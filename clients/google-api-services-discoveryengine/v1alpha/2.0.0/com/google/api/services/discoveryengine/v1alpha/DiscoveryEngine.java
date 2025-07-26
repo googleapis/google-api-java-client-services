@@ -154,196 +154,207 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
   public class Media {
 
     /**
-     * Uploads a file for Notebook LM to use. Creates a Source.
+     * Downloads a file from the session.
      *
-     * Create a request for the method "media.upload".
+     * Create a request for the method "media.download".
      *
      * This request holds the parameters needed by the discoveryengine server.  After setting any
-     * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The parent resource where the sources will be created. Format:
-     *        projects/{project}/locations/{location}/notebooks/{notebook}
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest}
+     * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+     *        ions/{collection}/engines/{engine}/sessions/{session}`
      * @return the request
      */
-    public Upload upload(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content) throws java.io.IOException {
-      Upload result = new Upload(parent, content);
+    public Download download(java.lang.String name) throws java.io.IOException {
+      Download result = new Download(name);
       initialize(result);
       return result;
     }
 
-    /**
-     * Uploads a file for Notebook LM to use. Creates a Source.
-     *
-     * Create a request for the method "media.upload".
-     *
-     * This request holds the parameters needed by the the discoveryengine server.  After setting any
-     * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
-     *
-     * <p>
-     * This method should be used for uploading media content.
-     * </p>
-     *
-     * @param parent Required. The parent resource where the sources will be created. Format:
-     *        projects/{project}/locations/{location}/notebooks/{notebook}
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content.
-     * @return the request
-     * @throws java.io.IOException if the initialization of the request fails
-     */
-    public Upload upload(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
-      Upload result = new Upload(parent, content, mediaContent);
-      initialize(result);
-      return result;
-    }
+    public class Download extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GdataMedia> {
 
-    public class Upload extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse> {
+      private static final String REST_PATH = "v1alpha/{+name}:downloadFile";
 
-      private static final String REST_PATH = "v1alpha/{+parent}/sources:uploadFile";
-
-      private final java.util.regex.Pattern PARENT_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
 
       /**
-       * Uploads a file for Notebook LM to use. Creates a Source.
+       * Downloads a file from the session.
        *
-       * Create a request for the method "media.upload".
+       * Create a request for the method "media.download".
        *
        * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
        * <p> {@link
-       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
+       * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The parent resource where the sources will be created. Format:
-     *        projects/{project}/locations/{location}/notebooks/{notebook}
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest}
+       * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+     *        ions/{collection}/engines/{engine}/sessions/{session}`
        * @since 1.13
        */
-      protected Upload(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content) {
-        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse.class);
-        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+      protected Download(java.lang.String name) {
+        super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GdataMedia.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
         }
+        initializeMediaDownload();
+      }
+
+      @Override
+      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+        super.executeMediaAndDownloadTo(outputStream);
+      }
+
+      @Override
+      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+        return super.executeMediaAsInputStream();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+        return super.executeMedia();
+      }
+
+      @Override
+      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+        return new com.google.api.client.http.GenericUrl(
+            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Download set$Xgafv(java.lang.String $Xgafv) {
+        return (Download) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Download setAccessToken(java.lang.String accessToken) {
+        return (Download) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Download setAlt(java.lang.String alt) {
+        return (Download) super.setAlt(alt);
+      }
+
+      @Override
+      public Download setCallback(java.lang.String callback) {
+        return (Download) super.setCallback(callback);
+      }
+
+      @Override
+      public Download setFields(java.lang.String fields) {
+        return (Download) super.setFields(fields);
+      }
+
+      @Override
+      public Download setKey(java.lang.String key) {
+        return (Download) super.setKey(key);
+      }
+
+      @Override
+      public Download setOauthToken(java.lang.String oauthToken) {
+        return (Download) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Download) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Download setQuotaUser(java.lang.String quotaUser) {
+        return (Download) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Download setUploadType(java.lang.String uploadType) {
+        return (Download) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Download setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Download) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
-       * Uploads a file for Notebook LM to use. Creates a Source.
-       *
-       * Create a request for the method "media.upload".
-       *
-       * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * <p>
-       * This constructor should be used for uploading media content.
-       * </p>
-       *
-       * @param parent Required. The parent resource where the sources will be created. Format:
-     *        projects/{project}/locations/{location}/notebooks/{notebook}
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest} media metadata or {@code null} if none
-       * @param mediaContent The media HTTP content.
-       * @since 1.13
-       */
-      protected Upload(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
-        super(DiscoveryEngine.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse.class);
-        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
-        initializeMediaUpload(mediaContent);
-      }
-
-      @Override
-      public Upload set$Xgafv(java.lang.String $Xgafv) {
-        return (Upload) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Upload setAccessToken(java.lang.String accessToken) {
-        return (Upload) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Upload setAlt(java.lang.String alt) {
-        return (Upload) super.setAlt(alt);
-      }
-
-      @Override
-      public Upload setCallback(java.lang.String callback) {
-        return (Upload) super.setCallback(callback);
-      }
-
-      @Override
-      public Upload setFields(java.lang.String fields) {
-        return (Upload) super.setFields(fields);
-      }
-
-      @Override
-      public Upload setKey(java.lang.String key) {
-        return (Upload) super.setKey(key);
-      }
-
-      @Override
-      public Upload setOauthToken(java.lang.String oauthToken) {
-        return (Upload) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Upload) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Upload setQuotaUser(java.lang.String quotaUser) {
-        return (Upload) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Upload setUploadType(java.lang.String uploadType) {
-        return (Upload) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Upload) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The parent resource where the sources will be created. Format:
-       * projects/{project}/locations/{location}/notebooks/{notebook}
+       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
+       * }/collections/{collection}/engines/{engine}/sessions/{session}`
        */
       @com.google.api.client.util.Key
-      private java.lang.String parent;
+      private java.lang.String name;
 
-      /** Required. The parent resource where the sources will be created. Format:
-     projects/{project}/locations/{location}/notebooks/{notebook}
+      /** Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collec
+     tions/{collection}/engines/{engine}/sessions/{session}`
        */
-      public java.lang.String getParent() {
-        return parent;
+      public java.lang.String getName() {
+        return name;
       }
 
       /**
-       * Required. The parent resource where the sources will be created. Format:
-       * projects/{project}/locations/{location}/notebooks/{notebook}
+       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
+       * }/collections/{collection}/engines/{engine}/sessions/{session}`
        */
-      public Upload setParent(java.lang.String parent) {
+      public Download setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
         }
-        this.parent = parent;
+        this.name = name;
+        return this;
+      }
+
+      /** Required. The ID of the file to be downloaded. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file to be downloaded.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file to be downloaded. */
+      public Download setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Optional. The ID of the view to be downloaded. */
+      @com.google.api.client.util.Key
+      private java.lang.String viewId;
+
+      /** Optional. The ID of the view to be downloaded.
+       */
+      public java.lang.String getViewId() {
+        return viewId;
+      }
+
+      /** Optional. The ID of the view to be downloaded. */
+      public Download setViewId(java.lang.String viewId) {
+        this.viewId = viewId;
         return this;
       }
 
       @Override
-      public Upload set(String parameterName, Object value) {
-        return (Upload) super.set(parameterName, value);
+      public Download set(String parameterName, Object value) {
+        return (Download) super.set(parameterName, value);
       }
     }
 
@@ -22005,6 +22016,314 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            */
           public class Assistants {
 
+            /**
+             * Gets an Assistant.
+             *
+             * Create a request for the method "assistants.get".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/{
+             *        collection}/engines/{engine}/assistants/{assistant}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Gets an Assistant.
+               *
+               * Create a request for the method "assistants.get".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/{
+             *        collection}/engines/{engine}/assistants/{assistant}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Resource name of Assistant. Format: `projects/{project}/locations/{locati
+               * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/
+             {collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Resource name of Assistant. Format: `projects/{project}/locations/{locati
+               * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates an Assistant
+             *
+             * Create a request for the method "assistants.patch".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded
+             *        string with a length limit of 1024 characters.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Updates an Assistant
+               *
+               * Create a request for the method "assistants.patch".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded
+             *        string with a length limit of 1024 characters.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant content) {
+                super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection}/engines/{engine}/assistants/{assistant}` It must
+               * be a UTF-8 encoded string with a length limit of 1024 characters.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/collect
+             ions/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded string with a
+             length limit of 1024 characters.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection}/engines/{engine}/assistants/{assistant}` It must
+               * be a UTF-8 encoded string with a length limit of 1024 characters.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** The list of fields to update. */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** The list of fields to update.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /** The list of fields to update. */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
             /**
              * Assists the user with a query in a streaming fashion.
              *
@@ -44413,6 +44732,192 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       public class Notebooks {
 
         /**
+         * Lists the recently viewed notebooks. Needs a side channel with the user's EUC.
+         *
+         * Create a request for the method "notebooks.listRecentlyViewed".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link ListRecentlyViewed#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}`.
+         * @return the request
+         */
+        public ListRecentlyViewed listRecentlyViewed(java.lang.String parent) throws java.io.IOException {
+          ListRecentlyViewed result = new ListRecentlyViewed(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ListRecentlyViewed extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaListRecentlyViewedNotebooksResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/notebooks:listRecentlyViewed";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the recently viewed notebooks. Needs a side channel with the user's EUC.
+           *
+           * Create a request for the method "notebooks.listRecentlyViewed".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link ListRecentlyViewed#execute()} method to invoke the remote
+           * operation. <p> {@link ListRecentlyViewed#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}`.
+           * @since 1.13
+           */
+          protected ListRecentlyViewed(java.lang.String parent) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaListRecentlyViewedNotebooksResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListRecentlyViewed set$Xgafv(java.lang.String $Xgafv) {
+            return (ListRecentlyViewed) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListRecentlyViewed setAccessToken(java.lang.String accessToken) {
+            return (ListRecentlyViewed) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListRecentlyViewed setAlt(java.lang.String alt) {
+            return (ListRecentlyViewed) super.setAlt(alt);
+          }
+
+          @Override
+          public ListRecentlyViewed setCallback(java.lang.String callback) {
+            return (ListRecentlyViewed) super.setCallback(callback);
+          }
+
+          @Override
+          public ListRecentlyViewed setFields(java.lang.String fields) {
+            return (ListRecentlyViewed) super.setFields(fields);
+          }
+
+          @Override
+          public ListRecentlyViewed setKey(java.lang.String key) {
+            return (ListRecentlyViewed) super.setKey(key);
+          }
+
+          @Override
+          public ListRecentlyViewed setOauthToken(java.lang.String oauthToken) {
+            return (ListRecentlyViewed) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListRecentlyViewed setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListRecentlyViewed) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListRecentlyViewed setQuotaUser(java.lang.String quotaUser) {
+            return (ListRecentlyViewed) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListRecentlyViewed setUploadType(java.lang.String uploadType) {
+            return (ListRecentlyViewed) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListRecentlyViewed setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListRecentlyViewed) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent branch resource name, such as
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent branch resource name, such as `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent branch resource name, such as
+           * `projects/{project}/locations/{location}`.
+           */
+          public ListRecentlyViewed setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of Notebooks to return. If unspecified, defaults to "200". The
+           * maximum allowed value is "500". If this field is negative, will use the default value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of Notebooks to return. If unspecified, defaults to "200". The maximum
+         allowed value is "500". If this field is negative, will use the default value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of Notebooks to return. If unspecified, defaults to "200". The
+           * maximum allowed value is "500". If this field is negative, will use the default value.
+           */
+          public ListRecentlyViewed setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The page token, provide this to retrieve the subsequent page. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token, provide this to retrieve the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The page token, provide this to retrieve the subsequent page. */
+          public ListRecentlyViewed setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListRecentlyViewed set(String parameterName, Object value) {
+            return (ListRecentlyViewed) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Sources collection.
          *
          * <p>The typical use is:</p>
@@ -44432,6 +44937,147 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          */
         public class Sources {
 
+          /**
+           * Creates a list of Sources.
+           *
+           * Create a request for the method "sources.batchCreate".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. The parent resource where the sources will be created. Format:
+           *        projects/{project}/locations/{location}/notebooks/{notebook}
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesRequest}
+           * @return the request
+           */
+          public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesRequest content) throws java.io.IOException {
+            BatchCreate result = new BatchCreate(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchCreate extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/sources:batchCreate";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+
+            /**
+             * Creates a list of Sources.
+             *
+             * Create a request for the method "sources.batchCreate".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource where the sources will be created. Format:
+           *        projects/{project}/locations/{location}/notebooks/{notebook}
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesRequest}
+             * @since 1.13
+             */
+            protected BatchCreate(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchCreate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchCreate setAccessToken(java.lang.String accessToken) {
+              return (BatchCreate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchCreate setAlt(java.lang.String alt) {
+              return (BatchCreate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchCreate setCallback(java.lang.String callback) {
+              return (BatchCreate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchCreate setFields(java.lang.String fields) {
+              return (BatchCreate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchCreate setKey(java.lang.String key) {
+              return (BatchCreate) super.setKey(key);
+            }
+
+            @Override
+            public BatchCreate setOauthToken(java.lang.String oauthToken) {
+              return (BatchCreate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchCreate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchCreate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchCreate setUploadType(java.lang.String uploadType) {
+              return (BatchCreate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource where the sources will be created. Format:
+             * projects/{project}/locations/{location}/notebooks/{notebook}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource where the sources will be created. Format:
+           projects/{project}/locations/{location}/notebooks/{notebook}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource where the sources will be created. Format:
+             * projects/{project}/locations/{location}/notebooks/{notebook}
+             */
+            public BatchCreate setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchCreate set(String parameterName, Object value) {
+              return (BatchCreate) super.set(parameterName, value);
+            }
+          }
           /**
            * Uploads a file for Notebook LM to use. Creates a Source.
            *

@@ -67,13 +67,6 @@ public final class BackupConfigInfo extends com.google.api.client.json.GenericJs
   private String lastSuccessfulBackupConsistencyTime;
 
   /**
-   * Output only. If the last log backup were successful, this field has the consistency date.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String lastSuccessfulLogBackupConsistencyTime;
-
-  /**
    * Configuration for an application backed up by a Backup Appliance.
    * @return value or {@code null} for none
    */
@@ -155,23 +148,6 @@ public final class BackupConfigInfo extends com.google.api.client.json.GenericJs
    */
   public BackupConfigInfo setLastSuccessfulBackupConsistencyTime(String lastSuccessfulBackupConsistencyTime) {
     this.lastSuccessfulBackupConsistencyTime = lastSuccessfulBackupConsistencyTime;
-    return this;
-  }
-
-  /**
-   * Output only. If the last log backup were successful, this field has the consistency date.
-   * @return value or {@code null} for none
-   */
-  public String getLastSuccessfulLogBackupConsistencyTime() {
-    return lastSuccessfulLogBackupConsistencyTime;
-  }
-
-  /**
-   * Output only. If the last log backup were successful, this field has the consistency date.
-   * @param lastSuccessfulLogBackupConsistencyTime lastSuccessfulLogBackupConsistencyTime or {@code null} for none
-   */
-  public BackupConfigInfo setLastSuccessfulLogBackupConsistencyTime(String lastSuccessfulLogBackupConsistencyTime) {
-    this.lastSuccessfulLogBackupConsistencyTime = lastSuccessfulLogBackupConsistencyTime;
     return this;
   }
 

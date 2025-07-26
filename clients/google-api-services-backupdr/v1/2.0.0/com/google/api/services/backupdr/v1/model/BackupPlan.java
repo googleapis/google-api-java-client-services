@@ -33,8 +33,8 @@ package com.google.api.services.backupdr.v1.model;
 public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The backup rules for this `BackupPlan`. There must be at least one `BackupRule`
-   * message.
+   * Optional. The backup rules for this `BackupPlan`. There must be at least one `BackupRule`
+   * message if on_demand_retention_limit_days is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,8 +151,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Required. The backup rules for this `BackupPlan`. There must be at least one `BackupRule`
-   * message.
+   * Optional. The backup rules for this `BackupPlan`. There must be at least one `BackupRule`
+   * message if on_demand_retention_limit_days is not set.
    * @return value or {@code null} for none
    */
   public java.util.List<BackupRule> getBackupRules() {
@@ -160,8 +160,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The backup rules for this `BackupPlan`. There must be at least one `BackupRule`
-   * message.
+   * Optional. The backup rules for this `BackupPlan`. There must be at least one `BackupRule`
+   * message if on_demand_retention_limit_days is not set.
    * @param backupRules backupRules or {@code null} for none
    */
   public BackupPlan setBackupRules(java.util.List<BackupRule> backupRules) {

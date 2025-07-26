@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2TaggedField extends com.google.api.client.j
 
   /**
    * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary
-   * table that contains statistical information on the possible values of this column (below).
+   * table that contains statistical information on the possible values of this column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GooglePrivacyDlpV2TaggedField extends com.google.api.client.j
 
   /**
    * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary
-   * table that contains statistical information on the possible values of this column (below).
+   * table that contains statistical information on the possible values of this column.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomTag() {
@@ -74,7 +74,7 @@ public final class GooglePrivacyDlpV2TaggedField extends com.google.api.client.j
 
   /**
    * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary
-   * table that contains statistical information on the possible values of this column (below).
+   * table that contains statistical information on the possible values of this column.
    * @param customTag customTag or {@code null} for none
    */
   public GooglePrivacyDlpV2TaggedField setCustomTag(java.lang.String customTag) {

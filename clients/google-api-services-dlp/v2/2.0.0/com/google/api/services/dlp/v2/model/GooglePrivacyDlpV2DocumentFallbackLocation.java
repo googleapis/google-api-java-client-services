@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Configure document processing to fall back to the configured processing option below if document
+ * Configure document processing to fall back to any of the following processing options if document
  * processing is unavailable in the original request location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,21 +32,21 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DocumentFallbackLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Processing will happen in the global region.
+   * Processing occurs in the global region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2GlobalProcessing globalProcessing;
 
   /**
-   * Processing will happen in a multi-region that contains the current region if available.
+   * Processing occurs in a multi-region that contains the current region if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2MultiRegionProcessing multiRegionProcessing;
 
   /**
-   * Processing will happen in the global region.
+   * Processing occurs in the global region.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2GlobalProcessing getGlobalProcessing() {
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2DocumentFallbackLocation extends com.google
   }
 
   /**
-   * Processing will happen in the global region.
+   * Processing occurs in the global region.
    * @param globalProcessing globalProcessing or {@code null} for none
    */
   public GooglePrivacyDlpV2DocumentFallbackLocation setGlobalProcessing(GooglePrivacyDlpV2GlobalProcessing globalProcessing) {
@@ -63,7 +63,7 @@ public final class GooglePrivacyDlpV2DocumentFallbackLocation extends com.google
   }
 
   /**
-   * Processing will happen in a multi-region that contains the current region if available.
+   * Processing occurs in a multi-region that contains the current region if available.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2MultiRegionProcessing getMultiRegionProcessing() {
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2DocumentFallbackLocation extends com.google
   }
 
   /**
-   * Processing will happen in a multi-region that contains the current region if available.
+   * Processing occurs in a multi-region that contains the current region if available.
    * @param multiRegionProcessing multiRegionProcessing or {@code null} for none
    */
   public GooglePrivacyDlpV2DocumentFallbackLocation setMultiRegionProcessing(GooglePrivacyDlpV2MultiRegionProcessing multiRegionProcessing) {

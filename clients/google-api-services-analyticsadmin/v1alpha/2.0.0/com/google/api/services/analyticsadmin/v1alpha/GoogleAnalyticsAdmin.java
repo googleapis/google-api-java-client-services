@@ -4876,6 +4876,138 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Submits a request for user deletion for a property.
+     *
+     * Create a request for the method "properties.submitUserDeletion".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link SubmitUserDeletion#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the property to submit user deletion for.
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionRequest}
+     * @return the request
+     */
+    public SubmitUserDeletion submitUserDeletion(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionRequest content) throws java.io.IOException {
+      SubmitUserDeletion result = new SubmitUserDeletion(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SubmitUserDeletion extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionResponse> {
+
+      private static final String REST_PATH = "v1alpha/{+name}:submitUserDeletion";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+      /**
+       * Submits a request for user deletion for a property.
+       *
+       * Create a request for the method "properties.submitUserDeletion".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link SubmitUserDeletion#execute()} method to invoke the remote
+       * operation. <p> {@link SubmitUserDeletion#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the property to submit user deletion for.
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionRequest}
+       * @since 1.13
+       */
+      protected SubmitUserDeletion(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+      }
+
+      @Override
+      public SubmitUserDeletion set$Xgafv(java.lang.String $Xgafv) {
+        return (SubmitUserDeletion) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SubmitUserDeletion setAccessToken(java.lang.String accessToken) {
+        return (SubmitUserDeletion) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SubmitUserDeletion setAlt(java.lang.String alt) {
+        return (SubmitUserDeletion) super.setAlt(alt);
+      }
+
+      @Override
+      public SubmitUserDeletion setCallback(java.lang.String callback) {
+        return (SubmitUserDeletion) super.setCallback(callback);
+      }
+
+      @Override
+      public SubmitUserDeletion setFields(java.lang.String fields) {
+        return (SubmitUserDeletion) super.setFields(fields);
+      }
+
+      @Override
+      public SubmitUserDeletion setKey(java.lang.String key) {
+        return (SubmitUserDeletion) super.setKey(key);
+      }
+
+      @Override
+      public SubmitUserDeletion setOauthToken(java.lang.String oauthToken) {
+        return (SubmitUserDeletion) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SubmitUserDeletion setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SubmitUserDeletion) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SubmitUserDeletion setQuotaUser(java.lang.String quotaUser) {
+        return (SubmitUserDeletion) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SubmitUserDeletion setUploadType(java.lang.String uploadType) {
+        return (SubmitUserDeletion) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SubmitUserDeletion setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SubmitUserDeletion) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the property to submit user deletion for. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the property to submit user deletion for.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the property to submit user deletion for. */
+      public SubmitUserDeletion setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public SubmitUserDeletion set(String parameterName, Object value) {
+        return (SubmitUserDeletion) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates attribution settings on a property.
      *
      * Create a request for the method "properties.updateAttributionSettings".

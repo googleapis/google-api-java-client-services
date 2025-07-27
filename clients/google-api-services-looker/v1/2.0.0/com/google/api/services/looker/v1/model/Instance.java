@@ -38,6 +38,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private AdminSettings adminSettings;
 
   /**
+   * Optional. Storage class of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String classType;
+
+  /**
    * Network name in the consumer project. Format: `projects/{project}/global/networks/{network}`.
    * Note that the consumer network may be in a different GCP project than the consumer project that
    * is hosting the Looker Instance.
@@ -258,6 +265,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setAdminSettings(AdminSettings adminSettings) {
     this.adminSettings = adminSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Storage class of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClassType() {
+    return classType;
+  }
+
+  /**
+   * Optional. Storage class of the instance.
+   * @param classType classType or {@code null} for none
+   */
+  public Instance setClassType(java.lang.String classType) {
+    this.classType = classType;
     return this;
   }
 

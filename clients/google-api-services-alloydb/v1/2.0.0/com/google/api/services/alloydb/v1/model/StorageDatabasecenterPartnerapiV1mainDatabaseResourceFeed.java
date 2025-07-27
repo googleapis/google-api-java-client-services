@@ -18,7 +18,7 @@ package com.google.api.services.alloydb.v1.model;
 
 /**
  * DatabaseResourceFeed is the top level proto to be used to ingest different database resource
- * level events into Condor platform. Next ID: 8
+ * level events into Condor platform. Next ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -29,6 +29,14 @@ package com.google.api.services.alloydb.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Config based signal data is used to ingest signals that are generated based on the
+   * configuration of the database resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData configBasedSignalData;
 
   /**
    * Required. Timestamp when feed is generated.
@@ -75,6 +83,25 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata resourceMetadata;
+
+  /**
+   * Config based signal data is used to ingest signals that are generated based on the
+   * configuration of the database resource.
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData getConfigBasedSignalData() {
+    return configBasedSignalData;
+  }
+
+  /**
+   * Config based signal data is used to ingest signals that are generated based on the
+   * configuration of the database resource.
+   * @param configBasedSignalData configBasedSignalData or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setConfigBasedSignalData(StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData configBasedSignalData) {
+    this.configBasedSignalData = configBasedSignalData;
+    return this;
+  }
 
   /**
    * Required. Timestamp when feed is generated.

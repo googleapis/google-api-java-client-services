@@ -22,7 +22,7 @@ package com.google.api.services.videointelligence.v1p3beta1.model;
  * bounding box: When the text is horizontal it might look like: 0----1 | | 3----2 When it's
  * clockwise rotated 180 degrees around the top-left corner it becomes: 2----3 | | 1----0 and the
  * vertex order will still be (0, 1, 2, 3). Note that values can be less than 0, or greater than 1
- * due to trignometric calculations for location of the box.
+ * due to trigonometric calculations for location of the box.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Video Intelligence API. For a detailed

@@ -37,6 +37,14 @@ public final class StorageDatabasecenterProtoCommonProduct extends com.google.ap
   private java.lang.String engine;
 
   /**
+   * Minor version of the underlying database engine. Example values: For MySQL, it could be
+   * "8.0.32", "5.7.32" etc.. For Postgres, it could be "14.3", "15.3" etc..
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minorVersion;
+
+  /**
    * Type of specific database product. It could be CloudSQL, AlloyDB etc..
    * The value may be {@code null}.
    */
@@ -65,6 +73,25 @@ public final class StorageDatabasecenterProtoCommonProduct extends com.google.ap
    */
   public StorageDatabasecenterProtoCommonProduct setEngine(java.lang.String engine) {
     this.engine = engine;
+    return this;
+  }
+
+  /**
+   * Minor version of the underlying database engine. Example values: For MySQL, it could be
+   * "8.0.32", "5.7.32" etc.. For Postgres, it could be "14.3", "15.3" etc..
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinorVersion() {
+    return minorVersion;
+  }
+
+  /**
+   * Minor version of the underlying database engine. Example values: For MySQL, it could be
+   * "8.0.32", "5.7.32" etc.. For Postgres, it could be "14.3", "15.3" etc..
+   * @param minorVersion minorVersion or {@code null} for none
+   */
+  public StorageDatabasecenterProtoCommonProduct setMinorVersion(java.lang.String minorVersion) {
+    this.minorVersion = minorVersion;
     return this;
   }
 

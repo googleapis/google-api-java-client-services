@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 25
+ * Common model for database resource instance metadata. Next ID: 26
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -49,6 +49,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupRun backupRun;
+
+  /**
+   * Optional. BackupDR Configuration for the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration backupdrConfiguration;
 
   /**
    * The creation time of the resource, i.e. the time when resource is created and recorded in
@@ -249,6 +256,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun backupRun) {
     this.backupRun = backupRun;
+    return this;
+  }
+
+  /**
+   * Optional. BackupDR Configuration for the resource.
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration getBackupdrConfiguration() {
+    return backupdrConfiguration;
+  }
+
+  /**
+   * Optional. BackupDR Configuration for the resource.
+   * @param backupdrConfiguration backupdrConfiguration or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setBackupdrConfiguration(StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration backupdrConfiguration) {
+    this.backupdrConfiguration = backupdrConfiguration;
     return this;
   }
 

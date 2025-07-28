@@ -37,6 +37,13 @@ public final class StageStatus extends com.google.api.client.json.GenericJson {
   private ReadPoolInstancesUpgradeStageStatus readPoolInstancesUpgrade;
 
   /**
+   * Output only. Timing information for the stage execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StageSchedule schedule;
+
+  /**
    * Upgrade stage.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class StageStatus extends com.google.api.client.json.GenericJson {
    */
   public StageStatus setReadPoolInstancesUpgrade(ReadPoolInstancesUpgradeStageStatus readPoolInstancesUpgrade) {
     this.readPoolInstancesUpgrade = readPoolInstancesUpgrade;
+    return this;
+  }
+
+  /**
+   * Output only. Timing information for the stage execution.
+   * @return value or {@code null} for none
+   */
+  public StageSchedule getSchedule() {
+    return schedule;
+  }
+
+  /**
+   * Output only. Timing information for the stage execution.
+   * @param schedule schedule or {@code null} for none
+   */
+  public StageStatus setSchedule(StageSchedule schedule) {
+    this.schedule = schedule;
     return this;
   }
 

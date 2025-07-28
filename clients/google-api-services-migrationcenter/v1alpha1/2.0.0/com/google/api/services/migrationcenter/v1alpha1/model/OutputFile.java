@@ -40,8 +40,8 @@ public final class OutputFile extends com.google.api.client.json.GenericJson {
    * Output only. File size in bytes.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.lang.Integer fileSizeBytes;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long fileSizeBytes;
 
   /**
    * Output only. XLSX output file.
@@ -71,7 +71,7 @@ public final class OutputFile extends com.google.api.client.json.GenericJson {
    * Output only. File size in bytes.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getFileSizeBytes() {
+  public java.lang.Long getFileSizeBytes() {
     return fileSizeBytes;
   }
 
@@ -79,7 +79,7 @@ public final class OutputFile extends com.google.api.client.json.GenericJson {
    * Output only. File size in bytes.
    * @param fileSizeBytes fileSizeBytes or {@code null} for none
    */
-  public OutputFile setFileSizeBytes(java.lang.Integer fileSizeBytes) {
+  public OutputFile setFileSizeBytes(java.lang.Long fileSizeBytes) {
     this.fileSizeBytes = fileSizeBytes;
     return this;
   }

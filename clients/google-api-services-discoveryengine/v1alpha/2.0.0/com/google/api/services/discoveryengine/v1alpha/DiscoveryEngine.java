@@ -15744,17 +15744,17 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
              `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
-             `update_time` Examples: "user_pseudo_id = some_id" "display_name = \"some_name\"" "starred = true"
-             "is_pinned=true AND (NOT labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -15763,9 +15763,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -21997,6 +21997,173 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
+           * An accessor for creating requests from the Analytics collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.Analytics.List request = discoveryengine.analytics().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Analytics analytics() {
+            return new Analytics();
+          }
+
+          /**
+           * The "analytics" collection of methods.
+           */
+          public class Analytics {
+
+            /**
+             * Exports metrics.
+             *
+             * Create a request for the method "analytics.exportMetrics".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link ExportMetrics#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param analytics Required. The analytics resource name under the engine where the metrics are created. The format is
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/analyti
+             *        cs`.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportMetricsRequest}
+             * @return the request
+             */
+            public ExportMetrics exportMetrics(java.lang.String analytics, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportMetricsRequest content) throws java.io.IOException {
+              ExportMetrics result = new ExportMetrics(analytics, content);
+              initialize(result);
+              return result;
+            }
+
+            public class ExportMetrics extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+analytics}:exportMetrics";
+
+              private final java.util.regex.Pattern ANALYTICS_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/analytics$");
+
+              /**
+               * Exports metrics.
+               *
+               * Create a request for the method "analytics.exportMetrics".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link ExportMetrics#execute()} method to invoke the remote
+               * operation. <p> {@link ExportMetrics#initialize(com.google.api.client.googleapis.services.Abstra
+               * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param analytics Required. The analytics resource name under the engine where the metrics are created. The format is
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/analyti
+             *        cs`.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportMetricsRequest}
+               * @since 1.13
+               */
+              protected ExportMetrics(java.lang.String analytics, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportMetricsRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                this.analytics = com.google.api.client.util.Preconditions.checkNotNull(analytics, "Required parameter analytics must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ANALYTICS_PATTERN.matcher(analytics).matches(),
+                      "Parameter analytics must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/analytics$");
+                }
+              }
+
+              @Override
+              public ExportMetrics set$Xgafv(java.lang.String $Xgafv) {
+                return (ExportMetrics) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ExportMetrics setAccessToken(java.lang.String accessToken) {
+                return (ExportMetrics) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ExportMetrics setAlt(java.lang.String alt) {
+                return (ExportMetrics) super.setAlt(alt);
+              }
+
+              @Override
+              public ExportMetrics setCallback(java.lang.String callback) {
+                return (ExportMetrics) super.setCallback(callback);
+              }
+
+              @Override
+              public ExportMetrics setFields(java.lang.String fields) {
+                return (ExportMetrics) super.setFields(fields);
+              }
+
+              @Override
+              public ExportMetrics setKey(java.lang.String key) {
+                return (ExportMetrics) super.setKey(key);
+              }
+
+              @Override
+              public ExportMetrics setOauthToken(java.lang.String oauthToken) {
+                return (ExportMetrics) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ExportMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ExportMetrics) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ExportMetrics setQuotaUser(java.lang.String quotaUser) {
+                return (ExportMetrics) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ExportMetrics setUploadType(java.lang.String uploadType) {
+                return (ExportMetrics) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ExportMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ExportMetrics) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The analytics resource name under the engine where the metrics are
+               * created. The format is `projects/{project}/locations/{location}/collections/{collec
+               * tion}/engines/{engine}/analytics`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String analytics;
+
+              /** Required. The analytics resource name under the engine where the metrics are created. The format is
+             `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/analytics`.
+               */
+              public java.lang.String getAnalytics() {
+                return analytics;
+              }
+
+              /**
+               * Required. The analytics resource name under the engine where the metrics are
+               * created. The format is `projects/{project}/locations/{location}/collections/{collec
+               * tion}/engines/{engine}/analytics`.
+               */
+              public ExportMetrics setAnalytics(java.lang.String analytics) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ANALYTICS_PATTERN.matcher(analytics).matches(),
+                      "Parameter analytics must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/analytics$");
+                }
+                this.analytics = analytics;
+                return this;
+              }
+
+              @Override
+              public ExportMetrics set(String parameterName, Object value) {
+                return (ExportMetrics) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
            * An accessor for creating requests from the Assistants collection.
            *
            * <p>The typical use is:</p>
@@ -26994,17 +27161,17 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
              `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
-             `update_time` Examples: "user_pseudo_id = some_id" "display_name = \"some_name\"" "starred = true"
-             "is_pinned=true AND (NOT labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -27013,9 +27180,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -38480,17 +38647,17 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
              * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
-             * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-             * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-             * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
            `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
-           `update_time` Examples: "user_pseudo_id = some_id" "display_name = \"some_name\"" "starred = true"
-           "is_pinned=true AND (NOT labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+           `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+           true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             public java.lang.String getFilter() {
               return filter;
@@ -38499,9 +38666,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
              * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
-             * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-             * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-             * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

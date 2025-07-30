@@ -134,6 +134,233 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Media collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+   *   {@code DiscoveryEngine.Media.List request = discoveryengine.media().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Media media() {
+    return new Media();
+  }
+
+  /**
+   * The "media" collection of methods.
+   */
+  public class Media {
+
+    /**
+     * Downloads a file from the session.
+     *
+     * Create a request for the method "media.download".
+     *
+     * This request holds the parameters needed by the discoveryengine server.  After setting any
+     * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+     *        ions/{collection}/engines/{engine}/sessions/{session}`
+     * @return the request
+     */
+    public Download download(java.lang.String name) throws java.io.IOException {
+      Download result = new Download(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Download extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GdataMedia> {
+
+      private static final String REST_PATH = "v1beta/{+name}:downloadFile";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+
+      /**
+       * Downloads a file from the session.
+       *
+       * Create a request for the method "media.download".
+       *
+       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+     *        ions/{collection}/engines/{engine}/sessions/{session}`
+       * @since 1.13
+       */
+      protected Download(java.lang.String name) {
+        super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GdataMedia.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+        }
+        initializeMediaDownload();
+      }
+
+      @Override
+      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+        super.executeMediaAndDownloadTo(outputStream);
+      }
+
+      @Override
+      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+        return super.executeMediaAsInputStream();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+        return super.executeMedia();
+      }
+
+      @Override
+      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+        return new com.google.api.client.http.GenericUrl(
+            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Download set$Xgafv(java.lang.String $Xgafv) {
+        return (Download) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Download setAccessToken(java.lang.String accessToken) {
+        return (Download) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Download setAlt(java.lang.String alt) {
+        return (Download) super.setAlt(alt);
+      }
+
+      @Override
+      public Download setCallback(java.lang.String callback) {
+        return (Download) super.setCallback(callback);
+      }
+
+      @Override
+      public Download setFields(java.lang.String fields) {
+        return (Download) super.setFields(fields);
+      }
+
+      @Override
+      public Download setKey(java.lang.String key) {
+        return (Download) super.setKey(key);
+      }
+
+      @Override
+      public Download setOauthToken(java.lang.String oauthToken) {
+        return (Download) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Download) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Download setQuotaUser(java.lang.String quotaUser) {
+        return (Download) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Download setUploadType(java.lang.String uploadType) {
+        return (Download) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Download setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Download) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
+       * }/collections/{collection}/engines/{engine}/sessions/{session}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collec
+     tions/{collection}/engines/{engine}/sessions/{session}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
+       * }/collections/{collection}/engines/{engine}/sessions/{session}`
+       */
+      public Download setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Required. The ID of the file to be downloaded. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file to be downloaded.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file to be downloaded. */
+      public Download setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Optional. The ID of the view to be downloaded. */
+      @com.google.api.client.util.Key
+      private java.lang.String viewId;
+
+      /** Optional. The ID of the view to be downloaded.
+       */
+      public java.lang.String getViewId() {
+        return viewId;
+      }
+
+      /** Optional. The ID of the view to be downloaded. */
+      public Download setViewId(java.lang.String viewId) {
+        this.viewId = viewId;
+        return this;
+      }
+
+      @Override
+      public Download set(String parameterName, Object value) {
+        return (Download) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -12053,17 +12280,17 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
              `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
-             `update_time` Examples: "user_pseudo_id = some_id" "display_name = \"some_name\"" "starred = true"
-             "is_pinned=true AND (NOT labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -12072,9 +12299,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -22788,17 +23015,17 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
              `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
-             `update_time` Examples: "user_pseudo_id = some_id" "display_name = \"some_name\"" "starred = true"
-             "is_pinned=true AND (NOT labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -22807,9 +23034,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -32845,17 +33072,17 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
              * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
-             * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-             * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-             * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
            `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
-           `update_time` Examples: "user_pseudo_id = some_id" "display_name = \"some_name\"" "starred = true"
-           "is_pinned=true AND (NOT labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+           `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+           true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             public java.lang.String getFilter() {
               return filter;
@@ -32864,9 +33091,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
              * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
-             * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
-             * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
-             * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
+             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

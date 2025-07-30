@@ -30,6 +30,19 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Controls behavior of how extracted filters are applied to the search. The default
+   * behavior depends on the request. For single datastore structured search, the default is
+   * `HARD_FILTER`. For multi-datastore search, the default behavior is `SOFT_BOOST`. Location-based
+   * filters are always applied as hard filters, and the `SOFT_BOOST` setting will not affect them.
+   * This field is only used if
+   * SearchRequest.natural_language_query_understanding_spec.filter_extraction_condition is set to
+   * FilterExtractionCondition.ENABLED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String extractedFilterBehavior;
+
+  /**
    * The condition under which filter extraction should occur. Server behavior defaults to
    * `DISABLED`.
    * The value may be {@code null}.
@@ -46,6 +59,35 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguage
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> geoSearchQueryDetectionFieldNames;
+
+  /**
+   * Optional. Controls behavior of how extracted filters are applied to the search. The default
+   * behavior depends on the request. For single datastore structured search, the default is
+   * `HARD_FILTER`. For multi-datastore search, the default behavior is `SOFT_BOOST`. Location-based
+   * filters are always applied as hard filters, and the `SOFT_BOOST` setting will not affect them.
+   * This field is only used if
+   * SearchRequest.natural_language_query_understanding_spec.filter_extraction_condition is set to
+   * FilterExtractionCondition.ENABLED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExtractedFilterBehavior() {
+    return extractedFilterBehavior;
+  }
+
+  /**
+   * Optional. Controls behavior of how extracted filters are applied to the search. The default
+   * behavior depends on the request. For single datastore structured search, the default is
+   * `HARD_FILTER`. For multi-datastore search, the default behavior is `SOFT_BOOST`. Location-based
+   * filters are always applied as hard filters, and the `SOFT_BOOST` setting will not affect them.
+   * This field is only used if
+   * SearchRequest.natural_language_query_understanding_spec.filter_extraction_condition is set to
+   * FilterExtractionCondition.ENABLED.
+   * @param extractedFilterBehavior extractedFilterBehavior or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec setExtractedFilterBehavior(java.lang.String extractedFilterBehavior) {
+    this.extractedFilterBehavior = extractedFilterBehavior;
+    return this;
+  }
 
   /**
    * The condition under which filter extraction should occur. Server behavior defaults to

@@ -78,6 +78,13 @@ public final class Type extends com.google.api.client.json.GenericJson {
   private GoogleBigtableAdminV2TypeDate dateType;
 
   /**
+   * Enum
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeEnum enumType;
+
+  /**
    * Float32
    * The value may be {@code null}.
    */
@@ -104,6 +111,13 @@ public final class Type extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private GoogleBigtableAdminV2TypeMap mapType;
+
+  /**
+   * Proto
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeProto protoType;
 
   /**
    * String
@@ -212,6 +226,23 @@ public final class Type extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Enum
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeEnum getEnumType() {
+    return enumType;
+  }
+
+  /**
+   * Enum
+   * @param enumType enumType or {@code null} for none
+   */
+  public Type setEnumType(GoogleBigtableAdminV2TypeEnum enumType) {
+    this.enumType = enumType;
+    return this;
+  }
+
+  /**
    * Float32
    * @return value or {@code null} for none
    */
@@ -276,6 +307,23 @@ public final class Type extends com.google.api.client.json.GenericJson {
    */
   public Type setMapType(GoogleBigtableAdminV2TypeMap mapType) {
     this.mapType = mapType;
+    return this;
+  }
+
+  /**
+   * Proto
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeProto getProtoType() {
+    return protoType;
+  }
+
+  /**
+   * Proto
+   * @param protoType protoType or {@code null} for none
+   */
+  public Type setProtoType(GoogleBigtableAdminV2TypeProto protoType) {
+    this.protoType = protoType;
     return this;
   }
 

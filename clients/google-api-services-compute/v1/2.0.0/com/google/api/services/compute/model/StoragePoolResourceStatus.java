@@ -44,7 +44,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   private java.lang.String lastResizeTimestamp;
 
   /**
-   * [Output Only] Maximum allowed aggregate disk size in gigabytes.
+   * [Output Only] Maximum allowed aggregate disk size in GiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -69,7 +69,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   private java.lang.Long poolUsedIops;
 
   /**
-   * [Output Only] Sum of all the disks' provisioned throughput in MB/s.
+   * [Output Only] Sum of all the disks' provisioned throughput in MiB/s.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -83,8 +83,8 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   private java.lang.Long poolUserWrittenBytes;
 
   /**
-   * [Output Only] Sum of all the capacity provisioned in disks in this storage pool. A disk's
-   * provisioned capacity is the same as its total capacity.
+   * [Output Only] Sum of all the disks' provisioned capacity (in GiB) in this storage pool. A
+   * disk's provisioned capacity is the same as its total capacity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -98,7 +98,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   private java.lang.Long totalProvisionedDiskIops;
 
   /**
-   * [Output Only] Sum of all the disks' provisioned throughput in MB/s, minus some amount that is
+   * [Output Only] Sum of all the disks' provisioned throughput in MiB/s, minus some amount that is
    * allowed per disk that is not counted towards pool's throughput capacity.
    * The value may be {@code null}.
    */
@@ -140,7 +140,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed aggregate disk size in gigabytes.
+   * [Output Only] Maximum allowed aggregate disk size in GiB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxTotalProvisionedDiskCapacityGb() {
@@ -148,7 +148,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed aggregate disk size in gigabytes.
+   * [Output Only] Maximum allowed aggregate disk size in GiB.
    * @param maxTotalProvisionedDiskCapacityGb maxTotalProvisionedDiskCapacityGb or {@code null} for none
    */
   public StoragePoolResourceStatus setMaxTotalProvisionedDiskCapacityGb(java.lang.Long maxTotalProvisionedDiskCapacityGb) {
@@ -199,7 +199,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the disks' provisioned throughput in MB/s.
+   * [Output Only] Sum of all the disks' provisioned throughput in MiB/s.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPoolUsedThroughput() {
@@ -207,7 +207,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the disks' provisioned throughput in MB/s.
+   * [Output Only] Sum of all the disks' provisioned throughput in MiB/s.
    * @param poolUsedThroughput poolUsedThroughput or {@code null} for none
    */
   public StoragePoolResourceStatus setPoolUsedThroughput(java.lang.Long poolUsedThroughput) {
@@ -233,8 +233,8 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the capacity provisioned in disks in this storage pool. A disk's
-   * provisioned capacity is the same as its total capacity.
+   * [Output Only] Sum of all the disks' provisioned capacity (in GiB) in this storage pool. A
+   * disk's provisioned capacity is the same as its total capacity.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalProvisionedDiskCapacityGb() {
@@ -242,8 +242,8 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the capacity provisioned in disks in this storage pool. A disk's
-   * provisioned capacity is the same as its total capacity.
+   * [Output Only] Sum of all the disks' provisioned capacity (in GiB) in this storage pool. A
+   * disk's provisioned capacity is the same as its total capacity.
    * @param totalProvisionedDiskCapacityGb totalProvisionedDiskCapacityGb or {@code null} for none
    */
   public StoragePoolResourceStatus setTotalProvisionedDiskCapacityGb(java.lang.Long totalProvisionedDiskCapacityGb) {
@@ -269,7 +269,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the disks' provisioned throughput in MB/s, minus some amount that is
+   * [Output Only] Sum of all the disks' provisioned throughput in MiB/s, minus some amount that is
    * allowed per disk that is not counted towards pool's throughput capacity.
    * @return value or {@code null} for none
    */
@@ -278,7 +278,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the disks' provisioned throughput in MB/s, minus some amount that is
+   * [Output Only] Sum of all the disks' provisioned throughput in MiB/s, minus some amount that is
    * allowed per disk that is not counted towards pool's throughput capacity.
    * @param totalProvisionedDiskThroughput totalProvisionedDiskThroughput or {@code null} for none
    */

@@ -326,16 +326,20 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load
    * balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host
    * selection times. For more information about Maglev, see
-   * https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional
-   * backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and
-   * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If
-   * sessionAffinity is not configured—that is, if session affinity remains at the default value of
-   * NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to
-   * a value other than NONE, then the default value for localityLbPolicy is MAGLEV. Only
-   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
-   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
-   * localityLbPolicy cannot be specified with haPolicy.
+   * https://ai.google/research/pubs/pub44824 - WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round
+   * Robin Load Balancing using weights computed from Backend reported Custom Metrics. If set, the
+   * Backend Service responses are expected to contain non-standard HTTP response header field
+   * Endpoint-Load-Metrics. The reported metrics to use for computing the weights are specified via
+   * the customMetrics field. This field is applicable to either: - A regional backend service with
+   * the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If sessionAffinity is not
+   * configured—that is, if session affinity remains at the default value of NONE—then the default
+   * value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to a value other than
+   * NONE, then the default value for localityLbPolicy is MAGLEV. Only ROUND_ROBIN and RING_HASH are
+   * supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true. localityLbPolicy cannot be specified
+   * with haPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1219,16 +1223,20 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load
    * balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host
    * selection times. For more information about Maglev, see
-   * https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional
-   * backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and
-   * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If
-   * sessionAffinity is not configured—that is, if session affinity remains at the default value of
-   * NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to
-   * a value other than NONE, then the default value for localityLbPolicy is MAGLEV. Only
-   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
-   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
-   * localityLbPolicy cannot be specified with haPolicy.
+   * https://ai.google/research/pubs/pub44824 - WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round
+   * Robin Load Balancing using weights computed from Backend reported Custom Metrics. If set, the
+   * Backend Service responses are expected to contain non-standard HTTP response header field
+   * Endpoint-Load-Metrics. The reported metrics to use for computing the weights are specified via
+   * the customMetrics field. This field is applicable to either: - A regional backend service with
+   * the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If sessionAffinity is not
+   * configured—that is, if session affinity remains at the default value of NONE—then the default
+   * value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to a value other than
+   * NONE, then the default value for localityLbPolicy is MAGLEV. Only ROUND_ROBIN and RING_HASH are
+   * supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true. localityLbPolicy cannot be specified
+   * with haPolicy.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalityLbPolicy() {
@@ -1248,16 +1256,20 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load
    * balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host
    * selection times. For more information about Maglev, see
-   * https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional
-   * backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and
-   * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If
-   * sessionAffinity is not configured—that is, if session affinity remains at the default value of
-   * NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to
-   * a value other than NONE, then the default value for localityLbPolicy is MAGLEV. Only
-   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
-   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
-   * localityLbPolicy cannot be specified with haPolicy.
+   * https://ai.google/research/pubs/pub44824 - WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round
+   * Robin Load Balancing using weights computed from Backend reported Custom Metrics. If set, the
+   * Backend Service responses are expected to contain non-standard HTTP response header field
+   * Endpoint-Load-Metrics. The reported metrics to use for computing the weights are specified via
+   * the customMetrics field. This field is applicable to either: - A regional backend service with
+   * the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If sessionAffinity is not
+   * configured—that is, if session affinity remains at the default value of NONE—then the default
+   * value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to a value other than
+   * NONE, then the default value for localityLbPolicy is MAGLEV. Only ROUND_ROBIN and RING_HASH are
+   * supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true. localityLbPolicy cannot be specified
+   * with haPolicy.
    * @param localityLbPolicy localityLbPolicy or {@code null} for none
    */
   public BackendService setLocalityLbPolicy(java.lang.String localityLbPolicy) {

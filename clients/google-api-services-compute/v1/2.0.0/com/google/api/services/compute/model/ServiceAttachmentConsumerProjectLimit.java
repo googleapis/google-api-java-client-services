@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class ServiceAttachmentConsumerProjectLimit extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value of the limit to set.
+   * The value of the limit to set. For endpoint_url, the limit should be no more than 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class ServiceAttachmentConsumerProjectLimit extends com.google.api.
   private java.lang.String projectIdOrNum;
 
   /**
-   * The value of the limit to set.
+   * The value of the limit to set. For endpoint_url, the limit should be no more than 1.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConnectionLimit() {
@@ -59,7 +59,7 @@ public final class ServiceAttachmentConsumerProjectLimit extends com.google.api.
   }
 
   /**
-   * The value of the limit to set.
+   * The value of the limit to set. For endpoint_url, the limit should be no more than 1.
    * @param connectionLimit connectionLimit or {@code null} for none
    */
   public ServiceAttachmentConsumerProjectLimit setConnectionLimit(java.lang.Long connectionLimit) {

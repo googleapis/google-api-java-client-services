@@ -142,8 +142,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private java.lang.String languageCode;
 
   /**
-   * If `naturalLanguageQueryUnderstandingSpec` is not specified, no additional natural language
-   * query understanding will be done.
+   * Config for natural language query understanding capabilities, such as extracting structured
+   * field filters from the query. Refer to [this
+   * documentation](https://cloud.google.com/generative-ai-app-builder/docs/natural-language-
+   * queries) for more information. If `naturalLanguageQueryUnderstandingSpec` is not specified, no
+   * additional natural language query understanding will be done.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -682,8 +685,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * If `naturalLanguageQueryUnderstandingSpec` is not specified, no additional natural language
-   * query understanding will be done.
+   * Config for natural language query understanding capabilities, such as extracting structured
+   * field filters from the query. Refer to [this
+   * documentation](https://cloud.google.com/generative-ai-app-builder/docs/natural-language-
+   * queries) for more information. If `naturalLanguageQueryUnderstandingSpec` is not specified, no
+   * additional natural language query understanding will be done.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec getNaturalLanguageQueryUnderstandingSpec() {
@@ -691,8 +697,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * If `naturalLanguageQueryUnderstandingSpec` is not specified, no additional natural language
-   * query understanding will be done.
+   * Config for natural language query understanding capabilities, such as extracting structured
+   * field filters from the query. Refer to [this
+   * documentation](https://cloud.google.com/generative-ai-app-builder/docs/natural-language-
+   * queries) for more information. If `naturalLanguageQueryUnderstandingSpec` is not specified, no
+   * additional natural language query understanding will be done.
    * @param naturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setNaturalLanguageQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec) {

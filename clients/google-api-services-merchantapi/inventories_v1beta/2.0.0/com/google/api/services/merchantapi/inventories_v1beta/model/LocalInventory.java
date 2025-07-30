@@ -97,7 +97,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   private java.lang.String pickupSla;
 
   /**
-   * Price of the product at this store.
+   * Optional. Price of the product at this store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,14 +111,15 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   private java.lang.Long quantity;
 
   /**
-   * Sale price of the product at this store. Mandatory if `salePriceEffectiveDate` is defined.
+   * Optional. Sale price of the product at this store. Mandatory if `salePriceEffectiveDate` is
+   * defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price salePrice;
 
   /**
-   * The `TimePeriod` of the sale at this store.
+   * Optional. The `TimePeriod` of the sale at this store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,7 +272,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Price of the product at this store.
+   * Optional. Price of the product at this store.
    * @return value or {@code null} for none
    */
   public Price getPrice() {
@@ -279,7 +280,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Price of the product at this store.
+   * Optional. Price of the product at this store.
    * @param price price or {@code null} for none
    */
   public LocalInventory setPrice(Price price) {
@@ -305,7 +306,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sale price of the product at this store. Mandatory if `salePriceEffectiveDate` is defined.
+   * Optional. Sale price of the product at this store. Mandatory if `salePriceEffectiveDate` is
+   * defined.
    * @return value or {@code null} for none
    */
   public Price getSalePrice() {
@@ -313,7 +315,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sale price of the product at this store. Mandatory if `salePriceEffectiveDate` is defined.
+   * Optional. Sale price of the product at this store. Mandatory if `salePriceEffectiveDate` is
+   * defined.
    * @param salePrice salePrice or {@code null} for none
    */
   public LocalInventory setSalePrice(Price salePrice) {
@@ -322,7 +325,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The `TimePeriod` of the sale at this store.
+   * Optional. The `TimePeriod` of the sale at this store.
    * @return value or {@code null} for none
    */
   public Interval getSalePriceEffectiveDate() {
@@ -330,7 +333,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The `TimePeriod` of the sale at this store.
+   * Optional. The `TimePeriod` of the sale at this store.
    * @param salePriceEffectiveDate salePriceEffectiveDate or {@code null} for none
    */
   public LocalInventory setSalePriceEffectiveDate(Interval salePriceEffectiveDate) {

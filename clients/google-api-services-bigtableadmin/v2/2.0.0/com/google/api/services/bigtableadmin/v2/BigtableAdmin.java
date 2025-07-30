@@ -12835,6 +12835,29 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
               return this;
             }
 
+            /**
+             * Optional. The resource_view to be applied to the returned SchemaBundles' fields.
+             * Defaults to NAME_ONLY.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The resource_view to be applied to the returned SchemaBundles' fields. Defaults to
+           NAME_ONLY.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. The resource_view to be applied to the returned SchemaBundles' fields.
+             * Defaults to NAME_ONLY.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);

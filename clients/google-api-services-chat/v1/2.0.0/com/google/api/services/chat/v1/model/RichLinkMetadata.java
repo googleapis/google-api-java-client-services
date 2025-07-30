@@ -18,7 +18,7 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A rich link to a resource. Rich links can be associated with the plain-text body of the message
- * or represent chips that link to Google Workspace resources like Google Docs or Sheets with a with
+ * or represent chips that link to Google Workspace resources like Google Docs or Sheets with
  * `start_index` and `length` of 0.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,7 +32,7 @@ package com.google.api.services.chat.v1.model;
 public final class RichLinkMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Data for a calendar event link.
+   * Data for a Calendar event link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class RichLinkMetadata extends com.google.api.client.json.GenericJs
   private DriveLinkData driveLinkData;
 
   /**
-   * Data for a meet space link.
+   * Data for a Meet space link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class RichLinkMetadata extends com.google.api.client.json.GenericJs
   private java.lang.String uri;
 
   /**
-   * Data for a calendar event link.
+   * Data for a Calendar event link.
    * @return value or {@code null} for none
    */
   public CalendarEventLinkData getCalendarEventLinkData() {
@@ -82,7 +82,7 @@ public final class RichLinkMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Data for a calendar event link.
+   * Data for a Calendar event link.
    * @param calendarEventLinkData calendarEventLinkData or {@code null} for none
    */
   public RichLinkMetadata setCalendarEventLinkData(CalendarEventLinkData calendarEventLinkData) {
@@ -125,7 +125,7 @@ public final class RichLinkMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Data for a meet space link.
+   * Data for a Meet space link.
    * @return value or {@code null} for none
    */
   public MeetSpaceLinkData getMeetSpaceLinkData() {
@@ -133,7 +133,7 @@ public final class RichLinkMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Data for a meet space link.
+   * Data for a Meet space link.
    * @param meetSpaceLinkData meetSpaceLinkData or {@code null} for none
    */
   public RichLinkMetadata setMeetSpaceLinkData(MeetSpaceLinkData meetSpaceLinkData) {

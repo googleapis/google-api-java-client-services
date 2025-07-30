@@ -183,9 +183,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the product input resource to delete. Format:
-       *        `accounts/{account}/productInputs/{product}` where the last section `product` consists of
-       *        4 parts: `channel~content_language~feed_label~offer_id` example for product name is
-       *        `accounts/123/productInputs/online~en~US~sku123`.
+       *        `accounts/{account}/productInputs/{product}` where the last section `product` consists of:
+       *        `content_language~feed_label~offer_id` example for product name is
+       *        `accounts/123/productInputs/en~US~sku123`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -215,9 +215,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the product input resource to delete. Format:
-       *        `accounts/{account}/productInputs/{product}` where the last section `product` consists of
-       *        4 parts: `channel~content_language~feed_label~offer_id` example for product name is
-       *        `accounts/123/productInputs/online~en~US~sku123`.
+       *        `accounts/{account}/productInputs/{product}` where the last section `product` consists of:
+       *        `content_language~feed_label~offer_id` example for product name is
+       *        `accounts/123/productInputs/en~US~sku123`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -287,17 +287,17 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the product input resource to delete. Format:
-         * `accounts/{account}/productInputs/{product}` where the last section `product` consists of
-         * 4 parts: `channel~content_language~feed_label~offer_id` example for product name is
-         * `accounts/123/productInputs/online~en~US~sku123`.
+         * `accounts/{account}/productInputs/{product}` where the last section `product` consists
+         * of: `content_language~feed_label~offer_id` example for product name is
+         * `accounts/123/productInputs/en~US~sku123`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the product input resource to delete. Format:
-       `accounts/{account}/productInputs/{product}` where the last section `product` consists of 4 parts:
-       `channel~content_language~feed_label~offer_id` example for product name is
-       `accounts/123/productInputs/online~en~US~sku123`.
+       `accounts/{account}/productInputs/{product}` where the last section `product` consists of:
+       `content_language~feed_label~offer_id` example for product name is
+       `accounts/123/productInputs/en~US~sku123`.
          */
         public java.lang.String getName() {
           return name;
@@ -305,9 +305,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the product input resource to delete. Format:
-         * `accounts/{account}/productInputs/{product}` where the last section `product` consists of
-         * 4 parts: `channel~content_language~feed_label~offer_id` example for product name is
-         * `accounts/123/productInputs/online~en~US~sku123`.
+         * `accounts/{account}/productInputs/{product}` where the last section `product` consists
+         * of: `content_language~feed_label~offer_id` example for product name is
+         * `accounts/123/productInputs/en~US~sku123`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -543,9 +543,12 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Identifier. The name of the product input. Format: `accounts/{account}/productInputs/{productinput}`
-       *        where the last section `productinput` consists of 4 parts:
-       *        `channel~content_language~feed_label~offer_id` example for product input name is
-       *        `accounts/123/productInputs/online~en~US~sku123`
+       *        where the last section `productinput` consists of: `content_language~feed_label~offer_id`
+       *        example for product input name is `accounts/123/productInputs/en~US~sku123`. A legacy
+       *        local product input name would be `accounts/123/productInputs/local~en~US~sku123`. Note:
+       *        For calls to the v1beta version, the `productInput` section consists of:
+       *        `channel~content_language~feed_label~offer_id`, for example:
+       *        `accounts/123/productInputs/online~en~US~sku123`.
        * @param content the {@link com.google.api.services.merchantapi.products_v1beta.model.ProductInput}
        * @return the request
        */
@@ -576,9 +579,12 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Identifier. The name of the product input. Format: `accounts/{account}/productInputs/{productinput}`
-       *        where the last section `productinput` consists of 4 parts:
-       *        `channel~content_language~feed_label~offer_id` example for product input name is
-       *        `accounts/123/productInputs/online~en~US~sku123`
+       *        where the last section `productinput` consists of: `content_language~feed_label~offer_id`
+       *        example for product input name is `accounts/123/productInputs/en~US~sku123`. A legacy
+       *        local product input name would be `accounts/123/productInputs/local~en~US~sku123`. Note:
+       *        For calls to the v1beta version, the `productInput` section consists of:
+       *        `channel~content_language~feed_label~offer_id`, for example:
+       *        `accounts/123/productInputs/online~en~US~sku123`.
          * @param content the {@link com.google.api.services.merchantapi.products_v1beta.model.ProductInput}
          * @since 1.13
          */
@@ -650,16 +656,22 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Identifier. The name of the product input. Format:
          * `accounts/{account}/productInputs/{productinput}` where the last section `productinput`
-         * consists of 4 parts: `channel~content_language~feed_label~offer_id` example for product
-         * input name is `accounts/123/productInputs/online~en~US~sku123`
+         * consists of: `content_language~feed_label~offer_id` example for product input name is
+         * `accounts/123/productInputs/en~US~sku123`. A legacy local product input name would be
+         * `accounts/123/productInputs/local~en~US~sku123`. Note: For calls to the v1beta version,
+         * the `productInput` section consists of: `channel~content_language~feed_label~offer_id`,
+         * for example: `accounts/123/productInputs/online~en~US~sku123`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Identifier. The name of the product input. Format:
-       `accounts/{account}/productInputs/{productinput}` where the last section `productinput` consists of
-       4 parts: `channel~content_language~feed_label~offer_id` example for product input name is
-       `accounts/123/productInputs/online~en~US~sku123`
+       `accounts/{account}/productInputs/{productinput}` where the last section `productinput` consists
+       of: `content_language~feed_label~offer_id` example for product input name is
+       `accounts/123/productInputs/en~US~sku123`. A legacy local product input name would be
+       `accounts/123/productInputs/local~en~US~sku123`. Note: For calls to the v1beta version, the
+       `productInput` section consists of: `channel~content_language~feed_label~offer_id`, for example:
+       `accounts/123/productInputs/online~en~US~sku123`.
          */
         public java.lang.String getName() {
           return name;
@@ -668,8 +680,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Identifier. The name of the product input. Format:
          * `accounts/{account}/productInputs/{productinput}` where the last section `productinput`
-         * consists of 4 parts: `channel~content_language~feed_label~offer_id` example for product
-         * input name is `accounts/123/productInputs/online~en~US~sku123`
+         * consists of: `content_language~feed_label~offer_id` example for product input name is
+         * `accounts/123/productInputs/en~US~sku123`. A legacy local product input name would be
+         * `accounts/123/productInputs/local~en~US~sku123`. Note: For calls to the v1beta version,
+         * the `productInput` section consists of: `channel~content_language~feed_label~offer_id`,
+         * for example: `accounts/123/productInputs/online~en~US~sku123`.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -785,9 +800,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the product to retrieve. Format: `accounts/{account}/products/{product}` where
-       *        the last section `product` consists of 4 parts:
-       *        `channel~content_language~feed_label~offer_id` example for product name is
-       *        `accounts/123/products/online~en~US~sku123`
+       *        the last section `product` consists of: `content_language~feed_label~offer_id` example for
+       *        product name is `accounts/123/products/en~US~sku123`. A legacy local product name would be
+       *        `accounts/123/products/local~en~US~sku123`. Note: For calls to the v1beta version, the
+       *        `product` section consists of: `channel~content_language~feed_label~offer_id`, for
+       *        example: `accounts/123/products/online~en~US~sku123`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -816,9 +833,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the product to retrieve. Format: `accounts/{account}/products/{product}` where
-       *        the last section `product` consists of 4 parts:
-       *        `channel~content_language~feed_label~offer_id` example for product name is
-       *        `accounts/123/products/online~en~US~sku123`
+       *        the last section `product` consists of: `content_language~feed_label~offer_id` example for
+       *        product name is `accounts/123/products/en~US~sku123`. A legacy local product name would be
+       *        `accounts/123/products/local~en~US~sku123`. Note: For calls to the v1beta version, the
+       *        `product` section consists of: `channel~content_language~feed_label~offer_id`, for
+       *        example: `accounts/123/products/online~en~US~sku123`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -898,17 +917,22 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the product to retrieve. Format:
-         * `accounts/{account}/products/{product}` where the last section `product` consists of 4
-         * parts: `channel~content_language~feed_label~offer_id` example for product name is
-         * `accounts/123/products/online~en~US~sku123`
+         * `accounts/{account}/products/{product}` where the last section `product` consists of:
+         * `content_language~feed_label~offer_id` example for product name is
+         * `accounts/123/products/en~US~sku123`. A legacy local product name would be
+         * `accounts/123/products/local~en~US~sku123`. Note: For calls to the v1beta version, the
+         * `product` section consists of: `channel~content_language~feed_label~offer_id`, for
+         * example: `accounts/123/products/online~en~US~sku123`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the product to retrieve. Format: `accounts/{account}/products/{product}`
-       where the last section `product` consists of 4 parts:
-       `channel~content_language~feed_label~offer_id` example for product name is
-       `accounts/123/products/online~en~US~sku123`
+       where the last section `product` consists of: `content_language~feed_label~offer_id` example for
+       product name is `accounts/123/products/en~US~sku123`. A legacy local product name would be
+       `accounts/123/products/local~en~US~sku123`. Note: For calls to the v1beta version, the `product`
+       section consists of: `channel~content_language~feed_label~offer_id`, for example:
+       `accounts/123/products/online~en~US~sku123`.
          */
         public java.lang.String getName() {
           return name;
@@ -916,9 +940,12 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the product to retrieve. Format:
-         * `accounts/{account}/products/{product}` where the last section `product` consists of 4
-         * parts: `channel~content_language~feed_label~offer_id` example for product name is
-         * `accounts/123/products/online~en~US~sku123`
+         * `accounts/{account}/products/{product}` where the last section `product` consists of:
+         * `content_language~feed_label~offer_id` example for product name is
+         * `accounts/123/products/en~US~sku123`. A legacy local product name would be
+         * `accounts/123/products/local~en~US~sku123`. Note: For calls to the v1beta version, the
+         * `product` section consists of: `channel~content_language~feed_label~offer_id`, for
+         * example: `accounts/123/products/online~en~US~sku123`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

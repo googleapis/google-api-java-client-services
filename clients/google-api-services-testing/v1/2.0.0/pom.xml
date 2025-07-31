@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-testing</artifactId>
-  <version>v1-rev20250624-2.0.0</version>
-  <name>Cloud Testing API v1-rev20250624-2.0.0</name>
+  <version>v1-rev20250725-2.0.0</version>
+  <name>Cloud Testing API v1-rev20250725-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

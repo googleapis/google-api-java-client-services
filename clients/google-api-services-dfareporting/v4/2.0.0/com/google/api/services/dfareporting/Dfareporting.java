@@ -16344,6 +16344,605 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the DynamicFeeds collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dfareporting dfareporting = new Dfareporting(...);}
+   *   {@code Dfareporting.DynamicFeeds.List request = dfareporting.dynamicFeeds().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public DynamicFeeds dynamicFeeds() {
+    return new DynamicFeeds();
+  }
+
+  /**
+   * The "dynamicFeeds" collection of methods.
+   */
+  public class DynamicFeeds {
+
+    /**
+     * Gets a dynamic feed by ID.
+     *
+     * Create a request for the method "dynamicFeeds.get".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param dynamicFeedId Required. Dynamic feed ID.
+     * @return the request
+     */
+    public Get get(java.lang.Long dynamicFeedId) throws java.io.IOException {
+      Get result = new Get(dynamicFeedId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicFeed> {
+
+      private static final String REST_PATH = "studio/dynamicFeeds/{+dynamicFeedId}";
+
+      private final java.util.regex.Pattern DYNAMIC_FEED_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets a dynamic feed by ID.
+       *
+       * Create a request for the method "dynamicFeeds.get".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param dynamicFeedId Required. Dynamic feed ID.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long dynamicFeedId) {
+        super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.DynamicFeed.class);
+        this.dynamicFeedId = com.google.api.client.util.Preconditions.checkNotNull(dynamicFeedId, "Required parameter dynamicFeedId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Dynamic feed ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long dynamicFeedId;
+
+      /** Required. Dynamic feed ID.
+       */
+      public java.lang.Long getDynamicFeedId() {
+        return dynamicFeedId;
+      }
+
+      /** Required. Dynamic feed ID. */
+      public Get setDynamicFeedId(java.lang.Long dynamicFeedId) {
+        this.dynamicFeedId = dynamicFeedId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Inserts a new dynamic feed.
+     *
+     * Create a request for the method "dynamicFeeds.insert".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.dfareporting.model.DynamicFeedsInsertRequest}
+     * @return the request
+     */
+    public Insert insert(com.google.api.services.dfareporting.model.DynamicFeedsInsertRequest content) throws java.io.IOException {
+      Insert result = new Insert(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicFeed> {
+
+      private static final String REST_PATH = "studio/dynamicFeeds";
+
+      /**
+       * Inserts a new dynamic feed.
+       *
+       * Create a request for the method "dynamicFeeds.insert".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.dfareporting.model.DynamicFeedsInsertRequest}
+       * @since 1.13
+       */
+      protected Insert(com.google.api.services.dfareporting.model.DynamicFeedsInsertRequest content) {
+        super(Dfareporting.this, "POST", REST_PATH, content, com.google.api.services.dfareporting.model.DynamicFeed.class);
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the DynamicProfiles collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dfareporting dfareporting = new Dfareporting(...);}
+   *   {@code Dfareporting.DynamicProfiles.List request = dfareporting.dynamicProfiles().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public DynamicProfiles dynamicProfiles() {
+    return new DynamicProfiles();
+  }
+
+  /**
+   * The "dynamicProfiles" collection of methods.
+   */
+  public class DynamicProfiles {
+
+    /**
+     * Gets a dynamic profile by ID.
+     *
+     * Create a request for the method "dynamicProfiles.get".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param dynamicProfileId Required. Dynamic profile ID.
+     * @return the request
+     */
+    public Get get(java.lang.Long dynamicProfileId) throws java.io.IOException {
+      Get result = new Get(dynamicProfileId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicProfile> {
+
+      private static final String REST_PATH = "studio/dynamicProfiles/{+dynamicProfileId}";
+
+      private final java.util.regex.Pattern DYNAMIC_PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets a dynamic profile by ID.
+       *
+       * Create a request for the method "dynamicProfiles.get".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param dynamicProfileId Required. Dynamic profile ID.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long dynamicProfileId) {
+        super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.DynamicProfile.class);
+        this.dynamicProfileId = com.google.api.client.util.Preconditions.checkNotNull(dynamicProfileId, "Required parameter dynamicProfileId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Dynamic profile ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long dynamicProfileId;
+
+      /** Required. Dynamic profile ID.
+       */
+      public java.lang.Long getDynamicProfileId() {
+        return dynamicProfileId;
+      }
+
+      /** Required. Dynamic profile ID. */
+      public Get setDynamicProfileId(java.lang.Long dynamicProfileId) {
+        this.dynamicProfileId = dynamicProfileId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Inserts a new dynamic profile.
+     *
+     * Create a request for the method "dynamicProfiles.insert".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.dfareporting.model.DynamicProfile}
+     * @return the request
+     */
+    public Insert insert(com.google.api.services.dfareporting.model.DynamicProfile content) throws java.io.IOException {
+      Insert result = new Insert(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicProfile> {
+
+      private static final String REST_PATH = "studio/dynamicProfiles";
+
+      /**
+       * Inserts a new dynamic profile.
+       *
+       * Create a request for the method "dynamicProfiles.insert".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.dfareporting.model.DynamicProfile}
+       * @since 1.13
+       */
+      protected Insert(com.google.api.services.dfareporting.model.DynamicProfile content) {
+        super(Dfareporting.this, "POST", REST_PATH, content, com.google.api.services.dfareporting.model.DynamicProfile.class);
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing dynamic profile.
+     *
+     * Create a request for the method "dynamicProfiles.update".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.dfareporting.model.DynamicProfile}
+     * @return the request
+     */
+    public Update update(com.google.api.services.dfareporting.model.DynamicProfile content) throws java.io.IOException {
+      Update result = new Update(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicProfile> {
+
+      private static final String REST_PATH = "studio/dynamicProfiles";
+
+      /**
+       * Updates an existing dynamic profile.
+       *
+       * Create a request for the method "dynamicProfiles.update".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.dfareporting.model.DynamicProfile}
+       * @since 1.13
+       */
+      protected Update(com.google.api.services.dfareporting.model.DynamicProfile content) {
+        super(Dfareporting.this, "PUT", REST_PATH, content, com.google.api.services.dfareporting.model.DynamicProfile.class);
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the DynamicTargetingKeys collection.
    *
    * <p>The typical use is:</p>

@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * SAP instance properties.
+ * Agent status.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SapInstanceProperties extends com.google.api.client.json.GenericJson {
+public final class AgentStates extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Sap Instance Agent status.
+   * Optional. The available version of the agent in artifact registry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AgentStates agentStates;
+  private java.lang.String availableVersion;
 
   /**
-   * Optional. SAP Instance numbers. They are from '00' to '99'.
+   * Optional. The installed version of the agent on the host.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> numbers;
+  private java.lang.String installedVersion;
 
   /**
-   * Optional. Sap Instance Agent status.
+   * Optional. The available version of the agent in artifact registry.
    * @return value or {@code null} for none
    */
-  public AgentStates getAgentStates() {
-    return agentStates;
+  public java.lang.String getAvailableVersion() {
+    return availableVersion;
   }
 
   /**
-   * Optional. Sap Instance Agent status.
-   * @param agentStates agentStates or {@code null} for none
+   * Optional. The available version of the agent in artifact registry.
+   * @param availableVersion availableVersion or {@code null} for none
    */
-  public SapInstanceProperties setAgentStates(AgentStates agentStates) {
-    this.agentStates = agentStates;
+  public AgentStates setAvailableVersion(java.lang.String availableVersion) {
+    this.availableVersion = availableVersion;
     return this;
   }
 
   /**
-   * Optional. SAP Instance numbers. They are from '00' to '99'.
+   * Optional. The installed version of the agent on the host.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getNumbers() {
-    return numbers;
+  public java.lang.String getInstalledVersion() {
+    return installedVersion;
   }
 
   /**
-   * Optional. SAP Instance numbers. They are from '00' to '99'.
-   * @param numbers numbers or {@code null} for none
+   * Optional. The installed version of the agent on the host.
+   * @param installedVersion installedVersion or {@code null} for none
    */
-  public SapInstanceProperties setNumbers(java.util.List<java.lang.String> numbers) {
-    this.numbers = numbers;
+  public AgentStates setInstalledVersion(java.lang.String installedVersion) {
+    this.installedVersion = installedVersion;
     return this;
   }
 
   @Override
-  public SapInstanceProperties set(String fieldName, Object value) {
-    return (SapInstanceProperties) super.set(fieldName, value);
+  public AgentStates set(String fieldName, Object value) {
+    return (AgentStates) super.set(fieldName, value);
   }
 
   @Override
-  public SapInstanceProperties clone() {
-    return (SapInstanceProperties) super.clone();
+  public AgentStates clone() {
+    return (AgentStates) super.clone();
   }
 
 }

@@ -66,6 +66,13 @@ public final class Host extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> cloudVirtualNetworkIds;
 
   /**
+   * Output only. The id of Virtual Private Cloud (VPC) of the host.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudVpcId;
+
+  /**
    * Output only. The cloud zone of the host.
    * The value may be {@code null}.
    */
@@ -161,6 +168,23 @@ public final class Host extends com.google.api.client.json.GenericJson {
    */
   public Host setCloudVirtualNetworkIds(java.util.List<java.lang.String> cloudVirtualNetworkIds) {
     this.cloudVirtualNetworkIds = cloudVirtualNetworkIds;
+    return this;
+  }
+
+  /**
+   * Output only. The id of Virtual Private Cloud (VPC) of the host.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudVpcId() {
+    return cloudVpcId;
+  }
+
+  /**
+   * Output only. The id of Virtual Private Cloud (VPC) of the host.
+   * @param cloudVpcId cloudVpcId or {@code null} for none
+   */
+  public Host setCloudVpcId(java.lang.String cloudVpcId) {
+    this.cloudVpcId = cloudVpcId;
     return this;
   }
 

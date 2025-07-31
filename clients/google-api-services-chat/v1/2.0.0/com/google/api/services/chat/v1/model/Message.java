@@ -258,7 +258,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private User privateMessageViewer;
 
   /**
-   * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
+   * Optional. Information about a message that's quoted by a Google Chat user in a space. Google
    * Chat users can quote a message to reply to it.
    * The value may be {@code null}.
    */
@@ -752,7 +752,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
+   * Optional. Information about a message that's quoted by a Google Chat user in a space. Google
    * Chat users can quote a message to reply to it.
    * @return value or {@code null} for none
    */
@@ -761,7 +761,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
+   * Optional. Information about a message that's quoted by a Google Chat user in a space. Google
    * Chat users can quote a message to reply to it.
    * @param quotedMessageMetadata quotedMessageMetadata or {@code null} for none
    */

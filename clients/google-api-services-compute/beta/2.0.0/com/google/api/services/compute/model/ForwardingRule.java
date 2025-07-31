@@ -109,7 +109,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
    * inject packets into the consumer's network. If set to true, the target service attachment must
    * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
-   * forwarding rules should not use this field.
+   * forwarding rules should not use this field. This field was never released to any customers and
+   * is deprecated and will be removed in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -616,7 +617,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
    * inject packets into the consumer's network. If set to true, the target service attachment must
    * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
-   * forwarding rules should not use this field.
+   * forwarding rules should not use this field. This field was never released to any customers and
+   * is deprecated and will be removed in the future.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowPscPacketInjection() {
@@ -627,7 +629,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
    * inject packets into the consumer's network. If set to true, the target service attachment must
    * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
-   * forwarding rules should not use this field.
+   * forwarding rules should not use this field. This field was never released to any customers and
+   * is deprecated and will be removed in the future.
    * @param allowPscPacketInjection allowPscPacketInjection or {@code null} for none
    */
   public ForwardingRule setAllowPscPacketInjection(java.lang.Boolean allowPscPacketInjection) {

@@ -292,6 +292,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String reservedInternalRange;
 
   /**
+   * Configures subnet mask resolution for this subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolveSubnetMask;
+
+  /**
    * The role of subnetwork. Currently, this field is only used when purpose is set to
    * GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An
    * ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a
@@ -1020,6 +1027,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setReservedInternalRange(java.lang.String reservedInternalRange) {
     this.reservedInternalRange = reservedInternalRange;
+    return this;
+  }
+
+  /**
+   * Configures subnet mask resolution for this subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolveSubnetMask() {
+    return resolveSubnetMask;
+  }
+
+  /**
+   * Configures subnet mask resolution for this subnetwork.
+   * @param resolveSubnetMask resolveSubnetMask or {@code null} for none
+   */
+  public Subnetwork setResolveSubnetMask(java.lang.String resolveSubnetMask) {
+    this.resolveSubnetMask = resolveSubnetMask;
     return this;
   }
 

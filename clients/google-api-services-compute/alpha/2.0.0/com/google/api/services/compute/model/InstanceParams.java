@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class InstanceParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * Relative deadline for waiting for capacity. Relevant only for Instances.Insert API.
+   * Relative deadline for waiting for capacity. Relevant only for Instances.Insert and
+   * Instances.Start API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class InstanceParams extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> resourceManagerTags;
 
   /**
-   * Relative deadline for waiting for capacity. Relevant only for Instances.Insert API.
+   * Relative deadline for waiting for capacity. Relevant only for Instances.Insert and
+   * Instances.Start API.
    * @return value or {@code null} for none
    */
   public Duration getRequestValidForDuration() {
@@ -54,7 +56,8 @@ public final class InstanceParams extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Relative deadline for waiting for capacity. Relevant only for Instances.Insert API.
+   * Relative deadline for waiting for capacity. Relevant only for Instances.Insert and
+   * Instances.Start API.
    * @param requestValidForDuration requestValidForDuration or {@code null} for none
    */
   public InstanceParams setRequestValidForDuration(Duration requestValidForDuration) {

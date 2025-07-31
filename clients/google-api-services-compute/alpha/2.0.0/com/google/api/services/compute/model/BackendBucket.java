@@ -124,6 +124,14 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendBucketParams params;
+
+  /**
    * [Output Only] URL of the region where the regional backend bucket resides. This field is not
    * applicable to global backend buckets. You must specify this field as part of the HTTP request
    * URL. It is not settable as a field in the request body.
@@ -372,6 +380,25 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
    */
   public BackendBucket setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public BackendBucketParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public BackendBucket setParams(BackendBucketParams params) {
+    this.params = params;
     return this;
   }
 

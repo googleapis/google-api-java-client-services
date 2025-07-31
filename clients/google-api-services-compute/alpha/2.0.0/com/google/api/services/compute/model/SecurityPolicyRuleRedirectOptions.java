@@ -38,7 +38,8 @@ public final class SecurityPolicyRuleRedirectOptions extends com.google.api.clie
   private java.lang.String target;
 
   /**
-   * Type of the redirect action.
+   * Type of the redirect action. Possible values are: - GOOGLE_RECAPTCHA: redirect to reCAPTCHA for
+   * manual challenge assessment. - EXTERNAL_302: redirect to a different URL via a 302 response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class SecurityPolicyRuleRedirectOptions extends com.google.api.clie
   }
 
   /**
-   * Type of the redirect action.
+   * Type of the redirect action. Possible values are: - GOOGLE_RECAPTCHA: redirect to reCAPTCHA for
+   * manual challenge assessment. - EXTERNAL_302: redirect to a different URL via a 302 response.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,7 +74,8 @@ public final class SecurityPolicyRuleRedirectOptions extends com.google.api.clie
   }
 
   /**
-   * Type of the redirect action.
+   * Type of the redirect action. Possible values are: - GOOGLE_RECAPTCHA: redirect to reCAPTCHA for
+   * manual challenge assessment. - EXTERNAL_302: redirect to a different URL via a 302 response.
    * @param type type or {@code null} for none
    */
   public SecurityPolicyRuleRedirectOptions setType(java.lang.String type) {

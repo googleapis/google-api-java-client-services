@@ -124,6 +124,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Protection tier for the workload which specifies the workload expectations in the event of
+   * infrastructure failures at data center (e.g. power and/or cooling failures).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectionTier;
+
+  /**
    * [Output only] Indicates the reservation mode of the reservation.
    * The value may be {@code null}.
    */
@@ -436,6 +444,25 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Protection tier for the workload which specifies the workload expectations in the event of
+   * infrastructure failures at data center (e.g. power and/or cooling failures).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectionTier() {
+    return protectionTier;
+  }
+
+  /**
+   * Protection tier for the workload which specifies the workload expectations in the event of
+   * infrastructure failures at data center (e.g. power and/or cooling failures).
+   * @param protectionTier protectionTier or {@code null} for none
+   */
+  public Reservation setProtectionTier(java.lang.String protectionTier) {
+    this.protectionTier = protectionTier;
     return this;
   }
 

@@ -30,18 +30,14 @@ package com.google.api.services.compute.model;
 public final class PreviewFeatureRolloutOperation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Input only. The input for the rollout operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PreviewFeatureRolloutOperationRolloutInput rolloutInput;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PreviewFeatureRolloutOperationRolloutStatus rolloutStatus;
-
-  /**
+   * Input only. The input for the rollout operation.
    * @return value or {@code null} for none
    */
   public PreviewFeatureRolloutOperationRolloutInput getRolloutInput() {
@@ -49,25 +45,11 @@ public final class PreviewFeatureRolloutOperation extends com.google.api.client.
   }
 
   /**
+   * Input only. The input for the rollout operation.
    * @param rolloutInput rolloutInput or {@code null} for none
    */
   public PreviewFeatureRolloutOperation setRolloutInput(PreviewFeatureRolloutOperationRolloutInput rolloutInput) {
     this.rolloutInput = rolloutInput;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public PreviewFeatureRolloutOperationRolloutStatus getRolloutStatus() {
-    return rolloutStatus;
-  }
-
-  /**
-   * @param rolloutStatus rolloutStatus or {@code null} for none
-   */
-  public PreviewFeatureRolloutOperation setRolloutStatus(PreviewFeatureRolloutOperationRolloutStatus rolloutStatus) {
-    this.rolloutStatus = rolloutStatus;
     return this;
   }
 

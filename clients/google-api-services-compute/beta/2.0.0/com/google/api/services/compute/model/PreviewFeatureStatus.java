@@ -37,6 +37,13 @@ public final class PreviewFeatureStatus extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
+   * [Output Only] Link to the public documentation for the feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String helpLink;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,6 +63,23 @@ public final class PreviewFeatureStatus extends com.google.api.client.json.Gener
    */
   public PreviewFeatureStatus setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] Link to the public documentation for the feature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHelpLink() {
+    return helpLink;
+  }
+
+  /**
+   * [Output Only] Link to the public documentation for the feature.
+   * @param helpLink helpLink or {@code null} for none
+   */
+  public PreviewFeatureStatus setHelpLink(java.lang.String helpLink) {
+    this.helpLink = helpLink;
     return this;
   }
 

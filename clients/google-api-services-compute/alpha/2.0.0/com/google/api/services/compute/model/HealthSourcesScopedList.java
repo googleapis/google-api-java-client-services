@@ -34,7 +34,7 @@ public final class HealthSourcesScopedList extends com.google.api.client.json.Ge
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<HealthSource> resources;
+  private java.util.List<HealthSource> healthSources;
 
   static {
     // hack to force ProGuard to consider HealthSource used, since otherwise it would be stripped out
@@ -53,16 +53,16 @@ public final class HealthSourcesScopedList extends com.google.api.client.json.Ge
    * A list of HealthSources contained in this scope.
    * @return value or {@code null} for none
    */
-  public java.util.List<HealthSource> getResources() {
-    return resources;
+  public java.util.List<HealthSource> getHealthSources() {
+    return healthSources;
   }
 
   /**
    * A list of HealthSources contained in this scope.
-   * @param resources resources or {@code null} for none
+   * @param healthSources healthSources or {@code null} for none
    */
-  public HealthSourcesScopedList setResources(java.util.List<HealthSource> resources) {
-    this.resources = resources;
+  public HealthSourcesScopedList setHealthSources(java.util.List<HealthSource> healthSources) {
+    this.healthSources = healthSources;
     return this;
   }
 

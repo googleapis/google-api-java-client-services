@@ -31,6 +31,13 @@ package com.google.api.services.compute.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Advanced control for cluster management, applicable only to DENSE deployment type reservations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAdvancedDeploymentControl advancedDeploymentControl;
+
+  /**
    * Reservation for aggregated resources, providing shape flexibility.
    * The value may be {@code null}.
    */
@@ -231,6 +238,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Advanced control for cluster management, applicable only to DENSE deployment type reservations.
+   * @return value or {@code null} for none
+   */
+  public ReservationAdvancedDeploymentControl getAdvancedDeploymentControl() {
+    return advancedDeploymentControl;
+  }
+
+  /**
+   * Advanced control for cluster management, applicable only to DENSE deployment type reservations.
+   * @param advancedDeploymentControl advancedDeploymentControl or {@code null} for none
+   */
+  public Reservation setAdvancedDeploymentControl(ReservationAdvancedDeploymentControl advancedDeploymentControl) {
+    this.advancedDeploymentControl = advancedDeploymentControl;
+    return this;
+  }
 
   /**
    * Reservation for aggregated resources, providing shape flexibility.

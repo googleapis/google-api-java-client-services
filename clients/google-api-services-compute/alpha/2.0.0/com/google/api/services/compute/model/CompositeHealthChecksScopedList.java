@@ -34,7 +34,7 @@ public final class CompositeHealthChecksScopedList extends com.google.api.client
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<CompositeHealthCheck> resources;
+  private java.util.List<CompositeHealthCheck> compositeHealthChecks;
 
   static {
     // hack to force ProGuard to consider CompositeHealthCheck used, since otherwise it would be stripped out
@@ -54,16 +54,16 @@ public final class CompositeHealthChecksScopedList extends com.google.api.client
    * A list of CompositeHealthChecks contained in this scope.
    * @return value or {@code null} for none
    */
-  public java.util.List<CompositeHealthCheck> getResources() {
-    return resources;
+  public java.util.List<CompositeHealthCheck> getCompositeHealthChecks() {
+    return compositeHealthChecks;
   }
 
   /**
    * A list of CompositeHealthChecks contained in this scope.
-   * @param resources resources or {@code null} for none
+   * @param compositeHealthChecks compositeHealthChecks or {@code null} for none
    */
-  public CompositeHealthChecksScopedList setResources(java.util.List<CompositeHealthCheck> resources) {
-    this.resources = resources;
+  public CompositeHealthChecksScopedList setCompositeHealthChecks(java.util.List<CompositeHealthCheck> compositeHealthChecks) {
+    this.compositeHealthChecks = compositeHealthChecks;
     return this;
   }
 

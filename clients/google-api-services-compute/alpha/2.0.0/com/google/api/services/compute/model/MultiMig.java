@@ -92,13 +92,6 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output only] Server-defined URL for this resource with the resource id.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String selfLinkWithId;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,23 +242,6 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
    */
   public MultiMig setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
-    return this;
-  }
-
-  /**
-   * [Output only] Server-defined URL for this resource with the resource id.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSelfLinkWithId() {
-    return selfLinkWithId;
-  }
-
-  /**
-   * [Output only] Server-defined URL for this resource with the resource id.
-   * @param selfLinkWithId selfLinkWithId or {@code null} for none
-   */
-  public MultiMig setSelfLinkWithId(java.lang.String selfLinkWithId) {
-    this.selfLinkWithId = selfLinkWithId;
     return this;
   }
 

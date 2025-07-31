@@ -103,7 +103,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String performanceProvisioningType;
 
   /**
-   * Size, in GiB, of the storage pool. For more information about the size limits, see
+   * Size of the storage pool in GiB. For more information about the size limits, see
    * https://cloud.google.com/compute/docs/disks/storage-pools.
    * The value may be {@code null}.
    */
@@ -119,7 +119,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Long poolProvisionedIops;
 
   /**
-   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * Provisioned throughput of the storage pool in MiB/s. Only relevant if the storage pool type is
    * hyperdisk-balanced or hyperdisk-throughput.
    * The value may be {@code null}.
    */
@@ -390,7 +390,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size, in GiB, of the storage pool. For more information about the size limits, see
+   * Size of the storage pool in GiB. For more information about the size limits, see
    * https://cloud.google.com/compute/docs/disks/storage-pools.
    * @return value or {@code null} for none
    */
@@ -399,7 +399,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size, in GiB, of the storage pool. For more information about the size limits, see
+   * Size of the storage pool in GiB. For more information about the size limits, see
    * https://cloud.google.com/compute/docs/disks/storage-pools.
    * @param poolProvisionedCapacityGb poolProvisionedCapacityGb or {@code null} for none
    */
@@ -428,7 +428,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * Provisioned throughput of the storage pool in MiB/s. Only relevant if the storage pool type is
    * hyperdisk-balanced or hyperdisk-throughput.
    * @return value or {@code null} for none
    */
@@ -437,7 +437,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * Provisioned throughput of the storage pool in MiB/s. Only relevant if the storage pool type is
    * hyperdisk-balanced or hyperdisk-throughput.
    * @param poolProvisionedThroughput poolProvisionedThroughput or {@code null} for none
    */

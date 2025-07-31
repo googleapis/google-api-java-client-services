@@ -144,6 +144,24 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.util.List<PublicDelegatedPrefixPublicDelegatedSubPrefix> publicDelegatedSubPrefixs;
 
   /**
+   * The purpose of the public delegated prefix. This field can only be set for the top-level global
+   * public delegated prefix. It is an output-only field for the sub-delegates that inherit the
+   * value from the top-level global public delegated prefix. Once the value is set, it cannot be
+   * changed. The field cannot be set for regional public delegated prefixes. The supported values
+   * are: - APPLICATION_AND_PROXY_LOAD_BALANCERS: The global public delegated prefix can only be
+   * used by Global External Application and Proxy Load Balancers to allocate addresses for
+   * forwarding rules. This is the default value. - PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0:
+   * The global public delegated prefix can only be used by Global External Passthrough Network Load
+   * Balancers to allocate Availability Group 0 addresses for forwarding rules. -
+   * PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1: The global public delegated prefix can only be
+   * used by Global External Passthrough Network Load Balancers to allocate Availability Group 1
+   * addresses for forwarding rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purpose;
+
+  /**
    * [Output Only] URL of the region where the public delegated prefix resides. This field applies
    * only to the region resource. You must specify this field as part of the HTTP request URL. It is
    * not settable as a field in the request body.
@@ -474,6 +492,45 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    */
   public PublicDelegatedPrefix setPublicDelegatedSubPrefixs(java.util.List<PublicDelegatedPrefixPublicDelegatedSubPrefix> publicDelegatedSubPrefixs) {
     this.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
+    return this;
+  }
+
+  /**
+   * The purpose of the public delegated prefix. This field can only be set for the top-level global
+   * public delegated prefix. It is an output-only field for the sub-delegates that inherit the
+   * value from the top-level global public delegated prefix. Once the value is set, it cannot be
+   * changed. The field cannot be set for regional public delegated prefixes. The supported values
+   * are: - APPLICATION_AND_PROXY_LOAD_BALANCERS: The global public delegated prefix can only be
+   * used by Global External Application and Proxy Load Balancers to allocate addresses for
+   * forwarding rules. This is the default value. - PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0:
+   * The global public delegated prefix can only be used by Global External Passthrough Network Load
+   * Balancers to allocate Availability Group 0 addresses for forwarding rules. -
+   * PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1: The global public delegated prefix can only be
+   * used by Global External Passthrough Network Load Balancers to allocate Availability Group 1
+   * addresses for forwarding rules.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurpose() {
+    return purpose;
+  }
+
+  /**
+   * The purpose of the public delegated prefix. This field can only be set for the top-level global
+   * public delegated prefix. It is an output-only field for the sub-delegates that inherit the
+   * value from the top-level global public delegated prefix. Once the value is set, it cannot be
+   * changed. The field cannot be set for regional public delegated prefixes. The supported values
+   * are: - APPLICATION_AND_PROXY_LOAD_BALANCERS: The global public delegated prefix can only be
+   * used by Global External Application and Proxy Load Balancers to allocate addresses for
+   * forwarding rules. This is the default value. - PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0:
+   * The global public delegated prefix can only be used by Global External Passthrough Network Load
+   * Balancers to allocate Availability Group 0 addresses for forwarding rules. -
+   * PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1: The global public delegated prefix can only be
+   * used by Global External Passthrough Network Load Balancers to allocate Availability Group 1
+   * addresses for forwarding rules.
+   * @param purpose purpose or {@code null} for none
+   */
+  public PublicDelegatedPrefix setPurpose(java.lang.String purpose) {
+    this.purpose = purpose;
     return this;
   }
 

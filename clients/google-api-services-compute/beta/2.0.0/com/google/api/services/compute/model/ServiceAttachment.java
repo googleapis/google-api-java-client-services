@@ -52,7 +52,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * Specifies which consumer projects or networks are allowed to connect to the service attachment.
    * Each project or network has a connection limit. A given service attachment can manage
    * connections at either the project or network level. Therefore, both the accept and reject lists
-   * for a given service attachment must contain either only projects or only networks.
+   * for a given service attachment must contain either only projects or only networks or only
+   * endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,6 +126,13 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Metadata of the service attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> metadata;
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
@@ -263,7 +271,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * Specifies which consumer projects or networks are allowed to connect to the service attachment.
    * Each project or network has a connection limit. A given service attachment can manage
    * connections at either the project or network level. Therefore, both the accept and reject lists
-   * for a given service attachment must contain either only projects or only networks.
+   * for a given service attachment must contain either only projects or only networks or only
+   * endpoints.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceAttachmentConsumerProjectLimit> getConsumerAcceptLists() {
@@ -274,7 +283,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * Specifies which consumer projects or networks are allowed to connect to the service attachment.
    * Each project or network has a connection limit. A given service attachment can manage
    * connections at either the project or network level. Therefore, both the accept and reject lists
-   * for a given service attachment must contain either only projects or only networks.
+   * for a given service attachment must contain either only projects or only networks or only
+   * endpoints.
    * @param consumerAcceptLists consumerAcceptLists or {@code null} for none
    */
   public ServiceAttachment setConsumerAcceptLists(java.util.List<ServiceAttachmentConsumerProjectLimit> consumerAcceptLists) {
@@ -475,6 +485,23 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Metadata of the service attachment.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata of the service attachment.
+   * @param metadata metadata or {@code null} for none
+   */
+  public ServiceAttachment setMetadata(java.util.Map<String, java.lang.String> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

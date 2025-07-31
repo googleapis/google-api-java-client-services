@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google.api.client.json.GenericJson {
 
   /**
+   * Grounding chunk from Google Maps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GroundingChunkMaps maps;
+
+  /**
    * Grounding chunk from context retrieved by the retrieval tools.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GroundingChunkWeb web;
+
+  /**
+   * Grounding chunk from Google Maps.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingChunkMaps getMaps() {
+    return maps;
+  }
+
+  /**
+   * Grounding chunk from Google Maps.
+   * @param maps maps or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingChunk setMaps(GoogleCloudAiplatformV1beta1GroundingChunkMaps maps) {
+    this.maps = maps;
+    return this;
+  }
 
   /**
    * Grounding chunk from context retrieved by the retrieval tools.

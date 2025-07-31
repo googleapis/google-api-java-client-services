@@ -53,6 +53,13 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.
   private java.lang.String trainingDatasetUri;
 
   /**
+   * Tuning mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tuningMode;
+
+  /**
    * Optional. Validation dataset used for tuning. The dataset can be specified as either a Cloud
    * Storage path to a JSONL file or as the resource name of a Vertex Multimodal Dataset.
    * The value may be {@code null}.
@@ -112,6 +119,23 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.
    */
   public GoogleCloudAiplatformV1beta1SupervisedTuningSpec setTrainingDatasetUri(java.lang.String trainingDatasetUri) {
     this.trainingDatasetUri = trainingDatasetUri;
+    return this;
+  }
+
+  /**
+   * Tuning mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTuningMode() {
+    return tuningMode;
+  }
+
+  /**
+   * Tuning mode.
+   * @param tuningMode tuningMode or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SupervisedTuningSpec setTuningMode(java.lang.String tuningMode) {
+    this.tuningMode = tuningMode;
     return this;
   }
 

@@ -30,11 +30,38 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1CreateEndpointOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The deployment stage of the model. Only populated if this CreateEndpoint request
+   * deploys a model at the same time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentStage;
+
+  /**
    * The operation generic information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1GenericOperationMetadata genericMetadata;
+
+  /**
+   * Output only. The deployment stage of the model. Only populated if this CreateEndpoint request
+   * deploys a model at the same time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentStage() {
+    return deploymentStage;
+  }
+
+  /**
+   * Output only. The deployment stage of the model. Only populated if this CreateEndpoint request
+   * deploys a model at the same time.
+   * @param deploymentStage deploymentStage or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CreateEndpointOperationMetadata setDeploymentStage(java.lang.String deploymentStage) {
+    this.deploymentStage = deploymentStage;
+    return this;
+  }
 
   /**
    * The operation generic information.

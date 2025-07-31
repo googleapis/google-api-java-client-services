@@ -60,7 +60,7 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
    * the next turn. Based on the function responses, Model will generate the final response back to
-   * the user. Maximum 128 function declarations can be provided.
+   * the user. Maximum 512 function declarations can be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,6 +71,13 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1FunctionDeclaration.class);
   }
+
+  /**
+   * Optional. GoogleMaps tool type. Tool to support Google Maps in Model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GoogleMaps googleMaps;
 
   /**
    * Optional. GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
@@ -163,7 +170,7 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
    * the next turn. Based on the function responses, Model will generate the final response back to
-   * the user. Maximum 128 function declarations can be provided.
+   * the user. Maximum 512 function declarations can be provided.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1FunctionDeclaration> getFunctionDeclarations() {
@@ -175,11 +182,28 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
    * the next turn. Based on the function responses, Model will generate the final response back to
-   * the user. Maximum 128 function declarations can be provided.
+   * the user. Maximum 512 function declarations can be provided.
    * @param functionDeclarations functionDeclarations or {@code null} for none
    */
   public GoogleCloudAiplatformV1Tool setFunctionDeclarations(java.util.List<GoogleCloudAiplatformV1FunctionDeclaration> functionDeclarations) {
     this.functionDeclarations = functionDeclarations;
+    return this;
+  }
+
+  /**
+   * Optional. GoogleMaps tool type. Tool to support Google Maps in Model.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GoogleMaps getGoogleMaps() {
+    return googleMaps;
+  }
+
+  /**
+   * Optional. GoogleMaps tool type. Tool to support Google Maps in Model.
+   * @param googleMaps googleMaps or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Tool setGoogleMaps(GoogleCloudAiplatformV1GoogleMaps googleMaps) {
+    this.googleMaps = googleMaps;
     return this;
   }
 

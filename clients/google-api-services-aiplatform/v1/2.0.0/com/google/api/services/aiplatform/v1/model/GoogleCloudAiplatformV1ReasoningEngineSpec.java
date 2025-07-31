@@ -61,6 +61,16 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   private GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec packageSpec;
 
   /**
+   * Optional. The service account that the Reasoning Engine artifact runs as. It should have
+   * "roles/storage.objectViewer" for reading the user project's Cloud Storage and
+   * "roles/aiplatform.user" for using Vertex extensions. If not specified, the Vertex AI Reasoning
+   * Engine Service Agent in the project will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Optional. The OSS agent framework used to develop the agent. Currently supported values:
    * "google-adk", "langchain", "langgraph", "ag2", "llama-index", "custom".
    * @return value or {@code null} for none
@@ -131,6 +141,29 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpec setPackageSpec(GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec packageSpec) {
     this.packageSpec = packageSpec;
+    return this;
+  }
+
+  /**
+   * Optional. The service account that the Reasoning Engine artifact runs as. It should have
+   * "roles/storage.objectViewer" for reading the user project's Cloud Storage and
+   * "roles/aiplatform.user" for using Vertex extensions. If not specified, the Vertex AI Reasoning
+   * Engine Service Agent in the project will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account that the Reasoning Engine artifact runs as. It should have
+   * "roles/storage.objectViewer" for reading the user project's Cloud Storage and
+   * "roles/aiplatform.user" for using Vertex extensions. If not specified, the Vertex AI Reasoning
+   * Engine Service Agent in the project will be used.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpec setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

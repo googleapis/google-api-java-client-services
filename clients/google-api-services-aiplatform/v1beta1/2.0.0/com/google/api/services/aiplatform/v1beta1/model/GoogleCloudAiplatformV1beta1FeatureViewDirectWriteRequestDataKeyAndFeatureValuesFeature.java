@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewDirectWriteRequestData
   private java.lang.String name;
 
   /**
+   * Feature value. A user provided timestamp may be set in the
+   * `FeatureValue.metadata.generate_time` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FeatureValue value;
+
+  /**
    * Feature value and timestamp.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewDirectWriteRequestData
    */
   public GoogleCloudAiplatformV1beta1FeatureViewDirectWriteRequestDataKeyAndFeatureValuesFeature setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Feature value. A user provided timestamp may be set in the
+   * `FeatureValue.metadata.generate_time` field.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureValue getValue() {
+    return value;
+  }
+
+  /**
+   * Feature value. A user provided timestamp may be set in the
+   * `FeatureValue.metadata.generate_time` field.
+   * @param value value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureViewDirectWriteRequestDataKeyAndFeatureValuesFeature setValue(GoogleCloudAiplatformV1beta1FeatureValue value) {
+    this.value = value;
     return this;
   }
 

@@ -47,11 +47,9 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
    * user) - [App authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-   * with the `chat.app.spaces` scope in [Developer
-   * Preview](https://developers.google.com/workspace/preview). This field is not populated when
-   * using the `chat.bot` scope with [app
-   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-   * Setting the target audience requires [user
+   * with the `chat.app.spaces` scope. This field is not populated when using the `chat.bot` scope
+   * with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
+   * chat-app). Setting the target audience requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * The value may be {@code null}.
    */
@@ -86,11 +84,9 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
    * user) - [App authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-   * with the `chat.app.spaces` scope in [Developer
-   * Preview](https://developers.google.com/workspace/preview). This field is not populated when
-   * using the `chat.bot` scope with [app
-   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-   * Setting the target audience requires [user
+   * with the `chat.app.spaces` scope. This field is not populated when using the `chat.bot` scope
+   * with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
+   * chat-app). Setting the target audience requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * @return value or {@code null} for none
    */
@@ -109,11 +105,9 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
    * user) - [App authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-   * with the `chat.app.spaces` scope in [Developer
-   * Preview](https://developers.google.com/workspace/preview). This field is not populated when
-   * using the `chat.bot` scope with [app
-   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
-   * Setting the target audience requires [user
+   * with the `chat.app.spaces` scope. This field is not populated when using the `chat.bot` scope
+   * with [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
+   * chat-app). Setting the target audience requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * @param audience audience or {@code null} for none
    */

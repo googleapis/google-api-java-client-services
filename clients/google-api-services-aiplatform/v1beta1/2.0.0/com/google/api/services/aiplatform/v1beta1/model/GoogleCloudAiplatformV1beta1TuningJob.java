@@ -45,6 +45,17 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private String createTime;
 
   /**
+   * Optional. The user-provided path to custom model weights. Set this field to tune a custom
+   * model. The path must be a Cloud Storage directory that contains the model weights in
+   * .safetensors format along with associated model metadata files. If this field is set, the
+   * base_model field must still be set to indicate which base model the custom model is derived
+   * from. This feature is only available for open source models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customBaseModel;
+
+  /**
    * Optional. The description of the TuningJob.
    * The value may be {@code null}.
    */
@@ -106,6 +117,14 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Cloud Storage path to the directory where tuning job outputs are written to. This
+   * field is only available and required for open source models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outputUri;
 
   /**
    * Tuning Spec for open sourced and third party Partner models.
@@ -230,6 +249,31 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The user-provided path to custom model weights. Set this field to tune a custom
+   * model. The path must be a Cloud Storage directory that contains the model weights in
+   * .safetensors format along with associated model metadata files. If this field is set, the
+   * base_model field must still be set to indicate which base model the custom model is derived
+   * from. This feature is only available for open source models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomBaseModel() {
+    return customBaseModel;
+  }
+
+  /**
+   * Optional. The user-provided path to custom model weights. Set this field to tune a custom
+   * model. The path must be a Cloud Storage directory that contains the model weights in
+   * .safetensors format along with associated model metadata files. If this field is set, the
+   * base_model field must still be set to indicate which base model the custom model is derived
+   * from. This feature is only available for open source models.
+   * @param customBaseModel customBaseModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setCustomBaseModel(java.lang.String customBaseModel) {
+    this.customBaseModel = customBaseModel;
     return this;
   }
 
@@ -380,6 +424,25 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Cloud Storage path to the directory where tuning job outputs are written to. This
+   * field is only available and required for open source models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutputUri() {
+    return outputUri;
+  }
+
+  /**
+   * Optional. Cloud Storage path to the directory where tuning job outputs are written to. This
+   * field is only available and required for open source models.
+   * @param outputUri outputUri or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setOutputUri(java.lang.String outputUri) {
+    this.outputUri = outputUri;
     return this;
   }
 

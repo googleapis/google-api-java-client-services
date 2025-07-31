@@ -30,6 +30,15 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Output only. Resource name of the Google Maps widget context token to be used with
+   * the PlacesContextElement widget to render contextual data. This is populated only for Google
+   * Maps grounding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String googleMapsWidgetContextToken;
+
+  /**
    * List of supporting references retrieved from specified grounding source.
    * The value may be {@code null}.
    */
@@ -69,6 +78,27 @@ public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> webSearchQueries;
+
+  /**
+   * Optional. Output only. Resource name of the Google Maps widget context token to be used with
+   * the PlacesContextElement widget to render contextual data. This is populated only for Google
+   * Maps grounding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGoogleMapsWidgetContextToken() {
+    return googleMapsWidgetContextToken;
+  }
+
+  /**
+   * Optional. Output only. Resource name of the Google Maps widget context token to be used with
+   * the PlacesContextElement widget to render contextual data. This is populated only for Google
+   * Maps grounding.
+   * @param googleMapsWidgetContextToken googleMapsWidgetContextToken or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingMetadata setGoogleMapsWidgetContextToken(java.lang.String googleMapsWidgetContextToken) {
+    this.googleMapsWidgetContextToken = googleMapsWidgetContextToken;
+    return this;
+  }
 
   /**
    * List of supporting references retrieved from specified grounding source.

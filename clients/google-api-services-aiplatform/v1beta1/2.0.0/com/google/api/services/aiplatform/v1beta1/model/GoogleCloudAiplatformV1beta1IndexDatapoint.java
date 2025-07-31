@@ -45,6 +45,13 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
   private java.lang.String datapointId;
 
   /**
+   * Optional. The key-value map of additional metadata for the datapoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> embeddingMetadata;
+
+  /**
    * Required. Feature embedding vector for dense index. An array of numbers with the length of
    * [NearestNeighborSearchConfig.dimensions].
    * The value may be {@code null}.
@@ -110,6 +117,23 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
    */
   public GoogleCloudAiplatformV1beta1IndexDatapoint setDatapointId(java.lang.String datapointId) {
     this.datapointId = datapointId;
+    return this;
+  }
+
+  /**
+   * Optional. The key-value map of additional metadata for the datapoint.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getEmbeddingMetadata() {
+    return embeddingMetadata;
+  }
+
+  /**
+   * Optional. The key-value map of additional metadata for the datapoint.
+   * @param embeddingMetadata embeddingMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1IndexDatapoint setEmbeddingMetadata(java.util.Map<String, java.lang.Object> embeddingMetadata) {
+    this.embeddingMetadata = embeddingMetadata;
     return this;
   }
 

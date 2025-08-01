@@ -14810,7 +14810,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
       public class SecurityGateways {
 
         /**
-         * Creates a new SecurityGateway in a given project and location.
+         * Creates a new Security Gateway in a given project and location.
          *
          * Create a request for the method "securityGateways.create".
          *
@@ -14836,7 +14836,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new SecurityGateway in a given project and location.
+           * Creates a new Security Gateway in a given project and location.
            *
            * Create a request for the method "securityGateways.create".
            *
@@ -14946,16 +14946,16 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore request if it has
-           * already been completed. The server will guarantee that for at least 60 minutes since
-           * the first request.
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore request if it has already been completed.
-         The server will guarantee that for at least 60 minutes since the first request.
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -14963,9 +14963,9 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore request if it has
-           * already been completed. The server will guarantee that for at least 60 minutes since
-           * the first request.
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request.
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -16502,7 +16502,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes a single Application.
+           * Deletes a single application.
            *
            * Create a request for the method "applications.delete".
            *
@@ -16526,7 +16526,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+/applications/[^/]+$");
 
             /**
-             * Deletes a single Application.
+             * Deletes a single application.
              *
              * Create a request for the method "applications.delete".
              *

@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1alpha.model;
 
 /**
- * A Beyondcorp Application resource information.
+ * The information about an application resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
   private String createTime;
 
   /**
-   * Optional. An arbitrary user-provided name for the Application resource. Cannot exceed 64
+   * Optional. An arbitrary user-provided name for the application resource. Cannot exceed 64
    * characters.
    * The value may be {@code null}.
    */
@@ -46,11 +46,11 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
 
   /**
    * Required. Endpoint matchers associated with an application. A combination of hostname and ports
-   * as endpoint matcher is used to match the application. Match conditions for OR logic. An array
+   * as endpoint matchers is used to match the application. Match conditions for OR logic. An array
    * of match conditions to allow for multiple matching criteria. The rule is considered a match if
-   * one the conditions are met. The conditions can be one of the following combination (Hostname),
-   * (Hostname & Ports) EXAMPLES: Hostname - ("*.abc.com"), ("xyz.abc.com") Hostname and Ports -
-   * ("abc.com" and "22"), ("abc.com" and "22,33") etc
+   * one of the conditions is met. The conditions can be one of the following combinations
+   * (Hostname), (Hostname & Ports) EXAMPLES: Hostname - ("*.example.com"), ("xyz.example.com")
+   * Hostname and Ports - ("example.com" and "22"), ("example.com" and "22,33") etc
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
   }
 
   /**
-   * Optional. An arbitrary user-provided name for the Application resource. Cannot exceed 64
+   * Optional. An arbitrary user-provided name for the application resource. Cannot exceed 64
    * characters.
    * @return value or {@code null} for none
    */
@@ -104,7 +104,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
   }
 
   /**
-   * Optional. An arbitrary user-provided name for the Application resource. Cannot exceed 64
+   * Optional. An arbitrary user-provided name for the application resource. Cannot exceed 64
    * characters.
    * @param displayName displayName or {@code null} for none
    */
@@ -115,11 +115,11 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
 
   /**
    * Required. Endpoint matchers associated with an application. A combination of hostname and ports
-   * as endpoint matcher is used to match the application. Match conditions for OR logic. An array
+   * as endpoint matchers is used to match the application. Match conditions for OR logic. An array
    * of match conditions to allow for multiple matching criteria. The rule is considered a match if
-   * one the conditions are met. The conditions can be one of the following combination (Hostname),
-   * (Hostname & Ports) EXAMPLES: Hostname - ("*.abc.com"), ("xyz.abc.com") Hostname and Ports -
-   * ("abc.com" and "22"), ("abc.com" and "22,33") etc
+   * one of the conditions is met. The conditions can be one of the following combinations
+   * (Hostname), (Hostname & Ports) EXAMPLES: Hostname - ("*.example.com"), ("xyz.example.com")
+   * Hostname and Ports - ("example.com" and "22"), ("example.com" and "22,33") etc
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher> getEndpointMatchers() {
@@ -128,11 +128,11 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
 
   /**
    * Required. Endpoint matchers associated with an application. A combination of hostname and ports
-   * as endpoint matcher is used to match the application. Match conditions for OR logic. An array
+   * as endpoint matchers is used to match the application. Match conditions for OR logic. An array
    * of match conditions to allow for multiple matching criteria. The rule is considered a match if
-   * one the conditions are met. The conditions can be one of the following combination (Hostname),
-   * (Hostname & Ports) EXAMPLES: Hostname - ("*.abc.com"), ("xyz.abc.com") Hostname and Ports -
-   * ("abc.com" and "22"), ("abc.com" and "22,33") etc
+   * one of the conditions is met. The conditions can be one of the following combinations
+   * (Hostname), (Hostname & Ports) EXAMPLES: Hostname - ("*.example.com"), ("xyz.example.com")
+   * Hostname and Ports - ("example.com" and "22"), ("example.com" and "22,33") etc
    * @param endpointMatchers endpointMatchers or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication setEndpointMatchers(java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher> endpointMatchers) {

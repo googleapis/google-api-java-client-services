@@ -253,6 +253,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String stateReason;
 
   /**
+   * Output only. Information about the troubleshooting steps which will provide debugging
+   * information to the end users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TroubleshootingInfo troubleshootingInfo;
+
+  /**
    * Output only. Server generated global unique identifier of
    * [UUID4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
    * The value may be {@code null}.
@@ -797,6 +805,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setStateReason(java.lang.String stateReason) {
     this.stateReason = stateReason;
+    return this;
+  }
+
+  /**
+   * Output only. Information about the troubleshooting steps which will provide debugging
+   * information to the end users.
+   * @return value or {@code null} for none
+   */
+  public TroubleshootingInfo getTroubleshootingInfo() {
+    return troubleshootingInfo;
+  }
+
+  /**
+   * Output only. Information about the troubleshooting steps which will provide debugging
+   * information to the end users.
+   * @param troubleshootingInfo troubleshootingInfo or {@code null} for none
+   */
+  public Backup setTroubleshootingInfo(TroubleshootingInfo troubleshootingInfo) {
+    this.troubleshootingInfo = troubleshootingInfo;
     return this;
   }
 

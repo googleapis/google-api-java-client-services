@@ -18,7 +18,7 @@ package com.google.api.services.backupdr.v1.model;
 
 /**
  * CloudSqlInstanceDataSourceReferenceProperties represents the properties of a Cloud SQL resource
- * that are stored in the DataSourceReference. .
+ * that are stored in the DataSourceReference.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation

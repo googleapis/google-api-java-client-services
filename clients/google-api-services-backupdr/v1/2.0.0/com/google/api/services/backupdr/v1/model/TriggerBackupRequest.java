@@ -45,7 +45,8 @@ public final class TriggerBackupRequest extends com.google.api.client.json.Gener
   private java.lang.String requestId;
 
   /**
-   * Required. backup rule_id for which a backup needs to be triggered.
+   * Optional. backup rule_id for which a backup needs to be triggered. If not specified, on-demand
+   * backup with custom retention will be triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +84,8 @@ public final class TriggerBackupRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. backup rule_id for which a backup needs to be triggered.
+   * Optional. backup rule_id for which a backup needs to be triggered. If not specified, on-demand
+   * backup with custom retention will be triggered.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuleId() {
@@ -91,7 +93,8 @@ public final class TriggerBackupRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. backup rule_id for which a backup needs to be triggered.
+   * Optional. backup rule_id for which a backup needs to be triggered. If not specified, on-demand
+   * backup with custom retention will be triggered.
    * @param ruleId ruleId or {@code null} for none
    */
   public TriggerBackupRequest setRuleId(java.lang.String ruleId) {

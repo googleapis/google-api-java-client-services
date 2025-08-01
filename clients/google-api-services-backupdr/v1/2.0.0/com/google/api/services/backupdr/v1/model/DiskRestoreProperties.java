@@ -93,7 +93,7 @@ public final class DiskRestoreProperties extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> licenses;
 
   /**
-   * Required. Name of the disk..
+   * Required. Name of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,7 +308,7 @@ public final class DiskRestoreProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Name of the disk..
+   * Required. Name of the disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -316,7 +316,7 @@ public final class DiskRestoreProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Name of the disk..
+   * Required. Name of the disk.
    * @param name name or {@code null} for none
    */
   public DiskRestoreProperties setName(java.lang.String name) {

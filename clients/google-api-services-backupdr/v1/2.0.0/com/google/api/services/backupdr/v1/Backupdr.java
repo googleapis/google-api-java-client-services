@@ -1580,7 +1580,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Update a BackupPlanAssociation
+         * Update a BackupPlanAssociation.
          *
          * Create a request for the method "backupPlanAssociations.patch".
          *
@@ -1606,7 +1606,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
 
           /**
-           * Update a BackupPlanAssociation
+           * Update a BackupPlanAssociation.
            *
            * Create a request for the method "backupPlanAssociations.patch".
            *
@@ -2747,7 +2747,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Update a BackupPlan
+         * Update a BackupPlan.
          *
          * Create a request for the method "backupPlans.patch".
          *
@@ -2773,7 +2773,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
 
           /**
-           * Update a BackupPlan
+           * Update a BackupPlan.
            *
            * Create a request for the method "backupPlans.patch".
            *

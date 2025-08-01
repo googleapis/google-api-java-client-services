@@ -17,7 +17,7 @@
 package com.google.api.services.backupdr.v1.model;
 
 /**
- * CloudSqlInstanceBackupProperties represents Cloud SQL Instance Backup properties. .
+ * CloudSqlInstanceBackupProperties represents Cloud SQL Instance Backup properties.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation

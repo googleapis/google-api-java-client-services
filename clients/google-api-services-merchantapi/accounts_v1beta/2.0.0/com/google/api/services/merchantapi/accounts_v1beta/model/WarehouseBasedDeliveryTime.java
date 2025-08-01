@@ -49,8 +49,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   private java.lang.String carrierService;
 
   /**
-   * Required. Warehouse name. This should match
-   * [warehouse](/merchant/api/reference/rest/accounts_v1beta/accounts.shippingSettings#warehouse)
+   * Required. Warehouse name. This should match warehouse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +96,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Warehouse name. This should match
-   * [warehouse](/merchant/api/reference/rest/accounts_v1beta/accounts.shippingSettings#warehouse)
+   * Required. Warehouse name. This should match warehouse.
    * @return value or {@code null} for none
    */
   public java.lang.String getWarehouse() {
@@ -106,8 +104,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Warehouse name. This should match
-   * [warehouse](/merchant/api/reference/rest/accounts_v1beta/accounts.shippingSettings#warehouse)
+   * Required. Warehouse name. This should match warehouse.
    * @param warehouse warehouse or {@code null} for none
    */
   public WarehouseBasedDeliveryTime setWarehouse(java.lang.String warehouse) {

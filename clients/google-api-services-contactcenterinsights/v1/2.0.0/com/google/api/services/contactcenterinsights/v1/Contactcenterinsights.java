@@ -3264,7 +3264,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
            * Optional. A unique ID for the new AuthorizedViewSet. This ID will become the final
            * component of the AuthorizedViewSet's resource name. If no ID is specified, a server-
            * generated ID will be used. This value should be 4-64 characters and must match the
-           * regular expression `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See go/aip/122#resource-id-
+           * regular expression `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See aip.dev/122#resource-id-
            * segments
            */
           @com.google.api.client.util.Key
@@ -3273,7 +3273,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           /** Optional. A unique ID for the new AuthorizedViewSet. This ID will become the final component of the
          AuthorizedViewSet's resource name. If no ID is specified, a server-generated ID will be used. This
          value should be 4-64 characters and must match the regular expression
-         `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See go/aip/122#resource-id-segments
+         `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See aip.dev/122#resource-id-segments
            */
           public java.lang.String getAuthorizedViewSetId() {
             return authorizedViewSetId;
@@ -3283,7 +3283,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
            * Optional. A unique ID for the new AuthorizedViewSet. This ID will become the final
            * component of the AuthorizedViewSet's resource name. If no ID is specified, a server-
            * generated ID will be used. This value should be 4-64 characters and must match the
-           * regular expression `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See go/aip/122#resource-id-
+           * regular expression `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See aip.dev/122#resource-id-
            * segments
            */
           public Create setAuthorizedViewSetId(java.lang.String authorizedViewSetId) {
@@ -4136,7 +4136,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
              * Optional. A unique ID for the new AuthorizedView. This ID will become the final
              * component of the AuthorizedView's resource name. If no ID is specified, a server-
              * generated ID will be used. This value should be 4-64 characters and must match the
-             * regular expression `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See go/aip/122#resource-id-
+             * regular expression `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See aip.dev/122#resource-id-
              * segments
              */
             @com.google.api.client.util.Key
@@ -4145,7 +4145,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             /** Optional. A unique ID for the new AuthorizedView. This ID will become the final component of the
            AuthorizedView's resource name. If no ID is specified, a server-generated ID will be used. This
            value should be 4-64 characters and must match the regular expression
-           `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See go/aip/122#resource-id-segments
+           `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See aip.dev/122#resource-id-segments
              */
             public java.lang.String getAuthorizedViewId() {
               return authorizedViewId;
@@ -4155,7 +4155,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
              * Optional. A unique ID for the new AuthorizedView. This ID will become the final
              * component of the AuthorizedView's resource name. If no ID is specified, a server-
              * generated ID will be used. This value should be 4-64 characters and must match the
-             * regular expression `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See go/aip/122#resource-id-
+             * regular expression `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See aip.dev/122#resource-id-
              * segments
              */
             public Create setAuthorizedViewId(java.lang.String authorizedViewId) {

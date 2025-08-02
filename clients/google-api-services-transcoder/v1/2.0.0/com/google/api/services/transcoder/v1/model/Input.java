@@ -30,6 +30,13 @@ package com.google.api.services.transcoder.v1.model;
 public final class Input extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Input Attributes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InputAttributes attributes;
+
+  /**
    * A unique key for this input. Must be specified when using advanced mapping and edit lists.
    * The value may be {@code null}.
    */
@@ -52,6 +59,23 @@ public final class Input extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Optional. Input Attributes.
+   * @return value or {@code null} for none
+   */
+  public InputAttributes getAttributes() {
+    return attributes;
+  }
+
+  /**
+   * Optional. Input Attributes.
+   * @param attributes attributes or {@code null} for none
+   */
+  public Input setAttributes(InputAttributes attributes) {
+    this.attributes = attributes;
+    return this;
+  }
 
   /**
    * A unique key for this input. Must be specified when using advanced mapping and edit lists.

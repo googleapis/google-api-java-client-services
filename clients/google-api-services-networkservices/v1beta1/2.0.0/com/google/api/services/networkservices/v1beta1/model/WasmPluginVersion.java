@@ -45,19 +45,27 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
-   * Output only. The resolved digest for the image specified in the `image` field. The digest is
-   * resolved during the creation of `WasmPluginVersion` resource. This field holds the digest
-   * value, regardless of whether a tag or digest was originally specified in the `image` field.
+   * Output only. This field holds the digest (usually checksum) value for the plugin image. The
+   * value is calculated based on the `image_uri` field. If the `image_uri` field refers to a
+   * container image, the digest value is obtained from the container image. If the `image_uri`
+   * field refers to a generic artifact, the digest value is calculated based on the contents of the
+   * file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageDigest;
 
   /**
-   * Optional. URI of the container image containing the plugin, stored in the Artifact Registry.
-   * When a new `WasmPluginVersion` resource is created, the digest of the container image is saved
-   * in the `image_digest` field. When downloading an image, the digest value is used instead of an
-   * image tag.
+   * Optional. URI of the image containing the Wasm module, stored in Artifact Registry. The URI can
+   * refer to one of the following repository formats: * Container images: the `image_uri` must
+   * point to a container that contains a single file with the name `plugin.wasm`. When a new
+   * `WasmPluginVersion` resource is created, the digest of the image is saved in the `image_digest`
+   * field. When pulling a container image from Artifact Registry, the digest value is used instead
+   * of an image tag. * Generic artifacts: the `image_uri` must be in this format:
+   * `projects/{project}/locations/{location}/repositories/{repository}/
+   * genericArtifacts/{package}:{version}`. The specified package and version must contain a file
+   * with the name `plugin.wasm`. When a new `WasmPluginVersion` resource is created, the checksum
+   * of the contents of the file is saved in the `image_digest` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +98,7 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
 
   /**
    * Output only. This field holds the digest (usually checksum) value for the plugin configuration.
-   * The value is calculated based on the contents of `plugin_config_data` or the container image
+   * The value is calculated based on the contents of `plugin_config_data` field or the image
    * defined by the `plugin_config_uri` field.
    * The value may be {@code null}.
    */
@@ -99,9 +107,16 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
 
   /**
    * URI of the plugin configuration stored in the Artifact Registry. The configuration is provided
-   * to the plugin at runtime through the `ON_CONFIGURE` callback. The container image must contain
-   * only a single file with the name `plugin.config`. When a new `WasmPluginVersion` resource is
-   * created, the digest of the container image is saved in the `plugin_config_digest` field.
+   * to the plugin at runtime through the `ON_CONFIGURE` callback. The URI can refer to one of the
+   * following repository formats: * Container images: the `plugin_config_uri` must point to a
+   * container that contains a single file with the name `plugin.config`. When a new
+   * `WasmPluginVersion` resource is created, the digest of the image is saved in the
+   * `plugin_config_digest` field. When pulling a container image from Artifact Registry, the digest
+   * value is used instead of an image tag. * Generic artifacts: the `plugin_config_uri` must be in
+   * this format: `projects/{project}/locations/{location}/repositories/{repository}/
+   * genericArtifacts/{package}:{version}`. The specified package and version must contain a file
+   * with the name `plugin.config`. When a new `WasmPluginVersion` resource is created, the checksum
+   * of the contents of the file is saved in the `plugin_config_digest` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,9 +164,11 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The resolved digest for the image specified in the `image` field. The digest is
-   * resolved during the creation of `WasmPluginVersion` resource. This field holds the digest
-   * value, regardless of whether a tag or digest was originally specified in the `image` field.
+   * Output only. This field holds the digest (usually checksum) value for the plugin image. The
+   * value is calculated based on the `image_uri` field. If the `image_uri` field refers to a
+   * container image, the digest value is obtained from the container image. If the `image_uri`
+   * field refers to a generic artifact, the digest value is calculated based on the contents of the
+   * file.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageDigest() {
@@ -159,9 +176,11 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The resolved digest for the image specified in the `image` field. The digest is
-   * resolved during the creation of `WasmPluginVersion` resource. This field holds the digest
-   * value, regardless of whether a tag or digest was originally specified in the `image` field.
+   * Output only. This field holds the digest (usually checksum) value for the plugin image. The
+   * value is calculated based on the `image_uri` field. If the `image_uri` field refers to a
+   * container image, the digest value is obtained from the container image. If the `image_uri`
+   * field refers to a generic artifact, the digest value is calculated based on the contents of the
+   * file.
    * @param imageDigest imageDigest or {@code null} for none
    */
   public WasmPluginVersion setImageDigest(java.lang.String imageDigest) {
@@ -170,10 +189,16 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. URI of the container image containing the plugin, stored in the Artifact Registry.
-   * When a new `WasmPluginVersion` resource is created, the digest of the container image is saved
-   * in the `image_digest` field. When downloading an image, the digest value is used instead of an
-   * image tag.
+   * Optional. URI of the image containing the Wasm module, stored in Artifact Registry. The URI can
+   * refer to one of the following repository formats: * Container images: the `image_uri` must
+   * point to a container that contains a single file with the name `plugin.wasm`. When a new
+   * `WasmPluginVersion` resource is created, the digest of the image is saved in the `image_digest`
+   * field. When pulling a container image from Artifact Registry, the digest value is used instead
+   * of an image tag. * Generic artifacts: the `image_uri` must be in this format:
+   * `projects/{project}/locations/{location}/repositories/{repository}/
+   * genericArtifacts/{package}:{version}`. The specified package and version must contain a file
+   * with the name `plugin.wasm`. When a new `WasmPluginVersion` resource is created, the checksum
+   * of the contents of the file is saved in the `image_digest` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -181,10 +206,16 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. URI of the container image containing the plugin, stored in the Artifact Registry.
-   * When a new `WasmPluginVersion` resource is created, the digest of the container image is saved
-   * in the `image_digest` field. When downloading an image, the digest value is used instead of an
-   * image tag.
+   * Optional. URI of the image containing the Wasm module, stored in Artifact Registry. The URI can
+   * refer to one of the following repository formats: * Container images: the `image_uri` must
+   * point to a container that contains a single file with the name `plugin.wasm`. When a new
+   * `WasmPluginVersion` resource is created, the digest of the image is saved in the `image_digest`
+   * field. When pulling a container image from Artifact Registry, the digest value is used instead
+   * of an image tag. * Generic artifacts: the `image_uri` must be in this format:
+   * `projects/{project}/locations/{location}/repositories/{repository}/
+   * genericArtifacts/{package}:{version}`. The specified package and version must contain a file
+   * with the name `plugin.wasm`. When a new `WasmPluginVersion` resource is created, the checksum
+   * of the contents of the file is saved in the `image_digest` field.
    * @param imageUri imageUri or {@code null} for none
    */
   public WasmPluginVersion setImageUri(java.lang.String imageUri) {
@@ -285,7 +316,7 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
 
   /**
    * Output only. This field holds the digest (usually checksum) value for the plugin configuration.
-   * The value is calculated based on the contents of `plugin_config_data` or the container image
+   * The value is calculated based on the contents of `plugin_config_data` field or the image
    * defined by the `plugin_config_uri` field.
    * @return value or {@code null} for none
    */
@@ -295,7 +326,7 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
 
   /**
    * Output only. This field holds the digest (usually checksum) value for the plugin configuration.
-   * The value is calculated based on the contents of `plugin_config_data` or the container image
+   * The value is calculated based on the contents of `plugin_config_data` field or the image
    * defined by the `plugin_config_uri` field.
    * @param pluginConfigDigest pluginConfigDigest or {@code null} for none
    */
@@ -306,9 +337,16 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
 
   /**
    * URI of the plugin configuration stored in the Artifact Registry. The configuration is provided
-   * to the plugin at runtime through the `ON_CONFIGURE` callback. The container image must contain
-   * only a single file with the name `plugin.config`. When a new `WasmPluginVersion` resource is
-   * created, the digest of the container image is saved in the `plugin_config_digest` field.
+   * to the plugin at runtime through the `ON_CONFIGURE` callback. The URI can refer to one of the
+   * following repository formats: * Container images: the `plugin_config_uri` must point to a
+   * container that contains a single file with the name `plugin.config`. When a new
+   * `WasmPluginVersion` resource is created, the digest of the image is saved in the
+   * `plugin_config_digest` field. When pulling a container image from Artifact Registry, the digest
+   * value is used instead of an image tag. * Generic artifacts: the `plugin_config_uri` must be in
+   * this format: `projects/{project}/locations/{location}/repositories/{repository}/
+   * genericArtifacts/{package}:{version}`. The specified package and version must contain a file
+   * with the name `plugin.config`. When a new `WasmPluginVersion` resource is created, the checksum
+   * of the contents of the file is saved in the `plugin_config_digest` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPluginConfigUri() {
@@ -317,9 +355,16 @@ public final class WasmPluginVersion extends com.google.api.client.json.GenericJ
 
   /**
    * URI of the plugin configuration stored in the Artifact Registry. The configuration is provided
-   * to the plugin at runtime through the `ON_CONFIGURE` callback. The container image must contain
-   * only a single file with the name `plugin.config`. When a new `WasmPluginVersion` resource is
-   * created, the digest of the container image is saved in the `plugin_config_digest` field.
+   * to the plugin at runtime through the `ON_CONFIGURE` callback. The URI can refer to one of the
+   * following repository formats: * Container images: the `plugin_config_uri` must point to a
+   * container that contains a single file with the name `plugin.config`. When a new
+   * `WasmPluginVersion` resource is created, the digest of the image is saved in the
+   * `plugin_config_digest` field. When pulling a container image from Artifact Registry, the digest
+   * value is used instead of an image tag. * Generic artifacts: the `plugin_config_uri` must be in
+   * this format: `projects/{project}/locations/{location}/repositories/{repository}/
+   * genericArtifacts/{package}:{version}`. The specified package and version must contain a file
+   * with the name `plugin.config`. When a new `WasmPluginVersion` resource is created, the checksum
+   * of the contents of the file is saved in the `plugin_config_digest` field.
    * @param pluginConfigUri pluginConfigUri or {@code null} for none
    */
   public WasmPluginVersion setPluginConfigUri(java.lang.String pluginConfigUri) {

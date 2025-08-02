@@ -2430,6 +2430,29 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Optional. The API output format for a timestamp. This offers more explicit control over the
+       * timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      @com.google.api.client.util.Key("formatOptions.timestampOutputFormat")
+      private java.lang.String formatOptionsTimestampOutputFormat;
+
+      /** Optional. The API output format for a timestamp. This offers more explicit control over the
+     timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      public java.lang.String getFormatOptionsTimestampOutputFormat() {
+        return formatOptionsTimestampOutputFormat;
+      }
+
+      /**
+       * Optional. The API output format for a timestamp. This offers more explicit control over the
+       * timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      public GetQueryResults setFormatOptionsTimestampOutputFormat(java.lang.String formatOptionsTimestampOutputFormat) {
+        this.formatOptionsTimestampOutputFormat = formatOptionsTimestampOutputFormat;
+        return this;
+      }
+
       /** Optional. Output timestamp as usec int64. Default is false. */
       @com.google.api.client.util.Key("formatOptions.useInt64Timestamp")
       private java.lang.Boolean formatOptionsUseInt64Timestamp;
@@ -7934,6 +7957,29 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
               "^[^/]+$");
         }
         this.tableId = tableId;
+        return this;
+      }
+
+      /**
+       * Optional. The API output format for a timestamp. This offers more explicit control over the
+       * timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      @com.google.api.client.util.Key("formatOptions.timestampOutputFormat")
+      private java.lang.String formatOptionsTimestampOutputFormat;
+
+      /** Optional. The API output format for a timestamp. This offers more explicit control over the
+     timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      public java.lang.String getFormatOptionsTimestampOutputFormat() {
+        return formatOptionsTimestampOutputFormat;
+      }
+
+      /**
+       * Optional. The API output format for a timestamp. This offers more explicit control over the
+       * timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      public List setFormatOptionsTimestampOutputFormat(java.lang.String formatOptionsTimestampOutputFormat) {
+        this.formatOptionsTimestampOutputFormat = formatOptionsTimestampOutputFormat;
         return this;
       }
 

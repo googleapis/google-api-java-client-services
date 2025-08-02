@@ -30,17 +30,20 @@ package com.google.api.services.bigquery.model;
 public final class ExternalRuntimeOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Amount of CPU provisioned for the container instance. If not specified, the default
-   * value is 0.33 vCPUs.
+   * Optional. Amount of CPU provisioned for a Python UDF container instance. For more information,
+   * see [Configure container limits for Python UDFs](https://cloud.google.com/bigquery/docs/user-
+   * defined-functions-python#configure-container-limits)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double containerCpu;
 
   /**
-   * Optional. Amount of memory provisioned for the container instance. Format: {number}{unit} where
-   * unit is one of "M", "G", "Mi" and "Gi" (e.g. 1G, 512Mi). If not specified, the default value is
-   * 512Mi.
+   * Optional. Amount of memory provisioned for a Python UDF container instance. Format:
+   * {number}{unit} where unit is one of "M", "G", "Mi" and "Gi" (e.g. 1G, 512Mi). If not specified,
+   * the default value is 512Mi. For more information, see [Configure container limits for Python
+   * UDFs](https://cloud.google.com/bigquery/docs/user-defined-functions-python#configure-container-
+   * limits)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,15 +67,16 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   private java.lang.String runtimeConnection;
 
   /**
-   * Optional. Language runtime version (e.g. python-3.11).
+   * Optional. Language runtime version. Example: `python-3.11`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String runtimeVersion;
 
   /**
-   * Optional. Amount of CPU provisioned for the container instance. If not specified, the default
-   * value is 0.33 vCPUs.
+   * Optional. Amount of CPU provisioned for a Python UDF container instance. For more information,
+   * see [Configure container limits for Python UDFs](https://cloud.google.com/bigquery/docs/user-
+   * defined-functions-python#configure-container-limits)
    * @return value or {@code null} for none
    */
   public java.lang.Double getContainerCpu() {
@@ -80,8 +84,9 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Amount of CPU provisioned for the container instance. If not specified, the default
-   * value is 0.33 vCPUs.
+   * Optional. Amount of CPU provisioned for a Python UDF container instance. For more information,
+   * see [Configure container limits for Python UDFs](https://cloud.google.com/bigquery/docs/user-
+   * defined-functions-python#configure-container-limits)
    * @param containerCpu containerCpu or {@code null} for none
    */
   public ExternalRuntimeOptions setContainerCpu(java.lang.Double containerCpu) {
@@ -90,9 +95,11 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Amount of memory provisioned for the container instance. Format: {number}{unit} where
-   * unit is one of "M", "G", "Mi" and "Gi" (e.g. 1G, 512Mi). If not specified, the default value is
-   * 512Mi.
+   * Optional. Amount of memory provisioned for a Python UDF container instance. Format:
+   * {number}{unit} where unit is one of "M", "G", "Mi" and "Gi" (e.g. 1G, 512Mi). If not specified,
+   * the default value is 512Mi. For more information, see [Configure container limits for Python
+   * UDFs](https://cloud.google.com/bigquery/docs/user-defined-functions-python#configure-container-
+   * limits)
    * @return value or {@code null} for none
    */
   public java.lang.String getContainerMemory() {
@@ -100,9 +107,11 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Amount of memory provisioned for the container instance. Format: {number}{unit} where
-   * unit is one of "M", "G", "Mi" and "Gi" (e.g. 1G, 512Mi). If not specified, the default value is
-   * 512Mi.
+   * Optional. Amount of memory provisioned for a Python UDF container instance. Format:
+   * {number}{unit} where unit is one of "M", "G", "Mi" and "Gi" (e.g. 1G, 512Mi). If not specified,
+   * the default value is 512Mi. For more information, see [Configure container limits for Python
+   * UDFs](https://cloud.google.com/bigquery/docs/user-defined-functions-python#configure-container-
+   * limits)
    * @param containerMemory containerMemory or {@code null} for none
    */
   public ExternalRuntimeOptions setContainerMemory(java.lang.String containerMemory) {
@@ -151,7 +160,7 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Language runtime version (e.g. python-3.11).
+   * Optional. Language runtime version. Example: `python-3.11`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -159,7 +168,7 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Language runtime version (e.g. python-3.11).
+   * Optional. Language runtime version. Example: `python-3.11`.
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public ExternalRuntimeOptions setRuntimeVersion(java.lang.String runtimeVersion) {

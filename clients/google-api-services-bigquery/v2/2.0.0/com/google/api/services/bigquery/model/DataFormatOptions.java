@@ -30,11 +30,38 @@ package com.google.api.services.bigquery.model;
 public final class DataFormatOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The API output format for a timestamp. This offers more explicit control over the
+   * timestamp output format as compared to the existing `use_int64_timestamp` option.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timestampOutputFormat;
+
+  /**
    * Optional. Output timestamp as usec int64. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useInt64Timestamp;
+
+  /**
+   * Optional. The API output format for a timestamp. This offers more explicit control over the
+   * timestamp output format as compared to the existing `use_int64_timestamp` option.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimestampOutputFormat() {
+    return timestampOutputFormat;
+  }
+
+  /**
+   * Optional. The API output format for a timestamp. This offers more explicit control over the
+   * timestamp output format as compared to the existing `use_int64_timestamp` option.
+   * @param timestampOutputFormat timestampOutputFormat or {@code null} for none
+   */
+  public DataFormatOptions setTimestampOutputFormat(java.lang.String timestampOutputFormat) {
+    this.timestampOutputFormat = timestampOutputFormat;
+    return this;
+  }
 
   /**
    * Optional. Output timestamp as usec int64. Default is false.

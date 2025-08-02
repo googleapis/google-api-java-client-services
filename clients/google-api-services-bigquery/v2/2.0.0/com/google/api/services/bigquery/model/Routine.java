@@ -125,8 +125,8 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.Long lastModifiedTime;
 
   /**
-   * Optional. Options for Python UDF. [Preview](https://cloud.google.com/products/#product-launch-
-   * stages)
+   * Optional. Options for the Python UDF. [Preview](https://cloud.google.com/products/#product-
+   * launch-stages)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -421,8 +421,8 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Options for Python UDF. [Preview](https://cloud.google.com/products/#product-launch-
-   * stages)
+   * Optional. Options for the Python UDF. [Preview](https://cloud.google.com/products/#product-
+   * launch-stages)
    * @return value or {@code null} for none
    */
   public PythonOptions getPythonOptions() {
@@ -430,8 +430,8 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Options for Python UDF. [Preview](https://cloud.google.com/products/#product-launch-
-   * stages)
+   * Optional. Options for the Python UDF. [Preview](https://cloud.google.com/products/#product-
+   * launch-stages)
    * @param pythonOptions pythonOptions or {@code null} for none
    */
   public Routine setPythonOptions(PythonOptions pythonOptions) {

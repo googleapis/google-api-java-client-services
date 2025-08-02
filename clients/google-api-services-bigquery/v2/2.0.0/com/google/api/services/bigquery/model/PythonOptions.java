@@ -30,22 +30,26 @@ package com.google.api.services.bigquery.model;
 public final class PythonOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The entry point function in the user's Python code.
+   * Required. The name of the function defined in Python code as the entry point when the Python
+   * UDF is invoked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entryPoint;
 
   /**
-   * Optional. A list of package names along with versions to be installed. Follows requirements.txt
-   * syntax (e.g. numpy==2.0, permutation, urllib3<2.2.1)
+   * Optional. A list of Python package names along with versions to be installed. Example:
+   * ["pandas>=2.1", "google-cloud-translate==3.11"]. For more information, see [Use third-party
+   * packages](https://cloud.google.com/bigquery/docs/user-defined-functions-python#third-party-
+   * packages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> packages;
 
   /**
-   * Required. The entry point function in the user's Python code.
+   * Required. The name of the function defined in Python code as the entry point when the Python
+   * UDF is invoked.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntryPoint() {
@@ -53,7 +57,8 @@ public final class PythonOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The entry point function in the user's Python code.
+   * Required. The name of the function defined in Python code as the entry point when the Python
+   * UDF is invoked.
    * @param entryPoint entryPoint or {@code null} for none
    */
   public PythonOptions setEntryPoint(java.lang.String entryPoint) {
@@ -62,8 +67,10 @@ public final class PythonOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A list of package names along with versions to be installed. Follows requirements.txt
-   * syntax (e.g. numpy==2.0, permutation, urllib3<2.2.1)
+   * Optional. A list of Python package names along with versions to be installed. Example:
+   * ["pandas>=2.1", "google-cloud-translate==3.11"]. For more information, see [Use third-party
+   * packages](https://cloud.google.com/bigquery/docs/user-defined-functions-python#third-party-
+   * packages).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPackages() {
@@ -71,8 +78,10 @@ public final class PythonOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A list of package names along with versions to be installed. Follows requirements.txt
-   * syntax (e.g. numpy==2.0, permutation, urllib3<2.2.1)
+   * Optional. A list of Python package names along with versions to be installed. Example:
+   * ["pandas>=2.1", "google-cloud-translate==3.11"]. For more information, see [Use third-party
+   * packages](https://cloud.google.com/bigquery/docs/user-defined-functions-python#third-party-
+   * packages).
    * @param packages packages or {@code null} for none
    */
   public PythonOptions setPackages(java.util.List<java.lang.String> packages) {

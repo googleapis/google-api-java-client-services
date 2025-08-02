@@ -45,6 +45,13 @@ public final class Autopilot extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enabled;
 
   /**
+   * PrivilegedAdmissionConfig is the configuration related to privileged admission control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivilegedAdmissionConfig privilegedAdmissionConfig;
+
+  /**
    * WorkloadPolicyConfig is the configuration related to GCW workload policy
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class Autopilot extends com.google.api.client.json.GenericJson {
    */
   public Autopilot setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * PrivilegedAdmissionConfig is the configuration related to privileged admission control.
+   * @return value or {@code null} for none
+   */
+  public PrivilegedAdmissionConfig getPrivilegedAdmissionConfig() {
+    return privilegedAdmissionConfig;
+  }
+
+  /**
+   * PrivilegedAdmissionConfig is the configuration related to privileged admission control.
+   * @param privilegedAdmissionConfig privilegedAdmissionConfig or {@code null} for none
+   */
+  public Autopilot setPrivilegedAdmissionConfig(PrivilegedAdmissionConfig privilegedAdmissionConfig) {
+    this.privilegedAdmissionConfig = privilegedAdmissionConfig;
     return this;
   }
 

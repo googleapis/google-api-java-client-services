@@ -39,6 +39,13 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   private java.lang.String membership;
 
   /**
+   * The type of the cluster's fleet membership.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String membershipType;
+
+  /**
    * Output only. Whether the cluster has been registered through the fleet API.
    * The value may be {@code null}.
    */
@@ -69,6 +76,23 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
    */
   public Fleet setMembership(java.lang.String membership) {
     this.membership = membership;
+    return this;
+  }
+
+  /**
+   * The type of the cluster's fleet membership.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMembershipType() {
+    return membershipType;
+  }
+
+  /**
+   * The type of the cluster's fleet membership.
+   * @param membershipType membershipType or {@code null} for none
+   */
+  public Fleet setMembershipType(java.lang.String membershipType) {
+    this.membershipType = membershipType;
     return this;
   }
 

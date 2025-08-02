@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
- * AutoIpamConfig contains all information related to Auto IPAM
+ * DefaultComputeClassConfig defines default compute class configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,17 +28,17 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AutoIpamConfig extends com.google.api.client.json.GenericJson {
+public final class DefaultComputeClassConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The flag that enables Auto IPAM on this cluster
+   * Enables default compute class.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * The flag that enables Auto IPAM on this cluster
+   * Enables default compute class.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -46,22 +46,22 @@ public final class AutoIpamConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The flag that enables Auto IPAM on this cluster
+   * Enables default compute class.
    * @param enabled enabled or {@code null} for none
    */
-  public AutoIpamConfig setEnabled(java.lang.Boolean enabled) {
+  public DefaultComputeClassConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
     return this;
   }
 
   @Override
-  public AutoIpamConfig set(String fieldName, Object value) {
-    return (AutoIpamConfig) super.set(fieldName, value);
+  public DefaultComputeClassConfig set(String fieldName, Object value) {
+    return (DefaultComputeClassConfig) super.set(fieldName, value);
   }
 
   @Override
-  public AutoIpamConfig clone() {
-    return (AutoIpamConfig) super.clone();
+  public DefaultComputeClassConfig clone() {
+    return (DefaultComputeClassConfig) super.clone();
   }
 
 }

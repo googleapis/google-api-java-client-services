@@ -31,13 +31,6 @@ package com.google.api.services.container.v1beta1.model;
 public final class BlueGreenSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Autoscaled policy for cluster autoscaler enabled blue-green upgrade.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AutoscaledRolloutPolicy autoscaledRolloutPolicy;
-
-  /**
    * Time needed after draining entire blue pool. After this period, blue pool will be cleaned up.
    * The value may be {@code null}.
    */
@@ -50,23 +43,6 @@ public final class BlueGreenSettings extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private StandardRolloutPolicy standardRolloutPolicy;
-
-  /**
-   * Autoscaled policy for cluster autoscaler enabled blue-green upgrade.
-   * @return value or {@code null} for none
-   */
-  public AutoscaledRolloutPolicy getAutoscaledRolloutPolicy() {
-    return autoscaledRolloutPolicy;
-  }
-
-  /**
-   * Autoscaled policy for cluster autoscaler enabled blue-green upgrade.
-   * @param autoscaledRolloutPolicy autoscaledRolloutPolicy or {@code null} for none
-   */
-  public BlueGreenSettings setAutoscaledRolloutPolicy(AutoscaledRolloutPolicy autoscaledRolloutPolicy) {
-    this.autoscaledRolloutPolicy = autoscaledRolloutPolicy;
-    return this;
-  }
 
   /**
    * Time needed after draining entire blue pool. After this period, blue pool will be cleaned up.

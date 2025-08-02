@@ -6622,6 +6622,166 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
       }
     }
+    /**
+     * An accessor for creating requests from the ThirdPartyProfileUsers collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+     *   {@code ChromeManagement.ThirdPartyProfileUsers.List request = chromemanagement.thirdPartyProfileUsers().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ThirdPartyProfileUsers thirdPartyProfileUsers() {
+      return new ThirdPartyProfileUsers();
+    }
+
+    /**
+     * The "thirdPartyProfileUsers" collection of methods.
+     */
+    public class ThirdPartyProfileUsers {
+
+      /**
+       * Moves a third party chrome profile user to a destination OU. All profiles associated to that user
+       * will be moved to the destination OU.
+       *
+       * Create a request for the method "thirdPartyProfileUsers.move".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Move#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format: customers/{customer_id}/thirdPartyProfileUsers/{third_party_profile_user_id}
+       * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveThirdPartyProfileUserRequest}
+       * @return the request
+       */
+      public Move move(java.lang.String name, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveThirdPartyProfileUserRequest content) throws java.io.IOException {
+        Move result = new Move(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Move extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveThirdPartyProfileUserResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:move";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/thirdPartyProfileUsers/[^/]+$");
+
+        /**
+         * Moves a third party chrome profile user to a destination OU. All profiles associated to that
+         * user will be moved to the destination OU.
+         *
+         * Create a request for the method "thirdPartyProfileUsers.move".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Move#execute()} method to invoke the remote operation. <p>
+         * {@link Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format: customers/{customer_id}/thirdPartyProfileUsers/{third_party_profile_user_id}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveThirdPartyProfileUserRequest}
+         * @since 1.13
+         */
+        protected Move(java.lang.String name, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveThirdPartyProfileUserRequest content) {
+          super(ChromeManagement.this, "POST", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveThirdPartyProfileUserResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/thirdPartyProfileUsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Move set$Xgafv(java.lang.String $Xgafv) {
+          return (Move) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Move setAccessToken(java.lang.String accessToken) {
+          return (Move) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Move setAlt(java.lang.String alt) {
+          return (Move) super.setAlt(alt);
+        }
+
+        @Override
+        public Move setCallback(java.lang.String callback) {
+          return (Move) super.setCallback(callback);
+        }
+
+        @Override
+        public Move setFields(java.lang.String fields) {
+          return (Move) super.setFields(fields);
+        }
+
+        @Override
+        public Move setKey(java.lang.String key) {
+          return (Move) super.setKey(key);
+        }
+
+        @Override
+        public Move setOauthToken(java.lang.String oauthToken) {
+          return (Move) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Move) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Move setQuotaUser(java.lang.String quotaUser) {
+          return (Move) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Move setUploadType(java.lang.String uploadType) {
+          return (Move) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Move setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Move) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Format:
+         * customers/{customer_id}/thirdPartyProfileUsers/{third_party_profile_user_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format: customers/{customer_id}/thirdPartyProfileUsers/{third_party_profile_user_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Format:
+         * customers/{customer_id}/thirdPartyProfileUsers/{third_party_profile_user_id}
+         */
+        public Move setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/thirdPartyProfileUsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Move set(String parameterName, Object value) {
+          return (Move) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

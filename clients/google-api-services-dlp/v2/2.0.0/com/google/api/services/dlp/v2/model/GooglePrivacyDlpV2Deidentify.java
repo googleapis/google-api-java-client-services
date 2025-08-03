@@ -44,10 +44,11 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
 
   /**
    * List of user-specified file type groups to transform. If specified, only the files with these
-   * file types will be transformed. If empty, all supported files will be transformed. Supported
-   * types may be automatically added over time. If a file type is set in this field that isn't
-   * supported by the Deidentify action then the job will fail and will not be successfully
-   * created/started. Currently the only file types supported are: IMAGES, TEXT_FILES, CSV, TSV.
+   * file types are transformed. If empty, all supported files are transformed. Supported types may
+   * be automatically added over time. Any unsupported file types that are set in this field are
+   * excluded from de-identification. An error is recorded for each unsupported file in the
+   * TransformationDetails output table. Currently the only file types supported are: IMAGES,
+   * TEXT_FILES, CSV, TSV.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,10 +120,11 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
 
   /**
    * List of user-specified file type groups to transform. If specified, only the files with these
-   * file types will be transformed. If empty, all supported files will be transformed. Supported
-   * types may be automatically added over time. If a file type is set in this field that isn't
-   * supported by the Deidentify action then the job will fail and will not be successfully
-   * created/started. Currently the only file types supported are: IMAGES, TEXT_FILES, CSV, TSV.
+   * file types are transformed. If empty, all supported files are transformed. Supported types may
+   * be automatically added over time. Any unsupported file types that are set in this field are
+   * excluded from de-identification. An error is recorded for each unsupported file in the
+   * TransformationDetails output table. Currently the only file types supported are: IMAGES,
+   * TEXT_FILES, CSV, TSV.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileTypesToTransform() {
@@ -131,10 +133,11 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
 
   /**
    * List of user-specified file type groups to transform. If specified, only the files with these
-   * file types will be transformed. If empty, all supported files will be transformed. Supported
-   * types may be automatically added over time. If a file type is set in this field that isn't
-   * supported by the Deidentify action then the job will fail and will not be successfully
-   * created/started. Currently the only file types supported are: IMAGES, TEXT_FILES, CSV, TSV.
+   * file types are transformed. If empty, all supported files are transformed. Supported types may
+   * be automatically added over time. Any unsupported file types that are set in this field are
+   * excluded from de-identification. An error is recorded for each unsupported file in the
+   * TransformationDetails output table. Currently the only file types supported are: IMAGES,
+   * TEXT_FILES, CSV, TSV.
    * @param fileTypesToTransform fileTypesToTransform or {@code null} for none
    */
   public GooglePrivacyDlpV2Deidentify setFileTypesToTransform(java.util.List<java.lang.String> fileTypesToTransform) {

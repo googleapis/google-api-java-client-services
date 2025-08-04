@@ -118,7 +118,7 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
    * to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-management-url` The number of values
    * for this attribute will be based on the cardinality of the attribute. The same can be retrieved
-   * via GetAttribute API.
+   * via GetAttribute API. The value of the attribute should be a valid URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,9 +133,10 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   private java.lang.String name;
 
   /**
-   * Required. A uri that uniquely identfies the deployment within a particular gateway. For
-   * example, if the runtime resource is of type APIGEE_PROXY, then this field will be a combination
-   * of org, proxy name and environment.
+   * Required. The resource URI identifies the deployment within its gateway. For Apigee gateways,
+   * its recommended to use the format: organizations/{org}/environments/{env}/apis/{api}. For ex:
+   * if a proxy with name `orders` is deployed in `staging` environment of `cymbal` organization,
+   * the resource URI would be: `organizations/cymbal/environments/staging/apis/orders`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,7 +180,8 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
    * found. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-source-uri` The number of values for
    * this attribute will be based on the cardinality of the attribute. The same can be retrieved via
-   * GetAttribute API.
+   * GetAttribute API. The value of the attribute should be a valid URI, and in case of Cloud
+   * Storage URI, it should point to a Cloud Storage object, not a directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -376,7 +378,7 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
    * to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-management-url` The number of values
    * for this attribute will be based on the cardinality of the attribute. The same can be retrieved
-   * via GetAttribute API.
+   * via GetAttribute API. The value of the attribute should be a valid URL.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1AttributeValues getManagementUrl() {
@@ -388,7 +390,7 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
    * to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-management-url` The number of values
    * for this attribute will be based on the cardinality of the attribute. The same can be retrieved
-   * via GetAttribute API.
+   * via GetAttribute API. The value of the attribute should be a valid URL.
    * @param managementUrl managementUrl or {@code null} for none
    */
   public GoogleCloudApihubV1Deployment setManagementUrl(GoogleCloudApihubV1AttributeValues managementUrl) {
@@ -416,9 +418,10 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Required. A uri that uniquely identfies the deployment within a particular gateway. For
-   * example, if the runtime resource is of type APIGEE_PROXY, then this field will be a combination
-   * of org, proxy name and environment.
+   * Required. The resource URI identifies the deployment within its gateway. For Apigee gateways,
+   * its recommended to use the format: organizations/{org}/environments/{env}/apis/{api}. For ex:
+   * if a proxy with name `orders` is deployed in `staging` environment of `cymbal` organization,
+   * the resource URI would be: `organizations/cymbal/environments/staging/apis/orders`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUri() {
@@ -426,9 +429,10 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Required. A uri that uniquely identfies the deployment within a particular gateway. For
-   * example, if the runtime resource is of type APIGEE_PROXY, then this field will be a combination
-   * of org, proxy name and environment.
+   * Required. The resource URI identifies the deployment within its gateway. For Apigee gateways,
+   * its recommended to use the format: organizations/{org}/environments/{env}/apis/{api}. For ex:
+   * if a proxy with name `orders` is deployed in `staging` environment of `cymbal` organization,
+   * the resource URI would be: `organizations/cymbal/environments/staging/apis/orders`.
    * @param resourceUri resourceUri or {@code null} for none
    */
   public GoogleCloudApihubV1Deployment setResourceUri(java.lang.String resourceUri) {
@@ -519,7 +523,8 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
    * found. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-source-uri` The number of values for
    * this attribute will be based on the cardinality of the attribute. The same can be retrieved via
-   * GetAttribute API.
+   * GetAttribute API. The value of the attribute should be a valid URI, and in case of Cloud
+   * Storage URI, it should point to a Cloud Storage object, not a directory.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1AttributeValues getSourceUri() {
@@ -531,7 +536,8 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
    * found. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-source-uri` The number of values for
    * this attribute will be based on the cardinality of the attribute. The same can be retrieved via
-   * GetAttribute API.
+   * GetAttribute API. The value of the attribute should be a valid URI, and in case of Cloud
+   * Storage URI, it should point to a Cloud Storage object, not a directory.
    * @param sourceUri sourceUri or {@code null} for none
    */
   public GoogleCloudApihubV1Deployment setSourceUri(GoogleCloudApihubV1AttributeValues sourceUri) {

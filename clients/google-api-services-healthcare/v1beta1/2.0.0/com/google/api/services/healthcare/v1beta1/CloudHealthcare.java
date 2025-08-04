@@ -13090,13 +13090,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * RetrieveStudyMetadata returns instance associated with the given study presented as metadata with
-             * the bulk data removed. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/outp
-             * ut/html/part18.html#sect_10.4). For details on the implementation of RetrieveStudyMetadata, see
-             * [Metadata resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the
-             * Cloud Healthcare API conformance statement. For samples that show how to call
-             * RetrieveStudyMetadata, see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-
-             * tos/dicomweb#retrieve-metadata).
+             * RetrieveStudyMetadata returns instance associated with the given study presented as metadata. See
+             * [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10
+             * .4). For details on the implementation of RetrieveStudyMetadata, see [Metadata
+             * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call RetrieveStudyMetadata,
+             * see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+             * metadata).
              *
              * Create a request for the method "studies.retrieveMetadata".
              *
@@ -13127,10 +13127,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+/metadata$");
 
               /**
-               * RetrieveStudyMetadata returns instance associated with the given study presented as metadata
-               * with the bulk data removed. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/curre
-               * nt/output/html/part18.html#sect_10.4). For details on the implementation of
-               * RetrieveStudyMetadata, see [Metadata
+               * RetrieveStudyMetadata returns instance associated with the given study presented as metadata.
+               * See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#s
+               * ect_10.4). For details on the implementation of RetrieveStudyMetadata, see [Metadata
                * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
                * Healthcare API conformance statement. For samples that show how to call RetrieveStudyMetadata,
                * see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
@@ -14316,9 +14315,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
               /**
                * RetrieveSeriesMetadata returns instance associated with the given study and series, presented as
-               * metadata with the bulk data removed. See [RetrieveTransaction](http://dicom.nema.org/medical/dico
-               * m/current/output/html/part18.html#sect_10.4). For details on the implementation of
-               * RetrieveSeriesMetadata, see [Metadata
+               * metadata. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/html/part1
+               * 8.html#sect_10.4). For details on the implementation of RetrieveSeriesMetadata, see [Metadata
                * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
                * Healthcare API conformance statement. For samples that show how to call RetrieveSeriesMetadata,
                * see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
@@ -14354,13 +14352,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * RetrieveSeriesMetadata returns instance associated with the given study and series, presented
-                 * as metadata with the bulk data removed. See [RetrieveTransaction](http://dicom.nema.org/medical
-                 * /dicom/current/output/html/part18.html#sect_10.4). For details on the implementation of
-                 * RetrieveSeriesMetadata, see [Metadata
-                 * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
-                 * Healthcare API conformance statement. For samples that show how to call RetrieveSeriesMetadata,
-                 * see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
-                 * metadata).
+                 * as metadata. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/html/
+                 * part18.html#sect_10.4). For details on the implementation of RetrieveSeriesMetadata, see
+                 * [Metadata resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the
+                 * Cloud Healthcare API conformance statement. For samples that show how to call
+                 * RetrieveSeriesMetadata, see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieve-metadata).
                  *
                  * Create a request for the method "series.retrieveMetadata".
                  *
@@ -15352,9 +15349,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
                 /**
                  * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
-                 * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction](http://d
-                 * icom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
-                 * implementation of RetrieveInstanceMetadata, see [Metadata
+                 * Instance UID presented as metadata. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom
+                 * /current/output/html/part18.html#sect_10.4). For details on the implementation of
+                 * RetrieveInstanceMetadata, see [Metadata
                  * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
                  * Healthcare API conformance statement. For samples that show how to call RetrieveInstanceMetadata,
                  * see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
@@ -15390,9 +15387,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
-                   * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction](http:/
-                   * /dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
-                   * implementation of RetrieveInstanceMetadata, see [Metadata
+                   * Instance UID presented as metadata. See [RetrieveTransaction](http://dicom.nema.org/medical/dic
+                   * om/current/output/html/part18.html#sect_10.4). For details on the implementation of
+                   * RetrieveInstanceMetadata, see [Metadata
                    * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
                    * Healthcare API conformance statement. For samples that show how to call
                    * RetrieveInstanceMetadata, see [Retrieve metadata](https://cloud.google.com/healthcare/docs/how-
@@ -15814,8 +15811,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * Returns uncompressed, unencoded bytes representing the referenced bulkdata tag from an instance.
-                   * See [Retrieve Transaction]
-                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4){: .external}. For
+                   * See [Retrieve
+                   * Transaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For
                    * details on the implementation of RetrieveBulkdata, see [Bulkdata
                    * resources](https://cloud.google.com/healthcare/docs/dicom#bulkdata-resources) in the Cloud
                    * Healthcare API conformance statement. For samples that show how to call RetrieveBulkdata, see
@@ -15851,8 +15848,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * Returns uncompressed, unencoded bytes representing the referenced bulkdata tag from an
-                     * instance. See [Retrieve Transaction]
-                     * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4){: .external}.
+                     * instance. See [Retrieve
+                     * Transaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
                      * For details on the implementation of RetrieveBulkdata, see [Bulkdata
                      * resources](https://cloud.google.com/healthcare/docs/dicom#bulkdata-resources) in the Cloud
                      * Healthcare API conformance statement. For samples that show how to call RetrieveBulkdata, see

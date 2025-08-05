@@ -37,6 +37,15 @@ public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequest extends c
   private GoogleCloudAiplatformV1beta1GenerateMemoriesRequestDirectContentsSource directContentsSource;
 
   /**
+   * Defines a direct source of memories that should be uploaded to Memory Bank. This is similar to
+   * `CreateMemory`, but it allows for consolidation between these new memories and existing
+   * memories for the same scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GenerateMemoriesRequestDirectMemoriesSource directMemoriesSource;
+
+  /**
    * Optional. If true, generated memories will not be consolidated with existing memories; all
    * generated memories will be added as new memories regardless of whether they are duplicates of
    * or contradictory to existing memories. By default, memory consolidation is enabled.
@@ -76,6 +85,27 @@ public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequest extends c
    */
   public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setDirectContentsSource(GoogleCloudAiplatformV1beta1GenerateMemoriesRequestDirectContentsSource directContentsSource) {
     this.directContentsSource = directContentsSource;
+    return this;
+  }
+
+  /**
+   * Defines a direct source of memories that should be uploaded to Memory Bank. This is similar to
+   * `CreateMemory`, but it allows for consolidation between these new memories and existing
+   * memories for the same scope.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateMemoriesRequestDirectMemoriesSource getDirectMemoriesSource() {
+    return directMemoriesSource;
+  }
+
+  /**
+   * Defines a direct source of memories that should be uploaded to Memory Bank. This is similar to
+   * `CreateMemory`, but it allows for consolidation between these new memories and existing
+   * memories for the same scope.
+   * @param directMemoriesSource directMemoriesSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setDirectMemoriesSource(GoogleCloudAiplatformV1beta1GenerateMemoriesRequestDirectMemoriesSource directMemoriesSource) {
+    this.directMemoriesSource = directMemoriesSource;
     return this;
   }
 

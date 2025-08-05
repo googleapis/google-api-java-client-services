@@ -142,6 +142,20 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private java.lang.String pipelineJob;
 
   /**
+   * The pre-tuned model for continuous tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PreTunedModel preTunedModel;
+
+  /**
+   * Tuning Spec for Preference Optimization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec preferenceOptimizationSpec;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -215,6 +229,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Tuning Spec for Veo Tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1VeoTuningSpec veoTuningSpec;
 
   /**
    * The base model that is being tuned. See [Supported models](https://cloud.google.com/vertex-
@@ -483,6 +504,40 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   }
 
   /**
+   * The pre-tuned model for continuous tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PreTunedModel getPreTunedModel() {
+    return preTunedModel;
+  }
+
+  /**
+   * The pre-tuned model for continuous tuning.
+   * @param preTunedModel preTunedModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setPreTunedModel(GoogleCloudAiplatformV1beta1PreTunedModel preTunedModel) {
+    this.preTunedModel = preTunedModel;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Preference Optimization.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec getPreferenceOptimizationSpec() {
+    return preferenceOptimizationSpec;
+  }
+
+  /**
+   * Tuning Spec for Preference Optimization.
+   * @param preferenceOptimizationSpec preferenceOptimizationSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setPreferenceOptimizationSpec(GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec preferenceOptimizationSpec) {
+    this.preferenceOptimizationSpec = preferenceOptimizationSpec;
+    return this;
+  }
+
+  /**
    * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
@@ -659,6 +714,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Veo Tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VeoTuningSpec getVeoTuningSpec() {
+    return veoTuningSpec;
+  }
+
+  /**
+   * Tuning Spec for Veo Tuning.
+   * @param veoTuningSpec veoTuningSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setVeoTuningSpec(GoogleCloudAiplatformV1beta1VeoTuningSpec veoTuningSpec) {
+    this.veoTuningSpec = veoTuningSpec;
     return this;
   }
 

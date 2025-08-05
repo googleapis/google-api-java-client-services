@@ -18,7 +18,7 @@ package com.google.api.services.redis.v1.model;
 
 /**
  * DatabaseResourceFeed is the top level proto to be used to ingest different database resource
- * level events into Condor platform. Next ID: 9
+ * level events into Condor platform. Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -30,6 +30,13 @@ package com.google.api.services.redis.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class DatabaseResourceFeed extends com.google.api.client.json.GenericJson {
+
+  /**
+   * BackupDR metadata is used to ingest metadata from BackupDR.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupDRMetadata backupdrMetadata;
 
   /**
    * Config based signal data is used to ingest signals that are generated based on the
@@ -84,6 +91,23 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private DatabaseResourceMetadata resourceMetadata;
+
+  /**
+   * BackupDR metadata is used to ingest metadata from BackupDR.
+   * @return value or {@code null} for none
+   */
+  public BackupDRMetadata getBackupdrMetadata() {
+    return backupdrMetadata;
+  }
+
+  /**
+   * BackupDR metadata is used to ingest metadata from BackupDR.
+   * @param backupdrMetadata backupdrMetadata or {@code null} for none
+   */
+  public DatabaseResourceFeed setBackupdrMetadata(BackupDRMetadata backupdrMetadata) {
+    this.backupdrMetadata = backupdrMetadata;
+    return this;
+  }
 
   /**
    * Config based signal data is used to ingest signals that are generated based on the

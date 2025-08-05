@@ -40,14 +40,6 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
   private GoogleCloudAiplatformV1ToolCodeExecution codeExecution;
 
   /**
-   * Optional. Tool to support the model interacting directly with the computer. If enabled, it
-   * automatically populates computer-use specific Function Declarations.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1ToolComputerUse computerUse;
-
-  /**
    * Optional. Tool to support searching public web data, powered by Vertex AI Search and Sec4
    * compliance.
    * The value may be {@code null}.
@@ -124,25 +116,6 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
    */
   public GoogleCloudAiplatformV1Tool setCodeExecution(GoogleCloudAiplatformV1ToolCodeExecution codeExecution) {
     this.codeExecution = codeExecution;
-    return this;
-  }
-
-  /**
-   * Optional. Tool to support the model interacting directly with the computer. If enabled, it
-   * automatically populates computer-use specific Function Declarations.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1ToolComputerUse getComputerUse() {
-    return computerUse;
-  }
-
-  /**
-   * Optional. Tool to support the model interacting directly with the computer. If enabled, it
-   * automatically populates computer-use specific Function Declarations.
-   * @param computerUse computerUse or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1Tool setComputerUse(GoogleCloudAiplatformV1ToolComputerUse computerUse) {
-    this.computerUse = computerUse;
     return this;
   }
 

@@ -31,6 +31,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1BatchDedicatedResources extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Immutable. If set, use DWS resource to schedule the deployment workload. reference:
+   * (https://cloud.google.com/blog/products/compute/introducing-dynamic-workload-scheduler)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FlexStart flexStart;
+
+  /**
    * Required. Immutable. The specification of a single machine.
    * The value may be {@code null}.
    */
@@ -46,12 +54,39 @@ public final class GoogleCloudAiplatformV1beta1BatchDedicatedResources extends c
   private java.lang.Integer maxReplicaCount;
 
   /**
+   * Optional. If true, schedule the deployment workload on [spot
+   * VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean spot;
+
+  /**
    * Immutable. The number of machine replicas used at the start of the batch operation. If not set,
    * Vertex AI decides starting number, not greater than max_replica_count
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer startingReplicaCount;
+
+  /**
+   * Optional. Immutable. If set, use DWS resource to schedule the deployment workload. reference:
+   * (https://cloud.google.com/blog/products/compute/introducing-dynamic-workload-scheduler)
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FlexStart getFlexStart() {
+    return flexStart;
+  }
+
+  /**
+   * Optional. Immutable. If set, use DWS resource to schedule the deployment workload. reference:
+   * (https://cloud.google.com/blog/products/compute/introducing-dynamic-workload-scheduler)
+   * @param flexStart flexStart or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1BatchDedicatedResources setFlexStart(GoogleCloudAiplatformV1beta1FlexStart flexStart) {
+    this.flexStart = flexStart;
+    return this;
+  }
 
   /**
    * Required. Immutable. The specification of a single machine.
@@ -86,6 +121,25 @@ public final class GoogleCloudAiplatformV1beta1BatchDedicatedResources extends c
    */
   public GoogleCloudAiplatformV1beta1BatchDedicatedResources setMaxReplicaCount(java.lang.Integer maxReplicaCount) {
     this.maxReplicaCount = maxReplicaCount;
+    return this;
+  }
+
+  /**
+   * Optional. If true, schedule the deployment workload on [spot
+   * VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSpot() {
+    return spot;
+  }
+
+  /**
+   * Optional. If true, schedule the deployment workload on [spot
+   * VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
+   * @param spot spot or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1BatchDedicatedResources setSpot(java.lang.Boolean spot) {
+    this.spot = spot;
     return this;
   }
 

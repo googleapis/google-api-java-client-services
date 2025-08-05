@@ -51,21 +51,6 @@ public final class GoogleCloudAiplatformV1beta1AssessDataRequest extends com.goo
   private GoogleCloudAiplatformV1beta1GeminiRequestReadConfig geminiRequestReadConfig;
 
   /**
-   * Optional. Config for assembling templates with a Gemini API structure to assess assembled data.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1GeminiTemplateConfig geminiTemplateConfig;
-
-  /**
-   * Optional. The column name in the underlying table that contains already fully assembled
-   * requests.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String requestColumnName;
-
-  /**
    * Optional. Configuration for the tuning resource usage assessment.
    * The value may be {@code null}.
    */
@@ -127,42 +112,6 @@ public final class GoogleCloudAiplatformV1beta1AssessDataRequest extends com.goo
    */
   public GoogleCloudAiplatformV1beta1AssessDataRequest setGeminiRequestReadConfig(GoogleCloudAiplatformV1beta1GeminiRequestReadConfig geminiRequestReadConfig) {
     this.geminiRequestReadConfig = geminiRequestReadConfig;
-    return this;
-  }
-
-  /**
-   * Optional. Config for assembling templates with a Gemini API structure to assess assembled data.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GeminiTemplateConfig getGeminiTemplateConfig() {
-    return geminiTemplateConfig;
-  }
-
-  /**
-   * Optional. Config for assembling templates with a Gemini API structure to assess assembled data.
-   * @param geminiTemplateConfig geminiTemplateConfig or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1AssessDataRequest setGeminiTemplateConfig(GoogleCloudAiplatformV1beta1GeminiTemplateConfig geminiTemplateConfig) {
-    this.geminiTemplateConfig = geminiTemplateConfig;
-    return this;
-  }
-
-  /**
-   * Optional. The column name in the underlying table that contains already fully assembled
-   * requests.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRequestColumnName() {
-    return requestColumnName;
-  }
-
-  /**
-   * Optional. The column name in the underlying table that contains already fully assembled
-   * requests.
-   * @param requestColumnName requestColumnName or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1AssessDataRequest setRequestColumnName(java.lang.String requestColumnName) {
-    this.requestColumnName = requestColumnName;
     return this;
   }
 

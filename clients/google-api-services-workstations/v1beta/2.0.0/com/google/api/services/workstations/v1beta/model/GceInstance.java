@@ -140,7 +140,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-
-   * zonal-resources) specifies a reservation that can be consumed to create boost VM instances. If
+   * zonal-resources) specifies a reservation that can be consumed to create VM instances. If
    * SPECIFIC_RESERVATION is specified, Cloud Workstations will only create VMs in the zone where
    * the reservation is located. This would affect availability since the service will no longer be
    * resilient to zonal outages. If ANY_RESERVATION is specified, creating reservations in both
@@ -430,7 +430,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-
-   * zonal-resources) specifies a reservation that can be consumed to create boost VM instances. If
+   * zonal-resources) specifies a reservation that can be consumed to create VM instances. If
    * SPECIFIC_RESERVATION is specified, Cloud Workstations will only create VMs in the zone where
    * the reservation is located. This would affect availability since the service will no longer be
    * resilient to zonal outages. If ANY_RESERVATION is specified, creating reservations in both
@@ -447,7 +447,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-
-   * zonal-resources) specifies a reservation that can be consumed to create boost VM instances. If
+   * zonal-resources) specifies a reservation that can be consumed to create VM instances. If
    * SPECIFIC_RESERVATION is specified, Cloud Workstations will only create VMs in the zone where
    * the reservation is located. This would affect availability since the service will no longer be
    * resilient to zonal outages. If ANY_RESERVATION is specified, creating reservations in both

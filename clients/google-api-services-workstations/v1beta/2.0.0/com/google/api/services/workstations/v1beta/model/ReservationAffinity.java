@@ -46,8 +46,8 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
   private java.lang.String key;
 
   /**
-   * Optional. Corresponds to the label values of reservation resources. Valid values are either a
-   * name to a reservation in the same project or "projects/{project}/reservations/{reservation}" to
+   * Optional. Corresponds to the label values of reservation resources. Valid values are either the
+   * name of a reservation in the same project or "projects/{project}/reservations/{reservation}" to
    * target a shared reservation in the same zone but in a different project.
    * The value may be {@code null}.
    */
@@ -89,8 +89,8 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Corresponds to the label values of reservation resources. Valid values are either a
-   * name to a reservation in the same project or "projects/{project}/reservations/{reservation}" to
+   * Optional. Corresponds to the label values of reservation resources. Valid values are either the
+   * name of a reservation in the same project or "projects/{project}/reservations/{reservation}" to
    * target a shared reservation in the same zone but in a different project.
    * @return value or {@code null} for none
    */
@@ -99,8 +99,8 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Corresponds to the label values of reservation resources. Valid values are either a
-   * name to a reservation in the same project or "projects/{project}/reservations/{reservation}" to
+   * Optional. Corresponds to the label values of reservation resources. Valid values are either the
+   * name of a reservation in the same project or "projects/{project}/reservations/{reservation}" to
    * target a shared reservation in the same zone but in a different project.
    * @param values values or {@code null} for none
    */

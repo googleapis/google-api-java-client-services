@@ -44,7 +44,16 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The URI for the image.
+   * An ID for an already uploaded private image. Either this or source_uri should be set. Requests
+   * setting both or neither will be rejected. Please contact support to use private images.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateImageId;
+
+  /**
+   * A URI for the image. Either this or private_image_id should be set. Requests setting both or
+   * neither will be rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +94,27 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI for the image.
+   * An ID for an already uploaded private image. Either this or source_uri should be set. Requests
+   * setting both or neither will be rejected. Please contact support to use private images.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateImageId() {
+    return privateImageId;
+  }
+
+  /**
+   * An ID for an already uploaded private image. Either this or source_uri should be set. Requests
+   * setting both or neither will be rejected. Please contact support to use private images.
+   * @param privateImageId privateImageId or {@code null} for none
+   */
+  public Image setPrivateImageId(java.lang.String privateImageId) {
+    this.privateImageId = privateImageId;
+    return this;
+  }
+
+  /**
+   * A URI for the image. Either this or private_image_id should be set. Requests setting both or
+   * neither will be rejected.
    * @return value or {@code null} for none
    */
   public ImageUri getSourceUri() {
@@ -93,7 +122,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI for the image.
+   * A URI for the image. Either this or private_image_id should be set. Requests setting both or
+   * neither will be rejected.
    * @param sourceUri sourceUri or {@code null} for none
    */
   public Image setSourceUri(ImageUri sourceUri) {

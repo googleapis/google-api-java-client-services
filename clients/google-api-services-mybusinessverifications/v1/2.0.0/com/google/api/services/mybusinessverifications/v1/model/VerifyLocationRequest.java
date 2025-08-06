@@ -92,6 +92,13 @@ public final class VerifyLocationRequest extends com.google.api.client.json.Gene
   private VerificationToken token;
 
   /**
+   * The input for TRUSTED_PARTNER method The verification token that is associated to the location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trustedPartnerToken;
+
+  /**
    * Optional. Extra context information for the verification of service businesses. It is only
    * required for the locations whose business type is CUSTOMER_LOCATION_ONLY. For ADDRESS
    * verification, the address will be used to send out postcard. For other methods, it should be
@@ -231,6 +238,23 @@ public final class VerifyLocationRequest extends com.google.api.client.json.Gene
    */
   public VerifyLocationRequest setToken(VerificationToken token) {
     this.token = token;
+    return this;
+  }
+
+  /**
+   * The input for TRUSTED_PARTNER method The verification token that is associated to the location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrustedPartnerToken() {
+    return trustedPartnerToken;
+  }
+
+  /**
+   * The input for TRUSTED_PARTNER method The verification token that is associated to the location.
+   * @param trustedPartnerToken trustedPartnerToken or {@code null} for none
+   */
+  public VerifyLocationRequest setTrustedPartnerToken(java.lang.String trustedPartnerToken) {
+    this.trustedPartnerToken = trustedPartnerToken;
     return this;
   }
 

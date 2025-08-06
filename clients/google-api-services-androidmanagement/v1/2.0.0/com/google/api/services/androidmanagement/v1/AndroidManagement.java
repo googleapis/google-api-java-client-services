@@ -1894,17 +1894,24 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** The requested page size. The actual page size may be fixed to a min or max value. */
+        /**
+         * The requested page size. If unspecified, at most 10 devices will be returned. The maximum
+         * value is 100; values above 100 will be coerced to 100. The limits can change over time.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The requested page size. The actual page size may be fixed to a min or max value.
+        /** The requested page size. If unspecified, at most 10 devices will be returned. The maximum value is
+       100; values above 100 will be coerced to 100. The limits can change over time.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The requested page size. The actual page size may be fixed to a min or max value. */
+        /**
+         * The requested page size. If unspecified, at most 10 devices will be returned. The maximum
+         * value is 100; values above 100 will be coerced to 100. The limits can change over time.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;

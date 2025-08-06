@@ -30,6 +30,33 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1Assistant extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Customer policy for the assistant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1AssistantCustomerPolicy customerPolicy;
+
+  /**
+   * Optional. Note: not implemented yet. Use enabled_actions instead. The enabled tools on this
+   * assistant. The keys are connector name, for example
+   * "projects/{projectId}/locations/{locationId}/collections/{collectionId}/dataconnector The
+   * values consist of admin enabled tools towards the connector instance. Admin can selectively
+   * enable multiple tools on any of the connector instances that they created in the project. For
+   * example {"jira1ConnectorName": [(toolId1, "createTicket"), (toolId2, "transferTicket")],
+   * "gmail1ConnectorName": [(toolId3, "sendEmail"),..] }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDiscoveryengineV1AssistantToolList> enabledTools;
+
+  /**
+   * Optional. Configuration for the generation of the assistant response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1AssistantGenerationConfig generationConfig;
+
+  /**
    * Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/col
    * lections/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded
    * string with a length limit of 1024 characters.
@@ -37,6 +64,76 @@ public final class GoogleCloudDiscoveryengineV1Assistant extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The type of web grounding to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String webGroundingType;
+
+  /**
+   * Optional. Customer policy for the assistant.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistantCustomerPolicy getCustomerPolicy() {
+    return customerPolicy;
+  }
+
+  /**
+   * Optional. Customer policy for the assistant.
+   * @param customerPolicy customerPolicy or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Assistant setCustomerPolicy(GoogleCloudDiscoveryengineV1AssistantCustomerPolicy customerPolicy) {
+    this.customerPolicy = customerPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Note: not implemented yet. Use enabled_actions instead. The enabled tools on this
+   * assistant. The keys are connector name, for example
+   * "projects/{projectId}/locations/{locationId}/collections/{collectionId}/dataconnector The
+   * values consist of admin enabled tools towards the connector instance. Admin can selectively
+   * enable multiple tools on any of the connector instances that they created in the project. For
+   * example {"jira1ConnectorName": [(toolId1, "createTicket"), (toolId2, "transferTicket")],
+   * "gmail1ConnectorName": [(toolId3, "sendEmail"),..] }
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDiscoveryengineV1AssistantToolList> getEnabledTools() {
+    return enabledTools;
+  }
+
+  /**
+   * Optional. Note: not implemented yet. Use enabled_actions instead. The enabled tools on this
+   * assistant. The keys are connector name, for example
+   * "projects/{projectId}/locations/{locationId}/collections/{collectionId}/dataconnector The
+   * values consist of admin enabled tools towards the connector instance. Admin can selectively
+   * enable multiple tools on any of the connector instances that they created in the project. For
+   * example {"jira1ConnectorName": [(toolId1, "createTicket"), (toolId2, "transferTicket")],
+   * "gmail1ConnectorName": [(toolId3, "sendEmail"),..] }
+   * @param enabledTools enabledTools or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Assistant setEnabledTools(java.util.Map<String, GoogleCloudDiscoveryengineV1AssistantToolList> enabledTools) {
+    this.enabledTools = enabledTools;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the generation of the assistant response.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistantGenerationConfig getGenerationConfig() {
+    return generationConfig;
+  }
+
+  /**
+   * Optional. Configuration for the generation of the assistant response.
+   * @param generationConfig generationConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Assistant setGenerationConfig(GoogleCloudDiscoveryengineV1AssistantGenerationConfig generationConfig) {
+    this.generationConfig = generationConfig;
+    return this;
+  }
 
   /**
    * Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/col
@@ -56,6 +153,23 @@ public final class GoogleCloudDiscoveryengineV1Assistant extends com.google.api.
    */
   public GoogleCloudDiscoveryengineV1Assistant setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The type of web grounding to use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWebGroundingType() {
+    return webGroundingType;
+  }
+
+  /**
+   * Optional. The type of web grounding to use.
+   * @param webGroundingType webGroundingType or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Assistant setWebGroundingType(java.lang.String webGroundingType) {
+    this.webGroundingType = webGroundingType;
     return this;
   }
 

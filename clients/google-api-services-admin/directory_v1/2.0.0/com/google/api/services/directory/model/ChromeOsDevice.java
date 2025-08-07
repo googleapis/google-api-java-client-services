@@ -406,6 +406,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String osVersion;
 
   /**
+   * Output only. Compliance status of the OS version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String osVersionCompliance;
+
+  /**
    * The Chrome device's platform version.
    * The value may be {@code null}.
    */
@@ -1282,6 +1289,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setOsVersion(java.lang.String osVersion) {
     this.osVersion = osVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Compliance status of the OS version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOsVersionCompliance() {
+    return osVersionCompliance;
+  }
+
+  /**
+   * Output only. Compliance status of the OS version.
+   * @param osVersionCompliance osVersionCompliance or {@code null} for none
+   */
+  public ChromeOsDevice setOsVersionCompliance(java.lang.String osVersionCompliance) {
+    this.osVersionCompliance = osVersionCompliance;
     return this;
   }
 

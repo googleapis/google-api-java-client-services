@@ -312,6 +312,151 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
+       * GetEntitlement returns the entitlement for the provided project.
+       *
+       * Create a request for the method "locations.getEntitlement".
+       *
+       * This request holds the parameters needed by the apim server.  After setting any optional
+       * parameters, call the {@link GetEntitlement#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The entitlement resource name Format: projects/{project}/locations/{location}/entitlement
+       * @return the request
+       */
+      public GetEntitlement getEntitlement(java.lang.String name) throws java.io.IOException {
+        GetEntitlement result = new GetEntitlement(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetEntitlement extends APIManagementRequest<com.google.api.services.apim.v1alpha.model.Entitlement> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entitlement$");
+
+        /**
+         * GetEntitlement returns the entitlement for the provided project.
+         *
+         * Create a request for the method "locations.getEntitlement".
+         *
+         * This request holds the parameters needed by the the apim server.  After setting any optional
+         * parameters, call the {@link GetEntitlement#execute()} method to invoke the remote operation.
+         * <p> {@link GetEntitlement#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+         * ientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Required. The entitlement resource name Format: projects/{project}/locations/{location}/entitlement
+         * @since 1.13
+         */
+        protected GetEntitlement(java.lang.String name) {
+          super(APIManagement.this, "GET", REST_PATH, null, com.google.api.services.apim.v1alpha.model.Entitlement.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/entitlement$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetEntitlement set$Xgafv(java.lang.String $Xgafv) {
+          return (GetEntitlement) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetEntitlement setAccessToken(java.lang.String accessToken) {
+          return (GetEntitlement) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetEntitlement setAlt(java.lang.String alt) {
+          return (GetEntitlement) super.setAlt(alt);
+        }
+
+        @Override
+        public GetEntitlement setCallback(java.lang.String callback) {
+          return (GetEntitlement) super.setCallback(callback);
+        }
+
+        @Override
+        public GetEntitlement setFields(java.lang.String fields) {
+          return (GetEntitlement) super.setFields(fields);
+        }
+
+        @Override
+        public GetEntitlement setKey(java.lang.String key) {
+          return (GetEntitlement) super.setKey(key);
+        }
+
+        @Override
+        public GetEntitlement setOauthToken(java.lang.String oauthToken) {
+          return (GetEntitlement) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetEntitlement setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetEntitlement) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetEntitlement setQuotaUser(java.lang.String quotaUser) {
+          return (GetEntitlement) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetEntitlement setUploadType(java.lang.String uploadType) {
+          return (GetEntitlement) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetEntitlement setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetEntitlement) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The entitlement resource name Format:
+         * projects/{project}/locations/{location}/entitlement
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The entitlement resource name Format: projects/{project}/locations/{location}/entitlement
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The entitlement resource name Format:
+         * projects/{project}/locations/{location}/entitlement
+         */
+        public GetEntitlement setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/entitlement$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetEntitlement set(String parameterName, Object value) {
+          return (GetEntitlement) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".

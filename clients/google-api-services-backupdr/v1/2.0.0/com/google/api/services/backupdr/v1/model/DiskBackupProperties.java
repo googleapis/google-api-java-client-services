@@ -31,6 +31,13 @@ package com.google.api.services.backupdr.v1.model;
 public final class DiskBackupProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * The access mode of the source disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accessMode;
+
+  /**
    * The architecture of the source disk. Valid values are ARM64 or X86_64.
    * The value may be {@code null}.
    */
@@ -45,11 +52,25 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
+   * Indicates whether the source disk is using confidential compute mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialCompute;
+
+  /**
    * A list of guest OS features that are applicable to this backup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GuestOsFeature> guestOsFeature;
+
+  /**
+   * The labels of the source disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
    * A list of publicly available licenses that are applicable to this backup. This is applicable if
@@ -58,6 +79,27 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> licenses;
+
+  /**
+   * The physical block size of the source disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long physicalBlockSizeBytes;
+
+  /**
+   * The number of IOPS provisioned for the source disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedIops;
+
+  /**
+   * The number of throughput provisioned for the source disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedThroughput;
 
   /**
    * Region and zone are mutually exclusive fields. The URL of the region of the source disk.
@@ -88,6 +130,13 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
   private java.lang.String sourceDisk;
 
   /**
+   * The storage pool of the source disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storagePool;
+
+  /**
    * The URL of the type of the disk.
    * The value may be {@code null}.
    */
@@ -100,6 +149,23 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * The access mode of the source disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccessMode() {
+    return accessMode;
+  }
+
+  /**
+   * The access mode of the source disk.
+   * @param accessMode accessMode or {@code null} for none
+   */
+  public DiskBackupProperties setAccessMode(java.lang.String accessMode) {
+    this.accessMode = accessMode;
+    return this;
+  }
 
   /**
    * The architecture of the source disk. Valid values are ARM64 or X86_64.
@@ -136,6 +202,23 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
   }
 
   /**
+   * Indicates whether the source disk is using confidential compute mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialCompute() {
+    return enableConfidentialCompute;
+  }
+
+  /**
+   * Indicates whether the source disk is using confidential compute mode.
+   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
+   */
+  public DiskBackupProperties setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
+    this.enableConfidentialCompute = enableConfidentialCompute;
+    return this;
+  }
+
+  /**
    * A list of guest OS features that are applicable to this backup.
    * @return value or {@code null} for none
    */
@@ -149,6 +232,23 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
    */
   public DiskBackupProperties setGuestOsFeature(java.util.List<GuestOsFeature> guestOsFeature) {
     this.guestOsFeature = guestOsFeature;
+    return this;
+  }
+
+  /**
+   * The labels of the source disk.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * The labels of the source disk.
+   * @param labels labels or {@code null} for none
+   */
+  public DiskBackupProperties setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
@@ -168,6 +268,57 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
    */
   public DiskBackupProperties setLicenses(java.util.List<java.lang.String> licenses) {
     this.licenses = licenses;
+    return this;
+  }
+
+  /**
+   * The physical block size of the source disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPhysicalBlockSizeBytes() {
+    return physicalBlockSizeBytes;
+  }
+
+  /**
+   * The physical block size of the source disk.
+   * @param physicalBlockSizeBytes physicalBlockSizeBytes or {@code null} for none
+   */
+  public DiskBackupProperties setPhysicalBlockSizeBytes(java.lang.Long physicalBlockSizeBytes) {
+    this.physicalBlockSizeBytes = physicalBlockSizeBytes;
+    return this;
+  }
+
+  /**
+   * The number of IOPS provisioned for the source disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedIops() {
+    return provisionedIops;
+  }
+
+  /**
+   * The number of IOPS provisioned for the source disk.
+   * @param provisionedIops provisionedIops or {@code null} for none
+   */
+  public DiskBackupProperties setProvisionedIops(java.lang.Long provisionedIops) {
+    this.provisionedIops = provisionedIops;
+    return this;
+  }
+
+  /**
+   * The number of throughput provisioned for the source disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedThroughput() {
+    return provisionedThroughput;
+  }
+
+  /**
+   * The number of throughput provisioned for the source disk.
+   * @param provisionedThroughput provisionedThroughput or {@code null} for none
+   */
+  public DiskBackupProperties setProvisionedThroughput(java.lang.Long provisionedThroughput) {
+    this.provisionedThroughput = provisionedThroughput;
     return this;
   }
 
@@ -236,6 +387,23 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
    */
   public DiskBackupProperties setSourceDisk(java.lang.String sourceDisk) {
     this.sourceDisk = sourceDisk;
+    return this;
+  }
+
+  /**
+   * The storage pool of the source disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoragePool() {
+    return storagePool;
+  }
+
+  /**
+   * The storage pool of the source disk.
+   * @param storagePool storagePool or {@code null} for none
+   */
+  public DiskBackupProperties setStoragePool(java.lang.String storagePool) {
+    this.storagePool = storagePool;
     return this;
   }
 

@@ -106,6 +106,14 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   private java.util.List<java.lang.Long> sharedAdvertiserIds;
 
   /**
+   * Optional. Immutable. Designates the third party optimization partner that manages this
+   * algorithm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thirdPartyOptimizationPartner;
+
+  /**
    * Immutable. The unique ID of the advertiser that owns the custom bidding algorithm.
    * @return value or {@code null} for none
    */
@@ -279,6 +287,25 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
    */
   public CustomBiddingAlgorithm setSharedAdvertiserIds(java.util.List<java.lang.Long> sharedAdvertiserIds) {
     this.sharedAdvertiserIds = sharedAdvertiserIds;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Designates the third party optimization partner that manages this
+   * algorithm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThirdPartyOptimizationPartner() {
+    return thirdPartyOptimizationPartner;
+  }
+
+  /**
+   * Optional. Immutable. Designates the third party optimization partner that manages this
+   * algorithm.
+   * @param thirdPartyOptimizationPartner thirdPartyOptimizationPartner or {@code null} for none
+   */
+  public CustomBiddingAlgorithm setThirdPartyOptimizationPartner(java.lang.String thirdPartyOptimizationPartner) {
+    this.thirdPartyOptimizationPartner = thirdPartyOptimizationPartner;
     return this;
   }
 

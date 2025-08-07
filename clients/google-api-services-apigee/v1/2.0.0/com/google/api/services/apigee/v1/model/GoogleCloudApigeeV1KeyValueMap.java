@@ -39,6 +39,13 @@ public final class GoogleCloudApigeeV1KeyValueMap extends com.google.api.client.
   private java.lang.Boolean encrypted;
 
   /**
+   * Required. Flag that specifies whether entry values will be masked when returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean maskedValues;
+
+  /**
    * Required. ID of the key value map.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class GoogleCloudApigeeV1KeyValueMap extends com.google.api.client.
    */
   public GoogleCloudApigeeV1KeyValueMap setEncrypted(java.lang.Boolean encrypted) {
     this.encrypted = encrypted;
+    return this;
+  }
+
+  /**
+   * Required. Flag that specifies whether entry values will be masked when returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMaskedValues() {
+    return maskedValues;
+  }
+
+  /**
+   * Required. Flag that specifies whether entry values will be masked when returned.
+   * @param maskedValues maskedValues or {@code null} for none
+   */
+  public GoogleCloudApigeeV1KeyValueMap setMaskedValues(java.lang.Boolean maskedValues) {
+    this.maskedValues = maskedValues;
     return this;
   }
 

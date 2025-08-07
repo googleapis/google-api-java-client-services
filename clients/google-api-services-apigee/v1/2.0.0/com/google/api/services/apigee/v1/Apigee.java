@@ -13038,15 +13038,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Optional. Count of apps a single page can have in the response. If unspecified, at most
-         * 100 apps will be returned. The maximum value is 100; values above 100 will be coerced to
-         * 100. "page_size" is supported from ver 1.10.0 and above.
+         * 1000 apps will be returned. The maximum value is 1000; values above 1000 will be coerced
+         * to 1000. "page_size" is supported from ver 1.10.0 and above.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. Count of apps a single page can have in the response. If unspecified, at most 100 apps
-       will be returned. The maximum value is 100; values above 100 will be coerced to 100. "page_size" is
-       supported from ver 1.10.0 and above.
+        /** Optional. Count of apps a single page can have in the response. If unspecified, at most 1000 apps
+       will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000. "page_size"
+       is supported from ver 1.10.0 and above.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -13054,8 +13054,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Optional. Count of apps a single page can have in the response. If unspecified, at most
-         * 100 apps will be returned. The maximum value is 100; values above 100 will be coerced to
-         * 100. "page_size" is supported from ver 1.10.0 and above.
+         * 1000 apps will be returned. The maximum value is 1000; values above 1000 will be coerced
+         * to 1000. "page_size" is supported from ver 1.10.0 and above.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -13085,17 +13085,24 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Optional. Maximum number of app IDs to return. Defaults to 1000. */
+        /**
+         * Optional. Maximum number of app IDs to return. Defaults to 1000, which is also the upper
+         * limit. To get more than 1000, use pagination with 'pageSize' and 'pageToken' parameters.
+         */
         @com.google.api.client.util.Key
         private java.lang.Long rows;
 
-        /** Optional. Maximum number of app IDs to return. Defaults to 1000.
+        /** Optional. Maximum number of app IDs to return. Defaults to 1000, which is also the upper limit. To
+       get more than 1000, use pagination with 'pageSize' and 'pageToken' parameters.
          */
         public java.lang.Long getRows() {
           return rows;
         }
 
-        /** Optional. Maximum number of app IDs to return. Defaults to 1000. */
+        /**
+         * Optional. Maximum number of app IDs to return. Defaults to 1000, which is also the upper
+         * limit. To get more than 1000, use pagination with 'pageSize' and 'pageToken' parameters.
+         */
         public List setRows(java.lang.Long rows) {
           this.rows = rows;
           return this;

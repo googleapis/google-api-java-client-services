@@ -79,6 +79,13 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
+   * Optional. Defined structured input parameters for this flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> inputParameterDefinitions;
+
+  /**
    * Optional. Knowledge connector configuration.
    * The value may be {@code null}.
    */
@@ -113,6 +120,13 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1NluSettings nluSettings;
+
+  /**
+   * Optional. Defined structured output parameters for this flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> outputParameterDefinitions;
 
   /**
    * A flow's transition route group serve two purposes: * They are responsible for matching the
@@ -221,6 +235,23 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
+   * Optional. Defined structured input parameters for this flow.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> getInputParameterDefinitions() {
+    return inputParameterDefinitions;
+  }
+
+  /**
+   * Optional. Defined structured input parameters for this flow.
+   * @param inputParameterDefinitions inputParameterDefinitions or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Flow setInputParameterDefinitions(java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> inputParameterDefinitions) {
+    this.inputParameterDefinitions = inputParameterDefinitions;
+    return this;
+  }
+
+  /**
    * Optional. Knowledge connector configuration.
    * @return value or {@code null} for none
    */
@@ -304,6 +335,23 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    */
   public GoogleCloudDialogflowCxV3beta1Flow setNluSettings(GoogleCloudDialogflowCxV3beta1NluSettings nluSettings) {
     this.nluSettings = nluSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Defined structured output parameters for this flow.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> getOutputParameterDefinitions() {
+    return outputParameterDefinitions;
+  }
+
+  /**
+   * Optional. Defined structured output parameters for this flow.
+   * @param outputParameterDefinitions outputParameterDefinitions or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Flow setOutputParameterDefinitions(java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> outputParameterDefinitions) {
+    this.outputParameterDefinitions = outputParameterDefinitions;
     return this;
   }
 

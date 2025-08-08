@@ -44,6 +44,13 @@ public final class LineItemDetails extends com.google.api.client.json.GenericJso
   private java.lang.String gtin;
 
   /**
+   * Optional. The Global Trade Item Numbers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> gtins;
+
+  /**
    * Required. The ID for this line item.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class LineItemDetails extends com.google.api.client.json.GenericJso
    */
   public LineItemDetails setGtin(java.lang.String gtin) {
     this.gtin = gtin;
+    return this;
+  }
+
+  /**
+   * Optional. The Global Trade Item Numbers.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGtins() {
+    return gtins;
+  }
+
+  /**
+   * Optional. The Global Trade Item Numbers.
+   * @param gtins gtins or {@code null} for none
+   */
+  public LineItemDetails setGtins(java.util.List<java.lang.String> gtins) {
+    this.gtins = gtins;
     return this;
   }
 

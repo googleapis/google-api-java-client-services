@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Dataplex Image version.
+   * Required. Dataplex Universal Catalog Image version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRunt
   private java.util.List<java.lang.String> pythonPackages;
 
   /**
-   * Required. Dataplex Image version.
+   * Required. Dataplex Universal Catalog Image version.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageVersion() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRunt
   }
 
   /**
-   * Required. Dataplex Image version.
+   * Required. Dataplex Universal Catalog Image version.
    * @param imageVersion imageVersion or {@code null} for none
    */
   public GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime setImageVersion(java.lang.String imageVersion) {

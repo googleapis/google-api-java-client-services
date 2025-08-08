@@ -30,7 +30,8 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If set, the latest DataScan job result will be published to Dataplex Catalog.
+   * Optional. If set, the latest DataScan job result will be published as Dataplex Universal
+   * Catalog metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +77,8 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
   private java.lang.Float samplingPercent;
 
   /**
-   * Optional. If set, the latest DataScan job result will be published to Dataplex Catalog.
+   * Optional. If set, the latest DataScan job result will be published as Dataplex Universal
+   * Catalog metadata.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCatalogPublishingEnabled() {
@@ -84,7 +86,8 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
   }
 
   /**
-   * Optional. If set, the latest DataScan job result will be published to Dataplex Catalog.
+   * Optional. If set, the latest DataScan job result will be published as Dataplex Universal
+   * Catalog metadata.
    * @param catalogPublishingEnabled catalogPublishingEnabled or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualitySpec setCatalogPublishingEnabled(java.lang.Boolean catalogPublishingEnabled) {

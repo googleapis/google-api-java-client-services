@@ -33,9 +33,9 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpec extends com.goo
    * Required. The root path of the Cloud Storage bucket to export the metadata to, in the format
    * gs://{bucket}/. You can optionally specify a custom prefix after the bucket name, in the format
    * gs://{bucket}/{prefix}/. The maximum length of the custom prefix is 128 characters. Dataplex
-   * constructs the object path for the exported files by using the bucket name and prefix that you
-   * provide, followed by a system-generated path.The bucket must be in the same VPC Service
-   * Controls perimeter as the job.
+   * Universal Catalog constructs the object path for the exported files by using the bucket name
+   * and prefix that you provide, followed by a system-generated path.The bucket must be in the same
+   * VPC Service Controls perimeter as the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,9 +52,9 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpec extends com.goo
    * Required. The root path of the Cloud Storage bucket to export the metadata to, in the format
    * gs://{bucket}/. You can optionally specify a custom prefix after the bucket name, in the format
    * gs://{bucket}/{prefix}/. The maximum length of the custom prefix is 128 characters. Dataplex
-   * constructs the object path for the exported files by using the bucket name and prefix that you
-   * provide, followed by a system-generated path.The bucket must be in the same VPC Service
-   * Controls perimeter as the job.
+   * Universal Catalog constructs the object path for the exported files by using the bucket name
+   * and prefix that you provide, followed by a system-generated path.The bucket must be in the same
+   * VPC Service Controls perimeter as the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputPath() {
@@ -65,9 +65,9 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpec extends com.goo
    * Required. The root path of the Cloud Storage bucket to export the metadata to, in the format
    * gs://{bucket}/. You can optionally specify a custom prefix after the bucket name, in the format
    * gs://{bucket}/{prefix}/. The maximum length of the custom prefix is 128 characters. Dataplex
-   * constructs the object path for the exported files by using the bucket name and prefix that you
-   * provide, followed by a system-generated path.The bucket must be in the same VPC Service
-   * Controls perimeter as the job.
+   * Universal Catalog constructs the object path for the exported files by using the bucket name
+   * and prefix that you provide, followed by a system-generated path.The bucket must be in the same
+   * VPC Service Controls perimeter as the job.
    * @param outputPath outputPath or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobSpec setOutputPath(java.lang.String outputPath) {

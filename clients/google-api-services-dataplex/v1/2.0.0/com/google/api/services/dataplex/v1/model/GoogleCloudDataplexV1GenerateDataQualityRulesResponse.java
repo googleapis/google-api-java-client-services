@@ -30,7 +30,8 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1GenerateDataQualityRulesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The data quality rules that Dataplex generates based on the results of a data profiling scan.
+   * The data quality rules that Dataplex Universal Catalog generates based on the results of a data
+   * profiling scan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +44,8 @@ public final class GoogleCloudDataplexV1GenerateDataQualityRulesResponse extends
   }
 
   /**
-   * The data quality rules that Dataplex generates based on the results of a data profiling scan.
+   * The data quality rules that Dataplex Universal Catalog generates based on the results of a data
+   * profiling scan.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataQualityRule> getRule() {
@@ -51,7 +53,8 @@ public final class GoogleCloudDataplexV1GenerateDataQualityRulesResponse extends
   }
 
   /**
-   * The data quality rules that Dataplex generates based on the results of a data profiling scan.
+   * The data quality rules that Dataplex Universal Catalog generates based on the results of a data
+   * profiling scan.
    * @param rule rule or {@code null} for none
    */
   public GoogleCloudDataplexV1GenerateDataQualityRulesResponse setRule(java.util.List<GoogleCloudDataplexV1DataQualityRule> rule) {

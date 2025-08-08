@@ -20,7 +20,7 @@ package com.google.api.services.dataplex.v1;
  * Service definition for CloudDataplex (v1).
  *
  * <p>
- * Dataplex API is used to manage the lifecycle of data lakes.
+ * A unified, intelligent governance solution for data and AI assets.
  * </p>
  *
  * <p>
@@ -3012,14 +3012,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The query against which entries in scope should be matched. The query syntax is
-         * defined in Search syntax for Dataplex Catalog
+         * defined in Search syntax for Dataplex Universal Catalog
          * (https://cloud.google.com/dataplex/docs/search-syntax).
          */
         @com.google.api.client.util.Key
         private java.lang.String query;
 
         /** Required. The query against which entries in scope should be matched. The query syntax is defined
-       in Search syntax for Dataplex Catalog (https://cloud.google.com/dataplex/docs/search-syntax).
+       in Search syntax for Dataplex Universal Catalog (https://cloud.google.com/dataplex/docs/search-
+       syntax).
          */
         public java.lang.String getQuery() {
           return query;
@@ -3027,7 +3028,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The query against which entries in scope should be matched. The query syntax is
-         * defined in Search syntax for Dataplex Catalog
+         * defined in Search syntax for Dataplex Universal Catalog
          * (https://cloud.google.com/dataplex/docs/search-syntax).
          */
         public SearchEntries setQuery(java.lang.String query) {
@@ -35012,8 +35013,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Creates a metadata job. For example, use a metadata job to import Dataplex Catalog entries and
-         * aspects from a third-party system into Dataplex.
+         * Creates a metadata job. For example, use a metadata job to import metadata from a third-party
+         * system into Dataplex Universal Catalog.
          *
          * Create a request for the method "metadataJobs.create".
          *
@@ -35039,8 +35040,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a metadata job. For example, use a metadata job to import Dataplex Catalog entries and
-           * aspects from a third-party system into Dataplex.
+           * Creates a metadata job. For example, use a metadata job to import metadata from a third-party
+           * system into Dataplex Universal Catalog.
            *
            * Create a request for the method "metadataJobs.create".
            *

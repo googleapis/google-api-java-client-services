@@ -55,7 +55,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
    * The data type retrieved from the schema of the data source. For instance, for a BigQuery native
    * table, it is the BigQuery Table Schema
    * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema). For a
-   * Dataplex Entity, it is the Entity Schema
+   * Dataplex Universal Catalog Entity, it is the Entity Schema
    * (https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).
    * The value may be {@code null}.
    */
@@ -119,7 +119,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
    * The data type retrieved from the schema of the data source. For instance, for a BigQuery native
    * table, it is the BigQuery Table Schema
    * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema). For a
-   * Dataplex Entity, it is the Entity Schema
+   * Dataplex Universal Catalog Entity, it is the Entity Schema
    * (https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).
    * @return value or {@code null} for none
    */
@@ -131,7 +131,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
    * The data type retrieved from the schema of the data source. For instance, for a BigQuery native
    * table, it is the BigQuery Table Schema
    * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema). For a
-   * Dataplex Entity, it is the Entity Schema
+   * Dataplex Universal Catalog Entity, it is the Entity Schema
    * (https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).
    * @param type type or {@code null} for none
    */

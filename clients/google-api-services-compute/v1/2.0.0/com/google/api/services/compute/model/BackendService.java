@@ -422,6 +422,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private OutlierDetection outlierDetection;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceParams params;
+
+  /**
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
    * 80. For internal passthrough Network Load Balancers and external passthrough Network Load
    * Balancers, omit port.
@@ -1444,6 +1452,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setOutlierDetection(OutlierDetection outlierDetection) {
     this.outlierDetection = outlierDetection;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public BackendService setParams(BackendServiceParams params) {
+    this.params = params;
     return this;
   }
 

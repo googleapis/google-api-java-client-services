@@ -32,6 +32,29 @@ package com.google.api.services.compute.model;
 public final class AllocationAggregateReservation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Count of reserved hosts of specified VM family. The host has fixed number of accelerators based
+   * on the accelerator/vm-family selected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer hostCount;
+
+  /**
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer inUseHostCount;
+
+  /**
+   * Number of instances currently in use in this reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer inUseInstanceCount;
+
+  /**
    * [Output only] List of resources currently in use.
    * The value may be {@code null}.
    */
@@ -58,6 +81,61 @@ public final class AllocationAggregateReservation extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String workloadType;
+
+  /**
+   * Count of reserved hosts of specified VM family. The host has fixed number of accelerators based
+   * on the accelerator/vm-family selected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getHostCount() {
+    return hostCount;
+  }
+
+  /**
+   * Count of reserved hosts of specified VM family. The host has fixed number of accelerators based
+   * on the accelerator/vm-family selected.
+   * @param hostCount hostCount or {@code null} for none
+   */
+  public AllocationAggregateReservation setHostCount(java.lang.Integer hostCount) {
+    this.hostCount = hostCount;
+    return this;
+  }
+
+  /**
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInUseHostCount() {
+    return inUseHostCount;
+  }
+
+  /**
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
+   * @param inUseHostCount inUseHostCount or {@code null} for none
+   */
+  public AllocationAggregateReservation setInUseHostCount(java.lang.Integer inUseHostCount) {
+    this.inUseHostCount = inUseHostCount;
+    return this;
+  }
+
+  /**
+   * Number of instances currently in use in this reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInUseInstanceCount() {
+    return inUseInstanceCount;
+  }
+
+  /**
+   * Number of instances currently in use in this reservation.
+   * @param inUseInstanceCount inUseInstanceCount or {@code null} for none
+   */
+  public AllocationAggregateReservation setInUseInstanceCount(java.lang.Integer inUseInstanceCount) {
+    this.inUseInstanceCount = inUseInstanceCount;
+    return this;
+  }
 
   /**
    * [Output only] List of resources currently in use.

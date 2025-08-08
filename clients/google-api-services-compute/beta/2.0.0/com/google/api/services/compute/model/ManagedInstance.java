@@ -125,6 +125,13 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstancePropertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy;
 
   /**
+   * [Output Only] Information about the termination timestamp of the instance, if applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedInstanceScheduling scheduling;
+
+  /**
    * [Output Only] The eventual status of the instance. The instance group manager will not be
    * identified as stable till each managed instance reaches its targetStatus.
    * The value may be {@code null}.
@@ -359,6 +366,23 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setPropertiesFromFlexibilityPolicy(ManagedInstancePropertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy) {
     this.propertiesFromFlexibilityPolicy = propertiesFromFlexibilityPolicy;
+    return this;
+  }
+
+  /**
+   * [Output Only] Information about the termination timestamp of the instance, if applicable.
+   * @return value or {@code null} for none
+   */
+  public ManagedInstanceScheduling getScheduling() {
+    return scheduling;
+  }
+
+  /**
+   * [Output Only] Information about the termination timestamp of the instance, if applicable.
+   * @param scheduling scheduling or {@code null} for none
+   */
+  public ManagedInstance setScheduling(ManagedInstanceScheduling scheduling) {
+    this.scheduling = scheduling;
     return this;
   }
 

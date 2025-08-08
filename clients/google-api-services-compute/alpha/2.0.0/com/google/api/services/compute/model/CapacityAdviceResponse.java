@@ -31,7 +31,7 @@ public final class CapacityAdviceResponse extends com.google.api.client.json.Gen
 
   /**
    * Initially the API will provide one recommendation which balances the individual scores
-   * according to Google's preference.
+   * according to service provider's preference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class CapacityAdviceResponse extends com.google.api.client.json.Gen
 
   /**
    * Initially the API will provide one recommendation which balances the individual scores
-   * according to Google's preference.
+   * according to service provider's preference.
    * @return value or {@code null} for none
    */
   public java.util.List<CapacityAdviceResponseRecommendation> getRecommendations() {
@@ -48,7 +48,7 @@ public final class CapacityAdviceResponse extends com.google.api.client.json.Gen
 
   /**
    * Initially the API will provide one recommendation which balances the individual scores
-   * according to Google's preference.
+   * according to service provider's preference.
    * @param recommendations recommendations or {@code null} for none
    */
   public CapacityAdviceResponse setRecommendations(java.util.List<CapacityAdviceResponseRecommendation> recommendations) {

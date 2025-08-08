@@ -52,10 +52,10 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The amount of time that a time series must fail to report new data to be considered failing.
-   * The minimum value of this field is 120 seconds. Larger values that are a multiple of a minute--
-   * for example, 240 or 300 seconds--are supported. If an invalid value is given, an error will be
-   * returned. The Duration.nanos field is ignored.
+   * Required. The amount of time that a time series must fail to report new data to be considered
+   * failing. The minimum value of this field is 120 seconds. Larger values that are a multiple of a
+   * minute--for example, 240 or 300 seconds--are supported. If an invalid value is given, an error
+   * will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,10 +113,10 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The amount of time that a time series must fail to report new data to be considered failing.
-   * The minimum value of this field is 120 seconds. Larger values that are a multiple of a minute--
-   * for example, 240 or 300 seconds--are supported. If an invalid value is given, an error will be
-   * returned. The Duration.nanos field is ignored.
+   * Required. The amount of time that a time series must fail to report new data to be considered
+   * failing. The minimum value of this field is 120 seconds. Larger values that are a multiple of a
+   * minute--for example, 240 or 300 seconds--are supported. If an invalid value is given, an error
+   * will be returned.
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -124,10 +124,10 @@ public final class MetricAbsence extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The amount of time that a time series must fail to report new data to be considered failing.
-   * The minimum value of this field is 120 seconds. Larger values that are a multiple of a minute--
-   * for example, 240 or 300 seconds--are supported. If an invalid value is given, an error will be
-   * returned. The Duration.nanos field is ignored.
+   * Required. The amount of time that a time series must fail to report new data to be considered
+   * failing. The minimum value of this field is 120 seconds. Larger values that are a multiple of a
+   * minute--for example, 240 or 300 seconds--are supported. If an invalid value is given, an error
+   * will be returned.
    * @param duration duration or {@code null} for none
    */
   public MetricAbsence setDuration(String duration) {

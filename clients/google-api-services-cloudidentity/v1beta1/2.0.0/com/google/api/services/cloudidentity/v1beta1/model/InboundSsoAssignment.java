@@ -45,6 +45,13 @@ public final class InboundSsoAssignment extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
+   * OpenID Connect SSO details. Must be set if and only if `sso_mode` is set to `OIDC_SSO`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OidcSsoInfo oidcSsoInfo;
+
+  /**
    * Must be zero (which is the default value so it can be omitted) for assignments with
    * `target_org_unit` set and must be greater-than-or-equal-to one for assignments with
    * `target_group` set.
@@ -123,6 +130,23 @@ public final class InboundSsoAssignment extends com.google.api.client.json.Gener
    */
   public InboundSsoAssignment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * OpenID Connect SSO details. Must be set if and only if `sso_mode` is set to `OIDC_SSO`.
+   * @return value or {@code null} for none
+   */
+  public OidcSsoInfo getOidcSsoInfo() {
+    return oidcSsoInfo;
+  }
+
+  /**
+   * OpenID Connect SSO details. Must be set if and only if `sso_mode` is set to `OIDC_SSO`.
+   * @param oidcSsoInfo oidcSsoInfo or {@code null} for none
+   */
+  public InboundSsoAssignment setOidcSsoInfo(OidcSsoInfo oidcSsoInfo) {
+    this.oidcSsoInfo = oidcSsoInfo;
     return this;
   }
 

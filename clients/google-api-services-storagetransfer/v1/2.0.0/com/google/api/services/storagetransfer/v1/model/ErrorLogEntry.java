@@ -30,22 +30,22 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class ErrorLogEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of messages that carry the error details.
+   * Optional. A list of messages that carry the error details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> errorDetails;
 
   /**
-   * Required. A URL that refers to the target (a data source, a data sink, or an object) with which
-   * the error is associated.
+   * Output only. A URL that refers to the target (a data source, a data sink, or an object) with
+   * which the error is associated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * A list of messages that carry the error details.
+   * Optional. A list of messages that carry the error details.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getErrorDetails() {
@@ -53,7 +53,7 @@ public final class ErrorLogEntry extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of messages that carry the error details.
+   * Optional. A list of messages that carry the error details.
    * @param errorDetails errorDetails or {@code null} for none
    */
   public ErrorLogEntry setErrorDetails(java.util.List<java.lang.String> errorDetails) {
@@ -62,8 +62,8 @@ public final class ErrorLogEntry extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. A URL that refers to the target (a data source, a data sink, or an object) with which
-   * the error is associated.
+   * Output only. A URL that refers to the target (a data source, a data sink, or an object) with
+   * which the error is associated.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -71,8 +71,8 @@ public final class ErrorLogEntry extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. A URL that refers to the target (a data source, a data sink, or an object) with which
-   * the error is associated.
+   * Output only. A URL that refers to the target (a data source, a data sink, or an object) with
+   * which the error is associated.
    * @param url url or {@code null} for none
    */
   public ErrorLogEntry setUrl(java.lang.String url) {

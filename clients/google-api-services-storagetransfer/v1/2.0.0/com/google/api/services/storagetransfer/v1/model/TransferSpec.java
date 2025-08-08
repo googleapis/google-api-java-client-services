@@ -30,35 +30,35 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class TransferSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * An AWS S3 compatible data source.
+   * Optional. An AWS S3 compatible data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsS3CompatibleData awsS3CompatibleDataSource;
 
   /**
-   * An AWS S3 data source.
+   * Optional. An AWS S3 data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsS3Data awsS3DataSource;
 
   /**
-   * An Azure Blob Storage data source.
+   * Optional. An Azure Blob Storage data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AzureBlobStorageData azureBlobStorageDataSource;
 
   /**
-   * A Cloud Storage data sink.
+   * Optional. A Cloud Storage data sink.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GcsData gcsDataSink;
 
   /**
-   * A Cloud Storage data source.
+   * Optional. A Cloud Storage data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,14 +74,14 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private GcsData gcsIntermediateDataLocation;
 
   /**
-   * An HDFS cluster data source.
+   * Optional. An HDFS cluster data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HdfsData hdfsDataSource;
 
   /**
-   * An HTTP URL data source.
+   * Optional. An HTTP URL data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,14 +97,14 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private ObjectConditions objectConditions;
 
   /**
-   * A POSIX Filesystem data sink.
+   * Optional. A POSIX Filesystem data sink.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PosixFilesystem posixDataSink;
 
   /**
-   * A POSIX Filesystem data source.
+   * Optional. A POSIX Filesystem data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +144,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private TransferOptions transferOptions;
 
   /**
-   * An AWS S3 compatible data source.
+   * Optional. An AWS S3 compatible data source.
    * @return value or {@code null} for none
    */
   public AwsS3CompatibleData getAwsS3CompatibleDataSource() {
@@ -152,7 +152,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An AWS S3 compatible data source.
+   * Optional. An AWS S3 compatible data source.
    * @param awsS3CompatibleDataSource awsS3CompatibleDataSource or {@code null} for none
    */
   public TransferSpec setAwsS3CompatibleDataSource(AwsS3CompatibleData awsS3CompatibleDataSource) {
@@ -161,7 +161,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An AWS S3 data source.
+   * Optional. An AWS S3 data source.
    * @return value or {@code null} for none
    */
   public AwsS3Data getAwsS3DataSource() {
@@ -169,7 +169,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An AWS S3 data source.
+   * Optional. An AWS S3 data source.
    * @param awsS3DataSource awsS3DataSource or {@code null} for none
    */
   public TransferSpec setAwsS3DataSource(AwsS3Data awsS3DataSource) {
@@ -178,7 +178,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An Azure Blob Storage data source.
+   * Optional. An Azure Blob Storage data source.
    * @return value or {@code null} for none
    */
   public AzureBlobStorageData getAzureBlobStorageDataSource() {
@@ -186,7 +186,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An Azure Blob Storage data source.
+   * Optional. An Azure Blob Storage data source.
    * @param azureBlobStorageDataSource azureBlobStorageDataSource or {@code null} for none
    */
   public TransferSpec setAzureBlobStorageDataSource(AzureBlobStorageData azureBlobStorageDataSource) {
@@ -195,7 +195,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Cloud Storage data sink.
+   * Optional. A Cloud Storage data sink.
    * @return value or {@code null} for none
    */
   public GcsData getGcsDataSink() {
@@ -203,7 +203,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Cloud Storage data sink.
+   * Optional. A Cloud Storage data sink.
    * @param gcsDataSink gcsDataSink or {@code null} for none
    */
   public TransferSpec setGcsDataSink(GcsData gcsDataSink) {
@@ -212,7 +212,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Cloud Storage data source.
+   * Optional. A Cloud Storage data source.
    * @return value or {@code null} for none
    */
   public GcsData getGcsDataSource() {
@@ -220,7 +220,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Cloud Storage data source.
+   * Optional. A Cloud Storage data source.
    * @param gcsDataSource gcsDataSource or {@code null} for none
    */
   public TransferSpec setGcsDataSource(GcsData gcsDataSource) {
@@ -250,7 +250,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An HDFS cluster data source.
+   * Optional. An HDFS cluster data source.
    * @return value or {@code null} for none
    */
   public HdfsData getHdfsDataSource() {
@@ -258,7 +258,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An HDFS cluster data source.
+   * Optional. An HDFS cluster data source.
    * @param hdfsDataSource hdfsDataSource or {@code null} for none
    */
   public TransferSpec setHdfsDataSource(HdfsData hdfsDataSource) {
@@ -267,7 +267,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An HTTP URL data source.
+   * Optional. An HTTP URL data source.
    * @return value or {@code null} for none
    */
   public HttpData getHttpDataSource() {
@@ -275,7 +275,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An HTTP URL data source.
+   * Optional. An HTTP URL data source.
    * @param httpDataSource httpDataSource or {@code null} for none
    */
   public TransferSpec setHttpDataSource(HttpData httpDataSource) {
@@ -305,7 +305,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A POSIX Filesystem data sink.
+   * Optional. A POSIX Filesystem data sink.
    * @return value or {@code null} for none
    */
   public PosixFilesystem getPosixDataSink() {
@@ -313,7 +313,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A POSIX Filesystem data sink.
+   * Optional. A POSIX Filesystem data sink.
    * @param posixDataSink posixDataSink or {@code null} for none
    */
   public TransferSpec setPosixDataSink(PosixFilesystem posixDataSink) {
@@ -322,7 +322,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A POSIX Filesystem data source.
+   * Optional. A POSIX Filesystem data source.
    * @return value or {@code null} for none
    */
   public PosixFilesystem getPosixDataSource() {
@@ -330,7 +330,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A POSIX Filesystem data source.
+   * Optional. A POSIX Filesystem data source.
    * @param posixDataSource posixDataSource or {@code null} for none
    */
   public TransferSpec setPosixDataSource(PosixFilesystem posixDataSource) {

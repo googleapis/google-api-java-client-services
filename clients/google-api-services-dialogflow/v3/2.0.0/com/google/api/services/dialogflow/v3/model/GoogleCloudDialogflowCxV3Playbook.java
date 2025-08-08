@@ -69,6 +69,19 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
+   * Optional. Defined structured input parameters for this playbook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> inputParameterDefinitions;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowCxV3ParameterDefinition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowCxV3ParameterDefinition.class);
+  }
+
+  /**
    * Instruction to accomplish target goal.
    * The value may be {@code null}.
    */
@@ -88,6 +101,26 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Defined structured output parameters for this playbook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> outputParameterDefinitions;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowCxV3ParameterDefinition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowCxV3ParameterDefinition.class);
+  }
+
+  /**
+   * Optional. Type of the playbook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String playbookType;
 
   /**
    * Output only. The resource name of flows referenced by the current playbook in the instructions.
@@ -198,6 +231,23 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
+   * Optional. Defined structured input parameters for this playbook.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> getInputParameterDefinitions() {
+    return inputParameterDefinitions;
+  }
+
+  /**
+   * Optional. Defined structured input parameters for this playbook.
+   * @param inputParameterDefinitions inputParameterDefinitions or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Playbook setInputParameterDefinitions(java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> inputParameterDefinitions) {
+    this.inputParameterDefinitions = inputParameterDefinitions;
+    return this;
+  }
+
+  /**
    * Instruction to accomplish target goal.
    * @return value or {@code null} for none
    */
@@ -245,6 +295,40 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
    */
   public GoogleCloudDialogflowCxV3Playbook setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Defined structured output parameters for this playbook.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> getOutputParameterDefinitions() {
+    return outputParameterDefinitions;
+  }
+
+  /**
+   * Optional. Defined structured output parameters for this playbook.
+   * @param outputParameterDefinitions outputParameterDefinitions or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Playbook setOutputParameterDefinitions(java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> outputParameterDefinitions) {
+    this.outputParameterDefinitions = outputParameterDefinitions;
+    return this;
+  }
+
+  /**
+   * Optional. Type of the playbook.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlaybookType() {
+    return playbookType;
+  }
+
+  /**
+   * Optional. Type of the playbook.
+   * @param playbookType playbookType or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Playbook setPlaybookType(java.lang.String playbookType) {
+    this.playbookType = playbookType;
     return this;
   }
 

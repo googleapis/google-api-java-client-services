@@ -42,7 +42,10 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   private java.lang.String debugString;
 
   /**
-   * Error codes that describe the result of the Check operation.
+   * Error codes that describe the result of the Check operation. NOTE: Error codes may be populated
+   * even when `linked` is true. The error codes do not necessarily imply that the request failed,
+   * but rather, specify any errors encountered in the statements file(s) which may or may not
+   * impact whether the server determines the requested source and target to be linked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +103,10 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Error codes that describe the result of the Check operation.
+   * Error codes that describe the result of the Check operation. NOTE: Error codes may be populated
+   * even when `linked` is true. The error codes do not necessarily imply that the request failed,
+   * but rather, specify any errors encountered in the statements file(s) which may or may not
+   * impact whether the server determines the requested source and target to be linked.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getErrorCode() {
@@ -108,7 +114,10 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Error codes that describe the result of the Check operation.
+   * Error codes that describe the result of the Check operation. NOTE: Error codes may be populated
+   * even when `linked` is true. The error codes do not necessarily imply that the request failed,
+   * but rather, specify any errors encountered in the statements file(s) which may or may not
+   * impact whether the server determines the requested source and target to be linked.
    * @param errorCode errorCode or {@code null} for none
    */
   public CheckResponse setErrorCode(java.util.List<java.lang.String> errorCode) {

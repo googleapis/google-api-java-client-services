@@ -7897,6 +7897,29 @@ public class ManagedKafka extends com.google.api.client.googleapis.services.json
             return this;
           }
 
+          /**
+           * Optional. Specifies the view to return for the schema registry instances. If not
+           * specified, the default view is SCHEMA_REGISTRY_VIEW_BASIC.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. Specifies the view to return for the schema registry instances. If not specified, the
+         default view is SCHEMA_REGISTRY_VIEW_BASIC.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Optional. Specifies the view to return for the schema registry instances. If not
+           * specified, the default view is SCHEMA_REGISTRY_VIEW_BASIC.
+           */
+          public List setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);

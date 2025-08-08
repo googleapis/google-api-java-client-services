@@ -60,6 +60,13 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
   private java.lang.String name;
 
   /**
+   * Optional. Test case that must be run before this test case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String prerequisiteTestCase;
+
+  /**
    * Optional. Instructions for AI driven test.
    * @return value or {@code null} for none
    */
@@ -126,6 +133,23 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
    */
   public GoogleFirebaseAppdistroV1alphaTestCase setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Test case that must be run before this test case.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrerequisiteTestCase() {
+    return prerequisiteTestCase;
+  }
+
+  /**
+   * Optional. Test case that must be run before this test case.
+   * @param prerequisiteTestCase prerequisiteTestCase or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaTestCase setPrerequisiteTestCase(java.lang.String prerequisiteTestCase) {
+    this.prerequisiteTestCase = prerequisiteTestCase;
     return this;
   }
 

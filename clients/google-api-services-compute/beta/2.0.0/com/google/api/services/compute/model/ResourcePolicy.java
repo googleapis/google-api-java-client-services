@@ -124,6 +124,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private java.lang.String status;
 
   /**
+   * Resource policy for defining instance placement for MIGs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -355,6 +356,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Resource policy for defining instance placement for MIGs.
    * @return value or {@code null} for none
    */
   public ResourcePolicyWorkloadPolicy getWorkloadPolicy() {
@@ -362,6 +364,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Resource policy for defining instance placement for MIGs.
    * @param workloadPolicy workloadPolicy or {@code null} for none
    */
   public ResourcePolicy setWorkloadPolicy(ResourcePolicyWorkloadPolicy workloadPolicy) {

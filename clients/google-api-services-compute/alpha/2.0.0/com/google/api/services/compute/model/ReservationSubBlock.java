@@ -65,6 +65,14 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.Integer inUseCount;
 
   /**
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer inUseHostCount;
+
+  /**
    * [Output Only] Type of the resource. Always compute#reservationSubBlock for reservation
    * subBlocks.
    * The value may be {@code null}.
@@ -205,6 +213,25 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
    */
   public ReservationSubBlock setInUseCount(java.lang.Integer inUseCount) {
     this.inUseCount = inUseCount;
+    return this;
+  }
+
+  /**
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInUseHostCount() {
+    return inUseHostCount;
+  }
+
+  /**
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
+   * @param inUseHostCount inUseHostCount or {@code null} for none
+   */
+  public ReservationSubBlock setInUseHostCount(java.lang.Integer inUseHostCount) {
+    this.inUseHostCount = inUseHostCount;
     return this;
   }
 

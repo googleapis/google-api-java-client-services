@@ -39,6 +39,14 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Long diskSizeGb;
 
   /**
+   * Optional. Enable nested virtualization on the worker, if supported by the machine type. By
+   * default, nested virtualization is disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableNestedVirtualization;
+
+  /**
    * Optional. Machine type of a worker, such as `e2-medium`. See [Worker pool config
    * file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). If
    * left blank, Cloud Build will use a sensible default.
@@ -65,6 +73,25 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
    */
   public WorkerConfig setDiskSizeGb(java.lang.Long diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * Optional. Enable nested virtualization on the worker, if supported by the machine type. By
+   * default, nested virtualization is disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableNestedVirtualization() {
+    return enableNestedVirtualization;
+  }
+
+  /**
+   * Optional. Enable nested virtualization on the worker, if supported by the machine type. By
+   * default, nested virtualization is disabled.
+   * @param enableNestedVirtualization enableNestedVirtualization or {@code null} for none
+   */
+  public WorkerConfig setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {
+    this.enableNestedVirtualization = enableNestedVirtualization;
     return this;
   }
 

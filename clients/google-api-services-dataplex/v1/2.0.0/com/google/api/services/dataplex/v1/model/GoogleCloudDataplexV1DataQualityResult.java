@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The status of publishing the data scan to Catalog.
+   * Output only. The status of publishing the data scan as Dataplex Universal Catalog metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
   private java.lang.Float score;
 
   /**
-   * Output only. The status of publishing the data scan to Catalog.
+   * Output only. The status of publishing the data scan as Dataplex Universal Catalog metadata.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScanCatalogPublishingStatus getCatalogPublishingStatus() {
@@ -118,7 +118,7 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
   }
 
   /**
-   * Output only. The status of publishing the data scan to Catalog.
+   * Output only. The status of publishing the data scan as Dataplex Universal Catalog metadata.
    * @param catalogPublishingStatus catalogPublishingStatus or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityResult setCatalogPublishingStatus(GoogleCloudDataplexV1DataScanCatalogPublishingStatus catalogPublishingStatus) {

@@ -41,8 +41,8 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
    * matches aspects of all types on the given path.Replace {aspect_type_reference} with a reference
    * to the aspect type, in the format {project_id_or_number}.{location_id}.{aspect_type_id}.In FULL
    * entry sync mode, if you leave this field empty, it is treated as specifying exactly those
-   * aspects that are present within the specified entry. Dataplex implicitly adds the keys for all
-   * of the required aspects of an entry.
+   * aspects that are present within the specified entry. Dataplex Universal Catalog implicitly adds
+   * the keys for all of the required aspects of an entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,16 +65,17 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
 
   /**
    * The fields to update, in paths that are relative to the Entry resource. Separate each field
-   * with a comma.In FULL entry sync mode, Dataplex includes the paths of all of the fields for an
-   * entry that can be modified, including aspects. This means that Dataplex replaces the existing
-   * entry with the entry in the metadata import file. All modifiable fields are updated, regardless
-   * of the fields that are listed in the update mask, and regardless of whether a field is present
-   * in the entry object.The update_mask field is ignored when an entry is created or re-created.In
-   * an aspect-only metadata job (when entry sync mode is NONE), set this value to aspects.Dataplex
-   * also determines which entries and aspects to modify by comparing the values and timestamps that
-   * you provide in the metadata import file with the values and timestamps that exist in your
-   * project. For more information, see Comparison logic
-   * (https://cloud.google.com/dataplex/docs/import-metadata#data-modification-logic).
+   * with a comma.In FULL entry sync mode, Dataplex Universal Catalog includes the paths of all of
+   * the fields for an entry that can be modified, including aspects. This means that Dataplex
+   * Universal Catalog replaces the existing entry with the entry in the metadata import file. All
+   * modifiable fields are updated, regardless of the fields that are listed in the update mask, and
+   * regardless of whether a field is present in the entry object.The update_mask field is ignored
+   * when an entry is created or re-created.In an aspect-only metadata job (when entry sync mode is
+   * NONE), set this value to aspects.Dataplex Universal Catalog also determines which entries and
+   * aspects to modify by comparing the values and timestamps that you provide in the metadata
+   * import file with the values and timestamps that exist in your project. For more information,
+   * see Comparison logic (https://cloud.google.com/dataplex/docs/import-metadata#data-modification-
+   * logic).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +89,8 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
    * matches aspects of all types on the given path.Replace {aspect_type_reference} with a reference
    * to the aspect type, in the format {project_id_or_number}.{location_id}.{aspect_type_id}.In FULL
    * entry sync mode, if you leave this field empty, it is treated as specifying exactly those
-   * aspects that are present within the specified entry. Dataplex implicitly adds the keys for all
-   * of the required aspects of an entry.
+   * aspects that are present within the specified entry. Dataplex Universal Catalog implicitly adds
+   * the keys for all of the required aspects of an entry.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAspectKeys() {
@@ -104,8 +105,8 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
    * matches aspects of all types on the given path.Replace {aspect_type_reference} with a reference
    * to the aspect type, in the format {project_id_or_number}.{location_id}.{aspect_type_id}.In FULL
    * entry sync mode, if you leave this field empty, it is treated as specifying exactly those
-   * aspects that are present within the specified entry. Dataplex implicitly adds the keys for all
-   * of the required aspects of an entry.
+   * aspects that are present within the specified entry. Dataplex Universal Catalog implicitly adds
+   * the keys for all of the required aspects of an entry.
    * @param aspectKeys aspectKeys or {@code null} for none
    */
   public GoogleCloudDataplexV1ImportItem setAspectKeys(java.util.List<java.lang.String> aspectKeys) {
@@ -151,16 +152,17 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
 
   /**
    * The fields to update, in paths that are relative to the Entry resource. Separate each field
-   * with a comma.In FULL entry sync mode, Dataplex includes the paths of all of the fields for an
-   * entry that can be modified, including aspects. This means that Dataplex replaces the existing
-   * entry with the entry in the metadata import file. All modifiable fields are updated, regardless
-   * of the fields that are listed in the update mask, and regardless of whether a field is present
-   * in the entry object.The update_mask field is ignored when an entry is created or re-created.In
-   * an aspect-only metadata job (when entry sync mode is NONE), set this value to aspects.Dataplex
-   * also determines which entries and aspects to modify by comparing the values and timestamps that
-   * you provide in the metadata import file with the values and timestamps that exist in your
-   * project. For more information, see Comparison logic
-   * (https://cloud.google.com/dataplex/docs/import-metadata#data-modification-logic).
+   * with a comma.In FULL entry sync mode, Dataplex Universal Catalog includes the paths of all of
+   * the fields for an entry that can be modified, including aspects. This means that Dataplex
+   * Universal Catalog replaces the existing entry with the entry in the metadata import file. All
+   * modifiable fields are updated, regardless of the fields that are listed in the update mask, and
+   * regardless of whether a field is present in the entry object.The update_mask field is ignored
+   * when an entry is created or re-created.In an aspect-only metadata job (when entry sync mode is
+   * NONE), set this value to aspects.Dataplex Universal Catalog also determines which entries and
+   * aspects to modify by comparing the values and timestamps that you provide in the metadata
+   * import file with the values and timestamps that exist in your project. For more information,
+   * see Comparison logic (https://cloud.google.com/dataplex/docs/import-metadata#data-modification-
+   * logic).
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -169,16 +171,17 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
 
   /**
    * The fields to update, in paths that are relative to the Entry resource. Separate each field
-   * with a comma.In FULL entry sync mode, Dataplex includes the paths of all of the fields for an
-   * entry that can be modified, including aspects. This means that Dataplex replaces the existing
-   * entry with the entry in the metadata import file. All modifiable fields are updated, regardless
-   * of the fields that are listed in the update mask, and regardless of whether a field is present
-   * in the entry object.The update_mask field is ignored when an entry is created or re-created.In
-   * an aspect-only metadata job (when entry sync mode is NONE), set this value to aspects.Dataplex
-   * also determines which entries and aspects to modify by comparing the values and timestamps that
-   * you provide in the metadata import file with the values and timestamps that exist in your
-   * project. For more information, see Comparison logic
-   * (https://cloud.google.com/dataplex/docs/import-metadata#data-modification-logic).
+   * with a comma.In FULL entry sync mode, Dataplex Universal Catalog includes the paths of all of
+   * the fields for an entry that can be modified, including aspects. This means that Dataplex
+   * Universal Catalog replaces the existing entry with the entry in the metadata import file. All
+   * modifiable fields are updated, regardless of the fields that are listed in the update mask, and
+   * regardless of whether a field is present in the entry object.The update_mask field is ignored
+   * when an entry is created or re-created.In an aspect-only metadata job (when entry sync mode is
+   * NONE), set this value to aspects.Dataplex Universal Catalog also determines which entries and
+   * aspects to modify by comparing the values and timestamps that you provide in the metadata
+   * import file with the values and timestamps that exist in your project. For more information,
+   * see Comparison logic (https://cloud.google.com/dataplex/docs/import-metadata#data-modification-
+   * logic).
    * @param updateMask updateMask or {@code null} for none
    */
   public GoogleCloudDataplexV1ImportItem setUpdateMask(String updateMask) {

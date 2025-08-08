@@ -31,7 +31,8 @@ public final class GoogleCloudDataplexV1AspectTypeAuthorization extends com.goog
 
   /**
    * Immutable. The IAM permission grantable on the EntryGroup to allow access to instantiate
-   * Aspects of Dataplex owned AspectTypes, only settable for Dataplex owned Types.
+   * Aspects of Dataplex Universal Catalog owned AspectTypes, only settable for Dataplex Universal
+   * Catalog owned Types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +40,8 @@ public final class GoogleCloudDataplexV1AspectTypeAuthorization extends com.goog
 
   /**
    * Immutable. The IAM permission grantable on the EntryGroup to allow access to instantiate
-   * Aspects of Dataplex owned AspectTypes, only settable for Dataplex owned Types.
+   * Aspects of Dataplex Universal Catalog owned AspectTypes, only settable for Dataplex Universal
+   * Catalog owned Types.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateUsePermission() {
@@ -48,7 +50,8 @@ public final class GoogleCloudDataplexV1AspectTypeAuthorization extends com.goog
 
   /**
    * Immutable. The IAM permission grantable on the EntryGroup to allow access to instantiate
-   * Aspects of Dataplex owned AspectTypes, only settable for Dataplex owned Types.
+   * Aspects of Dataplex Universal Catalog owned AspectTypes, only settable for Dataplex Universal
+   * Catalog owned Types.
    * @param alternateUsePermission alternateUsePermission or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeAuthorization setAlternateUsePermission(java.lang.String alternateUsePermission) {

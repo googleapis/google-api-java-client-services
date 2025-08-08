@@ -47,7 +47,7 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Output only. The time when the entry was created in Dataplex.
+   * Output only. The time when the entry was created in Dataplex Universal Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   private java.lang.String parentEntry;
 
   /**
-   * Output only. The time when the entry was last updated in Dataplex.
+   * Output only. The time when the entry was last updated in Dataplex Universal Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +128,7 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Output only. The time when the entry was created in Dataplex.
+   * Output only. The time when the entry was created in Dataplex Universal Catalog.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -136,7 +136,7 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Output only. The time when the entry was created in Dataplex.
+   * Output only. The time when the entry was created in Dataplex Universal Catalog.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDataplexV1Entry setCreateTime(String createTime) {
@@ -244,7 +244,7 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Output only. The time when the entry was last updated in Dataplex.
+   * Output only. The time when the entry was last updated in Dataplex Universal Catalog.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -252,7 +252,7 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Output only. The time when the entry was last updated in Dataplex.
+   * Output only. The time when the entry was last updated in Dataplex Universal Catalog.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDataplexV1Entry setUpdateTime(String updateTime) {

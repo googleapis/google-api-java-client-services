@@ -53,13 +53,14 @@ public final class GoogleCloudDataplexV1Schema extends com.google.api.client.jso
   private java.lang.String partitionStyle;
 
   /**
-   * Required. Set to true if user-managed or false if managed by Dataplex. The default is false
-   * (managed by Dataplex). Set to falseto enable Dataplex discovery to update the schema. including
-   * new data discovery, schema inference, and schema evolution. Users retain the ability to input
-   * and edit the schema. Dataplex treats schema input by the user as though produced by a previous
-   * Dataplex discovery operation, and it will evolve the schema and take action based on that
-   * treatment. Set to true to fully manage the entity schema. This setting guarantees that Dataplex
-   * will not change schema fields.
+   * Required. Set to true if user-managed or false if managed by Dataplex Universal Catalog. The
+   * default is false (managed by Dataplex Universal Catalog). Set to falseto enable Dataplex
+   * Universal Catalog discovery to update the schema. including new data discovery, schema
+   * inference, and schema evolution. Users retain the ability to input and edit the schema.
+   * Dataplex Universal Catalog treats schema input by the user as though produced by a previous
+   * Dataplex Universal Catalog discovery operation, and it will evolve the schema and take action
+   * based on that treatment. Set to true to fully manage the entity schema. This setting guarantees
+   * that Dataplex Universal Catalog will not change schema fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,13 +122,14 @@ public final class GoogleCloudDataplexV1Schema extends com.google.api.client.jso
   }
 
   /**
-   * Required. Set to true if user-managed or false if managed by Dataplex. The default is false
-   * (managed by Dataplex). Set to falseto enable Dataplex discovery to update the schema. including
-   * new data discovery, schema inference, and schema evolution. Users retain the ability to input
-   * and edit the schema. Dataplex treats schema input by the user as though produced by a previous
-   * Dataplex discovery operation, and it will evolve the schema and take action based on that
-   * treatment. Set to true to fully manage the entity schema. This setting guarantees that Dataplex
-   * will not change schema fields.
+   * Required. Set to true if user-managed or false if managed by Dataplex Universal Catalog. The
+   * default is false (managed by Dataplex Universal Catalog). Set to falseto enable Dataplex
+   * Universal Catalog discovery to update the schema. including new data discovery, schema
+   * inference, and schema evolution. Users retain the ability to input and edit the schema.
+   * Dataplex Universal Catalog treats schema input by the user as though produced by a previous
+   * Dataplex Universal Catalog discovery operation, and it will evolve the schema and take action
+   * based on that treatment. Set to true to fully manage the entity schema. This setting guarantees
+   * that Dataplex Universal Catalog will not change schema fields.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUserManaged() {
@@ -135,13 +137,14 @@ public final class GoogleCloudDataplexV1Schema extends com.google.api.client.jso
   }
 
   /**
-   * Required. Set to true if user-managed or false if managed by Dataplex. The default is false
-   * (managed by Dataplex). Set to falseto enable Dataplex discovery to update the schema. including
-   * new data discovery, schema inference, and schema evolution. Users retain the ability to input
-   * and edit the schema. Dataplex treats schema input by the user as though produced by a previous
-   * Dataplex discovery operation, and it will evolve the schema and take action based on that
-   * treatment. Set to true to fully manage the entity schema. This setting guarantees that Dataplex
-   * will not change schema fields.
+   * Required. Set to true if user-managed or false if managed by Dataplex Universal Catalog. The
+   * default is false (managed by Dataplex Universal Catalog). Set to falseto enable Dataplex
+   * Universal Catalog discovery to update the schema. including new data discovery, schema
+   * inference, and schema evolution. Users retain the ability to input and edit the schema.
+   * Dataplex Universal Catalog treats schema input by the user as though produced by a previous
+   * Dataplex Universal Catalog discovery operation, and it will evolve the schema and take action
+   * based on that treatment. Set to true to fully manage the entity schema. This setting guarantees
+   * that Dataplex Universal Catalog will not change schema fields.
    * @param userManaged userManaged or {@code null} for none
    */
   public GoogleCloudDataplexV1Schema setUserManaged(java.lang.Boolean userManaged) {

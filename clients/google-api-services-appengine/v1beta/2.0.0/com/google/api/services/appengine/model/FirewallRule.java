@@ -18,7 +18,10 @@ package com.google.api.services.appengine.model;
 
 /**
  * A single firewall rule that is evaluated against incoming traffic and provides an action to take
- * on matched requests.
+ * on matched requests. A positive integer between 1, Int32.MaxValue-1 that defines the order of
+ * rule evaluation. Rules with the lowest priority are evaluated first.A default rule at priority
+ * Int32.MaxValue matches all IPv4 and IPv6 traffic when no previous rule matches. Only the action
+ * of this rule can be modified by the user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Engine Admin API. For a detailed explanation see:
@@ -45,10 +48,6 @@ public final class FirewallRule extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * A positive integer between 1, Int32.MaxValue-1 that defines the order of rule evaluation. Rules
-   * with the lowest priority are evaluated first.A default rule at priority Int32.MaxValue matches
-   * all IPv4 and IPv6 traffic when no previous rule matches. Only the action of this rule can be
-   * modified by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,10 +101,6 @@ public final class FirewallRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A positive integer between 1, Int32.MaxValue-1 that defines the order of rule evaluation. Rules
-   * with the lowest priority are evaluated first.A default rule at priority Int32.MaxValue matches
-   * all IPv4 and IPv6 traffic when no previous rule matches. Only the action of this rule can be
-   * modified by the user.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -113,10 +108,6 @@ public final class FirewallRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A positive integer between 1, Int32.MaxValue-1 that defines the order of rule evaluation. Rules
-   * with the lowest priority are evaluated first.A default rule at priority Int32.MaxValue matches
-   * all IPv4 and IPv6 traffic when no previous rule matches. Only the action of this rule can be
-   * modified by the user.
    * @param priority priority or {@code null} for none
    */
   public FirewallRule setPriority(java.lang.Integer priority) {

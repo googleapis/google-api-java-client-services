@@ -31,7 +31,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
 
   /**
    * Optional. A list of IP addresses or IP address ranges to match against the source IP address of
-   * the request. Limited to 5 ip_blocks.
+   * the request. Limited to 10 ip_blocks per Authorization Policy
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,7 +42,11 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
    * on a request unless frontend mutual TLS is enabled for the forwarding rule or Gateway and the
    * client certificate has been successfully validated by mTLS. Each identity is a string whose
    * value is matched against a list of URI SANs, DNS Name SANs, or the common name in the client's
-   * certificate. A match happens when any principal matches with the rule. Limited to 5 principals.
+   * certificate. A match happens when any principal matches with the rule. Limited to 50 principals
+   * per Authorization Policy for Regional Internal Application Load Balancer, Regional External
+   * Application Load Balancer, Cross-region Internal Application Load Balancer, and Cloud Service
+   * Mesh. Limited to 25 principals per Authorization Policy for Global External Application Load
+   * Balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +54,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
 
   /**
    * Optional. A list of resources to match against the resource of the source VM of a request.
-   * Limited to 5 resources.
+   * Limited to 10 resources per Authorization Policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +62,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
 
   /**
    * Optional. A list of IP addresses or IP address ranges to match against the source IP address of
-   * the request. Limited to 5 ip_blocks.
+   * the request. Limited to 10 ip_blocks per Authorization Policy
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRuleIpBlock> getIpBlocks() {
@@ -67,7 +71,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
 
   /**
    * Optional. A list of IP addresses or IP address ranges to match against the source IP address of
-   * the request. Limited to 5 ip_blocks.
+   * the request. Limited to 10 ip_blocks per Authorization Policy
    * @param ipBlocks ipBlocks or {@code null} for none
    */
   public AuthzPolicyAuthzRuleFromRequestSource setIpBlocks(java.util.List<AuthzPolicyAuthzRuleIpBlock> ipBlocks) {
@@ -80,7 +84,11 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
    * on a request unless frontend mutual TLS is enabled for the forwarding rule or Gateway and the
    * client certificate has been successfully validated by mTLS. Each identity is a string whose
    * value is matched against a list of URI SANs, DNS Name SANs, or the common name in the client's
-   * certificate. A match happens when any principal matches with the rule. Limited to 5 principals.
+   * certificate. A match happens when any principal matches with the rule. Limited to 50 principals
+   * per Authorization Policy for Regional Internal Application Load Balancer, Regional External
+   * Application Load Balancer, Cross-region Internal Application Load Balancer, and Cloud Service
+   * Mesh. Limited to 25 principals per Authorization Policy for Global External Application Load
+   * Balancer.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRulePrincipal> getPrincipals() {
@@ -92,7 +100,11 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
    * on a request unless frontend mutual TLS is enabled for the forwarding rule or Gateway and the
    * client certificate has been successfully validated by mTLS. Each identity is a string whose
    * value is matched against a list of URI SANs, DNS Name SANs, or the common name in the client's
-   * certificate. A match happens when any principal matches with the rule. Limited to 5 principals.
+   * certificate. A match happens when any principal matches with the rule. Limited to 50 principals
+   * per Authorization Policy for Regional Internal Application Load Balancer, Regional External
+   * Application Load Balancer, Cross-region Internal Application Load Balancer, and Cloud Service
+   * Mesh. Limited to 25 principals per Authorization Policy for Global External Application Load
+   * Balancer.
    * @param principals principals or {@code null} for none
    */
   public AuthzPolicyAuthzRuleFromRequestSource setPrincipals(java.util.List<AuthzPolicyAuthzRulePrincipal> principals) {
@@ -102,7 +114,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
 
   /**
    * Optional. A list of resources to match against the resource of the source VM of a request.
-   * Limited to 5 resources.
+   * Limited to 10 resources per Authorization Policy.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRuleRequestResource> getResources() {
@@ -111,7 +123,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
 
   /**
    * Optional. A list of resources to match against the resource of the source VM of a request.
-   * Limited to 5 resources.
+   * Limited to 10 resources per Authorization Policy.
    * @param resources resources or {@code null} for none
    */
   public AuthzPolicyAuthzRuleFromRequestSource setResources(java.util.List<AuthzPolicyAuthzRuleRequestResource> resources) {

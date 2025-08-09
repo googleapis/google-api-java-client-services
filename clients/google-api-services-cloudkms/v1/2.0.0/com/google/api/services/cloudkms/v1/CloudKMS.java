@@ -8268,6 +8268,139 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
+             * Decapsulates data that was encapsulated with a public key retrieved from GetPublicKey
+             * corresponding to a CryptoKeyVersion with CryptoKey.purpose KEY_ENCAPSULATION.
+             *
+             * Create a request for the method "cryptoKeyVersions.decapsulate".
+             *
+             * This request holds the parameters needed by the cloudkms server.  After setting any optional
+             * parameters, call the {@link Decapsulate#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the CryptoKeyVersion to use for decapsulation.
+             * @param content the {@link com.google.api.services.cloudkms.v1.model.DecapsulateRequest}
+             * @return the request
+             */
+            public Decapsulate decapsulate(java.lang.String name, com.google.api.services.cloudkms.v1.model.DecapsulateRequest content) throws java.io.IOException {
+              Decapsulate result = new Decapsulate(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Decapsulate extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.DecapsulateResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:decapsulate";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+
+              /**
+               * Decapsulates data that was encapsulated with a public key retrieved from GetPublicKey
+               * corresponding to a CryptoKeyVersion with CryptoKey.purpose KEY_ENCAPSULATION.
+               *
+               * Create a request for the method "cryptoKeyVersions.decapsulate".
+               *
+               * This request holds the parameters needed by the the cloudkms server.  After setting any
+               * optional parameters, call the {@link Decapsulate#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Decapsulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the CryptoKeyVersion to use for decapsulation.
+               * @param content the {@link com.google.api.services.cloudkms.v1.model.DecapsulateRequest}
+               * @since 1.13
+               */
+              protected Decapsulate(java.lang.String name, com.google.api.services.cloudkms.v1.model.DecapsulateRequest content) {
+                super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.DecapsulateResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Decapsulate set$Xgafv(java.lang.String $Xgafv) {
+                return (Decapsulate) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Decapsulate setAccessToken(java.lang.String accessToken) {
+                return (Decapsulate) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Decapsulate setAlt(java.lang.String alt) {
+                return (Decapsulate) super.setAlt(alt);
+              }
+
+              @Override
+              public Decapsulate setCallback(java.lang.String callback) {
+                return (Decapsulate) super.setCallback(callback);
+              }
+
+              @Override
+              public Decapsulate setFields(java.lang.String fields) {
+                return (Decapsulate) super.setFields(fields);
+              }
+
+              @Override
+              public Decapsulate setKey(java.lang.String key) {
+                return (Decapsulate) super.setKey(key);
+              }
+
+              @Override
+              public Decapsulate setOauthToken(java.lang.String oauthToken) {
+                return (Decapsulate) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Decapsulate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Decapsulate) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Decapsulate setQuotaUser(java.lang.String quotaUser) {
+                return (Decapsulate) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Decapsulate setUploadType(java.lang.String uploadType) {
+                return (Decapsulate) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Decapsulate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Decapsulate) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for decapsulation. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the CryptoKeyVersion to use for decapsulation.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for decapsulation. */
+              public Decapsulate setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Decapsulate set(String parameterName, Object value) {
+                return (Decapsulate) super.set(parameterName, value);
+              }
+            }
+            /**
              * Schedule a CryptoKeyVersion for destruction. Upon calling this method, CryptoKeyVersion.state
              * will be set to DESTROY_SCHEDULED, and destroy_time will be set to the time
              * destroy_scheduled_duration in the future. At that time, the state will automatically change to

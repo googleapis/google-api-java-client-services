@@ -90,6 +90,17 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing" Tags and Labels (above) are both
+   * used to bind metadata to resources, with different use-cases. See
+   * https://cloud.google.com/resource-manager/docs/tags/tags-overview for an in-depth overview on
+   * the difference between tags and labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * The type of the instance. Defaults to `PRODUCTION`.
    * The value may be {@code null}.
    */
@@ -230,6 +241,31 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing" Tags and Labels (above) are both
+   * used to bind metadata to resources, with different use-cases. See
+   * https://cloud.google.com/resource-manager/docs/tags/tags-overview for an in-depth overview on
+   * the difference between tags and labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing" Tags and Labels (above) are both
+   * used to bind metadata to resources, with different use-cases. See
+   * https://cloud.google.com/resource-manager/docs/tags/tags-overview for an in-depth overview on
+   * the difference between tags and labels.
+   * @param tags tags or {@code null} for none
+   */
+  public Instance setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

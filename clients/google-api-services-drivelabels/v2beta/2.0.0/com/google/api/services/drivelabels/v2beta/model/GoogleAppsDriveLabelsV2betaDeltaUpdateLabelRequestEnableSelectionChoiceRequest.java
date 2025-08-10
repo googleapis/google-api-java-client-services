@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Request to enable a Choice.
+ * Request to enable a choice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableSelectionChoiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Selection Field in which a Choice will be enabled.
+   * Required. The selection field in which a choice will be enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableSelec
   private java.lang.String id;
 
   /**
-   * Required. The Selection Field in which a Choice will be enabled.
+   * Required. The selection field in which a choice will be enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldId() {
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableSelec
   }
 
   /**
-   * Required. The Selection Field in which a Choice will be enabled.
+   * Required. The selection field in which a choice will be enabled.
    * @param fieldId fieldId or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableSelectionChoiceRequest setFieldId(java.lang.String fieldId) {

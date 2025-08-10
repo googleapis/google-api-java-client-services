@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Label constraints governing the structure of a Label; such as, the maximum number of Fields
+ * Label constraints governing the structure of a label; such as, the maximum number of fields
  * allowed and maximum length of the label title.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,14 +31,14 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaLabelLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * The limits for Fields.
+   * The limits for fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaFieldLimits fieldLimits;
 
   /**
-   * The maximum number of published Fields that can be deleted.
+   * The maximum number of published fields that can be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLimits extends com.google.api
   private java.lang.Integer maxDraftRevisions;
 
   /**
-   * The maximum number of Fields allowed within the label.
+   * The maximum number of fields allowed within the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLimits extends com.google.api
   private java.lang.String name;
 
   /**
-   * The limits for Fields.
+   * The limits for fields.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits getFieldLimits() {
@@ -88,7 +88,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLimits extends com.google.api
   }
 
   /**
-   * The limits for Fields.
+   * The limits for fields.
    * @param fieldLimits fieldLimits or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLimits setFieldLimits(GoogleAppsDriveLabelsV2betaFieldLimits fieldLimits) {
@@ -97,7 +97,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLimits extends com.google.api
   }
 
   /**
-   * The maximum number of published Fields that can be deleted.
+   * The maximum number of published fields that can be deleted.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDeletedFields() {
@@ -105,7 +105,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLimits extends com.google.api
   }
 
   /**
-   * The maximum number of published Fields that can be deleted.
+   * The maximum number of published fields that can be deleted.
    * @param maxDeletedFields maxDeletedFields or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLimits setMaxDeletedFields(java.lang.Integer maxDeletedFields) {
@@ -148,7 +148,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLimits extends com.google.api
   }
 
   /**
-   * The maximum number of Fields allowed within the label.
+   * The maximum number of fields allowed within the label.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxFields() {
@@ -156,7 +156,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLimits extends com.google.api
   }
 
   /**
-   * The maximum number of Fields allowed within the label.
+   * The maximum number of fields allowed within the label.
    * @param maxFields maxFields or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLimits setMaxFields(java.lang.Integer maxFields) {

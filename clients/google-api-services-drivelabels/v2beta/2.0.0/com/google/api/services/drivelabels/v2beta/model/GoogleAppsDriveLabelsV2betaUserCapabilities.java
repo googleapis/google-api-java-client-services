@@ -44,14 +44,14 @@ public final class GoogleAppsDriveLabelsV2betaUserCapabilities extends com.googl
   private java.lang.Boolean canAdministrateLabels;
 
   /**
-   * Output only. Whether the user is allowed to create new admin labels.
+   * Output only. Whether the user is allowed to create admin labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canCreateAdminLabels;
 
   /**
-   * Output only. Whether the user is allowed to create new shared labels.
+   * Output only. Whether the user is allowed to create shared labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class GoogleAppsDriveLabelsV2betaUserCapabilities extends com.googl
   }
 
   /**
-   * Output only. Whether the user is allowed to create new admin labels.
+   * Output only. Whether the user is allowed to create admin labels.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanCreateAdminLabels() {
@@ -107,7 +107,7 @@ public final class GoogleAppsDriveLabelsV2betaUserCapabilities extends com.googl
   }
 
   /**
-   * Output only. Whether the user is allowed to create new admin labels.
+   * Output only. Whether the user is allowed to create admin labels.
    * @param canCreateAdminLabels canCreateAdminLabels or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaUserCapabilities setCanCreateAdminLabels(java.lang.Boolean canCreateAdminLabels) {
@@ -116,7 +116,7 @@ public final class GoogleAppsDriveLabelsV2betaUserCapabilities extends com.googl
   }
 
   /**
-   * Output only. Whether the user is allowed to create new shared labels.
+   * Output only. Whether the user is allowed to create shared labels.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanCreateSharedLabels() {
@@ -124,7 +124,7 @@ public final class GoogleAppsDriveLabelsV2betaUserCapabilities extends com.googl
   }
 
   /**
-   * Output only. Whether the user is allowed to create new shared labels.
+   * Output only. Whether the user is allowed to create shared labels.
    * @param canCreateSharedLabels canCreateSharedLabels or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaUserCapabilities setCanCreateSharedLabels(java.lang.Boolean canCreateSharedLabels) {

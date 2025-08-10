@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * UI display hints for rendering the label.
+ * The UI display hints for rendering the label.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -44,7 +44,7 @@ public final class GoogleAppsDriveLabelsV2LabelDisplayHints extends com.google.a
   private java.lang.Boolean hiddenInSearch;
 
   /**
-   * Order to display label in a list.
+   * The order to display labels in a list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -92,7 +92,7 @@ public final class GoogleAppsDriveLabelsV2LabelDisplayHints extends com.google.a
   }
 
   /**
-   * Order to display label in a list.
+   * The order to display labels in a list.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriority() {
@@ -100,7 +100,7 @@ public final class GoogleAppsDriveLabelsV2LabelDisplayHints extends com.google.a
   }
 
   /**
-   * Order to display label in a list.
+   * The order to display labels in a list.
    * @param priority priority or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelDisplayHints setPriority(java.lang.Long priority) {

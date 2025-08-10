@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * A Lock that can be applied to a Label, Field, or Choice.
+ * A lock that can be applied to a label, field, or choice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The user's capabilities on this LabelLock.
+   * Output only. The user's capabilities on this label lock.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaLabelLockCapabilities capabilities;
 
   /**
-   * The ID of the Selection Field Choice that should be locked. If present, `field_id` must also be
+   * The ID of the selection field choice that should be locked. If present, `field_id` must also be
    * present.
    * The value may be {@code null}.
    */
@@ -45,51 +45,51 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   private java.lang.String choiceId;
 
   /**
-   * Output only. The time this LabelLock was created.
+   * Output only. The time this label lock was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. The user whose credentials were used to create the LabelLock. This will not be
-   * present if no user was responsible for creating the LabelLock.
+   * Output only. The user whose credentials were used to create the label lock. Not present if no
+   * user was responsible for creating the label lock.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaUserInfo creator;
 
   /**
-   * Output only. A timestamp indicating when this LabelLock was scheduled for deletion. This will
-   * be present only if this LabelLock is in the DELETING state.
+   * Output only. A timestamp indicating when this label lock was scheduled for deletion. Present
+   * only if this label lock is in the `DELETING` state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String deleteTime;
 
   /**
-   * The ID of the Field that should be locked. Empty if the whole Label should be locked.
+   * The ID of the field that should be locked. Empty if the whole label should be locked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldId;
 
   /**
-   * Output only. Resource name of this LabelLock.
+   * Output only. Resource name of this label lock.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. This LabelLock's state.
+   * Output only. This label lock's state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. The user's capabilities on this LabelLock.
+   * Output only. The user's capabilities on this label lock.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLockCapabilities getCapabilities() {
@@ -97,7 +97,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. The user's capabilities on this LabelLock.
+   * Output only. The user's capabilities on this label lock.
    * @param capabilities capabilities or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLock setCapabilities(GoogleAppsDriveLabelsV2betaLabelLockCapabilities capabilities) {
@@ -106,7 +106,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * The ID of the Selection Field Choice that should be locked. If present, `field_id` must also be
+   * The ID of the selection field choice that should be locked. If present, `field_id` must also be
    * present.
    * @return value or {@code null} for none
    */
@@ -115,7 +115,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * The ID of the Selection Field Choice that should be locked. If present, `field_id` must also be
+   * The ID of the selection field choice that should be locked. If present, `field_id` must also be
    * present.
    * @param choiceId choiceId or {@code null} for none
    */
@@ -125,7 +125,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. The time this LabelLock was created.
+   * Output only. The time this label lock was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -133,7 +133,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. The time this LabelLock was created.
+   * Output only. The time this label lock was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLock setCreateTime(String createTime) {
@@ -142,8 +142,8 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. The user whose credentials were used to create the LabelLock. This will not be
-   * present if no user was responsible for creating the LabelLock.
+   * Output only. The user whose credentials were used to create the label lock. Not present if no
+   * user was responsible for creating the label lock.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaUserInfo getCreator() {
@@ -151,8 +151,8 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. The user whose credentials were used to create the LabelLock. This will not be
-   * present if no user was responsible for creating the LabelLock.
+   * Output only. The user whose credentials were used to create the label lock. Not present if no
+   * user was responsible for creating the label lock.
    * @param creator creator or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLock setCreator(GoogleAppsDriveLabelsV2betaUserInfo creator) {
@@ -161,8 +161,8 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. A timestamp indicating when this LabelLock was scheduled for deletion. This will
-   * be present only if this LabelLock is in the DELETING state.
+   * Output only. A timestamp indicating when this label lock was scheduled for deletion. Present
+   * only if this label lock is in the `DELETING` state.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -170,8 +170,8 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. A timestamp indicating when this LabelLock was scheduled for deletion. This will
-   * be present only if this LabelLock is in the DELETING state.
+   * Output only. A timestamp indicating when this label lock was scheduled for deletion. Present
+   * only if this label lock is in the `DELETING` state.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLock setDeleteTime(String deleteTime) {
@@ -180,7 +180,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * The ID of the Field that should be locked. Empty if the whole Label should be locked.
+   * The ID of the field that should be locked. Empty if the whole label should be locked.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldId() {
@@ -188,7 +188,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * The ID of the Field that should be locked. Empty if the whole Label should be locked.
+   * The ID of the field that should be locked. Empty if the whole label should be locked.
    * @param fieldId fieldId or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLock setFieldId(java.lang.String fieldId) {
@@ -197,7 +197,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. Resource name of this LabelLock.
+   * Output only. Resource name of this label lock.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -205,7 +205,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. Resource name of this LabelLock.
+   * Output only. Resource name of this label lock.
    * @param name name or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLock setName(java.lang.String name) {
@@ -214,7 +214,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. This LabelLock's state.
+   * Output only. This label lock's state.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -222,7 +222,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelLock extends com.google.api.c
   }
 
   /**
-   * Output only. This LabelLock's state.
+   * Output only. This label lock's state.
    * @param state state or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelLock setState(java.lang.String state) {

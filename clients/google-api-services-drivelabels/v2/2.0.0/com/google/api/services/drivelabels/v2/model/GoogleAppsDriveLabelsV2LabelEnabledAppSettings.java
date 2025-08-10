@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Describes the Workspace apps in which the Label can be used.
+ * Describes the Google Workspace apps in which the label can be used.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2LabelEnabledAppSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The list of Apps where the Label can be used.
+   * Optional. The list of apps where the label can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleAppsDriveLabelsV2LabelEnabledAppSettingsEnabledApp> enabledApps;
 
   /**
-   * Optional. The list of Apps where the Label can be used.
+   * Optional. The list of apps where the label can be used.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsDriveLabelsV2LabelEnabledAppSettingsEnabledApp> getEnabledApps() {
@@ -45,7 +45,7 @@ public final class GoogleAppsDriveLabelsV2LabelEnabledAppSettings extends com.go
   }
 
   /**
-   * Optional. The list of Apps where the Label can be used.
+   * Optional. The list of apps where the label can be used.
    * @param enabledApps enabledApps or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelEnabledAppSettings setEnabledApps(java.util.List<GoogleAppsDriveLabelsV2LabelEnabledAppSettingsEnabledApp> enabledApps) {

@@ -154,7 +154,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
   public class Labels {
 
     /**
-     * Creates a new Label.
+     * Creates a label. For more information, see [Create and publish a
+     * label](https://developers.google.com/workspace/drive/labels/guides/create-label).
      *
      * Create a request for the method "labels.create".
      *
@@ -175,7 +176,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v2/labels";
 
       /**
-       * Creates a new Label.
+       * Creates a label. For more information, see [Create and publish a
+       * label](https://developers.google.com/workspace/drive/labels/guides/create-label).
        *
        * Create a request for the method "labels.create".
        *
@@ -248,13 +250,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * The BCP-47 language code to use for evaluating localized Field labels in response. When not
+       * The BCP-47 language code to use for evaluating localized field labels in response. When not
        * specified, values in the default configured language will be used.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
-      /** The BCP-47 language code to use for evaluating localized Field labels in response. When not
+      /** The BCP-47 language code to use for evaluating localized field labels in response. When not
      specified, values in the default configured language will be used.
        */
       public java.lang.String getLanguageCode() {
@@ -262,7 +264,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * The BCP-47 language code to use for evaluating localized Field labels in response. When not
+       * The BCP-47 language code to use for evaluating localized field labels in response. When not
        * specified, values in the default configured language will be used.
        */
       public Create setLanguageCode(java.lang.String languageCode) {
@@ -299,9 +301,11 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Permanently deletes a Label and related metadata on Drive Items. Once deleted, the Label and
-     * related Drive item metadata will be deleted. Only draft Labels, and disabled Labels may be
-     * deleted.
+     * Permanently deletes a label and related metadata on Drive items. For more information, see
+     * [Disable, enable, and delete a
+     * label](https://developers.google.com/workspace/drive/labels/guides/disable-delete-label). Once
+     * deleted, the label and related Drive item metadata will be deleted. Only draft labels and
+     * disabled labels may be deleted.
      *
      * Create a request for the method "labels.delete".
      *
@@ -325,9 +329,11 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Permanently deletes a Label and related metadata on Drive Items. Once deleted, the Label and
-       * related Drive item metadata will be deleted. Only draft Labels, and disabled Labels may be
-       * deleted.
+       * Permanently deletes a label and related metadata on Drive items. For more information, see
+       * [Disable, enable, and delete a
+       * label](https://developers.google.com/workspace/drive/labels/guides/disable-delete-label). Once
+       * deleted, the label and related Drive item metadata will be deleted. Only draft labels and
+       * disabled labels may be deleted.
        *
        * Create a request for the method "labels.delete".
        *
@@ -428,13 +434,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
       /**
        * Set to `true` in order to use the user's admin credentials. The server will verify the user
-       * is an admin for the Label before allowing access.
+       * is an admin for the label before allowing access.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
       /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-     admin for the Label before allowing access.
+     admin for the label before allowing access.
        */
       public java.lang.Boolean getUseAdminAccess() {
         return useAdminAccess;
@@ -442,7 +448,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
       /**
        * Set to `true` in order to use the user's admin credentials. The server will verify the user
-       * is an admin for the Label before allowing access.
+       * is an admin for the label before allowing access.
        */
       public Delete setUseAdminAccess(java.lang.Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
@@ -450,14 +456,14 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * The revision_id of the label that the write request will be applied to. If this is not the
+       * The revision ID of the label that the write request will be applied to. If this isn't the
        * latest revision of the label, the request will not be processed and will return a 400 Bad
        * Request error.
        */
       @com.google.api.client.util.Key("writeControl.requiredRevisionId")
       private java.lang.String writeControlRequiredRevisionId;
 
-      /** The revision_id of the label that the write request will be applied to. If this is not the latest
+      /** The revision ID of the label that the write request will be applied to. If this isn't the latest
      revision of the label, the request will not be processed and will return a 400 Bad Request error.
        */
       public java.lang.String getWriteControlRequiredRevisionId() {
@@ -465,7 +471,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * The revision_id of the label that the write request will be applied to. If this is not the
+       * The revision ID of the label that the write request will be applied to. If this isn't the
        * latest revision of the label, the request will not be processed and will return a 400 Bad
        * Request error.
        */
@@ -480,17 +486,18 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Updates a single Label by applying a set of update requests resulting in a new draft revision.
-     * The batch update is all-or-nothing: If any of the update requests are invalid, no changes are
-     * applied. The resulting draft revision must be published before the changes may be used with Drive
-     * Items.
+     * Updates a single label by applying a set of update requests resulting in a new draft revision.
+     * For more information, see [Update a
+     * label](https://developers.google.com/workspace/drive/labels/guides/update-label). The batch
+     * update is all-or-nothing: If any of the update requests are invalid, no changes are applied. The
+     * resulting draft revision must be published before the changes may be used with Drive items.
      *
      * Create a request for the method "labels.delta".
      *
      * This request holds the parameters needed by the drivelabels server.  After setting any optional
      * parameters, call the {@link Delta#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the Label to update.
+     * @param name Required. The resource name of the label to update.
      * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest}
      * @return the request
      */
@@ -508,10 +515,11 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Updates a single Label by applying a set of update requests resulting in a new draft revision.
-       * The batch update is all-or-nothing: If any of the update requests are invalid, no changes are
-       * applied. The resulting draft revision must be published before the changes may be used with
-       * Drive Items.
+       * Updates a single label by applying a set of update requests resulting in a new draft revision.
+       * For more information, see [Update a
+       * label](https://developers.google.com/workspace/drive/labels/guides/update-label). The batch
+       * update is all-or-nothing: If any of the update requests are invalid, no changes are applied.
+       * The resulting draft revision must be published before the changes may be used with Drive items.
        *
        * Create a request for the method "labels.delta".
        *
@@ -521,7 +529,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
        * Delta#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the Label to update.
+       * @param name Required. The resource name of the label to update.
        * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest}
        * @since 1.13
        */
@@ -590,17 +598,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         return (Delta) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource name of the Label to update. */
+      /** Required. The resource name of the label to update. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the Label to update.
+      /** Required. The resource name of the label to update.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The resource name of the Label to update. */
+      /** Required. The resource name of the label to update. */
       public Delta setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -617,10 +625,12 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Disable a published Label. Disabling a Label will result in a new disabled published revision
-     * based on the current published revision. If there is a draft revision, a new disabled draft
-     * revision will be created based on the latest draft revision. Older draft revisions will be
-     * deleted. Once disabled, a label may be deleted with `DeleteLabel`.
+     * Disable a published label. For more information, see [Disable, enable, and delete a
+     * label](https://developers.google.com/workspace/drive/labels/guides/disable-delete-label).
+     * Disabling a label will result in a new disabled published revision based on the current published
+     * revision. If there's a draft revision, a new disabled draft revision will be created based on the
+     * latest draft revision. Older draft revisions will be deleted. Once disabled, a label may be
+     * deleted with `DeleteLabel`.
      *
      * Create a request for the method "labels.disable".
      *
@@ -645,10 +655,12 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Disable a published Label. Disabling a Label will result in a new disabled published revision
-       * based on the current published revision. If there is a draft revision, a new disabled draft
-       * revision will be created based on the latest draft revision. Older draft revisions will be
-       * deleted. Once disabled, a label may be deleted with `DeleteLabel`.
+       * Disable a published label. For more information, see [Disable, enable, and delete a
+       * label](https://developers.google.com/workspace/drive/labels/guides/disable-delete-label).
+       * Disabling a label will result in a new disabled published revision based on the current
+       * published revision. If there's a draft revision, a new disabled draft revision will be created
+       * based on the latest draft revision. Older draft revisions will be deleted. Once disabled, a
+       * label may be deleted with `DeleteLabel`.
        *
        * Create a request for the method "labels.disable".
        *
@@ -754,9 +766,12 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Enable a disabled Label and restore it to its published state. This will result in a new
-     * published revision based on the current disabled published revision. If there is an existing
-     * disabled draft revision, a new revision will be created based on that draft and will be enabled.
+     * Enable a disabled label and restore it to its published state. For more information, see
+     * [Disable, enable, and delete a
+     * label](https://developers.google.com/workspace/drive/labels/guides/disable-delete-label). This
+     * will result in a new published revision based on the current disabled published revision. If
+     * there's an existing disabled draft revision, a new revision will be created based on that draft
+     * and will be enabled.
      *
      * Create a request for the method "labels.enable".
      *
@@ -781,10 +796,12 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Enable a disabled Label and restore it to its published state. This will result in a new
-       * published revision based on the current disabled published revision. If there is an existing
-       * disabled draft revision, a new revision will be created based on that draft and will be
-       * enabled.
+       * Enable a disabled label and restore it to its published state. For more information, see
+       * [Disable, enable, and delete a
+       * label](https://developers.google.com/workspace/drive/labels/guides/disable-delete-label). This
+       * will result in a new published revision based on the current disabled published revision. If
+       * there's an existing disabled draft revision, a new revision will be created based on that draft
+       * and will be enabled.
        *
        * Create a request for the method "labels.enable".
        *
@@ -890,10 +907,11 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Get a label by its resource name. Resource name may be any of: * `labels/{id}` - See
-     * `labels/{id}@latest` * `labels/{id}@latest` - Gets the latest revision of the label. *
-     * `labels/{id}@published` - Gets the current published revision of the label. *
-     * `labels/{id}@{revision_id}` - Gets the label at the specified revision ID.
+     * Get a label by its resource name. For more information, see [Search for
+     * labels](https://developers.google.com/workspace/drive/labels/guides/search-label). Resource name
+     * may be any of: * `labels/{id}` - See `labels/{id}@latest` * `labels/{id}@latest` - Gets the
+     * latest revision of the label. * `labels/{id}@published` - Gets the current published revision of
+     * the label. * `labels/{id}@{revision_id}` - Gets the label at the specified revision ID.
      *
      * Create a request for the method "labels.get".
      *
@@ -918,10 +936,12 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Get a label by its resource name. Resource name may be any of: * `labels/{id}` - See
-       * `labels/{id}@latest` * `labels/{id}@latest` - Gets the latest revision of the label. *
-       * `labels/{id}@published` - Gets the current published revision of the label. *
-       * `labels/{id}@{revision_id}` - Gets the label at the specified revision ID.
+       * Get a label by its resource name. For more information, see [Search for
+       * labels](https://developers.google.com/workspace/drive/labels/guides/search-label). Resource
+       * name may be any of: * `labels/{id}` - See `labels/{id}@latest` * `labels/{id}@latest` - Gets
+       * the latest revision of the label. * `labels/{id}@published` - Gets the current published
+       * revision of the label. * `labels/{id}@{revision_id}` - Gets the label at the specified revision
+       * ID.
        *
        * Create a request for the method "labels.get".
        *
@@ -1107,7 +1127,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * List labels.
+     * List labels. For more information, see [Search for
+     * labels](https://developers.google.com/workspace/drive/labels/guides/search-label).
      *
      * Create a request for the method "labels.list".
      *
@@ -1127,7 +1148,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v2/labels";
 
       /**
-       * List labels.
+       * List labels. For more information, see [Search for
+       * labels](https://developers.google.com/workspace/drive/labels/guides/search-label).
        *
        * Create a request for the method "labels.list".
        *
@@ -1208,13 +1230,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * The customer to scope this list request to. For example: "customers/abcd1234". If unset,
+       * The customer to scope this list request to. For example: `customers/abcd1234`. If unset,
        * will return all labels within the current customer.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** The customer to scope this list request to. For example: "customers/abcd1234". If unset, will
+      /** The customer to scope this list request to. For example: `customers/abcd1234`. If unset, will
      return all labels within the current customer.
        */
       public java.lang.String getCustomer() {
@@ -1222,7 +1244,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * The customer to scope this list request to. For example: "customers/abcd1234". If unset,
+       * The customer to scope this list request to. For example: `customers/abcd1234`. If unset,
        * will return all labels within the current customer.
        */
       public List setCustomer(java.lang.String customer) {
@@ -1254,13 +1276,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Specifies the level of access the user must have on the returned Labels. The minimum role a
+       * Specifies the level of access the user must have on the returned labels. The minimum role a
        * user must have on a label. Defaults to `READER`.
        */
       @com.google.api.client.util.Key
       private java.lang.String minimumRole;
 
-      /** Specifies the level of access the user must have on the returned Labels. The minimum role a user
+      /** Specifies the level of access the user must have on the returned labels. The minimum role a user
      must have on a label. Defaults to `READER`.
        */
       public java.lang.String getMinimumRole() {
@@ -1268,7 +1290,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Specifies the level of access the user must have on the returned Labels. The minimum role a
+       * Specifies the level of access the user must have on the returned labels. The minimum role a
        * user must have on a label. Defaults to `READER`.
        */
       public List setMinimumRole(java.lang.String minimumRole) {
@@ -1341,13 +1363,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Set to `true` in order to use the user's admin credentials. This will return all Labels
+       * Set to `true` in order to use the user's admin credentials. This will return all labels
        * within the customer.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
-      /** Set to `true` in order to use the user's admin credentials. This will return all Labels within the
+      /** Set to `true` in order to use the user's admin credentials. This will return all labels within the
      customer.
        */
       public java.lang.Boolean getUseAdminAccess() {
@@ -1355,7 +1377,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Set to `true` in order to use the user's admin credentials. This will return all Labels
+       * Set to `true` in order to use the user's admin credentials. This will return all labels
        * within the customer.
        */
       public List setUseAdminAccess(java.lang.Boolean useAdminAccess) {
@@ -1385,16 +1407,19 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Publish all draft changes to the Label. Once published, the Label may not return to its draft
-     * state. See `google.apps.drive.labels.v2.Lifecycle` for more information. Publishing a Label will
-     * result in a new published revision. All previous draft revisions will be deleted. Previous
-     * published revisions will be kept but are subject to automated deletion as needed. Once published,
-     * some changes are no longer permitted. Generally, any change that would invalidate or cause new
-     * restrictions on existing metadata related to the Label will be rejected. For example, the
-     * following changes to a Label will be rejected after the Label is published: * The label cannot be
-     * directly deleted. It must be disabled first, then deleted. * Field.FieldType cannot be changed. *
-     * Changes to Field validation options cannot reject something that was previously accepted. *
-     * Reducing the max entries.
+     * Publish all draft changes to the label. Once published, the label may not return to its draft
+     * state. For more information, see [Create and publish a
+     * label](https://developers.google.com/workspace/drive/labels/guides/create-label). Publishing a
+     * label will result in a new published revision. All previous draft revisions will be deleted.
+     * Previous published revisions will be kept but are subject to automated deletion as needed. For
+     * more information, see [Label
+     * lifecycle](https://developers.google.com/workspace/drive/labels/guides/label-lifecycle). Once
+     * published, some changes are no longer permitted. Generally, any change that would invalidate or
+     * cause new restrictions on existing metadata related to the label will be rejected. For example,
+     * the following changes to a label will be rejected after the label is published: * The label
+     * cannot be directly deleted. It must be disabled first, then deleted. * `Field.FieldType` cannot
+     * be changed. * Changes to field validation options cannot reject something that was previously
+     * accepted. * Reducing the maximum entries.
      *
      * Create a request for the method "labels.publish".
      *
@@ -1419,16 +1444,19 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Publish all draft changes to the Label. Once published, the Label may not return to its draft
-       * state. See `google.apps.drive.labels.v2.Lifecycle` for more information. Publishing a Label
-       * will result in a new published revision. All previous draft revisions will be deleted. Previous
-       * published revisions will be kept but are subject to automated deletion as needed. Once
+       * Publish all draft changes to the label. Once published, the label may not return to its draft
+       * state. For more information, see [Create and publish a
+       * label](https://developers.google.com/workspace/drive/labels/guides/create-label). Publishing a
+       * label will result in a new published revision. All previous draft revisions will be deleted.
+       * Previous published revisions will be kept but are subject to automated deletion as needed. For
+       * more information, see [Label
+       * lifecycle](https://developers.google.com/workspace/drive/labels/guides/label-lifecycle). Once
        * published, some changes are no longer permitted. Generally, any change that would invalidate or
-       * cause new restrictions on existing metadata related to the Label will be rejected. For example,
-       * the following changes to a Label will be rejected after the Label is published: * The label
-       * cannot be directly deleted. It must be disabled first, then deleted. * Field.FieldType cannot
-       * be changed. * Changes to Field validation options cannot reject something that was previously
-       * accepted. * Reducing the max entries.
+       * cause new restrictions on existing metadata related to the label will be rejected. For example,
+       * the following changes to a label will be rejected after the label is published: * The label
+       * cannot be directly deleted. It must be disabled first, then deleted. * `Field.FieldType` cannot
+       * be changed. * Changes to field validation options cannot reject something that was previously
+       * accepted. * Reducing the maximum entries.
        *
        * Create a request for the method "labels.publish".
        *
@@ -1534,15 +1562,15 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Updates a Label's `CopyMode`. Changes to this policy are not revisioned, do not require
-     * publishing, and take effect immediately.
+     * Updates a label's `CopyMode`. Changes to this policy aren't revisioned, don't require publishing,
+     * and take effect immediately.
      *
      * Create a request for the method "labels.updateLabelCopyMode".
      *
      * This request holds the parameters needed by the drivelabels server.  After setting any optional
      * parameters, call the {@link UpdateLabelCopyMode#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the Label to update.
+     * @param name Required. The resource name of the label to update.
      * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequest}
      * @return the request
      */
@@ -1560,7 +1588,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Updates a Label's `CopyMode`. Changes to this policy are not revisioned, do not require
+       * Updates a label's `CopyMode`. Changes to this policy aren't revisioned, don't require
        * publishing, and take effect immediately.
        *
        * Create a request for the method "labels.updateLabelCopyMode".
@@ -1571,7 +1599,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
        * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the Label to update.
+       * @param name Required. The resource name of the label to update.
        * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequest}
        * @since 1.13
        */
@@ -1640,17 +1668,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         return (UpdateLabelCopyMode) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource name of the Label to update. */
+      /** Required. The resource name of the label to update. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the Label to update.
+      /** Required. The resource name of the label to update.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The resource name of the Label to update. */
+      /** Required. The resource name of the label to update. */
       public UpdateLabelCopyMode setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1667,9 +1695,9 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Updates a Label's EabledAppSettings. Enabling a Label in a Workspace Application allows it to be
-     * used in that application. This change is not revisioned, does not require publishing, and takes
-     * effect immediately.
+     * Updates a label's `EnabledAppSettings`. Enabling a label in a Google Workspace app allows it to
+     * be used in that app. This change isn't revisioned, doesn't require publishing, and takes effect
+     * immediately.
      *
      * Create a request for the method "labels.updateLabelEnabledAppSettings".
      *
@@ -1677,7 +1705,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
      * parameters, call the {@link UpdateLabelEnabledAppSettings#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Required. The resource name of the Label to update. The resource name of the Label to update.
+     * @param name Required. The resource name of the label to update. The resource name of the label to update.
      * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest}
      * @return the request
      */
@@ -1695,9 +1723,9 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Updates a Label's EabledAppSettings. Enabling a Label in a Workspace Application allows it to
-       * be used in that application. This change is not revisioned, does not require publishing, and
-       * takes effect immediately.
+       * Updates a label's `EnabledAppSettings`. Enabling a label in a Google Workspace app allows it to
+       * be used in that app. This change isn't revisioned, doesn't require publishing, and takes effect
+       * immediately.
        *
        * Create a request for the method "labels.updateLabelEnabledAppSettings".
        *
@@ -1707,7 +1735,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
        * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the Label to update. The resource name of the Label to update.
+       * @param name Required. The resource name of the label to update. The resource name of the label to update.
        * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest}
        * @since 1.13
        */
@@ -1777,20 +1805,20 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Required. The resource name of the Label to update. The resource name of the Label to
+       * Required. The resource name of the label to update. The resource name of the label to
        * update.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the Label to update. The resource name of the Label to update.
+      /** Required. The resource name of the label to update. The resource name of the label to update.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The resource name of the Label to update. The resource name of the Label to
+       * Required. The resource name of the label to update. The resource name of the label to
        * update.
        */
       public UpdateLabelEnabledAppSettings setName(java.lang.String name) {
@@ -1809,16 +1837,16 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-     * Label Permission is created, otherwise the existing permission is updated. Permissions affect the
-     * Label resource as a whole, are not revisioned, and do not require publishing.
+     * Updates a label's permissions. If a permission for the indicated principal doesn't exist, a label
+     * permission is created, otherwise the existing permission is updated. Permissions affect the label
+     * resource as a whole, aren't revisioned, and don't require publishing.
      *
      * Create a request for the method "labels.updatePermissions".
      *
      * This request holds the parameters needed by the drivelabels server.  After setting any optional
      * parameters, call the {@link UpdatePermissions#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The parent Label resource name.
+     * @param parent Required. The parent label resource name.
      * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2LabelPermission}
      * @return the request
      */
@@ -1836,9 +1864,9 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^labels/[^/]+$");
 
       /**
-       * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-       * Label Permission is created, otherwise the existing permission is updated. Permissions affect
-       * the Label resource as a whole, are not revisioned, and do not require publishing.
+       * Updates a label's permissions. If a permission for the indicated principal doesn't exist, a
+       * label permission is created, otherwise the existing permission is updated. Permissions affect
+       * the label resource as a whole, aren't revisioned, and don't require publishing.
        *
        * Create a request for the method "labels.updatePermissions".
        *
@@ -1848,7 +1876,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
        * stractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param parent Required. The parent Label resource name.
+       * @param parent Required. The parent label resource name.
        * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2LabelPermission}
        * @since 1.13
        */
@@ -1917,17 +1945,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         return (UpdatePermissions) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The parent Label resource name. */
+      /** Required. The parent label resource name. */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The parent Label resource name.
+      /** Required. The parent label resource name.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. The parent Label resource name. */
+      /** Required. The parent label resource name. */
       public UpdatePermissions setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1940,13 +1968,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
       /**
        * Set to `true` in order to use the user's admin credentials. The server will verify the user
-       * is an admin for the Label before allowing access.
+       * is an admin for the label before allowing access.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
       /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-     admin for the Label before allowing access.
+     admin for the label before allowing access.
        */
       public java.lang.Boolean getUseAdminAccess() {
         return useAdminAccess;
@@ -1954,7 +1982,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
       /**
        * Set to `true` in order to use the user's admin credentials. The server will verify the user
-       * is an admin for the Label before allowing access.
+       * is an admin for the label before allowing access.
        */
       public UpdatePermissions setUseAdminAccess(java.lang.Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
@@ -1988,14 +2016,14 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
     public class Locks {
 
       /**
-       * Lists the LabelLocks on a Label.
+       * Lists the label locks on a label.
        *
        * Create a request for the method "locks.list".
        *
        * This request holds the parameters needed by the drivelabels server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Label on which Locks are applied. Format: labels/{label}
+       * @param parent Required. Label on which locks are applied. Format: `labels/{label}`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2012,7 +2040,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^labels/[^/]+$");
 
         /**
-         * Lists the LabelLocks on a Label.
+         * Lists the label locks on a label.
          *
          * Create a request for the method "locks.list".
          *
@@ -2021,7 +2049,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Label on which Locks are applied. Format: labels/{label}
+         * @param parent Required. Label on which locks are applied. Format: `labels/{label}`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2099,17 +2127,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Label on which Locks are applied. Format: labels/{label} */
+        /** Required. Label on which locks are applied. Format: `labels/{label}`. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Label on which Locks are applied. Format: labels/{label}
+        /** Required. Label on which locks are applied. Format: `labels/{label}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. Label on which Locks are applied. Format: labels/{label} */
+        /** Required. Label on which locks are applied. Format: `labels/{label}`. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2120,17 +2148,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           return this;
         }
 
-        /** Maximum number of Locks to return per page. Default: 100. Max: 200. */
+        /** Maximum number of locks to return per page. Default: 100. Max: 200. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of Locks to return per page. Default: 100. Max: 200.
+        /** Maximum number of locks to return per page. Default: 100. Max: 200.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Maximum number of Locks to return per page. Default: 100. Max: 200. */
+        /** Maximum number of locks to return per page. Default: 100. Max: 200. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -2180,16 +2208,16 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
     public class Permissions {
 
       /**
-       * Deletes Label permissions. Permissions affect the Label resource as a whole, are not revisioned,
-       * and do not require publishing.
+       * Deletes label permissions. Permissions affect the label resource as a whole, aren't revisioned,
+       * and don't require publishing.
        *
        * Create a request for the method "permissions.batchDelete".
        *
        * This request holds the parameters needed by the drivelabels server.  After setting any optional
        * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent Label resource name shared by all permissions being deleted. Format:
-       *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+       * @param parent Required. The parent label resource name shared by all permissions being deleted. Format:
+       *        `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
        *        messages must either be empty or match this field.
        * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest}
        * @return the request
@@ -2208,8 +2236,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^labels/[^/]+$");
 
         /**
-         * Deletes Label permissions. Permissions affect the Label resource as a whole, are not
-         * revisioned, and do not require publishing.
+         * Deletes label permissions. Permissions affect the label resource as a whole, aren't revisioned,
+         * and don't require publishing.
          *
          * Create a request for the method "permissions.batchDelete".
          *
@@ -2219,8 +2247,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent Label resource name shared by all permissions being deleted. Format:
-       *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * @param parent Required. The parent label resource name shared by all permissions being deleted. Format:
+       *        `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
        *        messages must either be empty or match this field.
          * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest}
          * @since 1.13
@@ -2291,24 +2319,24 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Required. The parent Label resource name shared by all permissions being deleted. Format:
-         * labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * Required. The parent label resource name shared by all permissions being deleted. Format:
+         * `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
          * messages must either be empty or match this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent Label resource name shared by all permissions being deleted. Format:
-       labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest messages must
-       either be empty or match this field.
+        /** Required. The parent label resource name shared by all permissions being deleted. Format:
+       `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest` messages
+       must either be empty or match this field.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent Label resource name shared by all permissions being deleted. Format:
-         * labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * Required. The parent label resource name shared by all permissions being deleted. Format:
+         * `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
          * messages must either be empty or match this field.
          */
         public BatchDelete setParent(java.lang.String parent) {
@@ -2327,17 +2355,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Updates Label permissions. If a permission for the indicated principal doesn't exist, a new Label
-       * Permission is created, otherwise the existing permission is updated. Permissions affect the Label
-       * resource as a whole, are not revisioned, and do not require publishing.
+       * Updates label permissions. If a permission for the indicated principal doesn't exist, a label
+       * permission is created, otherwise the existing permission is updated. Permissions affect the label
+       * resource as a whole, aren't revisioned, and don't require publishing.
        *
        * Create a request for the method "permissions.batchUpdate".
        *
        * This request holds the parameters needed by the drivelabels server.  After setting any optional
        * parameters, call the {@link BatchUpdate#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent Label resource name shared by all permissions being updated. Format:
-       *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+       * @param parent Required. The parent label resource name shared by all permissions being updated. Format:
+       *        `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
        *        messages must either be empty or match this field.
        * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsRequest}
        * @return the request
@@ -2356,9 +2384,9 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^labels/[^/]+$");
 
         /**
-         * Updates Label permissions. If a permission for the indicated principal doesn't exist, a new
-         * Label Permission is created, otherwise the existing permission is updated. Permissions affect
-         * the Label resource as a whole, are not revisioned, and do not require publishing.
+         * Updates label permissions. If a permission for the indicated principal doesn't exist, a label
+         * permission is created, otherwise the existing permission is updated. Permissions affect the
+         * label resource as a whole, aren't revisioned, and don't require publishing.
          *
          * Create a request for the method "permissions.batchUpdate".
          *
@@ -2368,8 +2396,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent Label resource name shared by all permissions being updated. Format:
-       *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * @param parent Required. The parent label resource name shared by all permissions being updated. Format:
+       *        `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
        *        messages must either be empty or match this field.
          * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsRequest}
          * @since 1.13
@@ -2440,24 +2468,24 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Required. The parent Label resource name shared by all permissions being updated. Format:
-         * labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * Required. The parent label resource name shared by all permissions being updated. Format:
+         * `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
          * messages must either be empty or match this field.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent Label resource name shared by all permissions being updated. Format:
-       labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest messages must
-       either be empty or match this field.
+        /** Required. The parent label resource name shared by all permissions being updated. Format:
+       `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest` messages
+       must either be empty or match this field.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent Label resource name shared by all permissions being updated. Format:
-         * labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * Required. The parent label resource name shared by all permissions being updated. Format:
+         * `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
          * messages must either be empty or match this field.
          */
         public BatchUpdate setParent(java.lang.String parent) {
@@ -2476,16 +2504,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-       * Label Permission is created, otherwise the existing permission is updated. Permissions affect the
-       * Label resource as a whole, are not revisioned, and do not require publishing.
+       * Updates a label's permissions. If a permission for the indicated principal doesn't exist, a label
+       * permission is created, otherwise the existing permission is updated. Permissions affect the label
+       * resource as a whole, aren't revisioned, and don't require publishing.
        *
        * Create a request for the method "permissions.create".
        *
        * This request holds the parameters needed by the drivelabels server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent Label resource name on the Label Permission is created. Format: labels/{label}
+       * @param parent Required. The parent label resource name on the label permission is created. Format:
+       *        `labels/{label}`.
        * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2LabelPermission}
        * @return the request
        */
@@ -2503,9 +2532,9 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^labels/[^/]+$");
 
         /**
-         * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-         * Label Permission is created, otherwise the existing permission is updated. Permissions affect
-         * the Label resource as a whole, are not revisioned, and do not require publishing.
+         * Updates a label's permissions. If a permission for the indicated principal doesn't exist, a
+         * label permission is created, otherwise the existing permission is updated. Permissions affect
+         * the label resource as a whole, aren't revisioned, and don't require publishing.
          *
          * Create a request for the method "permissions.create".
          *
@@ -2515,7 +2544,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent Label resource name on the Label Permission is created. Format: labels/{label}
+         * @param parent Required. The parent label resource name on the label permission is created. Format:
+       *        `labels/{label}`.
          * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2LabelPermission}
          * @since 1.13
          */
@@ -2585,21 +2615,22 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Required. The parent Label resource name on the Label Permission is created. Format:
-         * labels/{label}
+         * Required. The parent label resource name on the label permission is created. Format:
+         * `labels/{label}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent Label resource name on the Label Permission is created. Format: labels/{label}
+        /** Required. The parent label resource name on the label permission is created. Format:
+       `labels/{label}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent Label resource name on the Label Permission is created. Format:
-         * labels/{label}
+         * Required. The parent label resource name on the label permission is created. Format:
+         * `labels/{label}`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2613,13 +2644,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
         /**
          * Set to `true` in order to use the user's admin credentials. The server will verify the
-         * user is an admin for the Label before allowing access.
+         * user is an admin for the label before allowing access.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean useAdminAccess;
 
         /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-       admin for the Label before allowing access.
+       admin for the label before allowing access.
          */
         public java.lang.Boolean getUseAdminAccess() {
           return useAdminAccess;
@@ -2627,7 +2658,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
         /**
          * Set to `true` in order to use the user's admin credentials. The server will verify the
-         * user is an admin for the Label before allowing access.
+         * user is an admin for the label before allowing access.
          */
         public Create setUseAdminAccess(java.lang.Boolean useAdminAccess) {
           this.useAdminAccess = useAdminAccess;
@@ -2640,15 +2671,15 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Deletes a Label's permission. Permissions affect the Label resource as a whole, are not
-       * revisioned, and do not require publishing.
+       * Deletes a label's permission. Permissions affect the label resource as a whole, aren't
+       * revisioned, and don't require publishing.
        *
        * Create a request for the method "permissions.delete".
        *
        * This request holds the parameters needed by the drivelabels server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Label Permission resource name.
+       * @param name Required. Label permission resource name.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2665,8 +2696,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^labels/[^/]+/permissions/[^/]+$");
 
         /**
-         * Deletes a Label's permission. Permissions affect the Label resource as a whole, are not
-         * revisioned, and do not require publishing.
+         * Deletes a label's permission. Permissions affect the label resource as a whole, aren't
+         * revisioned, and don't require publishing.
          *
          * Create a request for the method "permissions.delete".
          *
@@ -2676,7 +2707,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Label Permission resource name.
+         * @param name Required. Label permission resource name.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2744,17 +2775,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Label Permission resource name. */
+        /** Required. Label permission resource name. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Label Permission resource name.
+        /** Required. Label permission resource name.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Label Permission resource name. */
+        /** Required. Label permission resource name. */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2767,13 +2798,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
         /**
          * Set to `true` in order to use the user's admin credentials. The server will verify the
-         * user is an admin for the Label before allowing access.
+         * user is an admin for the label before allowing access.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean useAdminAccess;
 
         /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-       admin for the Label before allowing access.
+       admin for the label before allowing access.
          */
         public java.lang.Boolean getUseAdminAccess() {
           return useAdminAccess;
@@ -2781,7 +2812,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
         /**
          * Set to `true` in order to use the user's admin credentials. The server will verify the
-         * user is an admin for the Label before allowing access.
+         * user is an admin for the label before allowing access.
          */
         public Delete setUseAdminAccess(java.lang.Boolean useAdminAccess) {
           this.useAdminAccess = useAdminAccess;
@@ -2794,15 +2825,15 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Lists a Label's permissions.
+       * Lists a label's permissions.
        *
        * Create a request for the method "permissions.list".
        *
        * This request holds the parameters needed by the drivelabels server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent Label resource name on which Label Permission are listed. Format:
-       *        labels/{label}
+       * @param parent Required. The parent label resource name on which label permissions are listed. Format:
+       *        `labels/{label}`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2819,7 +2850,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^labels/[^/]+$");
 
         /**
-         * Lists a Label's permissions.
+         * Lists a label's permissions.
          *
          * Create a request for the method "permissions.list".
          *
@@ -2828,8 +2859,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent Label resource name on which Label Permission are listed. Format:
-       *        labels/{label}
+         * @param parent Required. The parent label resource name on which label permissions are listed. Format:
+       *        `labels/{label}`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2908,22 +2939,22 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Required. The parent Label resource name on which Label Permission are listed. Format:
-         * labels/{label}
+         * Required. The parent label resource name on which label permissions are listed. Format:
+         * `labels/{label}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent Label resource name on which Label Permission are listed. Format:
-       labels/{label}
+        /** Required. The parent label resource name on which label permissions are listed. Format:
+       `labels/{label}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent Label resource name on which Label Permission are listed. Format:
-         * labels/{label}
+         * Required. The parent label resource name on which label permissions are listed. Format:
+         * `labels/{label}`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2969,13 +3000,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
         /**
          * Set to `true` in order to use the user's admin credentials. The server will verify the
-         * user is an admin for the Label before allowing access.
+         * user is an admin for the label before allowing access.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean useAdminAccess;
 
         /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-       admin for the Label before allowing access.
+       admin for the label before allowing access.
          */
         public java.lang.Boolean getUseAdminAccess() {
           return useAdminAccess;
@@ -2983,7 +3014,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
         /**
          * Set to `true` in order to use the user's admin credentials. The server will verify the
-         * user is an admin for the Label before allowing access.
+         * user is an admin for the label before allowing access.
          */
         public List setUseAdminAccess(java.lang.Boolean useAdminAccess) {
           this.useAdminAccess = useAdminAccess;
@@ -3018,16 +3049,16 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
     public class Revisions {
 
       /**
-       * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-       * Label Permission is created, otherwise the existing permission is updated. Permissions affect the
-       * Label resource as a whole, are not revisioned, and do not require publishing.
+       * Updates a label's permissions. If a permission for the indicated principal doesn't exist, a label
+       * permission is created, otherwise the existing permission is updated. Permissions affect the label
+       * resource as a whole, aren't revisioned, and don't require publishing.
        *
        * Create a request for the method "revisions.updatePermissions".
        *
        * This request holds the parameters needed by the drivelabels server.  After setting any optional
        * parameters, call the {@link UpdatePermissions#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent Label resource name.
+       * @param parent Required. The parent label resource name.
        * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2LabelPermission}
        * @return the request
        */
@@ -3045,9 +3076,9 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+$");
 
         /**
-         * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-         * Label Permission is created, otherwise the existing permission is updated. Permissions affect
-         * the Label resource as a whole, are not revisioned, and do not require publishing.
+         * Updates a label's permissions. If a permission for the indicated principal doesn't exist, a
+         * label permission is created, otherwise the existing permission is updated. Permissions affect
+         * the label resource as a whole, aren't revisioned, and don't require publishing.
          *
          * Create a request for the method "revisions.updatePermissions".
          *
@@ -3057,7 +3088,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
          * stractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent Required. The parent Label resource name.
+         * @param parent Required. The parent label resource name.
          * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2LabelPermission}
          * @since 1.13
          */
@@ -3126,17 +3157,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           return (UpdatePermissions) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent Label resource name. */
+        /** Required. The parent label resource name. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent Label resource name.
+        /** Required. The parent label resource name.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent Label resource name. */
+        /** Required. The parent label resource name. */
         public UpdatePermissions setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3149,13 +3180,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
         /**
          * Set to `true` in order to use the user's admin credentials. The server will verify the
-         * user is an admin for the Label before allowing access.
+         * user is an admin for the label before allowing access.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean useAdminAccess;
 
         /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-       admin for the Label before allowing access.
+       admin for the label before allowing access.
          */
         public java.lang.Boolean getUseAdminAccess() {
           return useAdminAccess;
@@ -3163,7 +3194,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
         /**
          * Set to `true` in order to use the user's admin credentials. The server will verify the
-         * user is an admin for the Label before allowing access.
+         * user is an admin for the label before allowing access.
          */
         public UpdatePermissions setUseAdminAccess(java.lang.Boolean useAdminAccess) {
           this.useAdminAccess = useAdminAccess;
@@ -3197,14 +3228,14 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       public class Locks {
 
         /**
-         * Lists the LabelLocks on a Label.
+         * Lists the label locks on a label.
          *
          * Create a request for the method "locks.list".
          *
          * This request holds the parameters needed by the drivelabels server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Label on which Locks are applied. Format: labels/{label}
+         * @param parent Required. Label on which locks are applied. Format: `labels/{label}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3221,7 +3252,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+$");
 
           /**
-           * Lists the LabelLocks on a Label.
+           * Lists the label locks on a label.
            *
            * Create a request for the method "locks.list".
            *
@@ -3230,7 +3261,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Label on which Locks are applied. Format: labels/{label}
+           * @param parent Required. Label on which locks are applied. Format: `labels/{label}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3308,17 +3339,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Label on which Locks are applied. Format: labels/{label} */
+          /** Required. Label on which locks are applied. Format: `labels/{label}`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Label on which Locks are applied. Format: labels/{label}
+          /** Required. Label on which locks are applied. Format: `labels/{label}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Label on which Locks are applied. Format: labels/{label} */
+          /** Required. Label on which locks are applied. Format: `labels/{label}`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3329,17 +3360,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
-          /** Maximum number of Locks to return per page. Default: 100. Max: 200. */
+          /** Maximum number of locks to return per page. Default: 100. Max: 200. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of Locks to return per page. Default: 100. Max: 200.
+          /** Maximum number of locks to return per page. Default: 100. Max: 200.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of Locks to return per page. Default: 100. Max: 200. */
+          /** Maximum number of locks to return per page. Default: 100. Max: 200. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -3389,16 +3420,16 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       public class Permissions {
 
         /**
-         * Deletes Label permissions. Permissions affect the Label resource as a whole, are not revisioned,
-         * and do not require publishing.
+         * Deletes label permissions. Permissions affect the label resource as a whole, aren't revisioned,
+         * and don't require publishing.
          *
          * Create a request for the method "permissions.batchDelete".
          *
          * This request holds the parameters needed by the drivelabels server.  After setting any optional
          * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent Label resource name shared by all permissions being deleted. Format:
-         *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * @param parent Required. The parent label resource name shared by all permissions being deleted. Format:
+         *        `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
          *        messages must either be empty or match this field.
          * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest}
          * @return the request
@@ -3417,8 +3448,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+$");
 
           /**
-           * Deletes Label permissions. Permissions affect the Label resource as a whole, are not
-           * revisioned, and do not require publishing.
+           * Deletes label permissions. Permissions affect the label resource as a whole, aren't revisioned,
+           * and don't require publishing.
            *
            * Create a request for the method "permissions.batchDelete".
            *
@@ -3428,8 +3459,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
            * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent Label resource name shared by all permissions being deleted. Format:
-         *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+           * @param parent Required. The parent label resource name shared by all permissions being deleted. Format:
+         *        `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
          *        messages must either be empty or match this field.
            * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest}
            * @since 1.13
@@ -3500,25 +3531,25 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent Label resource name shared by all permissions being deleted.
-           * Format: labels/{label} If this is set, the parent field in the
-           * UpdateLabelPermissionRequest messages must either be empty or match this field.
+           * Required. The parent label resource name shared by all permissions being deleted.
+           * Format: `labels/{label}`. If this is set, the parent field in the
+           * `UpdateLabelPermissionRequest` messages must either be empty or match this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent Label resource name shared by all permissions being deleted. Format:
-         labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest messages must
-         either be empty or match this field.
+          /** Required. The parent label resource name shared by all permissions being deleted. Format:
+         `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest` messages
+         must either be empty or match this field.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent Label resource name shared by all permissions being deleted.
-           * Format: labels/{label} If this is set, the parent field in the
-           * UpdateLabelPermissionRequest messages must either be empty or match this field.
+           * Required. The parent label resource name shared by all permissions being deleted.
+           * Format: `labels/{label}`. If this is set, the parent field in the
+           * `UpdateLabelPermissionRequest` messages must either be empty or match this field.
            */
           public BatchDelete setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3536,17 +3567,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Updates Label permissions. If a permission for the indicated principal doesn't exist, a new Label
-         * Permission is created, otherwise the existing permission is updated. Permissions affect the Label
-         * resource as a whole, are not revisioned, and do not require publishing.
+         * Updates label permissions. If a permission for the indicated principal doesn't exist, a label
+         * permission is created, otherwise the existing permission is updated. Permissions affect the label
+         * resource as a whole, aren't revisioned, and don't require publishing.
          *
          * Create a request for the method "permissions.batchUpdate".
          *
          * This request holds the parameters needed by the drivelabels server.  After setting any optional
          * parameters, call the {@link BatchUpdate#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent Label resource name shared by all permissions being updated. Format:
-         *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+         * @param parent Required. The parent label resource name shared by all permissions being updated. Format:
+         *        `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
          *        messages must either be empty or match this field.
          * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsRequest}
          * @return the request
@@ -3565,9 +3596,9 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+$");
 
           /**
-           * Updates Label permissions. If a permission for the indicated principal doesn't exist, a new
-           * Label Permission is created, otherwise the existing permission is updated. Permissions affect
-           * the Label resource as a whole, are not revisioned, and do not require publishing.
+           * Updates label permissions. If a permission for the indicated principal doesn't exist, a label
+           * permission is created, otherwise the existing permission is updated. Permissions affect the
+           * label resource as a whole, aren't revisioned, and don't require publishing.
            *
            * Create a request for the method "permissions.batchUpdate".
            *
@@ -3577,8 +3608,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
            * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent Label resource name shared by all permissions being updated. Format:
-         *        labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest
+           * @param parent Required. The parent label resource name shared by all permissions being updated. Format:
+         *        `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest`
          *        messages must either be empty or match this field.
            * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsRequest}
            * @since 1.13
@@ -3649,25 +3680,25 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent Label resource name shared by all permissions being updated.
-           * Format: labels/{label} If this is set, the parent field in the
-           * UpdateLabelPermissionRequest messages must either be empty or match this field.
+           * Required. The parent label resource name shared by all permissions being updated.
+           * Format: `labels/{label}`. If this is set, the parent field in the
+           * `UpdateLabelPermissionRequest` messages must either be empty or match this field.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent Label resource name shared by all permissions being updated. Format:
-         labels/{label} If this is set, the parent field in the UpdateLabelPermissionRequest messages must
-         either be empty or match this field.
+          /** Required. The parent label resource name shared by all permissions being updated. Format:
+         `labels/{label}`. If this is set, the parent field in the `UpdateLabelPermissionRequest` messages
+         must either be empty or match this field.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent Label resource name shared by all permissions being updated.
-           * Format: labels/{label} If this is set, the parent field in the
-           * UpdateLabelPermissionRequest messages must either be empty or match this field.
+           * Required. The parent label resource name shared by all permissions being updated.
+           * Format: `labels/{label}`. If this is set, the parent field in the
+           * `UpdateLabelPermissionRequest` messages must either be empty or match this field.
            */
           public BatchUpdate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3685,16 +3716,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-         * Label Permission is created, otherwise the existing permission is updated. Permissions affect the
-         * Label resource as a whole, are not revisioned, and do not require publishing.
+         * Updates a label's permissions. If a permission for the indicated principal doesn't exist, a label
+         * permission is created, otherwise the existing permission is updated. Permissions affect the label
+         * resource as a whole, aren't revisioned, and don't require publishing.
          *
          * Create a request for the method "permissions.create".
          *
          * This request holds the parameters needed by the drivelabels server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent Label resource name on the Label Permission is created. Format: labels/{label}
+         * @param parent Required. The parent label resource name on the label permission is created. Format:
+         *        `labels/{label}`.
          * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2LabelPermission}
          * @return the request
          */
@@ -3712,9 +3744,9 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+$");
 
           /**
-           * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
-           * Label Permission is created, otherwise the existing permission is updated. Permissions affect
-           * the Label resource as a whole, are not revisioned, and do not require publishing.
+           * Updates a label's permissions. If a permission for the indicated principal doesn't exist, a
+           * label permission is created, otherwise the existing permission is updated. Permissions affect
+           * the label resource as a whole, aren't revisioned, and don't require publishing.
            *
            * Create a request for the method "permissions.create".
            *
@@ -3724,7 +3756,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent Label resource name on the Label Permission is created. Format: labels/{label}
+           * @param parent Required. The parent label resource name on the label permission is created. Format:
+         *        `labels/{label}`.
            * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2LabelPermission}
            * @since 1.13
            */
@@ -3794,21 +3827,22 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent Label resource name on the Label Permission is created. Format:
-           * labels/{label}
+           * Required. The parent label resource name on the label permission is created. Format:
+           * `labels/{label}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent Label resource name on the Label Permission is created. Format: labels/{label}
+          /** Required. The parent label resource name on the label permission is created. Format:
+         `labels/{label}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent Label resource name on the Label Permission is created. Format:
-           * labels/{label}
+           * Required. The parent label resource name on the label permission is created. Format:
+           * `labels/{label}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3822,13 +3856,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
           /**
            * Set to `true` in order to use the user's admin credentials. The server will verify the
-           * user is an admin for the Label before allowing access.
+           * user is an admin for the label before allowing access.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean useAdminAccess;
 
           /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-         admin for the Label before allowing access.
+         admin for the label before allowing access.
            */
           public java.lang.Boolean getUseAdminAccess() {
             return useAdminAccess;
@@ -3836,7 +3870,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
           /**
            * Set to `true` in order to use the user's admin credentials. The server will verify the
-           * user is an admin for the Label before allowing access.
+           * user is an admin for the label before allowing access.
            */
           public Create setUseAdminAccess(java.lang.Boolean useAdminAccess) {
             this.useAdminAccess = useAdminAccess;
@@ -3849,15 +3883,15 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Deletes a Label's permission. Permissions affect the Label resource as a whole, are not
-         * revisioned, and do not require publishing.
+         * Deletes a label's permission. Permissions affect the label resource as a whole, aren't
+         * revisioned, and don't require publishing.
          *
          * Create a request for the method "permissions.delete".
          *
          * This request holds the parameters needed by the drivelabels server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Label Permission resource name.
+         * @param name Required. Label permission resource name.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3874,8 +3908,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+/permissions/[^/]+$");
 
           /**
-           * Deletes a Label's permission. Permissions affect the Label resource as a whole, are not
-           * revisioned, and do not require publishing.
+           * Deletes a label's permission. Permissions affect the label resource as a whole, aren't
+           * revisioned, and don't require publishing.
            *
            * Create a request for the method "permissions.delete".
            *
@@ -3885,7 +3919,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Label Permission resource name.
+           * @param name Required. Label permission resource name.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -3953,17 +3987,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Label Permission resource name. */
+          /** Required. Label permission resource name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Label Permission resource name.
+          /** Required. Label permission resource name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Label Permission resource name. */
+          /** Required. Label permission resource name. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3976,13 +4010,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
           /**
            * Set to `true` in order to use the user's admin credentials. The server will verify the
-           * user is an admin for the Label before allowing access.
+           * user is an admin for the label before allowing access.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean useAdminAccess;
 
           /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-         admin for the Label before allowing access.
+         admin for the label before allowing access.
            */
           public java.lang.Boolean getUseAdminAccess() {
             return useAdminAccess;
@@ -3990,7 +4024,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
           /**
            * Set to `true` in order to use the user's admin credentials. The server will verify the
-           * user is an admin for the Label before allowing access.
+           * user is an admin for the label before allowing access.
            */
           public Delete setUseAdminAccess(java.lang.Boolean useAdminAccess) {
             this.useAdminAccess = useAdminAccess;
@@ -4003,15 +4037,15 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Lists a Label's permissions.
+         * Lists a label's permissions.
          *
          * Create a request for the method "permissions.list".
          *
          * This request holds the parameters needed by the drivelabels server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent Label resource name on which Label Permission are listed. Format:
-         *        labels/{label}
+         * @param parent Required. The parent label resource name on which label permissions are listed. Format:
+         *        `labels/{label}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4028,7 +4062,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+$");
 
           /**
-           * Lists a Label's permissions.
+           * Lists a label's permissions.
            *
            * Create a request for the method "permissions.list".
            *
@@ -4037,8 +4071,8 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent Label resource name on which Label Permission are listed. Format:
-         *        labels/{label}
+           * @param parent Required. The parent label resource name on which label permissions are listed. Format:
+         *        `labels/{label}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4117,22 +4151,22 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent Label resource name on which Label Permission are listed. Format:
-           * labels/{label}
+           * Required. The parent label resource name on which label permissions are listed. Format:
+           * `labels/{label}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent Label resource name on which Label Permission are listed. Format:
-         labels/{label}
+          /** Required. The parent label resource name on which label permissions are listed. Format:
+         `labels/{label}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent Label resource name on which Label Permission are listed. Format:
-           * labels/{label}
+           * Required. The parent label resource name on which label permissions are listed. Format:
+           * `labels/{label}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4178,13 +4212,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
           /**
            * Set to `true` in order to use the user's admin credentials. The server will verify the
-           * user is an admin for the Label before allowing access.
+           * user is an admin for the label before allowing access.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean useAdminAccess;
 
           /** Set to `true` in order to use the user's admin credentials. The server will verify the user is an
-         admin for the Label before allowing access.
+         admin for the label before allowing access.
            */
           public java.lang.Boolean getUseAdminAccess() {
             return useAdminAccess;
@@ -4192,7 +4226,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
 
           /**
            * Set to `true` in order to use the user's admin credentials. The server will verify the
-           * user is an admin for the Label before allowing access.
+           * user is an admin for the label before allowing access.
            */
           public List setUseAdminAccess(java.lang.Boolean useAdminAccess) {
             this.useAdminAccess = useAdminAccess;
@@ -4230,7 +4264,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
   public class Limits {
 
     /**
-     * Get the constraints on the structure of a Label; such as, the maximum number of Fields allowed
+     * Get the constraints on the structure of a label; such as, the maximum number of fields allowed
      * and maximum length of the label title.
      *
      * Create a request for the method "limits.getLabel".
@@ -4251,7 +4285,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v2/limits/label";
 
       /**
-       * Get the constraints on the structure of a Label; such as, the maximum number of Fields allowed
+       * Get the constraints on the structure of a label; such as, the maximum number of fields allowed
        * and maximum length of the label title.
        *
        * Create a request for the method "limits.getLabel".
@@ -4333,17 +4367,17 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         return (GetLabel) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Label revision resource name Must be: "limits/label" */
+      /** Required. Label revision resource name must be: "limits/label". */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Label revision resource name Must be: "limits/label"
+      /** Required. Label revision resource name must be: "limits/label".
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. Label revision resource name Must be: "limits/label" */
+      /** Required. Label revision resource name must be: "limits/label". */
       public GetLabel setName(java.lang.String name) {
         this.name = name;
         return this;
@@ -4512,13 +4546,13 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * The customer to scope this request to. For example: "customers/abcd1234". If unset, will
+       * The customer to scope this request to. For example: `customers/abcd1234`. If unset, it will
        * return settings within the current customer.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** The customer to scope this request to. For example: "customers/abcd1234". If unset, will return
+      /** The customer to scope this request to. For example: `customers/abcd1234`. If unset, it will return
      settings within the current customer.
        */
       public java.lang.String getCustomer() {
@@ -4526,7 +4560,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * The customer to scope this request to. For example: "customers/abcd1234". If unset, will
+       * The customer to scope this request to. For example: `customers/abcd1234`. If unset, it will
        * return settings within the current customer.
        */
       public GetCapabilities setCustomer(java.lang.String customer) {

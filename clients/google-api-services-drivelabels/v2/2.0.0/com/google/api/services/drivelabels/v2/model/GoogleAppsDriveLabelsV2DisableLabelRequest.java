@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Request to deprecate a published Label.
+ * Request to deprecate a published label.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -46,7 +46,7 @@ public final class GoogleAppsDriveLabelsV2DisableLabelRequest extends com.google
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `disabled_policy` is implied and should not be specified. A single `*` can be used as short-
+   * `disabled_policy` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * The value may be {@code null}.
    */
@@ -55,14 +55,14 @@ public final class GoogleAppsDriveLabelsV2DisableLabelRequest extends com.google
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAdminAccess;
 
   /**
-   * Provides control over how write requests are executed. Defaults to unset, which means last
+   * Provides control over how write requests are executed. Defaults to unset, which means the last
    * write wins.
    * The value may be {@code null}.
    */
@@ -107,7 +107,7 @@ public final class GoogleAppsDriveLabelsV2DisableLabelRequest extends com.google
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `disabled_policy` is implied and should not be specified. A single `*` can be used as short-
+   * `disabled_policy` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * @return value or {@code null} for none
    */
@@ -117,7 +117,7 @@ public final class GoogleAppsDriveLabelsV2DisableLabelRequest extends com.google
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `disabled_policy` is implied and should not be specified. A single `*` can be used as short-
+   * `disabled_policy` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * @param updateMask updateMask or {@code null} for none
    */
@@ -128,7 +128,7 @@ public final class GoogleAppsDriveLabelsV2DisableLabelRequest extends com.google
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAdminAccess() {
@@ -137,7 +137,7 @@ public final class GoogleAppsDriveLabelsV2DisableLabelRequest extends com.google
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @param useAdminAccess useAdminAccess or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2DisableLabelRequest setUseAdminAccess(java.lang.Boolean useAdminAccess) {
@@ -146,7 +146,7 @@ public final class GoogleAppsDriveLabelsV2DisableLabelRequest extends com.google
   }
 
   /**
-   * Provides control over how write requests are executed. Defaults to unset, which means last
+   * Provides control over how write requests are executed. Defaults to unset, which means the last
    * write wins.
    * @return value or {@code null} for none
    */
@@ -155,7 +155,7 @@ public final class GoogleAppsDriveLabelsV2DisableLabelRequest extends com.google
   }
 
   /**
-   * Provides control over how write requests are executed. Defaults to unset, which means last
+   * Provides control over how write requests are executed. Defaults to unset, which means the last
    * write wins.
    * @param writeControl writeControl or {@code null} for none
    */

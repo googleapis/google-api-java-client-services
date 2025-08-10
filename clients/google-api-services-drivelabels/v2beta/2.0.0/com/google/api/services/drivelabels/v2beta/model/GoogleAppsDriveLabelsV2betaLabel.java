@@ -60,14 +60,14 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   private GoogleAppsDriveLabelsV2betaUserInfo creator;
 
   /**
-   * Output only. The customer this label belongs to. For example: "customers/123abc789."
+   * Output only. The customer this label belongs to. For example: `customers/123abc789`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customer;
 
   /**
-   * Output only. The time this label was disabled. This value has no meaning when the label is not
+   * Output only. The time this label was disabled. This value has no meaning when the label isn't
    * disabled.
    * The value may be {@code null}.
    */
@@ -75,7 +75,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   private String disableTime;
 
   /**
-   * Output only. The user who disabled this label. This value has no meaning when the label is not
+   * Output only. The user who disabled this label. This value has no meaning when the label isn't
    * disabled.
    * The value may be {@code null}.
    */
@@ -90,7 +90,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   private GoogleAppsDriveLabelsV2betaLabelDisplayHints displayHints;
 
   /**
-   * Optional. The EnabledAppSettings for this Label.
+   * Optional. The `EnabledAppSettings` for this Label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
 
   /**
    * Output only. Globally unique identifier of this label. ID makes up part of the label `name`,
-   * but unlike `name`, ID is consistent between revisions. Matches the regex: `([a-zA-Z0-9])+`
+   * but unlike `name`, ID is consistent between revisions. Matches the regex: `([a-zA-Z0-9])+`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   private GoogleAppsDriveLabelsV2betaLifecycle lifecycle;
 
   /**
-   * Output only. The LockStatus of this label.
+   * Output only. The `LockStatus` of this label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   private GoogleAppsDriveLabelsV2betaLabelProperties properties;
 
   /**
-   * Output only. The time this label was published. This value has no meaning when the label is not
+   * Output only. The time this label was published. This value has no meaning when the label isn't
    * published.
    * The value may be {@code null}.
    */
@@ -171,8 +171,8 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   private String publishTime;
 
   /**
-   * Output only. The user who published this label. This value has no meaning when the label is not
-   * published.
+   * Output only. The user who published this label. This value has no meaning when the label isn't
+   * published.>>
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   /**
    * Output only. Revision ID of the label. Revision ID might be part of the label `name` depending
    * on the request issued. A new revision is created whenever revisioned properties of a label are
-   * changed. Matches the regex: `([a-zA-Z0-9])+`
+   * changed. Matches the regex: `([a-zA-Z0-9])+`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -277,7 +277,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The customer this label belongs to. For example: "customers/123abc789."
+   * Output only. The customer this label belongs to. For example: `customers/123abc789`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomer() {
@@ -285,7 +285,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The customer this label belongs to. For example: "customers/123abc789."
+   * Output only. The customer this label belongs to. For example: `customers/123abc789`.
    * @param customer customer or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabel setCustomer(java.lang.String customer) {
@@ -294,7 +294,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The time this label was disabled. This value has no meaning when the label is not
+   * Output only. The time this label was disabled. This value has no meaning when the label isn't
    * disabled.
    * @return value or {@code null} for none
    */
@@ -303,7 +303,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The time this label was disabled. This value has no meaning when the label is not
+   * Output only. The time this label was disabled. This value has no meaning when the label isn't
    * disabled.
    * @param disableTime disableTime or {@code null} for none
    */
@@ -313,7 +313,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The user who disabled this label. This value has no meaning when the label is not
+   * Output only. The user who disabled this label. This value has no meaning when the label isn't
    * disabled.
    * @return value or {@code null} for none
    */
@@ -322,7 +322,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The user who disabled this label. This value has no meaning when the label is not
+   * Output only. The user who disabled this label. This value has no meaning when the label isn't
    * disabled.
    * @param disabler disabler or {@code null} for none
    */
@@ -349,7 +349,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Optional. The EnabledAppSettings for this Label.
+   * Optional. The `EnabledAppSettings` for this Label.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelEnabledAppSettings getEnabledAppSettings() {
@@ -357,7 +357,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Optional. The EnabledAppSettings for this Label.
+   * Optional. The `EnabledAppSettings` for this Label.
    * @param enabledAppSettings enabledAppSettings or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabel setEnabledAppSettings(GoogleAppsDriveLabelsV2betaLabelEnabledAppSettings enabledAppSettings) {
@@ -384,7 +384,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
 
   /**
    * Output only. Globally unique identifier of this label. ID makes up part of the label `name`,
-   * but unlike `name`, ID is consistent between revisions. Matches the regex: `([a-zA-Z0-9])+`
+   * but unlike `name`, ID is consistent between revisions. Matches the regex: `([a-zA-Z0-9])+`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -393,7 +393,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
 
   /**
    * Output only. Globally unique identifier of this label. ID makes up part of the label `name`,
-   * but unlike `name`, ID is consistent between revisions. Matches the regex: `([a-zA-Z0-9])+`
+   * but unlike `name`, ID is consistent between revisions. Matches the regex: `([a-zA-Z0-9])+`.
    * @param id id or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabel setId(java.lang.String id) {
@@ -457,7 +457,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The LockStatus of this label.
+   * Output only. The `LockStatus` of this label.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLockStatus getLockStatus() {
@@ -465,7 +465,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The LockStatus of this label.
+   * Output only. The `LockStatus` of this label.
    * @param lockStatus lockStatus or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabel setLockStatus(GoogleAppsDriveLabelsV2betaLockStatus lockStatus) {
@@ -510,7 +510,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The time this label was published. This value has no meaning when the label is not
+   * Output only. The time this label was published. This value has no meaning when the label isn't
    * published.
    * @return value or {@code null} for none
    */
@@ -519,7 +519,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The time this label was published. This value has no meaning when the label is not
+   * Output only. The time this label was published. This value has no meaning when the label isn't
    * published.
    * @param publishTime publishTime or {@code null} for none
    */
@@ -529,8 +529,8 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The user who published this label. This value has no meaning when the label is not
-   * published.
+   * Output only. The user who published this label. This value has no meaning when the label isn't
+   * published.>>
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaUserInfo getPublisher() {
@@ -538,8 +538,8 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   }
 
   /**
-   * Output only. The user who published this label. This value has no meaning when the label is not
-   * published.
+   * Output only. The user who published this label. This value has no meaning when the label isn't
+   * published.>>
    * @param publisher publisher or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabel setPublisher(GoogleAppsDriveLabelsV2betaUserInfo publisher) {
@@ -584,7 +584,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   /**
    * Output only. Revision ID of the label. Revision ID might be part of the label `name` depending
    * on the request issued. A new revision is created whenever revisioned properties of a label are
-   * changed. Matches the regex: `([a-zA-Z0-9])+`
+   * changed. Matches the regex: `([a-zA-Z0-9])+`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionId() {
@@ -594,7 +594,7 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   /**
    * Output only. Revision ID of the label. Revision ID might be part of the label `name` depending
    * on the request issued. A new revision is created whenever revisioned properties of a label are
-   * changed. Matches the regex: `([a-zA-Z0-9])+`
+   * changed. Matches the regex: `([a-zA-Z0-9])+`.
    * @param revisionId revisionId or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabel setRevisionId(java.lang.String revisionId) {

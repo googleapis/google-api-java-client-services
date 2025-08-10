@@ -17,8 +17,8 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Request to update the `EnabledAppSettings` of the given Label. This change is not revisioned,
- * does not require publishing, and takes effect immediately. \
+ * Request to update the `EnabledAppSettings` of the given label. This change is not revisioned,
+ * doesn't require publishing, and takes effect immediately. \
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaUpdateLabelEnabledAppSettingsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The new `EnabledAppSettings` value for the Label.
+   * Required. The new `EnabledAppSettings` value for the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelEnabledAppSettingsReque
 
   /**
    * Optional. Set to `true` in order to use the user's admin credentials. The server will verify
-   * the user is an admin for the Label before allowing access.
+   * the user is an admin for the label before allowing access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelEnabledAppSettingsReque
   private java.lang.String view;
 
   /**
-   * Required. The new `EnabledAppSettings` value for the Label.
+   * Required. The new `EnabledAppSettings` value for the label.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelEnabledAppSettings getEnabledAppSettings() {
@@ -69,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelEnabledAppSettingsReque
   }
 
   /**
-   * Required. The new `EnabledAppSettings` value for the Label.
+   * Required. The new `EnabledAppSettings` value for the label.
    * @param enabledAppSettings enabledAppSettings or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaUpdateLabelEnabledAppSettingsRequest setEnabledAppSettings(GoogleAppsDriveLabelsV2betaLabelEnabledAppSettings enabledAppSettings) {
@@ -98,7 +98,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelEnabledAppSettingsReque
 
   /**
    * Optional. Set to `true` in order to use the user's admin credentials. The server will verify
-   * the user is an admin for the Label before allowing access.
+   * the user is an admin for the label before allowing access.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAdminAccess() {
@@ -107,7 +107,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelEnabledAppSettingsReque
 
   /**
    * Optional. Set to `true` in order to use the user's admin credentials. The server will verify
-   * the user is an admin for the Label before allowing access.
+   * the user is an admin for the label before allowing access.
    * @param useAdminAccess useAdminAccess or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaUpdateLabelEnabledAppSettingsRequest setUseAdminAccess(java.lang.Boolean useAdminAccess) {

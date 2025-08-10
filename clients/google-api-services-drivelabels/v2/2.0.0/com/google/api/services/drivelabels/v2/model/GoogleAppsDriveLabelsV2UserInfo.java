@@ -30,16 +30,18 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2UserInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The identifier for this user that can be used with the People API to get more information. For
-   * example, people/12345678.
+   * The identifier for this user that can be used with the [People
+   * API](https://developers.google.com/people) to get more information. For example,
+   * `people/12345678`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String person;
 
   /**
-   * The identifier for this user that can be used with the People API to get more information. For
-   * example, people/12345678.
+   * The identifier for this user that can be used with the [People
+   * API](https://developers.google.com/people) to get more information. For example,
+   * `people/12345678`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPerson() {
@@ -47,8 +49,9 @@ public final class GoogleAppsDriveLabelsV2UserInfo extends com.google.api.client
   }
 
   /**
-   * The identifier for this user that can be used with the People API to get more information. For
-   * example, people/12345678.
+   * The identifier for this user that can be used with the [People
+   * API](https://developers.google.com/people) to get more information. For example,
+   * `people/12345678`.
    * @param person person or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2UserInfo setPerson(java.lang.String person) {

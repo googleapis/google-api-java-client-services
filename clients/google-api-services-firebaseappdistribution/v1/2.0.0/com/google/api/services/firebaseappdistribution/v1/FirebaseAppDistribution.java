@@ -162,7 +162,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
      * This request holds the parameters needed by the firebaseappdistribution server.  After setting
      * any optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
      *
-     * @param app The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+     * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
      * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest}
      * @return the request
      */
@@ -186,7 +186,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
      * This method should be used for uploading media content.
      * </p>
      *
-     * @param app The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+     * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
      * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest} media metadata or {@code null} if none
      * @param mediaContent The media HTTP content.
      * @return the request
@@ -217,7 +217,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param app The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+       * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
        * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest}
        * @since 1.13
        */
@@ -247,7 +247,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * This constructor should be used for uploading media content.
        * </p>
        *
-       * @param app The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+       * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
        * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest} media metadata or {@code null} if none
        * @param mediaContent The media HTTP content.
        * @since 1.13
@@ -314,17 +314,21 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
         return (Upload) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The name of the app resource. Format: `projects/{project_number}/apps/{app_id}` */
+      /**
+       * Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+       */
       @com.google.api.client.util.Key
       private java.lang.String app;
 
-      /** The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+      /** Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
        */
       public java.lang.String getApp() {
         return app;
       }
 
-      /** The name of the app resource. Format: `projects/{project_number}/apps/{app_id}` */
+      /**
+       * Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+       */
       public Upload setApp(java.lang.String app) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
@@ -1133,7 +1137,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           }
 
           /**
-           * The expression to filter releases listed in the response. To learn more about
+           * Optional. The expression to filter releases listed in the response. To learn more about
            * filtering, refer to [Google's AIP-160 standard](http://aip.dev/160). Supported fields:
            * - `releaseNotes.text` supports `=` (can contain a wildcard character (`*`) at the
            * beginning or end of the string) - `createTime` supports `<`, `<=`, `>` and `>=`, and
@@ -1144,11 +1148,11 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** The expression to filter releases listed in the response. To learn more about filtering, refer to
-         [Google's AIP-160 standard](http://aip.dev/160). Supported fields: - `releaseNotes.text` supports
-         `=` (can contain a wildcard character (`*`) at the beginning or end of the string) - `createTime`
-         supports `<`, `<=`, `>` and `>=`, and expects an RFC-3339 formatted string Examples: - `createTime
-         <= "2021-09-08T00:00:00+04:00"` - `releaseNotes.text="fixes" AND createTime >=
+          /** Optional. The expression to filter releases listed in the response. To learn more about filtering,
+         refer to [Google's AIP-160 standard](http://aip.dev/160). Supported fields: - `releaseNotes.text`
+         supports `=` (can contain a wildcard character (`*`) at the beginning or end of the string) -
+         `createTime` supports `<`, `<=`, `>` and `>=`, and expects an RFC-3339 formatted string Examples: -
+         `createTime <= "2021-09-08T00:00:00+04:00"` - `releaseNotes.text="fixes" AND createTime >=
          "2021-09-08T00:00:00.0Z"` - `releaseNotes.text="*v1.0.0-rc*"`
            */
           public java.lang.String getFilter() {
@@ -1156,7 +1160,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           }
 
           /**
-           * The expression to filter releases listed in the response. To learn more about
+           * Optional. The expression to filter releases listed in the response. To learn more about
            * filtering, refer to [Google's AIP-160 standard](http://aip.dev/160). Supported fields:
            * - `releaseNotes.text` supports `=` (can contain a wildcard character (`*`) at the
            * beginning or end of the string) - `createTime` supports `<`, `<=`, `>` and `>=`, and
@@ -1170,25 +1174,27 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           }
 
           /**
-           * The fields used to order releases. Supported fields: - `createTime` To specify
-           * descending order for a field, append a "desc" suffix, for example, `createTime desc`.
-           * If this parameter is not set, releases are ordered by `createTime` in descending order.
+           * Optional. The fields used to order releases. Supported fields: - `createTime` To
+           * specify descending order for a field, append a "desc" suffix, for example, `createTime
+           * desc`. If this parameter is not set, releases are ordered by `createTime` in descending
+           * order.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** The fields used to order releases. Supported fields: - `createTime` To specify descending order for
-         a field, append a "desc" suffix, for example, `createTime desc`. If this parameter is not set,
-         releases are ordered by `createTime` in descending order.
+          /** Optional. The fields used to order releases. Supported fields: - `createTime` To specify descending
+         order for a field, append a "desc" suffix, for example, `createTime desc`. If this parameter is not
+         set, releases are ordered by `createTime` in descending order.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * The fields used to order releases. Supported fields: - `createTime` To specify
-           * descending order for a field, append a "desc" suffix, for example, `createTime desc`.
-           * If this parameter is not set, releases are ordered by `createTime` in descending order.
+           * Optional. The fields used to order releases. Supported fields: - `createTime` To
+           * specify descending order for a field, append a "desc" suffix, for example, `createTime
+           * desc`. If this parameter is not set, releases are ordered by `createTime` in descending
+           * order.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -1196,25 +1202,25 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           }
 
           /**
-           * The maximum number of releases to return. The service may return fewer than this value.
-           * The valid range is [1-100]; If unspecified (0), at most 25 releases are returned.
-           * Values above 100 are coerced to 100.
+           * Optional. The maximum number of releases to return. The service may return fewer than
+           * this value. The valid range is [1-100]; If unspecified (0), at most 25 releases are
+           * returned. Values above 100 are coerced to 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of releases to return. The service may return fewer than this value. The valid
-         range is [1-100]; If unspecified (0), at most 25 releases are returned. Values above 100 are
-         coerced to 100.
+          /** Optional. The maximum number of releases to return. The service may return fewer than this value.
+         The valid range is [1-100]; If unspecified (0), at most 25 releases are returned. Values above 100
+         are coerced to 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of releases to return. The service may return fewer than this value.
-           * The valid range is [1-100]; If unspecified (0), at most 25 releases are returned.
-           * Values above 100 are coerced to 100.
+           * Optional. The maximum number of releases to return. The service may return fewer than
+           * this value. The valid range is [1-100]; If unspecified (0), at most 25 releases are
+           * returned. Values above 100 are coerced to 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1222,25 +1228,25 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           }
 
           /**
-           * A page token, received from a previous `ListReleases` call. Provide this to retrieve
-           * the subsequent page. When paginating, all other parameters provided to `ListReleases`
-           * must match the call that provided the page token.
+           * Optional. A page token, received from a previous `ListReleases` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListReleases` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListReleases` call. Provide this to retrieve the subsequent
-         page. When paginating, all other parameters provided to `ListReleases` must match the call that
-         provided the page token.
+          /** Optional. A page token, received from a previous `ListReleases` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListReleases` must match the
+         call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A page token, received from a previous `ListReleases` call. Provide this to retrieve
-           * the subsequent page. When paginating, all other parameters provided to `ListReleases`
-           * must match the call that provided the page token.
+           * Optional. A page token, received from a previous `ListReleases` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListReleases` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -1387,17 +1393,17 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
             return this;
           }
 
-          /** The list of fields to update. */
+          /** Optional. The list of fields to update. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to update.
+          /** Optional. The list of fields to update.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to update. */
+          /** Optional. The list of fields to update. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -1859,25 +1865,25 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
             }
 
             /**
-             * The maximum number of feedback reports to return. The service may return fewer than
-             * this value. The valid range is [1-100]; If unspecified (0), at most 25 feedback
-             * reports are returned. Values above 100 are coerced to 100.
+             * Output only. The maximum number of feedback reports to return. The service may return
+             * fewer than this value. The valid range is [1-100]; If unspecified (0), at most 25
+             * feedback reports are returned. Values above 100 are coerced to 100.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of feedback reports to return. The service may return fewer than this value. The
-           valid range is [1-100]; If unspecified (0), at most 25 feedback reports are returned. Values above
-           100 are coerced to 100.
+            /** Output only. The maximum number of feedback reports to return. The service may return fewer than
+           this value. The valid range is [1-100]; If unspecified (0), at most 25 feedback reports are
+           returned. Values above 100 are coerced to 100.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of feedback reports to return. The service may return fewer than
-             * this value. The valid range is [1-100]; If unspecified (0), at most 25 feedback
-             * reports are returned. Values above 100 are coerced to 100.
+             * Output only. The maximum number of feedback reports to return. The service may return
+             * fewer than this value. The valid range is [1-100]; If unspecified (0), at most 25
+             * feedback reports are returned. Values above 100 are coerced to 100.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -1885,25 +1891,25 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
             }
 
             /**
-             * A page token, received from a previous `ListFeedbackReports` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListFeedbackReports` must match the call that provided the page token.
+             * Output only. A page token, received from a previous `ListFeedbackReports` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListFeedbackReports` must match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** A page token, received from a previous `ListFeedbackReports` call. Provide this to retrieve the
-           subsequent page. When paginating, all other parameters provided to `ListFeedbackReports` must match
-           the call that provided the page token.
+            /** Output only. A page token, received from a previous `ListFeedbackReports` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListFeedbackReports` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * A page token, received from a previous `ListFeedbackReports` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListFeedbackReports` must match the call that provided the page token.
+             * Output only. A page token, received from a previous `ListFeedbackReports` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListFeedbackReports` must match the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -3780,17 +3786,17 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           return this;
         }
 
-        /** The list of fields to update. */
+        /** Optional. The list of fields to update. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to update.
+        /** Optional. The list of fields to update.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to update. */
+        /** Optional. The list of fields to update. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -4456,17 +4462,17 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           return this;
         }
 
-        /** The list of fields to update. */
+        /** Optional. The list of fields to update. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to update.
+        /** Optional. The list of fields to update.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to update. */
+        /** Optional. The list of fields to update. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;

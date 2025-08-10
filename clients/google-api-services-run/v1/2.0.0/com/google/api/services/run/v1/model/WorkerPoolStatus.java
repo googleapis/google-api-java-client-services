@@ -45,7 +45,7 @@ public final class WorkerPoolStatus extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Holds the configured traffic distribution. These entries will always contain RevisionName
+   * Holds the configured workload distribution. These entries will always contain RevisionName
    * references. When ConfigurationName appears in the spec, this will hold the
    * LatestReadyRevisionName that we last observed.
    * The value may be {@code null}.
@@ -106,7 +106,7 @@ public final class WorkerPoolStatus extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Holds the configured traffic distribution. These entries will always contain RevisionName
+   * Holds the configured workload distribution. These entries will always contain RevisionName
    * references. When ConfigurationName appears in the spec, this will hold the
    * LatestReadyRevisionName that we last observed.
    * @return value or {@code null} for none
@@ -116,7 +116,7 @@ public final class WorkerPoolStatus extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Holds the configured traffic distribution. These entries will always contain RevisionName
+   * Holds the configured workload distribution. These entries will always contain RevisionName
    * references. When ConfigurationName appears in the spec, this will hold the
    * LatestReadyRevisionName that we last observed.
    * @param instanceSplits instanceSplits or {@code null} for none

@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * The bundle details for a line item corresponding to a hard bundle.
+ * Intent for entitling the previously provisioned subscription to an end user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,40 +28,43 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscriptionLineItemBundleDetails extends com.google.api.client.json.GenericJson {
+public final class EntitleSubscriptionIntent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Required. The name of the subscription resource that is entitled to the current end user. It is
+   * in the format of "partners/{partner_id}/subscriptions/{subscriptionId}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails;
+  private java.lang.String name;
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Required. The name of the subscription resource that is entitled to the current end user. It is
+   * in the format of "partners/{partner_id}/subscriptions/{subscriptionId}".
    * @return value or {@code null} for none
    */
-  public java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
-    return bundleElementDetails;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Output only. The details for each element in the hard bundle.
-   * @param bundleElementDetails bundleElementDetails or {@code null} for none
+   * Required. The name of the subscription resource that is entitled to the current end user. It is
+   * in the format of "partners/{partner_id}/subscriptions/{subscriptionId}".
+   * @param name name or {@code null} for none
    */
-  public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {
-    this.bundleElementDetails = bundleElementDetails;
+  public EntitleSubscriptionIntent setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails set(String fieldName, Object value) {
-    return (SubscriptionLineItemBundleDetails) super.set(fieldName, value);
+  public EntitleSubscriptionIntent set(String fieldName, Object value) {
+    return (EntitleSubscriptionIntent) super.set(fieldName, value);
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails clone() {
-    return (SubscriptionLineItemBundleDetails) super.clone();
+  public EntitleSubscriptionIntent clone() {
+    return (EntitleSubscriptionIntent) super.clone();
   }
 
 }

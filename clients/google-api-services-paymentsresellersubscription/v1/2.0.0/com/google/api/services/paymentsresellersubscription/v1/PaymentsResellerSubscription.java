@@ -192,7 +192,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         return result;
       }
 
-      public class List extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ListProductsResponse> {
+      public class List extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.ListProductsResponse> {
 
         private static final String REST_PATH = "v1/{+parent}/products";
 
@@ -215,7 +215,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          * @since 1.13
          */
         protected List(java.lang.String parent) {
-          super(PaymentsResellerSubscription.this, "GET", REST_PATH, null, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ListProductsResponse.class);
+          super(PaymentsResellerSubscription.this, "GET", REST_PATH, null, com.google.api.services.paymentsresellersubscription.v1.model.ListProductsResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -441,16 +441,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        * remote operation.
        *
        * @param parent Required. The parent, the partner that can resell. Format: partners/{partner}
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.FindEligiblePromotionsRequest}
        * @return the request
        */
-      public FindEligible findEligible(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest content) throws java.io.IOException {
+      public FindEligible findEligible(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.FindEligiblePromotionsRequest content) throws java.io.IOException {
         FindEligible result = new FindEligible(parent, content);
         initialize(result);
         return result;
       }
 
-      public class FindEligible extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse> {
+      public class FindEligible extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.FindEligiblePromotionsResponse> {
 
         private static final String REST_PATH = "v1/{+parent}/promotions:findEligible";
 
@@ -471,11 +471,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, the partner that can resell. Format: partners/{partner}
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.FindEligiblePromotionsRequest}
          * @since 1.13
          */
-        protected FindEligible(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse.class);
+        protected FindEligible(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.FindEligiblePromotionsRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.FindEligiblePromotionsResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -584,7 +584,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         return result;
       }
 
-      public class List extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ListPromotionsResponse> {
+      public class List extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.ListPromotionsResponse> {
 
         private static final String REST_PATH = "v1/{+parent}/promotions";
 
@@ -607,7 +607,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          * @since 1.13
          */
         protected List(java.lang.String parent) {
-          super(PaymentsResellerSubscription.this, "GET", REST_PATH, null, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ListPromotionsResponse.class);
+          super(PaymentsResellerSubscription.this, "GET", REST_PATH, null, com.google.api.services.paymentsresellersubscription.v1.model.ListPromotionsResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -836,16 +836,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        *
        * @param name Required. The name of the subscription resource to be cancelled. It will have the format of
        *        "partners/{partner_id}/subscriptions/{subscription_id}"
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.CancelSubscriptionRequest}
        * @return the request
        */
-      public Cancel cancel(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest content) throws java.io.IOException {
+      public Cancel cancel(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.CancelSubscriptionRequest content) throws java.io.IOException {
         Cancel result = new Cancel(name, content);
         initialize(result);
         return result;
       }
 
-      public class Cancel extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse> {
+      public class Cancel extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.CancelSubscriptionResponse> {
 
         private static final String REST_PATH = "v1/{+name}:cancel";
 
@@ -866,11 +866,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          *
          * @param name Required. The name of the subscription resource to be cancelled. It will have the format of
        *        "partners/{partner_id}/subscriptions/{subscription_id}"
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.CancelSubscriptionRequest}
          * @since 1.13
          */
-        protected Cancel(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse.class);
+        protected Cancel(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.CancelSubscriptionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.CancelSubscriptionResponse.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -980,16 +980,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        *
        * @param parent Required. The parent resource name, which is the identifier of the partner. It will have the format
        *        of "partners/{partner_id}".
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.Subscription}
        * @return the request
        */
-      public Create create(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription content) throws java.io.IOException {
+      public Create create(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.Subscription content) throws java.io.IOException {
         Create result = new Create(parent, content);
         initialize(result);
         return result;
       }
 
-      public class Create extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription> {
+      public class Create extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.Subscription> {
 
         private static final String REST_PATH = "v1/{+parent}/subscriptions";
 
@@ -1011,11 +1011,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          *
          * @param parent Required. The parent resource name, which is the identifier of the partner. It will have the format
        *        of "partners/{partner_id}".
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.Subscription}
          * @since 1.13
          */
-        protected Create(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription.class);
+        protected Create(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.Subscription content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.Subscription.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1151,16 +1151,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        *
        * @param name Required. The name of the subscription resource that is entitled to the current end user. It will
        *        have the format of "partners/{partner_id}/subscriptions/{subscription_id}"
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.EntitleSubscriptionRequest}
        * @return the request
        */
-      public Entitle entitle(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest content) throws java.io.IOException {
+      public Entitle entitle(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.EntitleSubscriptionRequest content) throws java.io.IOException {
         Entitle result = new Entitle(name, content);
         initialize(result);
         return result;
       }
 
-      public class Entitle extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse> {
+      public class Entitle extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.EntitleSubscriptionResponse> {
 
         private static final String REST_PATH = "v1/{+name}:entitle";
 
@@ -1182,11 +1182,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          *
          * @param name Required. The name of the subscription resource that is entitled to the current end user. It will
        *        have the format of "partners/{partner_id}/subscriptions/{subscription_id}"
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.EntitleSubscriptionRequest}
          * @since 1.13
          */
-        protected Entitle(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse.class);
+        protected Entitle(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.EntitleSubscriptionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.EntitleSubscriptionResponse.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1296,16 +1296,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        *
        * @param name Required. The name of the subscription resource to be extended. It will have the format of
        *        "partners/{partner_id}/subscriptions/{subscription_id}".
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.ExtendSubscriptionRequest}
        * @return the request
        */
-      public Extend extend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest content) throws java.io.IOException {
+      public Extend extend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.ExtendSubscriptionRequest content) throws java.io.IOException {
         Extend result = new Extend(name, content);
         initialize(result);
         return result;
       }
 
-      public class Extend extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse> {
+      public class Extend extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.ExtendSubscriptionResponse> {
 
         private static final String REST_PATH = "v1/{+name}:extend";
 
@@ -1327,11 +1327,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          *
          * @param name Required. The name of the subscription resource to be extended. It will have the format of
        *        "partners/{partner_id}/subscriptions/{subscription_id}".
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.ExtendSubscriptionRequest}
          * @since 1.13
          */
-        protected Extend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse.class);
+        protected Extend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.ExtendSubscriptionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.ExtendSubscriptionResponse.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1447,7 +1447,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         return result;
       }
 
-      public class Get extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription> {
+      public class Get extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.Subscription> {
 
         private static final String REST_PATH = "v1/{+name}";
 
@@ -1470,7 +1470,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          * @since 1.13
          */
         protected Get(java.lang.String name) {
-          super(PaymentsResellerSubscription.this, "GET", REST_PATH, null, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription.class);
+          super(PaymentsResellerSubscription.this, "GET", REST_PATH, null, com.google.api.services.paymentsresellersubscription.v1.model.Subscription.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1591,16 +1591,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        *
        * @param parent Required. The parent resource name, which is the identifier of the partner. It will have the format
        *        of "partners/{partner_id}".
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.Subscription}
        * @return the request
        */
-      public Provision provision(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription content) throws java.io.IOException {
+      public Provision provision(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.Subscription content) throws java.io.IOException {
         Provision result = new Provision(parent, content);
         initialize(result);
         return result;
       }
 
-      public class Provision extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription> {
+      public class Provision extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.Subscription> {
 
         private static final String REST_PATH = "v1/{+parent}/subscriptions:provision";
 
@@ -1623,11 +1623,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          *
          * @param parent Required. The parent resource name, which is the identifier of the partner. It will have the format
        *        of "partners/{partner_id}".
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.Subscription}
          * @since 1.13
          */
-        protected Provision(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1Subscription.class);
+        protected Provision(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.Subscription content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.Subscription.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1762,16 +1762,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        *
        * @param name Required. The name of the subscription resource to be resumed. It will have the format of
        *        "partners/{partner_id}/subscriptions/{subscription_id}"
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.ResumeSubscriptionRequest}
        * @return the request
        */
-      public Resume resume(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest content) throws java.io.IOException {
+      public Resume resume(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.ResumeSubscriptionRequest content) throws java.io.IOException {
         Resume result = new Resume(name, content);
         initialize(result);
         return result;
       }
 
-      public class Resume extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionResponse> {
+      public class Resume extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.ResumeSubscriptionResponse> {
 
         private static final String REST_PATH = "v1/{+name}:resume";
 
@@ -1792,11 +1792,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          *
          * @param name Required. The name of the subscription resource to be resumed. It will have the format of
        *        "partners/{partner_id}/subscriptions/{subscription_id}"
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.ResumeSubscriptionRequest}
          * @since 1.13
          */
-        protected Resume(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionResponse.class);
+        protected Resume(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.ResumeSubscriptionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.ResumeSubscriptionResponse.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1905,16 +1905,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        *
        * @param name Required. The name of the subscription resource to be suspended. It will have the format of
        *        "partners/{partner_id}/subscriptions/{subscription_id}"
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.SuspendSubscriptionRequest}
        * @return the request
        */
-      public Suspend suspend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest content) throws java.io.IOException {
+      public Suspend suspend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.SuspendSubscriptionRequest content) throws java.io.IOException {
         Suspend result = new Suspend(name, content);
         initialize(result);
         return result;
       }
 
-      public class Suspend extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionResponse> {
+      public class Suspend extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.SuspendSubscriptionResponse> {
 
         private static final String REST_PATH = "v1/{+name}:suspend";
 
@@ -1935,11 +1935,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          *
          * @param name Required. The name of the subscription resource to be suspended. It will have the format of
        *        "partners/{partner_id}/subscriptions/{subscription_id}"
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.SuspendSubscriptionRequest}
          * @since 1.13
          */
-        protected Suspend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionResponse.class);
+        protected Suspend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.SuspendSubscriptionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.SuspendSubscriptionResponse.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2050,16 +2050,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        *
        * @param name Required. The name of the subscription resource whose pending cancellation needs to be undone. It
        *        will have the format of "partners/{partner_id}/subscriptions/{subscription_id}"
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionRequest}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.UndoCancelSubscriptionRequest}
        * @return the request
        */
-      public UndoCancel undoCancel(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionRequest content) throws java.io.IOException {
+      public UndoCancel undoCancel(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.UndoCancelSubscriptionRequest content) throws java.io.IOException {
         UndoCancel result = new UndoCancel(name, content);
         initialize(result);
         return result;
       }
 
-      public class UndoCancel extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse> {
+      public class UndoCancel extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.UndoCancelSubscriptionResponse> {
 
         private static final String REST_PATH = "v1/{+name}:undoCancel";
 
@@ -2082,11 +2082,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          *
          * @param name Required. The name of the subscription resource whose pending cancellation needs to be undone. It
        *        will have the format of "partners/{partner_id}/subscriptions/{subscription_id}"
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionRequest}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.UndoCancelSubscriptionRequest}
          * @since 1.13
          */
-        protected UndoCancel(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionRequest content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse.class);
+        protected UndoCancel(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.UndoCancelSubscriptionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.UndoCancelSubscriptionResponse.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2221,16 +2221,16 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
        * operation.
        *
        * @param parent Required. The parent, the partner that can resell. Format: partners/{partner}
-       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GenerateUserSessionRequest}
        * @return the request
        */
-      public Generate generate(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest content) throws java.io.IOException {
+      public Generate generate(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GenerateUserSessionRequest content) throws java.io.IOException {
         Generate result = new Generate(parent, content);
         initialize(result);
         return result;
       }
 
-      public class Generate extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionResponse> {
+      public class Generate extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GenerateUserSessionResponse> {
 
         private static final String REST_PATH = "v1/{+parent}/userSessions:generate";
 
@@ -2253,11 +2253,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, the partner that can resell. Format: partners/{partner}
-         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GenerateUserSessionRequest}
          * @since 1.13
          */
-        protected Generate(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest content) {
-          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionResponse.class);
+        protected Generate(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GenerateUserSessionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GenerateUserSessionResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

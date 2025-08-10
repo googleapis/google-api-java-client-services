@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * The bundle details for a line item corresponding to a hard bundle.
+ * Details for a subscriptiin line item with finite billing cycles.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,40 +28,43 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscriptionLineItemBundleDetails extends com.google.api.client.json.GenericJson {
+public final class FiniteBillingCycleDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Required. The number of a subscription line item billing cycles after which billing will stop
+   * automatically.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long billingCycleCountLimit;
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Required. The number of a subscription line item billing cycles after which billing will stop
+   * automatically.
    * @return value or {@code null} for none
    */
-  public java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
-    return bundleElementDetails;
+  public java.lang.Long getBillingCycleCountLimit() {
+    return billingCycleCountLimit;
   }
 
   /**
-   * Output only. The details for each element in the hard bundle.
-   * @param bundleElementDetails bundleElementDetails or {@code null} for none
+   * Required. The number of a subscription line item billing cycles after which billing will stop
+   * automatically.
+   * @param billingCycleCountLimit billingCycleCountLimit or {@code null} for none
    */
-  public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {
-    this.bundleElementDetails = bundleElementDetails;
+  public FiniteBillingCycleDetails setBillingCycleCountLimit(java.lang.Long billingCycleCountLimit) {
+    this.billingCycleCountLimit = billingCycleCountLimit;
     return this;
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails set(String fieldName, Object value) {
-    return (SubscriptionLineItemBundleDetails) super.set(fieldName, value);
+  public FiniteBillingCycleDetails set(String fieldName, Object value) {
+    return (FiniteBillingCycleDetails) super.set(fieldName, value);
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails clone() {
-    return (SubscriptionLineItemBundleDetails) super.clone();
+  public FiniteBillingCycleDetails clone() {
+    return (FiniteBillingCycleDetails) super.clone();
   }
 
 }

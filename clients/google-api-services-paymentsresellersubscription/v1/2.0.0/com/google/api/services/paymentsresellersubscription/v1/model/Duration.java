@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Details for a bundle product.
+ * Describes the length of a period of a time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductBundleDetails extends com.google.api.client.json.GenericJson {
+public final class Duration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The individual products that are included in the bundle.
+   * number of duration units to be included.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductBundleDetailsBundleElement> bundleElements;
+  private java.lang.Integer count;
 
   /**
-   * The entitlement mode of the bundle product.
+   * The unit used for the duration
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String entitlementMode;
+  private java.lang.String unit;
 
   /**
-   * The individual products that are included in the bundle.
+   * number of duration units to be included.
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductBundleDetailsBundleElement> getBundleElements() {
-    return bundleElements;
+  public java.lang.Integer getCount() {
+    return count;
   }
 
   /**
-   * The individual products that are included in the bundle.
-   * @param bundleElements bundleElements or {@code null} for none
+   * number of duration units to be included.
+   * @param count count or {@code null} for none
    */
-  public ProductBundleDetails setBundleElements(java.util.List<ProductBundleDetailsBundleElement> bundleElements) {
-    this.bundleElements = bundleElements;
+  public Duration setCount(java.lang.Integer count) {
+    this.count = count;
     return this;
   }
 
   /**
-   * The entitlement mode of the bundle product.
+   * The unit used for the duration
    * @return value or {@code null} for none
    */
-  public java.lang.String getEntitlementMode() {
-    return entitlementMode;
+  public java.lang.String getUnit() {
+    return unit;
   }
 
   /**
-   * The entitlement mode of the bundle product.
-   * @param entitlementMode entitlementMode or {@code null} for none
+   * The unit used for the duration
+   * @param unit unit or {@code null} for none
    */
-  public ProductBundleDetails setEntitlementMode(java.lang.String entitlementMode) {
-    this.entitlementMode = entitlementMode;
+  public Duration setUnit(java.lang.String unit) {
+    this.unit = unit;
     return this;
   }
 
   @Override
-  public ProductBundleDetails set(String fieldName, Object value) {
-    return (ProductBundleDetails) super.set(fieldName, value);
+  public Duration set(String fieldName, Object value) {
+    return (Duration) super.set(fieldName, value);
   }
 
   @Override
-  public ProductBundleDetails clone() {
-    return (ProductBundleDetails) super.clone();
+  public Duration clone() {
+    return (Duration) super.clone();
   }
 
 }

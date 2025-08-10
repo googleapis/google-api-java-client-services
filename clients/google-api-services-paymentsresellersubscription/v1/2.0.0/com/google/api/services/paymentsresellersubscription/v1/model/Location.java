@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Details for a bundle product.
+ * Describes a location of an end user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,64 +28,67 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductBundleDetails extends com.google.api.client.json.GenericJson {
+public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
-   * The individual products that are included in the bundle.
+   * The postal code this location refers to. Ex. "94043"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductBundleDetailsBundleElement> bundleElements;
+  private java.lang.String postalCode;
 
   /**
-   * The entitlement mode of the bundle product.
+   * 2-letter ISO region code for current content region. Ex. “US” Please refers to:
+   * https://en.wikipedia.org/wiki/ISO_3166-1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String entitlementMode;
+  private java.lang.String regionCode;
 
   /**
-   * The individual products that are included in the bundle.
+   * The postal code this location refers to. Ex. "94043"
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductBundleDetailsBundleElement> getBundleElements() {
-    return bundleElements;
+  public java.lang.String getPostalCode() {
+    return postalCode;
   }
 
   /**
-   * The individual products that are included in the bundle.
-   * @param bundleElements bundleElements or {@code null} for none
+   * The postal code this location refers to. Ex. "94043"
+   * @param postalCode postalCode or {@code null} for none
    */
-  public ProductBundleDetails setBundleElements(java.util.List<ProductBundleDetailsBundleElement> bundleElements) {
-    this.bundleElements = bundleElements;
+  public Location setPostalCode(java.lang.String postalCode) {
+    this.postalCode = postalCode;
     return this;
   }
 
   /**
-   * The entitlement mode of the bundle product.
+   * 2-letter ISO region code for current content region. Ex. “US” Please refers to:
+   * https://en.wikipedia.org/wiki/ISO_3166-1
    * @return value or {@code null} for none
    */
-  public java.lang.String getEntitlementMode() {
-    return entitlementMode;
+  public java.lang.String getRegionCode() {
+    return regionCode;
   }
 
   /**
-   * The entitlement mode of the bundle product.
-   * @param entitlementMode entitlementMode or {@code null} for none
+   * 2-letter ISO region code for current content region. Ex. “US” Please refers to:
+   * https://en.wikipedia.org/wiki/ISO_3166-1
+   * @param regionCode regionCode or {@code null} for none
    */
-  public ProductBundleDetails setEntitlementMode(java.lang.String entitlementMode) {
-    this.entitlementMode = entitlementMode;
+  public Location setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 
   @Override
-  public ProductBundleDetails set(String fieldName, Object value) {
-    return (ProductBundleDetails) super.set(fieldName, value);
+  public Location set(String fieldName, Object value) {
+    return (Location) super.set(fieldName, value);
   }
 
   @Override
-  public ProductBundleDetails clone() {
-    return (ProductBundleDetails) super.clone();
+  public Location clone() {
+    return (Location) super.clone();
   }
 
 }

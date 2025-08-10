@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * The bundle details for a line item corresponding to a hard bundle.
+ * Details for a ONE_TIME recurrence line item.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,40 +28,40 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscriptionLineItemBundleDetails extends com.google.api.client.json.GenericJson {
+public final class SubscriptionLineItemOneTimeRecurrenceDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Output only. The service period of the ONE_TIME line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails;
+  private ServicePeriod servicePeriod;
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Output only. The service period of the ONE_TIME line item.
    * @return value or {@code null} for none
    */
-  public java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
-    return bundleElementDetails;
+  public ServicePeriod getServicePeriod() {
+    return servicePeriod;
   }
 
   /**
-   * Output only. The details for each element in the hard bundle.
-   * @param bundleElementDetails bundleElementDetails or {@code null} for none
+   * Output only. The service period of the ONE_TIME line item.
+   * @param servicePeriod servicePeriod or {@code null} for none
    */
-  public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {
-    this.bundleElementDetails = bundleElementDetails;
+  public SubscriptionLineItemOneTimeRecurrenceDetails setServicePeriod(ServicePeriod servicePeriod) {
+    this.servicePeriod = servicePeriod;
     return this;
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails set(String fieldName, Object value) {
-    return (SubscriptionLineItemBundleDetails) super.set(fieldName, value);
+  public SubscriptionLineItemOneTimeRecurrenceDetails set(String fieldName, Object value) {
+    return (SubscriptionLineItemOneTimeRecurrenceDetails) super.set(fieldName, value);
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails clone() {
-    return (SubscriptionLineItemBundleDetails) super.clone();
+  public SubscriptionLineItemOneTimeRecurrenceDetails clone() {
+    return (SubscriptionLineItemOneTimeRecurrenceDetails) super.clone();
   }
 
 }

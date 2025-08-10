@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Details for a bundle product.
+ * The payload that describes the user intent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductBundleDetails extends com.google.api.client.json.GenericJson {
+public final class IntentPayload extends com.google.api.client.json.GenericJson {
 
   /**
-   * The individual products that are included in the bundle.
+   * The request to create a subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductBundleDetailsBundleElement> bundleElements;
+  private CreateSubscriptionIntent createIntent;
 
   /**
-   * The entitlement mode of the bundle product.
+   * The request to entitle a subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String entitlementMode;
+  private EntitleSubscriptionIntent entitleIntent;
 
   /**
-   * The individual products that are included in the bundle.
+   * The request to create a subscription.
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductBundleDetailsBundleElement> getBundleElements() {
-    return bundleElements;
+  public CreateSubscriptionIntent getCreateIntent() {
+    return createIntent;
   }
 
   /**
-   * The individual products that are included in the bundle.
-   * @param bundleElements bundleElements or {@code null} for none
+   * The request to create a subscription.
+   * @param createIntent createIntent or {@code null} for none
    */
-  public ProductBundleDetails setBundleElements(java.util.List<ProductBundleDetailsBundleElement> bundleElements) {
-    this.bundleElements = bundleElements;
+  public IntentPayload setCreateIntent(CreateSubscriptionIntent createIntent) {
+    this.createIntent = createIntent;
     return this;
   }
 
   /**
-   * The entitlement mode of the bundle product.
+   * The request to entitle a subscription.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEntitlementMode() {
-    return entitlementMode;
+  public EntitleSubscriptionIntent getEntitleIntent() {
+    return entitleIntent;
   }
 
   /**
-   * The entitlement mode of the bundle product.
-   * @param entitlementMode entitlementMode or {@code null} for none
+   * The request to entitle a subscription.
+   * @param entitleIntent entitleIntent or {@code null} for none
    */
-  public ProductBundleDetails setEntitlementMode(java.lang.String entitlementMode) {
-    this.entitlementMode = entitlementMode;
+  public IntentPayload setEntitleIntent(EntitleSubscriptionIntent entitleIntent) {
+    this.entitleIntent = entitleIntent;
     return this;
   }
 
   @Override
-  public ProductBundleDetails set(String fieldName, Object value) {
-    return (ProductBundleDetails) super.set(fieldName, value);
+  public IntentPayload set(String fieldName, Object value) {
+    return (IntentPayload) super.set(fieldName, value);
   }
 
   @Override
-  public ProductBundleDetails clone() {
-    return (ProductBundleDetails) super.clone();
+  public IntentPayload clone() {
+    return (IntentPayload) super.clone();
   }
 
 }

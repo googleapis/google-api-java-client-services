@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Details for a bundle product.
+ * Configs the prices in an available region.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductBundleDetails extends com.google.api.client.json.GenericJson {
+public final class ProductPriceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The individual products that are included in the bundle.
+   * Output only. The price in the region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductBundleDetailsBundleElement> bundleElements;
+  private Amount amount;
 
   /**
-   * The entitlement mode of the bundle product.
+   * Output only. 2-letter ISO region code where the product is available in. Ex. "US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String entitlementMode;
+  private java.lang.String regionCode;
 
   /**
-   * The individual products that are included in the bundle.
+   * Output only. The price in the region.
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductBundleDetailsBundleElement> getBundleElements() {
-    return bundleElements;
+  public Amount getAmount() {
+    return amount;
   }
 
   /**
-   * The individual products that are included in the bundle.
-   * @param bundleElements bundleElements or {@code null} for none
+   * Output only. The price in the region.
+   * @param amount amount or {@code null} for none
    */
-  public ProductBundleDetails setBundleElements(java.util.List<ProductBundleDetailsBundleElement> bundleElements) {
-    this.bundleElements = bundleElements;
+  public ProductPriceConfig setAmount(Amount amount) {
+    this.amount = amount;
     return this;
   }
 
   /**
-   * The entitlement mode of the bundle product.
+   * Output only. 2-letter ISO region code where the product is available in. Ex. "US".
    * @return value or {@code null} for none
    */
-  public java.lang.String getEntitlementMode() {
-    return entitlementMode;
+  public java.lang.String getRegionCode() {
+    return regionCode;
   }
 
   /**
-   * The entitlement mode of the bundle product.
-   * @param entitlementMode entitlementMode or {@code null} for none
+   * Output only. 2-letter ISO region code where the product is available in. Ex. "US".
+   * @param regionCode regionCode or {@code null} for none
    */
-  public ProductBundleDetails setEntitlementMode(java.lang.String entitlementMode) {
-    this.entitlementMode = entitlementMode;
+  public ProductPriceConfig setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 
   @Override
-  public ProductBundleDetails set(String fieldName, Object value) {
-    return (ProductBundleDetails) super.set(fieldName, value);
+  public ProductPriceConfig set(String fieldName, Object value) {
+    return (ProductPriceConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ProductBundleDetails clone() {
-    return (ProductBundleDetails) super.clone();
+  public ProductPriceConfig clone() {
+    return (ProductPriceConfig) super.clone();
   }
 
 }

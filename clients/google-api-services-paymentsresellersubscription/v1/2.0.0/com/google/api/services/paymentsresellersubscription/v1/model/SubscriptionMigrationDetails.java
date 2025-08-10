@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * The bundle details for a line item corresponding to a hard bundle.
+ * Describes the details of the migrated subscription.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,40 +28,40 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscriptionLineItemBundleDetails extends com.google.api.client.json.GenericJson {
+public final class SubscriptionMigrationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Output only. The migrated subscription id in the legacy system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails;
+  private java.lang.String migratedSubscriptionId;
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Output only. The migrated subscription id in the legacy system.
    * @return value or {@code null} for none
    */
-  public java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
-    return bundleElementDetails;
+  public java.lang.String getMigratedSubscriptionId() {
+    return migratedSubscriptionId;
   }
 
   /**
-   * Output only. The details for each element in the hard bundle.
-   * @param bundleElementDetails bundleElementDetails or {@code null} for none
+   * Output only. The migrated subscription id in the legacy system.
+   * @param migratedSubscriptionId migratedSubscriptionId or {@code null} for none
    */
-  public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {
-    this.bundleElementDetails = bundleElementDetails;
+  public SubscriptionMigrationDetails setMigratedSubscriptionId(java.lang.String migratedSubscriptionId) {
+    this.migratedSubscriptionId = migratedSubscriptionId;
     return this;
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails set(String fieldName, Object value) {
-    return (SubscriptionLineItemBundleDetails) super.set(fieldName, value);
+  public SubscriptionMigrationDetails set(String fieldName, Object value) {
+    return (SubscriptionMigrationDetails) super.set(fieldName, value);
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails clone() {
-    return (SubscriptionLineItemBundleDetails) super.clone();
+  public SubscriptionMigrationDetails clone() {
+    return (SubscriptionMigrationDetails) super.clone();
   }
 
 }

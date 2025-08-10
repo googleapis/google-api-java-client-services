@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * The bundle details for a line item corresponding to a hard bundle.
+ * Response that contains the details for generated user session.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,40 +28,40 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscriptionLineItemBundleDetails extends com.google.api.client.json.GenericJson {
+public final class GenerateUserSessionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * The generated user session. The token size is proportional to the size of the intent payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails;
+  private UserSession userSession;
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * The generated user session. The token size is proportional to the size of the intent payload.
    * @return value or {@code null} for none
    */
-  public java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
-    return bundleElementDetails;
+  public UserSession getUserSession() {
+    return userSession;
   }
 
   /**
-   * Output only. The details for each element in the hard bundle.
-   * @param bundleElementDetails bundleElementDetails or {@code null} for none
+   * The generated user session. The token size is proportional to the size of the intent payload.
+   * @param userSession userSession or {@code null} for none
    */
-  public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {
-    this.bundleElementDetails = bundleElementDetails;
+  public GenerateUserSessionResponse setUserSession(UserSession userSession) {
+    this.userSession = userSession;
     return this;
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails set(String fieldName, Object value) {
-    return (SubscriptionLineItemBundleDetails) super.set(fieldName, value);
+  public GenerateUserSessionResponse set(String fieldName, Object value) {
+    return (GenerateUserSessionResponse) super.set(fieldName, value);
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails clone() {
-    return (SubscriptionLineItemBundleDetails) super.clone();
+  public GenerateUserSessionResponse clone() {
+    return (GenerateUserSessionResponse) super.clone();
   }
 
 }

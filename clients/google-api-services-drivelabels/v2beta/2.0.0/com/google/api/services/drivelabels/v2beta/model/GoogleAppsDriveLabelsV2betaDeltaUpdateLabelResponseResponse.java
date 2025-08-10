@@ -30,91 +30,91 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Creates a new Field.
+   * Creates a field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldResponse createField;
 
   /**
-   * Creates a new selection list option to add to a Selection Field.
+   * Creates a selection list option to add to a selection field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateSelectionChoiceResponse createSelectionChoice;
 
   /**
-   * Deletes a Field from the label.
+   * Deletes a field from the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDeleteFieldResponse deleteField;
 
   /**
-   * Deletes a Choice from a Selection Field.
+   * Deletes a choice from a selection field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDeleteSelectionChoiceResponse deleteSelectionChoice;
 
   /**
-   * Disables Field.
+   * Disables field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDisableFieldResponse disableField;
 
   /**
-   * Disables a Choice within a Selection Field.
+   * Disables a choice within a selection field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDisableSelectionChoiceResponse disableSelectionChoice;
 
   /**
-   * Enables Field.
+   * Enables field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseEnableFieldResponse enableField;
 
   /**
-   * Enables a Choice within a Selection Field.
+   * Enables a choice within a selection field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseEnableSelectionChoiceResponse enableSelectionChoice;
 
   /**
-   * Updates basic properties of a Field.
+   * Updates basic properties of a field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPropertiesResponse updateField;
 
   /**
-   * Update Field type and/or type options.
+   * Updates field type and/or type options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldTypeResponse updateFieldType;
 
   /**
-   * Updated basic properties of a Label.
+   * Updates basic properties of a label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateLabelPropertiesResponse updateLabel;
 
   /**
-   * Updates a Choice within a Selection Field.
+   * Updates a choice within a selection field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse updateSelectionChoiceProperties;
 
   /**
-   * Creates a new Field.
+   * Creates a field.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldResponse getCreateField() {
@@ -122,7 +122,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Creates a new Field.
+   * Creates a field.
    * @param createField createField or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setCreateField(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldResponse createField) {
@@ -131,7 +131,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Creates a new selection list option to add to a Selection Field.
+   * Creates a selection list option to add to a selection field.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateSelectionChoiceResponse getCreateSelectionChoice() {
@@ -139,7 +139,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Creates a new selection list option to add to a Selection Field.
+   * Creates a selection list option to add to a selection field.
    * @param createSelectionChoice createSelectionChoice or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setCreateSelectionChoice(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateSelectionChoiceResponse createSelectionChoice) {
@@ -148,7 +148,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Deletes a Field from the label.
+   * Deletes a field from the label.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDeleteFieldResponse getDeleteField() {
@@ -156,7 +156,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Deletes a Field from the label.
+   * Deletes a field from the label.
    * @param deleteField deleteField or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setDeleteField(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDeleteFieldResponse deleteField) {
@@ -165,7 +165,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Deletes a Choice from a Selection Field.
+   * Deletes a choice from a selection field.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDeleteSelectionChoiceResponse getDeleteSelectionChoice() {
@@ -173,7 +173,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Deletes a Choice from a Selection Field.
+   * Deletes a choice from a selection field.
    * @param deleteSelectionChoice deleteSelectionChoice or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setDeleteSelectionChoice(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDeleteSelectionChoiceResponse deleteSelectionChoice) {
@@ -182,7 +182,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Disables Field.
+   * Disables field.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDisableFieldResponse getDisableField() {
@@ -190,7 +190,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Disables Field.
+   * Disables field.
    * @param disableField disableField or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setDisableField(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDisableFieldResponse disableField) {
@@ -199,7 +199,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Disables a Choice within a Selection Field.
+   * Disables a choice within a selection field.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDisableSelectionChoiceResponse getDisableSelectionChoice() {
@@ -207,7 +207,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Disables a Choice within a Selection Field.
+   * Disables a choice within a selection field.
    * @param disableSelectionChoice disableSelectionChoice or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setDisableSelectionChoice(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseDisableSelectionChoiceResponse disableSelectionChoice) {
@@ -216,7 +216,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Enables Field.
+   * Enables field.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseEnableFieldResponse getEnableField() {
@@ -224,7 +224,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Enables Field.
+   * Enables field.
    * @param enableField enableField or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setEnableField(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseEnableFieldResponse enableField) {
@@ -233,7 +233,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Enables a Choice within a Selection Field.
+   * Enables a choice within a selection field.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseEnableSelectionChoiceResponse getEnableSelectionChoice() {
@@ -241,7 +241,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Enables a Choice within a Selection Field.
+   * Enables a choice within a selection field.
    * @param enableSelectionChoice enableSelectionChoice or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setEnableSelectionChoice(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseEnableSelectionChoiceResponse enableSelectionChoice) {
@@ -250,7 +250,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Updates basic properties of a Field.
+   * Updates basic properties of a field.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPropertiesResponse getUpdateField() {
@@ -258,7 +258,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Updates basic properties of a Field.
+   * Updates basic properties of a field.
    * @param updateField updateField or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setUpdateField(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPropertiesResponse updateField) {
@@ -267,7 +267,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Update Field type and/or type options.
+   * Updates field type and/or type options.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldTypeResponse getUpdateFieldType() {
@@ -275,7 +275,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Update Field type and/or type options.
+   * Updates field type and/or type options.
    * @param updateFieldType updateFieldType or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setUpdateFieldType(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldTypeResponse updateFieldType) {
@@ -284,7 +284,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Updated basic properties of a Label.
+   * Updates basic properties of a label.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateLabelPropertiesResponse getUpdateLabel() {
@@ -292,7 +292,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Updated basic properties of a Label.
+   * Updates basic properties of a label.
    * @param updateLabel updateLabel or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setUpdateLabel(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateLabelPropertiesResponse updateLabel) {
@@ -301,7 +301,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Updates a Choice within a Selection Field.
+   * Updates a choice within a selection field.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse getUpdateSelectionChoiceProperties() {
@@ -309,7 +309,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse e
   }
 
   /**
-   * Updates a Choice within a Selection Field.
+   * Updates a choice within a selection field.
    * @param updateSelectionChoiceProperties updateSelectionChoiceProperties or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse setUpdateSelectionChoiceProperties(GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse updateSelectionChoiceProperties) {

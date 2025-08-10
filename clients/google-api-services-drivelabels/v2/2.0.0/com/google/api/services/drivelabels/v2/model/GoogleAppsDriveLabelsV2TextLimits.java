@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Limits for text Field type.
+ * Limits for text field type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2TextLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum length allowed for a text Field type.
+   * Maximum length allowed for a text field type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxLength;
 
   /**
-   * Minimum length allowed for a text Field type.
+   * Minimum length allowed for a text field type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minLength;
 
   /**
-   * Maximum length allowed for a text Field type.
+   * Maximum length allowed for a text field type.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxLength() {
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2TextLimits extends com.google.api.clie
   }
 
   /**
-   * Maximum length allowed for a text Field type.
+   * Maximum length allowed for a text field type.
    * @param maxLength maxLength or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2TextLimits setMaxLength(java.lang.Integer maxLength) {
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2TextLimits extends com.google.api.clie
   }
 
   /**
-   * Minimum length allowed for a text Field type.
+   * Minimum length allowed for a text field type.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinLength() {
@@ -69,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2TextLimits extends com.google.api.clie
   }
 
   /**
-   * Minimum length allowed for a text Field type.
+   * Minimum length allowed for a text field type.
    * @param minLength minLength or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2TextLimits setMinLength(java.lang.Integer minLength) {

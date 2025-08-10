@@ -17,8 +17,8 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Deletes a Label Permission. Permissions affect the Label resource as a whole, are not revisioned,
- * and do not require publishing.
+ * Deletes a label permission. Permissions affect the label resource as a whole, aren't revisioned,
+ * and don't require publishing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Label Permission resource name.
+   * Required. Label permission resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,14 +39,14 @@ public final class GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest exten
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAdminAccess;
 
   /**
-   * Required. Label Permission resource name.
+   * Required. Label permission resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -54,7 +54,7 @@ public final class GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest exten
   }
 
   /**
-   * Required. Label Permission resource name.
+   * Required. Label permission resource name.
    * @param name name or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest setName(java.lang.String name) {
@@ -64,7 +64,7 @@ public final class GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest exten
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAdminAccess() {
@@ -73,7 +73,7 @@ public final class GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest exten
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @param useAdminAccess useAdminAccess or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest setUseAdminAccess(java.lang.Boolean useAdminAccess) {

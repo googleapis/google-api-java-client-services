@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaWriteControl extends com.google.api.client.json.GenericJson {
 
   /**
-   * The revision_id of the label that the write request will be applied to. If this is not the
+   * The revision ID of the label that the write request will be applied to. If this isn't the
    * latest revision of the label, the request will not be processed and will return a 400 Bad
    * Request error.
    * The value may be {@code null}.
@@ -39,7 +39,7 @@ public final class GoogleAppsDriveLabelsV2betaWriteControl extends com.google.ap
   private java.lang.String requiredRevisionId;
 
   /**
-   * The revision_id of the label that the write request will be applied to. If this is not the
+   * The revision ID of the label that the write request will be applied to. If this isn't the
    * latest revision of the label, the request will not be processed and will return a 400 Bad
    * Request error.
    * @return value or {@code null} for none
@@ -49,7 +49,7 @@ public final class GoogleAppsDriveLabelsV2betaWriteControl extends com.google.ap
   }
 
   /**
-   * The revision_id of the label that the write request will be applied to. If this is not the
+   * The revision ID of the label that the write request will be applied to. If this isn't the
    * latest revision of the label, the request will not be processed and will return a 400 Bad
    * Request error.
    * @param requiredRevisionId requiredRevisionId or {@code null} for none

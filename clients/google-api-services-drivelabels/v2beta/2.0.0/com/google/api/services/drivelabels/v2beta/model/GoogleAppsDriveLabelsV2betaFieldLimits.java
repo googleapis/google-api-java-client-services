@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Field constants governing the structure of a Field; such as, the maximum title length, minimum
+ * Field constants governing the structure of a field; such as, the maximum title length, minimum
  * and maximum field values or length, etc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,70 +31,70 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date Field limits.
+   * Date field limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaDateLimits dateLimits;
 
   /**
-   * Integer Field limits.
+   * Integer field limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaIntegerLimits integerLimits;
 
   /**
-   * Long text Field limits.
+   * Long text field limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaLongTextLimits longTextLimits;
 
   /**
-   * Limits for Field description, also called help text.
+   * Limits for field description, also called help text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxDescriptionLength;
 
   /**
-   * Limits for Field title.
+   * Limits for field title.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxDisplayNameLength;
 
   /**
-   * Max length for the id.
+   * Maximum length for the id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxIdLength;
 
   /**
-   * Selection Field limits.
+   * Selection field limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaSelectionLimits selectionLimits;
 
   /**
-   * The relevant limits for the specified Field.Type. Text Field limits.
+   * The relevant limits for the specified Field.Type. Text field limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaTextLimits textLimits;
 
   /**
-   * User Field limits.
+   * User field limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaUserLimits userLimits;
 
   /**
-   * Date Field limits.
+   * Date field limits.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDateLimits getDateLimits() {
@@ -102,7 +102,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Date Field limits.
+   * Date field limits.
    * @param dateLimits dateLimits or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits setDateLimits(GoogleAppsDriveLabelsV2betaDateLimits dateLimits) {
@@ -111,7 +111,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Integer Field limits.
+   * Integer field limits.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaIntegerLimits getIntegerLimits() {
@@ -119,7 +119,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Integer Field limits.
+   * Integer field limits.
    * @param integerLimits integerLimits or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits setIntegerLimits(GoogleAppsDriveLabelsV2betaIntegerLimits integerLimits) {
@@ -128,7 +128,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Long text Field limits.
+   * Long text field limits.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLongTextLimits getLongTextLimits() {
@@ -136,7 +136,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Long text Field limits.
+   * Long text field limits.
    * @param longTextLimits longTextLimits or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits setLongTextLimits(GoogleAppsDriveLabelsV2betaLongTextLimits longTextLimits) {
@@ -145,7 +145,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Limits for Field description, also called help text.
+   * Limits for field description, also called help text.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDescriptionLength() {
@@ -153,7 +153,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Limits for Field description, also called help text.
+   * Limits for field description, also called help text.
    * @param maxDescriptionLength maxDescriptionLength or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits setMaxDescriptionLength(java.lang.Integer maxDescriptionLength) {
@@ -162,7 +162,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Limits for Field title.
+   * Limits for field title.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDisplayNameLength() {
@@ -170,7 +170,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Limits for Field title.
+   * Limits for field title.
    * @param maxDisplayNameLength maxDisplayNameLength or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits setMaxDisplayNameLength(java.lang.Integer maxDisplayNameLength) {
@@ -179,7 +179,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Max length for the id.
+   * Maximum length for the id.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxIdLength() {
@@ -187,7 +187,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Max length for the id.
+   * Maximum length for the id.
    * @param maxIdLength maxIdLength or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits setMaxIdLength(java.lang.Integer maxIdLength) {
@@ -196,7 +196,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Selection Field limits.
+   * Selection field limits.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaSelectionLimits getSelectionLimits() {
@@ -204,7 +204,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * Selection Field limits.
+   * Selection field limits.
    * @param selectionLimits selectionLimits or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits setSelectionLimits(GoogleAppsDriveLabelsV2betaSelectionLimits selectionLimits) {
@@ -213,7 +213,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * The relevant limits for the specified Field.Type. Text Field limits.
+   * The relevant limits for the specified Field.Type. Text field limits.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaTextLimits getTextLimits() {
@@ -221,7 +221,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * The relevant limits for the specified Field.Type. Text Field limits.
+   * The relevant limits for the specified Field.Type. Text field limits.
    * @param textLimits textLimits or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits setTextLimits(GoogleAppsDriveLabelsV2betaTextLimits textLimits) {
@@ -230,7 +230,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * User Field limits.
+   * User field limits.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaUserLimits getUserLimits() {
@@ -238,7 +238,7 @@ public final class GoogleAppsDriveLabelsV2betaFieldLimits extends com.google.api
   }
 
   /**
-   * User Field limits.
+   * User field limits.
    * @param userLimits userLimits or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldLimits setUserLimits(GoogleAppsDriveLabelsV2betaUserLimits userLimits) {

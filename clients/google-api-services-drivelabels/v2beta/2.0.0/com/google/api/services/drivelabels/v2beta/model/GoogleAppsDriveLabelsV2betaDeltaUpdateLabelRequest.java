@@ -17,8 +17,8 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * The set of requests for updating aspects of a Label. If any request is not valid, no requests
- * will be applied.
+ * The set of requests for updating aspects of a label. If any request isn't valid, no requests will
+ * be applied.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The BCP-47 language code to use for evaluating localized Field labels when
+   * The BCP-47 language code to use for evaluating localized field labels when
    * `include_label_in_response` is `true`.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest extends co
   private java.lang.String languageCode;
 
   /**
-   * A list of updates to apply to the Label. Requests will be applied in the order they are
+   * A list of updates to apply to the label. Requests will be applied in the order they are
    * specified.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest extends co
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest extends co
   private GoogleAppsDriveLabelsV2betaWriteControl writeControl;
 
   /**
-   * The BCP-47 language code to use for evaluating localized Field labels when
+   * The BCP-47 language code to use for evaluating localized field labels when
    * `include_label_in_response` is `true`.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest extends co
   }
 
   /**
-   * The BCP-47 language code to use for evaluating localized Field labels when
+   * The BCP-47 language code to use for evaluating localized field labels when
    * `include_label_in_response` is `true`.
    * @param languageCode languageCode or {@code null} for none
    */
@@ -88,7 +88,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest extends co
   }
 
   /**
-   * A list of updates to apply to the Label. Requests will be applied in the order they are
+   * A list of updates to apply to the label. Requests will be applied in the order they are
    * specified.
    * @return value or {@code null} for none
    */
@@ -97,7 +97,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest extends co
   }
 
   /**
-   * A list of updates to apply to the Label. Requests will be applied in the order they are
+   * A list of updates to apply to the label. Requests will be applied in the order they are
    * specified.
    * @param requests requests or {@code null} for none
    */
@@ -108,7 +108,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest extends co
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAdminAccess() {
@@ -117,7 +117,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest extends co
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @param useAdminAccess useAdminAccess or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequest setUseAdminAccess(java.lang.Boolean useAdminAccess) {

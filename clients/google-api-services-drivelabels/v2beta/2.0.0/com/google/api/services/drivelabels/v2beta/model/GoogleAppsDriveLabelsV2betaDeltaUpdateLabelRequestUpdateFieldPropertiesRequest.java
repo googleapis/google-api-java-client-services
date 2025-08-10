@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Request to update Field properties.
+ * Request to update field properties.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldPropertiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Field to update.
+   * Required. The field to update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Required. Basic Field properties.
+   * Required. Basic field properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateField
 
   /**
    * The fields that should be updated. At least one field must be specified. The root `properties`
-   * is implied and should not be specified. A single `*` can be used as short-hand for updating
+   * is implied and should not be specified. A single `*` can be used as a short-hand for updating
    * every field.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateField
   private String updateMask;
 
   /**
-   * Required. The Field to update.
+   * Required. The field to update.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateField
   }
 
   /**
-   * Required. The Field to update.
+   * Required. The field to update.
    * @param id id or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldPropertiesRequest setId(java.lang.String id) {
@@ -70,7 +70,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateField
   }
 
   /**
-   * Required. Basic Field properties.
+   * Required. Basic field properties.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldProperties getProperties() {
@@ -78,7 +78,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateField
   }
 
   /**
-   * Required. Basic Field properties.
+   * Required. Basic field properties.
    * @param properties properties or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldPropertiesRequest setProperties(GoogleAppsDriveLabelsV2betaFieldProperties properties) {
@@ -88,7 +88,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateField
 
   /**
    * The fields that should be updated. At least one field must be specified. The root `properties`
-   * is implied and should not be specified. A single `*` can be used as short-hand for updating
+   * is implied and should not be specified. A single `*` can be used as a short-hand for updating
    * every field.
    * @return value or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateField
 
   /**
    * The fields that should be updated. At least one field must be specified. The root `properties`
-   * is implied and should not be specified. A single `*` can be used as short-hand for updating
+   * is implied and should not be specified. A single `*` can be used as a short-hand for updating
    * every field.
    * @param updateMask updateMask or {@code null} for none
    */

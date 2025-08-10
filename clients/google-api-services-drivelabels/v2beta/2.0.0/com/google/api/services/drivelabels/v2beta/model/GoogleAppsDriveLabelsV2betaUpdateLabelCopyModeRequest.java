@@ -17,8 +17,8 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Request to update the `CopyMode` of the given Label. Changes to this policy are not revisioned,
- * do not require publishing, and take effect immediately. \
+ * Request to update the `CopyMode` of the given label. Changes to this policy aren't revisioned,
+ * don't require publishing, and take effect immediately. \
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Indicates how the applied Label, and Field values should be copied when a Drive item
+   * Required. Indicates how the applied label and field values should be copied when a Drive item
    * is copied.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest extends
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest extends
   private java.lang.String view;
 
   /**
-   * Required. Indicates how the applied Label, and Field values should be copied when a Drive item
+   * Required. Indicates how the applied label and field values should be copied when a Drive item
    * is copied.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest extends
   }
 
   /**
-   * Required. Indicates how the applied Label, and Field values should be copied when a Drive item
+   * Required. Indicates how the applied label and field values should be copied when a Drive item
    * is copied.
    * @param copyMode copyMode or {@code null} for none
    */
@@ -101,7 +101,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest extends
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAdminAccess() {
@@ -110,7 +110,7 @@ public final class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest extends
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @param useAdminAccess useAdminAccess or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest setUseAdminAccess(java.lang.Boolean useAdminAccess) {

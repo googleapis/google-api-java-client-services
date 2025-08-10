@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Request to create a Selection Choice.
+ * Request to create a selection choice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelectionChoiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Choice to create.
+   * Required. The choice to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice choice;
 
   /**
-   * Required. The Selection Field in which a Choice will be created.
+   * Required. The selection field in which a choice will be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldId;
 
   /**
-   * Required. The Choice to create.
+   * Required. The choice to create.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice getChoice() {
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelection
   }
 
   /**
-   * Required. The Choice to create.
+   * Required. The choice to create.
    * @param choice choice or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelectionChoiceRequest setChoice(GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice choice) {
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelection
   }
 
   /**
-   * Required. The Selection Field in which a Choice will be created.
+   * Required. The selection field in which a choice will be created.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldId() {
@@ -69,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelection
   }
 
   /**
-   * Required. The Selection Field in which a Choice will be created.
+   * Required. The selection field in which a choice will be created.
    * @param fieldId fieldId or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelectionChoiceRequest setFieldId(java.lang.String fieldId) {

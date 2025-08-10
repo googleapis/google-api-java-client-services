@@ -39,14 +39,14 @@ public final class GoogleAppsDriveLabelsV2EnableLabelRequest extends com.google.
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAdminAccess;
 
   /**
-   * Provides control over how write requests are executed. Defaults to unset, which means last
+   * Provides control over how write requests are executed. Defaults to unset, which means the last
    * write wins.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class GoogleAppsDriveLabelsV2EnableLabelRequest extends com.google.
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAdminAccess() {
@@ -83,7 +83,7 @@ public final class GoogleAppsDriveLabelsV2EnableLabelRequest extends com.google.
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @param useAdminAccess useAdminAccess or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2EnableLabelRequest setUseAdminAccess(java.lang.Boolean useAdminAccess) {
@@ -92,7 +92,7 @@ public final class GoogleAppsDriveLabelsV2EnableLabelRequest extends com.google.
   }
 
   /**
-   * Provides control over how write requests are executed. Defaults to unset, which means last
+   * Provides control over how write requests are executed. Defaults to unset, which means the last
    * write wins.
    * @return value or {@code null} for none
    */
@@ -101,7 +101,7 @@ public final class GoogleAppsDriveLabelsV2EnableLabelRequest extends com.google.
   }
 
   /**
-   * Provides control over how write requests are executed. Defaults to unset, which means last
+   * Provides control over how write requests are executed. Defaults to unset, which means the last
    * write wins.
    * @param writeControl writeControl or {@code null} for none
    */

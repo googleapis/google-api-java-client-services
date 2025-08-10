@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Response following Selection Choice create.
+ * Response following selection choice create.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The server-generated id of the field.
+   * The server-generated ID of the field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldId;
 
   /**
-   * The server-generated ID of the created choice within the Field
+   * The server-generated ID of the created choice within the field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The server-generated id of the field.
+   * The server-generated ID of the field.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldId() {
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectio
   }
 
   /**
-   * The server-generated id of the field.
+   * The server-generated ID of the field.
    * @param fieldId fieldId or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceResponse setFieldId(java.lang.String fieldId) {
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectio
   }
 
   /**
-   * The server-generated ID of the created choice within the Field
+   * The server-generated ID of the created choice within the field.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -69,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectio
   }
 
   /**
-   * The server-generated ID of the created choice within the Field
+   * The server-generated ID of the created choice within the field.
    * @param id id or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceResponse setId(java.lang.String id) {

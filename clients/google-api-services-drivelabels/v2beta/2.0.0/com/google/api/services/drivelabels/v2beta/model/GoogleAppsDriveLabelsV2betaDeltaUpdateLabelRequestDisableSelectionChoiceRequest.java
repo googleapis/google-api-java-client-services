@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Request to disable a Choice.
+ * Request to disable a choice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSele
   private GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy disabledPolicy;
 
   /**
-   * Required. The Selection Field in which a Choice will be disabled.
+   * Required. The selection field in which a choice will be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSele
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `disabled_policy` is implied and should not be specified. A single `*` can be used as short-
+   * `disabled_policy` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * The value may be {@code null}.
    */
@@ -77,7 +77,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSele
   }
 
   /**
-   * Required. The Selection Field in which a Choice will be disabled.
+   * Required. The selection field in which a choice will be disabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldId() {
@@ -85,7 +85,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSele
   }
 
   /**
-   * Required. The Selection Field in which a Choice will be disabled.
+   * Required. The selection field in which a choice will be disabled.
    * @param fieldId fieldId or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSelectionChoiceRequest setFieldId(java.lang.String fieldId) {
@@ -112,7 +112,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSele
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `disabled_policy` is implied and should not be specified. A single `*` can be used as short-
+   * `disabled_policy` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * @return value or {@code null} for none
    */
@@ -122,7 +122,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSele
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `disabled_policy` is implied and should not be specified. A single `*` can be used as short-
+   * `disabled_policy` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * @param updateMask updateMask or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Limits for list-variant of a Field type.
+ * Limits for list-variant of a field type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaListLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum number of values allowed for the Field type.
+   * Maximum number of values allowed for the field type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxEntries;
 
   /**
-   * Maximum number of values allowed for the Field type.
+   * Maximum number of values allowed for the field type.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxEntries() {
@@ -45,7 +45,7 @@ public final class GoogleAppsDriveLabelsV2betaListLimits extends com.google.api.
   }
 
   /**
-   * Maximum number of values allowed for the Field type.
+   * Maximum number of values allowed for the field type.
    * @param maxEntries maxEntries or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaListLimits setMaxEntries(java.lang.Integer maxEntries) {

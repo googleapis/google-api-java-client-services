@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * An App where the Label can be used.
+ * An app where the label can be used.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaLabelEnabledAppSettingsEnabledApp extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the App.
+   * Optional. The name of the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String app;
 
   /**
-   * Optional. The name of the App.
+   * Optional. The name of the app.
    * @return value or {@code null} for none
    */
   public java.lang.String getApp() {
@@ -45,7 +45,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelEnabledAppSettingsEnabledApp 
   }
 
   /**
-   * Optional. The name of the App.
+   * Optional. The name of the app.
    * @param app app or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelEnabledAppSettingsEnabledApp setApp(java.lang.String app) {

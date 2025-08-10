@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Request to enable the Field.
+ * Request to enable the field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. ID of the Field to enable.
+   * Required. ID of the field to enable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Required. ID of the Field to enable.
+   * Required. ID of the field to enable.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -45,7 +45,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableField
   }
 
   /**
-   * Required. ID of the Field to enable.
+   * Required. ID of the field to enable.
    * @param id id or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldRequest setId(java.lang.String id) {

@@ -17,8 +17,8 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Updates a Label Permission. Permissions affect the Label resource as a whole, are not revisioned,
- * and do not require publishing.
+ * Updates a label permission. Permissions affect the label resource as a whole, aren't revisioned,
+ * and don't require publishing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -31,14 +31,14 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The permission to create or update on the Label.
+   * Required. The permission to create or update on the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2LabelPermission labelPermission;
 
   /**
-   * Required. The parent Label resource name.
+   * Required. The parent label resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +46,14 @@ public final class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest extends c
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAdminAccess;
 
   /**
-   * Required. The permission to create or update on the Label.
+   * Required. The permission to create or update on the label.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LabelPermission getLabelPermission() {
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest extends c
   }
 
   /**
-   * Required. The permission to create or update on the Label.
+   * Required. The permission to create or update on the label.
    * @param labelPermission labelPermission or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest setLabelPermission(GoogleAppsDriveLabelsV2LabelPermission labelPermission) {
@@ -70,7 +70,7 @@ public final class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest extends c
   }
 
   /**
-   * Required. The parent Label resource name.
+   * Required. The parent label resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -78,7 +78,7 @@ public final class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest extends c
   }
 
   /**
-   * Required. The parent Label resource name.
+   * Required. The parent label resource name.
    * @param parent parent or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest setParent(java.lang.String parent) {
@@ -88,7 +88,7 @@ public final class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest extends c
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAdminAccess() {
@@ -97,7 +97,7 @@ public final class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest extends c
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access.
+   * an admin for the label before allowing access.
    * @param useAdminAccess useAdminAccess or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest setUseAdminAccess(java.lang.Boolean useAdminAccess) {

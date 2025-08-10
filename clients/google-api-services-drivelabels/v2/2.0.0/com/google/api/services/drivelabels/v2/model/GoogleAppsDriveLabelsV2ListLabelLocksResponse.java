@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * The response to a ListLabelLocksRequest.
+ * The response to a `ListLabelLocksRequest`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2ListLabelLocksResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * LabelLocks.
+   * Label locks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class GoogleAppsDriveLabelsV2ListLabelLocksResponse extends com.goo
   private java.lang.String nextPageToken;
 
   /**
-   * LabelLocks.
+   * Label locks.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsDriveLabelsV2LabelLock> getLabelLocks() {
@@ -58,7 +58,7 @@ public final class GoogleAppsDriveLabelsV2ListLabelLocksResponse extends com.goo
   }
 
   /**
-   * LabelLocks.
+   * Label locks.
    * @param labelLocks labelLocks or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2ListLabelLocksResponse setLabelLocks(java.util.List<GoogleAppsDriveLabelsV2LabelLock> labelLocks) {

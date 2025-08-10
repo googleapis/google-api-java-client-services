@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * The bundle details for a line item corresponding to a hard bundle.
+ * The individual product that is included in the bundle.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,40 +28,43 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscriptionLineItemBundleDetails extends com.google.api.client.json.GenericJson {
+public final class ProductBundleDetailsBundleElement extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Required. Output only. Product resource name that identifies the bundle element. The format is
+   * 'partners/{partner_id}/products/{product_id}'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails;
+  private java.lang.String product;
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Required. Output only. Product resource name that identifies the bundle element. The format is
+   * 'partners/{partner_id}/products/{product_id}'.
    * @return value or {@code null} for none
    */
-  public java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
-    return bundleElementDetails;
+  public java.lang.String getProduct() {
+    return product;
   }
 
   /**
-   * Output only. The details for each element in the hard bundle.
-   * @param bundleElementDetails bundleElementDetails or {@code null} for none
+   * Required. Output only. Product resource name that identifies the bundle element. The format is
+   * 'partners/{partner_id}/products/{product_id}'.
+   * @param product product or {@code null} for none
    */
-  public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {
-    this.bundleElementDetails = bundleElementDetails;
+  public ProductBundleDetailsBundleElement setProduct(java.lang.String product) {
+    this.product = product;
     return this;
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails set(String fieldName, Object value) {
-    return (SubscriptionLineItemBundleDetails) super.set(fieldName, value);
+  public ProductBundleDetailsBundleElement set(String fieldName, Object value) {
+    return (ProductBundleDetailsBundleElement) super.set(fieldName, value);
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails clone() {
-    return (SubscriptionLineItemBundleDetails) super.clone();
+  public ProductBundleDetailsBundleElement clone() {
+    return (ProductBundleDetailsBundleElement) super.clone();
   }
 
 }

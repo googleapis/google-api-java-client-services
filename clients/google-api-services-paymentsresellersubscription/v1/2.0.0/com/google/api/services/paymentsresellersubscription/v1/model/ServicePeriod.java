@@ -17,7 +17,8 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Details for a bundle product.
+ * A description of what time period or moment in time the product or service is being delivered
+ * over.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,64 +29,64 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductBundleDetails extends com.google.api.client.json.GenericJson {
+public final class ServicePeriod extends com.google.api.client.json.GenericJson {
 
   /**
-   * The individual products that are included in the bundle.
+   * Optional. The end time of the service period. Time is exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductBundleDetailsBundleElement> bundleElements;
+  private String endTime;
 
   /**
-   * The entitlement mode of the bundle product.
+   * Required. The start time of the service period. Time is inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String entitlementMode;
+  private String startTime;
 
   /**
-   * The individual products that are included in the bundle.
+   * Optional. The end time of the service period. Time is exclusive.
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductBundleDetailsBundleElement> getBundleElements() {
-    return bundleElements;
+  public String getEndTime() {
+    return endTime;
   }
 
   /**
-   * The individual products that are included in the bundle.
-   * @param bundleElements bundleElements or {@code null} for none
+   * Optional. The end time of the service period. Time is exclusive.
+   * @param endTime endTime or {@code null} for none
    */
-  public ProductBundleDetails setBundleElements(java.util.List<ProductBundleDetailsBundleElement> bundleElements) {
-    this.bundleElements = bundleElements;
+  public ServicePeriod setEndTime(String endTime) {
+    this.endTime = endTime;
     return this;
   }
 
   /**
-   * The entitlement mode of the bundle product.
+   * Required. The start time of the service period. Time is inclusive.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEntitlementMode() {
-    return entitlementMode;
+  public String getStartTime() {
+    return startTime;
   }
 
   /**
-   * The entitlement mode of the bundle product.
-   * @param entitlementMode entitlementMode or {@code null} for none
+   * Required. The start time of the service period. Time is inclusive.
+   * @param startTime startTime or {@code null} for none
    */
-  public ProductBundleDetails setEntitlementMode(java.lang.String entitlementMode) {
-    this.entitlementMode = entitlementMode;
+  public ServicePeriod setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 
   @Override
-  public ProductBundleDetails set(String fieldName, Object value) {
-    return (ProductBundleDetails) super.set(fieldName, value);
+  public ServicePeriod set(String fieldName, Object value) {
+    return (ServicePeriod) super.set(fieldName, value);
   }
 
   @Override
-  public ProductBundleDetails clone() {
-    return (ProductBundleDetails) super.clone();
+  public ServicePeriod clone() {
+    return (ServicePeriod) super.clone();
   }
 
 }

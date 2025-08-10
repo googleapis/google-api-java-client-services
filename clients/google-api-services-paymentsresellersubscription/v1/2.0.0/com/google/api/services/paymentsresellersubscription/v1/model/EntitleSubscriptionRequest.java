@@ -17,7 +17,8 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * The bundle details for a line item corresponding to a hard bundle.
+ * Partner request for entitling the previously provisioned subscription to an end user. The end
+ * user identity is inferred from the request OAuth context.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,40 +29,40 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscriptionLineItemBundleDetails extends com.google.api.client.json.GenericJson {
+public final class EntitleSubscriptionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Optional. The line items to be entitled. If unspecified, all line items will be entitled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails;
+  private java.util.List<EntitleSubscriptionRequestLineItemEntitlementDetails> lineItemEntitlementDetails;
 
   /**
-   * Output only. The details for each element in the hard bundle.
+   * Optional. The line items to be entitled. If unspecified, all line items will be entitled.
    * @return value or {@code null} for none
    */
-  public java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
-    return bundleElementDetails;
+  public java.util.List<EntitleSubscriptionRequestLineItemEntitlementDetails> getLineItemEntitlementDetails() {
+    return lineItemEntitlementDetails;
   }
 
   /**
-   * Output only. The details for each element in the hard bundle.
-   * @param bundleElementDetails bundleElementDetails or {@code null} for none
+   * Optional. The line items to be entitled. If unspecified, all line items will be entitled.
+   * @param lineItemEntitlementDetails lineItemEntitlementDetails or {@code null} for none
    */
-  public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {
-    this.bundleElementDetails = bundleElementDetails;
+  public EntitleSubscriptionRequest setLineItemEntitlementDetails(java.util.List<EntitleSubscriptionRequestLineItemEntitlementDetails> lineItemEntitlementDetails) {
+    this.lineItemEntitlementDetails = lineItemEntitlementDetails;
     return this;
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails set(String fieldName, Object value) {
-    return (SubscriptionLineItemBundleDetails) super.set(fieldName, value);
+  public EntitleSubscriptionRequest set(String fieldName, Object value) {
+    return (EntitleSubscriptionRequest) super.set(fieldName, value);
   }
 
   @Override
-  public SubscriptionLineItemBundleDetails clone() {
-    return (SubscriptionLineItemBundleDetails) super.clone();
+  public EntitleSubscriptionRequest clone() {
+    return (EntitleSubscriptionRequest) super.clone();
   }
 
 }

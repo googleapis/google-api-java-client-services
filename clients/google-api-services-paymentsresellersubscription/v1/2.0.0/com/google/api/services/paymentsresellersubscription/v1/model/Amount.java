@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Details for a bundle product.
+ * Describes the amount unit including the currency code.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,64 +28,67 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductBundleDetails extends com.google.api.client.json.GenericJson {
+public final class Amount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The individual products that are included in the bundle.
+   * Required. Amount in micros (1_000_000 micros = 1 currency unit)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long amountMicros;
+
+  /**
+   * Required. Currency codes in accordance with [ISO-4217 Currency Codes]
+   * (https://en.wikipedia.org/wiki/ISO_4217). For example, USD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductBundleDetailsBundleElement> bundleElements;
+  private java.lang.String currencyCode;
 
   /**
-   * The entitlement mode of the bundle product.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String entitlementMode;
-
-  /**
-   * The individual products that are included in the bundle.
+   * Required. Amount in micros (1_000_000 micros = 1 currency unit)
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductBundleDetailsBundleElement> getBundleElements() {
-    return bundleElements;
+  public java.lang.Long getAmountMicros() {
+    return amountMicros;
   }
 
   /**
-   * The individual products that are included in the bundle.
-   * @param bundleElements bundleElements or {@code null} for none
+   * Required. Amount in micros (1_000_000 micros = 1 currency unit)
+   * @param amountMicros amountMicros or {@code null} for none
    */
-  public ProductBundleDetails setBundleElements(java.util.List<ProductBundleDetailsBundleElement> bundleElements) {
-    this.bundleElements = bundleElements;
+  public Amount setAmountMicros(java.lang.Long amountMicros) {
+    this.amountMicros = amountMicros;
     return this;
   }
 
   /**
-   * The entitlement mode of the bundle product.
+   * Required. Currency codes in accordance with [ISO-4217 Currency Codes]
+   * (https://en.wikipedia.org/wiki/ISO_4217). For example, USD.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEntitlementMode() {
-    return entitlementMode;
+  public java.lang.String getCurrencyCode() {
+    return currencyCode;
   }
 
   /**
-   * The entitlement mode of the bundle product.
-   * @param entitlementMode entitlementMode or {@code null} for none
+   * Required. Currency codes in accordance with [ISO-4217 Currency Codes]
+   * (https://en.wikipedia.org/wiki/ISO_4217). For example, USD.
+   * @param currencyCode currencyCode or {@code null} for none
    */
-  public ProductBundleDetails setEntitlementMode(java.lang.String entitlementMode) {
-    this.entitlementMode = entitlementMode;
+  public Amount setCurrencyCode(java.lang.String currencyCode) {
+    this.currencyCode = currencyCode;
     return this;
   }
 
   @Override
-  public ProductBundleDetails set(String fieldName, Object value) {
-    return (ProductBundleDetails) super.set(fieldName, value);
+  public Amount set(String fieldName, Object value) {
+    return (Amount) super.set(fieldName, value);
   }
 
   @Override
-  public ProductBundleDetails clone() {
-    return (ProductBundleDetails) super.clone();
+  public Amount clone() {
+    return (Amount) super.clone();
   }
 
 }

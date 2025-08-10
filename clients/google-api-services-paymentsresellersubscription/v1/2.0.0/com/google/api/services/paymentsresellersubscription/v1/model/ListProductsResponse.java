@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Details for a bundle product.
+ * Response that contains the products.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,64 +28,67 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductBundleDetails extends com.google.api.client.json.GenericJson {
+public final class ListProductsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The individual products that are included in the bundle.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is empty,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductBundleDetailsBundleElement> bundleElements;
+  private java.lang.String nextPageToken;
 
   /**
-   * The entitlement mode of the bundle product.
+   * The products for the specified partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String entitlementMode;
+  private java.util.List<Product> products;
 
   /**
-   * The individual products that are included in the bundle.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is empty,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductBundleDetailsBundleElement> getBundleElements() {
-    return bundleElements;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * The individual products that are included in the bundle.
-   * @param bundleElements bundleElements or {@code null} for none
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is empty,
+   * there are no subsequent pages.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ProductBundleDetails setBundleElements(java.util.List<ProductBundleDetailsBundleElement> bundleElements) {
-    this.bundleElements = bundleElements;
+  public ListProductsResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * The entitlement mode of the bundle product.
+   * The products for the specified partner.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEntitlementMode() {
-    return entitlementMode;
+  public java.util.List<Product> getProducts() {
+    return products;
   }
 
   /**
-   * The entitlement mode of the bundle product.
-   * @param entitlementMode entitlementMode or {@code null} for none
+   * The products for the specified partner.
+   * @param products products or {@code null} for none
    */
-  public ProductBundleDetails setEntitlementMode(java.lang.String entitlementMode) {
-    this.entitlementMode = entitlementMode;
+  public ListProductsResponse setProducts(java.util.List<Product> products) {
+    this.products = products;
     return this;
   }
 
   @Override
-  public ProductBundleDetails set(String fieldName, Object value) {
-    return (ProductBundleDetails) super.set(fieldName, value);
+  public ListProductsResponse set(String fieldName, Object value) {
+    return (ListProductsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ProductBundleDetails clone() {
-    return (ProductBundleDetails) super.clone();
+  public ListProductsResponse clone() {
+    return (ListProductsResponse) super.clone();
   }
 
 }

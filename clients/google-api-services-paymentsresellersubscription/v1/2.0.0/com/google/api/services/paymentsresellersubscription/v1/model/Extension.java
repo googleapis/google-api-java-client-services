@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Details for a bundle product.
+ * Describes the details of an extension request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductBundleDetails extends com.google.api.client.json.GenericJson {
+public final class Extension extends com.google.api.client.json.GenericJson {
 
   /**
-   * The individual products that are included in the bundle.
+   * Required. Specifies the period of access the subscription should grant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductBundleDetailsBundleElement> bundleElements;
+  private Duration duration;
 
   /**
-   * The entitlement mode of the bundle product.
+   * Required. Identifier of the end-user in partner’s system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String entitlementMode;
+  private java.lang.String partnerUserToken;
 
   /**
-   * The individual products that are included in the bundle.
+   * Required. Specifies the period of access the subscription should grant.
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductBundleDetailsBundleElement> getBundleElements() {
-    return bundleElements;
+  public Duration getDuration() {
+    return duration;
   }
 
   /**
-   * The individual products that are included in the bundle.
-   * @param bundleElements bundleElements or {@code null} for none
+   * Required. Specifies the period of access the subscription should grant.
+   * @param duration duration or {@code null} for none
    */
-  public ProductBundleDetails setBundleElements(java.util.List<ProductBundleDetailsBundleElement> bundleElements) {
-    this.bundleElements = bundleElements;
+  public Extension setDuration(Duration duration) {
+    this.duration = duration;
     return this;
   }
 
   /**
-   * The entitlement mode of the bundle product.
+   * Required. Identifier of the end-user in partner’s system.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEntitlementMode() {
-    return entitlementMode;
+  public java.lang.String getPartnerUserToken() {
+    return partnerUserToken;
   }
 
   /**
-   * The entitlement mode of the bundle product.
-   * @param entitlementMode entitlementMode or {@code null} for none
+   * Required. Identifier of the end-user in partner’s system.
+   * @param partnerUserToken partnerUserToken or {@code null} for none
    */
-  public ProductBundleDetails setEntitlementMode(java.lang.String entitlementMode) {
-    this.entitlementMode = entitlementMode;
+  public Extension setPartnerUserToken(java.lang.String partnerUserToken) {
+    this.partnerUserToken = partnerUserToken;
     return this;
   }
 
   @Override
-  public ProductBundleDetails set(String fieldName, Object value) {
-    return (ProductBundleDetails) super.set(fieldName, value);
+  public Extension set(String fieldName, Object value) {
+    return (Extension) super.set(fieldName, value);
   }
 
   @Override
-  public ProductBundleDetails clone() {
-    return (ProductBundleDetails) super.clone();
+  public Extension clone() {
+    return (Extension) super.clone();
   }
 
 }

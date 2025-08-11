@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Evaluation Config for Tuning Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EvaluationConfig evaluationConfig;
+
+  /**
    * Optional. If set to true, disable intermediate checkpoints for SFT and only the last checkpoint
    * will be exported. Otherwise, enable intermediate checkpoints for SFT. Default is false.
    * The value may be {@code null}.
@@ -66,6 +73,23 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String validationDatasetUri;
+
+  /**
+   * Optional. Evaluation Config for Tuning Job.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationConfig getEvaluationConfig() {
+    return evaluationConfig;
+  }
+
+  /**
+   * Optional. Evaluation Config for Tuning Job.
+   * @param evaluationConfig evaluationConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SupervisedTuningSpec setEvaluationConfig(GoogleCloudAiplatformV1beta1EvaluationConfig evaluationConfig) {
+    this.evaluationConfig = evaluationConfig;
+    return this;
+  }
 
   /**
    * Optional. If set to true, disable intermediate checkpoints for SFT and only the last checkpoint

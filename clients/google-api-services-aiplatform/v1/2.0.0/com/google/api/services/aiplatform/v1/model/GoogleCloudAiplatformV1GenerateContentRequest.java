@@ -73,6 +73,14 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Settings for prompt and response sanitization using the Model Armor service. If
+   * supplied, safety_settings must not be supplied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ModelArmorConfig modelArmorConfig;
+
+  /**
    * Optional. Per request settings for blocking unsafe content. Enforced on
    * GenerateContentResponse.candidates.
    * The value may be {@code null}.
@@ -187,6 +195,25 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
    */
   public GoogleCloudAiplatformV1GenerateContentRequest setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for prompt and response sanitization using the Model Armor service. If
+   * supplied, safety_settings must not be supplied.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelArmorConfig getModelArmorConfig() {
+    return modelArmorConfig;
+  }
+
+  /**
+   * Optional. Settings for prompt and response sanitization using the Model Armor service. If
+   * supplied, safety_settings must not be supplied.
+   * @param modelArmorConfig modelArmorConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentRequest setModelArmorConfig(GoogleCloudAiplatformV1ModelArmorConfig modelArmorConfig) {
+    this.modelArmorConfig = modelArmorConfig;
     return this;
   }
 

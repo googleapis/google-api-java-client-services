@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Evaluation Config for Preference Optimization Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EvaluationConfig evaluationConfig;
+
+  /**
    * Optional. Hyperparameters for Preference Optimization.
    * The value may be {@code null}.
    */
@@ -51,6 +58,23 @@ public final class GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec extend
    */
   @com.google.api.client.util.Key
   private java.lang.String validationDatasetUri;
+
+  /**
+   * Optional. Evaluation Config for Preference Optimization Job.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationConfig getEvaluationConfig() {
+    return evaluationConfig;
+  }
+
+  /**
+   * Optional. Evaluation Config for Preference Optimization Job.
+   * @param evaluationConfig evaluationConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec setEvaluationConfig(GoogleCloudAiplatformV1beta1EvaluationConfig evaluationConfig) {
+    this.evaluationConfig = evaluationConfig;
+    return this;
+  }
 
   /**
    * Optional. Hyperparameters for Preference Optimization.

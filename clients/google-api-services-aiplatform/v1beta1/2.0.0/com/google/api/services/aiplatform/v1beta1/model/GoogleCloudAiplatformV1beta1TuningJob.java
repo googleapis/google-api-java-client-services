@@ -93,6 +93,19 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private GoogleRpcStatus error;
 
   /**
+   * Output only. Evaluation runs for the Tuning Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1EvaluateDatasetRun> evaluateDatasetRuns;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1EvaluateDatasetRun used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1EvaluateDatasetRun.class);
+  }
+
+  /**
    * Output only. The Experiment associated with this TuningJob.
    * The value may be {@code null}.
    */
@@ -222,6 +235,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1TuningDataStats tuningDataStats;
+
+  /**
+   * Output only. The detail state of the tuning job (while the overall `JobState` is running).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tuningJobState;
 
   /**
    * Output only. Time when the TuningJob was most recently updated.
@@ -384,6 +404,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setError(GoogleRpcStatus error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Output only. Evaluation runs for the Tuning Job.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1EvaluateDatasetRun> getEvaluateDatasetRuns() {
+    return evaluateDatasetRuns;
+  }
+
+  /**
+   * Output only. Evaluation runs for the Tuning Job.
+   * @param evaluateDatasetRuns evaluateDatasetRuns or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setEvaluateDatasetRuns(java.util.List<GoogleCloudAiplatformV1beta1EvaluateDatasetRun> evaluateDatasetRuns) {
+    this.evaluateDatasetRuns = evaluateDatasetRuns;
     return this;
   }
 
@@ -697,6 +734,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setTuningDataStats(GoogleCloudAiplatformV1beta1TuningDataStats tuningDataStats) {
     this.tuningDataStats = tuningDataStats;
+    return this;
+  }
+
+  /**
+   * Output only. The detail state of the tuning job (while the overall `JobState` is running).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTuningJobState() {
+    return tuningJobState;
+  }
+
+  /**
+   * Output only. The detail state of the tuning job (while the overall `JobState` is running).
+   * @param tuningJobState tuningJobState or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setTuningJobState(java.lang.String tuningJobState) {
+    this.tuningJobState = tuningJobState;
     return this;
   }
 

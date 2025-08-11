@@ -30,6 +30,21 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PreferenceOptimizationDataStats extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A partial sample of the indices (starting from 1) of the dropped examples.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> droppedExampleIndices;
+
+  /**
+   * Output only. For each index in `dropped_example_indices`, the user-facing reason why the
+   * example was dropped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> droppedExampleReasons;
+
+  /**
    * Output only. Dataset distributions for scores variance per example.
    * The value may be {@code null}.
    */
@@ -90,6 +105,42 @@ public final class GoogleCloudAiplatformV1beta1PreferenceOptimizationDataStats e
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1DatasetDistribution userOutputTokenDistribution;
+
+  /**
+   * Output only. A partial sample of the indices (starting from 1) of the dropped examples.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getDroppedExampleIndices() {
+    return droppedExampleIndices;
+  }
+
+  /**
+   * Output only. A partial sample of the indices (starting from 1) of the dropped examples.
+   * @param droppedExampleIndices droppedExampleIndices or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PreferenceOptimizationDataStats setDroppedExampleIndices(java.util.List<java.lang.Long> droppedExampleIndices) {
+    this.droppedExampleIndices = droppedExampleIndices;
+    return this;
+  }
+
+  /**
+   * Output only. For each index in `dropped_example_indices`, the user-facing reason why the
+   * example was dropped.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDroppedExampleReasons() {
+    return droppedExampleReasons;
+  }
+
+  /**
+   * Output only. For each index in `dropped_example_indices`, the user-facing reason why the
+   * example was dropped.
+   * @param droppedExampleReasons droppedExampleReasons or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PreferenceOptimizationDataStats setDroppedExampleReasons(java.util.List<java.lang.String> droppedExampleReasons) {
+    this.droppedExampleReasons = droppedExampleReasons;
+    return this;
+  }
 
   /**
    * Output only. Dataset distributions for scores variance per example.

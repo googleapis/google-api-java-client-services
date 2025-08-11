@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingChunkRetrievedContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The full document name for the referenced Vertex AI Search document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String documentName;
+
+  /**
    * Additional context for the RAG retrieval result. This is only populated when using the RAG
    * retrieval tool.
    * The value may be {@code null}.
@@ -57,6 +64,23 @@ public final class GoogleCloudAiplatformV1GroundingChunkRetrievedContext extends
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Output only. The full document name for the referenced Vertex AI Search document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDocumentName() {
+    return documentName;
+  }
+
+  /**
+   * Output only. The full document name for the referenced Vertex AI Search document.
+   * @param documentName documentName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingChunkRetrievedContext setDocumentName(java.lang.String documentName) {
+    this.documentName = documentName;
+    return this;
+  }
 
   /**
    * Additional context for the RAG retrieval result. This is only populated when using the RAG

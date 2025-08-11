@@ -30,11 +30,24 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If true, the endpoint will be exposed through a dedicated DNS
-   * [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be isolated from
-   * other users' traffic and will have better performance and reliability. Note: Once you enabled
-   * dedicated endpoint, you won't be able to send request to the shared DNS
-   * {region}-aiplatform.googleapis.com. The limitations will be removed soon.
+   * Optional. By default, if dedicated endpoint is enabled, the endpoint will be exposed through a
+   * dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be
+   * isolated from other users' traffic and will have better performance and reliability. Note: Once
+   * you enabled dedicated endpoint, you won't be able to send request to the shared DNS
+   * {region}-aiplatform.googleapis.com. The limitations will be removed soon. If this field is set
+   * to true, the dedicated endpoint will be disabled and the deployed model will be exposed through
+   * the shared DNS {region}-aiplatform.googleapis.com.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dedicatedEndpointDisabled;
+
+  /**
+   * Optional. Deprecated. Use dedicated_endpoint_disabled instead. If true, the endpoint will be
+   * exposed through a dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the
+   * dedicated DNS will be isolated from other users' traffic and will have better performance and
+   * reliability. Note: Once you enabled dedicated endpoint, you won't be able to send request to
+   * the shared DNS {region}-aiplatform.googleapis.com. The limitations will be removed soon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,11 +62,54 @@ public final class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends co
   private java.lang.String endpointDisplayName;
 
   /**
-   * Optional. If true, the endpoint will be exposed through a dedicated DNS
-   * [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be isolated from
-   * other users' traffic and will have better performance and reliability. Note: Once you enabled
-   * dedicated endpoint, you won't be able to send request to the shared DNS
-   * {region}-aiplatform.googleapis.com. The limitations will be removed soon.
+   * Optional. Immutable. The ID to use for endpoint, which will become the final component of the
+   * endpoint resource name. If not provided, Vertex AI will generate a value for this ID. If the
+   * first character is a letter, this value may be up to 63 characters, and valid characters are
+   * `[a-z0-9-]`. The last character must be a letter or number. If the first character is a number,
+   * this value may be up to 9 characters, and valid characters are `[0-9]` with no leading zeros.
+   * When using HTTP/JSON, this field is populated based on a query string argument, such as
+   * `?endpoint_id=12345`. This is the fallback for fields that are not included in either the URI
+   * or the body.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endpointUserId;
+
+  /**
+   * Optional. By default, if dedicated endpoint is enabled, the endpoint will be exposed through a
+   * dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be
+   * isolated from other users' traffic and will have better performance and reliability. Note: Once
+   * you enabled dedicated endpoint, you won't be able to send request to the shared DNS
+   * {region}-aiplatform.googleapis.com. The limitations will be removed soon. If this field is set
+   * to true, the dedicated endpoint will be disabled and the deployed model will be exposed through
+   * the shared DNS {region}-aiplatform.googleapis.com.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDedicatedEndpointDisabled() {
+    return dedicatedEndpointDisabled;
+  }
+
+  /**
+   * Optional. By default, if dedicated endpoint is enabled, the endpoint will be exposed through a
+   * dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be
+   * isolated from other users' traffic and will have better performance and reliability. Note: Once
+   * you enabled dedicated endpoint, you won't be able to send request to the shared DNS
+   * {region}-aiplatform.googleapis.com. The limitations will be removed soon. If this field is set
+   * to true, the dedicated endpoint will be disabled and the deployed model will be exposed through
+   * the shared DNS {region}-aiplatform.googleapis.com.
+   * @param dedicatedEndpointDisabled dedicatedEndpointDisabled or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployRequestEndpointConfig setDedicatedEndpointDisabled(java.lang.Boolean dedicatedEndpointDisabled) {
+    this.dedicatedEndpointDisabled = dedicatedEndpointDisabled;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated. Use dedicated_endpoint_disabled instead. If true, the endpoint will be
+   * exposed through a dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the
+   * dedicated DNS will be isolated from other users' traffic and will have better performance and
+   * reliability. Note: Once you enabled dedicated endpoint, you won't be able to send request to
+   * the shared DNS {region}-aiplatform.googleapis.com. The limitations will be removed soon.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDedicatedEndpointEnabled() {
@@ -61,11 +117,11 @@ public final class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends co
   }
 
   /**
-   * Optional. If true, the endpoint will be exposed through a dedicated DNS
-   * [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be isolated from
-   * other users' traffic and will have better performance and reliability. Note: Once you enabled
-   * dedicated endpoint, you won't be able to send request to the shared DNS
-   * {region}-aiplatform.googleapis.com. The limitations will be removed soon.
+   * Optional. Deprecated. Use dedicated_endpoint_disabled instead. If true, the endpoint will be
+   * exposed through a dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the
+   * dedicated DNS will be isolated from other users' traffic and will have better performance and
+   * reliability. Note: Once you enabled dedicated endpoint, you won't be able to send request to
+   * the shared DNS {region}-aiplatform.googleapis.com. The limitations will be removed soon.
    * @param dedicatedEndpointEnabled dedicatedEndpointEnabled or {@code null} for none
    */
   public GoogleCloudAiplatformV1DeployRequestEndpointConfig setDedicatedEndpointEnabled(java.lang.Boolean dedicatedEndpointEnabled) {
@@ -89,6 +145,37 @@ public final class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends co
    */
   public GoogleCloudAiplatformV1DeployRequestEndpointConfig setEndpointDisplayName(java.lang.String endpointDisplayName) {
     this.endpointDisplayName = endpointDisplayName;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The ID to use for endpoint, which will become the final component of the
+   * endpoint resource name. If not provided, Vertex AI will generate a value for this ID. If the
+   * first character is a letter, this value may be up to 63 characters, and valid characters are
+   * `[a-z0-9-]`. The last character must be a letter or number. If the first character is a number,
+   * this value may be up to 9 characters, and valid characters are `[0-9]` with no leading zeros.
+   * When using HTTP/JSON, this field is populated based on a query string argument, such as
+   * `?endpoint_id=12345`. This is the fallback for fields that are not included in either the URI
+   * or the body.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndpointUserId() {
+    return endpointUserId;
+  }
+
+  /**
+   * Optional. Immutable. The ID to use for endpoint, which will become the final component of the
+   * endpoint resource name. If not provided, Vertex AI will generate a value for this ID. If the
+   * first character is a letter, this value may be up to 63 characters, and valid characters are
+   * `[a-z0-9-]`. The last character must be a letter or number. If the first character is a number,
+   * this value may be up to 9 characters, and valid characters are `[0-9]` with no leading zeros.
+   * When using HTTP/JSON, this field is populated based on a query string argument, such as
+   * `?endpoint_id=12345`. This is the fallback for fields that are not included in either the URI
+   * or the body.
+   * @param endpointUserId endpointUserId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployRequestEndpointConfig setEndpointUserId(java.lang.String endpointUserId) {
+    this.endpointUserId = endpointUserId;
     return this;
   }
 

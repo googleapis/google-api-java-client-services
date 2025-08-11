@@ -89,7 +89,8 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
   private GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig ragEmbeddingModelConfig;
 
   /**
-   * Output only. Number of RagFiles in the RagCorpus.
+   * Output only. Number of RagFiles in the RagCorpus. NOTE: This field is not populated in the
+   * response of VertexRagDataService.ListRagCorpora.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -266,7 +267,8 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
   }
 
   /**
-   * Output only. Number of RagFiles in the RagCorpus.
+   * Output only. Number of RagFiles in the RagCorpus. NOTE: This field is not populated in the
+   * response of VertexRagDataService.ListRagCorpora.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRagFilesCount() {
@@ -274,7 +276,8 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
   }
 
   /**
-   * Output only. Number of RagFiles in the RagCorpus.
+   * Output only. Number of RagFiles in the RagCorpus. NOTE: This field is not populated in the
+   * response of VertexRagDataService.ListRagCorpora.
    * @param ragFilesCount ragFilesCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagCorpus setRagFilesCount(java.lang.Integer ragFilesCount) {

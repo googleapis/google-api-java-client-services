@@ -66,6 +66,14 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean pinnable;
 
   /**
+   * Rollout-related metadata. Some releases are part of one or more A/B rollouts. This field
+   * contains the names and data describing this release's role in any rollouts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RolloutData> rolloutData;
+
+  /**
    * Timestamp interval of when the release was live. If end_time is unspecified, the release is
    * currently live.
    * The value may be {@code null}.
@@ -153,6 +161,25 @@ public final class Release extends com.google.api.client.json.GenericJson {
    */
   public Release setPinnable(java.lang.Boolean pinnable) {
     this.pinnable = pinnable;
+    return this;
+  }
+
+  /**
+   * Rollout-related metadata. Some releases are part of one or more A/B rollouts. This field
+   * contains the names and data describing this release's role in any rollouts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RolloutData> getRolloutData() {
+    return rolloutData;
+  }
+
+  /**
+   * Rollout-related metadata. Some releases are part of one or more A/B rollouts. This field
+   * contains the names and data describing this release's role in any rollouts.
+   * @param rolloutData rolloutData or {@code null} for none
+   */
+  public Release setRolloutData(java.util.List<RolloutData> rolloutData) {
+    this.rolloutData = rolloutData;
     return this;
   }
 

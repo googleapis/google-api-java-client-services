@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-merchantapi</artifactId>
-  <version>reports_v1-rev20250808-2.0.0</version>
-  <name>Merchant API reports_v1-rev20250808-2.0.0</name>
+  <version>lfp_v1-rev20250808-2.0.0</version>
+  <name>Merchant API lfp_v1-rev20250808-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

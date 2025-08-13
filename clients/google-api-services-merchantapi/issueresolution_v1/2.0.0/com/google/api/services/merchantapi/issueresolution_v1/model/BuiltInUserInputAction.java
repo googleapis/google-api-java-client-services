@@ -21,7 +21,7 @@ package com.google.api.services.merchantapi.issueresolution_v1.model;
  * to show an additional content and input form to the business. They can start the action only when
  * they provided all required inputs. The application will request processing of the action by
  * calling the [triggeraction method](https://developers.google.com/merchant/api/reference/rest/issu
- * eresolution_v1beta/issueresolution/triggeraction).
+ * eresolution_v1/issueresolution/triggeraction).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

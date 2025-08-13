@@ -64,7 +64,7 @@ public final class MediationGroupTargeting extends com.google.api.client.json.Ge
   private java.lang.String idfaTargeting;
 
   /**
-   * Describes the platform of the app. Examples: "IOS", "Android".
+   * Describes the platform of the app. Examples: "IOS", "ANDROID".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +158,7 @@ public final class MediationGroupTargeting extends com.google.api.client.json.Ge
   }
 
   /**
-   * Describes the platform of the app. Examples: "IOS", "Android".
+   * Describes the platform of the app. Examples: "IOS", "ANDROID".
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatform() {
@@ -166,7 +166,7 @@ public final class MediationGroupTargeting extends com.google.api.client.json.Ge
   }
 
   /**
-   * Describes the platform of the app. Examples: "IOS", "Android".
+   * Describes the platform of the app. Examples: "IOS", "ANDROID".
    * @param platform platform or {@code null} for none
    */
   public MediationGroupTargeting setPlatform(java.lang.String platform) {

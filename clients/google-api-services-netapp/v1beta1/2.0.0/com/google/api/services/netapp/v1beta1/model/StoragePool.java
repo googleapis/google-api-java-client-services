@@ -46,6 +46,13 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowAutoTiering;
 
   /**
+   * Output only. Available throughput of the storage pool (in MiB/s).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double availableThroughputMibps;
+
+  /**
    * Required. Capacity in GIB of the pool
    * The value may be {@code null}.
    */
@@ -147,6 +154,13 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String psaRange;
+
+  /**
+   * Optional. QoS (Quality of Service) Type of the storage pool
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String qosType;
 
   /**
    * Optional. Specifies the replica zone for regional storagePool.
@@ -259,6 +273,23 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setAllowAutoTiering(java.lang.Boolean allowAutoTiering) {
     this.allowAutoTiering = allowAutoTiering;
+    return this;
+  }
+
+  /**
+   * Output only. Available throughput of the storage pool (in MiB/s).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAvailableThroughputMibps() {
+    return availableThroughputMibps;
+  }
+
+  /**
+   * Output only. Available throughput of the storage pool (in MiB/s).
+   * @param availableThroughputMibps availableThroughputMibps or {@code null} for none
+   */
+  public StoragePool setAvailableThroughputMibps(java.lang.Double availableThroughputMibps) {
+    this.availableThroughputMibps = availableThroughputMibps;
     return this;
   }
 
@@ -507,6 +538,23 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setPsaRange(java.lang.String psaRange) {
     this.psaRange = psaRange;
+    return this;
+  }
+
+  /**
+   * Optional. QoS (Quality of Service) Type of the storage pool
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQosType() {
+    return qosType;
+  }
+
+  /**
+   * Optional. QoS (Quality of Service) Type of the storage pool
+   * @param qosType qosType or {@code null} for none
+   */
+  public StoragePool setQosType(java.lang.String qosType) {
+    this.qosType = qosType;
     return this;
   }
 

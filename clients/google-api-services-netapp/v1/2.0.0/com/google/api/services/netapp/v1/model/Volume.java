@@ -279,6 +279,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String storagePool;
 
   /**
+   * Optional. Throughput of the volume (in MiB/s)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double throughputMibps;
+
+  /**
    * Tiering policy for the volume.
    * The value may be {@code null}.
    */
@@ -893,6 +900,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setStoragePool(java.lang.String storagePool) {
     this.storagePool = storagePool;
+    return this;
+  }
+
+  /**
+   * Optional. Throughput of the volume (in MiB/s)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getThroughputMibps() {
+    return throughputMibps;
+  }
+
+  /**
+   * Optional. Throughput of the volume (in MiB/s)
+   * @param throughputMibps throughputMibps or {@code null} for none
+   */
+  public Volume setThroughputMibps(java.lang.Double throughputMibps) {
+    this.throughputMibps = throughputMibps;
     return this;
   }
 

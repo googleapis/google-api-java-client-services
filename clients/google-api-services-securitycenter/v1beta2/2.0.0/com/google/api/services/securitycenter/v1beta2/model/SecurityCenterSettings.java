@@ -31,6 +31,14 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class SecurityCenterSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * The KMS key name used for CMEK encryption. Format:
+   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key_name}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoKeyName;
+
+  /**
    * The resource name of the project to send logs to. This project must be part of the organization
    * this resource resides in. The format is `projects/{project_id}`. An empty value disables
    * logging. This value is only referenced by services that support log sink. Please refer to the
@@ -63,6 +71,25 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String orgServiceAccount;
+
+  /**
+   * The KMS key name used for CMEK encryption. Format:
+   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key_name}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoKeyName() {
+    return cryptoKeyName;
+  }
+
+  /**
+   * The KMS key name used for CMEK encryption. Format:
+   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key_name}
+   * @param cryptoKeyName cryptoKeyName or {@code null} for none
+   */
+  public SecurityCenterSettings setCryptoKeyName(java.lang.String cryptoKeyName) {
+    this.cryptoKeyName = cryptoKeyName;
+    return this;
+  }
 
   /**
    * The resource name of the project to send logs to. This project must be part of the organization

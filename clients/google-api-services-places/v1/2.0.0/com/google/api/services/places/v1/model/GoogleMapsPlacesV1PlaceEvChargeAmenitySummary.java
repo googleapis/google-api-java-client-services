@@ -68,7 +68,7 @@ public final class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends com.goo
   private GoogleMapsPlacesV1ContentBlock restaurant;
 
   /**
-   * A summary of the nearby gas stations.
+   * A summary of the nearby stores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends com.goo
   }
 
   /**
-   * A summary of the nearby gas stations.
+   * A summary of the nearby stores.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1ContentBlock getStore() {
@@ -170,7 +170,7 @@ public final class GoogleMapsPlacesV1PlaceEvChargeAmenitySummary extends com.goo
   }
 
   /**
-   * A summary of the nearby gas stations.
+   * A summary of the nearby stores.
    * @param store store or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceEvChargeAmenitySummary setStore(GoogleMapsPlacesV1ContentBlock store) {

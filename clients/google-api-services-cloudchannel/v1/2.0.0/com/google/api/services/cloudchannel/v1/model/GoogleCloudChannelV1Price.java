@@ -45,6 +45,20 @@ public final class GoogleCloudChannelV1Price extends com.google.api.client.json.
   private java.lang.Double discount;
 
   /**
+   * Breakdown of the discount into its components. This will be empty if there is no discount
+   * present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudChannelV1DiscountComponent> discountComponents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudChannelV1DiscountComponent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudChannelV1DiscountComponent.class);
+  }
+
+  /**
    * Effective Price after applying the discounts.
    * The value may be {@code null}.
    */
@@ -57,6 +71,14 @@ public final class GoogleCloudChannelV1Price extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalPriceUri;
+
+  /**
+   * The time period with respect to which base and effective prices are defined. Example: 1 month,
+   * 6 months, 1 year, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudChannelV1Period pricePeriod;
 
   /**
    * Base price.
@@ -95,6 +117,25 @@ public final class GoogleCloudChannelV1Price extends com.google.api.client.json.
   }
 
   /**
+   * Breakdown of the discount into its components. This will be empty if there is no discount
+   * present.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudChannelV1DiscountComponent> getDiscountComponents() {
+    return discountComponents;
+  }
+
+  /**
+   * Breakdown of the discount into its components. This will be empty if there is no discount
+   * present.
+   * @param discountComponents discountComponents or {@code null} for none
+   */
+  public GoogleCloudChannelV1Price setDiscountComponents(java.util.List<GoogleCloudChannelV1DiscountComponent> discountComponents) {
+    this.discountComponents = discountComponents;
+    return this;
+  }
+
+  /**
    * Effective Price after applying the discounts.
    * @return value or {@code null} for none
    */
@@ -125,6 +166,25 @@ public final class GoogleCloudChannelV1Price extends com.google.api.client.json.
    */
   public GoogleCloudChannelV1Price setExternalPriceUri(java.lang.String externalPriceUri) {
     this.externalPriceUri = externalPriceUri;
+    return this;
+  }
+
+  /**
+   * The time period with respect to which base and effective prices are defined. Example: 1 month,
+   * 6 months, 1 year, etc.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudChannelV1Period getPricePeriod() {
+    return pricePeriod;
+  }
+
+  /**
+   * The time period with respect to which base and effective prices are defined. Example: 1 month,
+   * 6 months, 1 year, etc.
+   * @param pricePeriod pricePeriod or {@code null} for none
+   */
+  public GoogleCloudChannelV1Price setPricePeriod(GoogleCloudChannelV1Period pricePeriod) {
+    this.pricePeriod = pricePeriod;
     return this;
   }
 

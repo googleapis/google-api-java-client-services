@@ -31,6 +31,20 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A back action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppdistroV1alphaDeviceInteractionBack backAction;
+
+  /**
+   * Output only. A drag and drop action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppdistroV1alphaDeviceInteractionDragAndDrop dragAndDrop;
+
+  /**
    * Output only. A text entry action, that enters text into a particular text field, clearing any
    * existing text in the field. Unlike `text_input` this action does not require any other actions
    * such as a tap to be performed before it can enter the text.
@@ -45,6 +59,13 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.String keyCode;
+
+  /**
+   * Output only. A long press (tap and hold) action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AndroidxCrawlerOutputPoint longPress;
 
   /**
    * Output only. The screenshot used in the context of this action. The screen may have changed
@@ -85,6 +106,40 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
   private GoogleFirebaseAppdistroV1alphaDeviceInteractionWait wait;
 
   /**
+   * Output only. A back action.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteractionBack getBackAction() {
+    return backAction;
+  }
+
+  /**
+   * Output only. A back action.
+   * @param backAction backAction or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteraction setBackAction(GoogleFirebaseAppdistroV1alphaDeviceInteractionBack backAction) {
+    this.backAction = backAction;
+    return this;
+  }
+
+  /**
+   * Output only. A drag and drop action.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteractionDragAndDrop getDragAndDrop() {
+    return dragAndDrop;
+  }
+
+  /**
+   * Output only. A drag and drop action.
+   * @param dragAndDrop dragAndDrop or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteraction setDragAndDrop(GoogleFirebaseAppdistroV1alphaDeviceInteractionDragAndDrop dragAndDrop) {
+    this.dragAndDrop = dragAndDrop;
+    return this;
+  }
+
+  /**
    * Output only. A text entry action, that enters text into a particular text field, clearing any
    * existing text in the field. Unlike `text_input` this action does not require any other actions
    * such as a tap to be performed before it can enter the text.
@@ -119,6 +174,23 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
    */
   public GoogleFirebaseAppdistroV1alphaDeviceInteraction setKeyCode(java.lang.String keyCode) {
     this.keyCode = keyCode;
+    return this;
+  }
+
+  /**
+   * Output only. A long press (tap and hold) action.
+   * @return value or {@code null} for none
+   */
+  public AndroidxCrawlerOutputPoint getLongPress() {
+    return longPress;
+  }
+
+  /**
+   * Output only. A long press (tap and hold) action.
+   * @param longPress longPress or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteraction setLongPress(AndroidxCrawlerOutputPoint longPress) {
+    this.longPress = longPress;
     return this;
   }
 

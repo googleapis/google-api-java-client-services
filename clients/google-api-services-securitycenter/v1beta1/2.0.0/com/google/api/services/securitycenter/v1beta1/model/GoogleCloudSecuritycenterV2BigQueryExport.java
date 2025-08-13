@@ -39,6 +39,14 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   private String createTime;
 
   /**
+   * Output only. The resource name of the Cloud KMS `CryptoKey` used to protect this
+   * configuration's data, if configured during Security Command Center activation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoKeyName;
+
+  /**
    * The dataset to write findings' updates to. Its format is
    * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery dataset unique ID must contain
    * only letters (a-z, A-Z), numbers (0-9), or underscores (_).
@@ -121,6 +129,25 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the Cloud KMS `CryptoKey` used to protect this
+   * configuration's data, if configured during Security Command Center activation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoKeyName() {
+    return cryptoKeyName;
+  }
+
+  /**
+   * Output only. The resource name of the Cloud KMS `CryptoKey` used to protect this
+   * configuration's data, if configured during Security Command Center activation.
+   * @param cryptoKeyName cryptoKeyName or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2BigQueryExport setCryptoKeyName(java.lang.String cryptoKeyName) {
+    this.cryptoKeyName = cryptoKeyName;
     return this;
   }
 

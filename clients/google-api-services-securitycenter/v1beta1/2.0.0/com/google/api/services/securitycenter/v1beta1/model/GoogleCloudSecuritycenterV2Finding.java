@@ -201,6 +201,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private String createTime;
 
   /**
+   * Output only. The name of the Cloud KMS key used to encrypt this finding, if any.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoKeyName;
+
+  /**
    * Data access events associated with the finding.
    * The value may be {@code null}.
    */
@@ -917,6 +924,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the Cloud KMS key used to encrypt this finding, if any.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoKeyName() {
+    return cryptoKeyName;
+  }
+
+  /**
+   * Output only. The name of the Cloud KMS key used to encrypt this finding, if any.
+   * @param cryptoKeyName cryptoKeyName or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setCryptoKeyName(java.lang.String cryptoKeyName) {
+    this.cryptoKeyName = cryptoKeyName;
     return this;
   }
 

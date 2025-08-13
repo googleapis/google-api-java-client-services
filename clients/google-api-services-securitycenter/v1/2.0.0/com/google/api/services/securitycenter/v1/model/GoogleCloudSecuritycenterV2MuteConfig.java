@@ -40,6 +40,14 @@ public final class GoogleCloudSecuritycenterV2MuteConfig extends com.google.api.
   private String createTime;
 
   /**
+   * Output only. The resource name of the Cloud KMS `CryptoKey` used to encrypt this configuration
+   * data, if CMEK was enabled during Security Command Center activation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoKeyName;
+
+  /**
    * A description of the mute config.
    * The value may be {@code null}.
    */
@@ -122,6 +130,25 @@ public final class GoogleCloudSecuritycenterV2MuteConfig extends com.google.api.
    */
   public GoogleCloudSecuritycenterV2MuteConfig setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the Cloud KMS `CryptoKey` used to encrypt this configuration
+   * data, if CMEK was enabled during Security Command Center activation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoKeyName() {
+    return cryptoKeyName;
+  }
+
+  /**
+   * Output only. The resource name of the Cloud KMS `CryptoKey` used to encrypt this configuration
+   * data, if CMEK was enabled during Security Command Center activation.
+   * @param cryptoKeyName cryptoKeyName or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2MuteConfig setCryptoKeyName(java.lang.String cryptoKeyName) {
+    this.cryptoKeyName = cryptoKeyName;
     return this;
   }
 

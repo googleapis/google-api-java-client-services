@@ -18,7 +18,7 @@ package com.google.api.services.redis.v1beta1.model;
 
 /**
  * DatabaseResourceFeed is the top level proto to be used to ingest different database resource
- * level events into Condor platform. Next ID: 10
+ * level events into Condor platform. Next ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -91,6 +91,16 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private DatabaseResourceMetadata resourceMetadata;
+
+  /**
+   * Optional. If true, the feed won't be ingested by DB Center. This indicates that the feed is
+   * intentionally skipped. For example, BackupDR feeds are only needed for resources integrated
+   * with DB Center (e.g., CloudSQL, AlloyDB). Feeds for non-integrated resources (e.g., Compute
+   * Engine, Persistent Disk) can be skipped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipIngestion;
 
   /**
    * BackupDR metadata is used to ingest metadata from BackupDR.
@@ -238,6 +248,29 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    */
   public DatabaseResourceFeed setResourceMetadata(DatabaseResourceMetadata resourceMetadata) {
     this.resourceMetadata = resourceMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the feed won't be ingested by DB Center. This indicates that the feed is
+   * intentionally skipped. For example, BackupDR feeds are only needed for resources integrated
+   * with DB Center (e.g., CloudSQL, AlloyDB). Feeds for non-integrated resources (e.g., Compute
+   * Engine, Persistent Disk) can be skipped.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipIngestion() {
+    return skipIngestion;
+  }
+
+  /**
+   * Optional. If true, the feed won't be ingested by DB Center. This indicates that the feed is
+   * intentionally skipped. For example, BackupDR feeds are only needed for resources integrated
+   * with DB Center (e.g., CloudSQL, AlloyDB). Feeds for non-integrated resources (e.g., Compute
+   * Engine, Persistent Disk) can be skipped.
+   * @param skipIngestion skipIngestion or {@code null} for none
+   */
+  public DatabaseResourceFeed setSkipIngestion(java.lang.Boolean skipIngestion) {
+    this.skipIngestion = skipIngestion;
     return this;
   }
 

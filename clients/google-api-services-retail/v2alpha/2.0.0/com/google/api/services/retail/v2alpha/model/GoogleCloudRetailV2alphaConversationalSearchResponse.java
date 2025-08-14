@@ -78,10 +78,12 @@ public final class GoogleCloudRetailV2alphaConversationalSearchResponse extends 
   private java.lang.String state;
 
   /**
-   * The types Retail classifies the search query as. Supported values are: - "ADVERSARIAL" -
-   * "CHITCHAT" - "JAILBREAK" - "ORDER_SUPPORT" - "SIMPLE_PRODUCT_SEARCH" - "INTENT_REFINEMENT" -
-   * "PRODUCT_DETAILS" - "PRODUCT_COMPARISON" - "DEALS_AND_COUPONS" - "STORE_RELEVANT" -
-   * "BLOCKLISTED" - "BEST_PRODUCT" - "RETAIL_SUPPORT" - "DISABLED" clang-format off clang-format on
+   * LINT.IfChange(query_types_proto) The types Retail classifies the search query as. Supported
+   * values are: - "ADVERSARIAL" - "CHITCHAT" - "JAILBREAK" - "ORDER_SUPPORT" -
+   * "SIMPLE_PRODUCT_SEARCH" - "INTENT_REFINEMENT" - "PRODUCT_DETAILS" - "PRODUCT_COMPARISON" -
+   * "DEALS_AND_COUPONS" - "STORE_RELEVANT" - "BLOCKLISTED" - "BEST_PRODUCT" - "RETAIL_SUPPORT" -
+   * "DISABLED" LINT.ThenChange(//depot/google3/cloud/console/web/ai/retail/service/conversational_s
+   * earch_customization_config.ts:intent_types_ts)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,10 +202,12 @@ public final class GoogleCloudRetailV2alphaConversationalSearchResponse extends 
   }
 
   /**
-   * The types Retail classifies the search query as. Supported values are: - "ADVERSARIAL" -
-   * "CHITCHAT" - "JAILBREAK" - "ORDER_SUPPORT" - "SIMPLE_PRODUCT_SEARCH" - "INTENT_REFINEMENT" -
-   * "PRODUCT_DETAILS" - "PRODUCT_COMPARISON" - "DEALS_AND_COUPONS" - "STORE_RELEVANT" -
-   * "BLOCKLISTED" - "BEST_PRODUCT" - "RETAIL_SUPPORT" - "DISABLED" clang-format off clang-format on
+   * LINT.IfChange(query_types_proto) The types Retail classifies the search query as. Supported
+   * values are: - "ADVERSARIAL" - "CHITCHAT" - "JAILBREAK" - "ORDER_SUPPORT" -
+   * "SIMPLE_PRODUCT_SEARCH" - "INTENT_REFINEMENT" - "PRODUCT_DETAILS" - "PRODUCT_COMPARISON" -
+   * "DEALS_AND_COUPONS" - "STORE_RELEVANT" - "BLOCKLISTED" - "BEST_PRODUCT" - "RETAIL_SUPPORT" -
+   * "DISABLED" LINT.ThenChange(//depot/google3/cloud/console/web/ai/retail/service/conversational_s
+   * earch_customization_config.ts:intent_types_ts)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUserQueryTypes() {
@@ -211,10 +215,12 @@ public final class GoogleCloudRetailV2alphaConversationalSearchResponse extends 
   }
 
   /**
-   * The types Retail classifies the search query as. Supported values are: - "ADVERSARIAL" -
-   * "CHITCHAT" - "JAILBREAK" - "ORDER_SUPPORT" - "SIMPLE_PRODUCT_SEARCH" - "INTENT_REFINEMENT" -
-   * "PRODUCT_DETAILS" - "PRODUCT_COMPARISON" - "DEALS_AND_COUPONS" - "STORE_RELEVANT" -
-   * "BLOCKLISTED" - "BEST_PRODUCT" - "RETAIL_SUPPORT" - "DISABLED" clang-format off clang-format on
+   * LINT.IfChange(query_types_proto) The types Retail classifies the search query as. Supported
+   * values are: - "ADVERSARIAL" - "CHITCHAT" - "JAILBREAK" - "ORDER_SUPPORT" -
+   * "SIMPLE_PRODUCT_SEARCH" - "INTENT_REFINEMENT" - "PRODUCT_DETAILS" - "PRODUCT_COMPARISON" -
+   * "DEALS_AND_COUPONS" - "STORE_RELEVANT" - "BLOCKLISTED" - "BEST_PRODUCT" - "RETAIL_SUPPORT" -
+   * "DISABLED" LINT.ThenChange(//depot/google3/cloud/console/web/ai/retail/service/conversational_s
+   * earch_customization_config.ts:intent_types_ts)
    * @param userQueryTypes userQueryTypes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaConversationalSearchResponse setUserQueryTypes(java.util.List<java.lang.String> userQueryTypes) {

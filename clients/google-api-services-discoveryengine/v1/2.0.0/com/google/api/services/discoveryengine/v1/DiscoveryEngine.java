@@ -11528,8 +11528,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               @com.google.api.client.util.Key
@@ -11537,7 +11537,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
              name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-             `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc": list
+             `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`: list
              sessions by is_pinned first, then by update_time.
                */
               public java.lang.String getOrderBy() {
@@ -11547,8 +11547,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               public List setOrderBy(java.lang.String orderBy) {
@@ -21489,8 +21489,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               @com.google.api.client.util.Key
@@ -21498,7 +21498,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
              name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-             `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc": list
+             `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`: list
              sessions by is_pinned first, then by update_time.
                */
               public java.lang.String getOrderBy() {
@@ -21508,8 +21508,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               public List setOrderBy(java.lang.String orderBy) {
@@ -31204,8 +31204,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
              * after a field name for descending. Supported fields: * `update_time` * `create_time`
-             * * `session_name` * `is_pinned` Example: * "update_time desc" * "create_time" *
-             * "is_pinned desc,update_time desc": list sessions by is_pinned first, then by
+             * * `session_name` * `is_pinned` Example: * `update_time desc` * `create_time` *
+             * `is_pinned desc,update_time desc`: list sessions by is_pinned first, then by
              * update_time.
              */
             @com.google.api.client.util.Key
@@ -31213,7 +31213,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
            name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-           `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc": list
+           `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`: list
            sessions by is_pinned first, then by update_time.
              */
             public java.lang.String getOrderBy() {
@@ -31223,8 +31223,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
              * after a field name for descending. Supported fields: * `update_time` * `create_time`
-             * * `session_name` * `is_pinned` Example: * "update_time desc" * "create_time" *
-             * "is_pinned desc,update_time desc": list sessions by is_pinned first, then by
+             * * `session_name` * `is_pinned` Example: * `update_time desc` * `create_time` *
+             * `is_pinned desc,update_time desc`: list sessions by is_pinned first, then by
              * update_time.
              */
             public List setOrderBy(java.lang.String orderBy) {

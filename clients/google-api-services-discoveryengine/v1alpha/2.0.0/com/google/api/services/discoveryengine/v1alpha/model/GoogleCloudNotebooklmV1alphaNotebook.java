@@ -31,6 +31,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. CMEK-related information for the Notebook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaCmekConfig cmekConfig;
+
+  /**
    * Output only. The emoji of the notebook.
    * The value may be {@code null}.
    */
@@ -67,6 +74,23 @@ public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Output only. CMEK-related information for the Notebook.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaCmekConfig getCmekConfig() {
+    return cmekConfig;
+  }
+
+  /**
+   * Output only. CMEK-related information for the Notebook.
+   * @param cmekConfig cmekConfig or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaNotebook setCmekConfig(GoogleCloudNotebooklmV1alphaCmekConfig cmekConfig) {
+    this.cmekConfig = cmekConfig;
+    return this;
+  }
 
   /**
    * Output only. The emoji of the notebook.

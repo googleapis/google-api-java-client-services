@@ -3656,6 +3656,1113 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
           }
 
         }
+        /**
+         * An accessor for creating requests from the QueryTemplates collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code AnalyticsHub analyticshub = new AnalyticsHub(...);}
+         *   {@code AnalyticsHub.QueryTemplates.List request = analyticshub.queryTemplates().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public QueryTemplates queryTemplates() {
+          return new QueryTemplates();
+        }
+
+        /**
+         * The "queryTemplates" collection of methods.
+         */
+        public class QueryTemplates {
+
+          /**
+           * Approves a query template.
+           *
+           * Create a request for the method "queryTemplates.approve".
+           *
+           * This request holds the parameters needed by the analyticshub server.  After setting any optional
+           * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+           * @param content the {@link com.google.api.services.analyticshub.v1.model.ApproveQueryTemplateRequest}
+           * @return the request
+           */
+          public Approve approve(java.lang.String name, com.google.api.services.analyticshub.v1.model.ApproveQueryTemplateRequest content) throws java.io.IOException {
+            Approve result = new Approve(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Approve extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.QueryTemplate> {
+
+            private static final String REST_PATH = "v1/{+name}:approve";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+
+            /**
+             * Approves a query template.
+             *
+             * Create a request for the method "queryTemplates.approve".
+             *
+             * This request holds the parameters needed by the the analyticshub server.  After setting any
+             * optional parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             * @param content the {@link com.google.api.services.analyticshub.v1.model.ApproveQueryTemplateRequest}
+             * @since 1.13
+             */
+            protected Approve(java.lang.String name, com.google.api.services.analyticshub.v1.model.ApproveQueryTemplateRequest content) {
+              super(AnalyticsHub.this, "POST", REST_PATH, content, com.google.api.services.analyticshub.v1.model.QueryTemplate.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Approve set$Xgafv(java.lang.String $Xgafv) {
+              return (Approve) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Approve setAccessToken(java.lang.String accessToken) {
+              return (Approve) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Approve setAlt(java.lang.String alt) {
+              return (Approve) super.setAlt(alt);
+            }
+
+            @Override
+            public Approve setCallback(java.lang.String callback) {
+              return (Approve) super.setCallback(callback);
+            }
+
+            @Override
+            public Approve setFields(java.lang.String fields) {
+              return (Approve) super.setFields(fields);
+            }
+
+            @Override
+            public Approve setKey(java.lang.String key) {
+              return (Approve) super.setKey(key);
+            }
+
+            @Override
+            public Approve setOauthToken(java.lang.String oauthToken) {
+              return (Approve) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Approve setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Approve) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Approve setQuotaUser(java.lang.String quotaUser) {
+              return (Approve) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Approve setUploadType(java.lang.String uploadType) {
+              return (Approve) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Approve setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Approve) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource path of the QueryTemplate. e.g.
+           `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            public Approve setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Approve set(String parameterName, Object value) {
+              return (Approve) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a new QueryTemplate
+           *
+           * Create a request for the method "queryTemplates.create".
+           *
+           * This request holds the parameters needed by the analyticshub server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+           * @param content the {@link com.google.api.services.analyticshub.v1.model.QueryTemplate}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.analyticshub.v1.model.QueryTemplate content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.QueryTemplate> {
+
+            private static final String REST_PATH = "v1/{+parent}/queryTemplates";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+
+            /**
+             * Creates a new QueryTemplate
+             *
+             * Create a request for the method "queryTemplates.create".
+             *
+             * This request holds the parameters needed by the the analyticshub server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+             * @param content the {@link com.google.api.services.analyticshub.v1.model.QueryTemplate}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.analyticshub.v1.model.QueryTemplate content) {
+              super(AnalyticsHub.this, "POST", REST_PATH, content, com.google.api.services.analyticshub.v1.model.QueryTemplate.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource path of the QueryTemplate. e.g.
+           `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID of the QueryTemplate to create. Must contain only Unicode letters,
+             * numbers (0-9), underscores (_). Max length: 100 bytes.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String queryTemplateId;
+
+            /** Required. The ID of the QueryTemplate to create. Must contain only Unicode letters, numbers (0-9),
+           underscores (_). Max length: 100 bytes.
+             */
+            public java.lang.String getQueryTemplateId() {
+              return queryTemplateId;
+            }
+
+            /**
+             * Required. The ID of the QueryTemplate to create. Must contain only Unicode letters,
+             * numbers (0-9), underscores (_). Max length: 100 bytes.
+             */
+            public Create setQueryTemplateId(java.lang.String queryTemplateId) {
+              this.queryTemplateId = queryTemplateId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a query template.
+           *
+           * Create a request for the method "queryTemplates.delete".
+           *
+           * This request holds the parameters needed by the analyticshub server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+
+            /**
+             * Deletes a query template.
+             *
+             * Create a request for the method "queryTemplates.delete".
+             *
+             * This request holds the parameters needed by the the analyticshub server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(AnalyticsHub.this, "DELETE", REST_PATH, null, com.google.api.services.analyticshub.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource path of the QueryTemplate. e.g.
+           `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a QueryTemplate
+           *
+           * Create a request for the method "queryTemplates.get".
+           *
+           * This request holds the parameters needed by the analyticshub server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The parent resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.QueryTemplate> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+
+            /**
+             * Gets a QueryTemplate
+             *
+             * Create a request for the method "queryTemplates.get".
+             *
+             * This request holds the parameters needed by the the analyticshub server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The parent resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(AnalyticsHub.this, "GET", REST_PATH, null, com.google.api.services.analyticshub.v1.model.QueryTemplate.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The parent resource path of the QueryTemplate. e.g.
+           `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The parent resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all QueryTemplates in a given project and location.
+           *
+           * Create a request for the method "queryTemplates.list".
+           *
+           * This request holds the parameters needed by the analyticshub server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource path of the QueryTemplates. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.ListQueryTemplatesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/queryTemplates";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+
+            /**
+             * Lists all QueryTemplates in a given project and location.
+             *
+             * Create a request for the method "queryTemplates.list".
+             *
+             * This request holds the parameters needed by the the analyticshub server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource path of the QueryTemplates. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(AnalyticsHub.this, "GET", REST_PATH, null, com.google.api.services.analyticshub.v1.model.ListQueryTemplatesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource path of the QueryTemplates. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource path of the QueryTemplates. e.g.
+           `projects/myproject/locations/us/dataExchanges/123`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource path of the QueryTemplates. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of results to return in a single response page. Leverage
+             * the page tokens to iterate through the entire collection.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of results to return in a single response page. Leverage the page
+           tokens to iterate through the entire collection.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of results to return in a single response page. Leverage
+             * the page tokens to iterate through the entire collection.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Page token, returned by a previous call, to request the next page of
+             * results.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Page token, returned by a previous call, to request the next page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Page token, returned by a previous call, to request the next page of
+             * results.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing QueryTemplate
+           *
+           * Create a request for the method "queryTemplates.patch".
+           *
+           * This request holds the parameters needed by the analyticshub server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. The resource name of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/456`
+           * @param content the {@link com.google.api.services.analyticshub.v1.model.QueryTemplate}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.analyticshub.v1.model.QueryTemplate content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.QueryTemplate> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+
+            /**
+             * Updates an existing QueryTemplate
+             *
+             * Create a request for the method "queryTemplates.patch".
+             *
+             * This request holds the parameters needed by the the analyticshub server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. The resource name of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/456`
+             * @param content the {@link com.google.api.services.analyticshub.v1.model.QueryTemplate}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.analyticshub.v1.model.QueryTemplate content) {
+              super(AnalyticsHub.this, "PATCH", REST_PATH, content, com.google.api.services.analyticshub.v1.model.QueryTemplate.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. The resource name of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/456`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. The resource name of the QueryTemplate. e.g.
+           `projects/myproject/locations/us/dataExchanges/123/queryTemplates/456`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. The resource name of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/456`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Field mask specifies the fields to update in the query template resource.
+             * The fields specified in the `updateMask` are relative to the resource and are not a
+             * full request.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. Field mask specifies the fields to update in the query template resource. The fields
+           specified in the `updateMask` are relative to the resource and are not a full request.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. Field mask specifies the fields to update in the query template resource.
+             * The fields specified in the `updateMask` are relative to the resource and are not a
+             * full request.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Submits a query template for approval.
+           *
+           * Create a request for the method "queryTemplates.submit".
+           *
+           * This request holds the parameters needed by the analyticshub server.  After setting any optional
+           * parameters, call the {@link Submit#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+           * @param content the {@link com.google.api.services.analyticshub.v1.model.SubmitQueryTemplateRequest}
+           * @return the request
+           */
+          public Submit submit(java.lang.String name, com.google.api.services.analyticshub.v1.model.SubmitQueryTemplateRequest content) throws java.io.IOException {
+            Submit result = new Submit(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Submit extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.QueryTemplate> {
+
+            private static final String REST_PATH = "v1/{+name}:submit";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+
+            /**
+             * Submits a query template for approval.
+             *
+             * Create a request for the method "queryTemplates.submit".
+             *
+             * This request holds the parameters needed by the the analyticshub server.  After setting any
+             * optional parameters, call the {@link Submit#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Submit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource path of the QueryTemplate. e.g.
+           *        `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             * @param content the {@link com.google.api.services.analyticshub.v1.model.SubmitQueryTemplateRequest}
+             * @since 1.13
+             */
+            protected Submit(java.lang.String name, com.google.api.services.analyticshub.v1.model.SubmitQueryTemplateRequest content) {
+              super(AnalyticsHub.this, "POST", REST_PATH, content, com.google.api.services.analyticshub.v1.model.QueryTemplate.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Submit set$Xgafv(java.lang.String $Xgafv) {
+              return (Submit) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Submit setAccessToken(java.lang.String accessToken) {
+              return (Submit) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Submit setAlt(java.lang.String alt) {
+              return (Submit) super.setAlt(alt);
+            }
+
+            @Override
+            public Submit setCallback(java.lang.String callback) {
+              return (Submit) super.setCallback(callback);
+            }
+
+            @Override
+            public Submit setFields(java.lang.String fields) {
+              return (Submit) super.setFields(fields);
+            }
+
+            @Override
+            public Submit setKey(java.lang.String key) {
+              return (Submit) super.setKey(key);
+            }
+
+            @Override
+            public Submit setOauthToken(java.lang.String oauthToken) {
+              return (Submit) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Submit setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Submit) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Submit setQuotaUser(java.lang.String quotaUser) {
+              return (Submit) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Submit setUploadType(java.lang.String uploadType) {
+              return (Submit) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Submit setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Submit) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource path of the QueryTemplate. e.g.
+           `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource path of the QueryTemplate. e.g.
+             * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+             */
+            public Submit setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/queryTemplates/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Submit set(String parameterName, Object value) {
+              return (Submit) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Subscriptions collection.

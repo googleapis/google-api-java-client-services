@@ -18,8 +18,8 @@ package com.google.api.services.dataplex.v1.model;
 
 /**
  * A Glossary represents a collection of GlossaryCategories and GlossaryTerms defined by the user.
- * Glossary is a top level resource and is the GCP parent resource of all the GlossaryCategories and
- * GlossaryTerms within it.
+ * Glossary is a top level resource and is the Google Cloud parent resource of all the
+ * GlossaryCategories and GlossaryTerms within it.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:

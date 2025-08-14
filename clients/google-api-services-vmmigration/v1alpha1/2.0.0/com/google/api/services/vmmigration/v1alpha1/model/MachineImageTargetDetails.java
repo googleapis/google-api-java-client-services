@@ -46,7 +46,8 @@ public final class MachineImageTargetDetails extends com.google.api.client.json.
   private java.lang.String description;
 
   /**
-   * Immutable. The encryption to apply to the machine image.
+   * Immutable. The encryption to apply to the machine image. If the Image Import resource has an
+   * encryption, this field must be set to the same encryption key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +172,8 @@ public final class MachineImageTargetDetails extends com.google.api.client.json.
   }
 
   /**
-   * Immutable. The encryption to apply to the machine image.
+   * Immutable. The encryption to apply to the machine image. If the Image Import resource has an
+   * encryption, this field must be set to the same encryption key.
    * @return value or {@code null} for none
    */
   public Encryption getEncryption() {
@@ -179,7 +181,8 @@ public final class MachineImageTargetDetails extends com.google.api.client.json.
   }
 
   /**
-   * Immutable. The encryption to apply to the machine image.
+   * Immutable. The encryption to apply to the machine image. If the Image Import resource has an
+   * encryption, this field must be set to the same encryption key.
    * @param encryption encryption or {@code null} for none
    */
   public MachineImageTargetDetails setEncryption(Encryption encryption) {

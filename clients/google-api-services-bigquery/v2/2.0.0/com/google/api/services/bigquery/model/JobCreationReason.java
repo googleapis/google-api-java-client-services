@@ -21,8 +21,7 @@ package com.google.api.services.bigquery.model;
  * [`jobs.query`](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/query) method when
  * used with `JOB_CREATION_OPTIONAL` Job creation mode. For
  * [`jobs.insert`](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/insert) method
- * calls it will always be `REQUESTED`. [Preview](https://cloud.google.com/products/#product-launch-
- * stages)
+ * calls it will always be `REQUESTED`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:

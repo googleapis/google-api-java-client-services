@@ -321,8 +321,9 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
      * This request holds the parameters needed by the firebaseappdistribution server.  After setting
      * any optional parameters, call the {@link GetJwt#execute()} method to invoke the remote operation.
      *
-     * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-     *        Example: 1:581234567376:android:aa0a3c7b135e90289
+     * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+     *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+     *        1:581234567376:android:aa0a3c7b135e90289
      * @return the request
      */
     public GetJwt getJwt(java.lang.String mobilesdkAppId) throws java.io.IOException {
@@ -346,8 +347,9 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * GetJwt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-     *        Example: 1:581234567376:android:aa0a3c7b135e90289
+       * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+     *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+     *        1:581234567376:android:aa0a3c7b135e90289
        * @since 1.13
        */
       protected GetJwt(java.lang.String mobilesdkAppId) {
@@ -421,22 +423,23 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
       }
 
       /**
-       * Unique id for a Firebase app of the format:
+       * Required. Unique id for a Firebase app of the format:
        * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
        * 1:581234567376:android:aa0a3c7b135e90289
        */
       @com.google.api.client.util.Key
       private java.lang.String mobilesdkAppId;
 
-      /** Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-     Example: 1:581234567376:android:aa0a3c7b135e90289
+      /** Required. Unique id for a Firebase app of the format:
+     {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+     1:581234567376:android:aa0a3c7b135e90289
        */
       public java.lang.String getMobilesdkAppId() {
         return mobilesdkAppId;
       }
 
       /**
-       * Unique id for a Firebase app of the format:
+       * Required. Unique id for a Firebase app of the format:
        * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
        * 1:581234567376:android:aa0a3c7b135e90289
        */
@@ -479,9 +482,10 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * This request holds the parameters needed by the firebaseappdistribution server.  After setting
        * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-       *        Example: 1:581234567376:android:aa0a3c7b135e90289
-       * @param uploadHash The hash for the upload
+       * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+       *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+       *        1:581234567376:android:aa0a3c7b135e90289
+       * @param uploadHash Required. The hash for the upload
        * @return the request
        */
       public Get get(java.lang.String mobilesdkAppId, java.lang.String uploadHash) throws java.io.IOException {
@@ -505,9 +509,10 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-       *        Example: 1:581234567376:android:aa0a3c7b135e90289
-         * @param uploadHash The hash for the upload
+         * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+       *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+       *        1:581234567376:android:aa0a3c7b135e90289
+         * @param uploadHash Required. The hash for the upload
          * @since 1.13
          */
         protected Get(java.lang.String mobilesdkAppId, java.lang.String uploadHash) {
@@ -582,22 +587,23 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
         }
 
         /**
-         * Unique id for a Firebase app of the format:
+         * Required. Unique id for a Firebase app of the format:
          * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
          * 1:581234567376:android:aa0a3c7b135e90289
          */
         @com.google.api.client.util.Key
         private java.lang.String mobilesdkAppId;
 
-        /** Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-       Example: 1:581234567376:android:aa0a3c7b135e90289
+        /** Required. Unique id for a Firebase app of the format:
+       {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+       1:581234567376:android:aa0a3c7b135e90289
          */
         public java.lang.String getMobilesdkAppId() {
           return mobilesdkAppId;
         }
 
         /**
-         * Unique id for a Firebase app of the format:
+         * Required. Unique id for a Firebase app of the format:
          * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
          * 1:581234567376:android:aa0a3c7b135e90289
          */
@@ -606,17 +612,17 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           return this;
         }
 
-        /** The hash for the upload */
+        /** Required. The hash for the upload */
         @com.google.api.client.util.Key
         private java.lang.String uploadHash;
 
-        /** The hash for the upload
+        /** Required. The hash for the upload
          */
         public java.lang.String getUploadHash() {
           return uploadHash;
         }
 
-        /** The hash for the upload */
+        /** Required. The hash for the upload */
         public Get setUploadHash(java.lang.String uploadHash) {
           this.uploadHash = uploadHash;
           return this;
@@ -658,9 +664,10 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * any optional parameters, call the {@link EnableAccess#execute()} method to invoke the remote
        * operation.
        *
-       * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-       *        Example: 1:581234567376:android:aa0a3c7b135e90289
-       * @param releaseId Release identifier
+       * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+       *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+       *        1:581234567376:android:aa0a3c7b135e90289
+       * @param releaseId Required. Release identifier
        * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaEnableAccessOnReleaseRequest}
        * @return the request
        */
@@ -685,9 +692,10 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * EnableAccess#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-       *        Example: 1:581234567376:android:aa0a3c7b135e90289
-         * @param releaseId Release identifier
+         * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+       *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+       *        1:581234567376:android:aa0a3c7b135e90289
+         * @param releaseId Required. Release identifier
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaEnableAccessOnReleaseRequest}
          * @since 1.13
          */
@@ -753,22 +761,23 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
         }
 
         /**
-         * Unique id for a Firebase app of the format:
+         * Required. Unique id for a Firebase app of the format:
          * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
          * 1:581234567376:android:aa0a3c7b135e90289
          */
         @com.google.api.client.util.Key
         private java.lang.String mobilesdkAppId;
 
-        /** Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-       Example: 1:581234567376:android:aa0a3c7b135e90289
+        /** Required. Unique id for a Firebase app of the format:
+       {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+       1:581234567376:android:aa0a3c7b135e90289
          */
         public java.lang.String getMobilesdkAppId() {
           return mobilesdkAppId;
         }
 
         /**
-         * Unique id for a Firebase app of the format:
+         * Required. Unique id for a Firebase app of the format:
          * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
          * 1:581234567376:android:aa0a3c7b135e90289
          */
@@ -777,17 +786,17 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           return this;
         }
 
-        /** Release identifier */
+        /** Required. Release identifier */
         @com.google.api.client.util.Key
         private java.lang.String releaseId;
 
-        /** Release identifier
+        /** Required. Release identifier
          */
         public java.lang.String getReleaseId() {
           return releaseId;
         }
 
-        /** Release identifier */
+        /** Required. Release identifier */
         public EnableAccess setReleaseId(java.lang.String releaseId) {
           this.releaseId = releaseId;
           return this;
@@ -827,9 +836,10 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * This request holds the parameters needed by the firebaseappdistribution server.  After setting
          * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-         *        Example: 1:581234567376:android:aa0a3c7b135e90289
-         * @param releaseId Release identifier
+         * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+         *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+         *        1:581234567376:android:aa0a3c7b135e90289
+         * @param releaseId Required. Release identifier
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaCreateReleaseNotesRequest}
          * @return the request
          */
@@ -854,9 +864,10 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-         *        Example: 1:581234567376:android:aa0a3c7b135e90289
-           * @param releaseId Release identifier
+           * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+         *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+         *        1:581234567376:android:aa0a3c7b135e90289
+           * @param releaseId Required. Release identifier
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaCreateReleaseNotesRequest}
            * @since 1.13
            */
@@ -922,22 +933,23 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           }
 
           /**
-           * Unique id for a Firebase app of the format:
+           * Required. Unique id for a Firebase app of the format:
            * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
            * 1:581234567376:android:aa0a3c7b135e90289
            */
           @com.google.api.client.util.Key
           private java.lang.String mobilesdkAppId;
 
-          /** Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-         Example: 1:581234567376:android:aa0a3c7b135e90289
+          /** Required. Unique id for a Firebase app of the format:
+         {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+         1:581234567376:android:aa0a3c7b135e90289
            */
           public java.lang.String getMobilesdkAppId() {
             return mobilesdkAppId;
           }
 
           /**
-           * Unique id for a Firebase app of the format:
+           * Required. Unique id for a Firebase app of the format:
            * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
            * 1:581234567376:android:aa0a3c7b135e90289
            */
@@ -946,17 +958,17 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
             return this;
           }
 
-          /** Release identifier */
+          /** Required. Release identifier */
           @com.google.api.client.util.Key
           private java.lang.String releaseId;
 
-          /** Release identifier
+          /** Required. Release identifier
            */
           public java.lang.String getReleaseId() {
             return releaseId;
           }
 
-          /** Release identifier */
+          /** Required. Release identifier */
           public Create setReleaseId(java.lang.String releaseId) {
             this.releaseId = releaseId;
             return this;
@@ -1180,9 +1192,10 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * This request holds the parameters needed by the firebaseappdistribution server.  After setting
        * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-       *        Example: 1:581234567376:android:aa0a3c7b135e90289
-       * @param uploadToken The token for the upload
+       * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+       *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+       *        1:581234567376:android:aa0a3c7b135e90289
+       * @param uploadToken Required. The token for the upload
        * @return the request
        */
       public Get get(java.lang.String mobilesdkAppId, java.lang.String uploadToken) throws java.io.IOException {
@@ -1206,9 +1219,10 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-       *        Example: 1:581234567376:android:aa0a3c7b135e90289
-         * @param uploadToken The token for the upload
+         * @param mobilesdkAppId Required. Unique id for a Firebase app of the format:
+       *        {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+       *        1:581234567376:android:aa0a3c7b135e90289
+         * @param uploadToken Required. The token for the upload
          * @since 1.13
          */
         protected Get(java.lang.String mobilesdkAppId, java.lang.String uploadToken) {
@@ -1283,22 +1297,23 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
         }
 
         /**
-         * Unique id for a Firebase app of the format:
+         * Required. Unique id for a Firebase app of the format:
          * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
          * 1:581234567376:android:aa0a3c7b135e90289
          */
         @com.google.api.client.util.Key
         private java.lang.String mobilesdkAppId;
 
-        /** Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-       Example: 1:581234567376:android:aa0a3c7b135e90289
+        /** Required. Unique id for a Firebase app of the format:
+       {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
+       1:581234567376:android:aa0a3c7b135e90289
          */
         public java.lang.String getMobilesdkAppId() {
           return mobilesdkAppId;
         }
 
         /**
-         * Unique id for a Firebase app of the format:
+         * Required. Unique id for a Firebase app of the format:
          * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
          * 1:581234567376:android:aa0a3c7b135e90289
          */
@@ -1307,17 +1322,17 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           return this;
         }
 
-        /** The token for the upload */
+        /** Required. The token for the upload */
         @com.google.api.client.util.Key
         private java.lang.String uploadToken;
 
-        /** The token for the upload
+        /** Required. The token for the upload
          */
         public java.lang.String getUploadToken() {
           return uploadToken;
         }
 
-        /** The token for the upload */
+        /** Required. The token for the upload */
         public Get setUploadToken(java.lang.String uploadToken) {
           this.uploadToken = uploadToken;
           return this;

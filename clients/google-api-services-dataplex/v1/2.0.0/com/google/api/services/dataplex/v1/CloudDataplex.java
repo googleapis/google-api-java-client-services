@@ -20,7 +20,7 @@ package com.google.api.services.dataplex.v1;
  * Service definition for CloudDataplex (v1).
  *
  * <p>
- * Dataplex API is used to manage the lifecycle of data lakes.
+ * A unified, intelligent governance solution for data and AI assets.
  * </p>
  *
  * <p>
@@ -1984,49 +1984,48 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * Lists operations that match the specified filter in the request. If the server doesn't support
          * this method, it returns UNIMPLEMENTED.
          *
-         * Create a request for the method "operations.listOperations".
+         * Create a request for the method "operations.list".
          *
          * This request holds the parameters needed by the dataplex server.  After setting any optional
-         * parameters, call the {@link ListOperations#execute()} method to invoke the remote operation.
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param name The name of the operation's parent resource.
          * @return the request
          */
-        public ListOperations listOperations(java.lang.String name) throws java.io.IOException {
-          ListOperations result = new ListOperations(name);
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
           initialize(result);
           return result;
         }
 
-        public class ListOperations extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningListOperationsResponse> {
+        public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningListOperationsResponse> {
 
-          private static final String REST_PATH = "v1/{+name}";
+          private static final String REST_PATH = "v1/{+name}/operations";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
            * this method, it returns UNIMPLEMENTED.
            *
-           * Create a request for the method "operations.listOperations".
+           * Create a request for the method "operations.list".
            *
            * This request holds the parameters needed by the the dataplex server.  After setting any
-           * optional parameters, call the {@link ListOperations#execute()} method to invoke the remote
-           * operation. <p> {@link ListOperations#initialize(com.google.api.client.googleapis.services.Abstr
-           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-           * the constructor. </p>
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The name of the operation's parent resource.
            * @since 1.13
            */
-          protected ListOperations(java.lang.String name) {
+          protected List(java.lang.String name) {
             super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleLongrunningListOperationsResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
           }
 
@@ -2041,58 +2040,58 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           @Override
-          public ListOperations set$Xgafv(java.lang.String $Xgafv) {
-            return (ListOperations) super.set$Xgafv($Xgafv);
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
           }
 
           @Override
-          public ListOperations setAccessToken(java.lang.String accessToken) {
-            return (ListOperations) super.setAccessToken(accessToken);
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
           }
 
           @Override
-          public ListOperations setAlt(java.lang.String alt) {
-            return (ListOperations) super.setAlt(alt);
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
           }
 
           @Override
-          public ListOperations setCallback(java.lang.String callback) {
-            return (ListOperations) super.setCallback(callback);
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
-          public ListOperations setFields(java.lang.String fields) {
-            return (ListOperations) super.setFields(fields);
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
           }
 
           @Override
-          public ListOperations setKey(java.lang.String key) {
-            return (ListOperations) super.setKey(key);
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
           }
 
           @Override
-          public ListOperations setOauthToken(java.lang.String oauthToken) {
-            return (ListOperations) super.setOauthToken(oauthToken);
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
-          public ListOperations setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ListOperations) super.setPrettyPrint(prettyPrint);
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
           }
 
           @Override
-          public ListOperations setQuotaUser(java.lang.String quotaUser) {
-            return (ListOperations) super.setQuotaUser(quotaUser);
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
           }
 
           @Override
-          public ListOperations setUploadType(java.lang.String uploadType) {
-            return (ListOperations) super.setUploadType(uploadType);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
           }
 
           @Override
-          public ListOperations setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ListOperations) super.setUploadProtocol(uploadProtocol);
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The name of the operation's parent resource. */
@@ -2106,11 +2105,11 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /** The name of the operation's parent resource. */
-          public ListOperations setName(java.lang.String name) {
+          public List setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.name = name;
             return this;
@@ -2127,7 +2126,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /** The standard list filter. */
-          public ListOperations setFilter(java.lang.String filter) {
+          public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
@@ -2143,7 +2142,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /** The standard list page size. */
-          public ListOperations setPageSize(java.lang.Integer pageSize) {
+          public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
@@ -2159,14 +2158,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /** The standard list page token. */
-          public ListOperations setPageToken(java.lang.String pageToken) {
+          public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
           @Override
-          public ListOperations set(String parameterName, Object value) {
-            return (ListOperations) super.set(parameterName, value);
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 
@@ -3013,14 +3012,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The query against which entries in scope should be matched. The query syntax is
-         * defined in Search syntax for Dataplex Catalog
+         * defined in Search syntax for Dataplex Universal Catalog
          * (https://cloud.google.com/dataplex/docs/search-syntax).
          */
         @com.google.api.client.util.Key
         private java.lang.String query;
 
         /** Required. The query against which entries in scope should be matched. The query syntax is defined
-       in Search syntax for Dataplex Catalog (https://cloud.google.com/dataplex/docs/search-syntax).
+       in Search syntax for Dataplex Universal Catalog (https://cloud.google.com/dataplex/docs/search-
+       syntax).
          */
         public java.lang.String getQuery() {
           return query;
@@ -3028,7 +3028,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The query against which entries in scope should be matched. The query syntax is
-         * defined in Search syntax for Dataplex Catalog
+         * defined in Search syntax for Dataplex Universal Catalog
          * (https://cloud.google.com/dataplex/docs/search-syntax).
          */
         public SearchEntries setQuery(java.lang.String query) {
@@ -5969,6 +5969,1036 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
       }
       /**
+       * An accessor for creating requests from the DataProducts collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudDataplex dataplex = new CloudDataplex(...);}
+       *   {@code CloudDataplex.DataProducts.List request = dataplex.dataProducts().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DataProducts dataProducts() {
+        return new DataProducts();
+      }
+
+      /**
+       * The "dataProducts" collection of methods.
+       */
+      public class DataProducts {
+
+        /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+         * does not have a policy set.
+         *
+         * Create a request for the method "dataProducts.getIamPolicy".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+           * and does not have a policy set.
+           *
+           * Create a request for the method "dataProducts.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See Resource names
+           * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           * this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See Resource names
+         (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See Resource names
+           * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           * this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy.Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset.The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy.Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected.Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset.The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1.To learn
+         which resources support conditions in their IAM policies, see the IAM documentation
+         (https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy.Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset.The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
+         *
+         * Create a request for the method "dataProducts.setIamPolicy".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
+           *
+           * Create a request for the method "dataProducts.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See Resource names
+           * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           * this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See Resource names
+         (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See Resource names
+           * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           * this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+         * this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
+         *
+         * Create a request for the method "dataProducts.testIamPermissions".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not
+           * exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation
+           * is designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "dataProducts.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See Resource
+           * names (https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See Resource names
+         (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See Resource
+           * names (https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the DataAssets collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudDataplex dataplex = new CloudDataplex(...);}
+         *   {@code CloudDataplex.DataAssets.List request = dataplex.dataAssets().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public DataAssets dataAssets() {
+          return new DataAssets();
+        }
+
+        /**
+         * The "dataAssets" collection of methods.
+         */
+        public class DataAssets {
+
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+           * does not have a policy set.
+           *
+           * Create a request for the method "dataAssets.getIamPolicy".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See Resource names
+           *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           *        field.
+           * @return the request
+           */
+          public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+            GetIamPolicy result = new GetIamPolicy(resource);
+            initialize(result);
+            return result;
+          }
+
+          public class GetIamPolicy extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleIamV1Policy> {
+
+            private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
+
+            /**
+             * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+             * and does not have a policy set.
+             *
+             * Create a request for the method "dataAssets.getIamPolicy".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being requested. See Resource names
+           *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           *        field.
+             * @since 1.13
+             */
+            protected GetIamPolicy(java.lang.String resource) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleIamV1Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (GetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (GetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetIamPolicy setAlt(java.lang.String alt) {
+              return (GetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public GetIamPolicy setCallback(java.lang.String callback) {
+              return (GetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public GetIamPolicy setFields(java.lang.String fields) {
+              return (GetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public GetIamPolicy setKey(java.lang.String key) {
+              return (GetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (GetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (GetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (GetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See Resource names
+             * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+             * this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being requested. See Resource names
+           (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See Resource names
+             * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+             * this field.
+             */
+            public GetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum policy version that will be used to format the policy.Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be
+             * rejected.Requests for policies with any conditional role bindings must specify
+             * version 3. Policies with no conditional role bindings may specify any valid value or
+             * leave the field unset.The policy in the response might use the policy version that
+             * you specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1.To learn which resources support conditions in their IAM policies, see the IAM
+             * documentation (https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            @com.google.api.client.util.Key("options.requestedPolicyVersion")
+            private java.lang.Integer optionsRequestedPolicyVersion;
+
+            /** Optional. The maximum policy version that will be used to format the policy.Valid values are 0, 1,
+           and 3. Requests specifying an invalid value will be rejected.Requests for policies with any
+           conditional role bindings must specify version 3. Policies with no conditional role bindings may
+           specify any valid value or leave the field unset.The policy in the response might use the policy
+           version that you specified, or it might use a lower policy version. For example, if you specify
+           version 3, but the policy has no conditional role bindings, the response uses version 1.To learn
+           which resources support conditions in their IAM policies, see the IAM documentation
+           (https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public java.lang.Integer getOptionsRequestedPolicyVersion() {
+              return optionsRequestedPolicyVersion;
+            }
+
+            /**
+             * Optional. The maximum policy version that will be used to format the policy.Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be
+             * rejected.Requests for policies with any conditional role bindings must specify
+             * version 3. Policies with no conditional role bindings may specify any valid value or
+             * leave the field unset.The policy in the response might use the policy version that
+             * you specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1.To learn which resources support conditions in their IAM policies, see the IAM
+             * documentation (https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+              this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+              return this;
+            }
+
+            @Override
+            public GetIamPolicy set(String parameterName, Object value) {
+              return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+           * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
+           *
+           * Create a request for the method "dataAssets.setIamPolicy".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See Resource names
+           *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           *        field.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest}
+           * @return the request
+           */
+          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
+            SetIamPolicy result = new SetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetIamPolicy extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleIamV1Policy> {
+
+            private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
+
+            /**
+             * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+             * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
+             *
+             * Create a request for the method "dataAssets.setIamPolicy".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being specified. See Resource names
+           *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           *        field.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected SetIamPolicy(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest content) {
+              super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleIamV1Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (SetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (SetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetIamPolicy setAlt(java.lang.String alt) {
+              return (SetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public SetIamPolicy setCallback(java.lang.String callback) {
+              return (SetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public SetIamPolicy setFields(java.lang.String fields) {
+              return (SetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public SetIamPolicy setKey(java.lang.String key) {
+              return (SetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (SetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (SetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (SetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See Resource names
+             * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+             * this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being specified. See Resource names
+           (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See Resource names
+             * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+             * this field.
+             */
+            public SetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetIamPolicy set(String parameterName, Object value) {
+              return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+           * this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "dataAssets.testIamPermissions".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See Resource names
+           *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           *        field.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
+
+            /**
+             * Returns permissions that a caller has on the specified resource. If the resource does not
+             * exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation
+             * is designed to be used for building permission-aware UIs and command-line tools, not for
+             * authorization checking. This operation may "fail open" without warning.
+             *
+             * Create a request for the method "dataAssets.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See Resource names
+           *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           *        field.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest content) {
+              super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See Resource
+             * names (https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy detail is being requested. See Resource names
+           (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See Resource
+             * names (https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the DataScans collection.
        *
        * <p>The typical use is:</p>
@@ -5997,7 +7027,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        project refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a Google Cloud
+         *        region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
          * @return the request
          */
@@ -6026,7 +7057,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        project refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a Google Cloud
+         *        region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
            * @since 1.13
            */
@@ -6098,13 +7130,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the parent location:
            * projects/{project}/locations/{location_id} where project refers to a project_id or
-           * project_number and location_id refers to a GCP region.
+           * project_number and location_id refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the parent location: projects/{project}/locations/{location_id}
-         where project refers to a project_id or project_number and location_id refers to a GCP region.
+         where project refers to a project_id or project_number and location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -6113,7 +7146,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the parent location:
            * projects/{project}/locations/{location_id} where project refers to a project_id or
-           * project_number and location_id refers to a GCP region.
+           * project_number and location_id refers to a Google Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6188,7 +7221,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. The resource name of the dataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6217,7 +7250,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the dataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6288,14 +7321,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the dataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the dataScan:
          projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers to a
-         project_id or project_number and location_id refers to a GCP region.
+         project_id or project_number and location_id refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -6304,7 +7338,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the dataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6502,7 +7537,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. The resource name of the dataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -6530,7 +7565,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the dataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6611,14 +7646,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the dataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the dataScan:
          projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers to a
-         project_id or project_number and location_id refers to a GCP region.
+         project_id or project_number and location_id refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -6627,7 +7663,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the dataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6866,7 +7903,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        project refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a Google Cloud
+         *        region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6893,7 +7931,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        project refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a Google Cloud
+         *        region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6974,13 +8013,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the parent location:
            * projects/{project}/locations/{location_id} where project refers to a project_id or
-           * project_number and location_id refers to a GCP region.
+           * project_number and location_id refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the parent location: projects/{project}/locations/{location_id}
-         where project refers to a project_id or project_number and location_id refers to a GCP region.
+         where project refers to a project_id or project_number and location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -6989,7 +8029,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the parent location:
            * projects/{project}/locations/{location_id} where project refers to a project_id or
-           * project_number and location_id refers to a GCP region.
+           * project_number and location_id refers to a Google Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7107,7 +8147,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          *
          * @param name Output only. Identifier. The relative resource name of the scan, of the form:
          *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
          * @return the request
          */
@@ -7137,7 +8177,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Output only. Identifier. The relative resource name of the scan, of the form:
          *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
            * @since 1.13
            */
@@ -7209,14 +8249,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Output only. Identifier. The relative resource name of the scan, of the form:
            * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. Identifier. The relative resource name of the scan, of the form:
          projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
-         project_id or project_number and location_id refers to a GCP region.
+         project_id or project_number and location_id refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -7225,7 +8266,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Output only. Identifier. The relative resource name of the scan, of the form:
            * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7290,8 +8332,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. The resource name of the DataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.Only OnDemand
-         *        data scans are allowed.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.Only
+         *        OnDemand data scans are allowed.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest}
          * @return the request
          */
@@ -7320,8 +8362,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the DataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.Only OnDemand
-         *        data scans are allowed.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.Only
+         *        OnDemand data scans are allowed.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest}
            * @since 1.13
            */
@@ -7393,16 +8435,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the DataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.Only
-           * OnDemand data scans are allowed.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.Only OnDemand data scans are allowed.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the DataScan:
          projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project refers to a
-         project_id or project_number and location_id refers to a GCP region.Only OnDemand data scans are
-         allowed.
+         project_id or project_number and location_id refers to a Google Cloud region.Only OnDemand data
+         scans are allowed.
            */
           public java.lang.String getName() {
             return name;
@@ -7411,8 +8453,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the DataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.Only
-           * OnDemand data scans are allowed.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.Only OnDemand data scans are allowed.
            */
           public Run setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7904,8 +8946,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the DataScanJob:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id
-           *        } where project refers to a project_id or project_number and location_id refers to a GCP
-           *        region.
+           *        } where project refers to a project_id or project_number and location_id refers to a
+           *        Google Cloud region.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -7933,8 +8975,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param name Required. The resource name of the DataScanJob:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id
-           *        } where project refers to a project_id or project_number and location_id refers to a GCP
-           *        region.
+           *        } where project refers to a project_id or project_number and location_id refers to a
+           *        Google Cloud region.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -8015,14 +9057,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
              * n_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where project refers to a
-             * project_id or project_number and location_id refers to a GCP region.
+             * project_id or project_number and location_id refers to a Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the DataScanJob:
            projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where
-           project refers to a project_id or project_number and location_id refers to a GCP region.
+           project refers to a project_id or project_number and location_id refers to a Google Cloud region.
              */
             public java.lang.String getName() {
               return name;
@@ -8031,7 +9073,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
              * n_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where project refers to a
-             * project_id or project_number and location_id refers to a GCP region.
+             * project_id or project_number and location_id refers to a Google Cloud region.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8074,7 +9116,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The resource name of the parent environment:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-           *        to a project_id or project_number and location_id refers to a GCP region.
+           *        to a project_id or project_number and location_id refers to a Google Cloud region.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -8102,7 +9144,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The resource name of the parent environment:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-           *        to a project_id or project_number and location_id refers to a GCP region.
+           *        to a project_id or project_number and location_id refers to a Google Cloud region.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -8183,14 +9225,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The resource name of the parent environment:
              * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-             * refers to a project_id or project_number and location_id refers to a GCP region.
+             * refers to a project_id or project_number and location_id refers to a Google Cloud
+             * region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent environment:
            projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers to a
-           project_id or project_number and location_id refers to a GCP region.
+           project_id or project_number and location_id refers to a Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -8199,7 +9242,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The resource name of the parent environment:
              * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-             * refers to a project_id or project_number and location_id refers to a GCP region.
+             * refers to a project_id or project_number and location_id refers to a Google Cloud
+             * region.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -9012,8 +10056,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the DataTaxonomy location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -9040,8 +10084,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the DataTaxonomy location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -9121,14 +10165,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the DataTaxonomy location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the DataTaxonomy location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -9136,8 +10181,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the DataTaxonomy location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -11165,8 +12210,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the entryGroup, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup}
          * @return the request
          */
@@ -11195,8 +12240,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the entryGroup, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup}
            * @since 1.13
            */
@@ -11267,14 +12312,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the entryGroup, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the entryGroup, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -11282,8 +12328,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the entryGroup, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16060,8 +17106,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource where this Glossary will be created. Format:
-         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+         *        Google Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
          * @return the request
          */
@@ -16090,8 +17136,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource where this Glossary will be created. Format:
-         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+         *        Google Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
            * @since 1.13
            */
@@ -16163,13 +17209,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The parent resource where this Glossary will be created. Format:
            * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
-           * GCP region.
+           * Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource where this Glossary will be created. Format:
-         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -16178,7 +17225,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The parent resource where this Glossary will be created. Format:
            * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
-           * GCP region.
+           * Google Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16750,8 +17797,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which has this collection of Glossaries. Format:
-         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+         *        Google Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16778,8 +17825,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which has this collection of Glossaries. Format:
-         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+         *        Google Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -16860,13 +17907,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The parent, which has this collection of Glossaries. Format:
            * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
-           * GCP region.
+           * Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which has this collection of Glossaries. Format:
-         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -16875,7 +17923,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The parent, which has this collection of Glossaries. Format:
            * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
-           * GCP region.
+           * Google Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -17498,7 +18546,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The parent resource where this GlossaryCategory will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        locationId refers to a GCP region.
+           *        locationId refers to a Google Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
            * @return the request
            */
@@ -17528,7 +18576,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The parent resource where this GlossaryCategory will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        locationId refers to a GCP region.
+           *        locationId refers to a Google Cloud region.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
              * @since 1.13
              */
@@ -17600,14 +18648,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent resource where this GlossaryCategory will be created. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where locationId refers to a GCP region.
+             * where locationId refers to a Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource where this GlossaryCategory will be created. Format:
            projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where locationId
-           refers to a GCP region.
+           refers to a Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -17616,7 +18664,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent resource where this GlossaryCategory will be created. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where locationId refers to a GCP region.
+             * where locationId refers to a Google Cloud region.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -18144,7 +19192,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The parent, which has this collection of GlossaryCategories. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} Location
-           *        is the GCP region.
+           *        is the Google Cloud region.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -18172,7 +19220,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The parent, which has this collection of GlossaryCategories. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} Location
-           *        is the GCP region.
+           *        is the Google Cloud region.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -18253,14 +19301,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent, which has this collection of GlossaryCategories. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * Location is the GCP region.
+             * Location is the Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent, which has this collection of GlossaryCategories. Format:
            projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} Location is the
-           GCP region.
+           Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -18269,7 +19317,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent, which has this collection of GlossaryCategories. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * Location is the GCP region.
+             * Location is the Google Cloud region.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -18884,7 +19932,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The parent resource where the GlossaryTerm will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        location_id refers to a GCP region.
+           *        location_id refers to a Google Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
            * @return the request
            */
@@ -18914,7 +19962,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The parent resource where the GlossaryTerm will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        location_id refers to a GCP region.
+           *        location_id refers to a Google Cloud region.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
              * @since 1.13
              */
@@ -18986,14 +20034,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent resource where the GlossaryTerm will be created. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where location_id refers to a GCP region.
+             * where location_id refers to a Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource where the GlossaryTerm will be created. Format:
            projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where location_id
-           refers to a GCP region.
+           refers to a Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -19002,7 +20050,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent resource where the GlossaryTerm will be created. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where location_id refers to a GCP region.
+             * where location_id refers to a Google Cloud region.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -19531,7 +20579,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The parent, which has this collection of GlossaryTerms. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        location_id refers to a GCP region.
+           *        location_id refers to a Google Cloud region.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -19559,7 +20607,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The parent, which has this collection of GlossaryTerms. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        location_id refers to a GCP region.
+           *        location_id refers to a Google Cloud region.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -19640,14 +20688,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent, which has this collection of GlossaryTerms. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where location_id refers to a GCP region.
+             * where location_id refers to a Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent, which has this collection of GlossaryTerms. Format:
            projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where location_id
-           refers to a GCP region.
+           refers to a Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -19656,7 +20704,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent, which has this collection of GlossaryTerms. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where location_id refers to a GCP region.
+             * where location_id refers to a Google Cloud region.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -20786,8 +21834,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the lake location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Lake}
          * @return the request
          */
@@ -20816,8 +21864,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the lake location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Lake}
            * @since 1.13
            */
@@ -20888,14 +21936,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the lake location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -20903,8 +21952,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -21467,8 +22516,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the lake location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -21495,8 +22544,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the lake location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -21576,14 +22625,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the lake location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -21591,8 +22641,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -33963,8 +35013,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Creates a metadata job. For example, use a metadata job to import Dataplex Catalog entries and
-         * aspects from a third-party system into Dataplex.
+         * Creates a metadata job. For example, use a metadata job to import metadata from a third-party
+         * system into Dataplex Universal Catalog.
          *
          * Create a request for the method "metadataJobs.create".
          *
@@ -33990,8 +35040,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a metadata job. For example, use a metadata job to import Dataplex Catalog entries and
-           * aspects from a third-party system into Dataplex.
+           * Creates a metadata job. For example, use a metadata job to import metadata from a third-party
+           * system into Dataplex Universal Catalog.
            *
            * Create a request for the method "metadataJobs.create".
            *

@@ -70,7 +70,8 @@ public final class ComputeInstanceRestoreProperties extends com.google.api.clien
 
   /**
    * Optional. Array of disks associated with this instance. Persistent disks must be created before
-   * you can assign them.
+   * you can assign them. Source regional persistent disks will be restored with default replica
+   * zones if not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +165,8 @@ public final class ComputeInstanceRestoreProperties extends com.google.api.clien
   /**
    * Optional. An array of network configurations for this instance. These specify how interfaces
    * are configured to interact with other network services, such as connecting to the internet.
-   * Multiple interfaces are supported per instance.
+   * Multiple interfaces are supported per instance. Required to restore in different project or
+   * region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,7 +203,8 @@ public final class ComputeInstanceRestoreProperties extends com.google.api.clien
   private AllocationAffinity reservationAffinity;
 
   /**
-   * Optional. Resource policies applied to this instance.
+   * Optional. Resource policies applied to this instance. By default, no resource policies will be
+   * applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +324,8 @@ public final class ComputeInstanceRestoreProperties extends com.google.api.clien
 
   /**
    * Optional. Array of disks associated with this instance. Persistent disks must be created before
-   * you can assign them.
+   * you can assign them. Source regional persistent disks will be restored with default replica
+   * zones if not specified.
    * @return value or {@code null} for none
    */
   public java.util.List<AttachedDisk> getDisks() {
@@ -330,7 +334,8 @@ public final class ComputeInstanceRestoreProperties extends com.google.api.clien
 
   /**
    * Optional. Array of disks associated with this instance. Persistent disks must be created before
-   * you can assign them.
+   * you can assign them. Source regional persistent disks will be restored with default replica
+   * zones if not specified.
    * @param disks disks or {@code null} for none
    */
   public ComputeInstanceRestoreProperties setDisks(java.util.List<AttachedDisk> disks) {
@@ -517,7 +522,8 @@ public final class ComputeInstanceRestoreProperties extends com.google.api.clien
   /**
    * Optional. An array of network configurations for this instance. These specify how interfaces
    * are configured to interact with other network services, such as connecting to the internet.
-   * Multiple interfaces are supported per instance.
+   * Multiple interfaces are supported per instance. Required to restore in different project or
+   * region.
    * @return value or {@code null} for none
    */
   public java.util.List<NetworkInterface> getNetworkInterfaces() {
@@ -527,7 +533,8 @@ public final class ComputeInstanceRestoreProperties extends com.google.api.clien
   /**
    * Optional. An array of network configurations for this instance. These specify how interfaces
    * are configured to interact with other network services, such as connecting to the internet.
-   * Multiple interfaces are supported per instance.
+   * Multiple interfaces are supported per instance. Required to restore in different project or
+   * region.
    * @param networkInterfaces networkInterfaces or {@code null} for none
    */
   public ComputeInstanceRestoreProperties setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {
@@ -608,7 +615,8 @@ public final class ComputeInstanceRestoreProperties extends com.google.api.clien
   }
 
   /**
-   * Optional. Resource policies applied to this instance.
+   * Optional. Resource policies applied to this instance. By default, no resource policies will be
+   * applied.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourcePolicies() {
@@ -616,7 +624,8 @@ public final class ComputeInstanceRestoreProperties extends com.google.api.clien
   }
 
   /**
-   * Optional. Resource policies applied to this instance.
+   * Optional. Resource policies applied to this instance. By default, no resource policies will be
+   * applied.
    * @param resourcePolicies resourcePolicies or {@code null} for none
    */
   public ComputeInstanceRestoreProperties setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {

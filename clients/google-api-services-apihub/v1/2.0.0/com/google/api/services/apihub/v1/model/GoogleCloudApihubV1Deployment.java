@@ -114,6 +114,17 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   private GoogleCloudApihubV1AttributeValues environment;
 
   /**
+   * Optional. The uri where users can navigate to for the management of the deployment. This maps
+   * to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-management-url` The number of values
+   * for this attribute will be based on the cardinality of the attribute. The same can be retrieved
+   * via GetAttribute API. The value of the attribute should be a valid URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApihubV1AttributeValues managementUrl;
+
+  /**
    * Identifier. The name of the deployment. Format:
    * `projects/{project}/locations/{location}/deployments/{deployment}`
    * The value may be {@code null}.
@@ -122,9 +133,10 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   private java.lang.String name;
 
   /**
-   * Required. A uri that uniquely identfies the deployment within a particular gateway. For
-   * example, if the runtime resource is of type APIGEE_PROXY, then this field will be a combination
-   * of org, proxy name and environment.
+   * Required. The resource URI identifies the deployment within its gateway. For Apigee gateways,
+   * its recommended to use the format: organizations/{org}/environments/{env}/apis/{api}. For ex:
+   * if a proxy with name `orders` is deployed in `staging` environment of `cymbal` organization,
+   * the resource URI would be: `organizations/cymbal/environments/staging/apis/orders`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,11 +154,38 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   private GoogleCloudApihubV1AttributeValues slo;
 
   /**
+   * Optional. The environment at source for the deployment. For example: prod, dev, staging, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceEnvironment;
+
+  /**
    * Output only. The list of sources and metadata from the sources of the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudApihubV1SourceMetadata> sourceMetadata;
+
+  /**
+   * Optional. The project to which the deployment belongs. For GCP gateways, this will refer to the
+   * project identifier. For others like Edge/OPDK, this will refer to the org identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceProject;
+
+  /**
+   * Optional. The uri where additional source specific information for this deployment can be
+   * found. This maps to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-source-uri` The number of values for
+   * this attribute will be based on the cardinality of the attribute. The same can be retrieved via
+   * GetAttribute API. The value of the attribute should be a valid URI, and in case of Cloud
+   * Storage URI, it should point to a Cloud Storage object, not a directory.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApihubV1AttributeValues sourceUri;
 
   /**
    * Output only. The time at which the deployment was last updated.
@@ -335,6 +374,31 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   }
 
   /**
+   * Optional. The uri where users can navigate to for the management of the deployment. This maps
+   * to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-management-url` The number of values
+   * for this attribute will be based on the cardinality of the attribute. The same can be retrieved
+   * via GetAttribute API. The value of the attribute should be a valid URL.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApihubV1AttributeValues getManagementUrl() {
+    return managementUrl;
+  }
+
+  /**
+   * Optional. The uri where users can navigate to for the management of the deployment. This maps
+   * to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-management-url` The number of values
+   * for this attribute will be based on the cardinality of the attribute. The same can be retrieved
+   * via GetAttribute API. The value of the attribute should be a valid URL.
+   * @param managementUrl managementUrl or {@code null} for none
+   */
+  public GoogleCloudApihubV1Deployment setManagementUrl(GoogleCloudApihubV1AttributeValues managementUrl) {
+    this.managementUrl = managementUrl;
+    return this;
+  }
+
+  /**
    * Identifier. The name of the deployment. Format:
    * `projects/{project}/locations/{location}/deployments/{deployment}`
    * @return value or {@code null} for none
@@ -354,9 +418,10 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Required. A uri that uniquely identfies the deployment within a particular gateway. For
-   * example, if the runtime resource is of type APIGEE_PROXY, then this field will be a combination
-   * of org, proxy name and environment.
+   * Required. The resource URI identifies the deployment within its gateway. For Apigee gateways,
+   * its recommended to use the format: organizations/{org}/environments/{env}/apis/{api}. For ex:
+   * if a proxy with name `orders` is deployed in `staging` environment of `cymbal` organization,
+   * the resource URI would be: `organizations/cymbal/environments/staging/apis/orders`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUri() {
@@ -364,9 +429,10 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Required. A uri that uniquely identfies the deployment within a particular gateway. For
-   * example, if the runtime resource is of type APIGEE_PROXY, then this field will be a combination
-   * of org, proxy name and environment.
+   * Required. The resource URI identifies the deployment within its gateway. For Apigee gateways,
+   * its recommended to use the format: organizations/{org}/environments/{env}/apis/{api}. For ex:
+   * if a proxy with name `orders` is deployed in `staging` environment of `cymbal` organization,
+   * the resource URI would be: `organizations/cymbal/environments/staging/apis/orders`.
    * @param resourceUri resourceUri or {@code null} for none
    */
   public GoogleCloudApihubV1Deployment setResourceUri(java.lang.String resourceUri) {
@@ -400,6 +466,23 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   }
 
   /**
+   * Optional. The environment at source for the deployment. For example: prod, dev, staging, etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceEnvironment() {
+    return sourceEnvironment;
+  }
+
+  /**
+   * Optional. The environment at source for the deployment. For example: prod, dev, staging, etc.
+   * @param sourceEnvironment sourceEnvironment or {@code null} for none
+   */
+  public GoogleCloudApihubV1Deployment setSourceEnvironment(java.lang.String sourceEnvironment) {
+    this.sourceEnvironment = sourceEnvironment;
+    return this;
+  }
+
+  /**
    * Output only. The list of sources and metadata from the sources of the deployment.
    * @return value or {@code null} for none
    */
@@ -413,6 +496,52 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
    */
   public GoogleCloudApihubV1Deployment setSourceMetadata(java.util.List<GoogleCloudApihubV1SourceMetadata> sourceMetadata) {
     this.sourceMetadata = sourceMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. The project to which the deployment belongs. For GCP gateways, this will refer to the
+   * project identifier. For others like Edge/OPDK, this will refer to the org identifier.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceProject() {
+    return sourceProject;
+  }
+
+  /**
+   * Optional. The project to which the deployment belongs. For GCP gateways, this will refer to the
+   * project identifier. For others like Edge/OPDK, this will refer to the org identifier.
+   * @param sourceProject sourceProject or {@code null} for none
+   */
+  public GoogleCloudApihubV1Deployment setSourceProject(java.lang.String sourceProject) {
+    this.sourceProject = sourceProject;
+    return this;
+  }
+
+  /**
+   * Optional. The uri where additional source specific information for this deployment can be
+   * found. This maps to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-source-uri` The number of values for
+   * this attribute will be based on the cardinality of the attribute. The same can be retrieved via
+   * GetAttribute API. The value of the attribute should be a valid URI, and in case of Cloud
+   * Storage URI, it should point to a Cloud Storage object, not a directory.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApihubV1AttributeValues getSourceUri() {
+    return sourceUri;
+  }
+
+  /**
+   * Optional. The uri where additional source specific information for this deployment can be
+   * found. This maps to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-source-uri` The number of values for
+   * this attribute will be based on the cardinality of the attribute. The same can be retrieved via
+   * GetAttribute API. The value of the attribute should be a valid URI, and in case of Cloud
+   * Storage URI, it should point to a Cloud Storage object, not a directory.
+   * @param sourceUri sourceUri or {@code null} for none
+   */
+  public GoogleCloudApihubV1Deployment setSourceUri(GoogleCloudApihubV1AttributeValues sourceUri) {
+    this.sourceUri = sourceUri;
     return this;
   }
 

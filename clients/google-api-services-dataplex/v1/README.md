@@ -1,6 +1,6 @@
 # Cloud Dataplex API Client Library for Java
 
-Dataplex API is used to manage the lifecycle of data lakes.
+A unified, intelligent governance solution for data and AI assets.
 
 This page contains information about getting started with the Cloud Dataplex API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-dataplex</artifactId>
-      <version>v1-rev20250618-2.0.0</version>
+      <version>v1-rev20250805-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-dataplex:v1-rev20250618-2.0.0'
+  implementation 'com.google.apis:google-api-services-dataplex:v1-rev20250805-2.0.0'
 }
 ```
 

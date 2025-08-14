@@ -99,8 +99,11 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the product. Format: `accounts/{account}/products/{product}` where the last section
-   * `product` consists of 4 parts: `channel~content_language~feed_label~offer_id` example for
-   * product name is `accounts/123/products/online~en~US~sku123`
+   * `product` consists of: `content_language~feed_label~offer_id` example for product name is
+   * `accounts/123/products/en~US~sku123`. A legacy local product name would be
+   * `accounts/123/products/local~en~US~sku123`. Note: For calls to the v1beta version, the
+   * `product` section consists of: `channel~content_language~feed_label~offer_id`, for example:
+   * `accounts/123/products/online~en~US~sku123`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,8 +274,11 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the product. Format: `accounts/{account}/products/{product}` where the last section
-   * `product` consists of 4 parts: `channel~content_language~feed_label~offer_id` example for
-   * product name is `accounts/123/products/online~en~US~sku123`
+   * `product` consists of: `content_language~feed_label~offer_id` example for product name is
+   * `accounts/123/products/en~US~sku123`. A legacy local product name would be
+   * `accounts/123/products/local~en~US~sku123`. Note: For calls to the v1beta version, the
+   * `product` section consists of: `channel~content_language~feed_label~offer_id`, for example:
+   * `accounts/123/products/online~en~US~sku123`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -281,8 +287,11 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the product. Format: `accounts/{account}/products/{product}` where the last section
-   * `product` consists of 4 parts: `channel~content_language~feed_label~offer_id` example for
-   * product name is `accounts/123/products/online~en~US~sku123`
+   * `product` consists of: `content_language~feed_label~offer_id` example for product name is
+   * `accounts/123/products/en~US~sku123`. A legacy local product name would be
+   * `accounts/123/products/local~en~US~sku123`. Note: For calls to the v1beta version, the
+   * `product` section consists of: `channel~content_language~feed_label~offer_id`, for example:
+   * `accounts/123/products/online~en~US~sku123`.
    * @param name name or {@code null} for none
    */
   public Product setName(java.lang.String name) {

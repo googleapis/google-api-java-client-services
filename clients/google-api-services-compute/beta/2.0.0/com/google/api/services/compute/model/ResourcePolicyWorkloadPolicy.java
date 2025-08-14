@@ -30,24 +30,28 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyWorkloadPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the topology required to create a partition for VMs that have interconnected GPUs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acceleratorTopology;
 
   /**
+   * Specifies the maximum distance between instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String maxTopologyDistance;
 
   /**
+   * Specifies the intent of the instance placement in the MIG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
+   * Specifies the topology required to create a partition for VMs that have interconnected GPUs.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorTopology() {
@@ -55,6 +59,7 @@ public final class ResourcePolicyWorkloadPolicy extends com.google.api.client.js
   }
 
   /**
+   * Specifies the topology required to create a partition for VMs that have interconnected GPUs.
    * @param acceleratorTopology acceleratorTopology or {@code null} for none
    */
   public ResourcePolicyWorkloadPolicy setAcceleratorTopology(java.lang.String acceleratorTopology) {
@@ -63,6 +68,7 @@ public final class ResourcePolicyWorkloadPolicy extends com.google.api.client.js
   }
 
   /**
+   * Specifies the maximum distance between instances.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaxTopologyDistance() {
@@ -70,6 +76,7 @@ public final class ResourcePolicyWorkloadPolicy extends com.google.api.client.js
   }
 
   /**
+   * Specifies the maximum distance between instances.
    * @param maxTopologyDistance maxTopologyDistance or {@code null} for none
    */
   public ResourcePolicyWorkloadPolicy setMaxTopologyDistance(java.lang.String maxTopologyDistance) {
@@ -78,6 +85,7 @@ public final class ResourcePolicyWorkloadPolicy extends com.google.api.client.js
   }
 
   /**
+   * Specifies the intent of the instance placement in the MIG.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -85,6 +93,7 @@ public final class ResourcePolicyWorkloadPolicy extends com.google.api.client.js
   }
 
   /**
+   * Specifies the intent of the instance placement in the MIG.
    * @param type type or {@code null} for none
    */
   public ResourcePolicyWorkloadPolicy setType(java.lang.String type) {

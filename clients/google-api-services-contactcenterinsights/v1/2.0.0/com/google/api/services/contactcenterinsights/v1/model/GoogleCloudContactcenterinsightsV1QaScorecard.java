@@ -52,6 +52,14 @@ public final class GoogleCloudContactcenterinsightsV1QaScorecard extends com.goo
   private java.lang.String displayName;
 
   /**
+   * Whether the scorecard is the default one for the project. A default scorecard cannot be deleted
+   * and will always appear first in scorecard selector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDefault;
+
+  /**
    * Identifier. The scorecard name. Format:
    * projects/{project}/locations/{location}/qaScorecards/{qa_scorecard}
    * The value may be {@code null}.
@@ -114,6 +122,25 @@ public final class GoogleCloudContactcenterinsightsV1QaScorecard extends com.goo
    */
   public GoogleCloudContactcenterinsightsV1QaScorecard setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Whether the scorecard is the default one for the project. A default scorecard cannot be deleted
+   * and will always appear first in scorecard selector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDefault() {
+    return isDefault;
+  }
+
+  /**
+   * Whether the scorecard is the default one for the project. A default scorecard cannot be deleted
+   * and will always appear first in scorecard selector.
+   * @param isDefault isDefault or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaScorecard setIsDefault(java.lang.Boolean isDefault) {
+    this.isDefault = isDefault;
     return this;
   }
 

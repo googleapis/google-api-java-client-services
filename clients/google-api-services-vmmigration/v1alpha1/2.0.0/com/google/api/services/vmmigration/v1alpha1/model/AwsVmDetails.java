@@ -51,7 +51,7 @@ public final class AwsVmDetails extends com.google.api.client.json.GenericJson {
   private java.lang.Long committedStorageMb;
 
   /**
-   * The number of cpus the VM has.
+   * The number of CPU cores the VM has.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,6 +134,14 @@ public final class AwsVmDetails extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> tags;
 
   /**
+   * The number of vCPUs the VM has. It is calculated as the number of CPU cores * threads per CPU
+   * the VM has.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer vcpuCount;
+
+  /**
    * The virtualization type.
    * The value may be {@code null}.
    */
@@ -213,7 +221,7 @@ public final class AwsVmDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of cpus the VM has.
+   * The number of CPU cores the VM has.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCpuCount() {
@@ -221,7 +229,7 @@ public final class AwsVmDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of cpus the VM has.
+   * The number of CPU cores the VM has.
    * @param cpuCount cpuCount or {@code null} for none
    */
   public AwsVmDetails setCpuCount(java.lang.Integer cpuCount) {
@@ -396,6 +404,25 @@ public final class AwsVmDetails extends com.google.api.client.json.GenericJson {
    */
   public AwsVmDetails setTags(java.util.Map<String, java.lang.String> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * The number of vCPUs the VM has. It is calculated as the number of CPU cores * threads per CPU
+   * the VM has.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVcpuCount() {
+    return vcpuCount;
+  }
+
+  /**
+   * The number of vCPUs the VM has. It is calculated as the number of CPU cores * threads per CPU
+   * the VM has.
+   * @param vcpuCount vcpuCount or {@code null} for none
+   */
+  public AwsVmDetails setVcpuCount(java.lang.Integer vcpuCount) {
+    this.vcpuCount = vcpuCount;
     return this;
   }
 

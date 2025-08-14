@@ -45,7 +45,7 @@ public final class GoogleCloudVideointelligenceV1DetectedLandmark extends com.go
   private java.lang.String name;
 
   /**
-   * The 2D point of the detected landmark using the normalized image coordindate system. The
+   * The 2D point of the detected landmark using the normalized image coordinate system. The
    * normalized coordinates have the range from 0 to 1.
    * The value may be {@code null}.
    */
@@ -87,7 +87,7 @@ public final class GoogleCloudVideointelligenceV1DetectedLandmark extends com.go
   }
 
   /**
-   * The 2D point of the detected landmark using the normalized image coordindate system. The
+   * The 2D point of the detected landmark using the normalized image coordinate system. The
    * normalized coordinates have the range from 0 to 1.
    * @return value or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class GoogleCloudVideointelligenceV1DetectedLandmark extends com.go
   }
 
   /**
-   * The 2D point of the detected landmark using the normalized image coordindate system. The
+   * The 2D point of the detected landmark using the normalized image coordinate system. The
    * normalized coordinates have the range from 0 to 1.
    * @param point point or {@code null} for none
    */

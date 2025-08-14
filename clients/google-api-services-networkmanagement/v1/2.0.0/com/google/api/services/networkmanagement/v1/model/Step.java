@@ -153,6 +153,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private InstanceInfo instance;
 
   /**
+   * Display information of an interconnect attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectAttachmentInfo interconnectAttachment;
+
+  /**
    * Display information of the load balancers. Deprecated in favor of the
    * `load_balancer_backend_info` field, not used in new tests.
    * The value may be {@code null}.
@@ -556,6 +563,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setInstance(InstanceInfo instance) {
     this.instance = instance;
+    return this;
+  }
+
+  /**
+   * Display information of an interconnect attachment.
+   * @return value or {@code null} for none
+   */
+  public InterconnectAttachmentInfo getInterconnectAttachment() {
+    return interconnectAttachment;
+  }
+
+  /**
+   * Display information of an interconnect attachment.
+   * @param interconnectAttachment interconnectAttachment or {@code null} for none
+   */
+  public Step setInterconnectAttachment(InterconnectAttachmentInfo interconnectAttachment) {
+    this.interconnectAttachment = interconnectAttachment;
     return this;
   }
 

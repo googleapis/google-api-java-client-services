@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-workloadmanager</artifactId>
-  <version>v1-rev20250609-2.0.0</version>
-  <name>Workload Manager API v1-rev20250609-2.0.0</name>
+  <version>v1-rev20250727-2.0.0</version>
+  <name>Workload Manager API v1-rev20250727-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

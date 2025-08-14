@@ -151,8 +151,6 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private Price minimumPurchaseAmount;
 
   /**
-   * Optional. [Minimum purchase quantity](https://support.google.com/merchants/answer/13838182?ref_
-   * topic=13773355&sjid=17642868584668136159-NC) for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -203,12 +201,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> productTypeInclusion;
 
   /**
-   * Required. The list of destinations where the promotion applies to. If you don't specify a
-   * destination by including a supported value in your data source, your promotion will display in
-   * Shopping ads and free listings by default. You may have previously submitted the following
-   * values as destinations for your products: Shopping Actions, Surfaces across Google, Local
-   * surfaces across Google. To represent these values use `FREE_LISTINGS`, `FREE_LOCAL_LISTINGS`,
-   * `LOCAL_INVENTORY_ADS`. For more details see [Promotion
+   * Required. The list of destinations (also known as [Marketing
+   * methods](https://support.google.com/merchants/answer/15130232)) where the promotion applies to.
+   * If you don't specify a destination by including a supported value in your data source, your
+   * promotion will display in Shopping ads and free listings by default. You may have previously
+   * submitted the following values as destinations for your products: Shopping Actions, Surfaces
+   * across Google, Local surfaces across Google. To represent these values use `FREE_LISTINGS`,
+   * `FREE_LOCAL_LISTINGS`, `LOCAL_INVENTORY_ADS`. For more details see [Promotion
    * destination](https://support.google.com/merchants/answer/13837465?sjid=5155774230887277618-NC)
    * The value may be {@code null}.
    */
@@ -564,8 +563,6 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Minimum purchase quantity](https://support.google.com/merchants/answer/13838182?ref_
-   * topic=13773355&sjid=17642868584668136159-NC) for the promotion.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinimumPurchaseQuantity() {
@@ -573,8 +570,6 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Minimum purchase quantity](https://support.google.com/merchants/answer/13838182?ref_
-   * topic=13773355&sjid=17642868584668136159-NC) for the promotion.
    * @param minimumPurchaseQuantity minimumPurchaseQuantity or {@code null} for none
    */
   public Attributes setMinimumPurchaseQuantity(java.lang.Long minimumPurchaseQuantity) {
@@ -689,12 +684,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of destinations where the promotion applies to. If you don't specify a
-   * destination by including a supported value in your data source, your promotion will display in
-   * Shopping ads and free listings by default. You may have previously submitted the following
-   * values as destinations for your products: Shopping Actions, Surfaces across Google, Local
-   * surfaces across Google. To represent these values use `FREE_LISTINGS`, `FREE_LOCAL_LISTINGS`,
-   * `LOCAL_INVENTORY_ADS`. For more details see [Promotion
+   * Required. The list of destinations (also known as [Marketing
+   * methods](https://support.google.com/merchants/answer/15130232)) where the promotion applies to.
+   * If you don't specify a destination by including a supported value in your data source, your
+   * promotion will display in Shopping ads and free listings by default. You may have previously
+   * submitted the following values as destinations for your products: Shopping Actions, Surfaces
+   * across Google, Local surfaces across Google. To represent these values use `FREE_LISTINGS`,
+   * `FREE_LOCAL_LISTINGS`, `LOCAL_INVENTORY_ADS`. For more details see [Promotion
    * destination](https://support.google.com/merchants/answer/13837465?sjid=5155774230887277618-NC)
    * @return value or {@code null} for none
    */
@@ -703,12 +699,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of destinations where the promotion applies to. If you don't specify a
-   * destination by including a supported value in your data source, your promotion will display in
-   * Shopping ads and free listings by default. You may have previously submitted the following
-   * values as destinations for your products: Shopping Actions, Surfaces across Google, Local
-   * surfaces across Google. To represent these values use `FREE_LISTINGS`, `FREE_LOCAL_LISTINGS`,
-   * `LOCAL_INVENTORY_ADS`. For more details see [Promotion
+   * Required. The list of destinations (also known as [Marketing
+   * methods](https://support.google.com/merchants/answer/15130232)) where the promotion applies to.
+   * If you don't specify a destination by including a supported value in your data source, your
+   * promotion will display in Shopping ads and free listings by default. You may have previously
+   * submitted the following values as destinations for your products: Shopping Actions, Surfaces
+   * across Google, Local surfaces across Google. To represent these values use `FREE_LISTINGS`,
+   * `FREE_LOCAL_LISTINGS`, `LOCAL_INVENTORY_ADS`. For more details see [Promotion
    * destination](https://support.google.com/merchants/answer/13837465?sjid=5155774230887277618-NC)
    * @param promotionDestinations promotionDestinations or {@code null} for none
    */

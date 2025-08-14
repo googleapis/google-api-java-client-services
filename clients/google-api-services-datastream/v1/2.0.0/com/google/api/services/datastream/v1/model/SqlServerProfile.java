@@ -67,6 +67,13 @@ public final class SqlServerProfile extends com.google.api.client.json.GenericJs
   private java.lang.String secretManagerStoredPassword;
 
   /**
+   * Optional. SSL configuration for the SQLServer connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerSslConfig sslConfig;
+
+  /**
    * Required. Username for the SQLServer connection.
    * The value may be {@code null}.
    */
@@ -159,6 +166,23 @@ public final class SqlServerProfile extends com.google.api.client.json.GenericJs
    */
   public SqlServerProfile setSecretManagerStoredPassword(java.lang.String secretManagerStoredPassword) {
     this.secretManagerStoredPassword = secretManagerStoredPassword;
+    return this;
+  }
+
+  /**
+   * Optional. SSL configuration for the SQLServer connection.
+   * @return value or {@code null} for none
+   */
+  public SqlServerSslConfig getSslConfig() {
+    return sslConfig;
+  }
+
+  /**
+   * Optional. SSL configuration for the SQLServer connection.
+   * @param sslConfig sslConfig or {@code null} for none
+   */
+  public SqlServerProfile setSslConfig(SqlServerSslConfig sslConfig) {
+    this.sslConfig = sslConfig;
     return this;
   }
 

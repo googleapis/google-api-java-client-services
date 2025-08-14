@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1beta1VideoMetadata extends com.google.
   private String endOffset;
 
   /**
+   * Optional. The frame rate of the video sent to the model. If not specified, the default value
+   * will be 1.0. The fps range is (0.0, 24.0].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double fps;
+
+  /**
    * Optional. The start offset of the video.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class GoogleCloudAiplatformV1beta1VideoMetadata extends com.google.
    */
   public GoogleCloudAiplatformV1beta1VideoMetadata setEndOffset(String endOffset) {
     this.endOffset = endOffset;
+    return this;
+  }
+
+  /**
+   * Optional. The frame rate of the video sent to the model. If not specified, the default value
+   * will be 1.0. The fps range is (0.0, 24.0].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getFps() {
+    return fps;
+  }
+
+  /**
+   * Optional. The frame rate of the video sent to the model. If not specified, the default value
+   * will be 1.0. The fps range is (0.0, 24.0].
+   * @param fps fps or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VideoMetadata setFps(java.lang.Double fps) {
+    this.fps = fps;
     return this;
   }
 

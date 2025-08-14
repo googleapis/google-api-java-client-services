@@ -38,7 +38,11 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Fully qualified class name of the receiver service class for Android Device Policy to notify
-   * the extension app of any local command status updates.
+   * the extension app of any local command status updates. The service must be exported in the
+   * extension app's AndroidManifest.xml and extend NotificationReceiverService (https://developers.
+   * google.com/android/management/reference/amapi/com/google/android/managementapi/notification/Not
+   * ificationReceiverService) (see Integrate with the AMAPI SDK
+   * (https://developers.google.com/android/management/sdk-integration) guide for more details).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +53,7 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
    * hexadecimal string representations of 64 characters are valid.The signing key certificate
    * fingerprints are always obtained from the Play Store and this field is used to provide
    * additional signing key certificate fingerprints. However, if the application is not available
-   * on the Play Store, this field needs to be set. A nonComplianceDetail with INVALID_VALUE is
+   * on the Play Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE is
    * reported if this field is not set when the application is not available on the Play Store.The
    * signing key certificate fingerprint of the extension app on the device must match one of the
    * signing key certificate fingerprints obtained from the Play Store or the ones provided in this
@@ -62,7 +66,11 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Fully qualified class name of the receiver service class for Android Device Policy to notify
-   * the extension app of any local command status updates.
+   * the extension app of any local command status updates. The service must be exported in the
+   * extension app's AndroidManifest.xml and extend NotificationReceiverService (https://developers.
+   * google.com/android/management/reference/amapi/com/google/android/managementapi/notification/Not
+   * ificationReceiverService) (see Integrate with the AMAPI SDK
+   * (https://developers.google.com/android/management/sdk-integration) guide for more details).
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationReceiver() {
@@ -71,7 +79,11 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Fully qualified class name of the receiver service class for Android Device Policy to notify
-   * the extension app of any local command status updates.
+   * the extension app of any local command status updates. The service must be exported in the
+   * extension app's AndroidManifest.xml and extend NotificationReceiverService (https://developers.
+   * google.com/android/management/reference/amapi/com/google/android/managementapi/notification/Not
+   * ificationReceiverService) (see Integrate with the AMAPI SDK
+   * (https://developers.google.com/android/management/sdk-integration) guide for more details).
    * @param notificationReceiver notificationReceiver or {@code null} for none
    */
   public ExtensionConfig setNotificationReceiver(java.lang.String notificationReceiver) {
@@ -84,7 +96,7 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
    * hexadecimal string representations of 64 characters are valid.The signing key certificate
    * fingerprints are always obtained from the Play Store and this field is used to provide
    * additional signing key certificate fingerprints. However, if the application is not available
-   * on the Play Store, this field needs to be set. A nonComplianceDetail with INVALID_VALUE is
+   * on the Play Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE is
    * reported if this field is not set when the application is not available on the Play Store.The
    * signing key certificate fingerprint of the extension app on the device must match one of the
    * signing key certificate fingerprints obtained from the Play Store or the ones provided in this
@@ -101,7 +113,7 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
    * hexadecimal string representations of 64 characters are valid.The signing key certificate
    * fingerprints are always obtained from the Play Store and this field is used to provide
    * additional signing key certificate fingerprints. However, if the application is not available
-   * on the Play Store, this field needs to be set. A nonComplianceDetail with INVALID_VALUE is
+   * on the Play Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE is
    * reported if this field is not set when the application is not available on the Play Store.The
    * signing key certificate fingerprint of the extension app on the device must match one of the
    * signing key certificate fingerprints obtained from the Play Store or the ones provided in this

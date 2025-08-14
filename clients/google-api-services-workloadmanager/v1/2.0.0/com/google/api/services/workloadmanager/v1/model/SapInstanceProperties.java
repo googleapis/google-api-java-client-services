@@ -30,11 +30,35 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapInstanceProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Sap Instance Agent status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentStates agentStates;
+
+  /**
    * Optional. SAP Instance numbers. They are from '00' to '99'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> numbers;
+
+  /**
+   * Optional. Sap Instance Agent status.
+   * @return value or {@code null} for none
+   */
+  public AgentStates getAgentStates() {
+    return agentStates;
+  }
+
+  /**
+   * Optional. Sap Instance Agent status.
+   * @param agentStates agentStates or {@code null} for none
+   */
+  public SapInstanceProperties setAgentStates(AgentStates agentStates) {
+    this.agentStates = agentStates;
+    return this;
+  }
 
   /**
    * Optional. SAP Instance numbers. They are from '00' to '99'.

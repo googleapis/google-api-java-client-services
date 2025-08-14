@@ -31,6 +31,13 @@ package com.google.api.services.compute.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Advanced control for cluster management, applicable only to DENSE deployment type reservations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAdvancedDeploymentControl advancedDeploymentControl;
+
+  /**
    * Reservation for aggregated resources, providing shape flexibility.
    * The value may be {@code null}.
    */
@@ -154,6 +161,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * The type of maintenance for the reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String schedulingType;
+
+  /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
@@ -202,6 +216,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Advanced control for cluster management, applicable only to DENSE deployment type reservations.
+   * @return value or {@code null} for none
+   */
+  public ReservationAdvancedDeploymentControl getAdvancedDeploymentControl() {
+    return advancedDeploymentControl;
+  }
+
+  /**
+   * Advanced control for cluster management, applicable only to DENSE deployment type reservations.
+   * @param advancedDeploymentControl advancedDeploymentControl or {@code null} for none
+   */
+  public Reservation setAdvancedDeploymentControl(ReservationAdvancedDeploymentControl advancedDeploymentControl) {
+    this.advancedDeploymentControl = advancedDeploymentControl;
+    return this;
+  }
 
   /**
    * Reservation for aggregated resources, providing shape flexibility.
@@ -494,6 +525,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * The type of maintenance for the reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSchedulingType() {
+    return schedulingType;
+  }
+
+  /**
+   * The type of maintenance for the reservation.
+   * @param schedulingType schedulingType or {@code null} for none
+   */
+  public Reservation setSchedulingType(java.lang.String schedulingType) {
+    this.schedulingType = schedulingType;
     return this;
   }
 

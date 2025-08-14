@@ -84,6 +84,14 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
   private java.lang.String deploymentGroup;
 
   /**
+   * Optional. The deployment tier that the index is deployed to. DEPLOYMENT_TIER_UNSPECIFIED
+   * defaults to PERFORMANCE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentTier;
+
+  /**
    * The display name of the DeployedIndex. If not provided upon creation, the Index's display_name
    * is used.
    * The value may be {@code null}.
@@ -100,6 +108,17 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAccessLogging;
+
+  /**
+   * Optional. If true, logs to Cloud Logging errors relating to datapoint upserts. Under normal
+   * operation conditions, these log entries should be very rare. However, if incompatible datapoint
+   * updates are being uploaded to an index, a high volume of log entries may be generated in a
+   * short period of time. Note that logs may incur a cost, especially if the deployed index
+   * receives a high volume of datapoint upserts. Estimate your costs before enabling this option.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableDatapointUpsertLogging;
 
   /**
    * Required. The user specified ID of the DeployedIndex. The ID can be up to 128 characters long
@@ -286,6 +305,25 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
   }
 
   /**
+   * Optional. The deployment tier that the index is deployed to. DEPLOYMENT_TIER_UNSPECIFIED
+   * defaults to PERFORMANCE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentTier() {
+    return deploymentTier;
+  }
+
+  /**
+   * Optional. The deployment tier that the index is deployed to. DEPLOYMENT_TIER_UNSPECIFIED
+   * defaults to PERFORMANCE.
+   * @param deploymentTier deploymentTier or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedIndex setDeploymentTier(java.lang.String deploymentTier) {
+    this.deploymentTier = deploymentTier;
+    return this;
+  }
+
+  /**
    * The display name of the DeployedIndex. If not provided upon creation, the Index's display_name
    * is used.
    * @return value or {@code null} for none
@@ -324,6 +362,31 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
    */
   public GoogleCloudAiplatformV1beta1DeployedIndex setEnableAccessLogging(java.lang.Boolean enableAccessLogging) {
     this.enableAccessLogging = enableAccessLogging;
+    return this;
+  }
+
+  /**
+   * Optional. If true, logs to Cloud Logging errors relating to datapoint upserts. Under normal
+   * operation conditions, these log entries should be very rare. However, if incompatible datapoint
+   * updates are being uploaded to an index, a high volume of log entries may be generated in a
+   * short period of time. Note that logs may incur a cost, especially if the deployed index
+   * receives a high volume of datapoint upserts. Estimate your costs before enabling this option.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableDatapointUpsertLogging() {
+    return enableDatapointUpsertLogging;
+  }
+
+  /**
+   * Optional. If true, logs to Cloud Logging errors relating to datapoint upserts. Under normal
+   * operation conditions, these log entries should be very rare. However, if incompatible datapoint
+   * updates are being uploaded to an index, a high volume of log entries may be generated in a
+   * short period of time. Note that logs may incur a cost, especially if the deployed index
+   * receives a high volume of datapoint upserts. Estimate your costs before enabling this option.
+   * @param enableDatapointUpsertLogging enableDatapointUpsertLogging or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedIndex setEnableDatapointUpsertLogging(java.lang.Boolean enableDatapointUpsertLogging) {
+    this.enableDatapointUpsertLogging = enableDatapointUpsertLogging;
     return this;
   }
 

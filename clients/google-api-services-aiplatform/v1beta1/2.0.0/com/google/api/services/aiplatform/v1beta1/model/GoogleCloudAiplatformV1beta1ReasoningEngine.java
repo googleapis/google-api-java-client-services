@@ -59,6 +59,14 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngine extends com.googl
   private java.lang.String displayName;
 
   /**
+   * Customer-managed encryption key spec for a ReasoningEngine. If set, this ReasoningEngine and
+   * all sub-resources of this ReasoningEngine will be secured by this key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Optional. Used to perform consistent read-modify-write updates. If not set, a blind "overwrite"
    * update happens.
    * The value may be {@code null}.
@@ -153,6 +161,25 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngine extends com.googl
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngine setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Customer-managed encryption key spec for a ReasoningEngine. If set, this ReasoningEngine and
+   * all sub-resources of this ReasoningEngine will be secured by this key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Customer-managed encryption key spec for a ReasoningEngine. If set, this ReasoningEngine and
+   * all sub-resources of this ReasoningEngine will be secured by this key.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngine setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

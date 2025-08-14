@@ -133,7 +133,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String description;
 
   /**
-   * Output only. A system-generated fingerprint for this version of the resource. May be used to
+   * Optional. A system-generated fingerprint for this version of the resource. May be used to
    * detect modification conflict during updates.
    * The value may be {@code null}.
    */
@@ -228,6 +228,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String launchStage;
+
+  /**
+   * Optional. Settings for multi-region deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2MultiRegionSettings multiRegionSettings;
 
   /**
    * The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
@@ -577,7 +584,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A system-generated fingerprint for this version of the resource. May be used to
+   * Optional. A system-generated fingerprint for this version of the resource. May be used to
    * detect modification conflict during updates.
    * @return value or {@code null} for none
    */
@@ -586,7 +593,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. A system-generated fingerprint for this version of the resource. May be used to
+   * Optional. A system-generated fingerprint for this version of the resource. May be used to
    * detect modification conflict during updates.
    * @param etag etag or {@code null} for none
    */
@@ -800,6 +807,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setLaunchStage(java.lang.String launchStage) {
     this.launchStage = launchStage;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for multi-region deployment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2MultiRegionSettings getMultiRegionSettings() {
+    return multiRegionSettings;
+  }
+
+  /**
+   * Optional. Settings for multi-region deployment.
+   * @param multiRegionSettings multiRegionSettings or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setMultiRegionSettings(GoogleCloudRunV2MultiRegionSettings multiRegionSettings) {
+    this.multiRegionSettings = multiRegionSettings;
     return this;
   }
 

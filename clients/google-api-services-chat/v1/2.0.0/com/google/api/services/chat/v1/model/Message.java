@@ -55,7 +55,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private ActionResponse actionResponse;
 
   /**
-   * Output only. Annotations associated with the `text` in this message.
+   * Output only. Annotations can be associated with the plain-text body of the message or with
+   * chips that link to Google Workspace resources like Google Docs or Sheets with `start_index` and
+   * `length` of 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -256,7 +258,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private User privateMessageViewer;
 
   /**
-   * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
+   * Optional. Information about a message that's quoted by a Google Chat user in a space. Google
    * Chat users can quote a message to reply to it.
    * The value may be {@code null}.
    */
@@ -365,7 +367,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Annotations associated with the `text` in this message.
+   * Output only. Annotations can be associated with the plain-text body of the message or with
+   * chips that link to Google Workspace resources like Google Docs or Sheets with `start_index` and
+   * `length` of 0.
    * @return value or {@code null} for none
    */
   public java.util.List<Annotation> getAnnotations() {
@@ -373,7 +377,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Annotations associated with the `text` in this message.
+   * Output only. Annotations can be associated with the plain-text body of the message or with
+   * chips that link to Google Workspace resources like Google Docs or Sheets with `start_index` and
+   * `length` of 0.
    * @param annotations annotations or {@code null} for none
    */
   public Message setAnnotations(java.util.List<Annotation> annotations) {
@@ -746,7 +752,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
+   * Optional. Information about a message that's quoted by a Google Chat user in a space. Google
    * Chat users can quote a message to reply to it.
    * @return value or {@code null} for none
    */
@@ -755,7 +761,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
+   * Optional. Information about a message that's quoted by a Google Chat user in a space. Google
    * Chat users can quote a message to reply to it.
    * @param quotedMessageMetadata quotedMessageMetadata or {@code null} for none
    */

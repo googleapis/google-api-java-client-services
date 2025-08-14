@@ -30,6 +30,30 @@ package com.google.api.services.container.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class AutoIpamConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The flag that enables Auto IPAM on this cluster
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enabled;
+
+  /**
+   * The flag that enables Auto IPAM on this cluster
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnabled() {
+    return enabled;
+  }
+
+  /**
+   * The flag that enables Auto IPAM on this cluster
+   * @param enabled enabled or {@code null} for none
+   */
+  public AutoIpamConfig setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
+    return this;
+  }
+
   @Override
   public AutoIpamConfig set(String fieldName, Object value) {
     return (AutoIpamConfig) super.set(fieldName, value);

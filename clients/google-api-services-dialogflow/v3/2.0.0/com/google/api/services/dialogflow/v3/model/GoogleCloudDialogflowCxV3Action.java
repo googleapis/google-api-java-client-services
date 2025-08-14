@@ -44,11 +44,25 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   private GoogleCloudDialogflowCxV3FlowInvocation flowInvocation;
 
   /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target CX flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3FlowTransition flowTransition;
+
+  /**
    * Optional. Action performed on behalf of the agent by invoking a child playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3PlaybookInvocation playbookInvocation;
+
+  /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target playbook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3PlaybookTransition playbookTransition;
 
   /**
    * Optional. Action performed on behalf of the agent by calling a plugin tool.
@@ -99,6 +113,23 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target CX flow.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3FlowTransition getFlowTransition() {
+    return flowTransition;
+  }
+
+  /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target CX flow.
+   * @param flowTransition flowTransition or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Action setFlowTransition(GoogleCloudDialogflowCxV3FlowTransition flowTransition) {
+    this.flowTransition = flowTransition;
+    return this;
+  }
+
+  /**
    * Optional. Action performed on behalf of the agent by invoking a child playbook.
    * @return value or {@code null} for none
    */
@@ -112,6 +143,23 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
    */
   public GoogleCloudDialogflowCxV3Action setPlaybookInvocation(GoogleCloudDialogflowCxV3PlaybookInvocation playbookInvocation) {
     this.playbookInvocation = playbookInvocation;
+    return this;
+  }
+
+  /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target playbook.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3PlaybookTransition getPlaybookTransition() {
+    return playbookTransition;
+  }
+
+  /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target playbook.
+   * @param playbookTransition playbookTransition or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Action setPlaybookTransition(GoogleCloudDialogflowCxV3PlaybookTransition playbookTransition) {
+    this.playbookTransition = playbookTransition;
     return this;
   }
 

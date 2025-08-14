@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Request to update a Choice properties.
+ * Request to update a choice property.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Selection Field to update.
+   * Required. The selection field to update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldId;
 
   /**
-   * Required. The Choice to update.
+   * Required. The choice to update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Required. The Choice properties to update.
+   * Required. The choice properties to update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelec
 
   /**
    * The fields that should be updated. At least one field must be specified. The root `properties`
-   * is implied and should not be specified. A single `*` can be used as short-hand for updating
+   * is implied and should not be specified. A single `*` can be used as a short-hand for updating
    * every field.
    * The value may be {@code null}.
    */
@@ -60,7 +60,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelec
   private String updateMask;
 
   /**
-   * Required. The Selection Field to update.
+   * Required. The selection field to update.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldId() {
@@ -68,7 +68,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelec
   }
 
   /**
-   * Required. The Selection Field to update.
+   * Required. The selection field to update.
    * @param fieldId fieldId or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest setFieldId(java.lang.String fieldId) {
@@ -77,7 +77,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelec
   }
 
   /**
-   * Required. The Choice to update.
+   * Required. The choice to update.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -85,7 +85,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelec
   }
 
   /**
-   * Required. The Choice to update.
+   * Required. The choice to update.
    * @param id id or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest setId(java.lang.String id) {
@@ -94,7 +94,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelec
   }
 
   /**
-   * Required. The Choice properties to update.
+   * Required. The choice properties to update.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties getProperties() {
@@ -102,7 +102,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelec
   }
 
   /**
-   * Required. The Choice properties to update.
+   * Required. The choice properties to update.
    * @param properties properties or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest setProperties(GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties properties) {
@@ -112,7 +112,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelec
 
   /**
    * The fields that should be updated. At least one field must be specified. The root `properties`
-   * is implied and should not be specified. A single `*` can be used as short-hand for updating
+   * is implied and should not be specified. A single `*` can be used as a short-hand for updating
    * every field.
    * @return value or {@code null} for none
    */
@@ -122,7 +122,7 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelec
 
   /**
    * The fields that should be updated. At least one field must be specified. The root `properties`
-   * is implied and should not be specified. A single `*` can be used as short-hand for updating
+   * is implied and should not be specified. A single `*` can be used as a short-hand for updating
    * every field.
    * @param updateMask updateMask or {@code null} for none
    */

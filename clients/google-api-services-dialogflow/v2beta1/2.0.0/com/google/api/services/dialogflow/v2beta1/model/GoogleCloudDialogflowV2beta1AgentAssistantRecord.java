@@ -51,6 +51,13 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantRecord extends com.
   private GoogleCloudDialogflowV2beta1FaqAnswer faqAnswer;
 
   /**
+   * Output only. The generator suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1GeneratorSuggestion generatorSuggestion;
+
+  /**
    * Output only. The article suggestion answer.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantRecord extends com.
    */
   public GoogleCloudDialogflowV2beta1AgentAssistantRecord setFaqAnswer(GoogleCloudDialogflowV2beta1FaqAnswer faqAnswer) {
     this.faqAnswer = faqAnswer;
+    return this;
+  }
+
+  /**
+   * Output only. The generator suggestion.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1GeneratorSuggestion getGeneratorSuggestion() {
+    return generatorSuggestion;
+  }
+
+  /**
+   * Output only. The generator suggestion.
+   * @param generatorSuggestion generatorSuggestion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AgentAssistantRecord setGeneratorSuggestion(GoogleCloudDialogflowV2beta1GeneratorSuggestion generatorSuggestion) {
+    this.generatorSuggestion = generatorSuggestion;
     return this;
   }
 

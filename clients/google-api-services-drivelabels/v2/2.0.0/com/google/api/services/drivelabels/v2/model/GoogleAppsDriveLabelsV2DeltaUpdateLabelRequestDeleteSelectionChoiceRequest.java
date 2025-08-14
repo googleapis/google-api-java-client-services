@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Request to delete a Choice.
+ * Request to delete a choice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelectionChoiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Selection Field from which a Choice will be deleted.
+   * Required. The selection field from which a choice will be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelection
   private java.lang.String id;
 
   /**
-   * Required. The Selection Field from which a Choice will be deleted.
+   * Required. The selection field from which a choice will be deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldId() {
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelection
   }
 
   /**
-   * Required. The Selection Field from which a Choice will be deleted.
+   * Required. The selection field from which a choice will be deleted.
    * @param fieldId fieldId or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelectionChoiceRequest setFieldId(java.lang.String fieldId) {

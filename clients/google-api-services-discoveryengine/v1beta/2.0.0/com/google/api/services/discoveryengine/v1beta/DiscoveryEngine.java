@@ -134,6 +134,233 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Media collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+   *   {@code DiscoveryEngine.Media.List request = discoveryengine.media().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Media media() {
+    return new Media();
+  }
+
+  /**
+   * The "media" collection of methods.
+   */
+  public class Media {
+
+    /**
+     * Downloads a file from the session.
+     *
+     * Create a request for the method "media.download".
+     *
+     * This request holds the parameters needed by the discoveryengine server.  After setting any
+     * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+     *        ions/{collection}/engines/{engine}/sessions/{session}`
+     * @return the request
+     */
+    public Download download(java.lang.String name) throws java.io.IOException {
+      Download result = new Download(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Download extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GdataMedia> {
+
+      private static final String REST_PATH = "v1beta/{+name}:downloadFile";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+
+      /**
+       * Downloads a file from the session.
+       *
+       * Create a request for the method "media.download".
+       *
+       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+     *        ions/{collection}/engines/{engine}/sessions/{session}`
+       * @since 1.13
+       */
+      protected Download(java.lang.String name) {
+        super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GdataMedia.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+        }
+        initializeMediaDownload();
+      }
+
+      @Override
+      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+        super.executeMediaAndDownloadTo(outputStream);
+      }
+
+      @Override
+      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+        return super.executeMediaAsInputStream();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+        return super.executeMedia();
+      }
+
+      @Override
+      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+        return new com.google.api.client.http.GenericUrl(
+            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Download set$Xgafv(java.lang.String $Xgafv) {
+        return (Download) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Download setAccessToken(java.lang.String accessToken) {
+        return (Download) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Download setAlt(java.lang.String alt) {
+        return (Download) super.setAlt(alt);
+      }
+
+      @Override
+      public Download setCallback(java.lang.String callback) {
+        return (Download) super.setCallback(callback);
+      }
+
+      @Override
+      public Download setFields(java.lang.String fields) {
+        return (Download) super.setFields(fields);
+      }
+
+      @Override
+      public Download setKey(java.lang.String key) {
+        return (Download) super.setKey(key);
+      }
+
+      @Override
+      public Download setOauthToken(java.lang.String oauthToken) {
+        return (Download) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Download) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Download setQuotaUser(java.lang.String quotaUser) {
+        return (Download) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Download setUploadType(java.lang.String uploadType) {
+        return (Download) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Download setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Download) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
+       * }/collections/{collection}/engines/{engine}/sessions/{session}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collec
+     tions/{collection}/engines/{engine}/sessions/{session}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
+       * }/collections/{collection}/engines/{engine}/sessions/{session}`
+       */
+      public Download setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Required. The ID of the file to be downloaded. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file to be downloaded.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file to be downloaded. */
+      public Download setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Optional. The ID of the view to be downloaded. */
+      @com.google.api.client.util.Key
+      private java.lang.String viewId;
+
+      /** Optional. The ID of the view to be downloaded.
+       */
+      public java.lang.String getViewId() {
+        return viewId;
+      }
+
+      /** Optional. The ID of the view to be downloaded. */
+      public Download setViewId(java.lang.String viewId) {
+        this.viewId = viewId;
+        return this;
+      }
+
+      @Override
+      public Download set(String parameterName, Object value) {
+        return (Download) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -12051,22 +12278,30 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-             "user_pseudo_id = some_id"
+              /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+             `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
+             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -12076,8 +12311,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               @com.google.api.client.util.Key
@@ -12085,7 +12320,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
              name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-             `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc": list
+             `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`: list
              sessions by is_pinned first, then by update_time.
                */
               public java.lang.String getOrderBy() {
@@ -12095,8 +12330,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               public List setOrderBy(java.lang.String orderBy) {
@@ -17783,6 +18018,477 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
+           * An accessor for creating requests from the Assistants collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.Assistants.List request = discoveryengine.assistants().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Assistants assistants() {
+            return new Assistants();
+          }
+
+          /**
+           * The "assistants" collection of methods.
+           */
+          public class Assistants {
+
+            /**
+             * Gets an Assistant.
+             *
+             * Create a request for the method "assistants.get".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/{
+             *        collection}/engines/{engine}/assistants/{assistant}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaAssistant> {
+
+              private static final String REST_PATH = "v1beta/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Gets an Assistant.
+               *
+               * Create a request for the method "assistants.get".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/{
+             *        collection}/engines/{engine}/assistants/{assistant}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaAssistant.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Resource name of Assistant. Format: `projects/{project}/locations/{locati
+               * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/
+             {collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Resource name of Assistant. Format: `projects/{project}/locations/{locati
+               * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates an Assistant
+             *
+             * Create a request for the method "assistants.patch".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded
+             *        string with a length limit of 1024 characters.
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaAssistant}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaAssistant content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaAssistant> {
+
+              private static final String REST_PATH = "v1beta/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Updates an Assistant
+               *
+               * Create a request for the method "assistants.patch".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded
+             *        string with a length limit of 1024 characters.
+               * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaAssistant}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaAssistant content) {
+                super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaAssistant.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection}/engines/{engine}/assistants/{assistant}` It must
+               * be a UTF-8 encoded string with a length limit of 1024 characters.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/collect
+             ions/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded string with a
+             length limit of 1024 characters.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection}/engines/{engine}/assistants/{assistant}` It must
+               * be a UTF-8 encoded string with a length limit of 1024 characters.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** The list of fields to update. */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** The list of fields to update.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /** The list of fields to update. */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Assists the user with a query in a streaming fashion.
+             *
+             * Create a request for the method "assistants.streamAssist".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link StreamAssist#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param name Required. The resource name of the Assistant. Format: `projects/{project}/locations/{location}/colle
+             *        ctions/{collection}/engines/{engine}/assistants/{assistant}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaStreamAssistRequest}
+             * @return the request
+             */
+            public StreamAssist streamAssist(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaStreamAssistRequest content) throws java.io.IOException {
+              StreamAssist result = new StreamAssist(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class StreamAssist extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaStreamAssistResponse> {
+
+              private static final String REST_PATH = "v1beta/{+name}:streamAssist";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Assists the user with a query in a streaming fashion.
+               *
+               * Create a request for the method "assistants.streamAssist".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link StreamAssist#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * StreamAssist#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Assistant. Format: `projects/{project}/locations/{location}/colle
+             *        ctions/{collection}/engines/{engine}/assistants/{assistant}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaStreamAssistRequest}
+               * @since 1.13
+               */
+              protected StreamAssist(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaStreamAssistRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaStreamAssistResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public StreamAssist set$Xgafv(java.lang.String $Xgafv) {
+                return (StreamAssist) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public StreamAssist setAccessToken(java.lang.String accessToken) {
+                return (StreamAssist) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public StreamAssist setAlt(java.lang.String alt) {
+                return (StreamAssist) super.setAlt(alt);
+              }
+
+              @Override
+              public StreamAssist setCallback(java.lang.String callback) {
+                return (StreamAssist) super.setCallback(callback);
+              }
+
+              @Override
+              public StreamAssist setFields(java.lang.String fields) {
+                return (StreamAssist) super.setFields(fields);
+              }
+
+              @Override
+              public StreamAssist setKey(java.lang.String key) {
+                return (StreamAssist) super.setKey(key);
+              }
+
+              @Override
+              public StreamAssist setOauthToken(java.lang.String oauthToken) {
+                return (StreamAssist) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public StreamAssist setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (StreamAssist) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public StreamAssist setQuotaUser(java.lang.String quotaUser) {
+                return (StreamAssist) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public StreamAssist setUploadType(java.lang.String uploadType) {
+                return (StreamAssist) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public StreamAssist setUploadProtocol(java.lang.String uploadProtocol) {
+                return (StreamAssist) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Assistant. Format: `projects/{project}/locations
+               * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Assistant. Format: `projects/{project}/locations/{location}/coll
+             ections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Assistant. Format: `projects/{project}/locations
+               * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public StreamAssist setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public StreamAssist set(String parameterName, Object value) {
+                return (StreamAssist) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
            * An accessor for creating requests from the CompletionConfig collection.
            *
            * <p>The typical use is:</p>
@@ -22307,22 +23013,30 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-             "user_pseudo_id = some_id"
+              /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+             `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
+             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -22332,8 +23046,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               @com.google.api.client.util.Key
@@ -22341,7 +23055,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
              name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-             `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc": list
+             `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`: list
              sessions by is_pinned first, then by update_time.
                */
               public java.lang.String getOrderBy() {
@@ -22351,8 +23065,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               public List setOrderBy(java.lang.String orderBy) {
@@ -32356,22 +33070,30 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state. Example: "user_pseudo_id = some_id"
+             * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
+             * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
+             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-           "user_pseudo_id = some_id"
+            /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+           `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
+           `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+           true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state. Example: "user_pseudo_id = some_id"
+             * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
+             * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
+             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -32381,8 +33103,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
              * after a field name for descending. Supported fields: * `update_time` * `create_time`
-             * * `session_name` * `is_pinned` Example: * "update_time desc" * "create_time" *
-             * "is_pinned desc,update_time desc": list sessions by is_pinned first, then by
+             * * `session_name` * `is_pinned` Example: * `update_time desc` * `create_time` *
+             * `is_pinned desc,update_time desc`: list sessions by is_pinned first, then by
              * update_time.
              */
             @com.google.api.client.util.Key
@@ -32390,7 +33112,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
            name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-           `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc": list
+           `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`: list
            sessions by is_pinned first, then by update_time.
              */
             public java.lang.String getOrderBy() {
@@ -32400,8 +33122,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
              * after a field name for descending. Supported fields: * `update_time` * `create_time`
-             * * `session_name` * `is_pinned` Example: * "update_time desc" * "create_time" *
-             * "is_pinned desc,update_time desc": list sessions by is_pinned first, then by
+             * * `session_name` * `is_pinned` Example: * `update_time desc` * `create_time` *
+             * `is_pinned desc,update_time desc`: list sessions by is_pinned first, then by
              * update_time.
              */
             public List setOrderBy(java.lang.String orderBy) {
@@ -36209,15 +36931,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum
-           * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
-           * negative, an `INVALID_ARGUMENT` error is returned.
+           * Optional. Maximum number of Evaluations to return. If unspecified, defaults to 100. The
+           * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+           * is negative, an `INVALID_ARGUMENT` error is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum allowed value
-         is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
+          /** Optional. Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum
+         allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
          `INVALID_ARGUMENT` error is returned.
            */
           public java.lang.Integer getPageSize() {
@@ -36225,9 +36947,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum
-           * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
-           * negative, an `INVALID_ARGUMENT` error is returned.
+           * Optional. Maximum number of Evaluations to return. If unspecified, defaults to 100. The
+           * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+           * is negative, an `INVALID_ARGUMENT` error is returned.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -36235,16 +36957,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A page token ListEvaluationsResponse.next_page_token, received from a previous
-           * EvaluationService.ListEvaluations call. Provide this to retrieve the subsequent page.
-           * When paginating, all other parameters provided to EvaluationService.ListEvaluations
-           * must match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
-           * error is returned.
+           * Optional. A page token ListEvaluationsResponse.next_page_token, received from a
+           * previous EvaluationService.ListEvaluations call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
+           * EvaluationService.ListEvaluations must match the call that provided the page token.
+           * Otherwise, an `INVALID_ARGUMENT` error is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token ListEvaluationsResponse.next_page_token, received from a previous
+          /** Optional. A page token ListEvaluationsResponse.next_page_token, received from a previous
          EvaluationService.ListEvaluations call. Provide this to retrieve the subsequent page. When
          paginating, all other parameters provided to EvaluationService.ListEvaluations must match the call
          that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
@@ -36254,11 +36976,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A page token ListEvaluationsResponse.next_page_token, received from a previous
-           * EvaluationService.ListEvaluations call. Provide this to retrieve the subsequent page.
-           * When paginating, all other parameters provided to EvaluationService.ListEvaluations
-           * must match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
-           * error is returned.
+           * Optional. A page token ListEvaluationsResponse.next_page_token, received from a
+           * previous EvaluationService.ListEvaluations call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
+           * EvaluationService.ListEvaluations must match the call that provided the page token.
+           * Otherwise, an `INVALID_ARGUMENT` error is returned.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -36429,25 +37151,27 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Maximum number of ListEvaluationResultsResponse.EvaluationResult to return. If
-           * unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000 will
-           * be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT` error is returned.
+           * Optional. Maximum number of ListEvaluationResultsResponse.EvaluationResult to return.
+           * If unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000
+           * will be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT` error is
+           * returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of ListEvaluationResultsResponse.EvaluationResult to return. If unspecified,
-         defaults to 100. The maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If
-         this field is negative, an `INVALID_ARGUMENT` error is returned.
+          /** Optional. Maximum number of ListEvaluationResultsResponse.EvaluationResult to return. If
+         unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000 will be coerced
+         to 1000. If this field is negative, an `INVALID_ARGUMENT` error is returned.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Maximum number of ListEvaluationResultsResponse.EvaluationResult to return. If
-           * unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000 will
-           * be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT` error is returned.
+           * Optional. Maximum number of ListEvaluationResultsResponse.EvaluationResult to return.
+           * If unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000
+           * will be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT` error is
+           * returned.
            */
           public ListResults setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -36455,16 +37179,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A page token ListEvaluationResultsResponse.next_page_token, received from a previous
-           * EvaluationService.ListEvaluationResults call. Provide this to retrieve the subsequent
-           * page. When paginating, all other parameters provided to
+           * Optional. A page token ListEvaluationResultsResponse.next_page_token, received from a
+           * previous EvaluationService.ListEvaluationResults call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
            * EvaluationService.ListEvaluationResults must match the call that provided the page
            * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token ListEvaluationResultsResponse.next_page_token, received from a previous
+          /** Optional. A page token ListEvaluationResultsResponse.next_page_token, received from a previous
          EvaluationService.ListEvaluationResults call. Provide this to retrieve the subsequent page. When
          paginating, all other parameters provided to EvaluationService.ListEvaluationResults must match the
          call that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
@@ -36474,9 +37198,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A page token ListEvaluationResultsResponse.next_page_token, received from a previous
-           * EvaluationService.ListEvaluationResults call. Provide this to retrieve the subsequent
-           * page. When paginating, all other parameters provided to
+           * Optional. A page token ListEvaluationResultsResponse.next_page_token, received from a
+           * previous EvaluationService.ListEvaluationResults call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
            * EvaluationService.ListEvaluationResults must match the call that provided the page
            * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
            */

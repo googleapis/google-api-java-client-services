@@ -68,6 +68,18 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   private ComputeScheduling computeScheduling;
 
   /**
+   * Optional. Additional replica zones of the target regional disks. If this list is not empty a
+   * regional disk will be created. The first supported zone would be the one stated in the zone
+   * field. The rest are taken from this list. Please refer to the [regional disk creation
+   * API](https://cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources) for
+   * further details about regional vs zonal disks. If not specified, a zonal disk will be created
+   * in the same zone the VM is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> diskReplicaZones;
+
+  /**
    * The disk type to use in the VM.
    * The value may be {@code null}.
    */
@@ -162,7 +174,7 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   private java.lang.Boolean secureBoot;
 
   /**
-   * The service account to associate the VM with.
+   * Optional. The service account to associate the VM with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -276,6 +288,33 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   public ComputeEngineTargetDefaults setComputeScheduling(ComputeScheduling computeScheduling) {
     this.computeScheduling = computeScheduling;
+    return this;
+  }
+
+  /**
+   * Optional. Additional replica zones of the target regional disks. If this list is not empty a
+   * regional disk will be created. The first supported zone would be the one stated in the zone
+   * field. The rest are taken from this list. Please refer to the [regional disk creation
+   * API](https://cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources) for
+   * further details about regional vs zonal disks. If not specified, a zonal disk will be created
+   * in the same zone the VM is created.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDiskReplicaZones() {
+    return diskReplicaZones;
+  }
+
+  /**
+   * Optional. Additional replica zones of the target regional disks. If this list is not empty a
+   * regional disk will be created. The first supported zone would be the one stated in the zone
+   * field. The rest are taken from this list. Please refer to the [regional disk creation
+   * API](https://cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources) for
+   * further details about regional vs zonal disks. If not specified, a zonal disk will be created
+   * in the same zone the VM is created.
+   * @param diskReplicaZones diskReplicaZones or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setDiskReplicaZones(java.util.List<java.lang.String> diskReplicaZones) {
+    this.diskReplicaZones = diskReplicaZones;
     return this;
   }
 
@@ -507,7 +546,7 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   }
 
   /**
-   * The service account to associate the VM with.
+   * Optional. The service account to associate the VM with.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -515,7 +554,7 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   }
 
   /**
-   * The service account to associate the VM with.
+   * Optional. The service account to associate the VM with.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public ComputeEngineTargetDefaults setServiceAccount(java.lang.String serviceAccount) {

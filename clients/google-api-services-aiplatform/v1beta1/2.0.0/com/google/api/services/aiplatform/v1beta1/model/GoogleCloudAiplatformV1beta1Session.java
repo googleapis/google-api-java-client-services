@@ -44,6 +44,14 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
   private java.lang.String displayName;
 
   /**
+   * Optional. Timestamp of when this session is considered expired. This is *always* provided on
+   * output, regardless of what was sent on input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
    * Identifier. The resource name of the session. Format: 'projects/{project}/locations/{location}/
    * reasoningEngines/{reasoning_engine}/sessions/{session}'.
    * The value may be {@code null}.
@@ -57,6 +65,13 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> sessionState;
+
+  /**
+   * Optional. Input only. The TTL for this session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String ttl;
 
   /**
    * Output only. Timestamp when the session was updated.
@@ -107,6 +122,25 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
   }
 
   /**
+   * Optional. Timestamp of when this session is considered expired. This is *always* provided on
+   * output, regardless of what was sent on input.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Optional. Timestamp of when this session is considered expired. This is *always* provided on
+   * output, regardless of what was sent on input.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Session setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
    * Identifier. The resource name of the session. Format: 'projects/{project}/locations/{location}/
    * reasoningEngines/{reasoning_engine}/sessions/{session}'.
    * @return value or {@code null} for none
@@ -139,6 +173,23 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1Session setSessionState(java.util.Map<String, java.lang.Object> sessionState) {
     this.sessionState = sessionState;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The TTL for this session.
+   * @return value or {@code null} for none
+   */
+  public String getTtl() {
+    return ttl;
+  }
+
+  /**
+   * Optional. Input only. The TTL for this session.
+   * @param ttl ttl or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Session setTtl(String ttl) {
+    this.ttl = ttl;
     return this;
   }
 

@@ -31,24 +31,24 @@ package com.google.api.services.firebaseappdistribution.v1.model;
 public final class GoogleFirebaseAppdistroV1DistributeReleaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of group aliases (IDs) to be given access to this release. A combined maximum of 999
-   * `testerEmails` and `groupAliases` can be specified in a single request.
+   * Optional. A list of group aliases (IDs) to be given access to this release. A combined maximum
+   * of 999 `testerEmails` and `groupAliases` can be specified in a single request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> groupAliases;
 
   /**
-   * A list of tester email addresses to be given access to this release. A combined maximum of 999
-   * `testerEmails` and `groupAliases` can be specified in a single request.
+   * Optional. A list of tester email addresses to be given access to this release. A combined
+   * maximum of 999 `testerEmails` and `groupAliases` can be specified in a single request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> testerEmails;
 
   /**
-   * A list of group aliases (IDs) to be given access to this release. A combined maximum of 999
-   * `testerEmails` and `groupAliases` can be specified in a single request.
+   * Optional. A list of group aliases (IDs) to be given access to this release. A combined maximum
+   * of 999 `testerEmails` and `groupAliases` can be specified in a single request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGroupAliases() {
@@ -56,8 +56,8 @@ public final class GoogleFirebaseAppdistroV1DistributeReleaseRequest extends com
   }
 
   /**
-   * A list of group aliases (IDs) to be given access to this release. A combined maximum of 999
-   * `testerEmails` and `groupAliases` can be specified in a single request.
+   * Optional. A list of group aliases (IDs) to be given access to this release. A combined maximum
+   * of 999 `testerEmails` and `groupAliases` can be specified in a single request.
    * @param groupAliases groupAliases or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1DistributeReleaseRequest setGroupAliases(java.util.List<java.lang.String> groupAliases) {
@@ -66,8 +66,8 @@ public final class GoogleFirebaseAppdistroV1DistributeReleaseRequest extends com
   }
 
   /**
-   * A list of tester email addresses to be given access to this release. A combined maximum of 999
-   * `testerEmails` and `groupAliases` can be specified in a single request.
+   * Optional. A list of tester email addresses to be given access to this release. A combined
+   * maximum of 999 `testerEmails` and `groupAliases` can be specified in a single request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTesterEmails() {
@@ -75,8 +75,8 @@ public final class GoogleFirebaseAppdistroV1DistributeReleaseRequest extends com
   }
 
   /**
-   * A list of tester email addresses to be given access to this release. A combined maximum of 999
-   * `testerEmails` and `groupAliases` can be specified in a single request.
+   * Optional. A list of tester email addresses to be given access to this release. A combined
+   * maximum of 999 `testerEmails` and `groupAliases` can be specified in a single request.
    * @param testerEmails testerEmails or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1DistributeReleaseRequest setTesterEmails(java.util.List<java.lang.String> testerEmails) {

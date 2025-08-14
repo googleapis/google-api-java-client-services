@@ -59,6 +59,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableDeletionProtection;
 
   /**
+   * Optional. Flag to enable managed end user credentials for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableManagedEuc;
+
+  /**
    * Optional. Flag that specifies that a notebook can be accessed with third party identity
    * provider.
    * The value may be {@code null}.
@@ -237,6 +244,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setEnableDeletionProtection(java.lang.Boolean enableDeletionProtection) {
     this.enableDeletionProtection = enableDeletionProtection;
+    return this;
+  }
+
+  /**
+   * Optional. Flag to enable managed end user credentials for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableManagedEuc() {
+    return enableManagedEuc;
+  }
+
+  /**
+   * Optional. Flag to enable managed end user credentials for the instance.
+   * @param enableManagedEuc enableManagedEuc or {@code null} for none
+   */
+  public Instance setEnableManagedEuc(java.lang.Boolean enableManagedEuc) {
+    this.enableManagedEuc = enableManagedEuc;
     return this;
   }
 

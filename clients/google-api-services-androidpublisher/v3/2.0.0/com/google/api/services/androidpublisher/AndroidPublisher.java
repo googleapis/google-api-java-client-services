@@ -11146,6 +11146,3031 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     }
 
     /**
+     * An accessor for creating requests from the Onetimeproducts collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.Onetimeproducts.List request = androidpublisher.onetimeproducts().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Onetimeproducts onetimeproducts() {
+      return new Onetimeproducts();
+    }
+
+    /**
+     * The "onetimeproducts" collection of methods.
+     */
+    public class Onetimeproducts {
+
+      /**
+       * Deletes one or more one-time products.
+       *
+       * Create a request for the method "onetimeproducts.batchDelete".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param packageName Required. The parent app (package name) for which the one-time products should be deleted. Must be
+       *        equal to the package_name field on all the OneTimeProduct resources.
+       * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductsRequest}
+       * @return the request
+       */
+      public BatchDelete batchDelete(java.lang.String packageName, com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductsRequest content) throws java.io.IOException {
+        BatchDelete result = new BatchDelete(packageName, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchDelete extends AndroidPublisherRequest<Void> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts:batchDelete";
+
+        /**
+         * Deletes one or more one-time products.
+         *
+         * Create a request for the method "onetimeproducts.batchDelete".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) for which the one-time products should be deleted. Must be
+       *        equal to the package_name field on all the OneTimeProduct resources.
+         * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductsRequest}
+         * @since 1.13
+         */
+        protected BatchDelete(java.lang.String packageName, com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductsRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, Void.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchDelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchDelete setAccessToken(java.lang.String accessToken) {
+          return (BatchDelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchDelete setAlt(java.lang.String alt) {
+          return (BatchDelete) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchDelete setCallback(java.lang.String callback) {
+          return (BatchDelete) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchDelete setFields(java.lang.String fields) {
+          return (BatchDelete) super.setFields(fields);
+        }
+
+        @Override
+        public BatchDelete setKey(java.lang.String key) {
+          return (BatchDelete) super.setKey(key);
+        }
+
+        @Override
+        public BatchDelete setOauthToken(java.lang.String oauthToken) {
+          return (BatchDelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchDelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+          return (BatchDelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchDelete setUploadType(java.lang.String uploadType) {
+          return (BatchDelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent app (package name) for which the one-time products should be
+         * deleted. Must be equal to the package_name field on all the OneTimeProduct resources.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) for which the one-time products should be deleted. Must be
+       equal to the package_name field on all the OneTimeProduct resources.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The parent app (package name) for which the one-time products should be
+         * deleted. Must be equal to the package_name field on all the OneTimeProduct resources.
+         */
+        public BatchDelete setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        @Override
+        public BatchDelete set(String parameterName, Object value) {
+          return (BatchDelete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Reads one or more one-time products.
+       *
+       * Create a request for the method "onetimeproducts.batchGet".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) for which the products should be retrieved. Must be equal to
+       *        the package_name field on all requests.
+       * @return the request
+       */
+      public BatchGet batchGet(java.lang.String packageName) throws java.io.IOException {
+        BatchGet result = new BatchGet(packageName);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchGet extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchGetOneTimeProductsResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts:batchGet";
+
+        /**
+         * Reads one or more one-time products.
+         *
+         * Create a request for the method "onetimeproducts.batchGet".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) for which the products should be retrieved. Must be equal to
+       *        the package_name field on all requests.
+         * @since 1.13
+         */
+        protected BatchGet(java.lang.String packageName) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.BatchGetOneTimeProductsResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchGet) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchGet setAccessToken(java.lang.String accessToken) {
+          return (BatchGet) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchGet setAlt(java.lang.String alt) {
+          return (BatchGet) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchGet setCallback(java.lang.String callback) {
+          return (BatchGet) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchGet setFields(java.lang.String fields) {
+          return (BatchGet) super.setFields(fields);
+        }
+
+        @Override
+        public BatchGet setKey(java.lang.String key) {
+          return (BatchGet) super.setKey(key);
+        }
+
+        @Override
+        public BatchGet setOauthToken(java.lang.String oauthToken) {
+          return (BatchGet) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchGet) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchGet setQuotaUser(java.lang.String quotaUser) {
+          return (BatchGet) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchGet setUploadType(java.lang.String uploadType) {
+          return (BatchGet) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchGet) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent app (package name) for which the products should be retrieved. Must
+         * be equal to the package_name field on all requests.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) for which the products should be retrieved. Must be equal
+       to the package_name field on all requests.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The parent app (package name) for which the products should be retrieved. Must
+         * be equal to the package_name field on all requests.
+         */
+        public BatchGet setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** Required. A list of up to 100 product IDs to retrieve. All IDs must be different. */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> productIds;
+
+        /** Required. A list of up to 100 product IDs to retrieve. All IDs must be different.
+         */
+        public java.util.List<java.lang.String> getProductIds() {
+          return productIds;
+        }
+
+        /** Required. A list of up to 100 product IDs to retrieve. All IDs must be different. */
+        public BatchGet setProductIds(java.util.List<java.lang.String> productIds) {
+          this.productIds = productIds;
+          return this;
+        }
+
+        @Override
+        public BatchGet set(String parameterName, Object value) {
+          return (BatchGet) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates or updates one or more one-time products.
+       *
+       * Create a request for the method "onetimeproducts.batchUpdate".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param packageName Required. The parent app (package name) for which the one-time products should be updated. Must be
+       *        equal to the package_name field on all the OneTimeProduct resources.
+       * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductsRequest}
+       * @return the request
+       */
+      public BatchUpdate batchUpdate(java.lang.String packageName, com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductsRequest content) throws java.io.IOException {
+        BatchUpdate result = new BatchUpdate(packageName, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchUpdate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductsResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts:batchUpdate";
+
+        /**
+         * Creates or updates one or more one-time products.
+         *
+         * Create a request for the method "onetimeproducts.batchUpdate".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) for which the one-time products should be updated. Must be
+       *        equal to the package_name field on all the OneTimeProduct resources.
+         * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductsRequest}
+         * @since 1.13
+         */
+        protected BatchUpdate(java.lang.String packageName, com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductsRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductsResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchUpdate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchUpdate setAccessToken(java.lang.String accessToken) {
+          return (BatchUpdate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchUpdate setAlt(java.lang.String alt) {
+          return (BatchUpdate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchUpdate setCallback(java.lang.String callback) {
+          return (BatchUpdate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchUpdate setFields(java.lang.String fields) {
+          return (BatchUpdate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchUpdate setKey(java.lang.String key) {
+          return (BatchUpdate) super.setKey(key);
+        }
+
+        @Override
+        public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+          return (BatchUpdate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchUpdate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchUpdate setUploadType(java.lang.String uploadType) {
+          return (BatchUpdate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent app (package name) for which the one-time products should be
+         * updated. Must be equal to the package_name field on all the OneTimeProduct resources.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) for which the one-time products should be updated. Must be
+       equal to the package_name field on all the OneTimeProduct resources.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The parent app (package name) for which the one-time products should be
+         * updated. Must be equal to the package_name field on all the OneTimeProduct resources.
+         */
+        public BatchUpdate setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        @Override
+        public BatchUpdate set(String parameterName, Object value) {
+          return (BatchUpdate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a one-time product.
+       *
+       * Create a request for the method "onetimeproducts.delete".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) of the one-time product to delete.
+       * @param productId Required. The one-time product ID of the one-time product to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.String packageName, java.lang.String productId) throws java.io.IOException {
+        Delete result = new Delete(packageName, productId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends AndroidPublisherRequest<Void> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}";
+
+        /**
+         * Deletes a one-time product.
+         *
+         * Create a request for the method "onetimeproducts.delete".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) of the one-time product to delete.
+         * @param productId Required. The one-time product ID of the one-time product to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String packageName, java.lang.String productId) {
+          super(AndroidPublisher.this, "DELETE", REST_PATH, null, Void.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent app (package name) of the one-time product to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) of the one-time product to delete.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Required. The parent app (package name) of the one-time product to delete. */
+        public Delete setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** Required. The one-time product ID of the one-time product to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** Required. The one-time product ID of the one-time product to delete.
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /** Required. The one-time product ID of the one-time product to delete. */
+        public Delete setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        /**
+         * Optional. The latency tolerance for the propagation of this product update. Defaults to
+         * latency-sensitive.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String latencyTolerance;
+
+        /** Optional. The latency tolerance for the propagation of this product update. Defaults to latency-
+       sensitive.
+         */
+        public java.lang.String getLatencyTolerance() {
+          return latencyTolerance;
+        }
+
+        /**
+         * Optional. The latency tolerance for the propagation of this product update. Defaults to
+         * latency-sensitive.
+         */
+        public Delete setLatencyTolerance(java.lang.String latencyTolerance) {
+          this.latencyTolerance = latencyTolerance;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Reads a single one-time product.
+       *
+       * Create a request for the method "onetimeproducts.get".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) of the product to retrieve.
+       * @param productId Required. The product ID of the product to retrieve.
+       * @return the request
+       */
+      public Get get(java.lang.String packageName, java.lang.String productId) throws java.io.IOException {
+        Get result = new Get(packageName, productId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.OneTimeProduct> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}";
+
+        /**
+         * Reads a single one-time product.
+         *
+         * Create a request for the method "onetimeproducts.get".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) of the product to retrieve.
+         * @param productId Required. The product ID of the product to retrieve.
+         * @since 1.13
+         */
+        protected Get(java.lang.String packageName, java.lang.String productId) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.OneTimeProduct.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent app (package name) of the product to retrieve. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) of the product to retrieve.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Required. The parent app (package name) of the product to retrieve. */
+        public Get setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** Required. The product ID of the product to retrieve. */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** Required. The product ID of the product to retrieve.
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /** Required. The product ID of the product to retrieve. */
+        public Get setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all one-time products under a given app.
+       *
+       * Create a request for the method "onetimeproducts.list".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The parent app (package name) for which the one-time product should be read.
+       * @return the request
+       */
+      public List list(java.lang.String packageName) throws java.io.IOException {
+        List result = new List(packageName);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ListOneTimeProductsResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts";
+
+        /**
+         * Lists all one-time products under a given app.
+         *
+         * Create a request for the method "onetimeproducts.list".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The parent app (package name) for which the one-time product should be read.
+         * @since 1.13
+         */
+        protected List(java.lang.String packageName) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.ListOneTimeProductsResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent app (package name) for which the one-time product should be read.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The parent app (package name) for which the one-time product should be read.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The parent app (package name) for which the one-time product should be read.
+         */
+        public List setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of one-time product to return. The service may return fewer
+         * than this value. If unspecified, at most 50 one-time products will be returned. The
+         * maximum value is 1000; values above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of one-time product to return. The service may return fewer than this
+       value. If unspecified, at most 50 one-time products will be returned. The maximum value is 1000;
+       values above 1000 will be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of one-time product to return. The service may return fewer
+         * than this value. If unspecified, at most 50 one-time products will be returned. The
+         * maximum value is 1000; values above 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListOneTimeProducts` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListOneTimeProducts` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListOneTimeProducts` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListOneTimeProducts` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListOneTimeProducts` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListOneTimeProducts` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates or updates a one-time product.
+       *
+       * Create a request for the method "onetimeproducts.patch".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. Immutable. Package name of the parent app.
+       * @param productId Required. Immutable. Unique product ID of the product. Unique within the parent app. Product IDs
+       *        must start with a number or lowercase letter, and can contain numbers (0-9), lowercase
+       *        letters (a-z), underscores (_), and periods (.).
+       * @param content the {@link com.google.api.services.androidpublisher.model.OneTimeProduct}
+       * @return the request
+       */
+      public Patch patch(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.OneTimeProduct content) throws java.io.IOException {
+        Patch result = new Patch(packageName, productId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.OneTimeProduct> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/onetimeproducts/{productId}";
+
+        /**
+         * Creates or updates a one-time product.
+         *
+         * Create a request for the method "onetimeproducts.patch".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. Immutable. Package name of the parent app.
+         * @param productId Required. Immutable. Unique product ID of the product. Unique within the parent app. Product IDs
+       *        must start with a number or lowercase letter, and can contain numbers (0-9), lowercase
+       *        letters (a-z), underscores (_), and periods (.).
+         * @param content the {@link com.google.api.services.androidpublisher.model.OneTimeProduct}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.OneTimeProduct content) {
+          super(AndroidPublisher.this, "PATCH", REST_PATH, content, com.google.api.services.androidpublisher.model.OneTimeProduct.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Immutable. Package name of the parent app. */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. Immutable. Package name of the parent app.
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /** Required. Immutable. Package name of the parent app. */
+        public Patch setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Required. Immutable. Unique product ID of the product. Unique within the parent app.
+         * Product IDs must start with a number or lowercase letter, and can contain numbers (0-9),
+         * lowercase letters (a-z), underscores (_), and periods (.).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** Required. Immutable. Unique product ID of the product. Unique within the parent app. Product IDs
+       must start with a number or lowercase letter, and can contain numbers (0-9), lowercase letters
+       (a-z), underscores (_), and periods (.).
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /**
+         * Required. Immutable. Unique product ID of the product. Unique within the parent app.
+         * Product IDs must start with a number or lowercase letter, and can contain numbers (0-9),
+         * lowercase letters (a-z), underscores (_), and periods (.).
+         */
+        public Patch setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        /**
+         * Optional. If set to true, and the one-time product with the given package_name and
+         * product_id doesn't exist, the one-time product will be created. If a new one-time product
+         * is created, update_mask is ignored.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean allowMissing;
+
+        /** Optional. If set to true, and the one-time product with the given package_name and product_id
+       doesn't exist, the one-time product will be created. If a new one-time product is created,
+       update_mask is ignored.
+         */
+        public java.lang.Boolean getAllowMissing() {
+          return allowMissing;
+        }
+
+        /**
+         * Optional. If set to true, and the one-time product with the given package_name and
+         * product_id doesn't exist, the one-time product will be created. If a new one-time product
+         * is created, update_mask is ignored.
+         */
+        public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+          this.allowMissing = allowMissing;
+          return this;
+        }
+
+        /**
+         * Optional. The latency tolerance for the propagation of this product upsert. Defaults to
+         * latency-sensitive.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String latencyTolerance;
+
+        /** Optional. The latency tolerance for the propagation of this product upsert. Defaults to latency-
+       sensitive.
+         */
+        public java.lang.String getLatencyTolerance() {
+          return latencyTolerance;
+        }
+
+        /**
+         * Optional. The latency tolerance for the propagation of this product upsert. Defaults to
+         * latency-sensitive.
+         */
+        public Patch setLatencyTolerance(java.lang.String latencyTolerance) {
+          this.latencyTolerance = latencyTolerance;
+          return this;
+        }
+
+        /**
+         * Required. A string representing the version of available regions being used for the
+         * specified resource. Regional prices and latest supported version for the resource have to
+         * be specified according to the information published in [this
+         * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
+         * time the supported locations substantially change, the version will be incremented. Using
+         * this field will ensure that creating and updating the resource with an older region's
+         * version and set of regional prices and currencies will succeed even though a new version
+         * is available.
+         */
+        @com.google.api.client.util.Key("regionsVersion.version")
+        private java.lang.String regionsVersionVersion;
+
+        /** Required. A string representing the version of available regions being used for the specified
+       resource. Regional prices and latest supported version for the resource have to be specified
+       according to the information published in [this
+       article](https://support.google.com/googleplay/android-developer/answer/10532353). Each time the
+       supported locations substantially change, the version will be incremented. Using this field will
+       ensure that creating and updating the resource with an older region's version and set of regional
+       prices and currencies will succeed even though a new version is available.
+         */
+        public java.lang.String getRegionsVersionVersion() {
+          return regionsVersionVersion;
+        }
+
+        /**
+         * Required. A string representing the version of available regions being used for the
+         * specified resource. Regional prices and latest supported version for the resource have to
+         * be specified according to the information published in [this
+         * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
+         * time the supported locations substantially change, the version will be incremented. Using
+         * this field will ensure that creating and updating the resource with an older region's
+         * version and set of regional prices and currencies will succeed even though a new version
+         * is available.
+         */
+        public Patch setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
+          this.regionsVersionVersion = regionsVersionVersion;
+          return this;
+        }
+
+        /** Required. The list of fields to be updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The list of fields to be updated. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the PurchaseOptions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+       *   {@code AndroidPublisher.PurchaseOptions.List request = androidpublisher.purchaseOptions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public PurchaseOptions purchaseOptions() {
+        return new PurchaseOptions();
+      }
+
+      /**
+       * The "purchaseOptions" collection of methods.
+       */
+      public class PurchaseOptions {
+
+        /**
+         * Deletes purchase options across one or multiple one-time products. By default this operation will
+         * fail if there are any existing offers under the deleted purchase options. Use the force parameter
+         * to override the default behavior.
+         *
+         * Create a request for the method "purchaseOptions.batchDelete".
+         *
+         * This request holds the parameters needed by the androidpublisher server.  After setting any
+         * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param packageName Required. The parent app (package name) of the purchase options to delete.
+         * @param productId Required. The product ID of the parent one-time product, if all purchase options to delete belong to
+         *        the same one-time product. If this batch delete spans multiple one-time products, set this
+         *        field to "-".
+         * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeletePurchaseOptionsRequest}
+         * @return the request
+         */
+        public BatchDelete batchDelete(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.BatchDeletePurchaseOptionsRequest content) throws java.io.IOException {
+          BatchDelete result = new BatchDelete(packageName, productId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchDelete extends AndroidPublisherRequest<Void> {
+
+          private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions:batchDelete";
+
+          /**
+           * Deletes purchase options across one or multiple one-time products. By default this operation
+           * will fail if there are any existing offers under the deleted purchase options. Use the force
+           * parameter to override the default behavior.
+           *
+           * Create a request for the method "purchaseOptions.batchDelete".
+           *
+           * This request holds the parameters needed by the the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param packageName Required. The parent app (package name) of the purchase options to delete.
+           * @param productId Required. The product ID of the parent one-time product, if all purchase options to delete belong to
+         *        the same one-time product. If this batch delete spans multiple one-time products, set this
+         *        field to "-".
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeletePurchaseOptionsRequest}
+           * @since 1.13
+           */
+          protected BatchDelete(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.BatchDeletePurchaseOptionsRequest content) {
+            super(AndroidPublisher.this, "POST", REST_PATH, content, Void.class);
+            this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+            this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+          }
+
+          @Override
+          public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchDelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchDelete setAccessToken(java.lang.String accessToken) {
+            return (BatchDelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchDelete setAlt(java.lang.String alt) {
+            return (BatchDelete) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchDelete setCallback(java.lang.String callback) {
+            return (BatchDelete) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchDelete setFields(java.lang.String fields) {
+            return (BatchDelete) super.setFields(fields);
+          }
+
+          @Override
+          public BatchDelete setKey(java.lang.String key) {
+            return (BatchDelete) super.setKey(key);
+          }
+
+          @Override
+          public BatchDelete setOauthToken(java.lang.String oauthToken) {
+            return (BatchDelete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchDelete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+            return (BatchDelete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchDelete setUploadType(java.lang.String uploadType) {
+            return (BatchDelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent app (package name) of the purchase options to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String packageName;
+
+          /** Required. The parent app (package name) of the purchase options to delete.
+           */
+          public java.lang.String getPackageName() {
+            return packageName;
+          }
+
+          /** Required. The parent app (package name) of the purchase options to delete. */
+          public BatchDelete setPackageName(java.lang.String packageName) {
+            this.packageName = packageName;
+            return this;
+          }
+
+          /**
+           * Required. The product ID of the parent one-time product, if all purchase options to
+           * delete belong to the same one-time product. If this batch delete spans multiple one-
+           * time products, set this field to "-".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String productId;
+
+          /** Required. The product ID of the parent one-time product, if all purchase options to delete belong
+         to the same one-time product. If this batch delete spans multiple one-time products, set this field
+         to "-".
+           */
+          public java.lang.String getProductId() {
+            return productId;
+          }
+
+          /**
+           * Required. The product ID of the parent one-time product, if all purchase options to
+           * delete belong to the same one-time product. If this batch delete spans multiple one-
+           * time products, set this field to "-".
+           */
+          public BatchDelete setProductId(java.lang.String productId) {
+            this.productId = productId;
+            return this;
+          }
+
+          @Override
+          public BatchDelete set(String parameterName, Object value) {
+            return (BatchDelete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Activates or deactivates purchase options across one or multiple one-time products.
+         *
+         * Create a request for the method "purchaseOptions.batchUpdateStates".
+         *
+         * This request holds the parameters needed by the androidpublisher server.  After setting any
+         * optional parameters, call the {@link BatchUpdateStates#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param packageName Required. The parent app (package name) of the updated purchase options.
+         * @param productId Required. The product ID of the parent one-time product, if all updated purchase options belong to
+         *        the same one-time product. If this batch update spans multiple one-time products, set this
+         *        field to "-".
+         * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdatePurchaseOptionStatesRequest}
+         * @return the request
+         */
+        public BatchUpdateStates batchUpdateStates(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.BatchUpdatePurchaseOptionStatesRequest content) throws java.io.IOException {
+          BatchUpdateStates result = new BatchUpdateStates(packageName, productId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchUpdateStates extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchUpdatePurchaseOptionStatesResponse> {
+
+          private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions:batchUpdateStates";
+
+          /**
+           * Activates or deactivates purchase options across one or multiple one-time products.
+           *
+           * Create a request for the method "purchaseOptions.batchUpdateStates".
+           *
+           * This request holds the parameters needed by the the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchUpdateStates#execute()} method to invoke the remote
+           * operation. <p> {@link BatchUpdateStates#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param packageName Required. The parent app (package name) of the updated purchase options.
+           * @param productId Required. The product ID of the parent one-time product, if all updated purchase options belong to
+         *        the same one-time product. If this batch update spans multiple one-time products, set this
+         *        field to "-".
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdatePurchaseOptionStatesRequest}
+           * @since 1.13
+           */
+          protected BatchUpdateStates(java.lang.String packageName, java.lang.String productId, com.google.api.services.androidpublisher.model.BatchUpdatePurchaseOptionStatesRequest content) {
+            super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchUpdatePurchaseOptionStatesResponse.class);
+            this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+            this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+          }
+
+          @Override
+          public BatchUpdateStates set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchUpdateStates) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchUpdateStates setAccessToken(java.lang.String accessToken) {
+            return (BatchUpdateStates) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchUpdateStates setAlt(java.lang.String alt) {
+            return (BatchUpdateStates) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchUpdateStates setCallback(java.lang.String callback) {
+            return (BatchUpdateStates) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchUpdateStates setFields(java.lang.String fields) {
+            return (BatchUpdateStates) super.setFields(fields);
+          }
+
+          @Override
+          public BatchUpdateStates setKey(java.lang.String key) {
+            return (BatchUpdateStates) super.setKey(key);
+          }
+
+          @Override
+          public BatchUpdateStates setOauthToken(java.lang.String oauthToken) {
+            return (BatchUpdateStates) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchUpdateStates setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchUpdateStates) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchUpdateStates setQuotaUser(java.lang.String quotaUser) {
+            return (BatchUpdateStates) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchUpdateStates setUploadType(java.lang.String uploadType) {
+            return (BatchUpdateStates) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchUpdateStates setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchUpdateStates) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent app (package name) of the updated purchase options. */
+          @com.google.api.client.util.Key
+          private java.lang.String packageName;
+
+          /** Required. The parent app (package name) of the updated purchase options.
+           */
+          public java.lang.String getPackageName() {
+            return packageName;
+          }
+
+          /** Required. The parent app (package name) of the updated purchase options. */
+          public BatchUpdateStates setPackageName(java.lang.String packageName) {
+            this.packageName = packageName;
+            return this;
+          }
+
+          /**
+           * Required. The product ID of the parent one-time product, if all updated purchase
+           * options belong to the same one-time product. If this batch update spans multiple one-
+           * time products, set this field to "-".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String productId;
+
+          /** Required. The product ID of the parent one-time product, if all updated purchase options belong to
+         the same one-time product. If this batch update spans multiple one-time products, set this field to
+         "-".
+           */
+          public java.lang.String getProductId() {
+            return productId;
+          }
+
+          /**
+           * Required. The product ID of the parent one-time product, if all updated purchase
+           * options belong to the same one-time product. If this batch update spans multiple one-
+           * time products, set this field to "-".
+           */
+          public BatchUpdateStates setProductId(java.lang.String productId) {
+            this.productId = productId;
+            return this;
+          }
+
+          @Override
+          public BatchUpdateStates set(String parameterName, Object value) {
+            return (BatchUpdateStates) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Offers collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+         *   {@code AndroidPublisher.Offers.List request = androidpublisher.offers().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Offers offers() {
+          return new Offers();
+        }
+
+        /**
+         * The "offers" collection of methods.
+         */
+        public class Offers {
+
+          /**
+           * Activates a one-time product offer.
+           *
+           * Create a request for the method "offers.activate".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) of the offer to activate.
+           * @param productId Required. The parent one-time product (ID) of the offer to activate.
+           * @param purchaseOptionId Required. The parent purchase option (ID) of the offer to activate.
+           * @param offerId Required. The offer ID of the offer to activate.
+           * @param content the {@link com.google.api.services.androidpublisher.model.ActivateOneTimeProductOfferRequest}
+           * @return the request
+           */
+          public Activate activate(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, java.lang.String offerId, com.google.api.services.androidpublisher.model.ActivateOneTimeProductOfferRequest content) throws java.io.IOException {
+            Activate result = new Activate(packageName, productId, purchaseOptionId, offerId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Activate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.OneTimeProductOffer> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers/{offerId}:activate";
+
+            /**
+             * Activates a one-time product offer.
+             *
+             * Create a request for the method "offers.activate".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the offer to activate.
+             * @param productId Required. The parent one-time product (ID) of the offer to activate.
+             * @param purchaseOptionId Required. The parent purchase option (ID) of the offer to activate.
+             * @param offerId Required. The offer ID of the offer to activate.
+             * @param content the {@link com.google.api.services.androidpublisher.model.ActivateOneTimeProductOfferRequest}
+             * @since 1.13
+             */
+            protected Activate(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, java.lang.String offerId, com.google.api.services.androidpublisher.model.ActivateOneTimeProductOfferRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.OneTimeProductOffer.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.purchaseOptionId = com.google.api.client.util.Preconditions.checkNotNull(purchaseOptionId, "Required parameter purchaseOptionId must be specified.");
+              this.offerId = com.google.api.client.util.Preconditions.checkNotNull(offerId, "Required parameter offerId must be specified.");
+            }
+
+            @Override
+            public Activate set$Xgafv(java.lang.String $Xgafv) {
+              return (Activate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Activate setAccessToken(java.lang.String accessToken) {
+              return (Activate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Activate setAlt(java.lang.String alt) {
+              return (Activate) super.setAlt(alt);
+            }
+
+            @Override
+            public Activate setCallback(java.lang.String callback) {
+              return (Activate) super.setCallback(callback);
+            }
+
+            @Override
+            public Activate setFields(java.lang.String fields) {
+              return (Activate) super.setFields(fields);
+            }
+
+            @Override
+            public Activate setKey(java.lang.String key) {
+              return (Activate) super.setKey(key);
+            }
+
+            @Override
+            public Activate setOauthToken(java.lang.String oauthToken) {
+              return (Activate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Activate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Activate setQuotaUser(java.lang.String quotaUser) {
+              return (Activate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Activate setUploadType(java.lang.String uploadType) {
+              return (Activate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Activate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent app (package name) of the offer to activate. */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the offer to activate.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /** Required. The parent app (package name) of the offer to activate. */
+            public Activate setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /** Required. The parent one-time product (ID) of the offer to activate. */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent one-time product (ID) of the offer to activate.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /** Required. The parent one-time product (ID) of the offer to activate. */
+            public Activate setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /** Required. The parent purchase option (ID) of the offer to activate. */
+            @com.google.api.client.util.Key
+            private java.lang.String purchaseOptionId;
+
+            /** Required. The parent purchase option (ID) of the offer to activate.
+             */
+            public java.lang.String getPurchaseOptionId() {
+              return purchaseOptionId;
+            }
+
+            /** Required. The parent purchase option (ID) of the offer to activate. */
+            public Activate setPurchaseOptionId(java.lang.String purchaseOptionId) {
+              this.purchaseOptionId = purchaseOptionId;
+              return this;
+            }
+
+            /** Required. The offer ID of the offer to activate. */
+            @com.google.api.client.util.Key
+            private java.lang.String offerId;
+
+            /** Required. The offer ID of the offer to activate.
+             */
+            public java.lang.String getOfferId() {
+              return offerId;
+            }
+
+            /** Required. The offer ID of the offer to activate. */
+            public Activate setOfferId(java.lang.String offerId) {
+              this.offerId = offerId;
+              return this;
+            }
+
+            @Override
+            public Activate set(String parameterName, Object value) {
+              return (Activate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes one or more one-time product offers.
+           *
+           * Create a request for the method "offers.batchDelete".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param packageName Required. The parent app (package name) of the offers to delete. Must be equal to the package_name
+           *        field on all the OneTimeProductOffer resources.
+           * @param productId Required. The product ID of the parent one-time product, if all offers to delete belong to the same
+           *        product. If this request spans multiple one-time products, set this field to "-".
+           * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be deleted. May be specified
+           *        as '-' to update offers from multiple purchase options.
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductOffersRequest}
+           * @return the request
+           */
+          public BatchDelete batchDelete(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductOffersRequest content) throws java.io.IOException {
+            BatchDelete result = new BatchDelete(packageName, productId, purchaseOptionId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchDelete extends AndroidPublisherRequest<Void> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers:batchDelete";
+
+            /**
+             * Deletes one or more one-time product offers.
+             *
+             * Create a request for the method "offers.batchDelete".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the offers to delete. Must be equal to the package_name
+           *        field on all the OneTimeProductOffer resources.
+             * @param productId Required. The product ID of the parent one-time product, if all offers to delete belong to the same
+           *        product. If this request spans multiple one-time products, set this field to "-".
+             * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be deleted. May be specified
+           *        as '-' to update offers from multiple purchase options.
+             * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductOffersRequest}
+             * @since 1.13
+             */
+            protected BatchDelete(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductOffersRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, Void.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.purchaseOptionId = com.google.api.client.util.Preconditions.checkNotNull(purchaseOptionId, "Required parameter purchaseOptionId must be specified.");
+            }
+
+            @Override
+            public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchDelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchDelete setAccessToken(java.lang.String accessToken) {
+              return (BatchDelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchDelete setAlt(java.lang.String alt) {
+              return (BatchDelete) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchDelete setCallback(java.lang.String callback) {
+              return (BatchDelete) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchDelete setFields(java.lang.String fields) {
+              return (BatchDelete) super.setFields(fields);
+            }
+
+            @Override
+            public BatchDelete setKey(java.lang.String key) {
+              return (BatchDelete) super.setKey(key);
+            }
+
+            @Override
+            public BatchDelete setOauthToken(java.lang.String oauthToken) {
+              return (BatchDelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchDelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+              return (BatchDelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchDelete setUploadType(java.lang.String uploadType) {
+              return (BatchDelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent app (package name) of the offers to delete. Must be equal to the
+             * package_name field on all the OneTimeProductOffer resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the offers to delete. Must be equal to the package_name
+           field on all the OneTimeProductOffer resources.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /**
+             * Required. The parent app (package name) of the offers to delete. Must be equal to the
+             * package_name field on all the OneTimeProductOffer resources.
+             */
+            public BatchDelete setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /**
+             * Required. The product ID of the parent one-time product, if all offers to delete
+             * belong to the same product. If this request spans multiple one-time products, set
+             * this field to "-".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The product ID of the parent one-time product, if all offers to delete belong to the same
+           product. If this request spans multiple one-time products, set this field to "-".
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /**
+             * Required. The product ID of the parent one-time product, if all offers to delete
+             * belong to the same product. If this request spans multiple one-time products, set
+             * this field to "-".
+             */
+            public BatchDelete setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The parent purchase option (ID) for which the offers should be deleted. May
+             * be specified as '-' to update offers from multiple purchase options.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String purchaseOptionId;
+
+            /** Required. The parent purchase option (ID) for which the offers should be deleted. May be specified
+           as '-' to update offers from multiple purchase options.
+             */
+            public java.lang.String getPurchaseOptionId() {
+              return purchaseOptionId;
+            }
+
+            /**
+             * Required. The parent purchase option (ID) for which the offers should be deleted. May
+             * be specified as '-' to update offers from multiple purchase options.
+             */
+            public BatchDelete setPurchaseOptionId(java.lang.String purchaseOptionId) {
+              this.purchaseOptionId = purchaseOptionId;
+              return this;
+            }
+
+            @Override
+            public BatchDelete set(String parameterName, Object value) {
+              return (BatchDelete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Reads one or more one-time product offers.
+           *
+           * Create a request for the method "offers.batchGet".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) of the updated offers. Must be equal to the package_name
+           *        field on all the updated OneTimeProductOffer resources.
+           * @param productId Required. The product ID of the parent one-time product, if all updated offers belong to the same
+           *        product. If this request spans multiple one-time products, set this field to "-".
+           * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be updated. May be specified
+           *        as '-' to update offers from multiple purchase options.
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchGetOneTimeProductOffersRequest}
+           * @return the request
+           */
+          public BatchGet batchGet(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, com.google.api.services.androidpublisher.model.BatchGetOneTimeProductOffersRequest content) throws java.io.IOException {
+            BatchGet result = new BatchGet(packageName, productId, purchaseOptionId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchGet extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchGetOneTimeProductOffersResponse> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers:batchGet";
+
+            /**
+             * Reads one or more one-time product offers.
+             *
+             * Create a request for the method "offers.batchGet".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the updated offers. Must be equal to the package_name
+           *        field on all the updated OneTimeProductOffer resources.
+             * @param productId Required. The product ID of the parent one-time product, if all updated offers belong to the same
+           *        product. If this request spans multiple one-time products, set this field to "-".
+             * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be updated. May be specified
+           *        as '-' to update offers from multiple purchase options.
+             * @param content the {@link com.google.api.services.androidpublisher.model.BatchGetOneTimeProductOffersRequest}
+             * @since 1.13
+             */
+            protected BatchGet(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, com.google.api.services.androidpublisher.model.BatchGetOneTimeProductOffersRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchGetOneTimeProductOffersResponse.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.purchaseOptionId = com.google.api.client.util.Preconditions.checkNotNull(purchaseOptionId, "Required parameter purchaseOptionId must be specified.");
+            }
+
+            @Override
+            public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchGet) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchGet setAccessToken(java.lang.String accessToken) {
+              return (BatchGet) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchGet setAlt(java.lang.String alt) {
+              return (BatchGet) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchGet setCallback(java.lang.String callback) {
+              return (BatchGet) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchGet setFields(java.lang.String fields) {
+              return (BatchGet) super.setFields(fields);
+            }
+
+            @Override
+            public BatchGet setKey(java.lang.String key) {
+              return (BatchGet) super.setKey(key);
+            }
+
+            @Override
+            public BatchGet setOauthToken(java.lang.String oauthToken) {
+              return (BatchGet) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchGet) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchGet setQuotaUser(java.lang.String quotaUser) {
+              return (BatchGet) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchGet setUploadType(java.lang.String uploadType) {
+              return (BatchGet) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchGet) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent app (package name) of the updated offers. Must be equal to the
+             * package_name field on all the updated OneTimeProductOffer resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the updated offers. Must be equal to the package_name
+           field on all the updated OneTimeProductOffer resources.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /**
+             * Required. The parent app (package name) of the updated offers. Must be equal to the
+             * package_name field on all the updated OneTimeProductOffer resources.
+             */
+            public BatchGet setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /**
+             * Required. The product ID of the parent one-time product, if all updated offers belong
+             * to the same product. If this request spans multiple one-time products, set this field
+             * to "-".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The product ID of the parent one-time product, if all updated offers belong to the same
+           product. If this request spans multiple one-time products, set this field to "-".
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /**
+             * Required. The product ID of the parent one-time product, if all updated offers belong
+             * to the same product. If this request spans multiple one-time products, set this field
+             * to "-".
+             */
+            public BatchGet setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The parent purchase option (ID) for which the offers should be updated. May
+             * be specified as '-' to update offers from multiple purchase options.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String purchaseOptionId;
+
+            /** Required. The parent purchase option (ID) for which the offers should be updated. May be specified
+           as '-' to update offers from multiple purchase options.
+             */
+            public java.lang.String getPurchaseOptionId() {
+              return purchaseOptionId;
+            }
+
+            /**
+             * Required. The parent purchase option (ID) for which the offers should be updated. May
+             * be specified as '-' to update offers from multiple purchase options.
+             */
+            public BatchGet setPurchaseOptionId(java.lang.String purchaseOptionId) {
+              this.purchaseOptionId = purchaseOptionId;
+              return this;
+            }
+
+            @Override
+            public BatchGet set(String parameterName, Object value) {
+              return (BatchGet) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates or updates one or more one-time product offers.
+           *
+           * Create a request for the method "offers.batchUpdate".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param packageName Required. The parent app (package name) of the updated offers. Must be equal to the package_name
+           *        field on all the updated OneTimeProductOffer resources.
+           * @param productId Required. The product ID of the parent one-time product, if all updated offers belong to the same
+           *        product. If this request spans multiple one-time products, set this field to "-".
+           * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be updated. May be specified
+           *        as '-' to update offers from multiple purchase options.
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOffersRequest}
+           * @return the request
+           */
+          public BatchUpdate batchUpdate(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOffersRequest content) throws java.io.IOException {
+            BatchUpdate result = new BatchUpdate(packageName, productId, purchaseOptionId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchUpdate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOffersResponse> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers:batchUpdate";
+
+            /**
+             * Creates or updates one or more one-time product offers.
+             *
+             * Create a request for the method "offers.batchUpdate".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the updated offers. Must be equal to the package_name
+           *        field on all the updated OneTimeProductOffer resources.
+             * @param productId Required. The product ID of the parent one-time product, if all updated offers belong to the same
+           *        product. If this request spans multiple one-time products, set this field to "-".
+             * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be updated. May be specified
+           *        as '-' to update offers from multiple purchase options.
+             * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOffersRequest}
+             * @since 1.13
+             */
+            protected BatchUpdate(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOffersRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOffersResponse.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.purchaseOptionId = com.google.api.client.util.Preconditions.checkNotNull(purchaseOptionId, "Required parameter purchaseOptionId must be specified.");
+            }
+
+            @Override
+            public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchUpdate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchUpdate setAccessToken(java.lang.String accessToken) {
+              return (BatchUpdate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchUpdate setAlt(java.lang.String alt) {
+              return (BatchUpdate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchUpdate setCallback(java.lang.String callback) {
+              return (BatchUpdate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchUpdate setFields(java.lang.String fields) {
+              return (BatchUpdate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchUpdate setKey(java.lang.String key) {
+              return (BatchUpdate) super.setKey(key);
+            }
+
+            @Override
+            public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+              return (BatchUpdate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchUpdate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchUpdate setUploadType(java.lang.String uploadType) {
+              return (BatchUpdate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent app (package name) of the updated offers. Must be equal to the
+             * package_name field on all the updated OneTimeProductOffer resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the updated offers. Must be equal to the package_name
+           field on all the updated OneTimeProductOffer resources.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /**
+             * Required. The parent app (package name) of the updated offers. Must be equal to the
+             * package_name field on all the updated OneTimeProductOffer resources.
+             */
+            public BatchUpdate setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /**
+             * Required. The product ID of the parent one-time product, if all updated offers belong
+             * to the same product. If this request spans multiple one-time products, set this field
+             * to "-".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The product ID of the parent one-time product, if all updated offers belong to the same
+           product. If this request spans multiple one-time products, set this field to "-".
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /**
+             * Required. The product ID of the parent one-time product, if all updated offers belong
+             * to the same product. If this request spans multiple one-time products, set this field
+             * to "-".
+             */
+            public BatchUpdate setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The parent purchase option (ID) for which the offers should be updated. May
+             * be specified as '-' to update offers from multiple purchase options.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String purchaseOptionId;
+
+            /** Required. The parent purchase option (ID) for which the offers should be updated. May be specified
+           as '-' to update offers from multiple purchase options.
+             */
+            public java.lang.String getPurchaseOptionId() {
+              return purchaseOptionId;
+            }
+
+            /**
+             * Required. The parent purchase option (ID) for which the offers should be updated. May
+             * be specified as '-' to update offers from multiple purchase options.
+             */
+            public BatchUpdate setPurchaseOptionId(java.lang.String purchaseOptionId) {
+              this.purchaseOptionId = purchaseOptionId;
+              return this;
+            }
+
+            @Override
+            public BatchUpdate set(String parameterName, Object value) {
+              return (BatchUpdate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a batch of one-time product offer states.
+           *
+           * Create a request for the method "offers.batchUpdateStates".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link BatchUpdateStates#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param packageName Required. The parent app (package name) of the updated one-time product offers.
+           * @param productId Required. The product ID of the parent one-time product, if all updated offers belong to the same
+           *        one-time product. If this batch update spans multiple one-time products, set this field to
+           *        "-".
+           * @param purchaseOptionId Required. The purchase option ID of the parent purchase option, if all updated offers belong to the
+           *        same purchase option. If this batch update spans multiple purchase options, set this field
+           *        to "-".
+           * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOfferStatesRequest}
+           * @return the request
+           */
+          public BatchUpdateStates batchUpdateStates(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOfferStatesRequest content) throws java.io.IOException {
+            BatchUpdateStates result = new BatchUpdateStates(packageName, productId, purchaseOptionId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchUpdateStates extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOfferStatesResponse> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers:batchUpdateStates";
+
+            /**
+             * Updates a batch of one-time product offer states.
+             *
+             * Create a request for the method "offers.batchUpdateStates".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link BatchUpdateStates#execute()} method to invoke the remote
+             * operation. <p> {@link BatchUpdateStates#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the updated one-time product offers.
+             * @param productId Required. The product ID of the parent one-time product, if all updated offers belong to the same
+           *        one-time product. If this batch update spans multiple one-time products, set this field to
+           *        "-".
+             * @param purchaseOptionId Required. The purchase option ID of the parent purchase option, if all updated offers belong to the
+           *        same purchase option. If this batch update spans multiple purchase options, set this field
+           *        to "-".
+             * @param content the {@link com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOfferStatesRequest}
+             * @since 1.13
+             */
+            protected BatchUpdateStates(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOfferStatesRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.BatchUpdateOneTimeProductOfferStatesResponse.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.purchaseOptionId = com.google.api.client.util.Preconditions.checkNotNull(purchaseOptionId, "Required parameter purchaseOptionId must be specified.");
+            }
+
+            @Override
+            public BatchUpdateStates set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchUpdateStates) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchUpdateStates setAccessToken(java.lang.String accessToken) {
+              return (BatchUpdateStates) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchUpdateStates setAlt(java.lang.String alt) {
+              return (BatchUpdateStates) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchUpdateStates setCallback(java.lang.String callback) {
+              return (BatchUpdateStates) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchUpdateStates setFields(java.lang.String fields) {
+              return (BatchUpdateStates) super.setFields(fields);
+            }
+
+            @Override
+            public BatchUpdateStates setKey(java.lang.String key) {
+              return (BatchUpdateStates) super.setKey(key);
+            }
+
+            @Override
+            public BatchUpdateStates setOauthToken(java.lang.String oauthToken) {
+              return (BatchUpdateStates) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchUpdateStates setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchUpdateStates) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchUpdateStates setQuotaUser(java.lang.String quotaUser) {
+              return (BatchUpdateStates) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchUpdateStates setUploadType(java.lang.String uploadType) {
+              return (BatchUpdateStates) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchUpdateStates setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchUpdateStates) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent app (package name) of the updated one-time product offers. */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the updated one-time product offers.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /** Required. The parent app (package name) of the updated one-time product offers. */
+            public BatchUpdateStates setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /**
+             * Required. The product ID of the parent one-time product, if all updated offers belong
+             * to the same one-time product. If this batch update spans multiple one-time products,
+             * set this field to "-".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The product ID of the parent one-time product, if all updated offers belong to the same
+           one-time product. If this batch update spans multiple one-time products, set this field to "-".
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /**
+             * Required. The product ID of the parent one-time product, if all updated offers belong
+             * to the same one-time product. If this batch update spans multiple one-time products,
+             * set this field to "-".
+             */
+            public BatchUpdateStates setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The purchase option ID of the parent purchase option, if all updated offers
+             * belong to the same purchase option. If this batch update spans multiple purchase
+             * options, set this field to "-".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String purchaseOptionId;
+
+            /** Required. The purchase option ID of the parent purchase option, if all updated offers belong to the
+           same purchase option. If this batch update spans multiple purchase options, set this field to "-".
+             */
+            public java.lang.String getPurchaseOptionId() {
+              return purchaseOptionId;
+            }
+
+            /**
+             * Required. The purchase option ID of the parent purchase option, if all updated offers
+             * belong to the same purchase option. If this batch update spans multiple purchase
+             * options, set this field to "-".
+             */
+            public BatchUpdateStates setPurchaseOptionId(java.lang.String purchaseOptionId) {
+              this.purchaseOptionId = purchaseOptionId;
+              return this;
+            }
+
+            @Override
+            public BatchUpdateStates set(String parameterName, Object value) {
+              return (BatchUpdateStates) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Cancels a one-time product offer.
+           *
+           * Create a request for the method "offers.cancel".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) of the offer to cancel.
+           * @param productId Required. The parent one-time product (ID) of the offer to cancel.
+           * @param purchaseOptionId Required. The parent purchase option (ID) of the offer to cancel.
+           * @param offerId Required. The offer ID of the offer to cancel.
+           * @param content the {@link com.google.api.services.androidpublisher.model.CancelOneTimeProductOfferRequest}
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, java.lang.String offerId, com.google.api.services.androidpublisher.model.CancelOneTimeProductOfferRequest content) throws java.io.IOException {
+            Cancel result = new Cancel(packageName, productId, purchaseOptionId, offerId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.OneTimeProductOffer> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers/{offerId}:cancel";
+
+            /**
+             * Cancels a one-time product offer.
+             *
+             * Create a request for the method "offers.cancel".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the offer to cancel.
+             * @param productId Required. The parent one-time product (ID) of the offer to cancel.
+             * @param purchaseOptionId Required. The parent purchase option (ID) of the offer to cancel.
+             * @param offerId Required. The offer ID of the offer to cancel.
+             * @param content the {@link com.google.api.services.androidpublisher.model.CancelOneTimeProductOfferRequest}
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, java.lang.String offerId, com.google.api.services.androidpublisher.model.CancelOneTimeProductOfferRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.OneTimeProductOffer.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.purchaseOptionId = com.google.api.client.util.Preconditions.checkNotNull(purchaseOptionId, "Required parameter purchaseOptionId must be specified.");
+              this.offerId = com.google.api.client.util.Preconditions.checkNotNull(offerId, "Required parameter offerId must be specified.");
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent app (package name) of the offer to cancel. */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the offer to cancel.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /** Required. The parent app (package name) of the offer to cancel. */
+            public Cancel setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /** Required. The parent one-time product (ID) of the offer to cancel. */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent one-time product (ID) of the offer to cancel.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /** Required. The parent one-time product (ID) of the offer to cancel. */
+            public Cancel setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /** Required. The parent purchase option (ID) of the offer to cancel. */
+            @com.google.api.client.util.Key
+            private java.lang.String purchaseOptionId;
+
+            /** Required. The parent purchase option (ID) of the offer to cancel.
+             */
+            public java.lang.String getPurchaseOptionId() {
+              return purchaseOptionId;
+            }
+
+            /** Required. The parent purchase option (ID) of the offer to cancel. */
+            public Cancel setPurchaseOptionId(java.lang.String purchaseOptionId) {
+              this.purchaseOptionId = purchaseOptionId;
+              return this;
+            }
+
+            /** Required. The offer ID of the offer to cancel. */
+            @com.google.api.client.util.Key
+            private java.lang.String offerId;
+
+            /** Required. The offer ID of the offer to cancel.
+             */
+            public java.lang.String getOfferId() {
+              return offerId;
+            }
+
+            /** Required. The offer ID of the offer to cancel. */
+            public Cancel setOfferId(java.lang.String offerId) {
+              this.offerId = offerId;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deactivates a one-time product offer.
+           *
+           * Create a request for the method "offers.deactivate".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link Deactivate#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) of the offer to deactivate.
+           * @param productId Required. The parent one-time product (ID) of the offer to deactivate.
+           * @param purchaseOptionId Required. The parent purchase option (ID) of the offer to deactivate.
+           * @param offerId Required. The offer ID of the offer to deactivate.
+           * @param content the {@link com.google.api.services.androidpublisher.model.DeactivateOneTimeProductOfferRequest}
+           * @return the request
+           */
+          public Deactivate deactivate(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, java.lang.String offerId, com.google.api.services.androidpublisher.model.DeactivateOneTimeProductOfferRequest content) throws java.io.IOException {
+            Deactivate result = new Deactivate(packageName, productId, purchaseOptionId, offerId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Deactivate extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.OneTimeProductOffer> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers/{offerId}:deactivate";
+
+            /**
+             * Deactivates a one-time product offer.
+             *
+             * Create a request for the method "offers.deactivate".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link Deactivate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Deactivate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) of the offer to deactivate.
+             * @param productId Required. The parent one-time product (ID) of the offer to deactivate.
+             * @param purchaseOptionId Required. The parent purchase option (ID) of the offer to deactivate.
+             * @param offerId Required. The offer ID of the offer to deactivate.
+             * @param content the {@link com.google.api.services.androidpublisher.model.DeactivateOneTimeProductOfferRequest}
+             * @since 1.13
+             */
+            protected Deactivate(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId, java.lang.String offerId, com.google.api.services.androidpublisher.model.DeactivateOneTimeProductOfferRequest content) {
+              super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.OneTimeProductOffer.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.purchaseOptionId = com.google.api.client.util.Preconditions.checkNotNull(purchaseOptionId, "Required parameter purchaseOptionId must be specified.");
+              this.offerId = com.google.api.client.util.Preconditions.checkNotNull(offerId, "Required parameter offerId must be specified.");
+            }
+
+            @Override
+            public Deactivate set$Xgafv(java.lang.String $Xgafv) {
+              return (Deactivate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Deactivate setAccessToken(java.lang.String accessToken) {
+              return (Deactivate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Deactivate setAlt(java.lang.String alt) {
+              return (Deactivate) super.setAlt(alt);
+            }
+
+            @Override
+            public Deactivate setCallback(java.lang.String callback) {
+              return (Deactivate) super.setCallback(callback);
+            }
+
+            @Override
+            public Deactivate setFields(java.lang.String fields) {
+              return (Deactivate) super.setFields(fields);
+            }
+
+            @Override
+            public Deactivate setKey(java.lang.String key) {
+              return (Deactivate) super.setKey(key);
+            }
+
+            @Override
+            public Deactivate setOauthToken(java.lang.String oauthToken) {
+              return (Deactivate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Deactivate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Deactivate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Deactivate setQuotaUser(java.lang.String quotaUser) {
+              return (Deactivate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Deactivate setUploadType(java.lang.String uploadType) {
+              return (Deactivate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Deactivate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Deactivate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent app (package name) of the offer to deactivate. */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) of the offer to deactivate.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /** Required. The parent app (package name) of the offer to deactivate. */
+            public Deactivate setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /** Required. The parent one-time product (ID) of the offer to deactivate. */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent one-time product (ID) of the offer to deactivate.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /** Required. The parent one-time product (ID) of the offer to deactivate. */
+            public Deactivate setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /** Required. The parent purchase option (ID) of the offer to deactivate. */
+            @com.google.api.client.util.Key
+            private java.lang.String purchaseOptionId;
+
+            /** Required. The parent purchase option (ID) of the offer to deactivate.
+             */
+            public java.lang.String getPurchaseOptionId() {
+              return purchaseOptionId;
+            }
+
+            /** Required. The parent purchase option (ID) of the offer to deactivate. */
+            public Deactivate setPurchaseOptionId(java.lang.String purchaseOptionId) {
+              this.purchaseOptionId = purchaseOptionId;
+              return this;
+            }
+
+            /** Required. The offer ID of the offer to deactivate. */
+            @com.google.api.client.util.Key
+            private java.lang.String offerId;
+
+            /** Required. The offer ID of the offer to deactivate.
+             */
+            public java.lang.String getOfferId() {
+              return offerId;
+            }
+
+            /** Required. The offer ID of the offer to deactivate. */
+            public Deactivate setOfferId(java.lang.String offerId) {
+              this.offerId = offerId;
+              return this;
+            }
+
+            @Override
+            public Deactivate set(String parameterName, Object value) {
+              return (Deactivate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all offers under a given app, product, or purchase option.
+           *
+           * Create a request for the method "offers.list".
+           *
+           * This request holds the parameters needed by the androidpublisher server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param packageName Required. The parent app (package name) for which the offers should be read.
+           * @param productId Required. The parent one-time product (ID) for which the offers should be read. May be specified as
+           *        '-' to read all offers under an app.
+           * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be read. May be specified as
+           *        '-' to read all offers under a one-time product or an app. Must be specified as '-' if
+           *        product_id is specified as '-'.
+           * @return the request
+           */
+          public List list(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId) throws java.io.IOException {
+            List result = new List(packageName, productId, purchaseOptionId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ListOneTimeProductOffersResponse> {
+
+            private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers";
+
+            /**
+             * Lists all offers under a given app, product, or purchase option.
+             *
+             * Create a request for the method "offers.list".
+             *
+             * This request holds the parameters needed by the the androidpublisher server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param packageName Required. The parent app (package name) for which the offers should be read.
+             * @param productId Required. The parent one-time product (ID) for which the offers should be read. May be specified as
+           *        '-' to read all offers under an app.
+             * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be read. May be specified as
+           *        '-' to read all offers under a one-time product or an app. Must be specified as '-' if
+           *        product_id is specified as '-'.
+             * @since 1.13
+             */
+            protected List(java.lang.String packageName, java.lang.String productId, java.lang.String purchaseOptionId) {
+              super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.ListOneTimeProductOffersResponse.class);
+              this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+              this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+              this.purchaseOptionId = com.google.api.client.util.Preconditions.checkNotNull(purchaseOptionId, "Required parameter purchaseOptionId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent app (package name) for which the offers should be read. */
+            @com.google.api.client.util.Key
+            private java.lang.String packageName;
+
+            /** Required. The parent app (package name) for which the offers should be read.
+             */
+            public java.lang.String getPackageName() {
+              return packageName;
+            }
+
+            /** Required. The parent app (package name) for which the offers should be read. */
+            public List setPackageName(java.lang.String packageName) {
+              this.packageName = packageName;
+              return this;
+            }
+
+            /**
+             * Required. The parent one-time product (ID) for which the offers should be read. May
+             * be specified as '-' to read all offers under an app.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String productId;
+
+            /** Required. The parent one-time product (ID) for which the offers should be read. May be specified as
+           '-' to read all offers under an app.
+             */
+            public java.lang.String getProductId() {
+              return productId;
+            }
+
+            /**
+             * Required. The parent one-time product (ID) for which the offers should be read. May
+             * be specified as '-' to read all offers under an app.
+             */
+            public List setProductId(java.lang.String productId) {
+              this.productId = productId;
+              return this;
+            }
+
+            /**
+             * Required. The parent purchase option (ID) for which the offers should be read. May be
+             * specified as '-' to read all offers under a one-time product or an app. Must be
+             * specified as '-' if product_id is specified as '-'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String purchaseOptionId;
+
+            /** Required. The parent purchase option (ID) for which the offers should be read. May be specified as
+           '-' to read all offers under a one-time product or an app. Must be specified as '-' if product_id
+           is specified as '-'.
+             */
+            public java.lang.String getPurchaseOptionId() {
+              return purchaseOptionId;
+            }
+
+            /**
+             * Required. The parent purchase option (ID) for which the offers should be read. May be
+             * specified as '-' to read all offers under a one-time product or an app. Must be
+             * specified as '-' if product_id is specified as '-'.
+             */
+            public List setPurchaseOptionId(java.lang.String purchaseOptionId) {
+              this.purchaseOptionId = purchaseOptionId;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of offers to return. The service may return fewer than
+             * this value. If unspecified, at most 50 offers will be returned. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of offers to return. The service may return fewer than this value. If
+           unspecified, at most 50 offers will be returned. The maximum value is 1000; values above 1000 will
+           be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of offers to return. The service may return fewer than
+             * this value. If unspecified, at most 50 offers will be returned. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListOneTimeProductsOffers` call.
+             * Provide this to retrieve the subsequent page. When paginating, product_id,
+             * package_name and purchase_option_id provided to `ListOneTimeProductsOffersRequest`
+             * must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListOneTimeProductsOffers` call. Provide this to
+           retrieve the subsequent page. When paginating, product_id, package_name and purchase_option_id
+           provided to `ListOneTimeProductsOffersRequest` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListOneTimeProductsOffers` call.
+             * Provide this to retrieve the subsequent page. When paginating, product_id,
+             * package_name and purchase_option_id provided to `ListOneTimeProductsOffersRequest`
+             * must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+    /**
      * An accessor for creating requests from the Subscriptions collection.
      *
      * <p>The typical use is:</p>
@@ -16637,6 +19662,180 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Productsv2 collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.Productsv2.List request = androidpublisher.productsv2().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Productsv2 productsv2() {
+      return new Productsv2();
+    }
+
+    /**
+     * The "productsv2" collection of methods.
+     */
+    public class Productsv2 {
+
+      /**
+       * Checks the purchase and consumption status of an inapp item.
+       *
+       * Create a request for the method "productsv2.getproductpurchasev2".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Getproductpurchasev2#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+       * @param token The token provided to the user's device when the inapp product was purchased.
+       * @return the request
+       */
+      public Getproductpurchasev2 getproductpurchasev2(java.lang.String packageName, java.lang.String token) throws java.io.IOException {
+        Getproductpurchasev2 result = new Getproductpurchasev2(packageName, token);
+        initialize(result);
+        return result;
+      }
+
+      public class Getproductpurchasev2 extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ProductPurchaseV2> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/productsv2/tokens/{token}";
+
+        /**
+         * Checks the purchase and consumption status of an inapp item.
+         *
+         * Create a request for the method "productsv2.getproductpurchasev2".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Getproductpurchasev2#execute()} method to invoke the
+         * remote operation. <p> {@link Getproductpurchasev2#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         * @param token The token provided to the user's device when the inapp product was purchased.
+         * @since 1.13
+         */
+        protected Getproductpurchasev2(java.lang.String packageName, java.lang.String token) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.ProductPurchaseV2.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Getproductpurchasev2 set$Xgafv(java.lang.String $Xgafv) {
+          return (Getproductpurchasev2) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Getproductpurchasev2 setAccessToken(java.lang.String accessToken) {
+          return (Getproductpurchasev2) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Getproductpurchasev2 setAlt(java.lang.String alt) {
+          return (Getproductpurchasev2) super.setAlt(alt);
+        }
+
+        @Override
+        public Getproductpurchasev2 setCallback(java.lang.String callback) {
+          return (Getproductpurchasev2) super.setCallback(callback);
+        }
+
+        @Override
+        public Getproductpurchasev2 setFields(java.lang.String fields) {
+          return (Getproductpurchasev2) super.setFields(fields);
+        }
+
+        @Override
+        public Getproductpurchasev2 setKey(java.lang.String key) {
+          return (Getproductpurchasev2) super.setKey(key);
+        }
+
+        @Override
+        public Getproductpurchasev2 setOauthToken(java.lang.String oauthToken) {
+          return (Getproductpurchasev2) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Getproductpurchasev2 setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Getproductpurchasev2) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Getproductpurchasev2 setQuotaUser(java.lang.String quotaUser) {
+          return (Getproductpurchasev2) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Getproductpurchasev2 setUploadType(java.lang.String uploadType) {
+          return (Getproductpurchasev2) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Getproductpurchasev2 setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Getproductpurchasev2) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The package name of the application the inapp product was sold in (for example,
+         * 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * The package name of the application the inapp product was sold in (for example,
+         * 'com.some.thing').
+         */
+        public Getproductpurchasev2 setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The token provided to the user's device when the inapp product was purchased. */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** The token provided to the user's device when the inapp product was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /** The token provided to the user's device when the inapp product was purchased. */
+        public Getproductpurchasev2 setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Getproductpurchasev2 set(String parameterName, Object value) {
+          return (Getproductpurchasev2) super.set(parameterName, value);
         }
       }
 

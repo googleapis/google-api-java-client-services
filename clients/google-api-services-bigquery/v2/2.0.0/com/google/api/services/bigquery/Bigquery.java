@@ -2430,6 +2430,29 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Optional. The API output format for a timestamp. This offers more explicit control over the
+       * timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      @com.google.api.client.util.Key("formatOptions.timestampOutputFormat")
+      private java.lang.String formatOptionsTimestampOutputFormat;
+
+      /** Optional. The API output format for a timestamp. This offers more explicit control over the
+     timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      public java.lang.String getFormatOptionsTimestampOutputFormat() {
+        return formatOptionsTimestampOutputFormat;
+      }
+
+      /**
+       * Optional. The API output format for a timestamp. This offers more explicit control over the
+       * timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      public GetQueryResults setFormatOptionsTimestampOutputFormat(java.lang.String formatOptionsTimestampOutputFormat) {
+        this.formatOptionsTimestampOutputFormat = formatOptionsTimestampOutputFormat;
+        return this;
+      }
+
       /** Optional. Output timestamp as usec int64. Default is false. */
       @com.google.api.client.util.Key("formatOptions.useInt64Timestamp")
       private java.lang.Boolean formatOptionsUseInt64Timestamp;
@@ -5514,6 +5537,157 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+     * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+     * designed to be used for building permission-aware UIs and command-line tools, not for
+     * authorization checking. This operation may "fail open" without warning.
+     *
+     * Create a request for the method "routines.testIamPermissions".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+     *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+     *        this field.
+     * @param content the {@link com.google.api.services.bigquery.model.TestIamPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.bigquery.model.TestIamPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends BigqueryRequest<com.google.api.services.bigquery.model.TestIamPermissionsResponse> {
+
+      private static final String REST_PATH = "{+resource}:testIamPermissions";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/datasets/[^/]+/routines/[^/]+$");
+
+      /**
+       * Returns permissions that a caller has on the specified resource. If the resource does not
+       * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+       * operation is designed to be used for building permission-aware UIs and command-line tools, not
+       * for authorization checking. This operation may "fail open" without warning.
+       *
+       * Create a request for the method "routines.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+     *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+     *        this field.
+       * @param content the {@link com.google.api.services.bigquery.model.TestIamPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String resource, com.google.api.services.bigquery.model.TestIamPermissionsRequest content) {
+        super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.TestIamPermissionsResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/routines/[^/]+$");
+        }
+      }
+
+      @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       * this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+     names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+     field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+       * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       * this field.
+       */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/routines/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates information in an existing routine. The update method replaces the entire Routine
      * resource.
      *
@@ -7783,6 +7957,29 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
               "^[^/]+$");
         }
         this.tableId = tableId;
+        return this;
+      }
+
+      /**
+       * Optional. The API output format for a timestamp. This offers more explicit control over the
+       * timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      @com.google.api.client.util.Key("formatOptions.timestampOutputFormat")
+      private java.lang.String formatOptionsTimestampOutputFormat;
+
+      /** Optional. The API output format for a timestamp. This offers more explicit control over the
+     timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      public java.lang.String getFormatOptionsTimestampOutputFormat() {
+        return formatOptionsTimestampOutputFormat;
+      }
+
+      /**
+       * Optional. The API output format for a timestamp. This offers more explicit control over the
+       * timestamp output format as compared to the existing `use_int64_timestamp` option.
+       */
+      public List setFormatOptionsTimestampOutputFormat(java.lang.String formatOptionsTimestampOutputFormat) {
+        this.formatOptionsTimestampOutputFormat = formatOptionsTimestampOutputFormat;
         return this;
       }
 

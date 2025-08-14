@@ -100,7 +100,7 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   private String deleteTime;
 
   /**
-   * Output only. A system-generated fingerprint for this version of the resource. May be used to
+   * Optional. A system-generated fingerprint for this version of the resource. May be used to
    * detect modification conflict during updates.
    * The value may be {@code null}.
    */
@@ -410,7 +410,7 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. A system-generated fingerprint for this version of the resource. May be used to
+   * Optional. A system-generated fingerprint for this version of the resource. May be used to
    * detect modification conflict during updates.
    * @return value or {@code null} for none
    */
@@ -419,7 +419,7 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. A system-generated fingerprint for this version of the resource. May be used to
+   * Optional. A system-generated fingerprint for this version of the resource. May be used to
    * detect modification conflict during updates.
    * @param etag etag or {@code null} for none
    */

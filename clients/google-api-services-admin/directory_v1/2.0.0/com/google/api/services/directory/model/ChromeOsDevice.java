@@ -18,8 +18,8 @@ package com.google.api.services.directory.model;
 
 /**
  * Google Chrome devices run on the [Chrome OS](https://support.google.com/chromeos). For more
- * information about common API tasks, see the [Developer's Guide](/admin-
- * sdk/directory/v1/guides/manage-chrome-devices).
+ * information about common API tasks, see the [Developer's
+ * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-devices).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:
@@ -332,7 +332,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * for the 3G mobile card in a mobile device. A MEID/IMEI is typically used when adding a device
    * to a wireless carrier's post-pay service plan. If the device does not have this information,
    * this property is not included in the response. For more information on how to export a
-   * MEID/IMEI list, see the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-chrome-
+   * MEID/IMEI list, see the [Developer's
+   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-
    * devices.html#export_meid).
    * The value may be {@code null}.
    */
@@ -349,9 +350,9 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
 
   /**
    * Notes about this device added by the administrator. This property can be
-   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [list](/admin-
-   * sdk/directory/v1/reference/chromeosdevices/list) method's `query` parameter. Maximum length is
-   * 500 characters. Empty values are allowed.
+   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [list](https://develope
+   * rs.google.com/workspace/admin/directory/v1/reference/chromeosdevices/list) method's `query`
+   * parameter. Maximum length is 500 characters. Empty values are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -367,10 +368,11 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   /**
    * The unique ID of the organizational unit. orgUnitPath is the human readable version of
    * orgUnitId. While orgUnitPath may change by renaming an organizational unit within the path,
-   * orgUnitId is unchangeable for one organizational unit. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
-   * more information about how to create an organizational structure for your device, see the
-   * [administration help center](https://support.google.com/a/answer/182433).
+   * orgUnitId is unchangeable for one organizational unit. This property can be
+   * [updated](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices#move_chrome_devices_to_ou) using the API. For more information about how to create an
+   * organizational structure for your device, see the [administration help
+   * center](https://support.google.com/a/answer/182433).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -379,10 +381,11 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   /**
    * The full parent path with the organizational unit's name associated with the device. Path names
    * are case insensitive. If the parent organizational unit is the top-level organization, it is
-   * represented as a forward slash, `/`. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
-   * more information about how to create an organizational structure for your device, see the
-   * [administration help center](https://support.google.com/a/answer/182433).
+   * represented as a forward slash, `/`. This property can be
+   * [updated](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices#move_chrome_devices_to_ou) using the API. For more information about how to create an
+   * organizational structure for your device, see the [administration help
+   * center](https://support.google.com/a/answer/182433).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -401,6 +404,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String osVersion;
+
+  /**
+   * Output only. Compliance status of the OS version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String osVersionCompliance;
 
   /**
    * The Chrome device's platform version.
@@ -1107,7 +1117,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * for the 3G mobile card in a mobile device. A MEID/IMEI is typically used when adding a device
    * to a wireless carrier's post-pay service plan. If the device does not have this information,
    * this property is not included in the response. For more information on how to export a
-   * MEID/IMEI list, see the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-chrome-
+   * MEID/IMEI list, see the [Developer's
+   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-
    * devices.html#export_meid).
    * @return value or {@code null} for none
    */
@@ -1120,7 +1131,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * for the 3G mobile card in a mobile device. A MEID/IMEI is typically used when adding a device
    * to a wireless carrier's post-pay service plan. If the device does not have this information,
    * this property is not included in the response. For more information on how to export a
-   * MEID/IMEI list, see the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-chrome-
+   * MEID/IMEI list, see the [Developer's
+   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-
    * devices.html#export_meid).
    * @param meid meid or {@code null} for none
    */
@@ -1150,9 +1162,9 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
 
   /**
    * Notes about this device added by the administrator. This property can be
-   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [list](/admin-
-   * sdk/directory/v1/reference/chromeosdevices/list) method's `query` parameter. Maximum length is
-   * 500 characters. Empty values are allowed.
+   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [list](https://develope
+   * rs.google.com/workspace/admin/directory/v1/reference/chromeosdevices/list) method's `query`
+   * parameter. Maximum length is 500 characters. Empty values are allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -1161,9 +1173,9 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
 
   /**
    * Notes about this device added by the administrator. This property can be
-   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [list](/admin-
-   * sdk/directory/v1/reference/chromeosdevices/list) method's `query` parameter. Maximum length is
-   * 500 characters. Empty values are allowed.
+   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [list](https://develope
+   * rs.google.com/workspace/admin/directory/v1/reference/chromeosdevices/list) method's `query`
+   * parameter. Maximum length is 500 characters. Empty values are allowed.
    * @param notes notes or {@code null} for none
    */
   public ChromeOsDevice setNotes(java.lang.String notes) {
@@ -1191,10 +1203,11 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   /**
    * The unique ID of the organizational unit. orgUnitPath is the human readable version of
    * orgUnitId. While orgUnitPath may change by renaming an organizational unit within the path,
-   * orgUnitId is unchangeable for one organizational unit. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
-   * more information about how to create an organizational structure for your device, see the
-   * [administration help center](https://support.google.com/a/answer/182433).
+   * orgUnitId is unchangeable for one organizational unit. This property can be
+   * [updated](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices#move_chrome_devices_to_ou) using the API. For more information about how to create an
+   * organizational structure for your device, see the [administration help
+   * center](https://support.google.com/a/answer/182433).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitId() {
@@ -1204,10 +1217,11 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   /**
    * The unique ID of the organizational unit. orgUnitPath is the human readable version of
    * orgUnitId. While orgUnitPath may change by renaming an organizational unit within the path,
-   * orgUnitId is unchangeable for one organizational unit. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
-   * more information about how to create an organizational structure for your device, see the
-   * [administration help center](https://support.google.com/a/answer/182433).
+   * orgUnitId is unchangeable for one organizational unit. This property can be
+   * [updated](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices#move_chrome_devices_to_ou) using the API. For more information about how to create an
+   * organizational structure for your device, see the [administration help
+   * center](https://support.google.com/a/answer/182433).
    * @param orgUnitId orgUnitId or {@code null} for none
    */
   public ChromeOsDevice setOrgUnitId(java.lang.String orgUnitId) {
@@ -1218,10 +1232,11 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   /**
    * The full parent path with the organizational unit's name associated with the device. Path names
    * are case insensitive. If the parent organizational unit is the top-level organization, it is
-   * represented as a forward slash, `/`. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
-   * more information about how to create an organizational structure for your device, see the
-   * [administration help center](https://support.google.com/a/answer/182433).
+   * represented as a forward slash, `/`. This property can be
+   * [updated](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices#move_chrome_devices_to_ou) using the API. For more information about how to create an
+   * organizational structure for your device, see the [administration help
+   * center](https://support.google.com/a/answer/182433).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitPath() {
@@ -1231,10 +1246,11 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   /**
    * The full parent path with the organizational unit's name associated with the device. Path names
    * are case insensitive. If the parent organizational unit is the top-level organization, it is
-   * represented as a forward slash, `/`. This property can be [updated](/admin-
-   * sdk/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou) using the API. For
-   * more information about how to create an organizational structure for your device, see the
-   * [administration help center](https://support.google.com/a/answer/182433).
+   * represented as a forward slash, `/`. This property can be
+   * [updated](https://developers.google.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices#move_chrome_devices_to_ou) using the API. For more information about how to create an
+   * organizational structure for your device, see the [administration help
+   * center](https://support.google.com/a/answer/182433).
    * @param orgUnitPath orgUnitPath or {@code null} for none
    */
   public ChromeOsDevice setOrgUnitPath(java.lang.String orgUnitPath) {
@@ -1273,6 +1289,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setOsVersion(java.lang.String osVersion) {
     this.osVersion = osVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Compliance status of the OS version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOsVersionCompliance() {
+    return osVersionCompliance;
+  }
+
+  /**
+   * Output only. Compliance status of the OS version.
+   * @param osVersionCompliance osVersionCompliance or {@code null} for none
+   */
+  public ChromeOsDevice setOsVersionCompliance(java.lang.String osVersionCompliance) {
+    this.osVersionCompliance = osVersionCompliance;
     return this;
   }
 

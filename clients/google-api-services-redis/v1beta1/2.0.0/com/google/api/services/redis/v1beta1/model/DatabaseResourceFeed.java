@@ -18,7 +18,7 @@ package com.google.api.services.redis.v1beta1.model;
 
 /**
  * DatabaseResourceFeed is the top level proto to be used to ingest different database resource
- * level events into Condor platform. Next ID: 8
+ * level events into Condor platform. Next ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -30,6 +30,21 @@ package com.google.api.services.redis.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class DatabaseResourceFeed extends com.google.api.client.json.GenericJson {
+
+  /**
+   * BackupDR metadata is used to ingest metadata from BackupDR.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupDRMetadata backupdrMetadata;
+
+  /**
+   * Config based signal data is used to ingest signals that are generated based on the
+   * configuration of the database resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigBasedSignalData configBasedSignalData;
 
   /**
    * Required. Timestamp when feed is generated.
@@ -76,6 +91,52 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private DatabaseResourceMetadata resourceMetadata;
+
+  /**
+   * Optional. If true, the feed won't be ingested by DB Center. This indicates that the feed is
+   * intentionally skipped. For example, BackupDR feeds are only needed for resources integrated
+   * with DB Center (e.g., CloudSQL, AlloyDB). Feeds for non-integrated resources (e.g., Compute
+   * Engine, Persistent Disk) can be skipped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipIngestion;
+
+  /**
+   * BackupDR metadata is used to ingest metadata from BackupDR.
+   * @return value or {@code null} for none
+   */
+  public BackupDRMetadata getBackupdrMetadata() {
+    return backupdrMetadata;
+  }
+
+  /**
+   * BackupDR metadata is used to ingest metadata from BackupDR.
+   * @param backupdrMetadata backupdrMetadata or {@code null} for none
+   */
+  public DatabaseResourceFeed setBackupdrMetadata(BackupDRMetadata backupdrMetadata) {
+    this.backupdrMetadata = backupdrMetadata;
+    return this;
+  }
+
+  /**
+   * Config based signal data is used to ingest signals that are generated based on the
+   * configuration of the database resource.
+   * @return value or {@code null} for none
+   */
+  public ConfigBasedSignalData getConfigBasedSignalData() {
+    return configBasedSignalData;
+  }
+
+  /**
+   * Config based signal data is used to ingest signals that are generated based on the
+   * configuration of the database resource.
+   * @param configBasedSignalData configBasedSignalData or {@code null} for none
+   */
+  public DatabaseResourceFeed setConfigBasedSignalData(ConfigBasedSignalData configBasedSignalData) {
+    this.configBasedSignalData = configBasedSignalData;
+    return this;
+  }
 
   /**
    * Required. Timestamp when feed is generated.
@@ -187,6 +248,29 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    */
   public DatabaseResourceFeed setResourceMetadata(DatabaseResourceMetadata resourceMetadata) {
     this.resourceMetadata = resourceMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the feed won't be ingested by DB Center. This indicates that the feed is
+   * intentionally skipped. For example, BackupDR feeds are only needed for resources integrated
+   * with DB Center (e.g., CloudSQL, AlloyDB). Feeds for non-integrated resources (e.g., Compute
+   * Engine, Persistent Disk) can be skipped.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipIngestion() {
+    return skipIngestion;
+  }
+
+  /**
+   * Optional. If true, the feed won't be ingested by DB Center. This indicates that the feed is
+   * intentionally skipped. For example, BackupDR feeds are only needed for resources integrated
+   * with DB Center (e.g., CloudSQL, AlloyDB). Feeds for non-integrated resources (e.g., Compute
+   * Engine, Persistent Disk) can be skipped.
+   * @param skipIngestion skipIngestion or {@code null} for none
+   */
+  public DatabaseResourceFeed setSkipIngestion(java.lang.Boolean skipIngestion) {
+    this.skipIngestion = skipIngestion;
     return this;
   }
 

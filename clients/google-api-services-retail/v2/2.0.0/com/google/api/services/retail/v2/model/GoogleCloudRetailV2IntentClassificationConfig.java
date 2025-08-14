@@ -56,6 +56,13 @@ public final class GoogleCloudRetailV2IntentClassificationConfig extends com.goo
   private java.util.List<GoogleCloudRetailV2IntentClassificationConfigExample> example;
 
   /**
+   * Optional. Inline source for intent classifications.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2IntentClassificationConfigInlineSource inlineSource;
+
+  /**
    * Optional. Customers can use the preamble to specify any requirements for blocklisting intent
    * classification. This preamble will be added to the blocklisting intent classification model
    * prompt.
@@ -118,6 +125,23 @@ public final class GoogleCloudRetailV2IntentClassificationConfig extends com.goo
    */
   public GoogleCloudRetailV2IntentClassificationConfig setExample(java.util.List<GoogleCloudRetailV2IntentClassificationConfigExample> example) {
     this.example = example;
+    return this;
+  }
+
+  /**
+   * Optional. Inline source for intent classifications.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2IntentClassificationConfigInlineSource getInlineSource() {
+    return inlineSource;
+  }
+
+  /**
+   * Optional. Inline source for intent classifications.
+   * @param inlineSource inlineSource or {@code null} for none
+   */
+  public GoogleCloudRetailV2IntentClassificationConfig setInlineSource(GoogleCloudRetailV2IntentClassificationConfigInlineSource inlineSource) {
+    this.inlineSource = inlineSource;
     return this;
   }
 

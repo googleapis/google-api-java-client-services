@@ -1577,6 +1577,28 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
+            /**
+             * Context metadata for request could be used to fetch customization of entity type
+             * schema.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String contextMetadata;
+
+            /** Context metadata for request could be used to fetch customization of entity type schema.
+             */
+            public java.lang.String getContextMetadata() {
+              return contextMetadata;
+            }
+
+            /**
+             * Context metadata for request could be used to fetch customization of entity type
+             * schema.
+             */
+            public Get setContextMetadata(java.lang.String contextMetadata) {
+              this.contextMetadata = contextMetadata;
+              return this;
+            }
+
             /** Specifies view for entity type schema. */
             @com.google.api.client.util.Key
             private java.lang.String view;

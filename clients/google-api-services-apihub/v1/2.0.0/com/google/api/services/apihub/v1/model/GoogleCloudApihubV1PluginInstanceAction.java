@@ -53,6 +53,14 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
   private GoogleCloudApihubV1ExecutionStatus hubInstanceAction;
 
   /**
+   * Output only. The configuration of resources created for a given plugin instance action. Note
+   * these will be returned only in case of Non-GCP plugins like OPDK.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApihubV1ResourceConfig resourceConfig;
+
+  /**
    * Optional. The schedule for this plugin instance action. This can only be set if the plugin
    * supports API_HUB_SCHEDULE_TRIGGER mode for this action.
    * The value may be {@code null}.
@@ -66,6 +74,14 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String scheduleTimeZone;
+
+  /**
+   * Optional. The service account used to publish data. Note, the service account will only be
+   * accepted for non GCP plugins like OPDK.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
 
   /**
    * Output only. The current state of the plugin action in the plugin instance.
@@ -130,6 +146,25 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
   }
 
   /**
+   * Output only. The configuration of resources created for a given plugin instance action. Note
+   * these will be returned only in case of Non-GCP plugins like OPDK.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApihubV1ResourceConfig getResourceConfig() {
+    return resourceConfig;
+  }
+
+  /**
+   * Output only. The configuration of resources created for a given plugin instance action. Note
+   * these will be returned only in case of Non-GCP plugins like OPDK.
+   * @param resourceConfig resourceConfig or {@code null} for none
+   */
+  public GoogleCloudApihubV1PluginInstanceAction setResourceConfig(GoogleCloudApihubV1ResourceConfig resourceConfig) {
+    this.resourceConfig = resourceConfig;
+    return this;
+  }
+
+  /**
    * Optional. The schedule for this plugin instance action. This can only be set if the plugin
    * supports API_HUB_SCHEDULE_TRIGGER mode for this action.
    * @return value or {@code null} for none
@@ -162,6 +197,25 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
    */
   public GoogleCloudApihubV1PluginInstanceAction setScheduleTimeZone(java.lang.String scheduleTimeZone) {
     this.scheduleTimeZone = scheduleTimeZone;
+    return this;
+  }
+
+  /**
+   * Optional. The service account used to publish data. Note, the service account will only be
+   * accepted for non GCP plugins like OPDK.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account used to publish data. Note, the service account will only be
+   * accepted for non GCP plugins like OPDK.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudApihubV1PluginInstanceAction setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

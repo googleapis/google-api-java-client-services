@@ -45,7 +45,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String internalIp;
 
   /**
-   * The network to connect the NIC to.
+   * Optional. The network to connect the NIC to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The network to connect the NIC to.
+   * Optional. The network to connect the NIC to.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -112,7 +112,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The network to connect the NIC to.
+   * Optional. The network to connect the NIC to.
    * @param network network or {@code null} for none
    */
   public NetworkInterface setNetwork(java.lang.String network) {

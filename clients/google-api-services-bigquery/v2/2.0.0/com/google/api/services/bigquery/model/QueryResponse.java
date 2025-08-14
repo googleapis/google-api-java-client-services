@@ -86,7 +86,6 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   /**
    * Optional. The reason why a Job was created. Only relevant when a job_reference is present in
    * the response. If job_reference is not present it will always be unset.
-   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +137,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.String pageToken;
 
   /**
-   * Auto-generated ID for the query. [Preview](https://cloud.google.com/products/#product-launch-
-   * stages)
+   * Auto-generated ID for the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,7 +323,6 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   /**
    * Optional. The reason why a Job was created. Only relevant when a job_reference is present in
    * the response. If job_reference is not present it will always be unset.
-   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * @return value or {@code null} for none
    */
   public JobCreationReason getJobCreationReason() {
@@ -335,7 +332,6 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   /**
    * Optional. The reason why a Job was created. Only relevant when a job_reference is present in
    * the response. If job_reference is not present it will always be unset.
-   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * @param jobCreationReason jobCreationReason or {@code null} for none
    */
   public QueryResponse setJobCreationReason(JobCreationReason jobCreationReason) {
@@ -449,8 +445,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Auto-generated ID for the query. [Preview](https://cloud.google.com/products/#product-launch-
-   * stages)
+   * Auto-generated ID for the query.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryId() {
@@ -458,8 +453,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Auto-generated ID for the query. [Preview](https://cloud.google.com/products/#product-launch-
-   * stages)
+   * Auto-generated ID for the query.
    * @param queryId queryId or {@code null} for none
    */
   public QueryResponse setQueryId(java.lang.String queryId) {

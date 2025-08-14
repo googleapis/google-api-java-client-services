@@ -44,6 +44,13 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   private java.lang.String creationTimestamp;
 
   /**
+   * [Output Only] Health information for the reservation block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationBlockHealthInfo healthInfo;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -56,6 +63,14 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Integer inUseCount;
+
+  /**
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer inUseHostCount;
 
   /**
    * [Output Only] Type of the resource. Always compute#reservationBlock for reservation blocks.
@@ -174,6 +189,23 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * [Output Only] Health information for the reservation block.
+   * @return value or {@code null} for none
+   */
+  public ReservationBlockHealthInfo getHealthInfo() {
+    return healthInfo;
+  }
+
+  /**
+   * [Output Only] Health information for the reservation block.
+   * @param healthInfo healthInfo or {@code null} for none
+   */
+  public ReservationBlock setHealthInfo(ReservationBlockHealthInfo healthInfo) {
+    this.healthInfo = healthInfo;
+    return this;
+  }
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
@@ -204,6 +236,25 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
    */
   public ReservationBlock setInUseCount(java.lang.Integer inUseCount) {
     this.inUseCount = inUseCount;
+    return this;
+  }
+
+  /**
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInUseHostCount() {
+    return inUseHostCount;
+  }
+
+  /**
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
+   * @param inUseHostCount inUseHostCount or {@code null} for none
+   */
+  public ReservationBlock setInUseHostCount(java.lang.Integer inUseHostCount) {
+    this.inUseHostCount = inUseHostCount;
     return this;
   }
 

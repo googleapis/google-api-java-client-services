@@ -58,6 +58,13 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   private java.lang.String executionEnvironment;
 
   /**
+   * Optional. True if GPU zonal redundancy is disabled on this task template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean gpuZonalRedundancyDisabled;
+
+  /**
    * Number of retries allowed per Task, before marking this Task failed. Defaults to 3.
    * The value may be {@code null}.
    */
@@ -154,6 +161,23 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
    */
   public GoogleCloudRunV2TaskTemplate setExecutionEnvironment(java.lang.String executionEnvironment) {
     this.executionEnvironment = executionEnvironment;
+    return this;
+  }
+
+  /**
+   * Optional. True if GPU zonal redundancy is disabled on this task template.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGpuZonalRedundancyDisabled() {
+    return gpuZonalRedundancyDisabled;
+  }
+
+  /**
+   * Optional. True if GPU zonal redundancy is disabled on this task template.
+   * @param gpuZonalRedundancyDisabled gpuZonalRedundancyDisabled or {@code null} for none
+   */
+  public GoogleCloudRunV2TaskTemplate setGpuZonalRedundancyDisabled(java.lang.Boolean gpuZonalRedundancyDisabled) {
+    this.gpuZonalRedundancyDisabled = gpuZonalRedundancyDisabled;
     return this;
   }
 

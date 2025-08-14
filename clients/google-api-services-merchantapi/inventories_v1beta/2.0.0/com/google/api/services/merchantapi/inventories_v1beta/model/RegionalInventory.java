@@ -42,7 +42,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
 
   /**
    * Availability of the product in this region. For accepted attribute values, see the [regional
-   * product inventory data specification](https://support.google.com/merchants/answer/6324448).
+   * product inventory data specification](https://support.google.com/merchants/answer/14644124).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * Price of the product in this region.
+   * Optional. Price of the product in this region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,14 +87,15 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   private java.lang.String region;
 
   /**
-   * Sale price of the product in this region. Mandatory if `salePriceEffectiveDate` is defined.
+   * Optional. Sale price of the product in this region. Mandatory if `salePriceEffectiveDate` is
+   * defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price salePrice;
 
   /**
-   * The `TimePeriod` of the sale price in this region.
+   * Optional. The `TimePeriod` of the sale price in this region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +122,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
 
   /**
    * Availability of the product in this region. For accepted attribute values, see the [regional
-   * product inventory data specification](https://support.google.com/merchants/answer/6324448).
+   * product inventory data specification](https://support.google.com/merchants/answer/14644124).
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -130,7 +131,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
 
   /**
    * Availability of the product in this region. For accepted attribute values, see the [regional
-   * product inventory data specification](https://support.google.com/merchants/answer/6324448).
+   * product inventory data specification](https://support.google.com/merchants/answer/14644124).
    * @param availability availability or {@code null} for none
    */
   public RegionalInventory setAvailability(java.lang.String availability) {
@@ -177,7 +178,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Price of the product in this region.
+   * Optional. Price of the product in this region.
    * @return value or {@code null} for none
    */
   public Price getPrice() {
@@ -185,7 +186,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Price of the product in this region.
+   * Optional. Price of the product in this region.
    * @param price price or {@code null} for none
    */
   public RegionalInventory setPrice(Price price) {
@@ -215,7 +216,8 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Sale price of the product in this region. Mandatory if `salePriceEffectiveDate` is defined.
+   * Optional. Sale price of the product in this region. Mandatory if `salePriceEffectiveDate` is
+   * defined.
    * @return value or {@code null} for none
    */
   public Price getSalePrice() {
@@ -223,7 +225,8 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Sale price of the product in this region. Mandatory if `salePriceEffectiveDate` is defined.
+   * Optional. Sale price of the product in this region. Mandatory if `salePriceEffectiveDate` is
+   * defined.
    * @param salePrice salePrice or {@code null} for none
    */
   public RegionalInventory setSalePrice(Price salePrice) {
@@ -232,7 +235,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The `TimePeriod` of the sale price in this region.
+   * Optional. The `TimePeriod` of the sale price in this region.
    * @return value or {@code null} for none
    */
   public Interval getSalePriceEffectiveDate() {
@@ -240,7 +243,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The `TimePeriod` of the sale price in this region.
+   * Optional. The `TimePeriod` of the sale price in this region.
    * @param salePriceEffectiveDate salePriceEffectiveDate or {@code null} for none
    */
   public RegionalInventory setSalePriceEffectiveDate(Interval salePriceEffectiveDate) {

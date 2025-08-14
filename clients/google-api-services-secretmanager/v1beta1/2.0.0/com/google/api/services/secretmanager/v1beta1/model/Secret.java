@@ -64,6 +64,15 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private Replication replication;
 
   /**
+   * Optional. Input only. Immutable. Mapping of Tag keys/values directly bound to this resource.
+   * For example: "123/environment": "production", "123/costCenter": "marketing" Tags are used to
+   * organize and group resources. Tags can be used to control policy evaluation for the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Output only. The time at which the Secret was created.
    * @return value or {@code null} for none
    */
@@ -138,6 +147,27 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    */
   public Secret setReplication(Replication replication) {
     this.replication = replication;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Mapping of Tag keys/values directly bound to this resource.
+   * For example: "123/environment": "production", "123/costCenter": "marketing" Tags are used to
+   * organize and group resources. Tags can be used to control policy evaluation for the resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Mapping of Tag keys/values directly bound to this resource.
+   * For example: "123/environment": "production", "123/costCenter": "marketing" Tags are used to
+   * organize and group resources. Tags can be used to control policy evaluation for the resource.
+   * @param tags tags or {@code null} for none
+   */
+  public Secret setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

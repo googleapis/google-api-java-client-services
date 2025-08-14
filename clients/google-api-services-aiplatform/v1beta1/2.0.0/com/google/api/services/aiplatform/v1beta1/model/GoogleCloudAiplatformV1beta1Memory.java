@@ -51,6 +51,14 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
   private java.lang.String displayName;
 
   /**
+   * Optional. Timestamp of when this resource is considered expired. This is *always* provided on
+   * output, regardless of what `expiration` was sent on input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
    * Required. Semantic knowledge extracted from the source content.
    * The value may be {@code null}.
    */
@@ -73,6 +81,13 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> scope;
+
+  /**
+   * Optional. Input only. The TTL for this resource. The expiration time is computed: now + TTL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String ttl;
 
   /**
    * Output only. Timestamp when this Memory was most recently updated.
@@ -133,6 +148,25 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
   }
 
   /**
+   * Optional. Timestamp of when this resource is considered expired. This is *always* provided on
+   * output, regardless of what `expiration` was sent on input.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Optional. Timestamp of when this resource is considered expired. This is *always* provided on
+   * output, regardless of what `expiration` was sent on input.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Memory setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
    * Required. Semantic knowledge extracted from the source content.
    * @return value or {@code null} for none
    */
@@ -186,6 +220,23 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Memory setScope(java.util.Map<String, java.lang.String> scope) {
     this.scope = scope;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The TTL for this resource. The expiration time is computed: now + TTL.
+   * @return value or {@code null} for none
+   */
+  public String getTtl() {
+    return ttl;
+  }
+
+  /**
+   * Optional. Input only. The TTL for this resource. The expiration time is computed: now + TTL.
+   * @param ttl ttl or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Memory setTtl(String ttl) {
+    this.ttl = ttl;
     return this;
   }
 

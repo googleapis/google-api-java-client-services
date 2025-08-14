@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Updates basic properties of a Label.
+ * Updates basic properties of a label.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -38,7 +38,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateLabelProp
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `label_properties` is implied and should not be specified. A single `*` can be used as short-
+   * `label_properties` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * The value may be {@code null}.
    */
@@ -64,7 +64,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateLabelProp
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `label_properties` is implied and should not be specified. A single `*` can be used as short-
+   * `label_properties` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateLabelProp
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `label_properties` is implied and should not be specified. A single `*` can be used as short-
+   * `label_properties` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * @param updateMask updateMask or {@code null} for none
    */

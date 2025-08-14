@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-tpu</artifactId>
-  <version>v2alpha1-rev20250616-2.0.0</version>
-  <name>Cloud TPU API v2alpha1-rev20250616-2.0.0</name>
+  <version>v2alpha1-rev20250715-2.0.0</version>
+  <name>Cloud TPU API v2alpha1-rev20250715-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

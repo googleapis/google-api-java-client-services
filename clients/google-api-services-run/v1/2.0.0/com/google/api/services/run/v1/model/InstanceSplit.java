@@ -31,15 +31,17 @@ package com.google.api.services.run.v1.model;
 public final class InstanceSplit extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uses the "status.latestReadyRevisionName" to determine the traffic target. When it changes,
-   * traffic will automatically migrate from the prior "latest ready" revision to the new one.
+   * Uses the "status.latestReadyRevisionName" to determine the instance split target. When it
+   * changes, workloads will automatically migrate from the prior "latest ready" revision to the new
+   * one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean latestRevision;
 
   /**
-   * Specifies percent of the instance split to this Revision. This defaults to zero if unspecified.
+   * Optional. Specifies percent of the instance split to this Revision. This defaults to zero if
+   * unspecified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +55,9 @@ public final class InstanceSplit extends com.google.api.client.json.GenericJson 
   private java.lang.String revisionName;
 
   /**
-   * Uses the "status.latestReadyRevisionName" to determine the traffic target. When it changes,
-   * traffic will automatically migrate from the prior "latest ready" revision to the new one.
+   * Uses the "status.latestReadyRevisionName" to determine the instance split target. When it
+   * changes, workloads will automatically migrate from the prior "latest ready" revision to the new
+   * one.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLatestRevision() {
@@ -62,8 +65,9 @@ public final class InstanceSplit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Uses the "status.latestReadyRevisionName" to determine the traffic target. When it changes,
-   * traffic will automatically migrate from the prior "latest ready" revision to the new one.
+   * Uses the "status.latestReadyRevisionName" to determine the instance split target. When it
+   * changes, workloads will automatically migrate from the prior "latest ready" revision to the new
+   * one.
    * @param latestRevision latestRevision or {@code null} for none
    */
   public InstanceSplit setLatestRevision(java.lang.Boolean latestRevision) {
@@ -72,7 +76,8 @@ public final class InstanceSplit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies percent of the instance split to this Revision. This defaults to zero if unspecified.
+   * Optional. Specifies percent of the instance split to this Revision. This defaults to zero if
+   * unspecified.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPercent() {
@@ -80,7 +85,8 @@ public final class InstanceSplit extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies percent of the instance split to this Revision. This defaults to zero if unspecified.
+   * Optional. Specifies percent of the instance split to this Revision. This defaults to zero if
+   * unspecified.
    * @param percent percent or {@code null} for none
    */
   public InstanceSplit setPercent(java.lang.Integer percent) {

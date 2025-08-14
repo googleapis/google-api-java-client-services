@@ -30,7 +30,7 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The configuration of actions supported by the plugin.
+   * Required. The configuration of actions supported by the plugin.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,6 +70,13 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1Documentation documentation;
+
+  /**
+   * Optional. The type of the gateway.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gatewayType;
 
   /**
    * Optional. This field is optional. It is used to notify the plugin hosting service for any
@@ -137,7 +144,7 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   private String updateTime;
 
   /**
-   * Optional. The configuration of actions supported by the plugin.
+   * Required. The configuration of actions supported by the plugin.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApihubV1PluginActionConfig> getActionsConfig() {
@@ -145,7 +152,7 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The configuration of actions supported by the plugin.
+   * Required. The configuration of actions supported by the plugin.
    * @param actionsConfig actionsConfig or {@code null} for none
    */
   public GoogleCloudApihubV1Plugin setActionsConfig(java.util.List<GoogleCloudApihubV1PluginActionConfig> actionsConfig) {
@@ -235,6 +242,23 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
    */
   public GoogleCloudApihubV1Plugin setDocumentation(GoogleCloudApihubV1Documentation documentation) {
     this.documentation = documentation;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the gateway.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGatewayType() {
+    return gatewayType;
+  }
+
+  /**
+   * Optional. The type of the gateway.
+   * @param gatewayType gatewayType or {@code null} for none
+   */
+  public GoogleCloudApihubV1Plugin setGatewayType(java.lang.String gatewayType) {
+    this.gatewayType = gatewayType;
     return this;
   }
 

@@ -1,6 +1,6 @@
 # Container Analysis API Client Library for Java
 
-This API is a prerequisite for leveraging Artifact Analysis scanning capabilities in both Artifact Registry and with Advanced Vulnerability Insights (runtime scanning) in GKE. In addition, the Container Analysis API is an implementation of the Grafeas API, which enables storing, querying, and retrieval of critical metadata about all of your software artifacts.
+This API is a prerequisite for leveraging Artifact Analysis scanning capabilities in Artifact Registry. In addition, the Container Analysis API is an implementation of the Grafeas API, which enables storing, querying, and retrieval of critical metadata about all of your software artifacts.
 
 This page contains information about getting started with the Container Analysis API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-containeranalysis</artifactId>
-      <version>v1beta1-rev20250616-2.0.0</version>
+      <version>v1beta1-rev20250704-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-containeranalysis:v1beta1-rev20250616-2.0.0'
+  implementation 'com.google.apis:google-api-services-containeranalysis:v1beta1-rev20250704-2.0.0'
 }
 ```
 

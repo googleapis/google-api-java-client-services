@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionIn
   private java.util.List<GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionInfoMimeContent> extraMimeContents;
 
   /**
-   * Optional. SDP of the call. It's initially the SDP answer to the endpoint, but maybe later
+   * Optional. SDP of the call. It's initially the SDP answer to the incoming call, but maybe later
    * updated for the purpose of making the link active, etc.
    * The value may be {@code null}.
    */
@@ -93,7 +93,7 @@ public final class GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionIn
   }
 
   /**
-   * Optional. SDP of the call. It's initially the SDP answer to the endpoint, but maybe later
+   * Optional. SDP of the call. It's initially the SDP answer to the incoming call, but maybe later
    * updated for the purpose of making the link active, etc.
    * @return value or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionIn
   }
 
   /**
-   * Optional. SDP of the call. It's initially the SDP answer to the endpoint, but maybe later
+   * Optional. SDP of the call. It's initially the SDP answer to the incoming call, but maybe later
    * updated for the purpose of making the link active, etc.
    * @param sdp sdp or {@code null} for none
    */

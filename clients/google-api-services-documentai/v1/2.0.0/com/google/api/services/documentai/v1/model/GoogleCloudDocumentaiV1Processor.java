@@ -32,7 +32,7 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1Processor extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time the processor was created.
+   * Output only. The time the processor was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class GoogleCloudDocumentaiV1Processor extends com.google.api.clien
   private java.lang.String type;
 
   /**
-   * The time the processor was created.
+   * Output only. The time the processor was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -120,7 +120,7 @@ public final class GoogleCloudDocumentaiV1Processor extends com.google.api.clien
   }
 
   /**
-   * The time the processor was created.
+   * Output only. The time the processor was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDocumentaiV1Processor setCreateTime(String createTime) {

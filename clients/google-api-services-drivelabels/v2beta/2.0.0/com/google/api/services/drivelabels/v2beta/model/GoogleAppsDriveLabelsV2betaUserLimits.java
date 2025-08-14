@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaUserLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * Limits for list-variant of a Field type.
+   * Limits for list-variant of a field type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaListLimits listLimits;
 
   /**
-   * Limits for list-variant of a Field type.
+   * Limits for list-variant of a field type.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaListLimits getListLimits() {
@@ -45,7 +45,7 @@ public final class GoogleAppsDriveLabelsV2betaUserLimits extends com.google.api.
   }
 
   /**
-   * Limits for list-variant of a Field type.
+   * Limits for list-variant of a field type.
    * @param listLimits listLimits or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaUserLimits setListLimits(GoogleAppsDriveLabelsV2betaListLimits listLimits) {

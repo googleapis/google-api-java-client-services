@@ -31,8 +31,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
 
   /**
    * Required. The model used to generate memories. Format:
-   * `projects/{project}/locations/{location}/publishers/google/models/{model}` or
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`.
+   * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +39,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
 
   /**
    * Required. The model used to generate memories. Format:
-   * `projects/{project}/locations/{location}/publishers/google/models/{model}` or
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`.
+   * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -50,8 +48,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
 
   /**
    * Required. The model used to generate memories. Format:
-   * `projects/{project}/locations/{location}/publishers/google/models/{model}` or
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`.
+   * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    * @param model model or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig setModel(java.lang.String model) {

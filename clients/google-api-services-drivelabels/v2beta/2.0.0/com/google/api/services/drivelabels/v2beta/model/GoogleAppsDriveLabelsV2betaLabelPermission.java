@@ -31,15 +31,15 @@ public final class GoogleAppsDriveLabelsV2betaLabelPermission extends com.google
 
   /**
    * Audience to grant a role to. The magic value of `audiences/default` may be used to apply the
-   * role to the default audience in the context of the organization that owns the Label.
+   * role to the default audience in the context of the organization that owns the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audience;
 
   /**
-   * Specifies the email address for a user or group pricinpal. Not populated for audience
-   * principals. User and Group permissions may only be inserted using email address. On update
+   * Specifies the email address for a user or group principal. Not populated for audience
+   * principals. User and group permissions may only be inserted using an email address. On update
    * requests, if email address is specified, no principal should be specified.
    * The value may be {@code null}.
    */
@@ -76,7 +76,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelPermission extends com.google
 
   /**
    * Audience to grant a role to. The magic value of `audiences/default` may be used to apply the
-   * role to the default audience in the context of the organization that owns the Label.
+   * role to the default audience in the context of the organization that owns the label.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudience() {
@@ -85,7 +85,7 @@ public final class GoogleAppsDriveLabelsV2betaLabelPermission extends com.google
 
   /**
    * Audience to grant a role to. The magic value of `audiences/default` may be used to apply the
-   * role to the default audience in the context of the organization that owns the Label.
+   * role to the default audience in the context of the organization that owns the label.
    * @param audience audience or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabelPermission setAudience(java.lang.String audience) {
@@ -94,8 +94,8 @@ public final class GoogleAppsDriveLabelsV2betaLabelPermission extends com.google
   }
 
   /**
-   * Specifies the email address for a user or group pricinpal. Not populated for audience
-   * principals. User and Group permissions may only be inserted using email address. On update
+   * Specifies the email address for a user or group principal. Not populated for audience
+   * principals. User and group permissions may only be inserted using an email address. On update
    * requests, if email address is specified, no principal should be specified.
    * @return value or {@code null} for none
    */
@@ -104,8 +104,8 @@ public final class GoogleAppsDriveLabelsV2betaLabelPermission extends com.google
   }
 
   /**
-   * Specifies the email address for a user or group pricinpal. Not populated for audience
-   * principals. User and Group permissions may only be inserted using email address. On update
+   * Specifies the email address for a user or group principal. Not populated for audience
+   * principals. User and group permissions may only be inserted using an email address. On update
    * requests, if email address is specified, no principal should be specified.
    * @param email email or {@code null} for none
    */

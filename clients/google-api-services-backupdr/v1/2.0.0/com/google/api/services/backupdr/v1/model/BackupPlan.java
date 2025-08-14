@@ -33,8 +33,7 @@ package com.google.api.services.backupdr.v1.model;
 public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The backup rules for this `BackupPlan`. There must be at least one `BackupRule`
-   * message.
+   * Optional. The backup rules for this `BackupPlan`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,6 +89,15 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Applicable only for CloudSQL resource_type. Configures how long logs will be stored.
+   * It is defined in “days”. This value should be greater than or equal to minimum enforced log
+   * retention duration of the backup vault.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long logRetentionDays;
+
+  /**
    * Output only. Identifier. The resource name of the `BackupPlan`. Format:
    * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
    * The value may be {@code null}.
@@ -98,7 +106,9 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required.
+   * Required. The resource type to which the `BackupPlan` will be applied. Examples include,
+   * "compute.googleapis.com/Instance", "sqladmin.googleapis.com/Instance",
+   * "alloydb.googleapis.com/Cluster", "compute.googleapis.com/Disk".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,8 +152,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Required. The backup rules for this `BackupPlan`. There must be at least one `BackupRule`
-   * message.
+   * Optional. The backup rules for this `BackupPlan`.
    * @return value or {@code null} for none
    */
   public java.util.List<BackupRule> getBackupRules() {
@@ -151,8 +160,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The backup rules for this `BackupPlan`. There must be at least one `BackupRule`
-   * message.
+   * Optional. The backup rules for this `BackupPlan`.
    * @param backupRules backupRules or {@code null} for none
    */
   public BackupPlan setBackupRules(java.util.List<BackupRule> backupRules) {
@@ -277,6 +285,27 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Applicable only for CloudSQL resource_type. Configures how long logs will be stored.
+   * It is defined in “days”. This value should be greater than or equal to minimum enforced log
+   * retention duration of the backup vault.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLogRetentionDays() {
+    return logRetentionDays;
+  }
+
+  /**
+   * Optional. Applicable only for CloudSQL resource_type. Configures how long logs will be stored.
+   * It is defined in “days”. This value should be greater than or equal to minimum enforced log
+   * retention duration of the backup vault.
+   * @param logRetentionDays logRetentionDays or {@code null} for none
+   */
+  public BackupPlan setLogRetentionDays(java.lang.Long logRetentionDays) {
+    this.logRetentionDays = logRetentionDays;
+    return this;
+  }
+
+  /**
    * Output only. Identifier. The resource name of the `BackupPlan`. Format:
    * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
    * @return value or {@code null} for none
@@ -296,7 +325,9 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
+   * Required. The resource type to which the `BackupPlan` will be applied. Examples include,
+   * "compute.googleapis.com/Instance", "sqladmin.googleapis.com/Instance",
+   * "alloydb.googleapis.com/Cluster", "compute.googleapis.com/Disk".
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -304,7 +335,9 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
+   * Required. The resource type to which the `BackupPlan` will be applied. Examples include,
+   * "compute.googleapis.com/Instance", "sqladmin.googleapis.com/Instance",
+   * "alloydb.googleapis.com/Cluster", "compute.googleapis.com/Disk".
    * @param resourceType resourceType or {@code null} for none
    */
   public BackupPlan setResourceType(java.lang.String resourceType) {

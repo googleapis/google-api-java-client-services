@@ -35,19 +35,13 @@ public final class SubscriptionLineItemBundleDetails extends com.google.api.clie
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemBundleDetailsBundleElementDetails used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemBundleDetailsBundleElementDetails.class);
-  }
+  private java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails;
 
   /**
    * Output only. The details for each element in the hard bundle.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
+  public java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
     return bundleElementDetails;
   }
 
@@ -55,7 +49,7 @@ public final class SubscriptionLineItemBundleDetails extends com.google.api.clie
    * Output only. The details for each element in the hard bundle.
    * @param bundleElementDetails bundleElementDetails or {@code null} for none
    */
-  public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {
+  public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {
     this.bundleElementDetails = bundleElementDetails;
     return this;
   }

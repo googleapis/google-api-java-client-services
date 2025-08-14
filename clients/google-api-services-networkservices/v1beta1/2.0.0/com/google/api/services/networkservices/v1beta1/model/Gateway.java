@@ -115,8 +115,8 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
-   * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1
-   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support
+   * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 5
+   * ports. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support
    * multiple ports.
    * The value may be {@code null}.
    */
@@ -376,8 +376,8 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
-   * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1
-   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support
+   * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 5
+   * ports. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support
    * multiple ports.
    * @return value or {@code null} for none
    */
@@ -387,8 +387,8 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
-   * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1
-   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support
+   * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 5
+   * ports. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support
    * multiple ports.
    * @param ports ports or {@code null} for none
    */

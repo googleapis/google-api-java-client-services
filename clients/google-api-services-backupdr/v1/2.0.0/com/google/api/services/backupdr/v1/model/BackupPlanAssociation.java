@@ -56,6 +56,13 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   private java.lang.String backupPlanRevisionName;
 
   /**
+   * Output only. Cloud SQL instance's backup plan association properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudSqlInstanceBackupPlanAssociationProperties cloudSqlInstanceBackupPlanAssociationProperties;
+
+  /**
    * Output only. The time when the instance was created.
    * The value may be {@code null}.
    */
@@ -90,7 +97,7 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   private java.lang.String resource;
 
   /**
-   * Required. Immutable.
+   * Required. Immutable. Resource type of workload on which backupplan is applied
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,6 +182,23 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   }
 
   /**
+   * Output only. Cloud SQL instance's backup plan association properties.
+   * @return value or {@code null} for none
+   */
+  public CloudSqlInstanceBackupPlanAssociationProperties getCloudSqlInstanceBackupPlanAssociationProperties() {
+    return cloudSqlInstanceBackupPlanAssociationProperties;
+  }
+
+  /**
+   * Output only. Cloud SQL instance's backup plan association properties.
+   * @param cloudSqlInstanceBackupPlanAssociationProperties cloudSqlInstanceBackupPlanAssociationProperties or {@code null} for none
+   */
+  public BackupPlanAssociation setCloudSqlInstanceBackupPlanAssociationProperties(CloudSqlInstanceBackupPlanAssociationProperties cloudSqlInstanceBackupPlanAssociationProperties) {
+    this.cloudSqlInstanceBackupPlanAssociationProperties = cloudSqlInstanceBackupPlanAssociationProperties;
+    return this;
+  }
+
+  /**
    * Output only. The time when the instance was created.
    * @return value or {@code null} for none
    */
@@ -255,7 +279,7 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Immutable.
+   * Required. Immutable. Resource type of workload on which backupplan is applied
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -263,7 +287,7 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Immutable.
+   * Required. Immutable. Resource type of workload on which backupplan is applied
    * @param resourceType resourceType or {@code null} for none
    */
   public BackupPlanAssociation setResourceType(java.lang.String resourceType) {

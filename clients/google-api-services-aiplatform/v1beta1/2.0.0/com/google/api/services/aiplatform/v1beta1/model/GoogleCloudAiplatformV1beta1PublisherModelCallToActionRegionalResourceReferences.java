@@ -31,6 +31,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. For notebook resource. When set to true, the Colab Enterprise link will be disabled
+   * in the "open notebook" dialog in UI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean colabNotebookDisabled;
+
+  /**
    * Required.
    * The value may be {@code null}.
    */
@@ -71,6 +79,25 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegiona
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Optional. For notebook resource. When set to true, the Colab Enterprise link will be disabled
+   * in the "open notebook" dialog in UI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getColabNotebookDisabled() {
+    return colabNotebookDisabled;
+  }
+
+  /**
+   * Optional. For notebook resource. When set to true, the Colab Enterprise link will be disabled
+   * in the "open notebook" dialog in UI.
+   * @param colabNotebookDisabled colabNotebookDisabled or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences setColabNotebookDisabled(java.lang.Boolean colabNotebookDisabled) {
+    this.colabNotebookDisabled = colabNotebookDisabled;
+    return this;
+  }
 
   /**
    * Required.

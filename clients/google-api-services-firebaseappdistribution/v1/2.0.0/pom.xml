@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-firebaseappdistribution</artifactId>
-  <version>v1-rev20241115-2.0.0</version>
-  <name>Firebase App Distribution API v1-rev20241115-2.0.0</name>
+  <version>v1-rev20250808-2.0.0</version>
+  <name>Firebase App Distribution API v1-rev20250808-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -25,7 +25,7 @@ package com.google.api.services.merchantapi.ordertracking_v1beta;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.devsite.corp.google.com/merchant/api" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/merchant/api" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -154,29 +154,29 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
   public class Accounts {
 
     /**
-     * An accessor for creating requests from the Ordertrackingsignals collection.
+     * An accessor for creating requests from the OrderTrackingSignals collection.
      *
      * <p>The typical use is:</p>
      * <pre>
      *   {@code Merchant merchantapi = new Merchant(...);}
-     *   {@code Merchant.Ordertrackingsignals.List request = merchantapi.ordertrackingsignals().list(parameters ...)}
+     *   {@code Merchant.OrderTrackingSignals.List request = merchantapi.orderTrackingSignals().list(parameters ...)}
      * </pre>
      *
      * @return the resource collection
      */
-    public Ordertrackingsignals ordertrackingsignals() {
-      return new Ordertrackingsignals();
+    public OrderTrackingSignals orderTrackingSignals() {
+      return new OrderTrackingSignals();
     }
 
     /**
-     * The "ordertrackingsignals" collection of methods.
+     * The "orderTrackingSignals" collection of methods.
      */
-    public class Ordertrackingsignals {
+    public class OrderTrackingSignals {
 
       /**
        * Creates new order tracking signal.
        *
-       * Create a request for the method "ordertrackingsignals.create".
+       * Create a request for the method "orderTrackingSignals.create".
        *
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
@@ -194,7 +194,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
       public class Create extends MerchantRequest<com.google.api.services.merchantapi.ordertracking_v1beta.model.OrderTrackingSignal> {
 
-        private static final String REST_PATH = "ordertracking/v1beta/{+parent}/ordertrackingsignals";
+        private static final String REST_PATH = "ordertracking/v1beta/{+parent}/orderTrackingSignals";
 
         private final java.util.regex.Pattern PARENT_PATTERN =
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
@@ -202,7 +202,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Creates new order tracking signal.
          *
-         * Create a request for the method "ordertrackingsignals.create".
+         * Create a request for the method "orderTrackingSignals.create".
          *
          * This request holds the parameters needed by the the merchantapi server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.

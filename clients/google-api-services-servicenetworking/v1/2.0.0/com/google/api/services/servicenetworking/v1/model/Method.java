@@ -17,7 +17,10 @@
 package com.google.api.services.servicenetworking.v1.model;
 
 /**
- * Method represents a method of an API interface.
+ * Method represents a method of an API interface. New usages of this message as an alternative to
+ * MethodDescriptorProto are strongly discouraged. This message does not reliability preserve all
+ * information necessary to model the schema and preserve semantics. Instead make use of
+ * FileDescriptorSet which preserves the necessary information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
@@ -29,6 +32,15 @@ package com.google.api.services.servicenetworking.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class Method extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS. This field should be
+   * ignored, instead the edition should be inherited from Api. This is similar to Field and
+   * EnumValue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
 
   /**
    * The simple name of this method.
@@ -73,11 +85,33 @@ public final class Method extends com.google.api.client.json.GenericJson {
   private java.lang.String responseTypeUrl;
 
   /**
-   * The source syntax of this method.
+   * The source syntax of this method. This field should be ignored, instead the syntax should be
+   * inherited from Api. This is similar to Field and EnumValue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String syntax;
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS. This field should be
+   * ignored, instead the edition should be inherited from Api. This is similar to Field and
+   * EnumValue.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS. This field should be
+   * ignored, instead the edition should be inherited from Api. This is similar to Field and
+   * EnumValue.
+   * @param edition edition or {@code null} for none
+   */
+  public Method setEdition(java.lang.String edition) {
+    this.edition = edition;
+    return this;
+  }
 
   /**
    * The simple name of this method.
@@ -182,7 +216,8 @@ public final class Method extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source syntax of this method.
+   * The source syntax of this method. This field should be ignored, instead the syntax should be
+   * inherited from Api. This is similar to Field and EnumValue.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyntax() {
@@ -190,7 +225,8 @@ public final class Method extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source syntax of this method.
+   * The source syntax of this method. This field should be ignored, instead the syntax should be
+   * inherited from Api. This is similar to Field and EnumValue.
    * @param syntax syntax or {@code null} for none
    */
   public Method setSyntax(java.lang.String syntax) {

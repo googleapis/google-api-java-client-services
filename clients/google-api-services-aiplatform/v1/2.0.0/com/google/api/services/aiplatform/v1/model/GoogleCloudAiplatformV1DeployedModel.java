@@ -117,6 +117,14 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   private GoogleCloudAiplatformV1FasterDeploymentConfig fasterDeploymentConfig;
 
   /**
+   * GDC pretrained / Gemini model name. The model name is a plain model name, e.g.
+   * gemini-1.5-flash-002.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gdcConnectedModel;
+
+  /**
    * Immutable. The ID of the DeployedModel. If not provided upon deployment, Vertex AI will
    * generate a value for this ID. This value should be 1-10 characters, and valid characters are
    * `/[0-9]/`.
@@ -394,6 +402,25 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
    */
   public GoogleCloudAiplatformV1DeployedModel setFasterDeploymentConfig(GoogleCloudAiplatformV1FasterDeploymentConfig fasterDeploymentConfig) {
     this.fasterDeploymentConfig = fasterDeploymentConfig;
+    return this;
+  }
+
+  /**
+   * GDC pretrained / Gemini model name. The model name is a plain model name, e.g.
+   * gemini-1.5-flash-002.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGdcConnectedModel() {
+    return gdcConnectedModel;
+  }
+
+  /**
+   * GDC pretrained / Gemini model name. The model name is a plain model name, e.g.
+   * gemini-1.5-flash-002.
+   * @param gdcConnectedModel gdcConnectedModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployedModel setGdcConnectedModel(java.lang.String gdcConnectedModel) {
+    this.gdcConnectedModel = gdcConnectedModel;
     return this;
   }
 

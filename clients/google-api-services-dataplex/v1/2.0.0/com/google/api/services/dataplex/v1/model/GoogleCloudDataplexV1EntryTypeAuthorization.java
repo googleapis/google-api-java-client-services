@@ -31,7 +31,8 @@ public final class GoogleCloudDataplexV1EntryTypeAuthorization extends com.googl
 
   /**
    * Immutable. The IAM permission grantable on the Entry Group to allow access to instantiate
-   * Entries of Dataplex owned Entry Types, only settable for Dataplex owned Types.
+   * Entries of Dataplex Universal Catalog owned Entry Types, only settable for Dataplex Universal
+   * Catalog owned Types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +40,8 @@ public final class GoogleCloudDataplexV1EntryTypeAuthorization extends com.googl
 
   /**
    * Immutable. The IAM permission grantable on the Entry Group to allow access to instantiate
-   * Entries of Dataplex owned Entry Types, only settable for Dataplex owned Types.
+   * Entries of Dataplex Universal Catalog owned Entry Types, only settable for Dataplex Universal
+   * Catalog owned Types.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateUsePermission() {
@@ -48,7 +50,8 @@ public final class GoogleCloudDataplexV1EntryTypeAuthorization extends com.googl
 
   /**
    * Immutable. The IAM permission grantable on the Entry Group to allow access to instantiate
-   * Entries of Dataplex owned Entry Types, only settable for Dataplex owned Types.
+   * Entries of Dataplex Universal Catalog owned Entry Types, only settable for Dataplex Universal
+   * Catalog owned Types.
    * @param alternateUsePermission alternateUsePermission or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryTypeAuthorization setAlternateUsePermission(java.lang.String alternateUsePermission) {

@@ -53,7 +53,7 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Long limit;
 
   /**
-   * Required. ProducerInstanceLocation is used to specify which authorization mechanism to use to
+   * Optional. ProducerInstanceLocation is used to specify which authorization mechanism to use to
    * determine which projects the Producer instance can be within.
    * The value may be {@code null}.
    */
@@ -119,7 +119,7 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. ProducerInstanceLocation is used to specify which authorization mechanism to use to
+   * Optional. ProducerInstanceLocation is used to specify which authorization mechanism to use to
    * determine which projects the Producer instance can be within.
    * @return value or {@code null} for none
    */
@@ -128,7 +128,7 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. ProducerInstanceLocation is used to specify which authorization mechanism to use to
+   * Optional. ProducerInstanceLocation is used to specify which authorization mechanism to use to
    * determine which projects the Producer instance can be within.
    * @param producerInstanceLocation producerInstanceLocation or {@code null} for none
    */

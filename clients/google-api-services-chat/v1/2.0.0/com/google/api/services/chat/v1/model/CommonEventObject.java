@@ -17,9 +17,17 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents information about the user's client, such as locale, host app, and platform. For Chat
- * apps, `CommonEventObject` includes data submitted by users interacting with cards, like data
- * entered in [dialogs](https://developers.google.com/chat/how-tos/dialogs).
+ * The common event object is the portion of the overall event object that carries general, host-
+ * independent information to the add-on from the user's client. This information includes details
+ * such as the user's locale, host app, and platform. In addition to homepage and contextual
+ * triggers, add-ons construct and pass event objects to [action callback
+ * functions](https://developers.google.com/workspace/add-ons/concepts/actions#callback_functions)
+ * when the user interacts with widgets. Your add-on's callback function can query the common event
+ * object to determine the contents of open widgets in the user's client. For example, your add-on
+ * can locate the text a user has entered into a [TextInput](https://developers.google.com/apps-
+ * script/reference/card-service/text-input) widget in the
+ * `eventObject.commentEventObject.formInputs` object. For Chat apps, the name of the function that
+ * the user invoked when interacting with a widget.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -32,18 +40,40 @@ package com.google.api.services.chat.v1.model;
 public final class CommonEventObject extends com.google.api.client.json.GenericJson {
 
   /**
-   * A map containing the values that a user inputs in a widget from a card or dialog. The map keys
-   * are the string IDs assigned to each widget, and the values represent inputs to the widget. For
-   * details, see [Process information inputted by
-   * users](https://developers.google.com/chat/ui/read-form-data).
+   * A map containing the current values of the widgets in the displayed card. The map keys are the
+   * string IDs assigned with each widget. The structure of the map value object is dependent on the
+   * widget type: **Note**: The following examples are formatted for Apps Script's V8 runtime. If
+   * you're using Rhino runtime, you must add `[""]` after the value. For example, instead of
+   * `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`, format the event object as
+   * `e.commonEventObject.formInputs.employeeName[""].stringInputs.value[0]`. To learn more about
+   * runtimes in Apps Script, see the [V8 Runtime Overview](https://developers.google.com/apps-
+   * script/guides/v8-runtime). * Single-valued widgets (for example, a text box): a list of strings
+   * (only one element). **Example**: for a text input widget with `employeeName` as its ID, access
+   * the text input value with: `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`.
+   * * Multi-valued widgets (for example, checkbox groups): a list of strings. **Example**: for a
+   * multi-value widget with `participants` as its ID, access the value array with:
+   * `e.commonEventObject.formInputs.participants.stringInputs.value`. * **A date-time picker**: a
+   * [`DateTimeInput object`](https://developers.google.com/workspace/add-ons/concepts/event-
+   * objects#date-time-input). **Example**: For a picker with an ID of `myDTPicker`, access the
+   * [`DateTimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-
+   * time-input) object using `e.commonEventObject.formInputs.myDTPicker.dateTimeInput`. * **A date-
+   * only picker**: a [`DateInput object`](https://developers.google.com/workspace/add-
+   * ons/concepts/event-objects#date-input). **Example**: For a picker with an ID of `myDatePicker`,
+   * access the [`DateInput`](https://developers.google.com/workspace/add-ons/concepts/event-
+   * objects#date-input) object using `e.commonEventObject.formInputs.myDatePicker.dateInput`. * **A
+   * time-only picker**: a [`TimeInput object`](https://developers.google.com/workspace/add-
+   * ons/concepts/event-objects#time-input). **Example**: For a picker with an ID of `myTimePicker`,
+   * access the [`TimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-
+   * objects#time-input) object using `e.commonEventObject.formInputs.myTimePicker.timeInput`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Inputs> formInputs;
 
   /**
-   * The hostApp enum which indicates the app the add-on is invoked from. Always `CHAT` for Chat
-   * apps.
+   * Indicates the host app the add-on is active in when the event object is generated. Possible
+   * values include the following: * `GMAIL` * `CALENDAR` * `DRIVE` * `DOCS` * `SHEETS` * `SLIDES` *
+   * `CHAT`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +87,17 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   private java.lang.String invokedFunction;
 
   /**
-   * Custom [parameters](/chat/api/reference/rest/v1/cards#ActionParameter) passed to the invoked
-   * function. Both keys and values must be strings.
+   * Any additional parameters you supply to an action using
+   * [`actionParameters`](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.Action.ActionParameter) or
+   * [`Action.setParameters()`](https://developers.google.com/apps-script/reference/card-
+   * service/action#setparametersparameters). **Developer Preview:** For [add-ons that extend Google
+   * Chat](https://developers.google.com/workspace/add-ons/chat), to suggest items based on what the
+   * users type in multiselect menus, use the value of the `"autocomplete_widget_query"` key
+   * (`event.commonEventObject.parameters["autocomplete_widget_query"]`). You can use this value to
+   * query a database and suggest selectable items to users as they type. For details, see [Collect
+   * and process information from Google Chat users](https://developers.google.com/workspace/add-
+   * ons/chat/collect-information).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,28 +112,59 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   private java.lang.String platform;
 
   /**
-   * The timezone ID and offset from Coordinated Universal Time (UTC). Only supported for the event
-   * types [`CARD_CLICKED`](https://developers.google.com/chat/api/reference/rest/v1/EventType#ENUM_
-   * VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://developers.google.com/chat/api/reference/res
-   * t/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
+   * **Disabled by default.** The timezone ID and offset from Coordinated Universal Time (UTC). To
+   * turn on this field, you must set `addOns.common.useLocaleFromApp` to `true` in your add-on's
+   * manifest. Your add-on's scope list must also include
+   * `https://www.googleapis.com/auth/script.locale`. See [Accessing user locale and
+   * timezone](https://developers.google.com/workspace/add-ons/how-tos/access-user-locale) for more
+   * details. Only supported for the event types [`CARD_CLICKED`](https://developers.google.com/chat
+   * /api/reference/rest/v1/EventType#ENUM_VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://develo
+   * pers.google.com/chat/api/reference/rest/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeZone timeZone;
 
   /**
-   * The full `locale.displayName` in the format of [ISO 639 language code]-[ISO 3166 country/region
-   * code] such as "en-US".
+   * **Disabled by default.** The user's language and country/region identifier in the format of
+   * [ISO 639](https://wikipedia.org/wiki/ISO_639_macrolanguage) language code-[ISO
+   * 3166](https://wikipedia.org/wiki/ISO_3166) country/region code. For example, `en-US`. To turn
+   * on this field, you must set `addOns.common.useLocaleFromApp` to `true` in your add-on's
+   * manifest. Your add-on's scope list must also include
+   * `https://www.googleapis.com/auth/script.locale`. See [Accessing user locale and
+   * timezone](https://developers.google.com/workspace/add-ons/how-tos/access-user-locale) for more
+   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userLocale;
 
   /**
-   * A map containing the values that a user inputs in a widget from a card or dialog. The map keys
-   * are the string IDs assigned to each widget, and the values represent inputs to the widget. For
-   * details, see [Process information inputted by
-   * users](https://developers.google.com/chat/ui/read-form-data).
+   * A map containing the current values of the widgets in the displayed card. The map keys are the
+   * string IDs assigned with each widget. The structure of the map value object is dependent on the
+   * widget type: **Note**: The following examples are formatted for Apps Script's V8 runtime. If
+   * you're using Rhino runtime, you must add `[""]` after the value. For example, instead of
+   * `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`, format the event object as
+   * `e.commonEventObject.formInputs.employeeName[""].stringInputs.value[0]`. To learn more about
+   * runtimes in Apps Script, see the [V8 Runtime Overview](https://developers.google.com/apps-
+   * script/guides/v8-runtime). * Single-valued widgets (for example, a text box): a list of strings
+   * (only one element). **Example**: for a text input widget with `employeeName` as its ID, access
+   * the text input value with: `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`.
+   * * Multi-valued widgets (for example, checkbox groups): a list of strings. **Example**: for a
+   * multi-value widget with `participants` as its ID, access the value array with:
+   * `e.commonEventObject.formInputs.participants.stringInputs.value`. * **A date-time picker**: a
+   * [`DateTimeInput object`](https://developers.google.com/workspace/add-ons/concepts/event-
+   * objects#date-time-input). **Example**: For a picker with an ID of `myDTPicker`, access the
+   * [`DateTimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-
+   * time-input) object using `e.commonEventObject.formInputs.myDTPicker.dateTimeInput`. * **A date-
+   * only picker**: a [`DateInput object`](https://developers.google.com/workspace/add-
+   * ons/concepts/event-objects#date-input). **Example**: For a picker with an ID of `myDatePicker`,
+   * access the [`DateInput`](https://developers.google.com/workspace/add-ons/concepts/event-
+   * objects#date-input) object using `e.commonEventObject.formInputs.myDatePicker.dateInput`. * **A
+   * time-only picker**: a [`TimeInput object`](https://developers.google.com/workspace/add-
+   * ons/concepts/event-objects#time-input). **Example**: For a picker with an ID of `myTimePicker`,
+   * access the [`TimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-
+   * objects#time-input) object using `e.commonEventObject.formInputs.myTimePicker.timeInput`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Inputs> getFormInputs() {
@@ -102,10 +172,31 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A map containing the values that a user inputs in a widget from a card or dialog. The map keys
-   * are the string IDs assigned to each widget, and the values represent inputs to the widget. For
-   * details, see [Process information inputted by
-   * users](https://developers.google.com/chat/ui/read-form-data).
+   * A map containing the current values of the widgets in the displayed card. The map keys are the
+   * string IDs assigned with each widget. The structure of the map value object is dependent on the
+   * widget type: **Note**: The following examples are formatted for Apps Script's V8 runtime. If
+   * you're using Rhino runtime, you must add `[""]` after the value. For example, instead of
+   * `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`, format the event object as
+   * `e.commonEventObject.formInputs.employeeName[""].stringInputs.value[0]`. To learn more about
+   * runtimes in Apps Script, see the [V8 Runtime Overview](https://developers.google.com/apps-
+   * script/guides/v8-runtime). * Single-valued widgets (for example, a text box): a list of strings
+   * (only one element). **Example**: for a text input widget with `employeeName` as its ID, access
+   * the text input value with: `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`.
+   * * Multi-valued widgets (for example, checkbox groups): a list of strings. **Example**: for a
+   * multi-value widget with `participants` as its ID, access the value array with:
+   * `e.commonEventObject.formInputs.participants.stringInputs.value`. * **A date-time picker**: a
+   * [`DateTimeInput object`](https://developers.google.com/workspace/add-ons/concepts/event-
+   * objects#date-time-input). **Example**: For a picker with an ID of `myDTPicker`, access the
+   * [`DateTimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-
+   * time-input) object using `e.commonEventObject.formInputs.myDTPicker.dateTimeInput`. * **A date-
+   * only picker**: a [`DateInput object`](https://developers.google.com/workspace/add-
+   * ons/concepts/event-objects#date-input). **Example**: For a picker with an ID of `myDatePicker`,
+   * access the [`DateInput`](https://developers.google.com/workspace/add-ons/concepts/event-
+   * objects#date-input) object using `e.commonEventObject.formInputs.myDatePicker.dateInput`. * **A
+   * time-only picker**: a [`TimeInput object`](https://developers.google.com/workspace/add-
+   * ons/concepts/event-objects#time-input). **Example**: For a picker with an ID of `myTimePicker`,
+   * access the [`TimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-
+   * objects#time-input) object using `e.commonEventObject.formInputs.myTimePicker.timeInput`.
    * @param formInputs formInputs or {@code null} for none
    */
   public CommonEventObject setFormInputs(java.util.Map<String, Inputs> formInputs) {
@@ -114,8 +205,9 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The hostApp enum which indicates the app the add-on is invoked from. Always `CHAT` for Chat
-   * apps.
+   * Indicates the host app the add-on is active in when the event object is generated. Possible
+   * values include the following: * `GMAIL` * `CALENDAR` * `DRIVE` * `DOCS` * `SHEETS` * `SLIDES` *
+   * `CHAT`
    * @return value or {@code null} for none
    */
   public java.lang.String getHostApp() {
@@ -123,8 +215,9 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The hostApp enum which indicates the app the add-on is invoked from. Always `CHAT` for Chat
-   * apps.
+   * Indicates the host app the add-on is active in when the event object is generated. Possible
+   * values include the following: * `GMAIL` * `CALENDAR` * `DRIVE` * `DOCS` * `SHEETS` * `SLIDES` *
+   * `CHAT`
    * @param hostApp hostApp or {@code null} for none
    */
   public CommonEventObject setHostApp(java.lang.String hostApp) {
@@ -150,8 +243,17 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Custom [parameters](/chat/api/reference/rest/v1/cards#ActionParameter) passed to the invoked
-   * function. Both keys and values must be strings.
+   * Any additional parameters you supply to an action using
+   * [`actionParameters`](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.Action.ActionParameter) or
+   * [`Action.setParameters()`](https://developers.google.com/apps-script/reference/card-
+   * service/action#setparametersparameters). **Developer Preview:** For [add-ons that extend Google
+   * Chat](https://developers.google.com/workspace/add-ons/chat), to suggest items based on what the
+   * users type in multiselect menus, use the value of the `"autocomplete_widget_query"` key
+   * (`event.commonEventObject.parameters["autocomplete_widget_query"]`). You can use this value to
+   * query a database and suggest selectable items to users as they type. For details, see [Collect
+   * and process information from Google Chat users](https://developers.google.com/workspace/add-
+   * ons/chat/collect-information).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getParameters() {
@@ -159,8 +261,17 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Custom [parameters](/chat/api/reference/rest/v1/cards#ActionParameter) passed to the invoked
-   * function. Both keys and values must be strings.
+   * Any additional parameters you supply to an action using
+   * [`actionParameters`](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#google.apps.card.v1.Action.ActionParameter) or
+   * [`Action.setParameters()`](https://developers.google.com/apps-script/reference/card-
+   * service/action#setparametersparameters). **Developer Preview:** For [add-ons that extend Google
+   * Chat](https://developers.google.com/workspace/add-ons/chat), to suggest items based on what the
+   * users type in multiselect menus, use the value of the `"autocomplete_widget_query"` key
+   * (`event.commonEventObject.parameters["autocomplete_widget_query"]`). You can use this value to
+   * query a database and suggest selectable items to users as they type. For details, see [Collect
+   * and process information from Google Chat users](https://developers.google.com/workspace/add-
+   * ons/chat/collect-information).
    * @param parameters parameters or {@code null} for none
    */
   public CommonEventObject setParameters(java.util.Map<String, java.lang.String> parameters) {
@@ -188,10 +299,14 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The timezone ID and offset from Coordinated Universal Time (UTC). Only supported for the event
-   * types [`CARD_CLICKED`](https://developers.google.com/chat/api/reference/rest/v1/EventType#ENUM_
-   * VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://developers.google.com/chat/api/reference/res
-   * t/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
+   * **Disabled by default.** The timezone ID and offset from Coordinated Universal Time (UTC). To
+   * turn on this field, you must set `addOns.common.useLocaleFromApp` to `true` in your add-on's
+   * manifest. Your add-on's scope list must also include
+   * `https://www.googleapis.com/auth/script.locale`. See [Accessing user locale and
+   * timezone](https://developers.google.com/workspace/add-ons/how-tos/access-user-locale) for more
+   * details. Only supported for the event types [`CARD_CLICKED`](https://developers.google.com/chat
+   * /api/reference/rest/v1/EventType#ENUM_VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://develo
+   * pers.google.com/chat/api/reference/rest/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
    * @return value or {@code null} for none
    */
   public TimeZone getTimeZone() {
@@ -199,10 +314,14 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The timezone ID and offset from Coordinated Universal Time (UTC). Only supported for the event
-   * types [`CARD_CLICKED`](https://developers.google.com/chat/api/reference/rest/v1/EventType#ENUM_
-   * VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://developers.google.com/chat/api/reference/res
-   * t/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
+   * **Disabled by default.** The timezone ID and offset from Coordinated Universal Time (UTC). To
+   * turn on this field, you must set `addOns.common.useLocaleFromApp` to `true` in your add-on's
+   * manifest. Your add-on's scope list must also include
+   * `https://www.googleapis.com/auth/script.locale`. See [Accessing user locale and
+   * timezone](https://developers.google.com/workspace/add-ons/how-tos/access-user-locale) for more
+   * details. Only supported for the event types [`CARD_CLICKED`](https://developers.google.com/chat
+   * /api/reference/rest/v1/EventType#ENUM_VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://develo
+   * pers.google.com/chat/api/reference/rest/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
    * @param timeZone timeZone or {@code null} for none
    */
   public CommonEventObject setTimeZone(TimeZone timeZone) {
@@ -211,8 +330,14 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The full `locale.displayName` in the format of [ISO 639 language code]-[ISO 3166 country/region
-   * code] such as "en-US".
+   * **Disabled by default.** The user's language and country/region identifier in the format of
+   * [ISO 639](https://wikipedia.org/wiki/ISO_639_macrolanguage) language code-[ISO
+   * 3166](https://wikipedia.org/wiki/ISO_3166) country/region code. For example, `en-US`. To turn
+   * on this field, you must set `addOns.common.useLocaleFromApp` to `true` in your add-on's
+   * manifest. Your add-on's scope list must also include
+   * `https://www.googleapis.com/auth/script.locale`. See [Accessing user locale and
+   * timezone](https://developers.google.com/workspace/add-ons/how-tos/access-user-locale) for more
+   * details.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserLocale() {
@@ -220,8 +345,14 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The full `locale.displayName` in the format of [ISO 639 language code]-[ISO 3166 country/region
-   * code] such as "en-US".
+   * **Disabled by default.** The user's language and country/region identifier in the format of
+   * [ISO 639](https://wikipedia.org/wiki/ISO_639_macrolanguage) language code-[ISO
+   * 3166](https://wikipedia.org/wiki/ISO_3166) country/region code. For example, `en-US`. To turn
+   * on this field, you must set `addOns.common.useLocaleFromApp` to `true` in your add-on's
+   * manifest. Your add-on's scope list must also include
+   * `https://www.googleapis.com/auth/script.locale`. See [Accessing user locale and
+   * timezone](https://developers.google.com/workspace/add-ons/how-tos/access-user-locale) for more
+   * details.
    * @param userLocale userLocale or {@code null} for none
    */
   public CommonEventObject setUserLocale(java.lang.String userLocale) {

@@ -51,6 +51,13 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StoragePoolExapoolProvisionedCapacityGb exapoolProvisionedCapacityGb;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -103,7 +110,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String performanceProvisioningType;
 
   /**
-   * Size, in GiB, of the storage pool. For more information about the size limits, see
+   * Size of the storage pool in GiB. For more information about the size limits, see
    * https://cloud.google.com/compute/docs/disks/storage-pools.
    * The value may be {@code null}.
    */
@@ -119,7 +126,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Long poolProvisionedIops;
 
   /**
-   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * Provisioned throughput of the storage pool in MiB/s. Only relevant if the storage pool type is
    * hyperdisk-balanced or hyperdisk-throughput.
    * The value may be {@code null}.
    */
@@ -247,6 +254,23 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
+   * @return value or {@code null} for none
+   */
+  public StoragePoolExapoolProvisionedCapacityGb getExapoolProvisionedCapacityGb() {
+    return exapoolProvisionedCapacityGb;
+  }
+
+  /**
+   * [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
+   * @param exapoolProvisionedCapacityGb exapoolProvisionedCapacityGb or {@code null} for none
+   */
+  public StoragePool setExapoolProvisionedCapacityGb(StoragePoolExapoolProvisionedCapacityGb exapoolProvisionedCapacityGb) {
+    this.exapoolProvisionedCapacityGb = exapoolProvisionedCapacityGb;
     return this;
   }
 
@@ -411,7 +435,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size, in GiB, of the storage pool. For more information about the size limits, see
+   * Size of the storage pool in GiB. For more information about the size limits, see
    * https://cloud.google.com/compute/docs/disks/storage-pools.
    * @return value or {@code null} for none
    */
@@ -420,7 +444,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size, in GiB, of the storage pool. For more information about the size limits, see
+   * Size of the storage pool in GiB. For more information about the size limits, see
    * https://cloud.google.com/compute/docs/disks/storage-pools.
    * @param poolProvisionedCapacityGb poolProvisionedCapacityGb or {@code null} for none
    */
@@ -449,7 +473,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * Provisioned throughput of the storage pool in MiB/s. Only relevant if the storage pool type is
    * hyperdisk-balanced or hyperdisk-throughput.
    * @return value or {@code null} for none
    */
@@ -458,7 +482,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * Provisioned throughput of the storage pool in MiB/s. Only relevant if the storage pool type is
    * hyperdisk-balanced or hyperdisk-throughput.
    * @param poolProvisionedThroughput poolProvisionedThroughput or {@code null} for none
    */

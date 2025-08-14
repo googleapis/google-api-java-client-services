@@ -30,8 +30,11 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaListSessionsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A filter to apply on the list results. The supported features are: user_pseudo_id, state.
-   * Example: "user_pseudo_id = some_id"
+   * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+   * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` *
+   * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` * `display_name =
+   * "some_name"` * `starred = true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time >
+   * "1970-01-01T12:00:00Z"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +43,7 @@ public final class GoogleCloudDiscoveryengineV1alphaListSessionsRequest extends 
   /**
    * A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a
    * field name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-   * `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc":
+   * `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`:
    * list sessions by is_pinned first, then by update_time.
    * The value may be {@code null}.
    */
@@ -71,8 +74,11 @@ public final class GoogleCloudDiscoveryengineV1alphaListSessionsRequest extends 
   private java.lang.String parent;
 
   /**
-   * A filter to apply on the list results. The supported features are: user_pseudo_id, state.
-   * Example: "user_pseudo_id = some_id"
+   * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+   * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` *
+   * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` * `display_name =
+   * "some_name"` * `starred = true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time >
+   * "1970-01-01T12:00:00Z"`
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -80,8 +86,11 @@ public final class GoogleCloudDiscoveryengineV1alphaListSessionsRequest extends 
   }
 
   /**
-   * A filter to apply on the list results. The supported features are: user_pseudo_id, state.
-   * Example: "user_pseudo_id = some_id"
+   * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+   * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` *
+   * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` * `display_name =
+   * "some_name"` * `starred = true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time >
+   * "1970-01-01T12:00:00Z"`
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaListSessionsRequest setFilter(java.lang.String filter) {
@@ -92,7 +101,7 @@ public final class GoogleCloudDiscoveryengineV1alphaListSessionsRequest extends 
   /**
    * A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a
    * field name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-   * `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc":
+   * `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`:
    * list sessions by is_pinned first, then by update_time.
    * @return value or {@code null} for none
    */
@@ -103,7 +112,7 @@ public final class GoogleCloudDiscoveryengineV1alphaListSessionsRequest extends 
   /**
    * A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a
    * field name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-   * `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc":
+   * `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`:
    * list sessions by is_pinned first, then by update_time.
    * @param orderBy orderBy or {@code null} for none
    */

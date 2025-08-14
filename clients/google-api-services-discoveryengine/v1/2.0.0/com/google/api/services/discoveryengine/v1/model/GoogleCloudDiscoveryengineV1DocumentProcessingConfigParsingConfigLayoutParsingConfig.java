@@ -30,6 +30,14 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, the processed document will be made available for the GetProcessedDocument
+   * API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableGetProcessedDocument;
+
+  /**
    * Optional. If true, the LLM based annotation is added to the image during parsing.
    * The value may be {@code null}.
    */
@@ -71,6 +79,25 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> structuredContentTypes;
+
+  /**
+   * Optional. If true, the processed document will be made available for the GetProcessedDocument
+   * API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableGetProcessedDocument() {
+    return enableGetProcessedDocument;
+  }
+
+  /**
+   * Optional. If true, the processed document will be made available for the GetProcessedDocument
+   * API.
+   * @param enableGetProcessedDocument enableGetProcessedDocument or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig setEnableGetProcessedDocument(java.lang.Boolean enableGetProcessedDocument) {
+    this.enableGetProcessedDocument = enableGetProcessedDocument;
+    return this;
+  }
 
   /**
    * Optional. If true, the LLM based annotation is added to the image during parsing.

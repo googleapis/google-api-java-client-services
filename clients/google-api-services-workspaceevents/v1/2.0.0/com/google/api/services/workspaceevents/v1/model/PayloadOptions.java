@@ -17,7 +17,8 @@
 package com.google.api.services.workspaceevents.v1.model;
 
 /**
- * Options about what data to include in the event payload. Only supported for Google Chat events.
+ * Options about what data to include in the event payload. Only supported for Google Chat and
+ * Google Drive events.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Events API. For a detailed

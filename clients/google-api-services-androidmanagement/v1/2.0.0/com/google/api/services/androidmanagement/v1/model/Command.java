@@ -188,6 +188,15 @@ public final class Command extends com.google.api.client.json.GenericJson {
   private java.lang.String userName;
 
   /**
+   * Optional. Parameters for the WIPE command to wipe the device. If this is set, then it is
+   * suggested that type should not be set. In this case, the server automatically sets it to WIPE.
+   * It is also acceptable to explicitly set type to WIPE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WipeParams wipeParams;
+
+  /**
    * Optional. Parameters for the ADD_ESIM command to add an eSIM profile to the device. If this is
    * set, then it is suggested that type should not be set. In this case, the server automatically
    * sets it to ADD_ESIM. It is also acceptable to explicitly set type to ADD_ESIM.
@@ -552,6 +561,27 @@ public final class Command extends com.google.api.client.json.GenericJson {
    */
   public Command setUserName(java.lang.String userName) {
     this.userName = userName;
+    return this;
+  }
+
+  /**
+   * Optional. Parameters for the WIPE command to wipe the device. If this is set, then it is
+   * suggested that type should not be set. In this case, the server automatically sets it to WIPE.
+   * It is also acceptable to explicitly set type to WIPE.
+   * @return value or {@code null} for none
+   */
+  public WipeParams getWipeParams() {
+    return wipeParams;
+  }
+
+  /**
+   * Optional. Parameters for the WIPE command to wipe the device. If this is set, then it is
+   * suggested that type should not be set. In this case, the server automatically sets it to WIPE.
+   * It is also acceptable to explicitly set type to WIPE.
+   * @param wipeParams wipeParams or {@code null} for none
+   */
+  public Command setWipeParams(WipeParams wipeParams) {
+    this.wipeParams = wipeParams;
     return this;
   }
 

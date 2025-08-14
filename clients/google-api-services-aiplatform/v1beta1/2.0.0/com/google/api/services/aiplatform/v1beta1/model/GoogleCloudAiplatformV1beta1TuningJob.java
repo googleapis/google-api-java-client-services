@@ -45,6 +45,17 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private String createTime;
 
   /**
+   * Optional. The user-provided path to custom model weights. Set this field to tune a custom
+   * model. The path must be a Cloud Storage directory that contains the model weights in
+   * .safetensors format along with associated model metadata files. If this field is set, the
+   * base_model field must still be set to indicate which base model the custom model is derived
+   * from. This feature is only available for open source models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customBaseModel;
+
+  /**
    * Optional. The description of the TuningJob.
    * The value may be {@code null}.
    */
@@ -82,6 +93,19 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private GoogleRpcStatus error;
 
   /**
+   * Output only. Evaluation runs for the Tuning Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1EvaluateDatasetRun> evaluateDatasetRuns;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1EvaluateDatasetRun used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1EvaluateDatasetRun.class);
+  }
+
+  /**
    * Output only. The Experiment associated with this TuningJob.
    * The value may be {@code null}.
    */
@@ -108,6 +132,14 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private java.lang.String name;
 
   /**
+   * Optional. Cloud Storage path to the directory where tuning job outputs are written to. This
+   * field is only available and required for open source models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outputUri;
+
+  /**
    * Tuning Spec for open sourced and third party Partner models.
    * The value may be {@code null}.
    */
@@ -121,6 +153,20 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String pipelineJob;
+
+  /**
+   * The pre-tuned model for continuous tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PreTunedModel preTunedModel;
+
+  /**
+   * Tuning Spec for Preference Optimization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec preferenceOptimizationSpec;
 
   /**
    * Output only. Reserved for future use.
@@ -191,11 +237,25 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private GoogleCloudAiplatformV1beta1TuningDataStats tuningDataStats;
 
   /**
+   * Output only. The detail state of the tuning job (while the overall `JobState` is running).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tuningJobState;
+
+  /**
    * Output only. Time when the TuningJob was most recently updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Tuning Spec for Veo Tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1VeoTuningSpec veoTuningSpec;
 
   /**
    * The base model that is being tuned. See [Supported models](https://cloud.google.com/vertex-
@@ -230,6 +290,31 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The user-provided path to custom model weights. Set this field to tune a custom
+   * model. The path must be a Cloud Storage directory that contains the model weights in
+   * .safetensors format along with associated model metadata files. If this field is set, the
+   * base_model field must still be set to indicate which base model the custom model is derived
+   * from. This feature is only available for open source models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomBaseModel() {
+    return customBaseModel;
+  }
+
+  /**
+   * Optional. The user-provided path to custom model weights. Set this field to tune a custom
+   * model. The path must be a Cloud Storage directory that contains the model weights in
+   * .safetensors format along with associated model metadata files. If this field is set, the
+   * base_model field must still be set to indicate which base model the custom model is derived
+   * from. This feature is only available for open source models.
+   * @param customBaseModel customBaseModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setCustomBaseModel(java.lang.String customBaseModel) {
+    this.customBaseModel = customBaseModel;
     return this;
   }
 
@@ -323,6 +408,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   }
 
   /**
+   * Output only. Evaluation runs for the Tuning Job.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1EvaluateDatasetRun> getEvaluateDatasetRuns() {
+    return evaluateDatasetRuns;
+  }
+
+  /**
+   * Output only. Evaluation runs for the Tuning Job.
+   * @param evaluateDatasetRuns evaluateDatasetRuns or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setEvaluateDatasetRuns(java.util.List<GoogleCloudAiplatformV1beta1EvaluateDatasetRun> evaluateDatasetRuns) {
+    this.evaluateDatasetRuns = evaluateDatasetRuns;
+    return this;
+  }
+
+  /**
    * Output only. The Experiment associated with this TuningJob.
    * @return value or {@code null} for none
    */
@@ -384,6 +486,25 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   }
 
   /**
+   * Optional. Cloud Storage path to the directory where tuning job outputs are written to. This
+   * field is only available and required for open source models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutputUri() {
+    return outputUri;
+  }
+
+  /**
+   * Optional. Cloud Storage path to the directory where tuning job outputs are written to. This
+   * field is only available and required for open source models.
+   * @param outputUri outputUri or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setOutputUri(java.lang.String outputUri) {
+    this.outputUri = outputUri;
+    return this;
+  }
+
+  /**
    * Tuning Spec for open sourced and third party Partner models.
    * @return value or {@code null} for none
    */
@@ -416,6 +537,40 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setPipelineJob(java.lang.String pipelineJob) {
     this.pipelineJob = pipelineJob;
+    return this;
+  }
+
+  /**
+   * The pre-tuned model for continuous tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PreTunedModel getPreTunedModel() {
+    return preTunedModel;
+  }
+
+  /**
+   * The pre-tuned model for continuous tuning.
+   * @param preTunedModel preTunedModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setPreTunedModel(GoogleCloudAiplatformV1beta1PreTunedModel preTunedModel) {
+    this.preTunedModel = preTunedModel;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Preference Optimization.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec getPreferenceOptimizationSpec() {
+    return preferenceOptimizationSpec;
+  }
+
+  /**
+   * Tuning Spec for Preference Optimization.
+   * @param preferenceOptimizationSpec preferenceOptimizationSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setPreferenceOptimizationSpec(GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec preferenceOptimizationSpec) {
+    this.preferenceOptimizationSpec = preferenceOptimizationSpec;
     return this;
   }
 
@@ -583,6 +738,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   }
 
   /**
+   * Output only. The detail state of the tuning job (while the overall `JobState` is running).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTuningJobState() {
+    return tuningJobState;
+  }
+
+  /**
+   * Output only. The detail state of the tuning job (while the overall `JobState` is running).
+   * @param tuningJobState tuningJobState or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setTuningJobState(java.lang.String tuningJobState) {
+    this.tuningJobState = tuningJobState;
+    return this;
+  }
+
+  /**
    * Output only. Time when the TuningJob was most recently updated.
    * @return value or {@code null} for none
    */
@@ -596,6 +768,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Veo Tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VeoTuningSpec getVeoTuningSpec() {
+    return veoTuningSpec;
+  }
+
+  /**
+   * Tuning Spec for Veo Tuning.
+   * @param veoTuningSpec veoTuningSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setVeoTuningSpec(GoogleCloudAiplatformV1beta1VeoTuningSpec veoTuningSpec) {
+    this.veoTuningSpec = veoTuningSpec;
     return this;
   }
 

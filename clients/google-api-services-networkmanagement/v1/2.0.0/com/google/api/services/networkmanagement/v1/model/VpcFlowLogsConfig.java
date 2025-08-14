@@ -100,9 +100,11 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> metadataFields;
 
   /**
-   * Identifier. Unique name of the configuration using one of the forms:
-   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `organiza
-   * tions/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+   * Identifier. Unique name of the configuration. The name can have one of the following forms: -
+   * For project-level configurations:
+   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For
+   * organization-level configurations:
+   * `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,8 +120,7 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   private java.lang.String state;
 
   /**
-   * Output only. A diagnostic bit - describes the state of the configured target resource for
-   * diagnostic purposes.
+   * Output only. Describes the state of the configured target resource for diagnostic purposes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,9 +307,11 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier. Unique name of the configuration using one of the forms:
-   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `organiza
-   * tions/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+   * Identifier. Unique name of the configuration. The name can have one of the following forms: -
+   * For project-level configurations:
+   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For
+   * organization-level configurations:
+   * `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -316,9 +319,11 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier. Unique name of the configuration using one of the forms:
-   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `organiza
-   * tions/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+   * Identifier. Unique name of the configuration. The name can have one of the following forms: -
+   * For project-level configurations:
+   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For
+   * organization-level configurations:
+   * `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
    * @param name name or {@code null} for none
    */
   public VpcFlowLogsConfig setName(java.lang.String name) {
@@ -348,8 +353,7 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. A diagnostic bit - describes the state of the configured target resource for
-   * diagnostic purposes.
+   * Output only. Describes the state of the configured target resource for diagnostic purposes.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetResourceState() {
@@ -357,8 +361,7 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. A diagnostic bit - describes the state of the configured target resource for
-   * diagnostic purposes.
+   * Output only. Describes the state of the configured target resource for diagnostic purposes.
    * @param targetResourceState targetResourceState or {@code null} for none
    */
   public VpcFlowLogsConfig setTargetResourceState(java.lang.String targetResourceState) {

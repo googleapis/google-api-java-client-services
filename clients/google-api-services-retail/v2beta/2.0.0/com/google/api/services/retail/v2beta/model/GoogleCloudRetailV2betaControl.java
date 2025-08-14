@@ -50,14 +50,6 @@ public final class GoogleCloudRetailV2betaControl extends com.google.api.client.
   private java.lang.String displayName;
 
   /**
-   * A facet specification to perform faceted search. Note that this field is deprecated and will
-   * throw NOT_IMPLEMENTED if used for creating a control.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudRetailV2betaSearchRequestFacetSpec facetSpec;
-
-  /**
    * Immutable. Fully qualified name `projects/locations/global/catalogs/controls`
    * The value may be {@code null}.
    */
@@ -130,25 +122,6 @@ public final class GoogleCloudRetailV2betaControl extends com.google.api.client.
    */
   public GoogleCloudRetailV2betaControl setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
-    return this;
-  }
-
-  /**
-   * A facet specification to perform faceted search. Note that this field is deprecated and will
-   * throw NOT_IMPLEMENTED if used for creating a control.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudRetailV2betaSearchRequestFacetSpec getFacetSpec() {
-    return facetSpec;
-  }
-
-  /**
-   * A facet specification to perform faceted search. Note that this field is deprecated and will
-   * throw NOT_IMPLEMENTED if used for creating a control.
-   * @param facetSpec facetSpec or {@code null} for none
-   */
-  public GoogleCloudRetailV2betaControl setFacetSpec(GoogleCloudRetailV2betaSearchRequestFacetSpec facetSpec) {
-    this.facetSpec = facetSpec;
     return this;
   }
 

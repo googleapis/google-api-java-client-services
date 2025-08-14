@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Deletes one of more Label Permissions.
+ * Deletes one or more label permissions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -38,8 +38,8 @@ public final class GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest ext
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access. If this is set, the use_admin_access field in
-   * the DeleteLabelPermissionRequest messages must either be empty or match this field.
+   * an admin for the label before allowing access. If this is set, the `use_admin_access` field in
+   * the `DeleteLabelPermissionRequest` messages must either be empty or match this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +64,8 @@ public final class GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest ext
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access. If this is set, the use_admin_access field in
-   * the DeleteLabelPermissionRequest messages must either be empty or match this field.
+   * an admin for the label before allowing access. If this is set, the `use_admin_access` field in
+   * the `DeleteLabelPermissionRequest` messages must either be empty or match this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAdminAccess() {
@@ -74,8 +74,8 @@ public final class GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest ext
 
   /**
    * Set to `true` in order to use the user's admin credentials. The server will verify the user is
-   * an admin for the Label before allowing access. If this is set, the use_admin_access field in
-   * the DeleteLabelPermissionRequest messages must either be empty or match this field.
+   * an admin for the label before allowing access. If this is set, the `use_admin_access` field in
+   * the `DeleteLabelPermissionRequest` messages must either be empty or match this field.
    * @param useAdminAccess useAdminAccess or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest setUseAdminAccess(java.lang.Boolean useAdminAccess) {

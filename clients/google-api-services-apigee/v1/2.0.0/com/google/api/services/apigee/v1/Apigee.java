@@ -13038,15 +13038,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Optional. Count of apps a single page can have in the response. If unspecified, at most
-         * 100 apps will be returned. The maximum value is 100; values above 100 will be coerced to
-         * 100. "page_size" is supported from ver 1.10.0 and above.
+         * 1000 apps will be returned. The maximum value is 1000; values above 1000 will be coerced
+         * to 1000. "page_size" is supported from ver 1.10.0 and above.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. Count of apps a single page can have in the response. If unspecified, at most 100 apps
-       will be returned. The maximum value is 100; values above 100 will be coerced to 100. "page_size" is
-       supported from ver 1.10.0 and above.
+        /** Optional. Count of apps a single page can have in the response. If unspecified, at most 1000 apps
+       will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000. "page_size"
+       is supported from ver 1.10.0 and above.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -13054,8 +13054,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Optional. Count of apps a single page can have in the response. If unspecified, at most
-         * 100 apps will be returned. The maximum value is 100; values above 100 will be coerced to
-         * 100. "page_size" is supported from ver 1.10.0 and above.
+         * 1000 apps will be returned. The maximum value is 1000; values above 1000 will be coerced
+         * to 1000. "page_size" is supported from ver 1.10.0 and above.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -13085,17 +13085,24 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Optional. Maximum number of app IDs to return. Defaults to 1000. */
+        /**
+         * Optional. Maximum number of app IDs to return. Defaults to 1000, which is also the upper
+         * limit. To get more than 1000, use pagination with 'pageSize' and 'pageToken' parameters.
+         */
         @com.google.api.client.util.Key
         private java.lang.Long rows;
 
-        /** Optional. Maximum number of app IDs to return. Defaults to 1000.
+        /** Optional. Maximum number of app IDs to return. Defaults to 1000, which is also the upper limit. To
+       get more than 1000, use pagination with 'pageSize' and 'pageToken' parameters.
          */
         public java.lang.Long getRows() {
           return rows;
         }
 
-        /** Optional. Maximum number of app IDs to return. Defaults to 1000. */
+        /**
+         * Optional. Maximum number of app IDs to return. Defaults to 1000, which is also the upper
+         * limit. To get more than 1000, use pagination with 'pageSize' and 'pageToken' parameters.
+         */
         public List setRows(java.lang.Long rows) {
           this.rows = rows;
           return this;
@@ -28695,8 +28702,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The name of the debug session to retrieve. Must be of the form: `organizations/{organizati
-             *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}`.
-             *        If the API proxy resource has the `space` attribute set, IAM permissions are checked
+             *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_sessio
+             *        n}`. If the API proxy resource has the `space` attribute set, IAM permissions are checked
              *        differently . To learn more, read the [Apigee Spaces
              *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
              *        administration/spaces/apigee-spaces-overview).
@@ -28726,8 +28733,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The name of the debug session to retrieve. Must be of the form: `organizations/{organizati
-             *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}`.
-             *        If the API proxy resource has the `space` attribute set, IAM permissions are checked
+             *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_sessio
+             *        n}`. If the API proxy resource has the `space` attribute set, IAM permissions are checked
              *        differently . To learn more, read the [Apigee Spaces
              *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
              *        administration/spaces/apigee-spaces-overview).
@@ -28811,17 +28818,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               /**
                * Required. The name of the debug session to retrieve. Must be of the form: `organiza
                * tions/{organization}/environments/{environment}/apis/{api}/revisions/{revision}/deb
-               * ugsessions/{session}`. If the API proxy resource has the `space` attribute set, IAM
-               * permissions are checked differently . To learn more, read the [Apigee Spaces
-               * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+               * ugsessions/{debug_session}`. If the API proxy resource has the `space` attribute
+               * set, IAM permissions are checked differently . To learn more, read the [Apigee
+               * Spaces Overview](https://cloud.google.com/apigee/docs/api-platform/system-
                * administration/spaces/apigee-spaces-overview).
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the debug session to retrieve. Must be of the form: `organizations/{organizat
-             ion}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}`. If the
-             API proxy resource has the `space` attribute set, IAM permissions are checked differently . To
+             ion}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_session}`. If
+             the API proxy resource has the `space` attribute set, IAM permissions are checked differently . To
              learn more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
              platform/system-administration/spaces/apigee-spaces-overview).
                */
@@ -28832,9 +28839,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               /**
                * Required. The name of the debug session to retrieve. Must be of the form: `organiza
                * tions/{organization}/environments/{environment}/apis/{api}/revisions/{revision}/deb
-               * ugsessions/{session}`. If the API proxy resource has the `space` attribute set, IAM
-               * permissions are checked differently . To learn more, read the [Apigee Spaces
-               * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+               * ugsessions/{debug_session}`. If the API proxy resource has the `space` attribute
+               * set, IAM permissions are checked differently . To learn more, read the [Apigee
+               * Spaces Overview](https://cloud.google.com/apigee/docs/api-platform/system-
                * administration/spaces/apigee-spaces-overview).
                */
               public Get setName(java.lang.String name) {
@@ -29016,39 +29023,43 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 return this;
               }
 
-              /** Maximum number of debug sessions to return. The page size defaults to 25. */
+              /**
+               * Optional. Maximum number of debug sessions to return. The page size defaults to 25.
+               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Maximum number of debug sessions to return. The page size defaults to 25.
+              /** Optional. Maximum number of debug sessions to return. The page size defaults to 25.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /** Maximum number of debug sessions to return. The page size defaults to 25. */
+              /**
+               * Optional. Maximum number of debug sessions to return. The page size defaults to 25.
+               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
               /**
-               * Page token, returned from a previous ListDebugSessions call, that you can use to
-               * retrieve the next page.
+               * Optional. Page token, returned from a previous ListDebugSessions call, that you can
+               * use to retrieve the next page.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Page token, returned from a previous ListDebugSessions call, that you can use to retrieve the next
-             page.
+              /** Optional. Page token, returned from a previous ListDebugSessions call, that you can use to retrieve
+             the next page.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * Page token, returned from a previous ListDebugSessions call, that you can use to
-               * retrieve the next page.
+               * Optional. Page token, returned from a previous ListDebugSessions call, that you can
+               * use to retrieve the next page.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -29090,9 +29101,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                * parameters, call the {@link Get#execute()} method to invoke the remote operation.
                *
                * @param name Required. The name of the debug session transaction. Must be of the form: `organizations/{organizati
-               *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}/dat
-               *        a/{transaction}`. If the API proxy resource has the `space` attribute set, IAM permissions
-               *        are checked differently . To learn more, read the [Apigee Spaces
+               *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_sessio
+               *        n}/data/{transaction}`. If the API proxy resource has the `space` attribute set, IAM
+               *        permissions are checked differently . To learn more, read the [Apigee Spaces
                *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
                *        administration/spaces/apigee-spaces-overview).
                * @return the request
@@ -29121,9 +29132,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                  * called to initialize this instance immediately after invoking the constructor. </p>
                  *
                  * @param name Required. The name of the debug session transaction. Must be of the form: `organizations/{organizati
-               *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}/dat
-               *        a/{transaction}`. If the API proxy resource has the `space` attribute set, IAM permissions
-               *        are checked differently . To learn more, read the [Apigee Spaces
+               *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_sessio
+               *        n}/data/{transaction}`. If the API proxy resource has the `space` attribute set, IAM
+               *        permissions are checked differently . To learn more, read the [Apigee Spaces
                *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
                *        administration/spaces/apigee-spaces-overview).
                  * @since 1.13
@@ -29206,18 +29217,18 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 /**
                  * Required. The name of the debug session transaction. Must be of the form: `organi
                  * zations/{organization}/environments/{environment}/apis/{api}/revisions/{revision}
-                 * /debugsessions/{session}/data/{transaction}`. If the API proxy resource has the
-                 * `space` attribute set, IAM permissions are checked differently . To learn more,
-                 * read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+                 * /debugsessions/{debug_session}/data/{transaction}`. If the API proxy resource has
+                 * the `space` attribute set, IAM permissions are checked differently . To learn
+                 * more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
                  * platform/system-administration/spaces/apigee-spaces-overview).
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
                 /** Required. The name of the debug session transaction. Must be of the form: `organizations/{organizat
-               ion}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}/data/{trans
-               action}`. If the API proxy resource has the `space` attribute set, IAM permissions are checked
-               differently . To learn more, read the [Apigee Spaces
+               ion}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_session}/data/
+               {transaction}`. If the API proxy resource has the `space` attribute set, IAM permissions are
+               checked differently . To learn more, read the [Apigee Spaces
                Overview](https://cloud.google.com/apigee/docs/api-platform/system-administration/spaces/apigee-
                spaces-overview).
                  */
@@ -29228,9 +29239,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 /**
                  * Required. The name of the debug session transaction. Must be of the form: `organi
                  * zations/{organization}/environments/{environment}/apis/{api}/revisions/{revision}
-                 * /debugsessions/{session}/data/{transaction}`. If the API proxy resource has the
-                 * `space` attribute set, IAM permissions are checked differently . To learn more,
-                 * read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+                 * /debugsessions/{debug_session}/data/{transaction}`. If the API proxy resource has
+                 * the `space` attribute set, IAM permissions are checked differently . To learn
+                 * more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
                  * platform/system-administration/spaces/apigee-spaces-overview).
                  */
                 public Get setName(java.lang.String name) {
@@ -38209,6 +38220,143 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
+         * Delete a SecurityAction.
+         *
+         * Create a request for the method "securityActions.delete".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the security monitoring condition to delete. Format:
+         *        `organizations/{org}/environment/{env}/securityActions/{security_action}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+
+          /**
+           * Delete a SecurityAction.
+           *
+           * Create a request for the method "securityActions.delete".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the security monitoring condition to delete. Format:
+         *        `organizations/{org}/environment/{env}/securityActions/{security_action}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the security monitoring condition to delete. Format:
+           * `organizations/{org}/environment/{env}/securityActions/{security_action}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the security monitoring condition to delete. Format:
+         `organizations/{org}/environment/{env}/securityActions/{security_action}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the security monitoring condition to delete. Format:
+           * `organizations/{org}/environment/{env}/securityActions/{security_action}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
          * Disable a SecurityAction. The `state` of the SecurityAction after disabling is `DISABLED`.
          * `DisableSecurityAction` can be called on SecurityActions in the state `ENABLED`; SecurityActions
          * in a different state (including `DISABLED`) return an error.
@@ -38866,6 +39014,177 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a SecurityAction.
+         *
+         * Create a request for the method "securityActions.patch".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. This field is ignored during creation as per AIP-133. Please set the `security_action_id`
+         *        field in the CreateSecurityActionRequest when creating a new SecurityAction. Format:
+         *        organizations/{org}/environments/{env}/securityActions/{security_action}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+
+          /**
+           * Update a SecurityAction.
+           *
+           * Create a request for the method "securityActions.patch".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. This field is ignored during creation as per AIP-133. Please set the `security_action_id`
+         *        field in the CreateSecurityActionRequest when creating a new SecurityAction. Format:
+         *        organizations/{org}/environments/{env}/securityActions/{security_action}
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction content) {
+            super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityAction.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. This field is ignored during creation as per AIP-133. Please set the
+           * `security_action_id` field in the CreateSecurityActionRequest when creating a new
+           * SecurityAction. Format:
+           * organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. This field is ignored during creation as per AIP-133. Please set the
+         `security_action_id` field in the CreateSecurityActionRequest when creating a new SecurityAction.
+         Format: organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. This field is ignored during creation as per AIP-133. Please set the
+           * `security_action_id` field in the CreateSecurityActionRequest when creating a new
+           * SecurityAction. Format:
+           * organizations/{org}/environments/{env}/securityActions/{security_action}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/securityActions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The list of fields to update. Valid fields to update are `description`,
+           * `state`, `allow`, `deny`, and `flag`, `expire_time`, and `ttl`, `api_proxies`, and
+           * `condition_config`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update. Valid fields to update are `description`, `state`, `allow`,
+         `deny`, and `flag`, `expire_time`, and `ttl`, `api_proxies`, and `condition_config`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The list of fields to update. Valid fields to update are `description`,
+           * `state`, `allow`, `deny`, and `flag`, `expire_time`, and `ttl`, `api_proxies`, and
+           * `condition_config`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -52103,22 +52422,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. The list of fields to update. Valid fields to update are `profile`, `scope`,
-         * `include_all_resources`, `include`, and `exclude`.
+         * Optional. The list of fields to update. Valid fields to update are
+         * `include_all_resources` and `include`.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Optional. The list of fields to update. Valid fields to update are `profile`, `scope`,
-       `include_all_resources`, `include`, and `exclude`.
+        /** Optional. The list of fields to update. Valid fields to update are `include_all_resources` and
+       `include`.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Optional. The list of fields to update. Valid fields to update are `profile`, `scope`,
-         * `include_all_resources`, `include`, and `exclude`.
+         * Optional. The list of fields to update. Valid fields to update are
+         * `include_all_resources` and `include`.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

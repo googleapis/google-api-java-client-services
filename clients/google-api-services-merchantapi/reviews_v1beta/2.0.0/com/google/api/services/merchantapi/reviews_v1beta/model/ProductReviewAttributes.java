@@ -68,7 +68,8 @@ public final class ProductReviewAttributes extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> cons;
 
   /**
-   * Required. The content of the review.
+   * Optional. The content of the review. If empty, the content might still get populated from pros
+   * and cons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,11 +84,25 @@ public final class ProductReviewAttributes extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> gtins;
 
   /**
+   * Optional. Indicates whether the review is incentivized.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isIncentivizedReview;
+
+  /**
    * Optional. Indicates whether the review is marked as spam in the publisher's system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isSpam;
+
+  /**
+   * Optional. Indicates whether the reviewer's purchase is verified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isVerifiedPurchase;
 
   /**
    * Optional. The maximum possible number for the rating. The value of the max rating must be
@@ -342,7 +357,8 @@ public final class ProductReviewAttributes extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The content of the review.
+   * Optional. The content of the review. If empty, the content might still get populated from pros
+   * and cons.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -350,7 +366,8 @@ public final class ProductReviewAttributes extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The content of the review.
+   * Optional. The content of the review. If empty, the content might still get populated from pros
+   * and cons.
    * @param content content or {@code null} for none
    */
   public ProductReviewAttributes setContent(java.lang.String content) {
@@ -378,6 +395,23 @@ public final class ProductReviewAttributes extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. Indicates whether the review is incentivized.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsIncentivizedReview() {
+    return isIncentivizedReview;
+  }
+
+  /**
+   * Optional. Indicates whether the review is incentivized.
+   * @param isIncentivizedReview isIncentivizedReview or {@code null} for none
+   */
+  public ProductReviewAttributes setIsIncentivizedReview(java.lang.Boolean isIncentivizedReview) {
+    this.isIncentivizedReview = isIncentivizedReview;
+    return this;
+  }
+
+  /**
    * Optional. Indicates whether the review is marked as spam in the publisher's system.
    * @return value or {@code null} for none
    */
@@ -391,6 +425,23 @@ public final class ProductReviewAttributes extends com.google.api.client.json.Ge
    */
   public ProductReviewAttributes setIsSpam(java.lang.Boolean isSpam) {
     this.isSpam = isSpam;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether the reviewer's purchase is verified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsVerifiedPurchase() {
+    return isVerifiedPurchase;
+  }
+
+  /**
+   * Optional. Indicates whether the reviewer's purchase is verified.
+   * @param isVerifiedPurchase isVerifiedPurchase or {@code null} for none
+   */
+  public ProductReviewAttributes setIsVerifiedPurchase(java.lang.Boolean isVerifiedPurchase) {
+    this.isVerifiedPurchase = isVerifiedPurchase;
     return this;
   }
 

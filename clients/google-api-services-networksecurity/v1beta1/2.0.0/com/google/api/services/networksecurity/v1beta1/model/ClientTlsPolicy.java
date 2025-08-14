@@ -62,7 +62,7 @@ public final class ClientTlsPolicy extends com.google.api.client.json.GenericJso
 
   /**
    * Required. Name of the ClientTlsPolicy resource. It matches the pattern
-   * `projects/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+   * `projects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class ClientTlsPolicy extends com.google.api.client.json.GenericJso
 
   /**
    * Required. Name of the ClientTlsPolicy resource. It matches the pattern
-   * `projects/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+   * `projects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -172,7 +172,7 @@ public final class ClientTlsPolicy extends com.google.api.client.json.GenericJso
 
   /**
    * Required. Name of the ClientTlsPolicy resource. It matches the pattern
-   * `projects/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+   * `projects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
    * @param name name or {@code null} for none
    */
   public ClientTlsPolicy setName(java.lang.String name) {

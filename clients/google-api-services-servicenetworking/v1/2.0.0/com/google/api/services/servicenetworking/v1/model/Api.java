@@ -22,7 +22,10 @@ package com.google.api.services.servicenetworking.v1.model;
  * are different from API Services, which represent a concrete implementation of an interface as
  * opposed to simply a description of methods and bindings. They are also sometimes simply referred
  * to as "APIs" in other contexts, such as the name of this message itself. See
- * https://cloud.google.com/apis/design/glossary for detailed terminology.
+ * https://cloud.google.com/apis/design/glossary for detailed terminology. New usages of this
+ * message as an alternative to ServiceDescriptorProto are strongly discouraged. This message does
+ * not reliability preserve all information necessary to model the schema and preserve semantics.
+ * Instead make use of FileDescriptorSet which preserves the necessary information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
@@ -34,6 +37,13 @@ package com.google.api.services.servicenetworking.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class Api extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
 
   /**
    * The methods of this interface, in unspecified order.
@@ -94,6 +104,23 @@ public final class Api extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   * @param edition edition or {@code null} for none
+   */
+  public Api setEdition(java.lang.String edition) {
+    this.edition = edition;
+    return this;
+  }
 
   /**
    * The methods of this interface, in unspecified order.

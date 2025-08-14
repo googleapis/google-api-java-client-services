@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Limits for integer Field type.
+ * Limits for integer field type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaIntegerLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum value for an integer Field type.
+   * Maximum value for an integer field type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxValue;
 
   /**
-   * Minimum value for an integer Field type.
+   * Minimum value for an integer field type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minValue;
 
   /**
-   * Maximum value for an integer Field type.
+   * Maximum value for an integer field type.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxValue() {
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2betaIntegerLimits extends com.google.a
   }
 
   /**
-   * Maximum value for an integer Field type.
+   * Maximum value for an integer field type.
    * @param maxValue maxValue or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaIntegerLimits setMaxValue(java.lang.Long maxValue) {
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2betaIntegerLimits extends com.google.a
   }
 
   /**
-   * Minimum value for an integer Field type.
+   * Minimum value for an integer field type.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinValue() {
@@ -69,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2betaIntegerLimits extends com.google.a
   }
 
   /**
-   * Minimum value for an integer Field type.
+   * Minimum value for an integer field type.
    * @param minValue minValue or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaIntegerLimits setMinValue(java.lang.Long minValue) {

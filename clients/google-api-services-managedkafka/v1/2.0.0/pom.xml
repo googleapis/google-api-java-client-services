@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-managedkafka</artifactId>
-  <version>v1-rev20250529-2.0.0</version>
-  <name>Managed Service for Apache Kafka API v1-rev20250529-2.0.0</name>
+  <version>v1-rev20250731-2.0.0</version>
+  <name>Managed Service for Apache Kafka API v1-rev20250731-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

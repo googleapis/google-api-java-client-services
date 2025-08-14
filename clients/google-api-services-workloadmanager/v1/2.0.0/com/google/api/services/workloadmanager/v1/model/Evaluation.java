@@ -65,6 +65,14 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   private java.lang.String evaluationType;
 
   /**
+   * Optional. Immutable. Customer-managed encryption key name, in the format
+   * projects/locations/keyRings/cryptoKeys.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKey;
+
+  /**
    * Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -204,6 +212,25 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
    */
   public Evaluation setEvaluationType(java.lang.String evaluationType) {
     this.evaluationType = evaluationType;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Customer-managed encryption key name, in the format
+   * projects/locations/keyRings/cryptoKeys.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKey() {
+    return kmsKey;
+  }
+
+  /**
+   * Optional. Immutable. Customer-managed encryption key name, in the format
+   * projects/locations/keyRings/cryptoKeys.
+   * @param kmsKey kmsKey or {@code null} for none
+   */
+  public Evaluation setKmsKey(java.lang.String kmsKey) {
+    this.kmsKey = kmsKey;
     return this;
   }
 

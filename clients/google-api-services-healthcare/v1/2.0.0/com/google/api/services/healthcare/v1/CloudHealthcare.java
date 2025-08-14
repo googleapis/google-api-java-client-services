@@ -12470,8 +12470,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * RetrieveStudyMetadata returns instance associated with the given study presented as metadata with
-             * the bulk data removed. See [RetrieveTransaction]
+             * RetrieveStudyMetadata returns instance associated with the given study presented as metadata. See
+             * [RetrieveTransaction]
              * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
              * the implementation of RetrieveStudyMetadata, see [Metadata
              * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
@@ -12508,8 +12508,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+/metadata$");
 
               /**
-               * RetrieveStudyMetadata returns instance associated with the given study presented as metadata
-               * with the bulk data removed. See [RetrieveTransaction]
+               * RetrieveStudyMetadata returns instance associated with the given study presented as metadata.
+               * See [RetrieveTransaction]
                * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
                * the implementation of RetrieveStudyMetadata, see [Metadata
                * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
@@ -13697,7 +13697,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
               /**
                * RetrieveSeriesMetadata returns instance associated with the given study and series, presented as
-               * metadata with the bulk data removed. See [RetrieveTransaction]
+               * metadata. See [RetrieveTransaction]
                * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
                * the implementation of RetrieveSeriesMetadata, see [Metadata
                * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
@@ -13735,7 +13735,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * RetrieveSeriesMetadata returns instance associated with the given study and series, presented
-                 * as metadata with the bulk data removed. See [RetrieveTransaction]
+                 * as metadata. See [RetrieveTransaction]
                  * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
                  * the implementation of RetrieveSeriesMetadata, see [Metadata
                  * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
@@ -14736,7 +14736,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
                 /**
                  * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
-                 * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction]
+                 * Instance UID presented as metadata. See [RetrieveTransaction]
                  * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
                  * the implementation of RetrieveInstanceMetadata, see [Metadata
                  * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
@@ -14774,7 +14774,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
-                   * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction]
+                   * Instance UID presented as metadata. See [RetrieveTransaction]
                    * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
                    * the implementation of RetrieveInstanceMetadata, see [Metadata
                    * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
@@ -15176,6 +15176,236 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
                 }
 
+                /**
+                 * An accessor for creating requests from the Bulkdata collection.
+                 *
+                 * <p>The typical use is:</p>
+                 * <pre>
+                 *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+                 *   {@code CloudHealthcare.Bulkdata.List request = healthcare.bulkdata().list(parameters ...)}
+                 * </pre>
+                 *
+                 * @return the resource collection
+                 */
+                public Bulkdata bulkdata() {
+                  return new Bulkdata();
+                }
+
+                /**
+                 * The "bulkdata" collection of methods.
+                 */
+                public class Bulkdata {
+
+                  /**
+                   * Returns uncompressed, unencoded bytes representing the referenced bulkdata tag from an instance.
+                   * See [Retrieve
+                   * Transaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For
+                   * details on the implementation of RetrieveBulkdata, see [Bulkdata
+                   * resources](https://cloud.google.com/healthcare/docs/dicom#bulkdata-resources) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call RetrieveBulkdata, see
+                   * [Retrieve bulkdata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-bulkdata).
+                   *
+                   * Create a request for the method "bulkdata.retrieveBulkdata".
+                   *
+                   * This request holds the parameters needed by the healthcare server.  After setting any optional
+                   * parameters, call the {@link RetrieveBulkdata#execute()} method to invoke the remote operation.
+                   *
+                   * @param parent Required. The name of the DICOM store that is being accessed. For example,
+                   *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+                   *        ore_id}`.
+                   * @param dicomWebPath Required. The path for the `RetrieveBulkdata` DICOMweb request. For example,
+                   *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/bukdata/{bulkdata_uri}`.
+                   * @return the request
+                   */
+                  public RetrieveBulkdata retrieveBulkdata(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
+                    RetrieveBulkdata result = new RetrieveBulkdata(parent, dicomWebPath);
+                    initialize(result);
+                    return result;
+                  }
+
+                  public class RetrieveBulkdata extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.HttpBody> {
+
+                    private static final String REST_PATH = "v1/{+parent}/dicomWeb/{+dicomWebPath}";
+
+                    private final java.util.regex.Pattern PARENT_PATTERN =
+                        java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+                    private final java.util.regex.Pattern DICOM_WEB_PATH_PATTERN =
+                        java.util.regex.Pattern.compile("^studies/[^/]+/series/[^/]+/instances/[^/]+/bulkdata/[^/]+/.*$");
+
+                    /**
+                     * Returns uncompressed, unencoded bytes representing the referenced bulkdata tag from an
+                     * instance. See [Retrieve
+                     * Transaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                     * For details on the implementation of RetrieveBulkdata, see [Bulkdata
+                     * resources](https://cloud.google.com/healthcare/docs/dicom#bulkdata-resources) in the Cloud
+                     * Healthcare API conformance statement. For samples that show how to call RetrieveBulkdata, see
+                     * [Retrieve bulkdata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+                     * bulkdata).
+                     *
+                     * Create a request for the method "bulkdata.retrieveBulkdata".
+                     *
+                     * This request holds the parameters needed by the the healthcare server.  After setting any
+                     * optional parameters, call the {@link RetrieveBulkdata#execute()} method to invoke the remote
+                     * operation. <p> {@link RetrieveBulkdata#initialize(com.google.api.client.googleapis.services.Abs
+                     * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+                     * invoking the constructor. </p>
+                     *
+                     * @param parent Required. The name of the DICOM store that is being accessed. For example,
+                   *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+                   *        ore_id}`.
+                     * @param dicomWebPath Required. The path for the `RetrieveBulkdata` DICOMweb request. For example,
+                   *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/bukdata/{bulkdata_uri}`.
+                     * @since 1.13
+                     */
+                    protected RetrieveBulkdata(java.lang.String parent, java.lang.String dicomWebPath) {
+                      super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.HttpBody.class);
+                      this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                            "Parameter parent must conform to the pattern " +
+                            "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                      }
+                      this.dicomWebPath = com.google.api.client.util.Preconditions.checkNotNull(dicomWebPath, "Required parameter dicomWebPath must be specified.");
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                            "Parameter dicomWebPath must conform to the pattern " +
+                            "^studies/[^/]+/series/[^/]+/instances/[^/]+/bulkdata/[^/]+/.*$");
+                      }
+                    }
+
+                    @Override
+                    public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                      return super.executeUsingHead();
+                    }
+
+                    @Override
+                    public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                      return super.buildHttpRequestUsingHead();
+                    }
+
+                    @Override
+                    public RetrieveBulkdata set$Xgafv(java.lang.String $Xgafv) {
+                      return (RetrieveBulkdata) super.set$Xgafv($Xgafv);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setAccessToken(java.lang.String accessToken) {
+                      return (RetrieveBulkdata) super.setAccessToken(accessToken);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setAlt(java.lang.String alt) {
+                      return (RetrieveBulkdata) super.setAlt(alt);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setCallback(java.lang.String callback) {
+                      return (RetrieveBulkdata) super.setCallback(callback);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setFields(java.lang.String fields) {
+                      return (RetrieveBulkdata) super.setFields(fields);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setKey(java.lang.String key) {
+                      return (RetrieveBulkdata) super.setKey(key);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setOauthToken(java.lang.String oauthToken) {
+                      return (RetrieveBulkdata) super.setOauthToken(oauthToken);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setPrettyPrint(java.lang.Boolean prettyPrint) {
+                      return (RetrieveBulkdata) super.setPrettyPrint(prettyPrint);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setQuotaUser(java.lang.String quotaUser) {
+                      return (RetrieveBulkdata) super.setQuotaUser(quotaUser);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setUploadType(java.lang.String uploadType) {
+                      return (RetrieveBulkdata) super.setUploadType(uploadType);
+                    }
+
+                    @Override
+                    public RetrieveBulkdata setUploadProtocol(java.lang.String uploadProtocol) {
+                      return (RetrieveBulkdata) super.setUploadProtocol(uploadProtocol);
+                    }
+
+                    /**
+                     * Required. The name of the DICOM store that is being accessed. For example, `p
+                     * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStore
+                     * s/{dicom_store_id}`.
+                     */
+                    @com.google.api.client.util.Key
+                    private java.lang.String parent;
+
+                    /** Required. The name of the DICOM store that is being accessed. For example,
+                   `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+                     */
+                    public java.lang.String getParent() {
+                      return parent;
+                    }
+
+                    /**
+                     * Required. The name of the DICOM store that is being accessed. For example, `p
+                     * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStore
+                     * s/{dicom_store_id}`.
+                     */
+                    public RetrieveBulkdata setParent(java.lang.String parent) {
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                            "Parameter parent must conform to the pattern " +
+                            "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                      }
+                      this.parent = parent;
+                      return this;
+                    }
+
+                    /**
+                     * Required. The path for the `RetrieveBulkdata` DICOMweb request. For example,
+                     * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/bukdata/{bu
+                     * lkdata_uri}`.
+                     */
+                    @com.google.api.client.util.Key
+                    private java.lang.String dicomWebPath;
+
+                    /** Required. The path for the `RetrieveBulkdata` DICOMweb request. For example,
+                   `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/bukdata/{bulkdata_uri}`.
+                     */
+                    public java.lang.String getDicomWebPath() {
+                      return dicomWebPath;
+                    }
+
+                    /**
+                     * Required. The path for the `RetrieveBulkdata` DICOMweb request. For example,
+                     * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/bukdata/{bu
+                     * lkdata_uri}`.
+                     */
+                    public RetrieveBulkdata setDicomWebPath(java.lang.String dicomWebPath) {
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                            "Parameter dicomWebPath must conform to the pattern " +
+                            "^studies/[^/]+/series/[^/]+/instances/[^/]+/bulkdata/[^/]+/.*$");
+                      }
+                      this.dicomWebPath = dicomWebPath;
+                      return this;
+                    }
+
+                    @Override
+                    public RetrieveBulkdata set(String parameterName, Object value) {
+                      return (RetrieveBulkdata) super.set(parameterName, value);
+                    }
+                  }
+
+                }
                 /**
                  * An accessor for creating requests from the Frames collection.
                  *
@@ -23224,9 +23454,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * representation of the updated resource, including the server-assigned version ID. Errors
              * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
              * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
-             * generic GCP error might be returned instead. In R5, the conditional update interaction If-None-
-             * Match is supported, including the wildcard behaviour. For samples that show how to call `update`,
-             * see [Updating a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+             * generic GCP error might be returned instead. The conditional update interaction If-None-Match is
+             * supported, including the wildcard behaviour, as defined by the R5 spec. This functionality is
+             * supported in R4 and R5. For samples that show how to call `update`, see [Updating a FHIR
+             * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
              * resources#updating_a_fhir_resource).
              *
              * Create a request for the method "fhir.update".
@@ -23268,8 +23499,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * including the server-assigned version ID. Errors generated by the FHIR store contain a JSON-
                * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot
                * be mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
-               * In R5, the conditional update interaction If-None-Match is supported, including the wildcard
-               * behaviour. For samples that show how to call `update`, see [Updating a FHIR
+               * The conditional update interaction If-None-Match is supported, including the wildcard
+               * behaviour, as defined by the R5 spec. This functionality is supported in R4 and R5. For samples
+               * that show how to call `update`, see [Updating a FHIR
                * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
                * resources#updating_a_fhir_resource).
                *

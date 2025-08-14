@@ -80,14 +80,17 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private EntityKey groupKey;
 
   /**
-   * Required. One or more label entries that apply to the Group. Currently supported labels contain
-   * a key with an empty value. Google Groups are the default type of group and have a label with a
-   * key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing
-   * Google Groups can have an additional label with a key of
+   * Required. One or more label entries that apply to the Group. Labels contain a key with an empty
+   * value. Google Groups are the default type of group and have a label with a key of
+   * `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google
+   * Groups can have an additional label with a key of
    * `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an
    * immutable change and the security label cannot be removed once added.** Dynamic groups have a
    * label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for
-   * Cloud Search have a label with a key of `system/groups/external` and an empty value.
+   * Cloud Search have a label with a key of `system/groups/external` and an empty value. Google
+   * Groups can be [locked](https://support.google.com/a?p=locked-groups). To lock a group, add a
+   * label with a key of `cloudidentity.googleapis.com/groups.locked` and an empty value. Doing so
+   * locks the group. To unlock the group, remove this label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,14 +228,17 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. One or more label entries that apply to the Group. Currently supported labels contain
-   * a key with an empty value. Google Groups are the default type of group and have a label with a
-   * key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing
-   * Google Groups can have an additional label with a key of
+   * Required. One or more label entries that apply to the Group. Labels contain a key with an empty
+   * value. Google Groups are the default type of group and have a label with a key of
+   * `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google
+   * Groups can have an additional label with a key of
    * `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an
    * immutable change and the security label cannot be removed once added.** Dynamic groups have a
    * label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for
-   * Cloud Search have a label with a key of `system/groups/external` and an empty value.
+   * Cloud Search have a label with a key of `system/groups/external` and an empty value. Google
+   * Groups can be [locked](https://support.google.com/a?p=locked-groups). To lock a group, add a
+   * label with a key of `cloudidentity.googleapis.com/groups.locked` and an empty value. Doing so
+   * locks the group. To unlock the group, remove this label.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -240,14 +246,17 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. One or more label entries that apply to the Group. Currently supported labels contain
-   * a key with an empty value. Google Groups are the default type of group and have a label with a
-   * key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing
-   * Google Groups can have an additional label with a key of
+   * Required. One or more label entries that apply to the Group. Labels contain a key with an empty
+   * value. Google Groups are the default type of group and have a label with a key of
+   * `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google
+   * Groups can have an additional label with a key of
    * `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an
    * immutable change and the security label cannot be removed once added.** Dynamic groups have a
    * label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for
-   * Cloud Search have a label with a key of `system/groups/external` and an empty value.
+   * Cloud Search have a label with a key of `system/groups/external` and an empty value. Google
+   * Groups can be [locked](https://support.google.com/a?p=locked-groups). To lock a group, add a
+   * label with a key of `cloudidentity.googleapis.com/groups.locked` and an empty value. Doing so
+   * locks the group. To unlock the group, remove this label.
    * @param labels labels or {@code null} for none
    */
   public Group setLabels(java.util.Map<String, java.lang.String> labels) {

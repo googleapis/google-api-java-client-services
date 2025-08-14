@@ -144,6 +144,13 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.String planningStatus;
 
   /**
+   * Protection tier for the workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectionTier;
+
+  /**
    * The reservation mode which determines reservation-termination behavior and expected pricing.
    * The value may be {@code null}.
    */
@@ -492,6 +499,23 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   public FutureReservation setPlanningStatus(java.lang.String planningStatus) {
     this.planningStatus = planningStatus;
+    return this;
+  }
+
+  /**
+   * Protection tier for the workload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectionTier() {
+    return protectionTier;
+  }
+
+  /**
+   * Protection tier for the workload.
+   * @param protectionTier protectionTier or {@code null} for none
+   */
+  public FutureReservation setProtectionTier(java.lang.String protectionTier) {
+    this.protectionTier = protectionTier;
     return this;
   }
 

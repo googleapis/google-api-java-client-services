@@ -35,13 +35,7 @@ public final class ProductBundleDetails extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement> bundleElements;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement.class);
-  }
+  private java.util.List<ProductBundleDetailsBundleElement> bundleElements;
 
   /**
    * The entitlement mode of the bundle product.
@@ -54,7 +48,7 @@ public final class ProductBundleDetails extends com.google.api.client.json.Gener
    * The individual products that are included in the bundle.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement> getBundleElements() {
+  public java.util.List<ProductBundleDetailsBundleElement> getBundleElements() {
     return bundleElements;
   }
 
@@ -62,7 +56,7 @@ public final class ProductBundleDetails extends com.google.api.client.json.Gener
    * The individual products that are included in the bundle.
    * @param bundleElements bundleElements or {@code null} for none
    */
-  public ProductBundleDetails setBundleElements(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement> bundleElements) {
+  public ProductBundleDetails setBundleElements(java.util.List<ProductBundleDetailsBundleElement> bundleElements) {
     this.bundleElements = bundleElements;
     return this;
   }

@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1alpha.model;
 
 /**
- * Information about a BeyondCorp SecurityGateway resource.
+ * The information about a security gateway resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -35,6 +35,13 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway e
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Output only. Service account used for operations that involve resources in consumer projects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String delegatingServiceAccount;
 
   /**
    * Optional. An arbitrary user-provided name for the SecurityGateway. Cannot exceed 64 characters.
@@ -98,6 +105,23 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway e
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Service account used for operations that involve resources in consumer projects.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDelegatingServiceAccount() {
+    return delegatingServiceAccount;
+  }
+
+  /**
+   * Output only. Service account used for operations that involve resources in consumer projects.
+   * @param delegatingServiceAccount delegatingServiceAccount or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway setDelegatingServiceAccount(java.lang.String delegatingServiceAccount) {
+    this.delegatingServiceAccount = delegatingServiceAccount;
     return this;
   }
 

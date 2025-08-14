@@ -45,6 +45,13 @@ public final class GoogleChromeManagementV1DisplayInfo extends com.google.api.cl
   private java.lang.String displayName;
 
   /**
+   * Output only. EDID version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edidVersion;
+
+  /**
    * Output only. Indicates if display is internal or not.
    * The value may be {@code null}.
    */
@@ -71,6 +78,13 @@ public final class GoogleChromeManagementV1DisplayInfo extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.Integer resolutionWidth;
+
+  /**
+   * Output only. Serial number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer serialNumber;
 
   /**
    * Output only. Represents the graphics card device id.
@@ -103,6 +117,23 @@ public final class GoogleChromeManagementV1DisplayInfo extends com.google.api.cl
    */
   public GoogleChromeManagementV1DisplayInfo setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. EDID version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdidVersion() {
+    return edidVersion;
+  }
+
+  /**
+   * Output only. EDID version.
+   * @param edidVersion edidVersion or {@code null} for none
+   */
+  public GoogleChromeManagementV1DisplayInfo setEdidVersion(java.lang.String edidVersion) {
+    this.edidVersion = edidVersion;
     return this;
   }
 
@@ -171,6 +202,23 @@ public final class GoogleChromeManagementV1DisplayInfo extends com.google.api.cl
    */
   public GoogleChromeManagementV1DisplayInfo setResolutionWidth(java.lang.Integer resolutionWidth) {
     this.resolutionWidth = resolutionWidth;
+    return this;
+  }
+
+  /**
+   * Output only. Serial number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSerialNumber() {
+    return serialNumber;
+  }
+
+  /**
+   * Output only. Serial number.
+   * @param serialNumber serialNumber or {@code null} for none
+   */
+  public GoogleChromeManagementV1DisplayInfo setSerialNumber(java.lang.Integer serialNumber) {
+    this.serialNumber = serialNumber;
     return this;
   }
 

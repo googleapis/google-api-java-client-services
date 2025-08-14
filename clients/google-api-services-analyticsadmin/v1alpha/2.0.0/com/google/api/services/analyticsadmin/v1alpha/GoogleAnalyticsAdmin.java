@@ -3204,108 +3204,6 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Creates a connected site tag for a Universal Analytics property. You can create a maximum of 20
-     * connected site tags per property. Note: This API cannot be used on GA4 properties.
-     *
-     * Create a request for the method "properties.createConnectedSiteTag".
-     *
-     * This request holds the parameters needed by the analyticsadmin server.  After setting any
-     * optional parameters, call the {@link CreateConnectedSiteTag#execute()} method to invoke the
-     * remote operation.
-     *
-     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest}
-     * @return the request
-     */
-    public CreateConnectedSiteTag createConnectedSiteTag(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest content) throws java.io.IOException {
-      CreateConnectedSiteTag result = new CreateConnectedSiteTag(content);
-      initialize(result);
-      return result;
-    }
-
-    public class CreateConnectedSiteTag extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagResponse> {
-
-      private static final String REST_PATH = "v1alpha/properties:createConnectedSiteTag";
-
-      /**
-       * Creates a connected site tag for a Universal Analytics property. You can create a maximum of 20
-       * connected site tags per property. Note: This API cannot be used on GA4 properties.
-       *
-       * Create a request for the method "properties.createConnectedSiteTag".
-       *
-       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
-       * optional parameters, call the {@link CreateConnectedSiteTag#execute()} method to invoke the
-       * remote operation. <p> {@link CreateConnectedSiteTag#initialize(com.google.api.client.googleapis
-       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-       * after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest}
-       * @since 1.13
-       */
-      protected CreateConnectedSiteTag(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest content) {
-        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagResponse.class);
-      }
-
-      @Override
-      public CreateConnectedSiteTag set$Xgafv(java.lang.String $Xgafv) {
-        return (CreateConnectedSiteTag) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setAccessToken(java.lang.String accessToken) {
-        return (CreateConnectedSiteTag) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setAlt(java.lang.String alt) {
-        return (CreateConnectedSiteTag) super.setAlt(alt);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setCallback(java.lang.String callback) {
-        return (CreateConnectedSiteTag) super.setCallback(callback);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setFields(java.lang.String fields) {
-        return (CreateConnectedSiteTag) super.setFields(fields);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setKey(java.lang.String key) {
-        return (CreateConnectedSiteTag) super.setKey(key);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setOauthToken(java.lang.String oauthToken) {
-        return (CreateConnectedSiteTag) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (CreateConnectedSiteTag) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setQuotaUser(java.lang.String quotaUser) {
-        return (CreateConnectedSiteTag) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setUploadType(java.lang.String uploadType) {
-        return (CreateConnectedSiteTag) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public CreateConnectedSiteTag setUploadProtocol(java.lang.String uploadProtocol) {
-        return (CreateConnectedSiteTag) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public CreateConnectedSiteTag set(String parameterName, Object value) {
-        return (CreateConnectedSiteTag) super.set(parameterName, value);
-      }
-    }
-    /**
      * Create a roll-up property and all roll-up property source links.
      *
      * Create a request for the method "properties.createRollupProperty".
@@ -3550,346 +3448,6 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Deletes a connected site tag for a Universal Analytics property. Note: this has no effect on GA4
-     * properties.
-     *
-     * Create a request for the method "properties.deleteConnectedSiteTag".
-     *
-     * This request holds the parameters needed by the analyticsadmin server.  After setting any
-     * optional parameters, call the {@link DeleteConnectedSiteTag#execute()} method to invoke the
-     * remote operation.
-     *
-     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest}
-     * @return the request
-     */
-    public DeleteConnectedSiteTag deleteConnectedSiteTag(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest content) throws java.io.IOException {
-      DeleteConnectedSiteTag result = new DeleteConnectedSiteTag(content);
-      initialize(result);
-      return result;
-    }
-
-    public class DeleteConnectedSiteTag extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
-
-      private static final String REST_PATH = "v1alpha/properties:deleteConnectedSiteTag";
-
-      /**
-       * Deletes a connected site tag for a Universal Analytics property. Note: this has no effect on
-       * GA4 properties.
-       *
-       * Create a request for the method "properties.deleteConnectedSiteTag".
-       *
-       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
-       * optional parameters, call the {@link DeleteConnectedSiteTag#execute()} method to invoke the
-       * remote operation. <p> {@link DeleteConnectedSiteTag#initialize(com.google.api.client.googleapis
-       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-       * after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest}
-       * @since 1.13
-       */
-      protected DeleteConnectedSiteTag(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest content) {
-        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag set$Xgafv(java.lang.String $Xgafv) {
-        return (DeleteConnectedSiteTag) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setAccessToken(java.lang.String accessToken) {
-        return (DeleteConnectedSiteTag) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setAlt(java.lang.String alt) {
-        return (DeleteConnectedSiteTag) super.setAlt(alt);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setCallback(java.lang.String callback) {
-        return (DeleteConnectedSiteTag) super.setCallback(callback);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setFields(java.lang.String fields) {
-        return (DeleteConnectedSiteTag) super.setFields(fields);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setKey(java.lang.String key) {
-        return (DeleteConnectedSiteTag) super.setKey(key);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setOauthToken(java.lang.String oauthToken) {
-        return (DeleteConnectedSiteTag) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (DeleteConnectedSiteTag) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setQuotaUser(java.lang.String quotaUser) {
-        return (DeleteConnectedSiteTag) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setUploadType(java.lang.String uploadType) {
-        return (DeleteConnectedSiteTag) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag setUploadProtocol(java.lang.String uploadProtocol) {
-        return (DeleteConnectedSiteTag) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public DeleteConnectedSiteTag set(String parameterName, Object value) {
-        return (DeleteConnectedSiteTag) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Fetches the opt out status for the automated GA4 setup process for a UA property. Note: this has
-     * no effect on GA4 property.
-     *
-     * Create a request for the method "properties.fetchAutomatedGa4ConfigurationOptOut".
-     *
-     * This request holds the parameters needed by the analyticsadmin server.  After setting any
-     * optional parameters, call the {@link FetchAutomatedGa4ConfigurationOptOut#execute()} method to
-     * invoke the remote operation.
-     *
-     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest}
-     * @return the request
-     */
-    public FetchAutomatedGa4ConfigurationOptOut fetchAutomatedGa4ConfigurationOptOut(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest content) throws java.io.IOException {
-      FetchAutomatedGa4ConfigurationOptOut result = new FetchAutomatedGa4ConfigurationOptOut(content);
-      initialize(result);
-      return result;
-    }
-
-    public class FetchAutomatedGa4ConfigurationOptOut extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse> {
-
-      private static final String REST_PATH = "v1alpha/properties:fetchAutomatedGa4ConfigurationOptOut";
-
-      /**
-       * Fetches the opt out status for the automated GA4 setup process for a UA property. Note: this
-       * has no effect on GA4 property.
-       *
-       * Create a request for the method "properties.fetchAutomatedGa4ConfigurationOptOut".
-       *
-       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
-       * optional parameters, call the {@link FetchAutomatedGa4ConfigurationOptOut#execute()} method to
-       * invoke the remote operation. <p> {@link FetchAutomatedGa4ConfigurationOptOut#initialize(com.goo
-       * gle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
-       * this instance immediately after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest}
-       * @since 1.13
-       */
-      protected FetchAutomatedGa4ConfigurationOptOut(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest content) {
-        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse.class);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut set$Xgafv(java.lang.String $Xgafv) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setAccessToken(java.lang.String accessToken) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setAlt(java.lang.String alt) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setAlt(alt);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setCallback(java.lang.String callback) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setCallback(callback);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setFields(java.lang.String fields) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setFields(fields);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setKey(java.lang.String key) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setKey(key);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setOauthToken(java.lang.String oauthToken) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setQuotaUser(java.lang.String quotaUser) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setUploadType(java.lang.String uploadType) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut setUploadProtocol(java.lang.String uploadProtocol) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public FetchAutomatedGa4ConfigurationOptOut set(String parameterName, Object value) {
-        return (FetchAutomatedGa4ConfigurationOptOut) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Given a specified UA property, looks up the GA4 property connected to it. Note: this cannot be
-     * used with GA4 properties.
-     *
-     * Create a request for the method "properties.fetchConnectedGa4Property".
-     *
-     * This request holds the parameters needed by the analyticsadmin server.  After setting any
-     * optional parameters, call the {@link FetchConnectedGa4Property#execute()} method to invoke the
-     * remote operation.
-     *
-     * @return the request
-     */
-    public FetchConnectedGa4Property fetchConnectedGa4Property() throws java.io.IOException {
-      FetchConnectedGa4Property result = new FetchConnectedGa4Property();
-      initialize(result);
-      return result;
-    }
-
-    public class FetchConnectedGa4Property extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse> {
-
-      private static final String REST_PATH = "v1alpha/properties:fetchConnectedGa4Property";
-
-      /**
-       * Given a specified UA property, looks up the GA4 property connected to it. Note: this cannot be
-       * used with GA4 properties.
-       *
-       * Create a request for the method "properties.fetchConnectedGa4Property".
-       *
-       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
-       * optional parameters, call the {@link FetchConnectedGa4Property#execute()} method to invoke the
-       * remote operation. <p> {@link FetchConnectedGa4Property#initialize(com.google.api.client.googlea
-       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-       * immediately after invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected FetchConnectedGa4Property() {
-        super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse.class);
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public FetchConnectedGa4Property set$Xgafv(java.lang.String $Xgafv) {
-        return (FetchConnectedGa4Property) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setAccessToken(java.lang.String accessToken) {
-        return (FetchConnectedGa4Property) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setAlt(java.lang.String alt) {
-        return (FetchConnectedGa4Property) super.setAlt(alt);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setCallback(java.lang.String callback) {
-        return (FetchConnectedGa4Property) super.setCallback(callback);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setFields(java.lang.String fields) {
-        return (FetchConnectedGa4Property) super.setFields(fields);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setKey(java.lang.String key) {
-        return (FetchConnectedGa4Property) super.setKey(key);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setOauthToken(java.lang.String oauthToken) {
-        return (FetchConnectedGa4Property) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (FetchConnectedGa4Property) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setQuotaUser(java.lang.String quotaUser) {
-        return (FetchConnectedGa4Property) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setUploadType(java.lang.String uploadType) {
-        return (FetchConnectedGa4Property) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public FetchConnectedGa4Property setUploadProtocol(java.lang.String uploadProtocol) {
-        return (FetchConnectedGa4Property) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The UA property for which to look up the connected GA4 property. Note this
-       * request uses the internal property ID, not the tracking ID of the form UA-XXXXXX-YY.
-       * Format: properties/{internal_web_property_id} Example: properties/1234
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String property;
-
-      /** Required. The UA property for which to look up the connected GA4 property. Note this request uses
-     the internal property ID, not the tracking ID of the form UA-XXXXXX-YY. Format:
-     properties/{internal_web_property_id} Example: properties/1234
-       */
-      public java.lang.String getProperty() {
-        return property;
-      }
-
-      /**
-       * Required. The UA property for which to look up the connected GA4 property. Note this
-       * request uses the internal property ID, not the tracking ID of the form UA-XXXXXX-YY.
-       * Format: properties/{internal_web_property_id} Example: properties/1234
-       */
-      public FetchConnectedGa4Property setProperty(java.lang.String property) {
-        this.property = property;
-        return this;
-      }
-
-      @Override
-      public FetchConnectedGa4Property set(String parameterName, Object value) {
-        return (FetchConnectedGa4Property) super.set(parameterName, value);
       }
     }
     /**
@@ -4489,6 +4047,160 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Returns the singleton data retention settings for this property.
+     *
+     * Create a request for the method "properties.getReportingIdentitySettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link GetReportingIdentitySettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the settings to lookup. Format:
+     *        properties/{property}/reportingIdentitySettings Example:
+     *        "properties/1000/reportingIdentitySettings"
+     * @return the request
+     */
+    public GetReportingIdentitySettings getReportingIdentitySettings(java.lang.String name) throws java.io.IOException {
+      GetReportingIdentitySettings result = new GetReportingIdentitySettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetReportingIdentitySettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/reportingIdentitySettings$");
+
+      /**
+       * Returns the singleton data retention settings for this property.
+       *
+       * Create a request for the method "properties.getReportingIdentitySettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link GetReportingIdentitySettings#execute()} method to invoke
+       * the remote operation. <p> {@link GetReportingIdentitySettings#initialize(com.google.api.client.
+       * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the settings to lookup. Format:
+     *        properties/{property}/reportingIdentitySettings Example:
+     *        "properties/1000/reportingIdentitySettings"
+       * @since 1.13
+       */
+      protected GetReportingIdentitySettings(java.lang.String name) {
+        super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/reportingIdentitySettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetReportingIdentitySettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetReportingIdentitySettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setAccessToken(java.lang.String accessToken) {
+        return (GetReportingIdentitySettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setAlt(java.lang.String alt) {
+        return (GetReportingIdentitySettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setCallback(java.lang.String callback) {
+        return (GetReportingIdentitySettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setFields(java.lang.String fields) {
+        return (GetReportingIdentitySettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setKey(java.lang.String key) {
+        return (GetReportingIdentitySettings) super.setKey(key);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setOauthToken(java.lang.String oauthToken) {
+        return (GetReportingIdentitySettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetReportingIdentitySettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetReportingIdentitySettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setUploadType(java.lang.String uploadType) {
+        return (GetReportingIdentitySettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetReportingIdentitySettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the settings to lookup. Format:
+       * properties/{property}/reportingIdentitySettings Example:
+       * "properties/1000/reportingIdentitySettings"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the settings to lookup. Format:
+     properties/{property}/reportingIdentitySettings Example:
+     "properties/1000/reportingIdentitySettings"
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the settings to lookup. Format:
+       * properties/{property}/reportingIdentitySettings Example:
+       * "properties/1000/reportingIdentitySettings"
+       */
+      public GetReportingIdentitySettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/reportingIdentitySettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetReportingIdentitySettings set(String parameterName, Object value) {
+        return (GetReportingIdentitySettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns child Properties under the specified parent Account. Properties will be excluded if the
      * caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default.
      * Returns an empty list if no relevant properties are found.
@@ -4715,108 +4427,6 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Lists the connected site tags for a Universal Analytics property. A maximum of 20 connected site
-     * tags will be returned. Note: this has no effect on GA4 property.
-     *
-     * Create a request for the method "properties.listConnectedSiteTags".
-     *
-     * This request holds the parameters needed by the analyticsadmin server.  After setting any
-     * optional parameters, call the {@link ListConnectedSiteTags#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest}
-     * @return the request
-     */
-    public ListConnectedSiteTags listConnectedSiteTags(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest content) throws java.io.IOException {
-      ListConnectedSiteTags result = new ListConnectedSiteTags(content);
-      initialize(result);
-      return result;
-    }
-
-    public class ListConnectedSiteTags extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse> {
-
-      private static final String REST_PATH = "v1alpha/properties:listConnectedSiteTags";
-
-      /**
-       * Lists the connected site tags for a Universal Analytics property. A maximum of 20 connected
-       * site tags will be returned. Note: this has no effect on GA4 property.
-       *
-       * Create a request for the method "properties.listConnectedSiteTags".
-       *
-       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
-       * optional parameters, call the {@link ListConnectedSiteTags#execute()} method to invoke the
-       * remote operation. <p> {@link ListConnectedSiteTags#initialize(com.google.api.client.googleapis.
-       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-       * after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest}
-       * @since 1.13
-       */
-      protected ListConnectedSiteTags(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest content) {
-        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse.class);
-      }
-
-      @Override
-      public ListConnectedSiteTags set$Xgafv(java.lang.String $Xgafv) {
-        return (ListConnectedSiteTags) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public ListConnectedSiteTags setAccessToken(java.lang.String accessToken) {
-        return (ListConnectedSiteTags) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public ListConnectedSiteTags setAlt(java.lang.String alt) {
-        return (ListConnectedSiteTags) super.setAlt(alt);
-      }
-
-      @Override
-      public ListConnectedSiteTags setCallback(java.lang.String callback) {
-        return (ListConnectedSiteTags) super.setCallback(callback);
-      }
-
-      @Override
-      public ListConnectedSiteTags setFields(java.lang.String fields) {
-        return (ListConnectedSiteTags) super.setFields(fields);
-      }
-
-      @Override
-      public ListConnectedSiteTags setKey(java.lang.String key) {
-        return (ListConnectedSiteTags) super.setKey(key);
-      }
-
-      @Override
-      public ListConnectedSiteTags setOauthToken(java.lang.String oauthToken) {
-        return (ListConnectedSiteTags) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public ListConnectedSiteTags setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (ListConnectedSiteTags) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public ListConnectedSiteTags setQuotaUser(java.lang.String quotaUser) {
-        return (ListConnectedSiteTags) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public ListConnectedSiteTags setUploadType(java.lang.String uploadType) {
-        return (ListConnectedSiteTags) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public ListConnectedSiteTags setUploadProtocol(java.lang.String uploadProtocol) {
-        return (ListConnectedSiteTags) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public ListConnectedSiteTags set(String parameterName, Object value) {
-        return (ListConnectedSiteTags) super.set(parameterName, value);
       }
     }
     /**
@@ -5266,105 +4876,135 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Sets the opt out status for the automated GA4 setup process for a UA property. Note: this has no
-     * effect on GA4 property.
+     * Submits a request for user deletion for a property.
      *
-     * Create a request for the method "properties.setAutomatedGa4ConfigurationOptOut".
+     * Create a request for the method "properties.submitUserDeletion".
      *
      * This request holds the parameters needed by the analyticsadmin server.  After setting any
-     * optional parameters, call the {@link SetAutomatedGa4ConfigurationOptOut#execute()} method to
-     * invoke the remote operation.
+     * optional parameters, call the {@link SubmitUserDeletion#execute()} method to invoke the remote
+     * operation.
      *
-     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest}
+     * @param name Required. The name of the property to submit user deletion for.
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionRequest}
      * @return the request
      */
-    public SetAutomatedGa4ConfigurationOptOut setAutomatedGa4ConfigurationOptOut(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest content) throws java.io.IOException {
-      SetAutomatedGa4ConfigurationOptOut result = new SetAutomatedGa4ConfigurationOptOut(content);
+    public SubmitUserDeletion submitUserDeletion(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionRequest content) throws java.io.IOException {
+      SubmitUserDeletion result = new SubmitUserDeletion(name, content);
       initialize(result);
       return result;
     }
 
-    public class SetAutomatedGa4ConfigurationOptOut extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutResponse> {
+    public class SubmitUserDeletion extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionResponse> {
 
-      private static final String REST_PATH = "v1alpha/properties:setAutomatedGa4ConfigurationOptOut";
+      private static final String REST_PATH = "v1alpha/{+name}:submitUserDeletion";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+$");
 
       /**
-       * Sets the opt out status for the automated GA4 setup process for a UA property. Note: this has
-       * no effect on GA4 property.
+       * Submits a request for user deletion for a property.
        *
-       * Create a request for the method "properties.setAutomatedGa4ConfigurationOptOut".
+       * Create a request for the method "properties.submitUserDeletion".
        *
        * This request holds the parameters needed by the the analyticsadmin server.  After setting any
-       * optional parameters, call the {@link SetAutomatedGa4ConfigurationOptOut#execute()} method to
-       * invoke the remote operation. <p> {@link SetAutomatedGa4ConfigurationOptOut#initialize(com.googl
-       * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
-       * this instance immediately after invoking the constructor. </p>
+       * optional parameters, call the {@link SubmitUserDeletion#execute()} method to invoke the remote
+       * operation. <p> {@link SubmitUserDeletion#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
        *
-       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest}
+       * @param name Required. The name of the property to submit user deletion for.
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionRequest}
        * @since 1.13
        */
-      protected SetAutomatedGa4ConfigurationOptOut(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest content) {
-        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutResponse.class);
+      protected SubmitUserDeletion(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSubmitUserDeletionResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut set$Xgafv(java.lang.String $Xgafv) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.set$Xgafv($Xgafv);
+      public SubmitUserDeletion set$Xgafv(java.lang.String $Xgafv) {
+        return (SubmitUserDeletion) super.set$Xgafv($Xgafv);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setAccessToken(java.lang.String accessToken) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setAccessToken(accessToken);
+      public SubmitUserDeletion setAccessToken(java.lang.String accessToken) {
+        return (SubmitUserDeletion) super.setAccessToken(accessToken);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setAlt(java.lang.String alt) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setAlt(alt);
+      public SubmitUserDeletion setAlt(java.lang.String alt) {
+        return (SubmitUserDeletion) super.setAlt(alt);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setCallback(java.lang.String callback) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setCallback(callback);
+      public SubmitUserDeletion setCallback(java.lang.String callback) {
+        return (SubmitUserDeletion) super.setCallback(callback);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setFields(java.lang.String fields) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setFields(fields);
+      public SubmitUserDeletion setFields(java.lang.String fields) {
+        return (SubmitUserDeletion) super.setFields(fields);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setKey(java.lang.String key) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setKey(key);
+      public SubmitUserDeletion setKey(java.lang.String key) {
+        return (SubmitUserDeletion) super.setKey(key);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setOauthToken(java.lang.String oauthToken) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setOauthToken(oauthToken);
+      public SubmitUserDeletion setOauthToken(java.lang.String oauthToken) {
+        return (SubmitUserDeletion) super.setOauthToken(oauthToken);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setPrettyPrint(prettyPrint);
+      public SubmitUserDeletion setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SubmitUserDeletion) super.setPrettyPrint(prettyPrint);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setQuotaUser(java.lang.String quotaUser) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setQuotaUser(quotaUser);
+      public SubmitUserDeletion setQuotaUser(java.lang.String quotaUser) {
+        return (SubmitUserDeletion) super.setQuotaUser(quotaUser);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setUploadType(java.lang.String uploadType) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setUploadType(uploadType);
+      public SubmitUserDeletion setUploadType(java.lang.String uploadType) {
+        return (SubmitUserDeletion) super.setUploadType(uploadType);
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut setUploadProtocol(java.lang.String uploadProtocol) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.setUploadProtocol(uploadProtocol);
+      public SubmitUserDeletion setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SubmitUserDeletion) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the property to submit user deletion for. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the property to submit user deletion for.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the property to submit user deletion for. */
+      public SubmitUserDeletion setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+        this.name = name;
+        return this;
       }
 
       @Override
-      public SetAutomatedGa4ConfigurationOptOut set(String parameterName, Object value) {
-        return (SetAutomatedGa4ConfigurationOptOut) super.set(parameterName, value);
+      public SubmitUserDeletion set(String parameterName, Object value) {
+        return (SubmitUserDeletion) super.set(parameterName, value);
       }
     }
     /**

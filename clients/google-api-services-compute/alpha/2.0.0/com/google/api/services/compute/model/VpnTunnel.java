@@ -122,6 +122,14 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpnTunnelParams params;
+
+  /**
    * URL of the peer side external VPN gateway to which this VPN tunnel is connected. Provided by
    * the client when the VPN tunnel is created. This field is exclusive with the field
    * peerGcpGateway.
@@ -501,6 +509,25 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
    */
   public VpnTunnel setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public VpnTunnelParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public VpnTunnel setParams(VpnTunnelParams params) {
+    this.params = params;
     return this;
   }
 

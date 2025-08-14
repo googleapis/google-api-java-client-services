@@ -31,7 +31,7 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Challenge information for SCORE_AND_CHALLENGE and INVISIBLE keys
+   * Output only. Challenge information for POLICY_BASED_CHALLENGE and INVISIBLE keys
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Output only. Challenge information for SCORE_AND_CHALLENGE and INVISIBLE keys
+   * Output only. Challenge information for POLICY_BASED_CHALLENGE and INVISIBLE keys
    * @return value or {@code null} for none
    */
   public java.lang.String getChallenge() {
@@ -83,7 +83,7 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Output only. Challenge information for SCORE_AND_CHALLENGE and INVISIBLE keys
+   * Output only. Challenge information for POLICY_BASED_CHALLENGE and INVISIBLE keys
    * @param challenge challenge or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setChallenge(java.lang.String challenge) {

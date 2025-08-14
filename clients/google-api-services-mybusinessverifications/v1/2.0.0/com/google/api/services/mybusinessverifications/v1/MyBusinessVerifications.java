@@ -894,6 +894,129 @@ public class MyBusinessVerifications extends com.google.api.client.googleapis.se
   }
 
   /**
+   * An accessor for creating requests from the VerificationTokens collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code MyBusinessVerifications mybusinessverifications = new MyBusinessVerifications(...);}
+   *   {@code MyBusinessVerifications.VerificationTokens.List request = mybusinessverifications.verificationTokens().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public VerificationTokens verificationTokens() {
+    return new VerificationTokens();
+  }
+
+  /**
+   * The "verificationTokens" collection of methods.
+   */
+  public class VerificationTokens {
+
+    /**
+     * Generate a token for the provided location data to verify the location.
+     *
+     * Create a request for the method "verificationTokens.generate".
+     *
+     * This request holds the parameters needed by the mybusinessverifications server.  After setting
+     * any optional parameters, call the {@link Generate#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.mybusinessverifications.v1.model.GenerateInstantVerificationTokenRequest}
+     * @return the request
+     */
+    public Generate generate(com.google.api.services.mybusinessverifications.v1.model.GenerateInstantVerificationTokenRequest content) throws java.io.IOException {
+      Generate result = new Generate(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Generate extends MyBusinessVerificationsRequest<com.google.api.services.mybusinessverifications.v1.model.GenerateInstantVerificationTokenResponse> {
+
+      private static final String REST_PATH = "v1/verificationTokens:generate";
+
+      /**
+       * Generate a token for the provided location data to verify the location.
+       *
+       * Create a request for the method "verificationTokens.generate".
+       *
+       * This request holds the parameters needed by the the mybusinessverifications server.  After
+       * setting any optional parameters, call the {@link Generate#execute()} method to invoke the
+       * remote operation. <p> {@link
+       * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.mybusinessverifications.v1.model.GenerateInstantVerificationTokenRequest}
+       * @since 1.13
+       */
+      protected Generate(com.google.api.services.mybusinessverifications.v1.model.GenerateInstantVerificationTokenRequest content) {
+        super(MyBusinessVerifications.this, "POST", REST_PATH, content, com.google.api.services.mybusinessverifications.v1.model.GenerateInstantVerificationTokenResponse.class);
+      }
+
+      @Override
+      public Generate set$Xgafv(java.lang.String $Xgafv) {
+        return (Generate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Generate setAccessToken(java.lang.String accessToken) {
+        return (Generate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Generate setAlt(java.lang.String alt) {
+        return (Generate) super.setAlt(alt);
+      }
+
+      @Override
+      public Generate setCallback(java.lang.String callback) {
+        return (Generate) super.setCallback(callback);
+      }
+
+      @Override
+      public Generate setFields(java.lang.String fields) {
+        return (Generate) super.setFields(fields);
+      }
+
+      @Override
+      public Generate setKey(java.lang.String key) {
+        return (Generate) super.setKey(key);
+      }
+
+      @Override
+      public Generate setOauthToken(java.lang.String oauthToken) {
+        return (Generate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Generate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Generate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Generate setQuotaUser(java.lang.String quotaUser) {
+        return (Generate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Generate setUploadType(java.lang.String uploadType) {
+        return (Generate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Generate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Generate set(String parameterName, Object value) {
+        return (Generate) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link MyBusinessVerifications}.
    *
    * <p>

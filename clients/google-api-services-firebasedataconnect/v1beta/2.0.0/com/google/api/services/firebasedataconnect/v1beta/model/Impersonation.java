@@ -40,6 +40,13 @@ public final class Impersonation extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.Object> authClaims;
 
   /**
+   * Optional. If set, include debug details in GraphQL error extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeDebugDetails;
+
+  /**
    * Evaluate the auth policy as an unauthenticated request. Can only be set to true.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class Impersonation extends com.google.api.client.json.GenericJson 
    */
   public Impersonation setAuthClaims(java.util.Map<String, java.lang.Object> authClaims) {
     this.authClaims = authClaims;
+    return this;
+  }
+
+  /**
+   * Optional. If set, include debug details in GraphQL error extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeDebugDetails() {
+    return includeDebugDetails;
+  }
+
+  /**
+   * Optional. If set, include debug details in GraphQL error extensions.
+   * @param includeDebugDetails includeDebugDetails or {@code null} for none
+   */
+  public Impersonation setIncludeDebugDetails(java.lang.Boolean includeDebugDetails) {
+    this.includeDebugDetails = includeDebugDetails;
     return this;
   }
 

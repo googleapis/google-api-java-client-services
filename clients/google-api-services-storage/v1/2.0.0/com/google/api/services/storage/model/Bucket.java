@@ -1383,12 +1383,81 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   public static final class Encryption extends com.google.api.client.json.GenericJson {
 
     /**
+     * If set, the new objects created in this bucket must comply with this enforcement config.
+     * Changing this has no effect on existing objects; it applies to new objects only. If omitted,
+     * the new objects are allowed to be encrypted with Customer Managed Encryption type by default.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private CustomerManagedEncryptionEnforcementConfig customerManagedEncryptionEnforcementConfig;
+
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config.
+     * Changing this has no effect on existing objects; it applies to new objects only. If omitted,
+     * the new objects are allowed to be encrypted with Customer Supplied Encryption type by default.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private CustomerSuppliedEncryptionEnforcementConfig customerSuppliedEncryptionEnforcementConfig;
+
+    /**
      * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no
      * encryption method is specified.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String defaultKmsKeyName;
+
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config.
+     * Changing this has no effect on existing objects; it applies to new objects only. If omitted,
+     * the new objects are allowed to be encrypted with Google Managed Encryption type by default.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private GoogleManagedEncryptionEnforcementConfig googleManagedEncryptionEnforcementConfig;
+
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config.
+     * Changing this has no effect on existing objects; it applies to new objects only. If omitted,
+     * the new objects are allowed to be encrypted with Customer Managed Encryption type by default.
+     * @return value or {@code null} for none
+     */
+    public CustomerManagedEncryptionEnforcementConfig getCustomerManagedEncryptionEnforcementConfig() {
+      return customerManagedEncryptionEnforcementConfig;
+    }
+
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config.
+     * Changing this has no effect on existing objects; it applies to new objects only. If omitted,
+     * the new objects are allowed to be encrypted with Customer Managed Encryption type by default.
+     * @param customerManagedEncryptionEnforcementConfig customerManagedEncryptionEnforcementConfig or {@code null} for none
+     */
+    public Encryption setCustomerManagedEncryptionEnforcementConfig(CustomerManagedEncryptionEnforcementConfig customerManagedEncryptionEnforcementConfig) {
+      this.customerManagedEncryptionEnforcementConfig = customerManagedEncryptionEnforcementConfig;
+      return this;
+    }
+
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config.
+     * Changing this has no effect on existing objects; it applies to new objects only. If omitted,
+     * the new objects are allowed to be encrypted with Customer Supplied Encryption type by default.
+     * @return value or {@code null} for none
+     */
+    public CustomerSuppliedEncryptionEnforcementConfig getCustomerSuppliedEncryptionEnforcementConfig() {
+      return customerSuppliedEncryptionEnforcementConfig;
+    }
+
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config.
+     * Changing this has no effect on existing objects; it applies to new objects only. If omitted,
+     * the new objects are allowed to be encrypted with Customer Supplied Encryption type by default.
+     * @param customerSuppliedEncryptionEnforcementConfig customerSuppliedEncryptionEnforcementConfig or {@code null} for none
+     */
+    public Encryption setCustomerSuppliedEncryptionEnforcementConfig(CustomerSuppliedEncryptionEnforcementConfig customerSuppliedEncryptionEnforcementConfig) {
+      this.customerSuppliedEncryptionEnforcementConfig = customerSuppliedEncryptionEnforcementConfig;
+      return this;
+    }
 
     /**
      * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no
@@ -1409,6 +1478,27 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       return this;
     }
 
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config.
+     * Changing this has no effect on existing objects; it applies to new objects only. If omitted,
+     * the new objects are allowed to be encrypted with Google Managed Encryption type by default.
+     * @return value or {@code null} for none
+     */
+    public GoogleManagedEncryptionEnforcementConfig getGoogleManagedEncryptionEnforcementConfig() {
+      return googleManagedEncryptionEnforcementConfig;
+    }
+
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config.
+     * Changing this has no effect on existing objects; it applies to new objects only. If omitted,
+     * the new objects are allowed to be encrypted with Google Managed Encryption type by default.
+     * @param googleManagedEncryptionEnforcementConfig googleManagedEncryptionEnforcementConfig or {@code null} for none
+     */
+    public Encryption setGoogleManagedEncryptionEnforcementConfig(GoogleManagedEncryptionEnforcementConfig googleManagedEncryptionEnforcementConfig) {
+      this.googleManagedEncryptionEnforcementConfig = googleManagedEncryptionEnforcementConfig;
+      return this;
+    }
+
     @Override
     public Encryption set(String fieldName, Object value) {
       return (Encryption) super.set(fieldName, value);
@@ -1419,6 +1509,213 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       return (Encryption) super.clone();
     }
 
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config. Changing
+     * this has no effect on existing objects; it applies to new objects only. If omitted, the new
+     * objects are allowed to be encrypted with Customer Managed Encryption type by default.
+     */
+    public static final class CustomerManagedEncryptionEnforcementConfig extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Server-determined value that indicates the time from which configuration was enforced and
+       * effective. This value is in RFC 3339 format.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private com.google.api.client.util.DateTime effectiveTime;
+
+      /**
+       * Restriction mode for Customer-Managed Encryption Keys. Defaults to NotRestricted.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String restrictionMode;
+
+      /**
+       * Server-determined value that indicates the time from which configuration was enforced and
+       * effective. This value is in RFC 3339 format.
+       * @return value or {@code null} for none
+       */
+      public com.google.api.client.util.DateTime getEffectiveTime() {
+        return effectiveTime;
+      }
+
+      /**
+       * Server-determined value that indicates the time from which configuration was enforced and
+       * effective. This value is in RFC 3339 format.
+       * @param effectiveTime effectiveTime or {@code null} for none
+       */
+      public CustomerManagedEncryptionEnforcementConfig setEffectiveTime(com.google.api.client.util.DateTime effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+      }
+
+      /**
+       * Restriction mode for Customer-Managed Encryption Keys. Defaults to NotRestricted.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getRestrictionMode() {
+        return restrictionMode;
+      }
+
+      /**
+       * Restriction mode for Customer-Managed Encryption Keys. Defaults to NotRestricted.
+       * @param restrictionMode restrictionMode or {@code null} for none
+       */
+      public CustomerManagedEncryptionEnforcementConfig setRestrictionMode(java.lang.String restrictionMode) {
+        this.restrictionMode = restrictionMode;
+        return this;
+      }
+
+      @Override
+      public CustomerManagedEncryptionEnforcementConfig set(String fieldName, Object value) {
+        return (CustomerManagedEncryptionEnforcementConfig) super.set(fieldName, value);
+      }
+
+      @Override
+      public CustomerManagedEncryptionEnforcementConfig clone() {
+        return (CustomerManagedEncryptionEnforcementConfig) super.clone();
+      }
+
+    }
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config. Changing
+     * this has no effect on existing objects; it applies to new objects only. If omitted, the new
+     * objects are allowed to be encrypted with Customer Supplied Encryption type by default.
+     */
+    public static final class CustomerSuppliedEncryptionEnforcementConfig extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Server-determined value that indicates the time from which configuration was enforced and
+       * effective. This value is in RFC 3339 format.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private com.google.api.client.util.DateTime effectiveTime;
+
+      /**
+       * Restriction mode for Customer-Supplied Encryption Keys. Defaults to NotRestricted.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String restrictionMode;
+
+      /**
+       * Server-determined value that indicates the time from which configuration was enforced and
+       * effective. This value is in RFC 3339 format.
+       * @return value or {@code null} for none
+       */
+      public com.google.api.client.util.DateTime getEffectiveTime() {
+        return effectiveTime;
+      }
+
+      /**
+       * Server-determined value that indicates the time from which configuration was enforced and
+       * effective. This value is in RFC 3339 format.
+       * @param effectiveTime effectiveTime or {@code null} for none
+       */
+      public CustomerSuppliedEncryptionEnforcementConfig setEffectiveTime(com.google.api.client.util.DateTime effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+      }
+
+      /**
+       * Restriction mode for Customer-Supplied Encryption Keys. Defaults to NotRestricted.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getRestrictionMode() {
+        return restrictionMode;
+      }
+
+      /**
+       * Restriction mode for Customer-Supplied Encryption Keys. Defaults to NotRestricted.
+       * @param restrictionMode restrictionMode or {@code null} for none
+       */
+      public CustomerSuppliedEncryptionEnforcementConfig setRestrictionMode(java.lang.String restrictionMode) {
+        this.restrictionMode = restrictionMode;
+        return this;
+      }
+
+      @Override
+      public CustomerSuppliedEncryptionEnforcementConfig set(String fieldName, Object value) {
+        return (CustomerSuppliedEncryptionEnforcementConfig) super.set(fieldName, value);
+      }
+
+      @Override
+      public CustomerSuppliedEncryptionEnforcementConfig clone() {
+        return (CustomerSuppliedEncryptionEnforcementConfig) super.clone();
+      }
+
+    }
+    /**
+     * If set, the new objects created in this bucket must comply with this enforcement config. Changing
+     * this has no effect on existing objects; it applies to new objects only. If omitted, the new
+     * objects are allowed to be encrypted with Google Managed Encryption type by default.
+     */
+    public static final class GoogleManagedEncryptionEnforcementConfig extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Server-determined value that indicates the time from which configuration was enforced and
+       * effective. This value is in RFC 3339 format.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private com.google.api.client.util.DateTime effectiveTime;
+
+      /**
+       * Restriction mode for Google-Managed Encryption Keys. Defaults to NotRestricted.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String restrictionMode;
+
+      /**
+       * Server-determined value that indicates the time from which configuration was enforced and
+       * effective. This value is in RFC 3339 format.
+       * @return value or {@code null} for none
+       */
+      public com.google.api.client.util.DateTime getEffectiveTime() {
+        return effectiveTime;
+      }
+
+      /**
+       * Server-determined value that indicates the time from which configuration was enforced and
+       * effective. This value is in RFC 3339 format.
+       * @param effectiveTime effectiveTime or {@code null} for none
+       */
+      public GoogleManagedEncryptionEnforcementConfig setEffectiveTime(com.google.api.client.util.DateTime effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+      }
+
+      /**
+       * Restriction mode for Google-Managed Encryption Keys. Defaults to NotRestricted.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getRestrictionMode() {
+        return restrictionMode;
+      }
+
+      /**
+       * Restriction mode for Google-Managed Encryption Keys. Defaults to NotRestricted.
+       * @param restrictionMode restrictionMode or {@code null} for none
+       */
+      public GoogleManagedEncryptionEnforcementConfig setRestrictionMode(java.lang.String restrictionMode) {
+        this.restrictionMode = restrictionMode;
+        return this;
+      }
+
+      @Override
+      public GoogleManagedEncryptionEnforcementConfig set(String fieldName, Object value) {
+        return (GoogleManagedEncryptionEnforcementConfig) super.set(fieldName, value);
+      }
+
+      @Override
+      public GoogleManagedEncryptionEnforcementConfig clone() {
+        return (GoogleManagedEncryptionEnforcementConfig) super.clone();
+      }
+
+    }
   }
 
   /**

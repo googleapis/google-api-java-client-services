@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Limits for selection Field type.
+ * Limits for selection field type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaSelectionLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * Limits for list-variant of a Field type.
+   * Limits for list-variant of a field type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2betaListLimits listLimits;
 
   /**
-   * The max number of choices.
+   * Maximum number of choices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,14 +58,14 @@ public final class GoogleAppsDriveLabelsV2betaSelectionLimits extends com.google
   private java.lang.Integer maxDisplayNameLength;
 
   /**
-   * Maximum ID length for a selection options.
+   * Maximum ID length for a selection option.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxIdLength;
 
   /**
-   * Limits for list-variant of a Field type.
+   * Limits for list-variant of a field type.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaListLimits getListLimits() {
@@ -73,7 +73,7 @@ public final class GoogleAppsDriveLabelsV2betaSelectionLimits extends com.google
   }
 
   /**
-   * Limits for list-variant of a Field type.
+   * Limits for list-variant of a field type.
    * @param listLimits listLimits or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaSelectionLimits setListLimits(GoogleAppsDriveLabelsV2betaListLimits listLimits) {
@@ -82,7 +82,7 @@ public final class GoogleAppsDriveLabelsV2betaSelectionLimits extends com.google
   }
 
   /**
-   * The max number of choices.
+   * Maximum number of choices.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxChoices() {
@@ -90,7 +90,7 @@ public final class GoogleAppsDriveLabelsV2betaSelectionLimits extends com.google
   }
 
   /**
-   * The max number of choices.
+   * Maximum number of choices.
    * @param maxChoices maxChoices or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaSelectionLimits setMaxChoices(java.lang.Integer maxChoices) {
@@ -133,7 +133,7 @@ public final class GoogleAppsDriveLabelsV2betaSelectionLimits extends com.google
   }
 
   /**
-   * Maximum ID length for a selection options.
+   * Maximum ID length for a selection option.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxIdLength() {
@@ -141,7 +141,7 @@ public final class GoogleAppsDriveLabelsV2betaSelectionLimits extends com.google
   }
 
   /**
-   * Maximum ID length for a selection options.
+   * Maximum ID length for a selection option.
    * @param maxIdLength maxIdLength or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaSelectionLimits setMaxIdLength(java.lang.Integer maxIdLength) {

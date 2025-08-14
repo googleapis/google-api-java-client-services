@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Response for Label update.
+ * Response for label update.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -38,8 +38,8 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse extends c
   private java.util.List<GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse> responses;
 
   /**
-   * The label after updates were applied. This is only set if
-   * [BatchUpdateLabelResponse2.include_label_in_response] is `true` and there were no errors.
+   * The label after updates were applied. This is only set if `include_label_in_response` is `true`
+   * and there were no errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse extends c
   }
 
   /**
-   * The label after updates were applied. This is only set if
-   * [BatchUpdateLabelResponse2.include_label_in_response] is `true` and there were no errors.
+   * The label after updates were applied. This is only set if `include_label_in_response` is `true`
+   * and there were no errors.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaLabel getUpdatedLabel() {
@@ -74,8 +74,8 @@ public final class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse extends c
   }
 
   /**
-   * The label after updates were applied. This is only set if
-   * [BatchUpdateLabelResponse2.include_label_in_response] is `true` and there were no errors.
+   * The label after updates were applied. This is only set if `include_label_in_response` is `true`
+   * and there were no errors.
    * @param updatedLabel updatedLabel or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponse setUpdatedLabel(GoogleAppsDriveLabelsV2betaLabel updatedLabel) {

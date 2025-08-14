@@ -44,6 +44,13 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearc
   private java.lang.String documentUri;
 
   /**
+   * Metadata associated with the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> metadata;
+
+  /**
    * Text included in the prompt.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearc
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet setDocumentUri(java.lang.String documentUri) {
     this.documentUri = documentUri;
+    return this;
+  }
+
+  /**
+   * Metadata associated with the document.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata associated with the document.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet setMetadata(java.util.Map<String, java.lang.Object> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

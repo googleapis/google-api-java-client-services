@@ -39,6 +39,13 @@ public final class WorkstationBoostConfig extends com.google.api.client.json.Gen
   private java.lang.String id;
 
   /**
+   * Output only. Whether or not the current workstation is actively boosted with this id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean running;
+
+  /**
    * Output only. Boost configuration ID.
    * @return value or {@code null} for none
    */
@@ -52,6 +59,23 @@ public final class WorkstationBoostConfig extends com.google.api.client.json.Gen
    */
   public WorkstationBoostConfig setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. Whether or not the current workstation is actively boosted with this id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRunning() {
+    return running;
+  }
+
+  /**
+   * Output only. Whether or not the current workstation is actively boosted with this id.
+   * @param running running or {@code null} for none
+   */
+  public WorkstationBoostConfig setRunning(java.lang.Boolean running) {
+    this.running = running;
     return this;
   }
 

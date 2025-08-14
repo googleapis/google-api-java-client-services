@@ -30,8 +30,8 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaLockStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Indicates whether this label component is the (direct) target of a LabelLock. A
-   * label component can be implicitly locked even if it's not the direct target of a LabelLock, in
+   * Output only. Indicates whether this label component is the (direct) target of a label lock. A
+   * label component can be implicitly locked even if it's not the direct target of a label lock, in
    * which case this field is set to false.
    * The value may be {@code null}.
    */
@@ -39,8 +39,8 @@ public final class GoogleAppsDriveLabelsV2betaLockStatus extends com.google.api.
   private java.lang.Boolean locked;
 
   /**
-   * Output only. Indicates whether this label component is the (direct) target of a LabelLock. A
-   * label component can be implicitly locked even if it's not the direct target of a LabelLock, in
+   * Output only. Indicates whether this label component is the (direct) target of a label lock. A
+   * label component can be implicitly locked even if it's not the direct target of a label lock, in
    * which case this field is set to false.
    * @return value or {@code null} for none
    */
@@ -49,8 +49,8 @@ public final class GoogleAppsDriveLabelsV2betaLockStatus extends com.google.api.
   }
 
   /**
-   * Output only. Indicates whether this label component is the (direct) target of a LabelLock. A
-   * label component can be implicitly locked even if it's not the direct target of a LabelLock, in
+   * Output only. Indicates whether this label component is the (direct) target of a label lock. A
+   * label component can be implicitly locked even if it's not the direct target of a label lock, in
    * which case this field is set to false.
    * @param locked locked or {@code null} for none
    */

@@ -44,6 +44,13 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.String creationTimestamp;
 
   /**
+   * [Output Only] Health information for the reservation subBlock.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationSubBlockHealthInfo healthInfo;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -80,6 +87,13 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private ReservationSubBlockPhysicalTopology physicalTopology;
+
+  /**
+   * Maintenance information for this reservation subBlock.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GroupMaintenanceInfo reservationSubBlockMaintenance;
 
   /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
@@ -140,6 +154,23 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
    */
   public ReservationSubBlock setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * [Output Only] Health information for the reservation subBlock.
+   * @return value or {@code null} for none
+   */
+  public ReservationSubBlockHealthInfo getHealthInfo() {
+    return healthInfo;
+  }
+
+  /**
+   * [Output Only] Health information for the reservation subBlock.
+   * @param healthInfo healthInfo or {@code null} for none
+   */
+  public ReservationSubBlock setHealthInfo(ReservationSubBlockHealthInfo healthInfo) {
+    this.healthInfo = healthInfo;
     return this;
   }
 
@@ -231,6 +262,23 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
    */
   public ReservationSubBlock setPhysicalTopology(ReservationSubBlockPhysicalTopology physicalTopology) {
     this.physicalTopology = physicalTopology;
+    return this;
+  }
+
+  /**
+   * Maintenance information for this reservation subBlock.
+   * @return value or {@code null} for none
+   */
+  public GroupMaintenanceInfo getReservationSubBlockMaintenance() {
+    return reservationSubBlockMaintenance;
+  }
+
+  /**
+   * Maintenance information for this reservation subBlock.
+   * @param reservationSubBlockMaintenance reservationSubBlockMaintenance or {@code null} for none
+   */
+  public ReservationSubBlock setReservationSubBlockMaintenance(GroupMaintenanceInfo reservationSubBlockMaintenance) {
+    this.reservationSubBlockMaintenance = reservationSubBlockMaintenance;
     return this;
   }
 

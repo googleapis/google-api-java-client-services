@@ -104,7 +104,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.List<ContainerPort> ports;
 
   /**
-   * Readiness probe to be used for health checks. Not supported by Cloud Run.
+   * Readiness probe to be used for health checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -343,7 +343,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Readiness probe to be used for health checks. Not supported by Cloud Run.
+   * Readiness probe to be used for health checks.
    * @return value or {@code null} for none
    */
   public Probe getReadinessProbe() {
@@ -351,7 +351,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Readiness probe to be used for health checks. Not supported by Cloud Run.
+   * Readiness probe to be used for health checks.
    * @param readinessProbe readinessProbe or {@code null} for none
    */
   public Container setReadinessProbe(Probe readinessProbe) {

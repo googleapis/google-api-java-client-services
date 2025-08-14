@@ -4067,6 +4067,1988 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
         }
+        /**
+         * An accessor for creating requests from the ScimTenants collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Iam iam = new Iam(...);}
+         *   {@code Iam.ScimTenants.List request = iam.scimTenants().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ScimTenants scimTenants() {
+          return new ScimTenants();
+        }
+
+        /**
+         * The "scimTenants" collection of methods.
+         */
+        public class ScimTenants {
+
+          /**
+           * Creates a new WorkforcePoolProviderScimTenant in a WorkforcePoolProvider. You cannot reuse the
+           * name of a deleted scim tenant until 30 days after deletion.
+           *
+           * Create a request for the method "scimTenants.create".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent to create scim tenant. Format:
+           *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+           * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant> {
+
+            private static final String REST_PATH = "v1/{+parent}/scimTenants";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+
+            /**
+             * Creates a new WorkforcePoolProviderScimTenant in a WorkforcePoolProvider. You cannot reuse the
+             * name of a deleted scim tenant until 30 days after deletion.
+             *
+             * Create a request for the method "scimTenants.create".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent to create scim tenant. Format:
+           *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant content) {
+              super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent to create scim tenant. Format:
+             * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent to create scim tenant. Format:
+           'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent to create scim tenant. Format:
+             * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the scim tenant, which becomes the final component of the
+             * resource name. This value should be 4-32 characters, and may contain the characters
+             * [a-z0-9-].
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String workforcePoolProviderScimTenantId;
+
+            /** Required. The ID to use for the scim tenant, which becomes the final component of the resource
+           name. This value should be 4-32 characters, and may contain the characters [a-z0-9-].
+             */
+            public java.lang.String getWorkforcePoolProviderScimTenantId() {
+              return workforcePoolProviderScimTenantId;
+            }
+
+            /**
+             * Required. The ID to use for the scim tenant, which becomes the final component of the
+             * resource name. This value should be 4-32 characters, and may contain the characters
+             * [a-z0-9-].
+             */
+            public Create setWorkforcePoolProviderScimTenantId(java.lang.String workforcePoolProviderScimTenantId) {
+              this.workforcePoolProviderScimTenantId = workforcePoolProviderScimTenantId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a WorkforcePoolProviderScimTenant. You can undelete a scim tenant for 30 days. After 30
+           * days, deletion is permanent. You cannot update deleted scim tenants. However, you can view and
+           * list them.
+           *
+           * Create a request for the method "scimTenants.delete".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the scim tenant to delete. Format: `locations/{location}/workforcePools/{workf
+           *        orce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+
+            /**
+             * Deletes a WorkforcePoolProviderScimTenant. You can undelete a scim tenant for 30 days. After 30
+             * days, deletion is permanent. You cannot update deleted scim tenants. However, you can view and
+             * list them.
+             *
+             * Create a request for the method "scimTenants.delete".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the scim tenant to delete. Format: `locations/{location}/workforcePools/{workf
+           *        orce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the scim tenant to delete. Format: `locations/{location}/workfo
+             * rcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the scim tenant to delete. Format: `locations/{location}/workforcePools/{work
+           force_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the scim tenant to delete. Format: `locations/{location}/workfo
+             * rcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets an individual WorkforcePoolProviderScimTenant.
+           *
+           * Create a request for the method "scimTenants.get".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the scim tenant to retrieve. Format: `locations/{location}/workforcePools/{wor
+           *        kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+
+            /**
+             * Gets an individual WorkforcePoolProviderScimTenant.
+             *
+             * Create a request for the method "scimTenants.get".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the scim tenant to retrieve. Format: `locations/{location}/workforcePools/{wor
+           *        kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the scim tenant to retrieve. Format: `locations/{location}/work
+             * forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the scim tenant to retrieve. Format: `locations/{location}/workforcePools/{wo
+           rkforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the scim tenant to retrieve. Format: `locations/{location}/work
+             * forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all non-deleted WorkforcePoolProviderScimTenants in a WorkforcePoolProvider. If
+           * `show_deleted` is set to `true`, then deleted scim tenants are also listed.
+           *
+           * Create a request for the method "scimTenants.list".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent to list scim tenants. Format:
+           *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends IamRequest<com.google.api.services.iam.v1.model.ListWorkforcePoolProviderScimTenantsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/scimTenants";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+
+            /**
+             * Lists all non-deleted WorkforcePoolProviderScimTenants in a WorkforcePoolProvider. If
+             * `show_deleted` is set to `true`, then deleted scim tenants are also listed.
+             *
+             * Create a request for the method "scimTenants.list".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent to list scim tenants. Format:
+           *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListWorkforcePoolProviderScimTenantsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent to list scim tenants. Format:
+             * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent to list scim tenants. Format:
+           'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent to list scim tenants. Format:
+             * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of scim tenants to return. If unspecified, at most 1
+             * scim tenant will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of scim tenants to return. If unspecified, at most 1 scim tenant will
+           be returned.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of scim tenants to return. If unspecified, at most 1
+             * scim tenant will be returned.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListScimTenants` call. Provide this
+             * to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListScimTenants` call. Provide this to retrieve
+           the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListScimTenants` call. Provide this
+             * to retrieve the subsequent page.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Optional. Whether to return soft-deleted scim tenants. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean showDeleted;
+
+            /** Optional. Whether to return soft-deleted scim tenants.
+             */
+            public java.lang.Boolean getShowDeleted() {
+              return showDeleted;
+            }
+
+            /** Optional. Whether to return soft-deleted scim tenants. */
+            public List setShowDeleted(java.lang.Boolean showDeleted) {
+              this.showDeleted = showDeleted;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing WorkforcePoolProviderScimTenant.
+           *
+           * Create a request for the method "scimTenants.patch".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. The resource name of the SCIM Tenant. Format:
+           *        `locations/{location}/workforcePools/{workforce_pool}/providers/
+           *        {workforce_pool_provider}/scimTenants/{scim_tenant}`
+           * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+
+            /**
+             * Updates an existing WorkforcePoolProviderScimTenant.
+             *
+             * Create a request for the method "scimTenants.patch".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. The resource name of the SCIM Tenant. Format:
+           *        `locations/{location}/workforcePools/{workforce_pool}/providers/
+           *        {workforce_pool_provider}/scimTenants/{scim_tenant}`
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant content) {
+              super(Iam.this, "PATCH", REST_PATH, content, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. The resource name of the SCIM Tenant. Format:
+             * `locations/{location}/workforcePools/{workforce_pool}/providers/
+             * {workforce_pool_provider}/scimTenants/{scim_tenant}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. The resource name of the SCIM Tenant. Format:
+           `locations/{location}/workforcePools/{workforce_pool}/providers/
+           {workforce_pool_provider}/scimTenants/{scim_tenant}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. The resource name of the SCIM Tenant. Format:
+             * `locations/{location}/workforcePools/{workforce_pool}/providers/
+             * {workforce_pool_provider}/scimTenants/{scim_tenant}`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Optional. The list of fields to update. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. The list of fields to update.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Optional. The list of fields to update. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Undeletes a WorkforcePoolProviderScimTenant, as long as it was deleted fewer than 30 days ago.
+           *
+           * Create a request for the method "scimTenants.undelete".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the scim tenant to undelete. Format: `locations/{location}/workforcePools/{wor
+           *        kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+           * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTenantRequest}
+           * @return the request
+           */
+          public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTenantRequest content) throws java.io.IOException {
+            Undelete result = new Undelete(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant> {
+
+            private static final String REST_PATH = "v1/{+name}:undelete";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+
+            /**
+             * Undeletes a WorkforcePoolProviderScimTenant, as long as it was deleted fewer than 30 days ago.
+             *
+             * Create a request for the method "scimTenants.undelete".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the scim tenant to undelete. Format: `locations/{location}/workforcePools/{wor
+           *        kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTenantRequest}
+             * @since 1.13
+             */
+            protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTenantRequest content) {
+              super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+              }
+            }
+
+            @Override
+            public Undelete set$Xgafv(java.lang.String $Xgafv) {
+              return (Undelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Undelete setAccessToken(java.lang.String accessToken) {
+              return (Undelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Undelete setAlt(java.lang.String alt) {
+              return (Undelete) super.setAlt(alt);
+            }
+
+            @Override
+            public Undelete setCallback(java.lang.String callback) {
+              return (Undelete) super.setCallback(callback);
+            }
+
+            @Override
+            public Undelete setFields(java.lang.String fields) {
+              return (Undelete) super.setFields(fields);
+            }
+
+            @Override
+            public Undelete setKey(java.lang.String key) {
+              return (Undelete) super.setKey(key);
+            }
+
+            @Override
+            public Undelete setOauthToken(java.lang.String oauthToken) {
+              return (Undelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Undelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Undelete setQuotaUser(java.lang.String quotaUser) {
+              return (Undelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Undelete setUploadType(java.lang.String uploadType) {
+              return (Undelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Undelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the scim tenant to undelete. Format: `locations/{location}/work
+             * forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the scim tenant to undelete. Format: `locations/{location}/workforcePools/{wo
+           rkforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the scim tenant to undelete. Format: `locations/{location}/work
+             * forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             */
+            public Undelete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Undelete set(String parameterName, Object value) {
+              return (Undelete) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Tokens collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Iam iam = new Iam(...);}
+           *   {@code Iam.Tokens.List request = iam.tokens().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Tokens tokens() {
+            return new Tokens();
+          }
+
+          /**
+           * The "tokens" collection of methods.
+           */
+          public class Tokens {
+
+            /**
+             * Creates a new WorkforcePoolProviderScimToken in a WorkforcePoolProviderScimTenant. You cannot
+             * reuse the name of a deleted SCIM token until 30 days after deletion.
+             *
+             * Create a request for the method "tokens.create".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent tenant to create scim token. Format: 'locations/{location}/workforcePools/{work
+             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken> {
+
+              private static final String REST_PATH = "v1/{+parent}/tokens";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+
+              /**
+               * Creates a new WorkforcePoolProviderScimToken in a WorkforcePoolProviderScimTenant. You cannot
+               * reuse the name of a deleted SCIM token until 30 days after deletion.
+               *
+               * Create a request for the method "tokens.create".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent tenant to create scim token. Format: 'locations/{location}/workforcePools/{work
+             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken content) {
+                super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent tenant to create scim token. Format: 'locations/{location}/wor
+               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent tenant to create scim token. Format: 'locations/{location}/workforcePools/{wor
+             kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent tenant to create scim token. Format: 'locations/{location}/wor
+               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The ID to use for the scim token, which becomes the final component of
+               * the resource name. This value should be 4-32 characters and follow this pattern:
+               * "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String workforcePoolProviderScimTokenId;
+
+              /** Required. The ID to use for the scim token, which becomes the final component of the resource name.
+             This value should be 4-32 characters and follow this pattern: "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
+               */
+              public java.lang.String getWorkforcePoolProviderScimTokenId() {
+                return workforcePoolProviderScimTokenId;
+              }
+
+              /**
+               * Required. The ID to use for the scim token, which becomes the final component of
+               * the resource name. This value should be 4-32 characters and follow this pattern:
+               * "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
+               */
+              public Create setWorkforcePoolProviderScimTokenId(java.lang.String workforcePoolProviderScimTokenId) {
+                this.workforcePoolProviderScimTokenId = workforcePoolProviderScimTokenId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes a WorkforcePoolProviderScimToken. You can undelete a scim token for 30 days. After 30
+             * days, deletion is permanent. You cannot update deleted scim tokens. However, you can view and
+             * list them.
+             *
+             * Create a request for the method "tokens.delete".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the scim token to delete. Format: `locations/{location}/workforcePools/{workfo
+             *        rce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+
+              /**
+               * Deletes a WorkforcePoolProviderScimToken. You can undelete a scim token for 30 days. After 30
+               * days, deletion is permanent. You cannot update deleted scim tokens. However, you can view and
+               * list them.
+               *
+               * Create a request for the method "tokens.delete".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the scim token to delete. Format: `locations/{location}/workforcePools/{workfo
+             *        rce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the scim token to delete. Format: `locations/{location}/workf
+               * orcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{t
+               * oken}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the scim token to delete. Format: `locations/{location}/workforcePools/{workf
+             orce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the scim token to delete. Format: `locations/{location}/workf
+               * orcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{t
+               * oken}`
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets an individual WorkforcePoolProviderScimToken.
+             *
+             * Create a request for the method "tokens.get".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the scim token to retrieve. Format: `locations/{location}/workforcePools/{work
+             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+
+              /**
+               * Gets an individual WorkforcePoolProviderScimToken.
+               *
+               * Create a request for the method "tokens.get".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the scim token to retrieve. Format: `locations/{location}/workforcePools/{work
+             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the scim token to retrieve. Format: `locations/{location}/wor
+               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
+               * {token}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the scim token to retrieve. Format: `locations/{location}/workforcePools/{wor
+             kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the scim token to retrieve. Format: `locations/{location}/wor
+               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
+               * {token}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists all non-deleted WorkforcePoolProviderScimTokenss in a WorkforcePoolProviderScimTenant. If
+             * `show_deleted` is set to `true`, then deleted SCIM tokens are also listed.
+             *
+             * Create a request for the method "tokens.list".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePools/{workforce_po
+             *        ol}/providers/{provider}/scimTenants/{scim_tenant}'
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends IamRequest<com.google.api.services.iam.v1.model.ListWorkforcePoolProviderScimTokensResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/tokens";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+
+              /**
+               * Lists all non-deleted WorkforcePoolProviderScimTokenss in a WorkforcePoolProviderScimTenant. If
+               * `show_deleted` is set to `true`, then deleted SCIM tokens are also listed.
+               *
+               * Create a request for the method "tokens.list".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePools/{workforce_po
+             *        ol}/providers/{provider}/scimTenants/{scim_tenant}'
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListWorkforcePoolProviderScimTokensResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePo
+               * ols/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePools/{workforce_p
+             ool}/providers/{provider}/scimTenants/{scim_tenant}'
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePo
+               * ols/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of scim tokens to return. If unspecified, at most 2
+               * scim tokens will be returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of scim tokens to return. If unspecified, at most 2 scim tokens will
+             be returned.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of scim tokens to return. If unspecified, at most 2
+               * scim tokens will be returned.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. A page token, received from a previous
+               * `ListWorkforcePoolProviderScimTokens` call. Provide this to retrieve the subsequent
+               * page.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. A page token, received from a previous `ListWorkforcePoolProviderScimTokens` call.
+             Provide this to retrieve the subsequent page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. A page token, received from a previous
+               * `ListWorkforcePoolProviderScimTokens` call. Provide this to retrieve the subsequent
+               * page.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** Optional. Whether to return soft-deleted scim tokens. */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean showDeleted;
+
+              /** Optional. Whether to return soft-deleted scim tokens.
+               */
+              public java.lang.Boolean getShowDeleted() {
+                return showDeleted;
+              }
+
+              /** Optional. Whether to return soft-deleted scim tokens. */
+              public List setShowDeleted(java.lang.Boolean showDeleted) {
+                this.showDeleted = showDeleted;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates an existing WorkforcePoolProviderScimToken.
+             *
+             * Create a request for the method "tokens.patch".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Identifier. The resource name of the SCIM Token. Format:
+             *        `locations/{location}/workforcePools/{workforce_pool}/providers/
+             *        {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+
+              /**
+               * Updates an existing WorkforcePoolProviderScimToken.
+               *
+               * Create a request for the method "tokens.patch".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Identifier. The resource name of the SCIM Token. Format:
+             *        `locations/{location}/workforcePools/{workforce_pool}/providers/
+             *        {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken content) {
+                super(Iam.this, "PATCH", REST_PATH, content, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Identifier. The resource name of the SCIM Token. Format:
+               * `locations/{location}/workforcePools/{workforce_pool}/providers/
+               * {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Identifier. The resource name of the SCIM Token. Format:
+             `locations/{location}/workforcePools/{workforce_pool}/providers/
+             {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Identifier. The resource name of the SCIM Token. Format:
+               * `locations/{location}/workforcePools/{workforce_pool}/providers/
+               * {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** Optional. The list of fields to update. */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Optional. The list of fields to update.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /** Optional. The list of fields to update. */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Undeletes a WorkforcePoolProviderScimToken, as long as it was deleted fewer than 30 days ago.
+             *
+             * Create a request for the method "tokens.undelete".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the scim token to undelete. Format: `locations/{location}/workforcePools/{work
+             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+             * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTokenRequest}
+             * @return the request
+             */
+            public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTokenRequest content) throws java.io.IOException {
+              Undelete result = new Undelete(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken> {
+
+              private static final String REST_PATH = "v1/{+name}:undelete";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+
+              /**
+               * Undeletes a WorkforcePoolProviderScimToken, as long as it was deleted fewer than 30 days ago.
+               *
+               * Create a request for the method "tokens.undelete".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+               * {@link
+               * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the scim token to undelete. Format: `locations/{location}/workforcePools/{work
+             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTokenRequest}
+               * @since 1.13
+               */
+              protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTokenRequest content) {
+                super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+                }
+              }
+
+              @Override
+              public Undelete set$Xgafv(java.lang.String $Xgafv) {
+                return (Undelete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Undelete setAccessToken(java.lang.String accessToken) {
+                return (Undelete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Undelete setAlt(java.lang.String alt) {
+                return (Undelete) super.setAlt(alt);
+              }
+
+              @Override
+              public Undelete setCallback(java.lang.String callback) {
+                return (Undelete) super.setCallback(callback);
+              }
+
+              @Override
+              public Undelete setFields(java.lang.String fields) {
+                return (Undelete) super.setFields(fields);
+              }
+
+              @Override
+              public Undelete setKey(java.lang.String key) {
+                return (Undelete) super.setKey(key);
+              }
+
+              @Override
+              public Undelete setOauthToken(java.lang.String oauthToken) {
+                return (Undelete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Undelete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Undelete setQuotaUser(java.lang.String quotaUser) {
+                return (Undelete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Undelete setUploadType(java.lang.String uploadType) {
+                return (Undelete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Undelete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the scim token to undelete. Format: `locations/{location}/wor
+               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
+               * {token}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the scim token to undelete. Format: `locations/{location}/workforcePools/{wor
+             kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the scim token to undelete. Format: `locations/{location}/wor
+               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
+               * {token}`
+               */
+              public Undelete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Undelete set(String parameterName, Object value) {
+                return (Undelete) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
       }
       /**
        * An accessor for creating requests from the Subjects collection.

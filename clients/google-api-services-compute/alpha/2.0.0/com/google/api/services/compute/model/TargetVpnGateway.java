@@ -106,6 +106,14 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   private java.lang.String network;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetVpnGatewayParams params;
+
+  /**
    * [Output Only] URL of the region where the target VPN gateway resides. You must specify this
    * field as part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
@@ -348,6 +356,25 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
    */
   public TargetVpnGateway setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public TargetVpnGatewayParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public TargetVpnGateway setParams(TargetVpnGatewayParams params) {
+    this.params = params;
     return this;
   }
 

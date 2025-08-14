@@ -107,6 +107,23 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String network;
 
   /**
+   * Optional. The name of the OdbNetwork associated with the Autonomous Database. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
+   * specified, this should match the parent ODBNetwork of the OdbSubnet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String odbNetwork;
+
+  /**
+   * Optional. The name of the OdbSubnet associated with the Autonomous Database. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String odbSubnet;
+
+  /**
    * Output only. The peer Autonomous Database names of the given Autonomous Database.
    * The value may be {@code null}.
    */
@@ -306,6 +323,46 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
    */
   public AutonomousDatabase setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the OdbNetwork associated with the Autonomous Database. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
+   * specified, this should match the parent ODBNetwork of the OdbSubnet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOdbNetwork() {
+    return odbNetwork;
+  }
+
+  /**
+   * Optional. The name of the OdbNetwork associated with the Autonomous Database. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
+   * specified, this should match the parent ODBNetwork of the OdbSubnet.
+   * @param odbNetwork odbNetwork or {@code null} for none
+   */
+  public AutonomousDatabase setOdbNetwork(java.lang.String odbNetwork) {
+    this.odbNetwork = odbNetwork;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the OdbSubnet associated with the Autonomous Database. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOdbSubnet() {
+    return odbSubnet;
+  }
+
+  /**
+   * Optional. The name of the OdbSubnet associated with the Autonomous Database. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+   * @param odbSubnet odbSubnet or {@code null} for none
+   */
+  public AutonomousDatabase setOdbSubnet(java.lang.String odbSubnet) {
+    this.odbSubnet = odbSubnet;
     return this;
   }
 

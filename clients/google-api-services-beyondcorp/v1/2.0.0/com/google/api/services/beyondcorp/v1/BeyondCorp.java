@@ -6217,604 +6217,6 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
 
       }
       /**
-       * An accessor for creating requests from the Global collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
-       *   {@code BeyondCorp.Global.List request = beyondcorp.global().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Global global() {
-        return new Global();
-      }
-
-      /**
-       * The "global" collection of methods.
-       */
-      public class Global {
-
-        /**
-         * An accessor for creating requests from the SecurityGateways collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
-         *   {@code BeyondCorp.SecurityGateways.List request = beyondcorp.securityGateways().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public SecurityGateways securityGateways() {
-          return new SecurityGateways();
-        }
-
-        /**
-         * The "securityGateways" collection of methods.
-         */
-        public class SecurityGateways {
-
-          /**
-           * An accessor for creating requests from the Applications collection.
-           *
-           * <p>The typical use is:</p>
-           * <pre>
-           *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
-           *   {@code BeyondCorp.Applications.List request = beyondcorp.applications().list(parameters ...)}
-           * </pre>
-           *
-           * @return the resource collection
-           */
-          public Applications applications() {
-            return new Applications();
-          }
-
-          /**
-           * The "applications" collection of methods.
-           */
-          public class Applications {
-
-            /**
-             * Creates a new Application in a given project and location.
-             *
-             * Create a request for the method "applications.create".
-             *
-             * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-             *
-             * @param parent Required. The resource name of the parent SecurityGateway using the form:
-             *        `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
-             * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application}
-             * @return the request
-             */
-            public Create create(java.lang.String parent, com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application content) throws java.io.IOException {
-              Create result = new Create(parent, content);
-              initialize(result);
-              return result;
-            }
-
-            public class Create extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1.model.GoogleLongrunningOperation> {
-
-              private static final String REST_PATH = "v1/{+parent}/applications";
-
-              private final java.util.regex.Pattern PARENT_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/securityGateways/[^/]+$");
-
-              /**
-               * Creates a new Application in a given project and location.
-               *
-               * Create a request for the method "applications.create".
-               *
-               * This request holds the parameters needed by the the beyondcorp server.  After setting any
-               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-               * <p> {@link
-               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-               * be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param parent Required. The resource name of the parent SecurityGateway using the form:
-             *        `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
-               * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application}
-               * @since 1.13
-               */
-              protected Create(java.lang.String parent, com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application content) {
-                super(BeyondCorp.this, "POST", REST_PATH, content, com.google.api.services.beyondcorp.v1.model.GoogleLongrunningOperation.class);
-                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/securityGateways/[^/]+$");
-                }
-              }
-
-              @Override
-              public Create set$Xgafv(java.lang.String $Xgafv) {
-                return (Create) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Create setAccessToken(java.lang.String accessToken) {
-                return (Create) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Create setAlt(java.lang.String alt) {
-                return (Create) super.setAlt(alt);
-              }
-
-              @Override
-              public Create setCallback(java.lang.String callback) {
-                return (Create) super.setCallback(callback);
-              }
-
-              @Override
-              public Create setFields(java.lang.String fields) {
-                return (Create) super.setFields(fields);
-              }
-
-              @Override
-              public Create setKey(java.lang.String key) {
-                return (Create) super.setKey(key);
-              }
-
-              @Override
-              public Create setOauthToken(java.lang.String oauthToken) {
-                return (Create) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Create) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Create setQuotaUser(java.lang.String quotaUser) {
-                return (Create) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Create setUploadType(java.lang.String uploadType) {
-                return (Create) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Create setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Create) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Required. The resource name of the parent SecurityGateway using the form:
-               * `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String parent;
-
-              /** Required. The resource name of the parent SecurityGateway using the form:
-             `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
-               */
-              public java.lang.String getParent() {
-                return parent;
-              }
-
-              /**
-               * Required. The resource name of the parent SecurityGateway using the form:
-               * `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
-               */
-              public Create setParent(java.lang.String parent) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/securityGateways/[^/]+$");
-                }
-                this.parent = parent;
-                return this;
-              }
-
-              /**
-               * Optional. User-settable Application resource ID. * Must start with a letter. * Must
-               * contain between 4-63 characters from `/a-z-/`. * Must end with a number or letter.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String applicationId;
-
-              /** Optional. User-settable Application resource ID. * Must start with a letter. * Must contain between
-             4-63 characters from `/a-z-/`. * Must end with a number or letter.
-               */
-              public java.lang.String getApplicationId() {
-                return applicationId;
-              }
-
-              /**
-               * Optional. User-settable Application resource ID. * Must start with a letter. * Must
-               * contain between 4-63 characters from `/a-z-/`. * Must end with a number or letter.
-               */
-              public Create setApplicationId(java.lang.String applicationId) {
-                this.applicationId = applicationId;
-                return this;
-              }
-
-              /**
-               * Optional. An optional request ID to identify requests. Specify a unique request ID
-               * so that if you must retry your request, the server will know to ignore request if
-               * it has already been completed. The server will guarantee that for at least 60
-               * minutes since the first request.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String requestId;
-
-              /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-             must retry your request, the server will know to ignore request if it has already been completed.
-             The server will guarantee that for at least 60 minutes since the first request.
-               */
-              public java.lang.String getRequestId() {
-                return requestId;
-              }
-
-              /**
-               * Optional. An optional request ID to identify requests. Specify a unique request ID
-               * so that if you must retry your request, the server will know to ignore request if
-               * it has already been completed. The server will guarantee that for at least 60
-               * minutes since the first request.
-               */
-              public Create setRequestId(java.lang.String requestId) {
-                this.requestId = requestId;
-                return this;
-              }
-
-              @Override
-              public Create set(String parameterName, Object value) {
-                return (Create) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Updates the parameters of a single Application.
-             *
-             * Create a request for the method "applications.patch".
-             *
-             * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-             *
-             * @param name Identifier. Name of the resource.
-             * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application}
-             * @return the request
-             */
-            public Patch patch(java.lang.String name, com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application content) throws java.io.IOException {
-              Patch result = new Patch(name, content);
-              initialize(result);
-              return result;
-            }
-
-            public class Patch extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1.model.GoogleLongrunningOperation> {
-
-              private static final String REST_PATH = "v1/{+name}";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/securityGateways/[^/]+/applications/[^/]+$");
-
-              /**
-               * Updates the parameters of a single Application.
-               *
-               * Create a request for the method "applications.patch".
-               *
-               * This request holds the parameters needed by the the beyondcorp server.  After setting any
-               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-               * <p> {@link
-               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-               * be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Identifier. Name of the resource.
-               * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application}
-               * @since 1.13
-               */
-              protected Patch(java.lang.String name, com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application content) {
-                super(BeyondCorp.this, "PATCH", REST_PATH, content, com.google.api.services.beyondcorp.v1.model.GoogleLongrunningOperation.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/securityGateways/[^/]+/applications/[^/]+$");
-                }
-              }
-
-              @Override
-              public Patch set$Xgafv(java.lang.String $Xgafv) {
-                return (Patch) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Patch setAccessToken(java.lang.String accessToken) {
-                return (Patch) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Patch setAlt(java.lang.String alt) {
-                return (Patch) super.setAlt(alt);
-              }
-
-              @Override
-              public Patch setCallback(java.lang.String callback) {
-                return (Patch) super.setCallback(callback);
-              }
-
-              @Override
-              public Patch setFields(java.lang.String fields) {
-                return (Patch) super.setFields(fields);
-              }
-
-              @Override
-              public Patch setKey(java.lang.String key) {
-                return (Patch) super.setKey(key);
-              }
-
-              @Override
-              public Patch setOauthToken(java.lang.String oauthToken) {
-                return (Patch) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Patch) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Patch setQuotaUser(java.lang.String quotaUser) {
-                return (Patch) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Patch setUploadType(java.lang.String uploadType) {
-                return (Patch) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Patch) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Identifier. Name of the resource. */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Identifier. Name of the resource.
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /** Identifier. Name of the resource. */
-              public Patch setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/securityGateways/[^/]+/applications/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              /**
-               * Optional. An optional request ID to identify requests. Specify a unique request ID
-               * so that if you must retry your request, the server will know to ignore the request
-               * if it has already been completed. The server will guarantee that for at least 60
-               * minutes after the first request. For example, consider a situation where you make
-               * an initial request and the request timed out. If you make the request again with
-               * the same request ID, the server can check if original operation with the same
-               * request ID was received, and if so, will ignore the second request. This prevents
-               * clients from accidentally creating duplicate commitments. The request ID must be a
-               * valid UUID with the exception that zero UUID is not supported
-               * (00000000-0000-0000-0000-000000000000).
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String requestId;
-
-              /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-             must retry your request, the server will know to ignore the request if it has already been
-             completed. The server will guarantee that for at least 60 minutes after the first request. For
-             example, consider a situation where you make an initial request and the request timed out. If you
-             make the request again with the same request ID, the server can check if original operation with
-             the same request ID was received, and if so, will ignore the second request. This prevents clients
-             from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-             exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
-               */
-              public java.lang.String getRequestId() {
-                return requestId;
-              }
-
-              /**
-               * Optional. An optional request ID to identify requests. Specify a unique request ID
-               * so that if you must retry your request, the server will know to ignore the request
-               * if it has already been completed. The server will guarantee that for at least 60
-               * minutes after the first request. For example, consider a situation where you make
-               * an initial request and the request timed out. If you make the request again with
-               * the same request ID, the server can check if original operation with the same
-               * request ID was received, and if so, will ignore the second request. This prevents
-               * clients from accidentally creating duplicate commitments. The request ID must be a
-               * valid UUID with the exception that zero UUID is not supported
-               * (00000000-0000-0000-0000-000000000000).
-               */
-              public Patch setRequestId(java.lang.String requestId) {
-                this.requestId = requestId;
-                return this;
-              }
-
-              /** Optional. Mutable fields include: display_name. */
-              @com.google.api.client.util.Key
-              private String updateMask;
-
-              /** Optional. Mutable fields include: display_name.
-               */
-              public String getUpdateMask() {
-                return updateMask;
-              }
-
-              /** Optional. Mutable fields include: display_name. */
-              public Patch setUpdateMask(String updateMask) {
-                this.updateMask = updateMask;
-                return this;
-              }
-
-              @Override
-              public Patch set(String parameterName, Object value) {
-                return (Patch) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-             * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
-             * designed to be used for building permission-aware UIs and command-line tools, not for
-             * authorization checking. This operation may "fail open" without warning.
-             *
-             * Create a request for the method "applications.testIamPermissions".
-             *
-             * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-             * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
-             *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
-             *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-             *        this field.
-             * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsRequest}
-             * @return the request
-             */
-            public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsRequest content) throws java.io.IOException {
-              TestIamPermissions result = new TestIamPermissions(resource, content);
-              initialize(result);
-              return result;
-            }
-
-            public class TestIamPermissions extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsResponse> {
-
-              private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
-
-              private final java.util.regex.Pattern RESOURCE_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/securityGateways/[^/]+/applications/[^/]+$");
-
-              /**
-               * Returns permissions that a caller has on the specified resource. If the resource does not
-               * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
-               * operation is designed to be used for building permission-aware UIs and command-line tools, not
-               * for authorization checking. This operation may "fail open" without warning.
-               *
-               * Create a request for the method "applications.testIamPermissions".
-               *
-               * This request holds the parameters needed by the the beyondcorp server.  After setting any
-               * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
-               * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
-               * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
-               * invoking the constructor. </p>
-               *
-               * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
-             *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-             *        this field.
-               * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsRequest}
-               * @since 1.13
-               */
-              protected TestIamPermissions(java.lang.String resource, com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsRequest content) {
-                super(BeyondCorp.this, "POST", REST_PATH, content, com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsResponse.class);
-                this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                      "Parameter resource must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/securityGateways/[^/]+/applications/[^/]+$");
-                }
-              }
-
-              @Override
-              public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
-                return (TestIamPermissions) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-                return (TestIamPermissions) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public TestIamPermissions setAlt(java.lang.String alt) {
-                return (TestIamPermissions) super.setAlt(alt);
-              }
-
-              @Override
-              public TestIamPermissions setCallback(java.lang.String callback) {
-                return (TestIamPermissions) super.setCallback(callback);
-              }
-
-              @Override
-              public TestIamPermissions setFields(java.lang.String fields) {
-                return (TestIamPermissions) super.setFields(fields);
-              }
-
-              @Override
-              public TestIamPermissions setKey(java.lang.String key) {
-                return (TestIamPermissions) super.setKey(key);
-              }
-
-              @Override
-              public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-                return (TestIamPermissions) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
-                return (TestIamPermissions) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public TestIamPermissions setUploadType(java.lang.String uploadType) {
-                return (TestIamPermissions) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
-                return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * REQUIRED: The resource for which the policy detail is being requested. See
-               * [Resource names](https://cloud.google.com/apis/design/resource_names) for the
-               * appropriate value for this field.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String resource;
-
-              /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
-             names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
-             field.
-               */
-              public java.lang.String getResource() {
-                return resource;
-              }
-
-              /**
-               * REQUIRED: The resource for which the policy detail is being requested. See
-               * [Resource names](https://cloud.google.com/apis/design/resource_names) for the
-               * appropriate value for this field.
-               */
-              public TestIamPermissions setResource(java.lang.String resource) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                      "Parameter resource must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/securityGateways/[^/]+/applications/[^/]+$");
-                }
-                this.resource = resource;
-                return this;
-              }
-
-              @Override
-              public TestIamPermissions set(String parameterName, Object value) {
-                return (TestIamPermissions) super.set(parameterName, value);
-              }
-            }
-
-          }
-        }
-      }
-      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>
@@ -7461,7 +6863,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
       public class SecurityGateways {
 
         /**
-         * Creates a new SecurityGateway in a given project and location.
+         * Creates a new Security Gateway in a given project and location.
          *
          * Create a request for the method "securityGateways.create".
          *
@@ -7487,7 +6889,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new SecurityGateway in a given project and location.
+           * Creates a new Security Gateway in a given project and location.
            *
            * Create a request for the method "securityGateways.create".
            *
@@ -7597,16 +6999,16 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore request if it has
-           * already been completed. The server will guarantee that for at least 60 minutes since
-           * the first request.
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore request if it has already been completed.
-         The server will guarantee that for at least 60 minutes since the first request.
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -7614,9 +7016,9 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore request if it has
-           * already been completed. The server will guarantee that for at least 60 minutes since
-           * the first request.
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request.
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -8962,7 +8364,198 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
         public class Applications {
 
           /**
-           * Deletes a single Application.
+           * Creates a new Application in a given project and location.
+           *
+           * Create a request for the method "applications.create".
+           *
+           * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the parent SecurityGateway using the form:
+           *        `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
+           * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+parent}/applications";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+$");
+
+            /**
+             * Creates a new Application in a given project and location.
+             *
+             * Create a request for the method "applications.create".
+             *
+             * This request holds the parameters needed by the the beyondcorp server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the parent SecurityGateway using the form:
+           *        `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
+             * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application content) {
+              super(BeyondCorp.this, "POST", REST_PATH, content, com.google.api.services.beyondcorp.v1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the parent SecurityGateway using the form:
+             * `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the parent SecurityGateway using the form:
+           `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the parent SecurityGateway using the form:
+             * `projects/{project_id}/locations/global/securityGateways/{security_gateway_id}`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. User-settable Application resource ID. * Must start with a letter. * Must
+             * contain between 4-63 characters from `/a-z-/`. * Must end with a number or letter.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String applicationId;
+
+            /** Optional. User-settable Application resource ID. * Must start with a letter. * Must contain between
+           4-63 characters from `/a-z-/`. * Must end with a number or letter.
+             */
+            public java.lang.String getApplicationId() {
+              return applicationId;
+            }
+
+            /**
+             * Optional. User-settable Application resource ID. * Must start with a letter. * Must
+             * contain between 4-63 characters from `/a-z-/`. * Must end with a number or letter.
+             */
+            public Create setApplicationId(java.lang.String applicationId) {
+              this.applicationId = applicationId;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore request if it has
+             * already been completed. The server will guarantee that for at least 60 minutes since
+             * the first request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore request if it has already been completed.
+           The server will guarantee that for at least 60 minutes since the first request.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore request if it has
+             * already been completed. The server will guarantee that for at least 60 minutes since
+             * the first request.
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a single application.
            *
            * Create a request for the method "applications.delete".
            *
@@ -8986,7 +8579,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+/applications/[^/]+$");
 
             /**
-             * Deletes a single Application.
+             * Deletes a single application.
              *
              * Create a request for the method "applications.delete".
              *
@@ -9755,6 +9348,196 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
+           * Updates the parameters of a single Application.
+           *
+           * Create a request for the method "applications.patch".
+           *
+           * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. Name of the resource.
+           * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+/applications/[^/]+$");
+
+            /**
+             * Updates the parameters of a single Application.
+             *
+             * Create a request for the method "applications.patch".
+             *
+             * This request holds the parameters needed by the the beyondcorp server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. Name of the resource.
+             * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.beyondcorp.v1.model.GoogleCloudBeyondcorpSecuritygatewaysV1Application content) {
+              super(BeyondCorp.this, "PATCH", REST_PATH, content, com.google.api.services.beyondcorp.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+/applications/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Identifier. Name of the resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. Name of the resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Identifier. Name of the resource. */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+/applications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request timed out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes after the first request. For
+           example, consider a situation where you make an initial request and the request timed out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request timed out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Patch setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /** Optional. Mutable fields include: display_name. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. Mutable fields include: display_name.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Optional. Mutable fields include: display_name. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
            * Sets the access control policy on the specified resource. Replaces any existing policy. Can
            * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
@@ -9899,6 +9682,157 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             @Override
             public SetIamPolicy set(String parameterName, Object value) {
               return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "applications.testIamPermissions".
+           *
+           * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+/applications/[^/]+$");
+
+            /**
+             * Returns permissions that a caller has on the specified resource. If the resource does not
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
+             *
+             * Create a request for the method "applications.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the beyondcorp server.  After setting any
+             * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsRequest content) {
+              super(BeyondCorp.this, "POST", REST_PATH, content, com.google.api.services.beyondcorp.v1.model.GoogleIamV1TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+/applications/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+/applications/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
             }
           }
 

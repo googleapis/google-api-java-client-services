@@ -17,8 +17,8 @@
 package com.google.api.services.networkservices.v1beta1.model;
 
 /**
- * `LbEdgeExtension` is a resource that lets the extension service influence the Backend Service
- * selection or Cloud CDN cache keys by modifying the request headers.
+ * `LbEdgeExtension` is a resource that lets the extension service influence the selection of
+ * backend services and Cloud CDN cache keys by modifying request headers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:
@@ -79,9 +79,8 @@ public final class LbEdgeExtension extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `EXTERNAL_MANAGED`. For more information, refer
-   * to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service).
+   * Required. All forwarding rules referenced by this extension must share the same load balancing
+   * scheme. Supported values: `EXTERNAL_MANAGED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,9 +201,8 @@ public final class LbEdgeExtension extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `EXTERNAL_MANAGED`. For more information, refer
-   * to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service).
+   * Required. All forwarding rules referenced by this extension must share the same load balancing
+   * scheme. Supported values: `EXTERNAL_MANAGED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -212,9 +210,8 @@ public final class LbEdgeExtension extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `EXTERNAL_MANAGED`. For more information, refer
-   * to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service).
+   * Required. All forwarding rules referenced by this extension must share the same load balancing
+   * scheme. Supported values: `EXTERNAL_MANAGED`.
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public LbEdgeExtension setLoadBalancingScheme(java.lang.String loadBalancingScheme) {

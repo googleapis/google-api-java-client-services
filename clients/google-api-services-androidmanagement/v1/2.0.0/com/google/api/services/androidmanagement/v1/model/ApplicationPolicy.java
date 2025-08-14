@@ -109,7 +109,7 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * certificate fingerprint of the app on the device must match one of the entries in
    * signingKeyFingerprintsSha256 or the signing key certificate fingerprints obtained from Play
    * Store for the app to be able to communicate with Android Device Policy. If the app is not on
-   * Play Store and signingKeyFingerprintsSha256 is not set, a nonComplianceDetail with
+   * Play Store and signingKeyFingerprintsSha256 is not set, a NonComplianceDetail with
    * INVALID_VALUE is reported.
    * The value may be {@code null}.
    */
@@ -208,7 +208,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Specifies whether user control is permitted for the app. User control includes user
-   * actions like force-stopping and clearing app data. Supported on Android 11 and above.
+   * actions like force-stopping and clearing app data. Certain types of apps have special
+   * treatment, see USER_CONTROL_SETTINGS_UNSPECIFIED and USER_CONTROL_ALLOWED for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -394,7 +395,7 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * certificate fingerprint of the app on the device must match one of the entries in
    * signingKeyFingerprintsSha256 or the signing key certificate fingerprints obtained from Play
    * Store for the app to be able to communicate with Android Device Policy. If the app is not on
-   * Play Store and signingKeyFingerprintsSha256 is not set, a nonComplianceDetail with
+   * Play Store and signingKeyFingerprintsSha256 is not set, a NonComplianceDetail with
    * INVALID_VALUE is reported.
    * @return value or {@code null} for none
    */
@@ -408,7 +409,7 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * certificate fingerprint of the app on the device must match one of the entries in
    * signingKeyFingerprintsSha256 or the signing key certificate fingerprints obtained from Play
    * Store for the app to be able to communicate with Android Device Policy. If the app is not on
-   * Play Store and signingKeyFingerprintsSha256 is not set, a nonComplianceDetail with
+   * Play Store and signingKeyFingerprintsSha256 is not set, a NonComplianceDetail with
    * INVALID_VALUE is reported.
    * @param extensionConfig extensionConfig or {@code null} for none
    */
@@ -629,7 +630,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Specifies whether user control is permitted for the app. User control includes user
-   * actions like force-stopping and clearing app data. Supported on Android 11 and above.
+   * actions like force-stopping and clearing app data. Certain types of apps have special
+   * treatment, see USER_CONTROL_SETTINGS_UNSPECIFIED and USER_CONTROL_ALLOWED for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserControlSettings() {
@@ -638,7 +640,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Specifies whether user control is permitted for the app. User control includes user
-   * actions like force-stopping and clearing app data. Supported on Android 11 and above.
+   * actions like force-stopping and clearing app data. Certain types of apps have special
+   * treatment, see USER_CONTROL_SETTINGS_UNSPECIFIED and USER_CONTROL_ALLOWED for more details.
    * @param userControlSettings userControlSettings or {@code null} for none
    */
   public ApplicationPolicy setUserControlSettings(java.lang.String userControlSettings) {

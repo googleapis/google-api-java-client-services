@@ -60,7 +60,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> pendingTasks;
 
   /**
-   * Output only. Whether this account is premium.
+   * Output only. Whether this account is premium. Premium accounts have access to additional spam-
+   * related metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +153,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this account is premium.
+   * Output only. Whether this account is premium. Premium accounts have access to additional spam-
+   * related metrics.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPremium() {
@@ -160,7 +162,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this account is premium.
+   * Output only. Whether this account is premium. Premium accounts have access to additional spam-
+   * related metrics.
    * @param premium premium or {@code null} for none
    */
   public Account setPremium(java.lang.Boolean premium) {

@@ -33,7 +33,8 @@ public final class GoogleCloudAiplatformV1AutoscalingMetricSpec extends com.goog
   /**
    * Required. The resource metric name. Supported metrics: * For Online Prediction: *
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
-   * `aiplatform.googleapis.com/prediction/online/cpu/utilization`
+   * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
+   * `aiplatform.googleapis.com/prediction/online/request_count`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +52,8 @@ public final class GoogleCloudAiplatformV1AutoscalingMetricSpec extends com.goog
   /**
    * Required. The resource metric name. Supported metrics: * For Online Prediction: *
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
-   * `aiplatform.googleapis.com/prediction/online/cpu/utilization`
+   * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
+   * `aiplatform.googleapis.com/prediction/online/request_count`
    * @return value or {@code null} for none
    */
   public java.lang.String getMetricName() {
@@ -61,7 +63,8 @@ public final class GoogleCloudAiplatformV1AutoscalingMetricSpec extends com.goog
   /**
    * Required. The resource metric name. Supported metrics: * For Online Prediction: *
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
-   * `aiplatform.googleapis.com/prediction/online/cpu/utilization`
+   * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
+   * `aiplatform.googleapis.com/prediction/online/request_count`
    * @param metricName metricName or {@code null} for none
    */
   public GoogleCloudAiplatformV1AutoscalingMetricSpec setMetricName(java.lang.String metricName) {

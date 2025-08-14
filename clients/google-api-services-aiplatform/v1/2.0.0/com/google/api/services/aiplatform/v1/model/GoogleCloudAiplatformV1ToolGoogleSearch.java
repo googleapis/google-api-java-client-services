@@ -29,6 +29,33 @@ package com.google.api.services.aiplatform.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1ToolGoogleSearch extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. List of domains to be excluded from the search results. The default limit is 2000
+   * domains. Example: ["amazon.com", "facebook.com"].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeDomains;
+
+  /**
+   * Optional. List of domains to be excluded from the search results. The default limit is 2000
+   * domains. Example: ["amazon.com", "facebook.com"].
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeDomains() {
+    return excludeDomains;
+  }
+
+  /**
+   * Optional. List of domains to be excluded from the search results. The default limit is 2000
+   * domains. Example: ["amazon.com", "facebook.com"].
+   * @param excludeDomains excludeDomains or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ToolGoogleSearch setExcludeDomains(java.util.List<java.lang.String> excludeDomains) {
+    this.excludeDomains = excludeDomains;
+    return this;
+  }
+
   @Override
   public GoogleCloudAiplatformV1ToolGoogleSearch set(String fieldName, Object value) {
     return (GoogleCloudAiplatformV1ToolGoogleSearch) super.set(fieldName, value);

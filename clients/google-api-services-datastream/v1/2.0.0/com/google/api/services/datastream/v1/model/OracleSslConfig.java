@@ -46,6 +46,17 @@ public final class OracleSslConfig extends com.google.api.client.json.GenericJso
   private java.lang.Boolean caCertificateSet;
 
   /**
+   * Optional. The distinguished name (DN) mentioned in the server certificate. This corresponds to
+   * SSL_SERVER_CERT_DN sqlnet parameter. Refer https://docs.oracle.com/en/database/oracle/oracle-
+   * database/19/netrf/local-naming-parameters-in-tns-ora-
+   * file.html#GUID-70AB0695-A9AA-4A94-B141-4C605236EEB7 If this field is not provided, the DN
+   * matching is not enforced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverCertificateDistinguishedName;
+
+  /**
    * Input only. PEM-encoded certificate of the CA that signed the source database server's
    * certificate.
    * @return value or {@code null} for none
@@ -80,6 +91,31 @@ public final class OracleSslConfig extends com.google.api.client.json.GenericJso
    */
   public OracleSslConfig setCaCertificateSet(java.lang.Boolean caCertificateSet) {
     this.caCertificateSet = caCertificateSet;
+    return this;
+  }
+
+  /**
+   * Optional. The distinguished name (DN) mentioned in the server certificate. This corresponds to
+   * SSL_SERVER_CERT_DN sqlnet parameter. Refer https://docs.oracle.com/en/database/oracle/oracle-
+   * database/19/netrf/local-naming-parameters-in-tns-ora-
+   * file.html#GUID-70AB0695-A9AA-4A94-B141-4C605236EEB7 If this field is not provided, the DN
+   * matching is not enforced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerCertificateDistinguishedName() {
+    return serverCertificateDistinguishedName;
+  }
+
+  /**
+   * Optional. The distinguished name (DN) mentioned in the server certificate. This corresponds to
+   * SSL_SERVER_CERT_DN sqlnet parameter. Refer https://docs.oracle.com/en/database/oracle/oracle-
+   * database/19/netrf/local-naming-parameters-in-tns-ora-
+   * file.html#GUID-70AB0695-A9AA-4A94-B141-4C605236EEB7 If this field is not provided, the DN
+   * matching is not enforced.
+   * @param serverCertificateDistinguishedName serverCertificateDistinguishedName or {@code null} for none
+   */
+  public OracleSslConfig setServerCertificateDistinguishedName(java.lang.String serverCertificateDistinguishedName) {
+    this.serverCertificateDistinguishedName = serverCertificateDistinguishedName;
     return this;
   }
 

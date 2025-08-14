@@ -950,6 +950,277 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
+         * List BackupPlanAssociations for a given resource type.
+         *
+         * Create a request for the method "backupPlanAssociations.fetchForResourceType".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link FetchForResourceType#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The parent resource name. Format: projects/{project}/locations/{location}
+         * @return the request
+         */
+        public FetchForResourceType fetchForResourceType(java.lang.String parent) throws java.io.IOException {
+          FetchForResourceType result = new FetchForResourceType(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchForResourceType extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchBackupPlanAssociationsForResourceTypeResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupPlanAssociations:fetchForResourceType";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List BackupPlanAssociations for a given resource type.
+           *
+           * Create a request for the method "backupPlanAssociations.fetchForResourceType".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link FetchForResourceType#execute()} method to invoke the
+           * remote operation. <p> {@link FetchForResourceType#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. Format: projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected FetchForResourceType(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.FetchBackupPlanAssociationsForResourceTypeResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchForResourceType set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchForResourceType) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchForResourceType setAccessToken(java.lang.String accessToken) {
+            return (FetchForResourceType) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchForResourceType setAlt(java.lang.String alt) {
+            return (FetchForResourceType) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchForResourceType setCallback(java.lang.String callback) {
+            return (FetchForResourceType) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchForResourceType setFields(java.lang.String fields) {
+            return (FetchForResourceType) super.setFields(fields);
+          }
+
+          @Override
+          public FetchForResourceType setKey(java.lang.String key) {
+            return (FetchForResourceType) super.setKey(key);
+          }
+
+          @Override
+          public FetchForResourceType setOauthToken(java.lang.String oauthToken) {
+            return (FetchForResourceType) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchForResourceType setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchForResourceType) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchForResourceType setQuotaUser(java.lang.String quotaUser) {
+            return (FetchForResourceType) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchForResourceType setUploadType(java.lang.String uploadType) {
+            return (FetchForResourceType) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchForResourceType setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchForResourceType) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. Format: projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. Format: projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. Format: projects/{project}/locations/{location}
+           */
+          public FetchForResourceType setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter expression that filters the results fetched in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. Supported fields: * resource * backup_plan * state *
+           * data_source *
+           * cloud_sql_instance_backup_plan_association_properties.instance_create_time
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter expression that filters the results fetched in the response. The expression must
+         specify the field name, a comparison operator, and the value that you want to use for filtering.
+         Supported fields: * resource * backup_plan * state * data_source *
+         cloud_sql_instance_backup_plan_association_properties.instance_create_time
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter expression that filters the results fetched in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. Supported fields: * resource * backup_plan * state *
+           * data_source *
+           * cloud_sql_instance_backup_plan_association_properties.instance_create_time
+           */
+          public FetchForResourceType setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. A comma-separated list of fields to order by, sorted in ascending order. Use
+           * "desc" after a field name for descending. Supported fields: * name
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after
+         a field name for descending. Supported fields: * name
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. A comma-separated list of fields to order by, sorted in ascending order. Use
+           * "desc" after a field name for descending. Supported fields: * name
+           */
+          public FetchForResourceType setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of BackupPlanAssociations to return. The service may
+           * return fewer than this value. If unspecified, at most 50 BackupPlanAssociations will be
+           * returned. The maximum value is 100; values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of BackupPlanAssociations to return. The service may return fewer than
+         this value. If unspecified, at most 50 BackupPlanAssociations will be returned. The maximum value
+         is 100; values above 100 will be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of BackupPlanAssociations to return. The service may
+           * return fewer than this value. If unspecified, at most 50 BackupPlanAssociations will be
+           * returned. The maximum value is 100; values above 100 will be coerced to 100.
+           */
+          public FetchForResourceType setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call of
+           * `FetchBackupPlanAssociationsForResourceType`. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to
+           * `FetchBackupPlanAssociationsForResourceType` must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous call of
+         `FetchBackupPlanAssociationsForResourceType`. Provide this to retrieve the subsequent page. When
+         paginating, all other parameters provided to `FetchBackupPlanAssociationsForResourceType` must
+         match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call of
+           * `FetchBackupPlanAssociationsForResourceType`. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to
+           * `FetchBackupPlanAssociationsForResourceType` must match the call that provided the page
+           * token.
+           */
+          public FetchForResourceType setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance */
+          @com.google.api.client.util.Key
+          private java.lang.String resourceType;
+
+          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance
+           */
+          public java.lang.String getResourceType() {
+            return resourceType;
+          }
+
+          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance */
+          public FetchForResourceType setResourceType(java.lang.String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+          }
+
+          @Override
+          public FetchForResourceType set(String parameterName, Object value) {
+            return (FetchForResourceType) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single BackupPlanAssociation.
          *
          * Create a request for the method "backupPlanAssociations.get".
@@ -1309,7 +1580,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Update a BackupPlanAssociation
+         * Update a BackupPlanAssociation.
          *
          * Create a request for the method "backupPlanAssociations.patch".
          *
@@ -1335,7 +1606,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
 
           /**
-           * Update a BackupPlanAssociation
+           * Update a BackupPlanAssociation.
            *
            * Create a request for the method "backupPlanAssociations.patch".
            *
@@ -2476,7 +2747,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Update a BackupPlan
+         * Update a BackupPlan.
          *
          * Create a request for the method "backupPlans.patch".
          *
@@ -2502,7 +2773,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
 
           /**
-           * Update a BackupPlan
+           * Update a BackupPlan.
            *
            * Create a request for the method "backupPlans.patch".
            *
@@ -7124,6 +7395,455 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * An accessor for creating requests from the DataSourceReferences collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.DataSourceReferences.List request = backupdr.dataSourceReferences().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DataSourceReferences dataSourceReferences() {
+        return new DataSourceReferences();
+      }
+
+      /**
+       * The "dataSourceReferences" collection of methods.
+       */
+      public class DataSourceReferences {
+
+        /**
+         * Fetch DataSourceReferences for a given project, location and resource type.
+         *
+         * Create a request for the method "dataSourceReferences.fetchForResourceType".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link FetchForResourceType#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The parent resource name. Format: projects/{project}/locations/{location}
+         * @return the request
+         */
+        public FetchForResourceType fetchForResourceType(java.lang.String parent) throws java.io.IOException {
+          FetchForResourceType result = new FetchForResourceType(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchForResourceType extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchDataSourceReferencesForResourceTypeResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/dataSourceReferences:fetchForResourceType";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Fetch DataSourceReferences for a given project, location and resource type.
+           *
+           * Create a request for the method "dataSourceReferences.fetchForResourceType".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link FetchForResourceType#execute()} method to invoke the
+           * remote operation. <p> {@link FetchForResourceType#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. Format: projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected FetchForResourceType(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.FetchDataSourceReferencesForResourceTypeResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchForResourceType set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchForResourceType) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchForResourceType setAccessToken(java.lang.String accessToken) {
+            return (FetchForResourceType) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchForResourceType setAlt(java.lang.String alt) {
+            return (FetchForResourceType) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchForResourceType setCallback(java.lang.String callback) {
+            return (FetchForResourceType) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchForResourceType setFields(java.lang.String fields) {
+            return (FetchForResourceType) super.setFields(fields);
+          }
+
+          @Override
+          public FetchForResourceType setKey(java.lang.String key) {
+            return (FetchForResourceType) super.setKey(key);
+          }
+
+          @Override
+          public FetchForResourceType setOauthToken(java.lang.String oauthToken) {
+            return (FetchForResourceType) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchForResourceType setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchForResourceType) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchForResourceType setQuotaUser(java.lang.String quotaUser) {
+            return (FetchForResourceType) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchForResourceType setUploadType(java.lang.String uploadType) {
+            return (FetchForResourceType) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchForResourceType setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchForResourceType) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. Format: projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. Format: projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. Format: projects/{project}/locations/{location}
+           */
+          public FetchForResourceType setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter expression that filters the results fetched in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. Supported fields: * data_source *
+           * data_source_gcp_resource_info.gcp_resourcename * data_source_backup_config_state *
+           * data_source_backup_count * data_source_backup_config_info.last_backup_state *
+           * data_source_gcp_resource_info.gcp_resourcename * data_source_gcp_resource_info.type *
+           * data_source_gcp_resource_info.location *
+           * data_source_gcp_resource_info.cloud_sql_instance_properties.instance_create_time
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter expression that filters the results fetched in the response. The expression must
+         specify the field name, a comparison operator, and the value that you want to use for filtering.
+         Supported fields: * data_source * data_source_gcp_resource_info.gcp_resourcename *
+         data_source_backup_config_state * data_source_backup_count *
+         data_source_backup_config_info.last_backup_state * data_source_gcp_resource_info.gcp_resourcename *
+         data_source_gcp_resource_info.type * data_source_gcp_resource_info.location *
+         data_source_gcp_resource_info.cloud_sql_instance_properties.instance_create_time
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter expression that filters the results fetched in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. Supported fields: * data_source *
+           * data_source_gcp_resource_info.gcp_resourcename * data_source_backup_config_state *
+           * data_source_backup_count * data_source_backup_config_info.last_backup_state *
+           * data_source_gcp_resource_info.gcp_resourcename * data_source_gcp_resource_info.type *
+           * data_source_gcp_resource_info.location *
+           * data_source_gcp_resource_info.cloud_sql_instance_properties.instance_create_time
+           */
+          public FetchForResourceType setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. A comma-separated list of fields to order by, sorted in ascending order. Use
+           * "desc" after a field name for descending. Supported fields: * name
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after
+         a field name for descending. Supported fields: * name
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. A comma-separated list of fields to order by, sorted in ascending order. Use
+           * "desc" after a field name for descending. Supported fields: * name
+           */
+          public FetchForResourceType setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of DataSourceReferences to return. The service may return
+           * fewer than this value. If unspecified, at most 50 DataSourceReferences will be
+           * returned. The maximum value is 100; values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of DataSourceReferences to return. The service may return fewer than
+         this value. If unspecified, at most 50 DataSourceReferences will be returned. The maximum value is
+         100; values above 100 will be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of DataSourceReferences to return. The service may return
+           * fewer than this value. If unspecified, at most 50 DataSourceReferences will be
+           * returned. The maximum value is 100; values above 100 will be coerced to 100.
+           */
+          public FetchForResourceType setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call of
+           * `FetchDataSourceReferencesForResourceType`. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to
+           * `FetchDataSourceReferencesForResourceType` must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous call of
+         `FetchDataSourceReferencesForResourceType`. Provide this to retrieve the subsequent page. When
+         paginating, all other parameters provided to `FetchDataSourceReferencesForResourceType` must match
+         the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call of
+           * `FetchDataSourceReferencesForResourceType`. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to
+           * `FetchDataSourceReferencesForResourceType` must match the call that provided the page
+           * token.
+           */
+          public FetchForResourceType setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance */
+          @com.google.api.client.util.Key
+          private java.lang.String resourceType;
+
+          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance
+           */
+          public java.lang.String getResourceType() {
+            return resourceType;
+          }
+
+          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance */
+          public FetchForResourceType setResourceType(java.lang.String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+          }
+
+          @Override
+          public FetchForResourceType set(String parameterName, Object value) {
+            return (FetchForResourceType) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single DataSourceReference.
+         *
+         * Create a request for the method "dataSourceReferences.get".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the DataSourceReference to retrieve. Format:
+         *        projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1.model.DataSourceReference> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataSourceReferences/[^/]+$");
+
+          /**
+           * Gets details of a single DataSourceReference.
+           *
+           * Create a request for the method "dataSourceReferences.get".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the DataSourceReference to retrieve. Format:
+         *        projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.DataSourceReference.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataSourceReferences/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the DataSourceReference to retrieve. Format:
+           * projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the DataSourceReference to retrieve. Format:
+         projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the DataSourceReference to retrieve. Format:
+           * projects/{project}/locations/{location}/dataSourceReferences/{data_source_reference}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataSourceReferences/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the ManagementServers collection.
        *
        * <p>The typical use is:</p>
@@ -8097,6 +8817,152 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the Assured Workloads compliance metadata for a given project.
+         *
+         * Create a request for the method "managementServers.msComplianceMetadata".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link MsComplianceMetadata#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The project and location to be used to check CSS metadata for target project information,
+         *        in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
+         *        map to Google Cloud regions, for example **us-central1**.
+         * @param content the {@link com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest}
+         * @return the request
+         */
+        public MsComplianceMetadata msComplianceMetadata(java.lang.String parent, com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest content) throws java.io.IOException {
+          MsComplianceMetadata result = new MsComplianceMetadata(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class MsComplianceMetadata extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:msComplianceMetadata";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/managementServers$");
+
+          /**
+           * Returns the Assured Workloads compliance metadata for a given project.
+           *
+           * Create a request for the method "managementServers.msComplianceMetadata".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link MsComplianceMetadata#execute()} method to invoke the
+           * remote operation. <p> {@link MsComplianceMetadata#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location to be used to check CSS metadata for target project information,
+         *        in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
+         *        map to Google Cloud regions, for example **us-central1**.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest}
+           * @since 1.13
+           */
+          protected MsComplianceMetadata(java.lang.String parent, com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/managementServers$");
+            }
+          }
+
+          @Override
+          public MsComplianceMetadata set$Xgafv(java.lang.String $Xgafv) {
+            return (MsComplianceMetadata) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public MsComplianceMetadata setAccessToken(java.lang.String accessToken) {
+            return (MsComplianceMetadata) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public MsComplianceMetadata setAlt(java.lang.String alt) {
+            return (MsComplianceMetadata) super.setAlt(alt);
+          }
+
+          @Override
+          public MsComplianceMetadata setCallback(java.lang.String callback) {
+            return (MsComplianceMetadata) super.setCallback(callback);
+          }
+
+          @Override
+          public MsComplianceMetadata setFields(java.lang.String fields) {
+            return (MsComplianceMetadata) super.setFields(fields);
+          }
+
+          @Override
+          public MsComplianceMetadata setKey(java.lang.String key) {
+            return (MsComplianceMetadata) super.setKey(key);
+          }
+
+          @Override
+          public MsComplianceMetadata setOauthToken(java.lang.String oauthToken) {
+            return (MsComplianceMetadata) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public MsComplianceMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (MsComplianceMetadata) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public MsComplianceMetadata setQuotaUser(java.lang.String quotaUser) {
+            return (MsComplianceMetadata) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public MsComplianceMetadata setUploadType(java.lang.String uploadType) {
+            return (MsComplianceMetadata) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public MsComplianceMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+            return (MsComplianceMetadata) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location to be used to check CSS metadata for target project
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
+           * BackupDR, locations map to Google Cloud regions, for example **us-central1**.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location to be used to check CSS metadata for target project information,
+         in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations map to
+         Google Cloud regions, for example **us-central1**.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location to be used to check CSS metadata for target project
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
+           * BackupDR, locations map to Google Cloud regions, for example **us-central1**.
+           */
+          public MsComplianceMetadata setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/managementServers$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public MsComplianceMetadata set(String parameterName, Object value) {
+            return (MsComplianceMetadata) super.set(parameterName, value);
           }
         }
         /**

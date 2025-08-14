@@ -30,9 +30,9 @@ package com.google.api.services.directory.model;
 public final class CreatePrintServerRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The [unique ID](https://developers.google.com/admin-
-   * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
-   * `customers/{id}`
+   * Required. The [unique
+   * ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers) of the
+   * customer's Google Workspace account. Format: `customers/{id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,16 +42,16 @@ public final class CreatePrintServerRequest extends com.google.api.client.json.G
    * Required. A print server to create. If you want to place the print server under a specific
    * organizational unit (OU), then populate the `org_unit_id`. Otherwise the print server is
    * created under the root OU. The `org_unit_id` can be retrieved using the [Directory
-   * API](https://developers.google.com/admin-sdk/directory/v1/guides/manage-org-units).
+   * API](https://developers.google.com/workspace/admin/directory/v1/guides/manage-org-units).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PrintServer printServer;
 
   /**
-   * Required. The [unique ID](https://developers.google.com/admin-
-   * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
-   * `customers/{id}`
+   * Required. The [unique
+   * ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers) of the
+   * customer's Google Workspace account. Format: `customers/{id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -59,9 +59,9 @@ public final class CreatePrintServerRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The [unique ID](https://developers.google.com/admin-
-   * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
-   * `customers/{id}`
+   * Required. The [unique
+   * ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers) of the
+   * customer's Google Workspace account. Format: `customers/{id}`
    * @param parent parent or {@code null} for none
    */
   public CreatePrintServerRequest setParent(java.lang.String parent) {
@@ -73,7 +73,7 @@ public final class CreatePrintServerRequest extends com.google.api.client.json.G
    * Required. A print server to create. If you want to place the print server under a specific
    * organizational unit (OU), then populate the `org_unit_id`. Otherwise the print server is
    * created under the root OU. The `org_unit_id` can be retrieved using the [Directory
-   * API](https://developers.google.com/admin-sdk/directory/v1/guides/manage-org-units).
+   * API](https://developers.google.com/workspace/admin/directory/v1/guides/manage-org-units).
    * @return value or {@code null} for none
    */
   public PrintServer getPrintServer() {
@@ -84,7 +84,7 @@ public final class CreatePrintServerRequest extends com.google.api.client.json.G
    * Required. A print server to create. If you want to place the print server under a specific
    * organizational unit (OU), then populate the `org_unit_id`. Otherwise the print server is
    * created under the root OU. The `org_unit_id` can be retrieved using the [Directory
-   * API](https://developers.google.com/admin-sdk/directory/v1/guides/manage-org-units).
+   * API](https://developers.google.com/workspace/admin/directory/v1/guides/manage-org-units).
    * @param printServer printServer or {@code null} for none
    */
   public CreatePrintServerRequest setPrintServer(PrintServer printServer) {

@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for PreviewFeatureRolloutOperationRolloutInput.
+ * Represents the input for the rollout operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -43,14 +43,6 @@ public final class PreviewFeatureRolloutOperationRolloutInput extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String predefinedRolloutPlan;
-
-  /**
-   * The UUID of the retry action. Only needed if this is a retry for an existing rollout. This can
-   * be used after the user canceled a rollout and want to retry it with no changes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String retryUuid;
 
   /**
    * The name of the rollout plan Ex. organizations//locations/global/rolloutPlans/ Ex.
@@ -85,25 +77,6 @@ public final class PreviewFeatureRolloutOperationRolloutInput extends com.google
    */
   public PreviewFeatureRolloutOperationRolloutInput setPredefinedRolloutPlan(java.lang.String predefinedRolloutPlan) {
     this.predefinedRolloutPlan = predefinedRolloutPlan;
-    return this;
-  }
-
-  /**
-   * The UUID of the retry action. Only needed if this is a retry for an existing rollout. This can
-   * be used after the user canceled a rollout and want to retry it with no changes.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRetryUuid() {
-    return retryUuid;
-  }
-
-  /**
-   * The UUID of the retry action. Only needed if this is a retry for an existing rollout. This can
-   * be used after the user canceled a rollout and want to retry it with no changes.
-   * @param retryUuid retryUuid or {@code null} for none
-   */
-  public PreviewFeatureRolloutOperationRolloutInput setRetryUuid(java.lang.String retryUuid) {
-    this.retryUuid = retryUuid;
     return this;
   }
 

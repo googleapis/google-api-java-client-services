@@ -37,6 +37,14 @@ package com.google.api.services.bigquery.model;
 public final class ExternalServiceCost extends com.google.api.client.json.GenericJson {
 
   /**
+   * The billing method used for the external job. This field is only used when billed on the
+   * services sku, set to "SERVICES_SKU". Otherwise, it is unspecified for backward compatibility.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingMethod;
+
+  /**
    * External service cost in terms of bigquery bytes billed.
    * The value may be {@code null}.
    */
@@ -71,6 +79,25 @@ public final class ExternalServiceCost extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long slotMs;
+
+  /**
+   * The billing method used for the external job. This field is only used when billed on the
+   * services sku, set to "SERVICES_SKU". Otherwise, it is unspecified for backward compatibility.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingMethod() {
+    return billingMethod;
+  }
+
+  /**
+   * The billing method used for the external job. This field is only used when billed on the
+   * services sku, set to "SERVICES_SKU". Otherwise, it is unspecified for backward compatibility.
+   * @param billingMethod billingMethod or {@code null} for none
+   */
+  public ExternalServiceCost setBillingMethod(java.lang.String billingMethod) {
+    this.billingMethod = billingMethod;
+    return this;
+  }
 
   /**
    * External service cost in terms of bigquery bytes billed.

@@ -56,6 +56,13 @@ public final class ClusterAutoscaling extends com.google.api.client.json.Generic
   private java.lang.String autoscalingProfile;
 
   /**
+   * Default compute class is a configuration for default compute class.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DefaultComputeClassConfig defaultComputeClassConfig;
+
+  /**
    * Enables automatic node pool creation and deletion.
    * The value may be {@code null}.
    */
@@ -121,6 +128,23 @@ public final class ClusterAutoscaling extends com.google.api.client.json.Generic
    */
   public ClusterAutoscaling setAutoscalingProfile(java.lang.String autoscalingProfile) {
     this.autoscalingProfile = autoscalingProfile;
+    return this;
+  }
+
+  /**
+   * Default compute class is a configuration for default compute class.
+   * @return value or {@code null} for none
+   */
+  public DefaultComputeClassConfig getDefaultComputeClassConfig() {
+    return defaultComputeClassConfig;
+  }
+
+  /**
+   * Default compute class is a configuration for default compute class.
+   * @param defaultComputeClassConfig defaultComputeClassConfig or {@code null} for none
+   */
+  public ClusterAutoscaling setDefaultComputeClassConfig(DefaultComputeClassConfig defaultComputeClassConfig) {
+    this.defaultComputeClassConfig = defaultComputeClassConfig;
     return this;
   }
 

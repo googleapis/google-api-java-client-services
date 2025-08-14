@@ -268,7 +268,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the appengine server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param appsId Part of `name`. Name of the Application resource to get. Example: apps/myapp.
+     * @param appsId Part of `name`. Required. Name of the Application resource to get. Example: apps/myapp.
      * @return the request
      */
     public Get get(java.lang.String appsId) throws java.io.IOException {
@@ -291,7 +291,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param appsId Part of `name`. Name of the Application resource to get. Example: apps/myapp.
+       * @param appsId Part of `name`. Required. Name of the Application resource to get. Example: apps/myapp.
        * @since 1.13
        */
       protected Get(java.lang.String appsId) {
@@ -364,17 +364,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Part of `name`. Name of the Application resource to get. Example: apps/myapp. */
+      /**
+       * Part of `name`. Required. Name of the Application resource to get. Example: apps/myapp.
+       */
       @com.google.api.client.util.Key
       private java.lang.String appsId;
 
-      /** Part of `name`. Name of the Application resource to get. Example: apps/myapp.
+      /** Part of `name`. Required. Name of the Application resource to get. Example: apps/myapp.
        */
       public java.lang.String getAppsId() {
         return appsId;
       }
 
-      /** Part of `name`. Name of the Application resource to get. Example: apps/myapp. */
+      /**
+       * Part of `name`. Required. Name of the Application resource to get. Example: apps/myapp.
+       */
       public Get setAppsId(java.lang.String appsId) {
         this.appsId = appsId;
         return this;
@@ -558,7 +562,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the appengine server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param appsId Part of `name`. Name of the Application resource to update. Example: apps/myapp.
+     * @param appsId Part of `name`. Required. Name of the Application resource to update. Example: apps/myapp.
      * @param content the {@link com.google.api.services.appengine.model.Application}
      * @return the request
      */
@@ -586,7 +590,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param appsId Part of `name`. Name of the Application resource to update. Example: apps/myapp.
+       * @param appsId Part of `name`. Required. Name of the Application resource to update. Example: apps/myapp.
        * @param content the {@link com.google.api.services.appengine.model.Application}
        * @since 1.13
        */
@@ -650,17 +654,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Part of `name`. Name of the Application resource to update. Example: apps/myapp. */
+      /**
+       * Part of `name`. Required. Name of the Application resource to update. Example: apps/myapp.
+       */
       @com.google.api.client.util.Key
       private java.lang.String appsId;
 
-      /** Part of `name`. Name of the Application resource to update. Example: apps/myapp.
+      /** Part of `name`. Required. Name of the Application resource to update. Example: apps/myapp.
        */
       public java.lang.String getAppsId() {
         return appsId;
       }
 
-      /** Part of `name`. Name of the Application resource to update. Example: apps/myapp. */
+      /**
+       * Part of `name`. Required. Name of the Application resource to update. Example: apps/myapp.
+       */
       public Patch setAppsId(java.lang.String appsId) {
         this.appsId = appsId;
         return this;
@@ -702,7 +710,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the appengine server.  After setting any optional
      * parameters, call the {@link Repair#execute()} method to invoke the remote operation.
      *
-     * @param appsId Part of `name`. Name of the application to repair. Example: apps/myapp
+     * @param appsId Part of `name`. Required. Name of the application to repair. Example: apps/myapp
      * @param content the {@link com.google.api.services.appengine.model.RepairApplicationRequest}
      * @return the request
      */
@@ -734,7 +742,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * Repair#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param appsId Part of `name`. Name of the application to repair. Example: apps/myapp
+       * @param appsId Part of `name`. Required. Name of the application to repair. Example: apps/myapp
        * @param content the {@link com.google.api.services.appengine.model.RepairApplicationRequest}
        * @since 1.13
        */
@@ -798,17 +806,17 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         return (Repair) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Part of `name`. Name of the application to repair. Example: apps/myapp */
+      /** Part of `name`. Required. Name of the application to repair. Example: apps/myapp */
       @com.google.api.client.util.Key
       private java.lang.String appsId;
 
-      /** Part of `name`. Name of the application to repair. Example: apps/myapp
+      /** Part of `name`. Required. Name of the application to repair. Example: apps/myapp
        */
       public java.lang.String getAppsId() {
         return appsId;
       }
 
-      /** Part of `name`. Name of the application to repair. Example: apps/myapp */
+      /** Part of `name`. Required. Name of the application to repair. Example: apps/myapp */
       public Repair setAppsId(java.lang.String appsId) {
         this.appsId = appsId;
         return this;
@@ -848,7 +856,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+       * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
        * @param content the {@link com.google.api.services.appengine.model.AuthorizedCertificate}
        * @return the request
        */
@@ -873,7 +881,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+         * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          * @param content the {@link com.google.api.services.appengine.model.AuthorizedCertificate}
          * @since 1.13
          */
@@ -937,17 +945,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+        /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         public Create setAppsId(java.lang.String appsId) {
           this.appsId = appsId;
           return this;
@@ -966,7 +978,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `name`. Name of the resource to delete. Example: apps/myapp/authorizedCertificates/12345.
+       * @param appsId Part of `name`. Required. Name of the resource to delete. Example:
+       *        apps/myapp/authorizedCertificates/12345.
        * @param authorizedCertificatesId Part of `name`. See documentation of `appsId`.
        * @return the request
        */
@@ -991,7 +1004,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `name`. Name of the resource to delete. Example: apps/myapp/authorizedCertificates/12345.
+         * @param appsId Part of `name`. Required. Name of the resource to delete. Example:
+       *        apps/myapp/authorizedCertificates/12345.
          * @param authorizedCertificatesId Part of `name`. See documentation of `appsId`.
          * @since 1.13
          */
@@ -1057,20 +1071,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Part of `name`. Name of the resource to delete. Example:
+         * Part of `name`. Required. Name of the resource to delete. Example:
          * apps/myapp/authorizedCertificates/12345.
          */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `name`. Name of the resource to delete. Example: apps/myapp/authorizedCertificates/12345.
+        /** Part of `name`. Required. Name of the resource to delete. Example:
+       apps/myapp/authorizedCertificates/12345.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
         /**
-         * Part of `name`. Name of the resource to delete. Example:
+         * Part of `name`. Required. Name of the resource to delete. Example:
          * apps/myapp/authorizedCertificates/12345.
          */
         public Delete setAppsId(java.lang.String appsId) {
@@ -1107,7 +1122,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/authorizedCertificates/12345.
+       * @param appsId Part of `name`. Required. Name of the resource requested. Example:
+       *        apps/myapp/authorizedCertificates/12345.
        * @param authorizedCertificatesId Part of `name`. See documentation of `appsId`.
        * @return the request
        */
@@ -1131,7 +1147,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/authorizedCertificates/12345.
+         * @param appsId Part of `name`. Required. Name of the resource requested. Example:
+       *        apps/myapp/authorizedCertificates/12345.
          * @param authorizedCertificatesId Part of `name`. See documentation of `appsId`.
          * @since 1.13
          */
@@ -1207,20 +1224,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Part of `name`. Name of the resource requested. Example:
+         * Part of `name`. Required. Name of the resource requested. Example:
          * apps/myapp/authorizedCertificates/12345.
          */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `name`. Name of the resource requested. Example: apps/myapp/authorizedCertificates/12345.
+        /** Part of `name`. Required. Name of the resource requested. Example:
+       apps/myapp/authorizedCertificates/12345.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
         /**
-         * Part of `name`. Name of the resource requested. Example:
+         * Part of `name`. Required. Name of the resource requested. Example:
          * apps/myapp/authorizedCertificates/12345.
          */
         public Get setAppsId(java.lang.String appsId) {
@@ -1273,7 +1291,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+       * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
        * @return the request
        */
       public List list(java.lang.String appsId) throws java.io.IOException {
@@ -1296,7 +1314,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+         * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          * @since 1.13
          */
         protected List(java.lang.String appsId) {
@@ -1369,17 +1387,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+        /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         public List setAppsId(java.lang.String appsId) {
           this.appsId = appsId;
           return this;
@@ -1449,7 +1471,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `name`. Name of the resource to update. Example: apps/myapp/authorizedCertificates/12345.
+       * @param appsId Part of `name`. Required. Name of the resource to update. Example:
+       *        apps/myapp/authorizedCertificates/12345.
        * @param authorizedCertificatesId Part of `name`. See documentation of `appsId`.
        * @param content the {@link com.google.api.services.appengine.model.AuthorizedCertificate}
        * @return the request
@@ -1478,7 +1501,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `name`. Name of the resource to update. Example: apps/myapp/authorizedCertificates/12345.
+         * @param appsId Part of `name`. Required. Name of the resource to update. Example:
+       *        apps/myapp/authorizedCertificates/12345.
          * @param authorizedCertificatesId Part of `name`. See documentation of `appsId`.
          * @param content the {@link com.google.api.services.appengine.model.AuthorizedCertificate}
          * @since 1.13
@@ -1545,20 +1569,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Part of `name`. Name of the resource to update. Example:
+         * Part of `name`. Required. Name of the resource to update. Example:
          * apps/myapp/authorizedCertificates/12345.
          */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `name`. Name of the resource to update. Example: apps/myapp/authorizedCertificates/12345.
+        /** Part of `name`. Required. Name of the resource to update. Example:
+       apps/myapp/authorizedCertificates/12345.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
         /**
-         * Part of `name`. Name of the resource to update. Example:
+         * Part of `name`. Required. Name of the resource to update. Example:
          * apps/myapp/authorizedCertificates/12345.
          */
         public Patch setAppsId(java.lang.String appsId) {
@@ -1640,7 +1665,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+       * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
        * @return the request
        */
       public List list(java.lang.String appsId) throws java.io.IOException {
@@ -1663,7 +1688,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+         * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          * @since 1.13
          */
         protected List(java.lang.String appsId) {
@@ -1736,17 +1761,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+        /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         public List setAppsId(java.lang.String appsId) {
           this.appsId = appsId;
           return this;
@@ -1821,7 +1850,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+       * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
        * @param content the {@link com.google.api.services.appengine.model.DomainMapping}
        * @return the request
        */
@@ -1848,7 +1877,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+         * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          * @param content the {@link com.google.api.services.appengine.model.DomainMapping}
          * @since 1.13
          */
@@ -1912,17 +1941,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+        /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         public Create setAppsId(java.lang.String appsId) {
           this.appsId = appsId;
           return this;
@@ -1965,7 +1998,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `name`. Name of the resource to delete. Example: apps/myapp/domainMappings/example.com.
+       * @param appsId Part of `name`. Required. Name of the resource to delete. Example:
+       *        apps/myapp/domainMappings/example.com.
        * @param domainMappingsId Part of `name`. See documentation of `appsId`.
        * @return the request
        */
@@ -1991,7 +2025,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `name`. Name of the resource to delete. Example: apps/myapp/domainMappings/example.com.
+         * @param appsId Part of `name`. Required. Name of the resource to delete. Example:
+       *        apps/myapp/domainMappings/example.com.
          * @param domainMappingsId Part of `name`. See documentation of `appsId`.
          * @since 1.13
          */
@@ -2057,20 +2092,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Part of `name`. Name of the resource to delete. Example:
+         * Part of `name`. Required. Name of the resource to delete. Example:
          * apps/myapp/domainMappings/example.com.
          */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `name`. Name of the resource to delete. Example: apps/myapp/domainMappings/example.com.
+        /** Part of `name`. Required. Name of the resource to delete. Example:
+       apps/myapp/domainMappings/example.com.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
         /**
-         * Part of `name`. Name of the resource to delete. Example:
+         * Part of `name`. Required. Name of the resource to delete. Example:
          * apps/myapp/domainMappings/example.com.
          */
         public Delete setAppsId(java.lang.String appsId) {
@@ -2107,7 +2143,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/domainMappings/example.com.
+       * @param appsId Part of `name`. Required. Name of the resource requested. Example:
+       *        apps/myapp/domainMappings/example.com.
        * @param domainMappingsId Part of `name`. See documentation of `appsId`.
        * @return the request
        */
@@ -2131,7 +2168,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/domainMappings/example.com.
+         * @param appsId Part of `name`. Required. Name of the resource requested. Example:
+       *        apps/myapp/domainMappings/example.com.
          * @param domainMappingsId Part of `name`. See documentation of `appsId`.
          * @since 1.13
          */
@@ -2207,20 +2245,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Part of `name`. Name of the resource requested. Example:
+         * Part of `name`. Required. Name of the resource requested. Example:
          * apps/myapp/domainMappings/example.com.
          */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `name`. Name of the resource requested. Example: apps/myapp/domainMappings/example.com.
+        /** Part of `name`. Required. Name of the resource requested. Example:
+       apps/myapp/domainMappings/example.com.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
         /**
-         * Part of `name`. Name of the resource requested. Example:
+         * Part of `name`. Required. Name of the resource requested. Example:
          * apps/myapp/domainMappings/example.com.
          */
         public Get setAppsId(java.lang.String appsId) {
@@ -2257,7 +2296,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+       * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
        * @return the request
        */
       public List list(java.lang.String appsId) throws java.io.IOException {
@@ -2280,7 +2319,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+         * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          * @since 1.13
          */
         protected List(java.lang.String appsId) {
@@ -2353,17 +2392,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+        /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         public List setAppsId(java.lang.String appsId) {
           this.appsId = appsId;
           return this;
@@ -2416,7 +2459,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `name`. Name of the resource to update. Example: apps/myapp/domainMappings/example.com.
+       * @param appsId Part of `name`. Required. Name of the resource to update. Example:
+       *        apps/myapp/domainMappings/example.com.
        * @param domainMappingsId Part of `name`. See documentation of `appsId`.
        * @param content the {@link com.google.api.services.appengine.model.DomainMapping}
        * @return the request
@@ -2444,7 +2488,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `name`. Name of the resource to update. Example: apps/myapp/domainMappings/example.com.
+         * @param appsId Part of `name`. Required. Name of the resource to update. Example:
+       *        apps/myapp/domainMappings/example.com.
          * @param domainMappingsId Part of `name`. See documentation of `appsId`.
          * @param content the {@link com.google.api.services.appengine.model.DomainMapping}
          * @since 1.13
@@ -2511,20 +2556,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Part of `name`. Name of the resource to update. Example:
+         * Part of `name`. Required. Name of the resource to update. Example:
          * apps/myapp/domainMappings/example.com.
          */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `name`. Name of the resource to update. Example: apps/myapp/domainMappings/example.com.
+        /** Part of `name`. Required. Name of the resource to update. Example:
+       apps/myapp/domainMappings/example.com.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
         /**
-         * Part of `name`. Name of the resource to update. Example:
+         * Part of `name`. Required. Name of the resource to update. Example:
          * apps/myapp/domainMappings/example.com.
          */
         public Patch setAppsId(java.lang.String appsId) {
@@ -2747,8 +2793,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the appengine server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param appsId Part of `parent`. Name of the parent Firewall collection in which to create a new rule. Example:
-         *        apps/myapp/firewall/ingressRules.
+         * @param appsId Part of `parent`. Required. Name of the parent Firewall collection in which to create a new rule.
+         *        Example: apps/myapp/firewall/ingressRules.
          * @param content the {@link com.google.api.services.appengine.model.FirewallRule}
          * @return the request
          */
@@ -2773,8 +2819,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param appsId Part of `parent`. Name of the parent Firewall collection in which to create a new rule. Example:
-         *        apps/myapp/firewall/ingressRules.
+           * @param appsId Part of `parent`. Required. Name of the parent Firewall collection in which to create a new rule.
+         *        Example: apps/myapp/firewall/ingressRules.
            * @param content the {@link com.google.api.services.appengine.model.FirewallRule}
            * @since 1.13
            */
@@ -2839,22 +2885,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Part of `parent`. Name of the parent Firewall collection in which to create a new rule.
-           * Example: apps/myapp/firewall/ingressRules.
+           * Part of `parent`. Required. Name of the parent Firewall collection in which to create a
+           * new rule. Example: apps/myapp/firewall/ingressRules.
            */
           @com.google.api.client.util.Key
           private java.lang.String appsId;
 
-          /** Part of `parent`. Name of the parent Firewall collection in which to create a new rule. Example:
-         apps/myapp/firewall/ingressRules.
+          /** Part of `parent`. Required. Name of the parent Firewall collection in which to create a new rule.
+         Example: apps/myapp/firewall/ingressRules.
            */
           public java.lang.String getAppsId() {
             return appsId;
           }
 
           /**
-           * Part of `parent`. Name of the parent Firewall collection in which to create a new rule.
-           * Example: apps/myapp/firewall/ingressRules.
+           * Part of `parent`. Required. Name of the parent Firewall collection in which to create a
+           * new rule. Example: apps/myapp/firewall/ingressRules.
            */
           public Create setAppsId(java.lang.String appsId) {
             this.appsId = appsId;
@@ -4266,7 +4312,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+       * @param appsId Part of `name`. Required. Name of the resource requested. Example: apps/myapp/services/default.
        * @param servicesId Part of `name`. See documentation of `appsId`.
        * @return the request
        */
@@ -4291,7 +4337,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+         * @param appsId Part of `name`. Required. Name of the resource requested. Example: apps/myapp/services/default.
          * @param servicesId Part of `name`. See documentation of `appsId`.
          * @since 1.13
          */
@@ -4357,19 +4403,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+         * Part of `name`. Required. Name of the resource requested. Example:
+         * apps/myapp/services/default.
          */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+        /** Part of `name`. Required. Name of the resource requested. Example: apps/myapp/services/default.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
         /**
-         * Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+         * Part of `name`. Required. Name of the resource requested. Example:
+         * apps/myapp/services/default.
          */
         public Delete setAppsId(java.lang.String appsId) {
           this.appsId = appsId;
@@ -4405,7 +4453,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+       * @param appsId Part of `name`. Required. Name of the resource requested. Example: apps/myapp/services/default.
        * @param servicesId Part of `name`. See documentation of `appsId`.
        * @return the request
        */
@@ -4429,7 +4477,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+         * @param appsId Part of `name`. Required. Name of the resource requested. Example: apps/myapp/services/default.
          * @param servicesId Part of `name`. See documentation of `appsId`.
          * @since 1.13
          */
@@ -4505,19 +4553,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+         * Part of `name`. Required. Name of the resource requested. Example:
+         * apps/myapp/services/default.
          */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+        /** Part of `name`. Required. Name of the resource requested. Example: apps/myapp/services/default.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
         /**
-         * Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+         * Part of `name`. Required. Name of the resource requested. Example:
+         * apps/myapp/services/default.
          */
         public Get setAppsId(java.lang.String appsId) {
           this.appsId = appsId;
@@ -4569,7 +4619,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+       * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
        * @return the request
        */
       public List list(java.lang.String appsId) throws java.io.IOException {
@@ -4592,7 +4642,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+         * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          * @since 1.13
          */
         protected List(java.lang.String appsId) {
@@ -4665,17 +4715,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+        /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
-        /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
         public List setAppsId(java.lang.String appsId) {
           this.appsId = appsId;
           return this;
@@ -4726,7 +4780,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the appengine server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param appsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+       * @param appsId Part of `name`. Required. Name of the resource to update. Example: apps/myapp/services/default.
        * @param servicesId Part of `name`. See documentation of `appsId`.
        * @param content the {@link com.google.api.services.appengine.model.Service}
        * @return the request
@@ -4752,7 +4806,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param appsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+         * @param appsId Part of `name`. Required. Name of the resource to update. Example: apps/myapp/services/default.
          * @param servicesId Part of `name`. See documentation of `appsId`.
          * @param content the {@link com.google.api.services.appengine.model.Service}
          * @since 1.13
@@ -4819,19 +4873,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+         * Part of `name`. Required. Name of the resource to update. Example:
+         * apps/myapp/services/default.
          */
         @com.google.api.client.util.Key
         private java.lang.String appsId;
 
-        /** Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+        /** Part of `name`. Required. Name of the resource to update. Example: apps/myapp/services/default.
          */
         public java.lang.String getAppsId() {
           return appsId;
         }
 
         /**
-         * Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+         * Part of `name`. Required. Name of the resource to update. Example:
+         * apps/myapp/services/default.
          */
         public Patch setAppsId(java.lang.String appsId) {
           this.appsId = appsId;
@@ -4956,7 +5012,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the appengine server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param appsId Part of `parent`. Name of the parent resource to create this version under. Example:
+         * @param appsId Part of `parent`. Required. Name of the parent resource to create this version under. Example:
          *        apps/myapp/services/default.
          * @param servicesId Part of `parent`. See documentation of `appsId`.
          * @param content the {@link com.google.api.services.appengine.model.Version}
@@ -4983,7 +5039,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param appsId Part of `parent`. Name of the parent resource to create this version under. Example:
+           * @param appsId Part of `parent`. Required. Name of the parent resource to create this version under. Example:
          *        apps/myapp/services/default.
            * @param servicesId Part of `parent`. See documentation of `appsId`.
            * @param content the {@link com.google.api.services.appengine.model.Version}
@@ -5051,13 +5107,13 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Part of `parent`. Name of the parent resource to create this version under. Example:
-           * apps/myapp/services/default.
+           * Part of `parent`. Required. Name of the parent resource to create this version under.
+           * Example: apps/myapp/services/default.
            */
           @com.google.api.client.util.Key
           private java.lang.String appsId;
 
-          /** Part of `parent`. Name of the parent resource to create this version under. Example:
+          /** Part of `parent`. Required. Name of the parent resource to create this version under. Example:
          apps/myapp/services/default.
            */
           public java.lang.String getAppsId() {
@@ -5065,8 +5121,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Part of `parent`. Name of the parent resource to create this version under. Example:
-           * apps/myapp/services/default.
+           * Part of `parent`. Required. Name of the parent resource to create this version under.
+           * Example: apps/myapp/services/default.
            */
           public Create setAppsId(java.lang.String appsId) {
             this.appsId = appsId;
@@ -5102,7 +5158,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the appengine server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+         * @param appsId Part of `name`. Required. Name of the resource requested. Example:
+         *        apps/myapp/services/default/versions/v1.
          * @param servicesId Part of `name`. See documentation of `appsId`.
          * @param versionsId Part of `name`. See documentation of `appsId`.
          * @return the request
@@ -5128,7 +5185,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+           * @param appsId Part of `name`. Required. Name of the resource requested. Example:
+         *        apps/myapp/services/default/versions/v1.
            * @param servicesId Part of `name`. See documentation of `appsId`.
            * @param versionsId Part of `name`. See documentation of `appsId`.
            * @since 1.13
@@ -5196,20 +5254,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Part of `name`. Name of the resource requested. Example:
+           * Part of `name`. Required. Name of the resource requested. Example:
            * apps/myapp/services/default/versions/v1.
            */
           @com.google.api.client.util.Key
           private java.lang.String appsId;
 
-          /** Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+          /** Part of `name`. Required. Name of the resource requested. Example:
+         apps/myapp/services/default/versions/v1.
            */
           public java.lang.String getAppsId() {
             return appsId;
           }
 
           /**
-           * Part of `name`. Name of the resource requested. Example:
+           * Part of `name`. Required. Name of the resource requested. Example:
            * apps/myapp/services/default/versions/v1.
            */
           public Delete setAppsId(java.lang.String appsId) {
@@ -5263,7 +5322,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the appengine server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+         * @param appsId Part of `name`. Required. Name of the resource requested. Example:
+         *        apps/myapp/services/default/versions/v1.
          * @param servicesId Part of `name`. See documentation of `appsId`.
          * @param versionsId Part of `name`. See documentation of `appsId`.
          * @return the request
@@ -5289,7 +5349,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param appsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+           * @param appsId Part of `name`. Required. Name of the resource requested. Example:
+         *        apps/myapp/services/default/versions/v1.
            * @param servicesId Part of `name`. See documentation of `appsId`.
            * @param versionsId Part of `name`. See documentation of `appsId`.
            * @since 1.13
@@ -5367,20 +5428,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Part of `name`. Name of the resource requested. Example:
+           * Part of `name`. Required. Name of the resource requested. Example:
            * apps/myapp/services/default/versions/v1.
            */
           @com.google.api.client.util.Key
           private java.lang.String appsId;
 
-          /** Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+          /** Part of `name`. Required. Name of the resource requested. Example:
+         apps/myapp/services/default/versions/v1.
            */
           public java.lang.String getAppsId() {
             return appsId;
           }
 
           /**
-           * Part of `name`. Name of the resource requested. Example:
+           * Part of `name`. Required. Name of the resource requested. Example:
            * apps/myapp/services/default/versions/v1.
            */
           public Get setAppsId(java.lang.String appsId) {
@@ -5465,7 +5527,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the appengine server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param appsId Part of `parent`. Name of the parent Service resource. Example: apps/myapp/services/default.
+         * @param appsId Part of `parent`. Required. Name of the parent Service resource. Example:
+         *        apps/myapp/services/default.
          * @param servicesId Part of `parent`. See documentation of `appsId`.
          * @return the request
          */
@@ -5489,7 +5552,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param appsId Part of `parent`. Name of the parent Service resource. Example: apps/myapp/services/default.
+           * @param appsId Part of `parent`. Required. Name of the parent Service resource. Example:
+         *        apps/myapp/services/default.
            * @param servicesId Part of `parent`. See documentation of `appsId`.
            * @since 1.13
            */
@@ -5565,20 +5629,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Part of `parent`. Name of the parent Service resource. Example:
+           * Part of `parent`. Required. Name of the parent Service resource. Example:
            * apps/myapp/services/default.
            */
           @com.google.api.client.util.Key
           private java.lang.String appsId;
 
-          /** Part of `parent`. Name of the parent Service resource. Example: apps/myapp/services/default.
+          /** Part of `parent`. Required. Name of the parent Service resource. Example:
+         apps/myapp/services/default.
            */
           public java.lang.String getAppsId() {
             return appsId;
           }
 
           /**
-           * Part of `parent`. Name of the parent Service resource. Example:
+           * Part of `parent`. Required. Name of the parent Service resource. Example:
            * apps/myapp/services/default.
            */
           public List setAppsId(java.lang.String appsId) {
@@ -5703,7 +5768,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the appengine server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param appsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+         * @param appsId Part of `name`. Required. Name of the resource to update. Example:
+         *        apps/myapp/services/default/versions/1.
          * @param servicesId Part of `name`. See documentation of `appsId`.
          * @param versionsId Part of `name`. See documentation of `appsId`.
          * @param content the {@link com.google.api.services.appengine.model.Version}
@@ -5770,7 +5836,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param appsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+           * @param appsId Part of `name`. Required. Name of the resource to update. Example:
+         *        apps/myapp/services/default/versions/1.
            * @param servicesId Part of `name`. See documentation of `appsId`.
            * @param versionsId Part of `name`. See documentation of `appsId`.
            * @param content the {@link com.google.api.services.appengine.model.Version}
@@ -5839,20 +5906,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Part of `name`. Name of the resource to update. Example:
+           * Part of `name`. Required. Name of the resource to update. Example:
            * apps/myapp/services/default/versions/1.
            */
           @com.google.api.client.util.Key
           private java.lang.String appsId;
 
-          /** Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+          /** Part of `name`. Required. Name of the resource to update. Example:
+         apps/myapp/services/default/versions/1.
            */
           public java.lang.String getAppsId() {
             return appsId;
           }
 
           /**
-           * Part of `name`. Name of the resource to update. Example:
+           * Part of `name`. Required. Name of the resource to update. Example:
            * apps/myapp/services/default/versions/1.
            */
           public Patch setAppsId(java.lang.String appsId) {
@@ -5946,7 +6014,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Debug#execute()} method to invoke the remote operation.
            *
-           * @param appsId Part of `name`. Name of the resource requested. Example:
+           * @param appsId Part of `name`. Required. Name of the resource requested. Example:
            *        apps/myapp/services/default/versions/v1/instances/instance-1.
            * @param servicesId Part of `name`. See documentation of `appsId`.
            * @param versionsId Part of `name`. See documentation of `appsId`.
@@ -5979,7 +6047,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * Debug#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param appsId Part of `name`. Name of the resource requested. Example:
+             * @param appsId Part of `name`. Required. Name of the resource requested. Example:
            *        apps/myapp/services/default/versions/v1/instances/instance-1.
              * @param servicesId Part of `name`. See documentation of `appsId`.
              * @param versionsId Part of `name`. See documentation of `appsId`.
@@ -6051,13 +6119,13 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/services/default/versions/v1/instances/instance-1.
              */
             @com.google.api.client.util.Key
             private java.lang.String appsId;
 
-            /** Part of `name`. Name of the resource requested. Example:
+            /** Part of `name`. Required. Name of the resource requested. Example:
            apps/myapp/services/default/versions/v1/instances/instance-1.
              */
             public java.lang.String getAppsId() {
@@ -6065,7 +6133,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/services/default/versions/v1/instances/instance-1.
              */
             public Debug setAppsId(java.lang.String appsId) {
@@ -6141,7 +6209,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param appsId Part of `name`. Name of the resource requested. Example:
+           * @param appsId Part of `name`. Required. Name of the resource requested. Example:
            *        apps/myapp/services/default/versions/v1/instances/instance-1.
            * @param servicesId Part of `name`. See documentation of `appsId`.
            * @param versionsId Part of `name`. See documentation of `appsId`.
@@ -6176,7 +6244,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param appsId Part of `name`. Name of the resource requested. Example:
+             * @param appsId Part of `name`. Required. Name of the resource requested. Example:
            *        apps/myapp/services/default/versions/v1/instances/instance-1.
              * @param servicesId Part of `name`. See documentation of `appsId`.
              * @param versionsId Part of `name`. See documentation of `appsId`.
@@ -6247,13 +6315,13 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/services/default/versions/v1/instances/instance-1.
              */
             @com.google.api.client.util.Key
             private java.lang.String appsId;
 
-            /** Part of `name`. Name of the resource requested. Example:
+            /** Part of `name`. Required. Name of the resource requested. Example:
            apps/myapp/services/default/versions/v1/instances/instance-1.
              */
             public java.lang.String getAppsId() {
@@ -6261,7 +6329,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/services/default/versions/v1/instances/instance-1.
              */
             public Delete setAppsId(java.lang.String appsId) {
@@ -6330,7 +6398,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param appsId Part of `name`. Name of the resource requested. Example:
+           * @param appsId Part of `name`. Required. Name of the resource requested. Example:
            *        apps/myapp/services/default/versions/v1/instances/instance-1.
            * @param servicesId Part of `name`. See documentation of `appsId`.
            * @param versionsId Part of `name`. See documentation of `appsId`.
@@ -6357,7 +6425,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param appsId Part of `name`. Name of the resource requested. Example:
+             * @param appsId Part of `name`. Required. Name of the resource requested. Example:
            *        apps/myapp/services/default/versions/v1/instances/instance-1.
              * @param servicesId Part of `name`. See documentation of `appsId`.
              * @param versionsId Part of `name`. See documentation of `appsId`.
@@ -6438,13 +6506,13 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/services/default/versions/v1/instances/instance-1.
              */
             @com.google.api.client.util.Key
             private java.lang.String appsId;
 
-            /** Part of `name`. Name of the resource requested. Example:
+            /** Part of `name`. Required. Name of the resource requested. Example:
            apps/myapp/services/default/versions/v1/instances/instance-1.
              */
             public java.lang.String getAppsId() {
@@ -6452,7 +6520,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/services/default/versions/v1/instances/instance-1.
              */
             public Get setAppsId(java.lang.String appsId) {
@@ -6523,7 +6591,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param appsId Part of `parent`. Name of the parent Version resource. Example:
+           * @param appsId Part of `parent`. Required. Name of the parent Version resource. Example:
            *        apps/myapp/services/default/versions/v1.
            * @param servicesId Part of `parent`. See documentation of `appsId`.
            * @param versionsId Part of `parent`. See documentation of `appsId`.
@@ -6551,7 +6619,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param appsId Part of `parent`. Name of the parent Version resource. Example:
+             * @param appsId Part of `parent`. Required. Name of the parent Version resource. Example:
            *        apps/myapp/services/default/versions/v1.
              * @param servicesId Part of `parent`. See documentation of `appsId`.
              * @param versionsId Part of `parent`. See documentation of `appsId`.
@@ -6630,13 +6698,13 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `parent`. Name of the parent Version resource. Example:
+             * Part of `parent`. Required. Name of the parent Version resource. Example:
              * apps/myapp/services/default/versions/v1.
              */
             @com.google.api.client.util.Key
             private java.lang.String appsId;
 
-            /** Part of `parent`. Name of the parent Version resource. Example:
+            /** Part of `parent`. Required. Name of the parent Version resource. Example:
            apps/myapp/services/default/versions/v1.
              */
             public java.lang.String getAppsId() {
@@ -6644,7 +6712,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `parent`. Name of the parent Version resource. Example:
+             * Part of `parent`. Required. Name of the parent Version resource. Example:
              * apps/myapp/services/default/versions/v1.
              */
             public List setAppsId(java.lang.String appsId) {
@@ -7155,7 +7223,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the appengine server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param projectsId Part of `name`. Name of the Application resource to update. Example: apps/myapp.
+         * @param projectsId Part of `name`. Required. Name of the Application resource to update. Example: apps/myapp.
          * @param locationsId Part of `name`. See documentation of `projectsId`.
          * @param applicationsId Part of `name`. See documentation of `projectsId`.
          * @param content the {@link com.google.api.services.appengine.model.Application}
@@ -7185,7 +7253,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param projectsId Part of `name`. Name of the Application resource to update. Example: apps/myapp.
+           * @param projectsId Part of `name`. Required. Name of the Application resource to update. Example: apps/myapp.
            * @param locationsId Part of `name`. See documentation of `projectsId`.
            * @param applicationsId Part of `name`. See documentation of `projectsId`.
            * @param content the {@link com.google.api.services.appengine.model.Application}
@@ -7253,17 +7321,23 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Part of `name`. Name of the Application resource to update. Example: apps/myapp. */
+          /**
+           * Part of `name`. Required. Name of the Application resource to update. Example:
+           * apps/myapp.
+           */
           @com.google.api.client.util.Key
           private java.lang.String projectsId;
 
-          /** Part of `name`. Name of the Application resource to update. Example: apps/myapp.
+          /** Part of `name`. Required. Name of the Application resource to update. Example: apps/myapp.
            */
           public java.lang.String getProjectsId() {
             return projectsId;
           }
 
-          /** Part of `name`. Name of the Application resource to update. Example: apps/myapp. */
+          /**
+           * Part of `name`. Required. Name of the Application resource to update. Example:
+           * apps/myapp.
+           */
           public Patch setProjectsId(java.lang.String projectsId) {
             this.projectsId = projectsId;
             return this;
@@ -7351,7 +7425,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+           * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
            * @param locationsId Part of `parent`. See documentation of `projectsId`.
            * @param applicationsId Part of `parent`. See documentation of `projectsId`.
            * @param content the {@link com.google.api.services.appengine.model.AuthorizedCertificate}
@@ -7378,7 +7452,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+             * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
              * @param locationsId Part of `parent`. See documentation of `projectsId`.
              * @param applicationsId Part of `parent`. See documentation of `projectsId`.
              * @param content the {@link com.google.api.services.appengine.model.AuthorizedCertificate}
@@ -7446,17 +7520,23 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+            /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
             public Create setProjectsId(java.lang.String projectsId) {
               this.projectsId = projectsId;
               return this;
@@ -7507,7 +7587,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `name`. Name of the resource to delete. Example: apps/myapp/authorizedCertificates/12345.
+           * @param projectsId Part of `name`. Required. Name of the resource to delete. Example:
+           *        apps/myapp/authorizedCertificates/12345.
            * @param locationsId Part of `name`. See documentation of `projectsId`.
            * @param applicationsId Part of `name`. See documentation of `projectsId`.
            * @param authorizedCertificatesId Part of `name`. See documentation of `projectsId`.
@@ -7534,7 +7615,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `name`. Name of the resource to delete. Example: apps/myapp/authorizedCertificates/12345.
+             * @param projectsId Part of `name`. Required. Name of the resource to delete. Example:
+           *        apps/myapp/authorizedCertificates/12345.
              * @param locationsId Part of `name`. See documentation of `projectsId`.
              * @param applicationsId Part of `name`. See documentation of `projectsId`.
              * @param authorizedCertificatesId Part of `name`. See documentation of `projectsId`.
@@ -7604,20 +7686,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource to delete. Example:
+             * Part of `name`. Required. Name of the resource to delete. Example:
              * apps/myapp/authorizedCertificates/12345.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `name`. Name of the resource to delete. Example: apps/myapp/authorizedCertificates/12345.
+            /** Part of `name`. Required. Name of the resource to delete. Example:
+           apps/myapp/authorizedCertificates/12345.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
             /**
-             * Part of `name`. Name of the resource to delete. Example:
+             * Part of `name`. Required. Name of the resource to delete. Example:
              * apps/myapp/authorizedCertificates/12345.
              */
             public Delete setProjectsId(java.lang.String projectsId) {
@@ -7686,7 +7769,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/authorizedCertificates/12345.
+           * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+           *        apps/myapp/authorizedCertificates/12345.
            * @param locationsId Part of `name`. See documentation of `projectsId`.
            * @param applicationsId Part of `name`. See documentation of `projectsId`.
            * @param authorizedCertificatesId Part of `name`. See documentation of `projectsId`.
@@ -7712,7 +7796,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/authorizedCertificates/12345.
+             * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+           *        apps/myapp/authorizedCertificates/12345.
              * @param locationsId Part of `name`. See documentation of `projectsId`.
              * @param applicationsId Part of `name`. See documentation of `projectsId`.
              * @param authorizedCertificatesId Part of `name`. See documentation of `projectsId`.
@@ -7792,20 +7877,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/authorizedCertificates/12345.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `name`. Name of the resource requested. Example: apps/myapp/authorizedCertificates/12345.
+            /** Part of `name`. Required. Name of the resource requested. Example:
+           apps/myapp/authorizedCertificates/12345.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/authorizedCertificates/12345.
              */
             public Get setProjectsId(java.lang.String projectsId) {
@@ -7890,7 +7976,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+           * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
            * @param locationsId Part of `parent`. See documentation of `projectsId`.
            * @param applicationsId Part of `parent`. See documentation of `projectsId`.
            * @return the request
@@ -7915,7 +8001,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+             * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
              * @param locationsId Part of `parent`. See documentation of `projectsId`.
              * @param applicationsId Part of `parent`. See documentation of `projectsId`.
              * @since 1.13
@@ -7992,17 +8078,23 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+            /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
             public List setProjectsId(java.lang.String projectsId) {
               this.projectsId = projectsId;
               return this;
@@ -8104,7 +8196,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `name`. Name of the resource to update. Example: apps/myapp/authorizedCertificates/12345.
+           * @param projectsId Part of `name`. Required. Name of the resource to update. Example:
+           *        apps/myapp/authorizedCertificates/12345.
            * @param locationsId Part of `name`. See documentation of `projectsId`.
            * @param applicationsId Part of `name`. See documentation of `projectsId`.
            * @param authorizedCertificatesId Part of `name`. See documentation of `projectsId`.
@@ -8135,7 +8228,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `name`. Name of the resource to update. Example: apps/myapp/authorizedCertificates/12345.
+             * @param projectsId Part of `name`. Required. Name of the resource to update. Example:
+           *        apps/myapp/authorizedCertificates/12345.
              * @param locationsId Part of `name`. See documentation of `projectsId`.
              * @param applicationsId Part of `name`. See documentation of `projectsId`.
              * @param authorizedCertificatesId Part of `name`. See documentation of `projectsId`.
@@ -8206,20 +8300,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource to update. Example:
+             * Part of `name`. Required. Name of the resource to update. Example:
              * apps/myapp/authorizedCertificates/12345.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `name`. Name of the resource to update. Example: apps/myapp/authorizedCertificates/12345.
+            /** Part of `name`. Required. Name of the resource to update. Example:
+           apps/myapp/authorizedCertificates/12345.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
             /**
-             * Part of `name`. Name of the resource to update. Example:
+             * Part of `name`. Required. Name of the resource to update. Example:
              * apps/myapp/authorizedCertificates/12345.
              */
             public Patch setProjectsId(java.lang.String projectsId) {
@@ -8333,7 +8428,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+           * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
            * @param locationsId Part of `parent`. See documentation of `projectsId`.
            * @param applicationsId Part of `parent`. See documentation of `projectsId`.
            * @return the request
@@ -8358,7 +8453,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+             * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
              * @param locationsId Part of `parent`. See documentation of `projectsId`.
              * @param applicationsId Part of `parent`. See documentation of `projectsId`.
              * @since 1.13
@@ -8435,17 +8530,23 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+            /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
             public List setProjectsId(java.lang.String projectsId) {
               this.projectsId = projectsId;
               return this;
@@ -8552,7 +8653,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+           * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
            * @param locationsId Part of `parent`. See documentation of `projectsId`.
            * @param applicationsId Part of `parent`. See documentation of `projectsId`.
            * @param content the {@link com.google.api.services.appengine.model.DomainMapping}
@@ -8581,7 +8682,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+             * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
              * @param locationsId Part of `parent`. See documentation of `projectsId`.
              * @param applicationsId Part of `parent`. See documentation of `projectsId`.
              * @param content the {@link com.google.api.services.appengine.model.DomainMapping}
@@ -8649,17 +8750,23 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+            /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
-            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
             public Create setProjectsId(java.lang.String projectsId) {
               this.projectsId = projectsId;
               return this;
@@ -8733,7 +8840,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/domainMappings/example.com.
+           * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+           *        apps/myapp/domainMappings/example.com.
            * @param locationsId Part of `name`. See documentation of `projectsId`.
            * @param applicationsId Part of `name`. See documentation of `projectsId`.
            * @param domainMappingsId Part of `name`. See documentation of `projectsId`.
@@ -8759,7 +8867,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/domainMappings/example.com.
+             * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+           *        apps/myapp/domainMappings/example.com.
              * @param locationsId Part of `name`. See documentation of `projectsId`.
              * @param applicationsId Part of `name`. See documentation of `projectsId`.
              * @param domainMappingsId Part of `name`. See documentation of `projectsId`.
@@ -8839,20 +8948,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/domainMappings/example.com.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `name`. Name of the resource requested. Example: apps/myapp/domainMappings/example.com.
+            /** Part of `name`. Required. Name of the resource requested. Example:
+           apps/myapp/domainMappings/example.com.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example:
+             * Part of `name`. Required. Name of the resource requested. Example:
              * apps/myapp/domainMappings/example.com.
              */
             public Get setProjectsId(java.lang.String projectsId) {
@@ -8943,7 +9053,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+           * @param projectsId Part of `name`. Required. Name of the resource requested. Example: apps/myapp/services/default.
            * @param locationsId Part of `name`. See documentation of `projectsId`.
            * @param applicationsId Part of `name`. See documentation of `projectsId`.
            * @param servicesId Part of `name`. See documentation of `projectsId`.
@@ -8970,7 +9080,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+             * @param projectsId Part of `name`. Required. Name of the resource requested. Example: apps/myapp/services/default.
              * @param locationsId Part of `name`. See documentation of `projectsId`.
              * @param applicationsId Part of `name`. See documentation of `projectsId`.
              * @param servicesId Part of `name`. See documentation of `projectsId`.
@@ -9040,19 +9150,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+             * Part of `name`. Required. Name of the resource requested. Example:
+             * apps/myapp/services/default.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+            /** Part of `name`. Required. Name of the resource requested. Example: apps/myapp/services/default.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
             /**
-             * Part of `name`. Name of the resource requested. Example: apps/myapp/services/default.
+             * Part of `name`. Required. Name of the resource requested. Example:
+             * apps/myapp/services/default.
              */
             public Delete setProjectsId(java.lang.String projectsId) {
               this.projectsId = projectsId;
@@ -9120,7 +9232,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the appengine server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param projectsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+           * @param projectsId Part of `name`. Required. Name of the resource to update. Example: apps/myapp/services/default.
            * @param locationsId Part of `name`. See documentation of `projectsId`.
            * @param applicationsId Part of `name`. See documentation of `projectsId`.
            * @param servicesId Part of `name`. See documentation of `projectsId`.
@@ -9148,7 +9260,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+             * @param projectsId Part of `name`. Required. Name of the resource to update. Example: apps/myapp/services/default.
              * @param locationsId Part of `name`. See documentation of `projectsId`.
              * @param applicationsId Part of `name`. See documentation of `projectsId`.
              * @param servicesId Part of `name`. See documentation of `projectsId`.
@@ -9219,19 +9331,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+             * Part of `name`. Required. Name of the resource to update. Example:
+             * apps/myapp/services/default.
              */
             @com.google.api.client.util.Key
             private java.lang.String projectsId;
 
-            /** Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+            /** Part of `name`. Required. Name of the resource to update. Example: apps/myapp/services/default.
              */
             public java.lang.String getProjectsId() {
               return projectsId;
             }
 
             /**
-             * Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+             * Part of `name`. Required. Name of the resource to update. Example:
+             * apps/myapp/services/default.
              */
             public Patch setProjectsId(java.lang.String projectsId) {
               this.projectsId = projectsId;
@@ -9388,7 +9502,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * This request holds the parameters needed by the appengine server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+             * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+             *        apps/myapp/services/default/versions/v1.
              * @param locationsId Part of `name`. See documentation of `projectsId`.
              * @param applicationsId Part of `name`. See documentation of `projectsId`.
              * @param servicesId Part of `name`. See documentation of `projectsId`.
@@ -9416,7 +9531,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+               * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+             *        apps/myapp/services/default/versions/v1.
                * @param locationsId Part of `name`. See documentation of `projectsId`.
                * @param applicationsId Part of `name`. See documentation of `projectsId`.
                * @param servicesId Part of `name`. See documentation of `projectsId`.
@@ -9488,20 +9604,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
               }
 
               /**
-               * Part of `name`. Name of the resource requested. Example:
+               * Part of `name`. Required. Name of the resource requested. Example:
                * apps/myapp/services/default/versions/v1.
                */
               @com.google.api.client.util.Key
               private java.lang.String projectsId;
 
-              /** Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1.
+              /** Part of `name`. Required. Name of the resource requested. Example:
+             apps/myapp/services/default/versions/v1.
                */
               public java.lang.String getProjectsId() {
                 return projectsId;
               }
 
               /**
-               * Part of `name`. Name of the resource requested. Example:
+               * Part of `name`. Required. Name of the resource requested. Example:
                * apps/myapp/services/default/versions/v1.
                */
               public Delete setProjectsId(java.lang.String projectsId) {
@@ -9626,7 +9743,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
              * This request holds the parameters needed by the appengine server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param projectsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+             * @param projectsId Part of `name`. Required. Name of the resource to update. Example:
+             *        apps/myapp/services/default/versions/1.
              * @param locationsId Part of `name`. See documentation of `projectsId`.
              * @param applicationsId Part of `name`. See documentation of `projectsId`.
              * @param servicesId Part of `name`. See documentation of `projectsId`.
@@ -9695,7 +9813,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param projectsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+               * @param projectsId Part of `name`. Required. Name of the resource to update. Example:
+             *        apps/myapp/services/default/versions/1.
                * @param locationsId Part of `name`. See documentation of `projectsId`.
                * @param applicationsId Part of `name`. See documentation of `projectsId`.
                * @param servicesId Part of `name`. See documentation of `projectsId`.
@@ -9768,20 +9887,21 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
               }
 
               /**
-               * Part of `name`. Name of the resource to update. Example:
+               * Part of `name`. Required. Name of the resource to update. Example:
                * apps/myapp/services/default/versions/1.
                */
               @com.google.api.client.util.Key
               private java.lang.String projectsId;
 
-              /** Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+              /** Part of `name`. Required. Name of the resource to update. Example:
+             apps/myapp/services/default/versions/1.
                */
               public java.lang.String getProjectsId() {
                 return projectsId;
               }
 
               /**
-               * Part of `name`. Name of the resource to update. Example:
+               * Part of `name`. Required. Name of the resource to update. Example:
                * apps/myapp/services/default/versions/1.
                */
               public Patch setProjectsId(java.lang.String projectsId) {

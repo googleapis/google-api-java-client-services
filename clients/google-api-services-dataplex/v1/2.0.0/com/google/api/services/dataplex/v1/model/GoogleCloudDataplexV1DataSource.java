@@ -30,9 +30,9 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The Dataplex entity that represents the data source (e.g. BigQuery table) for
-   * DataScan, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/
-   * {zone_id}/entities/{entity_id}.
+   * Immutable. The Dataplex Universal Catalog entity that represents the data source (e.g. BigQuery
+   * table) for DataScan, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake
+   * _id}/zones/{zone_id}/entities/{entity_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
 
   /**
    * Immutable. The service-qualified full resource name of the cloud resource for a DataScan job to
-   * scan against. The field could eitherbe: Cloud Storage bucket for DataDiscoveryScan Format:
+   * scan against. The field could either be: Cloud Storage bucket for DataDiscoveryScan Format:
    * //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID or BigQuery table of type
    * "TABLE" for DataProfileScan/DataQualityScan Format:
    * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
@@ -50,9 +50,9 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
   private java.lang.String resource;
 
   /**
-   * Immutable. The Dataplex entity that represents the data source (e.g. BigQuery table) for
-   * DataScan, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/
-   * {zone_id}/entities/{entity_id}.
+   * Immutable. The Dataplex Universal Catalog entity that represents the data source (e.g. BigQuery
+   * table) for DataScan, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake
+   * _id}/zones/{zone_id}/entities/{entity_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntity() {
@@ -60,9 +60,9 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
   }
 
   /**
-   * Immutable. The Dataplex entity that represents the data source (e.g. BigQuery table) for
-   * DataScan, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/
-   * {zone_id}/entities/{entity_id}.
+   * Immutable. The Dataplex Universal Catalog entity that represents the data source (e.g. BigQuery
+   * table) for DataScan, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake
+   * _id}/zones/{zone_id}/entities/{entity_id}.
    * @param entity entity or {@code null} for none
    */
   public GoogleCloudDataplexV1DataSource setEntity(java.lang.String entity) {
@@ -72,7 +72,7 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
 
   /**
    * Immutable. The service-qualified full resource name of the cloud resource for a DataScan job to
-   * scan against. The field could eitherbe: Cloud Storage bucket for DataDiscoveryScan Format:
+   * scan against. The field could either be: Cloud Storage bucket for DataDiscoveryScan Format:
    * //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID or BigQuery table of type
    * "TABLE" for DataProfileScan/DataQualityScan Format:
    * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
@@ -84,7 +84,7 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
 
   /**
    * Immutable. The service-qualified full resource name of the cloud resource for a DataScan job to
-   * scan against. The field could eitherbe: Cloud Storage bucket for DataDiscoveryScan Format:
+   * scan against. The field could either be: Cloud Storage bucket for DataDiscoveryScan Format:
    * //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID or BigQuery table of type
    * "TABLE" for DataProfileScan/DataQualityScan Format:
    * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID

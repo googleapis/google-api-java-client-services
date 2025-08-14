@@ -54,7 +54,7 @@ public final class GoogleCloudDiscoveryengineV1RankRequest extends com.google.ap
   private java.lang.String query;
 
   /**
-   * Required. A list of records to rank. At most 200 records to rank.
+   * Required. A list of records to rank.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class GoogleCloudDiscoveryengineV1RankRequest extends com.google.ap
   }
 
   /**
-   * Required. A list of records to rank. At most 200 records to rank.
+   * Required. A list of records to rank.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1RankingRecord> getRecords() {
@@ -149,7 +149,7 @@ public final class GoogleCloudDiscoveryengineV1RankRequest extends com.google.ap
   }
 
   /**
-   * Required. A list of records to rank. At most 200 records to rank.
+   * Required. A list of records to rank.
    * @param records records or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1RankRequest setRecords(java.util.List<GoogleCloudDiscoveryengineV1RankingRecord> records) {

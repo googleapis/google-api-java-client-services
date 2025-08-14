@@ -57,6 +57,15 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
   }
 
   /**
+   * Optional. Precision (maximum number of total digits in base 10) for seconds of TIMESTAMP type.
+   * Possible values include: * 6 (Default, for TIMESTAMP type with microsecond precision) * 12 (For
+   * TIMESTAMP type with picosecond precision)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long timestampPrecision;
+
+  /**
    * Required. The top level type of this field.
    * The value may be {@code null}.
    */
@@ -111,6 +120,27 @@ public final class QueryParameterType extends com.google.api.client.json.Generic
    */
   public QueryParameterType setStructTypes(java.util.List<StructTypes> structTypes) {
     this.structTypes = structTypes;
+    return this;
+  }
+
+  /**
+   * Optional. Precision (maximum number of total digits in base 10) for seconds of TIMESTAMP type.
+   * Possible values include: * 6 (Default, for TIMESTAMP type with microsecond precision) * 12 (For
+   * TIMESTAMP type with picosecond precision)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTimestampPrecision() {
+    return timestampPrecision;
+  }
+
+  /**
+   * Optional. Precision (maximum number of total digits in base 10) for seconds of TIMESTAMP type.
+   * Possible values include: * 6 (Default, for TIMESTAMP type with microsecond precision) * 12 (For
+   * TIMESTAMP type with picosecond precision)
+   * @param timestampPrecision timestampPrecision or {@code null} for none
+   */
+  public QueryParameterType setTimestampPrecision(java.lang.Long timestampPrecision) {
+    this.timestampPrecision = timestampPrecision;
     return this;
   }
 

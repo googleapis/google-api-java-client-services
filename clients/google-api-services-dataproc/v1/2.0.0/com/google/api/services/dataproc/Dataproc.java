@@ -12699,6 +12699,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
+            /** Optional. List of Job IDs to filter by if provided. */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.Long> jobIds;
+
+            /** Optional. List of Job IDs to filter by if provided.
+             */
+            public java.util.List<java.lang.Long> getJobIds() {
+              return jobIds;
+            }
+
+            /** Optional. List of Job IDs to filter by if provided. */
+            public SummarizeJobs setJobIds(java.util.List<java.lang.Long> jobIds) {
+              this.jobIds = jobIds;
+              return this;
+            }
+
             /** Required. Parent (Session) resource reference. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -13081,6 +13097,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             /** Required. Parent (Session) resource reference. */
             public SummarizeStages setParent(java.lang.String parent) {
               this.parent = parent;
+              return this;
+            }
+
+            /** Optional. List of Stage IDs to filter by if provided. */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.Long> stageIds;
+
+            /** Optional. List of Stage IDs to filter by if provided.
+             */
+            public java.util.List<java.lang.Long> getStageIds() {
+              return stageIds;
+            }
+
+            /** Optional. List of Stage IDs to filter by if provided. */
+            public SummarizeStages setStageIds(java.util.List<java.lang.Long> stageIds) {
+              this.stageIds = stageIds;
               return this;
             }
 

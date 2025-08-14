@@ -245,6 +245,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String reservedInternalRange;
 
   /**
+   * Configures subnet mask resolution for this subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolveSubnetMask;
+
+  /**
    * The role of subnetwork. Currently, this field is only used when purpose is set to
    * GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An
    * ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a
@@ -308,6 +315,14 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> systemReservedInternalIpv6Ranges;
+
+  /**
+   * Output only. [Output Only] The current IP utilization of all subnetwork ranges. Contains the
+   * total number of allocated and free IPs in each range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SubnetworkUtilizationDetails utilizationDetails;
 
   /**
    * Whether this subnetwork's ranges can conflict with existing static routes. Setting this to true
@@ -844,6 +859,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Configures subnet mask resolution for this subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolveSubnetMask() {
+    return resolveSubnetMask;
+  }
+
+  /**
+   * Configures subnet mask resolution for this subnetwork.
+   * @param resolveSubnetMask resolveSubnetMask or {@code null} for none
+   */
+  public Subnetwork setResolveSubnetMask(java.lang.String resolveSubnetMask) {
+    this.resolveSubnetMask = resolveSubnetMask;
+    return this;
+  }
+
+  /**
    * The role of subnetwork. Currently, this field is only used when purpose is set to
    * GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An
    * ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a
@@ -991,6 +1023,25 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setSystemReservedInternalIpv6Ranges(java.util.List<java.lang.String> systemReservedInternalIpv6Ranges) {
     this.systemReservedInternalIpv6Ranges = systemReservedInternalIpv6Ranges;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The current IP utilization of all subnetwork ranges. Contains the
+   * total number of allocated and free IPs in each range.
+   * @return value or {@code null} for none
+   */
+  public SubnetworkUtilizationDetails getUtilizationDetails() {
+    return utilizationDetails;
+  }
+
+  /**
+   * Output only. [Output Only] The current IP utilization of all subnetwork ranges. Contains the
+   * total number of allocated and free IPs in each range.
+   * @param utilizationDetails utilizationDetails or {@code null} for none
+   */
+  public Subnetwork setUtilizationDetails(SubnetworkUtilizationDetails utilizationDetails) {
+    this.utilizationDetails = utilizationDetails;
     return this;
   }
 

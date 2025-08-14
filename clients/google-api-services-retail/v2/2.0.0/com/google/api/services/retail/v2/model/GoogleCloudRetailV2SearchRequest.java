@@ -254,6 +254,16 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   private GoogleCloudRetailV2SearchRequestTileNavigationSpec tileNavigationSpec;
 
   /**
+   * Optional. The user attributes that could be used for personalization of search results. *
+   * Populate at most 100 key-value pairs per query. * Only supports string keys and repeated string
+   * values. * Duplicate keys are not allowed within a single query. Example: user_attributes: [ {
+   * key: "pets" value { values: "dog" values: "cat" } }, { key: "state" value { values: "CA" } } ]
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudRetailV2StringList> userAttributes;
+
+  /**
    * User information.
    * The value may be {@code null}.
    */
@@ -812,6 +822,29 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
    */
   public GoogleCloudRetailV2SearchRequest setTileNavigationSpec(GoogleCloudRetailV2SearchRequestTileNavigationSpec tileNavigationSpec) {
     this.tileNavigationSpec = tileNavigationSpec;
+    return this;
+  }
+
+  /**
+   * Optional. The user attributes that could be used for personalization of search results. *
+   * Populate at most 100 key-value pairs per query. * Only supports string keys and repeated string
+   * values. * Duplicate keys are not allowed within a single query. Example: user_attributes: [ {
+   * key: "pets" value { values: "dog" values: "cat" } }, { key: "state" value { values: "CA" } } ]
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudRetailV2StringList> getUserAttributes() {
+    return userAttributes;
+  }
+
+  /**
+   * Optional. The user attributes that could be used for personalization of search results. *
+   * Populate at most 100 key-value pairs per query. * Only supports string keys and repeated string
+   * values. * Duplicate keys are not allowed within a single query. Example: user_attributes: [ {
+   * key: "pets" value { values: "dog" values: "cat" } }, { key: "state" value { values: "CA" } } ]
+   * @param userAttributes userAttributes or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchRequest setUserAttributes(java.util.Map<String, GoogleCloudRetailV2StringList> userAttributes) {
+    this.userAttributes = userAttributes;
     return this;
   }
 

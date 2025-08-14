@@ -76,6 +76,13 @@ public final class GoogleCloudRetailV2alphaConversationalSearchRequest extends c
   private java.lang.String query;
 
   /**
+   * Optional. The safety settings to be applied to the generated content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaSafetySetting> safetySettings;
+
+  /**
    * Optional. Search parameters.
    * The value may be {@code null}.
    */
@@ -218,6 +225,23 @@ public final class GoogleCloudRetailV2alphaConversationalSearchRequest extends c
    */
   public GoogleCloudRetailV2alphaConversationalSearchRequest setQuery(java.lang.String query) {
     this.query = query;
+    return this;
+  }
+
+  /**
+   * Optional. The safety settings to be applied to the generated content.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaSafetySetting> getSafetySettings() {
+    return safetySettings;
+  }
+
+  /**
+   * Optional. The safety settings to be applied to the generated content.
+   * @param safetySettings safetySettings or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaConversationalSearchRequest setSafetySettings(java.util.List<GoogleCloudRetailV2alphaSafetySetting> safetySettings) {
+    this.safetySettings = safetySettings;
     return this;
   }
 

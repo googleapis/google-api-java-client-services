@@ -53,6 +53,20 @@ public final class GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig exten
   private java.util.List<java.lang.String> projectAllowlist;
 
   /**
+   * Optional. List of projects and networks where the PSC endpoints will be created. This field is
+   * used by Online Inference(Prediction) only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1PSCAutomationConfig> pscAutomationConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1PSCAutomationConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1PSCAutomationConfig.class);
+  }
+
+  /**
    * Output only. The name of the generated service attachment resource. This is only populated if
    * the endpoint is deployed with PrivateServiceConnect.
    * The value may be {@code null}.
@@ -112,6 +126,25 @@ public final class GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig exten
    */
   public GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig setProjectAllowlist(java.util.List<java.lang.String> projectAllowlist) {
     this.projectAllowlist = projectAllowlist;
+    return this;
+  }
+
+  /**
+   * Optional. List of projects and networks where the PSC endpoints will be created. This field is
+   * used by Online Inference(Prediction) only.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1PSCAutomationConfig> getPscAutomationConfigs() {
+    return pscAutomationConfigs;
+  }
+
+  /**
+   * Optional. List of projects and networks where the PSC endpoints will be created. This field is
+   * used by Online Inference(Prediction) only.
+   * @param pscAutomationConfigs pscAutomationConfigs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig setPscAutomationConfigs(java.util.List<GoogleCloudAiplatformV1beta1PSCAutomationConfig> pscAutomationConfigs) {
+    this.pscAutomationConfigs = pscAutomationConfigs;
     return this;
   }
 

@@ -25,7 +25,7 @@ package com.google.api.services.merchantapi.promotions_v1beta;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.devsite.corp.google.com/merchant/api" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/merchant/api" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -599,24 +599,24 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Output only. The maximum number of promotions to return. The service may return fewer
-         * than this value. The maximum value is 250; values above 250 will be coerced to 250. If
+         * Optional. The maximum number of promotions to return. The service may return fewer than
+         * this value. The maximum value is 250; values above 250 will be coerced to 250. If
          * unspecified, the maximum number of promotions will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Output only. The maximum number of promotions to return. The service may return fewer than this
-       value. The maximum value is 250; values above 250 will be coerced to 250. If unspecified, the
-       maximum number of promotions will be returned.
+        /** Optional. The maximum number of promotions to return. The service may return fewer than this value.
+       The maximum value is 250; values above 250 will be coerced to 250. If unspecified, the maximum
+       number of promotions will be returned.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Output only. The maximum number of promotions to return. The service may return fewer
-         * than this value. The maximum value is 250; values above 250 will be coerced to 250. If
+         * Optional. The maximum number of promotions to return. The service may return fewer than
+         * this value. The maximum value is 250; values above 250 will be coerced to 250. If
          * unspecified, the maximum number of promotions will be returned.
          */
         public List setPageSize(java.lang.Integer pageSize) {
@@ -625,14 +625,14 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Output only. A page token, received from a previous `ListPromotions` call. Provide this
-         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListPromotions` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListPromotions` must match the call that provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Output only. A page token, received from a previous `ListPromotions` call. Provide this to retrieve
+        /** Optional. A page token, received from a previous `ListPromotions` call. Provide this to retrieve
        the subsequent page. When paginating, all other parameters provided to `ListPromotions` must match
        the call that provided the page token.
          */
@@ -641,8 +641,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Output only. A page token, received from a previous `ListPromotions` call. Provide this
-         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListPromotions` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListPromotions` must match the call that provided the page token.
          */
         public List setPageToken(java.lang.String pageToken) {

@@ -51,6 +51,15 @@ public final class GoogleCloudRunV2SubmitBuildRequest extends com.google.api.cli
   private java.lang.String imageUri;
 
   /**
+   * Optional. The machine type from default pool to use for the build. If left blank, cloudbuild
+   * will use a sensible default. Currently only E2_HIGHCPU_8 is supported. If worker_pool is set,
+   * this field will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String machineType;
+
+  /**
    * Optional. The service account to use for the build. If not set, the default Cloud Build service
    * account for the project will be used.
    * The value may be {@code null}.
@@ -130,6 +139,27 @@ public final class GoogleCloudRunV2SubmitBuildRequest extends com.google.api.cli
    */
   public GoogleCloudRunV2SubmitBuildRequest setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * Optional. The machine type from default pool to use for the build. If left blank, cloudbuild
+   * will use a sensible default. Currently only E2_HIGHCPU_8 is supported. If worker_pool is set,
+   * this field will be ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMachineType() {
+    return machineType;
+  }
+
+  /**
+   * Optional. The machine type from default pool to use for the build. If left blank, cloudbuild
+   * will use a sensible default. Currently only E2_HIGHCPU_8 is supported. If worker_pool is set,
+   * this field will be ignored.
+   * @param machineType machineType or {@code null} for none
+   */
+  public GoogleCloudRunV2SubmitBuildRequest setMachineType(java.lang.String machineType) {
+    this.machineType = machineType;
     return this;
   }
 

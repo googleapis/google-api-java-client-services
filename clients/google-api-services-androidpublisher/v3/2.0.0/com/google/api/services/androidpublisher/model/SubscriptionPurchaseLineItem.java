@@ -38,6 +38,13 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
   private AutoRenewingPlan autoRenewingPlan;
 
   /**
+   * Information for deferred item removal.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeferredItemRemoval deferredItemRemoval;
+
+  /**
    * Information for deferred item replacement.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
    */
   public SubscriptionPurchaseLineItem setAutoRenewingPlan(AutoRenewingPlan autoRenewingPlan) {
     this.autoRenewingPlan = autoRenewingPlan;
+    return this;
+  }
+
+  /**
+   * Information for deferred item removal.
+   * @return value or {@code null} for none
+   */
+  public DeferredItemRemoval getDeferredItemRemoval() {
+    return deferredItemRemoval;
+  }
+
+  /**
+   * Information for deferred item removal.
+   * @param deferredItemRemoval deferredItemRemoval or {@code null} for none
+   */
+  public SubscriptionPurchaseLineItem setDeferredItemRemoval(DeferredItemRemoval deferredItemRemoval) {
+    this.deferredItemRemoval = deferredItemRemoval;
     return this;
   }
 

@@ -84,11 +84,26 @@ public final class GoogleCloudContactcenterinsightsV1QaQuestion extends com.goog
   private java.lang.Integer order;
 
   /**
+   * The configuration of the predefined question. This field will only be set if the Question Type
+   * is predefined.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig predefinedQuestionConfig;
+
+  /**
    * Question text. E.g., "Did the agent greet the customer?"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String questionBody;
+
+  /**
+   * The type of question.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String questionType;
 
   /**
    * Questions are tagged for categorization and scoring. Tags can either be: - Default Tags: These
@@ -245,6 +260,25 @@ public final class GoogleCloudContactcenterinsightsV1QaQuestion extends com.goog
   }
 
   /**
+   * The configuration of the predefined question. This field will only be set if the Question Type
+   * is predefined.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig getPredefinedQuestionConfig() {
+    return predefinedQuestionConfig;
+  }
+
+  /**
+   * The configuration of the predefined question. This field will only be set if the Question Type
+   * is predefined.
+   * @param predefinedQuestionConfig predefinedQuestionConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaQuestion setPredefinedQuestionConfig(GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig predefinedQuestionConfig) {
+    this.predefinedQuestionConfig = predefinedQuestionConfig;
+    return this;
+  }
+
+  /**
    * Question text. E.g., "Did the agent greet the customer?"
    * @return value or {@code null} for none
    */
@@ -258,6 +292,23 @@ public final class GoogleCloudContactcenterinsightsV1QaQuestion extends com.goog
    */
   public GoogleCloudContactcenterinsightsV1QaQuestion setQuestionBody(java.lang.String questionBody) {
     this.questionBody = questionBody;
+    return this;
+  }
+
+  /**
+   * The type of question.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuestionType() {
+    return questionType;
+  }
+
+  /**
+   * The type of question.
+   * @param questionType questionType or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaQuestion setQuestionType(java.lang.String questionType) {
+    this.questionType = questionType;
     return this;
   }
 

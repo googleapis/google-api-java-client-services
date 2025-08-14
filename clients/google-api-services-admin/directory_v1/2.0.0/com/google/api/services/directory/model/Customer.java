@@ -74,10 +74,10 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The customer's ISO 639-2 language code. See the [Language Codes](/admin-
-   * sdk/directory/v1/languages) page for the list of supported codes. Valid language codes outside
-   * the supported set will be accepted by the API but may lead to unexpected behavior. The default
-   * value is `en`.
+   * The customer's ISO 639-2 language code. See the [Language
+   * Codes](https://developers.google.com/workspace/admin/directory/v1/languages) page for the list
+   * of supported codes. Valid language codes outside the supported set will be accepted by the API
+   * but may lead to unexpected behavior. The default value is `en`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,10 +204,10 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer's ISO 639-2 language code. See the [Language Codes](/admin-
-   * sdk/directory/v1/languages) page for the list of supported codes. Valid language codes outside
-   * the supported set will be accepted by the API but may lead to unexpected behavior. The default
-   * value is `en`.
+   * The customer's ISO 639-2 language code. See the [Language
+   * Codes](https://developers.google.com/workspace/admin/directory/v1/languages) page for the list
+   * of supported codes. Valid language codes outside the supported set will be accepted by the API
+   * but may lead to unexpected behavior. The default value is `en`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguage() {
@@ -215,10 +215,10 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer's ISO 639-2 language code. See the [Language Codes](/admin-
-   * sdk/directory/v1/languages) page for the list of supported codes. Valid language codes outside
-   * the supported set will be accepted by the API but may lead to unexpected behavior. The default
-   * value is `en`.
+   * The customer's ISO 639-2 language code. See the [Language
+   * Codes](https://developers.google.com/workspace/admin/directory/v1/languages) page for the list
+   * of supported codes. Valid language codes outside the supported set will be accepted by the API
+   * but may lead to unexpected behavior. The default value is `en`.
    * @param language language or {@code null} for none
    */
   public Customer setLanguage(java.lang.String language) {

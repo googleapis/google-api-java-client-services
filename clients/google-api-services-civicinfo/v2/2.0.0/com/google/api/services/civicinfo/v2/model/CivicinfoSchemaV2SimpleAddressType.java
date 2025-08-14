@@ -31,6 +31,12 @@ package com.google.api.services.civicinfo.v2.model;
 public final class CivicinfoSchemaV2SimpleAddressType extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> addressLine;
+
+  /**
    * The city or town for the address.
    * The value may be {@code null}.
    */
@@ -78,6 +84,21 @@ public final class CivicinfoSchemaV2SimpleAddressType extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String zip;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAddressLine() {
+    return addressLine;
+  }
+
+  /**
+   * @param addressLine addressLine or {@code null} for none
+   */
+  public CivicinfoSchemaV2SimpleAddressType setAddressLine(java.util.List<java.lang.String> addressLine) {
+    this.addressLine = addressLine;
+    return this;
+  }
 
   /**
    * The city or town for the address.

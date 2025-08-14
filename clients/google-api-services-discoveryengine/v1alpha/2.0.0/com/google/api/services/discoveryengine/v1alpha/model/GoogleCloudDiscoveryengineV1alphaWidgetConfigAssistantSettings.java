@@ -30,6 +30,19 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigAssistantSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. This field controls the default web grounding toggle for end users if
+   * `web_grounding_type` is set to `WEB_GROUNDING_TYPE_GOOGLE_SEARCH` or
+   * `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`. By default, this field is set to false. If
+   * `web_grounding_type` is `WEB_GROUNDING_TYPE_GOOGLE_SEARCH` or
+   * `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`, end users will have web grounding enabled by
+   * default on UI. If true, grounding toggle will be disabled by default on UI. End users can still
+   * enable web grounding in the UI if web grounding is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultWebGroundingToggleOff;
+
+  /**
    * Whether or not the Google search grounding toggle is shown. Deprecated. Use web_grounding_type
    * instead.
    * The value may be {@code null}.
@@ -43,6 +56,35 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigAssistantSetting
    */
   @com.google.api.client.util.Key
   private java.lang.String webGroundingType;
+
+  /**
+   * Output only. This field controls the default web grounding toggle for end users if
+   * `web_grounding_type` is set to `WEB_GROUNDING_TYPE_GOOGLE_SEARCH` or
+   * `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`. By default, this field is set to false. If
+   * `web_grounding_type` is `WEB_GROUNDING_TYPE_GOOGLE_SEARCH` or
+   * `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`, end users will have web grounding enabled by
+   * default on UI. If true, grounding toggle will be disabled by default on UI. End users can still
+   * enable web grounding in the UI if web grounding is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultWebGroundingToggleOff() {
+    return defaultWebGroundingToggleOff;
+  }
+
+  /**
+   * Output only. This field controls the default web grounding toggle for end users if
+   * `web_grounding_type` is set to `WEB_GROUNDING_TYPE_GOOGLE_SEARCH` or
+   * `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`. By default, this field is set to false. If
+   * `web_grounding_type` is `WEB_GROUNDING_TYPE_GOOGLE_SEARCH` or
+   * `WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH`, end users will have web grounding enabled by
+   * default on UI. If true, grounding toggle will be disabled by default on UI. End users can still
+   * enable web grounding in the UI if web grounding is enabled.
+   * @param defaultWebGroundingToggleOff defaultWebGroundingToggleOff or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigAssistantSettings setDefaultWebGroundingToggleOff(java.lang.Boolean defaultWebGroundingToggleOff) {
+    this.defaultWebGroundingToggleOff = defaultWebGroundingToggleOff;
+    return this;
+  }
 
   /**
    * Whether or not the Google search grounding toggle is shown. Deprecated. Use web_grounding_type

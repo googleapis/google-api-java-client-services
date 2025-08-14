@@ -30,6 +30,14 @@ package com.google.api.services.compute.model;
 public final class MultiMigStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] The accelerator topology applied to this multi-MIG. Currently only one
+   * accelerator topology is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MultiMigStatusAcceleratorTopology> appliedAcceleratorTopologies;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,6 +49,25 @@ public final class MultiMigStatus extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Integer membersCount;
+
+  /**
+   * [Output Only] The accelerator topology applied to this multi-MIG. Currently only one
+   * accelerator topology is supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MultiMigStatusAcceleratorTopology> getAppliedAcceleratorTopologies() {
+    return appliedAcceleratorTopologies;
+  }
+
+  /**
+   * [Output Only] The accelerator topology applied to this multi-MIG. Currently only one
+   * accelerator topology is supported.
+   * @param appliedAcceleratorTopologies appliedAcceleratorTopologies or {@code null} for none
+   */
+  public MultiMigStatus setAppliedAcceleratorTopologies(java.util.List<MultiMigStatusAcceleratorTopology> appliedAcceleratorTopologies) {
+    this.appliedAcceleratorTopologies = appliedAcceleratorTopologies;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

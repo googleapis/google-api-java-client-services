@@ -154,196 +154,207 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
   public class Media {
 
     /**
-     * Uploads a file for Notebook LM to use. Creates a Source.
+     * Downloads a file from the session.
      *
-     * Create a request for the method "media.upload".
+     * Create a request for the method "media.download".
      *
      * This request holds the parameters needed by the discoveryengine server.  After setting any
-     * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The parent resource where the sources will be created. Format:
-     *        projects/{project}/locations/{location}/notebooks/{notebook}
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest}
+     * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+     *        ions/{collection}/engines/{engine}/sessions/{session}`
      * @return the request
      */
-    public Upload upload(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content) throws java.io.IOException {
-      Upload result = new Upload(parent, content);
+    public Download download(java.lang.String name) throws java.io.IOException {
+      Download result = new Download(name);
       initialize(result);
       return result;
     }
 
-    /**
-     * Uploads a file for Notebook LM to use. Creates a Source.
-     *
-     * Create a request for the method "media.upload".
-     *
-     * This request holds the parameters needed by the the discoveryengine server.  After setting any
-     * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
-     *
-     * <p>
-     * This method should be used for uploading media content.
-     * </p>
-     *
-     * @param parent Required. The parent resource where the sources will be created. Format:
-     *        projects/{project}/locations/{location}/notebooks/{notebook}
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content.
-     * @return the request
-     * @throws java.io.IOException if the initialization of the request fails
-     */
-    public Upload upload(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
-      Upload result = new Upload(parent, content, mediaContent);
-      initialize(result);
-      return result;
-    }
+    public class Download extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GdataMedia> {
 
-    public class Upload extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse> {
+      private static final String REST_PATH = "v1alpha/{+name}:downloadFile";
 
-      private static final String REST_PATH = "v1alpha/{+parent}/sources:uploadFile";
-
-      private final java.util.regex.Pattern PARENT_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
 
       /**
-       * Uploads a file for Notebook LM to use. Creates a Source.
+       * Downloads a file from the session.
        *
-       * Create a request for the method "media.upload".
+       * Create a request for the method "media.download".
        *
        * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
        * <p> {@link
-       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
+       * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The parent resource where the sources will be created. Format:
-     *        projects/{project}/locations/{location}/notebooks/{notebook}
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest}
+       * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+     *        ions/{collection}/engines/{engine}/sessions/{session}`
        * @since 1.13
        */
-      protected Upload(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content) {
-        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse.class);
-        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+      protected Download(java.lang.String name) {
+        super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GdataMedia.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
         }
+        initializeMediaDownload();
+      }
+
+      @Override
+      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+        super.executeMediaAndDownloadTo(outputStream);
+      }
+
+      @Override
+      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+        return super.executeMediaAsInputStream();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+        return super.executeMedia();
+      }
+
+      @Override
+      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+        return new com.google.api.client.http.GenericUrl(
+            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Download set$Xgafv(java.lang.String $Xgafv) {
+        return (Download) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Download setAccessToken(java.lang.String accessToken) {
+        return (Download) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Download setAlt(java.lang.String alt) {
+        return (Download) super.setAlt(alt);
+      }
+
+      @Override
+      public Download setCallback(java.lang.String callback) {
+        return (Download) super.setCallback(callback);
+      }
+
+      @Override
+      public Download setFields(java.lang.String fields) {
+        return (Download) super.setFields(fields);
+      }
+
+      @Override
+      public Download setKey(java.lang.String key) {
+        return (Download) super.setKey(key);
+      }
+
+      @Override
+      public Download setOauthToken(java.lang.String oauthToken) {
+        return (Download) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Download) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Download setQuotaUser(java.lang.String quotaUser) {
+        return (Download) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Download setUploadType(java.lang.String uploadType) {
+        return (Download) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Download setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Download) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
-       * Uploads a file for Notebook LM to use. Creates a Source.
-       *
-       * Create a request for the method "media.upload".
-       *
-       * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * <p>
-       * This constructor should be used for uploading media content.
-       * </p>
-       *
-       * @param parent Required. The parent resource where the sources will be created. Format:
-     *        projects/{project}/locations/{location}/notebooks/{notebook}
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest} media metadata or {@code null} if none
-       * @param mediaContent The media HTTP content.
-       * @since 1.13
-       */
-      protected Upload(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
-        super(DiscoveryEngine.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse.class);
-        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
-        initializeMediaUpload(mediaContent);
-      }
-
-      @Override
-      public Upload set$Xgafv(java.lang.String $Xgafv) {
-        return (Upload) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Upload setAccessToken(java.lang.String accessToken) {
-        return (Upload) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Upload setAlt(java.lang.String alt) {
-        return (Upload) super.setAlt(alt);
-      }
-
-      @Override
-      public Upload setCallback(java.lang.String callback) {
-        return (Upload) super.setCallback(callback);
-      }
-
-      @Override
-      public Upload setFields(java.lang.String fields) {
-        return (Upload) super.setFields(fields);
-      }
-
-      @Override
-      public Upload setKey(java.lang.String key) {
-        return (Upload) super.setKey(key);
-      }
-
-      @Override
-      public Upload setOauthToken(java.lang.String oauthToken) {
-        return (Upload) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Upload) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Upload setQuotaUser(java.lang.String quotaUser) {
-        return (Upload) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Upload setUploadType(java.lang.String uploadType) {
-        return (Upload) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Upload) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The parent resource where the sources will be created. Format:
-       * projects/{project}/locations/{location}/notebooks/{notebook}
+       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
+       * }/collections/{collection}/engines/{engine}/sessions/{session}`
        */
       @com.google.api.client.util.Key
-      private java.lang.String parent;
+      private java.lang.String name;
 
-      /** Required. The parent resource where the sources will be created. Format:
-     projects/{project}/locations/{location}/notebooks/{notebook}
+      /** Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collec
+     tions/{collection}/engines/{engine}/sessions/{session}`
        */
-      public java.lang.String getParent() {
-        return parent;
+      public java.lang.String getName() {
+        return name;
       }
 
       /**
-       * Required. The parent resource where the sources will be created. Format:
-       * projects/{project}/locations/{location}/notebooks/{notebook}
+       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
+       * }/collections/{collection}/engines/{engine}/sessions/{session}`
        */
-      public Upload setParent(java.lang.String parent) {
+      public Download setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
         }
-        this.parent = parent;
+        this.name = name;
+        return this;
+      }
+
+      /** Required. The ID of the file to be downloaded. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file to be downloaded.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file to be downloaded. */
+      public Download setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Optional. The ID of the view to be downloaded. */
+      @com.google.api.client.util.Key
+      private java.lang.String viewId;
+
+      /** Optional. The ID of the view to be downloaded.
+       */
+      public java.lang.String getViewId() {
+        return viewId;
+      }
+
+      /** Optional. The ID of the view to be downloaded. */
+      public Download setViewId(java.lang.String viewId) {
+        this.viewId = viewId;
         return this;
       }
 
       @Override
-      public Upload set(String parameterName, Object value) {
-        return (Upload) super.set(parameterName, value);
+      public Download set(String parameterName, Object value) {
+        return (Download) super.set(parameterName, value);
       }
     }
 
@@ -3783,20 +3794,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Indicates which fields in the provided DataConnector to update. Supported field paths
            * include: - refresh_interval - params - auto_run_disabled - action_config -
            * action_config.action_params - action_config.service_name - destination_configs -
-           * blocking_reasons - sync_mode Note: Support for these fields may vary depending on the
-           * connector type. For example, not all connectors support `destination_configs`. If an
-           * unsupported or unknown field path is provided, the request will return an
-           * INVALID_ARGUMENT error.
+           * blocking_reasons - sync_mode - incremental_sync_disabled - incremental_refresh_interval
+           * Note: Support for these fields may vary depending on the connector type. For example,
+           * not all connectors support `destination_configs`. If an unsupported or unknown field
+           * path is provided, the request will return an INVALID_ARGUMENT error.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Indicates which fields in the provided DataConnector to update. Supported field paths include: -
          refresh_interval - params - auto_run_disabled - action_config - action_config.action_params -
-         action_config.service_name - destination_configs - blocking_reasons - sync_mode Note: Support for
-         these fields may vary depending on the connector type. For example, not all connectors support
-         `destination_configs`. If an unsupported or unknown field path is provided, the request will return
-         an INVALID_ARGUMENT error.
+         action_config.service_name - destination_configs - blocking_reasons - sync_mode -
+         incremental_sync_disabled - incremental_refresh_interval Note: Support for these fields may vary
+         depending on the connector type. For example, not all connectors support `destination_configs`. If
+         an unsupported or unknown field path is provided, the request will return an INVALID_ARGUMENT
+         error.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -3806,10 +3818,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Indicates which fields in the provided DataConnector to update. Supported field paths
            * include: - refresh_interval - params - auto_run_disabled - action_config -
            * action_config.action_params - action_config.service_name - destination_configs -
-           * blocking_reasons - sync_mode Note: Support for these fields may vary depending on the
-           * connector type. For example, not all connectors support `destination_configs`. If an
-           * unsupported or unknown field path is provided, the request will return an
-           * INVALID_ARGUMENT error.
+           * blocking_reasons - sync_mode - incremental_sync_disabled - incremental_refresh_interval
+           * Note: Support for these fields may vary depending on the connector type. For example,
+           * not all connectors support `destination_configs`. If an unsupported or unknown field
+           * path is provided, the request will return an INVALID_ARGUMENT error.
            */
           public UpdateDataConnector setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -3842,6 +3854,146 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          */
         public class DataConnector {
 
+          /**
+           * Uses the per-user refresh token minted with AcquireAndStoreRefreshToken to generate and return a
+           * new access token and its details. Takes the access token from cache if available. Rotates the
+           * stored refresh token if needed. Uses the end user identity to return the user specific access
+           * token. Does *not* return the credentials configured by the administrator. Used by Agentspace
+           * action execution and Agentspace UI.
+           *
+           * Create a request for the method "dataConnector.acquireAccessToken".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link AcquireAccessToken#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the connector for which a token is queried.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest}
+           * @return the request
+           */
+          public AcquireAccessToken acquireAccessToken(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest content) throws java.io.IOException {
+            AcquireAccessToken result = new AcquireAccessToken(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AcquireAccessToken extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+name}:acquireAccessToken";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+
+            /**
+             * Uses the per-user refresh token minted with AcquireAndStoreRefreshToken to generate and return
+             * a new access token and its details. Takes the access token from cache if available. Rotates the
+             * stored refresh token if needed. Uses the end user identity to return the user specific access
+             * token. Does *not* return the credentials configured by the administrator. Used by Agentspace
+             * action execution and Agentspace UI.
+             *
+             * Create a request for the method "dataConnector.acquireAccessToken".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link AcquireAccessToken#execute()} method to invoke the remote
+             * operation. <p> {@link AcquireAccessToken#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the connector for which a token is queried.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest}
+             * @since 1.13
+             */
+            protected AcquireAccessToken(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+              }
+            }
+
+            @Override
+            public AcquireAccessToken set$Xgafv(java.lang.String $Xgafv) {
+              return (AcquireAccessToken) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AcquireAccessToken setAccessToken(java.lang.String accessToken) {
+              return (AcquireAccessToken) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AcquireAccessToken setAlt(java.lang.String alt) {
+              return (AcquireAccessToken) super.setAlt(alt);
+            }
+
+            @Override
+            public AcquireAccessToken setCallback(java.lang.String callback) {
+              return (AcquireAccessToken) super.setCallback(callback);
+            }
+
+            @Override
+            public AcquireAccessToken setFields(java.lang.String fields) {
+              return (AcquireAccessToken) super.setFields(fields);
+            }
+
+            @Override
+            public AcquireAccessToken setKey(java.lang.String key) {
+              return (AcquireAccessToken) super.setKey(key);
+            }
+
+            @Override
+            public AcquireAccessToken setOauthToken(java.lang.String oauthToken) {
+              return (AcquireAccessToken) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AcquireAccessToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AcquireAccessToken) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AcquireAccessToken setQuotaUser(java.lang.String quotaUser) {
+              return (AcquireAccessToken) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AcquireAccessToken setUploadType(java.lang.String uploadType) {
+              return (AcquireAccessToken) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AcquireAccessToken setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AcquireAccessToken) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name of the connector for which a token is queried. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the connector for which a token is queried.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name of the connector for which a token is queried. */
+            public AcquireAccessToken setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public AcquireAccessToken set(String parameterName, Object value) {
+              return (AcquireAccessToken) super.set(parameterName, value);
+            }
+          }
           /**
            * Get the secret for the associated connector.
            *
@@ -15590,22 +15742,30 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-             "user_pseudo_id = some_id"
+              /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+             `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
+             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -15615,8 +15775,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               @com.google.api.client.util.Key
@@ -15624,7 +15784,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
              name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-             `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc": list
+             `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`: list
              sessions by is_pinned first, then by update_time.
                */
               public java.lang.String getOrderBy() {
@@ -15634,8 +15794,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               public List setOrderBy(java.lang.String orderBy) {
@@ -20516,6 +20676,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              @com.google.api.client.util.Key("getWidgetConfigRequestOption.turnOffCollectionComponents")
+              private java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents;
+
+              /** Optional. Whether to turn off collection_components in WidgetConfig to reduce latency and data
+             transmission.
+               */
+              public java.lang.Boolean getGetWidgetConfigRequestOptionTurnOffCollectionComponents() {
+                return getWidgetConfigRequestOptionTurnOffCollectionComponents;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
+                this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
+                return this;
+              }
+
               @Override
               public Get set(String parameterName, Object value) {
                 return (Get) super.set(parameterName, value);
@@ -21813,6 +21996,644 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
 
+          /**
+           * An accessor for creating requests from the Analytics collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.Analytics.List request = discoveryengine.analytics().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Analytics analytics() {
+            return new Analytics();
+          }
+
+          /**
+           * The "analytics" collection of methods.
+           */
+          public class Analytics {
+
+            /**
+             * Exports metrics.
+             *
+             * Create a request for the method "analytics.exportMetrics".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link ExportMetrics#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param analytics Required. The analytics resource name under the engine where the metrics are created. The format is
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/analyti
+             *        cs`.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportMetricsRequest}
+             * @return the request
+             */
+            public ExportMetrics exportMetrics(java.lang.String analytics, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportMetricsRequest content) throws java.io.IOException {
+              ExportMetrics result = new ExportMetrics(analytics, content);
+              initialize(result);
+              return result;
+            }
+
+            public class ExportMetrics extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+analytics}:exportMetrics";
+
+              private final java.util.regex.Pattern ANALYTICS_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/analytics$");
+
+              /**
+               * Exports metrics.
+               *
+               * Create a request for the method "analytics.exportMetrics".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link ExportMetrics#execute()} method to invoke the remote
+               * operation. <p> {@link ExportMetrics#initialize(com.google.api.client.googleapis.services.Abstra
+               * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param analytics Required. The analytics resource name under the engine where the metrics are created. The format is
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/analyti
+             *        cs`.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportMetricsRequest}
+               * @since 1.13
+               */
+              protected ExportMetrics(java.lang.String analytics, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportMetricsRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                this.analytics = com.google.api.client.util.Preconditions.checkNotNull(analytics, "Required parameter analytics must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ANALYTICS_PATTERN.matcher(analytics).matches(),
+                      "Parameter analytics must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/analytics$");
+                }
+              }
+
+              @Override
+              public ExportMetrics set$Xgafv(java.lang.String $Xgafv) {
+                return (ExportMetrics) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ExportMetrics setAccessToken(java.lang.String accessToken) {
+                return (ExportMetrics) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ExportMetrics setAlt(java.lang.String alt) {
+                return (ExportMetrics) super.setAlt(alt);
+              }
+
+              @Override
+              public ExportMetrics setCallback(java.lang.String callback) {
+                return (ExportMetrics) super.setCallback(callback);
+              }
+
+              @Override
+              public ExportMetrics setFields(java.lang.String fields) {
+                return (ExportMetrics) super.setFields(fields);
+              }
+
+              @Override
+              public ExportMetrics setKey(java.lang.String key) {
+                return (ExportMetrics) super.setKey(key);
+              }
+
+              @Override
+              public ExportMetrics setOauthToken(java.lang.String oauthToken) {
+                return (ExportMetrics) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ExportMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ExportMetrics) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ExportMetrics setQuotaUser(java.lang.String quotaUser) {
+                return (ExportMetrics) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ExportMetrics setUploadType(java.lang.String uploadType) {
+                return (ExportMetrics) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ExportMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ExportMetrics) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The analytics resource name under the engine where the metrics are
+               * created. The format is `projects/{project}/locations/{location}/collections/{collec
+               * tion}/engines/{engine}/analytics`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String analytics;
+
+              /** Required. The analytics resource name under the engine where the metrics are created. The format is
+             `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/analytics`.
+               */
+              public java.lang.String getAnalytics() {
+                return analytics;
+              }
+
+              /**
+               * Required. The analytics resource name under the engine where the metrics are
+               * created. The format is `projects/{project}/locations/{location}/collections/{collec
+               * tion}/engines/{engine}/analytics`.
+               */
+              public ExportMetrics setAnalytics(java.lang.String analytics) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ANALYTICS_PATTERN.matcher(analytics).matches(),
+                      "Parameter analytics must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/analytics$");
+                }
+                this.analytics = analytics;
+                return this;
+              }
+
+              @Override
+              public ExportMetrics set(String parameterName, Object value) {
+                return (ExportMetrics) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Assistants collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.Assistants.List request = discoveryengine.assistants().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Assistants assistants() {
+            return new Assistants();
+          }
+
+          /**
+           * The "assistants" collection of methods.
+           */
+          public class Assistants {
+
+            /**
+             * Gets an Assistant.
+             *
+             * Create a request for the method "assistants.get".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/{
+             *        collection}/engines/{engine}/assistants/{assistant}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Gets an Assistant.
+               *
+               * Create a request for the method "assistants.get".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/{
+             *        collection}/engines/{engine}/assistants/{assistant}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Resource name of Assistant. Format: `projects/{project}/locations/{locati
+               * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/
+             {collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Resource name of Assistant. Format: `projects/{project}/locations/{locati
+               * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates an Assistant
+             *
+             * Create a request for the method "assistants.patch".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded
+             *        string with a length limit of 1024 characters.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Updates an Assistant
+               *
+               * Create a request for the method "assistants.patch".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded
+             *        string with a length limit of 1024 characters.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant content) {
+                super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection}/engines/{engine}/assistants/{assistant}` It must
+               * be a UTF-8 encoded string with a length limit of 1024 characters.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/collect
+             ions/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded string with a
+             length limit of 1024 characters.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection}/engines/{engine}/assistants/{assistant}` It must
+               * be a UTF-8 encoded string with a length limit of 1024 characters.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** The list of fields to update. */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** The list of fields to update.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /** The list of fields to update. */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Assists the user with a query in a streaming fashion.
+             *
+             * Create a request for the method "assistants.streamAssist".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link StreamAssist#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param name Required. The resource name of the Assistant. Format: `projects/{project}/locations/{location}/colle
+             *        ctions/{collection}/engines/{engine}/assistants/{assistant}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistRequest}
+             * @return the request
+             */
+            public StreamAssist streamAssist(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistRequest content) throws java.io.IOException {
+              StreamAssist result = new StreamAssist(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class StreamAssist extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+name}:streamAssist";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Assists the user with a query in a streaming fashion.
+               *
+               * Create a request for the method "assistants.streamAssist".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link StreamAssist#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * StreamAssist#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Assistant. Format: `projects/{project}/locations/{location}/colle
+             *        ctions/{collection}/engines/{engine}/assistants/{assistant}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistRequest}
+               * @since 1.13
+               */
+              protected StreamAssist(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public StreamAssist set$Xgafv(java.lang.String $Xgafv) {
+                return (StreamAssist) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public StreamAssist setAccessToken(java.lang.String accessToken) {
+                return (StreamAssist) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public StreamAssist setAlt(java.lang.String alt) {
+                return (StreamAssist) super.setAlt(alt);
+              }
+
+              @Override
+              public StreamAssist setCallback(java.lang.String callback) {
+                return (StreamAssist) super.setCallback(callback);
+              }
+
+              @Override
+              public StreamAssist setFields(java.lang.String fields) {
+                return (StreamAssist) super.setFields(fields);
+              }
+
+              @Override
+              public StreamAssist setKey(java.lang.String key) {
+                return (StreamAssist) super.setKey(key);
+              }
+
+              @Override
+              public StreamAssist setOauthToken(java.lang.String oauthToken) {
+                return (StreamAssist) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public StreamAssist setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (StreamAssist) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public StreamAssist setQuotaUser(java.lang.String quotaUser) {
+                return (StreamAssist) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public StreamAssist setUploadType(java.lang.String uploadType) {
+                return (StreamAssist) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public StreamAssist setUploadProtocol(java.lang.String uploadProtocol) {
+                return (StreamAssist) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Assistant. Format: `projects/{project}/locations
+               * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Assistant. Format: `projects/{project}/locations/{location}/coll
+             ections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Assistant. Format: `projects/{project}/locations
+               * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public StreamAssist setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public StreamAssist set(String parameterName, Object value) {
+                return (StreamAssist) super.set(parameterName, value);
+              }
+            }
+
+          }
           /**
            * An accessor for creating requests from the CompletionConfig collection.
            *
@@ -26338,22 +27159,30 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-             "user_pseudo_id = some_id"
+              /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+             `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
+             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -26363,8 +27192,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               @com.google.api.client.util.Key
@@ -26372,7 +27201,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
              name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-             `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc": list
+             `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`: list
              sessions by is_pinned first, then by update_time.
                */
               public java.lang.String getOrderBy() {
@@ -26382,8 +27211,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
                * after a field name for descending. Supported fields: * `update_time` *
-               * `create_time` * `session_name` * `is_pinned` Example: * "update_time desc" *
-               * "create_time" * "is_pinned desc,update_time desc": list sessions by is_pinned
+               * `create_time` * `session_name` * `is_pinned` Example: * `update_time desc` *
+               * `create_time` * `is_pinned desc,update_time desc`: list sessions by is_pinned
                * first, then by update_time.
                */
               public List setOrderBy(java.lang.String orderBy) {
@@ -26778,6 +27607,276 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
             }
+            /**
+             * An accessor for creating requests from the Files collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+             *   {@code DiscoveryEngine.Files.List request = discoveryengine.files().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Files files() {
+              return new Files();
+            }
+
+            /**
+             * The "files" collection of methods.
+             */
+            public class Files {
+
+              /**
+               * Lists metadata for all files in the current session.
+               *
+               * Create a request for the method "files.list".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+               *        ions/{collection}/engines/{engine}/sessions/{session}` Name of the session resource to
+               *        which the file belong.
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListFilesResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/files";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+
+                /**
+                 * Lists metadata for all files in the current session.
+                 *
+                 * Create a request for the method "files.list".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+               *        ions/{collection}/engines/{engine}/sessions/{session}` Name of the session resource to
+               *        which the file belong.
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListFilesResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The resource name of the Session. Format: `projects/{project}/locations
+                 * /{location}/collections/{collection}/engines/{engine}/sessions/{session}` Name of
+                 * the session resource to which the file belong.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collec
+               tions/{collection}/engines/{engine}/sessions/{session}` Name of the session resource to which the
+               file belong.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The resource name of the Session. Format: `projects/{project}/locations
+                 * /{location}/collections/{collection}/engines/{engine}/sessions/{session}` Name of
+                 * the session resource to which the file belong.
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. The filter syntax consists of an expression language for constructing a
+                 * predicate from one or more fields of the files being filtered. Filter expression
+                 * is case-sensitive. Currently supported field names are: * upload_time *
+                 * last_add_time * last_use_time * file_name * mime_type Some examples of filters
+                 * would be: * "file_name = 'file_1'" * "file_name = 'file_1' AND mime_type =
+                 * 'text/plain'" * "last_use_time > '2025-06-14T12:00:00Z'" For a full description
+                 * of the filter format, please see https://google.aip.dev/160.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String filter;
+
+                /** Optional. The filter syntax consists of an expression language for constructing a predicate from
+               one or more fields of the files being filtered. Filter expression is case-sensitive. Currently
+               supported field names are: * upload_time * last_add_time * last_use_time * file_name * mime_type
+               Some examples of filters would be: * "file_name = 'file_1'" * "file_name = 'file_1' AND mime_type =
+               'text/plain'" * "last_use_time > '2025-06-14T12:00:00Z'" For a full description of the filter
+               format, please see https://google.aip.dev/160.
+                 */
+                public java.lang.String getFilter() {
+                  return filter;
+                }
+
+                /**
+                 * Optional. The filter syntax consists of an expression language for constructing a
+                 * predicate from one or more fields of the files being filtered. Filter expression
+                 * is case-sensitive. Currently supported field names are: * upload_time *
+                 * last_add_time * last_use_time * file_name * mime_type Some examples of filters
+                 * would be: * "file_name = 'file_1'" * "file_name = 'file_1' AND mime_type =
+                 * 'text/plain'" * "last_use_time > '2025-06-14T12:00:00Z'" For a full description
+                 * of the filter format, please see https://google.aip.dev/160.
+                 */
+                public List setFilter(java.lang.String filter) {
+                  this.filter = filter;
+                  return this;
+                }
+
+                /**
+                 * Optional. The maximum number of files to return. The service may return fewer
+                 * than this value. If unspecified, at most 100 files will be returned. The maximum
+                 * value is 1000; values above 1000 will be coerced to 1000. If user specifies a
+                 * value less than or equal to 0 - the request will be rejected with an
+                 * INVALID_ARGUMENT error.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** Optional. The maximum number of files to return. The service may return fewer than this value. If
+               unspecified, at most 100 files will be returned. The maximum value is 1000; values above 1000 will
+               be coerced to 1000. If user specifies a value less than or equal to 0 - the request will be
+               rejected with an INVALID_ARGUMENT error.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /**
+                 * Optional. The maximum number of files to return. The service may return fewer
+                 * than this value. If unspecified, at most 100 files will be returned. The maximum
+                 * value is 1000; values above 1000 will be coerced to 1000. If user specifies a
+                 * value less than or equal to 0 - the request will be rejected with an
+                 * INVALID_ARGUMENT error.
+                 */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /**
+                 * Optional. A page token received from a previous `ListFiles` call. Provide this to
+                 * retrieve the subsequent page. When paginating, all other parameters provided to
+                 * `ListFiles` must match the call that provided the page token (except `page_size`,
+                 * which may differ).
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** Optional. A page token received from a previous `ListFiles` call. Provide this to retrieve the
+               subsequent page. When paginating, all other parameters provided to `ListFiles` must match the call
+               that provided the page token (except `page_size`, which may differ).
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /**
+                 * Optional. A page token received from a previous `ListFiles` call. Provide this to
+                 * retrieve the subsequent page. When paginating, all other parameters provided to
+                 * `ListFiles` must match the call that provided the page token (except `page_size`,
+                 * which may differ).
+                 */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
           }
           /**
            * An accessor for creating requests from the WidgetConfigs collection.
@@ -26971,6 +28070,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                */
               public Get setAcceptCache(java.lang.Boolean acceptCache) {
                 this.acceptCache = acceptCache;
+                return this;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              @com.google.api.client.util.Key("getWidgetConfigRequestOption.turnOffCollectionComponents")
+              private java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents;
+
+              /** Optional. Whether to turn off collection_components in WidgetConfig to reduce latency and data
+             transmission.
+               */
+              public java.lang.Boolean getGetWidgetConfigRequestOptionTurnOffCollectionComponents() {
+                return getWidgetConfigRequestOptionTurnOffCollectionComponents;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
+                this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
                 return this;
               }
 
@@ -37523,22 +38645,30 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state. Example: "user_pseudo_id = some_id"
+             * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
+             * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
+             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-           "user_pseudo_id = some_id"
+            /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+           `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
+           `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
+           true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state. Example: "user_pseudo_id = some_id"
+             * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
+             * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
+             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
+             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
+             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -37548,8 +38678,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
              * after a field name for descending. Supported fields: * `update_time` * `create_time`
-             * * `session_name` * `is_pinned` Example: * "update_time desc" * "create_time" *
-             * "is_pinned desc,update_time desc": list sessions by is_pinned first, then by
+             * * `session_name` * `is_pinned` Example: * `update_time desc` * `create_time` *
+             * `is_pinned desc,update_time desc`: list sessions by is_pinned first, then by
              * update_time.
              */
             @com.google.api.client.util.Key
@@ -37557,7 +38687,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /** A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after a field
            name for descending. Supported fields: * `update_time` * `create_time` * `session_name` *
-           `is_pinned` Example: * "update_time desc" * "create_time" * "is_pinned desc,update_time desc": list
+           `is_pinned` Example: * `update_time desc` * `create_time` * `is_pinned desc,update_time desc`: list
            sessions by is_pinned first, then by update_time.
              */
             public java.lang.String getOrderBy() {
@@ -37567,8 +38697,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to order by, sorted in ascending order. Use "desc"
              * after a field name for descending. Supported fields: * `update_time` * `create_time`
-             * * `session_name` * `is_pinned` Example: * "update_time desc" * "create_time" *
-             * "is_pinned desc,update_time desc": list sessions by is_pinned first, then by
+             * * `session_name` * `is_pinned` Example: * `update_time desc` * `create_time` *
+             * `is_pinned desc,update_time desc`: list sessions by is_pinned first, then by
              * update_time.
              */
             public List setOrderBy(java.lang.String orderBy) {
@@ -41102,6 +42232,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               return this;
             }
 
+            /**
+             * Optional. Whether to turn off collection_components in WidgetConfig to reduce latency
+             * and data transmission.
+             */
+            @com.google.api.client.util.Key("getWidgetConfigRequestOption.turnOffCollectionComponents")
+            private java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents;
+
+            /** Optional. Whether to turn off collection_components in WidgetConfig to reduce latency and data
+           transmission.
+             */
+            public java.lang.Boolean getGetWidgetConfigRequestOptionTurnOffCollectionComponents() {
+              return getWidgetConfigRequestOptionTurnOffCollectionComponents;
+            }
+
+            /**
+             * Optional. Whether to turn off collection_components in WidgetConfig to reduce latency
+             * and data transmission.
+             */
+            public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
+              this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
@@ -41578,15 +42731,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum
-           * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
-           * negative, an `INVALID_ARGUMENT` error is returned.
+           * Optional. Maximum number of Evaluations to return. If unspecified, defaults to 100. The
+           * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+           * is negative, an `INVALID_ARGUMENT` error is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum allowed value
-         is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
+          /** Optional. Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum
+         allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
          `INVALID_ARGUMENT` error is returned.
            */
           public java.lang.Integer getPageSize() {
@@ -41594,9 +42747,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum
-           * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
-           * negative, an `INVALID_ARGUMENT` error is returned.
+           * Optional. Maximum number of Evaluations to return. If unspecified, defaults to 100. The
+           * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+           * is negative, an `INVALID_ARGUMENT` error is returned.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -41604,16 +42757,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A page token ListEvaluationsResponse.next_page_token, received from a previous
-           * EvaluationService.ListEvaluations call. Provide this to retrieve the subsequent page.
-           * When paginating, all other parameters provided to EvaluationService.ListEvaluations
-           * must match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
-           * error is returned.
+           * Optional. A page token ListEvaluationsResponse.next_page_token, received from a
+           * previous EvaluationService.ListEvaluations call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
+           * EvaluationService.ListEvaluations must match the call that provided the page token.
+           * Otherwise, an `INVALID_ARGUMENT` error is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token ListEvaluationsResponse.next_page_token, received from a previous
+          /** Optional. A page token ListEvaluationsResponse.next_page_token, received from a previous
          EvaluationService.ListEvaluations call. Provide this to retrieve the subsequent page. When
          paginating, all other parameters provided to EvaluationService.ListEvaluations must match the call
          that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
@@ -41623,11 +42776,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A page token ListEvaluationsResponse.next_page_token, received from a previous
-           * EvaluationService.ListEvaluations call. Provide this to retrieve the subsequent page.
-           * When paginating, all other parameters provided to EvaluationService.ListEvaluations
-           * must match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
-           * error is returned.
+           * Optional. A page token ListEvaluationsResponse.next_page_token, received from a
+           * previous EvaluationService.ListEvaluations call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
+           * EvaluationService.ListEvaluations must match the call that provided the page token.
+           * Otherwise, an `INVALID_ARGUMENT` error is returned.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -41798,25 +42951,27 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Maximum number of ListEvaluationResultsResponse.EvaluationResult to return. If
-           * unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000 will
-           * be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT` error is returned.
+           * Optional. Maximum number of ListEvaluationResultsResponse.EvaluationResult to return.
+           * If unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000
+           * will be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT` error is
+           * returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of ListEvaluationResultsResponse.EvaluationResult to return. If unspecified,
-         defaults to 100. The maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If
-         this field is negative, an `INVALID_ARGUMENT` error is returned.
+          /** Optional. Maximum number of ListEvaluationResultsResponse.EvaluationResult to return. If
+         unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000 will be coerced
+         to 1000. If this field is negative, an `INVALID_ARGUMENT` error is returned.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Maximum number of ListEvaluationResultsResponse.EvaluationResult to return. If
-           * unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000 will
-           * be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT` error is returned.
+           * Optional. Maximum number of ListEvaluationResultsResponse.EvaluationResult to return.
+           * If unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000
+           * will be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT` error is
+           * returned.
            */
           public ListResults setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -41824,16 +42979,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A page token ListEvaluationResultsResponse.next_page_token, received from a previous
-           * EvaluationService.ListEvaluationResults call. Provide this to retrieve the subsequent
-           * page. When paginating, all other parameters provided to
+           * Optional. A page token ListEvaluationResultsResponse.next_page_token, received from a
+           * previous EvaluationService.ListEvaluationResults call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
            * EvaluationService.ListEvaluationResults must match the call that provided the page
            * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token ListEvaluationResultsResponse.next_page_token, received from a previous
+          /** Optional. A page token ListEvaluationResultsResponse.next_page_token, received from a previous
          EvaluationService.ListEvaluationResults call. Provide this to retrieve the subsequent page. When
          paginating, all other parameters provided to EvaluationService.ListEvaluationResults must match the
          call that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
@@ -41843,9 +42998,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A page token ListEvaluationResultsResponse.next_page_token, received from a previous
-           * EvaluationService.ListEvaluationResults call. Provide this to retrieve the subsequent
-           * page. When paginating, all other parameters provided to
+           * Optional. A page token ListEvaluationResultsResponse.next_page_token, received from a
+           * previous EvaluationService.ListEvaluationResults call. Provide this to retrieve the
+           * subsequent page. When paginating, all other parameters provided to
            * EvaluationService.ListEvaluationResults must match the call that provided the page
            * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
            */
@@ -43746,6 +44901,192 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       public class Notebooks {
 
         /**
+         * Lists the recently viewed notebooks. Needs a side channel with the user's EUC.
+         *
+         * Create a request for the method "notebooks.listRecentlyViewed".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link ListRecentlyViewed#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}`.
+         * @return the request
+         */
+        public ListRecentlyViewed listRecentlyViewed(java.lang.String parent) throws java.io.IOException {
+          ListRecentlyViewed result = new ListRecentlyViewed(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ListRecentlyViewed extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaListRecentlyViewedNotebooksResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/notebooks:listRecentlyViewed";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the recently viewed notebooks. Needs a side channel with the user's EUC.
+           *
+           * Create a request for the method "notebooks.listRecentlyViewed".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link ListRecentlyViewed#execute()} method to invoke the remote
+           * operation. <p> {@link ListRecentlyViewed#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}`.
+           * @since 1.13
+           */
+          protected ListRecentlyViewed(java.lang.String parent) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaListRecentlyViewedNotebooksResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListRecentlyViewed set$Xgafv(java.lang.String $Xgafv) {
+            return (ListRecentlyViewed) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListRecentlyViewed setAccessToken(java.lang.String accessToken) {
+            return (ListRecentlyViewed) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListRecentlyViewed setAlt(java.lang.String alt) {
+            return (ListRecentlyViewed) super.setAlt(alt);
+          }
+
+          @Override
+          public ListRecentlyViewed setCallback(java.lang.String callback) {
+            return (ListRecentlyViewed) super.setCallback(callback);
+          }
+
+          @Override
+          public ListRecentlyViewed setFields(java.lang.String fields) {
+            return (ListRecentlyViewed) super.setFields(fields);
+          }
+
+          @Override
+          public ListRecentlyViewed setKey(java.lang.String key) {
+            return (ListRecentlyViewed) super.setKey(key);
+          }
+
+          @Override
+          public ListRecentlyViewed setOauthToken(java.lang.String oauthToken) {
+            return (ListRecentlyViewed) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListRecentlyViewed setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListRecentlyViewed) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListRecentlyViewed setQuotaUser(java.lang.String quotaUser) {
+            return (ListRecentlyViewed) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListRecentlyViewed setUploadType(java.lang.String uploadType) {
+            return (ListRecentlyViewed) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListRecentlyViewed setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListRecentlyViewed) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent branch resource name, such as
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent branch resource name, such as `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent branch resource name, such as
+           * `projects/{project}/locations/{location}`.
+           */
+          public ListRecentlyViewed setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of Notebooks to return. If unspecified, defaults to "200". The
+           * maximum allowed value is "500". If this field is negative, will use the default value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of Notebooks to return. If unspecified, defaults to "200". The maximum
+         allowed value is "500". If this field is negative, will use the default value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of Notebooks to return. If unspecified, defaults to "200". The
+           * maximum allowed value is "500". If this field is negative, will use the default value.
+           */
+          public ListRecentlyViewed setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The page token, provide this to retrieve the subsequent page. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token, provide this to retrieve the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The page token, provide this to retrieve the subsequent page. */
+          public ListRecentlyViewed setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListRecentlyViewed set(String parameterName, Object value) {
+            return (ListRecentlyViewed) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Sources collection.
          *
          * <p>The typical use is:</p>
@@ -43765,6 +45106,147 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          */
         public class Sources {
 
+          /**
+           * Creates a list of Sources.
+           *
+           * Create a request for the method "sources.batchCreate".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. The parent resource where the sources will be created. Format:
+           *        projects/{project}/locations/{location}/notebooks/{notebook}
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesRequest}
+           * @return the request
+           */
+          public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesRequest content) throws java.io.IOException {
+            BatchCreate result = new BatchCreate(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchCreate extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/sources:batchCreate";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+
+            /**
+             * Creates a list of Sources.
+             *
+             * Create a request for the method "sources.batchCreate".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource where the sources will be created. Format:
+           *        projects/{project}/locations/{location}/notebooks/{notebook}
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesRequest}
+             * @since 1.13
+             */
+            protected BatchCreate(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaBatchCreateSourcesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchCreate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchCreate setAccessToken(java.lang.String accessToken) {
+              return (BatchCreate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchCreate setAlt(java.lang.String alt) {
+              return (BatchCreate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchCreate setCallback(java.lang.String callback) {
+              return (BatchCreate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchCreate setFields(java.lang.String fields) {
+              return (BatchCreate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchCreate setKey(java.lang.String key) {
+              return (BatchCreate) super.setKey(key);
+            }
+
+            @Override
+            public BatchCreate setOauthToken(java.lang.String oauthToken) {
+              return (BatchCreate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchCreate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchCreate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchCreate setUploadType(java.lang.String uploadType) {
+              return (BatchCreate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource where the sources will be created. Format:
+             * projects/{project}/locations/{location}/notebooks/{notebook}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource where the sources will be created. Format:
+           projects/{project}/locations/{location}/notebooks/{notebook}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource where the sources will be created. Format:
+             * projects/{project}/locations/{location}/notebooks/{notebook}
+             */
+            public BatchCreate setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchCreate set(String parameterName, Object value) {
+              return (BatchCreate) super.set(parameterName, value);
+            }
+          }
           /**
            * Uploads a file for Notebook LM to use. Creates a Source.
            *

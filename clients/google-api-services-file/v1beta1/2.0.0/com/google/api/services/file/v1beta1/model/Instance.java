@@ -30,6 +30,14 @@ package com.google.api.services.file.v1beta1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Immutable. Designates the backend type of this instance. Intended to be used by
+   * internal tests and allowed customers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backendType;
+
+  /**
    * The storage capacity of the instance in gigabytes (GB = 1024^3 bytes). This capacity can be
    * increased up to `max_capacity_gb` GB in multipliers of `capacity_step_size_gb` GB.
    * The value may be {@code null}.
@@ -244,6 +252,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String tier;
+
+  /**
+   * Optional. Immutable. Designates the backend type of this instance. Intended to be used by
+   * internal tests and allowed customers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackendType() {
+    return backendType;
+  }
+
+  /**
+   * Optional. Immutable. Designates the backend type of this instance. Intended to be used by
+   * internal tests and allowed customers.
+   * @param backendType backendType or {@code null} for none
+   */
+  public Instance setBackendType(java.lang.String backendType) {
+    this.backendType = backendType;
+    return this;
+  }
 
   /**
    * The storage capacity of the instance in gigabytes (GB = 1024^3 bytes). This capacity can be

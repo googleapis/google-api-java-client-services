@@ -31,8 +31,6 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1ReconcileTagsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to `true`, deletes entry tags related to a tag template not listed in the tags source
-   * from an entry. If set to `false`, unlisted tags are retained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +53,6 @@ public final class GoogleCloudDatacatalogV1ReconcileTagsRequest extends com.goog
   private java.util.List<GoogleCloudDatacatalogV1Tag> tags;
 
   /**
-   * If set to `true`, deletes entry tags related to a tag template not listed in the tags source
-   * from an entry. If set to `false`, unlisted tags are retained.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForceDeleteMissing() {
@@ -64,8 +60,6 @@ public final class GoogleCloudDatacatalogV1ReconcileTagsRequest extends com.goog
   }
 
   /**
-   * If set to `true`, deletes entry tags related to a tag template not listed in the tags source
-   * from an entry. If set to `false`, unlisted tags are retained.
    * @param forceDeleteMissing forceDeleteMissing or {@code null} for none
    */
   public GoogleCloudDatacatalogV1ReconcileTagsRequest setForceDeleteMissing(java.lang.Boolean forceDeleteMissing) {

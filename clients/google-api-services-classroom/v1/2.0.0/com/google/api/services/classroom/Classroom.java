@@ -160,8 +160,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
      * following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to create
      * courses or for access errors. * `NOT_FOUND` if the primary teacher is not a valid user. *
      * `FAILED_PRECONDITION` if the course owner's account is disabled or for the following request
-     * errors: * UserCannotOwnCourse * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if an alias
-     * was specified in the `id` and already exists.
+     * errors: * UserCannotOwnCourse * UserGroupsMembershipLimitReached * CourseTitleCannotContainUrl *
+     * `ALREADY_EXISTS` if an alias was specified in the `id` and already exists.
      *
      * Create a request for the method "courses.create".
      *
@@ -189,7 +189,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * permitted to create courses or for access errors. * `NOT_FOUND` if the primary teacher is not a
        * valid user. * `FAILED_PRECONDITION` if the course owner's account is disabled or for the
        * following request errors: * UserCannotOwnCourse * UserGroupsMembershipLimitReached *
-       * `ALREADY_EXISTS` if an alias was specified in the `id` and already exists.
+       * CourseTitleCannotContainUrl * `ALREADY_EXISTS` if an alias was specified in the `id` and
+       * already exists.
        *
        * Create a request for the method "courses.create".
        *
@@ -910,7 +911,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
      * access errors. * `NOT_FOUND` if no course exists with the requested ID. * `INVALID_ARGUMENT` if
      * invalid fields are specified in the update mask or if no update mask is supplied. *
      * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable *
-     * InactiveCourseOwner * IneligibleOwner
+     * InactiveCourseOwner * IneligibleOwner * CourseTitleCannotContainUrl
      *
      * Create a request for the method "courses.patch".
      *
@@ -938,7 +939,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * for access errors. * `NOT_FOUND` if no course exists with the requested ID. *
        * `INVALID_ARGUMENT` if invalid fields are specified in the update mask or if no update mask is
        * supplied. * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable *
-       * InactiveCourseOwner * IneligibleOwner
+       * InactiveCourseOwner * IneligibleOwner * CourseTitleCannotContainUrl
        *
        * Create a request for the method "courses.patch".
        *
@@ -1082,7 +1083,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
      * Updates a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
      * requesting user is not permitted to modify the requested course or for access errors. *
      * `NOT_FOUND` if no course exists with the requested ID. * `FAILED_PRECONDITION` for the following
-     * request errors: * CourseNotModifiable
+     * request errors: * CourseNotModifiable * CourseTitleCannotContainUrl
      *
      * Create a request for the method "courses.update".
      *
@@ -1108,7 +1109,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * Updates a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
        * requesting user is not permitted to modify the requested course or for access errors. *
        * `NOT_FOUND` if no course exists with the requested ID. * `FAILED_PRECONDITION` for the
-       * following request errors: * CourseNotModifiable
+       * following request errors: * CourseNotModifiable * CourseTitleCannotContainUrl
        *
        * Create a request for the method "courses.update".
        *

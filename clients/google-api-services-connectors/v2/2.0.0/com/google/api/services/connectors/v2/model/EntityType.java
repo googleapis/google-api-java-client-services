@@ -31,6 +31,12 @@ package com.google.api.services.connectors.v2.model;
 public final class EntityType extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultSortBy;
+
+  /**
    * List containing metadata information about each field of the entity type.
    * The value may be {@code null}.
    */
@@ -45,6 +51,13 @@ public final class EntityType extends com.google.api.client.json.GenericJson {
   private JsonSchema jsonSchema;
 
   /**
+   * Metadata like service latency, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata;
+
+  /**
    * The name of the entity type.
    * The value may be {@code null}.
    */
@@ -56,6 +69,21 @@ public final class EntityType extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> operations;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultSortBy() {
+    return defaultSortBy;
+  }
+
+  /**
+   * @param defaultSortBy defaultSortBy or {@code null} for none
+   */
+  public EntityType setDefaultSortBy(java.lang.String defaultSortBy) {
+    this.defaultSortBy = defaultSortBy;
+    return this;
+  }
 
   /**
    * List containing metadata information about each field of the entity type.
@@ -88,6 +116,23 @@ public final class EntityType extends com.google.api.client.json.GenericJson {
    */
   public EntityType setJsonSchema(JsonSchema jsonSchema) {
     this.jsonSchema = jsonSchema;
+    return this;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.util.Map<String, java.lang.Object>> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @param metadata metadata or {@code null} for none
+   */
+  public EntityType setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

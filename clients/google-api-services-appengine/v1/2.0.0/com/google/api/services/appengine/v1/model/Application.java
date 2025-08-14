@@ -131,7 +131,6 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String locationId;
 
   /**
-   * Output only. Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -402,7 +401,6 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -410,7 +408,6 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly
    * @param name name or {@code null} for none
    */
   public Application setName(java.lang.String name) {

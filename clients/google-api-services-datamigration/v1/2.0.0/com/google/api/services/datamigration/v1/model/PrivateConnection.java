@@ -69,6 +69,13 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * PSC Interface configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscInterfaceConfig pscInterfaceConfig;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -189,6 +196,23 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
    */
   public PrivateConnection setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * PSC Interface configuration.
+   * @return value or {@code null} for none
+   */
+  public PscInterfaceConfig getPscInterfaceConfig() {
+    return pscInterfaceConfig;
+  }
+
+  /**
+   * PSC Interface configuration.
+   * @param pscInterfaceConfig pscInterfaceConfig or {@code null} for none
+   */
+  public PrivateConnection setPscInterfaceConfig(PscInterfaceConfig pscInterfaceConfig) {
+    this.pscInterfaceConfig = pscInterfaceConfig;
     return this;
   }
 

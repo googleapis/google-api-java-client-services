@@ -44,6 +44,13 @@ public final class MachineArchitectureDetails extends com.google.api.client.json
   private java.lang.String cpuArchitecture;
 
   /**
+   * Optional. CPU manufacturer, e.g., "Intel", "AMD".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cpuManufacturer;
+
+  /**
    * CPU name, e.g., "Intel Xeon E5-2690", "AMD EPYC 7571" etc.
    * The value may be {@code null}.
    */
@@ -109,6 +116,23 @@ public final class MachineArchitectureDetails extends com.google.api.client.json
    */
   public MachineArchitectureDetails setCpuArchitecture(java.lang.String cpuArchitecture) {
     this.cpuArchitecture = cpuArchitecture;
+    return this;
+  }
+
+  /**
+   * Optional. CPU manufacturer, e.g., "Intel", "AMD".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCpuManufacturer() {
+    return cpuManufacturer;
+  }
+
+  /**
+   * Optional. CPU manufacturer, e.g., "Intel", "AMD".
+   * @param cpuManufacturer cpuManufacturer or {@code null} for none
+   */
+  public MachineArchitectureDetails setCpuManufacturer(java.lang.String cpuManufacturer) {
+    this.cpuManufacturer = cpuManufacturer;
     return this;
   }
 

@@ -53,6 +53,14 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
   private java.lang.String languageCode;
 
   /**
+   * Optional. The name of the model. If set, the service will choose the model matching the
+   * specified configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelName;
+
+  /**
    * The name of the voice. If both the name and the gender are not set, the service will choose a
    * voice based on the other parameters such as language_code.
    * The value may be {@code null}.
@@ -125,6 +133,25 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
    */
   public VoiceSelectionParams setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the model. If set, the service will choose the model matching the
+   * specified configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelName() {
+    return modelName;
+  }
+
+  /**
+   * Optional. The name of the model. If set, the service will choose the model matching the
+   * specified configuration.
+   * @param modelName modelName or {@code null} for none
+   */
+  public VoiceSelectionParams setModelName(java.lang.String modelName) {
+    this.modelName = modelName;
     return this;
   }
 

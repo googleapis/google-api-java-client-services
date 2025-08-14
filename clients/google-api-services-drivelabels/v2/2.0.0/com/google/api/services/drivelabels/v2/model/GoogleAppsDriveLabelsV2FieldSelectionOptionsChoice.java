@@ -88,7 +88,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice extends co
   private GoogleAppsDriveLabelsV2Lifecycle lifecycle;
 
   /**
-   * Output only. The LockStatus of this choice.
+   * Output only. The `LockStatus` of this choice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,7 +279,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice extends co
   }
 
   /**
-   * Output only. The LockStatus of this choice.
+   * Output only. The `LockStatus` of this choice.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LockStatus getLockStatus() {
@@ -287,7 +287,7 @@ public final class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice extends co
   }
 
   /**
-   * Output only. The LockStatus of this choice.
+   * Output only. The `LockStatus` of this choice.
    * @param lockStatus lockStatus or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice setLockStatus(GoogleAppsDriveLabelsV2LockStatus lockStatus) {

@@ -47,7 +47,10 @@ public final class GoogleCloudAiplatformV1beta1TunedModel extends com.google.api
 
   /**
    * Output only. The resource name of the TunedModel. Format:
-   * `projects/{project}/locations/{location}/models/{model}`.
+   * `projects/{project}/locations/{location}/models/{model}@{version_id}` When tuning from a base
+   * model, the version_id will be 1. For continuous tuning, the version id will be incremented by 1
+   * from the last version id in the parent model. E.g.,
+   * `projects/{project}/locations/{location}/models/{model}@{last_version_id + 1}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +96,10 @@ public final class GoogleCloudAiplatformV1beta1TunedModel extends com.google.api
 
   /**
    * Output only. The resource name of the TunedModel. Format:
-   * `projects/{project}/locations/{location}/models/{model}`.
+   * `projects/{project}/locations/{location}/models/{model}@{version_id}` When tuning from a base
+   * model, the version_id will be 1. For continuous tuning, the version id will be incremented by 1
+   * from the last version id in the parent model. E.g.,
+   * `projects/{project}/locations/{location}/models/{model}@{last_version_id + 1}`
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -102,7 +108,10 @@ public final class GoogleCloudAiplatformV1beta1TunedModel extends com.google.api
 
   /**
    * Output only. The resource name of the TunedModel. Format:
-   * `projects/{project}/locations/{location}/models/{model}`.
+   * `projects/{project}/locations/{location}/models/{model}@{version_id}` When tuning from a base
+   * model, the version_id will be 1. For continuous tuning, the version id will be incremented by 1
+   * from the last version id in the parent model. E.g.,
+   * `projects/{project}/locations/{location}/models/{model}@{last_version_id + 1}`
    * @param model model or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1TunedModel setModel(java.lang.String model) {

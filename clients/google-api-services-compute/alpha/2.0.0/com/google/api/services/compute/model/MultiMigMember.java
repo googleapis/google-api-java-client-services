@@ -37,13 +37,6 @@ public final class MultiMigMember extends com.google.api.client.json.GenericJson
   private java.lang.String creationTimestamp;
 
   /**
-   * An optional description of this resource.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String description;
-
-  /**
    * [Output only] The unique identifier for this resource type. The server generates this
    * identifier.
    * The value may be {@code null}.
@@ -80,13 +73,6 @@ public final class MultiMigMember extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String selfLinkWithId;
-
-  /**
    * [Output Only] The status of this multi-MIG member
    * The value may be {@code null}.
    */
@@ -107,23 +93,6 @@ public final class MultiMigMember extends com.google.api.client.json.GenericJson
    */
   public MultiMigMember setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
-    return this;
-  }
-
-  /**
-   * An optional description of this resource.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDescription() {
-    return description;
-  }
-
-  /**
-   * An optional description of this resource.
-   * @param description description or {@code null} for none
-   */
-  public MultiMigMember setDescription(java.lang.String description) {
-    this.description = description;
     return this;
   }
 
@@ -211,23 +180,6 @@ public final class MultiMigMember extends com.google.api.client.json.GenericJson
    */
   public MultiMigMember setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
-    return this;
-  }
-
-  /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSelfLinkWithId() {
-    return selfLinkWithId;
-  }
-
-  /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
-   * @param selfLinkWithId selfLinkWithId or {@code null} for none
-   */
-  public MultiMigMember setSelfLinkWithId(java.lang.String selfLinkWithId) {
-    this.selfLinkWithId = selfLinkWithId;
     return this;
   }
 

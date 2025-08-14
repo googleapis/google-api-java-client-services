@@ -30,12 +30,6 @@ package com.google.api.services.compute.model;
 public final class MultiMigsList extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String etag;
-
-  /**
    * Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
@@ -79,33 +73,11 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   private java.lang.String selfLink;
 
   /**
-   * [Output only] Unreachable resources.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> unreachables;
-
-  /**
    * Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEtag() {
-    return etag;
-  }
-
-  /**
-   * @param etag etag or {@code null} for none
-   */
-  public MultiMigsList setEtag(java.lang.String etag) {
-    this.etag = etag;
-    return this;
-  }
 
   /**
    * Unique identifier for the resource; defined by the server.
@@ -193,23 +165,6 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
    */
   public MultiMigsList setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
-    return this;
-  }
-
-  /**
-   * [Output only] Unreachable resources.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getUnreachables() {
-    return unreachables;
-  }
-
-  /**
-   * [Output only] Unreachable resources.
-   * @param unreachables unreachables or {@code null} for none
-   */
-  public MultiMigsList setUnreachables(java.util.List<java.lang.String> unreachables) {
-    this.unreachables = unreachables;
     return this;
   }
 

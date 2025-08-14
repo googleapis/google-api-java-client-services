@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2.model;
 
 /**
- * Request to disable the Field.
+ * Request to disable the field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.drivelabels.v2.model;
 public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Field Disabled Policy.
+   * Required. Field disabled policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsDriveLabelsV2LifecycleDisabledPolicy disabledPolicy;
 
   /**
-   * Required. Key of the Field to disable.
+   * Required. Key of the field to disable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldReq
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `disabled_policy` is implied and should not be specified. A single `*` can be used as short-
+   * `disabled_policy` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldReq
   private String updateMask;
 
   /**
-   * Required. Field Disabled Policy.
+   * Required. Field disabled policy.
    * @return value or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2LifecycleDisabledPolicy getDisabledPolicy() {
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldReq
   }
 
   /**
-   * Required. Field Disabled Policy.
+   * Required. Field disabled policy.
    * @param disabledPolicy disabledPolicy or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest setDisabledPolicy(GoogleAppsDriveLabelsV2LifecycleDisabledPolicy disabledPolicy) {
@@ -70,7 +70,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldReq
   }
 
   /**
-   * Required. Key of the Field to disable.
+   * Required. Key of the field to disable.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -78,7 +78,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldReq
   }
 
   /**
-   * Required. Key of the Field to disable.
+   * Required. Key of the field to disable.
    * @param id id or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest setId(java.lang.String id) {
@@ -88,7 +88,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldReq
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `disabled_policy` is implied and should not be specified. A single `*` can be used as short-
+   * `disabled_policy` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * @return value or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldReq
 
   /**
    * The fields that should be updated. At least one field must be specified. The root
-   * `disabled_policy` is implied and should not be specified. A single `*` can be used as short-
+   * `disabled_policy` is implied and should not be specified. A single `*` can be used as a short-
    * hand for updating every field.
    * @param updateMask updateMask or {@code null} for none
    */

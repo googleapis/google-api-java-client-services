@@ -109,7 +109,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
    * inject packets into the consumer's network. If set to true, the target service attachment must
    * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
-   * forwarding rules should not use this field.
+   * forwarding rules should not use this field. This field was never released to any customers and
+   * is deprecated and will be removed in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -460,6 +461,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String target;
 
   /**
+   * [PSC for VPC-hosted services only] Determines if clients are allowed to access the producer
+   * service via this PSC endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean trafficDisabled;
+
+  /**
    * IP address for which this forwarding rule accepts traffic. When a client sends traffic to this
    * IP address, the forwarding rule directs the traffic to the referenced target or backendService.
    * While creating a forwarding rule, specifying an IPAddress is required under the following
@@ -616,7 +625,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
    * inject packets into the consumer's network. If set to true, the target service attachment must
    * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
-   * forwarding rules should not use this field.
+   * forwarding rules should not use this field. This field was never released to any customers and
+   * is deprecated and will be removed in the future.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowPscPacketInjection() {
@@ -627,7 +637,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
    * inject packets into the consumer's network. If set to true, the target service attachment must
    * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
-   * forwarding rules should not use this field.
+   * forwarding rules should not use this field. This field was never released to any customers and
+   * is deprecated and will be removed in the future.
    * @param allowPscPacketInjection allowPscPacketInjection or {@code null} for none
    */
   public ForwardingRule setAllowPscPacketInjection(java.lang.Boolean allowPscPacketInjection) {
@@ -1493,6 +1504,25 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setTarget(java.lang.String target) {
     this.target = target;
+    return this;
+  }
+
+  /**
+   * [PSC for VPC-hosted services only] Determines if clients are allowed to access the producer
+   * service via this PSC endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTrafficDisabled() {
+    return trafficDisabled;
+  }
+
+  /**
+   * [PSC for VPC-hosted services only] Determines if clients are allowed to access the producer
+   * service via this PSC endpoint.
+   * @param trafficDisabled trafficDisabled or {@code null} for none
+   */
+  public ForwardingRule setTrafficDisabled(java.lang.Boolean trafficDisabled) {
+    this.trafficDisabled = trafficDisabled;
     return this;
   }
 

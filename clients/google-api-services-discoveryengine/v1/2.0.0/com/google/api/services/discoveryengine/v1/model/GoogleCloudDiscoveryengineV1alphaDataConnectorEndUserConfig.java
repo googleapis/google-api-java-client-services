@@ -44,6 +44,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig e
   private java.util.Map<String, java.lang.Object> authParams;
 
   /**
+   * Optional. The tenant project the connector is connected to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaTenant tenant;
+
+  /**
    * Optional. Any additional parameters needed for EUA.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig e
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig setAuthParams(java.util.Map<String, java.lang.Object> authParams) {
     this.authParams = authParams;
+    return this;
+  }
+
+  /**
+   * Optional. The tenant project the connector is connected to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaTenant getTenant() {
+    return tenant;
+  }
+
+  /**
+   * Optional. The tenant project the connector is connected to.
+   * @param tenant tenant or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig setTenant(GoogleCloudDiscoveryengineV1alphaTenant tenant) {
+    this.tenant = tenant;
     return this;
   }
 

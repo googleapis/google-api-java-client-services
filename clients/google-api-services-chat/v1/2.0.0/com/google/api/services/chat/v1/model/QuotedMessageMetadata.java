@@ -30,23 +30,24 @@ package com.google.api.services.chat.v1.model;
 public final class QuotedMessageMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The timestamp when the quoted message was created or when the quoted message was
-   * last updated.
+   * Required. The timestamp when the quoted message was created or when the quoted message was last
+   * updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastUpdateTime;
 
   /**
-   * Output only. Resource name of the quoted message. Format: `spaces/{space}/messages/{message}`
+   * Required. Resource name of the message that is quoted. Format:
+   * `spaces/{space}/messages/{message}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The timestamp when the quoted message was created or when the quoted message was
-   * last updated.
+   * Required. The timestamp when the quoted message was created or when the quoted message was last
+   * updated.
    * @return value or {@code null} for none
    */
   public String getLastUpdateTime() {
@@ -54,8 +55,8 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The timestamp when the quoted message was created or when the quoted message was
-   * last updated.
+   * Required. The timestamp when the quoted message was created or when the quoted message was last
+   * updated.
    * @param lastUpdateTime lastUpdateTime or {@code null} for none
    */
   public QuotedMessageMetadata setLastUpdateTime(String lastUpdateTime) {
@@ -64,7 +65,8 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Resource name of the quoted message. Format: `spaces/{space}/messages/{message}`
+   * Required. Resource name of the message that is quoted. Format:
+   * `spaces/{space}/messages/{message}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -72,7 +74,8 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Resource name of the quoted message. Format: `spaces/{space}/messages/{message}`
+   * Required. Resource name of the message that is quoted. Format:
+   * `spaces/{space}/messages/{message}`
    * @param name name or {@code null} for none
    */
   public QuotedMessageMetadata setName(java.lang.String name) {

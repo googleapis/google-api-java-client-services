@@ -32,8 +32,7 @@ package com.google.api.services.merchantapi.lfp_v1beta.model;
 public final class LfpStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. [Google My Business category id](https://gcid-
-   * explorer.corp.google.com/static/gcid.html).
+   * Optional. [Google My Business category id](https://support.google.com/business/answer/7249669).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +124,7 @@ public final class LfpStore extends com.google.api.client.json.GenericJson {
   private java.lang.String websiteUri;
 
   /**
-   * Optional. [Google My Business category id](https://gcid-
-   * explorer.corp.google.com/static/gcid.html).
+   * Optional. [Google My Business category id](https://support.google.com/business/answer/7249669).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGcidCategory() {
@@ -134,8 +132,7 @@ public final class LfpStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Google My Business category id](https://gcid-
-   * explorer.corp.google.com/static/gcid.html).
+   * Optional. [Google My Business category id](https://support.google.com/business/answer/7249669).
    * @param gcidCategory gcidCategory or {@code null} for none
    */
   public LfpStore setGcidCategory(java.util.List<java.lang.String> gcidCategory) {

@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Concurrency for each container and agent server. Recommended value: 2 * cpu + 1.
+   * Defaults to 9.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer containerConcurrency;
+
+  /**
    * Optional. Environment variables to be set with the Reasoning Engine deployment. The environment
    * variables can be updated through the UpdateReasoningEngine API.
    * The value may be {@code null}.
@@ -44,6 +52,40 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
   }
 
   /**
+   * Optional. The maximum number of application instances that can be launched to handle increased
+   * traffic. Defaults to 100.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInstances;
+
+  /**
+   * Optional. The minimum number of application instances that will be kept running at all times.
+   * Defaults to 1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minInstances;
+
+  /**
+   * Optional. Configuration for PSC-I.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PscInterfaceConfig pscInterfaceConfig;
+
+  /**
+   * Optional. Resource limits for each container. Only 'cpu' and 'memory' keys are supported.
+   * Defaults to {"cpu": "4", "memory": "4Gi"}. * The only supported values for CPU are '1', '2',
+   * '4', and '8'. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. *
+   * For supported 'memory' values and syntax, go to
+   * https://cloud.google.com/run/docs/configuring/memory-limits
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceLimits;
+
+  /**
    * Optional. Environment variables where the value is a secret in Cloud Secret Manager. To use
    * this feature, add 'Secret Manager Secret Accessor' role (roles/secretmanager.secretAccessor) to
    * AI Platform Reasoning Engine Service Agent.
@@ -51,6 +93,25 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1SecretEnvVar> secretEnv;
+
+  /**
+   * Optional. Concurrency for each container and agent server. Recommended value: 2 * cpu + 1.
+   * Defaults to 9.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getContainerConcurrency() {
+    return containerConcurrency;
+  }
+
+  /**
+   * Optional. Concurrency for each container and agent server. Recommended value: 2 * cpu + 1.
+   * Defaults to 9.
+   * @param containerConcurrency containerConcurrency or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec setContainerConcurrency(java.lang.Integer containerConcurrency) {
+    this.containerConcurrency = containerConcurrency;
+    return this;
+  }
 
   /**
    * Optional. Environment variables to be set with the Reasoning Engine deployment. The environment
@@ -68,6 +129,86 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec setEnv(java.util.List<GoogleCloudAiplatformV1beta1EnvVar> env) {
     this.env = env;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum number of application instances that can be launched to handle increased
+   * traffic. Defaults to 100.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInstances() {
+    return maxInstances;
+  }
+
+  /**
+   * Optional. The maximum number of application instances that can be launched to handle increased
+   * traffic. Defaults to 100.
+   * @param maxInstances maxInstances or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec setMaxInstances(java.lang.Integer maxInstances) {
+    this.maxInstances = maxInstances;
+    return this;
+  }
+
+  /**
+   * Optional. The minimum number of application instances that will be kept running at all times.
+   * Defaults to 1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinInstances() {
+    return minInstances;
+  }
+
+  /**
+   * Optional. The minimum number of application instances that will be kept running at all times.
+   * Defaults to 1.
+   * @param minInstances minInstances or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec setMinInstances(java.lang.Integer minInstances) {
+    this.minInstances = minInstances;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for PSC-I.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PscInterfaceConfig getPscInterfaceConfig() {
+    return pscInterfaceConfig;
+  }
+
+  /**
+   * Optional. Configuration for PSC-I.
+   * @param pscInterfaceConfig pscInterfaceConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec setPscInterfaceConfig(GoogleCloudAiplatformV1beta1PscInterfaceConfig pscInterfaceConfig) {
+    this.pscInterfaceConfig = pscInterfaceConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Resource limits for each container. Only 'cpu' and 'memory' keys are supported.
+   * Defaults to {"cpu": "4", "memory": "4Gi"}. * The only supported values for CPU are '1', '2',
+   * '4', and '8'. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. *
+   * For supported 'memory' values and syntax, go to
+   * https://cloud.google.com/run/docs/configuring/memory-limits
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceLimits() {
+    return resourceLimits;
+  }
+
+  /**
+   * Optional. Resource limits for each container. Only 'cpu' and 'memory' keys are supported.
+   * Defaults to {"cpu": "4", "memory": "4Gi"}. * The only supported values for CPU are '1', '2',
+   * '4', and '8'. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. *
+   * For supported 'memory' values and syntax, go to
+   * https://cloud.google.com/run/docs/configuring/memory-limits
+   * @param resourceLimits resourceLimits or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec setResourceLimits(java.util.Map<String, java.lang.String> resourceLimits) {
+    this.resourceLimits = resourceLimits;
     return this;
   }
 

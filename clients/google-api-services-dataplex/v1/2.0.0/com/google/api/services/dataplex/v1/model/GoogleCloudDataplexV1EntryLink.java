@@ -38,8 +38,10 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
 
   /**
    * Required. Immutable. Relative resource name of the Entry Link Type used to create this Entry
-   * Link, of the form:
-   * `projects/{project_id_or_number}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}.
+   * Link. For example: Entry link between synonym terms in a glossary: projects/dataplex-
+   * types/locations/global/entryLinkTypes/synonym Entry link between related terms in a glossary:
+   * projects/dataplex-types/locations/global/entryLinkTypes/related Entry link between glossary
+   * terms and data assets: projects/dataplex-types/locations/global/entryLinkTypes/definition
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +90,10 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
 
   /**
    * Required. Immutable. Relative resource name of the Entry Link Type used to create this Entry
-   * Link, of the form:
-   * `projects/{project_id_or_number}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}.
+   * Link. For example: Entry link between synonym terms in a glossary: projects/dataplex-
+   * types/locations/global/entryLinkTypes/synonym Entry link between related terms in a glossary:
+   * projects/dataplex-types/locations/global/entryLinkTypes/related Entry link between glossary
+   * terms and data assets: projects/dataplex-types/locations/global/entryLinkTypes/definition
    * @return value or {@code null} for none
    */
   public java.lang.String getEntryLinkType() {
@@ -98,8 +102,10 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
 
   /**
    * Required. Immutable. Relative resource name of the Entry Link Type used to create this Entry
-   * Link, of the form:
-   * `projects/{project_id_or_number}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}.
+   * Link. For example: Entry link between synonym terms in a glossary: projects/dataplex-
+   * types/locations/global/entryLinkTypes/synonym Entry link between related terms in a glossary:
+   * projects/dataplex-types/locations/global/entryLinkTypes/related Entry link between glossary
+   * terms and data assets: projects/dataplex-types/locations/global/entryLinkTypes/definition
    * @param entryLinkType entryLinkType or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryLink setEntryLinkType(java.lang.String entryLinkType) {

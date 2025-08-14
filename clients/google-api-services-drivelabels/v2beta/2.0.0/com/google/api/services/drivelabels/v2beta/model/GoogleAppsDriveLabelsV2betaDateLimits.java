@@ -17,7 +17,7 @@
 package com.google.api.services.drivelabels.v2beta.model;
 
 /**
- * Limits for date Field type.
+ * Limits for date field type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Labels API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.drivelabels.v2beta.model;
 public final class GoogleAppsDriveLabelsV2betaDateLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum value for the date Field type.
+   * Maximum value for the date field type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate maxValue;
 
   /**
-   * Minimum value for the date Field type.
+   * Minimum value for the date field type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate minValue;
 
   /**
-   * Maximum value for the date Field type.
+   * Maximum value for the date field type.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getMaxValue() {
@@ -52,7 +52,7 @@ public final class GoogleAppsDriveLabelsV2betaDateLimits extends com.google.api.
   }
 
   /**
-   * Maximum value for the date Field type.
+   * Maximum value for the date field type.
    * @param maxValue maxValue or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDateLimits setMaxValue(GoogleTypeDate maxValue) {
@@ -61,7 +61,7 @@ public final class GoogleAppsDriveLabelsV2betaDateLimits extends com.google.api.
   }
 
   /**
-   * Minimum value for the date Field type.
+   * Minimum value for the date field type.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getMinValue() {
@@ -69,7 +69,7 @@ public final class GoogleAppsDriveLabelsV2betaDateLimits extends com.google.api.
   }
 
   /**
-   * Minimum value for the date Field type.
+   * Minimum value for the date field type.
    * @param minValue minValue or {@code null} for none
    */
   public GoogleAppsDriveLabelsV2betaDateLimits setMinValue(GoogleTypeDate minValue) {

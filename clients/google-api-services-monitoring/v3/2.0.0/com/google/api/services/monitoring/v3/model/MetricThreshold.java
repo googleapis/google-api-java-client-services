@@ -89,13 +89,13 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   private java.lang.String denominatorFilter;
 
   /**
-   * The amount of time that a time series must violate the threshold to be considered failing.
-   * Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are
-   * supported. If an invalid value is given, an error will be returned. When choosing a duration,
-   * it is useful to keep in mind the frequency of the underlying time series data (which may also
-   * be affected by any alignments specified in the aggregations field); a good duration is long
-   * enough so that a single outlier does not generate spurious alerts, but short enough that
-   * unhealthy states are detected and alerted on quickly.
+   * Required. The amount of time that a time series must violate the threshold to be considered
+   * failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300
+   * seconds--are supported. If an invalid value is given, an error will be returned. When choosing
+   * a duration, it is useful to keep in mind the frequency of the underlying time series data
+   * (which may also be affected by any alignments specified in the aggregations field); a good
+   * duration is long enough so that a single outlier does not generate spurious alerts, but short
+   * enough that unhealthy states are detected and alerted on quickly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -256,13 +256,13 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The amount of time that a time series must violate the threshold to be considered failing.
-   * Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are
-   * supported. If an invalid value is given, an error will be returned. When choosing a duration,
-   * it is useful to keep in mind the frequency of the underlying time series data (which may also
-   * be affected by any alignments specified in the aggregations field); a good duration is long
-   * enough so that a single outlier does not generate spurious alerts, but short enough that
-   * unhealthy states are detected and alerted on quickly.
+   * Required. The amount of time that a time series must violate the threshold to be considered
+   * failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300
+   * seconds--are supported. If an invalid value is given, an error will be returned. When choosing
+   * a duration, it is useful to keep in mind the frequency of the underlying time series data
+   * (which may also be affected by any alignments specified in the aggregations field); a good
+   * duration is long enough so that a single outlier does not generate spurious alerts, but short
+   * enough that unhealthy states are detected and alerted on quickly.
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -270,13 +270,13 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The amount of time that a time series must violate the threshold to be considered failing.
-   * Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are
-   * supported. If an invalid value is given, an error will be returned. When choosing a duration,
-   * it is useful to keep in mind the frequency of the underlying time series data (which may also
-   * be affected by any alignments specified in the aggregations field); a good duration is long
-   * enough so that a single outlier does not generate spurious alerts, but short enough that
-   * unhealthy states are detected and alerted on quickly.
+   * Required. The amount of time that a time series must violate the threshold to be considered
+   * failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300
+   * seconds--are supported. If an invalid value is given, an error will be returned. When choosing
+   * a duration, it is useful to keep in mind the frequency of the underlying time series data
+   * (which may also be affected by any alignments specified in the aggregations field); a good
+   * duration is long enough so that a single outlier does not generate spurious alerts, but short
+   * enough that unhealthy states are detected and alerted on quickly.
    * @param duration duration or {@code null} for none
    */
   public MetricThreshold setDuration(String duration) {

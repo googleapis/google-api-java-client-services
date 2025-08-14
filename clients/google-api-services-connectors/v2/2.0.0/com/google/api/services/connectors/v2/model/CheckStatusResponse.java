@@ -38,6 +38,13 @@ public final class CheckStatusResponse extends com.google.api.client.json.Generi
   private java.lang.String description;
 
   /**
+   * Metadata like service latency, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata;
+
+  /**
    * State of the connector.
    * The value may be {@code null}.
    */
@@ -60,6 +67,23 @@ public final class CheckStatusResponse extends com.google.api.client.json.Generi
    */
   public CheckStatusResponse setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.util.Map<String, java.lang.Object>> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @param metadata metadata or {@code null} for none
+   */
+  public CheckStatusResponse setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

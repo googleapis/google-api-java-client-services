@@ -30,11 +30,35 @@ package com.google.api.services.connectors.v2.model;
 public final class UpdateEntitiesWithConditionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata like service latency, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata;
+
+  /**
    * Response returned by the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> response;
+
+  /**
+   * Metadata like service latency, etc.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.util.Map<String, java.lang.Object>> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @param metadata metadata or {@code null} for none
+   */
+  public UpdateEntitiesWithConditionsResponse setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
 
   /**
    * Response returned by the external system.

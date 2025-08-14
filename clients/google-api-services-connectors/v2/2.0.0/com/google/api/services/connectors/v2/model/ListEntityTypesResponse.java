@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v2.model;
 public final class ListEntityTypesResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata like service latency, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata;
+
+  /**
    * Next page token if more entity types available.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class ListEntityTypesResponse extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unsupportedTypeNames;
+
+  /**
+   * Metadata like service latency, etc.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.util.Map<String, java.lang.Object>> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @param metadata metadata or {@code null} for none
+   */
+  public ListEntityTypesResponse setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
 
   /**
    * Next page token if more entity types available.

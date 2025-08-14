@@ -114,6 +114,13 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> targetTags;
 
   /**
+   * Target type of the firewall rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetType;
+
+  /**
    * The URI of the firewall rule. This field is not applicable to implied VPC firewall rules.
    * The value may be {@code null}.
    */
@@ -314,6 +321,23 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
    */
   public FirewallInfo setTargetTags(java.util.List<java.lang.String> targetTags) {
     this.targetTags = targetTags;
+    return this;
+  }
+
+  /**
+   * Target type of the firewall rule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetType() {
+    return targetType;
+  }
+
+  /**
+   * Target type of the firewall rule.
+   * @param targetType targetType or {@code null} for none
+   */
+  public FirewallInfo setTargetType(java.lang.String targetType) {
+    this.targetType = targetType;
     return this;
   }
 

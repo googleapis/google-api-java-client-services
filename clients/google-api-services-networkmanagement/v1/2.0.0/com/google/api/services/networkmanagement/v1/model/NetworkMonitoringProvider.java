@@ -38,6 +38,13 @@ public final class NetworkMonitoringProvider extends com.google.api.client.json.
   private String createTime;
 
   /**
+   * Output only. The list of error messages detected for the NetworkMonitoringProvider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> errors;
+
+  /**
    * Output only. Identifier. Name of the resource. Format: `projects/{project}/locations/{location}
    * /networkMonitoringProviders/{network_monitoring_provider}`
    * The value may be {@code null}.
@@ -87,6 +94,23 @@ public final class NetworkMonitoringProvider extends com.google.api.client.json.
    */
   public NetworkMonitoringProvider setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The list of error messages detected for the NetworkMonitoringProvider.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getErrors() {
+    return errors;
+  }
+
+  /**
+   * Output only. The list of error messages detected for the NetworkMonitoringProvider.
+   * @param errors errors or {@code null} for none
+   */
+  public NetworkMonitoringProvider setErrors(java.util.List<java.lang.String> errors) {
+    this.errors = errors;
     return this;
   }
 

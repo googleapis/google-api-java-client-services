@@ -30,12 +30,6 @@ package com.google.api.services.compute.model;
 public final class HealthAggregationPolicyList extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String etag;
-
-  /**
    * [Output Only] Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
@@ -81,33 +75,11 @@ public final class HealthAggregationPolicyList extends com.google.api.client.jso
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> unreachables;
-
-  /**
    * [Output Only] Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEtag() {
-    return etag;
-  }
-
-  /**
-   * @param etag etag or {@code null} for none
-   */
-  public HealthAggregationPolicyList setEtag(java.lang.String etag) {
-    this.etag = etag;
-    return this;
-  }
 
   /**
    * [Output Only] Unique identifier for the resource; defined by the server.
@@ -199,23 +171,6 @@ public final class HealthAggregationPolicyList extends com.google.api.client.jso
    */
   public HealthAggregationPolicyList setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
-    return this;
-  }
-
-  /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getUnreachables() {
-    return unreachables;
-  }
-
-  /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
-   * @param unreachables unreachables or {@code null} for none
-   */
-  public HealthAggregationPolicyList setUnreachables(java.util.List<java.lang.String> unreachables) {
-    this.unreachables = unreachables;
     return this;
   }
 

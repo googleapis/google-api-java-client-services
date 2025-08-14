@@ -150,6 +150,18 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String identity;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean identityCertificate;
+
+  /**
    * Encrypts suspended data for an instance with a customer-managed encryption key. If you are
    * creating a new instance, this field will encrypt the local SSD and in-memory contents of the
    * instance during the suspend operation. If you do not provide an encryption key when creating
@@ -772,6 +784,36 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdentity() {
+    return identity;
+  }
+
+  /**
+   * @param identity identity or {@code null} for none
+   */
+  public Instance setIdentity(java.lang.String identity) {
+    this.identity = identity;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIdentityCertificate() {
+    return identityCertificate;
+  }
+
+  /**
+   * @param identityCertificate identityCertificate or {@code null} for none
+   */
+  public Instance setIdentityCertificate(java.lang.Boolean identityCertificate) {
+    this.identityCertificate = identityCertificate;
     return this;
   }
 

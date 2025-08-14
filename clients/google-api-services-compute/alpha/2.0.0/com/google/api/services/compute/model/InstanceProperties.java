@@ -100,6 +100,18 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String identity;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean identityCertificate;
+
+  /**
    * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
    * value is "NONE" if it is not specified.
    * The value may be {@code null}.
@@ -393,6 +405,36 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setGuestAccelerators(java.util.List<AcceleratorConfig> guestAccelerators) {
     this.guestAccelerators = guestAccelerators;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdentity() {
+    return identity;
+  }
+
+  /**
+   * @param identity identity or {@code null} for none
+   */
+  public InstanceProperties setIdentity(java.lang.String identity) {
+    this.identity = identity;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIdentityCertificate() {
+    return identityCertificate;
+  }
+
+  /**
+   * @param identityCertificate identityCertificate or {@code null} for none
+   */
+  public InstanceProperties setIdentityCertificate(java.lang.Boolean identityCertificate) {
+    this.identityCertificate = identityCertificate;
     return this;
   }
 

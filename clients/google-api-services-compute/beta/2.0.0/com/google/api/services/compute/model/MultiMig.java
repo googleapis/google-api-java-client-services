@@ -92,6 +92,12 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiMigStatus status;
+
+  /**
    * [Output only] The creation timestamp of this multi-MIG in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -236,6 +242,21 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
    */
   public MultiMig setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public MultiMigStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * @param status status or {@code null} for none
+   */
+  public MultiMig setStatus(MultiMigStatus status) {
+    this.status = status;
     return this;
   }
 

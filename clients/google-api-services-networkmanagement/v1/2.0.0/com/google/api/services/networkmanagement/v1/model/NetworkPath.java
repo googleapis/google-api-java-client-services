@@ -45,11 +45,11 @@ public final class NetworkPath extends com.google.api.client.json.GenericJson {
   private java.lang.String destination;
 
   /**
-   * Output only. Geographical location of the destination MonitoringPoint.
+   * Output only. Geographical location of the destination MonitoringPoint. ;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String destinationGeoLocation;
+  private GeoLocation destinationGeoLocation;
 
   /**
    * Output only. The display name of the network path.
@@ -175,18 +175,18 @@ public final class NetworkPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Geographical location of the destination MonitoringPoint.
+   * Output only. Geographical location of the destination MonitoringPoint. ;
    * @return value or {@code null} for none
    */
-  public java.lang.String getDestinationGeoLocation() {
+  public GeoLocation getDestinationGeoLocation() {
     return destinationGeoLocation;
   }
 
   /**
-   * Output only. Geographical location of the destination MonitoringPoint.
+   * Output only. Geographical location of the destination MonitoringPoint. ;
    * @param destinationGeoLocation destinationGeoLocation or {@code null} for none
    */
-  public NetworkPath setDestinationGeoLocation(java.lang.String destinationGeoLocation) {
+  public NetworkPath setDestinationGeoLocation(GeoLocation destinationGeoLocation) {
     this.destinationGeoLocation = destinationGeoLocation;
     return this;
   }

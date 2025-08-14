@@ -38,6 +38,13 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String cause;
 
   /**
+   * Geolocation (region code) of the destination IP address (if relevant).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destinationGeolocationCode;
+
+  /**
    * Destination IP address of the dropped packet (if relevant).
    * The value may be {@code null}.
    */
@@ -57,6 +64,13 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceUri;
+
+  /**
+   * Geolocation (region code) of the source IP address (if relevant).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceGeolocationCode;
 
   /**
    * Source IP address of the dropped packet (if relevant).
@@ -79,6 +93,23 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
    */
   public DropInfo setCause(java.lang.String cause) {
     this.cause = cause;
+    return this;
+  }
+
+  /**
+   * Geolocation (region code) of the destination IP address (if relevant).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestinationGeolocationCode() {
+    return destinationGeolocationCode;
+  }
+
+  /**
+   * Geolocation (region code) of the destination IP address (if relevant).
+   * @param destinationGeolocationCode destinationGeolocationCode or {@code null} for none
+   */
+  public DropInfo setDestinationGeolocationCode(java.lang.String destinationGeolocationCode) {
+    this.destinationGeolocationCode = destinationGeolocationCode;
     return this;
   }
 
@@ -130,6 +161,23 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
    */
   public DropInfo setResourceUri(java.lang.String resourceUri) {
     this.resourceUri = resourceUri;
+    return this;
+  }
+
+  /**
+   * Geolocation (region code) of the source IP address (if relevant).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceGeolocationCode() {
+    return sourceGeolocationCode;
+  }
+
+  /**
+   * Geolocation (region code) of the source IP address (if relevant).
+   * @param sourceGeolocationCode sourceGeolocationCode or {@code null} for none
+   */
+  public DropInfo setSourceGeolocationCode(java.lang.String sourceGeolocationCode) {
+    this.sourceGeolocationCode = sourceGeolocationCode;
     return this;
   }
 

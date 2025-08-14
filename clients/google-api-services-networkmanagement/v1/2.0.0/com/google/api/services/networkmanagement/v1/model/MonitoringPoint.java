@@ -66,12 +66,11 @@ public final class MonitoringPoint extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> errors;
 
   /**
-   * Output only. The geographical location of the MonitoringPoint. Examples: - "New York, NY, USA"
-   * - "Berlin, Germany"
+   * Output only. The geographical location of the MonitoringPoint. ;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String geoLocation;
+  private GeoLocation geoLocation;
 
   /**
    * Output only. The host information of the MonitoringPoint.
@@ -129,6 +128,13 @@ public final class MonitoringPoint extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Indicates if an upgrade is available for the MonitoringPoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean upgradeAvailable;
 
   /**
    * Output only. The type of upgrade available for the MonitoringPoint.
@@ -230,20 +236,18 @@ public final class MonitoringPoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The geographical location of the MonitoringPoint. Examples: - "New York, NY, USA"
-   * - "Berlin, Germany"
+   * Output only. The geographical location of the MonitoringPoint. ;
    * @return value or {@code null} for none
    */
-  public java.lang.String getGeoLocation() {
+  public GeoLocation getGeoLocation() {
     return geoLocation;
   }
 
   /**
-   * Output only. The geographical location of the MonitoringPoint. Examples: - "New York, NY, USA"
-   * - "Berlin, Germany"
+   * Output only. The geographical location of the MonitoringPoint. ;
    * @param geoLocation geoLocation or {@code null} for none
    */
-  public MonitoringPoint setGeoLocation(java.lang.String geoLocation) {
+  public MonitoringPoint setGeoLocation(GeoLocation geoLocation) {
     this.geoLocation = geoLocation;
     return this;
   }
@@ -383,6 +387,23 @@ public final class MonitoringPoint extends com.google.api.client.json.GenericJso
    */
   public MonitoringPoint setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates if an upgrade is available for the MonitoringPoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUpgradeAvailable() {
+    return upgradeAvailable;
+  }
+
+  /**
+   * Output only. Indicates if an upgrade is available for the MonitoringPoint.
+   * @param upgradeAvailable upgradeAvailable or {@code null} for none
+   */
+  public MonitoringPoint setUpgradeAvailable(java.lang.Boolean upgradeAvailable) {
+    this.upgradeAvailable = upgradeAvailable;
     return this;
   }
 

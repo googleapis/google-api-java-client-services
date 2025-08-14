@@ -36,6 +36,13 @@ public final class RefreshAccessTokenResponse extends com.google.api.client.json
   private AccessCredentials accessCredentials;
 
   /**
+   * Metadata like service latency, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata;
+
+  /**
    * @return value or {@code null} for none
    */
   public AccessCredentials getAccessCredentials() {
@@ -47,6 +54,23 @@ public final class RefreshAccessTokenResponse extends com.google.api.client.json
    */
   public RefreshAccessTokenResponse setAccessCredentials(AccessCredentials accessCredentials) {
     this.accessCredentials = accessCredentials;
+    return this;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.util.Map<String, java.lang.Object>> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @param metadata metadata or {@code null} for none
+   */
+  public RefreshAccessTokenResponse setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

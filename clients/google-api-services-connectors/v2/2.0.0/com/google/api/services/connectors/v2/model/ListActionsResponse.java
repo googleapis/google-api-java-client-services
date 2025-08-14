@@ -43,6 +43,13 @@ public final class ListActionsResponse extends com.google.api.client.json.Generi
   }
 
   /**
+   * Metadata like service latency, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata;
+
+  /**
    * Next page token if more actions available.
    * The value may be {@code null}.
    */
@@ -70,6 +77,23 @@ public final class ListActionsResponse extends com.google.api.client.json.Generi
    */
   public ListActionsResponse setActions(java.util.List<Action> actions) {
     this.actions = actions;
+    return this;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.util.Map<String, java.lang.Object>> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata like service latency, etc.
+   * @param metadata metadata or {@code null} for none
+   */
+  public ListActionsResponse setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

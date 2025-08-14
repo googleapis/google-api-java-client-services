@@ -351,13 +351,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * [Uploads a product input to your Merchant Center
-       * account](/merchant/api/guides/products/overview#upload-product-input). You must have a products
-       * [data source](/merchant/api/guides/data-sources/overview) to be able to insert a product. The
-       * unique identifier of the data source is passed as a query parameter in the request URL. If a
-       * product input with the same contentLanguage, offerId, and dataSource already exists, then the
-       * product input inserted by this method replaces that entry. After inserting, updating, or deleting
-       * a product input, it may take several minutes before the processed product can be retrieved.
+       * [Uploads a product input to your Merchant Center account](/merchant/api/guides/products/add-
+       * manage#add_a_product). You must have a products [data source](/merchant/api/guides/data-
+       * sources/api-sources#create-primary-data-source) to be able to insert a product. The unique
+       * identifier of the data source is passed as a query parameter in the request URL. If a product
+       * input with the same contentLanguage, offerId, and dataSource already exists, then the product
+       * input inserted by this method replaces that entry. After inserting, updating, or deleting a
+       * product input, it may take several minutes before the processed product can be retrieved.
        *
        * Create a request for the method "productInputs.insert".
        *
@@ -382,14 +382,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * [Uploads a product input to your Merchant Center
-         * account](/merchant/api/guides/products/overview#upload-product-input). You must have a products
-         * [data source](/merchant/api/guides/data-sources/overview) to be able to insert a product. The
-         * unique identifier of the data source is passed as a query parameter in the request URL. If a
-         * product input with the same contentLanguage, offerId, and dataSource already exists, then the
-         * product input inserted by this method replaces that entry. After inserting, updating, or
-         * deleting a product input, it may take several minutes before the processed product can be
-         * retrieved.
+         * [Uploads a product input to your Merchant Center account](/merchant/api/guides/products/add-
+         * manage#add_a_product). You must have a products [data source](/merchant/api/guides/data-
+         * sources/api-sources#create-primary-data-source) to be able to insert a product. The unique
+         * identifier of the data source is passed as a query parameter in the request URL. If a product
+         * input with the same contentLanguage, offerId, and dataSource already exists, then the product
+         * input inserted by this method replaces that entry. After inserting, updating, or deleting a
+         * product input, it may take several minutes before the processed product can be retrieved.
          *
          * Create a request for the method "productInputs.insert".
          *
@@ -496,19 +495,19 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The primary or supplemental product data source name. If the product already
          * exists and data source provided is different, then the product will be moved to a new
-         * data source. For more information, see [Overview of Data sources sub-
-         * API](/merchant/api/guides/data-sources/overview). Only API data sources are supported.
-         * Format: `accounts/{account}/dataSources/{datasource}`. For example,
-         * `accounts/123456/dataSources/104628`.
+         * data source. For more information, see [Create a primary data
+         * source](/merchant/api/guides/data-sources/api-sources#create-primary-data-source). Only
+         * API data sources are supported. Format: `accounts/{account}/dataSources/{datasource}`.
+         * For example, `accounts/123456/dataSources/104628`.
          */
         @com.google.api.client.util.Key
         private java.lang.String dataSource;
 
         /** Required. The primary or supplemental product data source name. If the product already exists and
        data source provided is different, then the product will be moved to a new data source. For more
-       information, see [Overview of Data sources sub-API](/merchant/api/guides/data-sources/overview).
-       Only API data sources are supported. Format: `accounts/{account}/dataSources/{datasource}`. For
-       example, `accounts/123456/dataSources/104628`.
+       information, see [Create a primary data source](/merchant/api/guides/data-sources/api-
+       sources#create-primary-data-source). Only API data sources are supported. Format:
+       `accounts/{account}/dataSources/{datasource}`. For example, `accounts/123456/dataSources/104628`.
          */
         public java.lang.String getDataSource() {
           return dataSource;
@@ -517,10 +516,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The primary or supplemental product data source name. If the product already
          * exists and data source provided is different, then the product will be moved to a new
-         * data source. For more information, see [Overview of Data sources sub-
-         * API](/merchant/api/guides/data-sources/overview). Only API data sources are supported.
-         * Format: `accounts/{account}/dataSources/{datasource}`. For example,
-         * `accounts/123456/dataSources/104628`.
+         * data source. For more information, see [Create a primary data
+         * source](/merchant/api/guides/data-sources/api-sources#create-primary-data-source). Only
+         * API data sources are supported. Format: `accounts/{account}/dataSources/{datasource}`.
+         * For example, `accounts/123456/dataSources/104628`.
          */
         public Insert setDataSource(java.lang.String dataSource) {
           this.dataSource = dataSource;

@@ -47,7 +47,7 @@ public final class BulkUpdateLineItemsRequest extends com.google.api.client.json
 
   /**
    * Required. A field mask identifying which fields to update. Only the following fields are
-   * currently supported: * entityStatus
+   * currently supported: * entityStatus * containsEuPoliticalAdvertising
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class BulkUpdateLineItemsRequest extends com.google.api.client.json
 
   /**
    * Required. A field mask identifying which fields to update. Only the following fields are
-   * currently supported: * entityStatus
+   * currently supported: * entityStatus * containsEuPoliticalAdvertising
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -100,7 +100,7 @@ public final class BulkUpdateLineItemsRequest extends com.google.api.client.json
 
   /**
    * Required. A field mask identifying which fields to update. Only the following fields are
-   * currently supported: * entityStatus
+   * currently supported: * entityStatus * containsEuPoliticalAdvertising
    * @param updateMask updateMask or {@code null} for none
    */
   public BulkUpdateLineItemsRequest setUpdateMask(String updateMask) {

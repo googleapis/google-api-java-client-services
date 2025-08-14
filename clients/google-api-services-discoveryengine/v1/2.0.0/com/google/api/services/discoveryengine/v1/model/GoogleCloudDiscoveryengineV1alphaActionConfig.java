@@ -58,6 +58,14 @@ public final class GoogleCloudDiscoveryengineV1alphaActionConfig extends com.goo
   private java.lang.String serviceName;
 
   /**
+   * Optional. Whether to use static secrets for the connector. If true, the secrets provided in the
+   * action_params will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useStaticSecrets;
+
+  /**
    * Required. Params needed to support actions in the format of (Key, Value) pairs. Required
    * parameters for sources that support OAUTH, i.e. `gmail`, `google_calendar`, `jira`, `workday`,
    * `salesforce`, `confluence`: * Key: `client_id` * Value: type STRING. The client ID for the
@@ -119,6 +127,25 @@ public final class GoogleCloudDiscoveryengineV1alphaActionConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaActionConfig setServiceName(java.lang.String serviceName) {
     this.serviceName = serviceName;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to use static secrets for the connector. If true, the secrets provided in the
+   * action_params will be ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseStaticSecrets() {
+    return useStaticSecrets;
+  }
+
+  /**
+   * Optional. Whether to use static secrets for the connector. If true, the secrets provided in the
+   * action_params will be ignored.
+   * @param useStaticSecrets useStaticSecrets or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaActionConfig setUseStaticSecrets(java.lang.Boolean useStaticSecrets) {
+    this.useStaticSecrets = useStaticSecrets;
     return this;
   }
 

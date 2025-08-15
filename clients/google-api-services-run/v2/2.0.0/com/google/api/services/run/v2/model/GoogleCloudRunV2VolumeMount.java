@@ -47,6 +47,14 @@ public final class GoogleCloudRunV2VolumeMount extends com.google.api.client.jso
   private java.lang.String name;
 
   /**
+   * Optional. Path within the volume from which the container's volume should be mounted. Defaults
+   * to "" (volume's root).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subPath;
+
+  /**
    * Required. Path within the container at which the volume should be mounted. Must not contain
    * ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be `/cloudsql`. All
    * instances defined in the Volume will be available as `/cloudsql/[instance]`. For more
@@ -83,6 +91,25 @@ public final class GoogleCloudRunV2VolumeMount extends com.google.api.client.jso
    */
   public GoogleCloudRunV2VolumeMount setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Path within the volume from which the container's volume should be mounted. Defaults
+   * to "" (volume's root).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubPath() {
+    return subPath;
+  }
+
+  /**
+   * Optional. Path within the volume from which the container's volume should be mounted. Defaults
+   * to "" (volume's root).
+   * @param subPath subPath or {@code null} for none
+   */
+  public GoogleCloudRunV2VolumeMount setSubPath(java.lang.String subPath) {
+    this.subPath = subPath;
     return this;
   }
 

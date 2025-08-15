@@ -64,8 +64,8 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Immutable. List of locations that the service is available in. Rollout refers to the
-   * list to generate a rollout plan.
+   * Optional. List of locations that the service is available in. Rollout refers to the list to
+   * generate a rollout plan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,8 +185,8 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. List of locations that the service is available in. Rollout refers to the
-   * list to generate a rollout plan.
+   * Optional. List of locations that the service is available in. Rollout refers to the list to
+   * generate a rollout plan.
    * @return value or {@code null} for none
    */
   public java.util.List<Location> getLocations() {
@@ -194,8 +194,8 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. List of locations that the service is available in. Rollout refers to the
-   * list to generate a rollout plan.
+   * Optional. List of locations that the service is available in. Rollout refers to the list to
+   * generate a rollout plan.
    * @param locations locations or {@code null} for none
    */
   public Saas setLocations(java.util.List<Location> locations) {

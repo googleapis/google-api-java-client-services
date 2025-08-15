@@ -20,7 +20,7 @@ package com.google.api.services.saasservicemgmt.v1beta1;
  * Service definition for SaaSServiceManagement (v1beta1).
  *
  * <p>
- * 
+ * Model, deploy, and operate your SaaS at scale. 
  * </p>
  *
  * <p>

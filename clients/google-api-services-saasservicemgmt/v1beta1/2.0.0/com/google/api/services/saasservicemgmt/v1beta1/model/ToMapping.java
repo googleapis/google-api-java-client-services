@@ -37,7 +37,7 @@ public final class ToMapping extends com.google.api.client.json.GenericJson {
   private java.lang.String dependency;
 
   /**
-   * Optional. Tells EasySaaS if this mapping should be used during lookup or not
+   * Optional. Tells SaaS Runtime if this mapping should be used during lookup or not
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class ToMapping extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Tells EasySaaS if this mapping should be used during lookup or not
+   * Optional. Tells SaaS Runtime if this mapping should be used during lookup or not
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreForLookup() {
@@ -76,7 +76,7 @@ public final class ToMapping extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Tells EasySaaS if this mapping should be used during lookup or not
+   * Optional. Tells SaaS Runtime if this mapping should be used during lookup or not
    * @param ignoreForLookup ignoreForLookup or {@code null} for none
    */
   public ToMapping setIgnoreForLookup(java.lang.Boolean ignoreForLookup) {

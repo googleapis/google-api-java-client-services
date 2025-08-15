@@ -114,8 +114,8 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with EasySaaS. Part of the EasySaaS common data model. Immutable
-   * once set.
+   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
+   * Immutable once set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,8 +321,8 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with EasySaaS. Part of the EasySaaS common data model. Immutable
-   * once set.
+   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
+   * Immutable once set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSaas() {
@@ -331,8 +331,8 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with EasySaaS. Part of the EasySaaS common data model. Immutable
-   * once set.
+   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
+   * Immutable once set.
    * @param saas saas or {@code null} for none
    */
   public UnitKind setSaas(java.lang.String saas) {

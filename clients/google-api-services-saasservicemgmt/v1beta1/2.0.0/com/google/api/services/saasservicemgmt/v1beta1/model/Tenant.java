@@ -45,8 +45,9 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. A reference to the consumer resource this SaaS Tenant is representing. The
-   * relationship with a consumer resource can be used by EasySaaS for retrieving consumer-defined
-   * settings and policies such as maintenance policies (using Unified Maintenance Policy API).
+   * relationship with a consumer resource can be used by SaaS Runtime for retrieving consumer-
+   * defined settings and policies such as maintenance policies (using Unified Maintenance Policy
+   * API).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,7 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with EasySaaS. Part of the EasySaaS common data model.
+   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,8 +137,9 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. A reference to the consumer resource this SaaS Tenant is representing. The
-   * relationship with a consumer resource can be used by EasySaaS for retrieving consumer-defined
-   * settings and policies such as maintenance policies (using Unified Maintenance Policy API).
+   * relationship with a consumer resource can be used by SaaS Runtime for retrieving consumer-
+   * defined settings and policies such as maintenance policies (using Unified Maintenance Policy
+   * API).
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerResource() {
@@ -146,8 +148,9 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. A reference to the consumer resource this SaaS Tenant is representing. The
-   * relationship with a consumer resource can be used by EasySaaS for retrieving consumer-defined
-   * settings and policies such as maintenance policies (using Unified Maintenance Policy API).
+   * relationship with a consumer resource can be used by SaaS Runtime for retrieving consumer-
+   * defined settings and policies such as maintenance policies (using Unified Maintenance Policy
+   * API).
    * @param consumerResource consumerResource or {@code null} for none
    */
   public Tenant setConsumerResource(java.lang.String consumerResource) {
@@ -233,7 +236,7 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with EasySaaS. Part of the EasySaaS common data model.
+   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
    * @return value or {@code null} for none
    */
   public java.lang.String getSaas() {
@@ -242,7 +245,7 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with EasySaaS. Part of the EasySaaS common data model.
+   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
    * @param saas saas or {@code null} for none
    */
   public Tenant setSaas(java.lang.String saas) {

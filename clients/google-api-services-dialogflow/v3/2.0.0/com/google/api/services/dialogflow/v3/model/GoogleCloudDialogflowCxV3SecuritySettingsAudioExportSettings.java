@@ -30,7 +30,9 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Filename pattern for exported audio.
+   * Filename pattern for exported audio. {conversation} and {timestamp} are placeholders that will
+   * be replaced with the conversation ID and epoch micros of the conversation. For example,
+   * "{conversation}/recording_{timestamp}.mulaw".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +70,9 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings 
   private java.lang.Boolean storeTtsAudio;
 
   /**
-   * Filename pattern for exported audio.
+   * Filename pattern for exported audio. {conversation} and {timestamp} are placeholders that will
+   * be replaced with the conversation ID and epoch micros of the conversation. For example,
+   * "{conversation}/recording_{timestamp}.mulaw".
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioExportPattern() {
@@ -76,7 +80,9 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings 
   }
 
   /**
-   * Filename pattern for exported audio.
+   * Filename pattern for exported audio. {conversation} and {timestamp} are placeholders that will
+   * be replaced with the conversation ID and epoch micros of the conversation. For example,
+   * "{conversation}/recording_{timestamp}.mulaw".
    * @param audioExportPattern audioExportPattern or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings setAudioExportPattern(java.lang.String audioExportPattern) {

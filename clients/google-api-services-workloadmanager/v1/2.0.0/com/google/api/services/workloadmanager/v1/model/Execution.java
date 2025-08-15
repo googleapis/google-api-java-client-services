@@ -37,6 +37,13 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
+   * Optional. Engine
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String engine;
+
+  /**
    * Output only. [Output only] Evaluation ID
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   public Execution setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Optional. Engine
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEngine() {
+    return engine;
+  }
+
+  /**
+   * Optional. Engine
+   * @param engine engine or {@code null} for none
+   */
+  public Execution setEngine(java.lang.String engine) {
+    this.engine = engine;
     return this;
   }
 

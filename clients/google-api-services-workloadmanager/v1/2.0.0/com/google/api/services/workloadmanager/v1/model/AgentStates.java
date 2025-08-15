@@ -37,11 +37,39 @@ public final class AgentStates extends com.google.api.client.json.GenericJson {
   private java.lang.String availableVersion;
 
   /**
+   * Optional. HANA monitoring metrics of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceStates hanaMonitoring;
+
+  /**
    * Optional. The installed version of the agent on the host.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String installedVersion;
+
+  /**
+   * Optional. Whether the agent is fully enabled. If false, the agent is has some issues.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isFullyEnabled;
+
+  /**
+   * Optional. The Process metrics of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceStates processMetrics;
+
+  /**
+   * Optional. The System discovery metrics of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceStates systemDiscovery;
 
   /**
    * Optional. The available version of the agent in artifact registry.
@@ -61,6 +89,23 @@ public final class AgentStates extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. HANA monitoring metrics of the agent.
+   * @return value or {@code null} for none
+   */
+  public ServiceStates getHanaMonitoring() {
+    return hanaMonitoring;
+  }
+
+  /**
+   * Optional. HANA monitoring metrics of the agent.
+   * @param hanaMonitoring hanaMonitoring or {@code null} for none
+   */
+  public AgentStates setHanaMonitoring(ServiceStates hanaMonitoring) {
+    this.hanaMonitoring = hanaMonitoring;
+    return this;
+  }
+
+  /**
    * Optional. The installed version of the agent on the host.
    * @return value or {@code null} for none
    */
@@ -74,6 +119,57 @@ public final class AgentStates extends com.google.api.client.json.GenericJson {
    */
   public AgentStates setInstalledVersion(java.lang.String installedVersion) {
     this.installedVersion = installedVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the agent is fully enabled. If false, the agent is has some issues.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsFullyEnabled() {
+    return isFullyEnabled;
+  }
+
+  /**
+   * Optional. Whether the agent is fully enabled. If false, the agent is has some issues.
+   * @param isFullyEnabled isFullyEnabled or {@code null} for none
+   */
+  public AgentStates setIsFullyEnabled(java.lang.Boolean isFullyEnabled) {
+    this.isFullyEnabled = isFullyEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. The Process metrics of the agent.
+   * @return value or {@code null} for none
+   */
+  public ServiceStates getProcessMetrics() {
+    return processMetrics;
+  }
+
+  /**
+   * Optional. The Process metrics of the agent.
+   * @param processMetrics processMetrics or {@code null} for none
+   */
+  public AgentStates setProcessMetrics(ServiceStates processMetrics) {
+    this.processMetrics = processMetrics;
+    return this;
+  }
+
+  /**
+   * Optional. The System discovery metrics of the agent.
+   * @return value or {@code null} for none
+   */
+  public ServiceStates getSystemDiscovery() {
+    return systemDiscovery;
+  }
+
+  /**
+   * Optional. The System discovery metrics of the agent.
+   * @param systemDiscovery systemDiscovery or {@code null} for none
+   */
+  public AgentStates setSystemDiscovery(ServiceStates systemDiscovery) {
+    this.systemDiscovery = systemDiscovery;
     return this;
   }
 

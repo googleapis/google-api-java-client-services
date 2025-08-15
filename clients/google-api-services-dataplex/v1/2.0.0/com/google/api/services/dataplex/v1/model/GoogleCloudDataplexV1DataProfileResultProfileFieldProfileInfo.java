@@ -30,9 +30,9 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Ratio of rows with distinct values against total scanned rows. Not available for complex non-
-   * groupable field type, including RECORD, ARRAY, GEOGRAPHY, and JSON, as well as fields with
-   * REPEATABLE mode.
+   * Output only. Ratio of rows with distinct values against total scanned rows. Not available for
+   * complex non-groupable field type, including RECORD, ARRAY, GEOGRAPHY, and JSON, as well as
+   * fields with REPEATABLE mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   private GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo integerProfile;
 
   /**
-   * Ratio of rows with null value against total scanned rows.
+   * Output only. Ratio of rows with null value against total scanned rows.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,19 +67,19 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   private GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo stringProfile;
 
   /**
-   * The list of top N non-null values, frequency and ratio with which they occur in the scanned
-   * data. N is 10 or equal to the number of distinct values in the field, whichever is smaller. Not
-   * available for complex non-groupable field type, including RECORD, ARRAY, GEOGRAPHY, and JSON,
-   * as well as fields with REPEATABLE mode.
+   * Output only. The list of top N non-null values, frequency and ratio with which they occur in
+   * the scanned data. N is 10 or equal to the number of distinct values in the field, whichever is
+   * smaller. Not available for complex non-groupable field type, including RECORD, ARRAY,
+   * GEOGRAPHY, and JSON, as well as fields with REPEATABLE mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue> topNValues;
 
   /**
-   * Ratio of rows with distinct values against total scanned rows. Not available for complex non-
-   * groupable field type, including RECORD, ARRAY, GEOGRAPHY, and JSON, as well as fields with
-   * REPEATABLE mode.
+   * Output only. Ratio of rows with distinct values against total scanned rows. Not available for
+   * complex non-groupable field type, including RECORD, ARRAY, GEOGRAPHY, and JSON, as well as
+   * fields with REPEATABLE mode.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDistinctRatio() {
@@ -87,9 +87,9 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Ratio of rows with distinct values against total scanned rows. Not available for complex non-
-   * groupable field type, including RECORD, ARRAY, GEOGRAPHY, and JSON, as well as fields with
-   * REPEATABLE mode.
+   * Output only. Ratio of rows with distinct values against total scanned rows. Not available for
+   * complex non-groupable field type, including RECORD, ARRAY, GEOGRAPHY, and JSON, as well as
+   * fields with REPEATABLE mode.
    * @param distinctRatio distinctRatio or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setDistinctRatio(java.lang.Double distinctRatio) {
@@ -132,7 +132,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Ratio of rows with null value against total scanned rows.
+   * Output only. Ratio of rows with null value against total scanned rows.
    * @return value or {@code null} for none
    */
   public java.lang.Double getNullRatio() {
@@ -140,7 +140,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Ratio of rows with null value against total scanned rows.
+   * Output only. Ratio of rows with null value against total scanned rows.
    * @param nullRatio nullRatio or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setNullRatio(java.lang.Double nullRatio) {
@@ -166,10 +166,10 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The list of top N non-null values, frequency and ratio with which they occur in the scanned
-   * data. N is 10 or equal to the number of distinct values in the field, whichever is smaller. Not
-   * available for complex non-groupable field type, including RECORD, ARRAY, GEOGRAPHY, and JSON,
-   * as well as fields with REPEATABLE mode.
+   * Output only. The list of top N non-null values, frequency and ratio with which they occur in
+   * the scanned data. N is 10 or equal to the number of distinct values in the field, whichever is
+   * smaller. Not available for complex non-groupable field type, including RECORD, ARRAY,
+   * GEOGRAPHY, and JSON, as well as fields with REPEATABLE mode.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue> getTopNValues() {
@@ -177,10 +177,10 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The list of top N non-null values, frequency and ratio with which they occur in the scanned
-   * data. N is 10 or equal to the number of distinct values in the field, whichever is smaller. Not
-   * available for complex non-groupable field type, including RECORD, ARRAY, GEOGRAPHY, and JSON,
-   * as well as fields with REPEATABLE mode.
+   * Output only. The list of top N non-null values, frequency and ratio with which they occur in
+   * the scanned data. N is 10 or equal to the number of distinct values in the field, whichever is
+   * smaller. Not available for complex non-groupable field type, including RECORD, ARRAY,
+   * GEOGRAPHY, and JSON, as well as fields with REPEATABLE mode.
    * @param topNValues topNValues or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setTopNValues(java.util.List<GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue> topNValues) {

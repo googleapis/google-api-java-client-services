@@ -30,29 +30,29 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Count of the corresponding value in the scanned data.
+   * Output only. Count of the corresponding value in the scanned data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long count;
 
   /**
-   * Ratio of the corresponding value in the field against the total number of rows in the scanned
-   * data.
+   * Output only. Ratio of the corresponding value in the field against the total number of rows in
+   * the scanned data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double ratio;
 
   /**
-   * String value of a top N non-null value.
+   * Output only. String value of a top N non-null value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Count of the corresponding value in the scanned data.
+   * Output only. Count of the corresponding value in the scanned data.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -60,7 +60,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Count of the corresponding value in the scanned data.
+   * Output only. Count of the corresponding value in the scanned data.
    * @param count count or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue setCount(java.lang.Long count) {
@@ -69,8 +69,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Ratio of the corresponding value in the field against the total number of rows in the scanned
-   * data.
+   * Output only. Ratio of the corresponding value in the field against the total number of rows in
+   * the scanned data.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRatio() {
@@ -78,8 +78,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Ratio of the corresponding value in the field against the total number of rows in the scanned
-   * data.
+   * Output only. Ratio of the corresponding value in the field against the total number of rows in
+   * the scanned data.
    * @param ratio ratio or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue setRatio(java.lang.Double ratio) {
@@ -88,7 +88,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * String value of a top N non-null value.
+   * Output only. String value of a top N non-null value.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -96,7 +96,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * String value of a top N non-null value.
+   * Output only. String value of a top N non-null value.
    * @param value value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue setValue(java.lang.String value) {

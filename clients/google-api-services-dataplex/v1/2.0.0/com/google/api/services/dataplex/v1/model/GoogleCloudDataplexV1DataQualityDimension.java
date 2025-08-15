@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityDimension extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The dimension name a rule belongs to. Custom dimension name is supported with all
+   * Output only. The dimension name a rule belongs to. Custom dimension name is supported with all
    * uppercase letters and maximum length of 30 characters.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class GoogleCloudDataplexV1DataQualityDimension extends com.google.
   private java.lang.String name;
 
   /**
-   * Optional. The dimension name a rule belongs to. Custom dimension name is supported with all
+   * Output only. The dimension name a rule belongs to. Custom dimension name is supported with all
    * uppercase letters and maximum length of 30 characters.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class GoogleCloudDataplexV1DataQualityDimension extends com.google.
   }
 
   /**
-   * Optional. The dimension name a rule belongs to. Custom dimension name is supported with all
+   * Output only. The dimension name a rule belongs to. Custom dimension name is supported with all
    * uppercase letters and maximum length of 30 characters.
    * @param name name or {@code null} for none
    */

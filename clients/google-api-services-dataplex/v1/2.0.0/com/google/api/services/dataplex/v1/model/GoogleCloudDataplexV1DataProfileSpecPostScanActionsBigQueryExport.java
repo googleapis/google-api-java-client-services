@@ -31,8 +31,7 @@ public final class GoogleCloudDataplexV1DataProfileSpecPostScanActionsBigQueryEx
 
   /**
    * Optional. The BigQuery table to export DataProfileScan results to. Format:
-   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID or
-   * projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +39,7 @@ public final class GoogleCloudDataplexV1DataProfileSpecPostScanActionsBigQueryEx
 
   /**
    * Optional. The BigQuery table to export DataProfileScan results to. Format:
-   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID or
-   * projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
    * @return value or {@code null} for none
    */
   public java.lang.String getResultsTable() {
@@ -50,8 +48,7 @@ public final class GoogleCloudDataplexV1DataProfileSpecPostScanActionsBigQueryEx
 
   /**
    * Optional. The BigQuery table to export DataProfileScan results to. Format:
-   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID or
-   * projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
    * @param resultsTable resultsTable or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileSpecPostScanActionsBigQueryExport setResultsTable(java.lang.String resultsTable) {

@@ -30,30 +30,30 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileField extends com.google.api.client.json.GenericJson {
 
   /**
-   * The mode of the field. Possible values include: REQUIRED, if it is a required field. NULLABLE,
-   * if it is an optional field. REPEATED, if it is a repeated field.
+   * Output only. The mode of the field. Possible values include: REQUIRED, if it is a required
+   * field. NULLABLE, if it is an optional field. REPEATED, if it is a repeated field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mode;
 
   /**
-   * The name of the field.
+   * Output only. The name of the field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Profile information for the corresponding field.
+   * Output only. Profile information for the corresponding field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo profile;
 
   /**
-   * The data type retrieved from the schema of the data source. For instance, for a BigQuery native
-   * table, it is the BigQuery Table Schema
+   * Output only. The data type retrieved from the schema of the data source. For instance, for a
+   * BigQuery native table, it is the BigQuery Table Schema
    * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema). For a
    * Dataplex Universal Catalog Entity, it is the Entity Schema
    * (https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).
@@ -63,8 +63,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   private java.lang.String type;
 
   /**
-   * The mode of the field. Possible values include: REQUIRED, if it is a required field. NULLABLE,
-   * if it is an optional field. REPEATED, if it is a repeated field.
+   * Output only. The mode of the field. Possible values include: REQUIRED, if it is a required
+   * field. NULLABLE, if it is an optional field. REPEATED, if it is a repeated field.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -72,8 +72,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The mode of the field. Possible values include: REQUIRED, if it is a required field. NULLABLE,
-   * if it is an optional field. REPEATED, if it is a repeated field.
+   * Output only. The mode of the field. Possible values include: REQUIRED, if it is a required
+   * field. NULLABLE, if it is an optional field. REPEATED, if it is a repeated field.
    * @param mode mode or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileField setMode(java.lang.String mode) {
@@ -82,7 +82,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The name of the field.
+   * Output only. The name of the field.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -90,7 +90,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The name of the field.
+   * Output only. The name of the field.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileField setName(java.lang.String name) {
@@ -99,7 +99,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * Profile information for the corresponding field.
+   * Output only. Profile information for the corresponding field.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo getProfile() {
@@ -107,7 +107,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * Profile information for the corresponding field.
+   * Output only. Profile information for the corresponding field.
    * @param profile profile or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileField setProfile(GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo profile) {
@@ -116,8 +116,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The data type retrieved from the schema of the data source. For instance, for a BigQuery native
-   * table, it is the BigQuery Table Schema
+   * Output only. The data type retrieved from the schema of the data source. For instance, for a
+   * BigQuery native table, it is the BigQuery Table Schema
    * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema). For a
    * Dataplex Universal Catalog Entity, it is the Entity Schema
    * (https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).
@@ -128,8 +128,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The data type retrieved from the schema of the data source. For instance, for a BigQuery native
-   * table, it is the BigQuery Table Schema
+   * Output only. The data type retrieved from the schema of the data source. For instance, for a
+   * BigQuery native table, it is the BigQuery Table Schema
    * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema). For a
    * Dataplex Universal Catalog Entity, it is the Entity Schema
    * (https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).

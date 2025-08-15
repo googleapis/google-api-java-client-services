@@ -30,29 +30,29 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ScannedDataIncrementalField extends com.google.api.client.json.GenericJson {
 
   /**
-   * Value that marks the end of the range.
+   * Output only. Value that marks the end of the range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String end;
 
   /**
-   * The field that contains values which monotonically increases over time (e.g. a timestamp
-   * column).
+   * Output only. The field that contains values which monotonically increases over time (e.g. a
+   * timestamp column).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
-   * Value that marks the start of the range.
+   * Output only. Value that marks the start of the range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String start;
 
   /**
-   * Value that marks the end of the range.
+   * Output only. Value that marks the end of the range.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnd() {
@@ -60,7 +60,7 @@ public final class GoogleCloudDataplexV1ScannedDataIncrementalField extends com.
   }
 
   /**
-   * Value that marks the end of the range.
+   * Output only. Value that marks the end of the range.
    * @param end end or {@code null} for none
    */
   public GoogleCloudDataplexV1ScannedDataIncrementalField setEnd(java.lang.String end) {
@@ -69,8 +69,8 @@ public final class GoogleCloudDataplexV1ScannedDataIncrementalField extends com.
   }
 
   /**
-   * The field that contains values which monotonically increases over time (e.g. a timestamp
-   * column).
+   * Output only. The field that contains values which monotonically increases over time (e.g. a
+   * timestamp column).
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -78,8 +78,8 @@ public final class GoogleCloudDataplexV1ScannedDataIncrementalField extends com.
   }
 
   /**
-   * The field that contains values which monotonically increases over time (e.g. a timestamp
-   * column).
+   * Output only. The field that contains values which monotonically increases over time (e.g. a
+   * timestamp column).
    * @param field field or {@code null} for none
    */
   public GoogleCloudDataplexV1ScannedDataIncrementalField setField(java.lang.String field) {
@@ -88,7 +88,7 @@ public final class GoogleCloudDataplexV1ScannedDataIncrementalField extends com.
   }
 
   /**
-   * Value that marks the start of the range.
+   * Output only. Value that marks the start of the range.
    * @return value or {@code null} for none
    */
   public java.lang.String getStart() {
@@ -96,7 +96,7 @@ public final class GoogleCloudDataplexV1ScannedDataIncrementalField extends com.
   }
 
   /**
-   * Value that marks the start of the range.
+   * Output only. Value that marks the start of the range.
    * @param start start or {@code null} for none
    */
   public GoogleCloudDataplexV1ScannedDataIncrementalField setStart(java.lang.String start) {

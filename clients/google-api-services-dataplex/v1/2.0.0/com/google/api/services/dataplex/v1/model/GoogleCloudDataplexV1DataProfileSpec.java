@@ -54,9 +54,8 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
 
   /**
    * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
-   * SQL expression for a WHERE clause in GoogleSQL syntax
-   * (https://cloud.google.com/bigquery/docs/reference/standard-sql/query-
-   * syntax#where_clause).Example: col1 >= 0 AND col2 < 10
+   * SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2
+   * < 10
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,9 +127,8 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
 
   /**
    * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
-   * SQL expression for a WHERE clause in GoogleSQL syntax
-   * (https://cloud.google.com/bigquery/docs/reference/standard-sql/query-
-   * syntax#where_clause).Example: col1 >= 0 AND col2 < 10
+   * SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2
+   * < 10
    * @return value or {@code null} for none
    */
   public java.lang.String getRowFilter() {
@@ -139,9 +137,8 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
 
   /**
    * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
-   * SQL expression for a WHERE clause in GoogleSQL syntax
-   * (https://cloud.google.com/bigquery/docs/reference/standard-sql/query-
-   * syntax#where_clause).Example: col1 >= 0 AND col2 < 10
+   * SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2
+   * < 10
    * @param rowFilter rowFilter or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileSpec setRowFilter(java.lang.String rowFilter) {

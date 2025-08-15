@@ -30,49 +30,50 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Average of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Average of non-null values in the scanned data. NaN, if the field has a NaN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double average;
 
   /**
-   * Maximum of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Maximum of non-null values in the scanned data. NaN, if the field has a NaN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double max;
 
   /**
-   * Minimum of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Minimum of non-null values in the scanned data. NaN, if the field has a NaN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double min;
 
   /**
-   * A quartile divides the number of data points into four parts, or quarters, of more-or-less
-   * equal size. Three main quartiles used are: The first quartile (Q1) splits off the lowest 25% of
-   * data from the highest 75%. It is also known as the lower or 25th empirical quartile, as 25% of
-   * the data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of
-   * the data lies below this point. The third quartile (Q3) splits off the highest 25% of data from
-   * the lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies
-   * below this point. Here, the quartiles is provided as an ordered list of quartile values for the
-   * scanned data, occurring in order Q1, median, Q3.
+   * Output only. A quartile divides the number of data points into four parts, or quarters, of
+   * more-or-less equal size. Three main quartiles used are: The first quartile (Q1) splits off the
+   * lowest 25% of data from the highest 75%. It is also known as the lower or 25th empirical
+   * quartile, as 25% of the data is below this point. The second quartile (Q2) is the median of a
+   * data set. So, 50% of the data lies below this point. The third quartile (Q3) splits off the
+   * highest 25% of data from the lowest 75%. It is known as the upper or 75th empirical quartile,
+   * as 75% of the data lies below this point. Here, the quartiles is provided as an ordered list of
+   * quartile values for the scanned data, occurring in order Q1, median, Q3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Double> quartiles;
 
   /**
-   * Standard deviation of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Standard deviation of non-null values in the scanned data. NaN, if the field has a
+   * NaN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double standardDeviation;
 
   /**
-   * Average of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Average of non-null values in the scanned data. NaN, if the field has a NaN.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAverage() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Average of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Average of non-null values in the scanned data. NaN, if the field has a NaN.
    * @param average average or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setAverage(java.lang.Double average) {
@@ -89,7 +90,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Maximum of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Maximum of non-null values in the scanned data. NaN, if the field has a NaN.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMax() {
@@ -97,7 +98,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Maximum of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Maximum of non-null values in the scanned data. NaN, if the field has a NaN.
    * @param max max or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setMax(java.lang.Double max) {
@@ -106,7 +107,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Minimum of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Minimum of non-null values in the scanned data. NaN, if the field has a NaN.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMin() {
@@ -114,7 +115,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Minimum of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Minimum of non-null values in the scanned data. NaN, if the field has a NaN.
    * @param min min or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setMin(java.lang.Double min) {
@@ -123,14 +124,14 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * A quartile divides the number of data points into four parts, or quarters, of more-or-less
-   * equal size. Three main quartiles used are: The first quartile (Q1) splits off the lowest 25% of
-   * data from the highest 75%. It is also known as the lower or 25th empirical quartile, as 25% of
-   * the data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of
-   * the data lies below this point. The third quartile (Q3) splits off the highest 25% of data from
-   * the lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies
-   * below this point. Here, the quartiles is provided as an ordered list of quartile values for the
-   * scanned data, occurring in order Q1, median, Q3.
+   * Output only. A quartile divides the number of data points into four parts, or quarters, of
+   * more-or-less equal size. Three main quartiles used are: The first quartile (Q1) splits off the
+   * lowest 25% of data from the highest 75%. It is also known as the lower or 25th empirical
+   * quartile, as 25% of the data is below this point. The second quartile (Q2) is the median of a
+   * data set. So, 50% of the data lies below this point. The third quartile (Q3) splits off the
+   * highest 25% of data from the lowest 75%. It is known as the upper or 75th empirical quartile,
+   * as 75% of the data lies below this point. Here, the quartiles is provided as an ordered list of
+   * quartile values for the scanned data, occurring in order Q1, median, Q3.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Double> getQuartiles() {
@@ -138,14 +139,14 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * A quartile divides the number of data points into four parts, or quarters, of more-or-less
-   * equal size. Three main quartiles used are: The first quartile (Q1) splits off the lowest 25% of
-   * data from the highest 75%. It is also known as the lower or 25th empirical quartile, as 25% of
-   * the data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of
-   * the data lies below this point. The third quartile (Q3) splits off the highest 25% of data from
-   * the lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies
-   * below this point. Here, the quartiles is provided as an ordered list of quartile values for the
-   * scanned data, occurring in order Q1, median, Q3.
+   * Output only. A quartile divides the number of data points into four parts, or quarters, of
+   * more-or-less equal size. Three main quartiles used are: The first quartile (Q1) splits off the
+   * lowest 25% of data from the highest 75%. It is also known as the lower or 25th empirical
+   * quartile, as 25% of the data is below this point. The second quartile (Q2) is the median of a
+   * data set. So, 50% of the data lies below this point. The third quartile (Q3) splits off the
+   * highest 25% of data from the lowest 75%. It is known as the upper or 75th empirical quartile,
+   * as 75% of the data lies below this point. Here, the quartiles is provided as an ordered list of
+   * quartile values for the scanned data, occurring in order Q1, median, Q3.
    * @param quartiles quartiles or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setQuartiles(java.util.List<java.lang.Double> quartiles) {
@@ -154,7 +155,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Standard deviation of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Standard deviation of non-null values in the scanned data. NaN, if the field has a
+   * NaN.
    * @return value or {@code null} for none
    */
   public java.lang.Double getStandardDeviation() {
@@ -162,7 +164,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Standard deviation of non-null values in the scanned data. NaN, if the field has a NaN.
+   * Output only. Standard deviation of non-null values in the scanned data. NaN, if the field has a
+   * NaN.
    * @param standardDeviation standardDeviation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo setStandardDeviation(java.lang.Double standardDeviation) {

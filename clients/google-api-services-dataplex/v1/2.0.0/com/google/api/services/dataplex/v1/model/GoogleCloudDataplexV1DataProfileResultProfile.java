@@ -30,14 +30,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of fields with structural and profile information for each field.
+   * Output only. List of fields with structural and profile information for each field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDataplexV1DataProfileResultProfileField> fields;
 
   /**
-   * List of fields with structural and profile information for each field.
+   * Output only. List of fields with structural and profile information for each field.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataProfileResultProfileField> getFields() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfile extends com.goo
   }
 
   /**
-   * List of fields with structural and profile information for each field.
+   * Output only. List of fields with structural and profile information for each field.
    * @param fields fields or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfile setFields(java.util.List<GoogleCloudDataplexV1DataProfileResultProfileField> fields) {

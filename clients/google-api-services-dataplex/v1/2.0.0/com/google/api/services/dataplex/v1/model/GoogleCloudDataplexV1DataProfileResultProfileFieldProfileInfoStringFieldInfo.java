@@ -30,28 +30,28 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Average length of non-null values in the scanned data.
+   * Output only. Average length of non-null values in the scanned data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double averageLength;
 
   /**
-   * Maximum length of non-null values in the scanned data.
+   * Output only. Maximum length of non-null values in the scanned data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxLength;
 
   /**
-   * Minimum length of non-null values in the scanned data.
+   * Output only. Minimum length of non-null values in the scanned data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minLength;
 
   /**
-   * Average length of non-null values in the scanned data.
+   * Output only. Average length of non-null values in the scanned data.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAverageLength() {
@@ -59,7 +59,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Average length of non-null values in the scanned data.
+   * Output only. Average length of non-null values in the scanned data.
    * @param averageLength averageLength or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo setAverageLength(java.lang.Double averageLength) {
@@ -68,7 +68,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Maximum length of non-null values in the scanned data.
+   * Output only. Maximum length of non-null values in the scanned data.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxLength() {
@@ -76,7 +76,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Maximum length of non-null values in the scanned data.
+   * Output only. Maximum length of non-null values in the scanned data.
    * @param maxLength maxLength or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo setMaxLength(java.lang.Long maxLength) {
@@ -85,7 +85,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Minimum length of non-null values in the scanned data.
+   * Output only. Minimum length of non-null values in the scanned data.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinLength() {
@@ -93,7 +93,7 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * Minimum length of non-null values in the scanned data.
+   * Output only. Minimum length of non-null values in the scanned data.
    * @param minLength minLength or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo setMinLength(java.lang.Long minLength) {

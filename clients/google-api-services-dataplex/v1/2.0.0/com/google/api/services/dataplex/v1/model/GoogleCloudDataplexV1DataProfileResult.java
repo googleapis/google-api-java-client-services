@@ -38,21 +38,21 @@ public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api
   private GoogleCloudDataplexV1DataProfileResultPostScanActionsResult postScanActionsResult;
 
   /**
-   * The profile information per field.
+   * Output only. The profile information per field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataProfileResultProfile profile;
 
   /**
-   * The count of rows scanned.
+   * Output only. The count of rows scanned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long rowCount;
 
   /**
-   * The data scanned for this result.
+   * Output only. The data scanned for this result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api
   }
 
   /**
-   * The profile information per field.
+   * Output only. The profile information per field.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfile getProfile() {
@@ -84,7 +84,7 @@ public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api
   }
 
   /**
-   * The profile information per field.
+   * Output only. The profile information per field.
    * @param profile profile or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResult setProfile(GoogleCloudDataplexV1DataProfileResultProfile profile) {
@@ -93,7 +93,7 @@ public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api
   }
 
   /**
-   * The count of rows scanned.
+   * Output only. The count of rows scanned.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRowCount() {
@@ -101,7 +101,7 @@ public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api
   }
 
   /**
-   * The count of rows scanned.
+   * Output only. The count of rows scanned.
    * @param rowCount rowCount or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResult setRowCount(java.lang.Long rowCount) {
@@ -110,7 +110,7 @@ public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api
   }
 
   /**
-   * The data scanned for this result.
+   * Output only. The data scanned for this result.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1ScannedData getScannedData() {
@@ -118,7 +118,7 @@ public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api
   }
 
   /**
-   * The data scanned for this result.
+   * Output only. The data scanned for this result.
    * @param scannedData scannedData or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResult setScannedData(GoogleCloudDataplexV1ScannedData scannedData) {

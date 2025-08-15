@@ -60,6 +60,13 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   private java.lang.String mentionText;
 
   /**
+   * Optional. Specifies how the entity's value is obtained.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String method;
+
+  /**
    * Optional. Normalized entity value. Absent if the extracted value could not be converted or the
    * type (e.g. address) is not supported for certain parsers. This field is also only populated for
    * certain supported document types.
@@ -177,6 +184,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
    */
   public GoogleCloudDocumentaiV1beta3DocumentEntity setMentionText(java.lang.String mentionText) {
     this.mentionText = mentionText;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies how the entity's value is obtained.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMethod() {
+    return method;
+  }
+
+  /**
+   * Optional. Specifies how the entity's value is obtained.
+   * @param method method or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentEntity setMethod(java.lang.String method) {
+    this.method = method;
     return this;
   }
 

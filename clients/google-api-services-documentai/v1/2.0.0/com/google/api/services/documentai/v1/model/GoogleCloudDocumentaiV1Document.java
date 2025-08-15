@@ -146,6 +146,14 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
   private java.lang.String uri;
 
   /**
+   * The output of the validation given the document and the validation rules. The output is
+   * appended to the document in the processing order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1DocumentValidationOutput> validationOutputs;
+
+  /**
    * Document chunked based on chunking config.
    * @return value or {@code null} for none
    */
@@ -443,6 +451,25 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
    */
   public GoogleCloudDocumentaiV1Document setUri(java.lang.String uri) {
     this.uri = uri;
+    return this;
+  }
+
+  /**
+   * The output of the validation given the document and the validation rules. The output is
+   * appended to the document in the processing order.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1DocumentValidationOutput> getValidationOutputs() {
+    return validationOutputs;
+  }
+
+  /**
+   * The output of the validation given the document and the validation rules. The output is
+   * appended to the document in the processing order.
+   * @param validationOutputs validationOutputs or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1Document setValidationOutputs(java.util.List<GoogleCloudDocumentaiV1DocumentValidationOutput> validationOutputs) {
+    this.validationOutputs = validationOutputs;
     return this;
   }
 

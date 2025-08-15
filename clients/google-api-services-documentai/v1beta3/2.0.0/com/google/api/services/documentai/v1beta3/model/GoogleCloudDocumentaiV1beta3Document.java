@@ -155,6 +155,14 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   private java.lang.String uri;
 
   /**
+   * The output of the validation given the document and the validation rules. The output is
+   * appended to the document in the processing order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1beta3DocumentValidationOutput> validationOutputs;
+
+  /**
    * Optional. The blob assets in this document. This is used to store the content of the inline
    * blobs in this document, e.g. image bytes, such that it can be referenced by other fields in the
    * document via asset id.
@@ -473,6 +481,25 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
    */
   public GoogleCloudDocumentaiV1beta3Document setUri(java.lang.String uri) {
     this.uri = uri;
+    return this;
+  }
+
+  /**
+   * The output of the validation given the document and the validation rules. The output is
+   * appended to the document in the processing order.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1beta3DocumentValidationOutput> getValidationOutputs() {
+    return validationOutputs;
+  }
+
+  /**
+   * The output of the validation given the document and the validation rules. The output is
+   * appended to the document in the processing order.
+   * @param validationOutputs validationOutputs or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Document setValidationOutputs(java.util.List<GoogleCloudDocumentaiV1beta3DocumentValidationOutput> validationOutputs) {
+    this.validationOutputs = validationOutputs;
     return this;
   }
 

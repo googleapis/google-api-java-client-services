@@ -17,8 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A data source from a Google Workspace application. The data source populates available items for
- * a widget.
+ * * Only supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-
+ * ons. In a `TextInput` or `SelectionInput` widget with MULTI_SELECT type or a `DateTimePicker`,
+ * provide data source from Google.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -28,64 +29,64 @@ package com.google.api.services.chat.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class HostAppDataSourceMarkup extends com.google.api.client.json.GenericJson {
+public final class WorkflowDataSourceMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * A data source from Google Chat.
+   * Whether to include variables from the previous step in the data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ChatClientDataSourceMarkup chatDataSource;
+  private java.lang.Boolean includeVariables;
 
   /**
-   * A data source from Google Workflow.
+   * The type of data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private WorkflowDataSourceMarkup workflowDataSource;
+  private java.lang.String type;
 
   /**
-   * A data source from Google Chat.
+   * Whether to include variables from the previous step in the data source.
    * @return value or {@code null} for none
    */
-  public ChatClientDataSourceMarkup getChatDataSource() {
-    return chatDataSource;
+  public java.lang.Boolean getIncludeVariables() {
+    return includeVariables;
   }
 
   /**
-   * A data source from Google Chat.
-   * @param chatDataSource chatDataSource or {@code null} for none
+   * Whether to include variables from the previous step in the data source.
+   * @param includeVariables includeVariables or {@code null} for none
    */
-  public HostAppDataSourceMarkup setChatDataSource(ChatClientDataSourceMarkup chatDataSource) {
-    this.chatDataSource = chatDataSource;
+  public WorkflowDataSourceMarkup setIncludeVariables(java.lang.Boolean includeVariables) {
+    this.includeVariables = includeVariables;
     return this;
   }
 
   /**
-   * A data source from Google Workflow.
+   * The type of data source.
    * @return value or {@code null} for none
    */
-  public WorkflowDataSourceMarkup getWorkflowDataSource() {
-    return workflowDataSource;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * A data source from Google Workflow.
-   * @param workflowDataSource workflowDataSource or {@code null} for none
+   * The type of data source.
+   * @param type type or {@code null} for none
    */
-  public HostAppDataSourceMarkup setWorkflowDataSource(WorkflowDataSourceMarkup workflowDataSource) {
-    this.workflowDataSource = workflowDataSource;
+  public WorkflowDataSourceMarkup setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public HostAppDataSourceMarkup set(String fieldName, Object value) {
-    return (HostAppDataSourceMarkup) super.set(fieldName, value);
+  public WorkflowDataSourceMarkup set(String fieldName, Object value) {
+    return (WorkflowDataSourceMarkup) super.set(fieldName, value);
   }
 
   @Override
-  public HostAppDataSourceMarkup clone() {
-    return (HostAppDataSourceMarkup) super.clone();
+  public WorkflowDataSourceMarkup clone() {
+    return (WorkflowDataSourceMarkup) super.clone();
   }
 
 }

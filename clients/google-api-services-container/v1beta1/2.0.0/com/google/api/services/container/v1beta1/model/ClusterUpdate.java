@@ -583,7 +583,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private VerticalPodAutoscaling desiredVerticalPodAutoscaling;
 
   /**
-   * Configuration for direct-path (via ALTS) with workload identity.
+   * Configuration for direct-path (via ALTS) with workload identity. This feature is not officially
+   * supported for external customers in Kubernetes Engine when using Workload Identity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1968,7 +1969,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Configuration for direct-path (via ALTS) with workload identity.
+   * Configuration for direct-path (via ALTS) with workload identity. This feature is not officially
+   * supported for external customers in Kubernetes Engine when using Workload Identity.
    * @return value or {@code null} for none
    */
   public WorkloadALTSConfig getDesiredWorkloadAltsConfig() {
@@ -1976,7 +1978,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Configuration for direct-path (via ALTS) with workload identity.
+   * Configuration for direct-path (via ALTS) with workload identity. This feature is not officially
+   * supported for external customers in Kubernetes Engine when using Workload Identity.
    * @param desiredWorkloadAltsConfig desiredWorkloadAltsConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredWorkloadAltsConfig(WorkloadALTSConfig desiredWorkloadAltsConfig) {

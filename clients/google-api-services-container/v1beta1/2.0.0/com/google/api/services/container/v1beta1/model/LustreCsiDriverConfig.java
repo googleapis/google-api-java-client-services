@@ -31,7 +31,10 @@ package com.google.api.services.container.v1beta1.model;
 public final class LustreCsiDriverConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true, the Lustre CSI driver will install Lustre kernel modules using port 6988.
+   * If set to true, the Lustre CSI driver will install Lustre kernel modules using port 6988. This
+   * serves as a workaround for a port conflict with the gke-metadata-server. This field is required
+   * ONLY under the following conditions: 1. The GKE node version is older than 1.33.2-gke.4655000.
+   * 2. You're connecting to a Lustre instance that has the 'gke-support-enabled' flag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +48,10 @@ public final class LustreCsiDriverConfig extends com.google.api.client.json.Gene
   private java.lang.Boolean enabled;
 
   /**
-   * If set to true, the Lustre CSI driver will install Lustre kernel modules using port 6988.
+   * If set to true, the Lustre CSI driver will install Lustre kernel modules using port 6988. This
+   * serves as a workaround for a port conflict with the gke-metadata-server. This field is required
+   * ONLY under the following conditions: 1. The GKE node version is older than 1.33.2-gke.4655000.
+   * 2. You're connecting to a Lustre instance that has the 'gke-support-enabled' flag.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableLegacyLustrePort() {
@@ -53,7 +59,10 @@ public final class LustreCsiDriverConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * If set to true, the Lustre CSI driver will install Lustre kernel modules using port 6988.
+   * If set to true, the Lustre CSI driver will install Lustre kernel modules using port 6988. This
+   * serves as a workaround for a port conflict with the gke-metadata-server. This field is required
+   * ONLY under the following conditions: 1. The GKE node version is older than 1.33.2-gke.4655000.
+   * 2. You're connecting to a Lustre instance that has the 'gke-support-enabled' flag.
    * @param enableLegacyLustrePort enableLegacyLustrePort or {@code null} for none
    */
   public LustreCsiDriverConfig setEnableLegacyLustrePort(java.lang.Boolean enableLegacyLustrePort) {

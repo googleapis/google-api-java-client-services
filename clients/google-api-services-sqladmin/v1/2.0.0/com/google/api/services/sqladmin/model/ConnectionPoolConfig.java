@@ -44,6 +44,13 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   private java.util.List<ConnectionPoolFlags> flags;
 
   /**
+   * Output only. Number of connection poolers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer poolerCount;
+
+  /**
    * Whether managed connection pooling is enabled.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
    */
   public ConnectionPoolConfig setFlags(java.util.List<ConnectionPoolFlags> flags) {
     this.flags = flags;
+    return this;
+  }
+
+  /**
+   * Output only. Number of connection poolers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPoolerCount() {
+    return poolerCount;
+  }
+
+  /**
+   * Output only. Number of connection poolers.
+   * @param poolerCount poolerCount or {@code null} for none
+   */
+  public ConnectionPoolConfig setPoolerCount(java.lang.Integer poolerCount) {
+    this.poolerCount = poolerCount;
     return this;
   }
 

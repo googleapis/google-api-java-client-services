@@ -217,6 +217,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableGoogleMlIntegration;
 
   /**
+   * Optional. The final backup configuration for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FinalBackupConfig finalBackupConfig;
+
+  /**
    * Insights configuration, for now relevant only for Postgres.
    * The value may be {@code null}.
    */
@@ -762,6 +769,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setEnableGoogleMlIntegration(java.lang.Boolean enableGoogleMlIntegration) {
     this.enableGoogleMlIntegration = enableGoogleMlIntegration;
+    return this;
+  }
+
+  /**
+   * Optional. The final backup configuration for the instance.
+   * @return value or {@code null} for none
+   */
+  public FinalBackupConfig getFinalBackupConfig() {
+    return finalBackupConfig;
+  }
+
+  /**
+   * Optional. The final backup configuration for the instance.
+   * @param finalBackupConfig finalBackupConfig or {@code null} for none
+   */
+  public Settings setFinalBackupConfig(FinalBackupConfig finalBackupConfig) {
+    this.finalBackupConfig = finalBackupConfig;
     return this;
   }
 

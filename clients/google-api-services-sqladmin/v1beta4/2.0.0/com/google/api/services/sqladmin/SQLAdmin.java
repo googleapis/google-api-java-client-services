@@ -4436,6 +4436,143 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Execute SQL statements.
+     *
+     * Create a request for the method "instances.executeSql".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link ExecuteSql#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Database instance ID. This does not include the project ID.
+     * @param content the {@link com.google.api.services.sqladmin.model.ExecuteSqlPayload}
+     * @return the request
+     */
+    public ExecuteSql executeSql(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.ExecuteSqlPayload content) throws java.io.IOException {
+      ExecuteSql result = new ExecuteSql(project, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ExecuteSql extends SQLAdminRequest<com.google.api.services.sqladmin.model.SqlInstancesExecuteSqlResponse> {
+
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/executeSql";
+
+      /**
+       * Execute SQL statements.
+       *
+       * Create a request for the method "instances.executeSql".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link ExecuteSql#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * ExecuteSql#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Database instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.ExecuteSqlPayload}
+       * @since 1.13
+       */
+      protected ExecuteSql(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.ExecuteSqlPayload content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.SqlInstancesExecuteSqlResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public ExecuteSql set$Xgafv(java.lang.String $Xgafv) {
+        return (ExecuteSql) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ExecuteSql setAccessToken(java.lang.String accessToken) {
+        return (ExecuteSql) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ExecuteSql setAlt(java.lang.String alt) {
+        return (ExecuteSql) super.setAlt(alt);
+      }
+
+      @Override
+      public ExecuteSql setCallback(java.lang.String callback) {
+        return (ExecuteSql) super.setCallback(callback);
+      }
+
+      @Override
+      public ExecuteSql setFields(java.lang.String fields) {
+        return (ExecuteSql) super.setFields(fields);
+      }
+
+      @Override
+      public ExecuteSql setKey(java.lang.String key) {
+        return (ExecuteSql) super.setKey(key);
+      }
+
+      @Override
+      public ExecuteSql setOauthToken(java.lang.String oauthToken) {
+        return (ExecuteSql) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ExecuteSql setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ExecuteSql) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ExecuteSql setQuotaUser(java.lang.String quotaUser) {
+        return (ExecuteSql) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ExecuteSql setUploadType(java.lang.String uploadType) {
+        return (ExecuteSql) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ExecuteSql setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ExecuteSql) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public ExecuteSql setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Database instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Database instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Database instance ID. This does not include the project ID. */
+      public ExecuteSql setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public ExecuteSql set(String parameterName, Object value) {
+        return (ExecuteSql) super.set(parameterName, value);
+      }
+    }
+    /**
      * Exports data from a Cloud SQL instance to a Cloud Storage bucket as a SQL dump or CSV file.
      *
      * Create a request for the method "instances.export".
@@ -8271,6 +8408,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         /** Cloud SQL instance ID. This does not include the project ID. */
         public GetLatestRecoveryTime setInstance(java.lang.String instance) {
           this.instance = instance;
+          return this;
+        }
+
+        /**
+         * The timestamp used to identify the time when the source instance is deleted. If this
+         * instance is deleted, then you must set the timestamp.
+         */
+        @com.google.api.client.util.Key
+        private String sourceInstanceDeletionTime;
+
+        /** The timestamp used to identify the time when the source instance is deleted. If this instance is
+       deleted, then you must set the timestamp.
+         */
+        public String getSourceInstanceDeletionTime() {
+          return sourceInstanceDeletionTime;
+        }
+
+        /**
+         * The timestamp used to identify the time when the source instance is deleted. If this
+         * instance is deleted, then you must set the timestamp.
+         */
+        public GetLatestRecoveryTime setSourceInstanceDeletionTime(String sourceInstanceDeletionTime) {
+          this.sourceInstanceDeletionTime = sourceInstanceDeletionTime;
           return this;
         }
 

@@ -55,6 +55,15 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
   private RestoreBackupContext restoreBackupContext;
 
   /**
+   * Optional. This field has the same purpose as restore_instance_settings, changes any instance
+   * settings stored in the backup you are restoring from. With the difference that these fields are
+   * cleared in the settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> restoreInstanceClearOverridesFieldNames;
+
+  /**
    * Optional. By using this parameter, Cloud SQL overrides any instance settings stored in the
    * backup you are restoring from. You can't change the instance's major database version and you
    * can only increase the disk size. You can use this field to restore new instances only. This
@@ -120,6 +129,27 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
    */
   public InstancesRestoreBackupRequest setRestoreBackupContext(RestoreBackupContext restoreBackupContext) {
     this.restoreBackupContext = restoreBackupContext;
+    return this;
+  }
+
+  /**
+   * Optional. This field has the same purpose as restore_instance_settings, changes any instance
+   * settings stored in the backup you are restoring from. With the difference that these fields are
+   * cleared in the settings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRestoreInstanceClearOverridesFieldNames() {
+    return restoreInstanceClearOverridesFieldNames;
+  }
+
+  /**
+   * Optional. This field has the same purpose as restore_instance_settings, changes any instance
+   * settings stored in the backup you are restoring from. With the difference that these fields are
+   * cleared in the settings.
+   * @param restoreInstanceClearOverridesFieldNames restoreInstanceClearOverridesFieldNames or {@code null} for none
+   */
+  public InstancesRestoreBackupRequest setRestoreInstanceClearOverridesFieldNames(java.util.List<java.lang.String> restoreInstanceClearOverridesFieldNames) {
+    this.restoreInstanceClearOverridesFieldNames = restoreInstanceClearOverridesFieldNames;
     return this;
   }
 

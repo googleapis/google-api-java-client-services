@@ -46,13 +46,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String backendType;
 
   /**
-   * Clears private network settings when the instance is restored.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean clearNetwork;
-
-  /**
    * Connection name of the Cloud SQL instance used in connection strings.
    * The value may be {@code null}.
    */
@@ -464,23 +457,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setBackendType(java.lang.String backendType) {
     this.backendType = backendType;
-    return this;
-  }
-
-  /**
-   * Clears private network settings when the instance is restored.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getClearNetwork() {
-    return clearNetwork;
-  }
-
-  /**
-   * Clears private network settings when the instance is restored.
-   * @param clearNetwork clearNetwork or {@code null} for none
-   */
-  public DatabaseInstance setClearNetwork(java.lang.Boolean clearNetwork) {
-    this.clearNetwork = clearNetwork;
     return this;
   }
 

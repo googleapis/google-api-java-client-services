@@ -30,6 +30,21 @@ package com.google.api.services.sqladmin.model;
 public final class SqlActiveDirectoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The secret manager key storing the administrator credential. (e.g.,
+   * projects/{project}/secrets/{secret}).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adminCredentialSecretName;
+
+  /**
+   * Optional. Domain controller IPv4 addresses used to bootstrap Active Directory.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> dnsServers;
+
+  /**
    * The name of the domain (e.g., mydomain.com).
    * The value may be {@code null}.
    */
@@ -42,6 +57,57 @@ public final class SqlActiveDirectoryConfig extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Optional. The mode of the Active Directory configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
+   * Optional. The organizational unit distinguished name. This is the full hierarchical path to the
+   * organizational unit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String organizationalUnit;
+
+  /**
+   * Optional. The secret manager key storing the administrator credential. (e.g.,
+   * projects/{project}/secrets/{secret}).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdminCredentialSecretName() {
+    return adminCredentialSecretName;
+  }
+
+  /**
+   * Optional. The secret manager key storing the administrator credential. (e.g.,
+   * projects/{project}/secrets/{secret}).
+   * @param adminCredentialSecretName adminCredentialSecretName or {@code null} for none
+   */
+  public SqlActiveDirectoryConfig setAdminCredentialSecretName(java.lang.String adminCredentialSecretName) {
+    this.adminCredentialSecretName = adminCredentialSecretName;
+    return this;
+  }
+
+  /**
+   * Optional. Domain controller IPv4 addresses used to bootstrap Active Directory.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDnsServers() {
+    return dnsServers;
+  }
+
+  /**
+   * Optional. Domain controller IPv4 addresses used to bootstrap Active Directory.
+   * @param dnsServers dnsServers or {@code null} for none
+   */
+  public SqlActiveDirectoryConfig setDnsServers(java.util.List<java.lang.String> dnsServers) {
+    this.dnsServers = dnsServers;
+    return this;
+  }
 
   /**
    * The name of the domain (e.g., mydomain.com).
@@ -74,6 +140,42 @@ public final class SqlActiveDirectoryConfig extends com.google.api.client.json.G
    */
   public SqlActiveDirectoryConfig setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Optional. The mode of the Active Directory configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Optional. The mode of the Active Directory configuration.
+   * @param mode mode or {@code null} for none
+   */
+  public SqlActiveDirectoryConfig setMode(java.lang.String mode) {
+    this.mode = mode;
+    return this;
+  }
+
+  /**
+   * Optional. The organizational unit distinguished name. This is the full hierarchical path to the
+   * organizational unit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrganizationalUnit() {
+    return organizationalUnit;
+  }
+
+  /**
+   * Optional. The organizational unit distinguished name. This is the full hierarchical path to the
+   * organizational unit.
+   * @param organizationalUnit organizationalUnit or {@code null} for none
+   */
+  public SqlActiveDirectoryConfig setOrganizationalUnit(java.lang.String organizationalUnit) {
+    this.organizationalUnit = organizationalUnit;
     return this;
   }
 

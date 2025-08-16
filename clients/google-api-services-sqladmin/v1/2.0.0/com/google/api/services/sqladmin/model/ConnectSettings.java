@@ -87,6 +87,16 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
+   * Optional. Output only. mdx_protocol_support controls how the client uses metadata exchange when
+   * connecting to the instance. The values in the list representing parts of the MDX protocol that
+   * are supported by this instance. When the list is empty, the instance does not support MDX, so
+   * the client must not send an MDX request. The default is empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> mdxProtocolSupport;
+
+  /**
    * The number of read pool nodes in a read pool.
    * The value may be {@code null}.
    */
@@ -267,6 +277,29 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
    */
   public ConnectSettings setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. mdx_protocol_support controls how the client uses metadata exchange when
+   * connecting to the instance. The values in the list representing parts of the MDX protocol that
+   * are supported by this instance. When the list is empty, the instance does not support MDX, so
+   * the client must not send an MDX request. The default is empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMdxProtocolSupport() {
+    return mdxProtocolSupport;
+  }
+
+  /**
+   * Optional. Output only. mdx_protocol_support controls how the client uses metadata exchange when
+   * connecting to the instance. The values in the list representing parts of the MDX protocol that
+   * are supported by this instance. When the list is empty, the instance does not support MDX, so
+   * the client must not send an MDX request. The default is empty.
+   * @param mdxProtocolSupport mdxProtocolSupport or {@code null} for none
+   */
+  public ConnectSettings setMdxProtocolSupport(java.util.List<java.lang.String> mdxProtocolSupport) {
+    this.mdxProtocolSupport = mdxProtocolSupport;
     return this;
   }
 

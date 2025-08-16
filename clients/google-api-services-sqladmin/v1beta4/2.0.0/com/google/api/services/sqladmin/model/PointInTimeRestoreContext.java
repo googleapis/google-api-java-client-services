@@ -36,7 +36,7 @@ public final class PointInTimeRestoreContext extends com.google.api.client.json.
    * address for the cloned instance in the allocated range. This range must comply with [RFC
    * 1035](https://tools.ietf.org/html/rfc1035) standards. Specifically, the name must be 1-63
    * characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. Reserved for
-   * future use. http://go/speckle-subnet-picker-clone
+   * future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class PointInTimeRestoreContext extends com.google.api.client.json.
    * address for the cloned instance in the allocated range. This range must comply with [RFC
    * 1035](https://tools.ietf.org/html/rfc1035) standards. Specifically, the name must be 1-63
    * characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. Reserved for
-   * future use. http://go/speckle-subnet-picker-clone
+   * future use.
    * @return value or {@code null} for none
    */
   public java.lang.String getAllocatedIpRange() {
@@ -108,7 +108,7 @@ public final class PointInTimeRestoreContext extends com.google.api.client.json.
    * address for the cloned instance in the allocated range. This range must comply with [RFC
    * 1035](https://tools.ietf.org/html/rfc1035) standards. Specifically, the name must be 1-63
    * characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. Reserved for
-   * future use. http://go/speckle-subnet-picker-clone
+   * future use.
    * @param allocatedIpRange allocatedIpRange or {@code null} for none
    */
   public PointInTimeRestoreContext setAllocatedIpRange(java.lang.String allocatedIpRange) {

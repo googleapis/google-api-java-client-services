@@ -46,6 +46,15 @@ public final class SqlInstancesStartExternalSyncRequest extends com.google.api.c
   private MySqlSyncConfig mysqlSyncConfig;
 
   /**
+   * Optional. MySQL only. True if end-user has confirmed that this SES call will wipe replica
+   * databases overlapping with the proposed selected_objects. If this field is not set and there
+   * are both overlapping and additional databases proposed, an error will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean replicaOverwriteEnabled;
+
+  /**
    * Whether to skip the verification step (VESS).
    * The value may be {@code null}.
    */
@@ -101,6 +110,27 @@ public final class SqlInstancesStartExternalSyncRequest extends com.google.api.c
    */
   public SqlInstancesStartExternalSyncRequest setMysqlSyncConfig(MySqlSyncConfig mysqlSyncConfig) {
     this.mysqlSyncConfig = mysqlSyncConfig;
+    return this;
+  }
+
+  /**
+   * Optional. MySQL only. True if end-user has confirmed that this SES call will wipe replica
+   * databases overlapping with the proposed selected_objects. If this field is not set and there
+   * are both overlapping and additional databases proposed, an error will be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReplicaOverwriteEnabled() {
+    return replicaOverwriteEnabled;
+  }
+
+  /**
+   * Optional. MySQL only. True if end-user has confirmed that this SES call will wipe replica
+   * databases overlapping with the proposed selected_objects. If this field is not set and there
+   * are both overlapping and additional databases proposed, an error will be returned.
+   * @param replicaOverwriteEnabled replicaOverwriteEnabled or {@code null} for none
+   */
+  public SqlInstancesStartExternalSyncRequest setReplicaOverwriteEnabled(java.lang.Boolean replicaOverwriteEnabled) {
+    this.replicaOverwriteEnabled = replicaOverwriteEnabled;
     return this;
   }
 

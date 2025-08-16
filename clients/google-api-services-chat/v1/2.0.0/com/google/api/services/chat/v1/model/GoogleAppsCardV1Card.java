@@ -73,6 +73,14 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private java.lang.String displayStyle;
 
   /**
+   * The expression data for the card. Only supported by Google Workspace Workflow, but not Google
+   * Chat apps or Google Workspace add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAppsCardV1ExpressionData> expressionData;
+
+  /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
    * `primaryButton` or a `secondaryButton` causes an error. For Chat apps, you can use fixed
    * footers in [dialogs](https://developers.google.com/workspace/chat/dialogs), but not [card
@@ -170,6 +178,25 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
    */
   public GoogleAppsCardV1Card setDisplayStyle(java.lang.String displayStyle) {
     this.displayStyle = displayStyle;
+    return this;
+  }
+
+  /**
+   * The expression data for the card. Only supported by Google Workspace Workflow, but not Google
+   * Chat apps or Google Workspace add-ons.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAppsCardV1ExpressionData> getExpressionData() {
+    return expressionData;
+  }
+
+  /**
+   * The expression data for the card. Only supported by Google Workspace Workflow, but not Google
+   * Chat apps or Google Workspace add-ons.
+   * @param expressionData expressionData or {@code null} for none
+   */
+  public GoogleAppsCardV1Card setExpressionData(java.util.List<GoogleAppsCardV1ExpressionData> expressionData) {
+    this.expressionData = expressionData;
     return this;
   }
 

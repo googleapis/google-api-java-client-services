@@ -38,8 +38,10 @@ public final class SubscriptionUpgradeDowngradeDetails extends com.google.api.cl
   private java.lang.String billingCycleSpec;
 
   /**
-   * Required. The previous subscription id to be replaced. This is not the full resource name, use
-   * the subscription_id segment only.
+   * Required. The previous subscription id to be replaced. The format can be one of the following:
+   * 1. `subscription_id`: the old subscription id under the same partner_id. 2.
+   * `partners/{partner_id}/subscriptions/{subscription_id}`. A different partner_id is allowed. But
+   * they must be under the same partner group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +65,10 @@ public final class SubscriptionUpgradeDowngradeDetails extends com.google.api.cl
   }
 
   /**
-   * Required. The previous subscription id to be replaced. This is not the full resource name, use
-   * the subscription_id segment only.
+   * Required. The previous subscription id to be replaced. The format can be one of the following:
+   * 1. `subscription_id`: the old subscription id under the same partner_id. 2.
+   * `partners/{partner_id}/subscriptions/{subscription_id}`. A different partner_id is allowed. But
+   * they must be under the same partner group.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreviousSubscriptionId() {
@@ -72,8 +76,10 @@ public final class SubscriptionUpgradeDowngradeDetails extends com.google.api.cl
   }
 
   /**
-   * Required. The previous subscription id to be replaced. This is not the full resource name, use
-   * the subscription_id segment only.
+   * Required. The previous subscription id to be replaced. The format can be one of the following:
+   * 1. `subscription_id`: the old subscription id under the same partner_id. 2.
+   * `partners/{partner_id}/subscriptions/{subscription_id}`. A different partner_id is allowed. But
+   * they must be under the same partner group.
    * @param previousSubscriptionId previousSubscriptionId or {@code null} for none
    */
   public SubscriptionUpgradeDowngradeDetails setPreviousSubscriptionId(java.lang.String previousSubscriptionId) {

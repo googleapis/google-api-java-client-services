@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-netapp</artifactId>
-  <version>v1beta1-rev20250811-2.0.0</version>
-  <name>NetApp API v1beta1-rev20250811-2.0.0</name>
+  <version>v1beta1-rev20250813-2.0.0</version>
+  <name>NetApp API v1beta1-rev20250813-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

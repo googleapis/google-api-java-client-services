@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Message describing Endpoint object
+ * Message describing Endpoint object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -55,7 +55,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.lang.String billingProjectId;
 
   /**
-   * Output only. Create time stamp
+   * Output only. Create time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. Identifier. name of resource
+   * Immutable. Identifier. Name of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +177,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Create time stamp
+   * Output only. Create time stamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -185,7 +185,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Create time stamp
+   * Output only. Create time stamp.
    * @param createTime createTime or {@code null} for none
    */
   public FirewallEndpoint setCreateTime(String createTime) {
@@ -228,7 +228,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. Identifier. name of resource
+   * Immutable. Identifier. Name of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -236,7 +236,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. Identifier. name of resource
+   * Immutable. Identifier. Name of resource.
    * @param name name or {@code null} for none
    */
   public FirewallEndpoint setName(java.lang.String name) {

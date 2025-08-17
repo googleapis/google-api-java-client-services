@@ -51,7 +51,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.Long capacityGib;
 
   /**
-   * Output only. Size of the volume cold tier data in GiB.
+   * Output only. Size of the volume cold tier data rounded down to the nearest GiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -367,7 +367,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Size of the volume cold tier data in GiB.
+   * Output only. Size of the volume cold tier data rounded down to the nearest GiB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getColdTierSizeGib() {
@@ -375,7 +375,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Size of the volume cold tier data in GiB.
+   * Output only. Size of the volume cold tier data rounded down to the nearest GiB.
    * @param coldTierSizeGib coldTierSizeGib or {@code null} for none
    */
   public Volume setColdTierSizeGib(java.lang.Long coldTierSizeGib) {

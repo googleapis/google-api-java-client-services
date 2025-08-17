@@ -3028,6 +3028,347 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
 
           }
         }
+        /**
+         * An accessor for creating requests from the Tools collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Connectors connectors = new Connectors(...);}
+         *   {@code Connectors.Tools.List request = connectors.tools().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Tools tools() {
+          return new Tools();
+        }
+
+        /**
+         * The "tools" collection of methods.
+         */
+        public class Tools {
+
+          /**
+           * Executes a specific tool.
+           *
+           * Create a request for the method "tools.execute".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Execute#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the Tool. Format:
+           *        projects/{project}/locations/{location}/connections/{connection}/tools/{tool}
+           * @param content the {@link com.google.api.services.connectors.v2.model.ExecuteToolRequest}
+           * @return the request
+           */
+          public Execute execute(java.lang.String name, com.google.api.services.connectors.v2.model.ExecuteToolRequest content) throws java.io.IOException {
+            Execute result = new Execute(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Execute extends ConnectorsRequest<com.google.api.services.connectors.v2.model.ExecuteToolResponse> {
+
+            private static final String REST_PATH = "v2/{+name}:execute";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/tools/[^/]+$");
+
+            /**
+             * Executes a specific tool.
+             *
+             * Create a request for the method "tools.execute".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Execute#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Execute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the Tool. Format:
+           *        projects/{project}/locations/{location}/connections/{connection}/tools/{tool}
+             * @param content the {@link com.google.api.services.connectors.v2.model.ExecuteToolRequest}
+             * @since 1.13
+             */
+            protected Execute(java.lang.String name, com.google.api.services.connectors.v2.model.ExecuteToolRequest content) {
+              super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v2.model.ExecuteToolResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/tools/[^/]+$");
+              }
+            }
+
+            @Override
+            public Execute set$Xgafv(java.lang.String $Xgafv) {
+              return (Execute) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Execute setAccessToken(java.lang.String accessToken) {
+              return (Execute) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Execute setAlt(java.lang.String alt) {
+              return (Execute) super.setAlt(alt);
+            }
+
+            @Override
+            public Execute setCallback(java.lang.String callback) {
+              return (Execute) super.setCallback(callback);
+            }
+
+            @Override
+            public Execute setFields(java.lang.String fields) {
+              return (Execute) super.setFields(fields);
+            }
+
+            @Override
+            public Execute setKey(java.lang.String key) {
+              return (Execute) super.setKey(key);
+            }
+
+            @Override
+            public Execute setOauthToken(java.lang.String oauthToken) {
+              return (Execute) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Execute setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Execute) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Execute setQuotaUser(java.lang.String quotaUser) {
+              return (Execute) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Execute setUploadType(java.lang.String uploadType) {
+              return (Execute) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Execute setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Execute) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the Tool. Format:
+             * projects/{project}/locations/{location}/connections/{connection}/tools/{tool}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the Tool. Format:
+           projects/{project}/locations/{location}/connections/{connection}/tools/{tool}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the Tool. Format:
+             * projects/{project}/locations/{location}/connections/{connection}/tools/{tool}
+             */
+            public Execute setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/tools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Execute set(String parameterName, Object value) {
+              return (Execute) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all available tools.
+           *
+           * Create a request for the method "tools.list".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Resource name of the Connection. Format:
+           *        projects/{project}/locations/{location}/connections/{connection}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ConnectorsRequest<com.google.api.services.connectors.v2.model.ListToolsResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/tools";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+            /**
+             * Lists all available tools.
+             *
+             * Create a request for the method "tools.list".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Resource name of the Connection. Format:
+           *        projects/{project}/locations/{location}/connections/{connection}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v2.model.ListToolsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the Connection. Format:
+             * projects/{project}/locations/{location}/connections/{connection}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Resource name of the Connection. Format:
+           projects/{project}/locations/{location}/connections/{connection}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Resource name of the Connection. Format:
+             * projects/{project}/locations/{location}/connections/{connection}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Page size. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Page size. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
   }

@@ -104,6 +104,20 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   private GoogleAppsCardV1Divider divider;
 
   /**
+   * Specifies the event actions that can be performed on the widget. Only supported by Google
+   * Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAppsCardV1EventAction> eventActions;
+
+  static {
+    // hack to force ProGuard to consider GoogleAppsCardV1EventAction used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAppsCardV1EventAction.class);
+  }
+
+  /**
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
@@ -125,6 +139,15 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String horizontalAlignment;
+
+  /**
+   * A unique ID assigned to the widget that's used to identify the widget to be mutated. The ID has
+   * a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+` and. Only
+   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
 
   /**
    * Displays an image. For example, the following JSON creates an image with alternative text: ```
@@ -170,6 +193,14 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1TextParagraph textParagraph;
+
+  /**
+   * Specifies whether the widget is visible or hidden. The default value is `VISIBLE`. Only
+   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String visibility;
 
   /**
    * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
@@ -339,6 +370,25 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
+   * Specifies the event actions that can be performed on the widget. Only supported by Google
+   * Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAppsCardV1EventAction> getEventActions() {
+    return eventActions;
+  }
+
+  /**
+   * Specifies the event actions that can be performed on the widget. Only supported by Google
+   * Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * @param eventActions eventActions or {@code null} for none
+   */
+  public GoogleAppsCardV1Widget setEventActions(java.util.List<GoogleAppsCardV1EventAction> eventActions) {
+    this.eventActions = eventActions;
+    return this;
+  }
+
+  /**
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
@@ -387,6 +437,27 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    */
   public GoogleAppsCardV1Widget setHorizontalAlignment(java.lang.String horizontalAlignment) {
     this.horizontalAlignment = horizontalAlignment;
+    return this;
+  }
+
+  /**
+   * A unique ID assigned to the widget that's used to identify the widget to be mutated. The ID has
+   * a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+` and. Only
+   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * A unique ID assigned to the widget that's used to identify the widget to be mutated. The ID has
+   * a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+` and. Only
+   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * @param id id or {@code null} for none
+   */
+  public GoogleAppsCardV1Widget setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 
@@ -489,6 +560,25 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    */
   public GoogleAppsCardV1Widget setTextParagraph(GoogleAppsCardV1TextParagraph textParagraph) {
     this.textParagraph = textParagraph;
+    return this;
+  }
+
+  /**
+   * Specifies whether the widget is visible or hidden. The default value is `VISIBLE`. Only
+   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVisibility() {
+    return visibility;
+  }
+
+  /**
+   * Specifies whether the widget is visible or hidden. The default value is `VISIBLE`. Only
+   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * @param visibility visibility or {@code null} for none
+   */
+  public GoogleAppsCardV1Widget setVisibility(java.lang.String visibility) {
+    this.visibility = visibility;
     return this;
   }
 

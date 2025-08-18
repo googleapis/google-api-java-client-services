@@ -59,6 +59,15 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   private java.lang.String hintText;
 
   /**
+   * A data source that's unique to a Google Workspace host application, such as Gmail emails,
+   * Google Calendar events, or Google Chat messages. Only supported by Google Workspace Workflow,
+   * but not Google Chat apps or Google Workspace add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HostAppDataSourceMarkup hostAppDataSource;
+
+  /**
    * Suggested values that users can enter. These values appear when users click inside the text
    * input field. As users type, the suggested values dynamically filter to match what the users
    * have typed. For example, a text input field for programming language might suggest Java,
@@ -176,6 +185,27 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    */
   public GoogleAppsCardV1TextInput setHintText(java.lang.String hintText) {
     this.hintText = hintText;
+    return this;
+  }
+
+  /**
+   * A data source that's unique to a Google Workspace host application, such as Gmail emails,
+   * Google Calendar events, or Google Chat messages. Only supported by Google Workspace Workflow,
+   * but not Google Chat apps or Google Workspace add-ons.
+   * @return value or {@code null} for none
+   */
+  public HostAppDataSourceMarkup getHostAppDataSource() {
+    return hostAppDataSource;
+  }
+
+  /**
+   * A data source that's unique to a Google Workspace host application, such as Gmail emails,
+   * Google Calendar events, or Google Chat messages. Only supported by Google Workspace Workflow,
+   * but not Google Chat apps or Google Workspace add-ons.
+   * @param hostAppDataSource hostAppDataSource or {@code null} for none
+   */
+  public GoogleAppsCardV1TextInput setHostAppDataSource(HostAppDataSourceMarkup hostAppDataSource) {
+    this.hostAppDataSource = hostAppDataSource;
     return this;
   }
 

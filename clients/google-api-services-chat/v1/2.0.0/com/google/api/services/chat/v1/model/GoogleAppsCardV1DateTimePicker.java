@@ -38,6 +38,15 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.json.GenericJson {
 
   /**
+   * A data source that's unique to a Google Workspace host application, such as Gmail emails,
+   * Google Calendar events, or Google Chat messages. Only supported by Google Workspace Workflows,
+   * but not Google Chat API or Google Workspace Add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HostAppDataSourceMarkup hostAppDataSource;
+
+  /**
    * The text that prompts users to input a date, a time, or a date and time. For example, if users
    * are scheduling an appointment, use a label such as `Appointment date` or `Appointment date and
    * time`.
@@ -89,6 +98,27 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long valueMsEpoch;
+
+  /**
+   * A data source that's unique to a Google Workspace host application, such as Gmail emails,
+   * Google Calendar events, or Google Chat messages. Only supported by Google Workspace Workflows,
+   * but not Google Chat API or Google Workspace Add-ons.
+   * @return value or {@code null} for none
+   */
+  public HostAppDataSourceMarkup getHostAppDataSource() {
+    return hostAppDataSource;
+  }
+
+  /**
+   * A data source that's unique to a Google Workspace host application, such as Gmail emails,
+   * Google Calendar events, or Google Chat messages. Only supported by Google Workspace Workflows,
+   * but not Google Chat API or Google Workspace Add-ons.
+   * @param hostAppDataSource hostAppDataSource or {@code null} for none
+   */
+  public GoogleAppsCardV1DateTimePicker setHostAppDataSource(HostAppDataSourceMarkup hostAppDataSource) {
+    this.hostAppDataSource = hostAppDataSource;
+    return this;
+  }
 
   /**
    * The text that prompts users to input a date, a time, or a date and time. For example, if users

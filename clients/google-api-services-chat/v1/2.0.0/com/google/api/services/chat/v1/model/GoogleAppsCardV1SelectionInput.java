@@ -40,6 +40,23 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The data source configs for the selection control. This field provides more fine-
+   * grained control over the data source. If specified, the `multi_select_max_selected_items`
+   * field, `multi_select_min_query_length` field, `external_data_source` field and
+   * `platform_data_source` field are ignored. Only supported by Google Workspace Workflow, but not
+   * Google Chat apps or Google Workspace add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAppsCardV1DataSourceConfig> dataSourceConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleAppsCardV1DataSourceConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAppsCardV1DataSourceConfig.class);
+  }
+
+  /**
    * An external data source, such as a relational database.
    * The value may be {@code null}.
    */
@@ -126,6 +143,31 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. The data source configs for the selection control. This field provides more fine-
+   * grained control over the data source. If specified, the `multi_select_max_selected_items`
+   * field, `multi_select_min_query_length` field, `external_data_source` field and
+   * `platform_data_source` field are ignored. Only supported by Google Workspace Workflow, but not
+   * Google Chat apps or Google Workspace add-ons.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAppsCardV1DataSourceConfig> getDataSourceConfigs() {
+    return dataSourceConfigs;
+  }
+
+  /**
+   * Optional. The data source configs for the selection control. This field provides more fine-
+   * grained control over the data source. If specified, the `multi_select_max_selected_items`
+   * field, `multi_select_min_query_length` field, `external_data_source` field and
+   * `platform_data_source` field are ignored. Only supported by Google Workspace Workflow, but not
+   * Google Chat apps or Google Workspace add-ons.
+   * @param dataSourceConfigs dataSourceConfigs or {@code null} for none
+   */
+  public GoogleAppsCardV1SelectionInput setDataSourceConfigs(java.util.List<GoogleAppsCardV1DataSourceConfig> dataSourceConfigs) {
+    this.dataSourceConfigs = dataSourceConfigs;
+    return this;
+  }
 
   /**
    * An external data source, such as a relational database.

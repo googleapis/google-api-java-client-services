@@ -61,6 +61,15 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   private java.lang.String header;
 
   /**
+   * A unique ID assigned to the section that's used to identify the section to be mutated. The ID
+   * has a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+`. Only
+   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * The number of uncollapsible widgets which remain visible even when a section is collapsed. For
    * example, when a section contains five widgets and the `uncollapsibleWidgetsCount` is set to
    * `2`, the first two widgets are always shown and the last three are collapsed by default. The
@@ -141,6 +150,27 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
    */
   public GoogleAppsCardV1Section setHeader(java.lang.String header) {
     this.header = header;
+    return this;
+  }
+
+  /**
+   * A unique ID assigned to the section that's used to identify the section to be mutated. The ID
+   * has a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+`. Only
+   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * A unique ID assigned to the section that's used to identify the section to be mutated. The ID
+   * has a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+`. Only
+   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * @param id id or {@code null} for none
+   */
+  public GoogleAppsCardV1Section setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 

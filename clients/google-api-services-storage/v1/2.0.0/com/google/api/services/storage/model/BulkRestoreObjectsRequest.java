@@ -51,6 +51,20 @@ public final class BulkRestoreObjectsRequest extends com.google.api.client.json.
   private java.lang.Boolean copySourceAcl;
 
   /**
+   * Restores only the objects that were created after this time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime createdAfterTime;
+
+  /**
+   * Restores only the objects that were created before this time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime createdBeforeTime;
+
+  /**
    * Restores only the objects matching any of the specified glob(s). If this parameter is not
    * specified, all objects will be restored within the specified time range.
    * The value may be {@code null}.
@@ -115,6 +129,40 @@ public final class BulkRestoreObjectsRequest extends com.google.api.client.json.
    */
   public BulkRestoreObjectsRequest setCopySourceAcl(java.lang.Boolean copySourceAcl) {
     this.copySourceAcl = copySourceAcl;
+    return this;
+  }
+
+  /**
+   * Restores only the objects that were created after this time.
+   * @return value or {@code null} for none
+   */
+  public com.google.api.client.util.DateTime getCreatedAfterTime() {
+    return createdAfterTime;
+  }
+
+  /**
+   * Restores only the objects that were created after this time.
+   * @param createdAfterTime createdAfterTime or {@code null} for none
+   */
+  public BulkRestoreObjectsRequest setCreatedAfterTime(com.google.api.client.util.DateTime createdAfterTime) {
+    this.createdAfterTime = createdAfterTime;
+    return this;
+  }
+
+  /**
+   * Restores only the objects that were created before this time.
+   * @return value or {@code null} for none
+   */
+  public com.google.api.client.util.DateTime getCreatedBeforeTime() {
+    return createdBeforeTime;
+  }
+
+  /**
+   * Restores only the objects that were created before this time.
+   * @param createdBeforeTime createdBeforeTime or {@code null} for none
+   */
+  public BulkRestoreObjectsRequest setCreatedBeforeTime(com.google.api.client.util.DateTime createdBeforeTime) {
+    this.createdBeforeTime = createdBeforeTime;
     return this;
   }
 

@@ -94,11 +94,11 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean migrateTls;
 
   /**
-   * Indicate whether connector is being migrated to use direct VPC egress.
+   * Network egress mode override to migrate to direct VPC egress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String networkEgressMode;
+  private NetworkEgressModeOverride networkEgressModeOverride;
 
   /**
    * Indicate whether cloud spanner is required for connector job.
@@ -296,19 +296,19 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Indicate whether connector is being migrated to use direct VPC egress.
+   * Network egress mode override to migrate to direct VPC egress.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNetworkEgressMode() {
-    return networkEgressMode;
+  public NetworkEgressModeOverride getNetworkEgressModeOverride() {
+    return networkEgressModeOverride;
   }
 
   /**
-   * Indicate whether connector is being migrated to use direct VPC egress.
-   * @param networkEgressMode networkEgressMode or {@code null} for none
+   * Network egress mode override to migrate to direct VPC egress.
+   * @param networkEgressModeOverride networkEgressModeOverride or {@code null} for none
    */
-  public ConnectorInfraConfig setNetworkEgressMode(java.lang.String networkEgressMode) {
-    this.networkEgressMode = networkEgressMode;
+  public ConnectorInfraConfig setNetworkEgressModeOverride(NetworkEgressModeOverride networkEgressModeOverride) {
+    this.networkEgressModeOverride = networkEgressModeOverride;
     return this;
   }
 

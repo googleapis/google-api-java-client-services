@@ -447,22 +447,22 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -7577,6 +7577,2332 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           @Override
           public TestIamPermissions set(String parameterName, Object value) {
             return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the MulticloudDataTransferConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Networkconnectivity networkconnectivity = new Networkconnectivity(...);}
+       *   {@code Networkconnectivity.MulticloudDataTransferConfigs.List request = networkconnectivity.multicloudDataTransferConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public MulticloudDataTransferConfigs multicloudDataTransferConfigs() {
+        return new MulticloudDataTransferConfigs();
+      }
+
+      /**
+       * The "multicloudDataTransferConfigs" collection of methods.
+       */
+      public class MulticloudDataTransferConfigs {
+
+        /**
+         * Creates a MulticloudDataTransferConfig in a given project and location.
+         *
+         * Create a request for the method "multicloudDataTransferConfigs.create".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource's name
+         * @param content the {@link com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/multicloudDataTransferConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a MulticloudDataTransferConfig in a given project and location.
+           *
+           * Create a request for the method "multicloudDataTransferConfigs.create".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource's name
+           * @param content the {@link com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig content) {
+            super(Networkconnectivity.this, "POST", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource's name */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource's name
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource's name */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the MulticloudDataTransferConfig, which will become the
+           * final component of the MulticloudDataTransferConfig's resource name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String multicloudDataTransferConfigId;
+
+          /** Required. The ID to use for the MulticloudDataTransferConfig, which will become the final component
+         of the MulticloudDataTransferConfig's resource name.
+           */
+          public java.lang.String getMulticloudDataTransferConfigId() {
+            return multicloudDataTransferConfigId;
+          }
+
+          /**
+           * Required. The ID to use for the MulticloudDataTransferConfig, which will become the
+           * final component of the MulticloudDataTransferConfig's resource name.
+           */
+          public Create setMulticloudDataTransferConfigId(java.lang.String multicloudDataTransferConfigId) {
+            this.multicloudDataTransferConfigId = multicloudDataTransferConfigId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate MulticloudDataTransferConfigs. The request ID must be a valid UUID
+           * with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate MulticloudDataTransferConfigs. The request ID must be a valid
+         UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate MulticloudDataTransferConfigs. The request ID must be a valid UUID
+           * with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single MulticloudDataTransferConfig.
+         *
+         * Create a request for the method "multicloudDataTransferConfigs.delete".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the MulticloudDataTransferConfig resource to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+
+          /**
+           * Deletes a single MulticloudDataTransferConfig.
+           *
+           * Create a request for the method "multicloudDataTransferConfigs.delete".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the MulticloudDataTransferConfig resource to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Networkconnectivity.this, "DELETE", REST_PATH, null, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the MulticloudDataTransferConfig resource to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the MulticloudDataTransferConfig resource to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the MulticloudDataTransferConfig resource to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The etag is computed by the server, and may be sent on update and delete
+           * requests to ensure the client has an up-to-date value before proceeding.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. The etag is computed by the server, and may be sent on update and delete requests to
+         ensure the client has an up-to-date value before proceeding.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. The etag is computed by the server, and may be sent on update and delete
+           * requests to ensure the client has an up-to-date value before proceeding.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate MulticloudDataTransferConfigs. The request ID must be a valid UUID
+           * with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate MulticloudDataTransferConfigs. The request ID must be a valid
+         UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate MulticloudDataTransferConfigs. The request ID must be a valid UUID
+           * with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single MulticloudDataTransferConfig.
+         *
+         * Create a request for the method "multicloudDataTransferConfigs.get".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the MulticloudDataTransferConfig to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+
+          /**
+           * Gets details of a single MulticloudDataTransferConfig.
+           *
+           * Create a request for the method "multicloudDataTransferConfigs.get".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the MulticloudDataTransferConfig to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Networkconnectivity.this, "GET", REST_PATH, null, com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the MulticloudDataTransferConfig to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the MulticloudDataTransferConfig to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the MulticloudDataTransferConfig to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists MulticloudDataTransferConfigs in a given project and location.
+         *
+         * Create a request for the method "multicloudDataTransferConfigs.list".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource's name
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.ListMulticloudDataTransferConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/multicloudDataTransferConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists MulticloudDataTransferConfigs in a given project and location.
+           *
+           * Create a request for the method "multicloudDataTransferConfigs.list".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource's name
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Networkconnectivity.this, "GET", REST_PATH, null, com.google.api.services.networkconnectivity.v1.model.ListMulticloudDataTransferConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource's name */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource's name
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource's name */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. A filter expression that filters the results listed in the response. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter expression that filters the results listed in the response.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. A filter expression that filters the results listed in the response. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Sort the results by a certain order. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Sort the results by a certain order.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Sort the results by a certain order. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** Optional. The maximum number of results per page that should be returned. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results per page that should be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of results per page that should be returned. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a MulticloudDataTransferConfig in a given project and location.
+         *
+         * Create a request for the method "multicloudDataTransferConfigs.patch".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the MulticloudDataTransferConfig resource. Format: `projects/{project}/locat
+         *        ions/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}`.
+         * @param content the {@link com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+
+          /**
+           * Updates a MulticloudDataTransferConfig in a given project and location.
+           *
+           * Create a request for the method "multicloudDataTransferConfigs.patch".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the MulticloudDataTransferConfig resource. Format: `projects/{project}/locat
+         *        ions/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}`.
+           * @param content the {@link com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferConfig content) {
+            super(Networkconnectivity.this, "PATCH", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the MulticloudDataTransferConfig resource. Format: `projects/{p
+           * roject}/locations/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_co
+           * nfig}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the MulticloudDataTransferConfig resource. Format: `projects/{project}/loca
+         tions/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the MulticloudDataTransferConfig resource. Format: `projects/{p
+           * roject}/locations/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_co
+           * nfig}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate MulticloudDataTransferConfigs. The request ID must be a valid UUID
+           * with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes after the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate MulticloudDataTransferConfigs. The request ID must be a valid
+         UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate MulticloudDataTransferConfigs. The request ID must be a valid UUID
+           * with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * MulticloudDataTransferConfig resource by the update. The fields specified in the
+           * update_mask are relative to the resource, not the full request. A field will be
+           * overwritten if it is in the mask. If the user does not provide a mask then all fields
+           * will be overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the
+         MulticloudDataTransferConfig resource by the update. The fields specified in the update_mask are
+         relative to the resource, not the full request. A field will be overwritten if it is in the mask.
+         If the user does not provide a mask then all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * MulticloudDataTransferConfig resource by the update. The fields specified in the
+           * update_mask are relative to the resource, not the full request. A field will be
+           * overwritten if it is in the mask. If the user does not provide a mask then all fields
+           * will be overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Destinations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Networkconnectivity networkconnectivity = new Networkconnectivity(...);}
+         *   {@code Networkconnectivity.Destinations.List request = networkconnectivity.destinations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Destinations destinations() {
+          return new Destinations();
+        }
+
+        /**
+         * The "destinations" collection of methods.
+         */
+        public class Destinations {
+
+          /**
+           * Creates a Destination in a given project and location.
+           *
+           * Create a request for the method "destinations.create".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource's name
+           * @param content the {@link com.google.api.services.networkconnectivity.v1.model.Destination}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.networkconnectivity.v1.model.Destination content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+parent}/destinations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+
+            /**
+             * Creates a Destination in a given project and location.
+             *
+             * Create a request for the method "destinations.create".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource's name
+             * @param content the {@link com.google.api.services.networkconnectivity.v1.model.Destination}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.networkconnectivity.v1.model.Destination content) {
+              super(Networkconnectivity.this, "POST", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent resource's name */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource's name
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent resource's name */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the Destination, which will become the final component of
+             * the Destination's resource name.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String destinationId;
+
+            /** Required. The ID to use for the Destination, which will become the final component of the
+           Destination's resource name.
+             */
+            public java.lang.String getDestinationId() {
+              return destinationId;
+            }
+
+            /**
+             * Required. The ID to use for the Destination, which will become the final component of
+             * the Destination's resource name.
+             */
+            public Create setDestinationId(java.lang.String destinationId) {
+              this.destinationId = destinationId;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate Destinations. The request ID must be a valid UUID
+             * with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes since the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate Destinations. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate Destinations. The request ID must be a valid UUID
+             * with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a single Destination.
+           *
+           * Create a request for the method "destinations.delete".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the Destination resource to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+/destinations/[^/]+$");
+
+            /**
+             * Deletes a single Destination.
+             *
+             * Create a request for the method "destinations.delete".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the Destination resource to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Networkconnectivity.this, "DELETE", REST_PATH, null, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+/destinations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the Destination resource to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the Destination resource to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the Destination resource to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+/destinations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The etag is computed by the server, and may be sent on update and delete
+             * requests to ensure the client has an up-to-date value before proceeding.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String etag;
+
+            /** Optional. The etag is computed by the server, and may be sent on update and delete requests to
+           ensure the client has an up-to-date value before proceeding.
+             */
+            public java.lang.String getEtag() {
+              return etag;
+            }
+
+            /**
+             * Optional. The etag is computed by the server, and may be sent on update and delete
+             * requests to ensure the client has an up-to-date value before proceeding.
+             */
+            public Delete setEtag(java.lang.String etag) {
+              this.etag = etag;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. The request ID must be a valid
+             * UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes since the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. The request ID must be
+           a valid UUID with the exception that zero UUID is not supported
+           (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. The request ID must be a valid
+             * UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single Destination.
+           *
+           * Create a request for the method "destinations.get".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the Destination to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.Destination> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+/destinations/[^/]+$");
+
+            /**
+             * Gets details of a single Destination.
+             *
+             * Create a request for the method "destinations.get".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the Destination to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Networkconnectivity.this, "GET", REST_PATH, null, com.google.api.services.networkconnectivity.v1.model.Destination.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+/destinations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the Destination to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the Destination to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the Destination to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+/destinations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists Destinations in a given project and location.
+           *
+           * Create a request for the method "destinations.list".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource's name
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.ListDestinationsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/destinations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+
+            /**
+             * Lists Destinations in a given project and location.
+             *
+             * Create a request for the method "destinations.list".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource's name
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Networkconnectivity.this, "GET", REST_PATH, null, com.google.api.services.networkconnectivity.v1.model.ListDestinationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent resource's name */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource's name
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent resource's name */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. A filter expression that filters the results listed in the response. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. A filter expression that filters the results listed in the response.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. A filter expression that filters the results listed in the response. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Sort the results by a certain order. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Sort the results by a certain order.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Sort the results by a certain order. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /** Optional. The maximum number of results per page that should be returned. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of results per page that should be returned.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. The maximum number of results per page that should be returned. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. If true, allow partial responses for multi-regional Aggregated List
+             * requests.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean returnPartialSuccess;
+
+            /** Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+             */
+            public java.lang.Boolean getReturnPartialSuccess() {
+              return returnPartialSuccess;
+            }
+
+            /**
+             * Optional. If true, allow partial responses for multi-regional Aggregated List
+             * requests.
+             */
+            public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+              this.returnPartialSuccess = returnPartialSuccess;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a Destination in a given project and location.
+           *
+           * Create a request for the method "destinations.patch".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. The name of the Destination resource. Format: `projects/{project}/locations/{location}/m
+           *        ulticloudDataTransferConfigs/{multicloud_data_transfer_config}/destinations/{destination}`
+           *        .
+           * @param content the {@link com.google.api.services.networkconnectivity.v1.model.Destination}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.Destination content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+/destinations/[^/]+$");
+
+            /**
+             * Updates a Destination in a given project and location.
+             *
+             * Create a request for the method "destinations.patch".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. The name of the Destination resource. Format: `projects/{project}/locations/{location}/m
+           *        ulticloudDataTransferConfigs/{multicloud_data_transfer_config}/destinations/{destination}`
+           *        .
+             * @param content the {@link com.google.api.services.networkconnectivity.v1.model.Destination}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.Destination content) {
+              super(Networkconnectivity.this, "PATCH", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+/destinations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. The name of the Destination resource. Format: `projects/{project}/locatio
+             * ns/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}/destina
+             * tions/{destination}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. The name of the Destination resource. Format: `projects/{project}/locations/{location}/
+           multicloudDataTransferConfigs/{multicloud_data_transfer_config}/destinations/{destination}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. The name of the Destination resource. Format: `projects/{project}/locatio
+             * ns/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}/destina
+             * tions/{destination}`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/multicloudDataTransferConfigs/[^/]+/destinations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. The request ID must be a valid
+             * UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes since the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. The request ID must be
+           a valid UUID with the exception that zero UUID is not supported
+           (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. The request ID must be a valid
+             * UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            public Patch setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Optional. Field mask is used to specify the fields to be overwritten in the
+             * Destination resource by the update. The fields specified in the update_mask are
+             * relative to the resource, not the full request. A field will be overwritten if it is
+             * in the mask. If the user does not provide a mask then all fields will be overwritten.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. Field mask is used to specify the fields to be overwritten in the Destination resource by
+           the update. The fields specified in the update_mask are relative to the resource, not the full
+           request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+           all fields will be overwritten.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. Field mask is used to specify the fields to be overwritten in the
+             * Destination resource by the update. The fields specified in the update_mask are
+             * relative to the resource, not the full request. A field will be overwritten if it is
+             * in the mask. If the user does not provide a mask then all fields will be overwritten.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the MulticloudDataTransferSupportedServices collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Networkconnectivity networkconnectivity = new Networkconnectivity(...);}
+       *   {@code Networkconnectivity.MulticloudDataTransferSupportedServices.List request = networkconnectivity.multicloudDataTransferSupportedServices().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public MulticloudDataTransferSupportedServices multicloudDataTransferSupportedServices() {
+        return new MulticloudDataTransferSupportedServices();
+      }
+
+      /**
+       * The "multicloudDataTransferSupportedServices" collection of methods.
+       */
+      public class MulticloudDataTransferSupportedServices {
+
+        /**
+         * Gets details of a single MulticloudDataTransferSupportedServices.
+         *
+         * Create a request for the method "multicloudDataTransferSupportedServices.get".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the service.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferSupportedService> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/multicloudDataTransferSupportedServices/[^/]+$");
+
+          /**
+           * Gets details of a single MulticloudDataTransferSupportedServices.
+           *
+           * Create a request for the method "multicloudDataTransferSupportedServices.get".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the service.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Networkconnectivity.this, "GET", REST_PATH, null, com.google.api.services.networkconnectivity.v1.model.MulticloudDataTransferSupportedService.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/multicloudDataTransferSupportedServices/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the service. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the service.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the service. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/multicloudDataTransferSupportedServices/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the supported services for Multicloud Data Transfer. This is a passthrough method.
+         *
+         * Create a request for the method "multicloudDataTransferSupportedServices.list".
+         *
+         * This request holds the parameters needed by the networkconnectivity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource's name
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.ListMulticloudDataTransferSupportedServicesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/multicloudDataTransferSupportedServices";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the supported services for Multicloud Data Transfer. This is a passthrough method.
+           *
+           * Create a request for the method "multicloudDataTransferSupportedServices.list".
+           *
+           * This request holds the parameters needed by the the networkconnectivity server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource's name
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Networkconnectivity.this, "GET", REST_PATH, null, com.google.api.services.networkconnectivity.v1.model.ListMulticloudDataTransferSupportedServicesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource's name */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource's name
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource's name */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The maximum number of results per page that should be returned. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results per page that should be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of results per page that should be returned. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 

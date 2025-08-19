@@ -38,11 +38,25 @@ public final class GoogleShoppingManufacturersV1ProductCertification extends com
   private java.lang.String authority;
 
   /**
-   * Required. A unique code to identify the certification.
+   * Optional. A unique code to identify the certification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
+
+  /**
+   * Optional. A URL link to the certification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String link;
+
+  /**
+   * Optional. A URL link to the certification logo.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String logo;
 
   /**
    * Required. Name of the certification.
@@ -50,6 +64,20 @@ public final class GoogleShoppingManufacturersV1ProductCertification extends com
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The expiration date (UTC).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String validUntil;
+
+  /**
+   * Optional. A custom value of the certification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String value;
 
   /**
    * Required. Name of the certification body.
@@ -69,7 +97,7 @@ public final class GoogleShoppingManufacturersV1ProductCertification extends com
   }
 
   /**
-   * Required. A unique code to identify the certification.
+   * Optional. A unique code to identify the certification.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -77,11 +105,45 @@ public final class GoogleShoppingManufacturersV1ProductCertification extends com
   }
 
   /**
-   * Required. A unique code to identify the certification.
+   * Optional. A unique code to identify the certification.
    * @param code code or {@code null} for none
    */
   public GoogleShoppingManufacturersV1ProductCertification setCode(java.lang.String code) {
     this.code = code;
+    return this;
+  }
+
+  /**
+   * Optional. A URL link to the certification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLink() {
+    return link;
+  }
+
+  /**
+   * Optional. A URL link to the certification.
+   * @param link link or {@code null} for none
+   */
+  public GoogleShoppingManufacturersV1ProductCertification setLink(java.lang.String link) {
+    this.link = link;
+    return this;
+  }
+
+  /**
+   * Optional. A URL link to the certification logo.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLogo() {
+    return logo;
+  }
+
+  /**
+   * Optional. A URL link to the certification logo.
+   * @param logo logo or {@code null} for none
+   */
+  public GoogleShoppingManufacturersV1ProductCertification setLogo(java.lang.String logo) {
+    this.logo = logo;
     return this;
   }
 
@@ -99,6 +161,40 @@ public final class GoogleShoppingManufacturersV1ProductCertification extends com
    */
   public GoogleShoppingManufacturersV1ProductCertification setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The expiration date (UTC).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValidUntil() {
+    return validUntil;
+  }
+
+  /**
+   * Optional. The expiration date (UTC).
+   * @param validUntil validUntil or {@code null} for none
+   */
+  public GoogleShoppingManufacturersV1ProductCertification setValidUntil(java.lang.String validUntil) {
+    this.validUntil = validUntil;
+    return this;
+  }
+
+  /**
+   * Optional. A custom value of the certification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValue() {
+    return value;
+  }
+
+  /**
+   * Optional. A custom value of the certification.
+   * @param value value or {@code null} for none
+   */
+  public GoogleShoppingManufacturersV1ProductCertification setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 

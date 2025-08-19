@@ -38,7 +38,7 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   private java.lang.String authority;
 
   /**
-   * Required. A unique code to identify the certification.
+   * Optional. A unique code to identify the certification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. A unique code to identify the certification.
+   * Optional. A unique code to identify the certification.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -105,7 +105,7 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. A unique code to identify the certification.
+   * Optional. A unique code to identify the certification.
    * @param code code or {@code null} for none
    */
   public Certification setCode(java.lang.String code) {

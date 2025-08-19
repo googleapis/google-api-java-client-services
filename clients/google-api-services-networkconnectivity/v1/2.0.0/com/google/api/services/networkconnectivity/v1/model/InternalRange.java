@@ -141,9 +141,10 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Can be set to narrow down or pick a different address space while searching for a
-   * free range. If not set, defaults to the "10.0.0.0/8" address space. This can be used to search
-   * in other rfc-1918 address spaces like "172.16.0.0/12" and "192.168.0.0/16" or non-rfc-1918
-   * address spaces used in the VPC.
+   * free range. If not set, defaults to the ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+   * address space (for auto-mode networks, the "10.0.0.0/9" range is used instead of "10.0.0.0/8").
+   * This can be used to target the search in other rfc-1918 address spaces like "172.16.0.0/12" and
+   * "192.168.0.0/16" or non-rfc-1918 address spaces used in the VPC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -429,9 +430,10 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Can be set to narrow down or pick a different address space while searching for a
-   * free range. If not set, defaults to the "10.0.0.0/8" address space. This can be used to search
-   * in other rfc-1918 address spaces like "172.16.0.0/12" and "192.168.0.0/16" or non-rfc-1918
-   * address spaces used in the VPC.
+   * free range. If not set, defaults to the ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+   * address space (for auto-mode networks, the "10.0.0.0/9" range is used instead of "10.0.0.0/8").
+   * This can be used to target the search in other rfc-1918 address spaces like "172.16.0.0/12" and
+   * "192.168.0.0/16" or non-rfc-1918 address spaces used in the VPC.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetCidrRange() {
@@ -440,9 +442,10 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Can be set to narrow down or pick a different address space while searching for a
-   * free range. If not set, defaults to the "10.0.0.0/8" address space. This can be used to search
-   * in other rfc-1918 address spaces like "172.16.0.0/12" and "192.168.0.0/16" or non-rfc-1918
-   * address spaces used in the VPC.
+   * free range. If not set, defaults to the ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+   * address space (for auto-mode networks, the "10.0.0.0/9" range is used instead of "10.0.0.0/8").
+   * This can be used to target the search in other rfc-1918 address spaces like "172.16.0.0/12" and
+   * "192.168.0.0/16" or non-rfc-1918 address spaces used in the VPC.
    * @param targetCidrRange targetCidrRange or {@code null} for none
    */
   public InternalRange setTargetCidrRange(java.util.List<java.lang.String> targetCidrRange) {

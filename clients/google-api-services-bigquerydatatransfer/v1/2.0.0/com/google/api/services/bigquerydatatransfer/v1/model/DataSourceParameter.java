@@ -73,6 +73,13 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
   private java.lang.Boolean immutable;
 
   /**
+   * For list parameters, the max size of the list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxListSize;
+
+  /**
    * For integer and double values specifies maximum allowed value.
    * The value may be {@code null}.
    */
@@ -242,6 +249,23 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
    */
   public DataSourceParameter setImmutable(java.lang.Boolean immutable) {
     this.immutable = immutable;
+    return this;
+  }
+
+  /**
+   * For list parameters, the max size of the list.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxListSize() {
+    return maxListSize;
+  }
+
+  /**
+   * For list parameters, the max size of the list.
+   * @param maxListSize maxListSize or {@code null} for none
+   */
+  public DataSourceParameter setMaxListSize(java.lang.Long maxListSize) {
+    this.maxListSize = maxListSize;
     return this;
   }
 

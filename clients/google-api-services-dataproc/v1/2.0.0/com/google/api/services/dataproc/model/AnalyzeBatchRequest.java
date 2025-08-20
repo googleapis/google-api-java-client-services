@@ -44,6 +44,14 @@ public final class AnalyzeBatchRequest extends com.google.api.client.json.Generi
   private java.lang.String requestId;
 
   /**
+   * Optional. The requestor ID is used to identify if the request comes from a GCA investigation or
+   * the old Ask Gemini Experience.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestorId;
+
+  /**
    * Optional. A unique ID used to identify the request. If the service receives two
    * AnalyzeBatchRequest (http://cloud/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.c
    * loud.dataproc.v1.AnalyzeBatchRequest)s with the same request_id, the second request is ignored
@@ -71,6 +79,25 @@ public final class AnalyzeBatchRequest extends com.google.api.client.json.Generi
    */
   public AnalyzeBatchRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
+    return this;
+  }
+
+  /**
+   * Optional. The requestor ID is used to identify if the request comes from a GCA investigation or
+   * the old Ask Gemini Experience.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestorId() {
+    return requestorId;
+  }
+
+  /**
+   * Optional. The requestor ID is used to identify if the request comes from a GCA investigation or
+   * the old Ask Gemini Experience.
+   * @param requestorId requestorId or {@code null} for none
+   */
+  public AnalyzeBatchRequest setRequestorId(java.lang.String requestorId) {
+    this.requestorId = requestorId;
     return this;
   }
 

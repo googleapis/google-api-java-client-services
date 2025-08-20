@@ -51,7 +51,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The tier of the cluster.
+   * Optional. The cluster tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,7 +227,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The tier of the cluster.
+   * Optional. The cluster tier.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterTier() {
@@ -235,7 +235,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The tier of the cluster.
+   * Optional. The cluster tier.
    * @param clusterTier clusterTier or {@code null} for none
    */
   public ClusterConfig setClusterTier(java.lang.String clusterTier) {

@@ -45,11 +45,25 @@ public final class HybridReplicationParameters extends com.google.api.client.jso
   private java.lang.String description;
 
   /**
+   * Optional. Type of the hybrid replication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hybridReplicationType;
+
+  /**
    * Optional. Labels to be added to the replication as the key value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Optional. Constituent volume count for large volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer largeVolumeConstituentCount;
 
   /**
    * Required. Name of the user's local source cluster to be peered with the destination cluster.
@@ -88,6 +102,13 @@ public final class HybridReplicationParameters extends com.google.api.client.jso
   private java.lang.String replication;
 
   /**
+   * Optional. Replication Schedule for the replication created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String replicationSchedule;
+
+  /**
    * Optional. Name of source cluster location associated with the Hybrid replication. This is a
    * free-form field for the display purpose only.
    * @return value or {@code null} for none
@@ -124,6 +145,23 @@ public final class HybridReplicationParameters extends com.google.api.client.jso
   }
 
   /**
+   * Optional. Type of the hybrid replication.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHybridReplicationType() {
+    return hybridReplicationType;
+  }
+
+  /**
+   * Optional. Type of the hybrid replication.
+   * @param hybridReplicationType hybridReplicationType or {@code null} for none
+   */
+  public HybridReplicationParameters setHybridReplicationType(java.lang.String hybridReplicationType) {
+    this.hybridReplicationType = hybridReplicationType;
+    return this;
+  }
+
+  /**
    * Optional. Labels to be added to the replication as the key value pairs.
    * @return value or {@code null} for none
    */
@@ -137,6 +175,23 @@ public final class HybridReplicationParameters extends com.google.api.client.jso
    */
   public HybridReplicationParameters setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Constituent volume count for large volume.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLargeVolumeConstituentCount() {
+    return largeVolumeConstituentCount;
+  }
+
+  /**
+   * Optional. Constituent volume count for large volume.
+   * @param largeVolumeConstituentCount largeVolumeConstituentCount or {@code null} for none
+   */
+  public HybridReplicationParameters setLargeVolumeConstituentCount(java.lang.Integer largeVolumeConstituentCount) {
+    this.largeVolumeConstituentCount = largeVolumeConstituentCount;
     return this;
   }
 
@@ -224,6 +279,23 @@ public final class HybridReplicationParameters extends com.google.api.client.jso
    */
   public HybridReplicationParameters setReplication(java.lang.String replication) {
     this.replication = replication;
+    return this;
+  }
+
+  /**
+   * Optional. Replication Schedule for the replication created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReplicationSchedule() {
+    return replicationSchedule;
+  }
+
+  /**
+   * Optional. Replication Schedule for the replication created.
+   * @param replicationSchedule replicationSchedule or {@code null} for none
+   */
+  public HybridReplicationParameters setReplicationSchedule(java.lang.String replicationSchedule) {
+    this.replicationSchedule = replicationSchedule;
     return this;
   }
 

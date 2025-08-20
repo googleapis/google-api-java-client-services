@@ -7071,6 +7071,148 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
+         * Establish volume peering. This is used to establish cluster and svm peerings between the GCNV and
+         * OnPrem clusters.
+         *
+         * Create a request for the method "volumes.establishPeering".
+         *
+         * This request holds the parameters needed by the netapp server.  After setting any optional
+         * parameters, call the {@link EstablishPeering#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The volume resource name, in the format
+         *        `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+         * @param content the {@link com.google.api.services.netapp.v1beta1.model.EstablishVolumePeeringRequest}
+         * @return the request
+         */
+        public EstablishPeering establishPeering(java.lang.String name, com.google.api.services.netapp.v1beta1.model.EstablishVolumePeeringRequest content) throws java.io.IOException {
+          EstablishPeering result = new EstablishPeering(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class EstablishPeering extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:establishPeering";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+
+          /**
+           * Establish volume peering. This is used to establish cluster and svm peerings between the GCNV
+           * and OnPrem clusters.
+           *
+           * Create a request for the method "volumes.establishPeering".
+           *
+           * This request holds the parameters needed by the the netapp server.  After setting any optional
+           * parameters, call the {@link EstablishPeering#execute()} method to invoke the remote operation.
+           * <p> {@link EstablishPeering#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+           * ClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param name Required. The volume resource name, in the format
+         *        `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+           * @param content the {@link com.google.api.services.netapp.v1beta1.model.EstablishVolumePeeringRequest}
+           * @since 1.13
+           */
+          protected EstablishPeering(java.lang.String name, com.google.api.services.netapp.v1beta1.model.EstablishVolumePeeringRequest content) {
+            super(NetAppFiles.this, "POST", REST_PATH, content, com.google.api.services.netapp.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+          }
+
+          @Override
+          public EstablishPeering set$Xgafv(java.lang.String $Xgafv) {
+            return (EstablishPeering) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EstablishPeering setAccessToken(java.lang.String accessToken) {
+            return (EstablishPeering) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EstablishPeering setAlt(java.lang.String alt) {
+            return (EstablishPeering) super.setAlt(alt);
+          }
+
+          @Override
+          public EstablishPeering setCallback(java.lang.String callback) {
+            return (EstablishPeering) super.setCallback(callback);
+          }
+
+          @Override
+          public EstablishPeering setFields(java.lang.String fields) {
+            return (EstablishPeering) super.setFields(fields);
+          }
+
+          @Override
+          public EstablishPeering setKey(java.lang.String key) {
+            return (EstablishPeering) super.setKey(key);
+          }
+
+          @Override
+          public EstablishPeering setOauthToken(java.lang.String oauthToken) {
+            return (EstablishPeering) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EstablishPeering setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EstablishPeering) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EstablishPeering setQuotaUser(java.lang.String quotaUser) {
+            return (EstablishPeering) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EstablishPeering setUploadType(java.lang.String uploadType) {
+            return (EstablishPeering) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EstablishPeering setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EstablishPeering) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The volume resource name, in the format
+           * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The volume resource name, in the format
+         `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The volume resource name, in the format
+           * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+           */
+          public EstablishPeering setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public EstablishPeering set(String parameterName, Object value) {
+            return (EstablishPeering) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single Volume.
          *
          * Create a request for the method "volumes.get".

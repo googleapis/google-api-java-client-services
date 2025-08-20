@@ -44,6 +44,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private BackupConfig backupConfig;
 
   /**
+   * Optional. Cache parameters for the volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CacheParameters cacheParameters;
+
+  /**
    * Required. Capacity in GIB of the volume
    * The value may be {@code null}.
    */
@@ -346,6 +353,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setBackupConfig(BackupConfig backupConfig) {
     this.backupConfig = backupConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Cache parameters for the volume.
+   * @return value or {@code null} for none
+   */
+  public CacheParameters getCacheParameters() {
+    return cacheParameters;
+  }
+
+  /**
+   * Optional. Cache parameters for the volume.
+   * @param cacheParameters cacheParameters or {@code null} for none
+   */
+  public Volume setCacheParameters(CacheParameters cacheParameters) {
+    this.cacheParameters = cacheParameters;
     return this;
   }
 

@@ -258,8 +258,12 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private User privateMessageViewer;
 
   /**
-   * Optional. Information about a message that's quoted by a Google Chat user in a space. Google
-   * Chat users can quote a message to reply to it.
+   * Optional. Information about a message that another message quotes. When you create a message,
+   * you can quote messages within the same thread, or quote a root message to create a new root
+   * message. However, you can't quote a message reply from a different thread. When you update a
+   * message, you can't add or replace the `quotedMessageMetadata` field, but you can remove it. For
+   * example usage, see [Quote another message](https://developers.google.com/workspace/chat/create-
+   * messages#quote-a-message).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -752,8 +756,12 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information about a message that's quoted by a Google Chat user in a space. Google
-   * Chat users can quote a message to reply to it.
+   * Optional. Information about a message that another message quotes. When you create a message,
+   * you can quote messages within the same thread, or quote a root message to create a new root
+   * message. However, you can't quote a message reply from a different thread. When you update a
+   * message, you can't add or replace the `quotedMessageMetadata` field, but you can remove it. For
+   * example usage, see [Quote another message](https://developers.google.com/workspace/chat/create-
+   * messages#quote-a-message).
    * @return value or {@code null} for none
    */
   public QuotedMessageMetadata getQuotedMessageMetadata() {
@@ -761,8 +769,12 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information about a message that's quoted by a Google Chat user in a space. Google
-   * Chat users can quote a message to reply to it.
+   * Optional. Information about a message that another message quotes. When you create a message,
+   * you can quote messages within the same thread, or quote a root message to create a new root
+   * message. However, you can't quote a message reply from a different thread. When you update a
+   * message, you can't add or replace the `quotedMessageMetadata` field, but you can remove it. For
+   * example usage, see [Quote another message](https://developers.google.com/workspace/chat/create-
+   * messages#quote-a-message).
    * @param quotedMessageMetadata quotedMessageMetadata or {@code null} for none
    */
   public Message setQuotedMessageMetadata(QuotedMessageMetadata quotedMessageMetadata) {

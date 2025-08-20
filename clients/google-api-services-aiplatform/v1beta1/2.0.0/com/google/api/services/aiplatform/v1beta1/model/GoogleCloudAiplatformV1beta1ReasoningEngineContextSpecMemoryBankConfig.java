@@ -30,6 +30,19 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for how to customize Memory Bank behavior for a particular scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfig> customizationConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfig.class);
+  }
+
+  /**
    * Optional. Configuration for how to generate memories for the Memory Bank.
    * The value may be {@code null}.
    */
@@ -43,6 +56,32 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigSimilaritySearchConfig similaritySearchConfig;
+
+  /**
+   * Optional. Configuration for automatic TTL ("time-to-live") of the memories in the Memory Bank.
+   * If not set, TTL will not be applied automatically. The TTL can be explicitly set by modifying
+   * the `expire_time` of each Memory resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigTtlConfig ttlConfig;
+
+  /**
+   * Optional. Configuration for how to customize Memory Bank behavior for a particular scope.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfig> getCustomizationConfigs() {
+    return customizationConfigs;
+  }
+
+  /**
+   * Optional. Configuration for how to customize Memory Bank behavior for a particular scope.
+   * @param customizationConfigs customizationConfigs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfig setCustomizationConfigs(java.util.List<GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfig> customizationConfigs) {
+    this.customizationConfigs = customizationConfigs;
+    return this;
+  }
 
   /**
    * Optional. Configuration for how to generate memories for the Memory Bank.
@@ -77,6 +116,27 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfig setSimilaritySearchConfig(GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigSimilaritySearchConfig similaritySearchConfig) {
     this.similaritySearchConfig = similaritySearchConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for automatic TTL ("time-to-live") of the memories in the Memory Bank.
+   * If not set, TTL will not be applied automatically. The TTL can be explicitly set by modifying
+   * the `expire_time` of each Memory resource.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigTtlConfig getTtlConfig() {
+    return ttlConfig;
+  }
+
+  /**
+   * Optional. Configuration for automatic TTL ("time-to-live") of the memories in the Memory Bank.
+   * If not set, TTL will not be applied automatically. The TTL can be explicitly set by modifying
+   * the `expire_time` of each Memory resource.
+   * @param ttlConfig ttlConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfig setTtlConfig(GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigTtlConfig ttlConfig) {
+    this.ttlConfig = ttlConfig;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Request message for MemoryBankService.GenerateMemories.
+ * Request message for MemoryBankService.GenerateMemories. Maximum size is 8 MB.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

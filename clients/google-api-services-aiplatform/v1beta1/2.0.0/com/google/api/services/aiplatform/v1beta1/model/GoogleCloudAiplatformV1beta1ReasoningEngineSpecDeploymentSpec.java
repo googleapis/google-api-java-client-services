@@ -53,7 +53,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
 
   /**
    * Optional. The maximum number of application instances that can be launched to handle increased
-   * traffic. Defaults to 100.
+   * traffic. Defaults to 100. Range: [1, 1000]. If VPC-SC or PSC-I is enabled, the acceptable range
+   * is [1, 100].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
 
   /**
    * Optional. The minimum number of application instances that will be kept running at all times.
-   * Defaults to 1.
+   * Defaults to 1. Range: [0, 10].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +78,9 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
   /**
    * Optional. Resource limits for each container. Only 'cpu' and 'memory' keys are supported.
    * Defaults to {"cpu": "4", "memory": "4Gi"}. * The only supported values for CPU are '1', '2',
-   * '4', and '8'. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. *
-   * For supported 'memory' values and syntax, go to
+   * '4', '6' and '8'. For more information, go to
+   * https://cloud.google.com/run/docs/configuring/cpu. * The only supported values for memory are
+   * '1Gi', '2Gi', ... '32 Gi'. * For required cpu on different memory values, go to
    * https://cloud.google.com/run/docs/configuring/memory-limits
    * The value may be {@code null}.
    */
@@ -134,7 +136,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
 
   /**
    * Optional. The maximum number of application instances that can be launched to handle increased
-   * traffic. Defaults to 100.
+   * traffic. Defaults to 100. Range: [1, 1000]. If VPC-SC or PSC-I is enabled, the acceptable range
+   * is [1, 100].
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxInstances() {
@@ -143,7 +146,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
 
   /**
    * Optional. The maximum number of application instances that can be launched to handle increased
-   * traffic. Defaults to 100.
+   * traffic. Defaults to 100. Range: [1, 1000]. If VPC-SC or PSC-I is enabled, the acceptable range
+   * is [1, 100].
    * @param maxInstances maxInstances or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec setMaxInstances(java.lang.Integer maxInstances) {
@@ -153,7 +157,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
 
   /**
    * Optional. The minimum number of application instances that will be kept running at all times.
-   * Defaults to 1.
+   * Defaults to 1. Range: [0, 10].
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinInstances() {
@@ -162,7 +166,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
 
   /**
    * Optional. The minimum number of application instances that will be kept running at all times.
-   * Defaults to 1.
+   * Defaults to 1. Range: [0, 10].
    * @param minInstances minInstances or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec setMinInstances(java.lang.Integer minInstances) {
@@ -190,8 +194,9 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
   /**
    * Optional. Resource limits for each container. Only 'cpu' and 'memory' keys are supported.
    * Defaults to {"cpu": "4", "memory": "4Gi"}. * The only supported values for CPU are '1', '2',
-   * '4', and '8'. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. *
-   * For supported 'memory' values and syntax, go to
+   * '4', '6' and '8'. For more information, go to
+   * https://cloud.google.com/run/docs/configuring/cpu. * The only supported values for memory are
+   * '1Gi', '2Gi', ... '32 Gi'. * For required cpu on different memory values, go to
    * https://cloud.google.com/run/docs/configuring/memory-limits
    * @return value or {@code null} for none
    */
@@ -202,8 +207,9 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec
   /**
    * Optional. Resource limits for each container. Only 'cpu' and 'memory' keys are supported.
    * Defaults to {"cpu": "4", "memory": "4Gi"}. * The only supported values for CPU are '1', '2',
-   * '4', and '8'. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. *
-   * For supported 'memory' values and syntax, go to
+   * '4', '6' and '8'. For more information, go to
+   * https://cloud.google.com/run/docs/configuring/cpu. * The only supported values for memory are
+   * '1Gi', '2Gi', ... '32 Gi'. * For required cpu on different memory values, go to
    * https://cloud.google.com/run/docs/configuring/memory-limits
    * @param resourceLimits resourceLimits or {@code null} for none
    */

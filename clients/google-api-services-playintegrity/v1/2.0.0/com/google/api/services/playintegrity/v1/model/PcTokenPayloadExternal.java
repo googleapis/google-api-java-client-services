@@ -31,6 +31,13 @@ package com.google.api.services.playintegrity.v1.model;
 public final class PcTokenPayloadExternal extends com.google.api.client.json.GenericJson {
 
   /**
+   * Details about the account information such as the licensing status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PcAccountDetails accountDetails;
+
+  /**
    * Required. Details about the device integrity.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class PcTokenPayloadExternal extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private PcRequestDetails requestDetails;
+
+  /**
+   * Details about the account information such as the licensing status.
+   * @return value or {@code null} for none
+   */
+  public PcAccountDetails getAccountDetails() {
+    return accountDetails;
+  }
+
+  /**
+   * Details about the account information such as the licensing status.
+   * @param accountDetails accountDetails or {@code null} for none
+   */
+  public PcTokenPayloadExternal setAccountDetails(PcAccountDetails accountDetails) {
+    this.accountDetails = accountDetails;
+    return this;
+  }
 
   /**
    * Required. Details about the device integrity.

@@ -171,6 +171,15 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String selfLinkWithId;
 
   /**
+   * [Output Only] URLs of the other locations that can pair up with this location to support
+   * Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99% peer
+   * locations of each other.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> singleRegionProductionCriticalPeerLocations;
+
+  /**
    * [Output Only] The status of this InterconnectLocation, which can take one of the following
    * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
    * Interconnects. - AVAILABLE: The InterconnectLocation is available for provisioning new
@@ -516,6 +525,27 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
    */
   public InterconnectLocation setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * [Output Only] URLs of the other locations that can pair up with this location to support
+   * Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99% peer
+   * locations of each other.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSingleRegionProductionCriticalPeerLocations() {
+    return singleRegionProductionCriticalPeerLocations;
+  }
+
+  /**
+   * [Output Only] URLs of the other locations that can pair up with this location to support
+   * Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99% peer
+   * locations of each other.
+   * @param singleRegionProductionCriticalPeerLocations singleRegionProductionCriticalPeerLocations or {@code null} for none
+   */
+  public InterconnectLocation setSingleRegionProductionCriticalPeerLocations(java.util.List<java.lang.String> singleRegionProductionCriticalPeerLocations) {
+    this.singleRegionProductionCriticalPeerLocations = singleRegionProductionCriticalPeerLocations;
     return this;
   }
 

@@ -321,6 +321,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Specific subzone in the InterconnectLocation that represents where this connection is to be
+   * provisioned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subzone;
+
+  /**
    * [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to use this
    * Interconnect. The Interconnect cannot be deleted if this list is non-empty.
    * The value may be {@code null}.
@@ -1043,6 +1051,25 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Specific subzone in the InterconnectLocation that represents where this connection is to be
+   * provisioned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubzone() {
+    return subzone;
+  }
+
+  /**
+   * Specific subzone in the InterconnectLocation that represents where this connection is to be
+   * provisioned.
+   * @param subzone subzone or {@code null} for none
+   */
+  public Interconnect setSubzone(java.lang.String subzone) {
+    this.subzone = subzone;
     return this;
   }
 

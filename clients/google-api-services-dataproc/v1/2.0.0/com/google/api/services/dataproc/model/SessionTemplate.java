@@ -76,7 +76,7 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The resource name of the session template.
+   * Required. Identifier. The resource name of the session template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,7 +222,7 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The resource name of the session template.
+   * Required. Identifier. The resource name of the session template.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -230,7 +230,7 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The resource name of the session template.
+   * Required. Identifier. The resource name of the session template.
    * @param name name or {@code null} for none
    */
   public SessionTemplate setName(java.lang.String name) {

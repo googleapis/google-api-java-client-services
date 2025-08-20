@@ -29,54 +29,6 @@ package com.google.api.services.aiplatform.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1beta1GoogleMaps extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The authentication config to access the API. Deprecated. Please use auth_config instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1ApiAuth apiAuth;
-
-  /**
-   * The authentication config to access the API. Only API key is supported.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1AuthConfig authConfig;
-
-  /**
-   * The authentication config to access the API. Deprecated. Please use auth_config instead.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1ApiAuth getApiAuth() {
-    return apiAuth;
-  }
-
-  /**
-   * The authentication config to access the API. Deprecated. Please use auth_config instead.
-   * @param apiAuth apiAuth or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GoogleMaps setApiAuth(GoogleCloudAiplatformV1beta1ApiAuth apiAuth) {
-    this.apiAuth = apiAuth;
-    return this;
-  }
-
-  /**
-   * The authentication config to access the API. Only API key is supported.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1AuthConfig getAuthConfig() {
-    return authConfig;
-  }
-
-  /**
-   * The authentication config to access the API. Only API key is supported.
-   * @param authConfig authConfig or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GoogleMaps setAuthConfig(GoogleCloudAiplatformV1beta1AuthConfig authConfig) {
-    this.authConfig = authConfig;
-    return this;
-  }
-
   @Override
   public GoogleCloudAiplatformV1beta1GoogleMaps set(String fieldName, Object value) {
     return (GoogleCloudAiplatformV1beta1GoogleMaps) super.set(fieldName, value);

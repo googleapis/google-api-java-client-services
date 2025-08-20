@@ -41,6 +41,15 @@ public final class GoogleCloudAiplatformV1beta1AutoscalingMetricSpec extends com
   private java.lang.String metricName;
 
   /**
+   * Optional. The Cloud Monitoring monitored resource labels as key value pairs used for metrics
+   * filtering. See Cloud Monitoring Labels https://cloud.google.com/monitoring/api/v3/metric-
+   * model#generic-label-info
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> monitoredResourceLabels;
+
+  /**
    * The target resource utilization in percentage (1% - 100%) for the given metric; once the real
    * usage deviates from the target by a certain percentage, the machine replicas change. The
    * default value is 60 (representing 60%) if not provided.
@@ -69,6 +78,27 @@ public final class GoogleCloudAiplatformV1beta1AutoscalingMetricSpec extends com
    */
   public GoogleCloudAiplatformV1beta1AutoscalingMetricSpec setMetricName(java.lang.String metricName) {
     this.metricName = metricName;
+    return this;
+  }
+
+  /**
+   * Optional. The Cloud Monitoring monitored resource labels as key value pairs used for metrics
+   * filtering. See Cloud Monitoring Labels https://cloud.google.com/monitoring/api/v3/metric-
+   * model#generic-label-info
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getMonitoredResourceLabels() {
+    return monitoredResourceLabels;
+  }
+
+  /**
+   * Optional. The Cloud Monitoring monitored resource labels as key value pairs used for metrics
+   * filtering. See Cloud Monitoring Labels https://cloud.google.com/monitoring/api/v3/metric-
+   * model#generic-label-info
+   * @param monitoredResourceLabels monitoredResourceLabels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AutoscalingMetricSpec setMonitoredResourceLabels(java.util.Map<String, java.lang.String> monitoredResourceLabels) {
+    this.monitoredResourceLabels = monitoredResourceLabels;
     return this;
   }
 

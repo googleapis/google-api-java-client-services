@@ -71,8 +71,8 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   /**
    * Optional. Required for managed constraints if parameters are defined. Passes parameter values
    * when policy enforcement is enabled. Ensure that parameter value types match those defined in
-   * the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"],
-   * "allowAll" : true }
+   * the constraint definition. For example: ``` { "allowedLocations": ["us-east1", "us-west1"],
+   * "allowAll": true } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,8 +186,8 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   /**
    * Optional. Required for managed constraints if parameters are defined. Passes parameter values
    * when policy enforcement is enabled. Ensure that parameter value types match those defined in
-   * the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"],
-   * "allowAll" : true }
+   * the constraint definition. For example: ``` { "allowedLocations": ["us-east1", "us-west1"],
+   * "allowAll": true } ```
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -197,8 +197,8 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   /**
    * Optional. Required for managed constraints if parameters are defined. Passes parameter values
    * when policy enforcement is enabled. Ensure that parameter value types match those defined in
-   * the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"],
-   * "allowAll" : true }
+   * the constraint definition. For example: ``` { "allowedLocations": ["us-east1", "us-west1"],
+   * "allowAll": true } ```
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudSecuritypostureV1PolicyRule setParameters(java.util.Map<String, java.lang.Object> parameters) {

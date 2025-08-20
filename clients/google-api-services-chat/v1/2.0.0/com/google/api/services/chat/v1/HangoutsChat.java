@@ -5817,7 +5817,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `accessory_widgets` (Requires [app authentication](/chat/api/guides/auth/service-
-         * accounts).)
+         * accounts).) - `quoted_message_metadata` (Only allows removal of the quoted message.)
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -5826,7 +5826,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        field paths. Currently supported field paths: - `text` - `attachment` - `cards` (Requires [app
        authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
        authentication](/chat/api/guides/auth/service-accounts).) - `accessory_widgets` (Requires [app
-       authentication](/chat/api/guides/auth/service-accounts).)
+       authentication](/chat/api/guides/auth/service-accounts).) - `quoted_message_metadata` (Only allows
+       removal of the quoted message.)
          */
         public String getUpdateMask() {
           return updateMask;
@@ -5838,7 +5839,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `accessory_widgets` (Requires [app authentication](/chat/api/guides/auth/service-
-         * accounts).)
+         * accounts).) - `quoted_message_metadata` (Only allows removal of the quoted message.)
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -6073,7 +6074,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `accessory_widgets` (Requires [app authentication](/chat/api/guides/auth/service-
-         * accounts).)
+         * accounts).) - `quoted_message_metadata` (Only allows removal of the quoted message.)
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -6082,7 +6083,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        field paths. Currently supported field paths: - `text` - `attachment` - `cards` (Requires [app
        authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
        authentication](/chat/api/guides/auth/service-accounts).) - `accessory_widgets` (Requires [app
-       authentication](/chat/api/guides/auth/service-accounts).)
+       authentication](/chat/api/guides/auth/service-accounts).) - `quoted_message_metadata` (Only allows
+       removal of the quoted message.)
          */
         public String getUpdateMask() {
           return updateMask;
@@ -6094,7 +6096,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `accessory_widgets` (Requires [app authentication](/chat/api/guides/auth/service-
-         * accounts).)
+         * accounts).) - `quoted_message_metadata` (Only allows removal of the quoted message.)
          */
         public Update setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

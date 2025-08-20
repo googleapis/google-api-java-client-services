@@ -17,7 +17,12 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Information about a quoted message.
+ * Information about a message that another message quotes. When you create a message, you can quote
+ * messages within the same thread, or quote a root message to create a new root message. However,
+ * you can't quote a message reply from a different thread. When you update a message, you can't add
+ * or replace the `quotedMessageMetadata` field, but you can remove it. For example usage, see
+ * [Quote another message](https://developers.google.com/workspace/chat/create-messages#quote-a-
+ * message).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,7 +36,9 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
 
   /**
    * Required. The timestamp when the quoted message was created or when the quoted message was last
-   * updated.
+   * updated. If the message was edited, use this field, `last_update_time`. If the message was
+   * never edited, use `create_time`. If `last_update_time` doesn't match the latest version of the
+   * quoted message, the request fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +54,9 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
 
   /**
    * Required. The timestamp when the quoted message was created or when the quoted message was last
-   * updated.
+   * updated. If the message was edited, use this field, `last_update_time`. If the message was
+   * never edited, use `create_time`. If `last_update_time` doesn't match the latest version of the
+   * quoted message, the request fails.
    * @return value or {@code null} for none
    */
   public String getLastUpdateTime() {
@@ -56,7 +65,9 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
 
   /**
    * Required. The timestamp when the quoted message was created or when the quoted message was last
-   * updated.
+   * updated. If the message was edited, use this field, `last_update_time`. If the message was
+   * never edited, use `create_time`. If `last_update_time` doesn't match the latest version of the
+   * quoted message, the request fails.
    * @param lastUpdateTime lastUpdateTime or {@code null} for none
    */
   public QuotedMessageMetadata setLastUpdateTime(String lastUpdateTime) {

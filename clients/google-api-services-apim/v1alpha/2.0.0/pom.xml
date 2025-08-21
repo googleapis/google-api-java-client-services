@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-apim</artifactId>
-  <version>v1alpha-rev20250730-2.0.0</version>
-  <name>API Management API v1alpha-rev20250730-2.0.0</name>
+  <version>v1alpha-rev20250813-2.0.0</version>
+  <name>API Management API v1alpha-rev20250813-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

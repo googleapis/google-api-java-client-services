@@ -7770,6 +7770,158 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Accelerates the deletion of a private cloud that is currently in soft deletion A `PrivateCloud`
+         * resource in soft deletion has `PrivateCloud.state` set to `SOFT_DELETED` and
+         * `PrivateCloud.expireTime` set to the time when deletion can no longer be reversed.
+         *
+         * Create a request for the method "privateClouds.privateCloudDeletionNow".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link PrivateCloudDeletionNow#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The resource name of the private cloud in softdeletion. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+         * @param content the {@link com.google.api.services.vmwareengine.v1.model.AcceleratePrivateCloudDeletionRequest}
+         * @return the request
+         */
+        public PrivateCloudDeletionNow privateCloudDeletionNow(java.lang.String name, com.google.api.services.vmwareengine.v1.model.AcceleratePrivateCloudDeletionRequest content) throws java.io.IOException {
+          PrivateCloudDeletionNow result = new PrivateCloudDeletionNow(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PrivateCloudDeletionNow extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:privateCloudDeletionNow";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
+
+          /**
+           * Accelerates the deletion of a private cloud that is currently in soft deletion A `PrivateCloud`
+           * resource in soft deletion has `PrivateCloud.state` set to `SOFT_DELETED` and
+           * `PrivateCloud.expireTime` set to the time when deletion can no longer be reversed.
+           *
+           * Create a request for the method "privateClouds.privateCloudDeletionNow".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link PrivateCloudDeletionNow#execute()} method to invoke the
+           * remote operation. <p> {@link PrivateCloudDeletionNow#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the private cloud in softdeletion. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.AcceleratePrivateCloudDeletionRequest}
+           * @since 1.13
+           */
+          protected PrivateCloudDeletionNow(java.lang.String name, com.google.api.services.vmwareengine.v1.model.AcceleratePrivateCloudDeletionRequest content) {
+            super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
+            }
+          }
+
+          @Override
+          public PrivateCloudDeletionNow set$Xgafv(java.lang.String $Xgafv) {
+            return (PrivateCloudDeletionNow) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setAccessToken(java.lang.String accessToken) {
+            return (PrivateCloudDeletionNow) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setAlt(java.lang.String alt) {
+            return (PrivateCloudDeletionNow) super.setAlt(alt);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setCallback(java.lang.String callback) {
+            return (PrivateCloudDeletionNow) super.setCallback(callback);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setFields(java.lang.String fields) {
+            return (PrivateCloudDeletionNow) super.setFields(fields);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setKey(java.lang.String key) {
+            return (PrivateCloudDeletionNow) super.setKey(key);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setOauthToken(java.lang.String oauthToken) {
+            return (PrivateCloudDeletionNow) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PrivateCloudDeletionNow) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setQuotaUser(java.lang.String quotaUser) {
+            return (PrivateCloudDeletionNow) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setUploadType(java.lang.String uploadType) {
+            return (PrivateCloudDeletionNow) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PrivateCloudDeletionNow setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PrivateCloudDeletionNow) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the private cloud in softdeletion. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1-a/privateClouds/my-cloud`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the private cloud in softdeletion. Resource names are schemeless
+         URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the private cloud in softdeletion. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1-a/privateClouds/my-cloud`
+           */
+          public PrivateCloudDeletionNow setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public PrivateCloudDeletionNow set(String parameterName, Object value) {
+            return (PrivateCloudDeletionNow) super.set(parameterName, value);
+          }
+        }
+        /**
          * Resets credentials of the NSX appliance.
          *
          * Create a request for the method "privateClouds.resetNsxCredentials".

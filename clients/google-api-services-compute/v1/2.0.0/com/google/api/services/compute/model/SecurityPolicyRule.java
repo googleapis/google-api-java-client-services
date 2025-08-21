@@ -41,6 +41,9 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    * be configured via redirectOptions. This action is only supported in Global Security Policies of
    * type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure
    * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
+   * - fairshare (preview only): when traffic reaches the threshold limit, requests from the clients
+   * matching this rule begin to be rate-limited using the Fair Share algorithm. This action is only
+   * allowed in security policies of type `CLOUD_ARMOR_INTERNAL_SERVICE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,8 +127,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Integer priority;
 
   /**
-   * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any
-   * other actions.
+   * Must be specified if the action is "rate_based_ban" or "throttle" or "fairshare". Cannot be
+   * specified for any other actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,6 +153,9 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    * be configured via redirectOptions. This action is only supported in Global Security Policies of
    * type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure
    * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
+   * - fairshare (preview only): when traffic reaches the threshold limit, requests from the clients
+   * matching this rule begin to be rate-limited using the Fair Share algorithm. This action is only
+   * allowed in security policies of type `CLOUD_ARMOR_INTERNAL_SERVICE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -167,6 +173,9 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    * be configured via redirectOptions. This action is only supported in Global Security Policies of
    * type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure
    * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
+   * - fairshare (preview only): when traffic reaches the threshold limit, requests from the clients
+   * matching this rule begin to be rate-limited using the Fair Share algorithm. This action is only
+   * allowed in security policies of type `CLOUD_ARMOR_INTERNAL_SERVICE`.
    * @param action action or {@code null} for none
    */
   public SecurityPolicyRule setAction(java.lang.String action) {
@@ -353,8 +362,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any
-   * other actions.
+   * Must be specified if the action is "rate_based_ban" or "throttle" or "fairshare". Cannot be
+   * specified for any other actions.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions getRateLimitOptions() {
@@ -362,8 +371,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any
-   * other actions.
+   * Must be specified if the action is "rate_based_ban" or "throttle" or "fairshare". Cannot be
+   * specified for any other actions.
    * @param rateLimitOptions rateLimitOptions or {@code null} for none
    */
   public SecurityPolicyRule setRateLimitOptions(SecurityPolicyRuleRateLimitOptions rateLimitOptions) {

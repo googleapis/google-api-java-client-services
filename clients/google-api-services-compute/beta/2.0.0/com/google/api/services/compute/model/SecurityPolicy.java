@@ -213,13 +213,13 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    * Armor edge security policies can be configured to filter incoming HTTP requests targeting
    * backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They
    * filter requests before the request is served from Google's cache. -
-   * CLOUD_ARMOR_INTERNAL_SERVICE: Cloud Armor internal service policies can be configured to filter
-   * HTTP requests targeting services managed by Traffic Director in a service mesh. They filter
-   * requests before the request is served from the application. - CLOUD_ARMOR_NETWORK: Cloud Armor
-   * network policies can be configured to filter packets targeting network load balancing resources
-   * such as backend services, target pools, target instances, and instances with external IPs. They
-   * filter requests before the request is served from the application. This field can be set only
-   * at resource creation time.
+   * CLOUD_ARMOR_INTERNAL_SERVICE (preview only): Cloud Armor internal service policies can be
+   * configured to filter HTTP requests targeting services managed by Traffic Director in a service
+   * mesh. They filter requests before the request is served from the application. -
+   * CLOUD_ARMOR_NETWORK: Cloud Armor network policies can be configured to filter packets targeting
+   * network load balancing resources such as backend services, target pools, target instances, and
+   * instances with external IPs. They filter requests before the request is served from the
+   * application. This field can be set only at resource creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -730,13 +730,13 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    * Armor edge security policies can be configured to filter incoming HTTP requests targeting
    * backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They
    * filter requests before the request is served from Google's cache. -
-   * CLOUD_ARMOR_INTERNAL_SERVICE: Cloud Armor internal service policies can be configured to filter
-   * HTTP requests targeting services managed by Traffic Director in a service mesh. They filter
-   * requests before the request is served from the application. - CLOUD_ARMOR_NETWORK: Cloud Armor
-   * network policies can be configured to filter packets targeting network load balancing resources
-   * such as backend services, target pools, target instances, and instances with external IPs. They
-   * filter requests before the request is served from the application. This field can be set only
-   * at resource creation time.
+   * CLOUD_ARMOR_INTERNAL_SERVICE (preview only): Cloud Armor internal service policies can be
+   * configured to filter HTTP requests targeting services managed by Traffic Director in a service
+   * mesh. They filter requests before the request is served from the application. -
+   * CLOUD_ARMOR_NETWORK: Cloud Armor network policies can be configured to filter packets targeting
+   * network load balancing resources such as backend services, target pools, target instances, and
+   * instances with external IPs. They filter requests before the request is served from the
+   * application. This field can be set only at resource creation time.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -750,13 +750,13 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    * Armor edge security policies can be configured to filter incoming HTTP requests targeting
    * backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They
    * filter requests before the request is served from Google's cache. -
-   * CLOUD_ARMOR_INTERNAL_SERVICE: Cloud Armor internal service policies can be configured to filter
-   * HTTP requests targeting services managed by Traffic Director in a service mesh. They filter
-   * requests before the request is served from the application. - CLOUD_ARMOR_NETWORK: Cloud Armor
-   * network policies can be configured to filter packets targeting network load balancing resources
-   * such as backend services, target pools, target instances, and instances with external IPs. They
-   * filter requests before the request is served from the application. This field can be set only
-   * at resource creation time.
+   * CLOUD_ARMOR_INTERNAL_SERVICE (preview only): Cloud Armor internal service policies can be
+   * configured to filter HTTP requests targeting services managed by Traffic Director in a service
+   * mesh. They filter requests before the request is served from the application. -
+   * CLOUD_ARMOR_NETWORK: Cloud Armor network policies can be configured to filter packets targeting
+   * network load balancing resources such as backend services, target pools, target instances, and
+   * instances with external IPs. They filter requests before the request is served from the
+   * application. This field can be set only at resource creation time.
    * @param type type or {@code null} for none
    */
   public SecurityPolicy setType(java.lang.String type) {

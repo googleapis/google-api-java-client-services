@@ -22915,28 +22915,30 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Optional. A filter to reduce results to a specific subset. Supports disjunctions (OR)
-           * and conjunctions (AND). Supported fields include the following: * `project_id` - id of
-           * the project to list tags for * `qa_scorecard_revision_id` - id of the scorecard
-           * revision to list tags for * `qa_question_id - id of the question to list tags for`
+           * Optional. A filter to reduce results to a specific subset. Supports conjunctions (ie.
+           * AND operators). Supported fields include the following: * `project_id` - id of the
+           * project to list tags for * `qa_scorecard_id` - id of the scorecard to list tags for *
+           * `revision_id` - id of the scorecard revision to list tags for` * `qa_question_id - id
+           * of the question to list tags for`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. A filter to reduce results to a specific subset. Supports disjunctions (OR) and
-         conjunctions (AND). Supported fields include the following: * `project_id` - id of the project to
-         list tags for * `qa_scorecard_revision_id` - id of the scorecard revision to list tags for *
-         `qa_question_id - id of the question to list tags for`
+          /** Optional. A filter to reduce results to a specific subset. Supports conjunctions (ie. AND
+         operators). Supported fields include the following: * `project_id` - id of the project to list tags
+         for * `qa_scorecard_id` - id of the scorecard to list tags for * `revision_id` - id of the
+         scorecard revision to list tags for` * `qa_question_id - id of the question to list tags for`
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. A filter to reduce results to a specific subset. Supports disjunctions (OR)
-           * and conjunctions (AND). Supported fields include the following: * `project_id` - id of
-           * the project to list tags for * `qa_scorecard_revision_id` - id of the scorecard
-           * revision to list tags for * `qa_question_id - id of the question to list tags for`
+           * Optional. A filter to reduce results to a specific subset. Supports conjunctions (ie.
+           * AND operators). Supported fields include the following: * `project_id` - id of the
+           * project to list tags for * `qa_scorecard_id` - id of the scorecard to list tags for *
+           * `revision_id` - id of the scorecard revision to list tags for` * `qa_question_id - id
+           * of the question to list tags for`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

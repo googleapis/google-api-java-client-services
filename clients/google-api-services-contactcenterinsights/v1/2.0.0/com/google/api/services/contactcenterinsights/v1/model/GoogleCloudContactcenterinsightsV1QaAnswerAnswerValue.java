@@ -81,6 +81,15 @@ public final class GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue extends
   private java.lang.Double score;
 
   /**
+   * Output only. A value of "Skip". If provided, this field may only be set to `true`. If a
+   * question receives this answer, it will be excluded from any score calculations. This would mean
+   * that the question was not evaluated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipValue;
+
+  /**
    * String value.
    * The value may be {@code null}.
    */
@@ -203,6 +212,27 @@ public final class GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue extends
    */
   public GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue setScore(java.lang.Double score) {
     this.score = score;
+    return this;
+  }
+
+  /**
+   * Output only. A value of "Skip". If provided, this field may only be set to `true`. If a
+   * question receives this answer, it will be excluded from any score calculations. This would mean
+   * that the question was not evaluated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipValue() {
+    return skipValue;
+  }
+
+  /**
+   * Output only. A value of "Skip". If provided, this field may only be set to `true`. If a
+   * question receives this answer, it will be excluded from any score calculations. This would mean
+   * that the question was not evaluated.
+   * @param skipValue skipValue or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue setSkipValue(java.lang.Boolean skipValue) {
+    this.skipValue = skipValue;
     return this;
   }
 

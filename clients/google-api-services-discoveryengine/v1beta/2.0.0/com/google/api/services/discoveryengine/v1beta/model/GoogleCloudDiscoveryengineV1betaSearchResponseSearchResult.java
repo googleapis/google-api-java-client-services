@@ -66,6 +66,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
   }
 
   /**
+   * Optional. A set of ranking signals associated with the result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchResponseSearchResultRankSignals rankSignals;
+
+  /**
    * The chunk data in the search response if the SearchRequest.ContentSearchSpec.search_result_mode
    * is set to CHUNKS.
    * @return value or {@code null} for none
@@ -134,6 +141,23 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult setModelScores(java.util.Map<String, GoogleCloudDiscoveryengineV1betaDoubleList> modelScores) {
     this.modelScores = modelScores;
+    return this;
+  }
+
+  /**
+   * Optional. A set of ranking signals associated with the result.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSearchResultRankSignals getRankSignals() {
+    return rankSignals;
+  }
+
+  /**
+   * Optional. A set of ranking signals associated with the result.
+   * @param rankSignals rankSignals or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult setRankSignals(GoogleCloudDiscoveryengineV1betaSearchResponseSearchResultRankSignals rankSignals) {
+    this.rankSignals = rankSignals;
     return this;
   }
 

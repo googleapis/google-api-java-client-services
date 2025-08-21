@@ -49,7 +49,8 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec extend
 
   /**
    * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col
-   * lections/{collection_id}/dataStores/{data_store_id}`.
+   * lections/{collection_id}/dataStores/{data_store_id}`. The path must include the project number,
+   * project id is not supported for this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +107,8 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec extend
 
   /**
    * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col
-   * lections/{collection_id}/dataStores/{data_store_id}`.
+   * lections/{collection_id}/dataStores/{data_store_id}`. The path must include the project number,
+   * project id is not supported for this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataStore() {
@@ -115,7 +117,8 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec extend
 
   /**
    * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col
-   * lections/{collection_id}/dataStores/{data_store_id}`.
+   * lections/{collection_id}/dataStores/{data_store_id}`. The path must include the project number,
+   * project id is not supported for this field.
    * @param dataStore dataStore or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec setDataStore(java.lang.String dataStore) {

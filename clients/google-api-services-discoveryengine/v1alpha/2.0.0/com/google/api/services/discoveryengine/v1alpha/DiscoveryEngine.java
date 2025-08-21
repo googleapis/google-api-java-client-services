@@ -27812,6 +27812,58 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
+                 * Optional. Specifies the order in which files are returned. The value is a comma-
+                 * separated string of fields to sort by. For ascending order - just the field name
+                 * is used. For descending order - the field name is suffixed with ` desc`. Sorting
+                 * is stable and applied sequentially according to the order of fields provided in
+                 * the string. Supported fields for ordering: * `upload_time`: The time the file was
+                 * uploaded. * `file_name`: The name of the file. * `mime_type`: The MIME type of
+                 * the file. * `session_name`: The name of the session the file belongs to. Default
+                 * Behavior: If the `order_by` field is not specified, files will be returned sorted
+                 * by creation time in descending order. Examples: 1. Sort by file name in ascending
+                 * order: `file_name` 2. Sort by upload time in descending order: `upload_time desc`
+                 * 3. Sort by file name (ascending), then by content type (MIME type) (descending),
+                 * and finally by upload time (ascending): `file_name, mime_type desc, upload_time`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String orderBy;
+
+                /** Optional. Specifies the order in which files are returned. The value is a comma-separated string of
+               fields to sort by. For ascending order - just the field name is used. For descending order - the
+               field name is suffixed with ` desc`. Sorting is stable and applied sequentially according to the
+               order of fields provided in the string. Supported fields for ordering: * `upload_time`: The time
+               the file was uploaded. * `file_name`: The name of the file. * `mime_type`: The MIME type of the
+               file. * `session_name`: The name of the session the file belongs to. Default Behavior: If the
+               `order_by` field is not specified, files will be returned sorted by creation time in descending
+               order. Examples: 1. Sort by file name in ascending order: `file_name` 2. Sort by upload time in
+               descending order: `upload_time desc` 3. Sort by file name (ascending), then by content type (MIME
+               type) (descending), and finally by upload time (ascending): `file_name, mime_type desc,
+               upload_time`
+                 */
+                public java.lang.String getOrderBy() {
+                  return orderBy;
+                }
+
+                /**
+                 * Optional. Specifies the order in which files are returned. The value is a comma-
+                 * separated string of fields to sort by. For ascending order - just the field name
+                 * is used. For descending order - the field name is suffixed with ` desc`. Sorting
+                 * is stable and applied sequentially according to the order of fields provided in
+                 * the string. Supported fields for ordering: * `upload_time`: The time the file was
+                 * uploaded. * `file_name`: The name of the file. * `mime_type`: The MIME type of
+                 * the file. * `session_name`: The name of the session the file belongs to. Default
+                 * Behavior: If the `order_by` field is not specified, files will be returned sorted
+                 * by creation time in descending order. Examples: 1. Sort by file name in ascending
+                 * order: `file_name` 2. Sort by upload time in descending order: `upload_time desc`
+                 * 3. Sort by file name (ascending), then by content type (MIME type) (descending),
+                 * and finally by upload time (ascending): `file_name, mime_type desc, upload_time`
+                 */
+                public List setOrderBy(java.lang.String orderBy) {
+                  this.orderBy = orderBy;
+                  return this;
+                }
+
+                /**
                  * Optional. The maximum number of files to return. The service may return fewer
                  * than this value. If unspecified, at most 100 files will be returned. The maximum
                  * value is 1000; values above 1000 will be coerced to 1000. If user specifies a

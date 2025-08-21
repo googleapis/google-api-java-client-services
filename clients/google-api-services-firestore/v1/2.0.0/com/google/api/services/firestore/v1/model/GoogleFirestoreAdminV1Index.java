@@ -102,6 +102,14 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   private java.lang.String state;
 
   /**
+   * Optional. Whether it is an unique index. Unique index ensures all values for the indexed
+   * field(s) are unique across documents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean unique;
+
+  /**
    * The API scope supported by this index.
    * @return value or {@code null} for none
    */
@@ -266,6 +274,25 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
    */
   public GoogleFirestoreAdminV1Index setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. Whether it is an unique index. Unique index ensures all values for the indexed
+   * field(s) are unique across documents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUnique() {
+    return unique;
+  }
+
+  /**
+   * Optional. Whether it is an unique index. Unique index ensures all values for the indexed
+   * field(s) are unique across documents.
+   * @param unique unique or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Index setUnique(java.lang.Boolean unique) {
+    this.unique = unique;
     return this;
   }
 

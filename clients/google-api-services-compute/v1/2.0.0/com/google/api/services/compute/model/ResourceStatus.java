@@ -31,6 +31,15 @@ package com.google.api.services.compute.model;
 public final class ResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
+   * and instance-level predefined metadata keys to provide the overridden value for those metadata
+   * keys at the instance level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatusEffectiveInstanceMetadata effectiveInstanceMetadata;
+
+  /**
    * [Output Only] The precise location of your instance within the zone's data center, including
    * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
    * The value may be {@code null}.
@@ -57,6 +66,27 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private UpcomingMaintenance upcomingMaintenance;
+
+  /**
+   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
+   * and instance-level predefined metadata keys to provide the overridden value for those metadata
+   * keys at the instance level.
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusEffectiveInstanceMetadata getEffectiveInstanceMetadata() {
+    return effectiveInstanceMetadata;
+  }
+
+  /**
+   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
+   * and instance-level predefined metadata keys to provide the overridden value for those metadata
+   * keys at the instance level.
+   * @param effectiveInstanceMetadata effectiveInstanceMetadata or {@code null} for none
+   */
+  public ResourceStatus setEffectiveInstanceMetadata(ResourceStatusEffectiveInstanceMetadata effectiveInstanceMetadata) {
+    this.effectiveInstanceMetadata = effectiveInstanceMetadata;
+    return this;
+  }
 
   /**
    * [Output Only] The precise location of your instance within the zone's data center, including

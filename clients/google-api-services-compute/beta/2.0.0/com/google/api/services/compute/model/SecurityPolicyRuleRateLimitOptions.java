@@ -77,7 +77,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    * with the security policy. If there is no "userIpRequestHeaders" configuration or an IP address
    * cannot be resolved from it, the key type defaults to IP. - TLS_JA4_FINGERPRINT: JA4 TLS/SSL
    * fingerprint if the client connects using HTTPS, HTTP/2 or HTTP/3. If not available, the key
-   * type defaults to ALL.
+   * type defaults to ALL. For "fairshare" action, this value is limited to ALL i.e. a single rate
+   * limit threshold is enforced for all the requests matching the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,7 +213,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    * with the security policy. If there is no "userIpRequestHeaders" configuration or an IP address
    * cannot be resolved from it, the key type defaults to IP. - TLS_JA4_FINGERPRINT: JA4 TLS/SSL
    * fingerprint if the client connects using HTTPS, HTTP/2 or HTTP/3. If not available, the key
-   * type defaults to ALL.
+   * type defaults to ALL. For "fairshare" action, this value is limited to ALL i.e. a single rate
+   * limit threshold is enforced for all the requests matching the rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnforceOnKey() {
@@ -241,7 +243,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    * with the security policy. If there is no "userIpRequestHeaders" configuration or an IP address
    * cannot be resolved from it, the key type defaults to IP. - TLS_JA4_FINGERPRINT: JA4 TLS/SSL
    * fingerprint if the client connects using HTTPS, HTTP/2 or HTTP/3. If not available, the key
-   * type defaults to ALL.
+   * type defaults to ALL. For "fairshare" action, this value is limited to ALL i.e. a single rate
+   * limit threshold is enforced for all the requests matching the rule.
    * @param enforceOnKey enforceOnKey or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions setEnforceOnKey(java.lang.String enforceOnKey) {

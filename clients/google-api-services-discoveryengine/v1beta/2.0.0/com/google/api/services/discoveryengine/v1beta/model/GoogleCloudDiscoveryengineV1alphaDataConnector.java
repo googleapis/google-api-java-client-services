@@ -158,6 +158,15 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private java.util.List<GoogleRpcStatus> errors;
 
   /**
+   * Optional. If the connector is a hybrid connector, determines whether ingestion is enabled and
+   * appropriate resources are provisioned during connector creation. If the connector is not a
+   * hybrid connector, this field is ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hybridIngestionDisabled;
+
+  /**
    * The refresh interval to sync the Access Control List information for the documents ingested by
    * this connector. If not set, the access control list will be refreshed at the default interval
    * of 30 minutes. The identity refresh interval can be at least 30 minutes and at most 7 days.
@@ -616,6 +625,27 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setErrors(java.util.List<GoogleRpcStatus> errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * Optional. If the connector is a hybrid connector, determines whether ingestion is enabled and
+   * appropriate resources are provisioned during connector creation. If the connector is not a
+   * hybrid connector, this field is ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHybridIngestionDisabled() {
+    return hybridIngestionDisabled;
+  }
+
+  /**
+   * Optional. If the connector is a hybrid connector, determines whether ingestion is enabled and
+   * appropriate resources are provisioned during connector creation. If the connector is not a
+   * hybrid connector, this field is ignored.
+   * @param hybridIngestionDisabled hybridIngestionDisabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setHybridIngestionDisabled(java.lang.Boolean hybridIngestionDisabled) {
+    this.hybridIngestionDisabled = hybridIngestionDisabled;
     return this;
   }
 

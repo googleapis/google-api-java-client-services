@@ -2269,25 +2269,27 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * An RFC3339 timestamp. Only sessions ending between the start and end times will be
-         * included in the response. If this time is omitted but startTime is specified, all
-         * sessions from startTime to the end of time will be returned.
+         * An RFC3339 timestamp. Only sessions starting before endTime and ending after startTime up
+         * to (endTime + 1 day) will be included in the response. If this time is omitted but
+         * startTime is specified, all sessions ending after startTime to the end of time will be
+         * returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String endTime;
 
-        /** An RFC3339 timestamp. Only sessions ending between the start and end times will be included in the
-       response. If this time is omitted but startTime is specified, all sessions from startTime to the
-       end of time will be returned.
+        /** An RFC3339 timestamp. Only sessions starting before endTime and ending after startTime up to
+       (endTime + 1 day) will be included in the response. If this time is omitted but startTime is
+       specified, all sessions ending after startTime to the end of time will be returned.
          */
         public java.lang.String getEndTime() {
           return endTime;
         }
 
         /**
-         * An RFC3339 timestamp. Only sessions ending between the start and end times will be
-         * included in the response. If this time is omitted but startTime is specified, all
-         * sessions from startTime to the end of time will be returned.
+         * An RFC3339 timestamp. Only sessions starting before endTime and ending after startTime up
+         * to (endTime + 1 day) will be included in the response. If this time is omitted but
+         * startTime is specified, all sessions ending after startTime to the end of time will be
+         * returned.
          */
         public List setEndTime(java.lang.String endTime) {
           this.endTime = endTime;
@@ -2348,25 +2350,28 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * An RFC3339 timestamp. Only sessions ending between the start and end times will be
-         * included in the response. If this time is omitted but endTime is specified, all sessions
-         * from the start of time up to endTime will be returned.
+         * An RFC3339 timestamp. Only sessions starting before endTime and ending after startTime up
+         * to (endTime + 1 day) will be included in the response. If this time is omitted but
+         * endTime is specified, all sessions starting before endTime and ending after the start of
+         * time up to (endTime + 1 day) will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String startTime;
 
-        /** An RFC3339 timestamp. Only sessions ending between the start and end times will be included in the
-       response. If this time is omitted but endTime is specified, all sessions from the start of time up
-       to endTime will be returned.
+        /** An RFC3339 timestamp. Only sessions starting before endTime and ending after startTime up to
+       (endTime + 1 day) will be included in the response. If this time is omitted but endTime is
+       specified, all sessions starting before endTime and ending after the start of time up to (endTime +
+       1 day) will be returned.
          */
         public java.lang.String getStartTime() {
           return startTime;
         }
 
         /**
-         * An RFC3339 timestamp. Only sessions ending between the start and end times will be
-         * included in the response. If this time is omitted but endTime is specified, all sessions
-         * from the start of time up to endTime will be returned.
+         * An RFC3339 timestamp. Only sessions starting before endTime and ending after startTime up
+         * to (endTime + 1 day) will be included in the response. If this time is omitted but
+         * endTime is specified, all sessions starting before endTime and ending after the start of
+         * time up to (endTime + 1 day) will be returned.
          */
         public List setStartTime(java.lang.String startTime) {
           this.startTime = startTime;

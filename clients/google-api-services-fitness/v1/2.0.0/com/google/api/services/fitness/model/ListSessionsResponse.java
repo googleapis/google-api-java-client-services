@@ -54,7 +54,8 @@ public final class ListSessionsResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * Sessions with an end time that is between startTime and endTime of the request.
+   * Sessions starting before endTime of the request and ending after startTime of the request up to
+   * (endTime of the request + 1 day).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +119,8 @@ public final class ListSessionsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Sessions with an end time that is between startTime and endTime of the request.
+   * Sessions starting before endTime of the request and ending after startTime of the request up to
+   * (endTime of the request + 1 day).
    * @return value or {@code null} for none
    */
   public java.util.List<Session> getSession() {
@@ -126,7 +128,8 @@ public final class ListSessionsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Sessions with an end time that is between startTime and endTime of the request.
+   * Sessions starting before endTime of the request and ending after startTime of the request up to
+   * (endTime of the request + 1 day).
    * @param session session or {@code null} for none
    */
   public ListSessionsResponse setSession(java.util.List<Session> session) {

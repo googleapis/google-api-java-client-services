@@ -135,6 +135,13 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. This field specifies the provider configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProviderConfig providerConfig;
+
+  /**
    * Optional. Input to control quota checks for resources in terraform configuration files. There
    * are limited resources on which quota validation applies.
    * The value may be {@code null}.
@@ -454,6 +461,23 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    */
   public Deployment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. This field specifies the provider configurations.
+   * @return value or {@code null} for none
+   */
+  public ProviderConfig getProviderConfig() {
+    return providerConfig;
+  }
+
+  /**
+   * Optional. This field specifies the provider configurations.
+   * @param providerConfig providerConfig or {@code null} for none
+   */
+  public Deployment setProviderConfig(ProviderConfig providerConfig) {
+    this.providerConfig = providerConfig;
     return this;
   }
 

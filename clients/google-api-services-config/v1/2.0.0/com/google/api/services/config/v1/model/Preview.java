@@ -135,6 +135,13 @@ public final class Preview extends com.google.api.client.json.GenericJson {
   private java.lang.String previewMode;
 
   /**
+   * Optional. This field specifies the provider configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProviderConfig providerConfig;
+
+  /**
    * Required. User-specified Service Account (SA) credentials to be used when previewing resources.
    * Format: `projects/{projectID}/serviceAccounts/{serviceAccount}`
    * The value may be {@code null}.
@@ -431,6 +438,23 @@ public final class Preview extends com.google.api.client.json.GenericJson {
    */
   public Preview setPreviewMode(java.lang.String previewMode) {
     this.previewMode = previewMode;
+    return this;
+  }
+
+  /**
+   * Optional. This field specifies the provider configurations.
+   * @return value or {@code null} for none
+   */
+  public ProviderConfig getProviderConfig() {
+    return providerConfig;
+  }
+
+  /**
+   * Optional. This field specifies the provider configurations.
+   * @param providerConfig providerConfig or {@code null} for none
+   */
+  public Preview setProviderConfig(ProviderConfig providerConfig) {
+    this.providerConfig = providerConfig;
     return this;
   }
 

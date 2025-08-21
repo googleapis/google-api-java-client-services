@@ -101,6 +101,13 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. This field specifies the provider configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProviderConfig providerConfig;
+
+  /**
    * Optional. Input to control quota checks for resources in terraform configuration files. There
    * are limited resources on which quota validation applies.
    * The value may be {@code null}.
@@ -348,6 +355,23 @@ public final class Revision extends com.google.api.client.json.GenericJson {
    */
   public Revision setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. This field specifies the provider configurations.
+   * @return value or {@code null} for none
+   */
+  public ProviderConfig getProviderConfig() {
+    return providerConfig;
+  }
+
+  /**
+   * Output only. This field specifies the provider configurations.
+   * @param providerConfig providerConfig or {@code null} for none
+   */
+  public Revision setProviderConfig(ProviderConfig providerConfig) {
+    this.providerConfig = providerConfig;
     return this;
   }
 

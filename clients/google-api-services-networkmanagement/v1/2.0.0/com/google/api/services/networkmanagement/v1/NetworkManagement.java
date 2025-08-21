@@ -447,22 +447,22 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -1484,22 +1484,22 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -4109,8 +4109,8 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the resource. Format:
-         *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
-         *        vider}
+         *        `projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pr
+         *        ovider}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -4138,8 +4138,8 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the resource. Format:
-         *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
-         *        vider}
+         *        `projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pr
+         *        ovider}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4218,22 +4218,22 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Required. Name of the resource. Format: projects/{project}/locations/{location}/network
-           * MonitoringProviders/{network_monitoring_provider}
+           * Required. Name of the resource. Format: `projects/{project}/locations/{location}/networ
+           * kMonitoringProviders/{network_monitoring_provider}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the resource. Format:
-         projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+         `projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the resource. Format: projects/{project}/locations/{location}/network
-           * MonitoringProviders/{network_monitoring_provider}
+           * Required. Name of the resource. Format: `projects/{project}/locations/{location}/networ
+           * kMonitoringProviders/{network_monitoring_provider}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4259,7 +4259,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
-         *        projects/{project}/locations/{location}
+         *        `projects/{project}/locations/{location}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4287,7 +4287,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
-         *        projects/{project}/locations/{location}
+         *        `projects/{project}/locations/{location}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4367,13 +4367,13 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
           /**
            * Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
-           * projects/{project}/locations/{location}
+           * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
-         projects/{project}/locations/{location}
+         `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -4381,7 +4381,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
           /**
            * Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
-           * projects/{project}/locations/{location}
+           * `projects/{project}/locations/{location}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

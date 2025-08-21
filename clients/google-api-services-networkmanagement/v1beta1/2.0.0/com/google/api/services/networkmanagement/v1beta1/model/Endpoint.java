@@ -74,8 +74,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
    * Service Connect and other network services to provide forwarding information in the control
    * plane. Applicable only to destination endpoint. Format:
-   * projects/{project}/global/forwardingRules/{id} or
-   * projects/{project}/regions/{region}/forwardingRules/{id}
+   * `projects/{project}/global/forwardingRules/{id}` or
+   * `projects/{project}/regions/{region}/forwardingRules/{id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,8 +283,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
    * Service Connect and other network services to provide forwarding information in the control
    * plane. Applicable only to destination endpoint. Format:
-   * projects/{project}/global/forwardingRules/{id} or
-   * projects/{project}/regions/{region}/forwardingRules/{id}
+   * `projects/{project}/global/forwardingRules/{id}` or
+   * `projects/{project}/regions/{region}/forwardingRules/{id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getForwardingRule() {
@@ -296,8 +296,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
    * Service Connect and other network services to provide forwarding information in the control
    * plane. Applicable only to destination endpoint. Format:
-   * projects/{project}/global/forwardingRules/{id} or
-   * projects/{project}/regions/{region}/forwardingRules/{id}
+   * `projects/{project}/global/forwardingRules/{id}` or
+   * `projects/{project}/regions/{region}/forwardingRules/{id}`
    * @param forwardingRule forwardingRule or {@code null} for none
    */
   public Endpoint setForwardingRule(java.lang.String forwardingRule) {

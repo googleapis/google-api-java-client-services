@@ -86,6 +86,15 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private NetworkPerformanceConfig networkPerformanceConfig;
 
   /**
+   * Output only. The network tier configuration for the node pool inherits from the cluster-level
+   * configuration and remains immutable throughout the node pool's lifecycle, including during
+   * upgrades.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkTierConfig networkTierConfig;
+
+  /**
    * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the nodepool. Pod CIDR size per node
    * depends on max_pods_per_node. By default, the value of max_pods_per_node is rounded off to next
    * power of 2 and we then double that to get the size of pod CIDR block per node. Example:
@@ -236,6 +245,27 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   public NodeNetworkConfig setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
     this.networkPerformanceConfig = networkPerformanceConfig;
+    return this;
+  }
+
+  /**
+   * Output only. The network tier configuration for the node pool inherits from the cluster-level
+   * configuration and remains immutable throughout the node pool's lifecycle, including during
+   * upgrades.
+   * @return value or {@code null} for none
+   */
+  public NetworkTierConfig getNetworkTierConfig() {
+    return networkTierConfig;
+  }
+
+  /**
+   * Output only. The network tier configuration for the node pool inherits from the cluster-level
+   * configuration and remains immutable throughout the node pool's lifecycle, including during
+   * upgrades.
+   * @param networkTierConfig networkTierConfig or {@code null} for none
+   */
+  public NodeNetworkConfig setNetworkTierConfig(NetworkTierConfig networkTierConfig) {
+    this.networkTierConfig = networkTierConfig;
     return this;
   }
 

@@ -373,6 +373,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ClusterNetworkPerformanceConfig desiredNetworkPerformanceConfig;
 
   /**
+   * The desired network tier configuration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkTierConfig desiredNetworkTierConfig;
+
+  /**
    * The desired node kubelet config for the cluster.
    * The value may be {@code null}.
    */
@@ -1464,6 +1471,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNetworkPerformanceConfig(ClusterNetworkPerformanceConfig desiredNetworkPerformanceConfig) {
     this.desiredNetworkPerformanceConfig = desiredNetworkPerformanceConfig;
+    return this;
+  }
+
+  /**
+   * The desired network tier configuration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public NetworkTierConfig getDesiredNetworkTierConfig() {
+    return desiredNetworkTierConfig;
+  }
+
+  /**
+   * The desired network tier configuration for the cluster.
+   * @param desiredNetworkTierConfig desiredNetworkTierConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNetworkTierConfig(NetworkTierConfig desiredNetworkTierConfig) {
+    this.desiredNetworkTierConfig = desiredNetworkTierConfig;
     return this;
   }
 

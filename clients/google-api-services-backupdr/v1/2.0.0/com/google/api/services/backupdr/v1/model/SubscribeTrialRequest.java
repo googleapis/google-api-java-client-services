@@ -17,7 +17,7 @@
 package com.google.api.services.backupdr.v1.model;
 
 /**
- * Request message for GetMsComplianceMetadata
+ * Request message for subscribing to a trial.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation
@@ -28,40 +28,16 @@ package com.google.api.services.backupdr.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FetchMsComplianceMetadataRequest extends com.google.api.client.json.GenericJson {
+public final class SubscribeTrialRequest extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Required. The project id of the target project
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String projectId;
-
-  /**
-   * Required. The project id of the target project
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getProjectId() {
-    return projectId;
-  }
-
-  /**
-   * Required. The project id of the target project
-   * @param projectId projectId or {@code null} for none
-   */
-  public FetchMsComplianceMetadataRequest setProjectId(java.lang.String projectId) {
-    this.projectId = projectId;
-    return this;
+  @Override
+  public SubscribeTrialRequest set(String fieldName, Object value) {
+    return (SubscribeTrialRequest) super.set(fieldName, value);
   }
 
   @Override
-  public FetchMsComplianceMetadataRequest set(String fieldName, Object value) {
-    return (FetchMsComplianceMetadataRequest) super.set(fieldName, value);
-  }
-
-  @Override
-  public FetchMsComplianceMetadataRequest clone() {
-    return (FetchMsComplianceMetadataRequest) super.clone();
+  public SubscribeTrialRequest clone() {
+    return (SubscribeTrialRequest) super.clone();
   }
 
 }

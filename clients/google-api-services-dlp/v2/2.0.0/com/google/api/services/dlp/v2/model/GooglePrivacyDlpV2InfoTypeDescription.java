@@ -65,6 +65,13 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
   private java.lang.String example;
 
   /**
+   * Locations at which this feature can be used. May change over time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2LocationSupport locationSupport;
+
+  /**
    * Internal name of the infoType.
    * The value may be {@code null}.
    */
@@ -167,6 +174,23 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
    */
   public GooglePrivacyDlpV2InfoTypeDescription setExample(java.lang.String example) {
     this.example = example;
+    return this;
+  }
+
+  /**
+   * Locations at which this feature can be used. May change over time.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2LocationSupport getLocationSupport() {
+    return locationSupport;
+  }
+
+  /**
+   * Locations at which this feature can be used. May change over time.
+   * @param locationSupport locationSupport or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoTypeDescription setLocationSupport(GooglePrivacyDlpV2LocationSupport locationSupport) {
+    this.locationSupport = locationSupport;
     return this;
   }
 

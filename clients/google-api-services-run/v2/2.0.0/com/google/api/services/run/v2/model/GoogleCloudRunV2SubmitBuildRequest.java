@@ -60,6 +60,13 @@ public final class GoogleCloudRunV2SubmitBuildRequest extends com.google.api.cli
   private java.lang.String machineType;
 
   /**
+   * Optional. The release track of the client that initiated the build request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String releaseTrack;
+
+  /**
    * Optional. The service account to use for the build. If not set, the default Cloud Build service
    * account for the project will be used.
    * The value may be {@code null}.
@@ -160,6 +167,23 @@ public final class GoogleCloudRunV2SubmitBuildRequest extends com.google.api.cli
    */
   public GoogleCloudRunV2SubmitBuildRequest setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Optional. The release track of the client that initiated the build request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReleaseTrack() {
+    return releaseTrack;
+  }
+
+  /**
+   * Optional. The release track of the client that initiated the build request.
+   * @param releaseTrack releaseTrack or {@code null} for none
+   */
+  public GoogleCloudRunV2SubmitBuildRequest setReleaseTrack(java.lang.String releaseTrack) {
+    this.releaseTrack = releaseTrack;
     return this;
   }
 

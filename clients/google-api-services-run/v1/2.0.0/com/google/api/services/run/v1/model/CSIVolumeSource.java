@@ -47,7 +47,8 @@ public final class CSIVolumeSource extends com.google.api.client.json.GenericJso
   /**
    * stores driver specific attributes. For Google Cloud Storage volumes, the following attributes
    * are supported: * bucketName: the name of the Cloud Storage bucket to mount. The Cloud Run
-   * Service identity must have access to this bucket.
+   * Service identity must have access to this bucket. * mountOptions: comma-separated list of mount
+   * options to pass to the gcsfuse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,8 @@ public final class CSIVolumeSource extends com.google.api.client.json.GenericJso
   /**
    * stores driver specific attributes. For Google Cloud Storage volumes, the following attributes
    * are supported: * bucketName: the name of the Cloud Storage bucket to mount. The Cloud Run
-   * Service identity must have access to this bucket.
+   * Service identity must have access to this bucket. * mountOptions: comma-separated list of mount
+   * options to pass to the gcsfuse.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getVolumeAttributes() {
@@ -102,7 +104,8 @@ public final class CSIVolumeSource extends com.google.api.client.json.GenericJso
   /**
    * stores driver specific attributes. For Google Cloud Storage volumes, the following attributes
    * are supported: * bucketName: the name of the Cloud Storage bucket to mount. The Cloud Run
-   * Service identity must have access to this bucket.
+   * Service identity must have access to this bucket. * mountOptions: comma-separated list of mount
+   * options to pass to the gcsfuse.
    * @param volumeAttributes volumeAttributes or {@code null} for none
    */
   public CSIVolumeSource setVolumeAttributes(java.util.Map<String, java.lang.String> volumeAttributes) {

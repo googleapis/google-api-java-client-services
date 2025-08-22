@@ -32,15 +32,15 @@ package com.google.api.services.iam.v1.model;
 public final class WorkloadIdentityPoolNamespace extends com.google.api.client.json.GenericJson {
 
   /**
-   * A description of the namespace. Cannot exceed 256 characters.
+   * Optional. A description of the namespace. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Whether the namespace is disabled. If disabled, credentials may no longer be issued for
-   * identities within this namespace, however existing credentials will still be accepted until
+   * Optional. Whether the namespace is disabled. If disabled, credentials may no longer be issued
+   * for identities within this namespace, however existing credentials will still be accepted until
    * they expire.
    * The value may be {@code null}.
    */
@@ -76,7 +76,7 @@ public final class WorkloadIdentityPoolNamespace extends com.google.api.client.j
   private java.lang.String state;
 
   /**
-   * A description of the namespace. Cannot exceed 256 characters.
+   * Optional. A description of the namespace. Cannot exceed 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -84,7 +84,7 @@ public final class WorkloadIdentityPoolNamespace extends com.google.api.client.j
   }
 
   /**
-   * A description of the namespace. Cannot exceed 256 characters.
+   * Optional. A description of the namespace. Cannot exceed 256 characters.
    * @param description description or {@code null} for none
    */
   public WorkloadIdentityPoolNamespace setDescription(java.lang.String description) {
@@ -93,8 +93,8 @@ public final class WorkloadIdentityPoolNamespace extends com.google.api.client.j
   }
 
   /**
-   * Whether the namespace is disabled. If disabled, credentials may no longer be issued for
-   * identities within this namespace, however existing credentials will still be accepted until
+   * Optional. Whether the namespace is disabled. If disabled, credentials may no longer be issued
+   * for identities within this namespace, however existing credentials will still be accepted until
    * they expire.
    * @return value or {@code null} for none
    */
@@ -103,8 +103,8 @@ public final class WorkloadIdentityPoolNamespace extends com.google.api.client.j
   }
 
   /**
-   * Whether the namespace is disabled. If disabled, credentials may no longer be issued for
-   * identities within this namespace, however existing credentials will still be accepted until
+   * Optional. Whether the namespace is disabled. If disabled, credentials may no longer be issued
+   * for identities within this namespace, however existing credentials will still be accepted until
    * they expire.
    * @param disabled disabled or {@code null} for none
    */

@@ -129,6 +129,14 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.String ipv6AccessType;
 
   /**
+   * Cluster-level network tier configuration is used to determine the default network tier for
+   * external IP addresses on cluster resources, such as node pools and load balancers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkTierConfig networkTierConfig;
+
+  /**
    * This field is deprecated, use node_ipv4_cidr_block.
    * The value may be {@code null}.
    */
@@ -461,6 +469,25 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   public IPAllocationPolicy setIpv6AccessType(java.lang.String ipv6AccessType) {
     this.ipv6AccessType = ipv6AccessType;
+    return this;
+  }
+
+  /**
+   * Cluster-level network tier configuration is used to determine the default network tier for
+   * external IP addresses on cluster resources, such as node pools and load balancers.
+   * @return value or {@code null} for none
+   */
+  public NetworkTierConfig getNetworkTierConfig() {
+    return networkTierConfig;
+  }
+
+  /**
+   * Cluster-level network tier configuration is used to determine the default network tier for
+   * external IP addresses on cluster resources, such as node pools and load balancers.
+   * @param networkTierConfig networkTierConfig or {@code null} for none
+   */
+  public IPAllocationPolicy setNetworkTierConfig(NetworkTierConfig networkTierConfig) {
+    this.networkTierConfig = networkTierConfig;
     return this;
   }
 

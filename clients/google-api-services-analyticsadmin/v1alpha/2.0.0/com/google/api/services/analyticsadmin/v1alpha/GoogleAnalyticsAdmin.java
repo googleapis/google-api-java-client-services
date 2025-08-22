@@ -4047,7 +4047,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Returns the singleton data retention settings for this property.
+     * Returns the reporting identity settings for this property.
      *
      * Create a request for the method "properties.getReportingIdentitySettings".
      *
@@ -4074,7 +4074,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^properties/[^/]+/reportingIdentitySettings$");
 
       /**
-       * Returns the singleton data retention settings for this property.
+       * Returns the reporting identity settings for this property.
        *
        * Create a request for the method "properties.getReportingIdentitySettings".
        *

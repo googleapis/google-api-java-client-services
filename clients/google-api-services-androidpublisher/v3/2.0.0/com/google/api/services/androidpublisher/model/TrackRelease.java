@@ -31,7 +31,8 @@ package com.google.api.services.androidpublisher.model;
 public final class TrackRelease extends com.google.api.client.json.GenericJson {
 
   /**
-   * Restricts a release to a specific set of countries.
+   * Restricts a release to a specific set of countries. Note this is only allowed to be set for
+   * inProgress releases in the production track.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> versionCodes;
 
   /**
-   * Restricts a release to a specific set of countries.
+   * Restricts a release to a specific set of countries. Note this is only allowed to be set for
+   * inProgress releases in the production track.
    * @return value or {@code null} for none
    */
   public CountryTargeting getCountryTargeting() {
@@ -100,7 +102,8 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Restricts a release to a specific set of countries.
+   * Restricts a release to a specific set of countries. Note this is only allowed to be set for
+   * inProgress releases in the production track.
    * @param countryTargeting countryTargeting or {@code null} for none
    */
   public TrackRelease setCountryTargeting(CountryTargeting countryTargeting) {

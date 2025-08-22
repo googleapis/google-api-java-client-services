@@ -54,7 +54,8 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
 
   /**
    * The current recurring price of the auto renewing plan. Note that the price does not take into
-   * account discounts and taxes, call orders.get API instead if transaction details are needed.
+   * account discounts and does not include taxes for tax-exclusive pricing, please call orders.get
+   * API instead if transaction details are needed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +116,8 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
 
   /**
    * The current recurring price of the auto renewing plan. Note that the price does not take into
-   * account discounts and taxes, call orders.get API instead if transaction details are needed.
+   * account discounts and does not include taxes for tax-exclusive pricing, please call orders.get
+   * API instead if transaction details are needed.
    * @return value or {@code null} for none
    */
   public Money getRecurringPrice() {
@@ -124,7 +126,8 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
 
   /**
    * The current recurring price of the auto renewing plan. Note that the price does not take into
-   * account discounts and taxes, call orders.get API instead if transaction details are needed.
+   * account discounts and does not include taxes for tax-exclusive pricing, please call orders.get
+   * API instead if transaction details are needed.
    * @param recurringPrice recurringPrice or {@code null} for none
    */
   public AutoRenewingPlan setRecurringPrice(Money recurringPrice) {

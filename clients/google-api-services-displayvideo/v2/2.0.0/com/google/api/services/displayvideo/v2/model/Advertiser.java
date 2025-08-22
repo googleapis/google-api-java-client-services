@@ -45,6 +45,18 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
   private java.lang.Long advertiserId;
 
   /**
+   * Optional. Whether this advertiser contains line items that serve European Union political ads.
+   * If this field is set to `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING`, then the following will
+   * happen: * Any new line items created under this advertiser will be assigned
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` if not otherwise specified. * Any existing line
+   * items under this advertiser that do not have a set value be updated to
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` within a day.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String containsEuPoliticalAds;
+
+  /**
    * Required. Creative related settings of the advertiser.
    * The value may be {@code null}.
    */
@@ -163,6 +175,33 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    */
   public Advertiser setAdvertiserId(java.lang.Long advertiserId) {
     this.advertiserId = advertiserId;
+    return this;
+  }
+
+  /**
+   * Optional. Whether this advertiser contains line items that serve European Union political ads.
+   * If this field is set to `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING`, then the following will
+   * happen: * Any new line items created under this advertiser will be assigned
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` if not otherwise specified. * Any existing line
+   * items under this advertiser that do not have a set value be updated to
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` within a day.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContainsEuPoliticalAds() {
+    return containsEuPoliticalAds;
+  }
+
+  /**
+   * Optional. Whether this advertiser contains line items that serve European Union political ads.
+   * If this field is set to `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING`, then the following will
+   * happen: * Any new line items created under this advertiser will be assigned
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` if not otherwise specified. * Any existing line
+   * items under this advertiser that do not have a set value be updated to
+   * `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` within a day.
+   * @param containsEuPoliticalAds containsEuPoliticalAds or {@code null} for none
+   */
+  public Advertiser setContainsEuPoliticalAds(java.lang.String containsEuPoliticalAds) {
+    this.containsEuPoliticalAds = containsEuPoliticalAds;
     return this;
   }
 

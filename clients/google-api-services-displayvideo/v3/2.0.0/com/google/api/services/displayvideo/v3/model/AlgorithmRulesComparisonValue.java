@@ -38,6 +38,27 @@ public final class AlgorithmRulesComparisonValue extends com.google.api.client.j
   private java.lang.Boolean boolValue;
 
   /**
+   * Video content duration value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentDurationValue;
+
+  /**
+   * Video genre id value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long contentGenreIdValue;
+
+  /**
+   * Video delivery type value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentStreamTypeValue;
+
+  /**
    * Creative dimension value.
    * The value may be {@code null}.
    */
@@ -121,6 +142,57 @@ public final class AlgorithmRulesComparisonValue extends com.google.api.client.j
    */
   public AlgorithmRulesComparisonValue setBoolValue(java.lang.Boolean boolValue) {
     this.boolValue = boolValue;
+    return this;
+  }
+
+  /**
+   * Video content duration value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentDurationValue() {
+    return contentDurationValue;
+  }
+
+  /**
+   * Video content duration value.
+   * @param contentDurationValue contentDurationValue or {@code null} for none
+   */
+  public AlgorithmRulesComparisonValue setContentDurationValue(java.lang.String contentDurationValue) {
+    this.contentDurationValue = contentDurationValue;
+    return this;
+  }
+
+  /**
+   * Video genre id value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getContentGenreIdValue() {
+    return contentGenreIdValue;
+  }
+
+  /**
+   * Video genre id value.
+   * @param contentGenreIdValue contentGenreIdValue or {@code null} for none
+   */
+  public AlgorithmRulesComparisonValue setContentGenreIdValue(java.lang.Long contentGenreIdValue) {
+    this.contentGenreIdValue = contentGenreIdValue;
+    return this;
+  }
+
+  /**
+   * Video delivery type value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentStreamTypeValue() {
+    return contentStreamTypeValue;
+  }
+
+  /**
+   * Video delivery type value.
+   * @param contentStreamTypeValue contentStreamTypeValue or {@code null} for none
+   */
+  public AlgorithmRulesComparisonValue setContentStreamTypeValue(java.lang.String contentStreamTypeValue) {
+    this.contentStreamTypeValue = contentStreamTypeValue;
     return this;
   }
 

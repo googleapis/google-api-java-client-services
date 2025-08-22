@@ -59,6 +59,20 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.lang.Long campaignId;
 
   /**
+   * Whether this line item will serve European Union political ads. If contains_eu_political_ads
+   * has been set to `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` in the parent advertiser, then this
+   * field will be assigned `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` if not otherwise specified.
+   * This field can then be updated using the UI, API, or Structured Data Files. *Warning*: Starting
+   * **September 8, 2025**, this field must be set when creating a new line item. If not, either the
+   * value `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` will be assigned if the parent advertiser has
+   * declared that it does not serve EU political ads, or **the `advertisers.lineItems.create`
+   * request will fail**.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String containsEuPoliticalAds;
+
+  /**
    * The conversion tracking setting of the line item.
    * The value may be {@code null}.
    */
@@ -283,6 +297,37 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    */
   public LineItem setCampaignId(java.lang.Long campaignId) {
     this.campaignId = campaignId;
+    return this;
+  }
+
+  /**
+   * Whether this line item will serve European Union political ads. If contains_eu_political_ads
+   * has been set to `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` in the parent advertiser, then this
+   * field will be assigned `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` if not otherwise specified.
+   * This field can then be updated using the UI, API, or Structured Data Files. *Warning*: Starting
+   * **September 8, 2025**, this field must be set when creating a new line item. If not, either the
+   * value `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` will be assigned if the parent advertiser has
+   * declared that it does not serve EU political ads, or **the `advertisers.lineItems.create`
+   * request will fail**.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContainsEuPoliticalAds() {
+    return containsEuPoliticalAds;
+  }
+
+  /**
+   * Whether this line item will serve European Union political ads. If contains_eu_political_ads
+   * has been set to `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` in the parent advertiser, then this
+   * field will be assigned `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` if not otherwise specified.
+   * This field can then be updated using the UI, API, or Structured Data Files. *Warning*: Starting
+   * **September 8, 2025**, this field must be set when creating a new line item. If not, either the
+   * value `DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` will be assigned if the parent advertiser has
+   * declared that it does not serve EU political ads, or **the `advertisers.lineItems.create`
+   * request will fail**.
+   * @param containsEuPoliticalAds containsEuPoliticalAds or {@code null} for none
+   */
+  public LineItem setContainsEuPoliticalAds(java.lang.String containsEuPoliticalAds) {
+    this.containsEuPoliticalAds = containsEuPoliticalAds;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class ExportFindingsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The destination big query dataset to export findings to.
+   * Required. The destination BigQuery dataset to export findings to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class ExportFindingsMetadata extends com.google.api.client.json.Gen
   private String exportStartTime;
 
   /**
-   * Required. The destination big query dataset to export findings to.
+   * Required. The destination BigQuery dataset to export findings to.
    * @return value or {@code null} for none
    */
   public BigQueryDestination getBigQueryDestination() {
@@ -53,7 +53,7 @@ public final class ExportFindingsMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The destination big query dataset to export findings to.
+   * Required. The destination BigQuery dataset to export findings to.
    * @param bigQueryDestination bigQueryDestination or {@code null} for none
    */
   public ExportFindingsMetadata setBigQueryDestination(BigQueryDestination bigQueryDestination) {

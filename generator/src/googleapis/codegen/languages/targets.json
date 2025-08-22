@@ -5,10 +5,10 @@
       "description": "Java libraries for Google APIs.",
       "variations": {
         "default": {
-          "path": "default"
+          "path": "2.0.0"
         },
         "stable": {
-          "path": "1.19.1"
+          "path": "2.0.0"
         }
       }
     }

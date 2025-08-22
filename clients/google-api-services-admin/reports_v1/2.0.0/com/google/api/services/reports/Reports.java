@@ -182,7 +182,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "admin/reports/v1/activity/users/{userKey}/applications/{applicationName}";
 
       private final java.util.regex.Pattern APPLICATION_NAME_PATTERN =
-          java.util.regex.Pattern.compile("(access_transparency)|(admin)|(calendar)|(chat)|(chrome)|(classroom)|(context_aware_access)|(data_studio)|(drive)|(gcp)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)");
+          java.util.regex.Pattern.compile("(access_transparency)|(admin)|(calendar)|(chat)|(chrome)|(classroom)|(context_aware_access)|(data_studio)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)");
 
       private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
           java.util.regex.Pattern.compile("C.+|my_customer");
@@ -229,7 +229,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(access_transparency)|(admin)|(calendar)|(chat)|(chrome)|(classroom)|(context_aware_access)|(data_studio)|(drive)|(gcp)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)");
+              "(access_transparency)|(admin)|(calendar)|(chat)|(chrome)|(classroom)|(context_aware_access)|(data_studio)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)");
         }
       }
 
@@ -344,7 +344,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(access_transparency)|(admin)|(calendar)|(chat)|(chrome)|(classroom)|(context_aware_access)|(data_studio)|(drive)|(gcp)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)");
+              "(access_transparency)|(admin)|(calendar)|(chat)|(chrome)|(classroom)|(context_aware_access)|(data_studio)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)");
         }
         this.applicationName = applicationName;
         return this;
@@ -414,7 +414,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * timespan of events summarized in a report can start in April and end in May. The report
        * itself can be requested in August. If the `endTime` is not specified, the report returns
        * all activities from the `startTime` until the current time or the most recent 180 days if
-       * the `startTime` is more than 180 days in the past.
+       * the `startTime` is more than 180 days in the past. For Gmail requests, `startTime` and
+       * `endTime` must be provided and the difference must not be greater than 30 days.
        */
       @com.google.api.client.util.Key
       private java.lang.String endTime;
@@ -428,7 +429,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      shown in the report. For example, the timespan of events summarized in a report can start in April
      and end in May. The report itself can be requested in August. If the `endTime` is not specified,
      the report returns all activities from the `startTime` until the current time or the most recent
-     180 days if the `startTime` is more than 180 days in the past.
+     180 days if the `startTime` is more than 180 days in the past. For Gmail requests, `startTime` and
+     `endTime` must be provided and the difference must not be greater than 30 days.
        */
       public java.lang.String getEndTime() {
         return endTime;
@@ -445,7 +447,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * timespan of events summarized in a report can start in April and end in May. The report
        * itself can be requested in August. If the `endTime` is not specified, the report returns
        * all activities from the `startTime` until the current time or the most recent 180 days if
-       * the `startTime` is more than 180 days in the past.
+       * the `startTime` is more than 180 days in the past. For Gmail requests, `startTime` and
+       * `endTime` must be provided and the difference must not be greater than 30 days.
        */
       public List setEndTime(java.lang.String endTime) {
         if (!getSuppressPatternChecks()) {
@@ -719,7 +722,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * Sets the beginning of the range of time shown in the report. The date is in the RFC 3339
        * format, for example 2010-10-28T10:26:35.000Z. The report returns all activities from
        * `startTime` until `endTime`. The `startTime` must be before the `endTime` (if specified)
-       * and the current time when the request is made, or the API returns an error.
+       * and the current time when the request is made, or the API returns an error. For Gmail
+       * requests, `startTime` and `endTime` must be provided and the difference must not be greater
+       * than 30 days.
        */
       @com.google.api.client.util.Key
       private java.lang.String startTime;
@@ -727,7 +732,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       /** Sets the beginning of the range of time shown in the report. The date is in the RFC 3339 format,
      for example 2010-10-28T10:26:35.000Z. The report returns all activities from `startTime` until
      `endTime`. The `startTime` must be before the `endTime` (if specified) and the current time when
-     the request is made, or the API returns an error.
+     the request is made, or the API returns an error. For Gmail requests, `startTime` and `endTime`
+     must be provided and the difference must not be greater than 30 days.
        */
       public java.lang.String getStartTime() {
         return startTime;
@@ -737,7 +743,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * Sets the beginning of the range of time shown in the report. The date is in the RFC 3339
        * format, for example 2010-10-28T10:26:35.000Z. The report returns all activities from
        * `startTime` until `endTime`. The `startTime` must be before the `endTime` (if specified)
-       * and the current time when the request is made, or the API returns an error.
+       * and the current time when the request is made, or the API returns an error. For Gmail
+       * requests, `startTime` and `endTime` must be provided and the difference must not be greater
+       * than 30 days.
        */
       public List setStartTime(java.lang.String startTime) {
         if (!getSuppressPatternChecks()) {

@@ -17,7 +17,7 @@
 package com.google.api.services.containeranalysis.v1.model;
 
 /**
- * A step in the build pipeline. Next ID: 22
+ * A step in the build pipeline. Next ID: 23
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -131,6 +131,13 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TimeSpan pullTiming;
+
+  /**
+   * Remote configuration for the build step.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String remoteConfig;
 
   /**
    * The value may be {@code null}.
@@ -431,6 +438,23 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
    */
   public BuildStep setPullTiming(TimeSpan pullTiming) {
     this.pullTiming = pullTiming;
+    return this;
+  }
+
+  /**
+   * Remote configuration for the build step.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRemoteConfig() {
+    return remoteConfig;
+  }
+
+  /**
+   * Remote configuration for the build step.
+   * @param remoteConfig remoteConfig or {@code null} for none
+   */
+  public BuildStep setRemoteConfig(java.lang.String remoteConfig) {
+    this.remoteConfig = remoteConfig;
     return this;
   }
 

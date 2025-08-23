@@ -2296,6 +2296,150 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
         }
         /**
+         * Pause the standby instance (replica). WARNING: This operation makes the standby instance's NFS
+         * filesystem writable. Any data written to the standby instance while paused will be lost when the
+         * replica is resumed or promoted.
+         *
+         * Create a request for the method "instances.pauseReplica".
+         *
+         * This request holds the parameters needed by the file server.  After setting any optional
+         * parameters, call the {@link PauseReplica#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+         * @param content the {@link com.google.api.services.file.v1beta1.model.PauseReplicaRequest}
+         * @return the request
+         */
+        public PauseReplica pauseReplica(java.lang.String name, com.google.api.services.file.v1beta1.model.PauseReplicaRequest content) throws java.io.IOException {
+          PauseReplica result = new PauseReplica(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PauseReplica extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:pauseReplica";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Pause the standby instance (replica). WARNING: This operation makes the standby instance's NFS
+           * filesystem writable. Any data written to the standby instance while paused will be lost when
+           * the replica is resumed or promoted.
+           *
+           * Create a request for the method "instances.pauseReplica".
+           *
+           * This request holds the parameters needed by the the file server.  After setting any optional
+           * parameters, call the {@link PauseReplica#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * PauseReplica#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           * @param content the {@link com.google.api.services.file.v1beta1.model.PauseReplicaRequest}
+           * @since 1.13
+           */
+          protected PauseReplica(java.lang.String name, com.google.api.services.file.v1beta1.model.PauseReplicaRequest content) {
+            super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public PauseReplica set$Xgafv(java.lang.String $Xgafv) {
+            return (PauseReplica) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PauseReplica setAccessToken(java.lang.String accessToken) {
+            return (PauseReplica) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PauseReplica setAlt(java.lang.String alt) {
+            return (PauseReplica) super.setAlt(alt);
+          }
+
+          @Override
+          public PauseReplica setCallback(java.lang.String callback) {
+            return (PauseReplica) super.setCallback(callback);
+          }
+
+          @Override
+          public PauseReplica setFields(java.lang.String fields) {
+            return (PauseReplica) super.setFields(fields);
+          }
+
+          @Override
+          public PauseReplica setKey(java.lang.String key) {
+            return (PauseReplica) super.setKey(key);
+          }
+
+          @Override
+          public PauseReplica setOauthToken(java.lang.String oauthToken) {
+            return (PauseReplica) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PauseReplica setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PauseReplica) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PauseReplica setQuotaUser(java.lang.String quotaUser) {
+            return (PauseReplica) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PauseReplica setUploadType(java.lang.String uploadType) {
+            return (PauseReplica) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PauseReplica setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PauseReplica) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the instance, in the format
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           */
+          public PauseReplica setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public PauseReplica set(String parameterName, Object value) {
+            return (PauseReplica) super.set(parameterName, value);
+          }
+        }
+        /**
          * Promote the standby instance (replica).
          *
          * Create a request for the method "instances.promoteReplica".

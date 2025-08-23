@@ -145,6 +145,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxShareCount;
 
   /**
+   * Output only. The min capacity of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minCapacityGb;
+
+  /**
    * Indicates whether this instance uses a multi-share configuration with which it can have more
    * than one file-share or none at all. File-shares are added, updated and removed through the
    * separate file-share APIs.
@@ -513,6 +520,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setMaxShareCount(java.lang.Long maxShareCount) {
     this.maxShareCount = maxShareCount;
+    return this;
+  }
+
+  /**
+   * Output only. The min capacity of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinCapacityGb() {
+    return minCapacityGb;
+  }
+
+  /**
+   * Output only. The min capacity of the instance.
+   * @param minCapacityGb minCapacityGb or {@code null} for none
+   */
+  public Instance setMinCapacityGb(java.lang.Long minCapacityGb) {
+    this.minCapacityGb = minCapacityGb;
     return this;
   }
 

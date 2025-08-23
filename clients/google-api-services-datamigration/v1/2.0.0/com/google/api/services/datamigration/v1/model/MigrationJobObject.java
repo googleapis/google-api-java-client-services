@@ -45,6 +45,13 @@ public final class MigrationJobObject extends com.google.api.client.json.Generic
   private Status error;
 
   /**
+   * Output only. Metadata for heterogeneous migration jobs objects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HeterogeneousMetadata heterogeneousMetadata;
+
+  /**
    * The object's name.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class MigrationJobObject extends com.google.api.client.json.Generic
    */
   public MigrationJobObject setError(Status error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata for heterogeneous migration jobs objects.
+   * @return value or {@code null} for none
+   */
+  public HeterogeneousMetadata getHeterogeneousMetadata() {
+    return heterogeneousMetadata;
+  }
+
+  /**
+   * Output only. Metadata for heterogeneous migration jobs objects.
+   * @param heterogeneousMetadata heterogeneousMetadata or {@code null} for none
+   */
+  public MigrationJobObject setHeterogeneousMetadata(HeterogeneousMetadata heterogeneousMetadata) {
+    this.heterogeneousMetadata = heterogeneousMetadata;
     return this;
   }
 

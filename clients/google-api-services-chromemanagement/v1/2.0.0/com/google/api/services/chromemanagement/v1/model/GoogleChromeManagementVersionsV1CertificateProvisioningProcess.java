@@ -93,6 +93,20 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   private java.lang.String provisioningProfileId;
 
   /**
+   * Output only. The CA connection is a SCEP CA connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementVersionsV1ScepCaConnection scepCaConnection;
+
+  /**
+   * Output only. The profile is a SCEP certificate provisioning profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementVersionsV1ScepProfile scepProfile;
+
+  /**
    * Output only. The data that the client was asked to sign. This field is only present after the
    * `SignData` operation has been initiated.
    * The value may be {@code null}.
@@ -279,6 +293,40 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
    */
   public GoogleChromeManagementVersionsV1CertificateProvisioningProcess setProvisioningProfileId(java.lang.String provisioningProfileId) {
     this.provisioningProfileId = provisioningProfileId;
+    return this;
+  }
+
+  /**
+   * Output only. The CA connection is a SCEP CA connection.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1ScepCaConnection getScepCaConnection() {
+    return scepCaConnection;
+  }
+
+  /**
+   * Output only. The CA connection is a SCEP CA connection.
+   * @param scepCaConnection scepCaConnection or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1CertificateProvisioningProcess setScepCaConnection(GoogleChromeManagementVersionsV1ScepCaConnection scepCaConnection) {
+    this.scepCaConnection = scepCaConnection;
+    return this;
+  }
+
+  /**
+   * Output only. The profile is a SCEP certificate provisioning profile.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1ScepProfile getScepProfile() {
+    return scepProfile;
+  }
+
+  /**
+   * Output only. The profile is a SCEP certificate provisioning profile.
+   * @param scepProfile scepProfile or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1CertificateProvisioningProcess setScepProfile(GoogleChromeManagementVersionsV1ScepProfile scepProfile) {
+    this.scepProfile = scepProfile;
     return this;
   }
 

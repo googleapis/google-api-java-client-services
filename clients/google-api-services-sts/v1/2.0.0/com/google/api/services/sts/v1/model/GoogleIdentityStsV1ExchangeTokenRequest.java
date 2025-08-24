@@ -52,7 +52,7 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   /**
    * A set of features that Security Token Service supports, in addition to the standard OAuth 2.0
    * token exchange, formatted as a serialized JSON object of Options. The size of the parameter
-   * value must not exceed 4096 characters.
+   * value must not exceed 4 * 1024 * 1024 characters (4 MB).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,7 +207,7 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   /**
    * A set of features that Security Token Service supports, in addition to the standard OAuth 2.0
    * token exchange, formatted as a serialized JSON object of Options. The size of the parameter
-   * value must not exceed 4096 characters.
+   * value must not exceed 4 * 1024 * 1024 characters (4 MB).
    * @return value or {@code null} for none
    */
   public java.lang.String getOptions() {
@@ -217,7 +217,7 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   /**
    * A set of features that Security Token Service supports, in addition to the standard OAuth 2.0
    * token exchange, formatted as a serialized JSON object of Options. The size of the parameter
-   * value must not exceed 4096 characters.
+   * value must not exceed 4 * 1024 * 1024 characters (4 MB).
    * @param options options or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setOptions(java.lang.String options) {

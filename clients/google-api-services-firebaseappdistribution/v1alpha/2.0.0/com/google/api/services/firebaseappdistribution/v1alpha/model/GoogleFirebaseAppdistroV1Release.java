@@ -62,6 +62,13 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
   private java.lang.String displayVersion;
 
   /**
+   * Output only. The time the release will expire.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
    * Output only. A link to the Firebase console displaying a single release.
    * The value may be {@code null}.
    */
@@ -91,6 +98,13 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String testingUri;
+
+  /**
+   * Output only. The time the release was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
 
   /**
    * Output only. A signed link (which expires in one hour) to directly download the app binary
@@ -167,6 +181,23 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
   }
 
   /**
+   * Output only. The time the release will expire.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Output only. The time the release will expire.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1Release setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
    * Output only. A link to the Firebase console displaying a single release.
    * @return value or {@code null} for none
    */
@@ -237,6 +268,23 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
    */
   public GoogleFirebaseAppdistroV1Release setTestingUri(java.lang.String testingUri) {
     this.testingUri = testingUri;
+    return this;
+  }
+
+  /**
+   * Output only. The time the release was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The time the release was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1Release setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

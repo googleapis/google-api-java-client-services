@@ -39,13 +39,13 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
   /**
    * Required. Where to put the content on the device. Must be an absolute, allowlisted path. If the
    * file exists, it will be replaced. The following device-side directories and any of their
-   * subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard, or /storage
-   * ${ANDROID_DATA}/local/tmp, or /data/local/tmp Specifying a path outside of these directory
-   * trees is invalid. The paths /sdcard and /data will be made available and treated as implicit
-   * path substitutions. E.g. if /sdcard on a particular device does not map to external storage,
-   * the system will replace it with the external storage path prefix for that device and copy the
-   * file there. It is strongly advised to use the Environment API in app and test code to access
-   * files on the device in a portable way.
+   * subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard ${ANDROID_DATA}/local/tmp, or
+   * /data/local/tmp Specifying a path outside of these directory trees is invalid. The paths
+   * /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if
+   * /sdcard on a particular device does not map to external storage, the system will replace it
+   * with the external storage path prefix for that device and copy the file there. It is strongly
+   * advised to use the Environment API in app and test code to access files on the device in a
+   * portable way.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,13 +71,13 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
   /**
    * Required. Where to put the content on the device. Must be an absolute, allowlisted path. If the
    * file exists, it will be replaced. The following device-side directories and any of their
-   * subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard, or /storage
-   * ${ANDROID_DATA}/local/tmp, or /data/local/tmp Specifying a path outside of these directory
-   * trees is invalid. The paths /sdcard and /data will be made available and treated as implicit
-   * path substitutions. E.g. if /sdcard on a particular device does not map to external storage,
-   * the system will replace it with the external storage path prefix for that device and copy the
-   * file there. It is strongly advised to use the Environment API in app and test code to access
-   * files on the device in a portable way.
+   * subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard ${ANDROID_DATA}/local/tmp, or
+   * /data/local/tmp Specifying a path outside of these directory trees is invalid. The paths
+   * /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if
+   * /sdcard on a particular device does not map to external storage, the system will replace it
+   * with the external storage path prefix for that device and copy the file there. It is strongly
+   * advised to use the Environment API in app and test code to access files on the device in a
+   * portable way.
    * @return value or {@code null} for none
    */
   public java.lang.String getDevicePath() {
@@ -87,13 +87,13 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
   /**
    * Required. Where to put the content on the device. Must be an absolute, allowlisted path. If the
    * file exists, it will be replaced. The following device-side directories and any of their
-   * subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard, or /storage
-   * ${ANDROID_DATA}/local/tmp, or /data/local/tmp Specifying a path outside of these directory
-   * trees is invalid. The paths /sdcard and /data will be made available and treated as implicit
-   * path substitutions. E.g. if /sdcard on a particular device does not map to external storage,
-   * the system will replace it with the external storage path prefix for that device and copy the
-   * file there. It is strongly advised to use the Environment API in app and test code to access
-   * files on the device in a portable way.
+   * subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard ${ANDROID_DATA}/local/tmp, or
+   * /data/local/tmp Specifying a path outside of these directory trees is invalid. The paths
+   * /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if
+   * /sdcard on a particular device does not map to external storage, the system will replace it
+   * with the external storage path prefix for that device and copy the file there. It is strongly
+   * advised to use the Environment API in app and test code to access files on the device in a
+   * portable way.
    * @param devicePath devicePath or {@code null} for none
    */
   public RegularFile setDevicePath(java.lang.String devicePath) {

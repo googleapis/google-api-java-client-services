@@ -23788,6 +23788,32 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             return this;
           }
 
+          /**
+           * Optional. The source of scorecards are based on how those Scorecards were created,
+           * e.g., a customer-defined scorecard, a predefined scorecard, etc. This field is used to
+           * retrieve Scorecards of one or more sources.
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> qaScorecardSources;
+
+          /** Optional. The source of scorecards are based on how those Scorecards were created, e.g., a
+         customer-defined scorecard, a predefined scorecard, etc. This field is used to retrieve Scorecards
+         of one or more sources.
+           */
+          public java.util.List<java.lang.String> getQaScorecardSources() {
+            return qaScorecardSources;
+          }
+
+          /**
+           * Optional. The source of scorecards are based on how those Scorecards were created,
+           * e.g., a customer-defined scorecard, a predefined scorecard, etc. This field is used to
+           * retrieve Scorecards of one or more sources.
+           */
+          public List setQaScorecardSources(java.util.List<java.lang.String> qaScorecardSources) {
+            this.qaScorecardSources = qaScorecardSources;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -24778,6 +24804,32 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. The source of scorecards are based on how those Scorecards were created,
+             * e.g., a customer-defined scorecard, a predefined scorecard, etc. This field is used
+             * to retrieve Scorecards Revisions from Scorecards of one or more sources.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> qaScorecardSources;
+
+            /** Optional. The source of scorecards are based on how those Scorecards were created, e.g., a
+           customer-defined scorecard, a predefined scorecard, etc. This field is used to retrieve Scorecards
+           Revisions from Scorecards of one or more sources.
+             */
+            public java.util.List<java.lang.String> getQaScorecardSources() {
+              return qaScorecardSources;
+            }
+
+            /**
+             * Optional. The source of scorecards are based on how those Scorecards were created,
+             * e.g., a customer-defined scorecard, a predefined scorecard, etc. This field is used
+             * to retrieve Scorecards Revisions from Scorecards of one or more sources.
+             */
+            public List setQaScorecardSources(java.util.List<java.lang.String> qaScorecardSources) {
+              this.qaScorecardSources = qaScorecardSources;
               return this;
             }
 

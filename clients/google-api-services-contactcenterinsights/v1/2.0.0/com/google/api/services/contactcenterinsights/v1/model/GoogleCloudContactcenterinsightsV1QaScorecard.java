@@ -68,6 +68,13 @@ public final class GoogleCloudContactcenterinsightsV1QaScorecard extends com.goo
   private java.lang.String name;
 
   /**
+   * Output only. The source of the scorecard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String source;
+
+  /**
    * Output only. The most recent time at which the scorecard was updated.
    * The value may be {@code null}.
    */
@@ -160,6 +167,23 @@ public final class GoogleCloudContactcenterinsightsV1QaScorecard extends com.goo
    */
   public GoogleCloudContactcenterinsightsV1QaScorecard setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The source of the scorecard.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSource() {
+    return source;
+  }
+
+  /**
+   * Output only. The source of the scorecard.
+   * @param source source or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaScorecard setSource(java.lang.String source) {
+    this.source = source;
     return this;
   }
 

@@ -3514,7 +3514,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Drives {
 
     /**
-     * Creates a shared drive.
+     * Creates a shared drive. For more information, see [Manage shared
+     * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
      *
      * Create a request for the method "drives.create".
      *
@@ -3539,7 +3540,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives";
 
       /**
-       * Creates a shared drive.
+       * Creates a shared drive. For more information, see [Manage shared
+       * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
        *
        * Create a request for the method "drives.create".
        *
@@ -3651,7 +3653,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Permanently deletes a shared drive for which the user is an `organizer`. The shared drive cannot
-     * contain any untrashed items.
+     * contain any untrashed items. For more information, see [Manage shared
+     * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
      *
      * Create a request for the method "drives.delete".
      *
@@ -3673,7 +3676,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Permanently deletes a shared drive for which the user is an `organizer`. The shared drive
-       * cannot contain any untrashed items.
+       * cannot contain any untrashed items. For more information, see [Manage shared
+       * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
        *
        * Create a request for the method "drives.delete".
        *
@@ -3872,7 +3876,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Gets a shared drive's metadata by ID.
+     * Gets a shared drive's metadata by ID. For more information, see [Manage shared
+     * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
      *
      * Create a request for the method "drives.get".
      *
@@ -3893,7 +3898,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives/{driveId}";
 
       /**
-       * Gets a shared drive's metadata by ID.
+       * Gets a shared drive's metadata by ID. For more information, see [Manage shared
+       * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
        *
        * Create a request for the method "drives.get".
        *
@@ -4051,7 +4057,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Hides a shared drive from the default view.
+     * Hides a shared drive from the default view. For more information, see [Manage shared
+     * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
      *
      * Create a request for the method "drives.hide".
      *
@@ -4072,7 +4079,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives/{driveId}/hide";
 
       /**
-       * Hides a shared drive from the default view.
+       * Hides a shared drive from the default view. For more information, see [Manage shared
+       * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
        *
        * Create a request for the method "drives.hide".
        *
@@ -4375,7 +4383,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Restores a shared drive to the default view.
+     * Restores a shared drive to the default view. For more information, see [Manage shared
+     * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
      *
      * Create a request for the method "drives.unhide".
      *
@@ -4396,7 +4405,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives/{driveId}/unhide";
 
       /**
-       * Restores a shared drive to the default view.
+       * Restores a shared drive to the default view. For more information, see [Manage shared
+       * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
        *
        * Create a request for the method "drives.unhide".
        *
@@ -4490,7 +4500,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates the metadata for a shared drive.
+     * Updates the metadata for a shared drive. For more information, see [Manage shared
+     * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
      *
      * Create a request for the method "drives.update".
      *
@@ -4512,7 +4523,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives/{driveId}";
 
       /**
-       * Updates the metadata for a shared drive.
+       * Updates the metadata for a shared drive. For more information, see [Manage shared
+       * drives](https://developers.google.com/workspace/drive/api/guides/manage-shareddrives).
        *
        * Create a request for the method "drives.update".
        *
@@ -11557,7 +11569,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Permanently deletes a file version. You can only delete revisions for files with binary content
      * in Google Drive, like images or videos. Revisions for other files, like Google Docs or Sheets,
-     * and the last remaining file version can't be deleted.
+     * and the last remaining file version can't be deleted. For more information, see [Manage file
+     * revisions](https://developers.google.com/drive/api/guides/manage-revisions).
      *
      * Create a request for the method "revisions.delete".
      *
@@ -11581,7 +11594,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Permanently deletes a file version. You can only delete revisions for files with binary content
        * in Google Drive, like images or videos. Revisions for other files, like Google Docs or Sheets,
-       * and the last remaining file version can't be deleted.
+       * and the last remaining file version can't be deleted. For more information, see [Manage file
+       * revisions](https://developers.google.com/drive/api/guides/manage-revisions).
        *
        * Create a request for the method "revisions.delete".
        *
@@ -11693,7 +11707,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Gets a revision's metadata or content by ID.
+     * Gets a revision's metadata or content by ID. For more information, see [Manage file
+     * revisions](https://developers.google.com/workspace/drive/api/guides/manage-revisions).
      *
      * Create a request for the method "revisions.get".
      *
@@ -11715,7 +11730,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/revisions/{revisionId}";
 
       /**
-       * Gets a revision's metadata or content by ID.
+       * Gets a revision's metadata or content by ID. For more information, see [Manage file
+       * revisions](https://developers.google.com/workspace/drive/api/guides/manage-revisions).
        *
        * Create a request for the method "revisions.get".
        *
@@ -11916,7 +11932,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists a file's revisions.
+     * Lists a file's revisions. For more information, see [Manage file
+     * revisions](https://developers.google.com/workspace/drive/api/guides/manage-revisions).
      *
      * Create a request for the method "revisions.list".
      *
@@ -11937,7 +11954,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/revisions";
 
       /**
-       * Lists a file's revisions.
+       * Lists a file's revisions. For more information, see [Manage file
+       * revisions](https://developers.google.com/workspace/drive/api/guides/manage-revisions).
        *
        * Create a request for the method "revisions.list".
        *
@@ -12080,7 +12098,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a revision with patch semantics.
+     * Updates a revision with patch semantics. For more information, see [Manage file
+     * revisions](https://developers.google.com/workspace/drive/api/guides/manage-revisions).
      *
      * Create a request for the method "revisions.update".
      *
@@ -12103,7 +12122,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/revisions/{revisionId}";
 
       /**
-       * Updates a revision with patch semantics.
+       * Updates a revision with patch semantics. For more information, see [Manage file
+       * revisions](https://developers.google.com/workspace/drive/api/guides/manage-revisions).
        *
        * Create a request for the method "revisions.update".
        *

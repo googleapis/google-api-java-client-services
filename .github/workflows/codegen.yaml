@@ -7,7 +7,7 @@ on:
     inputs:
       batch_index:
         type: number
-        description: Index of the batch ([0-2])
+        description: Index of the batch ([0-2]). You must call this workflow one time per index in order to confirm the generation in all the jobs.
 
 name: codegen
 jobs:

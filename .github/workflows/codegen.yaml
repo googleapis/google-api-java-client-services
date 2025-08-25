@@ -4,6 +4,10 @@ on:
   # See https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule
   - cron: '18 0-2 * * *'
   workflow_dispatch:
+    inputs:
+      batch_index:
+        type: number
+        description: Index of the batch ([0-2]). You must call this workflow one time per index in order to confirm the generation in all the jobs.
 
 name: codegen
 jobs:
@@ -57,8 +61,13 @@ jobs:
     secrets: inherit
     # The size of the batch is implicitly decided by the hour of the day.
     # For example, a job starting at "1:30" uses the chunk at the index 1 in the array.
-    # If you manually invoke the workflow other hours than 0:00 - 2:59 and the array's length is 3,
-    # this job is skipped because there's no element at the index in the array.
-    if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
+    if: github.event_name != 'workflow_dispatch' && ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
     with: 
       services: ${{toJson(fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour])}}
+  generate_dispatch:
+    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main
+    needs: batch
+    secrets: inherit
+    if: github.event_name == 'workflow_dispatch'
+    with: 
+      services: ${{toJson(fromJson(needs.batch.outputs.services).batches[inputs.batch_index])}}

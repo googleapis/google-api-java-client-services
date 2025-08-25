@@ -60,11 +60,32 @@ public final class BackupCollection extends com.google.api.client.json.GenericJs
   private java.lang.String kmsKey;
 
   /**
+   * Output only. The last time a backup was created in the backup collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastBackupTime;
+
+  /**
    * Identifier. Full resource path of the backup collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Total number of backups in the backup collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalBackupCount;
+
+  /**
+   * Output only. Total size of all backups in the backup collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalBackupSizeBytes;
 
   /**
    * Output only. System assigned unique identifier of the backup collection.
@@ -144,6 +165,23 @@ public final class BackupCollection extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. The last time a backup was created in the backup collection.
+   * @return value or {@code null} for none
+   */
+  public String getLastBackupTime() {
+    return lastBackupTime;
+  }
+
+  /**
+   * Output only. The last time a backup was created in the backup collection.
+   * @param lastBackupTime lastBackupTime or {@code null} for none
+   */
+  public BackupCollection setLastBackupTime(String lastBackupTime) {
+    this.lastBackupTime = lastBackupTime;
+    return this;
+  }
+
+  /**
    * Identifier. Full resource path of the backup collection.
    * @return value or {@code null} for none
    */
@@ -157,6 +195,40 @@ public final class BackupCollection extends com.google.api.client.json.GenericJs
    */
   public BackupCollection setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Total number of backups in the backup collection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalBackupCount() {
+    return totalBackupCount;
+  }
+
+  /**
+   * Output only. Total number of backups in the backup collection.
+   * @param totalBackupCount totalBackupCount or {@code null} for none
+   */
+  public BackupCollection setTotalBackupCount(java.lang.Long totalBackupCount) {
+    this.totalBackupCount = totalBackupCount;
+    return this;
+  }
+
+  /**
+   * Output only. Total size of all backups in the backup collection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalBackupSizeBytes() {
+    return totalBackupSizeBytes;
+  }
+
+  /**
+   * Output only. Total size of all backups in the backup collection.
+   * @param totalBackupSizeBytes totalBackupSizeBytes or {@code null} for none
+   */
+  public BackupCollection setTotalBackupSizeBytes(java.lang.Long totalBackupSizeBytes) {
+    this.totalBackupSizeBytes = totalBackupSizeBytes;
     return this;
   }
 

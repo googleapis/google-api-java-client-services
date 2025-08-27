@@ -87,6 +87,21 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesRequest extends 
   private GoogleCloudAiplatformV1beta1GroundednessInput groundednessInput;
 
   /**
+   * The instance to be evaluated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EvaluationInstance instance;
+
+  /**
+   * The metrics used for evaluation. Currently, we only support evaluating a single metric. If
+   * multiple metrics are provided, only the first one will be evaluated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1Metric> metrics;
+
+  /**
    * Input for Metricx metric.
    * The value may be {@code null}.
    */
@@ -396,6 +411,42 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesRequest extends 
    */
   public GoogleCloudAiplatformV1beta1EvaluateInstancesRequest setGroundednessInput(GoogleCloudAiplatformV1beta1GroundednessInput groundednessInput) {
     this.groundednessInput = groundednessInput;
+    return this;
+  }
+
+  /**
+   * The instance to be evaluated.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationInstance getInstance() {
+    return instance;
+  }
+
+  /**
+   * The instance to be evaluated.
+   * @param instance instance or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateInstancesRequest setInstance(GoogleCloudAiplatformV1beta1EvaluationInstance instance) {
+    this.instance = instance;
+    return this;
+  }
+
+  /**
+   * The metrics used for evaluation. Currently, we only support evaluating a single metric. If
+   * multiple metrics are provided, only the first one will be evaluated.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1Metric> getMetrics() {
+    return metrics;
+  }
+
+  /**
+   * The metrics used for evaluation. Currently, we only support evaluating a single metric. If
+   * multiple metrics are provided, only the first one will be evaluated.
+   * @param metrics metrics or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateInstancesRequest setMetrics(java.util.List<GoogleCloudAiplatformV1beta1Metric> metrics) {
+    this.metrics = metrics;
     return this;
   }
 

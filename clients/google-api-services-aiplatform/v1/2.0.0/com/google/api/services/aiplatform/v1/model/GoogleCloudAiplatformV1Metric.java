@@ -65,6 +65,13 @@ public final class GoogleCloudAiplatformV1Metric extends com.google.api.client.j
   private GoogleCloudAiplatformV1PointwiseMetricSpec pointwiseMetricSpec;
 
   /**
+   * The spec for a pre-defined metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PredefinedMetricSpec predefinedMetricSpec;
+
+  /**
    * Spec for rouge metric.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class GoogleCloudAiplatformV1Metric extends com.google.api.client.j
    */
   public GoogleCloudAiplatformV1Metric setPointwiseMetricSpec(GoogleCloudAiplatformV1PointwiseMetricSpec pointwiseMetricSpec) {
     this.pointwiseMetricSpec = pointwiseMetricSpec;
+    return this;
+  }
+
+  /**
+   * The spec for a pre-defined metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PredefinedMetricSpec getPredefinedMetricSpec() {
+    return predefinedMetricSpec;
+  }
+
+  /**
+   * The spec for a pre-defined metric.
+   * @param predefinedMetricSpec predefinedMetricSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Metric setPredefinedMetricSpec(GoogleCloudAiplatformV1PredefinedMetricSpec predefinedMetricSpec) {
+    this.predefinedMetricSpec = predefinedMetricSpec;
     return this;
   }
 

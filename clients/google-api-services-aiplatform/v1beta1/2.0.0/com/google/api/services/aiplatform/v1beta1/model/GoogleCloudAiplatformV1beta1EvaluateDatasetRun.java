@@ -45,6 +45,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
   private GoogleRpcStatus error;
 
   /**
+   * Output only. Results for EvaluationService.EvaluateDataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EvaluateDatasetResponse evaluateDatasetResponse;
+
+  /**
    * Output only. The operation ID of the evaluation run. Format:
    * `projects/{project}/locations/{location}/operations/{operation_id}`.
    * The value may be {@code null}.
@@ -85,6 +92,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
    */
   public GoogleCloudAiplatformV1beta1EvaluateDatasetRun setError(GoogleRpcStatus error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Output only. Results for EvaluationService.EvaluateDataset.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateDatasetResponse getEvaluateDatasetResponse() {
+    return evaluateDatasetResponse;
+  }
+
+  /**
+   * Output only. Results for EvaluationService.EvaluateDataset.
+   * @param evaluateDatasetResponse evaluateDatasetResponse or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateDatasetRun setEvaluateDatasetResponse(GoogleCloudAiplatformV1beta1EvaluateDatasetResponse evaluateDatasetResponse) {
+    this.evaluateDatasetResponse = evaluateDatasetResponse;
     return this;
   }
 

@@ -7592,6 +7592,413 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     public class Regions {
 
       /**
+       * Creates one or more regions in your Merchant Center account. Executing this method requires admin
+       * access.
+       *
+       * Create a request for the method "regions.batchCreate".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The account to create one or more regions for. Format: `accounts/{account}`
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.BatchCreateRegionsRequest}
+       * @return the request
+       */
+      public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1.model.BatchCreateRegionsRequest content) throws java.io.IOException {
+        BatchCreate result = new BatchCreate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchCreate extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1.model.BatchCreateRegionsResponse> {
+
+        private static final String REST_PATH = "accounts/v1/{+parent}/regions:batchCreate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Creates one or more regions in your Merchant Center account. Executing this method requires
+         * admin access.
+         *
+         * Create a request for the method "regions.batchCreate".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account to create one or more regions for. Format: `accounts/{account}`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.BatchCreateRegionsRequest}
+         * @since 1.13
+         */
+        protected BatchCreate(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1.model.BatchCreateRegionsRequest content) {
+          super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1.model.BatchCreateRegionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchCreate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchCreate setAccessToken(java.lang.String accessToken) {
+          return (BatchCreate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchCreate setAlt(java.lang.String alt) {
+          return (BatchCreate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchCreate setCallback(java.lang.String callback) {
+          return (BatchCreate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchCreate setFields(java.lang.String fields) {
+          return (BatchCreate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchCreate setKey(java.lang.String key) {
+          return (BatchCreate) super.setKey(key);
+        }
+
+        @Override
+        public BatchCreate setOauthToken(java.lang.String oauthToken) {
+          return (BatchCreate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchCreate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchCreate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchCreate setUploadType(java.lang.String uploadType) {
+          return (BatchCreate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account to create one or more regions for. Format: `accounts/{account}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account to create one or more regions for. Format: `accounts/{account}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account to create one or more regions for. Format: `accounts/{account}`
+         */
+        public BatchCreate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchCreate set(String parameterName, Object value) {
+          return (BatchCreate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes multiple regions by name from your Merchant Center account. Executing this method
+       * requires admin access.
+       *
+       * Create a request for the method "regions.batchDelete".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The account to create a region for. Format: `accounts/{account}`
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.BatchDeleteRegionsRequest}
+       * @return the request
+       */
+      public BatchDelete batchDelete(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1.model.BatchDeleteRegionsRequest content) throws java.io.IOException {
+        BatchDelete result = new BatchDelete(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchDelete extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1.model.Empty> {
+
+        private static final String REST_PATH = "accounts/v1/{+parent}/regions:batchDelete";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Deletes multiple regions by name from your Merchant Center account. Executing this method
+         * requires admin access.
+         *
+         * Create a request for the method "regions.batchDelete".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account to create a region for. Format: `accounts/{account}`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.BatchDeleteRegionsRequest}
+         * @since 1.13
+         */
+        protected BatchDelete(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1.model.BatchDeleteRegionsRequest content) {
+          super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1.model.Empty.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchDelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchDelete setAccessToken(java.lang.String accessToken) {
+          return (BatchDelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchDelete setAlt(java.lang.String alt) {
+          return (BatchDelete) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchDelete setCallback(java.lang.String callback) {
+          return (BatchDelete) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchDelete setFields(java.lang.String fields) {
+          return (BatchDelete) super.setFields(fields);
+        }
+
+        @Override
+        public BatchDelete setKey(java.lang.String key) {
+          return (BatchDelete) super.setKey(key);
+        }
+
+        @Override
+        public BatchDelete setOauthToken(java.lang.String oauthToken) {
+          return (BatchDelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchDelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+          return (BatchDelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchDelete setUploadType(java.lang.String uploadType) {
+          return (BatchDelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The account to create a region for. Format: `accounts/{account}` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account to create a region for. Format: `accounts/{account}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The account to create a region for. Format: `accounts/{account}` */
+        public BatchDelete setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchDelete set(String parameterName, Object value) {
+          return (BatchDelete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates one or more regions in your Merchant Center account. Executing this method requires admin
+       * access.
+       *
+       * Create a request for the method "regions.batchUpdate".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link BatchUpdate#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The account to update one or more regions for. Format: `accounts/{account}`
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.BatchUpdateRegionsRequest}
+       * @return the request
+       */
+      public BatchUpdate batchUpdate(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1.model.BatchUpdateRegionsRequest content) throws java.io.IOException {
+        BatchUpdate result = new BatchUpdate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchUpdate extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1.model.BatchUpdateRegionsResponse> {
+
+        private static final String REST_PATH = "accounts/v1/{+parent}/regions:batchUpdate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Updates one or more regions in your Merchant Center account. Executing this method requires
+         * admin access.
+         *
+         * Create a request for the method "regions.batchUpdate".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account to update one or more regions for. Format: `accounts/{account}`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.BatchUpdateRegionsRequest}
+         * @since 1.13
+         */
+        protected BatchUpdate(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1.model.BatchUpdateRegionsRequest content) {
+          super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1.model.BatchUpdateRegionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchUpdate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchUpdate setAccessToken(java.lang.String accessToken) {
+          return (BatchUpdate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchUpdate setAlt(java.lang.String alt) {
+          return (BatchUpdate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchUpdate setCallback(java.lang.String callback) {
+          return (BatchUpdate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchUpdate setFields(java.lang.String fields) {
+          return (BatchUpdate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchUpdate setKey(java.lang.String key) {
+          return (BatchUpdate) super.setKey(key);
+        }
+
+        @Override
+        public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+          return (BatchUpdate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchUpdate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchUpdate setUploadType(java.lang.String uploadType) {
+          return (BatchUpdate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account to update one or more regions for. Format: `accounts/{account}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account to update one or more regions for. Format: `accounts/{account}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account to update one or more regions for. Format: `accounts/{account}`
+         */
+        public BatchUpdate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchUpdate set(String parameterName, Object value) {
+          return (BatchUpdate) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a region definition in your Merchant Center account. Executing this method requires admin
        * access.
        *

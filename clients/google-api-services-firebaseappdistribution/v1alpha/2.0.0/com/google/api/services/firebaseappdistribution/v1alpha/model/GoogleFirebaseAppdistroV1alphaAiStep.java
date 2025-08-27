@@ -60,6 +60,15 @@ public final class GoogleFirebaseAppdistroV1alphaAiStep extends com.google.api.c
   private java.lang.String successCriteria;
 
   /**
+   * Output only. The test case that contained this step. Note: The test case may have changed or
+   * been deleted since this step was created. Format:
+   * `projects/{project_number}/apps/{app}/testCases/{test_case}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String testCase;
+
+  /**
    * An assertion to be checked by the AI
    * @return value or {@code null} for none
    */
@@ -126,6 +135,27 @@ public final class GoogleFirebaseAppdistroV1alphaAiStep extends com.google.api.c
    */
   public GoogleFirebaseAppdistroV1alphaAiStep setSuccessCriteria(java.lang.String successCriteria) {
     this.successCriteria = successCriteria;
+    return this;
+  }
+
+  /**
+   * Output only. The test case that contained this step. Note: The test case may have changed or
+   * been deleted since this step was created. Format:
+   * `projects/{project_number}/apps/{app}/testCases/{test_case}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTestCase() {
+    return testCase;
+  }
+
+  /**
+   * Output only. The test case that contained this step. Note: The test case may have changed or
+   * been deleted since this step was created. Format:
+   * `projects/{project_number}/apps/{app}/testCases/{test_case}`
+   * @param testCase testCase or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaAiStep setTestCase(java.lang.String testCase) {
+    this.testCase = testCase;
     return this;
   }
 

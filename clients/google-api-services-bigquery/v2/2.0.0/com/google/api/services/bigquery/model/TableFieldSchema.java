@@ -46,7 +46,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.String collation;
 
   /**
-   * Optional. Data policy options, will replace the data_policies.
+   * Optional. Data policies attached to this field, used for field-level access control.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +214,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Data policy options, will replace the data_policies.
+   * Optional. Data policies attached to this field, used for field-level access control.
    * @return value or {@code null} for none
    */
   public java.util.List<DataPolicyOption> getDataPolicies() {
@@ -222,7 +222,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Data policy options, will replace the data_policies.
+   * Optional. Data policies attached to this field, used for field-level access control.
    * @param dataPolicies dataPolicies or {@code null} for none
    */
   public TableFieldSchema setDataPolicies(java.util.List<DataPolicyOption> dataPolicies) {

@@ -88,6 +88,15 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   private JobConfigurationLoad load;
 
   /**
+   * Optional. INTERNAL: DO NOT USE. The maximum rate of slot consumption to allow for this job. If
+   * set, the number of slots used to execute the job will be throttled to try and keep its slot
+   * consumption below the requested rate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxSlots;
+
+  /**
    * [Pick one] Configures a query job.
    * The value may be {@code null}.
    */
@@ -238,6 +247,27 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
    */
   public JobConfiguration setLoad(JobConfigurationLoad load) {
     this.load = load;
+    return this;
+  }
+
+  /**
+   * Optional. INTERNAL: DO NOT USE. The maximum rate of slot consumption to allow for this job. If
+   * set, the number of slots used to execute the job will be throttled to try and keep its slot
+   * consumption below the requested rate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxSlots() {
+    return maxSlots;
+  }
+
+  /**
+   * Optional. INTERNAL: DO NOT USE. The maximum rate of slot consumption to allow for this job. If
+   * set, the number of slots used to execute the job will be throttled to try and keep its slot
+   * consumption below the requested rate.
+   * @param maxSlots maxSlots or {@code null} for none
+   */
+  public JobConfiguration setMaxSlots(java.lang.Integer maxSlots) {
+    this.maxSlots = maxSlots;
     return this;
   }
 

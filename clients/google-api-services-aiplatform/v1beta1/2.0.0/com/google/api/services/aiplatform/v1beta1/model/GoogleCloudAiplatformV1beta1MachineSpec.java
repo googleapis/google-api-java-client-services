@@ -45,6 +45,19 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
   private java.lang.String acceleratorType;
 
   /**
+   * Optional. Immutable. The Nvidia GPU partition size. When specified, the requested accelerators
+   * will be partitioned into smaller GPU partitions. For example, if the request is for 8 units of
+   * NVIDIA A100 GPUs, and gpu_partition_size="1g.10gb", the service will create 8 * 7 = 56
+   * partitioned MIG instances. The partition size must be a value supported by the requested
+   * accelerator. Refer to [Nvidia GPU Partitioning](https://cloud.google.com/kubernetes-
+   * engine/docs/how-to/gpus-multi#multi-instance_gpu_partitions) for the available partition sizes.
+   * If set, the accelerator_count should be set to 1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gpuPartitionSize;
+
+  /**
    * Immutable. The type of the machine. See the [list of machine types supported for
    * prediction](https://cloud.google.com/vertex-ai/docs/predictions/configure-compute#machine-
    * types) See the [list of machine types supported for custom
@@ -111,6 +124,35 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1MachineSpec setAcceleratorType(java.lang.String acceleratorType) {
     this.acceleratorType = acceleratorType;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The Nvidia GPU partition size. When specified, the requested accelerators
+   * will be partitioned into smaller GPU partitions. For example, if the request is for 8 units of
+   * NVIDIA A100 GPUs, and gpu_partition_size="1g.10gb", the service will create 8 * 7 = 56
+   * partitioned MIG instances. The partition size must be a value supported by the requested
+   * accelerator. Refer to [Nvidia GPU Partitioning](https://cloud.google.com/kubernetes-
+   * engine/docs/how-to/gpus-multi#multi-instance_gpu_partitions) for the available partition sizes.
+   * If set, the accelerator_count should be set to 1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGpuPartitionSize() {
+    return gpuPartitionSize;
+  }
+
+  /**
+   * Optional. Immutable. The Nvidia GPU partition size. When specified, the requested accelerators
+   * will be partitioned into smaller GPU partitions. For example, if the request is for 8 units of
+   * NVIDIA A100 GPUs, and gpu_partition_size="1g.10gb", the service will create 8 * 7 = 56
+   * partitioned MIG instances. The partition size must be a value supported by the requested
+   * accelerator. Refer to [Nvidia GPU Partitioning](https://cloud.google.com/kubernetes-
+   * engine/docs/how-to/gpus-multi#multi-instance_gpu_partitions) for the available partition sizes.
+   * If set, the accelerator_count should be set to 1.
+   * @param gpuPartitionSize gpuPartitionSize or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MachineSpec setGpuPartitionSize(java.lang.String gpuPartitionSize) {
+    this.gpuPartitionSize = gpuPartitionSize;
     return this;
   }
 

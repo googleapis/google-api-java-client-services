@@ -80,6 +80,14 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesResponse extends
   private GoogleCloudAiplatformV1beta1GroundednessResult groundednessResult;
 
   /**
+   * Metric results for each instance. The order of the metric results is guaranteed to be the same
+   * as the order of the instances in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1MetricResult> metricResults;
+
+  /**
    * Result for Metricx metric.
    * The value may be {@code null}.
    */
@@ -372,6 +380,25 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesResponse extends
    */
   public GoogleCloudAiplatformV1beta1EvaluateInstancesResponse setGroundednessResult(GoogleCloudAiplatformV1beta1GroundednessResult groundednessResult) {
     this.groundednessResult = groundednessResult;
+    return this;
+  }
+
+  /**
+   * Metric results for each instance. The order of the metric results is guaranteed to be the same
+   * as the order of the instances in the request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1MetricResult> getMetricResults() {
+    return metricResults;
+  }
+
+  /**
+   * Metric results for each instance. The order of the metric results is guaranteed to be the same
+   * as the order of the instances in the request.
+   * @param metricResults metricResults or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateInstancesResponse setMetricResults(java.util.List<GoogleCloudAiplatformV1beta1MetricResult> metricResults) {
+    this.metricResults = metricResults;
     return this;
   }
 

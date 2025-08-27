@@ -47,7 +47,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
 
   /**
    * Optional. The TTL duration for memories updated via GenerateMemories
-   * (GenerateMemoriesResponse.GeneratedMemory.Action.CREATED). In the case of an UPDATE action, the
+   * (GenerateMemoriesResponse.GeneratedMemory.Action.UPDATED). In the case of an UPDATE action, the
    * `expire_time` of the existing memory will be updated to the new value (now + TTL).
    * The value may be {@code null}.
    */
@@ -92,7 +92,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
 
   /**
    * Optional. The TTL duration for memories updated via GenerateMemories
-   * (GenerateMemoriesResponse.GeneratedMemory.Action.CREATED). In the case of an UPDATE action, the
+   * (GenerateMemoriesResponse.GeneratedMemory.Action.UPDATED). In the case of an UPDATE action, the
    * `expire_time` of the existing memory will be updated to the new value (now + TTL).
    * @return value or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
 
   /**
    * Optional. The TTL duration for memories updated via GenerateMemories
-   * (GenerateMemoriesResponse.GeneratedMemory.Action.CREATED). In the case of an UPDATE action, the
+   * (GenerateMemoriesResponse.GeneratedMemory.Action.UPDATED). In the case of an UPDATE action, the
    * `expire_time` of the existing memory will be updated to the new value (now + TTL).
    * @param generateUpdatedTtl generateUpdatedTtl or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappdistribution.v1alpha.model;
 
 /**
- * The results of running an automated test on a release.
+ * Instance of an automated test for a release.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Distribution API. For a detailed

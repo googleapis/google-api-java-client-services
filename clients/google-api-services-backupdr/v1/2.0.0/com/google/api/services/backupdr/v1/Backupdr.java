@@ -4933,6 +4933,153 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Returns the caller's permissions on a BackupVault resource. A caller is not required to have
+         * Google IAM permission to make this request.
+         *
+         * Create a request for the method "backupVaults.testIamPermissions".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.backupdr.v1.model.TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.backupdr.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends BackupdrRequest<com.google.api.services.backupdr.v1.model.TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+$");
+
+          /**
+           * Returns the caller's permissions on a BackupVault resource. A caller is not required to have
+           * Google IAM permission to make this request.
+           *
+           * Create a request for the method "backupVaults.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.backupdr.v1.model.TestIamPermissionsRequest content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the DataSources collection.
@@ -4954,6 +5101,426 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          */
         public class DataSources {
 
+          /**
+           * Internal only. Abandons a backup.
+           *
+           * Create a request for the method "dataSources.abandonBackup".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link AbandonBackup#execute()} method to invoke the remote operation.
+           *
+           * @param dataSource Required. The resource name of the instance, in the format
+           *        'projects/locations/backupVaults/dataSources/'.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.AbandonBackupRequest}
+           * @return the request
+           */
+          public AbandonBackup abandonBackup(java.lang.String dataSource, com.google.api.services.backupdr.v1.model.AbandonBackupRequest content) throws java.io.IOException {
+            AbandonBackup result = new AbandonBackup(dataSource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AbandonBackup extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+dataSource}:abandonBackup";
+
+            private final java.util.regex.Pattern DATA_SOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+
+            /**
+             * Internal only. Abandons a backup.
+             *
+             * Create a request for the method "dataSources.abandonBackup".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link AbandonBackup#execute()} method to invoke the remote
+             * operation. <p> {@link AbandonBackup#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param dataSource Required. The resource name of the instance, in the format
+           *        'projects/locations/backupVaults/dataSources/'.
+             * @param content the {@link com.google.api.services.backupdr.v1.model.AbandonBackupRequest}
+             * @since 1.13
+             */
+            protected AbandonBackup(java.lang.String dataSource, com.google.api.services.backupdr.v1.model.AbandonBackupRequest content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+              this.dataSource = com.google.api.client.util.Preconditions.checkNotNull(dataSource, "Required parameter dataSource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_SOURCE_PATTERN.matcher(dataSource).matches(),
+                    "Parameter dataSource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+            }
+
+            @Override
+            public AbandonBackup set$Xgafv(java.lang.String $Xgafv) {
+              return (AbandonBackup) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AbandonBackup setAccessToken(java.lang.String accessToken) {
+              return (AbandonBackup) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AbandonBackup setAlt(java.lang.String alt) {
+              return (AbandonBackup) super.setAlt(alt);
+            }
+
+            @Override
+            public AbandonBackup setCallback(java.lang.String callback) {
+              return (AbandonBackup) super.setCallback(callback);
+            }
+
+            @Override
+            public AbandonBackup setFields(java.lang.String fields) {
+              return (AbandonBackup) super.setFields(fields);
+            }
+
+            @Override
+            public AbandonBackup setKey(java.lang.String key) {
+              return (AbandonBackup) super.setKey(key);
+            }
+
+            @Override
+            public AbandonBackup setOauthToken(java.lang.String oauthToken) {
+              return (AbandonBackup) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AbandonBackup setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AbandonBackup) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AbandonBackup setQuotaUser(java.lang.String quotaUser) {
+              return (AbandonBackup) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AbandonBackup setUploadType(java.lang.String uploadType) {
+              return (AbandonBackup) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AbandonBackup setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AbandonBackup) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the instance, in the format
+             * 'projects/locations/backupVaults/dataSources/'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataSource;
+
+            /** Required. The resource name of the instance, in the format
+           'projects/locations/backupVaults/dataSources/'.
+             */
+            public java.lang.String getDataSource() {
+              return dataSource;
+            }
+
+            /**
+             * Required. The resource name of the instance, in the format
+             * 'projects/locations/backupVaults/dataSources/'.
+             */
+            public AbandonBackup setDataSource(java.lang.String dataSource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_SOURCE_PATTERN.matcher(dataSource).matches(),
+                    "Parameter dataSource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+              this.dataSource = dataSource;
+              return this;
+            }
+
+            @Override
+            public AbandonBackup set(String parameterName, Object value) {
+              return (AbandonBackup) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Internal only. Fetch access token for a given data source.
+           *
+           * Create a request for the method "dataSources.fetchAccessToken".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link FetchAccessToken#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name for the location for which static IPs should be returned. Must be in the
+           *        format 'projects/locations/backupVaults/dataSources'.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.FetchAccessTokenRequest}
+           * @return the request
+           */
+          public FetchAccessToken fetchAccessToken(java.lang.String name, com.google.api.services.backupdr.v1.model.FetchAccessTokenRequest content) throws java.io.IOException {
+            FetchAccessToken result = new FetchAccessToken(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchAccessToken extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchAccessTokenResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:fetchAccessToken";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+
+            /**
+             * Internal only. Fetch access token for a given data source.
+             *
+             * Create a request for the method "dataSources.fetchAccessToken".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link FetchAccessToken#execute()} method to invoke the remote
+             * operation. <p> {@link FetchAccessToken#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The resource name for the location for which static IPs should be returned. Must be in the
+           *        format 'projects/locations/backupVaults/dataSources'.
+             * @param content the {@link com.google.api.services.backupdr.v1.model.FetchAccessTokenRequest}
+             * @since 1.13
+             */
+            protected FetchAccessToken(java.lang.String name, com.google.api.services.backupdr.v1.model.FetchAccessTokenRequest content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.FetchAccessTokenResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+            }
+
+            @Override
+            public FetchAccessToken set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchAccessToken) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchAccessToken setAccessToken(java.lang.String accessToken) {
+              return (FetchAccessToken) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchAccessToken setAlt(java.lang.String alt) {
+              return (FetchAccessToken) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchAccessToken setCallback(java.lang.String callback) {
+              return (FetchAccessToken) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchAccessToken setFields(java.lang.String fields) {
+              return (FetchAccessToken) super.setFields(fields);
+            }
+
+            @Override
+            public FetchAccessToken setKey(java.lang.String key) {
+              return (FetchAccessToken) super.setKey(key);
+            }
+
+            @Override
+            public FetchAccessToken setOauthToken(java.lang.String oauthToken) {
+              return (FetchAccessToken) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchAccessToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchAccessToken) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchAccessToken setQuotaUser(java.lang.String quotaUser) {
+              return (FetchAccessToken) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchAccessToken setUploadType(java.lang.String uploadType) {
+              return (FetchAccessToken) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchAccessToken setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchAccessToken) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name for the location for which static IPs should be returned.
+             * Must be in the format 'projects/locations/backupVaults/dataSources'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name for the location for which static IPs should be returned. Must be in
+           the format 'projects/locations/backupVaults/dataSources'.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name for the location for which static IPs should be returned.
+             * Must be in the format 'projects/locations/backupVaults/dataSources'.
+             */
+            public FetchAccessToken setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public FetchAccessToken set(String parameterName, Object value) {
+              return (FetchAccessToken) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Internal only. Finalize a backup that was started by a call to InitiateBackup.
+           *
+           * Create a request for the method "dataSources.finalizeBackup".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link FinalizeBackup#execute()} method to invoke the remote operation.
+           *
+           * @param dataSource Required. The resource name of the instance, in the format
+           *        'projects/locations/backupVaults/dataSources/'.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.FinalizeBackupRequest}
+           * @return the request
+           */
+          public FinalizeBackup finalizeBackup(java.lang.String dataSource, com.google.api.services.backupdr.v1.model.FinalizeBackupRequest content) throws java.io.IOException {
+            FinalizeBackup result = new FinalizeBackup(dataSource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class FinalizeBackup extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+dataSource}:finalizeBackup";
+
+            private final java.util.regex.Pattern DATA_SOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+
+            /**
+             * Internal only. Finalize a backup that was started by a call to InitiateBackup.
+             *
+             * Create a request for the method "dataSources.finalizeBackup".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link FinalizeBackup#execute()} method to invoke the remote
+             * operation. <p> {@link FinalizeBackup#initialize(com.google.api.client.googleapis.services.Abstr
+             * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param dataSource Required. The resource name of the instance, in the format
+           *        'projects/locations/backupVaults/dataSources/'.
+             * @param content the {@link com.google.api.services.backupdr.v1.model.FinalizeBackupRequest}
+             * @since 1.13
+             */
+            protected FinalizeBackup(java.lang.String dataSource, com.google.api.services.backupdr.v1.model.FinalizeBackupRequest content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+              this.dataSource = com.google.api.client.util.Preconditions.checkNotNull(dataSource, "Required parameter dataSource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_SOURCE_PATTERN.matcher(dataSource).matches(),
+                    "Parameter dataSource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+            }
+
+            @Override
+            public FinalizeBackup set$Xgafv(java.lang.String $Xgafv) {
+              return (FinalizeBackup) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FinalizeBackup setAccessToken(java.lang.String accessToken) {
+              return (FinalizeBackup) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FinalizeBackup setAlt(java.lang.String alt) {
+              return (FinalizeBackup) super.setAlt(alt);
+            }
+
+            @Override
+            public FinalizeBackup setCallback(java.lang.String callback) {
+              return (FinalizeBackup) super.setCallback(callback);
+            }
+
+            @Override
+            public FinalizeBackup setFields(java.lang.String fields) {
+              return (FinalizeBackup) super.setFields(fields);
+            }
+
+            @Override
+            public FinalizeBackup setKey(java.lang.String key) {
+              return (FinalizeBackup) super.setKey(key);
+            }
+
+            @Override
+            public FinalizeBackup setOauthToken(java.lang.String oauthToken) {
+              return (FinalizeBackup) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FinalizeBackup setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FinalizeBackup) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FinalizeBackup setQuotaUser(java.lang.String quotaUser) {
+              return (FinalizeBackup) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FinalizeBackup setUploadType(java.lang.String uploadType) {
+              return (FinalizeBackup) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FinalizeBackup setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FinalizeBackup) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the instance, in the format
+             * 'projects/locations/backupVaults/dataSources/'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataSource;
+
+            /** Required. The resource name of the instance, in the format
+           'projects/locations/backupVaults/dataSources/'.
+             */
+            public java.lang.String getDataSource() {
+              return dataSource;
+            }
+
+            /**
+             * Required. The resource name of the instance, in the format
+             * 'projects/locations/backupVaults/dataSources/'.
+             */
+            public FinalizeBackup setDataSource(java.lang.String dataSource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_SOURCE_PATTERN.matcher(dataSource).matches(),
+                    "Parameter dataSource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+              this.dataSource = dataSource;
+              return this;
+            }
+
+            @Override
+            public FinalizeBackup set(String parameterName, Object value) {
+              return (FinalizeBackup) super.set(parameterName, value);
+            }
+          }
           /**
            * Gets details of a DataSource.
            *
@@ -5101,6 +5668,146 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Internal only. Initiates a backup.
+           *
+           * Create a request for the method "dataSources.initiateBackup".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link InitiateBackup#execute()} method to invoke the remote operation.
+           *
+           * @param dataSource Required. The resource name of the instance, in the format
+           *        'projects/locations/backupVaults/dataSources/'.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.InitiateBackupRequest}
+           * @return the request
+           */
+          public InitiateBackup initiateBackup(java.lang.String dataSource, com.google.api.services.backupdr.v1.model.InitiateBackupRequest content) throws java.io.IOException {
+            InitiateBackup result = new InitiateBackup(dataSource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class InitiateBackup extends BackupdrRequest<com.google.api.services.backupdr.v1.model.InitiateBackupResponse> {
+
+            private static final String REST_PATH = "v1/{+dataSource}:initiateBackup";
+
+            private final java.util.regex.Pattern DATA_SOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+
+            /**
+             * Internal only. Initiates a backup.
+             *
+             * Create a request for the method "dataSources.initiateBackup".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link InitiateBackup#execute()} method to invoke the remote
+             * operation. <p> {@link InitiateBackup#initialize(com.google.api.client.googleapis.services.Abstr
+             * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param dataSource Required. The resource name of the instance, in the format
+           *        'projects/locations/backupVaults/dataSources/'.
+             * @param content the {@link com.google.api.services.backupdr.v1.model.InitiateBackupRequest}
+             * @since 1.13
+             */
+            protected InitiateBackup(java.lang.String dataSource, com.google.api.services.backupdr.v1.model.InitiateBackupRequest content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.InitiateBackupResponse.class);
+              this.dataSource = com.google.api.client.util.Preconditions.checkNotNull(dataSource, "Required parameter dataSource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_SOURCE_PATTERN.matcher(dataSource).matches(),
+                    "Parameter dataSource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+            }
+
+            @Override
+            public InitiateBackup set$Xgafv(java.lang.String $Xgafv) {
+              return (InitiateBackup) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public InitiateBackup setAccessToken(java.lang.String accessToken) {
+              return (InitiateBackup) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public InitiateBackup setAlt(java.lang.String alt) {
+              return (InitiateBackup) super.setAlt(alt);
+            }
+
+            @Override
+            public InitiateBackup setCallback(java.lang.String callback) {
+              return (InitiateBackup) super.setCallback(callback);
+            }
+
+            @Override
+            public InitiateBackup setFields(java.lang.String fields) {
+              return (InitiateBackup) super.setFields(fields);
+            }
+
+            @Override
+            public InitiateBackup setKey(java.lang.String key) {
+              return (InitiateBackup) super.setKey(key);
+            }
+
+            @Override
+            public InitiateBackup setOauthToken(java.lang.String oauthToken) {
+              return (InitiateBackup) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public InitiateBackup setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (InitiateBackup) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public InitiateBackup setQuotaUser(java.lang.String quotaUser) {
+              return (InitiateBackup) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public InitiateBackup setUploadType(java.lang.String uploadType) {
+              return (InitiateBackup) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public InitiateBackup setUploadProtocol(java.lang.String uploadProtocol) {
+              return (InitiateBackup) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the instance, in the format
+             * 'projects/locations/backupVaults/dataSources/'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataSource;
+
+            /** Required. The resource name of the instance, in the format
+           'projects/locations/backupVaults/dataSources/'.
+             */
+            public java.lang.String getDataSource() {
+              return dataSource;
+            }
+
+            /**
+             * Required. The resource name of the instance, in the format
+             * 'projects/locations/backupVaults/dataSources/'.
+             */
+            public InitiateBackup setDataSource(java.lang.String dataSource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_SOURCE_PATTERN.matcher(dataSource).matches(),
+                    "Parameter dataSource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+              this.dataSource = dataSource;
+              return this;
+            }
+
+            @Override
+            public InitiateBackup set(String parameterName, Object value) {
+              return (InitiateBackup) super.set(parameterName, value);
             }
           }
           /**
@@ -5567,6 +6274,279 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a DataSource. This is a custom method instead of a standard delete method because
+           * external clients will not delete DataSources except for BackupDR backup appliances.
+           *
+           * Create a request for the method "dataSources.remove".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link Remove#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.RemoveDataSourceRequest}
+           * @return the request
+           */
+          public Remove remove(java.lang.String name, com.google.api.services.backupdr.v1.model.RemoveDataSourceRequest content) throws java.io.IOException {
+            Remove result = new Remove(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Remove extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:remove";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+
+            /**
+             * Deletes a DataSource. This is a custom method instead of a standard delete method because
+             * external clients will not delete DataSources except for BackupDR backup appliances.
+             *
+             * Create a request for the method "dataSources.remove".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link Remove#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Remove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource.
+             * @param content the {@link com.google.api.services.backupdr.v1.model.RemoveDataSourceRequest}
+             * @since 1.13
+             */
+            protected Remove(java.lang.String name, com.google.api.services.backupdr.v1.model.RemoveDataSourceRequest content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+            }
+
+            @Override
+            public Remove set$Xgafv(java.lang.String $Xgafv) {
+              return (Remove) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Remove setAccessToken(java.lang.String accessToken) {
+              return (Remove) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Remove setAlt(java.lang.String alt) {
+              return (Remove) super.setAlt(alt);
+            }
+
+            @Override
+            public Remove setCallback(java.lang.String callback) {
+              return (Remove) super.setCallback(callback);
+            }
+
+            @Override
+            public Remove setFields(java.lang.String fields) {
+              return (Remove) super.setFields(fields);
+            }
+
+            @Override
+            public Remove setKey(java.lang.String key) {
+              return (Remove) super.setKey(key);
+            }
+
+            @Override
+            public Remove setOauthToken(java.lang.String oauthToken) {
+              return (Remove) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Remove setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Remove) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Remove setQuotaUser(java.lang.String quotaUser) {
+              return (Remove) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Remove setUploadType(java.lang.String uploadType) {
+              return (Remove) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Remove setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Remove) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the resource. */
+            public Remove setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Remove set(String parameterName, Object value) {
+              return (Remove) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the internal status of a DataSource.
+           *
+           * Create a request for the method "dataSources.setInternalStatus".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link SetInternalStatus#execute()} method to invoke the remote operation.
+           *
+           * @param dataSource Required. The resource name of the instance, in the format
+           *        'projects/locations/backupVaults/dataSources/'.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.SetInternalStatusRequest}
+           * @return the request
+           */
+          public SetInternalStatus setInternalStatus(java.lang.String dataSource, com.google.api.services.backupdr.v1.model.SetInternalStatusRequest content) throws java.io.IOException {
+            SetInternalStatus result = new SetInternalStatus(dataSource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetInternalStatus extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+dataSource}:setInternalStatus";
+
+            private final java.util.regex.Pattern DATA_SOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+
+            /**
+             * Sets the internal status of a DataSource.
+             *
+             * Create a request for the method "dataSources.setInternalStatus".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link SetInternalStatus#execute()} method to invoke the remote
+             * operation. <p> {@link SetInternalStatus#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param dataSource Required. The resource name of the instance, in the format
+           *        'projects/locations/backupVaults/dataSources/'.
+             * @param content the {@link com.google.api.services.backupdr.v1.model.SetInternalStatusRequest}
+             * @since 1.13
+             */
+            protected SetInternalStatus(java.lang.String dataSource, com.google.api.services.backupdr.v1.model.SetInternalStatusRequest content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+              this.dataSource = com.google.api.client.util.Preconditions.checkNotNull(dataSource, "Required parameter dataSource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_SOURCE_PATTERN.matcher(dataSource).matches(),
+                    "Parameter dataSource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetInternalStatus set$Xgafv(java.lang.String $Xgafv) {
+              return (SetInternalStatus) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetInternalStatus setAccessToken(java.lang.String accessToken) {
+              return (SetInternalStatus) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetInternalStatus setAlt(java.lang.String alt) {
+              return (SetInternalStatus) super.setAlt(alt);
+            }
+
+            @Override
+            public SetInternalStatus setCallback(java.lang.String callback) {
+              return (SetInternalStatus) super.setCallback(callback);
+            }
+
+            @Override
+            public SetInternalStatus setFields(java.lang.String fields) {
+              return (SetInternalStatus) super.setFields(fields);
+            }
+
+            @Override
+            public SetInternalStatus setKey(java.lang.String key) {
+              return (SetInternalStatus) super.setKey(key);
+            }
+
+            @Override
+            public SetInternalStatus setOauthToken(java.lang.String oauthToken) {
+              return (SetInternalStatus) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetInternalStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetInternalStatus) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetInternalStatus setQuotaUser(java.lang.String quotaUser) {
+              return (SetInternalStatus) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetInternalStatus setUploadType(java.lang.String uploadType) {
+              return (SetInternalStatus) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetInternalStatus setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetInternalStatus) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the instance, in the format
+             * 'projects/locations/backupVaults/dataSources/'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataSource;
+
+            /** Required. The resource name of the instance, in the format
+           'projects/locations/backupVaults/dataSources/'.
+             */
+            public java.lang.String getDataSource() {
+              return dataSource;
+            }
+
+            /**
+             * Required. The resource name of the instance, in the format
+             * 'projects/locations/backupVaults/dataSources/'.
+             */
+            public SetInternalStatus setDataSource(java.lang.String dataSource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_SOURCE_PATTERN.matcher(dataSource).matches(),
+                    "Parameter dataSource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+              }
+              this.dataSource = dataSource;
+              return this;
+            }
+
+            @Override
+            public SetInternalStatus set(String parameterName, Object value) {
+              return (SetInternalStatus) super.set(parameterName, value);
             }
           }
 
@@ -7976,6 +8956,152 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the Assured Workloads compliance metadata for a given project.
+         *
+         * Create a request for the method "managementServers.msComplianceMetadata".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link MsComplianceMetadata#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The project and location to be used to check CSS metadata for target project information,
+         *        in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
+         *        map to Google Cloud regions, for example **us-central1**.
+         * @param content the {@link com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest}
+         * @return the request
+         */
+        public MsComplianceMetadata msComplianceMetadata(java.lang.String parent, com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest content) throws java.io.IOException {
+          MsComplianceMetadata result = new MsComplianceMetadata(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class MsComplianceMetadata extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:msComplianceMetadata";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/managementServers$");
+
+          /**
+           * Returns the Assured Workloads compliance metadata for a given project.
+           *
+           * Create a request for the method "managementServers.msComplianceMetadata".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link MsComplianceMetadata#execute()} method to invoke the
+           * remote operation. <p> {@link MsComplianceMetadata#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location to be used to check CSS metadata for target project information,
+         *        in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
+         *        map to Google Cloud regions, for example **us-central1**.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest}
+           * @since 1.13
+           */
+          protected MsComplianceMetadata(java.lang.String parent, com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/managementServers$");
+            }
+          }
+
+          @Override
+          public MsComplianceMetadata set$Xgafv(java.lang.String $Xgafv) {
+            return (MsComplianceMetadata) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public MsComplianceMetadata setAccessToken(java.lang.String accessToken) {
+            return (MsComplianceMetadata) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public MsComplianceMetadata setAlt(java.lang.String alt) {
+            return (MsComplianceMetadata) super.setAlt(alt);
+          }
+
+          @Override
+          public MsComplianceMetadata setCallback(java.lang.String callback) {
+            return (MsComplianceMetadata) super.setCallback(callback);
+          }
+
+          @Override
+          public MsComplianceMetadata setFields(java.lang.String fields) {
+            return (MsComplianceMetadata) super.setFields(fields);
+          }
+
+          @Override
+          public MsComplianceMetadata setKey(java.lang.String key) {
+            return (MsComplianceMetadata) super.setKey(key);
+          }
+
+          @Override
+          public MsComplianceMetadata setOauthToken(java.lang.String oauthToken) {
+            return (MsComplianceMetadata) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public MsComplianceMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (MsComplianceMetadata) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public MsComplianceMetadata setQuotaUser(java.lang.String quotaUser) {
+            return (MsComplianceMetadata) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public MsComplianceMetadata setUploadType(java.lang.String uploadType) {
+            return (MsComplianceMetadata) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public MsComplianceMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+            return (MsComplianceMetadata) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location to be used to check CSS metadata for target project
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
+           * BackupDR, locations map to Google Cloud regions, for example **us-central1**.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location to be used to check CSS metadata for target project information,
+         in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations map to
+         Google Cloud regions, for example **us-central1**.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location to be used to check CSS metadata for target project
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
+           * BackupDR, locations map to Google Cloud regions, for example **us-central1**.
+           */
+          public MsComplianceMetadata setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/managementServers$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public MsComplianceMetadata set(String parameterName, Object value) {
+            return (MsComplianceMetadata) super.set(parameterName, value);
           }
         }
         /**

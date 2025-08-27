@@ -67,6 +67,13 @@ public final class GoogleCloudContactcenterinsightsV1IngestConversationsMetadata
   private GoogleCloudContactcenterinsightsV1IngestConversationsRequest request;
 
   /**
+   * Output only. Stores the conversation resources produced by ingest sampling operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sampledConversations;
+
+  /**
    * Output only. The time the operation was created.
    * @return value or {@code null} for none
    */
@@ -150,6 +157,23 @@ public final class GoogleCloudContactcenterinsightsV1IngestConversationsMetadata
    */
   public GoogleCloudContactcenterinsightsV1IngestConversationsMetadata setRequest(GoogleCloudContactcenterinsightsV1IngestConversationsRequest request) {
     this.request = request;
+    return this;
+  }
+
+  /**
+   * Output only. Stores the conversation resources produced by ingest sampling operations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSampledConversations() {
+    return sampledConversations;
+  }
+
+  /**
+   * Output only. Stores the conversation resources produced by ingest sampling operations.
+   * @param sampledConversations sampledConversations or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IngestConversationsMetadata setSampledConversations(java.util.List<java.lang.String> sampledConversations) {
+    this.sampledConversations = sampledConversations;
     return this;
   }
 

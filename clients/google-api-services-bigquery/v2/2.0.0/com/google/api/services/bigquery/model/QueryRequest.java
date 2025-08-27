@@ -147,6 +147,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxResults;
 
   /**
+   * Optional. INTERNAL: DO NOT USE. The maximum rate of slot consumption to allow for this job. If
+   * set, the number of slots used to execute the job will be throttled to try and keep its slot
+   * consumption below the requested rate. This limit is best effort.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxSlots;
+
+  /**
    * Optional. Limits the bytes billed for this query. Queries with bytes billed above this limit
    * will fail (without incurring a charge). If unspecified, the project default is used.
    * The value may be {@code null}.
@@ -521,6 +530,27 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setMaxResults(java.lang.Long maxResults) {
     this.maxResults = maxResults;
+    return this;
+  }
+
+  /**
+   * Optional. INTERNAL: DO NOT USE. The maximum rate of slot consumption to allow for this job. If
+   * set, the number of slots used to execute the job will be throttled to try and keep its slot
+   * consumption below the requested rate. This limit is best effort.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxSlots() {
+    return maxSlots;
+  }
+
+  /**
+   * Optional. INTERNAL: DO NOT USE. The maximum rate of slot consumption to allow for this job. If
+   * set, the number of slots used to execute the job will be throttled to try and keep its slot
+   * consumption below the requested rate. This limit is best effort.
+   * @param maxSlots maxSlots or {@code null} for none
+   */
+  public QueryRequest setMaxSlots(java.lang.Integer maxSlots) {
+    this.maxSlots = maxSlots;
     return this;
   }
 

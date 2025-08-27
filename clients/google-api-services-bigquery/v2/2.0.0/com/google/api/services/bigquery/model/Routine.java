@@ -60,13 +60,14 @@ public final class Routine extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The body of the routine. For functions, this is the expression in the AS clause. If
-   * language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the
-   * function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string)
-   * as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with
-   * linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example,
-   * for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING
-   * LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are
-   * replaced with linebreaks.
+   * `language = "SQL"`, it is the substring inside (but excluding) the parentheses. For example,
+   * for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y
+   * string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not
+   * replaced with linebreak). If `language="JAVASCRIPT"`, it is the evaluated string in the AS
+   * clause. For example, for the function created with the following statement: `CREATE FUNCTION
+   * f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n`
+   * Note that both \n are replaced with linebreaks. If `definition_body` references another
+   * routine, then that routine must be fully qualified with its project ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -266,13 +267,14 @@ public final class Routine extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The body of the routine. For functions, this is the expression in the AS clause. If
-   * language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the
-   * function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string)
-   * as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with
-   * linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example,
-   * for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING
-   * LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are
-   * replaced with linebreaks.
+   * `language = "SQL"`, it is the substring inside (but excluding) the parentheses. For example,
+   * for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y
+   * string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not
+   * replaced with linebreak). If `language="JAVASCRIPT"`, it is the evaluated string in the AS
+   * clause. For example, for the function created with the following statement: `CREATE FUNCTION
+   * f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n`
+   * Note that both \n are replaced with linebreaks. If `definition_body` references another
+   * routine, then that routine must be fully qualified with its project ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefinitionBody() {
@@ -281,13 +283,14 @@ public final class Routine extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The body of the routine. For functions, this is the expression in the AS clause. If
-   * language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the
-   * function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string)
-   * as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with
-   * linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example,
-   * for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING
-   * LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are
-   * replaced with linebreaks.
+   * `language = "SQL"`, it is the substring inside (but excluding) the parentheses. For example,
+   * for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y
+   * string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not
+   * replaced with linebreak). If `language="JAVASCRIPT"`, it is the evaluated string in the AS
+   * clause. For example, for the function created with the following statement: `CREATE FUNCTION
+   * f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n`
+   * Note that both \n are replaced with linebreaks. If `definition_body` references another
+   * routine, then that routine must be fully qualified with its project ID.
    * @param definitionBody definitionBody or {@code null} for none
    */
   public Routine setDefinitionBody(java.lang.String definitionBody) {

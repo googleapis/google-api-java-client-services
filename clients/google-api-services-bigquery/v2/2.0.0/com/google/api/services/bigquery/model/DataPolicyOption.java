@@ -17,7 +17,8 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Data policy option proto, it currently supports name only, will support precedence later.
+ * Data policy option. For more information, see [Mask data by applying data policies to a
+ * column](https://cloud.google.com/bigquery/docs/column-data-masking#data-policies-on-column/).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:

@@ -32,7 +32,8 @@ public final class GooglePrivacyDlpV2TagValue extends com.google.api.client.json
 
   /**
    * The namespaced name for the tag value to attach to resources. Must be in the format
-   * `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod".
+   * `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod" for an
+   * organization parent, or "my-project/environment/prod" for a project parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +41,8 @@ public final class GooglePrivacyDlpV2TagValue extends com.google.api.client.json
 
   /**
    * The namespaced name for the tag value to attach to resources. Must be in the format
-   * `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod".
+   * `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod" for an
+   * organization parent, or "my-project/environment/prod" for a project parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespacedValue() {
@@ -49,7 +51,8 @@ public final class GooglePrivacyDlpV2TagValue extends com.google.api.client.json
 
   /**
    * The namespaced name for the tag value to attach to resources. Must be in the format
-   * `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod".
+   * `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod" for an
+   * organization parent, or "my-project/environment/prod" for a project parent.
    * @param namespacedValue namespacedValue or {@code null} for none
    */
   public GooglePrivacyDlpV2TagValue setNamespacedValue(java.lang.String namespacedValue) {

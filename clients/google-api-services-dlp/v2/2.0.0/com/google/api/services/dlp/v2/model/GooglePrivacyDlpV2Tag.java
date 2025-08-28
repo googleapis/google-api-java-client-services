@@ -40,8 +40,9 @@ public final class GooglePrivacyDlpV2Tag extends com.google.api.client.json.Gene
 
   /**
    * The namespaced name for the tag value to attach to Google Cloud resources. Must be in the
-   * format `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod".
-   * This is only set for Google Cloud resources.
+   * format `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod"
+   * for an organization parent, or "my-project/environment/prod" for a project parent. This is only
+   * set for Google Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +77,9 @@ public final class GooglePrivacyDlpV2Tag extends com.google.api.client.json.Gene
 
   /**
    * The namespaced name for the tag value to attach to Google Cloud resources. Must be in the
-   * format `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod".
-   * This is only set for Google Cloud resources.
+   * format `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod"
+   * for an organization parent, or "my-project/environment/prod" for a project parent. This is only
+   * set for Google Cloud resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespacedTagValue() {
@@ -86,8 +88,9 @@ public final class GooglePrivacyDlpV2Tag extends com.google.api.client.json.Gene
 
   /**
    * The namespaced name for the tag value to attach to Google Cloud resources. Must be in the
-   * format `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod".
-   * This is only set for Google Cloud resources.
+   * format `{parent_id}/{tag_key_short_name}/{short_name}`, for example, "123456/environment/prod"
+   * for an organization parent, or "my-project/environment/prod" for a project parent. This is only
+   * set for Google Cloud resources.
    * @param namespacedTagValue namespacedTagValue or {@code null} for none
    */
   public GooglePrivacyDlpV2Tag setNamespacedTagValue(java.lang.String namespacedTagValue) {

@@ -47,6 +47,14 @@ public final class Scope extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Required. The resource name of the `TraceScope`. For example:
+   * projects/myproject/locations/global/traceScopes/my-trace-scope
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String traceScope;
+
+  /**
    * Output only. Update timestamp. Note: The Update timestamp for the default scope is initially
    * unset.
    * The value may be {@code null}.
@@ -91,6 +99,25 @@ public final class Scope extends com.google.api.client.json.GenericJson {
    */
   public Scope setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Required. The resource name of the `TraceScope`. For example:
+   * projects/myproject/locations/global/traceScopes/my-trace-scope
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTraceScope() {
+    return traceScope;
+  }
+
+  /**
+   * Required. The resource name of the `TraceScope`. For example:
+   * projects/myproject/locations/global/traceScopes/my-trace-scope
+   * @param traceScope traceScope or {@code null} for none
+   */
+  public Scope setTraceScope(java.lang.String traceScope) {
+    this.traceScope = traceScope;
     return this;
   }
 

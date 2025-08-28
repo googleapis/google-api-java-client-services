@@ -89,6 +89,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   private Early early;
 
   /**
+   * Optional. Feature configuration to populate the feature flags.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FeatureConfig featureConfig;
+
+  /**
    * The configuration of this instance, it is currently immutable once created.
    * The value may be {@code null}.
    */
@@ -316,6 +323,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   public ContactCenter setEarly(Early early) {
     this.early = early;
+    return this;
+  }
+
+  /**
+   * Optional. Feature configuration to populate the feature flags.
+   * @return value or {@code null} for none
+   */
+  public FeatureConfig getFeatureConfig() {
+    return featureConfig;
+  }
+
+  /**
+   * Optional. Feature configuration to populate the feature flags.
+   * @param featureConfig featureConfig or {@code null} for none
+   */
+  public ContactCenter setFeatureConfig(FeatureConfig featureConfig) {
+    this.featureConfig = featureConfig;
     return this;
   }
 

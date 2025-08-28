@@ -55,8 +55,8 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   private GooglePrivacyDlpV2PublishToChronicle publishToChronicle;
 
   /**
-   * Publishes a portion of each profile to Dataplex Catalog with the aspect type Sensitive Data
-   * Protection Profile.
+   * Publishes a portion of each profile to Dataplex Universal Catalog with the aspect type
+   * Sensitive Data Protection Profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +134,8 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   }
 
   /**
-   * Publishes a portion of each profile to Dataplex Catalog with the aspect type Sensitive Data
-   * Protection Profile.
+   * Publishes a portion of each profile to Dataplex Universal Catalog with the aspect type
+   * Sensitive Data Protection Profile.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2PublishToDataplexCatalog getPublishToDataplexCatalog() {
@@ -143,8 +143,8 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   }
 
   /**
-   * Publishes a portion of each profile to Dataplex Catalog with the aspect type Sensitive Data
-   * Protection Profile.
+   * Publishes a portion of each profile to Dataplex Universal Catalog with the aspect type
+   * Sensitive Data Protection Profile.
    * @param publishToDataplexCatalog publishToDataplexCatalog or {@code null} for none
    */
   public GooglePrivacyDlpV2DataProfileAction setPublishToDataplexCatalog(GooglePrivacyDlpV2PublishToDataplexCatalog publishToDataplexCatalog) {

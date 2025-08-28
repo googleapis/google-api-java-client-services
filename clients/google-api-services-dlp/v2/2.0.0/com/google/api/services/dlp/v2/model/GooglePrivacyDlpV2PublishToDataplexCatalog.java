@@ -17,9 +17,9 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Create Dataplex Catalog aspects for profiled resources with the aspect type Sensitive Data
- * Protection Profile. To learn more about aspects, see https://cloud.google.com/sensitive-data-
- * protection/docs/add-aspects.
+ * Create Dataplex Universal Catalog aspects for profiled resources with the aspect type Sensitive
+ * Data Protection Profile. To learn more about aspects, see https://cloud.google.com/sensitive-
+ * data-protection/docs/add-aspects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -33,20 +33,20 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2PublishToDataplexCatalog extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether creating a Dataplex Catalog aspect for a profiled resource should lower the risk of the
-   * profile for that resource. This also lowers the data risk of resources at the lower levels of
-   * the resource hierarchy. For example, reducing the data risk of a table data profile also
-   * reduces the data risk of the constituent column data profiles.
+   * Whether creating a Dataplex Universal Catalog aspect for a profiled resource should lower the
+   * risk of the profile for that resource. This also lowers the data risk of resources at the lower
+   * levels of the resource hierarchy. For example, reducing the data risk of a table data profile
+   * also reduces the data risk of the constituent column data profiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean lowerDataRiskToLow;
 
   /**
-   * Whether creating a Dataplex Catalog aspect for a profiled resource should lower the risk of the
-   * profile for that resource. This also lowers the data risk of resources at the lower levels of
-   * the resource hierarchy. For example, reducing the data risk of a table data profile also
-   * reduces the data risk of the constituent column data profiles.
+   * Whether creating a Dataplex Universal Catalog aspect for a profiled resource should lower the
+   * risk of the profile for that resource. This also lowers the data risk of resources at the lower
+   * levels of the resource hierarchy. For example, reducing the data risk of a table data profile
+   * also reduces the data risk of the constituent column data profiles.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLowerDataRiskToLow() {
@@ -54,10 +54,10 @@ public final class GooglePrivacyDlpV2PublishToDataplexCatalog extends com.google
   }
 
   /**
-   * Whether creating a Dataplex Catalog aspect for a profiled resource should lower the risk of the
-   * profile for that resource. This also lowers the data risk of resources at the lower levels of
-   * the resource hierarchy. For example, reducing the data risk of a table data profile also
-   * reduces the data risk of the constituent column data profiles.
+   * Whether creating a Dataplex Universal Catalog aspect for a profiled resource should lower the
+   * risk of the profile for that resource. This also lowers the data risk of resources at the lower
+   * levels of the resource hierarchy. For example, reducing the data risk of a table data profile
+   * also reduces the data risk of the constituent column data profiles.
    * @param lowerDataRiskToLow lowerDataRiskToLow or {@code null} for none
    */
   public GooglePrivacyDlpV2PublishToDataplexCatalog setLowerDataRiskToLow(java.lang.Boolean lowerDataRiskToLow) {

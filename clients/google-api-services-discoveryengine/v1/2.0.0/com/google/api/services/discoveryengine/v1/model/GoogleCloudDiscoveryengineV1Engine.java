@@ -30,6 +30,14 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Immutable. This the application type which this engine resource represents. NOTE:
+   * this is a new concept independ of existing industry vertical or solution type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appType;
+
+  /**
    * Configurations for the Chat Engine. Only applicable if solution_type is SOLUTION_TYPE_CHAT.
    * The value may be {@code null}.
    */
@@ -143,6 +151,25 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Immutable. This the application type which this engine resource represents. NOTE:
+   * this is a new concept independ of existing industry vertical or solution type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppType() {
+    return appType;
+  }
+
+  /**
+   * Optional. Immutable. This the application type which this engine resource represents. NOTE:
+   * this is a new concept independ of existing industry vertical or solution type.
+   * @param appType appType or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setAppType(java.lang.String appType) {
+    this.appType = appType;
+    return this;
+  }
 
   /**
    * Configurations for the Chat Engine. Only applicable if solution_type is SOLUTION_TYPE_CHAT.

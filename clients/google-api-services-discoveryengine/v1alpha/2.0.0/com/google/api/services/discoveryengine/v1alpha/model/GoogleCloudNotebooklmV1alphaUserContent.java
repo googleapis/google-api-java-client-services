@@ -37,6 +37,34 @@ public final class GoogleCloudNotebooklmV1alphaUserContent extends com.google.ap
   private GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent agentspaceContent;
 
   /**
+   * The content from Google Drive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent googleDriveContent;
+
+  /**
+   * The text content uploaded as source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaUserContentTextContent textContent;
+
+  /**
+   * The video content uploaded as source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaUserContentVideoContent videoContent;
+
+  /**
+   * The web content uploaded as source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaUserContentWebContent webContent;
+
+  /**
    * Agentspace content uploaded as source.
    * @return value or {@code null} for none
    */
@@ -50,6 +78,74 @@ public final class GoogleCloudNotebooklmV1alphaUserContent extends com.google.ap
    */
   public GoogleCloudNotebooklmV1alphaUserContent setAgentspaceContent(GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent agentspaceContent) {
     this.agentspaceContent = agentspaceContent;
+    return this;
+  }
+
+  /**
+   * The content from Google Drive.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent getGoogleDriveContent() {
+    return googleDriveContent;
+  }
+
+  /**
+   * The content from Google Drive.
+   * @param googleDriveContent googleDriveContent or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaUserContent setGoogleDriveContent(GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent googleDriveContent) {
+    this.googleDriveContent = googleDriveContent;
+    return this;
+  }
+
+  /**
+   * The text content uploaded as source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaUserContentTextContent getTextContent() {
+    return textContent;
+  }
+
+  /**
+   * The text content uploaded as source.
+   * @param textContent textContent or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaUserContent setTextContent(GoogleCloudNotebooklmV1alphaUserContentTextContent textContent) {
+    this.textContent = textContent;
+    return this;
+  }
+
+  /**
+   * The video content uploaded as source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaUserContentVideoContent getVideoContent() {
+    return videoContent;
+  }
+
+  /**
+   * The video content uploaded as source.
+   * @param videoContent videoContent or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaUserContent setVideoContent(GoogleCloudNotebooklmV1alphaUserContentVideoContent videoContent) {
+    this.videoContent = videoContent;
+    return this;
+  }
+
+  /**
+   * The web content uploaded as source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaUserContentWebContent getWebContent() {
+    return webContent;
+  }
+
+  /**
+   * The web content uploaded as source.
+   * @param webContent webContent or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaUserContent setWebContent(GoogleCloudNotebooklmV1alphaUserContentWebContent webContent) {
+    this.webContent = webContent;
     return this;
   }
 

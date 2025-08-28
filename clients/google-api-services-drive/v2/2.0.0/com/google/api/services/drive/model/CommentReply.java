@@ -17,8 +17,7 @@
 package com.google.api.services.drive.model;
 
 /**
- * A comment on a file in Google Drive. Some resource methods (such as `replies.update`) require a
- * `replyId`. Use the `replies.list` method to retrieve the ID for a reply.
+ * A reply to a comment on a file in Google Drive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -31,8 +30,7 @@ package com.google.api.services.drive.model;
 public final class CommentReply extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The author of the reply. The author's email address and permission ID will not be
-   * populated.
+   * The user who wrote this reply.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,22 +53,29 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime createdDate;
 
   /**
-   * Output only. Whether this reply has been deleted. If a reply has been deleted the content will
-   * be cleared and this will only represent a reply that once existed.
+   * Whether this reply has been deleted. If a reply has been deleted the content will be cleared
+   * and this will only represent a reply that once existed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deleted;
 
   /**
-   * Output only. HTML formatted content for this reply.
+   * The user who wrote this reply as a GenoaUser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenoaUser genoaAuthor;
+
+  /**
+   * HTML formatted content for this reply.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String htmlContent;
 
   /**
-   * Output only. This is always `drive#commentReply`.
+   * This is always drive#commentReply.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +89,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime modifiedDate;
 
   /**
-   * Output only. The ID of the reply.
+   * The ID of the reply.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +97,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
 
   /**
    * The action this reply performed to the parent comment. When creating a new reply this is the
-   * action to be perform to the parent comment. Possible values are: * `resolve` - To resolve a
+   * action to be perform tSo the parent comment. Possible values are: * `resolve` - To resolve a
    * comment. * `reopen` - To reopen (un-resolve) a comment.
    * The value may be {@code null}.
    */
@@ -100,8 +105,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   private java.lang.String verb;
 
   /**
-   * Output only. The author of the reply. The author's email address and permission ID will not be
-   * populated.
+   * The user who wrote this reply.
    * @return value or {@code null} for none
    */
   public User getAuthor() {
@@ -109,8 +113,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The author of the reply. The author's email address and permission ID will not be
-   * populated.
+   * The user who wrote this reply.
    * @param author author or {@code null} for none
    */
   public CommentReply setAuthor(User author) {
@@ -157,8 +160,8 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this reply has been deleted. If a reply has been deleted the content will
-   * be cleared and this will only represent a reply that once existed.
+   * Whether this reply has been deleted. If a reply has been deleted the content will be cleared
+   * and this will only represent a reply that once existed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -166,8 +169,8 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this reply has been deleted. If a reply has been deleted the content will
-   * be cleared and this will only represent a reply that once existed.
+   * Whether this reply has been deleted. If a reply has been deleted the content will be cleared
+   * and this will only represent a reply that once existed.
    * @param deleted deleted or {@code null} for none
    */
   public CommentReply setDeleted(java.lang.Boolean deleted) {
@@ -176,7 +179,24 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. HTML formatted content for this reply.
+   * The user who wrote this reply as a GenoaUser.
+   * @return value or {@code null} for none
+   */
+  public GenoaUser getGenoaAuthor() {
+    return genoaAuthor;
+  }
+
+  /**
+   * The user who wrote this reply as a GenoaUser.
+   * @param genoaAuthor genoaAuthor or {@code null} for none
+   */
+  public CommentReply setGenoaAuthor(GenoaUser genoaAuthor) {
+    this.genoaAuthor = genoaAuthor;
+    return this;
+  }
+
+  /**
+   * HTML formatted content for this reply.
    * @return value or {@code null} for none
    */
   public java.lang.String getHtmlContent() {
@@ -184,7 +204,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. HTML formatted content for this reply.
+   * HTML formatted content for this reply.
    * @param htmlContent htmlContent or {@code null} for none
    */
   public CommentReply setHtmlContent(java.lang.String htmlContent) {
@@ -193,7 +213,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This is always `drive#commentReply`.
+   * This is always drive#commentReply.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -201,7 +221,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This is always `drive#commentReply`.
+   * This is always drive#commentReply.
    * @param kind kind or {@code null} for none
    */
   public CommentReply setKind(java.lang.String kind) {
@@ -227,7 +247,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The ID of the reply.
+   * The ID of the reply.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplyId() {
@@ -235,7 +255,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The ID of the reply.
+   * The ID of the reply.
    * @param replyId replyId or {@code null} for none
    */
   public CommentReply setReplyId(java.lang.String replyId) {
@@ -245,7 +265,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
 
   /**
    * The action this reply performed to the parent comment. When creating a new reply this is the
-   * action to be perform to the parent comment. Possible values are: * `resolve` - To resolve a
+   * action to be perform tSo the parent comment. Possible values are: * `resolve` - To resolve a
    * comment. * `reopen` - To reopen (un-resolve) a comment.
    * @return value or {@code null} for none
    */
@@ -255,7 +275,7 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
 
   /**
    * The action this reply performed to the parent comment. When creating a new reply this is the
-   * action to be perform to the parent comment. Possible values are: * `resolve` - To resolve a
+   * action to be perform tSo the parent comment. Possible values are: * `resolve` - To resolve a
    * comment. * `reopen` - To reopen (un-resolve) a comment.
    * @param verb verb or {@code null} for none
    */

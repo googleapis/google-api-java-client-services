@@ -44,7 +44,7 @@ public final class CommentList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always `drive#commentList`.
+   * This is always drive#commentList.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class CommentList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always `drive#commentList`.
+   * This is always drive#commentList.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -101,7 +101,7 @@ public final class CommentList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always `drive#commentList`.
+   * This is always drive#commentList.
    * @param kind kind or {@code null} for none
    */
   public CommentList setKind(java.lang.String kind) {

@@ -38,6 +38,13 @@ public final class SetAutoscalerLinkOperationMetadata extends com.google.api.cli
   private java.util.List<java.lang.Long> zonalIgmIds;
 
   /**
+   * Map of zone to an ID of the zonal IGM belonging to the RMIG.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.Map<String, java.lang.Long> zoneToIgmIds;
+
+  /**
    * List of zonal IGM IDs part of the RMIG.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class SetAutoscalerLinkOperationMetadata extends com.google.api.cli
    */
   public SetAutoscalerLinkOperationMetadata setZonalIgmIds(java.util.List<java.lang.Long> zonalIgmIds) {
     this.zonalIgmIds = zonalIgmIds;
+    return this;
+  }
+
+  /**
+   * Map of zone to an ID of the zonal IGM belonging to the RMIG.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Long> getZoneToIgmIds() {
+    return zoneToIgmIds;
+  }
+
+  /**
+   * Map of zone to an ID of the zonal IGM belonging to the RMIG.
+   * @param zoneToIgmIds zoneToIgmIds or {@code null} for none
+   */
+  public SetAutoscalerLinkOperationMetadata setZoneToIgmIds(java.util.Map<String, java.lang.Long> zoneToIgmIds) {
+    this.zoneToIgmIds = zoneToIgmIds;
     return this;
   }
 

@@ -20037,6 +20037,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
       /**
        * Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
+       * Newer version is available at purchases.subscriptionsv2.cancel for better client library support.
        *
        * Create a request for the method "subscriptions.cancel".
        *
@@ -20062,7 +20063,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Cancels a user's subscription purchase. The subscription remains valid until its expiration
-         * time.
+         * time. Newer version is available at purchases.subscriptionsv2.cancel for better client library
+         * support.
          *
          * Create a request for the method "subscriptions.cancel".
          *

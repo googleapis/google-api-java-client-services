@@ -81,7 +81,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> nodeSelector;
 
   /**
-   * Runtime. Leave unset for default.
+   * Optional. Runtime. Leave unset for default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +206,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Runtime. Leave unset for default.
+   * Optional. Runtime. Leave unset for default.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeClassName() {
@@ -214,7 +214,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Runtime. Leave unset for default.
+   * Optional. Runtime. Leave unset for default.
    * @param runtimeClassName runtimeClassName or {@code null} for none
    */
   public RevisionSpec setRuntimeClassName(java.lang.String runtimeClassName) {

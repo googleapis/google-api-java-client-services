@@ -30,6 +30,13 @@ package com.google.api.services.sqladmin.model;
 public final class SqlInstancesGetLatestRecoveryTimeResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Timestamp, identifies the earliest recovery time of the source instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String earliestRecoveryTime;
+
+  /**
    * This is always `sql#getLatestRecoveryTime`.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class SqlInstancesGetLatestRecoveryTimeResponse extends com.google.
    */
   @com.google.api.client.util.Key
   private String latestRecoveryTime;
+
+  /**
+   * Timestamp, identifies the earliest recovery time of the source instance.
+   * @return value or {@code null} for none
+   */
+  public String getEarliestRecoveryTime() {
+    return earliestRecoveryTime;
+  }
+
+  /**
+   * Timestamp, identifies the earliest recovery time of the source instance.
+   * @param earliestRecoveryTime earliestRecoveryTime or {@code null} for none
+   */
+  public SqlInstancesGetLatestRecoveryTimeResponse setEarliestRecoveryTime(String earliestRecoveryTime) {
+    this.earliestRecoveryTime = earliestRecoveryTime;
+    return this;
+  }
 
   /**
    * This is always `sql#getLatestRecoveryTime`.

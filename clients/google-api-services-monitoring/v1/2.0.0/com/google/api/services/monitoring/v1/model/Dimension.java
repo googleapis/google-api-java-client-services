@@ -31,7 +31,9 @@ package com.google.api.services.monitoring.v1.model;
 public final class Dimension extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the column in the source SQL query that is used to chart the dimension.
+   * Required. For widgets that use SQL queries, set the value to the name of the column in the
+   * results table whose data is charted. For a histogram that uses a time series query, set the
+   * value of this field to metric_value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,15 +58,18 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   private java.lang.Double floatBinSize;
 
   /**
-   * A limit to the number of bins generated. When 0 is specified, the maximum count is not
-   * enforced.
+   * For widgets that use SQL queries, the limit to the number of bins to generate. When 0 is
+   * specified, the maximum count is not enforced. For a histogram that uses a time series query,
+   * the exact number of bins to generate. If not specified or the value is 0, then the histogram
+   * determines the number of bins to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxBinCount;
 
   /**
-   * numeric_bin_size is used when the column type used for a dimension is numeric or string.
+   * numeric_bin_size is used when the column type used for a dimension is numeric or string. If the
+   * column field is set to metric_value, then numericBinSize overrides maxBinCount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,16 +92,18 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   private java.lang.String sortOrder;
 
   /**
-   * time_bin_size is used when the data type specified by column is a time type and the bin size is
-   * determined by a time duration. If column_type is DATE, this must be a whole value multiple of 1
-   * day. If column_type is TIME, this must be less than or equal to 24 hours.
+   * time_bin_size is used when the data type of the specified dimension is a time type and the bin
+   * size is determined by a time duration. If column_type is DATE, this must be a whole value
+   * multiple of 1 day. If column_type is TIME, this must be less than or equal to 24 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timeBinSize;
 
   /**
-   * Required. The name of the column in the source SQL query that is used to chart the dimension.
+   * Required. For widgets that use SQL queries, set the value to the name of the column in the
+   * results table whose data is charted. For a histogram that uses a time series query, set the
+   * value of this field to metric_value.
    * @return value or {@code null} for none
    */
   public java.lang.String getColumn() {
@@ -104,7 +111,9 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the column in the source SQL query that is used to chart the dimension.
+   * Required. For widgets that use SQL queries, set the value to the name of the column in the
+   * results table whose data is charted. For a histogram that uses a time series query, set the
+   * value of this field to metric_value.
    * @param column column or {@code null} for none
    */
   public Dimension setColumn(java.lang.String column) {
@@ -155,8 +164,10 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A limit to the number of bins generated. When 0 is specified, the maximum count is not
-   * enforced.
+   * For widgets that use SQL queries, the limit to the number of bins to generate. When 0 is
+   * specified, the maximum count is not enforced. For a histogram that uses a time series query,
+   * the exact number of bins to generate. If not specified or the value is 0, then the histogram
+   * determines the number of bins to use.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxBinCount() {
@@ -164,8 +175,10 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A limit to the number of bins generated. When 0 is specified, the maximum count is not
-   * enforced.
+   * For widgets that use SQL queries, the limit to the number of bins to generate. When 0 is
+   * specified, the maximum count is not enforced. For a histogram that uses a time series query,
+   * the exact number of bins to generate. If not specified or the value is 0, then the histogram
+   * determines the number of bins to use.
    * @param maxBinCount maxBinCount or {@code null} for none
    */
   public Dimension setMaxBinCount(java.lang.Integer maxBinCount) {
@@ -174,7 +187,8 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * numeric_bin_size is used when the column type used for a dimension is numeric or string.
+   * numeric_bin_size is used when the column type used for a dimension is numeric or string. If the
+   * column field is set to metric_value, then numericBinSize overrides maxBinCount.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumericBinSize() {
@@ -182,7 +196,8 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * numeric_bin_size is used when the column type used for a dimension is numeric or string.
+   * numeric_bin_size is used when the column type used for a dimension is numeric or string. If the
+   * column field is set to metric_value, then numericBinSize overrides maxBinCount.
    * @param numericBinSize numericBinSize or {@code null} for none
    */
   public Dimension setNumericBinSize(java.lang.Integer numericBinSize) {
@@ -229,9 +244,9 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * time_bin_size is used when the data type specified by column is a time type and the bin size is
-   * determined by a time duration. If column_type is DATE, this must be a whole value multiple of 1
-   * day. If column_type is TIME, this must be less than or equal to 24 hours.
+   * time_bin_size is used when the data type of the specified dimension is a time type and the bin
+   * size is determined by a time duration. If column_type is DATE, this must be a whole value
+   * multiple of 1 day. If column_type is TIME, this must be less than or equal to 24 hours.
    * @return value or {@code null} for none
    */
   public String getTimeBinSize() {
@@ -239,9 +254,9 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * time_bin_size is used when the data type specified by column is a time type and the bin size is
-   * determined by a time duration. If column_type is DATE, this must be a whole value multiple of 1
-   * day. If column_type is TIME, this must be less than or equal to 24 hours.
+   * time_bin_size is used when the data type of the specified dimension is a time type and the bin
+   * size is determined by a time duration. If column_type is DATE, this must be a whole value
+   * multiple of 1 day. If column_type is TIME, this must be less than or equal to 24 hours.
    * @param timeBinSize timeBinSize or {@code null} for none
    */
   public Dimension setTimeBinSize(String timeBinSize) {

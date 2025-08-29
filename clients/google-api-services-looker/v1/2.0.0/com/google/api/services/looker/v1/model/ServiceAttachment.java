@@ -38,6 +38,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String connectionStatus;
 
   /**
+   * Output only. Reason the service attachment creation failed. This value will only be populated
+   * if the service attachment encounters an issue during provisioning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String failureReason;
+
+  /**
    * Optional. Fully qualified domain name that will be used in the private DNS record created for
    * the service attachment.
    * The value may be {@code null}.
@@ -75,6 +83,25 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setConnectionStatus(java.lang.String connectionStatus) {
     this.connectionStatus = connectionStatus;
+    return this;
+  }
+
+  /**
+   * Output only. Reason the service attachment creation failed. This value will only be populated
+   * if the service attachment encounters an issue during provisioning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFailureReason() {
+    return failureReason;
+  }
+
+  /**
+   * Output only. Reason the service attachment creation failed. This value will only be populated
+   * if the service attachment encounters an issue during provisioning.
+   * @param failureReason failureReason or {@code null} for none
+   */
+  public ServiceAttachment setFailureReason(java.lang.String failureReason) {
+    this.failureReason = failureReason;
     return this;
   }
 

@@ -37,14 +37,15 @@ public final class CloudResource extends com.google.api.client.json.GenericJson 
   private InstanceProperties instanceProperties;
 
   /**
-   * Output only. ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
+   * Output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Output only. resource name
+   * Output only. resource name Example: compute.googleapis.com/projects/wlm-obs-dev/zones/us-
+   * central1-a/instances/sap-pri
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,7 @@ public final class CloudResource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
+   * Output only.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -76,7 +77,7 @@ public final class CloudResource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
+   * Output only.
    * @param kind kind or {@code null} for none
    */
   public CloudResource setKind(java.lang.String kind) {
@@ -85,7 +86,8 @@ public final class CloudResource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. resource name
+   * Output only. resource name Example: compute.googleapis.com/projects/wlm-obs-dev/zones/us-
+   * central1-a/instances/sap-pri
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -93,7 +95,8 @@ public final class CloudResource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. resource name
+   * Output only. resource name Example: compute.googleapis.com/projects/wlm-obs-dev/zones/us-
+   * central1-a/instances/sap-pri
    * @param name name or {@code null} for none
    */
   public CloudResource setName(java.lang.String name) {

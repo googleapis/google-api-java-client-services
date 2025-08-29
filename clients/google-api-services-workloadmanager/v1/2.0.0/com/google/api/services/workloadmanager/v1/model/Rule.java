@@ -79,6 +79,13 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   private java.lang.String revisionId;
 
   /**
+   * The type of the rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ruleType;
+
+  /**
    * the secondary category
    * The value may be {@code null}.
    */
@@ -222,6 +229,23 @@ public final class Rule extends com.google.api.client.json.GenericJson {
    */
   public Rule setRevisionId(java.lang.String revisionId) {
     this.revisionId = revisionId;
+    return this;
+  }
+
+  /**
+   * The type of the rule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuleType() {
+    return ruleType;
+  }
+
+  /**
+   * The type of the rule.
+   * @param ruleType ruleType or {@code null} for none
+   */
+  public Rule setRuleType(java.lang.String ruleType) {
+    this.ruleType = ruleType;
     return this;
   }
 

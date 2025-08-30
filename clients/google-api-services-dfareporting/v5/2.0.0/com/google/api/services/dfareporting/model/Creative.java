@@ -247,13 +247,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<CreativeCustomEvent> counterCustomEvents;
 
   /**
-   * Required if dynamicAssetSelection is true.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private CreativeAssetSelection creativeAssetSelection;
-
-  /**
    * Assets associated with a creative. Applicable to all but the following creative types:
    * INTERNAL_REDIRECT, INTERSTITIAL_INTERNAL_REDIRECT, and REDIRECT
    * The value may be {@code null}.
@@ -277,16 +270,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> customKeyValues;
-
-  /**
-   * Set this to true to enable the use of rules to target individual assets in this creative. When
-   * set to true creativeAssetSelection must be set. This also controls asset-level companions. When
-   * this is true, companion creatives should be assigned to creative assets. Learn more. Applicable
-   * to INSTREAM_VIDEO creatives.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean dynamicAssetSelection;
 
   /**
    * List of exit events configured for the creative. For DISPLAY and DISPLAY_IMAGE_GALLERY
@@ -1092,23 +1075,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required if dynamicAssetSelection is true.
-   * @return value or {@code null} for none
-   */
-  public CreativeAssetSelection getCreativeAssetSelection() {
-    return creativeAssetSelection;
-  }
-
-  /**
-   * Required if dynamicAssetSelection is true.
-   * @param creativeAssetSelection creativeAssetSelection or {@code null} for none
-   */
-  public Creative setCreativeAssetSelection(CreativeAssetSelection creativeAssetSelection) {
-    this.creativeAssetSelection = creativeAssetSelection;
-    return this;
-  }
-
-  /**
    * Assets associated with a creative. Applicable to all but the following creative types:
    * INTERNAL_REDIRECT, INTERSTITIAL_INTERNAL_REDIRECT, and REDIRECT
    * @return value or {@code null} for none
@@ -1164,29 +1130,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setCustomKeyValues(java.util.List<java.lang.String> customKeyValues) {
     this.customKeyValues = customKeyValues;
-    return this;
-  }
-
-  /**
-   * Set this to true to enable the use of rules to target individual assets in this creative. When
-   * set to true creativeAssetSelection must be set. This also controls asset-level companions. When
-   * this is true, companion creatives should be assigned to creative assets. Learn more. Applicable
-   * to INSTREAM_VIDEO creatives.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDynamicAssetSelection() {
-    return dynamicAssetSelection;
-  }
-
-  /**
-   * Set this to true to enable the use of rules to target individual assets in this creative. When
-   * set to true creativeAssetSelection must be set. This also controls asset-level companions. When
-   * this is true, companion creatives should be assigned to creative assets. Learn more. Applicable
-   * to INSTREAM_VIDEO creatives.
-   * @param dynamicAssetSelection dynamicAssetSelection or {@code null} for none
-   */
-  public Creative setDynamicAssetSelection(java.lang.Boolean dynamicAssetSelection) {
-    this.dynamicAssetSelection = dynamicAssetSelection;
     return this;
   }
 

@@ -157,6 +157,14 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime endDate;
 
   /**
+   * Optional. Whether the campaign has EU political ads. Campaign Manager 360 doesn't allow
+   * campaigns with EU political ads to serve in the EU. They can still serve in other regions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String euPoliticalAdsDeclaration;
+
+  /**
    * Overrides that can be used to activate or deactivate advertiser event tags.
    * The value may be {@code null}.
    */
@@ -514,6 +522,25 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
    */
   public Campaign setEndDate(com.google.api.client.util.DateTime endDate) {
     this.endDate = endDate;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the campaign has EU political ads. Campaign Manager 360 doesn't allow
+   * campaigns with EU political ads to serve in the EU. They can still serve in other regions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEuPoliticalAdsDeclaration() {
+    return euPoliticalAdsDeclaration;
+  }
+
+  /**
+   * Optional. Whether the campaign has EU political ads. Campaign Manager 360 doesn't allow
+   * campaigns with EU political ads to serve in the EU. They can still serve in other regions.
+   * @param euPoliticalAdsDeclaration euPoliticalAdsDeclaration or {@code null} for none
+   */
+  public Campaign setEuPoliticalAdsDeclaration(java.lang.String euPoliticalAdsDeclaration) {
+    this.euPoliticalAdsDeclaration = euPoliticalAdsDeclaration;
     return this;
   }
 

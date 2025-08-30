@@ -69,6 +69,13 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultEmail;
 
   /**
+   * Optional. Whether the advertiser plans to serve EU political ads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String euPoliticalAdsDeclaration;
+
+  /**
    * Floodlight configuration ID of this advertiser. The floodlight configuration ID will be created
    * automatically, so on insert this field should be left blank. This field can be set to another
    * advertiser's floodlight configuration ID in order to share that advertiser's floodlight
@@ -245,6 +252,23 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    */
   public Advertiser setDefaultEmail(java.lang.String defaultEmail) {
     this.defaultEmail = defaultEmail;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the advertiser plans to serve EU political ads.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEuPoliticalAdsDeclaration() {
+    return euPoliticalAdsDeclaration;
+  }
+
+  /**
+   * Optional. Whether the advertiser plans to serve EU political ads.
+   * @param euPoliticalAdsDeclaration euPoliticalAdsDeclaration or {@code null} for none
+   */
+  public Advertiser setEuPoliticalAdsDeclaration(java.lang.String euPoliticalAdsDeclaration) {
+    this.euPoliticalAdsDeclaration = euPoliticalAdsDeclaration;
     return this;
   }
 

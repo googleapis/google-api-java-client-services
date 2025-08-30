@@ -45,6 +45,14 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
   private java.lang.String database;
 
   /**
+   * Optional. Controls how the API should respond when the SQL execution result exceeds 10 MB. The
+   * default mode is to throw an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String partialResultMode;
+
+  /**
    * Optional. The maximum number of rows returned per SQL statement.
    * The value may be {@code null}.
    */
@@ -58,6 +66,14 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlStatement;
+
+  /**
+   * Optional. The name of an existing database user to connect to the database. When
+   * `auto_iam_authn` is set to true, this field is ignored and the API caller's IAM user is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String user;
 
   /**
    * Optional. When set to true, the API caller identity associated with the request is used for
@@ -96,6 +112,25 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. Controls how the API should respond when the SQL execution result exceeds 10 MB. The
+   * default mode is to throw an error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPartialResultMode() {
+    return partialResultMode;
+  }
+
+  /**
+   * Optional. Controls how the API should respond when the SQL execution result exceeds 10 MB. The
+   * default mode is to throw an error.
+   * @param partialResultMode partialResultMode or {@code null} for none
+   */
+  public ExecuteSqlPayload setPartialResultMode(java.lang.String partialResultMode) {
+    this.partialResultMode = partialResultMode;
+    return this;
+  }
+
+  /**
    * Optional. The maximum number of rows returned per SQL statement.
    * @return value or {@code null} for none
    */
@@ -128,6 +163,25 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
    */
   public ExecuteSqlPayload setSqlStatement(java.lang.String sqlStatement) {
     this.sqlStatement = sqlStatement;
+    return this;
+  }
+
+  /**
+   * Optional. The name of an existing database user to connect to the database. When
+   * `auto_iam_authn` is set to true, this field is ignored and the API caller's IAM user is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUser() {
+    return user;
+  }
+
+  /**
+   * Optional. The name of an existing database user to connect to the database. When
+   * `auto_iam_authn` is set to true, this field is ignored and the API caller's IAM user is used.
+   * @param user user or {@code null} for none
+   */
+  public ExecuteSqlPayload setUser(java.lang.String user) {
+    this.user = user;
     return this;
   }
 

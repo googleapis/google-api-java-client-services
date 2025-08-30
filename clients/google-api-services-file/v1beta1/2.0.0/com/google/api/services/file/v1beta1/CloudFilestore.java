@@ -445,22 +445,22 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -2721,6 +2721,148 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public Restore set(String parameterName, Object value) {
             return (Restore) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Resume the standby instance (replica). WARNING: Any data written to the standby instance while
+         * paused will be lost when the replica is resumed.
+         *
+         * Create a request for the method "instances.resumeReplica".
+         *
+         * This request holds the parameters needed by the file server.  After setting any optional
+         * parameters, call the {@link ResumeReplica#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+         * @param content the {@link com.google.api.services.file.v1beta1.model.ResumeReplicaRequest}
+         * @return the request
+         */
+        public ResumeReplica resumeReplica(java.lang.String name, com.google.api.services.file.v1beta1.model.ResumeReplicaRequest content) throws java.io.IOException {
+          ResumeReplica result = new ResumeReplica(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ResumeReplica extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:resumeReplica";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Resume the standby instance (replica). WARNING: Any data written to the standby instance while
+           * paused will be lost when the replica is resumed.
+           *
+           * Create a request for the method "instances.resumeReplica".
+           *
+           * This request holds the parameters needed by the the file server.  After setting any optional
+           * parameters, call the {@link ResumeReplica#execute()} method to invoke the remote operation. <p>
+           * {@link ResumeReplica#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           * @param content the {@link com.google.api.services.file.v1beta1.model.ResumeReplicaRequest}
+           * @since 1.13
+           */
+          protected ResumeReplica(java.lang.String name, com.google.api.services.file.v1beta1.model.ResumeReplicaRequest content) {
+            super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public ResumeReplica set$Xgafv(java.lang.String $Xgafv) {
+            return (ResumeReplica) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ResumeReplica setAccessToken(java.lang.String accessToken) {
+            return (ResumeReplica) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ResumeReplica setAlt(java.lang.String alt) {
+            return (ResumeReplica) super.setAlt(alt);
+          }
+
+          @Override
+          public ResumeReplica setCallback(java.lang.String callback) {
+            return (ResumeReplica) super.setCallback(callback);
+          }
+
+          @Override
+          public ResumeReplica setFields(java.lang.String fields) {
+            return (ResumeReplica) super.setFields(fields);
+          }
+
+          @Override
+          public ResumeReplica setKey(java.lang.String key) {
+            return (ResumeReplica) super.setKey(key);
+          }
+
+          @Override
+          public ResumeReplica setOauthToken(java.lang.String oauthToken) {
+            return (ResumeReplica) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ResumeReplica setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ResumeReplica) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ResumeReplica setQuotaUser(java.lang.String quotaUser) {
+            return (ResumeReplica) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ResumeReplica setUploadType(java.lang.String uploadType) {
+            return (ResumeReplica) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ResumeReplica setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ResumeReplica) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the instance, in the format
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           */
+          public ResumeReplica setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ResumeReplica set(String parameterName, Object value) {
+            return (ResumeReplica) super.set(parameterName, value);
           }
         }
         /**

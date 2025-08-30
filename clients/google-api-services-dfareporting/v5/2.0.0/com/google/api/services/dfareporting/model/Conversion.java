@@ -31,6 +31,20 @@ package com.google.api.services.dfareporting.model;
 public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
+   * This represents consent for ad user data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adUserDataConsent;
+
+  /**
+   * The cart data associated with this conversion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CartData cartData;
+
+  /**
    * Whether this particular request may come from a user under the age of 13, under COPPA
    * compliance.
    * The value may be {@code null}.
@@ -170,6 +184,14 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Long quantity;
 
   /**
+   * Session attributes for the conversion, encoded as based64 bytes. This field may only be used
+   * when calling batchinsert; it is not supported by batchupdate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sessionAttributesEncoded;
+
+  /**
    * The timestamp of conversion, in Unix epoch micros. This is a required field.
    * The value may be {@code null}.
    */
@@ -199,6 +221,40 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Double value;
+
+  /**
+   * This represents consent for ad user data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdUserDataConsent() {
+    return adUserDataConsent;
+  }
+
+  /**
+   * This represents consent for ad user data.
+   * @param adUserDataConsent adUserDataConsent or {@code null} for none
+   */
+  public Conversion setAdUserDataConsent(java.lang.String adUserDataConsent) {
+    this.adUserDataConsent = adUserDataConsent;
+    return this;
+  }
+
+  /**
+   * The cart data associated with this conversion.
+   * @return value or {@code null} for none
+   */
+  public CartData getCartData() {
+    return cartData;
+  }
+
+  /**
+   * The cart data associated with this conversion.
+   * @param cartData cartData or {@code null} for none
+   */
+  public Conversion setCartData(CartData cartData) {
+    this.cartData = cartData;
+    return this;
+  }
 
   /**
    * Whether this particular request may come from a user under the age of 13, under COPPA
@@ -523,6 +579,55 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    */
   public Conversion setQuantity(java.lang.Long quantity) {
     this.quantity = quantity;
+    return this;
+  }
+
+  /**
+   * Session attributes for the conversion, encoded as based64 bytes. This field may only be used
+   * when calling batchinsert; it is not supported by batchupdate.
+   * @see #decodeSessionAttributesEncoded()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSessionAttributesEncoded() {
+    return sessionAttributesEncoded;
+  }
+
+  /**
+   * Session attributes for the conversion, encoded as based64 bytes. This field may only be used
+   * when calling batchinsert; it is not supported by batchupdate.
+   * @see #getSessionAttributesEncoded()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeSessionAttributesEncoded() {
+    return com.google.api.client.util.Base64.decodeBase64(sessionAttributesEncoded);
+  }
+
+  /**
+   * Session attributes for the conversion, encoded as based64 bytes. This field may only be used
+   * when calling batchinsert; it is not supported by batchupdate.
+   * @see #encodeSessionAttributesEncoded()
+   * @param sessionAttributesEncoded sessionAttributesEncoded or {@code null} for none
+   */
+  public Conversion setSessionAttributesEncoded(java.lang.String sessionAttributesEncoded) {
+    this.sessionAttributesEncoded = sessionAttributesEncoded;
+    return this;
+  }
+
+  /**
+   * Session attributes for the conversion, encoded as based64 bytes. This field may only be used
+   * when calling batchinsert; it is not supported by batchupdate.
+   * @see #setSessionAttributesEncoded()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public Conversion encodeSessionAttributesEncoded(byte[] sessionAttributesEncoded) {
+    this.sessionAttributesEncoded = com.google.api.client.util.Base64.encodeBase64URLSafeString(sessionAttributesEncoded);
     return this;
   }
 

@@ -69,6 +69,13 @@ public final class FloodlightActivity extends com.google.api.client.json.Generic
   private java.lang.String cacheBustingType;
 
   /**
+   * Required. The conversion category of the activity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String conversionCategory;
+
+  /**
    * Counting method for conversions for this floodlight activity. This is a required field.
    * The value may be {@code null}.
    */
@@ -341,6 +348,23 @@ public final class FloodlightActivity extends com.google.api.client.json.Generic
    */
   public FloodlightActivity setCacheBustingType(java.lang.String cacheBustingType) {
     this.cacheBustingType = cacheBustingType;
+    return this;
+  }
+
+  /**
+   * Required. The conversion category of the activity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConversionCategory() {
+    return conversionCategory;
+  }
+
+  /**
+   * Required. The conversion category of the activity.
+   * @param conversionCategory conversionCategory or {@code null} for none
+   */
+  public FloodlightActivity setConversionCategory(java.lang.String conversionCategory) {
+    this.conversionCategory = conversionCategory;
     return this;
   }
 

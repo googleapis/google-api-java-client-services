@@ -92,7 +92,7 @@ public final class SendRfpRequest extends com.google.api.client.json.GenericJson
   private CriteriaTargeting geoTargeting;
 
   /**
-   * Inventory sizes to be targeted.
+   * Inventory sizes to be targeted. Only PIXEL inventory size type is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,7 +257,7 @@ public final class SendRfpRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Inventory sizes to be targeted.
+   * Inventory sizes to be targeted. Only PIXEL inventory size type is supported.
    * @return value or {@code null} for none
    */
   public InventorySizeTargeting getInventorySizeTargeting() {
@@ -265,7 +265,7 @@ public final class SendRfpRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Inventory sizes to be targeted.
+   * Inventory sizes to be targeted. Only PIXEL inventory size type is supported.
    * @param inventorySizeTargeting inventorySizeTargeting or {@code null} for none
    */
   public SendRfpRequest setInventorySizeTargeting(InventorySizeTargeting inventorySizeTargeting) {

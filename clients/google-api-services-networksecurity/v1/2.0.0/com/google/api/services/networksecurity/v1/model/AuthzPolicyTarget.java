@@ -31,9 +31,9 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
 
   /**
    * Required. All gateways and forwarding rules referenced by this policy and extensions must share
-   * the same load balancing scheme. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
-   * For more information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * the same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `INTERNAL_SELF_MANAGED`,
+   * and `EXTERNAL_MANAGED`. For more information, refer to [Backend services
+   * overview](https://cloud.google.com/load-balancing/docs/backend-service).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,6 +41,7 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
 
   /**
    * Required. A list of references to the Forwarding Rules on which this policy will be applied.
+   * For policies created for Cloudrun, this field will reference the Cloud Run services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,9 +49,9 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
 
   /**
    * Required. All gateways and forwarding rules referenced by this policy and extensions must share
-   * the same load balancing scheme. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
-   * For more information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * the same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `INTERNAL_SELF_MANAGED`,
+   * and `EXTERNAL_MANAGED`. For more information, refer to [Backend services
+   * overview](https://cloud.google.com/load-balancing/docs/backend-service).
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -59,9 +60,9 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
 
   /**
    * Required. All gateways and forwarding rules referenced by this policy and extensions must share
-   * the same load balancing scheme. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
-   * For more information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * the same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `INTERNAL_SELF_MANAGED`,
+   * and `EXTERNAL_MANAGED`. For more information, refer to [Backend services
+   * overview](https://cloud.google.com/load-balancing/docs/backend-service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public AuthzPolicyTarget setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
@@ -71,6 +72,7 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
 
   /**
    * Required. A list of references to the Forwarding Rules on which this policy will be applied.
+   * For policies created for Cloudrun, this field will reference the Cloud Run services.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -79,6 +81,7 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
 
   /**
    * Required. A list of references to the Forwarding Rules on which this policy will be applied.
+   * For policies created for Cloudrun, this field will reference the Cloud Run services.
    * @param resources resources or {@code null} for none
    */
   public AuthzPolicyTarget setResources(java.util.List<java.lang.String> resources) {

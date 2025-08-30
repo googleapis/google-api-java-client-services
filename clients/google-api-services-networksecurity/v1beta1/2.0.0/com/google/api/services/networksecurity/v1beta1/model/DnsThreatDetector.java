@@ -17,7 +17,9 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message describing DnsThreatDetector object.
+ * A DNS threat detector sends DNS query logs to a _provider_ that then analyzes the logs to
+ * identify malicious activity in the DNS queries. By default, all VPC networks in your projects are
+ * included. You can exclude specific networks by supplying `excluded_networks`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,22 +32,22 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class DnsThreatDetector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. A list of Network resource names which are exempt from the configuration in this
-   * DnsThreatDetector. Example: `projects/PROJECT_ID/global/networks/NETWORK_NAME`.
+   * Optional. A list of network resource names which aren't monitored by this DnsThreatDetector.
+   * Example: `projects/PROJECT_ID/global/networks/NETWORK_NAME`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludedNetworks;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Any labels associated with the DnsThreatDetector, listed as key value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,14 +68,14 @@ public final class DnsThreatDetector extends com.google.api.client.json.GenericJ
   private java.lang.String provider;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -81,7 +83,7 @@ public final class DnsThreatDetector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp.
    * @param createTime createTime or {@code null} for none
    */
   public DnsThreatDetector setCreateTime(String createTime) {
@@ -90,8 +92,8 @@ public final class DnsThreatDetector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. A list of Network resource names which are exempt from the configuration in this
-   * DnsThreatDetector. Example: `projects/PROJECT_ID/global/networks/NETWORK_NAME`.
+   * Optional. A list of network resource names which aren't monitored by this DnsThreatDetector.
+   * Example: `projects/PROJECT_ID/global/networks/NETWORK_NAME`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedNetworks() {
@@ -99,8 +101,8 @@ public final class DnsThreatDetector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. A list of Network resource names which are exempt from the configuration in this
-   * DnsThreatDetector. Example: `projects/PROJECT_ID/global/networks/NETWORK_NAME`.
+   * Optional. A list of network resource names which aren't monitored by this DnsThreatDetector.
+   * Example: `projects/PROJECT_ID/global/networks/NETWORK_NAME`.
    * @param excludedNetworks excludedNetworks or {@code null} for none
    */
   public DnsThreatDetector setExcludedNetworks(java.util.List<java.lang.String> excludedNetworks) {
@@ -109,7 +111,7 @@ public final class DnsThreatDetector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Any labels associated with the DnsThreatDetector, listed as key value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -117,7 +119,7 @@ public final class DnsThreatDetector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Any labels associated with the DnsThreatDetector, listed as key value pairs.
    * @param labels labels or {@code null} for none
    */
   public DnsThreatDetector setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -160,7 +162,7 @@ public final class DnsThreatDetector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -168,7 +170,7 @@ public final class DnsThreatDetector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public DnsThreatDetector setUpdateTime(String updateTime) {

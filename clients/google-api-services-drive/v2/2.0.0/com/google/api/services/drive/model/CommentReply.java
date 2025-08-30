@@ -61,13 +61,6 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean deleted;
 
   /**
-   * The user who wrote this reply as a GenoaUser.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenoaUser genoaAuthor;
-
-  /**
    * HTML formatted content for this reply.
    * The value may be {@code null}.
    */
@@ -175,23 +168,6 @@ public final class CommentReply extends com.google.api.client.json.GenericJson {
    */
   public CommentReply setDeleted(java.lang.Boolean deleted) {
     this.deleted = deleted;
-    return this;
-  }
-
-  /**
-   * The user who wrote this reply as a GenoaUser.
-   * @return value or {@code null} for none
-   */
-  public GenoaUser getGenoaAuthor() {
-    return genoaAuthor;
-  }
-
-  /**
-   * The user who wrote this reply as a GenoaUser.
-   * @param genoaAuthor genoaAuthor or {@code null} for none
-   */
-  public CommentReply setGenoaAuthor(GenoaUser genoaAuthor) {
-    this.genoaAuthor = genoaAuthor;
     return this;
   }
 

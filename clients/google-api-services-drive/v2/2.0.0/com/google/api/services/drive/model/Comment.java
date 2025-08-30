@@ -97,13 +97,6 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private java.lang.String fileTitle;
 
   /**
-   * The user who wrote this comment as a GenoaUser.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenoaUser genoaAuthor;
-
-  /**
    * HTML formatted content for this comment.
    * The value may be {@code null}.
    */
@@ -130,13 +123,6 @@ public final class Comment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<CommentReply> replies;
-
-  /**
-   * Output only. Whether the comment has been resolved by one of its replies.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean resolved;
 
   /**
    * A link back to this comment.
@@ -316,23 +302,6 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who wrote this comment as a GenoaUser.
-   * @return value or {@code null} for none
-   */
-  public GenoaUser getGenoaAuthor() {
-    return genoaAuthor;
-  }
-
-  /**
-   * The user who wrote this comment as a GenoaUser.
-   * @param genoaAuthor genoaAuthor or {@code null} for none
-   */
-  public Comment setGenoaAuthor(GenoaUser genoaAuthor) {
-    this.genoaAuthor = genoaAuthor;
-    return this;
-  }
-
-  /**
    * HTML formatted content for this comment.
    * @return value or {@code null} for none
    */
@@ -397,23 +366,6 @@ public final class Comment extends com.google.api.client.json.GenericJson {
    */
   public Comment setReplies(java.util.List<CommentReply> replies) {
     this.replies = replies;
-    return this;
-  }
-
-  /**
-   * Output only. Whether the comment has been resolved by one of its replies.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getResolved() {
-    return resolved;
-  }
-
-  /**
-   * Output only. Whether the comment has been resolved by one of its replies.
-   * @param resolved resolved or {@code null} for none
-   */
-  public Comment setResolved(java.lang.Boolean resolved) {
-    this.resolved = resolved;
     return this;
   }
 

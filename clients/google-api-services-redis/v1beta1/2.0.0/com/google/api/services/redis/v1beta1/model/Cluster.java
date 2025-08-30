@@ -31,9 +31,7 @@ package com.google.api.services.redis.v1beta1.model;
 public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Immutable. Allows customers to specify if they are okay with deploying a multi-zone
-   * cluster in less than 3 zones. Once set, if there is a zonal outage during the cluster creation,
-   * the cluster will only be deployed in 2 zones, and stay within the 2 zones for its lifecycle.
+   * Optional. Immutable. Deprecated, do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -301,9 +299,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ZoneDistributionConfig zoneDistributionConfig;
 
   /**
-   * Optional. Immutable. Allows customers to specify if they are okay with deploying a multi-zone
-   * cluster in less than 3 zones. Once set, if there is a zonal outage during the cluster creation,
-   * the cluster will only be deployed in 2 zones, and stay within the 2 zones for its lifecycle.
+   * Optional. Immutable. Deprecated, do not use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowFewerZonesDeployment() {
@@ -311,9 +307,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. Allows customers to specify if they are okay with deploying a multi-zone
-   * cluster in less than 3 zones. Once set, if there is a zonal outage during the cluster creation,
-   * the cluster will only be deployed in 2 zones, and stay within the 2 zones for its lifecycle.
+   * Optional. Immutable. Deprecated, do not use.
    * @param allowFewerZonesDeployment allowFewerZonesDeployment or {@code null} for none
    */
   public Cluster setAllowFewerZonesDeployment(java.lang.Boolean allowFewerZonesDeployment) {

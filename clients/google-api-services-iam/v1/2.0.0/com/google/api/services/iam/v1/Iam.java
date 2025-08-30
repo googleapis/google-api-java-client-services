@@ -1140,22 +1140,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The maximum number of pools to return. If unspecified, at most 50 pools will be returned.
-         * The maximum value is 1000; values above 1000 are truncated to 1000.
+         * The maximum number of pools to return. The default value is 50. The maximum value is 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of pools to return. If unspecified, at most 50 pools will be returned. The
-       maximum value is 1000; values above 1000 are truncated to 1000.
+        /** The maximum number of pools to return. The default value is 50. The maximum value is 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of pools to return. If unspecified, at most 50 pools will be returned.
-         * The maximum value is 1000; values above 1000 are truncated to 1000.
+         * The maximum number of pools to return. The default value is 50. The maximum value is 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

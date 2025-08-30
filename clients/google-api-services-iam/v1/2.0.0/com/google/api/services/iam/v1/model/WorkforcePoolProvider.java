@@ -135,7 +135,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    * cannot be used in attribute mapping or attribute condition expressions. To keep extended group
    * memberships up to date, extended groups are retrieved when the user signs in and at regular
    * intervals during the user's active session. Each user identity in the workforce identity pool
-   * must map to a specific, unique Microsoft Entra ID user.
+   * must map to a unique Microsoft Entra ID user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -402,7 +402,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    * cannot be used in attribute mapping or attribute condition expressions. To keep extended group
    * memberships up to date, extended groups are retrieved when the user signs in and at regular
    * intervals during the user's active session. Each user identity in the workforce identity pool
-   * must map to a specific, unique Microsoft Entra ID user.
+   * must map to a unique Microsoft Entra ID user.
    * @return value or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client getExtendedAttributesOauth2Client() {
@@ -417,7 +417,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    * cannot be used in attribute mapping or attribute condition expressions. To keep extended group
    * memberships up to date, extended groups are retrieved when the user signs in and at regular
    * intervals during the user's active session. Each user identity in the workforce identity pool
-   * must map to a specific, unique Microsoft Entra ID user.
+   * must map to a unique Microsoft Entra ID user.
    * @param extendedAttributesOauth2Client extendedAttributesOauth2Client or {@code null} for none
    */
   public WorkforcePoolProvider setExtendedAttributesOauth2Client(GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client extendedAttributesOauth2Client) {

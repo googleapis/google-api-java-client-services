@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message for response to listing DnsThreatDetectors.
+ * The response message to requesting a list of DnsThreatDetectors.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -43,7 +43,7 @@ public final class ListDnsThreatDetectorsResponse extends com.google.api.client.
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page.
+   * A token, which can be sent as `page_token`, to retrieve the next page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class ListDnsThreatDetectorsResponse extends com.google.api.client.
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page.
+   * A token, which can be sent as `page_token`, to retrieve the next page.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -82,7 +82,7 @@ public final class ListDnsThreatDetectorsResponse extends com.google.api.client.
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page.
+   * A token, which can be sent as `page_token`, to retrieve the next page.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListDnsThreatDetectorsResponse setNextPageToken(java.lang.String nextPageToken) {

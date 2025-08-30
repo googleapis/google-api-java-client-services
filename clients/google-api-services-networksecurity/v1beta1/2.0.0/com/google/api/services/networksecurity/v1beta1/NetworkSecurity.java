@@ -5363,22 +5363,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -12570,7 +12570,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent of the DnsThreatDetector resource.
+         * @param parent Required. The value for the parent of the DnsThreatDetector resource.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.DnsThreatDetector}
          * @return the request
          */
@@ -12598,7 +12598,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent of the DnsThreatDetector resource.
+           * @param parent Required. The value for the parent of the DnsThreatDetector resource.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.DnsThreatDetector}
            * @since 1.13
            */
@@ -12667,17 +12667,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent of the DnsThreatDetector resource. */
+          /** Required. The value for the parent of the DnsThreatDetector resource. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent of the DnsThreatDetector resource.
+          /** Required. The value for the parent of the DnsThreatDetector resource.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent of the DnsThreatDetector resource. */
+          /** Required. The value for the parent of the DnsThreatDetector resource. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12689,22 +12689,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. Id of the requesting DnsThreatDetector object. If this field is not supplied,
-           * the service will generate an identifier.
+           * Optional. The ID of the requesting DnsThreatDetector object. If this field is not
+           * supplied, the service generates an identifier.
            */
           @com.google.api.client.util.Key
           private java.lang.String dnsThreatDetectorId;
 
-          /** Optional. Id of the requesting DnsThreatDetector object. If this field is not supplied, the service
-         will generate an identifier.
+          /** Optional. The ID of the requesting DnsThreatDetector object. If this field is not supplied, the
+         service generates an identifier.
            */
           public java.lang.String getDnsThreatDetectorId() {
             return dnsThreatDetectorId;
           }
 
           /**
-           * Optional. Id of the requesting DnsThreatDetector object. If this field is not supplied,
-           * the service will generate an identifier.
+           * Optional. The ID of the requesting DnsThreatDetector object. If this field is not
+           * supplied, the service generates an identifier.
            */
           public Create setDnsThreatDetectorId(java.lang.String dnsThreatDetectorId) {
             this.dnsThreatDetectorId = dnsThreatDetectorId;
@@ -12846,14 +12846,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single DnsThreatDetector.
+         * Gets the details of a single DnsThreatDetector.
          *
          * Create a request for the method "dnsThreatDetectors.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the DnsThreatDetector resource
+         * @param name Required. Name of the DnsThreatDetector resource.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -12870,7 +12870,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dnsThreatDetectors/[^/]+$");
 
           /**
-           * Gets details of a single DnsThreatDetector.
+           * Gets the details of a single DnsThreatDetector.
            *
            * Create a request for the method "dnsThreatDetectors.get".
            *
@@ -12879,7 +12879,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the DnsThreatDetector resource
+           * @param name Required. Name of the DnsThreatDetector resource.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -12957,17 +12957,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the DnsThreatDetector resource */
+          /** Required. Name of the DnsThreatDetector resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the DnsThreatDetector resource
+          /** Required. Name of the DnsThreatDetector resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the DnsThreatDetector resource */
+          /** Required. Name of the DnsThreatDetector resource. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12991,7 +12991,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListDnsThreatDetectorsRequest
+         * @param parent Required. The parent value for `ListDnsThreatDetectorsRequest`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -13017,7 +13017,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListDnsThreatDetectorsRequest
+           * @param parent Required. The parent value for `ListDnsThreatDetectorsRequest`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -13095,17 +13095,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListDnsThreatDetectorsRequest */
+          /** Required. The parent value for `ListDnsThreatDetectorsRequest`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListDnsThreatDetectorsRequest
+          /** Required. The parent value for `ListDnsThreatDetectorsRequest`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListDnsThreatDetectorsRequest */
+          /** Required. The parent value for `ListDnsThreatDetectorsRequest`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13117,22 +13117,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * Optional. The requested page size. The server may return fewer items than requested. If
+           * unspecified, the server picks an appropriate default.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-         will pick an appropriate default.
+          /** Optional. The requested page size. The server may return fewer items than requested. If
+         unspecified, the server picks an appropriate default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * Optional. The requested page size. The server may return fewer items than requested. If
+           * unspecified, the server picks an appropriate default.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -13140,13 +13140,13 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. A page token, received from a previous `ListDnsThreatDetectorsRequest` call.
+           * Optional. A page token received from a previous `ListDnsThreatDetectorsRequest` call.
            * Provide this to retrieve the subsequent page.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. A page token, received from a previous `ListDnsThreatDetectorsRequest` call. Provide this
+          /** Optional. A page token received from a previous `ListDnsThreatDetectorsRequest` call. Provide this
          to retrieve the subsequent page.
            */
           public java.lang.String getPageToken() {
@@ -13154,7 +13154,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. A page token, received from a previous `ListDnsThreatDetectorsRequest` call.
+           * Optional. A page token received from a previous `ListDnsThreatDetectorsRequest` call.
            * Provide this to retrieve the subsequent page.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -13168,7 +13168,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates the parameters of a single DnsThreatDetector.
+         * Updates a single DnsThreatDetector.
          *
          * Create a request for the method "dnsThreatDetectors.patch".
          *
@@ -13193,7 +13193,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dnsThreatDetectors/[^/]+$");
 
           /**
-           * Updates the parameters of a single DnsThreatDetector.
+           * Updates a single DnsThreatDetector.
            *
            * Create a request for the method "dnsThreatDetectors.patch".
            *
@@ -13294,7 +13294,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * Optional. The field mask is used to specify the fields to be overwritten in the
            * DnsThreatDetector resource by the update. The fields specified in the update_mask are
            * relative to the resource, not the full request. A field will be overwritten if it is in
            * the mask. If the mask is not provided then all fields present in the request will be
@@ -13303,7 +13303,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Optional. Field mask is used to specify the fields to be overwritten in the DnsThreatDetector
+          /** Optional. The field mask is used to specify the fields to be overwritten in the DnsThreatDetector
          resource by the update. The fields specified in the update_mask are relative to the resource, not
          the full request. A field will be overwritten if it is in the mask. If the mask is not provided
          then all fields present in the request will be overwritten.
@@ -13313,7 +13313,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * Optional. The field mask is used to specify the fields to be overwritten in the
            * DnsThreatDetector resource by the update. The fields specified in the update_mask are
            * relative to the resource, not the full request. A field will be overwritten if it is in
            * the mask. If the mask is not provided then all fields present in the request will be

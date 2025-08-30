@@ -69,6 +69,13 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
+   * Optional. Settings for the endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FirewallEndpointEndpointSettings endpointSettings;
+
+  /**
    * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -207,6 +214,23 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
    */
   public FirewallEndpoint setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for the endpoint.
+   * @return value or {@code null} for none
+   */
+  public FirewallEndpointEndpointSettings getEndpointSettings() {
+    return endpointSettings;
+  }
+
+  /**
+   * Optional. Settings for the endpoint.
+   * @param endpointSettings endpointSettings or {@code null} for none
+   */
+  public FirewallEndpoint setEndpointSettings(FirewallEndpointEndpointSettings endpointSettings) {
+    this.endpointSettings = endpointSettings;
     return this;
   }
 

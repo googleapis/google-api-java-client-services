@@ -80,6 +80,14 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String credentialProviderPolicy;
 
   /**
+   * Optional. Configuration for this custom app.install_type must be set to CUSTOM for this to be
+   * set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomAppConfig customAppConfig;
+
+  /**
    * The default policy for all permissions requested by the app. If specified, this overrides the
    * policy-level default_permission_policy which applies to all apps. It does not override the
    * permission_grants which applies to all apps.
@@ -107,10 +115,11 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * Configuration to enable this app as an extension app, with the capability of interacting with
    * Android Device Policy offline.This field can be set for at most one app.The signing key
    * certificate fingerprint of the app on the device must match one of the entries in
-   * signingKeyFingerprintsSha256 or the signing key certificate fingerprints obtained from Play
-   * Store for the app to be able to communicate with Android Device Policy. If the app is not on
-   * Play Store and signingKeyFingerprintsSha256 is not set, a NonComplianceDetail with
-   * INVALID_VALUE is reported.
+   * ApplicationPolicy.signingKeyCerts or ExtensionConfig.signingKeyFingerprintsSha256 (deprecated)
+   * or the signing key certificate fingerprints obtained from Play Store for the app to be able to
+   * communicate with Android Device Policy. If the app is not on Play Store and if
+   * ApplicationPolicy.signingKeyCerts and ExtensionConfig.signingKeyFingerprintsSha256 (deprecated)
+   * are not set, a NonComplianceDetail with INVALID_VALUE is reported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,6 +214,21 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String preferentialNetworkId;
+
+  /**
+   * Optional. Signing key certificates of the app.This field is required in the following cases:
+   * The app has installType set to CUSTOM (i.e. a custom app). The app has extensionConfig set
+   * (i.e. an extension app) but ExtensionConfig.signingKeyFingerprintsSha256 (deprecated) is not
+   * set and the app does not exist on the Play Store.If this field is not set for a custom app, the
+   * policy is rejected. If it is not set when required for a non-custom app, a NonComplianceDetail
+   * with INVALID_VALUE is reported.For other cases, this field is optional and the signing key
+   * certificates obtained from Play Store are used.See following policy settings to see how this
+   * field is used: choosePrivateKeyRules ApplicationPolicy.InstallType.CUSTOM
+   * ApplicationPolicy.extensionConfig
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ApplicationSigningKeyCert> signingKeyCerts;
 
   /**
    * Optional. Specifies whether user control is permitted for the app. User control includes user
@@ -333,6 +357,25 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. Configuration for this custom app.install_type must be set to CUSTOM for this to be
+   * set.
+   * @return value or {@code null} for none
+   */
+  public CustomAppConfig getCustomAppConfig() {
+    return customAppConfig;
+  }
+
+  /**
+   * Optional. Configuration for this custom app.install_type must be set to CUSTOM for this to be
+   * set.
+   * @param customAppConfig customAppConfig or {@code null} for none
+   */
+  public ApplicationPolicy setCustomAppConfig(CustomAppConfig customAppConfig) {
+    this.customAppConfig = customAppConfig;
+    return this;
+  }
+
+  /**
    * The default policy for all permissions requested by the app. If specified, this overrides the
    * policy-level default_permission_policy which applies to all apps. It does not override the
    * permission_grants which applies to all apps.
@@ -393,10 +436,11 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * Configuration to enable this app as an extension app, with the capability of interacting with
    * Android Device Policy offline.This field can be set for at most one app.The signing key
    * certificate fingerprint of the app on the device must match one of the entries in
-   * signingKeyFingerprintsSha256 or the signing key certificate fingerprints obtained from Play
-   * Store for the app to be able to communicate with Android Device Policy. If the app is not on
-   * Play Store and signingKeyFingerprintsSha256 is not set, a NonComplianceDetail with
-   * INVALID_VALUE is reported.
+   * ApplicationPolicy.signingKeyCerts or ExtensionConfig.signingKeyFingerprintsSha256 (deprecated)
+   * or the signing key certificate fingerprints obtained from Play Store for the app to be able to
+   * communicate with Android Device Policy. If the app is not on Play Store and if
+   * ApplicationPolicy.signingKeyCerts and ExtensionConfig.signingKeyFingerprintsSha256 (deprecated)
+   * are not set, a NonComplianceDetail with INVALID_VALUE is reported.
    * @return value or {@code null} for none
    */
   public ExtensionConfig getExtensionConfig() {
@@ -407,10 +451,11 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * Configuration to enable this app as an extension app, with the capability of interacting with
    * Android Device Policy offline.This field can be set for at most one app.The signing key
    * certificate fingerprint of the app on the device must match one of the entries in
-   * signingKeyFingerprintsSha256 or the signing key certificate fingerprints obtained from Play
-   * Store for the app to be able to communicate with Android Device Policy. If the app is not on
-   * Play Store and signingKeyFingerprintsSha256 is not set, a NonComplianceDetail with
-   * INVALID_VALUE is reported.
+   * ApplicationPolicy.signingKeyCerts or ExtensionConfig.signingKeyFingerprintsSha256 (deprecated)
+   * or the signing key certificate fingerprints obtained from Play Store for the app to be able to
+   * communicate with Android Device Policy. If the app is not on Play Store and if
+   * ApplicationPolicy.signingKeyCerts and ExtensionConfig.signingKeyFingerprintsSha256 (deprecated)
+   * are not set, a NonComplianceDetail with INVALID_VALUE is reported.
    * @param extensionConfig extensionConfig or {@code null} for none
    */
   public ApplicationPolicy setExtensionConfig(ExtensionConfig extensionConfig) {
@@ -625,6 +670,39 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setPreferentialNetworkId(java.lang.String preferentialNetworkId) {
     this.preferentialNetworkId = preferentialNetworkId;
+    return this;
+  }
+
+  /**
+   * Optional. Signing key certificates of the app.This field is required in the following cases:
+   * The app has installType set to CUSTOM (i.e. a custom app). The app has extensionConfig set
+   * (i.e. an extension app) but ExtensionConfig.signingKeyFingerprintsSha256 (deprecated) is not
+   * set and the app does not exist on the Play Store.If this field is not set for a custom app, the
+   * policy is rejected. If it is not set when required for a non-custom app, a NonComplianceDetail
+   * with INVALID_VALUE is reported.For other cases, this field is optional and the signing key
+   * certificates obtained from Play Store are used.See following policy settings to see how this
+   * field is used: choosePrivateKeyRules ApplicationPolicy.InstallType.CUSTOM
+   * ApplicationPolicy.extensionConfig
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ApplicationSigningKeyCert> getSigningKeyCerts() {
+    return signingKeyCerts;
+  }
+
+  /**
+   * Optional. Signing key certificates of the app.This field is required in the following cases:
+   * The app has installType set to CUSTOM (i.e. a custom app). The app has extensionConfig set
+   * (i.e. an extension app) but ExtensionConfig.signingKeyFingerprintsSha256 (deprecated) is not
+   * set and the app does not exist on the Play Store.If this field is not set for a custom app, the
+   * policy is rejected. If it is not set when required for a non-custom app, a NonComplianceDetail
+   * with INVALID_VALUE is reported.For other cases, this field is optional and the signing key
+   * certificates obtained from Play Store are used.See following policy settings to see how this
+   * field is used: choosePrivateKeyRules ApplicationPolicy.InstallType.CUSTOM
+   * ApplicationPolicy.extensionConfig
+   * @param signingKeyCerts signingKeyCerts or {@code null} for none
+   */
+  public ApplicationPolicy setSigningKeyCerts(java.util.List<ApplicationSigningKeyCert> signingKeyCerts) {
+    this.signingKeyCerts = signingKeyCerts;
     return this;
   }
 

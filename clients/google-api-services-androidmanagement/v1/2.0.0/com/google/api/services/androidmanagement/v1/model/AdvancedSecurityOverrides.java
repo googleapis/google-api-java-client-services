@@ -56,7 +56,7 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    * Controls access to developer settings: developer options and safe boot. Replaces
    * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated). On personally-owned
    * devices with a work profile, setting this policy will not disable safe boot. In this case, a
-   * NonComplianceDetail with ADMIN_TYPE is reported.
+   * NonComplianceDetail with MANAGEMENT_MODE is reported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    * Controls access to developer settings: developer options and safe boot. Replaces
    * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated). On personally-owned
    * devices with a work profile, setting this policy will not disable safe boot. In this case, a
-   * NonComplianceDetail with ADMIN_TYPE is reported.
+   * NonComplianceDetail with MANAGEMENT_MODE is reported.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeveloperSettings() {
@@ -162,7 +162,7 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    * Controls access to developer settings: developer options and safe boot. Replaces
    * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated). On personally-owned
    * devices with a work profile, setting this policy will not disable safe boot. In this case, a
-   * NonComplianceDetail with ADMIN_TYPE is reported.
+   * NonComplianceDetail with MANAGEMENT_MODE is reported.
    * @param developerSettings developerSettings or {@code null} for none
    */
   public AdvancedSecurityOverrides setDeveloperSettings(java.lang.String developerSettings) {

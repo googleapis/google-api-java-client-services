@@ -42,12 +42,13 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class ChoosePrivateKeyRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The package names to which this rule applies. The hash of the signing certificate for each app
-   * is verified against the hash provided by Play. If no package names are specified, then the
-   * alias is provided to all apps that call KeyChain.choosePrivateKeyAlias (https://developer.andro
-   * id.com/reference/android/security/KeyChain#choosePrivateKeyAlias%28android.app.Activity,%20andr
-   * oid.security.KeyChainAliasCallback,%20java.lang.String[],%20java.security.Principal[],%20java.l
-   * ang.String,%20int,%20java.lang.String%29) or any overloads (but not without calling
+   * The package names to which this rule applies. The signing key certificate fingerprint of the
+   * app is verified against the signing key certificate fingerprints provided by Play Store and
+   * ApplicationPolicy.signingKeyCerts . If no package names are specified, then the alias is
+   * provided to all apps that call KeyChain.choosePrivateKeyAlias (https://developer.android.com/re
+   * ference/android/security/KeyChain#choosePrivateKeyAlias%28android.app.Activity,%20android.secur
+   * ity.KeyChainAliasCallback,%20java.lang.String[],%20java.security.Principal[],%20java.lang.Strin
+   * g,%20int,%20java.lang.String%29) or any overloads (but not without calling
    * KeyChain.choosePrivateKeyAlias, even on Android 11 and above). Any app with the same Android
    * UID as a package specified here will have access when they call KeyChain.choosePrivateKeyAlias.
    * The value may be {@code null}.
@@ -71,12 +72,13 @@ public final class ChoosePrivateKeyRule extends com.google.api.client.json.Gener
   private java.lang.String urlPattern;
 
   /**
-   * The package names to which this rule applies. The hash of the signing certificate for each app
-   * is verified against the hash provided by Play. If no package names are specified, then the
-   * alias is provided to all apps that call KeyChain.choosePrivateKeyAlias (https://developer.andro
-   * id.com/reference/android/security/KeyChain#choosePrivateKeyAlias%28android.app.Activity,%20andr
-   * oid.security.KeyChainAliasCallback,%20java.lang.String[],%20java.security.Principal[],%20java.l
-   * ang.String,%20int,%20java.lang.String%29) or any overloads (but not without calling
+   * The package names to which this rule applies. The signing key certificate fingerprint of the
+   * app is verified against the signing key certificate fingerprints provided by Play Store and
+   * ApplicationPolicy.signingKeyCerts . If no package names are specified, then the alias is
+   * provided to all apps that call KeyChain.choosePrivateKeyAlias (https://developer.android.com/re
+   * ference/android/security/KeyChain#choosePrivateKeyAlias%28android.app.Activity,%20android.secur
+   * ity.KeyChainAliasCallback,%20java.lang.String[],%20java.security.Principal[],%20java.lang.Strin
+   * g,%20int,%20java.lang.String%29) or any overloads (but not without calling
    * KeyChain.choosePrivateKeyAlias, even on Android 11 and above). Any app with the same Android
    * UID as a package specified here will have access when they call KeyChain.choosePrivateKeyAlias.
    * @return value or {@code null} for none
@@ -86,12 +88,13 @@ public final class ChoosePrivateKeyRule extends com.google.api.client.json.Gener
   }
 
   /**
-   * The package names to which this rule applies. The hash of the signing certificate for each app
-   * is verified against the hash provided by Play. If no package names are specified, then the
-   * alias is provided to all apps that call KeyChain.choosePrivateKeyAlias (https://developer.andro
-   * id.com/reference/android/security/KeyChain#choosePrivateKeyAlias%28android.app.Activity,%20andr
-   * oid.security.KeyChainAliasCallback,%20java.lang.String[],%20java.security.Principal[],%20java.l
-   * ang.String,%20int,%20java.lang.String%29) or any overloads (but not without calling
+   * The package names to which this rule applies. The signing key certificate fingerprint of the
+   * app is verified against the signing key certificate fingerprints provided by Play Store and
+   * ApplicationPolicy.signingKeyCerts . If no package names are specified, then the alias is
+   * provided to all apps that call KeyChain.choosePrivateKeyAlias (https://developer.android.com/re
+   * ference/android/security/KeyChain#choosePrivateKeyAlias%28android.app.Activity,%20android.secur
+   * ity.KeyChainAliasCallback,%20java.lang.String[],%20java.security.Principal[],%20java.lang.Strin
+   * g,%20int,%20java.lang.String%29) or any overloads (but not without calling
    * KeyChain.choosePrivateKeyAlias, even on Android 11 and above). Any app with the same Android
    * UID as a package specified here will have access when they call KeyChain.choosePrivateKeyAlias.
    * @param packageNames packageNames or {@code null} for none

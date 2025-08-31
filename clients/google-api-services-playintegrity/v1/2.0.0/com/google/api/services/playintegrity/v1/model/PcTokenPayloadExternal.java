@@ -52,6 +52,14 @@ public final class PcTokenPayloadExternal extends com.google.api.client.json.Gen
   private PcRequestDetails requestDetails;
 
   /**
+   * Indicates that this payload is generated for testing purposes and contains any additional data
+   * that is linked with testing status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PcTestingDetails testingDetails;
+
+  /**
    * Details about the account information such as the licensing status.
    * @return value or {@code null} for none
    */
@@ -99,6 +107,25 @@ public final class PcTokenPayloadExternal extends com.google.api.client.json.Gen
    */
   public PcTokenPayloadExternal setRequestDetails(PcRequestDetails requestDetails) {
     this.requestDetails = requestDetails;
+    return this;
+  }
+
+  /**
+   * Indicates that this payload is generated for testing purposes and contains any additional data
+   * that is linked with testing status.
+   * @return value or {@code null} for none
+   */
+  public PcTestingDetails getTestingDetails() {
+    return testingDetails;
+  }
+
+  /**
+   * Indicates that this payload is generated for testing purposes and contains any additional data
+   * that is linked with testing status.
+   * @param testingDetails testingDetails or {@code null} for none
+   */
+  public PcTokenPayloadExternal setTestingDetails(PcTestingDetails testingDetails) {
+    this.testingDetails = testingDetails;
     return this;
   }
 

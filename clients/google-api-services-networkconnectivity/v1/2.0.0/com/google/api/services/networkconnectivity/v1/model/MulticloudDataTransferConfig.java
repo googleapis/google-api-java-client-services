@@ -17,8 +17,8 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * The MulticloudDataTransferConfig resource. This lists the services for which customer is opting
- * in for Multicloud Data Transfer.
+ * The `MulticloudDataTransferConfig` resource. It lists the services that you configure for Data
+ * Transfer Essentials billing and metering.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -32,37 +32,38 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class MulticloudDataTransferConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Time when the MulticloudDataTransferConfig was created.
+   * Output only. Time when the `MulticloudDataTransferConfig` resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. An optional field to provide a description of this resource.
+   * Optional. A description of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Output only. The number of Destinations in use under the MulticloudDataTransferConfig resource.
+   * Output only. The number of `Destination` resources in use with the
+   * `MulticloudDataTransferConfig` resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer destinationsActiveCount;
 
   /**
-   * Output only. The number of Destinations configured under the MulticloudDataTransferConfig
-   * resource.
+   * Output only. The number of `Destination` resources configured for the
+   * `MulticloudDataTransferConfig` resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer destinationsCount;
 
   /**
-   * The etag is computed by the server, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
+   * The etag is computed by the server, and might be sent with update and delete requests so that
+   * the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,43 +77,43 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. The name of the MulticloudDataTransferConfig resource. Format: `projects/{project}/
-   * locations/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}`.
+   * Identifier. The name of the `MulticloudDataTransferConfig` resource. Format: `projects/{project
+   * }/locations/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. This map services to either their current or planned states. Service names are keys,
-   * and the associated values describe the service's state. If a state change is expected, the
-   * value will be the list of ADDING or DELETING states depending on the actions taken. Example:
-   * "services": { "big-query": { "states": [ { "state": "ADDING", "effective_time":
-   * "2024-12-12T08:00:00Z" }, ] }, "cloud-storage": { "states": [ { "state": "ACTIVE", } ] } }
+   * Optional. Maps services to their current or planned states. Service names are keys, and the
+   * associated values describe the state of the service. If a state change is expected, the value
+   * is either `ADDING` or `DELETING`, depending on the actions taken. Sample output: "services": {
+   * "big-query": { "states": [ { "effectiveTime": "2024-12-12T08:00:00Z" "state": "ADDING", }, ] },
+   * "cloud-storage": { "states": [ { "state": "ACTIVE", } ] } }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, StateTimeline> services;
 
   /**
-   * Output only. The Google-generated UUID for the MulticloudDataTransferConfig. This value is
-   * unique across all MulticloudDataTransferConfig resources. If a MulticloudDataTransferConfig is
-   * deleted and another with the same name is created, the new MulticloudDataTransferConfig is
-   * assigned a different uid.
+   * Output only. The Google-generated unique ID for the `MulticloudDataTransferConfig` resource.
+   * This value is unique across all `MulticloudDataTransferConfig` resources. If a resource is
+   * deleted and another with the same name is created, the new resource is assigned a different and
+   * unique ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * Output only. Time when the MulticloudDataTransferConfig was updated.
+   * Output only. Time when the `MulticloudDataTransferConfig` resource was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. Time when the MulticloudDataTransferConfig was created.
+   * Output only. Time when the `MulticloudDataTransferConfig` resource was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -120,7 +121,7 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. Time when the MulticloudDataTransferConfig was created.
+   * Output only. Time when the `MulticloudDataTransferConfig` resource was created.
    * @param createTime createTime or {@code null} for none
    */
   public MulticloudDataTransferConfig setCreateTime(String createTime) {
@@ -129,7 +130,7 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Optional. An optional field to provide a description of this resource.
+   * Optional. A description of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -137,7 +138,7 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Optional. An optional field to provide a description of this resource.
+   * Optional. A description of this resource.
    * @param description description or {@code null} for none
    */
   public MulticloudDataTransferConfig setDescription(java.lang.String description) {
@@ -146,7 +147,8 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. The number of Destinations in use under the MulticloudDataTransferConfig resource.
+   * Output only. The number of `Destination` resources in use with the
+   * `MulticloudDataTransferConfig` resource.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDestinationsActiveCount() {
@@ -154,7 +156,8 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. The number of Destinations in use under the MulticloudDataTransferConfig resource.
+   * Output only. The number of `Destination` resources in use with the
+   * `MulticloudDataTransferConfig` resource.
    * @param destinationsActiveCount destinationsActiveCount or {@code null} for none
    */
   public MulticloudDataTransferConfig setDestinationsActiveCount(java.lang.Integer destinationsActiveCount) {
@@ -163,8 +166,8 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. The number of Destinations configured under the MulticloudDataTransferConfig
-   * resource.
+   * Output only. The number of `Destination` resources configured for the
+   * `MulticloudDataTransferConfig` resource.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDestinationsCount() {
@@ -172,8 +175,8 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. The number of Destinations configured under the MulticloudDataTransferConfig
-   * resource.
+   * Output only. The number of `Destination` resources configured for the
+   * `MulticloudDataTransferConfig` resource.
    * @param destinationsCount destinationsCount or {@code null} for none
    */
   public MulticloudDataTransferConfig setDestinationsCount(java.lang.Integer destinationsCount) {
@@ -182,8 +185,8 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * The etag is computed by the server, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
+   * The etag is computed by the server, and might be sent with update and delete requests so that
+   * the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -191,8 +194,8 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * The etag is computed by the server, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
+   * The etag is computed by the server, and might be sent with update and delete requests so that
+   * the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public MulticloudDataTransferConfig setEtag(java.lang.String etag) {
@@ -218,8 +221,8 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Identifier. The name of the MulticloudDataTransferConfig resource. Format: `projects/{project}/
-   * locations/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}`.
+   * Identifier. The name of the `MulticloudDataTransferConfig` resource. Format: `projects/{project
+   * }/locations/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -227,8 +230,8 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Identifier. The name of the MulticloudDataTransferConfig resource. Format: `projects/{project}/
-   * locations/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}`.
+   * Identifier. The name of the `MulticloudDataTransferConfig` resource. Format: `projects/{project
+   * }/locations/{location}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}`.
    * @param name name or {@code null} for none
    */
   public MulticloudDataTransferConfig setName(java.lang.String name) {
@@ -237,11 +240,11 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Optional. This map services to either their current or planned states. Service names are keys,
-   * and the associated values describe the service's state. If a state change is expected, the
-   * value will be the list of ADDING or DELETING states depending on the actions taken. Example:
-   * "services": { "big-query": { "states": [ { "state": "ADDING", "effective_time":
-   * "2024-12-12T08:00:00Z" }, ] }, "cloud-storage": { "states": [ { "state": "ACTIVE", } ] } }
+   * Optional. Maps services to their current or planned states. Service names are keys, and the
+   * associated values describe the state of the service. If a state change is expected, the value
+   * is either `ADDING` or `DELETING`, depending on the actions taken. Sample output: "services": {
+   * "big-query": { "states": [ { "effectiveTime": "2024-12-12T08:00:00Z" "state": "ADDING", }, ] },
+   * "cloud-storage": { "states": [ { "state": "ACTIVE", } ] } }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, StateTimeline> getServices() {
@@ -249,11 +252,11 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Optional. This map services to either their current or planned states. Service names are keys,
-   * and the associated values describe the service's state. If a state change is expected, the
-   * value will be the list of ADDING or DELETING states depending on the actions taken. Example:
-   * "services": { "big-query": { "states": [ { "state": "ADDING", "effective_time":
-   * "2024-12-12T08:00:00Z" }, ] }, "cloud-storage": { "states": [ { "state": "ACTIVE", } ] } }
+   * Optional. Maps services to their current or planned states. Service names are keys, and the
+   * associated values describe the state of the service. If a state change is expected, the value
+   * is either `ADDING` or `DELETING`, depending on the actions taken. Sample output: "services": {
+   * "big-query": { "states": [ { "effectiveTime": "2024-12-12T08:00:00Z" "state": "ADDING", }, ] },
+   * "cloud-storage": { "states": [ { "state": "ACTIVE", } ] } }
    * @param services services or {@code null} for none
    */
   public MulticloudDataTransferConfig setServices(java.util.Map<String, StateTimeline> services) {
@@ -262,10 +265,10 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. The Google-generated UUID for the MulticloudDataTransferConfig. This value is
-   * unique across all MulticloudDataTransferConfig resources. If a MulticloudDataTransferConfig is
-   * deleted and another with the same name is created, the new MulticloudDataTransferConfig is
-   * assigned a different uid.
+   * Output only. The Google-generated unique ID for the `MulticloudDataTransferConfig` resource.
+   * This value is unique across all `MulticloudDataTransferConfig` resources. If a resource is
+   * deleted and another with the same name is created, the new resource is assigned a different and
+   * unique ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -273,10 +276,10 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. The Google-generated UUID for the MulticloudDataTransferConfig. This value is
-   * unique across all MulticloudDataTransferConfig resources. If a MulticloudDataTransferConfig is
-   * deleted and another with the same name is created, the new MulticloudDataTransferConfig is
-   * assigned a different uid.
+   * Output only. The Google-generated unique ID for the `MulticloudDataTransferConfig` resource.
+   * This value is unique across all `MulticloudDataTransferConfig` resources. If a resource is
+   * deleted and another with the same name is created, the new resource is assigned a different and
+   * unique ID.
    * @param uid uid or {@code null} for none
    */
   public MulticloudDataTransferConfig setUid(java.lang.String uid) {
@@ -285,7 +288,7 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. Time when the MulticloudDataTransferConfig was updated.
+   * Output only. Time when the `MulticloudDataTransferConfig` resource was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -293,7 +296,7 @@ public final class MulticloudDataTransferConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. Time when the MulticloudDataTransferConfig was updated.
+   * Output only. Time when the `MulticloudDataTransferConfig` resource was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public MulticloudDataTransferConfig setUpdateTime(String updateTime) {

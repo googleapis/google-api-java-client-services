@@ -31,6 +31,13 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class ServiceConnectionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Information for the automatically created subnetwork and its associated IR.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoCreatedSubnetworkInfo autoCreatedSubnetInfo;
+
+  /**
    * Output only. Time when the ServiceConnectionPolicy was created.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Information for the automatically created subnetwork and its associated IR.
+   * @return value or {@code null} for none
+   */
+  public AutoCreatedSubnetworkInfo getAutoCreatedSubnetInfo() {
+    return autoCreatedSubnetInfo;
+  }
+
+  /**
+   * Output only. Information for the automatically created subnetwork and its associated IR.
+   * @param autoCreatedSubnetInfo autoCreatedSubnetInfo or {@code null} for none
+   */
+  public ServiceConnectionPolicy setAutoCreatedSubnetInfo(AutoCreatedSubnetworkInfo autoCreatedSubnetInfo) {
+    this.autoCreatedSubnetInfo = autoCreatedSubnetInfo;
+    return this;
+  }
 
   /**
    * Output only. Time when the ServiceConnectionPolicy was created.

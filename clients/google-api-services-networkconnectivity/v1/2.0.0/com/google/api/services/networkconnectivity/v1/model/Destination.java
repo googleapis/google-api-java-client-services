@@ -17,7 +17,8 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * The Destination resource.
+ * The `Destination` resource. It specifies the IP prefix and the associated autonomous system
+ * numbers (ASN) that you want to include in a `MulticloudDataTransferConfig` resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -31,37 +32,37 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Time when the Destination was created.
+   * Output only. Time when the `Destination` resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. An optional field to provide a description of this resource.
+   * Optional. A description of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. Unordered list. The list of Endpoints configured for the IP Prefix.
+   * Required. Unordered list. The list of `DestinationEndpoint` resources configured for the IP
+   * prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<DestinationEndpoint> endpoints;
 
   /**
-   * The etag is computed by the server, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
+   * The etag is computed by the server, and might be sent with update and delete requests so that
+   * the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Required. Immutable. Remote IP Prefix in the remote CSP, where the customer's workload is
-   * located
+   * Required. Immutable. The IP prefix that represents your workload on another CSP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,44 +76,44 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. The name of the Destination resource. Format: `projects/{project}/locations/{locati
-   * on}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}/destinations/{destination}`
-   * .
+   * Identifier. The name of the `Destination` resource. Format: `projects/{project}/locations/{loca
+   * tion}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}/destinations/{destination
+   * }`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The timeline of the expected Destination states or the current rest state. If a
-   * state change is expected, the value will be the list of ADDING, DELETING or SUSPENDING
-   * statesdepending on the actions taken. Example: "state_timeline": { "states": [ { "state":
-   * "ADDING", // The time when the Destination will be activated. "effective_time":
-   * "2024-12-01T08:00:00Z" }, { "state": "SUSPENDING", // The time when the Destination will be
-   * suspended. "effective_time": "2024-12-01T20:00:00Z" } ] }
+   * Output only. The timeline of the expected `Destination` states or the current rest state. If a
+   * state change is expected, the value is `ADDING`, `DELETING` or `SUSPENDING`, depending on the
+   * action specified. Example: "state_timeline": { "states": [ { // The time when the `Destination`
+   * resource will be activated. "effectiveTime": "2024-12-01T08:00:00Z", "state": "ADDING" }, { //
+   * The time when the `Destination` resource will be suspended. "effectiveTime":
+   * "2024-12-01T20:00:00Z", "state": "SUSPENDING" } ] }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StateTimeline stateTimeline;
 
   /**
-   * Output only. The Google-generated UUID for the destination. This value is unique across all
-   * destination resources. If a destination is deleted and another with the same name is created,
-   * the new destination is assigned a different uid.
+   * Output only. The Google-generated unique ID for the `Destination` resource. This value is
+   * unique across all `Destination` resources. If a resource is deleted and another with the same
+   * name is created, the new resource is assigned a different and unique ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * Output only. Time when the Destination was updated.
+   * Output only. Time when the `Destination` resource was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. Time when the Destination was created.
+   * Output only. Time when the `Destination` resource was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -120,7 +121,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time when the Destination was created.
+   * Output only. Time when the `Destination` resource was created.
    * @param createTime createTime or {@code null} for none
    */
   public Destination setCreateTime(String createTime) {
@@ -129,7 +130,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An optional field to provide a description of this resource.
+   * Optional. A description of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -137,7 +138,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An optional field to provide a description of this resource.
+   * Optional. A description of this resource.
    * @param description description or {@code null} for none
    */
   public Destination setDescription(java.lang.String description) {
@@ -146,7 +147,8 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Unordered list. The list of Endpoints configured for the IP Prefix.
+   * Required. Unordered list. The list of `DestinationEndpoint` resources configured for the IP
+   * prefix.
    * @return value or {@code null} for none
    */
   public java.util.List<DestinationEndpoint> getEndpoints() {
@@ -154,7 +156,8 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Unordered list. The list of Endpoints configured for the IP Prefix.
+   * Required. Unordered list. The list of `DestinationEndpoint` resources configured for the IP
+   * prefix.
    * @param endpoints endpoints or {@code null} for none
    */
   public Destination setEndpoints(java.util.List<DestinationEndpoint> endpoints) {
@@ -163,8 +166,8 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The etag is computed by the server, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
+   * The etag is computed by the server, and might be sent with update and delete requests so that
+   * the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -172,8 +175,8 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The etag is computed by the server, and may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
+   * The etag is computed by the server, and might be sent with update and delete requests so that
+   * the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public Destination setEtag(java.lang.String etag) {
@@ -182,8 +185,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. Remote IP Prefix in the remote CSP, where the customer's workload is
-   * located
+   * Required. Immutable. The IP prefix that represents your workload on another CSP.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpPrefix() {
@@ -191,8 +193,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. Remote IP Prefix in the remote CSP, where the customer's workload is
-   * located
+   * Required. Immutable. The IP prefix that represents your workload on another CSP.
    * @param ipPrefix ipPrefix or {@code null} for none
    */
   public Destination setIpPrefix(java.lang.String ipPrefix) {
@@ -218,9 +219,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The name of the Destination resource. Format: `projects/{project}/locations/{locati
-   * on}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}/destinations/{destination}`
-   * .
+   * Identifier. The name of the `Destination` resource. Format: `projects/{project}/locations/{loca
+   * tion}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}/destinations/{destination
+   * }`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -228,9 +229,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The name of the Destination resource. Format: `projects/{project}/locations/{locati
-   * on}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}/destinations/{destination}`
-   * .
+   * Identifier. The name of the `Destination` resource. Format: `projects/{project}/locations/{loca
+   * tion}/multicloudDataTransferConfigs/{multicloud_data_transfer_config}/destinations/{destination
+   * }`.
    * @param name name or {@code null} for none
    */
   public Destination setName(java.lang.String name) {
@@ -239,12 +240,12 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timeline of the expected Destination states or the current rest state. If a
-   * state change is expected, the value will be the list of ADDING, DELETING or SUSPENDING
-   * statesdepending on the actions taken. Example: "state_timeline": { "states": [ { "state":
-   * "ADDING", // The time when the Destination will be activated. "effective_time":
-   * "2024-12-01T08:00:00Z" }, { "state": "SUSPENDING", // The time when the Destination will be
-   * suspended. "effective_time": "2024-12-01T20:00:00Z" } ] }
+   * Output only. The timeline of the expected `Destination` states or the current rest state. If a
+   * state change is expected, the value is `ADDING`, `DELETING` or `SUSPENDING`, depending on the
+   * action specified. Example: "state_timeline": { "states": [ { // The time when the `Destination`
+   * resource will be activated. "effectiveTime": "2024-12-01T08:00:00Z", "state": "ADDING" }, { //
+   * The time when the `Destination` resource will be suspended. "effectiveTime":
+   * "2024-12-01T20:00:00Z", "state": "SUSPENDING" } ] }
    * @return value or {@code null} for none
    */
   public StateTimeline getStateTimeline() {
@@ -252,12 +253,12 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timeline of the expected Destination states or the current rest state. If a
-   * state change is expected, the value will be the list of ADDING, DELETING or SUSPENDING
-   * statesdepending on the actions taken. Example: "state_timeline": { "states": [ { "state":
-   * "ADDING", // The time when the Destination will be activated. "effective_time":
-   * "2024-12-01T08:00:00Z" }, { "state": "SUSPENDING", // The time when the Destination will be
-   * suspended. "effective_time": "2024-12-01T20:00:00Z" } ] }
+   * Output only. The timeline of the expected `Destination` states or the current rest state. If a
+   * state change is expected, the value is `ADDING`, `DELETING` or `SUSPENDING`, depending on the
+   * action specified. Example: "state_timeline": { "states": [ { // The time when the `Destination`
+   * resource will be activated. "effectiveTime": "2024-12-01T08:00:00Z", "state": "ADDING" }, { //
+   * The time when the `Destination` resource will be suspended. "effectiveTime":
+   * "2024-12-01T20:00:00Z", "state": "SUSPENDING" } ] }
    * @param stateTimeline stateTimeline or {@code null} for none
    */
   public Destination setStateTimeline(StateTimeline stateTimeline) {
@@ -266,9 +267,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Google-generated UUID for the destination. This value is unique across all
-   * destination resources. If a destination is deleted and another with the same name is created,
-   * the new destination is assigned a different uid.
+   * Output only. The Google-generated unique ID for the `Destination` resource. This value is
+   * unique across all `Destination` resources. If a resource is deleted and another with the same
+   * name is created, the new resource is assigned a different and unique ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -276,9 +277,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Google-generated UUID for the destination. This value is unique across all
-   * destination resources. If a destination is deleted and another with the same name is created,
-   * the new destination is assigned a different uid.
+   * Output only. The Google-generated unique ID for the `Destination` resource. This value is
+   * unique across all `Destination` resources. If a resource is deleted and another with the same
+   * name is created, the new resource is assigned a different and unique ID.
    * @param uid uid or {@code null} for none
    */
   public Destination setUid(java.lang.String uid) {
@@ -287,7 +288,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time when the Destination was updated.
+   * Output only. Time when the `Destination` resource was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -295,7 +296,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time when the Destination was updated.
+   * Output only. Time when the `Destination` resource was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Destination setUpdateTime(String updateTime) {

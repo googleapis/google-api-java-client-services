@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * The timeline of pending states for a resource.
+ * The timeline of the pending states for a resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation

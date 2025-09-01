@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * The metadata for a `DestinationEndpoint` resource.
+ * Message describing RemoteTransportProfile object
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -28,89 +28,89 @@ package com.google.api.services.networkconnectivity.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DestinationEndpoint extends com.google.api.client.json.GenericJson {
+public final class RemoteTransportProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ASN of the remote IP prefix.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long asn;
-
-  /**
-   * Required. The CSP of the remote IP prefix.
+   * Output only. [Output only] Create time stamp
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String csp;
+  private String createTime;
 
   /**
-   * Output only. The state of the `DestinationEndpoint` resource.
+   * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String state;
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Time when the `DestinationEndpoint` resource was updated.
+   * Identifier. name of resource
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * Output only. [Output only] Update time stamp
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Required. The ASN of the remote IP prefix.
+   * Output only. [Output only] Create time stamp
    * @return value or {@code null} for none
    */
-  public java.lang.Long getAsn() {
-    return asn;
+  public String getCreateTime() {
+    return createTime;
   }
 
   /**
-   * Required. The ASN of the remote IP prefix.
-   * @param asn asn or {@code null} for none
+   * Output only. [Output only] Create time stamp
+   * @param createTime createTime or {@code null} for none
    */
-  public DestinationEndpoint setAsn(java.lang.Long asn) {
-    this.asn = asn;
+  public RemoteTransportProfile setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
   /**
-   * Required. The CSP of the remote IP prefix.
+   * Optional. Labels as key value pairs
    * @return value or {@code null} for none
    */
-  public java.lang.String getCsp() {
-    return csp;
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
   }
 
   /**
-   * Required. The CSP of the remote IP prefix.
-   * @param csp csp or {@code null} for none
+   * Optional. Labels as key value pairs
+   * @param labels labels or {@code null} for none
    */
-  public DestinationEndpoint setCsp(java.lang.String csp) {
-    this.csp = csp;
+  public RemoteTransportProfile setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
   /**
-   * Output only. The state of the `DestinationEndpoint` resource.
+   * Identifier. name of resource
    * @return value or {@code null} for none
    */
-  public java.lang.String getState() {
-    return state;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Output only. The state of the `DestinationEndpoint` resource.
-   * @param state state or {@code null} for none
+   * Identifier. name of resource
+   * @param name name or {@code null} for none
    */
-  public DestinationEndpoint setState(java.lang.String state) {
-    this.state = state;
+  public RemoteTransportProfile setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * Output only. Time when the `DestinationEndpoint` resource was updated.
+   * Output only. [Output only] Update time stamp
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -118,22 +118,22 @@ public final class DestinationEndpoint extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Time when the `DestinationEndpoint` resource was updated.
+   * Output only. [Output only] Update time stamp
    * @param updateTime updateTime or {@code null} for none
    */
-  public DestinationEndpoint setUpdateTime(String updateTime) {
+  public RemoteTransportProfile setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public DestinationEndpoint set(String fieldName, Object value) {
-    return (DestinationEndpoint) super.set(fieldName, value);
+  public RemoteTransportProfile set(String fieldName, Object value) {
+    return (RemoteTransportProfile) super.set(fieldName, value);
   }
 
   @Override
-  public DestinationEndpoint clone() {
-    return (DestinationEndpoint) super.clone();
+  public RemoteTransportProfile clone() {
+    return (RemoteTransportProfile) super.clone();
   }
 
 }

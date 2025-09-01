@@ -17,9 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * Specifies the Multicloud Data Transfer supported services configuration. This includes either the
- * network tier or the request endpoint. If end of support for multicloud data transfer is planned
- * for a service's network tier or request endpoint, the end time will be provided.
+ * Specifies eligibility information for the service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -33,24 +31,22 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class ServiceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The eligibility criteria for the service. The user has to meet the eligibility
-   * criteria specified here for the service to qualify for multicloud data transfer.
+   * Output only. The eligibility criteria for the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eligibilityCriteria;
 
   /**
-   * Output only. The eligibility criteria support end time. If the end time is not specified, no
-   * planned end time is available.
+   * Output only. The end time for eligibility criteria support. If not specified, no planned end
+   * time is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String supportEndTime;
 
   /**
-   * Output only. The eligibility criteria for the service. The user has to meet the eligibility
-   * criteria specified here for the service to qualify for multicloud data transfer.
+   * Output only. The eligibility criteria for the service.
    * @return value or {@code null} for none
    */
   public java.lang.String getEligibilityCriteria() {
@@ -58,8 +54,7 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The eligibility criteria for the service. The user has to meet the eligibility
-   * criteria specified here for the service to qualify for multicloud data transfer.
+   * Output only. The eligibility criteria for the service.
    * @param eligibilityCriteria eligibilityCriteria or {@code null} for none
    */
   public ServiceConfig setEligibilityCriteria(java.lang.String eligibilityCriteria) {
@@ -68,8 +63,8 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The eligibility criteria support end time. If the end time is not specified, no
-   * planned end time is available.
+   * Output only. The end time for eligibility criteria support. If not specified, no planned end
+   * time is set.
    * @return value or {@code null} for none
    */
   public String getSupportEndTime() {
@@ -77,8 +72,8 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The eligibility criteria support end time. If the end time is not specified, no
-   * planned end time is available.
+   * Output only. The end time for eligibility criteria support. If not specified, no planned end
+   * time is set.
    * @param supportEndTime supportEndTime or {@code null} for none
    */
   public ServiceConfig setSupportEndTime(String supportEndTime) {

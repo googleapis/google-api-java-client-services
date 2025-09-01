@@ -116,7 +116,7 @@ public final class ServiceConnectionMap extends com.google.api.client.json.Gener
 
   /**
    * The service class identifier this ServiceConnectionMap is for. The user of ServiceConnectionMap
-   * create API needs to have networkconnecitivty.serviceclasses.use iam permission for the service
+   * create API needs to have networkconnectivity.serviceClasses.use IAM permission for the service
    * class.
    * The value may be {@code null}.
    */
@@ -306,7 +306,7 @@ public final class ServiceConnectionMap extends com.google.api.client.json.Gener
 
   /**
    * The service class identifier this ServiceConnectionMap is for. The user of ServiceConnectionMap
-   * create API needs to have networkconnecitivty.serviceclasses.use iam permission for the service
+   * create API needs to have networkconnectivity.serviceClasses.use IAM permission for the service
    * class.
    * @return value or {@code null} for none
    */
@@ -316,7 +316,7 @@ public final class ServiceConnectionMap extends com.google.api.client.json.Gener
 
   /**
    * The service class identifier this ServiceConnectionMap is for. The user of ServiceConnectionMap
-   * create API needs to have networkconnecitivty.serviceclasses.use iam permission for the service
+   * create API needs to have networkconnectivity.serviceClasses.use IAM permission for the service
    * class.
    * @param serviceClass serviceClass or {@code null} for none
    */

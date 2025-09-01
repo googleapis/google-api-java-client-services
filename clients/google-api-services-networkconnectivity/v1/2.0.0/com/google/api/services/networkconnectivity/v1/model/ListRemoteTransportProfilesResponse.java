@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * Response message to list `Destination` resources.
+ * Message for response to listing RemoteTransportProfiles
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -28,54 +28,31 @@ package com.google.api.services.networkconnectivity.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListDestinationsResponse extends com.google.api.client.json.GenericJson {
+public final class ListRemoteTransportProfilesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of `Destination` resources to be listed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Destination> destinations;
-
-  static {
-    // hack to force ProGuard to consider Destination used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Destination.class);
-  }
-
-  /**
-   * The next page token.
+   * A token identifying a page of results the server should return.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Locations that could not be reached.
+   * The list of RemoteTransportProfiles
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RemoteTransportProfile> remoteTransportProfiles;
+
+  /**
+   * Unordered list. Locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of `Destination` resources to be listed.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Destination> getDestinations() {
-    return destinations;
-  }
-
-  /**
-   * The list of `Destination` resources to be listed.
-   * @param destinations destinations or {@code null} for none
-   */
-  public ListDestinationsResponse setDestinations(java.util.List<Destination> destinations) {
-    this.destinations = destinations;
-    return this;
-  }
-
-  /**
-   * The next page token.
+   * A token identifying a page of results the server should return.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -83,16 +60,33 @@ public final class ListDestinationsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The next page token.
+   * A token identifying a page of results the server should return.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListDestinationsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListRemoteTransportProfilesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * Locations that could not be reached.
+   * The list of RemoteTransportProfiles
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RemoteTransportProfile> getRemoteTransportProfiles() {
+    return remoteTransportProfiles;
+  }
+
+  /**
+   * The list of RemoteTransportProfiles
+   * @param remoteTransportProfiles remoteTransportProfiles or {@code null} for none
+   */
+  public ListRemoteTransportProfilesResponse setRemoteTransportProfiles(java.util.List<RemoteTransportProfile> remoteTransportProfiles) {
+    this.remoteTransportProfiles = remoteTransportProfiles;
+    return this;
+  }
+
+  /**
+   * Unordered list. Locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -100,22 +94,22 @@ public final class ListDestinationsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
-  public ListDestinationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+  public ListRemoteTransportProfilesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
     this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ListDestinationsResponse set(String fieldName, Object value) {
-    return (ListDestinationsResponse) super.set(fieldName, value);
+  public ListRemoteTransportProfilesResponse set(String fieldName, Object value) {
+    return (ListRemoteTransportProfilesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListDestinationsResponse clone() {
-    return (ListDestinationsResponse) super.clone();
+  public ListRemoteTransportProfilesResponse clone() {
+    return (ListRemoteTransportProfilesResponse) super.clone();
   }
 
 }

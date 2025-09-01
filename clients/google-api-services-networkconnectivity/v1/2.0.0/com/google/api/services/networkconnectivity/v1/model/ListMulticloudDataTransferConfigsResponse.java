@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * Response message for ListMulticloudDataTransferConfigs.
+ * Response message to list `MulticloudDataTransferConfig` resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class ListMulticloudDataTransferConfigsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * MulticloudDataTransferConfigs to be returned.
+   * The list of `MulticloudDataTransferConfig` resources to be listed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class ListMulticloudDataTransferConfigsResponse extends com.google.
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * MulticloudDataTransferConfigs to be returned.
+   * The list of `MulticloudDataTransferConfig` resources to be listed.
    * @return value or {@code null} for none
    */
   public java.util.List<MulticloudDataTransferConfig> getMulticloudDataTransferConfigs() {
@@ -60,7 +60,7 @@ public final class ListMulticloudDataTransferConfigsResponse extends com.google.
   }
 
   /**
-   * MulticloudDataTransferConfigs to be returned.
+   * The list of `MulticloudDataTransferConfig` resources to be listed.
    * @param multicloudDataTransferConfigs multicloudDataTransferConfigs or {@code null} for none
    */
   public ListMulticloudDataTransferConfigsResponse setMulticloudDataTransferConfigs(java.util.List<MulticloudDataTransferConfig> multicloudDataTransferConfigs) {

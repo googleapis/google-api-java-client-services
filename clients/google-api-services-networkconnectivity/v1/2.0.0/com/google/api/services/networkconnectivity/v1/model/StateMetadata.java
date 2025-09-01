@@ -31,11 +31,10 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class StateMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. This field will be accompanied only with transient states (PENDING_ADD,
-   * PENDING_DELETE, PENDING_SUSPENSION) and denotes the time when the transient state of the
-   * resource will be effective. For instance, if the state is "ADDING," this field will show the
-   * time the resource transitions to "ACTIVE." Similarly, if the state is "PENDING_DELETE," it will
-   * show the deletion time.
+   * Output only. Accompanies only the transient states, which include `ADDING`, `DELETING`, and
+   * `SUSPENDING`, to denote the time until which the transient state of the resource will be
+   * effective. For instance, if the state is `ADDING`, this field shows the time when the resource
+   * state transitions to `ACTIVE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,11 +48,10 @@ public final class StateMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.String state;
 
   /**
-   * Output only. This field will be accompanied only with transient states (PENDING_ADD,
-   * PENDING_DELETE, PENDING_SUSPENSION) and denotes the time when the transient state of the
-   * resource will be effective. For instance, if the state is "ADDING," this field will show the
-   * time the resource transitions to "ACTIVE." Similarly, if the state is "PENDING_DELETE," it will
-   * show the deletion time.
+   * Output only. Accompanies only the transient states, which include `ADDING`, `DELETING`, and
+   * `SUSPENDING`, to denote the time until which the transient state of the resource will be
+   * effective. For instance, if the state is `ADDING`, this field shows the time when the resource
+   * state transitions to `ACTIVE`.
    * @return value or {@code null} for none
    */
   public String getEffectiveTime() {
@@ -61,11 +59,10 @@ public final class StateMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. This field will be accompanied only with transient states (PENDING_ADD,
-   * PENDING_DELETE, PENDING_SUSPENSION) and denotes the time when the transient state of the
-   * resource will be effective. For instance, if the state is "ADDING," this field will show the
-   * time the resource transitions to "ACTIVE." Similarly, if the state is "PENDING_DELETE," it will
-   * show the deletion time.
+   * Output only. Accompanies only the transient states, which include `ADDING`, `DELETING`, and
+   * `SUSPENDING`, to denote the time until which the transient state of the resource will be
+   * effective. For instance, if the state is `ADDING`, this field shows the time when the resource
+   * state transitions to `ACTIVE`.
    * @param effectiveTime effectiveTime or {@code null} for none
    */
   public StateMetadata setEffectiveTime(String effectiveTime) {

@@ -17,7 +17,8 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * The supported service for Multicloud Data Transfer.
+ * A service in your project in a region that is eligible for Data Transfer Essentials
+ * configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -38,7 +39,7 @@ public final class MulticloudDataTransferSupportedService extends com.google.api
   private java.lang.String name;
 
   /**
-   * Output only. The network service tiers supported for the service.
+   * Output only. The network service tier or regional endpoint supported for the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,7 @@ public final class MulticloudDataTransferSupportedService extends com.google.api
   }
 
   /**
-   * Output only. The network service tiers supported for the service.
+   * Output only. The network service tier or regional endpoint supported for the service.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceConfig> getServiceConfigs() {
@@ -70,7 +71,7 @@ public final class MulticloudDataTransferSupportedService extends com.google.api
   }
 
   /**
-   * Output only. The network service tiers supported for the service.
+   * Output only. The network service tier or regional endpoint supported for the service.
    * @param serviceConfigs serviceConfigs or {@code null} for none
    */
   public MulticloudDataTransferSupportedService setServiceConfigs(java.util.List<ServiceConfig> serviceConfigs) {

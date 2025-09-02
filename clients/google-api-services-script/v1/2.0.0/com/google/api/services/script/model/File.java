@@ -32,8 +32,7 @@ package com.google.api.services.script.model;
 public final class File extends com.google.api.client.json.GenericJson {
 
   /**
-   * Creation date timestamp. This read-only field is only visible to users who have WRITER
-   * permission for the script project.
+   * Creation date timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   private GoogleAppsScriptTypeFunctionSet functionSet;
 
   /**
-   * The user who modified the file most recently. This read-only field is only visible to users who
-   * have WRITER permission for the script project.
+   * The user who modified the file most recently. The details visible in this object are controlled
+   * by the profile visibility settings of the last modifying user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,16 +76,14 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Last modified date timestamp. This read-only field is only visible to users who have WRITER
-   * permission for the script project.
+   * Last modified date timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Creation date timestamp. This read-only field is only visible to users who have WRITER
-   * permission for the script project.
+   * Creation date timestamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -94,8 +91,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Creation date timestamp. This read-only field is only visible to users who have WRITER
-   * permission for the script project.
+   * Creation date timestamp.
    * @param createTime createTime or {@code null} for none
    */
   public File setCreateTime(String createTime) {
@@ -121,8 +117,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who modified the file most recently. This read-only field is only visible to users who
-   * have WRITER permission for the script project.
+   * The user who modified the file most recently. The details visible in this object are controlled
+   * by the profile visibility settings of the last modifying user.
    * @return value or {@code null} for none
    */
   public GoogleAppsScriptTypeUser getLastModifyUser() {
@@ -130,8 +126,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user who modified the file most recently. This read-only field is only visible to users who
-   * have WRITER permission for the script project.
+   * The user who modified the file most recently. The details visible in this object are controlled
+   * by the profile visibility settings of the last modifying user.
    * @param lastModifyUser lastModifyUser or {@code null} for none
    */
   public File setLastModifyUser(GoogleAppsScriptTypeUser lastModifyUser) {
@@ -193,8 +189,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last modified date timestamp. This read-only field is only visible to users who have WRITER
-   * permission for the script project.
+   * Last modified date timestamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -202,8 +197,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last modified date timestamp. This read-only field is only visible to users who have WRITER
-   * permission for the script project.
+   * Last modified date timestamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public File setUpdateTime(String updateTime) {

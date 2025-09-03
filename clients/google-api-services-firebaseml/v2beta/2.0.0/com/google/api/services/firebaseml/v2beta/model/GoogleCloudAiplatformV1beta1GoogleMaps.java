@@ -29,6 +29,30 @@ package com.google.api.services.firebaseml.v2beta.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1beta1GoogleMaps extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. If true, include the widget context token in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableWidget;
+
+  /**
+   * Optional. If true, include the widget context token in the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableWidget() {
+    return enableWidget;
+  }
+
+  /**
+   * Optional. If true, include the widget context token in the response.
+   * @param enableWidget enableWidget or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GoogleMaps setEnableWidget(java.lang.Boolean enableWidget) {
+    this.enableWidget = enableWidget;
+    return this;
+  }
+
   @Override
   public GoogleCloudAiplatformV1beta1GoogleMaps set(String fieldName, Object value) {
     return (GoogleCloudAiplatformV1beta1GoogleMaps) super.set(fieldName, value);

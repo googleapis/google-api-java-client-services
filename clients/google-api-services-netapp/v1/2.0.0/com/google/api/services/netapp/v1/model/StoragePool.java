@@ -60,6 +60,13 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Long capacityGib;
 
   /**
+   * Output only. Total cold tier data rounded down to the nearest GiB used by the storage pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long coldTierSizeUsedGib;
+
+  /**
    * Output only. Create time of the storage pool
    * The value may be {@code null}.
    */
@@ -112,6 +119,13 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long hotTierSizeGib;
+
+  /**
+   * Output only. Total hot tier data rounded down to the nearest GiB used by the storage pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long hotTierSizeUsedGib;
 
   /**
    * Optional. Specifies the KMS config to be used for volume encryption.
@@ -311,6 +325,23 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Total cold tier data rounded down to the nearest GiB used by the storage pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getColdTierSizeUsedGib() {
+    return coldTierSizeUsedGib;
+  }
+
+  /**
+   * Output only. Total cold tier data rounded down to the nearest GiB used by the storage pool.
+   * @param coldTierSizeUsedGib coldTierSizeUsedGib or {@code null} for none
+   */
+  public StoragePool setColdTierSizeUsedGib(java.lang.Long coldTierSizeUsedGib) {
+    this.coldTierSizeUsedGib = coldTierSizeUsedGib;
+    return this;
+  }
+
+  /**
    * Output only. Create time of the storage pool
    * @return value or {@code null} for none
    */
@@ -436,6 +467,23 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setHotTierSizeGib(java.lang.Long hotTierSizeGib) {
     this.hotTierSizeGib = hotTierSizeGib;
+    return this;
+  }
+
+  /**
+   * Output only. Total hot tier data rounded down to the nearest GiB used by the storage pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getHotTierSizeUsedGib() {
+    return hotTierSizeUsedGib;
+  }
+
+  /**
+   * Output only. Total hot tier data rounded down to the nearest GiB used by the storage pool.
+   * @param hotTierSizeUsedGib hotTierSizeUsedGib or {@code null} for none
+   */
+  public StoragePool setHotTierSizeUsedGib(java.lang.Long hotTierSizeUsedGib) {
+    this.hotTierSizeUsedGib = hotTierSizeUsedGib;
     return this;
   }
 

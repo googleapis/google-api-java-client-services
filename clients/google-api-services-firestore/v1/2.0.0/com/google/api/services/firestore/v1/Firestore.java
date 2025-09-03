@@ -595,7 +595,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * Required. The ID to use for the database, which will become the final component of the
          * database's resource name. This value should be 4-63 characters. Valid characters are
          * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
-         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
+         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid
+         * if the database is Standard edition.
          */
         @com.google.api.client.util.Key
         private java.lang.String databaseId;
@@ -603,7 +604,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         /** Required. The ID to use for the database, which will become the final component of the database's
        resource name. This value should be 4-63 characters. Valid characters are /a-z-/ with first
        character a letter and the last a letter or a number. Must not be UUID-like
-       /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
+       /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid if the database
+       is Standard edition.
          */
         public java.lang.String getDatabaseId() {
           return databaseId;
@@ -613,7 +615,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * Required. The ID to use for the database, which will become the final component of the
          * database's resource name. This value should be 4-63 characters. Valid characters are
          * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
-         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
+         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid
+         * if the database is Standard edition.
          */
         public Create setDatabaseId(java.lang.String databaseId) {
           this.databaseId = databaseId;
@@ -8848,22 +8851,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;

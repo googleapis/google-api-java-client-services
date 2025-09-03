@@ -34,7 +34,8 @@ public final class GoogleFirestoreAdminV1CloneDatabaseRequest extends com.google
    * database's resource name. This database ID must not be associated with an existing database.
    * This value should be 4-63 characters. Valid characters are /a-z-/ with first character a letter
    * and the last a letter or a number. Must not be UUID-like
-   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
+   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid if the
+   * database is Standard edition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class GoogleFirestoreAdminV1CloneDatabaseRequest extends com.google
    * database's resource name. This database ID must not be associated with an existing database.
    * This value should be 4-63 characters. Valid characters are /a-z-/ with first character a letter
    * and the last a letter or a number. Must not be UUID-like
-   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
+   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid if the
+   * database is Standard edition.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseId() {
@@ -82,7 +84,8 @@ public final class GoogleFirestoreAdminV1CloneDatabaseRequest extends com.google
    * database's resource name. This database ID must not be associated with an existing database.
    * This value should be 4-63 characters. Valid characters are /a-z-/ with first character a letter
    * and the last a letter or a number. Must not be UUID-like
-   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
+   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid if the
+   * database is Standard edition.
    * @param databaseId databaseId or {@code null} for none
    */
   public GoogleFirestoreAdminV1CloneDatabaseRequest setDatabaseId(java.lang.String databaseId) {

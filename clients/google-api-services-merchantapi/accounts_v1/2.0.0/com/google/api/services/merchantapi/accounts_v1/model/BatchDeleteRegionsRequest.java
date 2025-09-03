@@ -30,7 +30,7 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 public final class BatchDeleteRegionsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The names of the regions to delete. A maximum of 1000 regions can be deleted in a
+   * Required. The names of the regions to delete. A maximum of 100 regions can be deleted in a
    * batch.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class BatchDeleteRegionsRequest extends com.google.api.client.json.
   private java.util.List<DeleteRegionRequest> requests;
 
   /**
-   * Required. The names of the regions to delete. A maximum of 1000 regions can be deleted in a
+   * Required. The names of the regions to delete. A maximum of 100 regions can be deleted in a
    * batch.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class BatchDeleteRegionsRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. The names of the regions to delete. A maximum of 1000 regions can be deleted in a
+   * Required. The names of the regions to delete. A maximum of 100 regions can be deleted in a
    * batch.
    * @param requests requests or {@code null} for none
    */

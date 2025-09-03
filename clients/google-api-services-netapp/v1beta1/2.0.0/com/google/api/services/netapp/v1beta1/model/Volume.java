@@ -100,6 +100,14 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean hasReplication;
 
   /**
+   * Output only. Total hot tier data rounded down to the nearest GiB used by the Volume. This field
+   * is only used for flex Service Level
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long hotTierSizeUsedGib;
+
+  /**
    * Optional. The Hybrid Replication parameters for the volume.
    * The value may be {@code null}.
    */
@@ -489,6 +497,25 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setHasReplication(java.lang.Boolean hasReplication) {
     this.hasReplication = hasReplication;
+    return this;
+  }
+
+  /**
+   * Output only. Total hot tier data rounded down to the nearest GiB used by the Volume. This field
+   * is only used for flex Service Level
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getHotTierSizeUsedGib() {
+    return hotTierSizeUsedGib;
+  }
+
+  /**
+   * Output only. Total hot tier data rounded down to the nearest GiB used by the Volume. This field
+   * is only used for flex Service Level
+   * @param hotTierSizeUsedGib hotTierSizeUsedGib or {@code null} for none
+   */
+  public Volume setHotTierSizeUsedGib(java.lang.Long hotTierSizeUsedGib) {
+    this.hotTierSizeUsedGib = hotTierSizeUsedGib;
     return this;
   }
 

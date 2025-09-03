@@ -7737,7 +7737,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The account to create a region for. Format: `accounts/{account}`
+       * @param parent Required. The account to delete one or more regions from. Format: `accounts/{account}`
        * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.BatchDeleteRegionsRequest}
        * @return the request
        */
@@ -7766,7 +7766,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The account to create a region for. Format: `accounts/{account}`
+         * @param parent Required. The account to delete one or more regions from. Format: `accounts/{account}`
          * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.BatchDeleteRegionsRequest}
          * @since 1.13
          */
@@ -7835,17 +7835,21 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return (BatchDelete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The account to create a region for. Format: `accounts/{account}` */
+        /**
+         * Required. The account to delete one or more regions from. Format: `accounts/{account}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The account to create a region for. Format: `accounts/{account}`
+        /** Required. The account to delete one or more regions from. Format: `accounts/{account}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The account to create a region for. Format: `accounts/{account}` */
+        /**
+         * Required. The account to delete one or more regions from. Format: `accounts/{account}`
+         */
         public BatchDelete setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

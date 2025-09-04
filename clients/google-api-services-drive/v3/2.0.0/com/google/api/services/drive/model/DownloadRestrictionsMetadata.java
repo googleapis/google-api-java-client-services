@@ -38,7 +38,7 @@ public final class DownloadRestrictionsMetadata extends com.google.api.client.js
   private DownloadRestriction effectiveDownloadRestrictionWithContext;
 
   /**
-   * The download restriction of the file applied directly by the owner or organizer. This does not
+   * The download restriction of the file applied directly by the owner or organizer. This doesn't
    * take into account shared drive settings or DLP rules.
    * The value may be {@code null}.
    */
@@ -65,7 +65,7 @@ public final class DownloadRestrictionsMetadata extends com.google.api.client.js
   }
 
   /**
-   * The download restriction of the file applied directly by the owner or organizer. This does not
+   * The download restriction of the file applied directly by the owner or organizer. This doesn't
    * take into account shared drive settings or DLP rules.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class DownloadRestrictionsMetadata extends com.google.api.client.js
   }
 
   /**
-   * The download restriction of the file applied directly by the owner or organizer. This does not
+   * The download restriction of the file applied directly by the owner or organizer. This doesn't
    * take into account shared drive settings or DLP rules.
    * @param itemDownloadRestriction itemDownloadRestriction or {@code null} for none
    */

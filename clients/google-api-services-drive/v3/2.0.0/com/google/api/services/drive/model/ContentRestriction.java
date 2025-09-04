@@ -56,7 +56,7 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   private java.lang.String reason;
 
   /**
-   * Output only. The user who set the content restriction. Only populated if `readOnly` is true.
+   * Output only. The user who set the content restriction. Only populated if `readOnly=true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +148,7 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The user who set the content restriction. Only populated if `readOnly` is true.
+   * Output only. The user who set the content restriction. Only populated if `readOnly=true`.
    * @return value or {@code null} for none
    */
   public User getRestrictingUser() {
@@ -156,7 +156,7 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The user who set the content restriction. Only populated if `readOnly` is true.
+   * Output only. The user who set the content restriction. Only populated if `readOnly=true`.
    * @param restrictingUser restrictingUser or {@code null} for none
    */
   public ContentRestriction setRestrictingUser(User restrictingUser) {

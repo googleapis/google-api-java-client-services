@@ -17,8 +17,8 @@
 package com.google.api.services.drive.model;
 
 /**
- * A modification to a label on a file. A LabelModification can be used to apply a label to a file,
- * update an existing label on a file, or remove a label from a file.
+ * A modification to a label on a file. A `LabelModification` can be used to apply a label to a
+ * file, update an existing label on a file, or remove a label from a file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -44,7 +44,7 @@ public final class LabelModification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always drive#labelModification.
+   * This is always `"drive#labelModification"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class LabelModification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always drive#labelModification.
+   * This is always `"drive#labelModification"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -90,7 +90,7 @@ public final class LabelModification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always drive#labelModification.
+   * This is always `"drive#labelModification"`.
    * @param kind kind or {@code null} for none
    */
   public LabelModification setKind(java.lang.String kind) {

@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * The web content uploaded as source.
+ * Metadata about a youtube video source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudNotebooklmV1alphaUserContentWebContent extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudNotebooklmV1alphaYoutubeMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name to be displayed for the source.
+   * Output only. The channel name of the youtube video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sourceName;
+  private java.lang.String channelName;
 
   /**
-   * If URL is supplied, will fetch the webpage in the backend.
+   * Output only. The id of the youtube video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String url;
+  private java.lang.String videoId;
 
   /**
-   * Name to be displayed for the source.
+   * Output only. The channel name of the youtube video.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSourceName() {
-    return sourceName;
+  public java.lang.String getChannelName() {
+    return channelName;
   }
 
   /**
-   * Name to be displayed for the source.
-   * @param sourceName sourceName or {@code null} for none
+   * Output only. The channel name of the youtube video.
+   * @param channelName channelName or {@code null} for none
    */
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent setSourceName(java.lang.String sourceName) {
-    this.sourceName = sourceName;
+  public GoogleCloudNotebooklmV1alphaYoutubeMetadata setChannelName(java.lang.String channelName) {
+    this.channelName = channelName;
     return this;
   }
 
   /**
-   * If URL is supplied, will fetch the webpage in the backend.
+   * Output only. The id of the youtube video.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUrl() {
-    return url;
+  public java.lang.String getVideoId() {
+    return videoId;
   }
 
   /**
-   * If URL is supplied, will fetch the webpage in the backend.
-   * @param url url or {@code null} for none
+   * Output only. The id of the youtube video.
+   * @param videoId videoId or {@code null} for none
    */
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent setUrl(java.lang.String url) {
-    this.url = url;
+  public GoogleCloudNotebooklmV1alphaYoutubeMetadata setVideoId(java.lang.String videoId) {
+    this.videoId = videoId;
     return this;
   }
 
   @Override
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent set(String fieldName, Object value) {
-    return (GoogleCloudNotebooklmV1alphaUserContentWebContent) super.set(fieldName, value);
+  public GoogleCloudNotebooklmV1alphaYoutubeMetadata set(String fieldName, Object value) {
+    return (GoogleCloudNotebooklmV1alphaYoutubeMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent clone() {
-    return (GoogleCloudNotebooklmV1alphaUserContentWebContent) super.clone();
+  public GoogleCloudNotebooklmV1alphaYoutubeMetadata clone() {
+    return (GoogleCloudNotebooklmV1alphaYoutubeMetadata) super.clone();
   }
 
 }

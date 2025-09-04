@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudNotebooklmV1alphaSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Metadata about the source.
+   * Output only. Metadata about the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,14 @@ public final class GoogleCloudNotebooklmV1alphaSource extends com.google.api.cli
   private java.lang.String name;
 
   /**
-   * Optional. Source id, which is the last segment of the source's resource name. This is to make
-   * it similar with notebooklm API.
+   * Output only. Status of the source, and any failure reasons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaSourceSettings settings;
+
+  /**
+   * Optional. Output only. Source id, which is the last segment of the source's resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +67,7 @@ public final class GoogleCloudNotebooklmV1alphaSource extends com.google.api.cli
   private java.lang.String title;
 
   /**
-   * Metadata about the source.
+   * Output only. Metadata about the source.
    * @return value or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaSourceMetadata getMetadata() {
@@ -69,7 +75,7 @@ public final class GoogleCloudNotebooklmV1alphaSource extends com.google.api.cli
   }
 
   /**
-   * Metadata about the source.
+   * Output only. Metadata about the source.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaSource setMetadata(GoogleCloudNotebooklmV1alphaSourceMetadata metadata) {
@@ -99,8 +105,24 @@ public final class GoogleCloudNotebooklmV1alphaSource extends com.google.api.cli
   }
 
   /**
-   * Optional. Source id, which is the last segment of the source's resource name. This is to make
-   * it similar with notebooklm API.
+   * Output only. Status of the source, and any failure reasons.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaSourceSettings getSettings() {
+    return settings;
+  }
+
+  /**
+   * Output only. Status of the source, and any failure reasons.
+   * @param settings settings or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaSource setSettings(GoogleCloudNotebooklmV1alphaSourceSettings settings) {
+    this.settings = settings;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Source id, which is the last segment of the source's resource name.
    * @return value or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaSourceId getSourceId() {
@@ -108,8 +130,7 @@ public final class GoogleCloudNotebooklmV1alphaSource extends com.google.api.cli
   }
 
   /**
-   * Optional. Source id, which is the last segment of the source's resource name. This is to make
-   * it similar with notebooklm API.
+   * Optional. Output only. Source id, which is the last segment of the source's resource name.
    * @param sourceId sourceId or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaSource setSourceId(GoogleCloudNotebooklmV1alphaSourceId sourceId) {

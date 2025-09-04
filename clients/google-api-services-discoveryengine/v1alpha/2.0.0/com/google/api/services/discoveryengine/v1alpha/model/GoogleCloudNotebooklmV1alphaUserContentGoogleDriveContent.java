@@ -38,14 +38,15 @@ public final class GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent ext
 
   /**
    * The mime type of the selected document. This can be used to differentiate type of content
-   * selected in the drive picker.
+   * selected in the drive picker. Use application/vnd.google-apps.document for Google Docs or
+   * application/vnd.google-apps.presentation for Google Slides.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * Should track this from Drive Picker.
+   * Name to be displayed for the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent ext
 
   /**
    * The mime type of the selected document. This can be used to differentiate type of content
-   * selected in the drive picker.
+   * selected in the drive picker. Use application/vnd.google-apps.document for Google Docs or
+   * application/vnd.google-apps.presentation for Google Slides.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -79,7 +81,8 @@ public final class GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent ext
 
   /**
    * The mime type of the selected document. This can be used to differentiate type of content
-   * selected in the drive picker.
+   * selected in the drive picker. Use application/vnd.google-apps.document for Google Docs or
+   * application/vnd.google-apps.presentation for Google Slides.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent setMimeType(java.lang.String mimeType) {
@@ -88,7 +91,7 @@ public final class GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent ext
   }
 
   /**
-   * Should track this from Drive Picker.
+   * Name to be displayed for the source.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceName() {
@@ -96,7 +99,7 @@ public final class GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent ext
   }
 
   /**
-   * Should track this from Drive Picker.
+   * Name to be displayed for the source.
    * @param sourceName sourceName or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent setSourceName(java.lang.String sourceName) {

@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * The web content uploaded as source.
+ * Allows extension of Source Settings in the BatchCreateSources (Formerly AddSource request).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudNotebooklmV1alphaUserContentWebContent extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudNotebooklmV1alphaSourceSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name to be displayed for the source.
+   * Failure reason containing details about why a source failed to ingest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sourceName;
+  private GoogleCloudNotebooklmV1alphaFailureReason failureReason;
 
   /**
-   * If URL is supplied, will fetch the webpage in the backend.
+   * Status of the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String url;
+  private java.lang.String status;
 
   /**
-   * Name to be displayed for the source.
+   * Failure reason containing details about why a source failed to ingest.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSourceName() {
-    return sourceName;
+  public GoogleCloudNotebooklmV1alphaFailureReason getFailureReason() {
+    return failureReason;
   }
 
   /**
-   * Name to be displayed for the source.
-   * @param sourceName sourceName or {@code null} for none
+   * Failure reason containing details about why a source failed to ingest.
+   * @param failureReason failureReason or {@code null} for none
    */
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent setSourceName(java.lang.String sourceName) {
-    this.sourceName = sourceName;
+  public GoogleCloudNotebooklmV1alphaSourceSettings setFailureReason(GoogleCloudNotebooklmV1alphaFailureReason failureReason) {
+    this.failureReason = failureReason;
     return this;
   }
 
   /**
-   * If URL is supplied, will fetch the webpage in the backend.
+   * Status of the source.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUrl() {
-    return url;
+  public java.lang.String getStatus() {
+    return status;
   }
 
   /**
-   * If URL is supplied, will fetch the webpage in the backend.
-   * @param url url or {@code null} for none
+   * Status of the source.
+   * @param status status or {@code null} for none
    */
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent setUrl(java.lang.String url) {
-    this.url = url;
+  public GoogleCloudNotebooklmV1alphaSourceSettings setStatus(java.lang.String status) {
+    this.status = status;
     return this;
   }
 
   @Override
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent set(String fieldName, Object value) {
-    return (GoogleCloudNotebooklmV1alphaUserContentWebContent) super.set(fieldName, value);
+  public GoogleCloudNotebooklmV1alphaSourceSettings set(String fieldName, Object value) {
+    return (GoogleCloudNotebooklmV1alphaSourceSettings) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent clone() {
-    return (GoogleCloudNotebooklmV1alphaUserContentWebContent) super.clone();
+  public GoogleCloudNotebooklmV1alphaSourceSettings clone() {
+    return (GoogleCloudNotebooklmV1alphaSourceSettings) super.clone();
   }
 
 }

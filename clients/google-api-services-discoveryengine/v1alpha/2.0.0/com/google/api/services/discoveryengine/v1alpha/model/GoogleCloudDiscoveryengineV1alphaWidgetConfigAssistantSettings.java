@@ -43,6 +43,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigAssistantSetting
   private java.lang.Boolean defaultWebGroundingToggleOff;
 
   /**
+   * Optional. Output only. Whether to disable user location context.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableLocationContext;
+
+  /**
    * Whether or not the Google search grounding toggle is shown. Deprecated. Use web_grounding_type
    * instead.
    * The value may be {@code null}.
@@ -83,6 +90,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigAssistantSetting
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigAssistantSettings setDefaultWebGroundingToggleOff(java.lang.Boolean defaultWebGroundingToggleOff) {
     this.defaultWebGroundingToggleOff = defaultWebGroundingToggleOff;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Whether to disable user location context.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableLocationContext() {
+    return disableLocationContext;
+  }
+
+  /**
+   * Optional. Output only. Whether to disable user location context.
+   * @param disableLocationContext disableLocationContext or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigAssistantSettings setDisableLocationContext(java.lang.Boolean disableLocationContext) {
+    this.disableLocationContext = disableLocationContext;
     return this;
   }
 

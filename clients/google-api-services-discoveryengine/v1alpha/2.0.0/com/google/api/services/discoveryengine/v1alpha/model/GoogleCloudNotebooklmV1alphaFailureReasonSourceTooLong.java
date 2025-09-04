@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * The web content uploaded as source.
+ * Indicates source word count exceeded the user's limit.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudNotebooklmV1alphaUserContentWebContent extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudNotebooklmV1alphaFailureReasonSourceTooLong extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name to be displayed for the source.
+   * The number of words in the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sourceName;
+  private java.lang.Integer wordCount;
 
   /**
-   * If URL is supplied, will fetch the webpage in the backend.
+   * The word count limit for the current user at the time of the upload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String url;
+  private java.lang.Integer wordLimit;
 
   /**
-   * Name to be displayed for the source.
+   * The number of words in the source.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSourceName() {
-    return sourceName;
+  public java.lang.Integer getWordCount() {
+    return wordCount;
   }
 
   /**
-   * Name to be displayed for the source.
-   * @param sourceName sourceName or {@code null} for none
+   * The number of words in the source.
+   * @param wordCount wordCount or {@code null} for none
    */
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent setSourceName(java.lang.String sourceName) {
-    this.sourceName = sourceName;
+  public GoogleCloudNotebooklmV1alphaFailureReasonSourceTooLong setWordCount(java.lang.Integer wordCount) {
+    this.wordCount = wordCount;
     return this;
   }
 
   /**
-   * If URL is supplied, will fetch the webpage in the backend.
+   * The word count limit for the current user at the time of the upload.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUrl() {
-    return url;
+  public java.lang.Integer getWordLimit() {
+    return wordLimit;
   }
 
   /**
-   * If URL is supplied, will fetch the webpage in the backend.
-   * @param url url or {@code null} for none
+   * The word count limit for the current user at the time of the upload.
+   * @param wordLimit wordLimit or {@code null} for none
    */
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent setUrl(java.lang.String url) {
-    this.url = url;
+  public GoogleCloudNotebooklmV1alphaFailureReasonSourceTooLong setWordLimit(java.lang.Integer wordLimit) {
+    this.wordLimit = wordLimit;
     return this;
   }
 
   @Override
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent set(String fieldName, Object value) {
-    return (GoogleCloudNotebooklmV1alphaUserContentWebContent) super.set(fieldName, value);
+  public GoogleCloudNotebooklmV1alphaFailureReasonSourceTooLong set(String fieldName, Object value) {
+    return (GoogleCloudNotebooklmV1alphaFailureReasonSourceTooLong) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudNotebooklmV1alphaUserContentWebContent clone() {
-    return (GoogleCloudNotebooklmV1alphaUserContentWebContent) super.clone();
+  public GoogleCloudNotebooklmV1alphaFailureReasonSourceTooLong clone() {
+    return (GoogleCloudNotebooklmV1alphaFailureReasonSourceTooLong) super.clone();
   }
 
 }

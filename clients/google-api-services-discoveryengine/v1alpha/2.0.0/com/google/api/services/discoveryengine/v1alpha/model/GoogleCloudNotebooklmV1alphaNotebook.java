@@ -45,7 +45,7 @@ public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.c
   private java.lang.String emoji;
 
   /**
-   * The metadata of the notebook.
+   * Output only. The metadata of the notebook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,7 @@ public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.c
   private java.lang.String name;
 
   /**
-   * Optional. Notebook id, which is the last segment of the notebook's resource name. This is to
-   * make it similar with notebooklm API.
+   * Output only. Notebook id, which is the last segment of the notebook's resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +109,7 @@ public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.c
   }
 
   /**
-   * The metadata of the notebook.
+   * Output only. The metadata of the notebook.
    * @return value or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaNotebookMetadata getMetadata() {
@@ -118,7 +117,7 @@ public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.c
   }
 
   /**
-   * The metadata of the notebook.
+   * Output only. The metadata of the notebook.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaNotebook setMetadata(GoogleCloudNotebooklmV1alphaNotebookMetadata metadata) {
@@ -148,8 +147,7 @@ public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.c
   }
 
   /**
-   * Optional. Notebook id, which is the last segment of the notebook's resource name. This is to
-   * make it similar with notebooklm API.
+   * Output only. Notebook id, which is the last segment of the notebook's resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotebookId() {
@@ -157,8 +155,7 @@ public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.c
   }
 
   /**
-   * Optional. Notebook id, which is the last segment of the notebook's resource name. This is to
-   * make it similar with notebooklm API.
+   * Output only. Notebook id, which is the last segment of the notebook's resource name.
    * @param notebookId notebookId or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaNotebook setNotebookId(java.lang.String notebookId) {

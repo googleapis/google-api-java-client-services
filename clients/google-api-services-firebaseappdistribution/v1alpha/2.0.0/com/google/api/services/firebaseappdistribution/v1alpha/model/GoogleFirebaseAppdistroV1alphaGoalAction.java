@@ -31,7 +31,7 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaGoalAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Debug information explaining why the agent to the specific action
+   * Output only. Debug information explaining why the agent to the specific action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,6 +52,13 @@ public final class GoogleFirebaseAppdistroV1alphaGoalAction extends com.google.a
   private java.lang.String explanation;
 
   /**
+   * Output only. The time at which the action started.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
    * Output only. An action taken by the AI to end the goal.
    * The value may be {@code null}.
    */
@@ -59,7 +66,7 @@ public final class GoogleFirebaseAppdistroV1alphaGoalAction extends com.google.a
   private GoogleFirebaseAppdistroV1alphaTerminalAction terminalAction;
 
   /**
-   * Output only. Debug information explaining why the agent to the specific action
+   * Output only. Debug information explaining why the agent to the specific action.
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo getDebugInfo() {
@@ -67,7 +74,7 @@ public final class GoogleFirebaseAppdistroV1alphaGoalAction extends com.google.a
   }
 
   /**
-   * Output only. Debug information explaining why the agent to the specific action
+   * Output only. Debug information explaining why the agent to the specific action.
    * @param debugInfo debugInfo or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaGoalAction setDebugInfo(GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo debugInfo) {
@@ -106,6 +113,23 @@ public final class GoogleFirebaseAppdistroV1alphaGoalAction extends com.google.a
    */
   public GoogleFirebaseAppdistroV1alphaGoalAction setExplanation(java.lang.String explanation) {
     this.explanation = explanation;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the action started.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Output only. The time at which the action started.
+   * @param startTime startTime or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaGoalAction setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

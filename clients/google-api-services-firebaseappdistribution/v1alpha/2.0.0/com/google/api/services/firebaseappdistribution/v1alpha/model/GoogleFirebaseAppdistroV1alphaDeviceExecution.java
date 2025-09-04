@@ -109,6 +109,13 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
   private java.lang.String state;
 
   /**
+   * Output only. The time at which the video started recording.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String videoStartTime;
+
+  /**
    * Output only. A URI to a video of the test run.
    * The value may be {@code null}.
    */
@@ -286,6 +293,23 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
    */
   public GoogleFirebaseAppdistroV1alphaDeviceExecution setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the video started recording.
+   * @return value or {@code null} for none
+   */
+  public String getVideoStartTime() {
+    return videoStartTime;
+  }
+
+  /**
+   * Output only. The time at which the video started recording.
+   * @param videoStartTime videoStartTime or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceExecution setVideoStartTime(String videoStartTime) {
+    this.videoStartTime = videoStartTime;
     return this;
   }
 

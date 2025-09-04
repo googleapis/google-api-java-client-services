@@ -37,6 +37,13 @@ public final class GoogleCloudNotebooklmV1alphaSourceMetadata extends com.google
   private GoogleCloudNotebooklmV1alphaAgentspaceMetadata agentspaceMetadata;
 
   /**
+   * Metadata for a google doc source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaGoogleDocsSourceMetadata googleDocsMetadata;
+
+  /**
    * The timestamp the source was added.
    * The value may be {@code null}.
    */
@@ -58,6 +65,13 @@ public final class GoogleCloudNotebooklmV1alphaSourceMetadata extends com.google
   private java.lang.Integer wordCount;
 
   /**
+   * Metadata for a youtube video source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaYoutubeMetadata youtubeMetadata;
+
+  /**
    * Metadata for an agentspace source.
    * @return value or {@code null} for none
    */
@@ -71,6 +85,23 @@ public final class GoogleCloudNotebooklmV1alphaSourceMetadata extends com.google
    */
   public GoogleCloudNotebooklmV1alphaSourceMetadata setAgentspaceMetadata(GoogleCloudNotebooklmV1alphaAgentspaceMetadata agentspaceMetadata) {
     this.agentspaceMetadata = agentspaceMetadata;
+    return this;
+  }
+
+  /**
+   * Metadata for a google doc source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaGoogleDocsSourceMetadata getGoogleDocsMetadata() {
+    return googleDocsMetadata;
+  }
+
+  /**
+   * Metadata for a google doc source.
+   * @param googleDocsMetadata googleDocsMetadata or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaSourceMetadata setGoogleDocsMetadata(GoogleCloudNotebooklmV1alphaGoogleDocsSourceMetadata googleDocsMetadata) {
+    this.googleDocsMetadata = googleDocsMetadata;
     return this;
   }
 
@@ -122,6 +153,23 @@ public final class GoogleCloudNotebooklmV1alphaSourceMetadata extends com.google
    */
   public GoogleCloudNotebooklmV1alphaSourceMetadata setWordCount(java.lang.Integer wordCount) {
     this.wordCount = wordCount;
+    return this;
+  }
+
+  /**
+   * Metadata for a youtube video source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaYoutubeMetadata getYoutubeMetadata() {
+    return youtubeMetadata;
+  }
+
+  /**
+   * Metadata for a youtube video source.
+   * @param youtubeMetadata youtubeMetadata or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaSourceMetadata setYoutubeMetadata(GoogleCloudNotebooklmV1alphaYoutubeMetadata youtubeMetadata) {
+    this.youtubeMetadata = youtubeMetadata;
     return this;
   }
 

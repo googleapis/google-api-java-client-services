@@ -46,7 +46,7 @@ public final class GoogleCloudNotebooklmV1alphaAudioOverview extends com.google.
 
   /**
    * The language code of the generated audio overview. Use the BCP 47 language code (e.g. "en",
-   * "es", "hi", etc.). Examples: google3/i18n/identifiers/tools/language_code_constants.txt
+   * "es", "hi", etc.).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class GoogleCloudNotebooklmV1alphaAudioOverview extends com.google.
 
   /**
    * The language code of the generated audio overview. Use the BCP 47 language code (e.g. "en",
-   * "es", "hi", etc.). Examples: google3/i18n/identifiers/tools/language_code_constants.txt
+   * "es", "hi", etc.).
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -159,7 +159,7 @@ public final class GoogleCloudNotebooklmV1alphaAudioOverview extends com.google.
 
   /**
    * The language code of the generated audio overview. Use the BCP 47 language code (e.g. "en",
-   * "es", "hi", etc.). Examples: google3/i18n/identifiers/tools/language_code_constants.txt
+   * "es", "hi", etc.).
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaAudioOverview setLanguageCode(java.lang.String languageCode) {

@@ -158,6 +158,15 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private java.util.List<GoogleRpcStatus> errors;
 
   /**
+   * Optional. Any params and credentials used specifically for hybrid connectors supporting
+   * FEDERATED mode. This field should only be set if the connector is a hybrid connector and we
+   * want to enable FEDERATED mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig federatedConfig;
+
+  /**
    * Optional. If the connector is a hybrid connector, determines whether ingestion is enabled and
    * appropriate resources are provisioned during connector creation. If the connector is not a
    * hybrid connector, this field is ignored.
@@ -306,6 +315,16 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   @com.google.api.client.util.Key
   private String refreshInterval;
+
+  /**
+   * Optional. Specifies keys to be removed from the 'params' field. This is only active when
+   * 'params' is included in the 'update_mask' in an UpdateDataConnectorRequest. Deletion takes
+   * precedence if a key is both in 'remove_param_keys' and present in the 'params' field of the
+   * request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> removeParamKeys;
 
   /**
    * Output only. State of the connector.
@@ -625,6 +644,27 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setErrors(java.util.List<GoogleRpcStatus> errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * Optional. Any params and credentials used specifically for hybrid connectors supporting
+   * FEDERATED mode. This field should only be set if the connector is a hybrid connector and we
+   * want to enable FEDERATED mode.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig getFederatedConfig() {
+    return federatedConfig;
+  }
+
+  /**
+   * Optional. Any params and credentials used specifically for hybrid connectors supporting
+   * FEDERATED mode. This field should only be set if the connector is a hybrid connector and we
+   * want to enable FEDERATED mode.
+   * @param federatedConfig federatedConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setFederatedConfig(GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig federatedConfig) {
+    this.federatedConfig = federatedConfig;
     return this;
   }
 
@@ -970,6 +1010,29 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setRefreshInterval(String refreshInterval) {
     this.refreshInterval = refreshInterval;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies keys to be removed from the 'params' field. This is only active when
+   * 'params' is included in the 'update_mask' in an UpdateDataConnectorRequest. Deletion takes
+   * precedence if a key is both in 'remove_param_keys' and present in the 'params' field of the
+   * request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRemoveParamKeys() {
+    return removeParamKeys;
+  }
+
+  /**
+   * Optional. Specifies keys to be removed from the 'params' field. This is only active when
+   * 'params' is included in the 'update_mask' in an UpdateDataConnectorRequest. Deletion takes
+   * precedence if a key is both in 'remove_param_keys' and present in the 'params' field of the
+   * request.
+   * @param removeParamKeys removeParamKeys or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setRemoveParamKeys(java.util.List<java.lang.String> removeParamKeys) {
+    this.removeParamKeys = removeParamKeys;
     return this;
   }
 

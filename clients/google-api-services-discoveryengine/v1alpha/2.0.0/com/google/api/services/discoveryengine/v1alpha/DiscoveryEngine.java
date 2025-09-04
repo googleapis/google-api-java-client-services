@@ -44953,7 +44953,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       public class Notebooks {
 
         /**
-         * Batch deletes Notebooks. Needs a side channel with the user's EUC.
+         * Batch deletes Notebooks.
          *
          * Create a request for the method "notebooks.batchDelete".
          *
@@ -44979,7 +44979,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Batch deletes Notebooks. Needs a side channel with the user's EUC.
+           * Batch deletes Notebooks.
            *
            * Create a request for the method "notebooks.batchDelete".
            *
@@ -45091,7 +45091,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Creates a notebook. Needs a side channel with the user's EUC.
+         * Creates a notebook.
          *
          * Create a request for the method "notebooks.create".
          *
@@ -45116,7 +45116,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a notebook. Needs a side channel with the user's EUC.
+           * Creates a notebook.
            *
            * Create a request for the method "notebooks.create".
            *
@@ -45226,7 +45226,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets a notebook. Needs a side channel with the user's EUC.
+         * Gets a notebook.
          *
          * Create a request for the method "notebooks.get".
          *
@@ -45251,7 +45251,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
 
           /**
-           * Gets a notebook. Needs a side channel with the user's EUC.
+           * Gets a notebook.
            *
            * Create a request for the method "notebooks.get".
            *
@@ -45373,7 +45373,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists the recently viewed notebooks. Needs a side channel with the user's EUC.
+         * Lists the notebooks ordered by last view time.
          *
          * Create a request for the method "notebooks.listRecentlyViewed".
          *
@@ -45398,7 +45398,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists the recently viewed notebooks. Needs a side channel with the user's EUC.
+           * Lists the notebooks ordered by last view time.
            *
            * Create a request for the method "notebooks.listRecentlyViewed".
            *
@@ -45558,7 +45558,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Shares a notebook to other accounts. Needs a side channel with the user's EUC.
+         * Shares a notebook to other accounts.
          *
          * Create a request for the method "notebooks.share".
          *
@@ -45584,7 +45584,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
 
           /**
-           * Shares a notebook to other accounts. Needs a side channel with the user's EUC.
+           * Shares a notebook to other accounts.
            *
            * Create a request for the method "notebooks.share".
            *
@@ -45719,7 +45719,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         public class AudioOverviews {
 
           /**
-           * Generates a new audio overview. Needs a side channel with the user's EUC.
+           * Generates a new audio overview.
            *
            * Create a request for the method "audioOverviews.create".
            *
@@ -45745,7 +45745,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
 
             /**
-             * Generates a new audio overview. Needs a side channel with the user's EUC.
+             * Generates a new audio overview.
              *
              * Create a request for the method "audioOverviews.create".
              *
@@ -45859,7 +45859,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Deletes an audio overview. Needs a side channel with the user's EUC.
+           * Deletes an audio overview.
            *
            * Create a request for the method "audioOverviews.delete".
            *
@@ -45885,7 +45885,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+/audioOverviews/[^/]+$");
 
             /**
-             * Deletes an audio overview. Needs a side channel with the user's EUC.
+             * Deletes an audio overview.
              *
              * Create a request for the method "audioOverviews.delete".
              *

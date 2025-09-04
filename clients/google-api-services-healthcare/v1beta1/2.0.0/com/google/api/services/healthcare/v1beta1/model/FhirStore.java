@@ -95,9 +95,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disableResourceVersioning;
 
   /**
-   * Optional. Whether to allow ExecuteBundle to accept history bundles, and directly insert and
-   * overwrite historical resource versions into the FHIR store. If set to false, using history
-   * bundles fails with an error. Defaults to false.
+   * Optional. Whether to allow the [ImportResourcesHistory] and [ExecuteBundle] APIs to accept
+   * history bundles, and directly insert and overwrite historical resource versions into the FHIR
+   * store. Changing resource histories creates resource interactions that have occurred in the past
+   * which clients might not allow. If set to false, [ImportResourcesHistory] and [ExecuteBundle]
+   * requests will return errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -348,9 +350,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether to allow ExecuteBundle to accept history bundles, and directly insert and
-   * overwrite historical resource versions into the FHIR store. If set to false, using history
-   * bundles fails with an error. Defaults to false.
+   * Optional. Whether to allow the [ImportResourcesHistory] and [ExecuteBundle] APIs to accept
+   * history bundles, and directly insert and overwrite historical resource versions into the FHIR
+   * store. Changing resource histories creates resource interactions that have occurred in the past
+   * which clients might not allow. If set to false, [ImportResourcesHistory] and [ExecuteBundle]
+   * requests will return errors.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableHistoryModifications() {
@@ -358,9 +362,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether to allow ExecuteBundle to accept history bundles, and directly insert and
-   * overwrite historical resource versions into the FHIR store. If set to false, using history
-   * bundles fails with an error. Defaults to false.
+   * Optional. Whether to allow the [ImportResourcesHistory] and [ExecuteBundle] APIs to accept
+   * history bundles, and directly insert and overwrite historical resource versions into the FHIR
+   * store. Changing resource histories creates resource interactions that have occurred in the past
+   * which clients might not allow. If set to false, [ImportResourcesHistory] and [ExecuteBundle]
+   * requests will return errors.
    * @param enableHistoryModifications enableHistoryModifications or {@code null} for none
    */
   public FhirStore setEnableHistoryModifications(java.lang.Boolean enableHistoryModifications) {

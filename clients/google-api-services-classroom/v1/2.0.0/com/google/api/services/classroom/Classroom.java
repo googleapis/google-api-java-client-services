@@ -2859,7 +2859,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * the announcement may call this method. This method returns the following error codes: *
        * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
        * course work or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND`
-       * if the requested course or course work does not exist.
+       * if the requested course or course work does not exist. * `FAILED_PRECONDITION` for the following
+       * request error: * EmptyAssignees
        *
        * Create a request for the method "announcements.modifyAssignees".
        *
@@ -2887,7 +2888,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * contains the announcement may call this method. This method returns the following error codes:
          * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
          * course work or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-         * `NOT_FOUND` if the requested course or course work does not exist.
+         * `NOT_FOUND` if the requested course or course work does not exist. * `FAILED_PRECONDITION` for
+         * the following request error: * EmptyAssignees
          *
          * Create a request for the method "announcements.modifyAssignees".
          *
@@ -5248,7 +5250,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * the coursework may call this method. This method returns the following error codes: *
        * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
        * course work or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND`
-       * if the requested course or course work does not exist.
+       * if the requested course or course work does not exist. * `FAILED_PRECONDITION` for the following
+       * request error: * EmptyAssignees
        *
        * Create a request for the method "courseWork.modifyAssignees".
        *
@@ -5276,7 +5279,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * the coursework may call this method. This method returns the following error codes: *
          * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
          * course work or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-         * `NOT_FOUND` if the requested course or course work does not exist.
+         * `NOT_FOUND` if the requested course or course work does not exist. * `FAILED_PRECONDITION` for
+         * the following request error: * EmptyAssignees
          *
          * Create a request for the method "courseWork.modifyAssignees".
          *

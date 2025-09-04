@@ -37,6 +37,15 @@ public final class GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec extend
   private GoogleCloudAiplatformV1beta1EvaluationConfig evaluationConfig;
 
   /**
+   * Optional. If set to true, disable intermediate checkpoints for Preference Optimization and only
+   * the last checkpoint will be exported. Otherwise, enable intermediate checkpoints for Preference
+   * Optimization. Default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exportLastCheckpointOnly;
+
+  /**
    * Optional. Hyperparameters for Preference Optimization.
    * The value may be {@code null}.
    */
@@ -73,6 +82,27 @@ public final class GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec extend
    */
   public GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec setEvaluationConfig(GoogleCloudAiplatformV1beta1EvaluationConfig evaluationConfig) {
     this.evaluationConfig = evaluationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, disable intermediate checkpoints for Preference Optimization and only
+   * the last checkpoint will be exported. Otherwise, enable intermediate checkpoints for Preference
+   * Optimization. Default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExportLastCheckpointOnly() {
+    return exportLastCheckpointOnly;
+  }
+
+  /**
+   * Optional. If set to true, disable intermediate checkpoints for Preference Optimization and only
+   * the last checkpoint will be exported. Otherwise, enable intermediate checkpoints for Preference
+   * Optimization. Default is false.
+   * @param exportLastCheckpointOnly exportLastCheckpointOnly or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec setExportLastCheckpointOnly(java.lang.Boolean exportLastCheckpointOnly) {
+    this.exportLastCheckpointOnly = exportLastCheckpointOnly;
     return this;
   }
 

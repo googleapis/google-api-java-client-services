@@ -52,7 +52,8 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
 
   /**
    * Optional. Timestamp of when this resource is considered expired. This is *always* provided on
-   * output, regardless of what `expiration` was sent on input.
+   * output when `expiration` is set on input, regardless of whether `expire_time` or `ttl` was
+   * provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +150,8 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
 
   /**
    * Optional. Timestamp of when this resource is considered expired. This is *always* provided on
-   * output, regardless of what `expiration` was sent on input.
+   * output when `expiration` is set on input, regardless of whether `expire_time` or `ttl` was
+   * provided.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -158,7 +160,8 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
 
   /**
    * Optional. Timestamp of when this resource is considered expired. This is *always* provided on
-   * output, regardless of what `expiration` was sent on input.
+   * output when `expiration` is set on input, regardless of whether `expire_time` or `ttl` was
+   * provided.
    * @param expireTime expireTime or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Memory setExpireTime(String expireTime) {

@@ -68,6 +68,13 @@ public final class GoogleCloudAiplatformV1ReasoningEngine extends com.google.api
   private java.lang.String etag;
 
   /**
+   * Labels for the ReasoningEngine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Identifier. The resource name of the ReasoningEngine. Format:
    * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
    * The value may be {@code null}.
@@ -175,6 +182,23 @@ public final class GoogleCloudAiplatformV1ReasoningEngine extends com.google.api
    */
   public GoogleCloudAiplatformV1ReasoningEngine setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Labels for the ReasoningEngine.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Labels for the ReasoningEngine.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngine setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

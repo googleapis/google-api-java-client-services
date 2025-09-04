@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v2.model;
 public final class Tool extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of tool names that this tool depends on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> dependsOn;
+
+  /**
    * Description of the tool.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private JsonSchema outputSchema;
+
+  /**
+   * List of tool names that this tool depends on.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDependsOn() {
+    return dependsOn;
+  }
+
+  /**
+   * List of tool names that this tool depends on.
+   * @param dependsOn dependsOn or {@code null} for none
+   */
+  public Tool setDependsOn(java.util.List<java.lang.String> dependsOn) {
+    this.dependsOn = dependsOn;
+    return this;
+  }
 
   /**
    * Description of the tool.

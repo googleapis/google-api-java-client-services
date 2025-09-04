@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappdistribution.v1alpha.model;
 
 /**
- * Information to help the customer understand why the agent took this action
+ * Information to help the customer understand why the agent took this action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Distribution API. For a detailed
@@ -31,21 +31,21 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. URI of the screenshot with elements labeled which was used by the agent
+   * Output only. URI of the screenshot with elements labeled which was used by the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String annotatedScreenshotUri;
 
   /**
-   * Output only. Structured data explaining the agent's choice
+   * Output only. Structured data explaining the agent's choice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String jsonUri;
 
   /**
-   * Output only. URI of the screenshot with elements labeled which was used by the agent
+   * Output only. URI of the screenshot with elements labeled which was used by the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnnotatedScreenshotUri() {
@@ -53,7 +53,7 @@ public final class GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo extends com
   }
 
   /**
-   * Output only. URI of the screenshot with elements labeled which was used by the agent
+   * Output only. URI of the screenshot with elements labeled which was used by the agent.
    * @param annotatedScreenshotUri annotatedScreenshotUri or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo setAnnotatedScreenshotUri(java.lang.String annotatedScreenshotUri) {
@@ -62,7 +62,7 @@ public final class GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo extends com
   }
 
   /**
-   * Output only. Structured data explaining the agent's choice
+   * Output only. Structured data explaining the agent's choice.
    * @return value or {@code null} for none
    */
   public java.lang.String getJsonUri() {
@@ -70,7 +70,7 @@ public final class GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo extends com
   }
 
   /**
-   * Output only. Structured data explaining the agent's choice
+   * Output only. Structured data explaining the agent's choice.
    * @param jsonUri jsonUri or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo setJsonUri(java.lang.String jsonUri) {

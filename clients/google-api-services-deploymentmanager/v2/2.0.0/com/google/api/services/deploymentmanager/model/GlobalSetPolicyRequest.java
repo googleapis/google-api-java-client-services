@@ -62,6 +62,7 @@ public final class GlobalSetPolicyRequest extends com.google.api.client.json.Gen
   private Policy policy;
 
   /**
+   * Update mask for the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,6 +158,7 @@ public final class GlobalSetPolicyRequest extends com.google.api.client.json.Gen
   }
 
   /**
+   * Update mask for the policy.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -164,6 +166,7 @@ public final class GlobalSetPolicyRequest extends com.google.api.client.json.Gen
   }
 
   /**
+   * Update mask for the policy.
    * @param updateMask updateMask or {@code null} for none
    */
   public GlobalSetPolicyRequest setUpdateMask(String updateMask) {

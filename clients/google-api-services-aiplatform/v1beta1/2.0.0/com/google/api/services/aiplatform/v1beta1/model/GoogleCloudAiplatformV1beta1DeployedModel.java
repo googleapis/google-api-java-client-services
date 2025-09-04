@@ -60,6 +60,17 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
   private GoogleCloudAiplatformV1beta1DedicatedResources dedicatedResources;
 
   /**
+   * For custom-trained Models and AutoML Tabular Models, the container of the DeployedModel
+   * instances will send `stderr` and `stdout` streams to Cloud Logging by default. Please note that
+   * the logs incur cost, which are subject to [Cloud Logging
+   * pricing](https://cloud.google.com/logging/pricing). User can disable container logging by
+   * setting this flag to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableContainerLogging;
+
+  /**
    * If true, deploy the model without explainable feature, regardless the existence of
    * Model.explanation_spec or explanation_spec.
    * The value may be {@code null}.
@@ -274,6 +285,31 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
    */
   public GoogleCloudAiplatformV1beta1DeployedModel setDedicatedResources(GoogleCloudAiplatformV1beta1DedicatedResources dedicatedResources) {
     this.dedicatedResources = dedicatedResources;
+    return this;
+  }
+
+  /**
+   * For custom-trained Models and AutoML Tabular Models, the container of the DeployedModel
+   * instances will send `stderr` and `stdout` streams to Cloud Logging by default. Please note that
+   * the logs incur cost, which are subject to [Cloud Logging
+   * pricing](https://cloud.google.com/logging/pricing). User can disable container logging by
+   * setting this flag to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableContainerLogging() {
+    return disableContainerLogging;
+  }
+
+  /**
+   * For custom-trained Models and AutoML Tabular Models, the container of the DeployedModel
+   * instances will send `stderr` and `stdout` streams to Cloud Logging by default. Please note that
+   * the logs incur cost, which are subject to [Cloud Logging
+   * pricing](https://cloud.google.com/logging/pricing). User can disable container logging by
+   * setting this flag to true.
+   * @param disableContainerLogging disableContainerLogging or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedModel setDisableContainerLogging(java.lang.Boolean disableContainerLogging) {
+    this.disableContainerLogging = disableContainerLogging;
     return this;
   }
 

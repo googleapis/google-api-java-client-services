@@ -37,27 +37,6 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecCodeExecuti
   private java.lang.String codeLanguage;
 
   /**
-   * Optional. The additional dependencies to install in the code execution environment. For
-   * example, "pandas==2.2.3".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> dependencies;
-
-  /**
-   * Optional. The environment variables to set in the code execution environment.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudAiplatformV1beta1EnvVar> env;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1EnvVar used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1EnvVar.class);
-  }
-
-  /**
    * The machine config of the code execution environment.
    * The value may be {@code null}.
    */
@@ -78,42 +57,6 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecCodeExecuti
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecCodeExecutionEnvironment setCodeLanguage(java.lang.String codeLanguage) {
     this.codeLanguage = codeLanguage;
-    return this;
-  }
-
-  /**
-   * Optional. The additional dependencies to install in the code execution environment. For
-   * example, "pandas==2.2.3".
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getDependencies() {
-    return dependencies;
-  }
-
-  /**
-   * Optional. The additional dependencies to install in the code execution environment. For
-   * example, "pandas==2.2.3".
-   * @param dependencies dependencies or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecCodeExecutionEnvironment setDependencies(java.util.List<java.lang.String> dependencies) {
-    this.dependencies = dependencies;
-    return this;
-  }
-
-  /**
-   * Optional. The environment variables to set in the code execution environment.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudAiplatformV1beta1EnvVar> getEnv() {
-    return env;
-  }
-
-  /**
-   * Optional. The environment variables to set in the code execution environment.
-   * @param env env or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecCodeExecutionEnvironment setEnv(java.util.List<GoogleCloudAiplatformV1beta1EnvVar> env) {
-    this.env = env;
     return this;
   }
 

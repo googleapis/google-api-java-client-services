@@ -45,13 +45,6 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironment extends com.go
   private java.lang.String displayName;
 
   /**
-   * Output only. Additional information about the SandboxEnvironment.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Object metadata;
-
-  /**
    * Identifier. The name of the SandboxEnvironment.
    * The value may be {@code null}.
    */
@@ -110,23 +103,6 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironment extends com.go
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironment setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
-    return this;
-  }
-
-  /**
-   * Output only. Additional information about the SandboxEnvironment.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Object getMetadata() {
-    return metadata;
-  }
-
-  /**
-   * Output only. Additional information about the SandboxEnvironment.
-   * @param metadata metadata or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1SandboxEnvironment setMetadata(java.lang.Object metadata) {
-    this.metadata = metadata;
     return this;
   }
 

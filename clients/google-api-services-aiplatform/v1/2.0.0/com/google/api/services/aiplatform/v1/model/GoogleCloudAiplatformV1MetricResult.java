@@ -30,29 +30,53 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1MetricResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The explanation for the metric result.
+   * Output only. The error status for the metric result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus error;
+
+  /**
+   * Output only. The explanation for the metric result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String explanation;
 
   /**
-   * For rubric-based metrics, the verdicts for each rubric.
+   * Output only. For rubric-based metrics, the verdicts for each rubric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1RubricVerdict> rubricVerdicts;
 
   /**
-   * The score for the metric. Please refer to each metric's documentation for the meaning of the
-   * score.
+   * Output only. The score for the metric. Please refer to each metric's documentation for the
+   * meaning of the score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
 
   /**
-   * The explanation for the metric result.
+   * Output only. The error status for the metric result.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getError() {
+    return error;
+  }
+
+  /**
+   * Output only. The error status for the metric result.
+   * @param error error or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MetricResult setError(GoogleRpcStatus error) {
+    this.error = error;
+    return this;
+  }
+
+  /**
+   * Output only. The explanation for the metric result.
    * @return value or {@code null} for none
    */
   public java.lang.String getExplanation() {
@@ -60,7 +84,7 @@ public final class GoogleCloudAiplatformV1MetricResult extends com.google.api.cl
   }
 
   /**
-   * The explanation for the metric result.
+   * Output only. The explanation for the metric result.
    * @param explanation explanation or {@code null} for none
    */
   public GoogleCloudAiplatformV1MetricResult setExplanation(java.lang.String explanation) {
@@ -69,7 +93,7 @@ public final class GoogleCloudAiplatformV1MetricResult extends com.google.api.cl
   }
 
   /**
-   * For rubric-based metrics, the verdicts for each rubric.
+   * Output only. For rubric-based metrics, the verdicts for each rubric.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1RubricVerdict> getRubricVerdicts() {
@@ -77,7 +101,7 @@ public final class GoogleCloudAiplatformV1MetricResult extends com.google.api.cl
   }
 
   /**
-   * For rubric-based metrics, the verdicts for each rubric.
+   * Output only. For rubric-based metrics, the verdicts for each rubric.
    * @param rubricVerdicts rubricVerdicts or {@code null} for none
    */
   public GoogleCloudAiplatformV1MetricResult setRubricVerdicts(java.util.List<GoogleCloudAiplatformV1RubricVerdict> rubricVerdicts) {
@@ -86,8 +110,8 @@ public final class GoogleCloudAiplatformV1MetricResult extends com.google.api.cl
   }
 
   /**
-   * The score for the metric. Please refer to each metric's documentation for the meaning of the
-   * score.
+   * Output only. The score for the metric. Please refer to each metric's documentation for the
+   * meaning of the score.
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -95,8 +119,8 @@ public final class GoogleCloudAiplatformV1MetricResult extends com.google.api.cl
   }
 
   /**
-   * The score for the metric. Please refer to each metric's documentation for the meaning of the
-   * score.
+   * Output only. The score for the metric. Please refer to each metric's documentation for the
+   * meaning of the score.
    * @param score score or {@code null} for none
    */
   public GoogleCloudAiplatformV1MetricResult setScore(java.lang.Float score) {

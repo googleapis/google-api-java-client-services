@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class LabelList extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always drive#labelList
+   * This is always `"drive#labelList"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class LabelList extends com.google.api.client.json.GenericJson {
   private java.lang.String nextPageToken;
 
   /**
-   * This is always drive#labelList
+   * This is always `"drive#labelList"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -69,7 +69,7 @@ public final class LabelList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#labelList
+   * This is always `"drive#labelList"`.
    * @param kind kind or {@code null} for none
    */
   public LabelList setKind(java.lang.String kind) {

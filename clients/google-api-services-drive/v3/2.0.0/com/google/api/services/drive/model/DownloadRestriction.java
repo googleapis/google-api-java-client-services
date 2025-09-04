@@ -37,7 +37,7 @@ public final class DownloadRestriction extends com.google.api.client.json.Generi
   private java.lang.Boolean restrictedForReaders;
 
   /**
-   * Whether download and copy is restricted for writers. If true, download is also restricted for
+   * Whether download and copy is restricted for writers. If `true`, download is also restricted for
    * readers.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class DownloadRestriction extends com.google.api.client.json.Generi
   }
 
   /**
-   * Whether download and copy is restricted for writers. If true, download is also restricted for
+   * Whether download and copy is restricted for writers. If `true`, download is also restricted for
    * readers.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class DownloadRestriction extends com.google.api.client.json.Generi
   }
 
   /**
-   * Whether download and copy is restricted for writers. If true, download is also restricted for
+   * Whether download and copy is restricted for writers. If `true`, download is also restricted for
    * readers.
    * @param restrictedForWriters restrictedForWriters or {@code null} for none
    */

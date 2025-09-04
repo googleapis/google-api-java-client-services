@@ -37,7 +37,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   private java.lang.String fieldId;
 
   /**
-   * This is always drive#labelFieldModification.
+   * This is always `"drive#labelFieldModification"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> setTextValues;
 
   /**
-   * Replaces a `user` field with these new values. The values must be valid email addresses.
+   * Replaces a `user` field with these new values. The values must be a valid email addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always drive#labelFieldModification.
+   * This is always `"drive#labelFieldModification"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -112,7 +112,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * This is always drive#labelFieldModification.
+   * This is always `"drive#labelFieldModification"`.
    * @param kind kind or {@code null} for none
    */
   public LabelFieldModification setKind(java.lang.String kind) {
@@ -191,7 +191,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a `user` field with these new values. The values must be valid email addresses.
+   * Replaces a `user` field with these new values. The values must be a valid email addresses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSetUserValues() {
@@ -199,7 +199,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a `user` field with these new values. The values must be valid email addresses.
+   * Replaces a `user` field with these new values. The values must be a valid email addresses.
    * @param setUserValues setUserValues or {@code null} for none
    */
   public LabelFieldModification setSetUserValues(java.util.List<java.lang.String> setUserValues) {

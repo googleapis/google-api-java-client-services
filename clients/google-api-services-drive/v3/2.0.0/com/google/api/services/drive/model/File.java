@@ -42,7 +42,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Capabilities the current user has on this file. Each capability corresponds to a
-   * fine-grained action that a user may take.
+   * fine-grained action that a user may take. For more information, see [Understand file
+   * capabilities](https://developers.google.com/workspace/drive/api/guides/manage-
+   * sharing#capabilities).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +73,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the options to copy, print, or download this file, should be disabled for readers and
+   * Whether the options to copy, print, or download this file should be disabled for readers and
    * commenters.
    * The value may be {@code null}.
    */
@@ -132,7 +134,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The color for a folder or a shortcut to a folder as an RGB hex string. The supported colors are
-   * published in the `folderColorPalette` field of the About resource. If an unsupported color is
+   * published in the `folderColorPalette` field of the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource. If an unsupported color is
    * specified, the closest color in the palette is used instead.
    * The value may be {@code null}.
    */
@@ -142,8 +145,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The full file extension extracted from the `name` field. May contain multiple
    * concatenated extensions, such as "tar.gz". This is only available for files with binary content
-   * in Google Drive. This is automatically updated when the `name` field changes, however it is not
-   * cleared if the new name does not contain a valid extension.
+   * in Google Drive. This is automatically updated when the `name` field changes, however it's not
+   * cleared if the new name doesn't contain a valid extension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +161,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean hasAugmentedPermissions;
 
   /**
-   * Output only. Whether this file has a thumbnail. This does not indicate whether the requesting
+   * Output only. Whether this file has a thumbnail. This doesn't indicate whether the requesting
    * app has access to the thumbnail. To check access, look for the presence of the thumbnailLink
    * field.
    * The value may be {@code null}.
@@ -251,7 +254,8 @@ public final class File extends com.google.api.client.json.GenericJson {
    * The MIME type of the file. Google Drive attempts to automatically detect an appropriate value
    * from uploaded content, if no value is provided. The value cannot be changed unless a new
    * revision is uploaded. If a file is created with a Google Doc MIME type, the uploaded content is
-   * imported, if possible. The supported import formats are published in the About resource.
+   * imported, if possible. The supported import formats are published in the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -280,9 +284,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime modifiedTime;
 
   /**
-   * The name of the file. This is not necessarily unique within a folder. Note that for immutable
-   * items such as the top level folders of shared drives, My Drive root folder, and Application
-   * Data folder the name is constant.
+   * The name of the file. This isn't necessarily unique within a folder. Note that for immutable
+   * items such as the top-level folders of shared drives, the My Drive root folder, and the
+   * Application Data folder, the name is constant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -362,8 +366,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The SHA1 checksum associated with this file, if available. This field is only
-   * populated for files with content stored in Google Drive; it is not populated for Docs Editors
-   * or shortcut files.
+   * populated for files with content stored in Google Drive; it's not populated for Docs Editors or
+   * shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -371,8 +375,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The SHA256 checksum associated with this file, if available. This field is only
-   * populated for files with content stored in Google Drive; it is not populated for Docs Editors
-   * or shortcut files.
+   * populated for files with content stored in Google Drive; it's not populated for Docs Editors or
+   * shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -408,8 +412,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   private ShortcutDetails shortcutDetails;
 
   /**
-   * Output only. Size in bytes of blobs and first party editor files. Won't be populated for files
-   * that have no size, like shortcuts and folders.
+   * Output only. Size in bytes of blobs and Google Workspace editor files. Won't be populated for
+   * files that have no size, like shortcuts and folders.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -417,7 +421,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The list of spaces which contain the file. The currently supported values are
-   * 'drive', 'appDataFolder' and 'photos'.
+   * `drive`, `appDataFolder`, and `photos`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -440,9 +444,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   /**
    * Output only. A short-lived link to the file's thumbnail, if available. Typically lasts on the
    * order of hours. Not intended for direct usage on web applications due to [Cross-Origin Resource
-   * Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies, consider
+   * Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies. Consider
    * using a proxy server. Only populated when the requesting app can access the file's content. If
-   * the file isn't shared publicly, the URL returned in `Files.thumbnailLink` must be fetched using
+   * the file isn't shared publicly, the URL returned in `files.thumbnailLink` must be fetched using
    * a credentialed request.
    * The value may be {@code null}.
    */
@@ -565,7 +569,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Capabilities the current user has on this file. Each capability corresponds to a
-   * fine-grained action that a user may take.
+   * fine-grained action that a user may take. For more information, see [Understand file
+   * capabilities](https://developers.google.com/workspace/drive/api/guides/manage-
+   * sharing#capabilities).
    * @return value or {@code null} for none
    */
   public Capabilities getCapabilities() {
@@ -574,7 +580,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Capabilities the current user has on this file. Each capability corresponds to a
-   * fine-grained action that a user may take.
+   * fine-grained action that a user may take. For more information, see [Understand file
+   * capabilities](https://developers.google.com/workspace/drive/api/guides/manage-
+   * sharing#capabilities).
    * @param capabilities capabilities or {@code null} for none
    */
   public File setCapabilities(Capabilities capabilities) {
@@ -621,7 +629,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the options to copy, print, or download this file, should be disabled for readers and
+   * Whether the options to copy, print, or download this file should be disabled for readers and
    * commenters.
    * @return value or {@code null} for none
    */
@@ -630,7 +638,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the options to copy, print, or download this file, should be disabled for readers and
+   * Whether the options to copy, print, or download this file should be disabled for readers and
    * commenters.
    * @param copyRequiresWriterPermission copyRequiresWriterPermission or {@code null} for none
    */
@@ -766,7 +774,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The color for a folder or a shortcut to a folder as an RGB hex string. The supported colors are
-   * published in the `folderColorPalette` field of the About resource. If an unsupported color is
+   * published in the `folderColorPalette` field of the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource. If an unsupported color is
    * specified, the closest color in the palette is used instead.
    * @return value or {@code null} for none
    */
@@ -776,7 +785,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The color for a folder or a shortcut to a folder as an RGB hex string. The supported colors are
-   * published in the `folderColorPalette` field of the About resource. If an unsupported color is
+   * published in the `folderColorPalette` field of the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource. If an unsupported color is
    * specified, the closest color in the palette is used instead.
    * @param folderColorRgb folderColorRgb or {@code null} for none
    */
@@ -788,8 +798,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The full file extension extracted from the `name` field. May contain multiple
    * concatenated extensions, such as "tar.gz". This is only available for files with binary content
-   * in Google Drive. This is automatically updated when the `name` field changes, however it is not
-   * cleared if the new name does not contain a valid extension.
+   * in Google Drive. This is automatically updated when the `name` field changes, however it's not
+   * cleared if the new name doesn't contain a valid extension.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullFileExtension() {
@@ -799,8 +809,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The full file extension extracted from the `name` field. May contain multiple
    * concatenated extensions, such as "tar.gz". This is only available for files with binary content
-   * in Google Drive. This is automatically updated when the `name` field changes, however it is not
-   * cleared if the new name does not contain a valid extension.
+   * in Google Drive. This is automatically updated when the `name` field changes, however it's not
+   * cleared if the new name doesn't contain a valid extension.
    * @param fullFileExtension fullFileExtension or {@code null} for none
    */
   public File setFullFileExtension(java.lang.String fullFileExtension) {
@@ -828,7 +838,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this file has a thumbnail. This does not indicate whether the requesting
+   * Output only. Whether this file has a thumbnail. This doesn't indicate whether the requesting
    * app has access to the thumbnail. To check access, look for the presence of the thumbnailLink
    * field.
    * @return value or {@code null} for none
@@ -838,7 +848,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this file has a thumbnail. This does not indicate whether the requesting
+   * Output only. Whether this file has a thumbnail. This doesn't indicate whether the requesting
    * app has access to the thumbnail. To check access, look for the presence of the thumbnailLink
    * field.
    * @param hasThumbnail hasThumbnail or {@code null} for none
@@ -1047,7 +1057,8 @@ public final class File extends com.google.api.client.json.GenericJson {
    * The MIME type of the file. Google Drive attempts to automatically detect an appropriate value
    * from uploaded content, if no value is provided. The value cannot be changed unless a new
    * revision is uploaded. If a file is created with a Google Doc MIME type, the uploaded content is
-   * imported, if possible. The supported import formats are published in the About resource.
+   * imported, if possible. The supported import formats are published in the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -1058,7 +1069,8 @@ public final class File extends com.google.api.client.json.GenericJson {
    * The MIME type of the file. Google Drive attempts to automatically detect an appropriate value
    * from uploaded content, if no value is provided. The value cannot be changed unless a new
    * revision is uploaded. If a file is created with a Google Doc MIME type, the uploaded content is
-   * imported, if possible. The supported import formats are published in the About resource.
+   * imported, if possible. The supported import formats are published in the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource.
    * @param mimeType mimeType or {@code null} for none
    */
   public File setMimeType(java.lang.String mimeType) {
@@ -1120,9 +1132,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the file. This is not necessarily unique within a folder. Note that for immutable
-   * items such as the top level folders of shared drives, My Drive root folder, and Application
-   * Data folder the name is constant.
+   * The name of the file. This isn't necessarily unique within a folder. Note that for immutable
+   * items such as the top-level folders of shared drives, the My Drive root folder, and the
+   * Application Data folder, the name is constant.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -1130,9 +1142,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the file. This is not necessarily unique within a folder. Note that for immutable
-   * items such as the top level folders of shared drives, My Drive root folder, and Application
-   * Data folder the name is constant.
+   * The name of the file. This isn't necessarily unique within a folder. Note that for immutable
+   * items such as the top-level folders of shared drives, the My Drive root folder, and the
+   * Application Data folder, the name is constant.
    * @param name name or {@code null} for none
    */
   public File setName(java.lang.String name) {
@@ -1313,8 +1325,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The SHA1 checksum associated with this file, if available. This field is only
-   * populated for files with content stored in Google Drive; it is not populated for Docs Editors
-   * or shortcut files.
+   * populated for files with content stored in Google Drive; it's not populated for Docs Editors or
+   * shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.String getSha1Checksum() {
@@ -1323,8 +1335,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The SHA1 checksum associated with this file, if available. This field is only
-   * populated for files with content stored in Google Drive; it is not populated for Docs Editors
-   * or shortcut files.
+   * populated for files with content stored in Google Drive; it's not populated for Docs Editors or
+   * shortcut files.
    * @param sha1Checksum sha1Checksum or {@code null} for none
    */
   public File setSha1Checksum(java.lang.String sha1Checksum) {
@@ -1334,8 +1346,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The SHA256 checksum associated with this file, if available. This field is only
-   * populated for files with content stored in Google Drive; it is not populated for Docs Editors
-   * or shortcut files.
+   * populated for files with content stored in Google Drive; it's not populated for Docs Editors or
+   * shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.String getSha256Checksum() {
@@ -1344,8 +1356,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The SHA256 checksum associated with this file, if available. This field is only
-   * populated for files with content stored in Google Drive; it is not populated for Docs Editors
-   * or shortcut files.
+   * populated for files with content stored in Google Drive; it's not populated for Docs Editors or
+   * shortcut files.
    * @param sha256Checksum sha256Checksum or {@code null} for none
    */
   public File setSha256Checksum(java.lang.String sha256Checksum) {
@@ -1424,8 +1436,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Size in bytes of blobs and first party editor files. Won't be populated for files
-   * that have no size, like shortcuts and folders.
+   * Output only. Size in bytes of blobs and Google Workspace editor files. Won't be populated for
+   * files that have no size, like shortcuts and folders.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSize() {
@@ -1433,8 +1445,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Size in bytes of blobs and first party editor files. Won't be populated for files
-   * that have no size, like shortcuts and folders.
+   * Output only. Size in bytes of blobs and Google Workspace editor files. Won't be populated for
+   * files that have no size, like shortcuts and folders.
    * @param size size or {@code null} for none
    */
   public File setSize(java.lang.Long size) {
@@ -1444,7 +1456,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The list of spaces which contain the file. The currently supported values are
-   * 'drive', 'appDataFolder' and 'photos'.
+   * `drive`, `appDataFolder`, and `photos`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSpaces() {
@@ -1453,7 +1465,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The list of spaces which contain the file. The currently supported values are
-   * 'drive', 'appDataFolder' and 'photos'.
+   * `drive`, `appDataFolder`, and `photos`.
    * @param spaces spaces or {@code null} for none
    */
   public File setSpaces(java.util.List<java.lang.String> spaces) {
@@ -1498,9 +1510,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   /**
    * Output only. A short-lived link to the file's thumbnail, if available. Typically lasts on the
    * order of hours. Not intended for direct usage on web applications due to [Cross-Origin Resource
-   * Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies, consider
+   * Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies. Consider
    * using a proxy server. Only populated when the requesting app can access the file's content. If
-   * the file isn't shared publicly, the URL returned in `Files.thumbnailLink` must be fetched using
+   * the file isn't shared publicly, the URL returned in `files.thumbnailLink` must be fetched using
    * a credentialed request.
    * @return value or {@code null} for none
    */
@@ -1511,9 +1523,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   /**
    * Output only. A short-lived link to the file's thumbnail, if available. Typically lasts on the
    * order of hours. Not intended for direct usage on web applications due to [Cross-Origin Resource
-   * Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies, consider
+   * Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies. Consider
    * using a proxy server. Only populated when the requesting app can access the file's content. If
-   * the file isn't shared publicly, the URL returned in `Files.thumbnailLink` must be fetched using
+   * the file isn't shared publicly, the URL returned in `files.thumbnailLink` must be fetched using
    * a credentialed request.
    * @param thumbnailLink thumbnailLink or {@code null} for none
    */
@@ -1752,7 +1764,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Capabilities the current user has on this file. Each capability corresponds to a
-   * fine-grained action that a user may take.
+   * fine-grained action that a user may take. For more information, see [Understand file
+   * capabilities](https://developers.google.com/workspace/drive/api/guides/manage-
+   * sharing#capabilities).
    */
   public static final class Capabilities extends com.google.api.client.json.GenericJson {
 
@@ -1765,8 +1779,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canAcceptOwnership;
 
     /**
-     * Output only. Whether the current user can add children to this folder. This is always false
-     * when the item is not a folder.
+     * Output only. Whether the current user can add children to this folder. This is always `false`
+     * when the item isn't a folder.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1774,7 +1788,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can add a folder from another drive (different shared
-     * drive or My Drive) to this folder. This is false when the item is not a folder. Only populated
+     * drive or My Drive) to this folder. This is `false` when the item isn't a folder. Only populated
      * for items in shared drives.
      * The value may be {@code null}.
      */
@@ -1806,8 +1820,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeItemDownloadRestriction;
 
     /**
-     * Output only. Whether the current user can change the securityUpdateEnabled field on link share
-     * metadata.
+     * Output only. Whether the current user can change the `securityUpdateEnabled` field on link
+     * share metadata.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1829,8 +1843,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can copy this file. For an item in a shared drive,
-     * whether the current user can copy non-folder descendants of this item, or this item itself if
-     * it is not a folder.
+     * whether the current user can copy non-folder descendants of this item, or this item if it's not
+     * a folder.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1844,8 +1858,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canDelete;
 
     /**
-     * Output only. Whether the current user can delete children of this folder. This is false when
-     * the item is not a folder. Only populated for items in shared drives.
+     * Output only. Whether the current user can delete children of this folder. This is `false` when
+     * the item isn't a folder. Only populated for items in shared drives.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1883,7 +1897,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can list the children of this folder. This is always
-     * false when the item is not a folder.
+     * `false` when the item isn't a folder.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1898,7 +1912,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Deprecated: Output only. Use one of `canModifyEditorContentRestriction`,
-     * `canModifyOwnerContentRestriction` or `canRemoveContentRestriction`.
+     * `canModifyOwnerContentRestriction`, or `canRemoveContentRestriction`.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1929,7 +1943,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can move children of this folder outside of the shared
-     * drive. This is false when the item is not a folder. Only populated for items in shared drives.
+     * drive. This is `false` when the item isn't a folder. Only populated for items in shared drives.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1944,7 +1958,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can move children of this folder within this drive. This
-     * is false when the item is not a folder. Note that a request to move the child may still fail
+     * is `false` when the item isn't a folder. Note that a request to move the child may still fail
      * depending on the current user's access to the child and to the destination folder.
      * The value may be {@code null}.
      */
@@ -1968,7 +1982,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     /**
      * Output only. Whether the current user can move this item outside of this drive by changing its
      * parent. Note that a request to change the parent of the item may still fail depending on the
-     * new parent that is being added.
+     * new parent that's being added.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1983,7 +1997,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can move this item within this drive. Note that a request
-     * to change the parent of the item may still fail depending on the new parent that is being added
+     * to change the parent of the item may still fail depending on the new parent that's being added
      * and the parent that is being removed.
      * The value may be {@code null}.
      */
@@ -2021,8 +2035,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can read the revisions resource of this file. For a
-     * shared drive item, whether revisions of non-folder descendants of this item, or this item
-     * itself if it is not a folder, can be read.
+     * shared drive item, whether revisions of non-folder descendants of this item, or this item if
+     * it's not a folder, can be read.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2037,15 +2051,15 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can remove children from this folder. This is always
-     * false when the item is not a folder. For a folder in a shared drive, use `canDeleteChildren` or
-     * `canTrashChildren` instead.
+     * `false` when the item isn't a folder. For a folder in a shared drive, use `canDeleteChildren`
+     * or `canTrashChildren` instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canRemoveChildren;
 
     /**
-     * Output only. Whether there is a content restriction on the file that can be removed by the
+     * Output only. Whether there's a content restriction on the file that can be removed by the
      * current user.
      * The value may be {@code null}.
      */
@@ -2082,8 +2096,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canTrash;
 
     /**
-     * Output only. Whether the current user can trash children of this folder. This is false when the
-     * item is not a folder. Only populated for items in shared drives.
+     * Output only. Whether the current user can trash children of this folder. This is `false` when
+     * the item isn't a folder. Only populated for items in shared drives.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2116,8 +2130,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can add children to this folder. This is always false
-     * when the item is not a folder.
+     * Output only. Whether the current user can add children to this folder. This is always `false`
+     * when the item isn't a folder.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanAddChildren() {
@@ -2125,8 +2139,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can add children to this folder. This is always false
-     * when the item is not a folder.
+     * Output only. Whether the current user can add children to this folder. This is always `false`
+     * when the item isn't a folder.
      * @param canAddChildren canAddChildren or {@code null} for none
      */
     public Capabilities setCanAddChildren(java.lang.Boolean canAddChildren) {
@@ -2136,7 +2150,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can add a folder from another drive (different shared
-     * drive or My Drive) to this folder. This is false when the item is not a folder. Only populated
+     * drive or My Drive) to this folder. This is `false` when the item isn't a folder. Only populated
      * for items in shared drives.
      * @return value or {@code null} for none
      */
@@ -2146,7 +2160,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can add a folder from another drive (different shared
-     * drive or My Drive) to this folder. This is false when the item is not a folder. Only populated
+     * drive or My Drive) to this folder. This is `false` when the item isn't a folder. Only populated
      * for items in shared drives.
      * @param canAddFolderFromAnotherDrive canAddFolderFromAnotherDrive or {@code null} for none
      */
@@ -2213,8 +2227,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can change the securityUpdateEnabled field on link share
-     * metadata.
+     * Output only. Whether the current user can change the `securityUpdateEnabled` field on link
+     * share metadata.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeSecurityUpdateEnabled() {
@@ -2222,8 +2236,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can change the securityUpdateEnabled field on link share
-     * metadata.
+     * Output only. Whether the current user can change the `securityUpdateEnabled` field on link
+     * share metadata.
      * @param canChangeSecurityUpdateEnabled canChangeSecurityUpdateEnabled or {@code null} for none
      */
     public Capabilities setCanChangeSecurityUpdateEnabled(java.lang.Boolean canChangeSecurityUpdateEnabled) {
@@ -2267,8 +2281,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can copy this file. For an item in a shared drive,
-     * whether the current user can copy non-folder descendants of this item, or this item itself if
-     * it is not a folder.
+     * whether the current user can copy non-folder descendants of this item, or this item if it's not
+     * a folder.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanCopy() {
@@ -2277,8 +2291,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can copy this file. For an item in a shared drive,
-     * whether the current user can copy non-folder descendants of this item, or this item itself if
-     * it is not a folder.
+     * whether the current user can copy non-folder descendants of this item, or this item if it's not
+     * a folder.
      * @param canCopy canCopy or {@code null} for none
      */
     public Capabilities setCanCopy(java.lang.Boolean canCopy) {
@@ -2304,8 +2318,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can delete children of this folder. This is false when
-     * the item is not a folder. Only populated for items in shared drives.
+     * Output only. Whether the current user can delete children of this folder. This is `false` when
+     * the item isn't a folder. Only populated for items in shared drives.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanDeleteChildren() {
@@ -2313,8 +2327,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can delete children of this folder. This is false when
-     * the item is not a folder. Only populated for items in shared drives.
+     * Output only. Whether the current user can delete children of this folder. This is `false` when
+     * the item isn't a folder. Only populated for items in shared drives.
      * @param canDeleteChildren canDeleteChildren or {@code null} for none
      */
     public Capabilities setCanDeleteChildren(java.lang.Boolean canDeleteChildren) {
@@ -2396,7 +2410,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can list the children of this folder. This is always
-     * false when the item is not a folder.
+     * `false` when the item isn't a folder.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanListChildren() {
@@ -2405,7 +2419,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can list the children of this folder. This is always
-     * false when the item is not a folder.
+     * `false` when the item isn't a folder.
      * @param canListChildren canListChildren or {@code null} for none
      */
     public Capabilities setCanListChildren(java.lang.Boolean canListChildren) {
@@ -2432,7 +2446,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Deprecated: Output only. Use one of `canModifyEditorContentRestriction`,
-     * `canModifyOwnerContentRestriction` or `canRemoveContentRestriction`.
+     * `canModifyOwnerContentRestriction`, or `canRemoveContentRestriction`.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanModifyContentRestriction() {
@@ -2441,7 +2455,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Deprecated: Output only. Use one of `canModifyEditorContentRestriction`,
-     * `canModifyOwnerContentRestriction` or `canRemoveContentRestriction`.
+     * `canModifyOwnerContentRestriction`, or `canRemoveContentRestriction`.
      * @param canModifyContentRestriction canModifyContentRestriction or {@code null} for none
      */
     public Capabilities setCanModifyContentRestriction(java.lang.Boolean canModifyContentRestriction) {
@@ -2506,7 +2520,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can move children of this folder outside of the shared
-     * drive. This is false when the item is not a folder. Only populated for items in shared drives.
+     * drive. This is `false` when the item isn't a folder. Only populated for items in shared drives.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveChildrenOutOfDrive() {
@@ -2515,7 +2529,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can move children of this folder outside of the shared
-     * drive. This is false when the item is not a folder. Only populated for items in shared drives.
+     * drive. This is `false` when the item isn't a folder. Only populated for items in shared drives.
      * @param canMoveChildrenOutOfDrive canMoveChildrenOutOfDrive or {@code null} for none
      */
     public Capabilities setCanMoveChildrenOutOfDrive(java.lang.Boolean canMoveChildrenOutOfDrive) {
@@ -2542,7 +2556,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can move children of this folder within this drive. This
-     * is false when the item is not a folder. Note that a request to move the child may still fail
+     * is `false` when the item isn't a folder. Note that a request to move the child may still fail
      * depending on the current user's access to the child and to the destination folder.
      * @return value or {@code null} for none
      */
@@ -2552,7 +2566,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can move children of this folder within this drive. This
-     * is false when the item is not a folder. Note that a request to move the child may still fail
+     * is `false` when the item isn't a folder. Note that a request to move the child may still fail
      * depending on the current user's access to the child and to the destination folder.
      * @param canMoveChildrenWithinDrive canMoveChildrenWithinDrive or {@code null} for none
      */
@@ -2598,7 +2612,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     /**
      * Output only. Whether the current user can move this item outside of this drive by changing its
      * parent. Note that a request to change the parent of the item may still fail depending on the
-     * new parent that is being added.
+     * new parent that's being added.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveItemOutOfDrive() {
@@ -2608,7 +2622,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     /**
      * Output only. Whether the current user can move this item outside of this drive by changing its
      * parent. Note that a request to change the parent of the item may still fail depending on the
-     * new parent that is being added.
+     * new parent that's being added.
      * @param canMoveItemOutOfDrive canMoveItemOutOfDrive or {@code null} for none
      */
     public Capabilities setCanMoveItemOutOfDrive(java.lang.Boolean canMoveItemOutOfDrive) {
@@ -2635,7 +2649,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can move this item within this drive. Note that a request
-     * to change the parent of the item may still fail depending on the new parent that is being added
+     * to change the parent of the item may still fail depending on the new parent that's being added
      * and the parent that is being removed.
      * @return value or {@code null} for none
      */
@@ -2645,7 +2659,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can move this item within this drive. Note that a request
-     * to change the parent of the item may still fail depending on the new parent that is being added
+     * to change the parent of the item may still fail depending on the new parent that's being added
      * and the parent that is being removed.
      * @param canMoveItemWithinDrive canMoveItemWithinDrive or {@code null} for none
      */
@@ -2726,8 +2740,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can read the revisions resource of this file. For a
-     * shared drive item, whether revisions of non-folder descendants of this item, or this item
-     * itself if it is not a folder, can be read.
+     * shared drive item, whether revisions of non-folder descendants of this item, or this item if
+     * it's not a folder, can be read.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanReadRevisions() {
@@ -2736,8 +2750,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can read the revisions resource of this file. For a
-     * shared drive item, whether revisions of non-folder descendants of this item, or this item
-     * itself if it is not a folder, can be read.
+     * shared drive item, whether revisions of non-folder descendants of this item, or this item if
+     * it's not a folder, can be read.
      * @param canReadRevisions canReadRevisions or {@code null} for none
      */
     public Capabilities setCanReadRevisions(java.lang.Boolean canReadRevisions) {
@@ -2764,8 +2778,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can remove children from this folder. This is always
-     * false when the item is not a folder. For a folder in a shared drive, use `canDeleteChildren` or
-     * `canTrashChildren` instead.
+     * `false` when the item isn't a folder. For a folder in a shared drive, use `canDeleteChildren`
+     * or `canTrashChildren` instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanRemoveChildren() {
@@ -2774,8 +2788,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. Whether the current user can remove children from this folder. This is always
-     * false when the item is not a folder. For a folder in a shared drive, use `canDeleteChildren` or
-     * `canTrashChildren` instead.
+     * `false` when the item isn't a folder. For a folder in a shared drive, use `canDeleteChildren`
+     * or `canTrashChildren` instead.
      * @param canRemoveChildren canRemoveChildren or {@code null} for none
      */
     public Capabilities setCanRemoveChildren(java.lang.Boolean canRemoveChildren) {
@@ -2784,7 +2798,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether there is a content restriction on the file that can be removed by the
+     * Output only. Whether there's a content restriction on the file that can be removed by the
      * current user.
      * @return value or {@code null} for none
      */
@@ -2793,7 +2807,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether there is a content restriction on the file that can be removed by the
+     * Output only. Whether there's a content restriction on the file that can be removed by the
      * current user.
      * @param canRemoveContentRestriction canRemoveContentRestriction or {@code null} for none
      */
@@ -2873,8 +2887,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can trash children of this folder. This is false when the
-     * item is not a folder. Only populated for items in shared drives.
+     * Output only. Whether the current user can trash children of this folder. This is `false` when
+     * the item isn't a folder. Only populated for items in shared drives.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanTrashChildren() {
@@ -2882,8 +2896,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can trash children of this folder. This is false when the
-     * item is not a folder. Only populated for items in shared drives.
+     * Output only. Whether the current user can trash children of this folder. This is `false` when
+     * the item isn't a folder. Only populated for items in shared drives.
      * @param canTrashChildren canTrashChildren or {@code null} for none
      */
     public Capabilities setCanTrashChildren(java.lang.Boolean canTrashChildren) {
@@ -2927,8 +2941,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   public static final class ContentHints extends com.google.api.client.json.GenericJson {
 
     /**
-     * Text to be indexed for the file to improve fullText queries. This is limited to 128KB in length
-     * and may contain HTML elements.
+     * Text to be indexed for the file to improve fullText queries. This is limited to 128 KB in
+     * length and may contain HTML elements.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2943,8 +2957,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     private Thumbnail thumbnail;
 
     /**
-     * Text to be indexed for the file to improve fullText queries. This is limited to 128KB in length
-     * and may contain HTML elements.
+     * Text to be indexed for the file to improve fullText queries. This is limited to 128 KB in
+     * length and may contain HTML elements.
      * @return value or {@code null} for none
      */
     public java.lang.String getIndexableText() {
@@ -2952,8 +2966,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Text to be indexed for the file to improve fullText queries. This is limited to 128KB in length
-     * and may contain HTML elements.
+     * Text to be indexed for the file to improve fullText queries. This is limited to 128 KB in
+     * length and may contain HTML elements.
      * @param indexableText indexableText or {@code null} for none
      */
     public ContentHints setIndexableText(java.lang.String indexableText) {
@@ -2997,7 +3011,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     public static final class Thumbnail extends com.google.api.client.json.GenericJson {
 
       /**
-       * The thumbnail data encoded with URL-safe Base64 (RFC 4648 section 5).
+       * The thumbnail data encoded with URL-safe Base64 ([RFC 4648 section
+       * 5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)).
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -3011,7 +3026,8 @@ public final class File extends com.google.api.client.json.GenericJson {
       private java.lang.String mimeType;
 
       /**
-       * The thumbnail data encoded with URL-safe Base64 (RFC 4648 section 5).
+       * The thumbnail data encoded with URL-safe Base64 ([RFC 4648 section
+       * 5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)).
        * @see #decodeImage()
        * @return value or {@code null} for none
        */
@@ -3020,7 +3036,8 @@ public final class File extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The thumbnail data encoded with URL-safe Base64 (RFC 4648 section 5).
+       * The thumbnail data encoded with URL-safe Base64 ([RFC 4648 section
+       * 5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)).
        * @see #getImage()
        * @return Base64 decoded value or {@code null} for none
        *
@@ -3031,7 +3048,8 @@ public final class File extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The thumbnail data encoded with URL-safe Base64 (RFC 4648 section 5).
+       * The thumbnail data encoded with URL-safe Base64 ([RFC 4648 section
+       * 5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)).
        * @see #encodeImage()
        * @param image image or {@code null} for none
        */
@@ -3041,7 +3059,8 @@ public final class File extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The thumbnail data encoded with URL-safe Base64 (RFC 4648 section 5).
+       * The thumbnail data encoded with URL-safe Base64 ([RFC 4648 section
+       * 5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)).
        * @see #setImage()
        *
        * <p>
@@ -3831,7 +3850,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.String targetMimeType;
 
     /**
-     * Output only. The ResourceKey for the target file.
+     * Output only. The `resourceKey` for the target file.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -3874,7 +3893,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. The ResourceKey for the target file.
+     * Output only. The `resourceKey` for the target file.
      * @return value or {@code null} for none
      */
     public java.lang.String getTargetResourceKey() {
@@ -3882,7 +3901,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. The ResourceKey for the target file.
+     * Output only. The `resourceKey` for the target file.
      * @param targetResourceKey targetResourceKey or {@code null} for none
      */
     public ShortcutDetails setTargetResourceKey(java.lang.String targetResourceKey) {

@@ -31,7 +31,7 @@ package com.google.api.services.drive.model;
 public final class ModifyLabelsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always drive#modifyLabelsRequest.
+   * This is always `"drive#modifyLabelsRequest"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class ModifyLabelsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * This is always drive#modifyLabelsRequest.
+   * This is always `"drive#modifyLabelsRequest"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -59,7 +59,7 @@ public final class ModifyLabelsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * This is always drive#modifyLabelsRequest.
+   * This is always `"drive#modifyLabelsRequest"`.
    * @param kind kind or {@code null} for none
    */
   public ModifyLabelsRequest setKind(java.lang.String kind) {

@@ -64,9 +64,8 @@ public final class SocketAddress extends com.google.api.client.json.GenericJson 
    * Filepath that specifies the Linux network namespace this socket will be created in (see ``man 7
    * network_namespaces``). If this field is set, Envoy will create the socket in the specified
    * network namespace. .. note:: Setting this parameter requires Envoy to run with the
-   * ``CAP_NET_ADMIN`` capability. .. note:: Currently only used for Listener sockets. ..
-   * attention:: Network namespaces are only configurable on Linux. Otherwise, this field has no
-   * effect.
+   * ``CAP_NET_ADMIN`` capability. .. attention:: Network namespaces are only configurable on Linux.
+   * Otherwise, this field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,9 +168,8 @@ public final class SocketAddress extends com.google.api.client.json.GenericJson 
    * Filepath that specifies the Linux network namespace this socket will be created in (see ``man 7
    * network_namespaces``). If this field is set, Envoy will create the socket in the specified
    * network namespace. .. note:: Setting this parameter requires Envoy to run with the
-   * ``CAP_NET_ADMIN`` capability. .. note:: Currently only used for Listener sockets. ..
-   * attention:: Network namespaces are only configurable on Linux. Otherwise, this field has no
-   * effect.
+   * ``CAP_NET_ADMIN`` capability. .. attention:: Network namespaces are only configurable on Linux.
+   * Otherwise, this field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkNamespaceFilepath() {
@@ -182,9 +180,8 @@ public final class SocketAddress extends com.google.api.client.json.GenericJson 
    * Filepath that specifies the Linux network namespace this socket will be created in (see ``man 7
    * network_namespaces``). If this field is set, Envoy will create the socket in the specified
    * network namespace. .. note:: Setting this parameter requires Envoy to run with the
-   * ``CAP_NET_ADMIN`` capability. .. note:: Currently only used for Listener sockets. ..
-   * attention:: Network namespaces are only configurable on Linux. Otherwise, this field has no
-   * effect.
+   * ``CAP_NET_ADMIN`` capability. .. attention:: Network namespaces are only configurable on Linux.
+   * Otherwise, this field has no effect.
    * @param networkNamespaceFilepath networkNamespaceFilepath or {@code null} for none
    */
   public SocketAddress setNetworkNamespaceFilepath(java.lang.String networkNamespaceFilepath) {

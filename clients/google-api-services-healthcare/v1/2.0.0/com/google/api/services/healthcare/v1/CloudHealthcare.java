@@ -445,22 +445,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -22972,11 +22972,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * identifier search criteria matches a large number (i.e. more than 2,000) of resources. For a
              * search query that will match a large number of resources, you can avoiding using the special
              * synchronous index by including an additional `_sort` parameter in your query. Use
-             * `_sort=-_lastUpdated` if you want to keep the default sorting order. Note: The special
-             * synchronous identifier index are currently disabled for DocumentReference and DocumentManifest
-             * searches. For samples and detailed information, see [Searching for FHIR
-             * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-             * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+             * `_sort=-_lastUpdated` if you want to keep the default sorting order. For samples and detailed
+             * information, see [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-
+             * tos/fhir-search) and [Advanced FHIR search
+             * features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
              *
              * Create a request for the method "fhir.search".
              *
@@ -23050,11 +23049,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * large number (i.e. more than 2,000) of resources. For a search query that will match a large
                * number of resources, you can avoiding using the special synchronous index by including an
                * additional `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the
-               * default sorting order. Note: The special synchronous identifier index are currently disabled
-               * for DocumentReference and DocumentManifest searches. For samples and detailed information, see
-               * [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search)
-               * and [Advanced FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-
-               * advanced-search).
+               * default sorting order. For samples and detailed information, see [Searching for FHIR
+               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
+               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -23207,11 +23204,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * identifier search criteria matches a large number (i.e. more than 2,000) of resources. For a
              * search query that will match a large number of resources, you can avoiding using the special
              * synchronous index by including an additional `_sort` parameter in your query. Use
-             * `_sort=-_lastUpdated` if you want to keep the default sorting order. Note: The special
-             * synchronous identifier index are currently disabled for DocumentReference and DocumentManifest
-             * searches. For samples and detailed information, see [Searching for FHIR
-             * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-             * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+             * `_sort=-_lastUpdated` if you want to keep the default sorting order. For samples and detailed
+             * information, see [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-
+             * tos/fhir-search) and [Advanced FHIR search
+             * features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
              *
              * Create a request for the method "fhir.search-type".
              *
@@ -23290,11 +23286,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * large number (i.e. more than 2,000) of resources. For a search query that will match a large
                * number of resources, you can avoiding using the special synchronous index by including an
                * additional `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the
-               * default sorting order. Note: The special synchronous identifier index are currently disabled
-               * for DocumentReference and DocumentManifest searches. For samples and detailed information, see
-               * [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search)
-               * and [Advanced FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-
-               * advanced-search).
+               * default sorting order. For samples and detailed information, see [Searching for FHIR
+               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
+               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search-type".
                *

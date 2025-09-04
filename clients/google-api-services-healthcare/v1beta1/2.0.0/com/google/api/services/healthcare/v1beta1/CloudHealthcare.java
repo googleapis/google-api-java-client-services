@@ -445,22 +445,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -11657,6 +11657,192 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (TestIamPermissions) super.set(parameterName, value);
             }
           }
+          /**
+           * UpdateInstances updates DICOM instances associated with study instance unique identifiers (SUID).
+           *
+           * Create a request for the method "dicomStores.updateInstances".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link UpdateInstances#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the DICOM store that is being accessed. For example,
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+           *        ore_id}`.
+           * @param dicomWebPath Required. The path of the UpdateInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+           *        Note that the `study_uid` is optional.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+           * @return the request
+           */
+          public UpdateInstances updateInstances(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+            UpdateInstances result = new UpdateInstances(parent, dicomWebPath, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpdateInstances extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/dicomWeb/{+dicomWebPath}";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+            private final java.util.regex.Pattern DICOM_WEB_PATH_PATTERN =
+                java.util.regex.Pattern.compile("^studies$");
+
+            /**
+             * UpdateInstances updates DICOM instances associated with study instance unique identifiers
+             * (SUID).
+             *
+             * Create a request for the method "dicomStores.updateInstances".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link UpdateInstances#execute()} method to invoke the remote
+             * operation. <p> {@link UpdateInstances#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+           *        ore_id}`.
+             * @param dicomWebPath Required. The path of the UpdateInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+           *        Note that the `study_uid` is optional.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+             * @since 1.13
+             */
+            protected UpdateInstances(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+              super(CloudHealthcare.this, "PUT", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+              this.dicomWebPath = com.google.api.client.util.Preconditions.checkNotNull(dicomWebPath, "Required parameter dicomWebPath must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                    "Parameter dicomWebPath must conform to the pattern " +
+                    "^studies$");
+              }
+            }
+
+            @Override
+            public UpdateInstances set$Xgafv(java.lang.String $Xgafv) {
+              return (UpdateInstances) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpdateInstances setAccessToken(java.lang.String accessToken) {
+              return (UpdateInstances) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpdateInstances setAlt(java.lang.String alt) {
+              return (UpdateInstances) super.setAlt(alt);
+            }
+
+            @Override
+            public UpdateInstances setCallback(java.lang.String callback) {
+              return (UpdateInstances) super.setCallback(callback);
+            }
+
+            @Override
+            public UpdateInstances setFields(java.lang.String fields) {
+              return (UpdateInstances) super.setFields(fields);
+            }
+
+            @Override
+            public UpdateInstances setKey(java.lang.String key) {
+              return (UpdateInstances) super.setKey(key);
+            }
+
+            @Override
+            public UpdateInstances setOauthToken(java.lang.String oauthToken) {
+              return (UpdateInstances) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpdateInstances setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpdateInstances) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpdateInstances setQuotaUser(java.lang.String quotaUser) {
+              return (UpdateInstances) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpdateInstances setUploadType(java.lang.String uploadType) {
+              return (UpdateInstances) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpdateInstances setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpdateInstances) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the DICOM store that is being accessed. For example,
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the DICOM store that is being accessed. For example, `projects/
+             * {project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
+             * d}`.
+             */
+            public UpdateInstances setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The path of the UpdateInstances DICOMweb request. For example,
+             * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dicomWebPath;
+
+            /** Required. The path of the UpdateInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+           Note that the `study_uid` is optional.
+             */
+            public java.lang.String getDicomWebPath() {
+              return dicomWebPath;
+            }
+
+            /**
+             * Required. The path of the UpdateInstances DICOMweb request. For example,
+             * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
+             */
+            public UpdateInstances setDicomWebPath(java.lang.String dicomWebPath) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                    "Parameter dicomWebPath must conform to the pattern " +
+                    "^studies$");
+              }
+              this.dicomWebPath = dicomWebPath;
+              return this;
+            }
+
+            @Override
+            public UpdateInstances set(String parameterName, Object value) {
+              return (UpdateInstances) super.set(parameterName, value);
+            }
+          }
 
           /**
            * An accessor for creating requests from the DicomWeb collection.
@@ -13581,6 +13767,378 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (StoreInstances) super.set(parameterName, value);
               }
             }
+            /**
+             * UpdateInstances updates DICOM instances associated with study instance unique identifiers (SUID).
+             *
+             * Create a request for the method "studies.updateInstances".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link UpdateInstances#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The name of the DICOM store that is being accessed. For example,
+             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+             *        ore_id}`.
+             * @param dicomWebPath Required. The path of the UpdateInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+             *        Note that the `study_uid` is optional.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+             * @return the request
+             */
+            public UpdateInstances updateInstances(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+              UpdateInstances result = new UpdateInstances(parent, dicomWebPath, content);
+              initialize(result);
+              return result;
+            }
+
+            public class UpdateInstances extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/dicomWeb/{+dicomWebPath}";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+              private final java.util.regex.Pattern DICOM_WEB_PATH_PATTERN =
+                  java.util.regex.Pattern.compile("^studies/[^/]+$");
+
+              /**
+               * UpdateInstances updates DICOM instances associated with study instance unique identifiers
+               * (SUID).
+               *
+               * Create a request for the method "studies.updateInstances".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link UpdateInstances#execute()} method to invoke the remote
+               * operation. <p> {@link UpdateInstances#initialize(com.google.api.client.googleapis.services.Abst
+               * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param parent Required. The name of the DICOM store that is being accessed. For example,
+             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+             *        ore_id}`.
+               * @param dicomWebPath Required. The path of the UpdateInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+             *        Note that the `study_uid` is optional.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+               * @since 1.13
+               */
+              protected UpdateInstances(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+                super(CloudHealthcare.this, "PUT", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                }
+                this.dicomWebPath = com.google.api.client.util.Preconditions.checkNotNull(dicomWebPath, "Required parameter dicomWebPath must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                      "Parameter dicomWebPath must conform to the pattern " +
+                      "^studies/[^/]+$");
+                }
+              }
+
+              @Override
+              public UpdateInstances set$Xgafv(java.lang.String $Xgafv) {
+                return (UpdateInstances) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public UpdateInstances setAccessToken(java.lang.String accessToken) {
+                return (UpdateInstances) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public UpdateInstances setAlt(java.lang.String alt) {
+                return (UpdateInstances) super.setAlt(alt);
+              }
+
+              @Override
+              public UpdateInstances setCallback(java.lang.String callback) {
+                return (UpdateInstances) super.setCallback(callback);
+              }
+
+              @Override
+              public UpdateInstances setFields(java.lang.String fields) {
+                return (UpdateInstances) super.setFields(fields);
+              }
+
+              @Override
+              public UpdateInstances setKey(java.lang.String key) {
+                return (UpdateInstances) super.setKey(key);
+              }
+
+              @Override
+              public UpdateInstances setOauthToken(java.lang.String oauthToken) {
+                return (UpdateInstances) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public UpdateInstances setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (UpdateInstances) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public UpdateInstances setQuotaUser(java.lang.String quotaUser) {
+                return (UpdateInstances) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public UpdateInstances setUploadType(java.lang.String uploadType) {
+                return (UpdateInstances) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public UpdateInstances setUploadProtocol(java.lang.String uploadProtocol) {
+                return (UpdateInstances) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the DICOM store that is being accessed. For example,
+             `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The name of the DICOM store that is being accessed. For example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`.
+               */
+              public UpdateInstances setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The path of the UpdateInstances DICOMweb request. For example,
+               * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String dicomWebPath;
+
+              /** Required. The path of the UpdateInstances DICOMweb request. For example, `studies/[{study_uid}]`.
+             Note that the `study_uid` is optional.
+               */
+              public java.lang.String getDicomWebPath() {
+                return dicomWebPath;
+              }
+
+              /**
+               * Required. The path of the UpdateInstances DICOMweb request. For example,
+               * `studies/[{study_uid}]`. Note that the `study_uid` is optional.
+               */
+              public UpdateInstances setDicomWebPath(java.lang.String dicomWebPath) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                      "Parameter dicomWebPath must conform to the pattern " +
+                      "^studies/[^/]+$");
+                }
+                this.dicomWebPath = dicomWebPath;
+                return this;
+              }
+
+              @Override
+              public UpdateInstances set(String parameterName, Object value) {
+                return (UpdateInstances) super.set(parameterName, value);
+              }
+            }
+            /**
+             * UpdateStudyMetadata modifies the metadata of all instances in the given study. The request body
+             * must contain a JSON Patch document specifying the updates to be applied to the metadata of all
+             * instances within the study.
+             *
+             * Create a request for the method "studies.updateMetadata".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link UpdateMetadata#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The name of the DICOM store that is being accessed (for example,
+             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+             *        ore_id}`).
+             * @param dicomWebPath Required. The path of the UpdateStudyMetadata request (for example, `studies/{study_uid}`).
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+             * @return the request
+             */
+            public UpdateMetadata updateMetadata(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+              UpdateMetadata result = new UpdateMetadata(parent, dicomWebPath, content);
+              initialize(result);
+              return result;
+            }
+
+            public class UpdateMetadata extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/dicomWeb/{+dicomWebPath}/metadata";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+              private final java.util.regex.Pattern DICOM_WEB_PATH_PATTERN =
+                  java.util.regex.Pattern.compile("^studies/[^/]+$");
+
+              /**
+               * UpdateStudyMetadata modifies the metadata of all instances in the given study. The request body
+               * must contain a JSON Patch document specifying the updates to be applied to the metadata of all
+               * instances within the study.
+               *
+               * Create a request for the method "studies.updateMetadata".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link UpdateMetadata#execute()} method to invoke the remote
+               * operation. <p> {@link UpdateMetadata#initialize(com.google.api.client.googleapis.services.Abstr
+               * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param parent Required. The name of the DICOM store that is being accessed (for example,
+             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+             *        ore_id}`).
+               * @param dicomWebPath Required. The path of the UpdateStudyMetadata request (for example, `studies/{study_uid}`).
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+               * @since 1.13
+               */
+              protected UpdateMetadata(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                }
+                this.dicomWebPath = com.google.api.client.util.Preconditions.checkNotNull(dicomWebPath, "Required parameter dicomWebPath must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                      "Parameter dicomWebPath must conform to the pattern " +
+                      "^studies/[^/]+$");
+                }
+              }
+
+              @Override
+              public UpdateMetadata set$Xgafv(java.lang.String $Xgafv) {
+                return (UpdateMetadata) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public UpdateMetadata setAccessToken(java.lang.String accessToken) {
+                return (UpdateMetadata) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public UpdateMetadata setAlt(java.lang.String alt) {
+                return (UpdateMetadata) super.setAlt(alt);
+              }
+
+              @Override
+              public UpdateMetadata setCallback(java.lang.String callback) {
+                return (UpdateMetadata) super.setCallback(callback);
+              }
+
+              @Override
+              public UpdateMetadata setFields(java.lang.String fields) {
+                return (UpdateMetadata) super.setFields(fields);
+              }
+
+              @Override
+              public UpdateMetadata setKey(java.lang.String key) {
+                return (UpdateMetadata) super.setKey(key);
+              }
+
+              @Override
+              public UpdateMetadata setOauthToken(java.lang.String oauthToken) {
+                return (UpdateMetadata) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public UpdateMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (UpdateMetadata) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public UpdateMetadata setQuotaUser(java.lang.String quotaUser) {
+                return (UpdateMetadata) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public UpdateMetadata setUploadType(java.lang.String uploadType) {
+                return (UpdateMetadata) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public UpdateMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+                return (UpdateMetadata) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the DICOM store that is being accessed (for example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the DICOM store that is being accessed (for example, `projects/{project_id}/l
+             ocations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The name of the DICOM store that is being accessed (for example, `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_sto
+               * re_id}`).
+               */
+              public UpdateMetadata setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The path of the UpdateStudyMetadata request (for example,
+               * `studies/{study_uid}`).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String dicomWebPath;
+
+              /** Required. The path of the UpdateStudyMetadata request (for example, `studies/{study_uid}`).
+               */
+              public java.lang.String getDicomWebPath() {
+                return dicomWebPath;
+              }
+
+              /**
+               * Required. The path of the UpdateStudyMetadata request (for example,
+               * `studies/{study_uid}`).
+               */
+              public UpdateMetadata setDicomWebPath(java.lang.String dicomWebPath) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                      "Parameter dicomWebPath must conform to the pattern " +
+                      "^studies/[^/]+$");
+                }
+                this.dicomWebPath = dicomWebPath;
+                return this;
+              }
+
+              @Override
+              public UpdateMetadata set(String parameterName, Object value) {
+                return (UpdateMetadata) super.set(parameterName, value);
+              }
+            }
 
             /**
              * An accessor for creating requests from the Series collection.
@@ -14407,6 +14965,195 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 @Override
                 public SearchForInstances set(String parameterName, Object value) {
                   return (SearchForInstances) super.set(parameterName, value);
+                }
+              }
+              /**
+               * UpdateSeriesMetadata modifies the metadata of all instances in the given series. The request body
+               * must contain a JSON Patch document specifying the updates to be applied to the metadata of all
+               * instances within the series.
+               *
+               * Create a request for the method "series.updateMetadata".
+               *
+               * This request holds the parameters needed by the healthcare server.  After setting any optional
+               * parameters, call the {@link UpdateMetadata#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The name of the DICOM store that is being accessed (for example,
+               *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+               *        ore_id}`).
+               * @param dicomWebPath Required. The path of the UpdateSeriesMetadata request (for example,
+               *        `studies/{study_uid}/series/{series_uid}`).
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+               * @return the request
+               */
+              public UpdateMetadata updateMetadata(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+                UpdateMetadata result = new UpdateMetadata(parent, dicomWebPath, content);
+                initialize(result);
+                return result;
+              }
+
+              public class UpdateMetadata extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+                private static final String REST_PATH = "v1beta1/{+parent}/dicomWeb/{+dicomWebPath}/metadata";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+                private final java.util.regex.Pattern DICOM_WEB_PATH_PATTERN =
+                    java.util.regex.Pattern.compile("^studies/[^/]+/series/[^/]+$");
+
+                /**
+                 * UpdateSeriesMetadata modifies the metadata of all instances in the given series. The request
+                 * body must contain a JSON Patch document specifying the updates to be applied to the metadata of
+                 * all instances within the series.
+                 *
+                 * Create a request for the method "series.updateMetadata".
+                 *
+                 * This request holds the parameters needed by the the healthcare server.  After setting any
+                 * optional parameters, call the {@link UpdateMetadata#execute()} method to invoke the remote
+                 * operation. <p> {@link UpdateMetadata#initialize(com.google.api.client.googleapis.services.Abstr
+                 * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+                 * the constructor. </p>
+                 *
+                 * @param parent Required. The name of the DICOM store that is being accessed (for example,
+               *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+               *        ore_id}`).
+                 * @param dicomWebPath Required. The path of the UpdateSeriesMetadata request (for example,
+               *        `studies/{study_uid}/series/{series_uid}`).
+                 * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+                 * @since 1.13
+                 */
+                protected UpdateMetadata(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+                  super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                  }
+                  this.dicomWebPath = com.google.api.client.util.Preconditions.checkNotNull(dicomWebPath, "Required parameter dicomWebPath must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                        "Parameter dicomWebPath must conform to the pattern " +
+                        "^studies/[^/]+/series/[^/]+$");
+                  }
+                }
+
+                @Override
+                public UpdateMetadata set$Xgafv(java.lang.String $Xgafv) {
+                  return (UpdateMetadata) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public UpdateMetadata setAccessToken(java.lang.String accessToken) {
+                  return (UpdateMetadata) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public UpdateMetadata setAlt(java.lang.String alt) {
+                  return (UpdateMetadata) super.setAlt(alt);
+                }
+
+                @Override
+                public UpdateMetadata setCallback(java.lang.String callback) {
+                  return (UpdateMetadata) super.setCallback(callback);
+                }
+
+                @Override
+                public UpdateMetadata setFields(java.lang.String fields) {
+                  return (UpdateMetadata) super.setFields(fields);
+                }
+
+                @Override
+                public UpdateMetadata setKey(java.lang.String key) {
+                  return (UpdateMetadata) super.setKey(key);
+                }
+
+                @Override
+                public UpdateMetadata setOauthToken(java.lang.String oauthToken) {
+                  return (UpdateMetadata) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public UpdateMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (UpdateMetadata) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public UpdateMetadata setQuotaUser(java.lang.String quotaUser) {
+                  return (UpdateMetadata) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public UpdateMetadata setUploadType(java.lang.String uploadType) {
+                  return (UpdateMetadata) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public UpdateMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (UpdateMetadata) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The name of the DICOM store that is being accessed (for example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`).
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The name of the DICOM store that is being accessed (for example, `projects/{project_id}/l
+               ocations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The name of the DICOM store that is being accessed (for example, `proje
+                 * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom
+                 * _store_id}`).
+                 */
+                public UpdateMetadata setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Required. The path of the UpdateSeriesMetadata request (for example,
+                 * `studies/{study_uid}/series/{series_uid}`).
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String dicomWebPath;
+
+                /** Required. The path of the UpdateSeriesMetadata request (for example,
+               `studies/{study_uid}/series/{series_uid}`).
+                 */
+                public java.lang.String getDicomWebPath() {
+                  return dicomWebPath;
+                }
+
+                /**
+                 * Required. The path of the UpdateSeriesMetadata request (for example,
+                 * `studies/{study_uid}/series/{series_uid}`).
+                 */
+                public UpdateMetadata setDicomWebPath(java.lang.String dicomWebPath) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                        "Parameter dicomWebPath must conform to the pattern " +
+                        "^studies/[^/]+/series/[^/]+$");
+                  }
+                  this.dicomWebPath = dicomWebPath;
+                  return this;
+                }
+
+                @Override
+                public UpdateMetadata set(String parameterName, Object value) {
+                  return (UpdateMetadata) super.set(parameterName, value);
                 }
               }
 
@@ -15268,6 +16015,194 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   @Override
                   public RetrieveRendered set(String parameterName, Object value) {
                     return (RetrieveRendered) super.set(parameterName, value);
+                  }
+                }
+                /**
+                 * UpdateInstanceMetadata modifies the metadata of a single instance. The request body must contain
+                 * a JSON Patch document specifying the updates to be applied to the metadata of the instance.
+                 *
+                 * Create a request for the method "instances.updateMetadata".
+                 *
+                 * This request holds the parameters needed by the healthcare server.  After setting any optional
+                 * parameters, call the {@link UpdateMetadata#execute()} method to invoke the remote operation.
+                 *
+                 * @param parent Required. The name of the DICOM store that is being accessed (for example,
+                 *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+                 *        ore_id}`).
+                 * @param dicomWebPath Required. The path of the UpdateInstanceMetadata request (for example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                 * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+                 * @return the request
+                 */
+                public UpdateMetadata updateMetadata(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+                  UpdateMetadata result = new UpdateMetadata(parent, dicomWebPath, content);
+                  initialize(result);
+                  return result;
+                }
+
+                public class UpdateMetadata extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+                  private static final String REST_PATH = "v1beta1/{+parent}/dicomWeb/{+dicomWebPath}/metadata";
+
+                  private final java.util.regex.Pattern PARENT_PATTERN =
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+                  private final java.util.regex.Pattern DICOM_WEB_PATH_PATTERN =
+                      java.util.regex.Pattern.compile("^studies/[^/]+/series/[^/]+/instances/[^/]+$");
+
+                  /**
+                   * UpdateInstanceMetadata modifies the metadata of a single instance. The request body must
+                   * contain a JSON Patch document specifying the updates to be applied to the metadata of the
+                   * instance.
+                   *
+                   * Create a request for the method "instances.updateMetadata".
+                   *
+                   * This request holds the parameters needed by the the healthcare server.  After setting any
+                   * optional parameters, call the {@link UpdateMetadata#execute()} method to invoke the remote
+                   * operation. <p> {@link UpdateMetadata#initialize(com.google.api.client.googleapis.services.Abstr
+                   * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+                   * the constructor. </p>
+                   *
+                   * @param parent Required. The name of the DICOM store that is being accessed (for example,
+                 *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
+                 *        ore_id}`).
+                   * @param dicomWebPath Required. The path of the UpdateInstanceMetadata request (for example,
+                 *        `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                   * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+                   * @since 1.13
+                   */
+                  protected UpdateMetadata(java.lang.String parent, java.lang.String dicomWebPath, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+                    super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                    this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                    }
+                    this.dicomWebPath = com.google.api.client.util.Preconditions.checkNotNull(dicomWebPath, "Required parameter dicomWebPath must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                          "Parameter dicomWebPath must conform to the pattern " +
+                          "^studies/[^/]+/series/[^/]+/instances/[^/]+$");
+                    }
+                  }
+
+                  @Override
+                  public UpdateMetadata set$Xgafv(java.lang.String $Xgafv) {
+                    return (UpdateMetadata) super.set$Xgafv($Xgafv);
+                  }
+
+                  @Override
+                  public UpdateMetadata setAccessToken(java.lang.String accessToken) {
+                    return (UpdateMetadata) super.setAccessToken(accessToken);
+                  }
+
+                  @Override
+                  public UpdateMetadata setAlt(java.lang.String alt) {
+                    return (UpdateMetadata) super.setAlt(alt);
+                  }
+
+                  @Override
+                  public UpdateMetadata setCallback(java.lang.String callback) {
+                    return (UpdateMetadata) super.setCallback(callback);
+                  }
+
+                  @Override
+                  public UpdateMetadata setFields(java.lang.String fields) {
+                    return (UpdateMetadata) super.setFields(fields);
+                  }
+
+                  @Override
+                  public UpdateMetadata setKey(java.lang.String key) {
+                    return (UpdateMetadata) super.setKey(key);
+                  }
+
+                  @Override
+                  public UpdateMetadata setOauthToken(java.lang.String oauthToken) {
+                    return (UpdateMetadata) super.setOauthToken(oauthToken);
+                  }
+
+                  @Override
+                  public UpdateMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+                    return (UpdateMetadata) super.setPrettyPrint(prettyPrint);
+                  }
+
+                  @Override
+                  public UpdateMetadata setQuotaUser(java.lang.String quotaUser) {
+                    return (UpdateMetadata) super.setQuotaUser(quotaUser);
+                  }
+
+                  @Override
+                  public UpdateMetadata setUploadType(java.lang.String uploadType) {
+                    return (UpdateMetadata) super.setUploadType(uploadType);
+                  }
+
+                  @Override
+                  public UpdateMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+                    return (UpdateMetadata) super.setUploadProtocol(uploadProtocol);
+                  }
+
+                  /**
+                   * Required. The name of the DICOM store that is being accessed (for example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`).
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String parent;
+
+                  /** Required. The name of the DICOM store that is being accessed (for example, `projects/{project_id}/l
+                 ocations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`).
+                   */
+                  public java.lang.String getParent() {
+                    return parent;
+                  }
+
+                  /**
+                   * Required. The name of the DICOM store that is being accessed (for example, `pro
+                   * jects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+                   * icom_store_id}`).
+                   */
+                  public UpdateMetadata setParent(java.lang.String parent) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+                    }
+                    this.parent = parent;
+                    return this;
+                  }
+
+                  /**
+                   * Required. The path of the UpdateInstanceMetadata request (for example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String dicomWebPath;
+
+                  /** Required. The path of the UpdateInstanceMetadata request (for example,
+                 `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                   */
+                  public java.lang.String getDicomWebPath() {
+                    return dicomWebPath;
+                  }
+
+                  /**
+                   * Required. The path of the UpdateInstanceMetadata request (for example,
+                   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`).
+                   */
+                  public UpdateMetadata setDicomWebPath(java.lang.String dicomWebPath) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
+                          "Parameter dicomWebPath must conform to the pattern " +
+                          "^studies/[^/]+/series/[^/]+/instances/[^/]+$");
+                    }
+                    this.dicomWebPath = dicomWebPath;
+                    return this;
+                  }
+
+                  @Override
+                  public UpdateMetadata set(String parameterName, Object value) {
+                    return (UpdateMetadata) super.set(parameterName, value);
                   }
                 }
 
@@ -24800,11 +25735,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * identifier search criteria matches a large number (i.e. more than 2,000) of resources. For a
              * search query that will match a large number of resources, you can avoiding using the special
              * synchronous index by including an additional `_sort` parameter in your query. Use
-             * `_sort=-_lastUpdated` if you want to keep the default sorting order. Note: The special
-             * synchronous identifier index are currently disabled for DocumentReference and DocumentManifest
-             * searches. For samples and detailed information, see [Searching for FHIR
-             * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-             * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+             * `_sort=-_lastUpdated` if you want to keep the default sorting order. For samples and detailed
+             * information, see [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-
+             * tos/fhir-search) and [Advanced FHIR search
+             * features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
              *
              * Create a request for the method "fhir.search".
              *
@@ -24878,11 +25812,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * large number (i.e. more than 2,000) of resources. For a search query that will match a large
                * number of resources, you can avoiding using the special synchronous index by including an
                * additional `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the
-               * default sorting order. Note: The special synchronous identifier index are currently disabled
-               * for DocumentReference and DocumentManifest searches. For samples and detailed information, see
-               * [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search)
-               * and [Advanced FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-
-               * advanced-search).
+               * default sorting order. For samples and detailed information, see [Searching for FHIR
+               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
+               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -25035,11 +25967,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * identifier search criteria matches a large number (i.e. more than 2,000) of resources. For a
              * search query that will match a large number of resources, you can avoiding using the special
              * synchronous index by including an additional `_sort` parameter in your query. Use
-             * `_sort=-_lastUpdated` if you want to keep the default sorting order. Note: The special
-             * synchronous identifier index are currently disabled for DocumentReference and DocumentManifest
-             * searches. For samples and detailed information, see [Searching for FHIR
-             * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-             * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+             * `_sort=-_lastUpdated` if you want to keep the default sorting order. For samples and detailed
+             * information, see [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-
+             * tos/fhir-search) and [Advanced FHIR search
+             * features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
              *
              * Create a request for the method "fhir.search-type".
              *
@@ -25118,11 +26049,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * large number (i.e. more than 2,000) of resources. For a search query that will match a large
                * number of resources, you can avoiding using the special synchronous index by including an
                * additional `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the
-               * default sorting order. Note: The special synchronous identifier index are currently disabled
-               * for DocumentReference and DocumentManifest searches. For samples and detailed information, see
-               * [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search)
-               * and [Advanced FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-
-               * advanced-search).
+               * default sorting order. For samples and detailed information, see [Searching for FHIR
+               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
+               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search-type".
                *

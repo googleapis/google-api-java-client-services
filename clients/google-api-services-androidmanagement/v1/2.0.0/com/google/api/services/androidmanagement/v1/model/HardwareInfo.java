@@ -132,7 +132,8 @@ public final class HardwareInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String model;
 
   /**
-   * The device serial number.
+   * The device serial number. However, for personally-owned devices running Android 12 and above,
+   * this is the same as the enterpriseSpecificId.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -380,7 +381,8 @@ public final class HardwareInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The device serial number.
+   * The device serial number. However, for personally-owned devices running Android 12 and above,
+   * this is the same as the enterpriseSpecificId.
    * @return value or {@code null} for none
    */
   public java.lang.String getSerialNumber() {
@@ -388,7 +390,8 @@ public final class HardwareInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The device serial number.
+   * The device serial number. However, for personally-owned devices running Android 12 and above,
+   * this is the same as the enterpriseSpecificId.
    * @param serialNumber serialNumber or {@code null} for none
    */
   public HardwareInfo setSerialNumber(java.lang.String serialNumber) {

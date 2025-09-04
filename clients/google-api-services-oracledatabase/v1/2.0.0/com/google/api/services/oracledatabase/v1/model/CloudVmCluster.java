@@ -85,6 +85,14 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String gcpOracleZone;
 
   /**
+   * Output only. The identity connector details which will allow OCI to securely access the
+   * resources in the customer project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityConnector identityConnector;
+
+  /**
    * Optional. Labels or tags associated with the VM Cluster.
    * The value may be {@code null}.
    */
@@ -254,6 +262,25 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
    */
   public CloudVmCluster setGcpOracleZone(java.lang.String gcpOracleZone) {
     this.gcpOracleZone = gcpOracleZone;
+    return this;
+  }
+
+  /**
+   * Output only. The identity connector details which will allow OCI to securely access the
+   * resources in the customer project.
+   * @return value or {@code null} for none
+   */
+  public IdentityConnector getIdentityConnector() {
+    return identityConnector;
+  }
+
+  /**
+   * Output only. The identity connector details which will allow OCI to securely access the
+   * resources in the customer project.
+   * @param identityConnector identityConnector or {@code null} for none
+   */
+  public CloudVmCluster setIdentityConnector(IdentityConnector identityConnector) {
+    this.identityConnector = identityConnector;
     return this;
   }
 

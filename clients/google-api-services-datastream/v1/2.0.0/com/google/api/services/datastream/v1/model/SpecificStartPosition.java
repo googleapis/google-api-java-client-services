@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class SpecificStartPosition extends com.google.api.client.json.GenericJson {
 
   /**
+   * MongoDB change stream position to start replicating from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MongodbChangeStreamPosition mongodbChangeStreamPosition;
+
+  /**
    * MySQL GTID set to start replicating from.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class SpecificStartPosition extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private SqlServerLsnPosition sqlServerLsnPosition;
+
+  /**
+   * MongoDB change stream position to start replicating from.
+   * @return value or {@code null} for none
+   */
+  public MongodbChangeStreamPosition getMongodbChangeStreamPosition() {
+    return mongodbChangeStreamPosition;
+  }
+
+  /**
+   * MongoDB change stream position to start replicating from.
+   * @param mongodbChangeStreamPosition mongodbChangeStreamPosition or {@code null} for none
+   */
+  public SpecificStartPosition setMongodbChangeStreamPosition(MongodbChangeStreamPosition mongodbChangeStreamPosition) {
+    this.mongodbChangeStreamPosition = mongodbChangeStreamPosition;
+    return this;
+  }
 
   /**
    * MySQL GTID set to start replicating from.

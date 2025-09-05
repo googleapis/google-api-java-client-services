@@ -57,6 +57,14 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   private MultiSpeakerMarkup multiSpeakerMarkup;
 
   /**
+   * This is system instruction supported only for controllable voice models. If used, we will pass
+   * text to Flash TTS as is. Can only used with Flash TTS. What AI Studio calls Style Instructions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String prompt;
+
+  /**
    * The SSML document to be synthesized. The SSML document must be valid and well-formed. Otherwise
    * the RPC will fail and return google.rpc.Code.INVALID_ARGUMENT. For more information, see
    * [SSML](https://cloud.google.com/text-to-speech/docs/ssml).
@@ -128,6 +136,25 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
    */
   public SynthesisInput setMultiSpeakerMarkup(MultiSpeakerMarkup multiSpeakerMarkup) {
     this.multiSpeakerMarkup = multiSpeakerMarkup;
+    return this;
+  }
+
+  /**
+   * This is system instruction supported only for controllable voice models. If used, we will pass
+   * text to Flash TTS as is. Can only used with Flash TTS. What AI Studio calls Style Instructions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrompt() {
+    return prompt;
+  }
+
+  /**
+   * This is system instruction supported only for controllable voice models. If used, we will pass
+   * text to Flash TTS as is. Can only used with Flash TTS. What AI Studio calls Style Instructions.
+   * @param prompt prompt or {@code null} for none
+   */
+  public SynthesisInput setPrompt(java.lang.String prompt) {
+    this.prompt = prompt;
     return this;
   }
 

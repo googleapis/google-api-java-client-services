@@ -20906,6 +20906,156 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Subscriptionsv2 {
 
       /**
+       * Cancel a subscription purchase for the user.
+       *
+       * Create a request for the method "subscriptionsv2.cancel".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+       * @param token Required. The token provided to the user's device when the subscription was purchased.
+       * @param content the {@link com.google.api.services.androidpublisher.model.CancelSubscriptionPurchaseRequest}
+       * @return the request
+       */
+      public Cancel cancel(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.CancelSubscriptionPurchaseRequest content) throws java.io.IOException {
+        Cancel result = new Cancel(packageName, token, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancel extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.CancelSubscriptionPurchaseResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}:cancel";
+
+        /**
+         * Cancel a subscription purchase for the user.
+         *
+         * Create a request for the method "subscriptionsv2.cancel".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+         * @param token Required. The token provided to the user's device when the subscription was purchased.
+         * @param content the {@link com.google.api.services.androidpublisher.model.CancelSubscriptionPurchaseRequest}
+         * @since 1.13
+         */
+        protected Cancel(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.CancelSubscriptionPurchaseRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.CancelSubscriptionPurchaseResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancel setAlt(java.lang.String alt) {
+          return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancel setFields(java.lang.String fields) {
+          return (Cancel) super.setFields(fields);
+        }
+
+        @Override
+        public Cancel setKey(java.lang.String key) {
+          return (Cancel) super.setKey(key);
+        }
+
+        @Override
+        public Cancel setOauthToken(java.lang.String oauthToken) {
+          return (Cancel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancel setQuotaUser(java.lang.String quotaUser) {
+          return (Cancel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The package of the application for which this subscription was purchased (for example,
+       'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        public Cancel setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public Cancel setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Cancel set(String parameterName, Object value) {
+          return (Cancel) super.set(parameterName, value);
+        }
+      }
+      /**
        * Get metadata about a subscription
        *
        * Create a request for the method "subscriptionsv2.get".

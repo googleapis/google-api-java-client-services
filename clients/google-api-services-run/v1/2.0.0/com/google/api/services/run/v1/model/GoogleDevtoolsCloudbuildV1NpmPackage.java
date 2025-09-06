@@ -30,7 +30,8 @@ package com.google.api.services.run.v1.model;
 public final class GoogleDevtoolsCloudbuildV1NpmPackage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Path to the package.json. e.g. workspace/path/to/package
+   * Optional. Path to the package.json. e.g. workspace/path/to/package Only one of `archive` or
+   * `package_path` can be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class GoogleDevtoolsCloudbuildV1NpmPackage extends com.google.api.c
   private java.lang.String repository;
 
   /**
-   * Path to the package.json. e.g. workspace/path/to/package
+   * Optional. Path to the package.json. e.g. workspace/path/to/package Only one of `archive` or
+   * `package_path` can be specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackagePath() {
@@ -54,7 +56,8 @@ public final class GoogleDevtoolsCloudbuildV1NpmPackage extends com.google.api.c
   }
 
   /**
-   * Path to the package.json. e.g. workspace/path/to/package
+   * Optional. Path to the package.json. e.g. workspace/path/to/package Only one of `archive` or
+   * `package_path` can be specified.
    * @param packagePath packagePath or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1NpmPackage setPackagePath(java.lang.String packagePath) {

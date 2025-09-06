@@ -197,6 +197,13 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
   private VmwareAdminPrivateRegistryConfig privateRegistryConfig;
 
   /**
+   * Configuration for proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmwareAdminProxy proxy;
+
+  /**
    * Output only. If set, there are currently changes in flight to the VMware admin cluster.
    * The value may be {@code null}.
    */
@@ -642,6 +649,23 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
    */
   public VmwareAdminCluster setPrivateRegistryConfig(VmwareAdminPrivateRegistryConfig privateRegistryConfig) {
     this.privateRegistryConfig = privateRegistryConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for proxy.
+   * @return value or {@code null} for none
+   */
+  public VmwareAdminProxy getProxy() {
+    return proxy;
+  }
+
+  /**
+   * Configuration for proxy.
+   * @param proxy proxy or {@code null} for none
+   */
+  public VmwareAdminCluster setProxy(VmwareAdminProxy proxy) {
+    this.proxy = proxy;
     return this;
   }
 

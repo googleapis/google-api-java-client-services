@@ -31,7 +31,8 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Path to the package.json. e.g. workspace/path/to/package
+   * Optional. Path to the package.json. e.g. workspace/path/to/package Only one of `archive` or
+   * `package_path` can be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackag
   private java.lang.String repository;
 
   /**
-   * Path to the package.json. e.g. workspace/path/to/package
+   * Optional. Path to the package.json. e.g. workspace/path/to/package Only one of `archive` or
+   * `package_path` can be specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackagePath() {
@@ -55,7 +57,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackag
   }
 
   /**
-   * Path to the package.json. e.g. workspace/path/to/package
+   * Optional. Path to the package.json. e.g. workspace/path/to/package Only one of `archive` or
+   * `package_path` can be specified.
    * @param packagePath packagePath or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage setPackagePath(java.lang.String packagePath) {

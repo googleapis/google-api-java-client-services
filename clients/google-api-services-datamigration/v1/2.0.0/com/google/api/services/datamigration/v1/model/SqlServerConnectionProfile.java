@@ -46,11 +46,26 @@ public final class SqlServerConnectionProfile extends com.google.api.client.json
   private java.lang.String cloudSqlId;
 
   /**
+   * Optional. The project id of the Cloud SQL instance. If not provided, the project id of the
+   * connection profile will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudSqlProjectId;
+
+  /**
    * Required. The name of the specific database within the host.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String database;
+
+  /**
+   * Optional. The Database Mirroring (DBM) port of the source SQL Server instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer dbmPort;
 
   /**
    * Forward SSH tunnel connectivity.
@@ -162,6 +177,25 @@ public final class SqlServerConnectionProfile extends com.google.api.client.json
   }
 
   /**
+   * Optional. The project id of the Cloud SQL instance. If not provided, the project id of the
+   * connection profile will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudSqlProjectId() {
+    return cloudSqlProjectId;
+  }
+
+  /**
+   * Optional. The project id of the Cloud SQL instance. If not provided, the project id of the
+   * connection profile will be used.
+   * @param cloudSqlProjectId cloudSqlProjectId or {@code null} for none
+   */
+  public SqlServerConnectionProfile setCloudSqlProjectId(java.lang.String cloudSqlProjectId) {
+    this.cloudSqlProjectId = cloudSqlProjectId;
+    return this;
+  }
+
+  /**
    * Required. The name of the specific database within the host.
    * @return value or {@code null} for none
    */
@@ -175,6 +209,23 @@ public final class SqlServerConnectionProfile extends com.google.api.client.json
    */
   public SqlServerConnectionProfile setDatabase(java.lang.String database) {
     this.database = database;
+    return this;
+  }
+
+  /**
+   * Optional. The Database Mirroring (DBM) port of the source SQL Server instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDbmPort() {
+    return dbmPort;
+  }
+
+  /**
+   * Optional. The Database Mirroring (DBM) port of the source SQL Server instance.
+   * @param dbmPort dbmPort or {@code null} for none
+   */
+  public SqlServerConnectionProfile setDbmPort(java.lang.Integer dbmPort) {
+    this.dbmPort = dbmPort;
     return this;
   }
 

@@ -41,6 +41,21 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
   private java.lang.String dataset;
 
   /**
+   * Output only. Server-owned effective state of replicas. Contains both primary and secondary
+   * replicas. Each replica includes a system-computed (output-only) state and primary designation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Replica> effectiveReplicas;
+
+  /**
+   * Optional. A list of regions where the publisher has created shared dataset replicas.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> replicaLocations;
+
+  /**
    * Optional. If set, restricted export policy will be propagated and enforced on the linked
    * dataset.
    * The value may be {@code null}.
@@ -72,6 +87,42 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
    */
   public BigQueryDatasetSource setDataset(java.lang.String dataset) {
     this.dataset = dataset;
+    return this;
+  }
+
+  /**
+   * Output only. Server-owned effective state of replicas. Contains both primary and secondary
+   * replicas. Each replica includes a system-computed (output-only) state and primary designation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Replica> getEffectiveReplicas() {
+    return effectiveReplicas;
+  }
+
+  /**
+   * Output only. Server-owned effective state of replicas. Contains both primary and secondary
+   * replicas. Each replica includes a system-computed (output-only) state and primary designation.
+   * @param effectiveReplicas effectiveReplicas or {@code null} for none
+   */
+  public BigQueryDatasetSource setEffectiveReplicas(java.util.List<Replica> effectiveReplicas) {
+    this.effectiveReplicas = effectiveReplicas;
+    return this;
+  }
+
+  /**
+   * Optional. A list of regions where the publisher has created shared dataset replicas.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReplicaLocations() {
+    return replicaLocations;
+  }
+
+  /**
+   * Optional. A list of regions where the publisher has created shared dataset replicas.
+   * @param replicaLocations replicaLocations or {@code null} for none
+   */
+  public BigQueryDatasetSource setReplicaLocations(java.util.List<java.lang.String> replicaLocations) {
+    this.replicaLocations = replicaLocations;
     return this;
   }
 

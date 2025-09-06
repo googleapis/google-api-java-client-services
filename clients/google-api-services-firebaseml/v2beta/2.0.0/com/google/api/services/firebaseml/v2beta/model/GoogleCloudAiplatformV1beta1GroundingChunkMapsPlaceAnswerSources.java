@@ -30,35 +30,11 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSources extends com.google.api.client.json.GenericJson {
 
   /**
-   * A link where users can flag a problem with the generated answer.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String flagContentUri;
-
-  /**
    * Snippets of reviews that are used to generate the answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet> reviewSnippets;
-
-  /**
-   * A link where users can flag a problem with the generated answer.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFlagContentUri() {
-    return flagContentUri;
-  }
-
-  /**
-   * A link where users can flag a problem with the generated answer.
-   * @param flagContentUri flagContentUri or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSources setFlagContentUri(java.lang.String flagContentUri) {
-    this.flagContentUri = flagContentUri;
-    return this;
-  }
 
   /**
    * Snippets of reviews that are used to generate the answer.

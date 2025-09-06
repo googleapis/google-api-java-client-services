@@ -38,6 +38,23 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
   private java.lang.String authoritySelector;
 
   /**
+   * Converted from "identity_cloudgaia.AuditLoggableShortLivedCredential" proto. This message will
+   * be used by security, detection and response team. For context please refer to go/cg:short-
+   * lived-credential-logging. When the JSON object represented here has a proto equivalent, the
+   * proto name will be indicated in the `@type` property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> loggableShortLivedCredential;
+
+  /**
+   * OAuth authentication information such as the OAuth client ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OAuthInfo oauthInfo;
+
+  /**
    * The email address of the authenticated user (or service account on behalf of third party
    * principal) making the request. For third party identity callers, the `principal_subject` field
    * is populated instead of this field. For privacy reasons, the principal email address is
@@ -107,6 +124,46 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
    */
   public AuthenticationInfo setAuthoritySelector(java.lang.String authoritySelector) {
     this.authoritySelector = authoritySelector;
+    return this;
+  }
+
+  /**
+   * Converted from "identity_cloudgaia.AuditLoggableShortLivedCredential" proto. This message will
+   * be used by security, detection and response team. For context please refer to go/cg:short-
+   * lived-credential-logging. When the JSON object represented here has a proto equivalent, the
+   * proto name will be indicated in the `@type` property.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getLoggableShortLivedCredential() {
+    return loggableShortLivedCredential;
+  }
+
+  /**
+   * Converted from "identity_cloudgaia.AuditLoggableShortLivedCredential" proto. This message will
+   * be used by security, detection and response team. For context please refer to go/cg:short-
+   * lived-credential-logging. When the JSON object represented here has a proto equivalent, the
+   * proto name will be indicated in the `@type` property.
+   * @param loggableShortLivedCredential loggableShortLivedCredential or {@code null} for none
+   */
+  public AuthenticationInfo setLoggableShortLivedCredential(java.util.Map<String, java.lang.Object> loggableShortLivedCredential) {
+    this.loggableShortLivedCredential = loggableShortLivedCredential;
+    return this;
+  }
+
+  /**
+   * OAuth authentication information such as the OAuth client ID.
+   * @return value or {@code null} for none
+   */
+  public OAuthInfo getOauthInfo() {
+    return oauthInfo;
+  }
+
+  /**
+   * OAuth authentication information such as the OAuth client ID.
+   * @param oauthInfo oauthInfo or {@code null} for none
+   */
+  public AuthenticationInfo setOauthInfo(OAuthInfo oauthInfo) {
+    this.oauthInfo = oauthInfo;
     return this;
   }
 

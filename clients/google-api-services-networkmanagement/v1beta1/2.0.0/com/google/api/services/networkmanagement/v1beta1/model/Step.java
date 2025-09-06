@@ -146,6 +146,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private GoogleServiceInfo googleService;
 
   /**
+   * Display information of a hybrid subnet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HybridSubnetInfo hybridSubnet;
+
+  /**
    * Display information of a Compute Engine instance.
    * The value may be {@code null}.
    */
@@ -546,6 +553,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setGoogleService(GoogleServiceInfo googleService) {
     this.googleService = googleService;
+    return this;
+  }
+
+  /**
+   * Display information of a hybrid subnet.
+   * @return value or {@code null} for none
+   */
+  public HybridSubnetInfo getHybridSubnet() {
+    return hybridSubnet;
+  }
+
+  /**
+   * Display information of a hybrid subnet.
+   * @param hybridSubnet hybridSubnet or {@code null} for none
+   */
+  public Step setHybridSubnet(HybridSubnetInfo hybridSubnet) {
+    this.hybridSubnet = hybridSubnet;
     return this;
   }
 

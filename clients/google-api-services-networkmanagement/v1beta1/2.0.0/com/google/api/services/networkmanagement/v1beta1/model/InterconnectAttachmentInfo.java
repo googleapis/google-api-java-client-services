@@ -52,11 +52,25 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
   private java.lang.String interconnectUri;
 
   /**
+   * Appliance IP address that was matched for L2_DEDICATED attachments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String l2AttachmentMatchedIpAddress;
+
+  /**
    * Name of a Google Cloud region where the Interconnect attachment is configured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
+
+  /**
+   * The type of interconnect attachment this is.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
 
   /**
    * URI of an Interconnect attachment.
@@ -117,6 +131,23 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
   }
 
   /**
+   * Appliance IP address that was matched for L2_DEDICATED attachments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getL2AttachmentMatchedIpAddress() {
+    return l2AttachmentMatchedIpAddress;
+  }
+
+  /**
+   * Appliance IP address that was matched for L2_DEDICATED attachments.
+   * @param l2AttachmentMatchedIpAddress l2AttachmentMatchedIpAddress or {@code null} for none
+   */
+  public InterconnectAttachmentInfo setL2AttachmentMatchedIpAddress(java.lang.String l2AttachmentMatchedIpAddress) {
+    this.l2AttachmentMatchedIpAddress = l2AttachmentMatchedIpAddress;
+    return this;
+  }
+
+  /**
    * Name of a Google Cloud region where the Interconnect attachment is configured.
    * @return value or {@code null} for none
    */
@@ -130,6 +161,23 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
    */
   public InterconnectAttachmentInfo setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * The type of interconnect attachment this is.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * The type of interconnect attachment this is.
+   * @param type type or {@code null} for none
+   */
+  public InterconnectAttachmentInfo setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

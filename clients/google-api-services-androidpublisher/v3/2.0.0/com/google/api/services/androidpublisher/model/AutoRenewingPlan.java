@@ -53,6 +53,13 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
   private SubscriptionItemPriceChangeDetails priceChangeDetails;
 
   /**
+   * The information of the latest price step-up consent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PriceStepUpConsentDetails priceStepUpConsentDetails;
+
+  /**
    * The current recurring price of the auto renewing plan. Note that the price does not take into
    * account discounts and does not include taxes for tax-exclusive pricing, please call orders.get
    * API instead if transaction details are needed.
@@ -111,6 +118,23 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
    */
   public AutoRenewingPlan setPriceChangeDetails(SubscriptionItemPriceChangeDetails priceChangeDetails) {
     this.priceChangeDetails = priceChangeDetails;
+    return this;
+  }
+
+  /**
+   * The information of the latest price step-up consent.
+   * @return value or {@code null} for none
+   */
+  public PriceStepUpConsentDetails getPriceStepUpConsentDetails() {
+    return priceStepUpConsentDetails;
+  }
+
+  /**
+   * The information of the latest price step-up consent.
+   * @param priceStepUpConsentDetails priceStepUpConsentDetails or {@code null} for none
+   */
+  public AutoRenewingPlan setPriceStepUpConsentDetails(PriceStepUpConsentDetails priceStepUpConsentDetails) {
+    this.priceStepUpConsentDetails = priceStepUpConsentDetails;
     return this;
   }
 

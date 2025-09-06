@@ -102,6 +102,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private TlsConfig tlsConfig;
 
   /**
+   * Optional. UpdateOptions represents options that control how updates to the cluster are applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateOptions updateOptions;
+
+  /**
    * Output only. The time when the cluster was last updated.
    * The value may be {@code null}.
    */
@@ -277,6 +284,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setTlsConfig(TlsConfig tlsConfig) {
     this.tlsConfig = tlsConfig;
+    return this;
+  }
+
+  /**
+   * Optional. UpdateOptions represents options that control how updates to the cluster are applied.
+   * @return value or {@code null} for none
+   */
+  public UpdateOptions getUpdateOptions() {
+    return updateOptions;
+  }
+
+  /**
+   * Optional. UpdateOptions represents options that control how updates to the cluster are applied.
+   * @param updateOptions updateOptions or {@code null} for none
+   */
+  public Cluster setUpdateOptions(UpdateOptions updateOptions) {
+    this.updateOptions = updateOptions;
     return this;
   }
 

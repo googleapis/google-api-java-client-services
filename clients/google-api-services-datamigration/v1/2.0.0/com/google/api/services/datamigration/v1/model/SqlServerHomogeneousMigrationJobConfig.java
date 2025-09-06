@@ -45,6 +45,14 @@ public final class SqlServerHomogeneousMigrationJobConfig extends com.google.api
   private java.lang.String backupFilePattern;
 
   /**
+   * Optional. Configuration for distributed availability group (DAG) for the SQL Server homogeneous
+   * migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerDagConfig dagConfig;
+
+  /**
    * Required. Backup details per database in Cloud Storage.
    * The value may be {@code null}.
    */
@@ -99,6 +107,25 @@ public final class SqlServerHomogeneousMigrationJobConfig extends com.google.api
    */
   public SqlServerHomogeneousMigrationJobConfig setBackupFilePattern(java.lang.String backupFilePattern) {
     this.backupFilePattern = backupFilePattern;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for distributed availability group (DAG) for the SQL Server homogeneous
+   * migration.
+   * @return value or {@code null} for none
+   */
+  public SqlServerDagConfig getDagConfig() {
+    return dagConfig;
+  }
+
+  /**
+   * Optional. Configuration for distributed availability group (DAG) for the SQL Server homogeneous
+   * migration.
+   * @param dagConfig dagConfig or {@code null} for none
+   */
+  public SqlServerHomogeneousMigrationJobConfig setDagConfig(SqlServerDagConfig dagConfig) {
+    this.dagConfig = dagConfig;
     return this;
   }
 

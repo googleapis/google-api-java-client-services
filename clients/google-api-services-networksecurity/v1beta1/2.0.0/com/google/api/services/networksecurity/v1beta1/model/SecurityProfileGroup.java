@@ -103,6 +103,13 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   private String updateTime;
 
   /**
+   * Optional. Reference to a SecurityProfile with the UrlFiltering configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String urlFilteringProfile;
+
+  /**
    * Output only. Resource creation timestamp.
    * @return value or {@code null} for none
    */
@@ -275,6 +282,23 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
    */
   public SecurityProfileGroup setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Reference to a SecurityProfile with the UrlFiltering configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUrlFilteringProfile() {
+    return urlFilteringProfile;
+  }
+
+  /**
+   * Optional. Reference to a SecurityProfile with the UrlFiltering configuration.
+   * @param urlFilteringProfile urlFilteringProfile or {@code null} for none
+   */
+  public SecurityProfileGroup setUrlFilteringProfile(java.lang.String urlFilteringProfile) {
+    this.urlFilteringProfile = urlFilteringProfile;
     return this;
   }
 

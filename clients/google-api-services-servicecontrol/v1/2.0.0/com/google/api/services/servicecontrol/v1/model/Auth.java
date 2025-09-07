@@ -68,6 +68,13 @@ public final class Auth extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> claims;
 
   /**
+   * Attributes of the OAuth token associated with the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Oauth oauth;
+
+  /**
    * The authorized presenter of the credential. Reflects the optional Authorized Presenter (`azp`)
    * claim within a JWT or the OAuth client id. For example, a Google Cloud Platform client id looks
    * as follows: "123456789012.apps.googleusercontent.com".
@@ -166,6 +173,23 @@ public final class Auth extends com.google.api.client.json.GenericJson {
    */
   public Auth setClaims(java.util.Map<String, java.lang.Object> claims) {
     this.claims = claims;
+    return this;
+  }
+
+  /**
+   * Attributes of the OAuth token associated with the request.
+   * @return value or {@code null} for none
+   */
+  public Oauth getOauth() {
+    return oauth;
+  }
+
+  /**
+   * Attributes of the OAuth token associated with the request.
+   * @param oauth oauth or {@code null} for none
+   */
+  public Auth setOauth(Oauth oauth) {
+    this.oauth = oauth;
     return this;
   }
 

@@ -38,12 +38,12 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   private java.lang.String account;
 
   /**
-   * Output only. The reason the entitlement was cancelled. If this entitlement was not cancelled,
-   * this field will be empty. Possible values include "unknown", "expired", "user-cancelled",
-   * "account-closed", "billing-disabled" (if the customer has manually disabled billing to their
-   * resources), "user-aborted", and "migrated" (if the entitlement has migrated across products).
-   * Values of this field are subject to change and should not be relied upon for technical
-   * integration.
+   * Output only. The reason the entitlement was cancelled. If this entitlement wasn't cancelled,
+   * this field is empty. Possible values include "unknown", "expired", "user-cancelled", "account-
+   * closed", "billing-disabled" (if the customer has manually disabled billing to their resources),
+   * "user-aborted", and "migrated" (if the entitlement has migrated across products). Values of
+   * this field are subject to change, and we recommend that you don't build your technical
+   * integration to rely on these fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,17 +106,16 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The end time of the new offer. If the offer was created with a term instead of a
-   * specified end date, this field is empty. This field will be populated even if the entitlement
-   * is not active yet. If there is no upcoming offer, the field will be empty.
+   * specified end date, this field is empty. This field is populated even if the entitlement isn't
+   * active yet. If there's no upcoming offer, the field is be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String newOfferEndTime;
 
   /**
-   * Output only. The timestamp when the new offer will become effective. This field will be
-   * populated even if the entitlement is not active yet. If there is no upcoming offer, the field
-   * will be empty.
+   * Output only. The timestamp when the new offer becomes effective. This field is populated even
+   * if the entitlement isn't active yet. If there's no upcoming offer, the field is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,8 +123,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the offer the entitlement is switching to upon a pending plan change.
-   * Only exists if the pending plan change is moving to an offer. This field is not populated for
-   * entitlements which are not active yet. Format:
+   * Only exists if the pending plan change is moving to an offer. This field isn't populated for
+   * entitlements which aren't active yet. Format:
    * 'projects/{project}/services/{service}/privateOffers/{offer-id}' OR
    * 'projects/{project}/services/{service}/standardOffers/{offer-id}', depending on whether the
    * offer is private or public. The {service} in the name is the listing service of the offer. It
@@ -138,8 +137,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   private java.lang.String newPendingOffer;
 
   /**
-   * Output only. The offer duration of the new offer in ISO 8601 duration format. This field is not
-   * populated for entitlements which are not active yet, only for pending offer changes. If the
+   * Output only. The duration of the new offer, in ISO 8601 duration format. This field isn't
+   * populated for entitlements which aren't active yet, only for pending offer changes. If the
    * offer was created with a specified end date instead of a duration, this field is empty.
    * The value may be {@code null}.
    */
@@ -280,12 +279,12 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reason the entitlement was cancelled. If this entitlement was not cancelled,
-   * this field will be empty. Possible values include "unknown", "expired", "user-cancelled",
-   * "account-closed", "billing-disabled" (if the customer has manually disabled billing to their
-   * resources), "user-aborted", and "migrated" (if the entitlement has migrated across products).
-   * Values of this field are subject to change and should not be relied upon for technical
-   * integration.
+   * Output only. The reason the entitlement was cancelled. If this entitlement wasn't cancelled,
+   * this field is empty. Possible values include "unknown", "expired", "user-cancelled", "account-
+   * closed", "billing-disabled" (if the customer has manually disabled billing to their resources),
+   * "user-aborted", and "migrated" (if the entitlement has migrated across products). Values of
+   * this field are subject to change, and we recommend that you don't build your technical
+   * integration to rely on these fields.
    * @return value or {@code null} for none
    */
   public java.lang.String getCancellationReason() {
@@ -293,12 +292,12 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reason the entitlement was cancelled. If this entitlement was not cancelled,
-   * this field will be empty. Possible values include "unknown", "expired", "user-cancelled",
-   * "account-closed", "billing-disabled" (if the customer has manually disabled billing to their
-   * resources), "user-aborted", and "migrated" (if the entitlement has migrated across products).
-   * Values of this field are subject to change and should not be relied upon for technical
-   * integration.
+   * Output only. The reason the entitlement was cancelled. If this entitlement wasn't cancelled,
+   * this field is empty. Possible values include "unknown", "expired", "user-cancelled", "account-
+   * closed", "billing-disabled" (if the customer has manually disabled billing to their resources),
+   * "user-aborted", and "migrated" (if the entitlement has migrated across products). Values of
+   * this field are subject to change, and we recommend that you don't build your technical
+   * integration to rely on these fields.
    * @param cancellationReason cancellationReason or {@code null} for none
    */
   public Entitlement setCancellationReason(java.lang.String cancellationReason) {
@@ -424,8 +423,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The end time of the new offer. If the offer was created with a term instead of a
-   * specified end date, this field is empty. This field will be populated even if the entitlement
-   * is not active yet. If there is no upcoming offer, the field will be empty.
+   * specified end date, this field is empty. This field is populated even if the entitlement isn't
+   * active yet. If there's no upcoming offer, the field is be empty.
    * @return value or {@code null} for none
    */
   public String getNewOfferEndTime() {
@@ -434,8 +433,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The end time of the new offer. If the offer was created with a term instead of a
-   * specified end date, this field is empty. This field will be populated even if the entitlement
-   * is not active yet. If there is no upcoming offer, the field will be empty.
+   * specified end date, this field is empty. This field is populated even if the entitlement isn't
+   * active yet. If there's no upcoming offer, the field is be empty.
    * @param newOfferEndTime newOfferEndTime or {@code null} for none
    */
   public Entitlement setNewOfferEndTime(String newOfferEndTime) {
@@ -444,9 +443,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp when the new offer will become effective. This field will be
-   * populated even if the entitlement is not active yet. If there is no upcoming offer, the field
-   * will be empty.
+   * Output only. The timestamp when the new offer becomes effective. This field is populated even
+   * if the entitlement isn't active yet. If there's no upcoming offer, the field is empty.
    * @return value or {@code null} for none
    */
   public String getNewOfferStartTime() {
@@ -454,9 +452,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp when the new offer will become effective. This field will be
-   * populated even if the entitlement is not active yet. If there is no upcoming offer, the field
-   * will be empty.
+   * Output only. The timestamp when the new offer becomes effective. This field is populated even
+   * if the entitlement isn't active yet. If there's no upcoming offer, the field is empty.
    * @param newOfferStartTime newOfferStartTime or {@code null} for none
    */
   public Entitlement setNewOfferStartTime(String newOfferStartTime) {
@@ -466,8 +463,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the offer the entitlement is switching to upon a pending plan change.
-   * Only exists if the pending plan change is moving to an offer. This field is not populated for
-   * entitlements which are not active yet. Format:
+   * Only exists if the pending plan change is moving to an offer. This field isn't populated for
+   * entitlements which aren't active yet. Format:
    * 'projects/{project}/services/{service}/privateOffers/{offer-id}' OR
    * 'projects/{project}/services/{service}/standardOffers/{offer-id}', depending on whether the
    * offer is private or public. The {service} in the name is the listing service of the offer. It
@@ -482,8 +479,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the offer the entitlement is switching to upon a pending plan change.
-   * Only exists if the pending plan change is moving to an offer. This field is not populated for
-   * entitlements which are not active yet. Format:
+   * Only exists if the pending plan change is moving to an offer. This field isn't populated for
+   * entitlements which aren't active yet. Format:
    * 'projects/{project}/services/{service}/privateOffers/{offer-id}' OR
    * 'projects/{project}/services/{service}/standardOffers/{offer-id}', depending on whether the
    * offer is private or public. The {service} in the name is the listing service of the offer. It
@@ -498,8 +495,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The offer duration of the new offer in ISO 8601 duration format. This field is not
-   * populated for entitlements which are not active yet, only for pending offer changes. If the
+   * Output only. The duration of the new offer, in ISO 8601 duration format. This field isn't
+   * populated for entitlements which aren't active yet, only for pending offer changes. If the
    * offer was created with a specified end date instead of a duration, this field is empty.
    * @return value or {@code null} for none
    */
@@ -508,8 +505,8 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The offer duration of the new offer in ISO 8601 duration format. This field is not
-   * populated for entitlements which are not active yet, only for pending offer changes. If the
+   * Output only. The duration of the new offer, in ISO 8601 duration format. This field isn't
+   * populated for entitlements which aren't active yet, only for pending offer changes. If the
    * offer was created with a specified end date instead of a duration, this field is empty.
    * @param newPendingOfferDuration newPendingOfferDuration or {@code null} for none
    */

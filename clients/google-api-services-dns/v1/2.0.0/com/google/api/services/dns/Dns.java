@@ -3081,7 +3081,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class Policies {
 
     /**
-     * Creates a new Policy.
+     * Creates a new policy.
      *
      * Create a request for the method "policies.create".
      *
@@ -3103,7 +3103,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies";
 
       /**
-       * Creates a new Policy.
+       * Creates a new policy.
        *
        * Create a request for the method "policies.create".
        *
@@ -3221,7 +3221,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Deletes a previously created Policy. Fails if the policy is still being referenced by a network.
+     * Deletes a previously created policy. Fails if the policy is still being referenced by a network.
      *
      * Create a request for the method "policies.delete".
      *
@@ -3243,7 +3243,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies/{policy}";
 
       /**
-       * Deletes a previously created Policy. Fails if the policy is still being referenced by a
+       * Deletes a previously created policy. Fails if the policy is still being referenced by a
        * network.
        *
        * Create a request for the method "policies.delete".
@@ -3379,7 +3379,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Fetches the representation of an existing Policy.
+     * Fetches the representation of an existing policy.
      *
      * Create a request for the method "policies.get".
      *
@@ -3401,7 +3401,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies/{policy}";
 
       /**
-       * Fetches the representation of an existing Policy.
+       * Fetches the representation of an existing policy.
        *
        * Create a request for the method "policies.get".
        *
@@ -3546,7 +3546,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Enumerates all Policies associated with a project.
+     * Enumerates all policies associated with a project.
      *
      * Create a request for the method "policies.list".
      *
@@ -3567,7 +3567,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies";
 
       /**
-       * Enumerates all Policies associated with a project.
+       * Enumerates all policies associated with a project.
        *
        * Create a request for the method "policies.list".
        *
@@ -3717,7 +3717,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Applies a partial update to an existing Policy.
+     * Applies a partial update to an existing policy.
      *
      * Create a request for the method "policies.patch".
      *
@@ -3740,7 +3740,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies/{policy}";
 
       /**
-       * Applies a partial update to an existing Policy.
+       * Applies a partial update to an existing policy.
        *
        * Create a request for the method "policies.patch".
        *
@@ -3876,7 +3876,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Updates an existing Policy.
+     * Updates an existing policy.
      *
      * Create a request for the method "policies.update".
      *
@@ -3899,7 +3899,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies/{policy}";
 
       /**
-       * Updates an existing Policy.
+       * Updates an existing policy.
        *
        * Create a request for the method "policies.update".
        *
@@ -4965,17 +4965,24 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
-      /** Restricts the list to return only records with this fully qualified domain name. */
+      /**
+       * Restricts the list to return only records with this fully qualified domain name. Mutually
+       * exclusive with the {@code filter} field.
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Restricts the list to return only records with this fully qualified domain name.
+      /** Restricts the list to return only records with this fully qualified domain name. Mutually exclusive
+     with the {@code filter} field.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Restricts the list to return only records with this fully qualified domain name. */
+      /**
+       * Restricts the list to return only records with this fully qualified domain name. Mutually
+       * exclusive with the {@code filter} field.
+       */
       public List setName(java.lang.String name) {
         this.name = name;
         return this;
@@ -5006,13 +5013,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Restricts the list to return only records of this type. If present, the "name" parameter
-       * must also be present.
+       * must also be present. Mutually exclusive with the {@code filter} field.
        */
       @com.google.api.client.util.Key
       private java.lang.String type;
 
       /** Restricts the list to return only records of this type. If present, the "name" parameter must also
-     be present.
+     be present. Mutually exclusive with the {@code filter} field.
        */
       public java.lang.String getType() {
         return type;
@@ -5020,7 +5027,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Restricts the list to return only records of this type. If present, the "name" parameter
-       * must also be present.
+       * must also be present. Mutually exclusive with the {@code filter} field.
        */
       public List setType(java.lang.String type) {
         this.type = type;

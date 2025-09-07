@@ -47,7 +47,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Configurations related to DNS64 for this Policy.
+   * Configurations related to DNS64 for this policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +138,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configurations related to DNS64 for this Policy.
+   * Configurations related to DNS64 for this policy.
    * @return value or {@code null} for none
    */
   public PolicyDns64Config getDns64Config() {
@@ -146,7 +146,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configurations related to DNS64 for this Policy.
+   * Configurations related to DNS64 for this policy.
    * @param dns64Config dns64Config or {@code null} for none
    */
   public Policy setDns64Config(PolicyDns64Config dns64Config) {

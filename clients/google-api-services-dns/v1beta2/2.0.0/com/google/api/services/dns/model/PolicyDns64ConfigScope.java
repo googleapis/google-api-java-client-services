@@ -30,7 +30,7 @@ package com.google.api.services.dns.model;
 public final class PolicyDns64ConfigScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * Controls whether DNS64 is enabled globally at the network level.
+   * Controls whether DNS64 is enabled globally for all networks bound to the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class PolicyDns64ConfigScope extends com.google.api.client.json.Gen
   private java.lang.String kind;
 
   /**
-   * Controls whether DNS64 is enabled globally at the network level.
+   * Controls whether DNS64 is enabled globally for all networks bound to the policy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllQueries() {
@@ -51,7 +51,7 @@ public final class PolicyDns64ConfigScope extends com.google.api.client.json.Gen
   }
 
   /**
-   * Controls whether DNS64 is enabled globally at the network level.
+   * Controls whether DNS64 is enabled globally for all networks bound to the policy.
    * @param allQueries allQueries or {@code null} for none
    */
   public PolicyDns64ConfigScope setAllQueries(java.lang.Boolean allQueries) {

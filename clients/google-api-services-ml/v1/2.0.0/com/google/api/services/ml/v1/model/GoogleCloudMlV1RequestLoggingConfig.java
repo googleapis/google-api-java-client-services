@@ -41,7 +41,7 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
    * Required. Fully qualified BigQuery table name in the following format: "
    * project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML
    * Service Agent" for your project must have permission to write to it. The table must have the
-   * following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED
+   * following [schema](/bigquery/docs/schemas): Field name Type Mode model STRING REQUIRED
    * model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction
    * STRING NULLABLE groundtruth STRING NULLABLE
    * The value may be {@code null}.
@@ -62,7 +62,7 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
    * Required. Fully qualified BigQuery table name in the following format: "
    * project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML
    * Service Agent" for your project must have permission to write to it. The table must have the
-   * following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED
+   * following [schema](/bigquery/docs/schemas): Field name Type Mode model STRING REQUIRED
    * model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction
    * STRING NULLABLE groundtruth STRING NULLABLE
    * @return value or {@code null} for none
@@ -75,7 +75,7 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
    * Required. Fully qualified BigQuery table name in the following format: "
    * project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML
    * Service Agent" for your project must have permission to write to it. The table must have the
-   * following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED
+   * following [schema](/bigquery/docs/schemas): Field name Type Mode model STRING REQUIRED
    * model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction
    * STRING NULLABLE groundtruth STRING NULLABLE
    * @param bigqueryTableName bigqueryTableName or {@code null} for none

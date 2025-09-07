@@ -33,6 +33,14 @@ package com.google.api.services.privateca.v1.model;
 public final class CaPool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. When EncryptionSpec is provided, the Subject, SubjectAltNames, and the PEM-encoded
+   * certificate fields will be encrypted at rest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionSpec encryptionSpec;
+
+  /**
    * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
    * The value may be {@code null}.
    */
@@ -67,6 +75,25 @@ public final class CaPool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String tier;
+
+  /**
+   * Optional. When EncryptionSpec is provided, the Subject, SubjectAltNames, and the PEM-encoded
+   * certificate fields will be encrypted at rest.
+   * @return value or {@code null} for none
+   */
+  public EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Optional. When EncryptionSpec is provided, the Subject, SubjectAltNames, and the PEM-encoded
+   * certificate fields will be encrypted at rest.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public CaPool setEncryptionSpec(EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
+    return this;
+  }
 
   /**
    * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.

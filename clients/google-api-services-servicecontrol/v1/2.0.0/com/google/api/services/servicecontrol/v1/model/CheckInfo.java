@@ -46,6 +46,13 @@ public final class CheckInfo extends com.google.api.client.json.GenericJson {
   private ConsumerInfo consumerInfo;
 
   /**
+   * Whether or not the api key should be ignored in the credential_id during reporting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreApiKeyUidAsCredentialId;
+
+  /**
    * A list of fields and label keys that are ignored by the server. The client doesn't need to send
    * them for following requests to improve performance and allow better aggregation.
    * The value may be {@code null}.
@@ -88,6 +95,23 @@ public final class CheckInfo extends com.google.api.client.json.GenericJson {
    */
   public CheckInfo setConsumerInfo(ConsumerInfo consumerInfo) {
     this.consumerInfo = consumerInfo;
+    return this;
+  }
+
+  /**
+   * Whether or not the api key should be ignored in the credential_id during reporting.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreApiKeyUidAsCredentialId() {
+    return ignoreApiKeyUidAsCredentialId;
+  }
+
+  /**
+   * Whether or not the api key should be ignored in the credential_id during reporting.
+   * @param ignoreApiKeyUidAsCredentialId ignoreApiKeyUidAsCredentialId or {@code null} for none
+   */
+  public CheckInfo setIgnoreApiKeyUidAsCredentialId(java.lang.Boolean ignoreApiKeyUidAsCredentialId) {
+    this.ignoreApiKeyUidAsCredentialId = ignoreApiKeyUidAsCredentialId;
     return this;
   }
 

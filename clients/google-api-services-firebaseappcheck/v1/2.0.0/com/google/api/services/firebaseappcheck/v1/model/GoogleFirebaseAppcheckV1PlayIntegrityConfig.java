@@ -36,6 +36,47 @@ package com.google.api.services.firebaseappcheck.v1.model;
 public final class GoogleFirebaseAppcheckV1PlayIntegrityConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies account requirements for Android devices running your app. These settings correspond
+   * to requirements on the [**account details**
+   * field](https://developer.android.com/google/play/integrity/verdicts#account-details-field)
+   * obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default) for a quick summary.
+   * The default values for these settings work for most apps, and are recommended.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails accountDetails;
+
+  /**
+   * Specifies application integrity requirements for Android devices running your app. These
+   * settings correspond to requirements on the [**application integrity**
+   * field](https://developer.android.com/google/play/integrity/verdicts#application-integrity-
+   * field) obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default) for a quick summary.
+   * The default values for these settings work for most apps, and are recommended.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity appIntegrity;
+
+  /**
+   * Specifies device integrity requirements for Android devices running your app. These settings
+   * correspond to requirements on the [**device integrity**
+   * field](https://developer.android.com/google/play/integrity/verdicts#device-integrity-field)
+   * obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default) for a quick summary.
+   * Warning: There are also
+   * [conditional](https://developer.android.com/google/play/integrity/setup#conditional) as well as
+   * [optional](https://developer.android.com/google/play/integrity/setup#optional_device_informatio
+   * n) responses that you can receive, but requires additional explicit opt-in from you. The App
+   * Check API is **not** responsible for any such opt-ins. The default values for these settings
+   * work for most apps, and are recommended.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity deviceIntegrity;
+
+  /**
    * Required. The relative resource name of the Play Integrity configuration object, in the format:
    * ``` projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
    * The value may be {@code null}.
@@ -51,6 +92,97 @@ public final class GoogleFirebaseAppcheckV1PlayIntegrityConfig extends com.googl
    */
   @com.google.api.client.util.Key
   private String tokenTtl;
+
+  /**
+   * Specifies account requirements for Android devices running your app. These settings correspond
+   * to requirements on the [**account details**
+   * field](https://developer.android.com/google/play/integrity/verdicts#account-details-field)
+   * obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default) for a quick summary.
+   * The default values for these settings work for most apps, and are recommended.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails getAccountDetails() {
+    return accountDetails;
+  }
+
+  /**
+   * Specifies account requirements for Android devices running your app. These settings correspond
+   * to requirements on the [**account details**
+   * field](https://developer.android.com/google/play/integrity/verdicts#account-details-field)
+   * obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default) for a quick summary.
+   * The default values for these settings work for most apps, and are recommended.
+   * @param accountDetails accountDetails or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1PlayIntegrityConfig setAccountDetails(GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails accountDetails) {
+    this.accountDetails = accountDetails;
+    return this;
+  }
+
+  /**
+   * Specifies application integrity requirements for Android devices running your app. These
+   * settings correspond to requirements on the [**application integrity**
+   * field](https://developer.android.com/google/play/integrity/verdicts#application-integrity-
+   * field) obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default) for a quick summary.
+   * The default values for these settings work for most apps, and are recommended.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity getAppIntegrity() {
+    return appIntegrity;
+  }
+
+  /**
+   * Specifies application integrity requirements for Android devices running your app. These
+   * settings correspond to requirements on the [**application integrity**
+   * field](https://developer.android.com/google/play/integrity/verdicts#application-integrity-
+   * field) obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default) for a quick summary.
+   * The default values for these settings work for most apps, and are recommended.
+   * @param appIntegrity appIntegrity or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1PlayIntegrityConfig setAppIntegrity(GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity appIntegrity) {
+    this.appIntegrity = appIntegrity;
+    return this;
+  }
+
+  /**
+   * Specifies device integrity requirements for Android devices running your app. These settings
+   * correspond to requirements on the [**device integrity**
+   * field](https://developer.android.com/google/play/integrity/verdicts#device-integrity-field)
+   * obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default) for a quick summary.
+   * Warning: There are also
+   * [conditional](https://developer.android.com/google/play/integrity/setup#conditional) as well as
+   * [optional](https://developer.android.com/google/play/integrity/setup#optional_device_informatio
+   * n) responses that you can receive, but requires additional explicit opt-in from you. The App
+   * Check API is **not** responsible for any such opt-ins. The default values for these settings
+   * work for most apps, and are recommended.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity getDeviceIntegrity() {
+    return deviceIntegrity;
+  }
+
+  /**
+   * Specifies device integrity requirements for Android devices running your app. These settings
+   * correspond to requirements on the [**device integrity**
+   * field](https://developer.android.com/google/play/integrity/verdicts#device-integrity-field)
+   * obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default) for a quick summary.
+   * Warning: There are also
+   * [conditional](https://developer.android.com/google/play/integrity/setup#conditional) as well as
+   * [optional](https://developer.android.com/google/play/integrity/setup#optional_device_informatio
+   * n) responses that you can receive, but requires additional explicit opt-in from you. The App
+   * Check API is **not** responsible for any such opt-ins. The default values for these settings
+   * work for most apps, and are recommended.
+   * @param deviceIntegrity deviceIntegrity or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1PlayIntegrityConfig setDeviceIntegrity(GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity deviceIntegrity) {
+    this.deviceIntegrity = deviceIntegrity;
+    return this;
+  }
 
   /**
    * Required. The relative resource name of the Play Integrity configuration object, in the format:

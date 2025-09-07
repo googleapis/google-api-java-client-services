@@ -33,6 +33,15 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies a minimum score required for a reCAPTCHA token to be considered valid. If its score
+   * is greater than or equal to this value, it will be accepted; otherwise, it will be rejected.
+   * The value must be between 0.0 and 1.0. The default value is 0.5.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float minValidScore;
+
+  /**
    * Required. The relative resource name of the reCAPTCHA v3 configuration object, in the format:
    * ``` projects/{project_number}/apps/{app_id}/recaptchaConfig ```
    * The value may be {@code null}.
@@ -64,6 +73,27 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.googl
    */
   @com.google.api.client.util.Key
   private String tokenTtl;
+
+  /**
+   * Specifies a minimum score required for a reCAPTCHA token to be considered valid. If its score
+   * is greater than or equal to this value, it will be accepted; otherwise, it will be rejected.
+   * The value must be between 0.0 and 1.0. The default value is 0.5.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getMinValidScore() {
+    return minValidScore;
+  }
+
+  /**
+   * Specifies a minimum score required for a reCAPTCHA token to be considered valid. If its score
+   * is greater than or equal to this value, it will be accepted; otherwise, it will be rejected.
+   * The value must be between 0.0 and 1.0. The default value is 0.5.
+   * @param minValidScore minValidScore or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaRecaptchaConfig setMinValidScore(java.lang.Float minValidScore) {
+    this.minValidScore = minValidScore;
+    return this;
+  }
 
   /**
    * Required. The relative resource name of the reCAPTCHA v3 configuration object, in the format:

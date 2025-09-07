@@ -41,6 +41,16 @@ public final class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig extends com
   private java.lang.String name;
 
   /**
+   * Specifies risk tolerance and requirements for your application. These settings correspond to
+   * requirements on the [**`riskAnalysis`**](https://cloud.google.com/recaptcha/docs/interpret-
+   * assessment-website#interpret_assessment) tuple in the assessment obtained from reCAPTCHA
+   * Enterprise. The default values for these settings work for most apps, and are recommended.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis riskAnalysis;
+
+  /**
    * The score-based site key [created in reCAPTCHA Enterprise](https://cloud.google.com/recaptcha-
    * enterprise/docs/create-key#creating_a_site_key) used to [invoke reCAPTCHA and generate the
    * reCAPTCHA tokens](https://cloud.google.com/recaptcha-enterprise/docs/instrument-web-pages) for
@@ -76,6 +86,29 @@ public final class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig extends com
    */
   public GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Specifies risk tolerance and requirements for your application. These settings correspond to
+   * requirements on the [**`riskAnalysis`**](https://cloud.google.com/recaptcha/docs/interpret-
+   * assessment-website#interpret_assessment) tuple in the assessment obtained from reCAPTCHA
+   * Enterprise. The default values for these settings work for most apps, and are recommended.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis getRiskAnalysis() {
+    return riskAnalysis;
+  }
+
+  /**
+   * Specifies risk tolerance and requirements for your application. These settings correspond to
+   * requirements on the [**`riskAnalysis`**](https://cloud.google.com/recaptcha/docs/interpret-
+   * assessment-website#interpret_assessment) tuple in the assessment obtained from reCAPTCHA
+   * Enterprise. The default values for these settings work for most apps, and are recommended.
+   * @param riskAnalysis riskAnalysis or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig setRiskAnalysis(GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis riskAnalysis) {
+    this.riskAnalysis = riskAnalysis;
     return this;
   }
 

@@ -129,6 +129,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String kmsKey;
 
   /**
+   * Optional. Labels to represent user-provided metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Optional. ClusterMaintenancePolicy determines when to allow or deny updates.
    * The value may be {@code null}.
    */
@@ -530,6 +537,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setKmsKey(java.lang.String kmsKey) {
     this.kmsKey = kmsKey;
+    return this;
+  }
+
+  /**
+   * Optional. Labels to represent user-provided metadata.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Labels to represent user-provided metadata.
+   * @param labels labels or {@code null} for none
+   */
+  public Cluster setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

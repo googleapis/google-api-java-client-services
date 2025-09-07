@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-groupsmigration</artifactId>
-  <version>v1-rev20210304-2.0.0</version>
-  <name>Groups Migration API v1-rev20210304-2.0.0</name>
+  <version>v1-rev20250901-2.0.0</version>
+  <name>Groups Migration API v1-rev20250901-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

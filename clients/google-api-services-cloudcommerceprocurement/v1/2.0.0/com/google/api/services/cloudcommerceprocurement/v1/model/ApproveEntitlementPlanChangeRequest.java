@@ -31,14 +31,14 @@ package com.google.api.services.cloudcommerceprocurement.v1.model;
 public final class ApproveEntitlementPlanChangeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the pending plan that is being approved.
+   * Required. Name of the pending plan that's being approved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pendingPlanName;
 
   /**
-   * Required. Name of the pending plan that is being approved.
+   * Required. Name of the pending plan that's being approved.
    * @return value or {@code null} for none
    */
   public java.lang.String getPendingPlanName() {
@@ -46,7 +46,7 @@ public final class ApproveEntitlementPlanChangeRequest extends com.google.api.cl
   }
 
   /**
-   * Required. Name of the pending plan that is being approved.
+   * Required. Name of the pending plan that's being approved.
    * @param pendingPlanName pendingPlanName or {@code null} for none
    */
   public ApproveEntitlementPlanChangeRequest setPendingPlanName(java.lang.String pendingPlanName) {

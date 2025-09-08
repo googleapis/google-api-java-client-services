@@ -7721,7 +7721,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Identifier. The unique name of the materialized view. Format:
-         *        `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
+         *        `projects/{project}/instances/{instance}/materializedViews/{materialized_view}` Views:
+         *        `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
          * @param content the {@link com.google.api.services.bigtableadmin.v2.model.MaterializedView}
          * @return the request
          */
@@ -7750,7 +7751,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Identifier. The unique name of the materialized view. Format:
-         *        `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
+         *        `projects/{project}/instances/{instance}/materializedViews/{materialized_view}` Views:
+         *        `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
            * @param content the {@link com.google.api.services.bigtableadmin.v2.model.MaterializedView}
            * @since 1.13
            */
@@ -7821,13 +7823,15 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
 
           /**
            * Identifier. The unique name of the materialized view. Format:
-           * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
+           * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}` Views:
+           * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Identifier. The unique name of the materialized view. Format:
-         `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
+         `projects/{project}/instances/{instance}/materializedViews/{materialized_view}` Views:
+         `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
            */
           public java.lang.String getName() {
             return name;
@@ -7835,7 +7839,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
 
           /**
            * Identifier. The unique name of the materialized view. Format:
-           * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
+           * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}` Views:
+           * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

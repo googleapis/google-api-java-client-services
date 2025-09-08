@@ -31,7 +31,8 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class MaterializedView extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set to true to make the MaterializedView protected against deletion.
+   * Set to true to make the MaterializedView protected against deletion. Views: `SCHEMA_VIEW`,
+   * `REPLICATION_VIEW`, `FULL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +41,7 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
   /**
    * Optional. The etag for this materialized view. This may be sent on update requests to ensure
    * that the client has an up-to-date value before proceeding. The server returns an ABORTED error
-   * on a mismatched etag.
+   * on a mismatched etag. Views: `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,21 +49,23 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
 
   /**
    * Identifier. The unique name of the materialized view. Format:
-   * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
+   * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}` Views:
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Immutable. The materialized view's select query.
+   * Required. Immutable. The materialized view's select query. Views: `SCHEMA_VIEW`, `FULL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
 
   /**
-   * Set to true to make the MaterializedView protected against deletion.
+   * Set to true to make the MaterializedView protected against deletion. Views: `SCHEMA_VIEW`,
+   * `REPLICATION_VIEW`, `FULL`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeletionProtection() {
@@ -70,7 +73,8 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Set to true to make the MaterializedView protected against deletion.
+   * Set to true to make the MaterializedView protected against deletion. Views: `SCHEMA_VIEW`,
+   * `REPLICATION_VIEW`, `FULL`.
    * @param deletionProtection deletionProtection or {@code null} for none
    */
   public MaterializedView setDeletionProtection(java.lang.Boolean deletionProtection) {
@@ -81,7 +85,7 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
   /**
    * Optional. The etag for this materialized view. This may be sent on update requests to ensure
    * that the client has an up-to-date value before proceeding. The server returns an ABORTED error
-   * on a mismatched etag.
+   * on a mismatched etag. Views: `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -91,7 +95,7 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
   /**
    * Optional. The etag for this materialized view. This may be sent on update requests to ensure
    * that the client has an up-to-date value before proceeding. The server returns an ABORTED error
-   * on a mismatched etag.
+   * on a mismatched etag. Views: `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
    * @param etag etag or {@code null} for none
    */
   public MaterializedView setEtag(java.lang.String etag) {
@@ -101,7 +105,8 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
 
   /**
    * Identifier. The unique name of the materialized view. Format:
-   * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
+   * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}` Views:
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -110,7 +115,8 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
 
   /**
    * Identifier. The unique name of the materialized view. Format:
-   * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
+   * `projects/{project}/instances/{instance}/materializedViews/{materialized_view}` Views:
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
    * @param name name or {@code null} for none
    */
   public MaterializedView setName(java.lang.String name) {
@@ -119,7 +125,7 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Immutable. The materialized view's select query.
+   * Required. Immutable. The materialized view's select query. Views: `SCHEMA_VIEW`, `FULL`.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -127,7 +133,7 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Immutable. The materialized view's select query.
+   * Required. Immutable. The materialized view's select query. Views: `SCHEMA_VIEW`, `FULL`.
    * @param query query or {@code null} for none
    */
   public MaterializedView setQuery(java.lang.String query) {

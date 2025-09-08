@@ -63,6 +63,14 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
+   * Optional. Private Service Connect configuration. Should only be set when connect_mode is
+   * PRIVATE_SERVICE_CONNECT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscConfig pscConfig;
+
+  /**
    * Optional, reserved_ip_range can have one of the following two types of values. * CIDR range
    * value when using DIRECT_PEERING connect mode. * [Allocated IP address
    * range](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address)
@@ -156,6 +164,25 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. Private Service Connect configuration. Should only be set when connect_mode is
+   * PRIVATE_SERVICE_CONNECT.
+   * @return value or {@code null} for none
+   */
+  public PscConfig getPscConfig() {
+    return pscConfig;
+  }
+
+  /**
+   * Optional. Private Service Connect configuration. Should only be set when connect_mode is
+   * PRIVATE_SERVICE_CONNECT.
+   * @param pscConfig pscConfig or {@code null} for none
+   */
+  public NetworkConfig setPscConfig(PscConfig pscConfig) {
+    this.pscConfig = pscConfig;
     return this;
   }
 

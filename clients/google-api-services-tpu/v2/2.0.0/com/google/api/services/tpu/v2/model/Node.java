@@ -51,6 +51,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.String apiVersion;
 
   /**
+   * Optional. Boot disk configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BootDiskConfig bootDiskConfig;
+
+  /**
    * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be
    * a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block
    * would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block
@@ -289,6 +296,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Boot disk configuration.
+   * @return value or {@code null} for none
+   */
+  public BootDiskConfig getBootDiskConfig() {
+    return bootDiskConfig;
+  }
+
+  /**
+   * Optional. Boot disk configuration.
+   * @param bootDiskConfig bootDiskConfig or {@code null} for none
+   */
+  public Node setBootDiskConfig(BootDiskConfig bootDiskConfig) {
+    this.bootDiskConfig = bootDiskConfig;
     return this;
   }
 

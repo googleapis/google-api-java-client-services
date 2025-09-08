@@ -78,6 +78,14 @@ public final class BootDiskConfig extends com.google.api.client.json.GenericJson
   private java.lang.String sourceImage;
 
   /**
+   * Optional. The storage pool in which the boot disk is created. You can provide this as a partial
+   * or full URL to the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storagePool;
+
+  /**
    * Optional. Customer encryption key for boot disk.
    * @return value or {@code null} for none
    */
@@ -188,6 +196,25 @@ public final class BootDiskConfig extends com.google.api.client.json.GenericJson
    */
   public BootDiskConfig setSourceImage(java.lang.String sourceImage) {
     this.sourceImage = sourceImage;
+    return this;
+  }
+
+  /**
+   * Optional. The storage pool in which the boot disk is created. You can provide this as a partial
+   * or full URL to the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoragePool() {
+    return storagePool;
+  }
+
+  /**
+   * Optional. The storage pool in which the boot disk is created. You can provide this as a partial
+   * or full URL to the resource.
+   * @param storagePool storagePool or {@code null} for none
+   */
+  public BootDiskConfig setStoragePool(java.lang.String storagePool) {
+    this.storagePool = storagePool;
     return this;
   }
 

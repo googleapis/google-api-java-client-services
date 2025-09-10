@@ -37,6 +37,15 @@ public final class GoogleCloudDiscoveryengineV1AssistAnswer extends com.google.a
   private java.util.List<java.lang.String> assistSkippedReasons;
 
   /**
+   * Optional. The field contains information about the various policy checks' results like the
+   * banned phrases or the Model Armor checks. This field is populated only if the assist call was
+   * skipped due to a policy violation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResult customerPolicyEnforcementResult;
+
+  /**
    * Immutable. Identifier. Resource name of the `AssistAnswer`. Format: `projects/{project}/locatio
    * ns/{location}/collections/{collection}/engines/{engine}/sessions/{session}/assistAnswers/{assis
    * t_answer}` This field must be a UTF-8 encoded string with a length limit of 1024 characters.
@@ -73,6 +82,27 @@ public final class GoogleCloudDiscoveryengineV1AssistAnswer extends com.google.a
    */
   public GoogleCloudDiscoveryengineV1AssistAnswer setAssistSkippedReasons(java.util.List<java.lang.String> assistSkippedReasons) {
     this.assistSkippedReasons = assistSkippedReasons;
+    return this;
+  }
+
+  /**
+   * Optional. The field contains information about the various policy checks' results like the
+   * banned phrases or the Model Armor checks. This field is populated only if the assist call was
+   * skipped due to a policy violation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResult getCustomerPolicyEnforcementResult() {
+    return customerPolicyEnforcementResult;
+  }
+
+  /**
+   * Optional. The field contains information about the various policy checks' results like the
+   * banned phrases or the Model Armor checks. This field is populated only if the assist call was
+   * skipped due to a policy violation.
+   * @param customerPolicyEnforcementResult customerPolicyEnforcementResult or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistAnswer setCustomerPolicyEnforcementResult(GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResult customerPolicyEnforcementResult) {
+    this.customerPolicyEnforcementResult = customerPolicyEnforcementResult;
     return this;
   }
 

@@ -68,6 +68,14 @@ public final class MediaRequestInfo extends com.google.api.client.json.GenericJs
   private java.lang.String notificationType;
 
   /**
+   * The physical headers provided by RequestReceivedParameters in Scotty request. type is
+   * uploader_service.KeyValuePairs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String physicalHeaders;
+
+  /**
    * The Scotty request ID.
    * The value may be {@code null}.
    */
@@ -185,6 +193,55 @@ public final class MediaRequestInfo extends com.google.api.client.json.GenericJs
    */
   public MediaRequestInfo setNotificationType(java.lang.String notificationType) {
     this.notificationType = notificationType;
+    return this;
+  }
+
+  /**
+   * The physical headers provided by RequestReceivedParameters in Scotty request. type is
+   * uploader_service.KeyValuePairs.
+   * @see #decodePhysicalHeaders()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhysicalHeaders() {
+    return physicalHeaders;
+  }
+
+  /**
+   * The physical headers provided by RequestReceivedParameters in Scotty request. type is
+   * uploader_service.KeyValuePairs.
+   * @see #getPhysicalHeaders()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodePhysicalHeaders() {
+    return com.google.api.client.util.Base64.decodeBase64(physicalHeaders);
+  }
+
+  /**
+   * The physical headers provided by RequestReceivedParameters in Scotty request. type is
+   * uploader_service.KeyValuePairs.
+   * @see #encodePhysicalHeaders()
+   * @param physicalHeaders physicalHeaders or {@code null} for none
+   */
+  public MediaRequestInfo setPhysicalHeaders(java.lang.String physicalHeaders) {
+    this.physicalHeaders = physicalHeaders;
+    return this;
+  }
+
+  /**
+   * The physical headers provided by RequestReceivedParameters in Scotty request. type is
+   * uploader_service.KeyValuePairs.
+   * @see #setPhysicalHeaders()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public MediaRequestInfo encodePhysicalHeaders(byte[] physicalHeaders) {
+    this.physicalHeaders = com.google.api.client.util.Base64.encodeBase64URLSafeString(physicalHeaders);
     return this;
   }
 

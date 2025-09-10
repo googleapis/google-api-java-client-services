@@ -54,9 +54,7 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   private java.lang.String isActive;
 
   /**
-   * Whether this Attachment is active, and if so, whether BGP is up. This is based on the statuses
-   * available in the Pantheon UI here:
-   * http://google3/java/com/google/cloud/boq/clientapi/gce/hybrid/api/interconnect_models.proto
+   * Whether this Attachment is active, and if so, whether BGP is up.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,9 +118,7 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   }
 
   /**
-   * Whether this Attachment is active, and if so, whether BGP is up. This is based on the statuses
-   * available in the Pantheon UI here:
-   * http://google3/java/com/google/cloud/boq/clientapi/gce/hybrid/api/interconnect_models.proto
+   * Whether this Attachment is active, and if so, whether BGP is up.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -130,9 +126,7 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   }
 
   /**
-   * Whether this Attachment is active, and if so, whether BGP is up. This is based on the statuses
-   * available in the Pantheon UI here:
-   * http://google3/java/com/google/cloud/boq/clientapi/gce/hybrid/api/interconnect_models.proto
+   * Whether this Attachment is active, and if so, whether BGP is up.
    * @param status status or {@code null} for none
    */
   public InterconnectAttachmentGroupsOperationalStatusAttachmentStatus setStatus(java.lang.String status) {

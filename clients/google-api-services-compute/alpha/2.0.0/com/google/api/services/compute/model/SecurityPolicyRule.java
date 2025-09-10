@@ -168,7 +168,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.String redirectTarget;
 
   /**
-   * [Output Only] The minimum managed protection tier required for this rule. [Deprecated] Use
+   * [Output Only] The minimum Cloud Armor subscription required for this rule. [Deprecated] Use
    * requiredManagedProtectionTiers instead.
    * The value may be {@code null}.
    */
@@ -523,7 +523,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] The minimum managed protection tier required for this rule. [Deprecated] Use
+   * [Output Only] The minimum Cloud Armor subscription required for this rule. [Deprecated] Use
    * requiredManagedProtectionTiers instead.
    * @return value or {@code null} for none
    */
@@ -532,7 +532,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] The minimum managed protection tier required for this rule. [Deprecated] Use
+   * [Output Only] The minimum Cloud Armor subscription required for this rule. [Deprecated] Use
    * requiredManagedProtectionTiers instead.
    * @param ruleManagedProtectionTier ruleManagedProtectionTier or {@code null} for none
    */

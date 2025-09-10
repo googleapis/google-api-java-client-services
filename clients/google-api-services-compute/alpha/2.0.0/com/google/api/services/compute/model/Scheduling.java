@@ -176,6 +176,15 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean preemptible;
 
   /**
+   * Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off
+   * signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2
+   * Soft Off signal is triggered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration preemptionNoticeDuration;
+
+  /**
    * Specifies the provisioning model of the instance.
    * The value may be {@code null}.
    */
@@ -560,6 +569,27 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off
+   * signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2
+   * Soft Off signal is triggered.
+   * @return value or {@code null} for none
+   */
+  public Duration getPreemptionNoticeDuration() {
+    return preemptionNoticeDuration;
+  }
+
+  /**
+   * Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off
+   * signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2
+   * Soft Off signal is triggered.
+   * @param preemptionNoticeDuration preemptionNoticeDuration or {@code null} for none
+   */
+  public Scheduling setPreemptionNoticeDuration(Duration preemptionNoticeDuration) {
+    this.preemptionNoticeDuration = preemptionNoticeDuration;
     return this;
   }
 

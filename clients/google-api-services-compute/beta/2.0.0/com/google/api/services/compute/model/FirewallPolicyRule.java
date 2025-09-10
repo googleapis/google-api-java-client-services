@@ -121,6 +121,18 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.String securityProfileGroup;
 
   /**
+   * A list of forwarding rules to which this rule applies. This field allows you to control which
+   * load balancers get this rule. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project /global/forwardingRules/forwardingRule -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /forwardingRules/forwardingRule - projects/project/global/ forwardingRules/forwardingRule -
+   * projects/project/regions/region/forwardingRules/ forwardingRule
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> targetForwardingRules;
+
+  /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
    * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
@@ -148,6 +160,13 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> targetServiceAccounts;
+
+  /**
+   * Target types of the firewall policy rule. Default value is INSTANCES.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetType;
 
   /**
    * Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action =
@@ -371,6 +390,33 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
+   * A list of forwarding rules to which this rule applies. This field allows you to control which
+   * load balancers get this rule. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project /global/forwardingRules/forwardingRule -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /forwardingRules/forwardingRule - projects/project/global/ forwardingRules/forwardingRule -
+   * projects/project/regions/region/forwardingRules/ forwardingRule
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTargetForwardingRules() {
+    return targetForwardingRules;
+  }
+
+  /**
+   * A list of forwarding rules to which this rule applies. This field allows you to control which
+   * load balancers get this rule. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project /global/forwardingRules/forwardingRule -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /forwardingRules/forwardingRule - projects/project/global/ forwardingRules/forwardingRule -
+   * projects/project/regions/region/forwardingRules/ forwardingRule
+   * @param targetForwardingRules targetForwardingRules or {@code null} for none
+   */
+  public FirewallPolicyRule setTargetForwardingRules(java.util.List<java.lang.String> targetForwardingRules) {
+    this.targetForwardingRules = targetForwardingRules;
+    return this;
+  }
+
+  /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
    * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
@@ -434,6 +480,23 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   public FirewallPolicyRule setTargetServiceAccounts(java.util.List<java.lang.String> targetServiceAccounts) {
     this.targetServiceAccounts = targetServiceAccounts;
+    return this;
+  }
+
+  /**
+   * Target types of the firewall policy rule. Default value is INSTANCES.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetType() {
+    return targetType;
+  }
+
+  /**
+   * Target types of the firewall policy rule. Default value is INSTANCES.
+   * @param targetType targetType or {@code null} for none
+   */
+  public FirewallPolicyRule setTargetType(java.lang.String targetType) {
+    this.targetType = targetType;
     return this;
   }
 

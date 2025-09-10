@@ -32,12 +32,10 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
   /**
    * The configuration of the bandwidth allocation, one of the following: - ALLOCATE_PER_WIRE:
    * configures a separate unmetered bandwidth allocation (and associated charges) for each wire in
-   * the group. - SHARED_WITH_WIRE_GROUP: configures one unmetered bandwidth allocation for the wire
-   * group. The unmetered bandwidth is divided equally across each wire in the group, but dynamic
-   * throttling reallocates unused unmetered bandwidth from unused or underused wires to other wires
-   * in the group. For example, with a four-wire box-and-cross group, when one Interconnect
-   * connection is down, the unmetered bandwidth of the two down wires is reallocated to the
-   * remaining up wires.
+   * the group. - SHARED_WITH_WIRE_GROUP: this is the default behavior, which configures one
+   * unmetered bandwidth allocation for the wire group. The unmetered bandwidth is divided equally
+   * across each wire in the group, but dynamic throttling reallocates unused unmetered bandwidth
+   * from unused or underused wires to other wires in the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,12 +77,10 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
   /**
    * The configuration of the bandwidth allocation, one of the following: - ALLOCATE_PER_WIRE:
    * configures a separate unmetered bandwidth allocation (and associated charges) for each wire in
-   * the group. - SHARED_WITH_WIRE_GROUP: configures one unmetered bandwidth allocation for the wire
-   * group. The unmetered bandwidth is divided equally across each wire in the group, but dynamic
-   * throttling reallocates unused unmetered bandwidth from unused or underused wires to other wires
-   * in the group. For example, with a four-wire box-and-cross group, when one Interconnect
-   * connection is down, the unmetered bandwidth of the two down wires is reallocated to the
-   * remaining up wires.
+   * the group. - SHARED_WITH_WIRE_GROUP: this is the default behavior, which configures one
+   * unmetered bandwidth allocation for the wire group. The unmetered bandwidth is divided equally
+   * across each wire in the group, but dynamic throttling reallocates unused unmetered bandwidth
+   * from unused or underused wires to other wires in the group.
    * @return value or {@code null} for none
    */
   public java.lang.String getBandwidthAllocation() {
@@ -94,12 +90,10 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
   /**
    * The configuration of the bandwidth allocation, one of the following: - ALLOCATE_PER_WIRE:
    * configures a separate unmetered bandwidth allocation (and associated charges) for each wire in
-   * the group. - SHARED_WITH_WIRE_GROUP: configures one unmetered bandwidth allocation for the wire
-   * group. The unmetered bandwidth is divided equally across each wire in the group, but dynamic
-   * throttling reallocates unused unmetered bandwidth from unused or underused wires to other wires
-   * in the group. For example, with a four-wire box-and-cross group, when one Interconnect
-   * connection is down, the unmetered bandwidth of the two down wires is reallocated to the
-   * remaining up wires.
+   * the group. - SHARED_WITH_WIRE_GROUP: this is the default behavior, which configures one
+   * unmetered bandwidth allocation for the wire group. The unmetered bandwidth is divided equally
+   * across each wire in the group, but dynamic throttling reallocates unused unmetered bandwidth
+   * from unused or underused wires to other wires in the group.
    * @param bandwidthAllocation bandwidthAllocation or {@code null} for none
    */
   public WireProperties setBandwidthAllocation(java.lang.String bandwidthAllocation) {

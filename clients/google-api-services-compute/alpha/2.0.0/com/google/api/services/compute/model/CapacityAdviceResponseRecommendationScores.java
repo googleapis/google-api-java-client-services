@@ -38,13 +38,22 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
   private java.lang.Double obtainability;
 
   /**
-   * The preemption score indicates the likelihood that your Spot VMs is preempted. For more
-   * information about the preemption process, see Preemption of Spot VMs. The score range is 0.0
-   * through 1.0. Higher is better.
+   * [Deprecated] Use uptime_score field instead. The preemption score indicates the likelihood that
+   * your Spot VMs is preempted. For more information about the preemption process, see Preemption
+   * of Spot VMs. The score range is 0.0 through 1.0. Higher is better.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double spotPreemption;
+
+  /**
+   * The uptime score indicates the availability of your Spot VMs. For more information about the
+   * preemption process, see Preemption of Spot VMs. The score range is 0.0 through 1.0. Higher is
+   * better.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double uptimeScore;
 
   /**
    * The obtainability score indicates the likelihood of successfully obtaining (provisioning) the
@@ -66,9 +75,9 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
   }
 
   /**
-   * The preemption score indicates the likelihood that your Spot VMs is preempted. For more
-   * information about the preemption process, see Preemption of Spot VMs. The score range is 0.0
-   * through 1.0. Higher is better.
+   * [Deprecated] Use uptime_score field instead. The preemption score indicates the likelihood that
+   * your Spot VMs is preempted. For more information about the preemption process, see Preemption
+   * of Spot VMs. The score range is 0.0 through 1.0. Higher is better.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSpotPreemption() {
@@ -76,13 +85,34 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
   }
 
   /**
-   * The preemption score indicates the likelihood that your Spot VMs is preempted. For more
-   * information about the preemption process, see Preemption of Spot VMs. The score range is 0.0
-   * through 1.0. Higher is better.
+   * [Deprecated] Use uptime_score field instead. The preemption score indicates the likelihood that
+   * your Spot VMs is preempted. For more information about the preemption process, see Preemption
+   * of Spot VMs. The score range is 0.0 through 1.0. Higher is better.
    * @param spotPreemption spotPreemption or {@code null} for none
    */
   public CapacityAdviceResponseRecommendationScores setSpotPreemption(java.lang.Double spotPreemption) {
     this.spotPreemption = spotPreemption;
+    return this;
+  }
+
+  /**
+   * The uptime score indicates the availability of your Spot VMs. For more information about the
+   * preemption process, see Preemption of Spot VMs. The score range is 0.0 through 1.0. Higher is
+   * better.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUptimeScore() {
+    return uptimeScore;
+  }
+
+  /**
+   * The uptime score indicates the availability of your Spot VMs. For more information about the
+   * preemption process, see Preemption of Spot VMs. The score range is 0.0 through 1.0. Higher is
+   * better.
+   * @param uptimeScore uptimeScore or {@code null} for none
+   */
+  public CapacityAdviceResponseRecommendationScores setUptimeScore(java.lang.Double uptimeScore) {
+    this.uptimeScore = uptimeScore;
     return this;
   }
 

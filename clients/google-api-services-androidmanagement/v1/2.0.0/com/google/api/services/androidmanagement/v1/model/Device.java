@@ -53,9 +53,11 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The password requirements currently applied to the device. The applied requirements may be
-   * slightly different from those specified in passwordPolicies in some cases. fieldPath is set
-   * based on passwordPolicies.
+   * The password requirements currently applied to the device. This field exists because the
+   * applied requirements may be slightly different from those specified in passwordPolicies in some
+   * cases. Note that this field does not provide information about password compliance. For non-
+   * compliance information, see nonComplianceDetails. NonComplianceDetail.fieldPath, is set based
+   * on passwordPolicies, not based on this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,9 +356,11 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The password requirements currently applied to the device. The applied requirements may be
-   * slightly different from those specified in passwordPolicies in some cases. fieldPath is set
-   * based on passwordPolicies.
+   * The password requirements currently applied to the device. This field exists because the
+   * applied requirements may be slightly different from those specified in passwordPolicies in some
+   * cases. Note that this field does not provide information about password compliance. For non-
+   * compliance information, see nonComplianceDetails. NonComplianceDetail.fieldPath, is set based
+   * on passwordPolicies, not based on this field.
    * @return value or {@code null} for none
    */
   public java.util.List<PasswordRequirements> getAppliedPasswordPolicies() {
@@ -364,9 +368,11 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The password requirements currently applied to the device. The applied requirements may be
-   * slightly different from those specified in passwordPolicies in some cases. fieldPath is set
-   * based on passwordPolicies.
+   * The password requirements currently applied to the device. This field exists because the
+   * applied requirements may be slightly different from those specified in passwordPolicies in some
+   * cases. Note that this field does not provide information about password compliance. For non-
+   * compliance information, see nonComplianceDetails. NonComplianceDetail.fieldPath, is set based
+   * on passwordPolicies, not based on this field.
    * @param appliedPasswordPolicies appliedPasswordPolicies or {@code null} for none
    */
   public Device setAppliedPasswordPolicies(java.util.List<PasswordRequirements> appliedPasswordPolicies) {

@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudNotebooklmV1alphaUserContentTextContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name to be displayed for the source.
+   * The name to be displayed for the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudNotebooklmV1alphaUserContentTextContent extends co
   private java.lang.String sourceName;
 
   /**
-   * Name to be displayed for the source.
+   * The name to be displayed for the source.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -52,7 +52,7 @@ public final class GoogleCloudNotebooklmV1alphaUserContentTextContent extends co
   }
 
   /**
-   * Name to be displayed for the source.
+   * The name to be displayed for the source.
    * @param content content or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaUserContentTextContent setContent(java.lang.String content) {

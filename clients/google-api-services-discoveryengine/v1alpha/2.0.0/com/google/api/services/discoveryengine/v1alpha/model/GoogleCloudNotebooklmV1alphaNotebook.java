@@ -68,6 +68,13 @@ public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.c
   private java.lang.String notebookId;
 
   /**
+   * Output only. List of sources in the notebook. This is an output only field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudNotebooklmV1alphaSource> sources;
+
+  /**
    * Optional. The title of the notebook.
    * The value may be {@code null}.
    */
@@ -160,6 +167,23 @@ public final class GoogleCloudNotebooklmV1alphaNotebook extends com.google.api.c
    */
   public GoogleCloudNotebooklmV1alphaNotebook setNotebookId(java.lang.String notebookId) {
     this.notebookId = notebookId;
+    return this;
+  }
+
+  /**
+   * Output only. List of sources in the notebook. This is an output only field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudNotebooklmV1alphaSource> getSources() {
+    return sources;
+  }
+
+  /**
+   * Output only. List of sources in the notebook. This is an output only field.
+   * @param sources sources or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaNotebook setSources(java.util.List<GoogleCloudNotebooklmV1alphaSource> sources) {
+    this.sources = sources;
     return this;
   }
 

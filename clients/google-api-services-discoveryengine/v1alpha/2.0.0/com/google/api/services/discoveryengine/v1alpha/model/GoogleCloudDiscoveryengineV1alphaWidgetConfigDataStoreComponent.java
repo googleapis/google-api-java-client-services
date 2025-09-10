@@ -38,6 +38,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreCompone
   private java.lang.String contentConfig;
 
   /**
+   * Output only. The type of the data store config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataStoreConfigType;
+
+  /**
    * The display name of the data store.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreCompone
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreComponent setContentConfig(java.lang.String contentConfig) {
     this.contentConfig = contentConfig;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the data store config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataStoreConfigType() {
+    return dataStoreConfigType;
+  }
+
+  /**
+   * Output only. The type of the data store config.
+   * @param dataStoreConfigType dataStoreConfigType or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreComponent setDataStoreConfigType(java.lang.String dataStoreConfigType) {
+    this.dataStoreConfigType = dataStoreConfigType;
     return this;
   }
 

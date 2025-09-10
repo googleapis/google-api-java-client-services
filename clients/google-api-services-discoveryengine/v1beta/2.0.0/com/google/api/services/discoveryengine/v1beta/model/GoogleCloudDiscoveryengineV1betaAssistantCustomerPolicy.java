@@ -37,6 +37,14 @@ public final class GoogleCloudDiscoveryengineV1betaAssistantCustomerPolicy exten
   private java.util.List<GoogleCloudDiscoveryengineV1betaAssistantCustomerPolicyBannedPhrase> bannedPhrases;
 
   /**
+   * Optional. Model Armor configuration to be used for sanitizing user prompts and assistant
+   * responses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaAssistantCustomerPolicyModelArmorConfig modelArmorConfig;
+
+  /**
    * Optional. List of banned phrases.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class GoogleCloudDiscoveryengineV1betaAssistantCustomerPolicy exten
    */
   public GoogleCloudDiscoveryengineV1betaAssistantCustomerPolicy setBannedPhrases(java.util.List<GoogleCloudDiscoveryengineV1betaAssistantCustomerPolicyBannedPhrase> bannedPhrases) {
     this.bannedPhrases = bannedPhrases;
+    return this;
+  }
+
+  /**
+   * Optional. Model Armor configuration to be used for sanitizing user prompts and assistant
+   * responses.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAssistantCustomerPolicyModelArmorConfig getModelArmorConfig() {
+    return modelArmorConfig;
+  }
+
+  /**
+   * Optional. Model Armor configuration to be used for sanitizing user prompts and assistant
+   * responses.
+   * @param modelArmorConfig modelArmorConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAssistantCustomerPolicy setModelArmorConfig(GoogleCloudDiscoveryengineV1betaAssistantCustomerPolicyModelArmorConfig modelArmorConfig) {
+    this.modelArmorConfig = modelArmorConfig;
     return this;
   }
 

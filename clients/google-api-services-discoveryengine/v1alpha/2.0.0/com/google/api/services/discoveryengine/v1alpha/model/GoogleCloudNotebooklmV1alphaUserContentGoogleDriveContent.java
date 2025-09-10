@@ -46,7 +46,7 @@ public final class GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent ext
   private java.lang.String mimeType;
 
   /**
-   * Name to be displayed for the source.
+   * The name to be displayed for the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent ext
   }
 
   /**
-   * Name to be displayed for the source.
+   * The name to be displayed for the source.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceName() {
@@ -99,7 +99,7 @@ public final class GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent ext
   }
 
   /**
-   * Name to be displayed for the source.
+   * The name to be displayed for the source.
    * @param sourceName sourceName or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaUserContentGoogleDriveContent setSourceName(java.lang.String sourceName) {

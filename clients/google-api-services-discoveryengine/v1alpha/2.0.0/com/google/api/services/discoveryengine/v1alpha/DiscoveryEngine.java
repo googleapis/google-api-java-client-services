@@ -45514,13 +45514,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. Maximum number of Notebooks to return. If unspecified, defaults to "200". The
+           * Optional. Maximum number of Notebooks to return. If unspecified, defaults to "500". The
            * maximum allowed value is "500". If this field is negative, will use the default value.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Maximum number of Notebooks to return. If unspecified, defaults to "200". The maximum
+          /** Optional. Maximum number of Notebooks to return. If unspecified, defaults to "500". The maximum
          allowed value is "500". If this field is negative, will use the default value.
            */
           public java.lang.Integer getPageSize() {
@@ -45528,7 +45528,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. Maximum number of Notebooks to return. If unspecified, defaults to "200". The
+           * Optional. Maximum number of Notebooks to return. If unspecified, defaults to "500". The
            * maximum allowed value is "500". If this field is negative, will use the default value.
            */
           public ListRecentlyViewed setPageSize(java.lang.Integer pageSize) {

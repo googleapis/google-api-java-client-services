@@ -39,8 +39,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Immutable. The name of a build that already exists. It doesn't have to be built; a rollout will
-   * wait for a build to be ready before updating traffic.
+   * Required. Immutable. The name of a build that already exists. It doesn't have to be built; a
+   * rollout will wait for a build to be ready before updating traffic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +146,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The name of a build that already exists. It doesn't have to be built; a rollout will
-   * wait for a build to be ready before updating traffic.
+   * Required. Immutable. The name of a build that already exists. It doesn't have to be built; a
+   * rollout will wait for a build to be ready before updating traffic.
    * @return value or {@code null} for none
    */
   public java.lang.String getBuild() {
@@ -155,8 +155,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The name of a build that already exists. It doesn't have to be built; a rollout will
-   * wait for a build to be ready before updating traffic.
+   * Required. Immutable. The name of a build that already exists. It doesn't have to be built; a
+   * rollout will wait for a build to be ready before updating traffic.
    * @param build build or {@code null} for none
    */
   public Rollout setBuild(java.lang.String build) {

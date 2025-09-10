@@ -31,6 +31,13 @@ package com.google.api.services.firebaseapphosting.v1.model;
 public final class BuildSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * An archive source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArchiveSource archive;
+
+  /**
    * A codebase source.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class BuildSource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ContainerSource container;
+
+  /**
+   * An archive source.
+   * @return value or {@code null} for none
+   */
+  public ArchiveSource getArchive() {
+    return archive;
+  }
+
+  /**
+   * An archive source.
+   * @param archive archive or {@code null} for none
+   */
+  public BuildSource setArchive(ArchiveSource archive) {
+    this.archive = archive;
+    return this;
+  }
 
   /**
    * A codebase source.

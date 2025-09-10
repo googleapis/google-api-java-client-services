@@ -77,12 +77,9 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2BackupDisasterRecovery backupDisasterRecovery;
 
   /**
-   * Output only. The canonical name of the finding. The following list shows some examples: +
-   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}` + `organizations/{o
-   * rganization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/findings/{finding_id}` +
+   * Output only. The canonical name of the finding. The following list shows some examples: + `orga
+   * nizations/{organization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}`
+   * + `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
    * `projects/{project_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` The
    * prefix is the closest CRM ancestor of the resource associated with the finding.
    * The value may be {@code null}.
@@ -692,12 +689,9 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The canonical name of the finding. The following list shows some examples: +
-   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}` + `organizations/{o
-   * rganization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/findings/{finding_id}` +
+   * Output only. The canonical name of the finding. The following list shows some examples: + `orga
+   * nizations/{organization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}`
+   * + `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
    * `projects/{project_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` The
    * prefix is the closest CRM ancestor of the resource associated with the finding.
    * @return value or {@code null} for none
@@ -707,12 +701,9 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The canonical name of the finding. The following list shows some examples: +
-   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}` + `organizations/{o
-   * rganization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/findings/{finding_id}` +
+   * Output only. The canonical name of the finding. The following list shows some examples: + `orga
+   * nizations/{organization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}`
+   * + `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
    * `projects/{project_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` The
    * prefix is the closest CRM ancestor of the resource associated with the finding.
    * @param canonicalName canonicalName or {@code null} for none

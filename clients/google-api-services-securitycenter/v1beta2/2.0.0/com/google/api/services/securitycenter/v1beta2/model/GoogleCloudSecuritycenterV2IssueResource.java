@@ -31,6 +31,14 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * The AppHub application associated with the resource, if any. Only populated for the primary
+   * resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2IssueResourceApplication application;
+
+  /**
    * The AWS metadata of the resource associated with the issue. Only populated for AWS resources.
    * The value may be {@code null}.
    */
@@ -80,6 +88,25 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The AppHub application associated with the resource, if any. Only populated for the primary
+   * resource.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2IssueResourceApplication getApplication() {
+    return application;
+  }
+
+  /**
+   * The AppHub application associated with the resource, if any. Only populated for the primary
+   * resource.
+   * @param application application or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2IssueResource setApplication(GoogleCloudSecuritycenterV2IssueResourceApplication application) {
+    this.application = application;
+    return this;
+  }
 
   /**
    * The AWS metadata of the resource associated with the issue. Only populated for AWS resources.

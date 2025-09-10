@@ -30,6 +30,14 @@ package com.google.api.services.compute.model;
 public final class HaControllerStatusFailoverProgress extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] Timestamp of the failover completion. Filled only if the failover is completed,
+   * in lastFailoverInfo.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String failoverCompleteTimestamp;
+
+  /**
    * [Output Only] Indicates if failover has been triggered automatically or manually.
    * The value may be {@code null}.
    */
@@ -50,6 +58,25 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private HaControllerStatusFailoverProgressLastFailoverAttempt lastFailoverAttempt;
+
+  /**
+   * [Output Only] Timestamp of the failover completion. Filled only if the failover is completed,
+   * in lastFailoverInfo.
+   * @return value or {@code null} for none
+   */
+  public String getFailoverCompleteTimestamp() {
+    return failoverCompleteTimestamp;
+  }
+
+  /**
+   * [Output Only] Timestamp of the failover completion. Filled only if the failover is completed,
+   * in lastFailoverInfo.
+   * @param failoverCompleteTimestamp failoverCompleteTimestamp or {@code null} for none
+   */
+  public HaControllerStatusFailoverProgress setFailoverCompleteTimestamp(String failoverCompleteTimestamp) {
+    this.failoverCompleteTimestamp = failoverCompleteTimestamp;
+    return this;
+  }
 
   /**
    * [Output Only] Indicates if failover has been triggered automatically or manually.

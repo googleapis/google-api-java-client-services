@@ -38,6 +38,13 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   private HaControllerStatusFailoverProgress failoverProgress;
 
   /**
+   * [Output Only] Contains the details of the last successful failover.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HaControllerStatusFailoverProgress lastFailoverInfo;
+
+  /**
    * [Output Only] Indicates if the failover is currently in-progress.
    * The value may be {@code null}.
    */
@@ -92,6 +99,23 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
    */
   public HaControllerStatus setFailoverProgress(HaControllerStatusFailoverProgress failoverProgress) {
     this.failoverProgress = failoverProgress;
+    return this;
+  }
+
+  /**
+   * [Output Only] Contains the details of the last successful failover.
+   * @return value or {@code null} for none
+   */
+  public HaControllerStatusFailoverProgress getLastFailoverInfo() {
+    return lastFailoverInfo;
+  }
+
+  /**
+   * [Output Only] Contains the details of the last successful failover.
+   * @param lastFailoverInfo lastFailoverInfo or {@code null} for none
+   */
+  public HaControllerStatus setLastFailoverInfo(HaControllerStatusFailoverProgress lastFailoverInfo) {
+    this.lastFailoverInfo = lastFailoverInfo;
     return this;
   }
 

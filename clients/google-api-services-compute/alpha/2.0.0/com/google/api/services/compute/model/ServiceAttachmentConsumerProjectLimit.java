@@ -37,6 +37,13 @@ public final class ServiceAttachmentConsumerProjectLimit extends com.google.api.
   private java.lang.Long connectionLimit;
 
   /**
+   * The URL for the PSC endpoint to accept
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endpointUrl;
+
+  /**
    * The network URL for the network to set the limit for.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class ServiceAttachmentConsumerProjectLimit extends com.google.api.
    */
   public ServiceAttachmentConsumerProjectLimit setConnectionLimit(java.lang.Long connectionLimit) {
     this.connectionLimit = connectionLimit;
+    return this;
+  }
+
+  /**
+   * The URL for the PSC endpoint to accept
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndpointUrl() {
+    return endpointUrl;
+  }
+
+  /**
+   * The URL for the PSC endpoint to accept
+   * @param endpointUrl endpointUrl or {@code null} for none
+   */
+  public ServiceAttachmentConsumerProjectLimit setEndpointUrl(java.lang.String endpointUrl) {
+    this.endpointUrl = endpointUrl;
     return this;
   }
 

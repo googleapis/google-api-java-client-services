@@ -114,6 +114,14 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String parent;
 
   /**
+   * [Output Only] Source of this Firewall Policy. USER_DEFINED if created by a Cloud user, or
+   * SYSTEM if created by managed services like GKE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policySource;
+
+  /**
    * The type of the firewall policy. This field can be either VPC_POLICY or RDMA_ROCE_POLICY. Note:
    * if not specified then VPC_POLICY will be used.
    * The value may be {@code null}.
@@ -407,6 +415,25 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
    */
   public FirewallPolicy setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * [Output Only] Source of this Firewall Policy. USER_DEFINED if created by a Cloud user, or
+   * SYSTEM if created by managed services like GKE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicySource() {
+    return policySource;
+  }
+
+  /**
+   * [Output Only] Source of this Firewall Policy. USER_DEFINED if created by a Cloud user, or
+   * SYSTEM if created by managed services like GKE.
+   * @param policySource policySource or {@code null} for none
+   */
+  public FirewallPolicy setPolicySource(java.lang.String policySource) {
+    this.policySource = policySource;
     return this;
   }
 

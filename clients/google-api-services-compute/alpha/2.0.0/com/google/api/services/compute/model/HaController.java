@@ -30,6 +30,14 @@ package com.google.api.services.compute.model;
 public final class HaController extends com.google.api.client.json.GenericJson {
 
   /**
+   * Advanced configuration option. If specified, these Backend Services need to be pre-created and
+   * configured as managed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> backendServices;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -88,6 +96,14 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Basic networking configuration. Required backend services and forwarding rules will be
+   * automatically created with default parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HaControllerNetworkingAutoConfiguration networkingAutoConfiguration;
+
+  /**
    * [Output Only] URL of the region where the resource resides. You must specify this field as part
    * of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
@@ -129,6 +145,25 @@ public final class HaController extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, HaControllerZoneConfiguration> zoneConfigurations;
+
+  /**
+   * Advanced configuration option. If specified, these Backend Services need to be pre-created and
+   * configured as managed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBackendServices() {
+    return backendServices;
+  }
+
+  /**
+   * Advanced configuration option. If specified, these Backend Services need to be pre-created and
+   * configured as managed.
+   * @param backendServices backendServices or {@code null} for none
+   */
+  public HaController setBackendServices(java.util.List<java.lang.String> backendServices) {
+    this.backendServices = backendServices;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -264,6 +299,25 @@ public final class HaController extends com.google.api.client.json.GenericJson {
    */
   public HaController setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Basic networking configuration. Required backend services and forwarding rules will be
+   * automatically created with default parameters.
+   * @return value or {@code null} for none
+   */
+  public HaControllerNetworkingAutoConfiguration getNetworkingAutoConfiguration() {
+    return networkingAutoConfiguration;
+  }
+
+  /**
+   * Basic networking configuration. Required backend services and forwarding rules will be
+   * automatically created with default parameters.
+   * @param networkingAutoConfiguration networkingAutoConfiguration or {@code null} for none
+   */
+  public HaController setNetworkingAutoConfiguration(HaControllerNetworkingAutoConfiguration networkingAutoConfiguration) {
+    this.networkingAutoConfiguration = networkingAutoConfiguration;
     return this;
   }
 

@@ -67,7 +67,7 @@ public final class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsReque
   private java.lang.String profile;
 
   /**
-   * Required. Scope of the resources for the computation. For Apigee, the environment is the scope
+   * Optional. Scope of the resources for the computation. For Apigee, the environment is the scope
    * of the resources.
    * The value may be {@code null}.
    */
@@ -164,7 +164,7 @@ public final class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsReque
   }
 
   /**
-   * Required. Scope of the resources for the computation. For Apigee, the environment is the scope
+   * Optional. Scope of the resources for the computation. For Apigee, the environment is the scope
    * of the resources.
    * @return value or {@code null} for none
    */
@@ -173,7 +173,7 @@ public final class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsReque
   }
 
   /**
-   * Required. Scope of the resources for the computation. For Apigee, the environment is the scope
+   * Optional. Scope of the resources for the computation. For Apigee, the environment is the scope
    * of the resources.
    * @param scope scope or {@code null} for none
    */

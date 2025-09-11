@@ -17,9 +17,9 @@
 package com.google.api.services.eventarc.v1.model;
 
 /**
- * Represents a config used to authenticate with a Google OIDC token using a GCP service account.
- * Use this authentication method to invoke your Cloud Run and Cloud Functions destinations or HTTP
- * endpoints that support Google OIDC.
+ * Represents a config used to authenticate with a Google OIDC token using a Google Cloud service
+ * account. Use this authentication method to invoke your Cloud Run and Cloud Functions destinations
+ * or HTTP endpoints that support Google OIDC.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Eventarc API. For a detailed explanation see:

@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class InstanceParams extends com.google.api.client.json.GenericJson {
 
   /**
+   * Relative deadline for waiting for capacity. Relevant only for Instances.Insert API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration requestValidForDuration;
+
+  /**
    * Resource manager tags to be bound to the instance. Tag keys and values have the same definition
    * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
    * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
@@ -37,6 +44,23 @@ public final class InstanceParams extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> resourceManagerTags;
+
+  /**
+   * Relative deadline for waiting for capacity. Relevant only for Instances.Insert API.
+   * @return value or {@code null} for none
+   */
+  public Duration getRequestValidForDuration() {
+    return requestValidForDuration;
+  }
+
+  /**
+   * Relative deadline for waiting for capacity. Relevant only for Instances.Insert API.
+   * @param requestValidForDuration requestValidForDuration or {@code null} for none
+   */
+  public InstanceParams setRequestValidForDuration(Duration requestValidForDuration) {
+    this.requestValidForDuration = requestValidForDuration;
+    return this;
+  }
 
   /**
    * Resource manager tags to be bound to the instance. Tag keys and values have the same definition

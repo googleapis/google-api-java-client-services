@@ -31,6 +31,13 @@ package com.google.api.services.compute.model;
 public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
+   * User specified list of ciphers to use for the phase 1 and phase 2 of the IKE protocol.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpnTunnelCipherSuite cipherSuite;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -243,6 +250,23 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer vpnGatewayInterface;
+
+  /**
+   * User specified list of ciphers to use for the phase 1 and phase 2 of the IKE protocol.
+   * @return value or {@code null} for none
+   */
+  public VpnTunnelCipherSuite getCipherSuite() {
+    return cipherSuite;
+  }
+
+  /**
+   * User specified list of ciphers to use for the phase 1 and phase 2 of the IKE protocol.
+   * @param cipherSuite cipherSuite or {@code null} for none
+   */
+  public VpnTunnel setCipherSuite(VpnTunnelCipherSuite cipherSuite) {
+    this.cipherSuite = cipherSuite;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

@@ -79,6 +79,13 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * [Output Only] Type of the network profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkProfileProfileType profileType;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -208,6 +215,23 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
    */
   public NetworkProfile setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] Type of the network profile.
+   * @return value or {@code null} for none
+   */
+  public NetworkProfileProfileType getProfileType() {
+    return profileType;
+  }
+
+  /**
+   * [Output Only] Type of the network profile.
+   * @param profileType profileType or {@code null} for none
+   */
+  public NetworkProfile setProfileType(NetworkProfileProfileType profileType) {
+    this.profileType = profileType;
     return this;
   }
 

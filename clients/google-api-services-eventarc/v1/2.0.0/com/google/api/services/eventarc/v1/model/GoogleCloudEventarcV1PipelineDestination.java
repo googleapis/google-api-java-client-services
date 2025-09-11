@@ -31,9 +31,9 @@ public final class GoogleCloudEventarcV1PipelineDestination extends com.google.a
 
   /**
    * Optional. An authentication config used to authenticate message requests, such that
-   * destinations can verify the source. For example, this can be used with private GCP destinations
-   * that require GCP credentials to access like Cloud Run. This field is optional and should be set
-   * only by users interested in authenticated push
+   * destinations can verify the source. For example, this can be used with private Google Cloud
+   * destinations that require Google Cloud credentials for access like Cloud Run. This field is
+   * optional and should be set only by users interested in authenticated push.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +94,9 @@ public final class GoogleCloudEventarcV1PipelineDestination extends com.google.a
 
   /**
    * Optional. An authentication config used to authenticate message requests, such that
-   * destinations can verify the source. For example, this can be used with private GCP destinations
-   * that require GCP credentials to access like Cloud Run. This field is optional and should be set
-   * only by users interested in authenticated push
+   * destinations can verify the source. For example, this can be used with private Google Cloud
+   * destinations that require Google Cloud credentials for access like Cloud Run. This field is
+   * optional and should be set only by users interested in authenticated push.
    * @return value or {@code null} for none
    */
   public GoogleCloudEventarcV1PipelineDestinationAuthenticationConfig getAuthenticationConfig() {
@@ -105,9 +105,9 @@ public final class GoogleCloudEventarcV1PipelineDestination extends com.google.a
 
   /**
    * Optional. An authentication config used to authenticate message requests, such that
-   * destinations can verify the source. For example, this can be used with private GCP destinations
-   * that require GCP credentials to access like Cloud Run. This field is optional and should be set
-   * only by users interested in authenticated push
+   * destinations can verify the source. For example, this can be used with private Google Cloud
+   * destinations that require Google Cloud credentials for access like Cloud Run. This field is
+   * optional and should be set only by users interested in authenticated push.
    * @param authenticationConfig authenticationConfig or {@code null} for none
    */
   public GoogleCloudEventarcV1PipelineDestination setAuthenticationConfig(GoogleCloudEventarcV1PipelineDestinationAuthenticationConfig authenticationConfig) {

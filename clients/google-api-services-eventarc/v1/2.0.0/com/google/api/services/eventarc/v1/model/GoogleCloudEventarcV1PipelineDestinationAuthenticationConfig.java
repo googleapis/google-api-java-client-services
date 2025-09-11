@@ -30,8 +30,8 @@ package com.google.api.services.eventarc.v1.model;
 public final class GoogleCloudEventarcV1PipelineDestinationAuthenticationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. This authenticate method will apply Google OIDC tokens signed by a GCP service
-   * account to the requests.
+   * Optional. This authenticate method will apply Google OIDC tokens signed by a Google Cloud
+   * service account to the requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class GoogleCloudEventarcV1PipelineDestinationAuthenticationConfig 
   private GoogleCloudEventarcV1PipelineDestinationAuthenticationConfigOAuthToken oauthToken;
 
   /**
-   * Optional. This authenticate method will apply Google OIDC tokens signed by a GCP service
-   * account to the requests.
+   * Optional. This authenticate method will apply Google OIDC tokens signed by a Google Cloud
+   * service account to the requests.
    * @return value or {@code null} for none
    */
   public GoogleCloudEventarcV1PipelineDestinationAuthenticationConfigOidcToken getGoogleOidc() {
@@ -57,8 +57,8 @@ public final class GoogleCloudEventarcV1PipelineDestinationAuthenticationConfig 
   }
 
   /**
-   * Optional. This authenticate method will apply Google OIDC tokens signed by a GCP service
-   * account to the requests.
+   * Optional. This authenticate method will apply Google OIDC tokens signed by a Google Cloud
+   * service account to the requests.
    * @param googleOidc googleOidc or {@code null} for none
    */
   public GoogleCloudEventarcV1PipelineDestinationAuthenticationConfig setGoogleOidc(GoogleCloudEventarcV1PipelineDestinationAuthenticationConfigOidcToken googleOidc) {

@@ -56,7 +56,9 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The default and minimum enforced retention for each backup within the backup vault.
-   * The enforced retention for each backup can be extended.
+   * The enforced retention for each backup can be extended. Note: Longer minimum enforced retention
+   * period impacts potential storage costs post introductory trial. We recommend starting with a
+   * short duration of 3 days or less.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +213,9 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The default and minimum enforced retention for each backup within the backup vault.
-   * The enforced retention for each backup can be extended.
+   * The enforced retention for each backup can be extended. Note: Longer minimum enforced retention
+   * period impacts potential storage costs post introductory trial. We recommend starting with a
+   * short duration of 3 days or less.
    * @return value or {@code null} for none
    */
   public String getBackupMinimumEnforcedRetentionDuration() {
@@ -220,7 +224,9 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The default and minimum enforced retention for each backup within the backup vault.
-   * The enforced retention for each backup can be extended.
+   * The enforced retention for each backup can be extended. Note: Longer minimum enforced retention
+   * period impacts potential storage costs post introductory trial. We recommend starting with a
+   * short duration of 3 days or less.
    * @param backupMinimumEnforcedRetentionDuration backupMinimumEnforcedRetentionDuration or {@code null} for none
    */
   public BackupVault setBackupMinimumEnforcedRetentionDuration(String backupMinimumEnforcedRetentionDuration) {

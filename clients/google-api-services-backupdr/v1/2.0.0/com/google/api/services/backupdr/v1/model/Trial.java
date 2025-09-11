@@ -31,6 +31,13 @@ package com.google.api.services.backupdr.v1.model;
 public final class Trial extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The reason for ending the trial.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endReason;
+
+  /**
    * Output only. The time when the trial will expire.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class Trial extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. The reason for ending the trial.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndReason() {
+    return endReason;
+  }
+
+  /**
+   * Output only. The reason for ending the trial.
+   * @param endReason endReason or {@code null} for none
+   */
+  public Trial setEndReason(java.lang.String endReason) {
+    this.endReason = endReason;
+    return this;
+  }
 
   /**
    * Output only. The time when the trial will expire.

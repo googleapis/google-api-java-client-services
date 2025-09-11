@@ -34,7 +34,9 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
    * Required. Configures the duration for which backup data will be kept. It is defined in “days”.
    * The value should be greater than or equal to minimum enforced retention of the backup vault.
    * Minimum value is 1 and maximum value is 36159 for custom retention on-demand backup. Minimum
-   * and maximum values are workload specific for all other rules.
+   * and maximum values are workload specific for all other rules. Note: Longer retention can lead
+   * to higher storage costs post introductory trial. We recommend starting with a short duration of
+   * 3 days or less.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +62,9 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
    * Required. Configures the duration for which backup data will be kept. It is defined in “days”.
    * The value should be greater than or equal to minimum enforced retention of the backup vault.
    * Minimum value is 1 and maximum value is 36159 for custom retention on-demand backup. Minimum
-   * and maximum values are workload specific for all other rules.
+   * and maximum values are workload specific for all other rules. Note: Longer retention can lead
+   * to higher storage costs post introductory trial. We recommend starting with a short duration of
+   * 3 days or less.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBackupRetentionDays() {
@@ -71,7 +75,9 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
    * Required. Configures the duration for which backup data will be kept. It is defined in “days”.
    * The value should be greater than or equal to minimum enforced retention of the backup vault.
    * Minimum value is 1 and maximum value is 36159 for custom retention on-demand backup. Minimum
-   * and maximum values are workload specific for all other rules.
+   * and maximum values are workload specific for all other rules. Note: Longer retention can lead
+   * to higher storage costs post introductory trial. We recommend starting with a short duration of
+   * 3 days or less.
    * @param backupRetentionDays backupRetentionDays or {@code null} for none
    */
   public BackupRule setBackupRetentionDays(java.lang.Integer backupRetentionDays) {

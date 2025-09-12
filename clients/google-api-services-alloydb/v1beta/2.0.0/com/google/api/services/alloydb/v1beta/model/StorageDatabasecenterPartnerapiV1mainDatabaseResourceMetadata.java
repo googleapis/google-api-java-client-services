@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 26
+ * Common model for database resource instance metadata. Next ID: 27
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -207,6 +207,14 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainUserLabels userLabelSet;
+
+  /**
+   * The resource zone. This is only applicable for zonal resources and will be empty for regional
+   * and multi-regional resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String zone;
 
   /**
    * Availability configuration for this instance
@@ -635,6 +643,25 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setUserLabelSet(StorageDatabasecenterPartnerapiV1mainUserLabels userLabelSet) {
     this.userLabelSet = userLabelSet;
+    return this;
+  }
+
+  /**
+   * The resource zone. This is only applicable for zonal resources and will be empty for regional
+   * and multi-regional resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getZone() {
+    return zone;
+  }
+
+  /**
+   * The resource zone. This is only applicable for zonal resources and will be empty for regional
+   * and multi-regional resources.
+   * @param zone zone or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setZone(java.lang.String zone) {
+    this.zone = zone;
     return this;
   }
 

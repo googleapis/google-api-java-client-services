@@ -447,22 +447,22 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -2441,22 +2441,22 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -5877,6 +5877,243 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           @Override
           public QueryOrgVpcFlowLogsConfigs set(String parameterName, Object value) {
             return (QueryOrgVpcFlowLogsConfigs) super.set(parameterName, value);
+          }
+        }
+        /**
+         * ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs configurations applicable to a
+         * specified resource.
+         *
+         * Create a request for the method "vpcFlowLogsConfigs.showEffectiveFlowLogsConfigs".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link ShowEffectiveFlowLogsConfigs#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param parent Required. The parent resource of the VpcFlowLogsConfig, specified in the following format:
+         *        `projects/{project_id}/locations/global`
+         * @return the request
+         */
+        public ShowEffectiveFlowLogsConfigs showEffectiveFlowLogsConfigs(java.lang.String parent) throws java.io.IOException {
+          ShowEffectiveFlowLogsConfigs result = new ShowEffectiveFlowLogsConfigs(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ShowEffectiveFlowLogsConfigs extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1beta1.model.ShowEffectiveFlowLogsConfigsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/vpcFlowLogsConfigs:showEffectiveFlowLogsConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs configurations applicable to a
+           * specified resource.
+           *
+           * Create a request for the method "vpcFlowLogsConfigs.showEffectiveFlowLogsConfigs".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link ShowEffectiveFlowLogsConfigs#execute()} method to
+           * invoke the remote operation. <p> {@link ShowEffectiveFlowLogsConfigs#initialize(com.google.api.
+           * client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the VpcFlowLogsConfig, specified in the following format:
+         *        `projects/{project_id}/locations/global`
+           * @since 1.13
+           */
+          protected ShowEffectiveFlowLogsConfigs(java.lang.String parent) {
+            super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1beta1.model.ShowEffectiveFlowLogsConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs set$Xgafv(java.lang.String $Xgafv) {
+            return (ShowEffectiveFlowLogsConfigs) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setAccessToken(java.lang.String accessToken) {
+            return (ShowEffectiveFlowLogsConfigs) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setAlt(java.lang.String alt) {
+            return (ShowEffectiveFlowLogsConfigs) super.setAlt(alt);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setCallback(java.lang.String callback) {
+            return (ShowEffectiveFlowLogsConfigs) super.setCallback(callback);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setFields(java.lang.String fields) {
+            return (ShowEffectiveFlowLogsConfigs) super.setFields(fields);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setKey(java.lang.String key) {
+            return (ShowEffectiveFlowLogsConfigs) super.setKey(key);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setOauthToken(java.lang.String oauthToken) {
+            return (ShowEffectiveFlowLogsConfigs) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ShowEffectiveFlowLogsConfigs) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setQuotaUser(java.lang.String quotaUser) {
+            return (ShowEffectiveFlowLogsConfigs) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setUploadType(java.lang.String uploadType) {
+            return (ShowEffectiveFlowLogsConfigs) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ShowEffectiveFlowLogsConfigs) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig, specified in the following
+           * format: `projects/{project_id}/locations/global`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the VpcFlowLogsConfig, specified in the following format:
+         `projects/{project_id}/locations/global`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig, specified in the following
+           * format: `projects/{project_id}/locations/global`
+           */
+          public ShowEffectiveFlowLogsConfigs setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Lists the `EffectiveVpcFlowLogsConfigs` that match the filter expression. A
+           * filter expression must use the supported [CEL logic operators]
+           * (https://cloud.google.com/vpc/docs/about-flow-logs-
+           * records#supported_cel_logic_operators).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Lists the `EffectiveVpcFlowLogsConfigs` that match the filter expression. A filter
+         expression must use the supported [CEL logic operators] (https://cloud.google.com/vpc/docs/about-
+         flow-logs-records#supported_cel_logic_operators).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Lists the `EffectiveVpcFlowLogsConfigs` that match the filter expression. A
+           * filter expression must use the supported [CEL logic operators]
+           * (https://cloud.google.com/vpc/docs/about-flow-logs-
+           * records#supported_cel_logic_operators).
+           */
+          public ShowEffectiveFlowLogsConfigs setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Number of `EffectiveVpcFlowLogsConfigs` to return. Default is 30. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Number of `EffectiveVpcFlowLogsConfigs` to return. Default is 30.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Number of `EffectiveVpcFlowLogsConfigs` to return. Default is 30. */
+          public ShowEffectiveFlowLogsConfigs setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`. */
+          public ShowEffectiveFlowLogsConfigs setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Required. The resource to get the effective VPC Flow Logs configuration for. The
+           * resource must belong to the same project as the parent. The resource must be a network,
+           * subnetwork, interconnect attachment, VPN tunnel, or a project.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** Required. The resource to get the effective VPC Flow Logs configuration for. The resource must
+         belong to the same project as the parent. The resource must be a network, subnetwork, interconnect
+         attachment, VPN tunnel, or a project.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * Required. The resource to get the effective VPC Flow Logs configuration for. The
+           * resource must belong to the same project as the parent. The resource must be a network,
+           * subnetwork, interconnect attachment, VPN tunnel, or a project.
+           */
+          public ShowEffectiveFlowLogsConfigs setResource(java.lang.String resource) {
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs set(String parameterName, Object value) {
+            return (ShowEffectiveFlowLogsConfigs) super.set(parameterName, value);
           }
         }
 

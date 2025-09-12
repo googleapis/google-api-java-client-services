@@ -44,6 +44,14 @@ public final class SimpleExportPolicyRule extends com.google.api.client.json.Gen
   private java.lang.String allowedClients;
 
   /**
+   * Optional. An integer representing the anonymous user ID. Range is 0 to 4294967295. Required
+   * when squash_mode is ROOT_SQUASH or ALL_SQUASH.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long anonUid;
+
+  /**
    * Whether Unix root access will be granted.
    * The value may be {@code null}.
    */
@@ -116,6 +124,15 @@ public final class SimpleExportPolicyRule extends com.google.api.client.json.Gen
   private java.lang.Boolean nfsv4;
 
   /**
+   * Optional. Defines how user identity squashing is applied for this export rule. This field is
+   * the preferred way to configure squashing behavior and takes precedence over `has_root_access`
+   * if both are provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String squashMode;
+
+  /**
    * Access type (ReadWrite, ReadOnly, None)
    * @return value or {@code null} for none
    */
@@ -146,6 +163,25 @@ public final class SimpleExportPolicyRule extends com.google.api.client.json.Gen
    */
   public SimpleExportPolicyRule setAllowedClients(java.lang.String allowedClients) {
     this.allowedClients = allowedClients;
+    return this;
+  }
+
+  /**
+   * Optional. An integer representing the anonymous user ID. Range is 0 to 4294967295. Required
+   * when squash_mode is ROOT_SQUASH or ALL_SQUASH.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAnonUid() {
+    return anonUid;
+  }
+
+  /**
+   * Optional. An integer representing the anonymous user ID. Range is 0 to 4294967295. Required
+   * when squash_mode is ROOT_SQUASH or ALL_SQUASH.
+   * @param anonUid anonUid or {@code null} for none
+   */
+  public SimpleExportPolicyRule setAnonUid(java.lang.Long anonUid) {
+    this.anonUid = anonUid;
     return this;
   }
 
@@ -317,6 +353,27 @@ public final class SimpleExportPolicyRule extends com.google.api.client.json.Gen
    */
   public SimpleExportPolicyRule setNfsv4(java.lang.Boolean nfsv4) {
     this.nfsv4 = nfsv4;
+    return this;
+  }
+
+  /**
+   * Optional. Defines how user identity squashing is applied for this export rule. This field is
+   * the preferred way to configure squashing behavior and takes precedence over `has_root_access`
+   * if both are provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSquashMode() {
+    return squashMode;
+  }
+
+  /**
+   * Optional. Defines how user identity squashing is applied for this export rule. This field is
+   * the preferred way to configure squashing behavior and takes precedence over `has_root_access`
+   * if both are provided.
+   * @param squashMode squashMode or {@code null} for none
+   */
+  public SimpleExportPolicyRule setSquashMode(java.lang.String squashMode) {
+    this.squashMode = squashMode;
     return this;
   }
 

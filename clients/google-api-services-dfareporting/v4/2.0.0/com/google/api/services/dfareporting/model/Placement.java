@@ -88,6 +88,13 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   private DimensionValue advertiserIdDimensionValue;
 
   /**
+   * Optional. Whether the placement is enabled for YouTube integration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowOnYoutube;
+
+  /**
    * Campaign ID of this placement. This field is a required field on insertion.
    * The value may be {@code null}.
    */
@@ -394,6 +401,14 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean wrappingOptOut;
 
   /**
+   * Optional. YouTube settings for the placement. The placement must be enabled for YouTube to use
+   * this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YoutubeSettings youtubeSettings;
+
+  /**
    * Account ID of this placement. This field can be left blank.
    * @return value or {@code null} for none
    */
@@ -525,6 +540,23 @@ public final class Placement extends com.google.api.client.json.GenericJson {
    */
   public Placement setAdvertiserIdDimensionValue(DimensionValue advertiserIdDimensionValue) {
     this.advertiserIdDimensionValue = advertiserIdDimensionValue;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the placement is enabled for YouTube integration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowOnYoutube() {
+    return allowOnYoutube;
+  }
+
+  /**
+   * Optional. Whether the placement is enabled for YouTube integration.
+   * @param allowOnYoutube allowOnYoutube or {@code null} for none
+   */
+  public Placement setAllowOnYoutube(java.lang.Boolean allowOnYoutube) {
+    this.allowOnYoutube = allowOnYoutube;
     return this;
   }
 
@@ -1254,6 +1286,25 @@ public final class Placement extends com.google.api.client.json.GenericJson {
    */
   public Placement setWrappingOptOut(java.lang.Boolean wrappingOptOut) {
     this.wrappingOptOut = wrappingOptOut;
+    return this;
+  }
+
+  /**
+   * Optional. YouTube settings for the placement. The placement must be enabled for YouTube to use
+   * this field.
+   * @return value or {@code null} for none
+   */
+  public YoutubeSettings getYoutubeSettings() {
+    return youtubeSettings;
+  }
+
+  /**
+   * Optional. YouTube settings for the placement. The placement must be enabled for YouTube to use
+   * this field.
+   * @param youtubeSettings youtubeSettings or {@code null} for none
+   */
+  public Placement setYoutubeSettings(YoutubeSettings youtubeSettings) {
+    this.youtubeSettings = youtubeSettings;
     return this;
   }
 

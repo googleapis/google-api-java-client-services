@@ -31,14 +31,16 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class FailoverReservationRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. failover mode for the failover operation.
+   * Optional. A parameter that determines how writes that are pending replication are handled after
+   * a failover is initiated. If not specified, HARD failover mode is used by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String failoverMode;
 
   /**
-   * Optional. failover mode for the failover operation.
+   * Optional. A parameter that determines how writes that are pending replication are handled after
+   * a failover is initiated. If not specified, HARD failover mode is used by default.
    * @return value or {@code null} for none
    */
   public java.lang.String getFailoverMode() {
@@ -46,7 +48,8 @@ public final class FailoverReservationRequest extends com.google.api.client.json
   }
 
   /**
-   * Optional. failover mode for the failover operation.
+   * Optional. A parameter that determines how writes that are pending replication are handled after
+   * a failover is initiated. If not specified, HARD failover mode is used by default.
    * @param failoverMode failoverMode or {@code null} for none
    */
   public FailoverReservationRequest setFailoverMode(java.lang.String failoverMode) {

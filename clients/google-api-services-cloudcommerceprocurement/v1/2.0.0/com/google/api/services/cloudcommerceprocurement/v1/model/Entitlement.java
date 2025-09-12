@@ -105,9 +105,15 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The end time of the new offer. If the offer was created with a term instead of a
+   * Output only. The end time of the new offer. If the offer was has a term duration instead of a
    * specified end date, this field is empty. This field is populated even if the entitlement isn't
-   * active yet. If there's no upcoming offer, the field is be empty.
+   * active yet. If there's no upcoming offer, the field is empty. * If the entitlement is in
+   * ENTITLEMENT_ACTIVATION_REQUESTED, ENTITLEMENT_ACTIVE, or ENTITLEMENT_PENDING_CANCELLATION
+   * state, then this field will be empty. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state, then this
+   * field will be populated with the expected end time of the upcoming offer (in the future) if the
+   * upcoming offer has a specified end date. Otherwise, this field will be empty. * If the
+   * entitlement is in ENTITLEMENT_CANCELLED state, then this field will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +121,16 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The timestamp when the new offer becomes effective. This field is populated even
-   * if the entitlement isn't active yet. If there's no upcoming offer, the field is empty.
+   * if the entitlement isn't active yet. If there's no upcoming offer, the field is empty. * If the
+   * entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED state, this field will not be populated when
+   * the entitlement is not yet approved. But after the entitlement is approved, then this field
+   * will be populated with effective time of the upcoming offer. * If the entitlement is in
+   * ENTITLEMENT_ACTIVE or ENTITLEMENT_PENDING_CANCELLATION state, this field will not be populated.
+   * * If the entitlement is in ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL state, this field will not
+   * be populated since the entitlement change is waiting on approval. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE state, this field will be populated with the expected effective
+   * time of the upcoming offer (in the future). * If the entitlement is in ENTITLEMENT_CANCELLED
+   * state, then this field will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,12 +140,16 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
    * Output only. The name of the offer the entitlement is switching to upon a pending plan change.
    * Only exists if the pending plan change is moving to an offer. This field isn't populated for
    * entitlements which aren't active yet. Format:
-   * 'projects/{project}/services/{service}/privateOffers/{offer-id}' OR
-   * 'projects/{project}/services/{service}/standardOffers/{offer-id}', depending on whether the
-   * offer is private or public. The {service} in the name is the listing service of the offer. It
-   * could be either the product service that the offer is referencing, or a generic private offer
-   * parent service. We recommend that you don't build your integration to rely on the meaning of
-   * this {service} part.
+   * 'projects/{project}/services/{service}/privateOffers/{offer}' OR
+   * 'projects/{project}/services/{service}/standardOffers/{offer}', depending on whether the offer
+   * is private or public. The {service} in the name is the listing service of the offer. It could
+   * be either the product service that the offer is referencing, or a generic private offer parent
+   * service. We recommend that you don't build your integration to rely on the meaning of this
+   * {service} part. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED, ENTITLEMENT_ACTIVE
+   * or ENTITLEMENT_PENDING_CANCELLATION state, then this field will be empty. * If the entitlement
+   * is in ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state, then
+   * this field will be populated with the upcoming offer. * If the entitlement is in
+   * ENTITLEMENT_CANCELLED state, then this will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +158,13 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The duration of the new offer, in ISO 8601 duration format. This field isn't
    * populated for entitlements which aren't active yet, only for pending offer changes. If the
-   * offer was created with a specified end date instead of a duration, this field is empty.
+   * offer was has a specified end date instead of a duration, this field is empty. * If the
+   * entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED, ENTITLEENTITLEMENT_ACTIVE, or
+   * ENTITLEMENT_PENDING_CANCELLATION state, then this field is empty. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state, then this
+   * field will be populated with the duration of the upcoming offer, if the upcoming offer is does
+   * not have a specified end date. Otherwise, this field will be empty. * If the entitlement is in
+   * ENTITLEMENT_CANCELLED state, then this field will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,12 +180,17 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the offer that was procured. Field is empty if order was not made
-   * using an offer. Format: 'projects/{project}/services/{service}/privateOffers/{offer-id}' OR
-   * 'projects/{project}/services/{service}/standardOffers/{offer-id}', depending on whether the
-   * offer is private or public. The {service} in the name is the listing service of the offer. It
-   * could be either the product service that the offer is referencing, or a generic private offer
-   * parent service. We recommend that you don't build your integration to rely on the meaning of
-   * this {service} part.
+   * using an offer. Format: 'projects/{project}/services/{service}/privateOffers/{offer}' OR
+   * 'projects/{project}/services/{service}/standardOffers/{offer}', depending on whether the offer
+   * is private or public. The {service} in the name is the listing service of the offer. It could
+   * be either the product service that the offer is referencing, or a generic private offer parent
+   * service. We recommend that you don't build your integration to rely on the meaning of this
+   * {service} part. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED state, this field
+   * will be populated with the upcoming offer. * If the entitlement is in ENTITLEMENT_ACTIVE,
+   * ENTITLEMENT_PENDING_CANCELLATION, ENTITLEMENT_PENDING_PLAN_CHANGE, or
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL state, this field will be populated with the current
+   * offer. * If the entitlement is in ENTITLEMENT_CANCELLED state, then this field will be
+   * populated with the latest offer the order was associated with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,16 +198,42 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The offer duration of the current offer in ISO 8601 duration format. Field is
-   * empty if entitlement was not made using an offer. If the offer was created with a specified end
-   * date instead of a duration, this field is empty.
+   * empty if entitlement was not made using an offer. If the offer has a specified end date instead
+   * of a duration, this field is empty. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED
+   * state, then this field will be populated with the duration of the upcoming offer, if the
+   * upcoming offer does not have a specified end date. Otherwise, this field will be empty. * If
+   * the entitlement is in ENTITLEMENT_ACTIVE, ENTITLEMENT_PENDING_CANCELLATION,
+   * ENTITLEMENT_PENDING_PLAN_CHANGE, or ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL state, then this
+   * field will be populated with the duration of the current offer if the current offer is does not
+   * have a specific end date. Otherwise, this field will be empty. * If the entitlement is in
+   * ENTITLEMENT_CANCELLED state, then this field will be populated with the duration of the latest
+   * offer the order was associated with if that offer does not have a specific end date. Otherwise,
+   * this field will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String offerDuration;
 
   /**
-   * Output only. End time for the Offer association corresponding to this entitlement. The field is
-   * only populated if the entitlement is currently associated with an Offer.
+   * Output only. End time for the Offer associated with this entitlement. Note that this field
+   * value can change over time. This occurs naturally even if the offer is not changed, due to auto
+   * renewal. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED state, then: * If the
+   * entitlement is not yet approved, then this field will be populated with the expected end time
+   * of the upcoming offer (in the future) if the upcoming offer has a specified end date. Otherwise
+   * this field will be empty. * If the entitlement is approved, then this field will always be
+   * populated with the expected end time of the upcoming offer (in the future). This means both
+   * this field, and the offer_duration field, can co-exist. * If the entitlement is in
+   * ENTITLEMENT_ACTIVE or ENTITLEMENT_PENDING_CANCELLATION state, then this field will be populated
+   * with the actual expected end time of the current offer (in the futre). Meaning, this field will
+   * be set, regardless of whether the offer has a specific end date or a duration. This means both
+   * this field, and the offer_duration field, can co-exist. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state: * If the
+   * current offer has already ended and became pure PAYG, then this field reflects the ACTUAL end
+   * time of the current offer (in the past). * Otherwise, then this is the EXPECTED end date of the
+   * current offer (in the future). * If the entitlement is in ENTITLEMENT_CANCELLED state, then
+   * this field will be populated with the ACTUAL end time of the latest offer the order was
+   * associated with (in the past). If the entitlement was cancelled before any offer started, then
+   * this field will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -422,9 +478,15 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The end time of the new offer. If the offer was created with a term instead of a
+   * Output only. The end time of the new offer. If the offer was has a term duration instead of a
    * specified end date, this field is empty. This field is populated even if the entitlement isn't
-   * active yet. If there's no upcoming offer, the field is be empty.
+   * active yet. If there's no upcoming offer, the field is empty. * If the entitlement is in
+   * ENTITLEMENT_ACTIVATION_REQUESTED, ENTITLEMENT_ACTIVE, or ENTITLEMENT_PENDING_CANCELLATION
+   * state, then this field will be empty. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state, then this
+   * field will be populated with the expected end time of the upcoming offer (in the future) if the
+   * upcoming offer has a specified end date. Otherwise, this field will be empty. * If the
+   * entitlement is in ENTITLEMENT_CANCELLED state, then this field will be empty.
    * @return value or {@code null} for none
    */
   public String getNewOfferEndTime() {
@@ -432,9 +494,15 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The end time of the new offer. If the offer was created with a term instead of a
+   * Output only. The end time of the new offer. If the offer was has a term duration instead of a
    * specified end date, this field is empty. This field is populated even if the entitlement isn't
-   * active yet. If there's no upcoming offer, the field is be empty.
+   * active yet. If there's no upcoming offer, the field is empty. * If the entitlement is in
+   * ENTITLEMENT_ACTIVATION_REQUESTED, ENTITLEMENT_ACTIVE, or ENTITLEMENT_PENDING_CANCELLATION
+   * state, then this field will be empty. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state, then this
+   * field will be populated with the expected end time of the upcoming offer (in the future) if the
+   * upcoming offer has a specified end date. Otherwise, this field will be empty. * If the
+   * entitlement is in ENTITLEMENT_CANCELLED state, then this field will be empty.
    * @param newOfferEndTime newOfferEndTime or {@code null} for none
    */
   public Entitlement setNewOfferEndTime(String newOfferEndTime) {
@@ -444,7 +512,16 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The timestamp when the new offer becomes effective. This field is populated even
-   * if the entitlement isn't active yet. If there's no upcoming offer, the field is empty.
+   * if the entitlement isn't active yet. If there's no upcoming offer, the field is empty. * If the
+   * entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED state, this field will not be populated when
+   * the entitlement is not yet approved. But after the entitlement is approved, then this field
+   * will be populated with effective time of the upcoming offer. * If the entitlement is in
+   * ENTITLEMENT_ACTIVE or ENTITLEMENT_PENDING_CANCELLATION state, this field will not be populated.
+   * * If the entitlement is in ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL state, this field will not
+   * be populated since the entitlement change is waiting on approval. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE state, this field will be populated with the expected effective
+   * time of the upcoming offer (in the future). * If the entitlement is in ENTITLEMENT_CANCELLED
+   * state, then this field will be empty.
    * @return value or {@code null} for none
    */
   public String getNewOfferStartTime() {
@@ -453,7 +530,16 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The timestamp when the new offer becomes effective. This field is populated even
-   * if the entitlement isn't active yet. If there's no upcoming offer, the field is empty.
+   * if the entitlement isn't active yet. If there's no upcoming offer, the field is empty. * If the
+   * entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED state, this field will not be populated when
+   * the entitlement is not yet approved. But after the entitlement is approved, then this field
+   * will be populated with effective time of the upcoming offer. * If the entitlement is in
+   * ENTITLEMENT_ACTIVE or ENTITLEMENT_PENDING_CANCELLATION state, this field will not be populated.
+   * * If the entitlement is in ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL state, this field will not
+   * be populated since the entitlement change is waiting on approval. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE state, this field will be populated with the expected effective
+   * time of the upcoming offer (in the future). * If the entitlement is in ENTITLEMENT_CANCELLED
+   * state, then this field will be empty.
    * @param newOfferStartTime newOfferStartTime or {@code null} for none
    */
   public Entitlement setNewOfferStartTime(String newOfferStartTime) {
@@ -465,12 +551,16 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
    * Output only. The name of the offer the entitlement is switching to upon a pending plan change.
    * Only exists if the pending plan change is moving to an offer. This field isn't populated for
    * entitlements which aren't active yet. Format:
-   * 'projects/{project}/services/{service}/privateOffers/{offer-id}' OR
-   * 'projects/{project}/services/{service}/standardOffers/{offer-id}', depending on whether the
-   * offer is private or public. The {service} in the name is the listing service of the offer. It
-   * could be either the product service that the offer is referencing, or a generic private offer
-   * parent service. We recommend that you don't build your integration to rely on the meaning of
-   * this {service} part.
+   * 'projects/{project}/services/{service}/privateOffers/{offer}' OR
+   * 'projects/{project}/services/{service}/standardOffers/{offer}', depending on whether the offer
+   * is private or public. The {service} in the name is the listing service of the offer. It could
+   * be either the product service that the offer is referencing, or a generic private offer parent
+   * service. We recommend that you don't build your integration to rely on the meaning of this
+   * {service} part. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED, ENTITLEMENT_ACTIVE
+   * or ENTITLEMENT_PENDING_CANCELLATION state, then this field will be empty. * If the entitlement
+   * is in ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state, then
+   * this field will be populated with the upcoming offer. * If the entitlement is in
+   * ENTITLEMENT_CANCELLED state, then this will be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getNewPendingOffer() {
@@ -481,12 +571,16 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
    * Output only. The name of the offer the entitlement is switching to upon a pending plan change.
    * Only exists if the pending plan change is moving to an offer. This field isn't populated for
    * entitlements which aren't active yet. Format:
-   * 'projects/{project}/services/{service}/privateOffers/{offer-id}' OR
-   * 'projects/{project}/services/{service}/standardOffers/{offer-id}', depending on whether the
-   * offer is private or public. The {service} in the name is the listing service of the offer. It
-   * could be either the product service that the offer is referencing, or a generic private offer
-   * parent service. We recommend that you don't build your integration to rely on the meaning of
-   * this {service} part.
+   * 'projects/{project}/services/{service}/privateOffers/{offer}' OR
+   * 'projects/{project}/services/{service}/standardOffers/{offer}', depending on whether the offer
+   * is private or public. The {service} in the name is the listing service of the offer. It could
+   * be either the product service that the offer is referencing, or a generic private offer parent
+   * service. We recommend that you don't build your integration to rely on the meaning of this
+   * {service} part. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED, ENTITLEMENT_ACTIVE
+   * or ENTITLEMENT_PENDING_CANCELLATION state, then this field will be empty. * If the entitlement
+   * is in ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state, then
+   * this field will be populated with the upcoming offer. * If the entitlement is in
+   * ENTITLEMENT_CANCELLED state, then this will be empty.
    * @param newPendingOffer newPendingOffer or {@code null} for none
    */
   public Entitlement setNewPendingOffer(java.lang.String newPendingOffer) {
@@ -497,7 +591,13 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The duration of the new offer, in ISO 8601 duration format. This field isn't
    * populated for entitlements which aren't active yet, only for pending offer changes. If the
-   * offer was created with a specified end date instead of a duration, this field is empty.
+   * offer was has a specified end date instead of a duration, this field is empty. * If the
+   * entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED, ENTITLEENTITLEMENT_ACTIVE, or
+   * ENTITLEMENT_PENDING_CANCELLATION state, then this field is empty. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state, then this
+   * field will be populated with the duration of the upcoming offer, if the upcoming offer is does
+   * not have a specified end date. Otherwise, this field will be empty. * If the entitlement is in
+   * ENTITLEMENT_CANCELLED state, then this field will be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getNewPendingOfferDuration() {
@@ -507,7 +607,13 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The duration of the new offer, in ISO 8601 duration format. This field isn't
    * populated for entitlements which aren't active yet, only for pending offer changes. If the
-   * offer was created with a specified end date instead of a duration, this field is empty.
+   * offer was has a specified end date instead of a duration, this field is empty. * If the
+   * entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED, ENTITLEENTITLEMENT_ACTIVE, or
+   * ENTITLEMENT_PENDING_CANCELLATION state, then this field is empty. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state, then this
+   * field will be populated with the duration of the upcoming offer, if the upcoming offer is does
+   * not have a specified end date. Otherwise, this field will be empty. * If the entitlement is in
+   * ENTITLEMENT_CANCELLED state, then this field will be empty.
    * @param newPendingOfferDuration newPendingOfferDuration or {@code null} for none
    */
   public Entitlement setNewPendingOfferDuration(java.lang.String newPendingOfferDuration) {
@@ -536,12 +642,17 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the offer that was procured. Field is empty if order was not made
-   * using an offer. Format: 'projects/{project}/services/{service}/privateOffers/{offer-id}' OR
-   * 'projects/{project}/services/{service}/standardOffers/{offer-id}', depending on whether the
-   * offer is private or public. The {service} in the name is the listing service of the offer. It
-   * could be either the product service that the offer is referencing, or a generic private offer
-   * parent service. We recommend that you don't build your integration to rely on the meaning of
-   * this {service} part.
+   * using an offer. Format: 'projects/{project}/services/{service}/privateOffers/{offer}' OR
+   * 'projects/{project}/services/{service}/standardOffers/{offer}', depending on whether the offer
+   * is private or public. The {service} in the name is the listing service of the offer. It could
+   * be either the product service that the offer is referencing, or a generic private offer parent
+   * service. We recommend that you don't build your integration to rely on the meaning of this
+   * {service} part. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED state, this field
+   * will be populated with the upcoming offer. * If the entitlement is in ENTITLEMENT_ACTIVE,
+   * ENTITLEMENT_PENDING_CANCELLATION, ENTITLEMENT_PENDING_PLAN_CHANGE, or
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL state, this field will be populated with the current
+   * offer. * If the entitlement is in ENTITLEMENT_CANCELLED state, then this field will be
+   * populated with the latest offer the order was associated with.
    * @return value or {@code null} for none
    */
   public java.lang.String getOffer() {
@@ -550,12 +661,17 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the offer that was procured. Field is empty if order was not made
-   * using an offer. Format: 'projects/{project}/services/{service}/privateOffers/{offer-id}' OR
-   * 'projects/{project}/services/{service}/standardOffers/{offer-id}', depending on whether the
-   * offer is private or public. The {service} in the name is the listing service of the offer. It
-   * could be either the product service that the offer is referencing, or a generic private offer
-   * parent service. We recommend that you don't build your integration to rely on the meaning of
-   * this {service} part.
+   * using an offer. Format: 'projects/{project}/services/{service}/privateOffers/{offer}' OR
+   * 'projects/{project}/services/{service}/standardOffers/{offer}', depending on whether the offer
+   * is private or public. The {service} in the name is the listing service of the offer. It could
+   * be either the product service that the offer is referencing, or a generic private offer parent
+   * service. We recommend that you don't build your integration to rely on the meaning of this
+   * {service} part. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED state, this field
+   * will be populated with the upcoming offer. * If the entitlement is in ENTITLEMENT_ACTIVE,
+   * ENTITLEMENT_PENDING_CANCELLATION, ENTITLEMENT_PENDING_PLAN_CHANGE, or
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL state, this field will be populated with the current
+   * offer. * If the entitlement is in ENTITLEMENT_CANCELLED state, then this field will be
+   * populated with the latest offer the order was associated with.
    * @param offer offer or {@code null} for none
    */
   public Entitlement setOffer(java.lang.String offer) {
@@ -565,8 +681,17 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The offer duration of the current offer in ISO 8601 duration format. Field is
-   * empty if entitlement was not made using an offer. If the offer was created with a specified end
-   * date instead of a duration, this field is empty.
+   * empty if entitlement was not made using an offer. If the offer has a specified end date instead
+   * of a duration, this field is empty. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED
+   * state, then this field will be populated with the duration of the upcoming offer, if the
+   * upcoming offer does not have a specified end date. Otherwise, this field will be empty. * If
+   * the entitlement is in ENTITLEMENT_ACTIVE, ENTITLEMENT_PENDING_CANCELLATION,
+   * ENTITLEMENT_PENDING_PLAN_CHANGE, or ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL state, then this
+   * field will be populated with the duration of the current offer if the current offer is does not
+   * have a specific end date. Otherwise, this field will be empty. * If the entitlement is in
+   * ENTITLEMENT_CANCELLED state, then this field will be populated with the duration of the latest
+   * offer the order was associated with if that offer does not have a specific end date. Otherwise,
+   * this field will be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferDuration() {
@@ -575,8 +700,17 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The offer duration of the current offer in ISO 8601 duration format. Field is
-   * empty if entitlement was not made using an offer. If the offer was created with a specified end
-   * date instead of a duration, this field is empty.
+   * empty if entitlement was not made using an offer. If the offer has a specified end date instead
+   * of a duration, this field is empty. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED
+   * state, then this field will be populated with the duration of the upcoming offer, if the
+   * upcoming offer does not have a specified end date. Otherwise, this field will be empty. * If
+   * the entitlement is in ENTITLEMENT_ACTIVE, ENTITLEMENT_PENDING_CANCELLATION,
+   * ENTITLEMENT_PENDING_PLAN_CHANGE, or ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL state, then this
+   * field will be populated with the duration of the current offer if the current offer is does not
+   * have a specific end date. Otherwise, this field will be empty. * If the entitlement is in
+   * ENTITLEMENT_CANCELLED state, then this field will be populated with the duration of the latest
+   * offer the order was associated with if that offer does not have a specific end date. Otherwise,
+   * this field will be empty.
    * @param offerDuration offerDuration or {@code null} for none
    */
   public Entitlement setOfferDuration(java.lang.String offerDuration) {
@@ -585,8 +719,25 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. End time for the Offer association corresponding to this entitlement. The field is
-   * only populated if the entitlement is currently associated with an Offer.
+   * Output only. End time for the Offer associated with this entitlement. Note that this field
+   * value can change over time. This occurs naturally even if the offer is not changed, due to auto
+   * renewal. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED state, then: * If the
+   * entitlement is not yet approved, then this field will be populated with the expected end time
+   * of the upcoming offer (in the future) if the upcoming offer has a specified end date. Otherwise
+   * this field will be empty. * If the entitlement is approved, then this field will always be
+   * populated with the expected end time of the upcoming offer (in the future). This means both
+   * this field, and the offer_duration field, can co-exist. * If the entitlement is in
+   * ENTITLEMENT_ACTIVE or ENTITLEMENT_PENDING_CANCELLATION state, then this field will be populated
+   * with the actual expected end time of the current offer (in the futre). Meaning, this field will
+   * be set, regardless of whether the offer has a specific end date or a duration. This means both
+   * this field, and the offer_duration field, can co-exist. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state: * If the
+   * current offer has already ended and became pure PAYG, then this field reflects the ACTUAL end
+   * time of the current offer (in the past). * Otherwise, then this is the EXPECTED end date of the
+   * current offer (in the future). * If the entitlement is in ENTITLEMENT_CANCELLED state, then
+   * this field will be populated with the ACTUAL end time of the latest offer the order was
+   * associated with (in the past). If the entitlement was cancelled before any offer started, then
+   * this field will be empty.
    * @return value or {@code null} for none
    */
   public String getOfferEndTime() {
@@ -594,8 +745,25 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. End time for the Offer association corresponding to this entitlement. The field is
-   * only populated if the entitlement is currently associated with an Offer.
+   * Output only. End time for the Offer associated with this entitlement. Note that this field
+   * value can change over time. This occurs naturally even if the offer is not changed, due to auto
+   * renewal. * If the entitlement is in ENTITLEMENT_ACTIVATION_REQUESTED state, then: * If the
+   * entitlement is not yet approved, then this field will be populated with the expected end time
+   * of the upcoming offer (in the future) if the upcoming offer has a specified end date. Otherwise
+   * this field will be empty. * If the entitlement is approved, then this field will always be
+   * populated with the expected end time of the upcoming offer (in the future). This means both
+   * this field, and the offer_duration field, can co-exist. * If the entitlement is in
+   * ENTITLEMENT_ACTIVE or ENTITLEMENT_PENDING_CANCELLATION state, then this field will be populated
+   * with the actual expected end time of the current offer (in the futre). Meaning, this field will
+   * be set, regardless of whether the offer has a specific end date or a duration. This means both
+   * this field, and the offer_duration field, can co-exist. * If the entitlement is in
+   * ENTITLEMENT_PENDING_PLAN_CHANGE_APPROVAL or ENTITLEMENT_PENDING_PLAN_CHANGE state: * If the
+   * current offer has already ended and became pure PAYG, then this field reflects the ACTUAL end
+   * time of the current offer (in the past). * Otherwise, then this is the EXPECTED end date of the
+   * current offer (in the future). * If the entitlement is in ENTITLEMENT_CANCELLED state, then
+   * this field will be populated with the ACTUAL end time of the latest offer the order was
+   * associated with (in the past). If the entitlement was cancelled before any offer started, then
+   * this field will be empty.
    * @param offerEndTime offerEndTime or {@code null} for none
    */
   public Entitlement setOfferEndTime(String offerEndTime) {

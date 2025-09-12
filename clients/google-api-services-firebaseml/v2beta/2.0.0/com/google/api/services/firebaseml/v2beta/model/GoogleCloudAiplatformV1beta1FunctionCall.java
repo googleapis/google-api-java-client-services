@@ -48,7 +48,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   private java.lang.String id;
 
   /**
-   * Required. The name of the function to call. Matches [FunctionDeclaration.name].
+   * Optional. The name of the function to call. Matches [FunctionDeclaration.name].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   }
 
   /**
-   * Required. The name of the function to call. Matches [FunctionDeclaration.name].
+   * Optional. The name of the function to call. Matches [FunctionDeclaration.name].
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,7 +101,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   }
 
   /**
-   * Required. The name of the function to call. Matches [FunctionDeclaration.name].
+   * Optional. The name of the function to call. Matches [FunctionDeclaration.name].
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FunctionCall setName(java.lang.String name) {

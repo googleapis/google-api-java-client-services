@@ -447,22 +447,22 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -1167,6 +1167,942 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         }
 
       }
+      /**
+       * An accessor for creating requests from the VpcFlowLogsConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code NetworkManagement networkmanagement = new NetworkManagement(...);}
+       *   {@code NetworkManagement.VpcFlowLogsConfigs.List request = networkmanagement.vpcFlowLogsConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public VpcFlowLogsConfigs vpcFlowLogsConfigs() {
+        return new VpcFlowLogsConfigs();
+      }
+
+      /**
+       * The "vpcFlowLogsConfigs" collection of methods.
+       */
+      public class VpcFlowLogsConfigs {
+
+        /**
+         * Creates a new `VpcFlowLogsConfig`. If a configuration with the exact same settings already exists
+         * (even if the ID is different), the creation fails. Notes: 1. Creating a configuration with
+         * `state=DISABLED` will fail 2. The following fields are not considered as settings for the purpose
+         * of the check mentioned above, therefore - creating another configuration with the same fields but
+         * different values for the following fields will fail as well: * name * create_time * update_time *
+         * labels * description
+         *
+         * Create a request for the method "vpcFlowLogsConfigs.create".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the VpcFlowLogsConfig to create, in one of the following formats: -
+         *        For project-level resources: `projects/{project_id}/locations/global` - For organization-
+         *        level resources: `organizations/{organization_id}/locations/global`
+         * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/vpcFlowLogsConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new `VpcFlowLogsConfig`. If a configuration with the exact same settings already
+           * exists (even if the ID is different), the creation fails. Notes: 1. Creating a configuration
+           * with `state=DISABLED` will fail 2. The following fields are not considered as settings for the
+           * purpose of the check mentioned above, therefore - creating another configuration with the same
+           * fields but different values for the following fields will fail as well: * name * create_time *
+           * update_time * labels * description
+           *
+           * Create a request for the method "vpcFlowLogsConfigs.create".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the VpcFlowLogsConfig to create, in one of the following formats: -
+         *        For project-level resources: `projects/{project_id}/locations/global` - For organization-
+         *        level resources: `organizations/{organization_id}/locations/global`
+           * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig content) {
+            super(NetworkManagement.this, "POST", REST_PATH, content, com.google.api.services.networkmanagement.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig to create, in one of the
+           * following formats: - For project-level resources:
+           * `projects/{project_id}/locations/global` - For organization-level resources:
+           * `organizations/{organization_id}/locations/global`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the VpcFlowLogsConfig to create, in one of the following formats:
+         - For project-level resources: `projects/{project_id}/locations/global` - For organization-level
+         resources: `organizations/{organization_id}/locations/global`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig to create, in one of the
+           * following formats: - For project-level resources:
+           * `projects/{project_id}/locations/global` - For organization-level resources:
+           * `organizations/{organization_id}/locations/global`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. ID of the `VpcFlowLogsConfig`. */
+          @com.google.api.client.util.Key
+          private java.lang.String vpcFlowLogsConfigId;
+
+          /** Required. ID of the `VpcFlowLogsConfig`.
+           */
+          public java.lang.String getVpcFlowLogsConfigId() {
+            return vpcFlowLogsConfigId;
+          }
+
+          /** Required. ID of the `VpcFlowLogsConfig`. */
+          public Create setVpcFlowLogsConfigId(java.lang.String vpcFlowLogsConfigId) {
+            this.vpcFlowLogsConfigId = vpcFlowLogsConfigId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a specific `VpcFlowLogsConfig`.
+         *
+         * Create a request for the method "vpcFlowLogsConfigs.delete".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For a
+         *        project-level resource:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For an organization-level resource: `organizations/{organization_id}/locations/global/vpcF
+         *        lowLogsConfigs/{vpc_flow_logs_config_id}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/vpcFlowLogsConfigs/[^/]+$");
+
+          /**
+           * Deletes a specific `VpcFlowLogsConfig`.
+           *
+           * Create a request for the method "vpcFlowLogsConfigs.delete".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For a
+         *        project-level resource:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For an organization-level resource: `organizations/{organization_id}/locations/global/vpcF
+         *        lowLogsConfigs/{vpc_flow_logs_config_id}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(NetworkManagement.this, "DELETE", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/vpcFlowLogsConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the VpcFlowLogsConfig, in one of the following formats:
+           * - For a project-level resource:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For an organization-level resource: `organizations/{organization_id}/locations/global/v
+           * pcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For a
+         project-level resource:
+         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For an
+         organization-level resource:
+         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the VpcFlowLogsConfig, in one of the following formats:
+           * - For a project-level resource:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For an organization-level resource: `organizations/{organization_id}/locations/global/v
+           * pcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/vpcFlowLogsConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the details of a specific `VpcFlowLogsConfig`.
+         *
+         * Create a request for the method "vpcFlowLogsConfigs.get".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For
+         *        project-level resources:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For organization-level resources: `organizations/{organization_id}/locations/global/vpcFlo
+         *        wLogsConfigs/{vpc_flow_logs_config_id}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/vpcFlowLogsConfigs/[^/]+$");
+
+          /**
+           * Gets the details of a specific `VpcFlowLogsConfig`.
+           *
+           * Create a request for the method "vpcFlowLogsConfigs.get".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For
+         *        project-level resources:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For organization-level resources: `organizations/{organization_id}/locations/global/vpcFlo
+         *        wLogsConfigs/{vpc_flow_logs_config_id}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/vpcFlowLogsConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the VpcFlowLogsConfig, in one of the following formats:
+           * - For project-level resources:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For organization-level resources: `organizations/{organization_id}/locations/global/vpc
+           * FlowLogsConfigs/{vpc_flow_logs_config_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For
+         project-level resources:
+         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For
+         organization-level resources:
+         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the VpcFlowLogsConfig, in one of the following formats:
+           * - For project-level resources:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For organization-level resources: `organizations/{organization_id}/locations/global/vpc
+           * FlowLogsConfigs/{vpc_flow_logs_config_id}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/vpcFlowLogsConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all `VpcFlowLogsConfigs` in a given organization.
+         *
+         * Create a request for the method "vpcFlowLogsConfigs.list".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the VpcFlowLogsConfig, in one of the following formats: - For
+         *        project-level resourcs: `projects/{project_id}/locations/global` - For organization-level
+         *        resources: `organizations/{organization_id}/locations/global`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.ListVpcFlowLogsConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/vpcFlowLogsConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all `VpcFlowLogsConfigs` in a given organization.
+           *
+           * Create a request for the method "vpcFlowLogsConfigs.list".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the VpcFlowLogsConfig, in one of the following formats: - For
+         *        project-level resourcs: `projects/{project_id}/locations/global` - For organization-level
+         *        resources: `organizations/{organization_id}/locations/global`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.ListVpcFlowLogsConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig, in one of the following
+           * formats: - For project-level resourcs: `projects/{project_id}/locations/global` - For
+           * organization-level resources: `organizations/{organization_id}/locations/global`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the VpcFlowLogsConfig, in one of the following formats: - For
+         project-level resourcs: `projects/{project_id}/locations/global` - For organization-level
+         resources: `organizations/{organization_id}/locations/global`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig, in one of the following
+           * formats: - For project-level resourcs: `projects/{project_id}/locations/global` - For
+           * organization-level resources: `organizations/{organization_id}/locations/global`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Lists the `VpcFlowLogsConfigs` that match the filter expression. A filter
+           * expression must use the supported [CEL logic operators]
+           * (https://cloud.google.com/vpc/docs/about-flow-logs-
+           * records#supported_cel_logic_operators).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Lists the `VpcFlowLogsConfigs` that match the filter expression. A filter expression must
+         use the supported [CEL logic operators] (https://cloud.google.com/vpc/docs/about-flow-logs-
+         records#supported_cel_logic_operators).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Lists the `VpcFlowLogsConfigs` that match the filter expression. A filter
+           * expression must use the supported [CEL logic operators]
+           * (https://cloud.google.com/vpc/docs/about-flow-logs-
+           * records#supported_cel_logic_operators).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Field to use to sort the list. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field to use to sort the list.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Field to use to sort the list. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** Optional. Number of `VpcFlowLogsConfigs` to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Number of `VpcFlowLogsConfigs` to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Number of `VpcFlowLogsConfigs` to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing `VpcFlowLogsConfig`. If a configuration with the exact same settings already
+         * exists (even if the ID is different), the creation fails. Notes: 1. Updating a configuration with
+         * `state=DISABLED` will fail 2. The following fields are not considered as settings for the purpose
+         * of the check mentioned above, therefore - updating another configuration with the same fields but
+         * different values for the following fields will fail as well: * name * create_time * update_time *
+         * labels * description
+         *
+         * Create a request for the method "vpcFlowLogsConfigs.patch".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Unique name of the configuration. The name can have one of the following forms: - For
+         *        project-level configurations:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For organization-level configurations: `organizations/{organization_id}/locations/global/v
+         *        pcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+         * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/vpcFlowLogsConfigs/[^/]+$");
+
+          /**
+           * Updates an existing `VpcFlowLogsConfig`. If a configuration with the exact same settings
+           * already exists (even if the ID is different), the creation fails. Notes: 1. Updating a
+           * configuration with `state=DISABLED` will fail 2. The following fields are not considered as
+           * settings for the purpose of the check mentioned above, therefore - updating another
+           * configuration with the same fields but different values for the following fields will fail as
+           * well: * name * create_time * update_time * labels * description
+           *
+           * Create a request for the method "vpcFlowLogsConfigs.patch".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Unique name of the configuration. The name can have one of the following forms: - For
+         *        project-level configurations:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For organization-level configurations: `organizations/{organization_id}/locations/global/v
+         *        pcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig content) {
+            super(NetworkManagement.this, "PATCH", REST_PATH, content, com.google.api.services.networkmanagement.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/vpcFlowLogsConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Unique name of the configuration. The name can have one of the following
+           * forms: - For project-level configurations:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For organization-level configurations: `organizations/{organization_id}/locations/globa
+           * l/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Unique name of the configuration. The name can have one of the following forms: - For
+         project-level configurations:
+         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For
+         organization-level configurations:
+         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Unique name of the configuration. The name can have one of the following
+           * forms: - For project-level configurations:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For organization-level configurations: `organizations/{organization_id}/locations/globa
+           * l/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/vpcFlowLogsConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Mask of fields to update. At least one path must be supplied in this field.
+           * For example, to change the state of the configuration to ENABLED, specify `update_mask`
+           * = `"state"`, and the `vpc_flow_logs_config` would be: `vpc_flow_logs_config = { name =
+           * "projects/my-project/locations/global/vpcFlowLogsConfigs/my-config" state = "ENABLED"
+           * }`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask of fields to update. At least one path must be supplied in this field. For example,
+         to change the state of the configuration to ENABLED, specify `update_mask` = `"state"`, and the
+         `vpc_flow_logs_config` would be: `vpc_flow_logs_config = { name = "projects/my-
+         project/locations/global/vpcFlowLogsConfigs/my-config" state = "ENABLED" }`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Mask of fields to update. At least one path must be supplied in this field.
+           * For example, to change the state of the configuration to ENABLED, specify `update_mask`
+           * = `"state"`, and the `vpc_flow_logs_config` would be: `vpc_flow_logs_config = { name =
+           * "projects/my-project/locations/global/vpcFlowLogsConfigs/my-config" state = "ENABLED"
+           * }`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 
@@ -1484,22 +2420,22 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -6502,6 +7438,454 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC Flow Logs configurations
+         * applicable to the specified project.
+         *
+         * Create a request for the method "vpcFlowLogsConfigs.queryOrgVpcFlowLogsConfigs".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link QueryOrgVpcFlowLogsConfigs#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param parent Required. The parent resource of the VpcFlowLogsConfig, specified in the following format:
+         *        `projects/{project_id}/locations/global`
+         * @return the request
+         */
+        public QueryOrgVpcFlowLogsConfigs queryOrgVpcFlowLogsConfigs(java.lang.String parent) throws java.io.IOException {
+          QueryOrgVpcFlowLogsConfigs result = new QueryOrgVpcFlowLogsConfigs(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryOrgVpcFlowLogsConfigs extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.QueryOrgVpcFlowLogsConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/vpcFlowLogsConfigs:queryOrgVpcFlowLogsConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC Flow Logs
+           * configurations applicable to the specified project.
+           *
+           * Create a request for the method "vpcFlowLogsConfigs.queryOrgVpcFlowLogsConfigs".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link QueryOrgVpcFlowLogsConfigs#execute()} method to invoke
+           * the remote operation. <p> {@link QueryOrgVpcFlowLogsConfigs#initialize(com.google.api.client.go
+           * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the VpcFlowLogsConfig, specified in the following format:
+         *        `projects/{project_id}/locations/global`
+           * @since 1.13
+           */
+          protected QueryOrgVpcFlowLogsConfigs(java.lang.String parent) {
+            super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.QueryOrgVpcFlowLogsConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryOrgVpcFlowLogsConfigs) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setAccessToken(java.lang.String accessToken) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setAlt(java.lang.String alt) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setCallback(java.lang.String callback) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setFields(java.lang.String fields) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setFields(fields);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setKey(java.lang.String key) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setKey(key);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setOauthToken(java.lang.String oauthToken) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setQuotaUser(java.lang.String quotaUser) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setUploadType(java.lang.String uploadType) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryOrgVpcFlowLogsConfigs) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig, specified in the following
+           * format: `projects/{project_id}/locations/global`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the VpcFlowLogsConfig, specified in the following format:
+         `projects/{project_id}/locations/global`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig, specified in the following
+           * format: `projects/{project_id}/locations/global`
+           */
+          public QueryOrgVpcFlowLogsConfigs setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Lists the `VpcFlowLogsConfigs` that match the filter expression. A filter
+           * expression must use the supported [CEL logic operators]
+           * (https://cloud.google.com/vpc/docs/about-flow-logs-
+           * records#supported_cel_logic_operators).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Lists the `VpcFlowLogsConfigs` that match the filter expression. A filter expression must
+         use the supported [CEL logic operators] (https://cloud.google.com/vpc/docs/about-flow-logs-
+         records#supported_cel_logic_operators).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Lists the `VpcFlowLogsConfigs` that match the filter expression. A filter
+           * expression must use the supported [CEL logic operators]
+           * (https://cloud.google.com/vpc/docs/about-flow-logs-
+           * records#supported_cel_logic_operators).
+           */
+          public QueryOrgVpcFlowLogsConfigs setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Number of `VpcFlowLogsConfigs` to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Number of `VpcFlowLogsConfigs` to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Number of `VpcFlowLogsConfigs` to return. */
+          public QueryOrgVpcFlowLogsConfigs setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`. */
+          public QueryOrgVpcFlowLogsConfigs setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public QueryOrgVpcFlowLogsConfigs set(String parameterName, Object value) {
+            return (QueryOrgVpcFlowLogsConfigs) super.set(parameterName, value);
+          }
+        }
+        /**
+         * ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs configurations applicable to a
+         * specified resource.
+         *
+         * Create a request for the method "vpcFlowLogsConfigs.showEffectiveFlowLogsConfigs".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link ShowEffectiveFlowLogsConfigs#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param parent Required. The parent resource of the VpcFlowLogsConfig, specified in the following format:
+         *        `projects/{project_id}/locations/global`
+         * @return the request
+         */
+        public ShowEffectiveFlowLogsConfigs showEffectiveFlowLogsConfigs(java.lang.String parent) throws java.io.IOException {
+          ShowEffectiveFlowLogsConfigs result = new ShowEffectiveFlowLogsConfigs(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ShowEffectiveFlowLogsConfigs extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.ShowEffectiveFlowLogsConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/vpcFlowLogsConfigs:showEffectiveFlowLogsConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs configurations applicable to a
+           * specified resource.
+           *
+           * Create a request for the method "vpcFlowLogsConfigs.showEffectiveFlowLogsConfigs".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link ShowEffectiveFlowLogsConfigs#execute()} method to
+           * invoke the remote operation. <p> {@link ShowEffectiveFlowLogsConfigs#initialize(com.google.api.
+           * client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the VpcFlowLogsConfig, specified in the following format:
+         *        `projects/{project_id}/locations/global`
+           * @since 1.13
+           */
+          protected ShowEffectiveFlowLogsConfigs(java.lang.String parent) {
+            super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.ShowEffectiveFlowLogsConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs set$Xgafv(java.lang.String $Xgafv) {
+            return (ShowEffectiveFlowLogsConfigs) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setAccessToken(java.lang.String accessToken) {
+            return (ShowEffectiveFlowLogsConfigs) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setAlt(java.lang.String alt) {
+            return (ShowEffectiveFlowLogsConfigs) super.setAlt(alt);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setCallback(java.lang.String callback) {
+            return (ShowEffectiveFlowLogsConfigs) super.setCallback(callback);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setFields(java.lang.String fields) {
+            return (ShowEffectiveFlowLogsConfigs) super.setFields(fields);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setKey(java.lang.String key) {
+            return (ShowEffectiveFlowLogsConfigs) super.setKey(key);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setOauthToken(java.lang.String oauthToken) {
+            return (ShowEffectiveFlowLogsConfigs) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ShowEffectiveFlowLogsConfigs) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setQuotaUser(java.lang.String quotaUser) {
+            return (ShowEffectiveFlowLogsConfigs) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setUploadType(java.lang.String uploadType) {
+            return (ShowEffectiveFlowLogsConfigs) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ShowEffectiveFlowLogsConfigs) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig, specified in the following
+           * format: `projects/{project_id}/locations/global`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the VpcFlowLogsConfig, specified in the following format:
+         `projects/{project_id}/locations/global`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the VpcFlowLogsConfig, specified in the following
+           * format: `projects/{project_id}/locations/global`
+           */
+          public ShowEffectiveFlowLogsConfigs setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Lists the `EffectiveVpcFlowLogsConfigs` that match the filter expression. A
+           * filter expression must use the supported [CEL logic operators]
+           * (https://cloud.google.com/vpc/docs/about-flow-logs-
+           * records#supported_cel_logic_operators).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Lists the `EffectiveVpcFlowLogsConfigs` that match the filter expression. A filter
+         expression must use the supported [CEL logic operators] (https://cloud.google.com/vpc/docs/about-
+         flow-logs-records#supported_cel_logic_operators).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Lists the `EffectiveVpcFlowLogsConfigs` that match the filter expression. A
+           * filter expression must use the supported [CEL logic operators]
+           * (https://cloud.google.com/vpc/docs/about-flow-logs-
+           * records#supported_cel_logic_operators).
+           */
+          public ShowEffectiveFlowLogsConfigs setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Number of `EffectiveVpcFlowLogsConfigs` to return. Default is 30. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Number of `EffectiveVpcFlowLogsConfigs` to return. Default is 30.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Number of `EffectiveVpcFlowLogsConfigs` to return. Default is 30. */
+          public ShowEffectiveFlowLogsConfigs setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Page token from an earlier query, as returned in `next_page_token`. */
+          public ShowEffectiveFlowLogsConfigs setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Required. The resource to get the effective VPC Flow Logs configuration for. The
+           * resource must belong to the same project as the parent. The resource must be a network,
+           * subnetwork, interconnect attachment, VPN tunnel, or a project.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** Required. The resource to get the effective VPC Flow Logs configuration for. The resource must
+         belong to the same project as the parent. The resource must be a network, subnetwork, interconnect
+         attachment, VPN tunnel, or a project.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * Required. The resource to get the effective VPC Flow Logs configuration for. The
+           * resource must belong to the same project as the parent. The resource must be a network,
+           * subnetwork, interconnect attachment, VPN tunnel, or a project.
+           */
+          public ShowEffectiveFlowLogsConfigs setResource(java.lang.String resource) {
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public ShowEffectiveFlowLogsConfigs set(String parameterName, Object value) {
+            return (ShowEffectiveFlowLogsConfigs) super.set(parameterName, value);
           }
         }
 

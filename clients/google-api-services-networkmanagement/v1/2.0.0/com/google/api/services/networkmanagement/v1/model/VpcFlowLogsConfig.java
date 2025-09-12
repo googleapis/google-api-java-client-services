@@ -45,6 +45,15 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   private String createTime;
 
   /**
+   * Optional. Determines whether to include cross project annotations in the logs. This field is
+   * available only for organization configurations. If not specified in org configs will be set to
+   * CROSS_PROJECT_METADATA_ENABLED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String crossProjectMetadata;
+
+  /**
    * Optional. The user-supplied description of the VPC Flow Logs configuration. Maximum of 512
    * characters.
    * The value may be {@code null}.
@@ -111,6 +120,14 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * Traffic will be logged from VMs, VPN tunnels and Interconnect Attachments within the network.
+   * Format: projects/{project_id}/global/networks/{name}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * Optional. The state of the VPC Flow Log configuration. Default value is ENABLED. When creating
    * a new configuration, it must be enabled. Setting state=DISABLED will pause the log generation
    * for this config.
@@ -118,6 +135,14 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Traffic will be logged from VMs within the subnetwork. Format:
+   * projects/{project_id}/regions/{region}/subnetworks/{name}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subnet;
 
   /**
    * Output only. Describes the state of the configured target resource for diagnostic purposes.
@@ -172,6 +197,27 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
    */
   public VpcFlowLogsConfig setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Determines whether to include cross project annotations in the logs. This field is
+   * available only for organization configurations. If not specified in org configs will be set to
+   * CROSS_PROJECT_METADATA_ENABLED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCrossProjectMetadata() {
+    return crossProjectMetadata;
+  }
+
+  /**
+   * Optional. Determines whether to include cross project annotations in the logs. This field is
+   * available only for organization configurations. If not specified in org configs will be set to
+   * CROSS_PROJECT_METADATA_ENABLED.
+   * @param crossProjectMetadata crossProjectMetadata or {@code null} for none
+   */
+  public VpcFlowLogsConfig setCrossProjectMetadata(java.lang.String crossProjectMetadata) {
+    this.crossProjectMetadata = crossProjectMetadata;
     return this;
   }
 
@@ -332,6 +378,25 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Traffic will be logged from VMs, VPN tunnels and Interconnect Attachments within the network.
+   * Format: projects/{project_id}/global/networks/{name}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Traffic will be logged from VMs, VPN tunnels and Interconnect Attachments within the network.
+   * Format: projects/{project_id}/global/networks/{name}
+   * @param network network or {@code null} for none
+   */
+  public VpcFlowLogsConfig setNetwork(java.lang.String network) {
+    this.network = network;
+    return this;
+  }
+
+  /**
    * Optional. The state of the VPC Flow Log configuration. Default value is ENABLED. When creating
    * a new configuration, it must be enabled. Setting state=DISABLED will pause the log generation
    * for this config.
@@ -349,6 +414,25 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
    */
   public VpcFlowLogsConfig setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Traffic will be logged from VMs within the subnetwork. Format:
+   * projects/{project_id}/regions/{region}/subnetworks/{name}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubnet() {
+    return subnet;
+  }
+
+  /**
+   * Traffic will be logged from VMs within the subnetwork. Format:
+   * projects/{project_id}/regions/{region}/subnetworks/{name}
+   * @param subnet subnet or {@code null} for none
+   */
+  public VpcFlowLogsConfig setSubnet(java.lang.String subnet) {
+    this.subnet = subnet;
     return this;
   }
 

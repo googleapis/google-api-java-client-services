@@ -107,6 +107,13 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String gkeMasterCluster;
 
   /**
+   * A [GKE Pod](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gkePod;
+
+  /**
    * A Compute Engine instance URI.
    * The value may be {@code null}.
    */
@@ -361,6 +368,23 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setGkeMasterCluster(java.lang.String gkeMasterCluster) {
     this.gkeMasterCluster = gkeMasterCluster;
+    return this;
+  }
+
+  /**
+   * A [GKE Pod](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGkePod() {
+    return gkePod;
+  }
+
+  /**
+   * A [GKE Pod](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) URI.
+   * @param gkePod gkePod or {@code null} for none
+   */
+  public Endpoint setGkePod(java.lang.String gkePod) {
+    this.gkePod = gkePod;
     return this;
   }
 

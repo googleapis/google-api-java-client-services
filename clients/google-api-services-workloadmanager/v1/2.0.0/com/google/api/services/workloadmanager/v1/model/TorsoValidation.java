@@ -37,7 +37,7 @@ public final class TorsoValidation extends com.google.api.client.json.GenericJso
   private java.lang.String agentVersion;
 
   /**
-   * Required. instance_name lists the human readable name of the instance that the data comes from.
+   * Optional. instance_name lists the human readable name of the instance that the data comes from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class TorsoValidation extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. instance_name lists the human readable name of the instance that the data comes from.
+   * Optional. instance_name lists the human readable name of the instance that the data comes from.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceName() {
@@ -90,7 +90,7 @@ public final class TorsoValidation extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. instance_name lists the human readable name of the instance that the data comes from.
+   * Optional. instance_name lists the human readable name of the instance that the data comes from.
    * @param instanceName instanceName or {@code null} for none
    */
   public TorsoValidation setInstanceName(java.lang.String instanceName) {

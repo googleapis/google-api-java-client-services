@@ -37,7 +37,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   private AgentStatus agentStatus;
 
   /**
-   * Required. The instance id where the insight is generated from
+   * Optional. The instance id where the insight is generated from
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The instance id where the insight is generated from
+   * Optional. The instance id where the insight is generated from
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceId() {
@@ -105,7 +105,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The instance id where the insight is generated from
+   * Optional. The instance id where the insight is generated from
    * @param instanceId instanceId or {@code null} for none
    */
   public Insight setInstanceId(java.lang.String instanceId) {

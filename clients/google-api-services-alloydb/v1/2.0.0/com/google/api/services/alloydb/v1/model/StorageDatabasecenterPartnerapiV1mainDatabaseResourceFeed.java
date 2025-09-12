@@ -18,7 +18,7 @@ package com.google.api.services.alloydb.v1.model;
 
 /**
  * DatabaseResourceFeed is the top level proto to be used to ingest different database resource
- * level events into Condor platform. Next ID: 11
+ * level events into Condor platform. Next ID: 12
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -44,6 +44,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData configBasedSignalData;
+
+  /**
+   * Database resource signal data is used to ingest signals from database resource signal feeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData databaseResourceSignalData;
 
   /**
    * Required. Timestamp when feed is generated.
@@ -134,6 +141,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setConfigBasedSignalData(StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData configBasedSignalData) {
     this.configBasedSignalData = configBasedSignalData;
+    return this;
+  }
+
+  /**
+   * Database resource signal data is used to ingest signals from database resource signal feeds.
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData getDatabaseResourceSignalData() {
+    return databaseResourceSignalData;
+  }
+
+  /**
+   * Database resource signal data is used to ingest signals from database resource signal feeds.
+   * @param databaseResourceSignalData databaseResourceSignalData or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setDatabaseResourceSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData databaseResourceSignalData) {
+    this.databaseResourceSignalData = databaseResourceSignalData;
     return this;
   }
 

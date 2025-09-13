@@ -45,6 +45,14 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String entitlementId;
 
   /**
+   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-east4-b-r2. If not
+   * specified, the system will pick a zone based on availability.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcpOracleZone;
+
+  /**
    * Optional. Labels or tags associated with the resource.
    * The value may be {@code null}.
    */
@@ -105,6 +113,25 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
    */
   public OdbNetwork setEntitlementId(java.lang.String entitlementId) {
     this.entitlementId = entitlementId;
+    return this;
+  }
+
+  /**
+   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-east4-b-r2. If not
+   * specified, the system will pick a zone based on availability.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcpOracleZone() {
+    return gcpOracleZone;
+  }
+
+  /**
+   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-east4-b-r2. If not
+   * specified, the system will pick a zone based on availability.
+   * @param gcpOracleZone gcpOracleZone or {@code null} for none
+   */
+  public OdbNetwork setGcpOracleZone(java.lang.String gcpOracleZone) {
+    this.gcpOracleZone = gcpOracleZone;
     return this;
   }
 

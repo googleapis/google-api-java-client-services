@@ -445,22 +445,22 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -3541,6 +3541,38 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /** Optional. An expression for filtering the results of the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the results of the request.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. An expression for filtering the results of the request. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. An expression for ordering the results of the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. An expression for ordering the results of the request.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. An expression for ordering the results of the request. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
           /**
            * Optional. The maximum number of items to return. If unspecified, at most 50 Exadata
            * infrastructures will be returned. The maximum value is 1000; values above 1000 will be
@@ -4934,6 +4966,31 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /**
+           * Optional. An expression for filtering the results of the request. Only the
+           * gcp_oracle_zone_id field is supported in this format:
+           * `gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the results of the request. Only the gcp_oracle_zone_id field
+         is supported in this format: `gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. Only the
+           * gcp_oracle_zone_id field is supported in this format:
+           * `gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of items to return. If unspecified, at most 50 database
            * system shapes will be returned. The maximum value is 1000; values above 1000 will be
            * coerced to 1000.
@@ -5353,22 +5410,22 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Optional. An expression for filtering the results of the request. Only the shape and
-           * gi_version fields are supported in this format: `shape="{shape}"`.
+           * Optional. An expression for filtering the results of the request. Only the shape,
+           * gcp_oracle_zone and gi_version fields are supported in this format: `shape="{shape}"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. An expression for filtering the results of the request. Only the shape and gi_version
-         fields are supported in this format: `shape="{shape}"`.
+          /** Optional. An expression for filtering the results of the request. Only the shape, gcp_oracle_zone
+         and gi_version fields are supported in this format: `shape="{shape}"`.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. An expression for filtering the results of the request. Only the shape and
-           * gi_version fields are supported in this format: `shape="{shape}"`.
+           * Optional. An expression for filtering the results of the request. Only the shape,
+           * gcp_oracle_zone and gi_version fields are supported in this format: `shape="{shape}"`.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

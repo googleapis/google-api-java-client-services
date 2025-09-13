@@ -39,8 +39,16 @@ public final class ResourceOptions extends com.google.api.client.json.GenericJso
   private java.lang.String connectVersion;
 
   /**
-   * Optional. Major version of the Kubernetes cluster. This is only used to determine which version
-   * to use for the CustomResourceDefinition resources, `apiextensions/v1beta1`
+   * Optional. Git version of the Kubernetes cluster. This is only used to gate the Connect Agent
+   * migration to svc.id.goog on GDC-SO 1.33.100 patch and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String k8sGitVersion;
+
+  /**
+   * Optional. Major and minor version of the Kubernetes cluster. This is only used to determine
+   * which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1`
    * or`apiextensions/v1`.
    * The value may be {@code null}.
    */
@@ -78,8 +86,27 @@ public final class ResourceOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Major version of the Kubernetes cluster. This is only used to determine which version
-   * to use for the CustomResourceDefinition resources, `apiextensions/v1beta1`
+   * Optional. Git version of the Kubernetes cluster. This is only used to gate the Connect Agent
+   * migration to svc.id.goog on GDC-SO 1.33.100 patch and above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getK8sGitVersion() {
+    return k8sGitVersion;
+  }
+
+  /**
+   * Optional. Git version of the Kubernetes cluster. This is only used to gate the Connect Agent
+   * migration to svc.id.goog on GDC-SO 1.33.100 patch and above.
+   * @param k8sGitVersion k8sGitVersion or {@code null} for none
+   */
+  public ResourceOptions setK8sGitVersion(java.lang.String k8sGitVersion) {
+    this.k8sGitVersion = k8sGitVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Major and minor version of the Kubernetes cluster. This is only used to determine
+   * which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1`
    * or`apiextensions/v1`.
    * @return value or {@code null} for none
    */
@@ -88,8 +115,8 @@ public final class ResourceOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Major version of the Kubernetes cluster. This is only used to determine which version
-   * to use for the CustomResourceDefinition resources, `apiextensions/v1beta1`
+   * Optional. Major and minor version of the Kubernetes cluster. This is only used to determine
+   * which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1`
    * or`apiextensions/v1`.
    * @param k8sVersion k8sVersion or {@code null} for none
    */

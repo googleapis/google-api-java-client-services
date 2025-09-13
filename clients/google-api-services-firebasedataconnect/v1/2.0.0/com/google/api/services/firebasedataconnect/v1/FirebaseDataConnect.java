@@ -447,22 +447,22 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -2119,6 +2119,155 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Execute introspection query against the Firebase Data Connect's generated GraphQL schema. GraphQL
+         * introspection query provides metadata such as what tables the schema have, what queries and
+         * mutations can be performed on the schema, and so on. Read more at
+         * https://graphql.org/learn/introspection. IntrospectGraphql can read schema metadata but cannot
+         * read rows from Cloud SQL instance, which can be done via ExecuteGraphqlRead.
+         *
+         * Create a request for the method "services.introspectGraphql".
+         *
+         * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+         * optional parameters, call the {@link IntrospectGraphql#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
+         *        projects/{project}/locations/{location}/services/{service} ```
+         * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
+         * @return the request
+         */
+        public IntrospectGraphql introspectGraphql(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest content) throws java.io.IOException {
+          IntrospectGraphql result = new IntrospectGraphql(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class IntrospectGraphql extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:introspectGraphql";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Execute introspection query against the Firebase Data Connect's generated GraphQL schema.
+           * GraphQL introspection query provides metadata such as what tables the schema have, what queries
+           * and mutations can be performed on the schema, and so on. Read more at
+           * https://graphql.org/learn/introspection. IntrospectGraphql can read schema metadata but cannot
+           * read rows from Cloud SQL instance, which can be done via ExecuteGraphqlRead.
+           *
+           * Create a request for the method "services.introspectGraphql".
+           *
+           * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+           * any optional parameters, call the {@link IntrospectGraphql#execute()} method to invoke the
+           * remote operation. <p> {@link IntrospectGraphql#initialize(com.google.api.client.googleapis.serv
+           * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
+         *        projects/{project}/locations/{location}/services/{service} ```
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
+           * @since 1.13
+           */
+          protected IntrospectGraphql(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest content) {
+            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public IntrospectGraphql set$Xgafv(java.lang.String $Xgafv) {
+            return (IntrospectGraphql) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public IntrospectGraphql setAccessToken(java.lang.String accessToken) {
+            return (IntrospectGraphql) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public IntrospectGraphql setAlt(java.lang.String alt) {
+            return (IntrospectGraphql) super.setAlt(alt);
+          }
+
+          @Override
+          public IntrospectGraphql setCallback(java.lang.String callback) {
+            return (IntrospectGraphql) super.setCallback(callback);
+          }
+
+          @Override
+          public IntrospectGraphql setFields(java.lang.String fields) {
+            return (IntrospectGraphql) super.setFields(fields);
+          }
+
+          @Override
+          public IntrospectGraphql setKey(java.lang.String key) {
+            return (IntrospectGraphql) super.setKey(key);
+          }
+
+          @Override
+          public IntrospectGraphql setOauthToken(java.lang.String oauthToken) {
+            return (IntrospectGraphql) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public IntrospectGraphql setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (IntrospectGraphql) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public IntrospectGraphql setQuotaUser(java.lang.String quotaUser) {
+            return (IntrospectGraphql) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public IntrospectGraphql setUploadType(java.lang.String uploadType) {
+            return (IntrospectGraphql) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public IntrospectGraphql setUploadProtocol(java.lang.String uploadProtocol) {
+            return (IntrospectGraphql) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of Firebase Data Connect service, in the format:
+           * ``` projects/{project}/locations/{location}/services/{service} ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of Firebase Data Connect service, in the format: ```
+         projects/{project}/locations/{location}/services/{service} ```
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of Firebase Data Connect service, in the format:
+           * ``` projects/{project}/locations/{location}/services/{service} ```
+           */
+          public IntrospectGraphql setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public IntrospectGraphql set(String parameterName, Object value) {
+            return (IntrospectGraphql) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists Services in a given project and location.
          *
          * Create a request for the method "services.list".
@@ -3554,6 +3703,300 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Impersonate a mutation defined on a Firebase Data Connect connector. It grants the admin SDK
+           * access to mutations defined in the given connector. The caller can choose to impersonate a
+           * particular Firebase Auth user, or skip @auth completely.
+           *
+           * Create a request for the method "connectors.impersonateMutation".
+           *
+           * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+           * optional parameters, call the {@link ImpersonateMutation#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the connector to find the predefined query/mutation, in the format:
+           *        ``` projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.ImpersonateRequest}
+           * @return the request
+           */
+          public ImpersonateMutation impersonateMutation(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.ImpersonateRequest content) throws java.io.IOException {
+            ImpersonateMutation result = new ImpersonateMutation(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ImpersonateMutation extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:impersonateMutation";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
+
+            /**
+             * Impersonate a mutation defined on a Firebase Data Connect connector. It grants the admin SDK
+             * access to mutations defined in the given connector. The caller can choose to impersonate a
+             * particular Firebase Auth user, or skip @auth completely.
+             *
+             * Create a request for the method "connectors.impersonateMutation".
+             *
+             * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+             * any optional parameters, call the {@link ImpersonateMutation#execute()} method to invoke the
+             * remote operation. <p> {@link ImpersonateMutation#initialize(com.google.api.client.googleapis.se
+             * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the connector to find the predefined query/mutation, in the format:
+           *        ``` projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.ImpersonateRequest}
+             * @since 1.13
+             */
+            protected ImpersonateMutation(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.ImpersonateRequest content) {
+              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public ImpersonateMutation set$Xgafv(java.lang.String $Xgafv) {
+              return (ImpersonateMutation) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ImpersonateMutation setAccessToken(java.lang.String accessToken) {
+              return (ImpersonateMutation) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ImpersonateMutation setAlt(java.lang.String alt) {
+              return (ImpersonateMutation) super.setAlt(alt);
+            }
+
+            @Override
+            public ImpersonateMutation setCallback(java.lang.String callback) {
+              return (ImpersonateMutation) super.setCallback(callback);
+            }
+
+            @Override
+            public ImpersonateMutation setFields(java.lang.String fields) {
+              return (ImpersonateMutation) super.setFields(fields);
+            }
+
+            @Override
+            public ImpersonateMutation setKey(java.lang.String key) {
+              return (ImpersonateMutation) super.setKey(key);
+            }
+
+            @Override
+            public ImpersonateMutation setOauthToken(java.lang.String oauthToken) {
+              return (ImpersonateMutation) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ImpersonateMutation setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ImpersonateMutation) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ImpersonateMutation setQuotaUser(java.lang.String quotaUser) {
+              return (ImpersonateMutation) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ImpersonateMutation setUploadType(java.lang.String uploadType) {
+              return (ImpersonateMutation) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ImpersonateMutation setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ImpersonateMutation) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the connector to find the predefined query/mutation,
+             * in the format: ```
+             * projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the connector to find the predefined query/mutation, in the format:
+           ``` projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the connector to find the predefined query/mutation,
+             * in the format: ```
+             * projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+             */
+            public ImpersonateMutation setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ImpersonateMutation set(String parameterName, Object value) {
+              return (ImpersonateMutation) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Impersonate a query defined on a Firebase Data Connect connector. It grants the admin SDK access
+           * to queries defined in the given connector. The caller can choose to impersonate a particular
+           * Firebase Auth user, or skip @auth completely.
+           *
+           * Create a request for the method "connectors.impersonateQuery".
+           *
+           * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+           * optional parameters, call the {@link ImpersonateQuery#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the connector to find the predefined query/mutation, in the format:
+           *        ``` projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.ImpersonateRequest}
+           * @return the request
+           */
+          public ImpersonateQuery impersonateQuery(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.ImpersonateRequest content) throws java.io.IOException {
+            ImpersonateQuery result = new ImpersonateQuery(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ImpersonateQuery extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:impersonateQuery";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
+
+            /**
+             * Impersonate a query defined on a Firebase Data Connect connector. It grants the admin SDK
+             * access to queries defined in the given connector. The caller can choose to impersonate a
+             * particular Firebase Auth user, or skip @auth completely.
+             *
+             * Create a request for the method "connectors.impersonateQuery".
+             *
+             * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+             * any optional parameters, call the {@link ImpersonateQuery#execute()} method to invoke the
+             * remote operation. <p> {@link ImpersonateQuery#initialize(com.google.api.client.googleapis.servi
+             * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the connector to find the predefined query/mutation, in the format:
+           *        ``` projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.ImpersonateRequest}
+             * @since 1.13
+             */
+            protected ImpersonateQuery(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.ImpersonateRequest content) {
+              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public ImpersonateQuery set$Xgafv(java.lang.String $Xgafv) {
+              return (ImpersonateQuery) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ImpersonateQuery setAccessToken(java.lang.String accessToken) {
+              return (ImpersonateQuery) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ImpersonateQuery setAlt(java.lang.String alt) {
+              return (ImpersonateQuery) super.setAlt(alt);
+            }
+
+            @Override
+            public ImpersonateQuery setCallback(java.lang.String callback) {
+              return (ImpersonateQuery) super.setCallback(callback);
+            }
+
+            @Override
+            public ImpersonateQuery setFields(java.lang.String fields) {
+              return (ImpersonateQuery) super.setFields(fields);
+            }
+
+            @Override
+            public ImpersonateQuery setKey(java.lang.String key) {
+              return (ImpersonateQuery) super.setKey(key);
+            }
+
+            @Override
+            public ImpersonateQuery setOauthToken(java.lang.String oauthToken) {
+              return (ImpersonateQuery) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ImpersonateQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ImpersonateQuery) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ImpersonateQuery setQuotaUser(java.lang.String quotaUser) {
+              return (ImpersonateQuery) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ImpersonateQuery setUploadType(java.lang.String uploadType) {
+              return (ImpersonateQuery) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ImpersonateQuery setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ImpersonateQuery) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the connector to find the predefined query/mutation,
+             * in the format: ```
+             * projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the connector to find the predefined query/mutation, in the format:
+           ``` projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the connector to find the predefined query/mutation,
+             * in the format: ```
+             * projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
+             */
+            public ImpersonateQuery setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ImpersonateQuery set(String parameterName, Object value) {
+              return (ImpersonateQuery) super.set(parameterName, value);
             }
           }
           /**

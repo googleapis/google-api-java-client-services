@@ -80,7 +80,10 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   private java.lang.String hostApp;
 
   /**
-   * Name of the invoked function associated with the widget. Only set for Chat apps.
+   * Name of the function to invoke. This field doesn't populate for Google Workspace Add-ons that
+   * extend Google Chat. Instead, to receive function data like identifiers, add-ons that extend
+   * Chat should use the `parameters` field. See [Build interactive interfaces for Chat
+   * apps](https://developers.google.com/workspace/add-ons/chat/build).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +229,10 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of the invoked function associated with the widget. Only set for Chat apps.
+   * Name of the function to invoke. This field doesn't populate for Google Workspace Add-ons that
+   * extend Google Chat. Instead, to receive function data like identifiers, add-ons that extend
+   * Chat should use the `parameters` field. See [Build interactive interfaces for Chat
+   * apps](https://developers.google.com/workspace/add-ons/chat/build).
    * @return value or {@code null} for none
    */
   public java.lang.String getInvokedFunction() {
@@ -234,7 +240,10 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of the invoked function associated with the widget. Only set for Chat apps.
+   * Name of the function to invoke. This field doesn't populate for Google Workspace Add-ons that
+   * extend Google Chat. Instead, to receive function data like identifiers, add-ons that extend
+   * Chat should use the `parameters` field. See [Build interactive interfaces for Chat
+   * apps](https://developers.google.com/workspace/add-ons/chat/build).
    * @param invokedFunction invokedFunction or {@code null} for none
    */
   public CommonEventObject setInvokedFunction(java.lang.String invokedFunction) {

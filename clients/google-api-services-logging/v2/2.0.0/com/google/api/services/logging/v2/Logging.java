@@ -1677,22 +1677,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -11660,22 +11660,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -15544,8 +15544,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the logging server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent project in which to create the log scope
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         * @param parent Required. The parent resource in which to create the log scope:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          *        project/locations/global"
          * @param content the {@link com.google.api.services.logging.v2.model.LogScope}
          * @return the request
@@ -15573,8 +15575,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent project in which to create the log scope
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * @param parent Required. The parent resource in which to create the log scope:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          *        project/locations/global"
            * @param content the {@link com.google.api.services.logging.v2.model.LogScope}
            * @since 1.13
@@ -15645,23 +15649,29 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The parent project in which to create the log scope
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * Required. The parent resource in which to create the log scope:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
            * project/locations/global"
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent project in which to create the log scope
-         "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
+          /** Required. The parent resource in which to create the log scope:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent project in which to create the log scope
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * Required. The parent resource in which to create the log scope:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
            * project/locations/global"
            */
           public Create setParent(java.lang.String parent) {
@@ -15714,8 +15724,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the log scope to delete:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -15742,8 +15754,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the log scope to delete:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -15813,14 +15827,18 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope to delete:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the log scope to delete:
-         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For example:"projects/my-
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          project/locations/global/logScopes/my-log-scope"
            */
           public java.lang.String getName() {
@@ -15829,8 +15847,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope to delete:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -15855,9 +15875,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the logging server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the log scope:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+         * @param name Required. The resource name of the log scope: "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -15883,9 +15904,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the log scope:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * @param name Required. The resource name of the log scope: "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -15965,14 +15987,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the log scope:
-         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For example:"projects/my-
+          /** Required. The resource name of the log scope: "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          project/locations/global/logScopes/my-log-scope"
            */
           public java.lang.String getName() {
@@ -15981,8 +16006,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -20196,22 +20223,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-       * documented otherwise. This is primarily for internal usage.
+       * Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       * primarily intended for internal usage.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> extraLocationTypes;
 
-      /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-     otherwise. This is primarily for internal usage.
+      /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+     primarily intended for internal usage.
        */
       public java.util.List<java.lang.String> getExtraLocationTypes() {
         return extraLocationTypes;
       }
 
       /**
-       * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-       * documented otherwise. This is primarily for internal usage.
+       * Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       * primarily intended for internal usage.
        */
       public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
         this.extraLocationTypes = extraLocationTypes;
@@ -26805,22 +26832,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -30689,8 +30716,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the logging server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent project in which to create the log scope
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         * @param parent Required. The parent resource in which to create the log scope:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          *        project/locations/global"
          * @param content the {@link com.google.api.services.logging.v2.model.LogScope}
          * @return the request
@@ -30718,8 +30747,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent project in which to create the log scope
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * @param parent Required. The parent resource in which to create the log scope:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          *        project/locations/global"
            * @param content the {@link com.google.api.services.logging.v2.model.LogScope}
            * @since 1.13
@@ -30790,23 +30821,29 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The parent project in which to create the log scope
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * Required. The parent resource in which to create the log scope:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
            * project/locations/global"
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent project in which to create the log scope
-         "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
+          /** Required. The parent resource in which to create the log scope:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent project in which to create the log scope
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * Required. The parent resource in which to create the log scope:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
            * project/locations/global"
            */
           public Create setParent(java.lang.String parent) {
@@ -30859,8 +30896,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the log scope to delete:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -30887,8 +30926,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the log scope to delete:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -30958,14 +30999,18 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope to delete:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the log scope to delete:
-         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For example:"projects/my-
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          project/locations/global/logScopes/my-log-scope"
            */
           public java.lang.String getName() {
@@ -30974,8 +31019,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope to delete:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -31000,9 +31047,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the logging server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the log scope:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+         * @param name Required. The resource name of the log scope: "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -31028,9 +31076,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the log scope:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * @param name Required. The resource name of the log scope: "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -31110,14 +31159,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the log scope:
-         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For example:"projects/my-
+          /** Required. The resource name of the log scope: "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          project/locations/global/logScopes/my-log-scope"
            */
           public java.lang.String getName() {
@@ -31126,8 +31178,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -36593,22 +36647,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -40477,8 +40531,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the logging server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent project in which to create the log scope
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         * @param parent Required. The parent resource in which to create the log scope:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          *        project/locations/global"
          * @param content the {@link com.google.api.services.logging.v2.model.LogScope}
          * @return the request
@@ -40506,8 +40562,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent project in which to create the log scope
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * @param parent Required. The parent resource in which to create the log scope:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          *        project/locations/global"
            * @param content the {@link com.google.api.services.logging.v2.model.LogScope}
            * @since 1.13
@@ -40578,23 +40636,29 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The parent project in which to create the log scope
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * Required. The parent resource in which to create the log scope:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
            * project/locations/global"
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent project in which to create the log scope
-         "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
+          /** Required. The parent resource in which to create the log scope:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-project/locations/global"
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent project in which to create the log scope
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * Required. The parent resource in which to create the log scope:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
            * project/locations/global"
            */
           public Create setParent(java.lang.String parent) {
@@ -40647,8 +40711,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the log scope to delete:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -40675,8 +40741,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the log scope to delete:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -40746,14 +40814,18 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope to delete:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the log scope to delete:
-         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For example:"projects/my-
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          project/locations/global/logScopes/my-log-scope"
            */
           public java.lang.String getName() {
@@ -40762,8 +40834,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope to delete:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -40788,9 +40862,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the logging server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the log scope:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+         * @param name Required. The resource name of the log scope: "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -40816,9 +40891,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the log scope:
-         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-         *        example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * @param name Required. The resource name of the log scope: "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+         *        project/locations/global/logScopes/my-log-scope"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -40898,14 +40974,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the log scope:
-         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For example:"projects/my-
+          /** Required. The resource name of the log scope: "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
          project/locations/global/logScopes/my-log-scope"
            */
           public java.lang.String getName() {
@@ -40914,8 +40993,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The resource name of the log scope:
-           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/logScopes/[LOG_SCOPE_ID]" For
-           * example:"projects/my-project/locations/global/logScopes/my-log-scope"
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+           * project/locations/global/logScopes/my-log-scope"
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

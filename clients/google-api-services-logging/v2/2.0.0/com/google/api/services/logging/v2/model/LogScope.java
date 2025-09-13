@@ -52,8 +52,8 @@ public final class LogScope extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. Names of one or more parent resources: projects/[PROJECT_ID]May alternatively be one
-   * or more views:
+   * Required. Names of one or more parent resources (organizations and folders are not supported.):
+   * projects/[PROJECT_ID]May alternatively be one or more views:
    * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]A log scope
    * can include a maximum of 5 projects and a maximum of 100 resources in total.
    * The value may be {@code null}.
@@ -122,8 +122,8 @@ public final class LogScope extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Names of one or more parent resources: projects/[PROJECT_ID]May alternatively be one
-   * or more views:
+   * Required. Names of one or more parent resources (organizations and folders are not supported.):
+   * projects/[PROJECT_ID]May alternatively be one or more views:
    * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]A log scope
    * can include a maximum of 5 projects and a maximum of 100 resources in total.
    * @return value or {@code null} for none
@@ -133,8 +133,8 @@ public final class LogScope extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Names of one or more parent resources: projects/[PROJECT_ID]May alternatively be one
-   * or more views:
+   * Required. Names of one or more parent resources (organizations and folders are not supported.):
+   * projects/[PROJECT_ID]May alternatively be one or more views:
    * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]A log scope
    * can include a maximum of 5 projects and a maximum of 100 resources in total.
    * @param resourceNames resourceNames or {@code null} for none

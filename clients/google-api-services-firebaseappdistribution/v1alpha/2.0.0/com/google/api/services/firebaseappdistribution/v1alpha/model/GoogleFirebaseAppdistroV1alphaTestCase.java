@@ -45,7 +45,7 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
   private String createTime;
 
   /**
-   * Output only. Other test cases that depend on this test cse as a prerequisite.
+   * Output only. Other test cases that depend on this test case as a prerequisite.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
   }
 
   /**
-   * Output only. Other test cases that depend on this test cse as a prerequisite.
+   * Output only. Other test cases that depend on this test case as a prerequisite.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDependentTestCases() {
@@ -116,7 +116,7 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
   }
 
   /**
-   * Output only. Other test cases that depend on this test cse as a prerequisite.
+   * Output only. Other test cases that depend on this test case as a prerequisite.
    * @param dependentTestCases dependentTestCases or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaTestCase setDependentTestCases(java.util.List<java.lang.String> dependentTestCases) {

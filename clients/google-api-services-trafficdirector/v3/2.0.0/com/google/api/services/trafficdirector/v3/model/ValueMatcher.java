@@ -17,7 +17,7 @@
 package com.google.api.services.trafficdirector.v3.model;
 
 /**
- * Specifies the way to match a ProtobufWkt::Value. Primitive values and ListValue are supported.
+ * Specifies the way to match a Protobuf::Value. Primitive values and ListValue are supported.
  * StructValue is not supported and is always not matched. [#next-free-field: 8]
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

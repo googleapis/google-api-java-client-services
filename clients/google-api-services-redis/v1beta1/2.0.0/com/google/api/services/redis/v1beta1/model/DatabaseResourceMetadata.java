@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1beta1.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 26
+ * Common model for database resource instance metadata. Next ID: 27
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -208,6 +208,14 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private UserLabels userLabelSet;
+
+  /**
+   * The resource zone. This is only applicable for zonal resources and will be empty for regional
+   * and multi-regional resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String zone;
 
   /**
    * Availability configuration for this instance
@@ -636,6 +644,25 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   public DatabaseResourceMetadata setUserLabelSet(UserLabels userLabelSet) {
     this.userLabelSet = userLabelSet;
+    return this;
+  }
+
+  /**
+   * The resource zone. This is only applicable for zonal resources and will be empty for regional
+   * and multi-regional resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getZone() {
+    return zone;
+  }
+
+  /**
+   * The resource zone. This is only applicable for zonal resources and will be empty for regional
+   * and multi-regional resources.
+   * @param zone zone or {@code null} for none
+   */
+  public DatabaseResourceMetadata setZone(java.lang.String zone) {
+    this.zone = zone;
     return this;
   }
 

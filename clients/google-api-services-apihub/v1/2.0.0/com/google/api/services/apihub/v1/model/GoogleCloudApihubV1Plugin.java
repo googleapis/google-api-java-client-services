@@ -30,7 +30,9 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The configuration of actions supported by the plugin.
+   * Optional. The configuration of actions supported by the plugin. **REQUIRED**: This field must
+   * be provided when creating or updating a Plugin. The server will reject requests if this field
+   * is missing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +146,9 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   private String updateTime;
 
   /**
-   * Required. The configuration of actions supported by the plugin.
+   * Optional. The configuration of actions supported by the plugin. **REQUIRED**: This field must
+   * be provided when creating or updating a Plugin. The server will reject requests if this field
+   * is missing.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApihubV1PluginActionConfig> getActionsConfig() {
@@ -152,7 +156,9 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   }
 
   /**
-   * Required. The configuration of actions supported by the plugin.
+   * Optional. The configuration of actions supported by the plugin. **REQUIRED**: This field must
+   * be provided when creating or updating a Plugin. The server will reject requests if this field
+   * is missing.
    * @param actionsConfig actionsConfig or {@code null} for none
    */
   public GoogleCloudApihubV1Plugin setActionsConfig(java.util.List<GoogleCloudApihubV1PluginActionConfig> actionsConfig) {

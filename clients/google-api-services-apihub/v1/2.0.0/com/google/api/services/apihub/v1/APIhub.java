@@ -585,22 +585,22 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -1157,7 +1157,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Deletes the API hub instance.
+         * Deletes the API hub instance. Deleting the API hub instance will also result in the removal of
+         * all associated runtime project attachments and the host project registration.
          *
          * Create a request for the method "apiHubInstances.delete".
          *
@@ -1182,7 +1183,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apiHubInstances/[^/]+$");
 
           /**
-           * Deletes the API hub instance.
+           * Deletes the API hub instance. Deleting the API hub instance will also result in the removal of
+           * all associated runtime project attachments and the host project registration.
            *
            * Create a request for the method "apiHubInstances.delete".
            *
@@ -15390,6 +15392,146 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Manages data for a given plugin instance.
+           *
+           * Create a request for the method "instances.manageSourceData".
+           *
+           * This request holds the parameters needed by the apihub server.  After setting any optional
+           * parameters, call the {@link ManageSourceData#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the plugin instance for which data needs to be managed. Format:
+           *        `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+           * @param content the {@link com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManagePluginInstanceSourceDataRequest}
+           * @return the request
+           */
+          public ManageSourceData manageSourceData(java.lang.String name, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManagePluginInstanceSourceDataRequest content) throws java.io.IOException {
+            ManageSourceData result = new ManageSourceData(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ManageSourceData extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManagePluginInstanceSourceDataResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:manageSourceData";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/plugins/[^/]+/instances/[^/]+$");
+
+            /**
+             * Manages data for a given plugin instance.
+             *
+             * Create a request for the method "instances.manageSourceData".
+             *
+             * This request holds the parameters needed by the the apihub server.  After setting any optional
+             * parameters, call the {@link ManageSourceData#execute()} method to invoke the remote operation.
+             * <p> {@link ManageSourceData#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+             * ClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param name Required. The name of the plugin instance for which data needs to be managed. Format:
+           *        `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+             * @param content the {@link com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManagePluginInstanceSourceDataRequest}
+             * @since 1.13
+             */
+            protected ManageSourceData(java.lang.String name, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManagePluginInstanceSourceDataRequest content) {
+              super(APIhub.this, "POST", REST_PATH, content, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManagePluginInstanceSourceDataResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/plugins/[^/]+/instances/[^/]+$");
+              }
+            }
+
+            @Override
+            public ManageSourceData set$Xgafv(java.lang.String $Xgafv) {
+              return (ManageSourceData) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ManageSourceData setAccessToken(java.lang.String accessToken) {
+              return (ManageSourceData) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ManageSourceData setAlt(java.lang.String alt) {
+              return (ManageSourceData) super.setAlt(alt);
+            }
+
+            @Override
+            public ManageSourceData setCallback(java.lang.String callback) {
+              return (ManageSourceData) super.setCallback(callback);
+            }
+
+            @Override
+            public ManageSourceData setFields(java.lang.String fields) {
+              return (ManageSourceData) super.setFields(fields);
+            }
+
+            @Override
+            public ManageSourceData setKey(java.lang.String key) {
+              return (ManageSourceData) super.setKey(key);
+            }
+
+            @Override
+            public ManageSourceData setOauthToken(java.lang.String oauthToken) {
+              return (ManageSourceData) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ManageSourceData setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ManageSourceData) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ManageSourceData setQuotaUser(java.lang.String quotaUser) {
+              return (ManageSourceData) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ManageSourceData setUploadType(java.lang.String uploadType) {
+              return (ManageSourceData) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ManageSourceData setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ManageSourceData) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the plugin instance for which data needs to be managed. Format:
+             * `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the plugin instance for which data needs to be managed. Format:
+           `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the plugin instance for which data needs to be managed. Format:
+             * `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+             */
+            public ManageSourceData setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/plugins/[^/]+/instances/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ManageSourceData set(String parameterName, Object value) {
+              return (ManageSourceData) super.set(parameterName, value);
             }
           }
           /**

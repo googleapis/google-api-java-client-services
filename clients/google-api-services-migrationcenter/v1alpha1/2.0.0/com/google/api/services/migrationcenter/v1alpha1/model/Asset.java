@@ -45,6 +45,69 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
+   * Output only. Asset information specific for AWS CloudFront distributions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsCloudFrontDistributionDetails awsCloudFrontDistributionDetails;
+
+  /**
+   * Output only. Asset information specific for AWS ECS clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsEcsClusterDetails awsEcsClusterDetails;
+
+  /**
+   * Output only. Asset information specific for AWS EFS file systems.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsEfsFileSystemDetails awsEfsFileSystemDetails;
+
+  /**
+   * Output only. Asset information specific for AWS EKS clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsEksClusterDetails awsEksClusterDetails;
+
+  /**
+   * Output only. Asset information specific for AWS Load Balancers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsElbLoadBalancerDetails awsElbLoadBalancerDetails;
+
+  /**
+   * Output only. Asset information specific for AWS Lambda functions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsLambdaFunctionDetails awsLambdaFunctionDetails;
+
+  /**
+   * Output only. Asset information specific for AWS Redshift
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsRedshiftDetails awsRedshiftDetails;
+
+  /**
+   * Output only. Asset information specific for AWS S3 buckets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsS3BucketDetails awsS3BucketDetails;
+
+  /**
+   * Output only. Asset information specific for AWS VPCs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsVpcDetails awsVpcDetails;
+
+  /**
    * Output only. The timestamp when the asset was created.
    * The value may be {@code null}.
    */
@@ -87,6 +150,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private String hideTime;
 
   /**
+   * Output only. Details about the hosting provider of the asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HostingProviderDetails hostingProviderDetails;
+
+  /**
    * Output only. The list of insights associated with the asset.
    * The value may be {@code null}.
    */
@@ -127,6 +197,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sources;
+
+  /**
+   * Optional. Generic structured asset attributes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> structuredAttributes;
 
   /**
    * Output only. Server generated human readable name of the asset.
@@ -180,6 +257,159 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setAttributes(java.util.Map<String, java.lang.String> attributes) {
     this.attributes = attributes;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS CloudFront distributions.
+   * @return value or {@code null} for none
+   */
+  public AwsCloudFrontDistributionDetails getAwsCloudFrontDistributionDetails() {
+    return awsCloudFrontDistributionDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS CloudFront distributions.
+   * @param awsCloudFrontDistributionDetails awsCloudFrontDistributionDetails or {@code null} for none
+   */
+  public Asset setAwsCloudFrontDistributionDetails(AwsCloudFrontDistributionDetails awsCloudFrontDistributionDetails) {
+    this.awsCloudFrontDistributionDetails = awsCloudFrontDistributionDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS ECS clusters.
+   * @return value or {@code null} for none
+   */
+  public AwsEcsClusterDetails getAwsEcsClusterDetails() {
+    return awsEcsClusterDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS ECS clusters.
+   * @param awsEcsClusterDetails awsEcsClusterDetails or {@code null} for none
+   */
+  public Asset setAwsEcsClusterDetails(AwsEcsClusterDetails awsEcsClusterDetails) {
+    this.awsEcsClusterDetails = awsEcsClusterDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS EFS file systems.
+   * @return value or {@code null} for none
+   */
+  public AwsEfsFileSystemDetails getAwsEfsFileSystemDetails() {
+    return awsEfsFileSystemDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS EFS file systems.
+   * @param awsEfsFileSystemDetails awsEfsFileSystemDetails or {@code null} for none
+   */
+  public Asset setAwsEfsFileSystemDetails(AwsEfsFileSystemDetails awsEfsFileSystemDetails) {
+    this.awsEfsFileSystemDetails = awsEfsFileSystemDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS EKS clusters.
+   * @return value or {@code null} for none
+   */
+  public AwsEksClusterDetails getAwsEksClusterDetails() {
+    return awsEksClusterDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS EKS clusters.
+   * @param awsEksClusterDetails awsEksClusterDetails or {@code null} for none
+   */
+  public Asset setAwsEksClusterDetails(AwsEksClusterDetails awsEksClusterDetails) {
+    this.awsEksClusterDetails = awsEksClusterDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Load Balancers.
+   * @return value or {@code null} for none
+   */
+  public AwsElbLoadBalancerDetails getAwsElbLoadBalancerDetails() {
+    return awsElbLoadBalancerDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Load Balancers.
+   * @param awsElbLoadBalancerDetails awsElbLoadBalancerDetails or {@code null} for none
+   */
+  public Asset setAwsElbLoadBalancerDetails(AwsElbLoadBalancerDetails awsElbLoadBalancerDetails) {
+    this.awsElbLoadBalancerDetails = awsElbLoadBalancerDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Lambda functions.
+   * @return value or {@code null} for none
+   */
+  public AwsLambdaFunctionDetails getAwsLambdaFunctionDetails() {
+    return awsLambdaFunctionDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Lambda functions.
+   * @param awsLambdaFunctionDetails awsLambdaFunctionDetails or {@code null} for none
+   */
+  public Asset setAwsLambdaFunctionDetails(AwsLambdaFunctionDetails awsLambdaFunctionDetails) {
+    this.awsLambdaFunctionDetails = awsLambdaFunctionDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Redshift
+   * @return value or {@code null} for none
+   */
+  public AwsRedshiftDetails getAwsRedshiftDetails() {
+    return awsRedshiftDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Redshift
+   * @param awsRedshiftDetails awsRedshiftDetails or {@code null} for none
+   */
+  public Asset setAwsRedshiftDetails(AwsRedshiftDetails awsRedshiftDetails) {
+    this.awsRedshiftDetails = awsRedshiftDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS S3 buckets.
+   * @return value or {@code null} for none
+   */
+  public AwsS3BucketDetails getAwsS3BucketDetails() {
+    return awsS3BucketDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS S3 buckets.
+   * @param awsS3BucketDetails awsS3BucketDetails or {@code null} for none
+   */
+  public Asset setAwsS3BucketDetails(AwsS3BucketDetails awsS3BucketDetails) {
+    this.awsS3BucketDetails = awsS3BucketDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS VPCs.
+   * @return value or {@code null} for none
+   */
+  public AwsVpcDetails getAwsVpcDetails() {
+    return awsVpcDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS VPCs.
+   * @param awsVpcDetails awsVpcDetails or {@code null} for none
+   */
+  public Asset setAwsVpcDetails(AwsVpcDetails awsVpcDetails) {
+    this.awsVpcDetails = awsVpcDetails;
     return this;
   }
 
@@ -286,6 +516,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Details about the hosting provider of the asset.
+   * @return value or {@code null} for none
+   */
+  public HostingProviderDetails getHostingProviderDetails() {
+    return hostingProviderDetails;
+  }
+
+  /**
+   * Output only. Details about the hosting provider of the asset.
+   * @param hostingProviderDetails hostingProviderDetails or {@code null} for none
+   */
+  public Asset setHostingProviderDetails(HostingProviderDetails hostingProviderDetails) {
+    this.hostingProviderDetails = hostingProviderDetails;
+    return this;
+  }
+
+  /**
    * Output only. The list of insights associated with the asset.
    * @return value or {@code null} for none
    */
@@ -384,6 +631,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setSources(java.util.List<java.lang.String> sources) {
     this.sources = sources;
+    return this;
+  }
+
+  /**
+   * Optional. Generic structured asset attributes.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getStructuredAttributes() {
+    return structuredAttributes;
+  }
+
+  /**
+   * Optional. Generic structured asset attributes.
+   * @param structuredAttributes structuredAttributes or {@code null} for none
+   */
+  public Asset setStructuredAttributes(java.util.Map<String, java.lang.Object> structuredAttributes) {
+    this.structuredAttributes = structuredAttributes;
     return this;
   }
 

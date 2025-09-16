@@ -31,6 +31,19 @@ package com.google.api.services.vmmigration.v1.model;
 public final class ComputeEngineTargetDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Modifiers to be used as configuration of the OS adaptation process.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AdaptationModifier> adaptationModifiers;
+
+  static {
+    // hack to force ProGuard to consider AdaptationModifier used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdaptationModifier.class);
+  }
+
+  /**
    * Additional licenses to assign to the VM.
    * The value may be {@code null}.
    */
@@ -198,6 +211,23 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Optional. Modifiers to be used as configuration of the OS adaptation process.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AdaptationModifier> getAdaptationModifiers() {
+    return adaptationModifiers;
+  }
+
+  /**
+   * Optional. Modifiers to be used as configuration of the OS adaptation process.
+   * @param adaptationModifiers adaptationModifiers or {@code null} for none
+   */
+  public ComputeEngineTargetDetails setAdaptationModifiers(java.util.List<AdaptationModifier> adaptationModifiers) {
+    this.adaptationModifiers = adaptationModifiers;
+    return this;
+  }
 
   /**
    * Additional licenses to assign to the VM.

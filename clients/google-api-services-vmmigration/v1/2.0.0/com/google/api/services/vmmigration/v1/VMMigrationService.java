@@ -2527,7 +2527,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
         public class ImageImportJobs {
 
           /**
-           * Initiates the cancellation of a running clone job.
+           * Initiates the cancellation of a running ImageImportJob.
            *
            * Create a request for the method "imageImportJobs.cancel".
            *
@@ -2552,7 +2552,7 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/imageImports/[^/]+/imageImportJobs/[^/]+$");
 
             /**
-             * Initiates the cancellation of a running clone job.
+             * Initiates the cancellation of a running ImageImportJob.
              *
              * Create a request for the method "imageImportJobs.cancel".
              *

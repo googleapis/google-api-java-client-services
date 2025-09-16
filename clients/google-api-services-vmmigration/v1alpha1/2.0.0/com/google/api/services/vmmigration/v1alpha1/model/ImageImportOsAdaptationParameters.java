@@ -30,6 +30,19 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class ImageImportOsAdaptationParameters extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Modifiers to be used as configuration of the OS adaptation process.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AdaptationModifier> adaptationModifiers;
+
+  static {
+    // hack to force ProGuard to consider AdaptationModifier used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdaptationModifier.class);
+  }
+
+  /**
    * Optional. By default the image will keep its existing boot option. Setting this property will
    * trigger an internal process which will convert the image from using the existing boot option to
    * another. The size of the boot disk might be increased to allow the conversion
@@ -54,6 +67,23 @@ public final class ImageImportOsAdaptationParameters extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String licenseType;
+
+  /**
+   * Optional. Modifiers to be used as configuration of the OS adaptation process.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AdaptationModifier> getAdaptationModifiers() {
+    return adaptationModifiers;
+  }
+
+  /**
+   * Optional. Modifiers to be used as configuration of the OS adaptation process.
+   * @param adaptationModifiers adaptationModifiers or {@code null} for none
+   */
+  public ImageImportOsAdaptationParameters setAdaptationModifiers(java.util.List<AdaptationModifier> adaptationModifiers) {
+    this.adaptationModifiers = adaptationModifiers;
+    return this;
+  }
 
   /**
    * Optional. By default the image will keep its existing boot option. Setting this property will

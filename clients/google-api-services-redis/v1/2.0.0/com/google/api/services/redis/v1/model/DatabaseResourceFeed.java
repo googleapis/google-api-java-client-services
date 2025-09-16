@@ -18,7 +18,7 @@ package com.google.api.services.redis.v1.model;
 
 /**
  * DatabaseResourceFeed is the top level proto to be used to ingest different database resource
- * level events into Condor platform. Next ID: 11
+ * level events into Condor platform. Next ID: 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -45,6 +45,13 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private ConfigBasedSignalData configBasedSignalData;
+
+  /**
+   * Database resource signal data is used to ingest signals from database resource signal feeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseResourceSignalData databaseResourceSignalData;
 
   /**
    * Required. Timestamp when feed is generated.
@@ -135,6 +142,23 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    */
   public DatabaseResourceFeed setConfigBasedSignalData(ConfigBasedSignalData configBasedSignalData) {
     this.configBasedSignalData = configBasedSignalData;
+    return this;
+  }
+
+  /**
+   * Database resource signal data is used to ingest signals from database resource signal feeds.
+   * @return value or {@code null} for none
+   */
+  public DatabaseResourceSignalData getDatabaseResourceSignalData() {
+    return databaseResourceSignalData;
+  }
+
+  /**
+   * Database resource signal data is used to ingest signals from database resource signal feeds.
+   * @param databaseResourceSignalData databaseResourceSignalData or {@code null} for none
+   */
+  public DatabaseResourceFeed setDatabaseResourceSignalData(DatabaseResourceSignalData databaseResourceSignalData) {
+    this.databaseResourceSignalData = databaseResourceSignalData;
     return this;
   }
 

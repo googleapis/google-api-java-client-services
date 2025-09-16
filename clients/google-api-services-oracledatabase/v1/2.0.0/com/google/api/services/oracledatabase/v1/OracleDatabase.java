@@ -4804,6 +4804,865 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
         }
       }
       /**
+       * An accessor for creating requests from the DatabaseCharacterSets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OracleDatabase oracledatabase = new OracleDatabase(...);}
+       *   {@code OracleDatabase.DatabaseCharacterSets.List request = oracledatabase.databaseCharacterSets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DatabaseCharacterSets databaseCharacterSets() {
+        return new DatabaseCharacterSets();
+      }
+
+      /**
+       * The "databaseCharacterSets" collection of methods.
+       */
+      public class DatabaseCharacterSets {
+
+        /**
+         * List DatabaseCharacterSets for the given project and location.
+         *
+         * Create a request for the method "databaseCharacterSets.list".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent value for DatabaseCharacterSets in the following format:
+         *        projects/{project}/locations/{location}.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ListDatabaseCharacterSetsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/databaseCharacterSets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List DatabaseCharacterSets for the given project and location.
+           *
+           * Create a request for the method "databaseCharacterSets.list".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent value for DatabaseCharacterSets in the following format:
+         *        projects/{project}/locations/{location}.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.ListDatabaseCharacterSetsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent value for DatabaseCharacterSets in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent value for DatabaseCharacterSets in the following format:
+         projects/{project}/locations/{location}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent value for DatabaseCharacterSets in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. Only the
+           * **character_set_type** field is supported in the following format:
+           * `character_set_type="{characterSetType}"`. Accepted values include `DATABASE` and
+           * `NATIONAL`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the results of the request. Only the **character_set_type**
+         field is supported in the following format: `character_set_type="{characterSetType}"`. Accepted
+         values include `DATABASE` and `NATIONAL`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. Only the
+           * **character_set_type** field is supported in the following format:
+           * `character_set_type="{characterSetType}"`. Accepted values include `DATABASE` and
+           * `NATIONAL`.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of DatabaseCharacterSets to return. The service may return
+           * fewer than this value. If unspecified, at most 50 DatabaseCharacterSets will be
+           * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of DatabaseCharacterSets to return. The service may return fewer than
+         this value. If unspecified, at most 50 DatabaseCharacterSets will be returned. The maximum value is
+         1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of DatabaseCharacterSets to return. The service may return
+           * fewer than this value. If unspecified, at most 50 DatabaseCharacterSets will be
+           * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListDatabaseCharacterSets` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListDatabaseCharacterSets` must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListDatabaseCharacterSets` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListDatabaseCharacterSets` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListDatabaseCharacterSets` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListDatabaseCharacterSets` must match the call that provided the page
+           * token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Databases collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OracleDatabase oracledatabase = new OracleDatabase(...);}
+       *   {@code OracleDatabase.Databases.List request = oracledatabase.databases().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Databases databases() {
+        return new Databases();
+      }
+
+      /**
+       * The "databases" collection of methods.
+       */
+      public class Databases {
+
+        /**
+         * Gets details of a single Database.
+         *
+         * Create a request for the method "databases.get".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Database resource in the following format:
+         *        projects/{project}/locations/{region}/databases/{database}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Database> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/databases/[^/]+$");
+
+          /**
+           * Gets details of a single Database.
+           *
+           * Create a request for the method "databases.get".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Database resource in the following format:
+         *        projects/{project}/locations/{region}/databases/{database}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.Database.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Database resource in the following format:
+           * projects/{project}/locations/{region}/databases/{database}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Database resource in the following format:
+         projects/{project}/locations/{region}/databases/{database}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Database resource in the following format:
+           * projects/{project}/locations/{region}/databases/{database}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the Databases for the given project, location and DbSystem.
+         *
+         * Create a request for the method "databases.list".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name in the following format: projects/{project}/locations/{region}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ListDatabasesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/databases";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the Databases for the given project, location and DbSystem.
+           *
+           * Create a request for the method "databases.list".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name in the following format: projects/{project}/locations/{region}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.ListDatabasesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name in the following format:
+           * projects/{project}/locations/{region}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name in the following format: projects/{project}/locations/{region}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name in the following format:
+           * projects/{project}/locations/{region}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. list for container
+           * databases is supported only with a valid dbSystem (full resource name) filter in this
+           * format: `dbSystem="projects/{project}/locations/{location}/dbSystems/{dbSystemId}"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the results of the request. list for container databases is
+         supported only with a valid dbSystem (full resource name) filter in this format:
+         `dbSystem="projects/{project}/locations/{location}/dbSystems/{dbSystemId}"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. list for container
+           * databases is supported only with a valid dbSystem (full resource name) filter in this
+           * format: `dbSystem="projects/{project}/locations/{location}/dbSystems/{dbSystemId}"`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
+           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return. If unspecified, a maximum of 50 System Versions
+         will be returned. The maximum value is 1000; values above 1000 will be reset to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
+           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token identifying the requested page of results to return. All fields
+           * except the filter should remain the same as in the request that provided this page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying the requested page of results to return. All fields except the filter
+         should remain the same as in the request that provided this page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token identifying the requested page of results to return. All fields
+           * except the filter should remain the same as in the request that provided this page
+           * token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the DbSystemInitialStorageSizes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OracleDatabase oracledatabase = new OracleDatabase(...);}
+       *   {@code OracleDatabase.DbSystemInitialStorageSizes.List request = oracledatabase.dbSystemInitialStorageSizes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DbSystemInitialStorageSizes dbSystemInitialStorageSizes() {
+        return new DbSystemInitialStorageSizes();
+      }
+
+      /**
+       * The "dbSystemInitialStorageSizes" collection of methods.
+       */
+      public class DbSystemInitialStorageSizes {
+
+        /**
+         * Lists all the DbSystemInitialStorageSizes for the given project and location.
+         *
+         * Create a request for the method "dbSystemInitialStorageSizes.list".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent value for the DbSystemInitialStorageSize resource with the format:
+         *        projects/{project}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ListDbSystemInitialStorageSizesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/dbSystemInitialStorageSizes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the DbSystemInitialStorageSizes for the given project and location.
+           *
+           * Create a request for the method "dbSystemInitialStorageSizes.list".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent value for the DbSystemInitialStorageSize resource with the format:
+         *        projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.ListDbSystemInitialStorageSizesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent value for the DbSystemInitialStorageSize resource with the format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent value for the DbSystemInitialStorageSize resource with the format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent value for the DbSystemInitialStorageSize resource with the format:
+           * projects/{project}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
+           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return. If unspecified, a maximum of 50 System Versions
+         will be returned. The maximum value is 1000; values above 1000 will be reset to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
+           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token identifying the requested page of results to return. All fields
+           * except the filter should remain the same as in the request that provided this page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying the requested page of results to return. All fields except the filter
+         should remain the same as in the request that provided this page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token identifying the requested page of results to return. All fields
+           * except the filter should remain the same as in the request that provided this page
+           * token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the DbSystemShapes collection.
        *
        * <p>The typical use is:</p>
@@ -5026,6 +5885,1021 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /** Optional. A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the DbSystems collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OracleDatabase oracledatabase = new OracleDatabase(...);}
+       *   {@code OracleDatabase.DbSystems.List request = oracledatabase.dbSystems().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DbSystems dbSystems() {
+        return new DbSystems();
+      }
+
+      /**
+       * The "dbSystems" collection of methods.
+       */
+      public class DbSystems {
+
+        /**
+         * Creates a new DbSystem in a given project and location.
+         *
+         * Create a request for the method "dbSystems.create".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The value for parent of the DbSystem in the following format:
+         *        projects/{project}/locations/{location}.
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.DbSystem}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.oracledatabase.v1.model.DbSystem content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/dbSystems";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new DbSystem in a given project and location.
+           *
+           * Create a request for the method "dbSystems.create".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The value for parent of the DbSystem in the following format:
+         *        projects/{project}/locations/{location}.
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.DbSystem}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.oracledatabase.v1.model.DbSystem content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The value for parent of the DbSystem in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The value for parent of the DbSystem in the following format:
+         projects/{project}/locations/{location}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The value for parent of the DbSystem in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the DbSystem to create. This value is restricted to
+           * (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63 characters in length.
+           * The value must start with a letter and end with a letter or a number.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dbSystemId;
+
+          /** Required. The ID of the DbSystem to create. This value is restricted to
+         (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63 characters in length. The value
+         must start with a letter and end with a letter or a number.
+           */
+          public java.lang.String getDbSystemId() {
+            return dbSystemId;
+          }
+
+          /**
+           * Required. The ID of the DbSystem to create. This value is restricted to
+           * (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63 characters in length.
+           * The value must start with a letter and end with a letter or a number.
+           */
+          public Create setDbSystemId(java.lang.String dbSystemId) {
+            this.dbSystemId = dbSystemId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single DbSystem.
+         *
+         * Create a request for the method "dbSystems.delete".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the DbSystem in the following format:
+         *        projects/{project}/locations/{location}/dbSystems/{db_system}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dbSystems/[^/]+$");
+
+          /**
+           * Deletes a single DbSystem.
+           *
+           * Create a request for the method "dbSystems.delete".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the DbSystem in the following format:
+         *        projects/{project}/locations/{location}/dbSystems/{db_system}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(OracleDatabase.this, "DELETE", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dbSystems/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the DbSystem in the following format:
+           * projects/{project}/locations/{location}/dbSystems/{db_system}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the DbSystem in the following format:
+         projects/{project}/locations/{location}/dbSystems/{db_system}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the DbSystem in the following format:
+           * projects/{project}/locations/{location}/dbSystems/{db_system}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dbSystems/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single DbSystem.
+         *
+         * Create a request for the method "dbSystems.get".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the DbSystem in the following format:
+         *        projects/{project}/locations/{location}/dbSystems/{db_system}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.DbSystem> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dbSystems/[^/]+$");
+
+          /**
+           * Gets details of a single DbSystem.
+           *
+           * Create a request for the method "dbSystems.get".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the DbSystem in the following format:
+         *        projects/{project}/locations/{location}/dbSystems/{db_system}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.DbSystem.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dbSystems/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the DbSystem in the following format:
+           * projects/{project}/locations/{location}/dbSystems/{db_system}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the DbSystem in the following format:
+         projects/{project}/locations/{location}/dbSystems/{db_system}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the DbSystem in the following format:
+           * projects/{project}/locations/{location}/dbSystems/{db_system}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dbSystems/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the DbSystems for the given project and location.
+         *
+         * Create a request for the method "dbSystems.list".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent value for DbSystems in the following format:
+         *        projects/{project}/locations/{location}.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ListDbSystemsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/dbSystems";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the DbSystems for the given project and location.
+           *
+           * Create a request for the method "dbSystems.list".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent value for DbSystems in the following format:
+         *        projects/{project}/locations/{location}.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.ListDbSystemsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent value for DbSystems in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent value for DbSystems in the following format:
+         projects/{project}/locations/{location}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent value for DbSystems in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. An expression for filtering the results of the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the results of the request.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. An expression for filtering the results of the request. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. An expression for ordering the results of the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. An expression for ordering the results of the request.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. An expression for ordering the results of the request. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, at most 50 DbSystems
+           * will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return. If unspecified, at most 50 DbSystems will be
+         returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, at most 50 DbSystems
+           * will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the DbVersions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OracleDatabase oracledatabase = new OracleDatabase(...);}
+       *   {@code OracleDatabase.DbVersions.List request = oracledatabase.dbVersions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DbVersions dbVersions() {
+        return new DbVersions();
+      }
+
+      /**
+       * The "dbVersions" collection of methods.
+       */
+      public class DbVersions {
+
+        /**
+         * List DbVersions for the given project and location.
+         *
+         * Create a request for the method "dbVersions.list".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent value for the DbVersion resource with the format:
+         *        projects/{project}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ListDbVersionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/dbVersions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List DbVersions for the given project and location.
+           *
+           * Create a request for the method "dbVersions.list".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent value for the DbVersion resource with the format:
+         *        projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.ListDbVersionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent value for the DbVersion resource with the format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent value for the DbVersion resource with the format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent value for the DbVersion resource with the format:
+           * projects/{project}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter expression that matches a subset of the DbVersions to show. The
+           * supported filter for dbSystem creation is `db_system_shape = {db_system_shape} AND
+           * storage_management = {storage_management}`. If no filter is provided, all DbVersions
+           * will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter expression that matches a subset of the DbVersions to show. The supported filter
+         for dbSystem creation is `db_system_shape = {db_system_shape} AND storage_management =
+         {storage_management}`. If no filter is provided, all DbVersions will be returned.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter expression that matches a subset of the DbVersions to show. The
+           * supported filter for dbSystem creation is `db_system_shape = {db_system_shape} AND
+           * storage_management = {storage_management}`. If no filter is provided, all DbVersions
+           * will be returned.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
+           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return. If unspecified, a maximum of 50 System Versions
+         will be returned. The maximum value is 1000; values above 1000 will be reset to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
+           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token identifying the requested page of results to return. All fields
+           * except the filter should remain the same as in the request that provided this page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying the requested page of results to return. All fields except the filter
+         should remain the same as in the request that provided this page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token identifying the requested page of results to return. All fields
+           * except the filter should remain the same as in the request that provided this page
+           * token.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -7617,6 +9491,399 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the PluggableDatabases collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OracleDatabase oracledatabase = new OracleDatabase(...);}
+       *   {@code OracleDatabase.PluggableDatabases.List request = oracledatabase.pluggableDatabases().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public PluggableDatabases pluggableDatabases() {
+        return new PluggableDatabases();
+      }
+
+      /**
+       * The "pluggableDatabases" collection of methods.
+       */
+      public class PluggableDatabases {
+
+        /**
+         * Gets details of a single PluggableDatabase.
+         *
+         * Create a request for the method "pluggableDatabases.get".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the PluggableDatabase resource in the following format:
+         *        projects/{project}/locations/{region}/pluggableDatabases/{pluggable_database}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.PluggableDatabase> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/pluggableDatabases/[^/]+$");
+
+          /**
+           * Gets details of a single PluggableDatabase.
+           *
+           * Create a request for the method "pluggableDatabases.get".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the PluggableDatabase resource in the following format:
+         *        projects/{project}/locations/{region}/pluggableDatabases/{pluggable_database}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.PluggableDatabase.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/pluggableDatabases/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the PluggableDatabase resource in the following format:
+           * projects/{project}/locations/{region}/pluggableDatabases/{pluggable_database}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the PluggableDatabase resource in the following format:
+         projects/{project}/locations/{region}/pluggableDatabases/{pluggable_database}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the PluggableDatabase resource in the following format:
+           * projects/{project}/locations/{region}/pluggableDatabases/{pluggable_database}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/pluggableDatabases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the PluggableDatabases for the given project, location and Container Database.
+         *
+         * Create a request for the method "pluggableDatabases.list".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of PluggableDatabases. Format:
+         *        projects/{project}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ListPluggableDatabasesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/pluggableDatabases";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the PluggableDatabases for the given project, location and Container Database.
+           *
+           * Create a request for the method "pluggableDatabases.list".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of PluggableDatabases. Format:
+         *        projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.ListPluggableDatabasesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns this collection of PluggableDatabases. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of PluggableDatabases. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns this collection of PluggableDatabases. Format:
+           * projects/{project}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. List for pluggable
+           * databases is supported only with a valid container database (full resource name) filter
+           * in this format:
+           * `database="projects/{project}/locations/{location}/databases/{database}"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the results of the request. List for pluggable databases is
+         supported only with a valid container database (full resource name) filter in this format:
+         `database="projects/{project}/locations/{location}/databases/{database}"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. List for pluggable
+           * databases is supported only with a valid container database (full resource name) filter
+           * in this format:
+           * `database="projects/{project}/locations/{location}/databases/{database}"`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of PluggableDatabases to return. The service may return
+           * fewer than this value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of PluggableDatabases to return. The service may return fewer than
+         this value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of PluggableDatabases to return. The service may return
+           * fewer than this value.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListPluggableDatabases` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListPluggableDatabases` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListPluggableDatabases` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListPluggableDatabases` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListPluggableDatabases` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListPluggableDatabases` must match the call that provided the page token.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

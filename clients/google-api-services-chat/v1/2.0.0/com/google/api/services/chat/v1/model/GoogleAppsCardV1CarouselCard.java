@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * [Developer Preview](https://developers.google.com/workspace/preview): A card that can be
- * displayed as a carousel item. [Google Chat apps](https://developers.google.com/workspace/chat):
+ * A card that can be displayed as a carousel item. [Google Chat
+ * apps](https://developers.google.com/workspace/chat):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

@@ -50,15 +50,15 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.lang.Boolean ancestorHasActiveKeyVersion;
 
   /**
-   * Optional. Policy for approval. This contains all policies.
+   * Optional. Policy configuration for Access Approval that sets the operating mode. The available
+   * policies are Transparency, Streamlined Support, and Approval Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomerApprovalApprovalPolicy approvalPolicy;
 
   /**
-   * Output only. Policy for approval included inherited settings to understand the exact policy
-   * applied to this resource. This is a read-only field.
+   * Output only. Effective policy applied for Access Approval, inclusive of inheritance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,7 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    * will be required to have explicit approval. If name refers to an organization, enrollment can
    * be done for individual services. If name refers to a folder or project, enrollment can only be
    * done on an all or nothing basis. If a cloud_product is repeated in this list, the first entry
-   * will be honored and all following entries will be discarded. A maximum of 10 enrolled services
-   * will be enforced, to be expanded as the set of supported services is expanded.
+   * will be honored and all following entries will be discarded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,37 +117,44 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> notificationEmails;
 
   /**
-   * Optional. A pubsub topic to which notifications relating to approval requests should be sent.
+   * Optional. A pubsub topic that notifications relating to access approval are published to.
+   * Notifications include pre-approved accesses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notificationPubsubTopic;
 
   /**
-   * This preference is communicated to Google personnel when sending an approval request but can be
-   * overridden if necessary.
+   * This field is used to set a preference for granularity of an access approval request. If true,
+   * Google personnel will be asked to send resource-level requests when possible. If false, Google
+   * personnel will be asked to send requests at the project level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preferNoBroadApprovalRequests;
 
   /**
-   * This preference is shared with Google personnel, but can be overridden if said personnel deems
-   * necessary. The approver ultimately can set the expiration at approval time.
+   * Set the default access approval request expiration time. This value is able to be set directly
+   * by the customer at the time of approval, overriding this suggested value. We recommend setting
+   * this value to 30 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer preferredRequestExpirationDays;
 
   /**
-   * Optional. A setting to indicate the maximum width of an Access Approval request.
+   * Optional. A setting that indicates the maximum scope of an Access Approval request: either
+   * organization, folder, or project. Google administrators will be asked to send requests no
+   * broader than the configured scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestScopeMaxWidthPreference;
 
   /**
-   * Optional. A setting to require approval request justifications to be customer visible.
+   * Optional. When enabled, Google will only be able to send approval requests for access reasons
+   * with a customer accessible case ID in the reason detail. Also known as "Require customer
+   * initiated support case justification"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,7 +207,8 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Policy for approval. This contains all policies.
+   * Optional. Policy configuration for Access Approval that sets the operating mode. The available
+   * policies are Transparency, Streamlined Support, and Approval Required.
    * @return value or {@code null} for none
    */
   public CustomerApprovalApprovalPolicy getApprovalPolicy() {
@@ -209,7 +216,8 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Policy for approval. This contains all policies.
+   * Optional. Policy configuration for Access Approval that sets the operating mode. The available
+   * policies are Transparency, Streamlined Support, and Approval Required.
    * @param approvalPolicy approvalPolicy or {@code null} for none
    */
   public AccessApprovalSettings setApprovalPolicy(CustomerApprovalApprovalPolicy approvalPolicy) {
@@ -218,8 +226,7 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Policy for approval included inherited settings to understand the exact policy
-   * applied to this resource. This is a read-only field.
+   * Output only. Effective policy applied for Access Approval, inclusive of inheritance.
    * @return value or {@code null} for none
    */
   public CustomerApprovalApprovalPolicy getEffectiveApprovalPolicy() {
@@ -227,8 +234,7 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Policy for approval included inherited settings to understand the exact policy
-   * applied to this resource. This is a read-only field.
+   * Output only. Effective policy applied for Access Approval, inclusive of inheritance.
    * @param effectiveApprovalPolicy effectiveApprovalPolicy or {@code null} for none
    */
   public AccessApprovalSettings setEffectiveApprovalPolicy(CustomerApprovalApprovalPolicy effectiveApprovalPolicy) {
@@ -265,8 +271,7 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    * will be required to have explicit approval. If name refers to an organization, enrollment can
    * be done for individual services. If name refers to a folder or project, enrollment can only be
    * done on an all or nothing basis. If a cloud_product is repeated in this list, the first entry
-   * will be honored and all following entries will be discarded. A maximum of 10 enrolled services
-   * will be enforced, to be expanded as the set of supported services is expanded.
+   * will be honored and all following entries will be discarded.
    * @return value or {@code null} for none
    */
   public java.util.List<EnrolledService> getEnrolledServices() {
@@ -279,8 +284,7 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    * will be required to have explicit approval. If name refers to an organization, enrollment can
    * be done for individual services. If name refers to a folder or project, enrollment can only be
    * done on an all or nothing basis. If a cloud_product is repeated in this list, the first entry
-   * will be honored and all following entries will be discarded. A maximum of 10 enrolled services
-   * will be enforced, to be expanded as the set of supported services is expanded.
+   * will be honored and all following entries will be discarded.
    * @param enrolledServices enrolledServices or {@code null} for none
    */
   public AccessApprovalSettings setEnrolledServices(java.util.List<EnrolledService> enrolledServices) {
@@ -358,7 +362,8 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. A pubsub topic to which notifications relating to approval requests should be sent.
+   * Optional. A pubsub topic that notifications relating to access approval are published to.
+   * Notifications include pre-approved accesses.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationPubsubTopic() {
@@ -366,7 +371,8 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. A pubsub topic to which notifications relating to approval requests should be sent.
+   * Optional. A pubsub topic that notifications relating to access approval are published to.
+   * Notifications include pre-approved accesses.
    * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
    */
   public AccessApprovalSettings setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
@@ -375,8 +381,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * This preference is communicated to Google personnel when sending an approval request but can be
-   * overridden if necessary.
+   * This field is used to set a preference for granularity of an access approval request. If true,
+   * Google personnel will be asked to send resource-level requests when possible. If false, Google
+   * personnel will be asked to send requests at the project level.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreferNoBroadApprovalRequests() {
@@ -384,8 +391,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * This preference is communicated to Google personnel when sending an approval request but can be
-   * overridden if necessary.
+   * This field is used to set a preference for granularity of an access approval request. If true,
+   * Google personnel will be asked to send resource-level requests when possible. If false, Google
+   * personnel will be asked to send requests at the project level.
    * @param preferNoBroadApprovalRequests preferNoBroadApprovalRequests or {@code null} for none
    */
   public AccessApprovalSettings setPreferNoBroadApprovalRequests(java.lang.Boolean preferNoBroadApprovalRequests) {
@@ -394,8 +402,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * This preference is shared with Google personnel, but can be overridden if said personnel deems
-   * necessary. The approver ultimately can set the expiration at approval time.
+   * Set the default access approval request expiration time. This value is able to be set directly
+   * by the customer at the time of approval, overriding this suggested value. We recommend setting
+   * this value to 30 days.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPreferredRequestExpirationDays() {
@@ -403,8 +412,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * This preference is shared with Google personnel, but can be overridden if said personnel deems
-   * necessary. The approver ultimately can set the expiration at approval time.
+   * Set the default access approval request expiration time. This value is able to be set directly
+   * by the customer at the time of approval, overriding this suggested value. We recommend setting
+   * this value to 30 days.
    * @param preferredRequestExpirationDays preferredRequestExpirationDays or {@code null} for none
    */
   public AccessApprovalSettings setPreferredRequestExpirationDays(java.lang.Integer preferredRequestExpirationDays) {
@@ -413,7 +423,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. A setting to indicate the maximum width of an Access Approval request.
+   * Optional. A setting that indicates the maximum scope of an Access Approval request: either
+   * organization, folder, or project. Google administrators will be asked to send requests no
+   * broader than the configured scope.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestScopeMaxWidthPreference() {
@@ -421,7 +433,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. A setting to indicate the maximum width of an Access Approval request.
+   * Optional. A setting that indicates the maximum scope of an Access Approval request: either
+   * organization, folder, or project. Google administrators will be asked to send requests no
+   * broader than the configured scope.
    * @param requestScopeMaxWidthPreference requestScopeMaxWidthPreference or {@code null} for none
    */
   public AccessApprovalSettings setRequestScopeMaxWidthPreference(java.lang.String requestScopeMaxWidthPreference) {
@@ -430,7 +444,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. A setting to require approval request justifications to be customer visible.
+   * Optional. When enabled, Google will only be able to send approval requests for access reasons
+   * with a customer accessible case ID in the reason detail. Also known as "Require customer
+   * initiated support case justification"
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequireCustomerVisibleJustification() {
@@ -438,7 +454,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. A setting to require approval request justifications to be customer visible.
+   * Optional. When enabled, Google will only be able to send approval requests for access reasons
+   * with a customer accessible case ID in the reason detail. Also known as "Require customer
+   * initiated support case justification"
    * @param requireCustomerVisibleJustification requireCustomerVisibleJustification or {@code null} for none
    */
   public AccessApprovalSettings setRequireCustomerVisibleJustification(java.lang.Boolean requireCustomerVisibleJustification) {

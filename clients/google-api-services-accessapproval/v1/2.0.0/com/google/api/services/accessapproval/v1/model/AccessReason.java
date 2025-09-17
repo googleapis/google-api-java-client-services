@@ -37,7 +37,7 @@ public final class AccessReason extends com.google.api.client.json.GenericJson {
   private java.lang.String detail;
 
   /**
-   * Type of access justification.
+   * Type of access reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class AccessReason extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of access justification.
+   * Type of access reason.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -69,7 +69,7 @@ public final class AccessReason extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of access justification.
+   * Type of access reason.
    * @param type type or {@code null} for none
    */
   public AccessReason setType(java.lang.String type) {

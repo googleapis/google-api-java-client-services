@@ -17,7 +17,8 @@
 package com.google.api.services.accessapproval.v1.model;
 
 /**
- * This field contains the augmented information of the request.
+ * This field contains the augmented information of the request. Requires augmented administrative
+ * access to be enabled.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Approval API. For a detailed explanation see:

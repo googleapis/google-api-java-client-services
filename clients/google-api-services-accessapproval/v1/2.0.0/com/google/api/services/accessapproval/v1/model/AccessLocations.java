@@ -17,7 +17,7 @@
 package com.google.api.services.accessapproval.v1.model;
 
 /**
- * Home office and physical location of the principal.
+ * Physical assigned office and physical location of the Google administrator performing the access.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Approval API. For a detailed explanation see:
@@ -30,33 +30,33 @@ package com.google.api.services.accessapproval.v1.model;
 public final class AccessLocations extends com.google.api.client.json.GenericJson {
 
   /**
-   * The "home office" location of the principal. A two-letter country code (ISO 3166-1 alpha-2),
-   * such as "US", "DE" or "GB" or a region code. In some limited situations Google systems may
-   * refer refer to a region code instead of a country code. Possible Region Codes: * ASI: Asia *
-   * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South America * ANT:
-   * Antarctica * ANY: Any location
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String principalOfficeCountry;
-
-  /**
-   * Physical location of the principal at the time of the access. A two-letter country code (ISO
-   * 3166-1 alpha-2), such as "US", "DE" or "GB" or a region code. In some limited situations Google
+   * The "home office" location of the Google administrator. A two-letter country code (ISO 3166-1
+   * alpha-2), such as "US", "DE" or "GB" or a region code. In some limited situations Google
    * systems may refer refer to a region code instead of a country code. Possible Region Codes: *
    * ASI: Asia * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South America
    * * ANT: Antarctica * ANY: Any location
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String principalOfficeCountry;
+
+  /**
+   * Physical location of the Google administrator at the time of the access. A two-letter country
+   * code (ISO 3166-1 alpha-2), such as "US", "DE" or "GB" or a region code. In some limited
+   * situations Google systems may refer refer to a region code instead of a country code. Possible
+   * Region Codes: * ASI: Asia * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America *
+   * SAM: South America * ANT: Antarctica * ANY: Any location
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String principalPhysicalLocationCountry;
 
   /**
-   * The "home office" location of the principal. A two-letter country code (ISO 3166-1 alpha-2),
-   * such as "US", "DE" or "GB" or a region code. In some limited situations Google systems may
-   * refer refer to a region code instead of a country code. Possible Region Codes: * ASI: Asia *
-   * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South America * ANT:
-   * Antarctica * ANY: Any location
+   * The "home office" location of the Google administrator. A two-letter country code (ISO 3166-1
+   * alpha-2), such as "US", "DE" or "GB" or a region code. In some limited situations Google
+   * systems may refer refer to a region code instead of a country code. Possible Region Codes: *
+   * ASI: Asia * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South America
+   * * ANT: Antarctica * ANY: Any location
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalOfficeCountry() {
@@ -64,11 +64,11 @@ public final class AccessLocations extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The "home office" location of the principal. A two-letter country code (ISO 3166-1 alpha-2),
-   * such as "US", "DE" or "GB" or a region code. In some limited situations Google systems may
-   * refer refer to a region code instead of a country code. Possible Region Codes: * ASI: Asia *
-   * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South America * ANT:
-   * Antarctica * ANY: Any location
+   * The "home office" location of the Google administrator. A two-letter country code (ISO 3166-1
+   * alpha-2), such as "US", "DE" or "GB" or a region code. In some limited situations Google
+   * systems may refer refer to a region code instead of a country code. Possible Region Codes: *
+   * ASI: Asia * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South America
+   * * ANT: Antarctica * ANY: Any location
    * @param principalOfficeCountry principalOfficeCountry or {@code null} for none
    */
   public AccessLocations setPrincipalOfficeCountry(java.lang.String principalOfficeCountry) {
@@ -77,11 +77,11 @@ public final class AccessLocations extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Physical location of the principal at the time of the access. A two-letter country code (ISO
-   * 3166-1 alpha-2), such as "US", "DE" or "GB" or a region code. In some limited situations Google
-   * systems may refer refer to a region code instead of a country code. Possible Region Codes: *
-   * ASI: Asia * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South America
-   * * ANT: Antarctica * ANY: Any location
+   * Physical location of the Google administrator at the time of the access. A two-letter country
+   * code (ISO 3166-1 alpha-2), such as "US", "DE" or "GB" or a region code. In some limited
+   * situations Google systems may refer refer to a region code instead of a country code. Possible
+   * Region Codes: * ASI: Asia * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America *
+   * SAM: South America * ANT: Antarctica * ANY: Any location
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalPhysicalLocationCountry() {
@@ -89,11 +89,11 @@ public final class AccessLocations extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Physical location of the principal at the time of the access. A two-letter country code (ISO
-   * 3166-1 alpha-2), such as "US", "DE" or "GB" or a region code. In some limited situations Google
-   * systems may refer refer to a region code instead of a country code. Possible Region Codes: *
-   * ASI: Asia * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South America
-   * * ANT: Antarctica * ANY: Any location
+   * Physical location of the Google administrator at the time of the access. A two-letter country
+   * code (ISO 3166-1 alpha-2), such as "US", "DE" or "GB" or a region code. In some limited
+   * situations Google systems may refer refer to a region code instead of a country code. Possible
+   * Region Codes: * ASI: Asia * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America *
+   * SAM: South America * ANT: Antarctica * ANY: Any location
    * @param principalPhysicalLocationCountry principalPhysicalLocationCountry or {@code null} for none
    */
   public AccessLocations setPrincipalPhysicalLocationCountry(java.lang.String principalPhysicalLocationCountry) {

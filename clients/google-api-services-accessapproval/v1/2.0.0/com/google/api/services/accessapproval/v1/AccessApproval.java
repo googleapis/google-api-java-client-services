@@ -155,10 +155,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
     /**
      * Deletes the settings associated with a project, folder, or organization. This will have the
-     * effect of disabling Access Approval for the project, folder, or organization, but only if all
-     * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of
-     * the hierarchy, then Access Approval will still be enabled at this level as the settings are
-     * inherited.
+     * effect of disabling Access Approval for the resource. Access Approval may remain active based on
+     * parent resource settings. To confirm the effective settings, call GetAccessApprovalSettings and
+     * verify effective setting is disabled.
      *
      * Create a request for the method "folders.deleteAccessApprovalSettings".
      *
@@ -184,10 +183,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
       /**
        * Deletes the settings associated with a project, folder, or organization. This will have the
-       * effect of disabling Access Approval for the project, folder, or organization, but only if all
-       * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level
-       * of the hierarchy, then Access Approval will still be enabled at this level as the settings are
-       * inherited.
+       * effect of disabling Access Approval for the resource. Access Approval may remain active based
+       * on parent resource settings. To confirm the effective settings, call GetAccessApprovalSettings
+       * and verify effective setting is disabled.
        *
        * Create a request for the method "folders.deleteAccessApprovalSettings".
        *
@@ -292,7 +290,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
     }
     /**
-     * Gets the settings associated with a project, folder, or organization.
+     * Gets the Access Approval settings associated with a project, folder, or organization.
      *
      * Create a request for the method "folders.getAccessApprovalSettings".
      *
@@ -318,7 +316,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
           java.util.regex.Pattern.compile("^folders/[^/]+/accessApprovalSettings$");
 
       /**
-       * Gets the settings associated with a project, folder, or organization.
+       * Gets the Access Approval settings associated with a project, folder, or organization.
        *
        * Create a request for the method "folders.getAccessApprovalSettings".
        *
@@ -920,10 +918,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
-       * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the
-       * resource if another request has been made and approved. It is equivalent in effect to ignoring
-       * the request altogether. Returns NOT_FOUND if the request does not exist. Returns
-       * FAILED_PRECONDITION if the request exists but is not in a pending state.
+       * Dismisses a request. Returns the updated ApprovalRequest. NOTE: When a request is dismissed, it
+       * is considered ignored. Dismissing a request does not prevent access granted by other Access
+       * Approval requests. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION
+       * if the request exists but is not in a pending state.
        *
        * Create a request for the method "approvalRequests.dismiss".
        *
@@ -948,10 +946,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^folders/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to
-         * the resource if another request has been made and approved. It is equivalent in effect to
-         * ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns
-         * FAILED_PRECONDITION if the request exists but is not in a pending state.
+         * Dismisses a request. Returns the updated ApprovalRequest. NOTE: When a request is dismissed, it
+         * is considered ignored. Dismissing a request does not prevent access granted by other Access
+         * Approval requests. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION
+         * if the request exists but is not in a pending state.
          *
          * Create a request for the method "approvalRequests.dismiss".
          *
@@ -1204,10 +1202,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
-       * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not
-       * deny access to the resource if another request has been made and approved. It only invalidates a
-       * single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved
-       * state.
+       * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This action
+       * revokes Google access based on this approval request. If the resource has other active approvals,
+       * access will remain granted. Returns FAILED_PRECONDITION if the request exists but is not in an
+       * approved state.
        *
        * Create a request for the method "approvalRequests.invalidate".
        *
@@ -1232,10 +1230,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^folders/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does
-         * not deny access to the resource if another request has been made and approved. It only
-         * invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in
-         * an approved state.
+         * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This action
+         * revokes Google access based on this approval request. If the resource has other active
+         * approvals, access will remain granted. Returns FAILED_PRECONDITION if the request exists but is
+         * not in an approved state.
          *
          * Create a request for the method "approvalRequests.invalidate".
          *
@@ -1582,10 +1580,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
     /**
      * Deletes the settings associated with a project, folder, or organization. This will have the
-     * effect of disabling Access Approval for the project, folder, or organization, but only if all
-     * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of
-     * the hierarchy, then Access Approval will still be enabled at this level as the settings are
-     * inherited.
+     * effect of disabling Access Approval for the resource. Access Approval may remain active based on
+     * parent resource settings. To confirm the effective settings, call GetAccessApprovalSettings and
+     * verify effective setting is disabled.
      *
      * Create a request for the method "organizations.deleteAccessApprovalSettings".
      *
@@ -1611,10 +1608,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
       /**
        * Deletes the settings associated with a project, folder, or organization. This will have the
-       * effect of disabling Access Approval for the project, folder, or organization, but only if all
-       * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level
-       * of the hierarchy, then Access Approval will still be enabled at this level as the settings are
-       * inherited.
+       * effect of disabling Access Approval for the resource. Access Approval may remain active based
+       * on parent resource settings. To confirm the effective settings, call GetAccessApprovalSettings
+       * and verify effective setting is disabled.
        *
        * Create a request for the method "organizations.deleteAccessApprovalSettings".
        *
@@ -1719,7 +1715,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
     }
     /**
-     * Gets the settings associated with a project, folder, or organization.
+     * Gets the Access Approval settings associated with a project, folder, or organization.
      *
      * Create a request for the method "organizations.getAccessApprovalSettings".
      *
@@ -1745,7 +1741,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
           java.util.regex.Pattern.compile("^organizations/[^/]+/accessApprovalSettings$");
 
       /**
-       * Gets the settings associated with a project, folder, or organization.
+       * Gets the Access Approval settings associated with a project, folder, or organization.
        *
        * Create a request for the method "organizations.getAccessApprovalSettings".
        *
@@ -2347,10 +2343,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
-       * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the
-       * resource if another request has been made and approved. It is equivalent in effect to ignoring
-       * the request altogether. Returns NOT_FOUND if the request does not exist. Returns
-       * FAILED_PRECONDITION if the request exists but is not in a pending state.
+       * Dismisses a request. Returns the updated ApprovalRequest. NOTE: When a request is dismissed, it
+       * is considered ignored. Dismissing a request does not prevent access granted by other Access
+       * Approval requests. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION
+       * if the request exists but is not in a pending state.
        *
        * Create a request for the method "approvalRequests.dismiss".
        *
@@ -2375,10 +2371,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^organizations/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to
-         * the resource if another request has been made and approved. It is equivalent in effect to
-         * ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns
-         * FAILED_PRECONDITION if the request exists but is not in a pending state.
+         * Dismisses a request. Returns the updated ApprovalRequest. NOTE: When a request is dismissed, it
+         * is considered ignored. Dismissing a request does not prevent access granted by other Access
+         * Approval requests. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION
+         * if the request exists but is not in a pending state.
          *
          * Create a request for the method "approvalRequests.dismiss".
          *
@@ -2631,10 +2627,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
-       * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not
-       * deny access to the resource if another request has been made and approved. It only invalidates a
-       * single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved
-       * state.
+       * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This action
+       * revokes Google access based on this approval request. If the resource has other active approvals,
+       * access will remain granted. Returns FAILED_PRECONDITION if the request exists but is not in an
+       * approved state.
        *
        * Create a request for the method "approvalRequests.invalidate".
        *
@@ -2659,10 +2655,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^organizations/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does
-         * not deny access to the resource if another request has been made and approved. It only
-         * invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in
-         * an approved state.
+         * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This action
+         * revokes Google access based on this approval request. If the resource has other active
+         * approvals, access will remain granted. Returns FAILED_PRECONDITION if the request exists but is
+         * not in an approved state.
          *
          * Create a request for the method "approvalRequests.invalidate".
          *
@@ -3009,10 +3005,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
     /**
      * Deletes the settings associated with a project, folder, or organization. This will have the
-     * effect of disabling Access Approval for the project, folder, or organization, but only if all
-     * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of
-     * the hierarchy, then Access Approval will still be enabled at this level as the settings are
-     * inherited.
+     * effect of disabling Access Approval for the resource. Access Approval may remain active based on
+     * parent resource settings. To confirm the effective settings, call GetAccessApprovalSettings and
+     * verify effective setting is disabled.
      *
      * Create a request for the method "projects.deleteAccessApprovalSettings".
      *
@@ -3038,10 +3033,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
       /**
        * Deletes the settings associated with a project, folder, or organization. This will have the
-       * effect of disabling Access Approval for the project, folder, or organization, but only if all
-       * ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level
-       * of the hierarchy, then Access Approval will still be enabled at this level as the settings are
-       * inherited.
+       * effect of disabling Access Approval for the resource. Access Approval may remain active based
+       * on parent resource settings. To confirm the effective settings, call GetAccessApprovalSettings
+       * and verify effective setting is disabled.
        *
        * Create a request for the method "projects.deleteAccessApprovalSettings".
        *
@@ -3146,7 +3140,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
     }
     /**
-     * Gets the settings associated with a project, folder, or organization.
+     * Gets the Access Approval settings associated with a project, folder, or organization.
      *
      * Create a request for the method "projects.getAccessApprovalSettings".
      *
@@ -3172,7 +3166,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
           java.util.regex.Pattern.compile("^projects/[^/]+/accessApprovalSettings$");
 
       /**
-       * Gets the settings associated with a project, folder, or organization.
+       * Gets the Access Approval settings associated with a project, folder, or organization.
        *
        * Create a request for the method "projects.getAccessApprovalSettings".
        *
@@ -3774,10 +3768,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
-       * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the
-       * resource if another request has been made and approved. It is equivalent in effect to ignoring
-       * the request altogether. Returns NOT_FOUND if the request does not exist. Returns
-       * FAILED_PRECONDITION if the request exists but is not in a pending state.
+       * Dismisses a request. Returns the updated ApprovalRequest. NOTE: When a request is dismissed, it
+       * is considered ignored. Dismissing a request does not prevent access granted by other Access
+       * Approval requests. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION
+       * if the request exists but is not in a pending state.
        *
        * Create a request for the method "approvalRequests.dismiss".
        *
@@ -3802,10 +3796,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^projects/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to
-         * the resource if another request has been made and approved. It is equivalent in effect to
-         * ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns
-         * FAILED_PRECONDITION if the request exists but is not in a pending state.
+         * Dismisses a request. Returns the updated ApprovalRequest. NOTE: When a request is dismissed, it
+         * is considered ignored. Dismissing a request does not prevent access granted by other Access
+         * Approval requests. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION
+         * if the request exists but is not in a pending state.
          *
          * Create a request for the method "approvalRequests.dismiss".
          *
@@ -4058,10 +4052,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
-       * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not
-       * deny access to the resource if another request has been made and approved. It only invalidates a
-       * single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved
-       * state.
+       * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This action
+       * revokes Google access based on this approval request. If the resource has other active approvals,
+       * access will remain granted. Returns FAILED_PRECONDITION if the request exists but is not in an
+       * approved state.
        *
        * Create a request for the method "approvalRequests.invalidate".
        *
@@ -4086,10 +4080,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^projects/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does
-         * not deny access to the resource if another request has been made and approved. It only
-         * invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in
-         * an approved state.
+         * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This action
+         * revokes Google access based on this approval request. If the resource has other active
+         * approvals, access will remain granted. Returns FAILED_PRECONDITION if the request exists but is
+         * not in an approved state.
          *
          * Create a request for the method "approvalRequests.invalidate".
          *

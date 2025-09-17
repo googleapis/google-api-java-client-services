@@ -88,7 +88,7 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
   private AccessLocations requestedLocations;
 
   /**
-   * The justification for which approval is being requested.
+   * The access reason for which approval is being requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,7 +253,7 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The justification for which approval is being requested.
+   * The access reason for which approval is being requested.
    * @return value or {@code null} for none
    */
   public AccessReason getRequestedReason() {
@@ -261,7 +261,7 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The justification for which approval is being requested.
+   * The access reason for which approval is being requested.
    * @param requestedReason requestedReason or {@code null} for none
    */
   public ApprovalRequest setRequestedReason(AccessReason requestedReason) {

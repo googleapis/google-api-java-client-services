@@ -30,20 +30,6 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet extends com.google.api.client.json.GenericJson {
 
   /**
-   * This review's author.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution authorAttribution;
-
-  /**
-   * A link where users can flag a problem with the review.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String flagContentUri;
-
-  /**
    * A link to show the review on Google Maps.
    * The value may be {@code null}.
    */
@@ -51,54 +37,18 @@ public final class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesRe
   private java.lang.String googleMapsUri;
 
   /**
-   * A string of formatted recent time, expressing the review time relative to the current time in a
-   * form appropriate for the language and country.
+   * Id of the review referencing the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String relativePublishTimeDescription;
+  private java.lang.String reviewId;
 
   /**
-   * A reference representing this place review which may be used to look up this place review
-   * again.
+   * Title of the review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String review;
-
-  /**
-   * This review's author.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution getAuthorAttribution() {
-    return authorAttribution;
-  }
-
-  /**
-   * This review's author.
-   * @param authorAttribution authorAttribution or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet setAuthorAttribution(GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution authorAttribution) {
-    this.authorAttribution = authorAttribution;
-    return this;
-  }
-
-  /**
-   * A link where users can flag a problem with the review.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFlagContentUri() {
-    return flagContentUri;
-  }
-
-  /**
-   * A link where users can flag a problem with the review.
-   * @param flagContentUri flagContentUri or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet setFlagContentUri(java.lang.String flagContentUri) {
-    this.flagContentUri = flagContentUri;
-    return this;
-  }
+  private java.lang.String title;
 
   /**
    * A link to show the review on Google Maps.
@@ -118,40 +68,36 @@ public final class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesRe
   }
 
   /**
-   * A string of formatted recent time, expressing the review time relative to the current time in a
-   * form appropriate for the language and country.
+   * Id of the review referencing the place.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRelativePublishTimeDescription() {
-    return relativePublishTimeDescription;
+  public java.lang.String getReviewId() {
+    return reviewId;
   }
 
   /**
-   * A string of formatted recent time, expressing the review time relative to the current time in a
-   * form appropriate for the language and country.
-   * @param relativePublishTimeDescription relativePublishTimeDescription or {@code null} for none
+   * Id of the review referencing the place.
+   * @param reviewId reviewId or {@code null} for none
    */
-  public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet setRelativePublishTimeDescription(java.lang.String relativePublishTimeDescription) {
-    this.relativePublishTimeDescription = relativePublishTimeDescription;
+  public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet setReviewId(java.lang.String reviewId) {
+    this.reviewId = reviewId;
     return this;
   }
 
   /**
-   * A reference representing this place review which may be used to look up this place review
-   * again.
+   * Title of the review.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReview() {
-    return review;
+  public java.lang.String getTitle() {
+    return title;
   }
 
   /**
-   * A reference representing this place review which may be used to look up this place review
-   * again.
-   * @param review review or {@code null} for none
+   * Title of the review.
+   * @param title title or {@code null} for none
    */
-  public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet setReview(java.lang.String review) {
-    this.review = review;
+  public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet setTitle(java.lang.String title) {
+    this.title = title;
     return this;
   }
 

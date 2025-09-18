@@ -37,6 +37,15 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGene
   private java.lang.String fact;
 
   /**
+   * Optional. The list of topics that the memory should be associated with. For example, use
+   * `custom_memory_topic_label = "jargon"` if the extracted memory is an example of memory
+   * extraction for the custom topic `jargon`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> topics;
+
+  /**
    * Required. The fact to generate a memory from.
    * @return value or {@code null} for none
    */
@@ -50,6 +59,27 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGene
    */
   public GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGenerateMemoriesExampleGeneratedMemory setFact(java.lang.String fact) {
     this.fact = fact;
+    return this;
+  }
+
+  /**
+   * Optional. The list of topics that the memory should be associated with. For example, use
+   * `custom_memory_topic_label = "jargon"` if the extracted memory is an example of memory
+   * extraction for the custom topic `jargon`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> getTopics() {
+    return topics;
+  }
+
+  /**
+   * Optional. The list of topics that the memory should be associated with. For example, use
+   * `custom_memory_topic_label = "jargon"` if the extracted memory is an example of memory
+   * extraction for the custom topic `jargon`.
+   * @param topics topics or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGenerateMemoriesExampleGeneratedMemory setTopics(java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> topics) {
+    this.topics = topics;
     return this;
   }
 

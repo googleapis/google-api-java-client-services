@@ -30,13 +30,6 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1EvaluationRunMetric extends com.google.api.client.json.GenericJson {
 
   /**
-   * Spec for a computation based metric.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1EvaluationRunMetricComputationBasedMetricSpec computationBasedMetricSpec;
-
-  /**
    * Spec for an LLM based metric.
    * The value may be {@code null}.
    */
@@ -63,23 +56,6 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunMetric extends com.g
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1EvaluationRunMetricRubricBasedMetricSpec rubricBasedMetricSpec;
-
-  /**
-   * Spec for a computation based metric.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1EvaluationRunMetricComputationBasedMetricSpec getComputationBasedMetricSpec() {
-    return computationBasedMetricSpec;
-  }
-
-  /**
-   * Spec for a computation based metric.
-   * @param computationBasedMetricSpec computationBasedMetricSpec or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1EvaluationRunMetric setComputationBasedMetricSpec(GoogleCloudAiplatformV1beta1EvaluationRunMetricComputationBasedMetricSpec computationBasedMetricSpec) {
-    this.computationBasedMetricSpec = computationBasedMetricSpec;
-    return this;
-  }
 
   /**
    * Spec for an LLM based metric.

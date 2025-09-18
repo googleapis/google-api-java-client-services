@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Usage metadata about response(s).
+ * Usage metadata about the content generation request and response. This message provides a
+ * detailed breakdown of token usage and other relevant metrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,86 +31,91 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of modalities of the cached content in the request input.
+   * Output only. A detailed breakdown of the token count for each modality in the cached content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> cacheTokensDetails;
 
   /**
-   * Output only. Number of tokens in the cached part in the input (the cached content).
+   * Output only. The number of tokens in the cached content that was used for this request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer cachedContentTokenCount;
 
   /**
-   * Number of tokens in the response(s).
+   * The total number of tokens in the generated candidates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer candidatesTokenCount;
 
   /**
-   * Output only. List of modalities that were returned in the response.
+   * Output only. A detailed breakdown of the token count for each modality in the generated
+   * candidates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> candidatesTokensDetails;
 
   /**
-   * Number of tokens in the request. When `cached_content` is set, this is still the total
-   * effective prompt size meaning this includes the number of tokens in the cached content.
+   * The total number of tokens in the prompt. This includes any text, images, or other media
+   * provided in the request. When `cached_content` is set, this also includes the number of tokens
+   * in the cached content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer promptTokenCount;
 
   /**
-   * Output only. List of modalities that were processed in the request input.
+   * Output only. A detailed breakdown of the token count for each modality in the prompt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> promptTokensDetails;
 
   /**
-   * Output only. Number of tokens present in thoughts output.
+   * Output only. The number of tokens that were part of the model's generated "thoughts" output, if
+   * applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer thoughtsTokenCount;
 
   /**
-   * Output only. Number of tokens present in tool-use prompt(s).
+   * Output only. The number of tokens in the results from tool executions, which are provided back
+   * to the model as input, if applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer toolUsePromptTokenCount;
 
   /**
-   * Output only. List of modalities that were processed for tool-use request inputs.
+   * Output only. A detailed breakdown by modality of the token counts from the results of tool
+   * executions, which are provided back to the model as input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> toolUsePromptTokensDetails;
 
   /**
-   * Total token count for prompt, response candidates, and tool-use prompts (if present).
+   * The total number of tokens for the entire request. This is the sum of `prompt_token_count`,
+   * `candidates_token_count`, `tool_use_prompt_token_count`, and `thoughts_token_count`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalTokenCount;
 
   /**
-   * Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
-   * Throughput quota.
+   * Output only. The traffic type for this request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trafficType;
 
   /**
-   * Output only. List of modalities of the cached content in the request input.
+   * Output only. A detailed breakdown of the token count for each modality in the cached content.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> getCacheTokensDetails() {
@@ -117,7 +123,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. List of modalities of the cached content in the request input.
+   * Output only. A detailed breakdown of the token count for each modality in the cached content.
    * @param cacheTokensDetails cacheTokensDetails or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setCacheTokensDetails(java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> cacheTokensDetails) {
@@ -126,7 +132,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. Number of tokens in the cached part in the input (the cached content).
+   * Output only. The number of tokens in the cached content that was used for this request.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCachedContentTokenCount() {
@@ -134,7 +140,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. Number of tokens in the cached part in the input (the cached content).
+   * Output only. The number of tokens in the cached content that was used for this request.
    * @param cachedContentTokenCount cachedContentTokenCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setCachedContentTokenCount(java.lang.Integer cachedContentTokenCount) {
@@ -143,7 +149,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Number of tokens in the response(s).
+   * The total number of tokens in the generated candidates.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCandidatesTokenCount() {
@@ -151,7 +157,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Number of tokens in the response(s).
+   * The total number of tokens in the generated candidates.
    * @param candidatesTokenCount candidatesTokenCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setCandidatesTokenCount(java.lang.Integer candidatesTokenCount) {
@@ -160,7 +166,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. List of modalities that were returned in the response.
+   * Output only. A detailed breakdown of the token count for each modality in the generated
+   * candidates.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> getCandidatesTokensDetails() {
@@ -168,7 +175,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. List of modalities that were returned in the response.
+   * Output only. A detailed breakdown of the token count for each modality in the generated
+   * candidates.
    * @param candidatesTokensDetails candidatesTokensDetails or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setCandidatesTokensDetails(java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> candidatesTokensDetails) {
@@ -177,8 +185,9 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Number of tokens in the request. When `cached_content` is set, this is still the total
-   * effective prompt size meaning this includes the number of tokens in the cached content.
+   * The total number of tokens in the prompt. This includes any text, images, or other media
+   * provided in the request. When `cached_content` is set, this also includes the number of tokens
+   * in the cached content.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPromptTokenCount() {
@@ -186,8 +195,9 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Number of tokens in the request. When `cached_content` is set, this is still the total
-   * effective prompt size meaning this includes the number of tokens in the cached content.
+   * The total number of tokens in the prompt. This includes any text, images, or other media
+   * provided in the request. When `cached_content` is set, this also includes the number of tokens
+   * in the cached content.
    * @param promptTokenCount promptTokenCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setPromptTokenCount(java.lang.Integer promptTokenCount) {
@@ -196,7 +206,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. List of modalities that were processed in the request input.
+   * Output only. A detailed breakdown of the token count for each modality in the prompt.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> getPromptTokensDetails() {
@@ -204,7 +214,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. List of modalities that were processed in the request input.
+   * Output only. A detailed breakdown of the token count for each modality in the prompt.
    * @param promptTokensDetails promptTokensDetails or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setPromptTokensDetails(java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> promptTokensDetails) {
@@ -213,7 +223,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. Number of tokens present in thoughts output.
+   * Output only. The number of tokens that were part of the model's generated "thoughts" output, if
+   * applicable.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getThoughtsTokenCount() {
@@ -221,7 +232,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. Number of tokens present in thoughts output.
+   * Output only. The number of tokens that were part of the model's generated "thoughts" output, if
+   * applicable.
    * @param thoughtsTokenCount thoughtsTokenCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setThoughtsTokenCount(java.lang.Integer thoughtsTokenCount) {
@@ -230,7 +242,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. Number of tokens present in tool-use prompt(s).
+   * Output only. The number of tokens in the results from tool executions, which are provided back
+   * to the model as input, if applicable.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getToolUsePromptTokenCount() {
@@ -238,7 +251,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. Number of tokens present in tool-use prompt(s).
+   * Output only. The number of tokens in the results from tool executions, which are provided back
+   * to the model as input, if applicable.
    * @param toolUsePromptTokenCount toolUsePromptTokenCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setToolUsePromptTokenCount(java.lang.Integer toolUsePromptTokenCount) {
@@ -247,7 +261,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. List of modalities that were processed for tool-use request inputs.
+   * Output only. A detailed breakdown by modality of the token counts from the results of tool
+   * executions, which are provided back to the model as input.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> getToolUsePromptTokensDetails() {
@@ -255,7 +270,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. List of modalities that were processed for tool-use request inputs.
+   * Output only. A detailed breakdown by modality of the token counts from the results of tool
+   * executions, which are provided back to the model as input.
    * @param toolUsePromptTokensDetails toolUsePromptTokensDetails or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setToolUsePromptTokensDetails(java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> toolUsePromptTokensDetails) {
@@ -264,7 +280,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Total token count for prompt, response candidates, and tool-use prompts (if present).
+   * The total number of tokens for the entire request. This is the sum of `prompt_token_count`,
+   * `candidates_token_count`, `tool_use_prompt_token_count`, and `thoughts_token_count`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalTokenCount() {
@@ -272,7 +289,8 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Total token count for prompt, response candidates, and tool-use prompts (if present).
+   * The total number of tokens for the entire request. This is the sum of `prompt_token_count`,
+   * `candidates_token_count`, `tool_use_prompt_token_count`, and `thoughts_token_count`.
    * @param totalTokenCount totalTokenCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setTotalTokenCount(java.lang.Integer totalTokenCount) {
@@ -281,8 +299,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
-   * Throughput quota.
+   * Output only. The traffic type for this request.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrafficType() {
@@ -290,8 +307,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
-   * Throughput quota.
+   * Output only. The traffic type for this request.
    * @param trafficType trafficType or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setTrafficType(java.lang.String trafficType) {

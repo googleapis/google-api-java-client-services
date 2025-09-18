@@ -73,6 +73,14 @@ public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.a
   private GoogleCloudAiplatformV1SearchEntryPoint searchEntryPoint;
 
   /**
+   * Optional. Output only. List of source flagging uris. This is currently populated only for
+   * Google Maps grounding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri> sourceFlaggingUris;
+
+  /**
    * Optional. Web search queries for the following-up web search.
    * The value may be {@code null}.
    */
@@ -165,6 +173,25 @@ public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.a
    */
   public GoogleCloudAiplatformV1GroundingMetadata setSearchEntryPoint(GoogleCloudAiplatformV1SearchEntryPoint searchEntryPoint) {
     this.searchEntryPoint = searchEntryPoint;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. List of source flagging uris. This is currently populated only for
+   * Google Maps grounding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri> getSourceFlaggingUris() {
+    return sourceFlaggingUris;
+  }
+
+  /**
+   * Optional. Output only. List of source flagging uris. This is currently populated only for
+   * Google Maps grounding.
+   * @param sourceFlaggingUris sourceFlaggingUris or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingMetadata setSourceFlaggingUris(java.util.List<GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri> sourceFlaggingUris) {
+    this.sourceFlaggingUris = sourceFlaggingUris;
     return this;
   }
 

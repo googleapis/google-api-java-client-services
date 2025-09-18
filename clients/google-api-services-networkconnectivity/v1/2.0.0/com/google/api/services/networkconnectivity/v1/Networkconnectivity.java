@@ -447,22 +447,22 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -11300,7 +11300,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Name of the resource.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -11327,7 +11327,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Name of the resource.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -11405,17 +11405,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. Name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. Name of the resource. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11439,7 +11439,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListRemoteTransportProfilesRequest
+         * @param parent Required. Parent value for ListRemoteTransportProfilesRequest.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -11466,7 +11466,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListRemoteTransportProfilesRequest
+           * @param parent Required. Parent value for ListRemoteTransportProfilesRequest.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -11544,17 +11544,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListRemoteTransportProfilesRequest */
+          /** Required. Parent value for ListRemoteTransportProfilesRequest. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListRemoteTransportProfilesRequest
+          /** Required. Parent value for ListRemoteTransportProfilesRequest.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListRemoteTransportProfilesRequest */
+          /** Required. Parent value for ListRemoteTransportProfilesRequest. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -11565,33 +11565,33 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -18413,7 +18413,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Name of the resource.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -18440,7 +18440,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Name of the resource.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -18508,17 +18508,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. Name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. Name of the resource. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18585,7 +18585,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Name of the resource.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -18612,7 +18612,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Name of the resource.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -18690,17 +18690,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. Name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. Name of the resource. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18724,7 +18724,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListTransportsRequest
+         * @param parent Required. Parent value for ListTransportsRequest.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -18751,7 +18751,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListTransportsRequest
+           * @param parent Required. Parent value for ListTransportsRequest.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -18829,17 +18829,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListTransportsRequest */
+          /** Required. Parent value for ListTransportsRequest. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListTransportsRequest
+          /** Required. Parent value for ListTransportsRequest.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListTransportsRequest */
+          /** Required. Parent value for ListTransportsRequest. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -18850,33 +18850,33 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -18934,7 +18934,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. name of resource
+         * @param name Identifier. Name of the resource, see google.aip.dev/122 for resource naming.
          * @param content the {@link com.google.api.services.networkconnectivity.v1.model.Transport}
          * @return the request
          */
@@ -18962,7 +18962,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. name of resource
+           * @param name Identifier. Name of the resource, see google.aip.dev/122 for resource naming.
            * @param content the {@link com.google.api.services.networkconnectivity.v1.model.Transport}
            * @since 1.13
            */
@@ -19031,17 +19031,17 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Identifier. name of resource */
+          /** Identifier. Name of the resource, see google.aip.dev/122 for resource naming. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. name of resource
+          /** Identifier. Name of the resource, see google.aip.dev/122 for resource naming.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Identifier. name of resource */
+          /** Identifier. Name of the resource, see google.aip.dev/122 for resource naming. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

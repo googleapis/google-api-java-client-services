@@ -8611,6 +8611,164 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
         public class Placements {
 
           /**
+           * Performs a conversational search. This feature is only available for users who have
+           * Conversational Search enabled.
+           *
+           * Create a request for the method "placements.conversationalSearch".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link ConversationalSearch#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param placement Required. The resource name of the search engine placement, such as
+           *        `projects/locations/global/catalogs/default_catalog/placements/default_search` or
+           *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
+           *        This field is used to identify the serving config name and the set of models that will be
+           *        used to make the search.
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchRequest}
+           * @return the request
+           */
+          public ConversationalSearch conversationalSearch(java.lang.String placement, com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchRequest content) throws java.io.IOException {
+            ConversationalSearch result = new ConversationalSearch(placement, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ConversationalSearch extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchResponse> {
+
+            private static final String REST_PATH = "v2/{+placement}:conversationalSearch";
+
+            private final java.util.regex.Pattern PLACEMENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/placements/[^/]+$");
+
+            /**
+             * Performs a conversational search. This feature is only available for users who have
+             * Conversational Search enabled.
+             *
+             * Create a request for the method "placements.conversationalSearch".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link ConversationalSearch#execute()} method to invoke the remote
+             * operation. <p> {@link ConversationalSearch#initialize(com.google.api.client.googleapis.services
+             * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param placement Required. The resource name of the search engine placement, such as
+           *        `projects/locations/global/catalogs/default_catalog/placements/default_search` or
+           *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
+           *        This field is used to identify the serving config name and the set of models that will be
+           *        used to make the search.
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchRequest}
+             * @since 1.13
+             */
+            protected ConversationalSearch(java.lang.String placement, com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchResponse.class);
+              this.placement = com.google.api.client.util.Preconditions.checkNotNull(placement, "Required parameter placement must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PLACEMENT_PATTERN.matcher(placement).matches(),
+                    "Parameter placement must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/placements/[^/]+$");
+              }
+            }
+
+            @Override
+            public ConversationalSearch set$Xgafv(java.lang.String $Xgafv) {
+              return (ConversationalSearch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ConversationalSearch setAccessToken(java.lang.String accessToken) {
+              return (ConversationalSearch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ConversationalSearch setAlt(java.lang.String alt) {
+              return (ConversationalSearch) super.setAlt(alt);
+            }
+
+            @Override
+            public ConversationalSearch setCallback(java.lang.String callback) {
+              return (ConversationalSearch) super.setCallback(callback);
+            }
+
+            @Override
+            public ConversationalSearch setFields(java.lang.String fields) {
+              return (ConversationalSearch) super.setFields(fields);
+            }
+
+            @Override
+            public ConversationalSearch setKey(java.lang.String key) {
+              return (ConversationalSearch) super.setKey(key);
+            }
+
+            @Override
+            public ConversationalSearch setOauthToken(java.lang.String oauthToken) {
+              return (ConversationalSearch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ConversationalSearch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ConversationalSearch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ConversationalSearch setQuotaUser(java.lang.String quotaUser) {
+              return (ConversationalSearch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ConversationalSearch setUploadType(java.lang.String uploadType) {
+              return (ConversationalSearch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ConversationalSearch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ConversationalSearch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the search engine placement, such as
+             * `projects/locations/global/catalogs/default_catalog/placements/default_search` or `pr
+             * ojects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_confi
+             * g` This field is used to identify the serving config name and the set of models that
+             * will be used to make the search.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String placement;
+
+            /** Required. The resource name of the search engine placement, such as
+           `projects/locations/global/catalogs/default_catalog/placements/default_search` or
+           `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` This
+           field is used to identify the serving config name and the set of models that will be used to make
+           the search.
+             */
+            public java.lang.String getPlacement() {
+              return placement;
+            }
+
+            /**
+             * Required. The resource name of the search engine placement, such as
+             * `projects/locations/global/catalogs/default_catalog/placements/default_search` or `pr
+             * ojects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_confi
+             * g` This field is used to identify the serving config name and the set of models that
+             * will be used to make the search.
+             */
+            public ConversationalSearch setPlacement(java.lang.String placement) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PLACEMENT_PATTERN.matcher(placement).matches(),
+                    "Parameter placement must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/placements/[^/]+$");
+              }
+              this.placement = placement;
+              return this;
+            }
+
+            @Override
+            public ConversationalSearch set(String parameterName, Object value) {
+              return (ConversationalSearch) super.set(parameterName, value);
+            }
+          }
+          /**
            * Makes a recommendation prediction.
            *
            * Create a request for the method "placements.predict".
@@ -9114,6 +9272,164 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             @Override
             public AddControl set(String parameterName, Object value) {
               return (AddControl) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Performs a conversational search. This feature is only available for users who have
+           * Conversational Search enabled.
+           *
+           * Create a request for the method "servingConfigs.conversationalSearch".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link ConversationalSearch#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param placement Required. The resource name of the search engine placement, such as
+           *        `projects/locations/global/catalogs/default_catalog/placements/default_search` or
+           *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
+           *        This field is used to identify the serving config name and the set of models that will be
+           *        used to make the search.
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchRequest}
+           * @return the request
+           */
+          public ConversationalSearch conversationalSearch(java.lang.String placement, com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchRequest content) throws java.io.IOException {
+            ConversationalSearch result = new ConversationalSearch(placement, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ConversationalSearch extends CloudRetailRequest<com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchResponse> {
+
+            private static final String REST_PATH = "v2/{+placement}:conversationalSearch";
+
+            private final java.util.regex.Pattern PLACEMENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+
+            /**
+             * Performs a conversational search. This feature is only available for users who have
+             * Conversational Search enabled.
+             *
+             * Create a request for the method "servingConfigs.conversationalSearch".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link ConversationalSearch#execute()} method to invoke the remote
+             * operation. <p> {@link ConversationalSearch#initialize(com.google.api.client.googleapis.services
+             * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param placement Required. The resource name of the search engine placement, such as
+           *        `projects/locations/global/catalogs/default_catalog/placements/default_search` or
+           *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
+           *        This field is used to identify the serving config name and the set of models that will be
+           *        used to make the search.
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchRequest}
+             * @since 1.13
+             */
+            protected ConversationalSearch(java.lang.String placement, com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleCloudRetailV2ConversationalSearchResponse.class);
+              this.placement = com.google.api.client.util.Preconditions.checkNotNull(placement, "Required parameter placement must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PLACEMENT_PATTERN.matcher(placement).matches(),
+                    "Parameter placement must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public ConversationalSearch set$Xgafv(java.lang.String $Xgafv) {
+              return (ConversationalSearch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ConversationalSearch setAccessToken(java.lang.String accessToken) {
+              return (ConversationalSearch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ConversationalSearch setAlt(java.lang.String alt) {
+              return (ConversationalSearch) super.setAlt(alt);
+            }
+
+            @Override
+            public ConversationalSearch setCallback(java.lang.String callback) {
+              return (ConversationalSearch) super.setCallback(callback);
+            }
+
+            @Override
+            public ConversationalSearch setFields(java.lang.String fields) {
+              return (ConversationalSearch) super.setFields(fields);
+            }
+
+            @Override
+            public ConversationalSearch setKey(java.lang.String key) {
+              return (ConversationalSearch) super.setKey(key);
+            }
+
+            @Override
+            public ConversationalSearch setOauthToken(java.lang.String oauthToken) {
+              return (ConversationalSearch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ConversationalSearch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ConversationalSearch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ConversationalSearch setQuotaUser(java.lang.String quotaUser) {
+              return (ConversationalSearch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ConversationalSearch setUploadType(java.lang.String uploadType) {
+              return (ConversationalSearch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ConversationalSearch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ConversationalSearch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the search engine placement, such as
+             * `projects/locations/global/catalogs/default_catalog/placements/default_search` or `pr
+             * ojects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_confi
+             * g` This field is used to identify the serving config name and the set of models that
+             * will be used to make the search.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String placement;
+
+            /** Required. The resource name of the search engine placement, such as
+           `projects/locations/global/catalogs/default_catalog/placements/default_search` or
+           `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` This
+           field is used to identify the serving config name and the set of models that will be used to make
+           the search.
+             */
+            public java.lang.String getPlacement() {
+              return placement;
+            }
+
+            /**
+             * Required. The resource name of the search engine placement, such as
+             * `projects/locations/global/catalogs/default_catalog/placements/default_search` or `pr
+             * ojects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_confi
+             * g` This field is used to identify the serving config name and the set of models that
+             * will be used to make the search.
+             */
+            public ConversationalSearch setPlacement(java.lang.String placement) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PLACEMENT_PATTERN.matcher(placement).matches(),
+                    "Parameter placement must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/servingConfigs/[^/]+$");
+              }
+              this.placement = placement;
+              return this;
+            }
+
+            @Override
+            public ConversationalSearch set(String parameterName, Object value) {
+              return (ConversationalSearch) super.set(parameterName, value);
             }
           }
           /**

@@ -45,21 +45,21 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   private java.lang.String placeId;
 
   /**
-   * Text of the chunk.
+   * Text of the place answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Title of the chunk.
+   * Title of the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * URI reference of the chunk.
+   * URI reference of the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * Text of the chunk.
+   * Text of the place answer.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -110,7 +110,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * Text of the chunk.
+   * Text of the place answer.
    * @param text text or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMaps setText(java.lang.String text) {
@@ -119,7 +119,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * Title of the chunk.
+   * Title of the place.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -127,7 +127,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * Title of the chunk.
+   * Title of the place.
    * @param title title or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMaps setTitle(java.lang.String title) {
@@ -136,7 +136,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * URI reference of the chunk.
+   * URI reference of the place.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -144,7 +144,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * URI reference of the chunk.
+   * URI reference of the place.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMaps setUri(java.lang.String uri) {

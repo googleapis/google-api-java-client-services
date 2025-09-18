@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1Metric extends com.google.api.client.j
   private GoogleCloudAiplatformV1ExactMatchSpec exactMatchSpec;
 
   /**
+   * Spec for an LLM based metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1LLMBasedMetricSpec llmBasedMetricSpec;
+
+  /**
    * Spec for pairwise metric.
    * The value may be {@code null}.
    */
@@ -126,6 +133,23 @@ public final class GoogleCloudAiplatformV1Metric extends com.google.api.client.j
    */
   public GoogleCloudAiplatformV1Metric setExactMatchSpec(GoogleCloudAiplatformV1ExactMatchSpec exactMatchSpec) {
     this.exactMatchSpec = exactMatchSpec;
+    return this;
+  }
+
+  /**
+   * Spec for an LLM based metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1LLMBasedMetricSpec getLlmBasedMetricSpec() {
+    return llmBasedMetricSpec;
+  }
+
+  /**
+   * Spec for an LLM based metric.
+   * @param llmBasedMetricSpec llmBasedMetricSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Metric setLlmBasedMetricSpec(GoogleCloudAiplatformV1LLMBasedMetricSpec llmBasedMetricSpec) {
+    this.llmBasedMetricSpec = llmBasedMetricSpec;
     return this;
   }
 

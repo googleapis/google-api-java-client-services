@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Content filter results for a prompt sent in the request.
+ * Content filter results for a prompt sent in the request. Note: This is sent only in the first
+ * stream chunk and only if no candidates were generated due to content violations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,28 +31,28 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Blocked reason.
+   * Output only. The reason why the prompt was blocked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String blockReason;
 
   /**
-   * Output only. A readable block reason message.
+   * Output only. A readable message that explains the reason why the prompt was blocked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String blockReasonMessage;
 
   /**
-   * Output only. Safety ratings.
+   * Output only. A list of safety ratings for the prompt. There is one rating per category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> safetyRatings;
 
   /**
-   * Output only. Blocked reason.
+   * Output only. The reason why the prompt was blocked.
    * @return value or {@code null} for none
    */
   public java.lang.String getBlockReason() {
@@ -59,7 +60,7 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeed
   }
 
   /**
-   * Output only. Blocked reason.
+   * Output only. The reason why the prompt was blocked.
    * @param blockReason blockReason or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback setBlockReason(java.lang.String blockReason) {
@@ -68,7 +69,7 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeed
   }
 
   /**
-   * Output only. A readable block reason message.
+   * Output only. A readable message that explains the reason why the prompt was blocked.
    * @return value or {@code null} for none
    */
   public java.lang.String getBlockReasonMessage() {
@@ -76,7 +77,7 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeed
   }
 
   /**
-   * Output only. A readable block reason message.
+   * Output only. A readable message that explains the reason why the prompt was blocked.
    * @param blockReasonMessage blockReasonMessage or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback setBlockReasonMessage(java.lang.String blockReasonMessage) {
@@ -85,7 +86,7 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeed
   }
 
   /**
-   * Output only. Safety ratings.
+   * Output only. A list of safety ratings for the prompt. There is one rating per category.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> getSafetyRatings() {
@@ -93,7 +94,7 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeed
   }
 
   /**
-   * Output only. Safety ratings.
+   * Output only. A list of safety ratings for the prompt. There is one rating per category.
    * @param safetyRatings safetyRatings or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback setSafetyRatings(java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> safetyRatings) {

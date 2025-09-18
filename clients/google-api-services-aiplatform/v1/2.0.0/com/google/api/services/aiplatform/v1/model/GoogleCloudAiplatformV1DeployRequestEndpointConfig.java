@@ -30,10 +30,12 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. By default, if dedicated endpoint is enabled, the endpoint will be exposed through a
-   * dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be
-   * isolated from other users' traffic and will have better performance and reliability. Note: Once
-   * you enabled dedicated endpoint, you won't be able to send request to the shared DNS
+   * Optional. By default, if dedicated endpoint is enabled and private service connect config is
+   * not set, the endpoint will be exposed through a dedicated DNS
+   * [Endpoint.dedicated_endpoint_dns]. If private service connect config is set, the endpoint will
+   * be exposed through private service connect. Your request to the dedicated DNS will be isolated
+   * from other users' traffic and will have better performance and reliability. Note: Once you
+   * enabled dedicated endpoint, you won't be able to send request to the shared DNS
    * {region}-aiplatform.googleapis.com. The limitations will be removed soon. If this field is set
    * to true, the dedicated endpoint will be disabled and the deployed model will be exposed through
    * the shared DNS {region}-aiplatform.googleapis.com.
@@ -76,10 +78,20 @@ public final class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends co
   private java.lang.String endpointUserId;
 
   /**
-   * Optional. By default, if dedicated endpoint is enabled, the endpoint will be exposed through a
-   * dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be
-   * isolated from other users' traffic and will have better performance and reliability. Note: Once
-   * you enabled dedicated endpoint, you won't be able to send request to the shared DNS
+   * Optional. Configuration for private service connect. If set, the endpoint will be exposed
+   * through private service connect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PrivateServiceConnectConfig privateServiceConnectConfig;
+
+  /**
+   * Optional. By default, if dedicated endpoint is enabled and private service connect config is
+   * not set, the endpoint will be exposed through a dedicated DNS
+   * [Endpoint.dedicated_endpoint_dns]. If private service connect config is set, the endpoint will
+   * be exposed through private service connect. Your request to the dedicated DNS will be isolated
+   * from other users' traffic and will have better performance and reliability. Note: Once you
+   * enabled dedicated endpoint, you won't be able to send request to the shared DNS
    * {region}-aiplatform.googleapis.com. The limitations will be removed soon. If this field is set
    * to true, the dedicated endpoint will be disabled and the deployed model will be exposed through
    * the shared DNS {region}-aiplatform.googleapis.com.
@@ -90,10 +102,12 @@ public final class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends co
   }
 
   /**
-   * Optional. By default, if dedicated endpoint is enabled, the endpoint will be exposed through a
-   * dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be
-   * isolated from other users' traffic and will have better performance and reliability. Note: Once
-   * you enabled dedicated endpoint, you won't be able to send request to the shared DNS
+   * Optional. By default, if dedicated endpoint is enabled and private service connect config is
+   * not set, the endpoint will be exposed through a dedicated DNS
+   * [Endpoint.dedicated_endpoint_dns]. If private service connect config is set, the endpoint will
+   * be exposed through private service connect. Your request to the dedicated DNS will be isolated
+   * from other users' traffic and will have better performance and reliability. Note: Once you
+   * enabled dedicated endpoint, you won't be able to send request to the shared DNS
    * {region}-aiplatform.googleapis.com. The limitations will be removed soon. If this field is set
    * to true, the dedicated endpoint will be disabled and the deployed model will be exposed through
    * the shared DNS {region}-aiplatform.googleapis.com.
@@ -176,6 +190,25 @@ public final class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends co
    */
   public GoogleCloudAiplatformV1DeployRequestEndpointConfig setEndpointUserId(java.lang.String endpointUserId) {
     this.endpointUserId = endpointUserId;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for private service connect. If set, the endpoint will be exposed
+   * through private service connect.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PrivateServiceConnectConfig getPrivateServiceConnectConfig() {
+    return privateServiceConnectConfig;
+  }
+
+  /**
+   * Optional. Configuration for private service connect. If set, the endpoint will be exposed
+   * through private service connect.
+   * @param privateServiceConnectConfig privateServiceConnectConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployRequestEndpointConfig setPrivateServiceConnectConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig privateServiceConnectConfig) {
+    this.privateServiceConnectConfig = privateServiceConnectConfig;
     return this;
   }
 

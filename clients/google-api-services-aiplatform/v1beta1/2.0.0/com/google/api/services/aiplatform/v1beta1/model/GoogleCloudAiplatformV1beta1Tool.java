@@ -79,8 +79,7 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1ToolGoogleSearch googleSearch;
 
   /**
-   * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
-   * search.
+   * Optional. Specialized retrieval tool that is powered by Google Search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,8 +197,7 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
-   * search.
+   * Optional. Specialized retrieval tool that is powered by Google Search.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GoogleSearchRetrieval getGoogleSearchRetrieval() {
@@ -207,8 +205,7 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
-   * search.
+   * Optional. Specialized retrieval tool that is powered by Google Search.
    * @param googleSearchRetrieval googleSearchRetrieval or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Tool setGoogleSearchRetrieval(GoogleCloudAiplatformV1beta1GoogleSearchRetrieval googleSearchRetrieval) {

@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1alphaProject extends com.google.a
   private String createTime;
 
   /**
+   * Optional. Customer provided configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaProjectCustomerProvidedConfig customerProvidedConfig;
+
+  /**
    * Output only. Full resource name of the project, for example `projects/{project}`. Note that
    * when making requests, project number and project id are both acceptable, but the server will
    * always respond in project number.
@@ -74,6 +81,23 @@ public final class GoogleCloudDiscoveryengineV1alphaProject extends com.google.a
    */
   public GoogleCloudDiscoveryengineV1alphaProject setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Customer provided configurations.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaProjectCustomerProvidedConfig getCustomerProvidedConfig() {
+    return customerProvidedConfig;
+  }
+
+  /**
+   * Optional. Customer provided configurations.
+   * @param customerProvidedConfig customerProvidedConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaProject setCustomerProvidedConfig(GoogleCloudDiscoveryengineV1alphaProjectCustomerProvidedConfig customerProvidedConfig) {
+    this.customerProvidedConfig = customerProvidedConfig;
     return this;
   }
 

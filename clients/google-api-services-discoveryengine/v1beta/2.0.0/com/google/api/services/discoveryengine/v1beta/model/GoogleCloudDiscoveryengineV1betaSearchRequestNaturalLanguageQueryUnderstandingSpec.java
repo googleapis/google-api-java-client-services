@@ -30,6 +30,18 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Allowlist of fields that can be used for natural language filter extraction. By
+   * default, if this is unspecified, all indexable fields are eligible for natural language filter
+   * extraction (but are not guaranteed to be used). If any fields are specified in
+   * allowed_field_names, only the fields that are both marked as indexable in the schema and
+   * specified in the allowlist will be eligible for natural language filter extraction. Note: for
+   * multi-datastore search, this is not yet supported, and will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedFieldNames;
+
+  /**
    * Optional. Controls behavior of how extracted filters are applied to the search. The default
    * behavior depends on the request. For single datastore structured search, the default is
    * `HARD_FILTER`. For multi-datastore search, the default behavior is `SOFT_BOOST`. Location-based
@@ -59,6 +71,33 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQ
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> geoSearchQueryDetectionFieldNames;
+
+  /**
+   * Optional. Allowlist of fields that can be used for natural language filter extraction. By
+   * default, if this is unspecified, all indexable fields are eligible for natural language filter
+   * extraction (but are not guaranteed to be used). If any fields are specified in
+   * allowed_field_names, only the fields that are both marked as indexable in the schema and
+   * specified in the allowlist will be eligible for natural language filter extraction. Note: for
+   * multi-datastore search, this is not yet supported, and will be ignored.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedFieldNames() {
+    return allowedFieldNames;
+  }
+
+  /**
+   * Optional. Allowlist of fields that can be used for natural language filter extraction. By
+   * default, if this is unspecified, all indexable fields are eligible for natural language filter
+   * extraction (but are not guaranteed to be used). If any fields are specified in
+   * allowed_field_names, only the fields that are both marked as indexable in the schema and
+   * specified in the allowlist will be eligible for natural language filter extraction. Note: for
+   * multi-datastore search, this is not yet supported, and will be ignored.
+   * @param allowedFieldNames allowedFieldNames or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec setAllowedFieldNames(java.util.List<java.lang.String> allowedFieldNames) {
+    this.allowedFieldNames = allowedFieldNames;
+    return this;
+  }
 
   /**
    * Optional. Controls behavior of how extracted filters are applied to the search. The default

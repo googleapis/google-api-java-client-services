@@ -67,6 +67,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
   private java.lang.Boolean enableAutocomplete;
 
   /**
+   * Optional. If set to true, the widget will enable the create agent button.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableCreateAgentButton;
+
+  /**
    * Optional. If set to true, the widget will enable people search.
    * The value may be {@code null}.
    */
@@ -106,7 +113,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
    * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` - Enables personalization based on user preferences.
+   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,6 +214,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
   }
 
   /**
+   * Optional. If set to true, the widget will enable the create agent button.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableCreateAgentButton() {
+    return enableCreateAgentButton;
+  }
+
+  /**
+   * Optional. If set to true, the widget will enable the create agent button.
+   * @param enableCreateAgentButton enableCreateAgentButton or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setEnableCreateAgentButton(java.lang.Boolean enableCreateAgentButton) {
+    this.enableCreateAgentButton = enableCreateAgentButton;
+    return this;
+  }
+
+  /**
    * Optional. If set to true, the widget will enable people search.
    * @return value or {@code null} for none
    */
@@ -297,7 +321,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
    * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` - Enables personalization based on user preferences.
+   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -308,7 +332,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
    * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` - Enables personalization based on user preferences.
+   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {

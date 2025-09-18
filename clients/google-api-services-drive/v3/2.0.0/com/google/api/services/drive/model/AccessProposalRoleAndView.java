@@ -17,7 +17,8 @@
 package com.google.api.services.drive.model;
 
 /**
- * A wrapper for the role and view of an access proposal.
+ * A wrapper for the role and view of an access proposal. For more information, see [Roles and
+ * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -30,8 +31,8 @@ package com.google.api.services.drive.model;
 public final class AccessProposalRoleAndView extends com.google.api.client.json.GenericJson {
 
   /**
-   * The role that was proposed by the requester New values may be added in the future, but the
-   * following are currently possible: * `writer` * `commenter` * `reader`
+   * The role that was proposed by the requester. The supported values are: * `writer` * `commenter`
+   * * `reader`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,15 +40,15 @@ public final class AccessProposalRoleAndView extends com.google.api.client.json.
 
   /**
    * Indicates the view for this access proposal. Only populated for proposals that belong to a
-   * view. `published` is the only supported value.
+   * view. Only `published` is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String view;
 
   /**
-   * The role that was proposed by the requester New values may be added in the future, but the
-   * following are currently possible: * `writer` * `commenter` * `reader`
+   * The role that was proposed by the requester. The supported values are: * `writer` * `commenter`
+   * * `reader`
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -55,8 +56,8 @@ public final class AccessProposalRoleAndView extends com.google.api.client.json.
   }
 
   /**
-   * The role that was proposed by the requester New values may be added in the future, but the
-   * following are currently possible: * `writer` * `commenter` * `reader`
+   * The role that was proposed by the requester. The supported values are: * `writer` * `commenter`
+   * * `reader`
    * @param role role or {@code null} for none
    */
   public AccessProposalRoleAndView setRole(java.lang.String role) {
@@ -66,7 +67,7 @@ public final class AccessProposalRoleAndView extends com.google.api.client.json.
 
   /**
    * Indicates the view for this access proposal. Only populated for proposals that belong to a
-   * view. `published` is the only supported value.
+   * view. Only `published` is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getView() {
@@ -75,7 +76,7 @@ public final class AccessProposalRoleAndView extends com.google.api.client.json.
 
   /**
    * Indicates the view for this access proposal. Only populated for proposals that belong to a
-   * view. `published` is the only supported value.
+   * view. Only `published` is supported.
    * @param view view or {@code null} for none
    */
   public AccessProposalRoleAndView setView(java.lang.String view) {

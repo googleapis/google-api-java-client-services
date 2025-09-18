@@ -290,15 +290,16 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Accessproposals {
 
     /**
-     * Retrieves an AccessProposal by ID.
+     * Retrieves an access proposal by ID. For more information, see [Manage pending access
+     * proposals](https://developers.google.com/workspace/drive/api/guides/pending-access).
      *
      * Create a request for the method "accessproposals.get".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param fileId Required. The id of the item the request is on.
-     * @param proposalId Required. The id of the access proposal to resolve.
+     * @param fileId Required. The ID of the item the request is on.
+     * @param proposalId Required. The ID of the access proposal to resolve.
      * @return the request
      */
     public Get get(java.lang.String fileId, java.lang.String proposalId) throws java.io.IOException {
@@ -312,7 +313,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/accessproposals/{proposalId}";
 
       /**
-       * Retrieves an AccessProposal by ID.
+       * Retrieves an access proposal by ID. For more information, see [Manage pending access
+       * proposals](https://developers.google.com/workspace/drive/api/guides/pending-access).
        *
        * Create a request for the method "accessproposals.get".
        *
@@ -321,8 +323,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId Required. The id of the item the request is on.
-       * @param proposalId Required. The id of the access proposal to resolve.
+       * @param fileId Required. The ID of the item the request is on.
+       * @param proposalId Required. The ID of the access proposal to resolve.
        * @since 1.13
        */
       protected Get(java.lang.String fileId, java.lang.String proposalId) {
@@ -396,33 +398,33 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The id of the item the request is on. */
+      /** Required. The ID of the item the request is on. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** Required. The id of the item the request is on.
+      /** Required. The ID of the item the request is on.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** Required. The id of the item the request is on. */
+      /** Required. The ID of the item the request is on. */
       public Get setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
       }
 
-      /** Required. The id of the access proposal to resolve. */
+      /** Required. The ID of the access proposal to resolve. */
       @com.google.api.client.util.Key
       private java.lang.String proposalId;
 
-      /** Required. The id of the access proposal to resolve.
+      /** Required. The ID of the access proposal to resolve.
        */
       public java.lang.String getProposalId() {
         return proposalId;
       }
 
-      /** Required. The id of the access proposal to resolve. */
+      /** Required. The ID of the access proposal to resolve. */
       public Get setProposalId(java.lang.String proposalId) {
         this.proposalId = proposalId;
         return this;
@@ -434,15 +436,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * List the AccessProposals on a file. Note: Only approvers are able to list AccessProposals on a
-     * file. If the user is not an approver, returns a 403.
+     * List the access proposals on a file. For more information, see [Manage pending access
+     * proposals](https://developers.google.com/workspace/drive/api/guides/pending-access). Note: Only
+     * approvers are able to list access proposals on a file. If the user isn't an approver, a 403 error
+     * is returned.
      *
      * Create a request for the method "accessproposals.list".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param fileId Required. The id of the item the request is on.
+     * @param fileId Required. The ID of the item the request is on.
      * @return the request
      */
     public List list(java.lang.String fileId) throws java.io.IOException {
@@ -456,8 +460,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/accessproposals";
 
       /**
-       * List the AccessProposals on a file. Note: Only approvers are able to list AccessProposals on a
-       * file. If the user is not an approver, returns a 403.
+       * List the access proposals on a file. For more information, see [Manage pending access
+       * proposals](https://developers.google.com/workspace/drive/api/guides/pending-access). Note: Only
+       * approvers are able to list access proposals on a file. If the user isn't an approver, a 403
+       * error is returned.
        *
        * Create a request for the method "accessproposals.list".
        *
@@ -466,7 +472,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId Required. The id of the item the request is on.
+       * @param fileId Required. The ID of the item the request is on.
        * @since 1.13
        */
       protected List(java.lang.String fileId) {
@@ -539,33 +545,33 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The id of the item the request is on. */
+      /** Required. The ID of the item the request is on. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** Required. The id of the item the request is on.
+      /** Required. The ID of the item the request is on.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** Required. The id of the item the request is on. */
+      /** Required. The ID of the item the request is on. */
       public List setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
       }
 
-      /** Optional. The number of results per page */
+      /** Optional. The number of results per page. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The number of results per page
+      /** Optional. The number of results per page.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** Optional. The number of results per page */
+      /** Optional. The number of results per page. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -593,15 +599,16 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Used to approve or deny an Access Proposal.
+     * Approves or denies an access proposal. For more information, see [Manage pending access
+     * proposals](https://developers.google.com/workspace/drive/api/guides/pending-access).
      *
      * Create a request for the method "accessproposals.resolve".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
      *
-     * @param fileId Required. The id of the item the request is on.
-     * @param proposalId Required. The id of the access proposal to resolve.
+     * @param fileId Required. The ID of the item the request is on.
+     * @param proposalId Required. The ID of the access proposal to resolve.
      * @param content the {@link com.google.api.services.drive.model.ResolveAccessProposalRequest}
      * @return the request
      */
@@ -616,7 +623,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/accessproposals/{proposalId}:resolve";
 
       /**
-       * Used to approve or deny an Access Proposal.
+       * Approves or denies an access proposal. For more information, see [Manage pending access
+       * proposals](https://developers.google.com/workspace/drive/api/guides/pending-access).
        *
        * Create a request for the method "accessproposals.resolve".
        *
@@ -626,8 +634,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * Resolve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId Required. The id of the item the request is on.
-       * @param proposalId Required. The id of the access proposal to resolve.
+       * @param fileId Required. The ID of the item the request is on.
+       * @param proposalId Required. The ID of the access proposal to resolve.
        * @param content the {@link com.google.api.services.drive.model.ResolveAccessProposalRequest}
        * @since 1.13
        */
@@ -692,33 +700,33 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (Resolve) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The id of the item the request is on. */
+      /** Required. The ID of the item the request is on. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** Required. The id of the item the request is on.
+      /** Required. The ID of the item the request is on.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** Required. The id of the item the request is on. */
+      /** Required. The ID of the item the request is on. */
       public Resolve setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
       }
 
-      /** Required. The id of the access proposal to resolve. */
+      /** Required. The ID of the access proposal to resolve. */
       @com.google.api.client.util.Key
       private java.lang.String proposalId;
 
-      /** Required. The id of the access proposal to resolve.
+      /** Required. The ID of the access proposal to resolve.
        */
       public java.lang.String getProposalId() {
         return proposalId;
       }
 
-      /** Required. The id of the access proposal to resolve. */
+      /** Required. The ID of the access proposal to resolve. */
       public Resolve setProposalId(java.lang.String proposalId) {
         this.proposalId = proposalId;
         return this;

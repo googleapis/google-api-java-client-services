@@ -126,7 +126,7 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
-   * returned.
+   * returned. A large offset may be capped to a reasonable threshold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -576,7 +576,7 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
-   * returned.
+   * returned. A large offset may be capped to a reasonable threshold.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getOffset() {
@@ -587,7 +587,7 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
-   * returned.
+   * returned. A large offset may be capped to a reasonable threshold.
    * @param offset offset or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setOffset(java.lang.Integer offset) {

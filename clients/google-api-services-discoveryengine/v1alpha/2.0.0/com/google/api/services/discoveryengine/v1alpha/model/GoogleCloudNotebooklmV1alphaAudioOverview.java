@@ -30,19 +30,18 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudNotebooklmV1alphaAudioOverview extends com.google.api.client.json.GenericJson {
 
   /**
-   * The audio overview in wav format. This is only present if the status is
-   * AUDIO_OVERVIEW_STATUS_COMPLETE.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String audio;
-
-  /**
    * Output only. Unique ID of the audio overview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioOverviewId;
+
+  /**
+   * The options used to generate the audio overview.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaAudioOverviewGenerationOptions generationOptions;
 
   /**
    * The language code of the generated audio overview. Use the BCP 47 language code (e.g. "en",
@@ -69,67 +68,11 @@ public final class GoogleCloudNotebooklmV1alphaAudioOverview extends com.google.
   private java.lang.String name;
 
   /**
-   * The url used to play the audio overview.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String playbackUrl;
-
-  /**
    * The status of the audio overview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
-
-  /**
-   * The audio overview in wav format. This is only present if the status is
-   * AUDIO_OVERVIEW_STATUS_COMPLETE.
-   * @see #decodeAudio()
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAudio() {
-    return audio;
-  }
-
-  /**
-   * The audio overview in wav format. This is only present if the status is
-   * AUDIO_OVERVIEW_STATUS_COMPLETE.
-   * @see #getAudio()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodeAudio() {
-    return com.google.api.client.util.Base64.decodeBase64(audio);
-  }
-
-  /**
-   * The audio overview in wav format. This is only present if the status is
-   * AUDIO_OVERVIEW_STATUS_COMPLETE.
-   * @see #encodeAudio()
-   * @param audio audio or {@code null} for none
-   */
-  public GoogleCloudNotebooklmV1alphaAudioOverview setAudio(java.lang.String audio) {
-    this.audio = audio;
-    return this;
-  }
-
-  /**
-   * The audio overview in wav format. This is only present if the status is
-   * AUDIO_OVERVIEW_STATUS_COMPLETE.
-   * @see #setAudio()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public GoogleCloudNotebooklmV1alphaAudioOverview encodeAudio(byte[] audio) {
-    this.audio = com.google.api.client.util.Base64.encodeBase64URLSafeString(audio);
-    return this;
-  }
 
   /**
    * Output only. Unique ID of the audio overview.
@@ -145,6 +88,23 @@ public final class GoogleCloudNotebooklmV1alphaAudioOverview extends com.google.
    */
   public GoogleCloudNotebooklmV1alphaAudioOverview setAudioOverviewId(java.lang.String audioOverviewId) {
     this.audioOverviewId = audioOverviewId;
+    return this;
+  }
+
+  /**
+   * The options used to generate the audio overview.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaAudioOverviewGenerationOptions getGenerationOptions() {
+    return generationOptions;
+  }
+
+  /**
+   * The options used to generate the audio overview.
+   * @param generationOptions generationOptions or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaAudioOverview setGenerationOptions(GoogleCloudNotebooklmV1alphaAudioOverviewGenerationOptions generationOptions) {
+    this.generationOptions = generationOptions;
     return this;
   }
 
@@ -202,23 +162,6 @@ public final class GoogleCloudNotebooklmV1alphaAudioOverview extends com.google.
    */
   public GoogleCloudNotebooklmV1alphaAudioOverview setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * The url used to play the audio overview.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPlaybackUrl() {
-    return playbackUrl;
-  }
-
-  /**
-   * The url used to play the audio overview.
-   * @param playbackUrl playbackUrl or {@code null} for none
-   */
-  public GoogleCloudNotebooklmV1alphaAudioOverview setPlaybackUrl(java.lang.String playbackUrl) {
-    this.playbackUrl = playbackUrl;
     return this;
   }
 

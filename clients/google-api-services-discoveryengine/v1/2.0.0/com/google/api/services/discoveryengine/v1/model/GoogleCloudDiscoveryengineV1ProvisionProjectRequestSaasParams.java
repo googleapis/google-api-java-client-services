@@ -38,6 +38,13 @@ public final class GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams
   private java.lang.Boolean acceptBizQos;
 
   /**
+   * Optional. Indicates if the current request is for Biz edition (= true) or not (= false).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isBiz;
+
+  /**
    * Optional. Set to `true` to specify that caller has read and would like to give consent to the
    * [Terms for Agent Space quality of service].
    * @return value or {@code null} for none
@@ -53,6 +60,23 @@ public final class GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams
    */
   public GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams setAcceptBizQos(java.lang.Boolean acceptBizQos) {
     this.acceptBizQos = acceptBizQos;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the current request is for Biz edition (= true) or not (= false).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsBiz() {
+    return isBiz;
+  }
+
+  /**
+   * Optional. Indicates if the current request is for Biz edition (= true) or not (= false).
+   * @param isBiz isBiz or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams setIsBiz(java.lang.Boolean isBiz) {
+    this.isBiz = isBiz;
     return this;
   }
 

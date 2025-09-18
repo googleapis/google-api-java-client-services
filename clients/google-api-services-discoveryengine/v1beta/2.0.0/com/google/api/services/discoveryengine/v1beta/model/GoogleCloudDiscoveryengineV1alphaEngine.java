@@ -60,6 +60,14 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   private GoogleCloudDiscoveryengineV1alphaEngineCommonConfig commonConfig;
 
   /**
+   * Optional. Configuration for configurable billing approach. See go/vais-repricing-billing-dd for
+   * more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String configurableBillingApproach;
+
+  /**
    * Output only. Timestamp the Recommendation Engine was created at.
    * The value may be {@code null}.
    */
@@ -97,7 +105,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` - Enables personalization based on user preferences.
+   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,6 +248,25 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   }
 
   /**
+   * Optional. Configuration for configurable billing approach. See go/vais-repricing-billing-dd for
+   * more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConfigurableBillingApproach() {
+    return configurableBillingApproach;
+  }
+
+  /**
+   * Optional. Configuration for configurable billing approach. See go/vais-repricing-billing-dd for
+   * more details.
+   * @param configurableBillingApproach configurableBillingApproach or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setConfigurableBillingApproach(java.lang.String configurableBillingApproach) {
+    this.configurableBillingApproach = configurableBillingApproach;
+    return this;
+  }
+
+  /**
    * Output only. Timestamp the Recommendation Engine was created at.
    * @return value or {@code null} for none
    */
@@ -322,7 +349,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` - Enables personalization based on user preferences.
+   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -334,7 +361,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` - Enables personalization based on user preferences.
+   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setFeatures(java.util.Map<String, java.lang.String> features) {

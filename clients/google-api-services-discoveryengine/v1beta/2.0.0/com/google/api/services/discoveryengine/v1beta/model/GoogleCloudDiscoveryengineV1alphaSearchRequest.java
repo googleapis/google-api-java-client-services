@@ -156,7 +156,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
-   * returned.
+   * returned. A large offset may be capped to a reasonable threshold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,6 +327,14 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean safeSearch;
+
+  /**
+   * Optional. SearchAddonSpec is used to disable add-ons for search as per new repricing model.
+   * Refer go/vais-repricing-prd. This field is only supported for search requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAddonSpec searchAddonSpec;
 
   /**
    * Search as you type configuration. Only supported for the IndustryVertical.MEDIA vertical.
@@ -713,7 +721,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
-   * returned.
+   * returned. A large offset may be capped to a reasonable threshold.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getOffset() {
@@ -724,7 +732,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
-   * returned.
+   * returned. A large offset may be capped to a reasonable threshold.
    * @param offset offset or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setOffset(java.lang.Integer offset) {
@@ -1103,6 +1111,25 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setSafeSearch(java.lang.Boolean safeSearch) {
     this.safeSearch = safeSearch;
+    return this;
+  }
+
+  /**
+   * Optional. SearchAddonSpec is used to disable add-ons for search as per new repricing model.
+   * Refer go/vais-repricing-prd. This field is only supported for search requests.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAddonSpec getSearchAddonSpec() {
+    return searchAddonSpec;
+  }
+
+  /**
+   * Optional. SearchAddonSpec is used to disable add-ons for search as per new repricing model.
+   * Refer go/vais-repricing-prd. This field is only supported for search requests.
+   * @param searchAddonSpec searchAddonSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setSearchAddonSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAddonSpec searchAddonSpec) {
+    this.searchAddonSpec = searchAddonSpec;
     return this;
   }
 

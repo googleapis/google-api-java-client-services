@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDestinationConfig extends co
   private java.util.List<GoogleCloudDiscoveryengineV1alphaDestinationConfigDestination> destinations;
 
   /**
+   * Additional parameters for this destination config in json string format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jsonParams;
+
+  /**
    * Optional. Unique destination identifier that is supported by the connector.
    * The value may be {@code null}.
    */
@@ -44,7 +51,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDestinationConfig extends co
   private java.lang.String key;
 
   /**
-   * Optional. Additional parameters for this destination config.
+   * Optional. Additional parameters for this destination config in structured json format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,6 +75,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDestinationConfig extends co
   }
 
   /**
+   * Additional parameters for this destination config in json string format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJsonParams() {
+    return jsonParams;
+  }
+
+  /**
+   * Additional parameters for this destination config in json string format.
+   * @param jsonParams jsonParams or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDestinationConfig setJsonParams(java.lang.String jsonParams) {
+    this.jsonParams = jsonParams;
+    return this;
+  }
+
+  /**
    * Optional. Unique destination identifier that is supported by the connector.
    * @return value or {@code null} for none
    */
@@ -85,7 +109,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDestinationConfig extends co
   }
 
   /**
-   * Optional. Additional parameters for this destination config.
+   * Optional. Additional parameters for this destination config in structured json format.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -93,7 +117,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDestinationConfig extends co
   }
 
   /**
-   * Optional. Additional parameters for this destination config.
+   * Optional. Additional parameters for this destination config in structured json format.
    * @param params params or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDestinationConfig setParams(java.util.Map<String, java.lang.Object> params) {

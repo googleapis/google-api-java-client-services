@@ -45,6 +45,13 @@ public final class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroun
   private java.lang.String domain;
 
   /**
+   * The mime type of the document. https://www.iana.org/assignments/media-types/media-types.xhtml.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mimeType;
+
+  /**
    * Page identifier.
    * The value may be {@code null}.
    */
@@ -98,6 +105,23 @@ public final class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroun
    */
   public GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata setDomain(java.lang.String domain) {
     this.domain = domain;
+    return this;
+  }
+
+  /**
+   * The mime type of the document. https://www.iana.org/assignments/media-types/media-types.xhtml.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMimeType() {
+    return mimeType;
+  }
+
+  /**
+   * The mime type of the document. https://www.iana.org/assignments/media-types/media-types.xhtml.
+   * @param mimeType mimeType or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata setMimeType(java.lang.String mimeType) {
+    this.mimeType = mimeType;
     return this;
   }
 

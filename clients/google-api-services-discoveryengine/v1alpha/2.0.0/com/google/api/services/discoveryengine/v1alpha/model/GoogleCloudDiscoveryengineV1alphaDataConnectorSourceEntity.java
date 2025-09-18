@@ -56,6 +56,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity ex
   private GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig healthcareFhirConfig;
 
   /**
+   * The parameters for the entity to facilitate data ingestion in json string format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jsonParams;
+
+  /**
    * Attributes for indexing. Key: Field name. Value: The key property to map a field to, such as
    * `title`, and `description`. Supported key properties: * `title`: The title for data record.
    * This would be displayed on search results. * `description`: The description for data record.
@@ -66,8 +73,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity ex
   private java.util.Map<String, java.lang.String> keyPropertyMappings;
 
   /**
-   * The parameters for the entity to facilitate data ingestion. E.g. for BigQuery connectors: *
-   * Key: `document_id_column` * Value: type STRING. The value of the column ID.
+   * The parameters for the entity to facilitate data ingestion in structured json format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,6 +154,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity ex
   }
 
   /**
+   * The parameters for the entity to facilitate data ingestion in json string format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJsonParams() {
+    return jsonParams;
+  }
+
+  /**
+   * The parameters for the entity to facilitate data ingestion in json string format.
+   * @param jsonParams jsonParams or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity setJsonParams(java.lang.String jsonParams) {
+    this.jsonParams = jsonParams;
+    return this;
+  }
+
+  /**
    * Attributes for indexing. Key: Field name. Value: The key property to map a field to, such as
    * `title`, and `description`. Supported key properties: * `title`: The title for data record.
    * This would be displayed on search results. * `description`: The description for data record.
@@ -171,8 +194,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity ex
   }
 
   /**
-   * The parameters for the entity to facilitate data ingestion. E.g. for BigQuery connectors: *
-   * Key: `document_id_column` * Value: type STRING. The value of the column ID.
+   * The parameters for the entity to facilitate data ingestion in structured json format.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -180,8 +202,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity ex
   }
 
   /**
-   * The parameters for the entity to facilitate data ingestion. E.g. for BigQuery connectors: *
-   * Key: `document_id_column` * Value: type STRING. The value of the column ID.
+   * The parameters for the entity to facilitate data ingestion in structured json format.
    * @param params params or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity setParams(java.util.Map<String, java.lang.Object> params) {

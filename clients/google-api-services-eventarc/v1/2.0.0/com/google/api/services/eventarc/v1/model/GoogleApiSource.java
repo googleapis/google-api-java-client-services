@@ -99,6 +99,22 @@ public final class GoogleApiSource extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Optional. Config to enable subscribing to events from all projects in the GoogleApiSource's
+   * org.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OrganizationSubscription organizationSubscription;
+
+  /**
+   * Optional. Config to enable subscribing to all events from a list of projects. All the projects
+   * must be in the same org as the GoogleApiSource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProjectSubscriptions projectSubscriptions;
+
+  /**
    * Output only. Server assigned unique identifier for the channel. The value is a UUID4 string and
    * guaranteed to remain unchanged until the resource is deleted.
    * The value may be {@code null}.
@@ -275,6 +291,44 @@ public final class GoogleApiSource extends com.google.api.client.json.GenericJso
    */
   public GoogleApiSource setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Config to enable subscribing to events from all projects in the GoogleApiSource's
+   * org.
+   * @return value or {@code null} for none
+   */
+  public OrganizationSubscription getOrganizationSubscription() {
+    return organizationSubscription;
+  }
+
+  /**
+   * Optional. Config to enable subscribing to events from all projects in the GoogleApiSource's
+   * org.
+   * @param organizationSubscription organizationSubscription or {@code null} for none
+   */
+  public GoogleApiSource setOrganizationSubscription(OrganizationSubscription organizationSubscription) {
+    this.organizationSubscription = organizationSubscription;
+    return this;
+  }
+
+  /**
+   * Optional. Config to enable subscribing to all events from a list of projects. All the projects
+   * must be in the same org as the GoogleApiSource.
+   * @return value or {@code null} for none
+   */
+  public ProjectSubscriptions getProjectSubscriptions() {
+    return projectSubscriptions;
+  }
+
+  /**
+   * Optional. Config to enable subscribing to all events from a list of projects. All the projects
+   * must be in the same org as the GoogleApiSource.
+   * @param projectSubscriptions projectSubscriptions or {@code null} for none
+   */
+  public GoogleApiSource setProjectSubscriptions(ProjectSubscriptions projectSubscriptions) {
+    this.projectSubscriptions = projectSubscriptions;
     return this;
   }
 

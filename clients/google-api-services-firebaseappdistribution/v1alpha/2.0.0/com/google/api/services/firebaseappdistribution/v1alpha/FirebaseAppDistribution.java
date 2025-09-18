@@ -3511,6 +3511,28 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
             return this;
           }
 
+          /**
+           * Optional. If set to true, and the test case is not found, a new test case will be
+           * created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the test case is not found, a new test case will be created.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the test case is not found, a new test case will be
+           * created.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);

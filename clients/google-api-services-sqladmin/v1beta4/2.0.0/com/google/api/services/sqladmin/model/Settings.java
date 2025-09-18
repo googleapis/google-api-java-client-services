@@ -279,6 +279,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String pricingPlan;
 
   /**
+   * Optional. The read pool auto-scale configuration for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReadPoolAutoScaleConfig readPoolAutoScaleConfig;
+
+  /**
    * Optional. Configuration value for recreation of replica after certain replication lag.
    * The value may be {@code null}.
    */
@@ -917,6 +924,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setPricingPlan(java.lang.String pricingPlan) {
     this.pricingPlan = pricingPlan;
+    return this;
+  }
+
+  /**
+   * Optional. The read pool auto-scale configuration for the instance.
+   * @return value or {@code null} for none
+   */
+  public ReadPoolAutoScaleConfig getReadPoolAutoScaleConfig() {
+    return readPoolAutoScaleConfig;
+  }
+
+  /**
+   * Optional. The read pool auto-scale configuration for the instance.
+   * @param readPoolAutoScaleConfig readPoolAutoScaleConfig or {@code null} for none
+   */
+  public Settings setReadPoolAutoScaleConfig(ReadPoolAutoScaleConfig readPoolAutoScaleConfig) {
+    this.readPoolAutoScaleConfig = readPoolAutoScaleConfig;
     return this;
   }
 

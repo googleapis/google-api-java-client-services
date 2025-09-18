@@ -163,6 +163,15 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String ipv6NexthopAddress;
 
   /**
+   * The linked custom hardware resource. The URI of the custom hardware link attachment is where
+   * you will establish the BGP session from the Cloud Router. This link attachment must reside in
+   * the same subnetwork as the associated router interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String linkedCustomHardware;
+
+  /**
    * [Output Only] The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the
    * default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer
    * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
@@ -529,6 +538,27 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   public RouterBgpPeer setIpv6NexthopAddress(java.lang.String ipv6NexthopAddress) {
     this.ipv6NexthopAddress = ipv6NexthopAddress;
+    return this;
+  }
+
+  /**
+   * The linked custom hardware resource. The URI of the custom hardware link attachment is where
+   * you will establish the BGP session from the Cloud Router. This link attachment must reside in
+   * the same subnetwork as the associated router interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLinkedCustomHardware() {
+    return linkedCustomHardware;
+  }
+
+  /**
+   * The linked custom hardware resource. The URI of the custom hardware link attachment is where
+   * you will establish the BGP session from the Cloud Router. This link attachment must reside in
+   * the same subnetwork as the associated router interface.
+   * @param linkedCustomHardware linkedCustomHardware or {@code null} for none
+   */
+  public RouterBgpPeer setLinkedCustomHardware(java.lang.String linkedCustomHardware) {
+    this.linkedCustomHardware = linkedCustomHardware;
     return this;
   }
 

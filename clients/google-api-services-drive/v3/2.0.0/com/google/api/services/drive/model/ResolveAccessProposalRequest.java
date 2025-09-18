@@ -30,22 +30,23 @@ package com.google.api.services.drive.model;
 public final class ResolveAccessProposalRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The action to take on the AccessProposal.
+   * Required. The action to take on the access proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Optional. The roles the approver has allowed, if any. Note: This field is required for the
-   * `ACCEPT` action.
+   * Optional. The roles that the approver has allowed, if any. For more information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles). Note: This
+   * field is required for the `ACCEPT` action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> role;
 
   /**
-   * Optional. Whether to send an email to the requester when the AccessProposal is denied or
+   * Optional. Whether to send an email to the requester when the access proposal is denied or
    * accepted.
    * The value may be {@code null}.
    */
@@ -54,14 +55,14 @@ public final class ResolveAccessProposalRequest extends com.google.api.client.js
 
   /**
    * Optional. Indicates the view for this access proposal. This should only be set when the
-   * proposal belongs to a view. `published` is the only supported value.
+   * proposal belongs to a view. Only `published` is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String view;
 
   /**
-   * Required. The action to take on the AccessProposal.
+   * Required. The action to take on the access proposal.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -69,7 +70,7 @@ public final class ResolveAccessProposalRequest extends com.google.api.client.js
   }
 
   /**
-   * Required. The action to take on the AccessProposal.
+   * Required. The action to take on the access proposal.
    * @param action action or {@code null} for none
    */
   public ResolveAccessProposalRequest setAction(java.lang.String action) {
@@ -78,8 +79,9 @@ public final class ResolveAccessProposalRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. The roles the approver has allowed, if any. Note: This field is required for the
-   * `ACCEPT` action.
+   * Optional. The roles that the approver has allowed, if any. For more information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles). Note: This
+   * field is required for the `ACCEPT` action.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRole() {
@@ -87,8 +89,9 @@ public final class ResolveAccessProposalRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. The roles the approver has allowed, if any. Note: This field is required for the
-   * `ACCEPT` action.
+   * Optional. The roles that the approver has allowed, if any. For more information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles). Note: This
+   * field is required for the `ACCEPT` action.
    * @param role role or {@code null} for none
    */
   public ResolveAccessProposalRequest setRole(java.util.List<java.lang.String> role) {
@@ -97,7 +100,7 @@ public final class ResolveAccessProposalRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. Whether to send an email to the requester when the AccessProposal is denied or
+   * Optional. Whether to send an email to the requester when the access proposal is denied or
    * accepted.
    * @return value or {@code null} for none
    */
@@ -106,7 +109,7 @@ public final class ResolveAccessProposalRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. Whether to send an email to the requester when the AccessProposal is denied or
+   * Optional. Whether to send an email to the requester when the access proposal is denied or
    * accepted.
    * @param sendNotification sendNotification or {@code null} for none
    */
@@ -117,7 +120,7 @@ public final class ResolveAccessProposalRequest extends com.google.api.client.js
 
   /**
    * Optional. Indicates the view for this access proposal. This should only be set when the
-   * proposal belongs to a view. `published` is the only supported value.
+   * proposal belongs to a view. Only `published` is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getView() {
@@ -126,7 +129,7 @@ public final class ResolveAccessProposalRequest extends com.google.api.client.js
 
   /**
    * Optional. Indicates the view for this access proposal. This should only be set when the
-   * proposal belongs to a view. `published` is the only supported value.
+   * proposal belongs to a view. Only `published` is supported.
    * @param view view or {@code null} for none
    */
   public ResolveAccessProposalRequest setView(java.lang.String view) {

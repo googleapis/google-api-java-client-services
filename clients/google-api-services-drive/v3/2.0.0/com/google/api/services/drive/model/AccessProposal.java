@@ -17,7 +17,7 @@
 package com.google.api.services.drive.model;
 
 /**
- * The Access Proposal resource for outstanding access proposals on a file
+ * Manage outstanding access proposals on a file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -30,56 +30,57 @@ package com.google.api.services.drive.model;
 public final class AccessProposal extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation time
+   * The creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The file id that the proposal for access is on
+   * The file ID that the proposal for access is on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileId;
 
   /**
-   * The id of the access proposal
+   * The ID of the access proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String proposalId;
 
   /**
-   * The email address of the user that will receive permissions if accepted
+   * The email address of the user that will receive permissions, if accepted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recipientEmailAddress;
 
   /**
-   * The message that the requester added to the proposal
+   * The message that the requester added to the proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestMessage;
 
   /**
-   * The email address of the requesting user
+   * The email address of the requesting user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requesterEmailAddress;
 
   /**
-   * A wrapper for the role and view of an access proposal.
+   * A wrapper for the role and view of an access proposal. For more information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AccessProposalRoleAndView> rolesAndViews;
 
   /**
-   * The creation time
+   * The creation time.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -87,7 +88,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The creation time
+   * The creation time.
    * @param createTime createTime or {@code null} for none
    */
   public AccessProposal setCreateTime(String createTime) {
@@ -96,7 +97,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The file id that the proposal for access is on
+   * The file ID that the proposal for access is on.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileId() {
@@ -104,7 +105,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The file id that the proposal for access is on
+   * The file ID that the proposal for access is on.
    * @param fileId fileId or {@code null} for none
    */
   public AccessProposal setFileId(java.lang.String fileId) {
@@ -113,7 +114,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The id of the access proposal
+   * The ID of the access proposal.
    * @return value or {@code null} for none
    */
   public java.lang.String getProposalId() {
@@ -121,7 +122,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The id of the access proposal
+   * The ID of the access proposal.
    * @param proposalId proposalId or {@code null} for none
    */
   public AccessProposal setProposalId(java.lang.String proposalId) {
@@ -130,7 +131,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The email address of the user that will receive permissions if accepted
+   * The email address of the user that will receive permissions, if accepted.
    * @return value or {@code null} for none
    */
   public java.lang.String getRecipientEmailAddress() {
@@ -138,7 +139,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The email address of the user that will receive permissions if accepted
+   * The email address of the user that will receive permissions, if accepted.
    * @param recipientEmailAddress recipientEmailAddress or {@code null} for none
    */
   public AccessProposal setRecipientEmailAddress(java.lang.String recipientEmailAddress) {
@@ -147,7 +148,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The message that the requester added to the proposal
+   * The message that the requester added to the proposal.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestMessage() {
@@ -155,7 +156,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The message that the requester added to the proposal
+   * The message that the requester added to the proposal.
    * @param requestMessage requestMessage or {@code null} for none
    */
   public AccessProposal setRequestMessage(java.lang.String requestMessage) {
@@ -164,7 +165,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The email address of the requesting user
+   * The email address of the requesting user.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequesterEmailAddress() {
@@ -172,7 +173,7 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The email address of the requesting user
+   * The email address of the requesting user.
    * @param requesterEmailAddress requesterEmailAddress or {@code null} for none
    */
   public AccessProposal setRequesterEmailAddress(java.lang.String requesterEmailAddress) {
@@ -181,7 +182,8 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A wrapper for the role and view of an access proposal.
+   * A wrapper for the role and view of an access proposal. For more information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
    * @return value or {@code null} for none
    */
   public java.util.List<AccessProposalRoleAndView> getRolesAndViews() {
@@ -189,7 +191,8 @@ public final class AccessProposal extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A wrapper for the role and view of an access proposal.
+   * A wrapper for the role and view of an access proposal. For more information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
    * @param rolesAndViews rolesAndViews or {@code null} for none
    */
   public AccessProposal setRolesAndViews(java.util.List<AccessProposalRoleAndView> rolesAndViews) {

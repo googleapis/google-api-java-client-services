@@ -17,7 +17,7 @@
 package com.google.api.services.drive.model;
 
 /**
- * The response to an Access Proposal list request.
+ * The response to an access proposal list request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class ListAccessProposalsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Access Proposals. This field is only populated in v3 and v3beta.
+   * The list of access proposals. This field is only populated in Drive API v3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class ListAccessProposalsResponse extends com.google.api.client.jso
   private java.lang.String nextPageToken;
 
   /**
-   * The list of Access Proposals. This field is only populated in v3 and v3beta.
+   * The list of access proposals. This field is only populated in Drive API v3.
    * @return value or {@code null} for none
    */
   public java.util.List<AccessProposal> getAccessProposals() {
@@ -60,7 +60,7 @@ public final class ListAccessProposalsResponse extends com.google.api.client.jso
   }
 
   /**
-   * The list of Access Proposals. This field is only populated in v3 and v3beta.
+   * The list of access proposals. This field is only populated in Drive API v3.
    * @param accessProposals accessProposals or {@code null} for none
    */
   public ListAccessProposalsResponse setAccessProposals(java.util.List<AccessProposal> accessProposals) {

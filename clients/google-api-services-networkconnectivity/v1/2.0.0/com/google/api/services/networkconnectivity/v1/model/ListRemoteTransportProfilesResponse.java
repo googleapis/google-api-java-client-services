@@ -38,7 +38,7 @@ public final class ListRemoteTransportProfilesResponse extends com.google.api.cl
   private java.lang.String nextPageToken;
 
   /**
-   * The list of RemoteTransportProfiles
+   * The list of RemoteTransportProfiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class ListRemoteTransportProfilesResponse extends com.google.api.cl
   }
 
   /**
-   * The list of RemoteTransportProfiles
+   * The list of RemoteTransportProfiles.
    * @return value or {@code null} for none
    */
   public java.util.List<RemoteTransportProfile> getRemoteTransportProfiles() {
@@ -77,7 +77,7 @@ public final class ListRemoteTransportProfilesResponse extends com.google.api.cl
   }
 
   /**
-   * The list of RemoteTransportProfiles
+   * The list of RemoteTransportProfiles.
    * @param remoteTransportProfiles remoteTransportProfiles or {@code null} for none
    */
   public ListRemoteTransportProfilesResponse setRemoteTransportProfiles(java.util.List<RemoteTransportProfile> remoteTransportProfiles) {

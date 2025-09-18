@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * Message describing RemoteTransportProfile object
+ * Message describing RemoteTransportProfile object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -31,35 +31,96 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class RemoteTransportProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. [Output only] Create time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. Labels as key value pairs
+   * Output only. Description of the profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Output only. [Output only] Type of provisioning flows supported by this profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flow;
+
+  /**
+   * Output only. Labels as key value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. name of resource
+   * Identifier. Name of the resource in the format of $provider-$site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. [Output only] Order state for this profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String orderState;
+
+  /**
+   * Output only. Name of the provider on the other end of this profile. E.g. “Amazon Web Services”
+   * or “Microsoft Azure”.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provider;
+
+  /**
+   * Output only. If the profile is a Cloud Service Provider with compute resources, this is
+   * populated with the region where connectivity is being established. If the profile provides
+   * facility-level selection, this is an identity of the facility any connections on this profile
+   * are going through.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String providerSite;
+
+  /**
+   * Output only. GCP Region where this profile is available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
+   * Output only. [Output only] Availability class that will be configured for this particular
+   * RemoteTransportProfile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sla;
+
+  /**
+   * Output only. List of bandwidth enum values that are supported by this profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> supportedBandwidths;
+
+  /**
+   * Output only. [Output only] Update time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. [Output only] Create time stamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -67,7 +128,7 @@ public final class RemoteTransportProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. [Output only] Create time stamp.
    * @param createTime createTime or {@code null} for none
    */
   public RemoteTransportProfile setCreateTime(String createTime) {
@@ -76,7 +137,41 @@ public final class RemoteTransportProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Output only. Description of the profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Output only. Description of the profile.
+   * @param description description or {@code null} for none
+   */
+  public RemoteTransportProfile setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] Type of provisioning flows supported by this profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlow() {
+    return flow;
+  }
+
+  /**
+   * Output only. [Output only] Type of provisioning flows supported by this profile.
+   * @param flow flow or {@code null} for none
+   */
+  public RemoteTransportProfile setFlow(java.lang.String flow) {
+    this.flow = flow;
+    return this;
+  }
+
+  /**
+   * Output only. Labels as key value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -84,7 +179,7 @@ public final class RemoteTransportProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Output only. Labels as key value pairs.
    * @param labels labels or {@code null} for none
    */
   public RemoteTransportProfile setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -93,7 +188,7 @@ public final class RemoteTransportProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Identifier. name of resource
+   * Identifier. Name of the resource in the format of $provider-$site.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,7 +196,7 @@ public final class RemoteTransportProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Identifier. name of resource
+   * Identifier. Name of the resource in the format of $provider-$site.
    * @param name name or {@code null} for none
    */
   public RemoteTransportProfile setName(java.lang.String name) {
@@ -110,7 +205,119 @@ public final class RemoteTransportProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. [Output only] Order state for this profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrderState() {
+    return orderState;
+  }
+
+  /**
+   * Output only. [Output only] Order state for this profile.
+   * @param orderState orderState or {@code null} for none
+   */
+  public RemoteTransportProfile setOrderState(java.lang.String orderState) {
+    this.orderState = orderState;
+    return this;
+  }
+
+  /**
+   * Output only. Name of the provider on the other end of this profile. E.g. “Amazon Web Services”
+   * or “Microsoft Azure”.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvider() {
+    return provider;
+  }
+
+  /**
+   * Output only. Name of the provider on the other end of this profile. E.g. “Amazon Web Services”
+   * or “Microsoft Azure”.
+   * @param provider provider or {@code null} for none
+   */
+  public RemoteTransportProfile setProvider(java.lang.String provider) {
+    this.provider = provider;
+    return this;
+  }
+
+  /**
+   * Output only. If the profile is a Cloud Service Provider with compute resources, this is
+   * populated with the region where connectivity is being established. If the profile provides
+   * facility-level selection, this is an identity of the facility any connections on this profile
+   * are going through.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProviderSite() {
+    return providerSite;
+  }
+
+  /**
+   * Output only. If the profile is a Cloud Service Provider with compute resources, this is
+   * populated with the region where connectivity is being established. If the profile provides
+   * facility-level selection, this is an identity of the facility any connections on this profile
+   * are going through.
+   * @param providerSite providerSite or {@code null} for none
+   */
+  public RemoteTransportProfile setProviderSite(java.lang.String providerSite) {
+    this.providerSite = providerSite;
+    return this;
+  }
+
+  /**
+   * Output only. GCP Region where this profile is available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * Output only. GCP Region where this profile is available.
+   * @param region region or {@code null} for none
+   */
+  public RemoteTransportProfile setRegion(java.lang.String region) {
+    this.region = region;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] Availability class that will be configured for this particular
+   * RemoteTransportProfile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSla() {
+    return sla;
+  }
+
+  /**
+   * Output only. [Output only] Availability class that will be configured for this particular
+   * RemoteTransportProfile.
+   * @param sla sla or {@code null} for none
+   */
+  public RemoteTransportProfile setSla(java.lang.String sla) {
+    this.sla = sla;
+    return this;
+  }
+
+  /**
+   * Output only. List of bandwidth enum values that are supported by this profile.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSupportedBandwidths() {
+    return supportedBandwidths;
+  }
+
+  /**
+   * Output only. List of bandwidth enum values that are supported by this profile.
+   * @param supportedBandwidths supportedBandwidths or {@code null} for none
+   */
+  public RemoteTransportProfile setSupportedBandwidths(java.util.List<java.lang.String> supportedBandwidths) {
+    this.supportedBandwidths = supportedBandwidths;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] Update time stamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -118,7 +325,7 @@ public final class RemoteTransportProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. [Output only] Update time stamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public RemoteTransportProfile setUpdateTime(String updateTime) {

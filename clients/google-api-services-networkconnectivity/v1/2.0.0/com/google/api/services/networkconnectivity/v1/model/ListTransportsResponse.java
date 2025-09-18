@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * Message for response to listing Transports
+ * Message for response to listing Transports.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class ListTransportsResponse extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
-   * The list of Transport
+   * The list of Transport.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class ListTransportsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The list of Transport
+   * The list of Transport.
    * @return value or {@code null} for none
    */
   public java.util.List<Transport> getTransports() {
@@ -77,7 +77,7 @@ public final class ListTransportsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The list of Transport
+   * The list of Transport.
    * @param transports transports or {@code null} for none
    */
   public ListTransportsResponse setTransports(java.util.List<Transport> transports) {

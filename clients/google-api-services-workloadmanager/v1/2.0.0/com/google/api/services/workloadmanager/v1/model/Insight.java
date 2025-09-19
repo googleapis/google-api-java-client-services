@@ -44,6 +44,13 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   private java.lang.String instanceId;
 
   /**
+   * The insights data for the OpenShift workload validation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OpenShiftValidation openShiftValidation;
+
+  /**
    * The insights data for SAP system discovery. This is a copy of SAP System proto and should get
    * updated whenever that one changes.
    * The value may be {@code null}.
@@ -110,6 +117,23 @@ public final class Insight extends com.google.api.client.json.GenericJson {
    */
   public Insight setInstanceId(java.lang.String instanceId) {
     this.instanceId = instanceId;
+    return this;
+  }
+
+  /**
+   * The insights data for the OpenShift workload validation.
+   * @return value or {@code null} for none
+   */
+  public OpenShiftValidation getOpenShiftValidation() {
+    return openShiftValidation;
+  }
+
+  /**
+   * The insights data for the OpenShift workload validation.
+   * @param openShiftValidation openShiftValidation or {@code null} for none
+   */
+  public Insight setOpenShiftValidation(OpenShiftValidation openShiftValidation) {
+    this.openShiftValidation = openShiftValidation;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLayoutBlockLayoutTextBlock extends com.google.api.client.json.GenericJson {
 
   /**
+   * Annotation of the text block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentAnnotations annotations;
+
+  /**
    * A text block could further have child blocks. Repeated blocks support further hierarchies and
    * nested blocks.
    * The value may be {@code null}.
@@ -58,6 +65,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Annotation of the text block.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentAnnotations getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Annotation of the text block.
+   * @param annotations annotations or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLayoutBlockLayoutTextBlock setAnnotations(GoogleCloudDocumentaiV1beta3DocumentAnnotations annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * A text block could further have child blocks. Repeated blocks support further hierarchies and

@@ -43,6 +43,18 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
   private java.lang.String outputSchema;
 
   /**
+   * Store findings in an existing Cloud Storage bucket. Files will be generated with the job ID and
+   * file part number as the filename, and will contain findings in textproto format as
+   * SaveToGcsFindingsOutput. The file name will use the naming convention -, for example: my-job-
+   * id-2. Supported for Inspect jobs. The bucket must not be the same as the bucket being
+   * inspected. If storing findings to Cloud Storage, the output schema field should not be set. If
+   * set, it will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2CloudStoragePath storagePath;
+
+  /**
    * Store findings in an existing table or a new table in an existing dataset. If table_id is not
    * set a new one will be generated for you with the following format:
    * dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific time zone will be used for generating the date
@@ -81,6 +93,33 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
    */
   public GooglePrivacyDlpV2OutputStorageConfig setOutputSchema(java.lang.String outputSchema) {
     this.outputSchema = outputSchema;
+    return this;
+  }
+
+  /**
+   * Store findings in an existing Cloud Storage bucket. Files will be generated with the job ID and
+   * file part number as the filename, and will contain findings in textproto format as
+   * SaveToGcsFindingsOutput. The file name will use the naming convention -, for example: my-job-
+   * id-2. Supported for Inspect jobs. The bucket must not be the same as the bucket being
+   * inspected. If storing findings to Cloud Storage, the output schema field should not be set. If
+   * set, it will be ignored.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CloudStoragePath getStoragePath() {
+    return storagePath;
+  }
+
+  /**
+   * Store findings in an existing Cloud Storage bucket. Files will be generated with the job ID and
+   * file part number as the filename, and will contain findings in textproto format as
+   * SaveToGcsFindingsOutput. The file name will use the naming convention -, for example: my-job-
+   * id-2. Supported for Inspect jobs. The bucket must not be the same as the bucket being
+   * inspected. If storing findings to Cloud Storage, the output schema field should not be set. If
+   * set, it will be ignored.
+   * @param storagePath storagePath or {@code null} for none
+   */
+  public GooglePrivacyDlpV2OutputStorageConfig setStoragePath(GooglePrivacyDlpV2CloudStoragePath storagePath) {
+    this.storagePath = storagePath;
     return this;
   }
 

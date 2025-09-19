@@ -72,6 +72,15 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String provider;
 
   /**
+   * The reseller parent billing account of the account's corresponding billing account, applicable
+   * only when the corresponding billing account is a subaccount of a reseller. Included in
+   * responses only for view ACCOUNT_VIEW_FULL. Format: billingAccounts/{billing_account_id}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resellerParentBillingAccount;
+
+  /**
    * Output only. The state of the account. This is used to decide whether the customer is in good
    * standing with the provider and is able to make purchases. An account might not be able to make
    * a purchase if the billing account is suspended, for example.
@@ -181,6 +190,27 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   public Account setProvider(java.lang.String provider) {
     this.provider = provider;
+    return this;
+  }
+
+  /**
+   * The reseller parent billing account of the account's corresponding billing account, applicable
+   * only when the corresponding billing account is a subaccount of a reseller. Included in
+   * responses only for view ACCOUNT_VIEW_FULL. Format: billingAccounts/{billing_account_id}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResellerParentBillingAccount() {
+    return resellerParentBillingAccount;
+  }
+
+  /**
+   * The reseller parent billing account of the account's corresponding billing account, applicable
+   * only when the corresponding billing account is a subaccount of a reseller. Included in
+   * responses only for view ACCOUNT_VIEW_FULL. Format: billingAccounts/{billing_account_id}
+   * @param resellerParentBillingAccount resellerParentBillingAccount or {@code null} for none
+   */
+  public Account setResellerParentBillingAccount(java.lang.String resellerParentBillingAccount) {
+    this.resellerParentBillingAccount = resellerParentBillingAccount;
     return this;
   }
 

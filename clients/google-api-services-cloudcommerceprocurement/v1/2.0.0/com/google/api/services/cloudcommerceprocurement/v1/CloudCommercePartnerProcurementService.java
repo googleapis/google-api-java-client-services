@@ -448,6 +448,22 @@ public class CloudCommercePartnerProcurementService extends com.google.api.clien
           return this;
         }
 
+        /** Optional. What information to include in the response. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Optional. What information to include in the response.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Optional. What information to include in the response. */
+        public Get setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);

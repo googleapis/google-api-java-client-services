@@ -38,6 +38,18 @@ public final class GooglePrivacyDlpV2FileStoreCollection extends com.google.api.
   private GooglePrivacyDlpV2FileStoreRegexes includeRegexes;
 
   /**
+   * Optional. To be included in the collection, a resource must meet all of the following
+   * requirements: - If tag filters are provided, match all provided tag filters. - If one or more
+   * patterns are specified, match at least one pattern. For a resource to match the tag filters,
+   * the resource must have all of the provided tags attached. Tags refer to Resource Manager tags
+   * bound to the resource or its ancestors. See https://cloud.google.com/sensitive-data-
+   * protection/docs/profile-project-cloud-storage#manage-schedules to learn more.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2TagFilters includeTags;
+
+  /**
    * Optional. A collection of regular expressions to match a file store against.
    * @return value or {@code null} for none
    */
@@ -51,6 +63,33 @@ public final class GooglePrivacyDlpV2FileStoreCollection extends com.google.api.
    */
   public GooglePrivacyDlpV2FileStoreCollection setIncludeRegexes(GooglePrivacyDlpV2FileStoreRegexes includeRegexes) {
     this.includeRegexes = includeRegexes;
+    return this;
+  }
+
+  /**
+   * Optional. To be included in the collection, a resource must meet all of the following
+   * requirements: - If tag filters are provided, match all provided tag filters. - If one or more
+   * patterns are specified, match at least one pattern. For a resource to match the tag filters,
+   * the resource must have all of the provided tags attached. Tags refer to Resource Manager tags
+   * bound to the resource or its ancestors. See https://cloud.google.com/sensitive-data-
+   * protection/docs/profile-project-cloud-storage#manage-schedules to learn more.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TagFilters getIncludeTags() {
+    return includeTags;
+  }
+
+  /**
+   * Optional. To be included in the collection, a resource must meet all of the following
+   * requirements: - If tag filters are provided, match all provided tag filters. - If one or more
+   * patterns are specified, match at least one pattern. For a resource to match the tag filters,
+   * the resource must have all of the provided tags attached. Tags refer to Resource Manager tags
+   * bound to the resource or its ancestors. See https://cloud.google.com/sensitive-data-
+   * protection/docs/profile-project-cloud-storage#manage-schedules to learn more.
+   * @param includeTags includeTags or {@code null} for none
+   */
+  public GooglePrivacyDlpV2FileStoreCollection setIncludeTags(GooglePrivacyDlpV2TagFilters includeTags) {
+    this.includeTags = includeTags;
     return this;
   }
 

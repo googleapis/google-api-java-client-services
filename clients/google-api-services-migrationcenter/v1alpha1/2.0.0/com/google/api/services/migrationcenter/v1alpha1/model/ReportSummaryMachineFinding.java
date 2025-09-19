@@ -37,7 +37,7 @@ public final class ReportSummaryMachineFinding extends com.google.api.client.jso
   private java.lang.Long allocatedAssetCount;
 
   /**
-   * Set of disk types allocated to assets.
+   * @deprecated. Use storage_allocations instead. Set of disk types allocated to assets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class ReportSummaryMachineFinding extends com.google.api.client.jso
   }
 
   /**
-   * Set of disk types allocated to assets.
+   * @deprecated. Use storage_allocations instead. Set of disk types allocated to assets.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllocatedDiskTypes() {
@@ -83,7 +83,7 @@ public final class ReportSummaryMachineFinding extends com.google.api.client.jso
   }
 
   /**
-   * Set of disk types allocated to assets.
+   * @deprecated. Use storage_allocations instead. Set of disk types allocated to assets.
    * @param allocatedDiskTypes allocatedDiskTypes or {@code null} for none
    */
   public ReportSummaryMachineFinding setAllocatedDiskTypes(java.util.List<java.lang.String> allocatedDiskTypes) {

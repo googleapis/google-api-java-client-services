@@ -53,11 +53,32 @@ public final class VmwarePlatformDetails extends com.google.api.client.json.Gene
   private java.lang.String osid;
 
   /**
+   * Folder name in vCenter where asset resides.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vcenterFolder;
+
+  /**
+   * vCenter URI used in collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vcenterUri;
+
+  /**
    * vCenter version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vcenterVersion;
+
+  /**
+   * vCenter VM ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vcenterVmId;
 
   /**
    * Whether the ESX is hyperthreaded.
@@ -115,6 +136,40 @@ public final class VmwarePlatformDetails extends com.google.api.client.json.Gene
   }
 
   /**
+   * Folder name in vCenter where asset resides.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVcenterFolder() {
+    return vcenterFolder;
+  }
+
+  /**
+   * Folder name in vCenter where asset resides.
+   * @param vcenterFolder vcenterFolder or {@code null} for none
+   */
+  public VmwarePlatformDetails setVcenterFolder(java.lang.String vcenterFolder) {
+    this.vcenterFolder = vcenterFolder;
+    return this;
+  }
+
+  /**
+   * vCenter URI used in collection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVcenterUri() {
+    return vcenterUri;
+  }
+
+  /**
+   * vCenter URI used in collection.
+   * @param vcenterUri vcenterUri or {@code null} for none
+   */
+  public VmwarePlatformDetails setVcenterUri(java.lang.String vcenterUri) {
+    this.vcenterUri = vcenterUri;
+    return this;
+  }
+
+  /**
    * vCenter version.
    * @return value or {@code null} for none
    */
@@ -128,6 +183,23 @@ public final class VmwarePlatformDetails extends com.google.api.client.json.Gene
    */
   public VmwarePlatformDetails setVcenterVersion(java.lang.String vcenterVersion) {
     this.vcenterVersion = vcenterVersion;
+    return this;
+  }
+
+  /**
+   * vCenter VM ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVcenterVmId() {
+    return vcenterVmId;
+  }
+
+  /**
+   * vCenter VM ID.
+   * @param vcenterVmId vcenterVmId or {@code null} for none
+   */
+  public VmwarePlatformDetails setVcenterVmId(java.lang.String vcenterVmId) {
+    this.vcenterVmId = vcenterVmId;
     return this;
   }
 

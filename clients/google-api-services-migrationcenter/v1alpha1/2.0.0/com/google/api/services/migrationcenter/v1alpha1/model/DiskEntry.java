@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class DiskEntry extends com.google.api.client.json.GenericJson {
 
   /**
+   * Disk capacity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long capacityBytes;
+
+  /**
    * Disk label.
    * The value may be {@code null}.
    */
@@ -42,6 +49,13 @@ public final class DiskEntry extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String diskLabelType;
+
+  /**
+   * Disk free space.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long freeSpaceBytes;
 
   /**
    * Disk hardware address (e.g. 0:1 for SCSI).
@@ -86,6 +100,23 @@ public final class DiskEntry extends com.google.api.client.json.GenericJson {
   private java.lang.Long totalFreeBytes;
 
   /**
+   * Disk capacity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCapacityBytes() {
+    return capacityBytes;
+  }
+
+  /**
+   * Disk capacity.
+   * @param capacityBytes capacityBytes or {@code null} for none
+   */
+  public DiskEntry setCapacityBytes(java.lang.Long capacityBytes) {
+    this.capacityBytes = capacityBytes;
+    return this;
+  }
+
+  /**
    * Disk label.
    * @return value or {@code null} for none
    */
@@ -116,6 +147,23 @@ public final class DiskEntry extends com.google.api.client.json.GenericJson {
    */
   public DiskEntry setDiskLabelType(java.lang.String diskLabelType) {
     this.diskLabelType = diskLabelType;
+    return this;
+  }
+
+  /**
+   * Disk free space.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getFreeSpaceBytes() {
+    return freeSpaceBytes;
+  }
+
+  /**
+   * Disk free space.
+   * @param freeSpaceBytes freeSpaceBytes or {@code null} for none
+   */
+  public DiskEntry setFreeSpaceBytes(java.lang.Long freeSpaceBytes) {
+    this.freeSpaceBytes = freeSpaceBytes;
     return this;
   }
 

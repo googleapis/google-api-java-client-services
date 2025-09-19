@@ -58,11 +58,39 @@ public final class BiosDetails extends com.google.api.client.json.GenericJson {
   private java.lang.String biosVersion;
 
   /**
+   * BIOS ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
+   * BIOS manufacturer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String manufacturer;
+
+  /**
+   * BIOS release date.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String releaseTime;
+
+  /**
    * SMBIOS UUID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String smbiosUuid;
+
+  /**
+   * BIOS version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
 
   /**
    * BIOS manufacturer.
@@ -133,6 +161,57 @@ public final class BiosDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * BIOS ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * BIOS ID.
+   * @param id id or {@code null} for none
+   */
+  public BiosDetails setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * BIOS manufacturer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManufacturer() {
+    return manufacturer;
+  }
+
+  /**
+   * BIOS manufacturer.
+   * @param manufacturer manufacturer or {@code null} for none
+   */
+  public BiosDetails setManufacturer(java.lang.String manufacturer) {
+    this.manufacturer = manufacturer;
+    return this;
+  }
+
+  /**
+   * BIOS release date.
+   * @return value or {@code null} for none
+   */
+  public String getReleaseTime() {
+    return releaseTime;
+  }
+
+  /**
+   * BIOS release date.
+   * @param releaseTime releaseTime or {@code null} for none
+   */
+  public BiosDetails setReleaseTime(String releaseTime) {
+    this.releaseTime = releaseTime;
+    return this;
+  }
+
+  /**
    * SMBIOS UUID.
    * @return value or {@code null} for none
    */
@@ -146,6 +225,23 @@ public final class BiosDetails extends com.google.api.client.json.GenericJson {
    */
   public BiosDetails setSmbiosUuid(java.lang.String smbiosUuid) {
     this.smbiosUuid = smbiosUuid;
+    return this;
+  }
+
+  /**
+   * BIOS version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * BIOS version.
+   * @param version version or {@code null} for none
+   */
+  public BiosDetails setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

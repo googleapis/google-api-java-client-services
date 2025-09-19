@@ -51,6 +51,22 @@ public final class RuntimeNetworkInfo extends com.google.api.client.json.Generic
   private DateTime netstatTime;
 
   /**
+   * Raw network scan result. This field is intended for human inspection. The format of this field
+   * may be netstat output or any another raw output. The exact format may change without notice and
+   * should not be relied upon.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rawScanResult;
+
+  /**
+   * Time of the last network scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String scanTime;
+
+  /**
    * Network connections.
    * @return value or {@code null} for none
    */
@@ -98,6 +114,44 @@ public final class RuntimeNetworkInfo extends com.google.api.client.json.Generic
    */
   public RuntimeNetworkInfo setNetstatTime(DateTime netstatTime) {
     this.netstatTime = netstatTime;
+    return this;
+  }
+
+  /**
+   * Raw network scan result. This field is intended for human inspection. The format of this field
+   * may be netstat output or any another raw output. The exact format may change without notice and
+   * should not be relied upon.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRawScanResult() {
+    return rawScanResult;
+  }
+
+  /**
+   * Raw network scan result. This field is intended for human inspection. The format of this field
+   * may be netstat output or any another raw output. The exact format may change without notice and
+   * should not be relied upon.
+   * @param rawScanResult rawScanResult or {@code null} for none
+   */
+  public RuntimeNetworkInfo setRawScanResult(java.lang.String rawScanResult) {
+    this.rawScanResult = rawScanResult;
+    return this;
+  }
+
+  /**
+   * Time of the last network scan.
+   * @return value or {@code null} for none
+   */
+  public String getScanTime() {
+    return scanTime;
+  }
+
+  /**
+   * Time of the last network scan.
+   * @param scanTime scanTime or {@code null} for none
+   */
+  public RuntimeNetworkInfo setScanTime(String scanTime) {
+    this.scanTime = scanTime;
     return this;
   }
 

@@ -34,12 +34,42 @@ public final class RunningProcessList extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<RunningProcess> entries;
+
+  static {
+    // hack to force ProGuard to consider RunningProcess used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RunningProcess.class);
+  }
+
+  /**
+   * Running process entries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.util.List<RunningProcess> processes;
 
   static {
     // hack to force ProGuard to consider RunningProcess used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(RunningProcess.class);
+  }
+
+  /**
+   * Running process entries.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RunningProcess> getEntries() {
+    return entries;
+  }
+
+  /**
+   * Running process entries.
+   * @param entries entries or {@code null} for none
+   */
+  public RunningProcessList setEntries(java.util.List<RunningProcess> entries) {
+    this.entries = entries;
+    return this;
   }
 
   /**

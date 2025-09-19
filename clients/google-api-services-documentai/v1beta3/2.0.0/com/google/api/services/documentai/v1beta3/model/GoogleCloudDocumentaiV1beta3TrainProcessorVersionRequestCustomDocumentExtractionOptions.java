@@ -31,14 +31,14 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestCustomDocumentExtractionOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Training method to use for CDE training.
+   * Optional. Training method to use for CDE training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trainingMethod;
 
   /**
-   * Training method to use for CDE training.
+   * Optional. Training method to use for CDE training.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrainingMethod() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestCusto
   }
 
   /**
-   * Training method to use for CDE training.
+   * Optional. Training method to use for CDE training.
    * @param trainingMethod trainingMethod or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestCustomDocumentExtractionOptions setTrainingMethod(java.lang.String trainingMethod) {

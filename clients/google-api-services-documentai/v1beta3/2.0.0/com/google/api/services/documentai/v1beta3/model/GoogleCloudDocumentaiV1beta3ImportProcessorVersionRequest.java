@@ -44,8 +44,7 @@ public final class GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest ext
 
   /**
    * The source processor version to import from. The source processor version and destination
-   * processor need to be in the same environment and region. Note that ProcessorVersions with
-   * `model_type` `MODEL_TYPE_LLM` are not supported.
+   * processor need to be in the same environment and region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +71,7 @@ public final class GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest ext
 
   /**
    * The source processor version to import from. The source processor version and destination
-   * processor need to be in the same environment and region. Note that ProcessorVersions with
-   * `model_type` `MODEL_TYPE_LLM` are not supported.
+   * processor need to be in the same environment and region.
    * @return value or {@code null} for none
    */
   public java.lang.String getProcessorVersionSource() {
@@ -82,8 +80,7 @@ public final class GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest ext
 
   /**
    * The source processor version to import from. The source processor version and destination
-   * processor need to be in the same environment and region. Note that ProcessorVersions with
-   * `model_type` `MODEL_TYPE_LLM` are not supported.
+   * processor need to be in the same environment and region.
    * @param processorVersionSource processorVersionSource or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest setProcessorVersionSource(java.lang.String processorVersionSource) {

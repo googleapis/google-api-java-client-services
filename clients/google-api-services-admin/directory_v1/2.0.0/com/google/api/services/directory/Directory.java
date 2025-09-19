@@ -7179,22 +7179,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Query string search. Should be of the form "". Complete documentation is at https:
-       * //developers.google.com/admin-sdk/directory/v1/guides/search-groups
+       * Query string search. Should be of the form "". Complete documentation is at
+       * https://developers.google.com/workspace/admin/directory/v1/guides/search-groups
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Query string search. Should be of the form "". Complete documentation is at https:
-     //developers.google.com/admin-sdk/directory/v1/guides/search-groups
+      /** Query string search. Should be of the form "". Complete documentation is at
+     https://developers.google.com/workspace/admin/directory/v1/guides/search-groups
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Query string search. Should be of the form "". Complete documentation is at https:
-       * //developers.google.com/admin-sdk/directory/v1/guides/search-groups
+       * Query string search. Should be of the form "". Complete documentation is at
+       * https://developers.google.com/workspace/admin/directory/v1/guides/search-groups
        */
       public List setQuery(java.lang.String query) {
         this.query = query;
@@ -18897,22 +18897,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Query string search. Should be of the form "". Complete documentation is at https:
-       * //developers.google.com/admin-sdk/directory/v1/guides/search-users
+       * Query string search. Should be of the form "". Complete documentation is at
+       * https://developers.google.com/workspace/admin/directory/v1/guides/search-users
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Query string search. Should be of the form "". Complete documentation is at https:
-     //developers.google.com/admin-sdk/directory/v1/guides/search-users
+      /** Query string search. Should be of the form "". Complete documentation is at
+     https://developers.google.com/workspace/admin/directory/v1/guides/search-users
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Query string search. Should be of the form "". Complete documentation is at https:
-       * //developers.google.com/admin-sdk/directory/v1/guides/search-users
+       * Query string search. Should be of the form "". Complete documentation is at
+       * https://developers.google.com/workspace/admin/directory/v1/guides/search-users
        */
       public Watch setQuery(java.lang.String query) {
         this.query = query;

@@ -30,6 +30,20 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class GuestInstalledApplication extends com.google.api.client.json.GenericJson {
 
   /**
+   * Installed application name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String applicationName;
+
+  /**
+   * The time when the application was installed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String installTime;
+
+  /**
    * License strings associated with the installed application.
    * The value may be {@code null}.
    */
@@ -70,6 +84,40 @@ public final class GuestInstalledApplication extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * Installed application name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApplicationName() {
+    return applicationName;
+  }
+
+  /**
+   * Installed application name.
+   * @param applicationName applicationName or {@code null} for none
+   */
+  public GuestInstalledApplication setApplicationName(java.lang.String applicationName) {
+    this.applicationName = applicationName;
+    return this;
+  }
+
+  /**
+   * The time when the application was installed.
+   * @return value or {@code null} for none
+   */
+  public String getInstallTime() {
+    return installTime;
+  }
+
+  /**
+   * The time when the application was installed.
+   * @param installTime installTime or {@code null} for none
+   */
+  public GuestInstalledApplication setInstallTime(String installTime) {
+    this.installTime = installTime;
+    return this;
+  }
 
   /**
    * License strings associated with the installed application.

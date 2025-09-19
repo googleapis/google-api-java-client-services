@@ -37,11 +37,32 @@ public final class GuestOsDetails extends com.google.api.client.json.GenericJson
   private GuestConfigDetails config;
 
   /**
+   * What family the OS belong to, if known.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String family;
+
+  /**
+   * The name of the operating system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String osName;
+
+  /**
    * Runtime information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GuestRuntimeDetails runtime;
+
+  /**
+   * The version of the operating system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
 
   /**
    * OS and app configuration.
@@ -61,6 +82,40 @@ public final class GuestOsDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * What family the OS belong to, if known.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFamily() {
+    return family;
+  }
+
+  /**
+   * What family the OS belong to, if known.
+   * @param family family or {@code null} for none
+   */
+  public GuestOsDetails setFamily(java.lang.String family) {
+    this.family = family;
+    return this;
+  }
+
+  /**
+   * The name of the operating system.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOsName() {
+    return osName;
+  }
+
+  /**
+   * The name of the operating system.
+   * @param osName osName or {@code null} for none
+   */
+  public GuestOsDetails setOsName(java.lang.String osName) {
+    this.osName = osName;
+    return this;
+  }
+
+  /**
    * Runtime information.
    * @return value or {@code null} for none
    */
@@ -74,6 +129,23 @@ public final class GuestOsDetails extends com.google.api.client.json.GenericJson
    */
   public GuestOsDetails setRuntime(GuestRuntimeDetails runtime) {
     this.runtime = runtime;
+    return this;
+  }
+
+  /**
+   * The version of the operating system.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * The version of the operating system.
+   * @param version version or {@code null} for none
+   */
+  public GuestOsDetails setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

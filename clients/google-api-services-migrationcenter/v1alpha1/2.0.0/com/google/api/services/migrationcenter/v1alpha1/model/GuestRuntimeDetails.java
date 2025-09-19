@@ -44,6 +44,13 @@ public final class GuestRuntimeDetails extends com.google.api.client.json.Generi
   private GuestInstalledApplicationList installedApps;
 
   /**
+   * Last time the OS was booted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastBootTime;
+
+  /**
    * Date since last booted (last uptime date).
    * The value may be {@code null}.
    */
@@ -116,6 +123,23 @@ public final class GuestRuntimeDetails extends com.google.api.client.json.Generi
    */
   public GuestRuntimeDetails setInstalledApps(GuestInstalledApplicationList installedApps) {
     this.installedApps = installedApps;
+    return this;
+  }
+
+  /**
+   * Last time the OS was booted.
+   * @return value or {@code null} for none
+   */
+  public String getLastBootTime() {
+    return lastBootTime;
+  }
+
+  /**
+   * Last time the OS was booted.
+   * @param lastBootTime lastBootTime or {@code null} for none
+   */
+  public GuestRuntimeDetails setLastBootTime(String lastBootTime) {
+    this.lastBootTime = lastBootTime;
     return this;
   }
 

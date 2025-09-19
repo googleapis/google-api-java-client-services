@@ -44,6 +44,19 @@ public final class NetworkAddressList extends com.google.api.client.json.Generic
 
   /**
    * Network address entries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NetworkAddress> entries;
+
+  static {
+    // hack to force ProGuard to consider NetworkAddress used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NetworkAddress.class);
+  }
+
+  /**
+   * Network address entries.
    * @return value or {@code null} for none
    */
   public java.util.List<NetworkAddress> getAddresses() {
@@ -56,6 +69,23 @@ public final class NetworkAddressList extends com.google.api.client.json.Generic
    */
   public NetworkAddressList setAddresses(java.util.List<NetworkAddress> addresses) {
     this.addresses = addresses;
+    return this;
+  }
+
+  /**
+   * Network address entries.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NetworkAddress> getEntries() {
+    return entries;
+  }
+
+  /**
+   * Network address entries.
+   * @param entries entries or {@code null} for none
+   */
+  public NetworkAddressList setEntries(java.util.List<NetworkAddress> entries) {
+    this.entries = entries;
     return this;
   }
 

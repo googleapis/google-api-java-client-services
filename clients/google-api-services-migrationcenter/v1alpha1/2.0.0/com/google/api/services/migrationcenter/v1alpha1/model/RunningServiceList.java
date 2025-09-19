@@ -34,12 +34,42 @@ public final class RunningServiceList extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<RunningService> entries;
+
+  static {
+    // hack to force ProGuard to consider RunningService used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RunningService.class);
+  }
+
+  /**
+   * Running service entries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.util.List<RunningService> services;
 
   static {
     // hack to force ProGuard to consider RunningService used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(RunningService.class);
+  }
+
+  /**
+   * Running service entries.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RunningService> getEntries() {
+    return entries;
+  }
+
+  /**
+   * Running service entries.
+   * @param entries entries or {@code null} for none
+   */
+  public RunningServiceList setEntries(java.util.List<RunningService> entries) {
+    this.entries = entries;
+    return this;
   }
 
   /**

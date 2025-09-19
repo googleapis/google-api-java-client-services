@@ -65,6 +65,13 @@ public final class GuestConfigDetails extends com.google.api.client.json.Generic
   private Selinux selinux;
 
   /**
+   * Security-Enhanced Linux (SELinux) mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selinuxMode;
+
+  /**
    * Mount list (Linux fstab).
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class GuestConfigDetails extends com.google.api.client.json.Generic
    */
   public GuestConfigDetails setSelinux(Selinux selinux) {
     this.selinux = selinux;
+    return this;
+  }
+
+  /**
+   * Security-Enhanced Linux (SELinux) mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelinuxMode() {
+    return selinuxMode;
+  }
+
+  /**
+   * Security-Enhanced Linux (SELinux) mode.
+   * @param selinuxMode selinuxMode or {@code null} for none
+   */
+  public GuestConfigDetails setSelinuxMode(java.lang.String selinuxMode) {
+    this.selinuxMode = selinuxMode;
     return this;
   }
 

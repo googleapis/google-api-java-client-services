@@ -30,6 +30,19 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class NetworkAdapterList extends com.google.api.client.json.GenericJson {
 
   /**
+   * Network adapter entries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NetworkAdapterDetails> entries;
+
+  static {
+    // hack to force ProGuard to consider NetworkAdapterDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NetworkAdapterDetails.class);
+  }
+
+  /**
    * Network adapter descriptions.
    * The value may be {@code null}.
    */
@@ -40,6 +53,23 @@ public final class NetworkAdapterList extends com.google.api.client.json.Generic
     // hack to force ProGuard to consider NetworkAdapterDetails used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(NetworkAdapterDetails.class);
+  }
+
+  /**
+   * Network adapter entries.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NetworkAdapterDetails> getEntries() {
+    return entries;
+  }
+
+  /**
+   * Network adapter entries.
+   * @param entries entries or {@code null} for none
+   */
+  public NetworkAdapterList setEntries(java.util.List<NetworkAdapterDetails> entries) {
+    this.entries = entries;
+    return this;
   }
 
   /**

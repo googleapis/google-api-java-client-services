@@ -58,6 +58,13 @@ public final class RunningService extends com.google.api.client.json.GenericJson
   private java.lang.Long pid;
 
   /**
+   * Service name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceName;
+
+  /**
    * Service start mode (raw, OS-agnostic).
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class RunningService extends com.google.api.client.json.GenericJson
    */
   public RunningService setPid(java.lang.Long pid) {
     this.pid = pid;
+    return this;
+  }
+
+  /**
+   * Service name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceName() {
+    return serviceName;
+  }
+
+  /**
+   * Service name.
+   * @param serviceName serviceName or {@code null} for none
+   */
+  public RunningService setServiceName(java.lang.String serviceName) {
+    this.serviceName = serviceName;
     return this;
   }
 

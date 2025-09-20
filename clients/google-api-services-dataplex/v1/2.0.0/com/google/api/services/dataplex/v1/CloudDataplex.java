@@ -2577,7 +2577,10 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Looks up an entry by name using the permission on the source system.
+       * Looks up an entry by name using the permission on the source system. Caution: The Vertex AI,
+       * Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc Metastore metadata that is stored in Dataplex
+       * Universal Catalog is changing. For more information, see Changes to metadata stored in Dataplex
+       * Universal Catalog (https://cloud.google.com/dataplex/docs/metadata-changes).
        *
        * Create a request for the method "locations.lookupEntry".
        *
@@ -2602,7 +2605,10 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Looks up an entry by name using the permission on the source system.
+         * Looks up an entry by name using the permission on the source system. Caution: The Vertex AI,
+         * Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc Metastore metadata that is stored in
+         * Dataplex Universal Catalog is changing. For more information, see Changes to metadata stored in
+         * Dataplex Universal Catalog (https://cloud.google.com/dataplex/docs/metadata-changes).
          *
          * Create a request for the method "locations.lookupEntry".
          *
@@ -13553,7 +13559,10 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Gets an Entry.
+           * Gets an Entry. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+           * Metastore metadata that is stored in Dataplex Universal Catalog is changing. For more
+           * information, see Changes to metadata stored in Dataplex Universal Catalog
+           * (https://cloud.google.com/dataplex/docs/metadata-changes).
            *
            * Create a request for the method "entries.get".
            *
@@ -13578,7 +13587,10 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
 
             /**
-             * Gets an Entry.
+             * Gets an Entry. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+             * Metastore metadata that is stored in Dataplex Universal Catalog is changing. For more
+             * information, see Changes to metadata stored in Dataplex Universal Catalog
+             * (https://cloud.google.com/dataplex/docs/metadata-changes).
              *
              * Create a request for the method "entries.get".
              *
@@ -13761,7 +13773,10 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Lists Entries within an EntryGroup.
+           * Lists Entries within an EntryGroup. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform,
+           * and Dataproc Metastore metadata that is stored in Dataplex Universal Catalog is changing. For
+           * more information, see Changes to metadata stored in Dataplex Universal Catalog
+           * (https://cloud.google.com/dataplex/docs/metadata-changes).
            *
            * Create a request for the method "entries.list".
            *
@@ -13786,7 +13801,10 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
             /**
-             * Lists Entries within an EntryGroup.
+             * Lists Entries within an EntryGroup. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub,
+             * Dataform, and Dataproc Metastore metadata that is stored in Dataplex Universal Catalog is
+             * changing. For more information, see Changes to metadata stored in Dataplex Universal Catalog
+             * (https://cloud.google.com/dataplex/docs/metadata-changes).
              *
              * Create a request for the method "entries.list".
              *

@@ -847,6 +847,343 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * Creates a Collection and sets up the DataConnector for it. To stop a DataConnector after setup,
+       * use the CollectionService.DeleteCollection method.
+       *
+       * Create a request for the method "locations.setUpDataConnector".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link SetUpDataConnector#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The parent of Collection, in the format of `projects/{project}/locations/{location}`.
+       * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest}
+       * @return the request
+       */
+      public SetUpDataConnector setUpDataConnector(java.lang.String parent, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest content) throws java.io.IOException {
+        SetUpDataConnector result = new SetUpDataConnector(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SetUpDataConnector extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+parent}:setUpDataConnector";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Creates a Collection and sets up the DataConnector for it. To stop a DataConnector after setup,
+         * use the CollectionService.DeleteCollection method.
+         *
+         * Create a request for the method "locations.setUpDataConnector".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link SetUpDataConnector#execute()} method to invoke the remote
+         * operation. <p> {@link SetUpDataConnector#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent Required. The parent of Collection, in the format of `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest}
+         * @since 1.13
+         */
+        protected SetUpDataConnector(java.lang.String parent, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest content) {
+          super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public SetUpDataConnector set$Xgafv(java.lang.String $Xgafv) {
+          return (SetUpDataConnector) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SetUpDataConnector setAccessToken(java.lang.String accessToken) {
+          return (SetUpDataConnector) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SetUpDataConnector setAlt(java.lang.String alt) {
+          return (SetUpDataConnector) super.setAlt(alt);
+        }
+
+        @Override
+        public SetUpDataConnector setCallback(java.lang.String callback) {
+          return (SetUpDataConnector) super.setCallback(callback);
+        }
+
+        @Override
+        public SetUpDataConnector setFields(java.lang.String fields) {
+          return (SetUpDataConnector) super.setFields(fields);
+        }
+
+        @Override
+        public SetUpDataConnector setKey(java.lang.String key) {
+          return (SetUpDataConnector) super.setKey(key);
+        }
+
+        @Override
+        public SetUpDataConnector setOauthToken(java.lang.String oauthToken) {
+          return (SetUpDataConnector) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SetUpDataConnector setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SetUpDataConnector) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SetUpDataConnector setQuotaUser(java.lang.String quotaUser) {
+          return (SetUpDataConnector) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SetUpDataConnector setUploadType(java.lang.String uploadType) {
+          return (SetUpDataConnector) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SetUpDataConnector setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SetUpDataConnector) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent of Collection, in the format of
+         * `projects/{project}/locations/{location}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent of Collection, in the format of `projects/{project}/locations/{location}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent of Collection, in the format of
+         * `projects/{project}/locations/{location}`.
+         */
+        public SetUpDataConnector setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public SetUpDataConnector set(String parameterName, Object value) {
+          return (SetUpDataConnector) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a Collection and sets up the DataConnector for it. To stop a DataConnector after setup,
+       * use the CollectionService.DeleteCollection method.
+       *
+       * Create a request for the method "locations.setUpDataConnectorV2".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link SetUpDataConnectorV2#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The parent of Collection, in the format of `projects/{project}/locations/{location}`.
+       * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector}
+       * @return the request
+       */
+      public SetUpDataConnectorV2 setUpDataConnectorV2(java.lang.String parent, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector content) throws java.io.IOException {
+        SetUpDataConnectorV2 result = new SetUpDataConnectorV2(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SetUpDataConnectorV2 extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+parent}:setUpDataConnectorV2";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Creates a Collection and sets up the DataConnector for it. To stop a DataConnector after setup,
+         * use the CollectionService.DeleteCollection method.
+         *
+         * Create a request for the method "locations.setUpDataConnectorV2".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link SetUpDataConnectorV2#execute()} method to invoke the
+         * remote operation. <p> {@link SetUpDataConnectorV2#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent of Collection, in the format of `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector}
+         * @since 1.13
+         */
+        protected SetUpDataConnectorV2(java.lang.String parent, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector content) {
+          super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public SetUpDataConnectorV2 set$Xgafv(java.lang.String $Xgafv) {
+          return (SetUpDataConnectorV2) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setAccessToken(java.lang.String accessToken) {
+          return (SetUpDataConnectorV2) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setAlt(java.lang.String alt) {
+          return (SetUpDataConnectorV2) super.setAlt(alt);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setCallback(java.lang.String callback) {
+          return (SetUpDataConnectorV2) super.setCallback(callback);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setFields(java.lang.String fields) {
+          return (SetUpDataConnectorV2) super.setFields(fields);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setKey(java.lang.String key) {
+          return (SetUpDataConnectorV2) super.setKey(key);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setOauthToken(java.lang.String oauthToken) {
+          return (SetUpDataConnectorV2) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SetUpDataConnectorV2) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setQuotaUser(java.lang.String quotaUser) {
+          return (SetUpDataConnectorV2) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setUploadType(java.lang.String uploadType) {
+          return (SetUpDataConnectorV2) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SetUpDataConnectorV2 setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SetUpDataConnectorV2) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent of Collection, in the format of
+         * `projects/{project}/locations/{location}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent of Collection, in the format of `projects/{project}/locations/{location}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent of Collection, in the format of
+         * `projects/{project}/locations/{location}`.
+         */
+        public SetUpDataConnectorV2 setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. The display name of the Collection. Should be human readable, used to display
+         * collections in the Console Dashboard. UTF-8 encoded string with limit of 1024 characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String collectionDisplayName;
+
+        /** Required. The display name of the Collection. Should be human readable, used to display collections
+       in the Console Dashboard. UTF-8 encoded string with limit of 1024 characters.
+         */
+        public java.lang.String getCollectionDisplayName() {
+          return collectionDisplayName;
+        }
+
+        /**
+         * Required. The display name of the Collection. Should be human readable, used to display
+         * collections in the Console Dashboard. UTF-8 encoded string with limit of 1024 characters.
+         */
+        public SetUpDataConnectorV2 setCollectionDisplayName(java.lang.String collectionDisplayName) {
+          this.collectionDisplayName = collectionDisplayName;
+          return this;
+        }
+
+        /**
+         * Required. The ID to use for the Collection, which will become the final component of the
+         * Collection's resource name. A new Collection is created as part of the DataConnector
+         * setup. DataConnector is a singleton resource under Collection, managing all DataStores of
+         * the Collection. This field must conform to
+         * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
+         * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String collectionId;
+
+        /** Required. The ID to use for the Collection, which will become the final component of the
+       Collection's resource name. A new Collection is created as part of the DataConnector setup.
+       DataConnector is a singleton resource under Collection, managing all DataStores of the Collection.
+       This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
+       limit of 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+         */
+        public java.lang.String getCollectionId() {
+          return collectionId;
+        }
+
+        /**
+         * Required. The ID to use for the Collection, which will become the final component of the
+         * Collection's resource name. A new Collection is created as part of the DataConnector
+         * setup. DataConnector is a singleton resource under Collection, managing all DataStores of
+         * the Collection. This field must conform to
+         * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
+         * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+         */
+        public SetUpDataConnectorV2 setCollectionId(java.lang.String collectionId) {
+          this.collectionId = collectionId;
+          return this;
+        }
+
+        @Override
+        public SetUpDataConnectorV2 set(String parameterName, Object value) {
+          return (SetUpDataConnectorV2) super.set(parameterName, value);
+        }
+      }
+      /**
        * Default ACL configuration for use in a location of a customer's project. Updates will only
        * reflect to new data stores. Existing data stores will still use the old value.
        *
@@ -1825,6 +2162,488 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
        * The "collections" collection of methods.
        */
       public class Collections {
+
+        /**
+         * Deletes a Collection.
+         *
+         * Create a request for the method "collections.delete".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the Collection, in the format of
+         *        `projects/{project}/locations/{location}/collections/{collection}`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
+
+          /**
+           * Deletes a Collection.
+           *
+           * Create a request for the method "collections.delete".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the Collection, in the format of
+         *        `projects/{project}/locations/{location}/collections/{collection}`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full resource name of the Collection, in the format of
+           * `projects/{project}/locations/{location}/collections/{collection}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the Collection, in the format of
+         `projects/{project}/locations/{location}/collections/{collection}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full resource name of the Collection, in the format of
+           * `projects/{project}/locations/{location}/collections/{collection}`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the DataConnector. DataConnector is a singleton resource for each Collection.
+         *
+         * Create a request for the method "collections.getDataConnector".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link GetDataConnector#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Full resource name of DataConnector, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
+         *        the caller does not have permission to access the DataConnector, regardless of whether or
+         *        not it exists, a PERMISSION_DENIED error is returned. If the requested DataConnector does
+         *        not exist, a NOT_FOUND error is returned.
+         * @return the request
+         */
+        public GetDataConnector getDataConnector(java.lang.String name) throws java.io.IOException {
+          GetDataConnector result = new GetDataConnector(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetDataConnector extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+
+          /**
+           * Gets the DataConnector. DataConnector is a singleton resource for each Collection.
+           *
+           * Create a request for the method "collections.getDataConnector".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link GetDataConnector#execute()} method to invoke the remote
+           * operation. <p> {@link GetDataConnector#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Full resource name of DataConnector, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
+         *        the caller does not have permission to access the DataConnector, regardless of whether or
+         *        not it exists, a PERMISSION_DENIED error is returned. If the requested DataConnector does
+         *        not exist, a NOT_FOUND error is returned.
+           * @since 1.13
+           */
+          protected GetDataConnector(java.lang.String name) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetDataConnector set$Xgafv(java.lang.String $Xgafv) {
+            return (GetDataConnector) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetDataConnector setAccessToken(java.lang.String accessToken) {
+            return (GetDataConnector) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetDataConnector setAlt(java.lang.String alt) {
+            return (GetDataConnector) super.setAlt(alt);
+          }
+
+          @Override
+          public GetDataConnector setCallback(java.lang.String callback) {
+            return (GetDataConnector) super.setCallback(callback);
+          }
+
+          @Override
+          public GetDataConnector setFields(java.lang.String fields) {
+            return (GetDataConnector) super.setFields(fields);
+          }
+
+          @Override
+          public GetDataConnector setKey(java.lang.String key) {
+            return (GetDataConnector) super.setKey(key);
+          }
+
+          @Override
+          public GetDataConnector setOauthToken(java.lang.String oauthToken) {
+            return (GetDataConnector) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetDataConnector setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetDataConnector) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetDataConnector setQuotaUser(java.lang.String quotaUser) {
+            return (GetDataConnector) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetDataConnector setUploadType(java.lang.String uploadType) {
+            return (GetDataConnector) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetDataConnector setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetDataConnector) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of DataConnector, such as
+           * `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
+           * the caller does not have permission to access the DataConnector, regardless of whether
+           * or not it exists, a PERMISSION_DENIED error is returned. If the requested DataConnector
+           * does not exist, a NOT_FOUND error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Full resource name of DataConnector, such as
+         `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If the caller
+         does not have permission to access the DataConnector, regardless of whether or not it exists, a
+         PERMISSION_DENIED error is returned. If the requested DataConnector does not exist, a NOT_FOUND
+         error is returned.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Full resource name of DataConnector, such as
+           * `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
+           * the caller does not have permission to access the DataConnector, regardless of whether
+           * or not it exists, a PERMISSION_DENIED error is returned. If the requested DataConnector
+           * does not exist, a NOT_FOUND error is returned.
+           */
+          public GetDataConnector setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetDataConnector set(String parameterName, Object value) {
+            return (GetDataConnector) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a DataConnector.
+         *
+         * Create a request for the method "collections.updateDataConnector".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link UpdateDataConnector#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Output only. The full resource name of the Data Connector. Format:
+         *        `projects/locations/collections/dataConnector`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector}
+         * @return the request
+         */
+        public UpdateDataConnector updateDataConnector(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector content) throws java.io.IOException {
+          UpdateDataConnector result = new UpdateDataConnector(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateDataConnector extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+
+          /**
+           * Updates a DataConnector.
+           *
+           * Create a request for the method "collections.updateDataConnector".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link UpdateDataConnector#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateDataConnector#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Output only. The full resource name of the Data Connector. Format:
+         *        `projects/locations/collections/dataConnector`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector}
+           * @since 1.13
+           */
+          protected UpdateDataConnector(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector content) {
+            super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+            }
+          }
+
+          @Override
+          public UpdateDataConnector set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateDataConnector) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateDataConnector setAccessToken(java.lang.String accessToken) {
+            return (UpdateDataConnector) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateDataConnector setAlt(java.lang.String alt) {
+            return (UpdateDataConnector) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateDataConnector setCallback(java.lang.String callback) {
+            return (UpdateDataConnector) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateDataConnector setFields(java.lang.String fields) {
+            return (UpdateDataConnector) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateDataConnector setKey(java.lang.String key) {
+            return (UpdateDataConnector) super.setKey(key);
+          }
+
+          @Override
+          public UpdateDataConnector setOauthToken(java.lang.String oauthToken) {
+            return (UpdateDataConnector) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateDataConnector setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateDataConnector) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateDataConnector setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateDataConnector) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateDataConnector setUploadType(java.lang.String uploadType) {
+            return (UpdateDataConnector) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateDataConnector setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateDataConnector) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The full resource name of the Data Connector. Format:
+           * `projects/locations/collections/dataConnector`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The full resource name of the Data Connector. Format:
+         `projects/locations/collections/dataConnector`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The full resource name of the Data Connector. Format:
+           * `projects/locations/collections/dataConnector`.
+           */
+          public UpdateDataConnector setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Indicates which fields in the provided DataConnector to update. Supported field paths
+           * include: - refresh_interval - params - auto_run_disabled - action_config -
+           * action_config.action_params - action_config.service_name - destination_configs -
+           * blocking_reasons - sync_mode - incremental_sync_disabled - incremental_refresh_interval
+           * Note: Support for these fields may vary depending on the connector type. For example,
+           * not all connectors support `destination_configs`. If an unsupported or unknown field
+           * path is provided, the request will return an INVALID_ARGUMENT error.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Indicates which fields in the provided DataConnector to update. Supported field paths include: -
+         refresh_interval - params - auto_run_disabled - action_config - action_config.action_params -
+         action_config.service_name - destination_configs - blocking_reasons - sync_mode -
+         incremental_sync_disabled - incremental_refresh_interval Note: Support for these fields may vary
+         depending on the connector type. For example, not all connectors support `destination_configs`. If
+         an unsupported or unknown field path is provided, the request will return an INVALID_ARGUMENT
+         error.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Indicates which fields in the provided DataConnector to update. Supported field paths
+           * include: - refresh_interval - params - auto_run_disabled - action_config -
+           * action_config.action_params - action_config.service_name - destination_configs -
+           * blocking_reasons - sync_mode - incremental_sync_disabled - incremental_refresh_interval
+           * Note: Support for these fields may vary depending on the connector type. For example,
+           * not all connectors support `destination_configs`. If an unsupported or unknown field
+           * path is provided, the request will return an INVALID_ARGUMENT error.
+           */
+          public UpdateDataConnector setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateDataConnector set(String parameterName, Object value) {
+            return (UpdateDataConnector) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the DataConnector collection.

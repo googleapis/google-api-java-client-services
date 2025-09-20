@@ -42,11 +42,27 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private java.lang.String bottomLabel;
 
   /**
+   * `TextParagraph` equivalent of `bottom_label`. Always wraps. Allows for more complex formatting
+   * than `bottom_label`. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1TextParagraph bottomLabelText;
+
+  /**
    * A button that a user can click to trigger an action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Button button;
+
+  /**
+   * `TextParagraph` equivalent of `text`. Allows for more complex formatting than `text`. [Google
+   * Chat apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1TextParagraph contentText;
 
   /**
    * An icon displayed after the text. Supports [built-
@@ -79,6 +95,14 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1Icon startIcon;
 
   /**
+   * Optional. Vertical alignment of the start icon. If not set, the icon will be vertically
+   * centered. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startIconVerticalAlignment;
+
+  /**
    * A switch widget that a user can click to change its state and trigger an action.
    * The value may be {@code null}.
    */
@@ -102,6 +126,14 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String topLabel;
+
+  /**
+   * `TextParagraph` equivalent of `top_label`. Always truncates. Allows for more complex formatting
+   * than `top_label`. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1TextParagraph topLabelText;
 
   /**
    * The wrap text setting. If `true`, the text wraps and displays on multiple lines. Otherwise, the
@@ -129,6 +161,25 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
+   * `TextParagraph` equivalent of `bottom_label`. Always wraps. Allows for more complex formatting
+   * than `bottom_label`. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1TextParagraph getBottomLabelText() {
+    return bottomLabelText;
+  }
+
+  /**
+   * `TextParagraph` equivalent of `bottom_label`. Always wraps. Allows for more complex formatting
+   * than `bottom_label`. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @param bottomLabelText bottomLabelText or {@code null} for none
+   */
+  public GoogleAppsCardV1DecoratedText setBottomLabelText(GoogleAppsCardV1TextParagraph bottomLabelText) {
+    this.bottomLabelText = bottomLabelText;
+    return this;
+  }
+
+  /**
    * A button that a user can click to trigger an action.
    * @return value or {@code null} for none
    */
@@ -142,6 +193,25 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
    */
   public GoogleAppsCardV1DecoratedText setButton(GoogleAppsCardV1Button button) {
     this.button = button;
+    return this;
+  }
+
+  /**
+   * `TextParagraph` equivalent of `text`. Allows for more complex formatting than `text`. [Google
+   * Chat apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1TextParagraph getContentText() {
+    return contentText;
+  }
+
+  /**
+   * `TextParagraph` equivalent of `text`. Allows for more complex formatting than `text`. [Google
+   * Chat apps](https://developers.google.com/workspace/chat):
+   * @param contentText contentText or {@code null} for none
+   */
+  public GoogleAppsCardV1DecoratedText setContentText(GoogleAppsCardV1TextParagraph contentText) {
+    this.contentText = contentText;
     return this;
   }
 
@@ -218,6 +288,25 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
+   * Optional. Vertical alignment of the start icon. If not set, the icon will be vertically
+   * centered. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartIconVerticalAlignment() {
+    return startIconVerticalAlignment;
+  }
+
+  /**
+   * Optional. Vertical alignment of the start icon. If not set, the icon will be vertically
+   * centered. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @param startIconVerticalAlignment startIconVerticalAlignment or {@code null} for none
+   */
+  public GoogleAppsCardV1DecoratedText setStartIconVerticalAlignment(java.lang.String startIconVerticalAlignment) {
+    this.startIconVerticalAlignment = startIconVerticalAlignment;
+    return this;
+  }
+
+  /**
    * A switch widget that a user can click to change its state and trigger an action.
    * @return value or {@code null} for none
    */
@@ -273,6 +362,25 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
    */
   public GoogleAppsCardV1DecoratedText setTopLabel(java.lang.String topLabel) {
     this.topLabel = topLabel;
+    return this;
+  }
+
+  /**
+   * `TextParagraph` equivalent of `top_label`. Always truncates. Allows for more complex formatting
+   * than `top_label`. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1TextParagraph getTopLabelText() {
+    return topLabelText;
+  }
+
+  /**
+   * `TextParagraph` equivalent of `top_label`. Always truncates. Allows for more complex formatting
+   * than `top_label`. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @param topLabelText topLabelText or {@code null} for none
+   */
+  public GoogleAppsCardV1DecoratedText setTopLabelText(GoogleAppsCardV1TextParagraph topLabelText) {
+    this.topLabelText = topLabelText;
     return this;
   }
 

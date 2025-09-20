@@ -54,6 +54,14 @@ public final class GoogleAppsCardV1TextParagraph extends com.google.api.client.j
   private java.lang.String text;
 
   /**
+   * The syntax of the text. If not set, the text is rendered as HTML. [Google Chat
+   * apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String textSyntax;
+
+  /**
    * The maximum number of lines of text that are displayed in the widget. If the text exceeds the
    * specified maximum number of lines, the excess content is concealed behind a **show more**
    * button. If the text is equal or shorter than the specified maximum number of lines, a **show
@@ -92,6 +100,25 @@ public final class GoogleAppsCardV1TextParagraph extends com.google.api.client.j
    */
   public GoogleAppsCardV1TextParagraph setText(java.lang.String text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * The syntax of the text. If not set, the text is rendered as HTML. [Google Chat
+   * apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTextSyntax() {
+    return textSyntax;
+  }
+
+  /**
+   * The syntax of the text. If not set, the text is rendered as HTML. [Google Chat
+   * apps](https://developers.google.com/workspace/chat):
+   * @param textSyntax textSyntax or {@code null} for none
+   */
+  public GoogleAppsCardV1TextParagraph setTextSyntax(java.lang.String textSyntax) {
+    this.textSyntax = textSyntax;
     return this;
   }
 

@@ -293,6 +293,14 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> systemReservedInternalIpv6Ranges;
 
   /**
+   * Output only. [Output Only] The current IP utilization of all subnetwork ranges. Contains the
+   * total number of allocated and free IPs in each range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SubnetworkUtilizationDetails utilizationDetails;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -937,6 +945,25 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setSystemReservedInternalIpv6Ranges(java.util.List<java.lang.String> systemReservedInternalIpv6Ranges) {
     this.systemReservedInternalIpv6Ranges = systemReservedInternalIpv6Ranges;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The current IP utilization of all subnetwork ranges. Contains the
+   * total number of allocated and free IPs in each range.
+   * @return value or {@code null} for none
+   */
+  public SubnetworkUtilizationDetails getUtilizationDetails() {
+    return utilizationDetails;
+  }
+
+  /**
+   * Output only. [Output Only] The current IP utilization of all subnetwork ranges. Contains the
+   * total number of allocated and free IPs in each range.
+   * @param utilizationDetails utilizationDetails or {@code null} for none
+   */
+  public Subnetwork setUtilizationDetails(SubnetworkUtilizationDetails utilizationDetails) {
+    this.utilizationDetails = utilizationDetails;
     return this;
   }
 

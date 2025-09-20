@@ -43,6 +43,13 @@ public final class RequestMirrorPolicy extends com.google.api.client.json.Generi
   private java.lang.String backendService;
 
   /**
+   * The percentage of requests to be mirrored to `backend_service`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double mirrorPercent;
+
+  /**
    * The full or partial URL to the BackendService resource being mirrored to. The backend service
    * configured for a mirroring policy must reference backends that are of the same type as the
    * original backend service matched in the URL map. Serverless NEG backends are not currently
@@ -62,6 +69,23 @@ public final class RequestMirrorPolicy extends com.google.api.client.json.Generi
    */
   public RequestMirrorPolicy setBackendService(java.lang.String backendService) {
     this.backendService = backendService;
+    return this;
+  }
+
+  /**
+   * The percentage of requests to be mirrored to `backend_service`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMirrorPercent() {
+    return mirrorPercent;
+  }
+
+  /**
+   * The percentage of requests to be mirrored to `backend_service`.
+   * @param mirrorPercent mirrorPercent or {@code null} for none
+   */
+  public RequestMirrorPolicy setMirrorPercent(java.lang.Double mirrorPercent) {
+    this.mirrorPercent = mirrorPercent;
     return this;
   }
 

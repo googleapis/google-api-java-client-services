@@ -2769,8 +2769,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the job to retrieve. Replace {namespace} with the project ID or number. It
-       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+       * @param name Required. The name of the job to retrieve. It takes the form namespaces/{namespace}/jobs/{job_name}
+       *        and the `endpoint` must be regional. Replace {namespace} with the project ID or number.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2796,8 +2796,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the job to retrieve. Replace {namespace} with the project ID or number. It
-       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * @param name Required. The name of the job to retrieve. It takes the form namespaces/{namespace}/jobs/{job_name}
+       *        and the `endpoint` must be regional. Replace {namespace} with the project ID or number.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2876,22 +2876,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. The name of the job to retrieve. Replace {namespace} with the project ID or
-         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * Required. The name of the job to retrieve. It takes the form
+         * namespaces/{namespace}/jobs/{job_name} and the `endpoint` must be regional. Replace
+         * {namespace} with the project ID or number.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the job to retrieve. Replace {namespace} with the project ID or number. It
-       takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+        /** Required. The name of the job to retrieve. It takes the form namespaces/{namespace}/jobs/{job_name}
+       and the `endpoint` must be regional. Replace {namespace} with the project ID or number.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name of the job to retrieve. Replace {namespace} with the project ID or
-         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * Required. The name of the job to retrieve. It takes the form
+         * namespaces/{namespace}/jobs/{job_name} and the `endpoint` must be regional. Replace
+         * {namespace} with the project ID or number.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

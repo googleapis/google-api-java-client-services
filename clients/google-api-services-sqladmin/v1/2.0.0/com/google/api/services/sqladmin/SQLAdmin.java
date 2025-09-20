@@ -6469,6 +6469,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Reset SSL mode to use. */
+      @com.google.api.client.util.Key
+      private java.lang.String mode;
+
+      /** Optional. Reset SSL mode to use.
+       */
+      public java.lang.String getMode() {
+        return mode;
+      }
+
+      /** Optional. Reset SSL mode to use. */
+      public ResetSslConfig setMode(java.lang.String mode) {
+        this.mode = mode;
+        return this;
+      }
+
       @Override
       public ResetSslConfig set(String parameterName, Object value) {
         return (ResetSslConfig) super.set(parameterName, value);

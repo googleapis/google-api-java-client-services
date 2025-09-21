@@ -25,7 +25,7 @@ package com.google.api.services.bigtableadmin.v2.model;
  * `Encode(X) <= Encode(Y)` if and only if `X <= Y`. This is useful anywhere sort order is
  * important, for example when encoding keys. - Distinct: In this mode, Bigtable guarantees that if
  * `X != Y` then `Encode(X) != Encode(Y)`. However, the converse is not guaranteed. For example,
- * both "{'foo': '1', 'bar': '2'}" and "{'bar': '2', 'foo': '1'}" are valid encodings of the same
+ * both `{'foo': '1', 'bar': '2'}` and `{'bar': '2', 'foo': '1'}` are valid encodings of the same
  * JSON value. The API clearly documents which mode is used wherever an encoding can be configured.
  * Each encoding also documents which values are supported in which modes. For example, when
  * encoding INT64 as a numeric STRING, negative numbers cannot be encoded in sorted mode. This is

@@ -21,8 +21,9 @@ package com.google.api.services.bigtableadmin.v2.model;
  * struct with no fields defined is encoded as a single `delimiter`. Sorted mode: - Fields are
  * encoded in sorted mode. - Encoded field values must not contain any bytes <= `delimiter[0]` -
  * Element-wise order is preserved: `A < B` if `A[0] < B[0]`, or if `A[0] == B[0] && A[1] < B[1]`,
- * etc. Strict prefixes sort first. Distinct mode: - Fields are encoded in distinct mode. - Encoded
- * field values must not contain `delimiter[0]`.
+ * etc. Strict prefixes sort first. - This encoding does not support `DESC` field ordering. Distinct
+ * mode: - Fields are encoded in distinct mode. - Encoded field values must not contain
+ * `delimiter[0]`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation

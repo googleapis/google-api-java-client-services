@@ -31,11 +31,19 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class UpdateTableMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, the time at which this operation finished or was canceled.
+   * If set, the time at which this operation finished or was canceled. DEPRECATED: Use finish_time
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
+
+  /**
+   * The time at which the operation failed or was completed successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String finishTime;
 
   /**
    * The name of the table being updated.
@@ -45,14 +53,22 @@ public final class UpdateTableMetadata extends com.google.api.client.json.Generi
   private java.lang.String name;
 
   /**
-   * The time at which this operation started.
+   * The time at which the original request was received.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String requestTime;
+
+  /**
+   * The time at which this operation started. DEPRECATED: Use request_time instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * If set, the time at which this operation finished or was canceled.
+   * If set, the time at which this operation finished or was canceled. DEPRECATED: Use finish_time
+   * instead.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -60,11 +76,29 @@ public final class UpdateTableMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * If set, the time at which this operation finished or was canceled.
+   * If set, the time at which this operation finished or was canceled. DEPRECATED: Use finish_time
+   * instead.
    * @param endTime endTime or {@code null} for none
    */
   public UpdateTableMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The time at which the operation failed or was completed successfully.
+   * @return value or {@code null} for none
+   */
+  public String getFinishTime() {
+    return finishTime;
+  }
+
+  /**
+   * The time at which the operation failed or was completed successfully.
+   * @param finishTime finishTime or {@code null} for none
+   */
+  public UpdateTableMetadata setFinishTime(String finishTime) {
+    this.finishTime = finishTime;
     return this;
   }
 
@@ -86,7 +120,24 @@ public final class UpdateTableMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * The time at which this operation started.
+   * The time at which the original request was received.
+   * @return value or {@code null} for none
+   */
+  public String getRequestTime() {
+    return requestTime;
+  }
+
+  /**
+   * The time at which the original request was received.
+   * @param requestTime requestTime or {@code null} for none
+   */
+  public UpdateTableMetadata setRequestTime(String requestTime) {
+    this.requestTime = requestTime;
+    return this;
+  }
+
+  /**
+   * The time at which this operation started. DEPRECATED: Use request_time instead.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -94,7 +145,7 @@ public final class UpdateTableMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * The time at which this operation started.
+   * The time at which this operation started. DEPRECATED: Use request_time instead.
    * @param startTime startTime or {@code null} for none
    */
   public UpdateTableMetadata setStartTime(String startTime) {

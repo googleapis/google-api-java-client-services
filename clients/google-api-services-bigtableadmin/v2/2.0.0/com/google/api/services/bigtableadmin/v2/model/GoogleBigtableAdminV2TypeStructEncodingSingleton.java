@@ -17,7 +17,8 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * Uses the encoding of `fields[0].type` as-is. Only valid if `fields.size == 1`.
+ * Uses the encoding of `fields[0].type` as-is. Only valid if `fields.size == 1`. This encoding does
+ * not support `DESC` field ordering.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation

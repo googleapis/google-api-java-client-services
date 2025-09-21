@@ -17,21 +17,27 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * Fields are encoded independently and concatenated with the fixed byte pair {0x00, 0x01} in
- * between. Any null (0x00) byte in an encoded field is replaced by the fixed byte pair {0x00,
- * 0xFF}. Fields that encode to the empty string "" have special handling: - If *every* field
- * encodes to "", or if the STRUCT has no fields defined, then the STRUCT is encoded as the fixed
- * byte pair {0x00, 0x00}. - Otherwise, the STRUCT only encodes until the last non-empty field,
- * omitting any trailing empty fields. Any empty fields that aren't omitted are replaced with the
- * fixed byte pair {0x00, 0x00}. Examples: - STRUCT() -> "\00\00" - STRUCT("") -> "\00\00" -
+ * Fields are encoded independently, then escaped and delimited by appling the following rules in
+ * order: - While the last remaining field is `ASC` or `UNSPECIFIED`, and encodes to the empty
+ * string "", remove it. - In each remaining field, replace all null bytes `0x00` with the fixed
+ * byte pair `{0x00, 0xFF}`. - If any remaining field encodes to the empty string "", replace it
+ * with the fixed byte pair `{0x00, 0x00}`. - Append the fixed byte pair `{0x00, 0x01}` to each
+ * remaining field, except for the last remaining field if it is `ASC`. - Bitwise negate all `DESC`
+ * fields. - Concatenate the results, or emit the fixed byte pair `{0x00, 0x00}` if there are no
+ * remaining fields to concatenate. Examples: ``` - STRUCT() -> "\00\00" - STRUCT("") -> "\00\00" -
  * STRUCT("", "") -> "\00\00" - STRUCT("", "B") -> "\00\00" + "\00\01" + "B" - STRUCT("A", "") ->
  * "A" - STRUCT("", "B", "") -> "\00\00" + "\00\01" + "B" - STRUCT("A", "", "C") -> "A" + "\00\01" +
- * "\00\00" + "\00\01" + "C" Since null bytes are always escaped, this encoding can cause size
- * blowup for encodings like `Int64.BigEndianBytes` that are likely to produce many such bytes.
- * Sorted mode: - Fields are encoded in sorted mode. - All values supported by the field encodings
- * are allowed - Element-wise order is preserved: `A < B` if `A[0] < B[0]`, or if `A[0] == B[0] &&
- * A[1] < B[1]`, etc. Strict prefixes sort first. Distinct mode: - Fields are encoded in distinct
- * mode. - All values supported by the field encodings are allowed.
+ * "\00\00" + "\00\01" + "C" ``` Examples for struct with `DESC` fields: ``` - STRUCT("" DESC) ->
+ * "\xFF\xFF" + "\xFF\xFE" - STRUCT("" DESC, "") -> "\xFF\xFF" + "\xFF\xFE" - STRUCT("" DESC, "",
+ * "") -> "\xFF\xFF" + "\xFF\xFE" - STRUCT("" DESC, "A") -> "\xFF\xFF" + "\xFF\xFE" + "A" -
+ * STRUCT("A", "" DESC, "") -> "A" + "\00\01" + "\xFF\xFF" + "\xFF\xFE" - STRUCT("", "A" DESC) ->
+ * "\x00\x00" + "\x00\x01" + "\xBE" + "\xFF\xFE" ``` Since null bytes are always escaped, this
+ * encoding can cause size blowup for encodings like `Int64.BigEndianBytes` that are likely to
+ * produce many such bytes. Sorted mode: - Fields are encoded in sorted mode. - All values supported
+ * by the field encodings are allowed. - Fields with unset or `UNSPECIFIED` order are treated as
+ * `ASC`. - Element-wise order is preserved: `A < B` if `A[0] < B[0]`, or if `A[0] == B[0] && A[1] <
+ * B[1]`, etc. Strict prefixes sort first. Distinct mode: - Fields are encoded in distinct mode. -
+ * All values supported by the field encodings are allowed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation

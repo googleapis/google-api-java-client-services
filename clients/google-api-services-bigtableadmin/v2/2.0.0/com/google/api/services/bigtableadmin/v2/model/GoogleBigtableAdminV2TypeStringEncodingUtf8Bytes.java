@@ -36,8 +36,8 @@ public final class GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes extends com.
    * Single-character escape sequence used to support NULL values. If set, allows NULL values to be
    * encoded as the empty string "". The actual empty string, or any value where every character
    * equals `null_escape_char`, has one more `null_escape_char` appended. If `null_escape_char` is
-   * set and does not equal the ASCII null character 0x00, then the encoding will not support sorted
-   * mode. .
+   * set and does not equal the ASCII null character `0x00`, then the encoding will not support
+   * sorted mode. .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes extends com.
    * Single-character escape sequence used to support NULL values. If set, allows NULL values to be
    * encoded as the empty string "". The actual empty string, or any value where every character
    * equals `null_escape_char`, has one more `null_escape_char` appended. If `null_escape_char` is
-   * set and does not equal the ASCII null character 0x00, then the encoding will not support sorted
-   * mode. .
+   * set and does not equal the ASCII null character `0x00`, then the encoding will not support
+   * sorted mode. .
    * @return value or {@code null} for none
    */
   public java.lang.String getNullEscapeChar() {
@@ -59,8 +59,8 @@ public final class GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes extends com.
    * Single-character escape sequence used to support NULL values. If set, allows NULL values to be
    * encoded as the empty string "". The actual empty string, or any value where every character
    * equals `null_escape_char`, has one more `null_escape_char` appended. If `null_escape_char` is
-   * set and does not equal the ASCII null character 0x00, then the encoding will not support sorted
-   * mode. .
+   * set and does not equal the ASCII null character `0x00`, then the encoding will not support
+   * sorted mode. .
    * @param nullEscapeChar nullEscapeChar or {@code null} for none
    */
   public GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes setNullEscapeChar(java.lang.String nullEscapeChar) {

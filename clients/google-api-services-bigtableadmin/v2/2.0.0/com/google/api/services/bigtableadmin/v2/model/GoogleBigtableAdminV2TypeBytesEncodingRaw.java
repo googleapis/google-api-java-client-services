@@ -33,7 +33,7 @@ public final class GoogleBigtableAdminV2TypeBytesEncodingRaw extends com.google.
 
   /**
    * If set, allows NULL values to be encoded as the empty string "". The actual empty string, or
-   * any value which only contains the null byte 0x00, has one more null byte appended.
+   * any value which only contains the null byte `0x00`, has one more null byte appended.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class GoogleBigtableAdminV2TypeBytesEncodingRaw extends com.google.
 
   /**
    * If set, allows NULL values to be encoded as the empty string "". The actual empty string, or
-   * any value which only contains the null byte 0x00, has one more null byte appended.
+   * any value which only contains the null byte `0x00`, has one more null byte appended.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEscapeNulls() {
@@ -50,7 +50,7 @@ public final class GoogleBigtableAdminV2TypeBytesEncodingRaw extends com.google.
 
   /**
    * If set, allows NULL values to be encoded as the empty string "". The actual empty string, or
-   * any value which only contains the null byte 0x00, has one more null byte appended.
+   * any value which only contains the null byte `0x00`, has one more null byte appended.
    * @param escapeNulls escapeNulls or {@code null} for none
    */
   public GoogleBigtableAdminV2TypeBytesEncodingRaw setEscapeNulls(java.lang.Boolean escapeNulls) {

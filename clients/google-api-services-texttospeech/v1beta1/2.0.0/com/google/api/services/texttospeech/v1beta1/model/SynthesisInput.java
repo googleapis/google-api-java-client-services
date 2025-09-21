@@ -57,8 +57,9 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   private MultiSpeakerMarkup multiSpeakerMarkup;
 
   /**
-   * This is system instruction supported only for controllable voice models. If used, we will pass
-   * text to Flash TTS as is. Can only used with Flash TTS. What AI Studio calls Style Instructions.
+   * This system instruction is supported only for controllable/promptable voice models. If this
+   * system instruction is used, we pass the unedited text to Gemini-TTS. Otherwise, a default
+   * system instruction is used. AI Studio calls this system instruction, Style Instructions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +141,9 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This is system instruction supported only for controllable voice models. If used, we will pass
-   * text to Flash TTS as is. Can only used with Flash TTS. What AI Studio calls Style Instructions.
+   * This system instruction is supported only for controllable/promptable voice models. If this
+   * system instruction is used, we pass the unedited text to Gemini-TTS. Otherwise, a default
+   * system instruction is used. AI Studio calls this system instruction, Style Instructions.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrompt() {
@@ -149,8 +151,9 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This is system instruction supported only for controllable voice models. If used, we will pass
-   * text to Flash TTS as is. Can only used with Flash TTS. What AI Studio calls Style Instructions.
+   * This system instruction is supported only for controllable/promptable voice models. If this
+   * system instruction is used, we pass the unedited text to Gemini-TTS. Otherwise, a default
+   * system instruction is used. AI Studio calls this system instruction, Style Instructions.
    * @param prompt prompt or {@code null} for none
    */
   public SynthesisInput setPrompt(java.lang.String prompt) {

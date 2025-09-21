@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.netapp.v1beta1.model;
+package com.google.api.services.netapp.v1.model;
 
 /**
  * RestoreBackupFilesRequest restores files from a backup to a volume.

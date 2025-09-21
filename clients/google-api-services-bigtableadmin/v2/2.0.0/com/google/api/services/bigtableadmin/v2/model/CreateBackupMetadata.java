@@ -31,11 +31,19 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class CreateBackupMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, the time at which this operation finished or was cancelled.
+   * If set, the time at which this operation finished or was cancelled. DEPRECATED: Use finish_time
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
+
+  /**
+   * The time at which the operation failed or was completed successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String finishTime;
 
   /**
    * The name of the backup being created.
@@ -45,6 +53,13 @@ public final class CreateBackupMetadata extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
+   * The time at which the original request was received.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String requestTime;
+
+  /**
    * The name of the table the backup is created from.
    * The value may be {@code null}.
    */
@@ -52,14 +67,15 @@ public final class CreateBackupMetadata extends com.google.api.client.json.Gener
   private java.lang.String sourceTable;
 
   /**
-   * The time at which this operation started.
+   * The time at which this operation started. DEPRECATED: Use request_time instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * If set, the time at which this operation finished or was cancelled.
+   * If set, the time at which this operation finished or was cancelled. DEPRECATED: Use finish_time
+   * instead.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -67,11 +83,29 @@ public final class CreateBackupMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * If set, the time at which this operation finished or was cancelled.
+   * If set, the time at which this operation finished or was cancelled. DEPRECATED: Use finish_time
+   * instead.
    * @param endTime endTime or {@code null} for none
    */
   public CreateBackupMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The time at which the operation failed or was completed successfully.
+   * @return value or {@code null} for none
+   */
+  public String getFinishTime() {
+    return finishTime;
+  }
+
+  /**
+   * The time at which the operation failed or was completed successfully.
+   * @param finishTime finishTime or {@code null} for none
+   */
+  public CreateBackupMetadata setFinishTime(String finishTime) {
+    this.finishTime = finishTime;
     return this;
   }
 
@@ -93,6 +127,23 @@ public final class CreateBackupMetadata extends com.google.api.client.json.Gener
   }
 
   /**
+   * The time at which the original request was received.
+   * @return value or {@code null} for none
+   */
+  public String getRequestTime() {
+    return requestTime;
+  }
+
+  /**
+   * The time at which the original request was received.
+   * @param requestTime requestTime or {@code null} for none
+   */
+  public CreateBackupMetadata setRequestTime(String requestTime) {
+    this.requestTime = requestTime;
+    return this;
+  }
+
+  /**
    * The name of the table the backup is created from.
    * @return value or {@code null} for none
    */
@@ -110,7 +161,7 @@ public final class CreateBackupMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * The time at which this operation started.
+   * The time at which this operation started. DEPRECATED: Use request_time instead.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -118,7 +169,7 @@ public final class CreateBackupMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * The time at which this operation started.
+   * The time at which this operation started. DEPRECATED: Use request_time instead.
    * @param startTime startTime or {@code null} for none
    */
   public CreateBackupMetadata setStartTime(String startTime) {

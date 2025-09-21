@@ -31,11 +31,11 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class CreateSchemaBundleMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, the time at which this operation finished or was canceled.
+   * The time at which the operation failed or was completed successfully.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String endTime;
+  private String finishTime;
 
   /**
    * The unique name identifying this schema bundle. Values are of the form
@@ -46,26 +46,26 @@ public final class CreateSchemaBundleMetadata extends com.google.api.client.json
   private java.lang.String name;
 
   /**
-   * The time at which this operation started.
+   * The time at which the original request was received.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String startTime;
+  private String requestTime;
 
   /**
-   * If set, the time at which this operation finished or was canceled.
+   * The time at which the operation failed or was completed successfully.
    * @return value or {@code null} for none
    */
-  public String getEndTime() {
-    return endTime;
+  public String getFinishTime() {
+    return finishTime;
   }
 
   /**
-   * If set, the time at which this operation finished or was canceled.
-   * @param endTime endTime or {@code null} for none
+   * The time at which the operation failed or was completed successfully.
+   * @param finishTime finishTime or {@code null} for none
    */
-  public CreateSchemaBundleMetadata setEndTime(String endTime) {
-    this.endTime = endTime;
+  public CreateSchemaBundleMetadata setFinishTime(String finishTime) {
+    this.finishTime = finishTime;
     return this;
   }
 
@@ -89,19 +89,19 @@ public final class CreateSchemaBundleMetadata extends com.google.api.client.json
   }
 
   /**
-   * The time at which this operation started.
+   * The time at which the original request was received.
    * @return value or {@code null} for none
    */
-  public String getStartTime() {
-    return startTime;
+  public String getRequestTime() {
+    return requestTime;
   }
 
   /**
-   * The time at which this operation started.
-   * @param startTime startTime or {@code null} for none
+   * The time at which the original request was received.
+   * @param requestTime requestTime or {@code null} for none
    */
-  public CreateSchemaBundleMetadata setStartTime(String startTime) {
-    this.startTime = startTime;
+  public CreateSchemaBundleMetadata setRequestTime(String requestTime) {
+    this.requestTime = requestTime;
     return this;
   }
 

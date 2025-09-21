@@ -31,11 +31,18 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class CreateLogicalViewMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, the time at which this operation finished or was canceled.
+   * DEPRECATED: Use finish_time instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
+
+  /**
+   * The time at which the operation failed or was completed successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String finishTime;
 
   /**
    * The request that prompted the initiation of this CreateLogicalView operation.
@@ -45,14 +52,21 @@ public final class CreateLogicalViewMetadata extends com.google.api.client.json.
   private CreateLogicalViewRequest originalRequest;
 
   /**
-   * The time at which this operation started.
+   * The time at which the original request was received.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String requestTime;
+
+  /**
+   * DEPRECATED: Use request_time instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * If set, the time at which this operation finished or was canceled.
+   * DEPRECATED: Use finish_time instead.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -60,11 +74,28 @@ public final class CreateLogicalViewMetadata extends com.google.api.client.json.
   }
 
   /**
-   * If set, the time at which this operation finished or was canceled.
+   * DEPRECATED: Use finish_time instead.
    * @param endTime endTime or {@code null} for none
    */
   public CreateLogicalViewMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The time at which the operation failed or was completed successfully.
+   * @return value or {@code null} for none
+   */
+  public String getFinishTime() {
+    return finishTime;
+  }
+
+  /**
+   * The time at which the operation failed or was completed successfully.
+   * @param finishTime finishTime or {@code null} for none
+   */
+  public CreateLogicalViewMetadata setFinishTime(String finishTime) {
+    this.finishTime = finishTime;
     return this;
   }
 
@@ -86,7 +117,24 @@ public final class CreateLogicalViewMetadata extends com.google.api.client.json.
   }
 
   /**
-   * The time at which this operation started.
+   * The time at which the original request was received.
+   * @return value or {@code null} for none
+   */
+  public String getRequestTime() {
+    return requestTime;
+  }
+
+  /**
+   * The time at which the original request was received.
+   * @param requestTime requestTime or {@code null} for none
+   */
+  public CreateLogicalViewMetadata setRequestTime(String requestTime) {
+    this.requestTime = requestTime;
+    return this;
+  }
+
+  /**
+   * DEPRECATED: Use request_time instead.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -94,7 +142,7 @@ public final class CreateLogicalViewMetadata extends com.google.api.client.json.
   }
 
   /**
-   * The time at which this operation started.
+   * DEPRECATED: Use request_time instead.
    * @param startTime startTime or {@code null} for none
    */
   public CreateLogicalViewMetadata setStartTime(String startTime) {

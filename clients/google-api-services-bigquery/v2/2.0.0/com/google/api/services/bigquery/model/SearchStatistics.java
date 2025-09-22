@@ -30,6 +30,21 @@ package com.google.api.services.bigquery.model;
 public final class SearchStatistics extends com.google.api.client.json.GenericJson {
 
   /**
+   * Search index pruning statistics, one for each base table that has a search index. If a base
+   * table does not have a search index or the index does not help with pruning on the base table,
+   * then there is no pruning statistics for that table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<IndexPruningStats> indexPruningStats;
+
+  static {
+    // hack to force ProGuard to consider IndexPruningStats used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(IndexPruningStats.class);
+  }
+
+  /**
    * When `indexUsageMode` is `UNUSED` or `PARTIALLY_USED`, this field explains why indexes were not
    * used in all or part of the search query. If `indexUsageMode` is `FULLY_USED`, this field is not
    * populated.
@@ -50,6 +65,27 @@ public final class SearchStatistics extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String indexUsageMode;
+
+  /**
+   * Search index pruning statistics, one for each base table that has a search index. If a base
+   * table does not have a search index or the index does not help with pruning on the base table,
+   * then there is no pruning statistics for that table.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<IndexPruningStats> getIndexPruningStats() {
+    return indexPruningStats;
+  }
+
+  /**
+   * Search index pruning statistics, one for each base table that has a search index. If a base
+   * table does not have a search index or the index does not help with pruning on the base table,
+   * then there is no pruning statistics for that table.
+   * @param indexPruningStats indexPruningStats or {@code null} for none
+   */
+  public SearchStatistics setIndexPruningStats(java.util.List<IndexPruningStats> indexPruningStats) {
+    this.indexPruningStats = indexPruningStats;
+    return this;
+  }
 
   /**
    * When `indexUsageMode` is `UNUSED` or `PARTIALLY_USED`, this field explains why indexes were not

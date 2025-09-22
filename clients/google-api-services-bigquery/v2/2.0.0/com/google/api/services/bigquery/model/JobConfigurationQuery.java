@@ -196,12 +196,12 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
 
   /**
    * Allows the schema of the destination table to be updated as a side effect of the query job.
-   * Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when
-   * writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table,
-   * specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the
-   * schema. One or more of the following values are specified: * ALLOW_FIELD_ADDITION: allow adding
-   * a nullable field to the schema. * ALLOW_FIELD_RELAXATION: allow relaxing a required field in
-   * the original schema to nullable.
+   * Schema update options are supported in three cases: when writeDisposition is WRITE_APPEND; when
+   * writeDisposition is WRITE_TRUNCATE_DATA; when writeDisposition is WRITE_TRUNCATE and the
+   * destination table is a partition of a table, specified by partition decorators. For normal
+   * tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values
+   * are specified: * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema. *
+   * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -732,12 +732,12 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
 
   /**
    * Allows the schema of the destination table to be updated as a side effect of the query job.
-   * Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when
-   * writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table,
-   * specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the
-   * schema. One or more of the following values are specified: * ALLOW_FIELD_ADDITION: allow adding
-   * a nullable field to the schema. * ALLOW_FIELD_RELAXATION: allow relaxing a required field in
-   * the original schema to nullable.
+   * Schema update options are supported in three cases: when writeDisposition is WRITE_APPEND; when
+   * writeDisposition is WRITE_TRUNCATE_DATA; when writeDisposition is WRITE_TRUNCATE and the
+   * destination table is a partition of a table, specified by partition decorators. For normal
+   * tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values
+   * are specified: * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema. *
+   * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSchemaUpdateOptions() {
@@ -746,12 +746,12 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
 
   /**
    * Allows the schema of the destination table to be updated as a side effect of the query job.
-   * Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when
-   * writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table,
-   * specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the
-   * schema. One or more of the following values are specified: * ALLOW_FIELD_ADDITION: allow adding
-   * a nullable field to the schema. * ALLOW_FIELD_RELAXATION: allow relaxing a required field in
-   * the original schema to nullable.
+   * Schema update options are supported in three cases: when writeDisposition is WRITE_APPEND; when
+   * writeDisposition is WRITE_TRUNCATE_DATA; when writeDisposition is WRITE_TRUNCATE and the
+   * destination table is a partition of a table, specified by partition decorators. For normal
+   * tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values
+   * are specified: * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema. *
+   * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
    * @param schemaUpdateOptions schemaUpdateOptions or {@code null} for none
    */
   public JobConfigurationQuery setSchemaUpdateOptions(java.util.List<java.lang.String> schemaUpdateOptions) {

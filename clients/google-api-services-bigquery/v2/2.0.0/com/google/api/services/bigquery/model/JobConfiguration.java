@@ -53,10 +53,10 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   private JobConfigurationExtract extract;
 
   /**
-   * Optional. Job timeout in milliseconds. If this time limit is exceeded, BigQuery will attempt to
-   * stop a longer job, but may not always succeed in canceling it before the job completes. For
-   * example, a job that takes more than 60 seconds to complete has a better chance of being stopped
-   * than a job that takes 10 seconds to complete.
+   * Optional. Job timeout in milliseconds relative to the job creation time. If this time limit is
+   * exceeded, BigQuery attempts to stop the job, but might not always succeed in canceling it
+   * before the job completes. For example, a job that takes more than 60 seconds to complete has a
+   * better chance of being stopped than a job that takes 10 seconds to complete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -169,10 +169,10 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Job timeout in milliseconds. If this time limit is exceeded, BigQuery will attempt to
-   * stop a longer job, but may not always succeed in canceling it before the job completes. For
-   * example, a job that takes more than 60 seconds to complete has a better chance of being stopped
-   * than a job that takes 10 seconds to complete.
+   * Optional. Job timeout in milliseconds relative to the job creation time. If this time limit is
+   * exceeded, BigQuery attempts to stop the job, but might not always succeed in canceling it
+   * before the job completes. For example, a job that takes more than 60 seconds to complete has a
+   * better chance of being stopped than a job that takes 10 seconds to complete.
    * @return value or {@code null} for none
    */
   public java.lang.Long getJobTimeoutMs() {
@@ -180,10 +180,10 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Job timeout in milliseconds. If this time limit is exceeded, BigQuery will attempt to
-   * stop a longer job, but may not always succeed in canceling it before the job completes. For
-   * example, a job that takes more than 60 seconds to complete has a better chance of being stopped
-   * than a job that takes 10 seconds to complete.
+   * Optional. Job timeout in milliseconds relative to the job creation time. If this time limit is
+   * exceeded, BigQuery attempts to stop the job, but might not always succeed in canceling it
+   * before the job completes. For example, a job that takes more than 60 seconds to complete has a
+   * better chance of being stopped than a job that takes 10 seconds to complete.
    * @param jobTimeoutMs jobTimeoutMs or {@code null} for none
    */
   public JobConfiguration setJobTimeoutMs(java.lang.Long jobTimeoutMs) {

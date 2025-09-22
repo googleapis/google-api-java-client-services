@@ -445,6 +445,29 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).

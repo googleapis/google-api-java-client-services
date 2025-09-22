@@ -38,6 +38,13 @@ public final class TableMetadataCacheUsage extends com.google.api.client.json.Ge
   private java.lang.String explanation;
 
   /**
+   * The column metadata index pruning statistics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PruningStats pruningStats;
+
+  /**
    * Duration since last refresh as of this job for managed tables (indicates metadata cache
    * staleness as seen by this job).
    * The value may be {@code null}.
@@ -81,6 +88,23 @@ public final class TableMetadataCacheUsage extends com.google.api.client.json.Ge
    */
   public TableMetadataCacheUsage setExplanation(java.lang.String explanation) {
     this.explanation = explanation;
+    return this;
+  }
+
+  /**
+   * The column metadata index pruning statistics.
+   * @return value or {@code null} for none
+   */
+  public PruningStats getPruningStats() {
+    return pruningStats;
+  }
+
+  /**
+   * The column metadata index pruning statistics.
+   * @param pruningStats pruningStats or {@code null} for none
+   */
+  public TableMetadataCacheUsage setPruningStats(PruningStats pruningStats) {
+    this.pruningStats = pruningStats;
     return this;
   }
 

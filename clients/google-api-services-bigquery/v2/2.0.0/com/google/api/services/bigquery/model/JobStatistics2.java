@@ -165,6 +165,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. Statistics related to incremental query results, if enabled for the query. This
+   * feature is not yet available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IncrementalResultStats incrementalResultStats;
+
+  /**
    * Output only. Statistics for a LOAD query.
    * The value may be {@code null}.
    */
@@ -429,9 +437,9 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long totalPartitionsProcessed;
 
   /**
-   * Output only. Total slot-milliseconds for the job that run on external services and billed on
-   * the service SKU. This field is only populated for jobs that have external service costs, and is
-   * the total of the usage for costs whose billing method is "SERVICES_SKU".
+   * Output only. Total slot milliseconds for the job that ran on external services and billed on
+   * the services SKU. This field is only populated for jobs that have external service costs, and
+   * is the total of the usage for costs whose billing method is `"SERVICES_SKU"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -773,6 +781,25 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setExternalServiceCosts(java.util.List<ExternalServiceCost> externalServiceCosts) {
     this.externalServiceCosts = externalServiceCosts;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics related to incremental query results, if enabled for the query. This
+   * feature is not yet available.
+   * @return value or {@code null} for none
+   */
+  public IncrementalResultStats getIncrementalResultStats() {
+    return incrementalResultStats;
+  }
+
+  /**
+   * Output only. Statistics related to incremental query results, if enabled for the query. This
+   * feature is not yet available.
+   * @param incrementalResultStats incrementalResultStats or {@code null} for none
+   */
+  public JobStatistics2 setIncrementalResultStats(IncrementalResultStats incrementalResultStats) {
+    this.incrementalResultStats = incrementalResultStats;
     return this;
   }
 
@@ -1350,9 +1377,9 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Total slot-milliseconds for the job that run on external services and billed on
-   * the service SKU. This field is only populated for jobs that have external service costs, and is
-   * the total of the usage for costs whose billing method is "SERVICES_SKU".
+   * Output only. Total slot milliseconds for the job that ran on external services and billed on
+   * the services SKU. This field is only populated for jobs that have external service costs, and
+   * is the total of the usage for costs whose billing method is `"SERVICES_SKU"`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalServicesSkuSlotMs() {
@@ -1360,9 +1387,9 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Total slot-milliseconds for the job that run on external services and billed on
-   * the service SKU. This field is only populated for jobs that have external service costs, and is
-   * the total of the usage for costs whose billing method is "SERVICES_SKU".
+   * Output only. Total slot milliseconds for the job that ran on external services and billed on
+   * the services SKU. This field is only populated for jobs that have external service costs, and
+   * is the total of the usage for costs whose billing method is `"SERVICES_SKU"`.
    * @param totalServicesSkuSlotMs totalServicesSkuSlotMs or {@code null} for none
    */
   public JobStatistics2 setTotalServicesSkuSlotMs(java.lang.Long totalServicesSkuSlotMs) {

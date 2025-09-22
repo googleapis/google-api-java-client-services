@@ -247,6 +247,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean enableGlobalExplain;
 
   /**
+   * The idle TTL of the endpoint before the resources get destroyed. The default value is 6.5
+   * hours.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endpointIdleTtl;
+
+  /**
    * Feedback type that specifies which algorithm to run for matrix factorization.
    * The value may be {@code null}.
    */
@@ -310,6 +318,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> hparamTuningObjectives;
+
+  /**
+   * The id of a Hugging Face model. For example, `google/gemma-2-2b-it`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String huggingFaceModelId;
 
   /**
    * Include drift when fitting an ARIMA model.
@@ -427,6 +442,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String lossType;
 
   /**
+   * The type of the machine used to deploy and serve the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String machineType;
+
+  /**
    * The maximum number of iterations in training. Used only for iterative training algorithms.
    * The value may be {@code null}.
    */
@@ -439,6 +461,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxParallelTrials;
+
+  /**
+   * The maximum number of machine replicas that will be deployed on an endpoint. The default value
+   * is equal to min_replica_count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxReplicaCount;
 
   /**
    * The maximum number of time points in a time series that can be used in modeling the trend
@@ -472,6 +502,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Double minRelativeProgress;
 
   /**
+   * The minimum number of machine replicas that will be always deployed on an endpoint. This value
+   * must be greater than or equal to 1. The default value is 1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minReplicaCount;
+
+  /**
    * Minimum split loss for boosted tree models.
    * The value may be {@code null}.
    */
@@ -497,6 +535,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minTreeChildWeight;
+
+  /**
+   * The name of a Vertex model garden publisher model. Format is
+   * `publishers/{publisher}/models/{model}@{optional_version_id}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelGardenModelName;
 
   /**
    * The model registry.
@@ -583,6 +629,31 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String pcaSolver;
+
+  /**
+   * Corresponds to the label key of a reservation resource used by Vertex AI. To target a
+   * SPECIFIC_RESERVATION by name, use `compute.googleapis.com/reservation-name` as the key and
+   * specify the name of your reservation as its value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationAffinityKey;
+
+  /**
+   * Specifies the reservation affinity type used to configure a Vertex AI resource. The default
+   * value is `NO_RESERVATION`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationAffinityType;
+
+  /**
+   * Corresponds to the label values of a reservation resource used by Vertex AI. This must be the
+   * full resource name of the reservation or reservation block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> reservationAffinityValues;
 
   /**
    * Number of paths for the sampled Shapley explain method.
@@ -1236,6 +1307,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The idle TTL of the endpoint before the resources get destroyed. The default value is 6.5
+   * hours.
+   * @return value or {@code null} for none
+   */
+  public String getEndpointIdleTtl() {
+    return endpointIdleTtl;
+  }
+
+  /**
+   * The idle TTL of the endpoint before the resources get destroyed. The default value is 6.5
+   * hours.
+   * @param endpointIdleTtl endpointIdleTtl or {@code null} for none
+   */
+  public TrainingOptions setEndpointIdleTtl(String endpointIdleTtl) {
+    this.endpointIdleTtl = endpointIdleTtl;
+    return this;
+  }
+
+  /**
    * Feedback type that specifies which algorithm to run for matrix factorization.
    * @return value or {@code null} for none
    */
@@ -1389,6 +1479,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setHparamTuningObjectives(java.util.List<java.lang.String> hparamTuningObjectives) {
     this.hparamTuningObjectives = hparamTuningObjectives;
+    return this;
+  }
+
+  /**
+   * The id of a Hugging Face model. For example, `google/gemma-2-2b-it`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHuggingFaceModelId() {
+    return huggingFaceModelId;
+  }
+
+  /**
+   * The id of a Hugging Face model. For example, `google/gemma-2-2b-it`.
+   * @param huggingFaceModelId huggingFaceModelId or {@code null} for none
+   */
+  public TrainingOptions setHuggingFaceModelId(java.lang.String huggingFaceModelId) {
+    this.huggingFaceModelId = huggingFaceModelId;
     return this;
   }
 
@@ -1671,6 +1778,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The type of the machine used to deploy and serve the model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMachineType() {
+    return machineType;
+  }
+
+  /**
+   * The type of the machine used to deploy and serve the model.
+   * @param machineType machineType or {@code null} for none
+   */
+  public TrainingOptions setMachineType(java.lang.String machineType) {
+    this.machineType = machineType;
+    return this;
+  }
+
+  /**
    * The maximum number of iterations in training. Used only for iterative training algorithms.
    * @return value or {@code null} for none
    */
@@ -1701,6 +1825,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setMaxParallelTrials(java.lang.Long maxParallelTrials) {
     this.maxParallelTrials = maxParallelTrials;
+    return this;
+  }
+
+  /**
+   * The maximum number of machine replicas that will be deployed on an endpoint. The default value
+   * is equal to min_replica_count.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxReplicaCount() {
+    return maxReplicaCount;
+  }
+
+  /**
+   * The maximum number of machine replicas that will be deployed on an endpoint. The default value
+   * is equal to min_replica_count.
+   * @param maxReplicaCount maxReplicaCount or {@code null} for none
+   */
+  public TrainingOptions setMaxReplicaCount(java.lang.Long maxReplicaCount) {
+    this.maxReplicaCount = maxReplicaCount;
     return this;
   }
 
@@ -1779,6 +1922,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The minimum number of machine replicas that will be always deployed on an endpoint. This value
+   * must be greater than or equal to 1. The default value is 1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinReplicaCount() {
+    return minReplicaCount;
+  }
+
+  /**
+   * The minimum number of machine replicas that will be always deployed on an endpoint. This value
+   * must be greater than or equal to 1. The default value is 1.
+   * @param minReplicaCount minReplicaCount or {@code null} for none
+   */
+  public TrainingOptions setMinReplicaCount(java.lang.Long minReplicaCount) {
+    this.minReplicaCount = minReplicaCount;
+    return this;
+  }
+
+  /**
    * Minimum split loss for boosted tree models.
    * @return value or {@code null} for none
    */
@@ -1838,6 +2000,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setMinTreeChildWeight(java.lang.Long minTreeChildWeight) {
     this.minTreeChildWeight = minTreeChildWeight;
+    return this;
+  }
+
+  /**
+   * The name of a Vertex model garden publisher model. Format is
+   * `publishers/{publisher}/models/{model}@{optional_version_id}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelGardenModelName() {
+    return modelGardenModelName;
+  }
+
+  /**
+   * The name of a Vertex model garden publisher model. Format is
+   * `publishers/{publisher}/models/{model}@{optional_version_id}`.
+   * @param modelGardenModelName modelGardenModelName or {@code null} for none
+   */
+  public TrainingOptions setModelGardenModelName(java.lang.String modelGardenModelName) {
+    this.modelGardenModelName = modelGardenModelName;
     return this;
   }
 
@@ -2046,6 +2227,65 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setPcaSolver(java.lang.String pcaSolver) {
     this.pcaSolver = pcaSolver;
+    return this;
+  }
+
+  /**
+   * Corresponds to the label key of a reservation resource used by Vertex AI. To target a
+   * SPECIFIC_RESERVATION by name, use `compute.googleapis.com/reservation-name` as the key and
+   * specify the name of your reservation as its value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationAffinityKey() {
+    return reservationAffinityKey;
+  }
+
+  /**
+   * Corresponds to the label key of a reservation resource used by Vertex AI. To target a
+   * SPECIFIC_RESERVATION by name, use `compute.googleapis.com/reservation-name` as the key and
+   * specify the name of your reservation as its value.
+   * @param reservationAffinityKey reservationAffinityKey or {@code null} for none
+   */
+  public TrainingOptions setReservationAffinityKey(java.lang.String reservationAffinityKey) {
+    this.reservationAffinityKey = reservationAffinityKey;
+    return this;
+  }
+
+  /**
+   * Specifies the reservation affinity type used to configure a Vertex AI resource. The default
+   * value is `NO_RESERVATION`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationAffinityType() {
+    return reservationAffinityType;
+  }
+
+  /**
+   * Specifies the reservation affinity type used to configure a Vertex AI resource. The default
+   * value is `NO_RESERVATION`.
+   * @param reservationAffinityType reservationAffinityType or {@code null} for none
+   */
+  public TrainingOptions setReservationAffinityType(java.lang.String reservationAffinityType) {
+    this.reservationAffinityType = reservationAffinityType;
+    return this;
+  }
+
+  /**
+   * Corresponds to the label values of a reservation resource used by Vertex AI. This must be the
+   * full resource name of the reservation or reservation block.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReservationAffinityValues() {
+    return reservationAffinityValues;
+  }
+
+  /**
+   * Corresponds to the label values of a reservation resource used by Vertex AI. This must be the
+   * full resource name of the reservation or reservation block.
+   * @param reservationAffinityValues reservationAffinityValues or {@code null} for none
+   */
+  public TrainingOptions setReservationAffinityValues(java.util.List<java.lang.String> reservationAffinityValues) {
+    this.reservationAffinityValues = reservationAffinityValues;
     return this;
   }
 

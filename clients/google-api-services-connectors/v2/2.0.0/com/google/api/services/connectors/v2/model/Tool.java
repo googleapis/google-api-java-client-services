@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v2.model;
 public final class Tool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Annotations for the tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolAnnotations annotations;
+
+  /**
    * List of tool names that this tool depends on.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private JsonSchema outputSchema;
+
+  /**
+   * Annotations for the tool.
+   * @return value or {@code null} for none
+   */
+  public ToolAnnotations getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Annotations for the tool.
+   * @param annotations annotations or {@code null} for none
+   */
+  public Tool setAnnotations(ToolAnnotations annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * List of tool names that this tool depends on.

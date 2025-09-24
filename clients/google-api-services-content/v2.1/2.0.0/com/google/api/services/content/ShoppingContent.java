@@ -20,7 +20,7 @@ package com.google.api.services.content;
  * Service definition for ShoppingContent (v2.1).
  *
  * <p>
- * Manage your product listings and accounts for Google Shopping
+ * This API is deprecated. Please use Merchant API instead: https://developers.google.com/merchant/api. 
  * </p>
  *
  * <p>

@@ -90,6 +90,14 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.String businessStatus;
 
   /**
+   * The consumer alert message for the place when we detect suspicious review activity on a
+   * business or a business violates our policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceConsumerAlert consumerAlert;
+
+  /**
    * List of places in which the current place is located.
    * The value may be {@code null}.
    */
@@ -733,6 +741,25 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setBusinessStatus(java.lang.String businessStatus) {
     this.businessStatus = businessStatus;
+    return this;
+  }
+
+  /**
+   * The consumer alert message for the place when we detect suspicious review activity on a
+   * business or a business violates our policies.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceConsumerAlert getConsumerAlert() {
+    return consumerAlert;
+  }
+
+  /**
+   * The consumer alert message for the place when we detect suspicious review activity on a
+   * business or a business violates our policies.
+   * @param consumerAlert consumerAlert or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setConsumerAlert(GoogleMapsPlacesV1PlaceConsumerAlert consumerAlert) {
+    this.consumerAlert = consumerAlert;
     return this;
   }
 

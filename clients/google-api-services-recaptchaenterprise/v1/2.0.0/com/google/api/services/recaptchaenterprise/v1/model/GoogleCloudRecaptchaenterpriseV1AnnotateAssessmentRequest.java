@@ -58,6 +58,14 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   private java.lang.String hashedAccountId;
 
   /**
+   * Optional. If using an external multi-factor authentication provider, provide phone
+   * authentication details for fraud detection purposes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1PhoneAuthenticationEvent phoneAuthenticationEvent;
+
+  /**
    * Optional. Reasons for the annotation that are assigned to the event.
    * The value may be {@code null}.
    */
@@ -164,6 +172,25 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
    */
   public GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest encodeHashedAccountId(byte[] hashedAccountId) {
     this.hashedAccountId = com.google.api.client.util.Base64.encodeBase64URLSafeString(hashedAccountId);
+    return this;
+  }
+
+  /**
+   * Optional. If using an external multi-factor authentication provider, provide phone
+   * authentication details for fraud detection purposes.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1PhoneAuthenticationEvent getPhoneAuthenticationEvent() {
+    return phoneAuthenticationEvent;
+  }
+
+  /**
+   * Optional. If using an external multi-factor authentication provider, provide phone
+   * authentication details for fraud detection purposes.
+   * @param phoneAuthenticationEvent phoneAuthenticationEvent or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest setPhoneAuthenticationEvent(GoogleCloudRecaptchaenterpriseV1PhoneAuthenticationEvent phoneAuthenticationEvent) {
+    this.phoneAuthenticationEvent = phoneAuthenticationEvent;
     return this;
   }
 

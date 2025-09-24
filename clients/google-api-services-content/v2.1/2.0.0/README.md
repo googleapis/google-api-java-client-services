@@ -1,6 +1,6 @@
 # Content API for Shopping Client Library for Java
 
-Manage your product listings and accounts for Google Shopping
+This API is deprecated. Please use Merchant API instead: https://developers.google.com/merchant/api. 
 
 This page contains information about getting started with the Content API for Shopping
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-content</artifactId>
-      <version>v2.1-rev20250723-2.0.0</version>
+      <version>v2.1-rev20250921-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-content:v2.1-rev20250723-2.0.0'
+  implementation 'com.google.apis:google-api-services-content:v2.1-rev20250921-2.0.0'
 }
 ```
 

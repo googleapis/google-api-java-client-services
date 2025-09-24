@@ -101,6 +101,19 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> subsets;
 
   /**
+   * The tags that apply to this family.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Tag> tags;
+
+  static {
+    // hack to force ProGuard to consider Tag used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Tag.class);
+  }
+
+  /**
    * The available variants for the font.
    * The value may be {@code null}.
    */
@@ -266,6 +279,23 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
    */
   public Webfont setSubsets(java.util.List<java.lang.String> subsets) {
     this.subsets = subsets;
+    return this;
+  }
+
+  /**
+   * The tags that apply to this family.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Tag> getTags() {
+    return tags;
+  }
+
+  /**
+   * The tags that apply to this family.
+   * @param tags tags or {@code null} for none
+   */
+  public Webfont setTags(java.util.List<Tag> tags) {
+    this.tags = tags;
     return this;
   }
 

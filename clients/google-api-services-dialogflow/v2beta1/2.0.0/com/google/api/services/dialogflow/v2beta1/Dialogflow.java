@@ -21578,22 +21578,22 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -38486,6 +38486,636 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
 
+        /**
+         * An accessor for creating requests from the Evaluations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+         *   {@code Dialogflow.Evaluations.List request = dialogflow.evaluations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Evaluations evaluations() {
+          return new Evaluations();
+        }
+
+        /**
+         * The "evaluations" collection of methods.
+         */
+        public class Evaluations {
+
+          /**
+           * Creates evaluation of a generator.
+           *
+           * Create a request for the method "evaluations.create".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The generator resource name. Format: `projects//locations//generators/`
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1GeneratorEvaluation}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1GeneratorEvaluation content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2beta1/{+parent}/evaluations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/generators/[^/]+$");
+
+            /**
+             * Creates evaluation of a generator.
+             *
+             * Create a request for the method "evaluations.create".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The generator resource name. Format: `projects//locations//generators/`
+             * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1GeneratorEvaluation}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1GeneratorEvaluation content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/generators/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The generator resource name. Format: `projects//locations//generators/`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The generator resource name. Format: `projects//locations//generators/`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The generator resource name. Format: `projects//locations//generators/`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/generators/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an evaluation of generator.
+           *
+           * Create a request for the method "evaluations.delete".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The generator evaluation resource name. Format: `projects//locations//generators//
+           *        evaluations/`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v2beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/generators/[^/]+/evaluations/[^/]+$");
+
+            /**
+             * Deletes an evaluation of generator.
+             *
+             * Create a request for the method "evaluations.delete".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The generator evaluation resource name. Format: `projects//locations//generators//
+           *        evaluations/`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/generators/[^/]+/evaluations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The generator evaluation resource name. Format:
+             * `projects//locations//generators// evaluations/`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The generator evaluation resource name. Format: `projects//locations//generators//
+           evaluations/`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The generator evaluation resource name. Format:
+             * `projects//locations//generators// evaluations/`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/generators/[^/]+/evaluations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets an evaluation of generator.
+           *
+           * Create a request for the method "evaluations.get".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The generator evaluation resource name. Format:
+           *        `projects//locations//generators//evaluations/`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1GeneratorEvaluation> {
+
+            private static final String REST_PATH = "v2beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/generators/[^/]+/evaluations/[^/]+$");
+
+            /**
+             * Gets an evaluation of generator.
+             *
+             * Create a request for the method "evaluations.get".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The generator evaluation resource name. Format:
+           *        `projects//locations//generators//evaluations/`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1GeneratorEvaluation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/generators/[^/]+/evaluations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The generator evaluation resource name. Format:
+             * `projects//locations//generators//evaluations/`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The generator evaluation resource name. Format:
+           `projects//locations//generators//evaluations/`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The generator evaluation resource name. Format:
+             * `projects//locations//generators//evaluations/`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/generators/[^/]+/evaluations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists evaluations of generator.
+           *
+           * Create a request for the method "evaluations.list".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The generator resource name. Format: `projects//locations//generators/` Wildcard value `-`
+           *        is supported on generator_id to list evaluations across all generators under same project.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListGeneratorEvaluationsResponse> {
+
+            private static final String REST_PATH = "v2beta1/{+parent}/evaluations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/generators/[^/]+$");
+
+            /**
+             * Lists evaluations of generator.
+             *
+             * Create a request for the method "evaluations.list".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The generator resource name. Format: `projects//locations//generators/` Wildcard value `-`
+           *        is supported on generator_id to list evaluations across all generators under same project.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListGeneratorEvaluationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/generators/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The generator resource name. Format: `projects//locations//generators/`
+             * Wildcard value `-` is supported on generator_id to list evaluations across all
+             * generators under same project.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The generator resource name. Format: `projects//locations//generators/` Wildcard value
+           `-` is supported on generator_id to list evaluations across all generators under same project.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The generator resource name. Format: `projects//locations//generators/`
+             * Wildcard value `-` is supported on generator_id to list evaluations across all
+             * generators under same project.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/generators/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of evaluations to return in a single page. By default 100
+             * and at most 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of evaluations to return in a single page. By default 100 and at most
+           1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of evaluations to return in a single page. By default 100
+             * and at most 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The next_page_token value returned from a previous list request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The next_page_token value returned from a previous list request. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the KnowledgeBases collection.

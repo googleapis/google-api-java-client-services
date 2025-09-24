@@ -50,9 +50,9 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
 
   /**
    * Port override. When specified, replaces the port part of the task URI. For instance, for a URI
-   * http://www.google.com/foo and port=123, the overridden URI becomes
-   * http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the
-   * port to 0 (Zero) clears the URI port.
+   * "https://www.example.com/example" and port=123, the overridden URI becomes
+   * "https://www.example.com:123/example". Note that the port value must be a positive integer.
+   * Setting the port to 0 (Zero) clears the URI port.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -126,9 +126,9 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
 
   /**
    * Port override. When specified, replaces the port part of the task URI. For instance, for a URI
-   * http://www.google.com/foo and port=123, the overridden URI becomes
-   * http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the
-   * port to 0 (Zero) clears the URI port.
+   * "https://www.example.com/example" and port=123, the overridden URI becomes
+   * "https://www.example.com:123/example". Note that the port value must be a positive integer.
+   * Setting the port to 0 (Zero) clears the URI port.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPort() {
@@ -137,9 +137,9 @@ public final class UriOverride extends com.google.api.client.json.GenericJson {
 
   /**
    * Port override. When specified, replaces the port part of the task URI. For instance, for a URI
-   * http://www.google.com/foo and port=123, the overridden URI becomes
-   * http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the
-   * port to 0 (Zero) clears the URI port.
+   * "https://www.example.com/example" and port=123, the overridden URI becomes
+   * "https://www.example.com:123/example". Note that the port value must be a positive integer.
+   * Setting the port to 0 (Zero) clears the URI port.
    * @param port port or {@code null} for none
    */
   public UriOverride setPort(java.lang.Long port) {

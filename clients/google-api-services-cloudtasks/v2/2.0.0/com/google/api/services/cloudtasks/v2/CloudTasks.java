@@ -590,22 +590,22 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -3130,7 +3130,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Gets a task.
+           * Gets a task. After a task is successfully executed or has exhausted its retry attempts, the task
+           * is deleted. A `GetTask` request for a deleted task returns a `NOT_FOUND` error.
            *
            * Create a request for the method "tasks.get".
            *
@@ -3155,7 +3156,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+/tasks/[^/]+$");
 
             /**
-             * Gets a task.
+             * Gets a task. After a task is successfully executed or has exhausted its retry attempts, the
+             * task is deleted. A `GetTask` request for a deleted task returns a `NOT_FOUND` error.
              *
              * Create a request for the method "tasks.get".
              *

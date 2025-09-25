@@ -30,22 +30,22 @@ package com.google.api.services.docs.v1.model;
 public final class PersonProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The email address linked to this Person. This field is always present.
+   * The email address linked to this Person. This field is always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * Output only. The name of the person if it's displayed in the link text instead of the person's
-   * email address.
+   * The name of the person if it's displayed in the link text instead of the person's email
+   * address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The email address linked to this Person. This field is always present.
+   * The email address linked to this Person. This field is always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -53,7 +53,7 @@ public final class PersonProperties extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The email address linked to this Person. This field is always present.
+   * The email address linked to this Person. This field is always present.
    * @param email email or {@code null} for none
    */
   public PersonProperties setEmail(java.lang.String email) {
@@ -62,8 +62,8 @@ public final class PersonProperties extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The name of the person if it's displayed in the link text instead of the person's
-   * email address.
+   * The name of the person if it's displayed in the link text instead of the person's email
+   * address.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -71,8 +71,8 @@ public final class PersonProperties extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The name of the person if it's displayed in the link text instead of the person's
-   * email address.
+   * The name of the person if it's displayed in the link text instead of the person's email
+   * address.
    * @param name name or {@code null} for none
    */
   public PersonProperties setName(java.lang.String name) {

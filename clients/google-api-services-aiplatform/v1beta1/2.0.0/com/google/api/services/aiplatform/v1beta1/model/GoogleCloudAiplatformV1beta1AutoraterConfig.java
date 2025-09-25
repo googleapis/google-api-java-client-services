@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1beta1AutoraterConfig extends com.googl
   private java.lang.Boolean flipEnabled;
 
   /**
+   * Optional. Configuration options for model generation and outputs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GenerationConfig generationConfig;
+
+  /**
    * Optional. Number of samples for each instance in the dataset. If not specified, the default is
    * 4. Minimum value is 1, maximum value is 32.
    * The value may be {@code null}.
@@ -103,6 +110,23 @@ public final class GoogleCloudAiplatformV1beta1AutoraterConfig extends com.googl
    */
   public GoogleCloudAiplatformV1beta1AutoraterConfig setFlipEnabled(java.lang.Boolean flipEnabled) {
     this.flipEnabled = flipEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration options for model generation and outputs.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig getGenerationConfig() {
+    return generationConfig;
+  }
+
+  /**
+   * Optional. Configuration options for model generation and outputs.
+   * @param generationConfig generationConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AutoraterConfig setGenerationConfig(GoogleCloudAiplatformV1beta1GenerationConfig generationConfig) {
+    this.generationConfig = generationConfig;
     return this;
   }
 

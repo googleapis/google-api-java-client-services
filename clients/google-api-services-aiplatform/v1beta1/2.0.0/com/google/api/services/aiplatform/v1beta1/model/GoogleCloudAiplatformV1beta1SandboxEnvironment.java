@@ -45,6 +45,14 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironment extends com.go
   private java.lang.String displayName;
 
   /**
+   * Optional. Timestamp in UTC of when this SandboxEnvironment is considered expired. This is
+   * *always* provided on output, regardless of what `expiration` was sent on input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
    * Identifier. The name of the SandboxEnvironment.
    * The value may be {@code null}.
    */
@@ -64,6 +72,14 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironment extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. Input only. The TTL for the sandbox environment. The expiration time is computed: now
+   * + TTL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String ttl;
 
   /**
    * Output only. The timestamp when this SandboxEnvironment was most recently updated.
@@ -103,6 +119,25 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironment extends com.go
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironment setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Timestamp in UTC of when this SandboxEnvironment is considered expired. This is
+   * *always* provided on output, regardless of what `expiration` was sent on input.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Optional. Timestamp in UTC of when this SandboxEnvironment is considered expired. This is
+   * *always* provided on output, regardless of what `expiration` was sent on input.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironment setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
     return this;
   }
 
@@ -154,6 +189,25 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironment extends com.go
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironment setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The TTL for the sandbox environment. The expiration time is computed: now
+   * + TTL.
+   * @return value or {@code null} for none
+   */
+  public String getTtl() {
+    return ttl;
+  }
+
+  /**
+   * Optional. Input only. The TTL for the sandbox environment. The expiration time is computed: now
+   * + TTL.
+   * @param ttl ttl or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironment setTtl(String ttl) {
+    this.ttl = ttl;
     return this;
   }
 

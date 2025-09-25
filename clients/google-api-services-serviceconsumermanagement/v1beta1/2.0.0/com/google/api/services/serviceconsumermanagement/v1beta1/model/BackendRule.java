@@ -100,6 +100,7 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, BackendRule> overridesByRequestProtocol;
 
   /**
+   * no-lint
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -288,6 +289,7 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * no-lint
    * @return value or {@code null} for none
    */
   public java.lang.String getPathTranslation() {
@@ -295,6 +297,7 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * no-lint
    * @param pathTranslation pathTranslation or {@code null} for none
    */
   public BackendRule setPathTranslation(java.lang.String pathTranslation) {

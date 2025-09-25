@@ -142,8 +142,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private java.lang.String languageCode;
 
   /**
-   * Config for natural language query understanding capabilities, such as extracting structured
-   * field filters from the query. Refer to [this
+   * Optional. Config for natural language query understanding capabilities, such as extracting
+   * structured field filters from the query. Refer to [this
    * documentation](https://cloud.google.com/generative-ai-app-builder/docs/natural-language-
    * queries) for more information. If `naturalLanguageQueryUnderstandingSpec` is not specified, no
    * additional natural language query understanding will be done.
@@ -330,7 +330,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Optional. SearchAddonSpec is used to disable add-ons for search as per new repricing model.
-   * Refer go/vais-repricing-prd. This field is only supported for search requests.
+   * This field is only supported for search requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -693,8 +693,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * Config for natural language query understanding capabilities, such as extracting structured
-   * field filters from the query. Refer to [this
+   * Optional. Config for natural language query understanding capabilities, such as extracting
+   * structured field filters from the query. Refer to [this
    * documentation](https://cloud.google.com/generative-ai-app-builder/docs/natural-language-
    * queries) for more information. If `naturalLanguageQueryUnderstandingSpec` is not specified, no
    * additional natural language query understanding will be done.
@@ -705,8 +705,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * Config for natural language query understanding capabilities, such as extracting structured
-   * field filters from the query. Refer to [this
+   * Optional. Config for natural language query understanding capabilities, such as extracting
+   * structured field filters from the query. Refer to [this
    * documentation](https://cloud.google.com/generative-ai-app-builder/docs/natural-language-
    * queries) for more information. If `naturalLanguageQueryUnderstandingSpec` is not specified, no
    * additional natural language query understanding will be done.
@@ -1116,7 +1116,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Optional. SearchAddonSpec is used to disable add-ons for search as per new repricing model.
-   * Refer go/vais-repricing-prd. This field is only supported for search requests.
+   * This field is only supported for search requests.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAddonSpec getSearchAddonSpec() {
@@ -1125,7 +1125,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Optional. SearchAddonSpec is used to disable add-ons for search as per new repricing model.
-   * Refer go/vais-repricing-prd. This field is only supported for search requests.
+   * This field is only supported for search requests.
    * @param searchAddonSpec searchAddonSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setSearchAddonSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAddonSpec searchAddonSpec) {

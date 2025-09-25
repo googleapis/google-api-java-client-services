@@ -58,6 +58,20 @@ public final class ReadPoolAutoScaleConfig extends com.google.api.client.json.Ge
   private java.lang.Integer minNodeCount;
 
   /**
+   * The cooldown period for scale-in operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer scaleInCooldownSeconds;
+
+  /**
+   * The cooldown period for scale-out operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer scaleOutCooldownSeconds;
+
+  /**
    * Optional. Target metrics for read pool auto scaling.
    * The value may be {@code null}.
    */
@@ -129,6 +143,40 @@ public final class ReadPoolAutoScaleConfig extends com.google.api.client.json.Ge
    */
   public ReadPoolAutoScaleConfig setMinNodeCount(java.lang.Integer minNodeCount) {
     this.minNodeCount = minNodeCount;
+    return this;
+  }
+
+  /**
+   * The cooldown period for scale-in operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getScaleInCooldownSeconds() {
+    return scaleInCooldownSeconds;
+  }
+
+  /**
+   * The cooldown period for scale-in operations.
+   * @param scaleInCooldownSeconds scaleInCooldownSeconds or {@code null} for none
+   */
+  public ReadPoolAutoScaleConfig setScaleInCooldownSeconds(java.lang.Integer scaleInCooldownSeconds) {
+    this.scaleInCooldownSeconds = scaleInCooldownSeconds;
+    return this;
+  }
+
+  /**
+   * The cooldown period for scale-out operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getScaleOutCooldownSeconds() {
+    return scaleOutCooldownSeconds;
+  }
+
+  /**
+   * The cooldown period for scale-out operations.
+   * @param scaleOutCooldownSeconds scaleOutCooldownSeconds or {@code null} for none
+   */
+  public ReadPoolAutoScaleConfig setScaleOutCooldownSeconds(java.lang.Integer scaleOutCooldownSeconds) {
+    this.scaleOutCooldownSeconds = scaleOutCooldownSeconds;
     return this;
   }
 

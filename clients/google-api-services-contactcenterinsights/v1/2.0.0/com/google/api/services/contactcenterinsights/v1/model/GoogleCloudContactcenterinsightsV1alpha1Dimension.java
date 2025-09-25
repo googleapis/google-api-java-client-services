@@ -67,6 +67,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1Dimension extends com
   private GoogleCloudContactcenterinsightsV1alpha1DimensionQaQuestionDimensionMetadata qaQuestionDimensionMetadata;
 
   /**
+   * Output only. Metadata about the QA scorecard dimension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1alpha1DimensionQaScorecardDimensionMetadata qaScorecardDimensionMetadata;
+
+  /**
    * Output only. Metadata about the agent dimension.
    * @return value or {@code null} for none
    */
@@ -148,6 +155,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1Dimension extends com
    */
   public GoogleCloudContactcenterinsightsV1alpha1Dimension setQaQuestionDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionQaQuestionDimensionMetadata qaQuestionDimensionMetadata) {
     this.qaQuestionDimensionMetadata = qaQuestionDimensionMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about the QA scorecard dimension.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1DimensionQaScorecardDimensionMetadata getQaScorecardDimensionMetadata() {
+    return qaScorecardDimensionMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the QA scorecard dimension.
+   * @param qaScorecardDimensionMetadata qaScorecardDimensionMetadata or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1Dimension setQaScorecardDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionQaScorecardDimensionMetadata qaScorecardDimensionMetadata) {
+    this.qaScorecardDimensionMetadata = qaScorecardDimensionMetadata;
     return this;
   }
 

@@ -37,6 +37,16 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswerReply extends co
   private GoogleCloudDiscoveryengineV1alphaAssistantGroundedContent groundedContent;
 
   /**
+   * Output only. When set, uniquely identifies a reply within the `AssistAnswer` resource. During
+   * an AssistantService.StreamAssist call, multiple `Reply` messages with the same ID can occur
+   * within the response stream (across multiple AssistantService.StreamAssistResponse messages).
+   * These represent parts of a single `Reply` message in the final `AssistAnswer` resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String replyId;
+
+  /**
    * Possibly grounded response text or media from the assistant.
    * @return value or {@code null} for none
    */
@@ -50,6 +60,29 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswerReply extends co
    */
   public GoogleCloudDiscoveryengineV1alphaAssistAnswerReply setGroundedContent(GoogleCloudDiscoveryengineV1alphaAssistantGroundedContent groundedContent) {
     this.groundedContent = groundedContent;
+    return this;
+  }
+
+  /**
+   * Output only. When set, uniquely identifies a reply within the `AssistAnswer` resource. During
+   * an AssistantService.StreamAssist call, multiple `Reply` messages with the same ID can occur
+   * within the response stream (across multiple AssistantService.StreamAssistResponse messages).
+   * These represent parts of a single `Reply` message in the final `AssistAnswer` resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReplyId() {
+    return replyId;
+  }
+
+  /**
+   * Output only. When set, uniquely identifies a reply within the `AssistAnswer` resource. During
+   * an AssistantService.StreamAssist call, multiple `Reply` messages with the same ID can occur
+   * within the response stream (across multiple AssistantService.StreamAssistResponse messages).
+   * These represent parts of a single `Reply` message in the final `AssistAnswer` resource.
+   * @param replyId replyId or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAssistAnswerReply setReplyId(java.lang.String replyId) {
+    this.replyId = replyId;
     return this;
   }
 

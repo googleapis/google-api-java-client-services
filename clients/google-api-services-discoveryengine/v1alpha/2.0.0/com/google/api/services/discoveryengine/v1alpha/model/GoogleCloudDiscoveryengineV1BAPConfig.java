@@ -30,11 +30,35 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1BAPConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The actions enabled on the associated BAP connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> enabledActions;
+
+  /**
    * Required. The supported connector modes for the associated BAP connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedConnectorModes;
+
+  /**
+   * Optional. The actions enabled on the associated BAP connection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEnabledActions() {
+    return enabledActions;
+  }
+
+  /**
+   * Optional. The actions enabled on the associated BAP connection.
+   * @param enabledActions enabledActions or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1BAPConfig setEnabledActions(java.util.List<java.lang.String> enabledActions) {
+    this.enabledActions = enabledActions;
+    return this;
+  }
 
   /**
    * Required. The supported connector modes for the associated BAP connection.

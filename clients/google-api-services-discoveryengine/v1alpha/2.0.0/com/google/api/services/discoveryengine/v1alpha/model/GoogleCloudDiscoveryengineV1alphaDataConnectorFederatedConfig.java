@@ -37,11 +37,18 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig
   private java.util.Map<String, java.lang.Object> additionalParams;
 
   /**
-   * Optional. Any authentication parameters specific to FEDERATED.
+   * Optional. Any authentication parameters specific to FEDERATED connectors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> authParams;
+
+  /**
+   * Optional. Any authentication parameters specific to FEDERATED connectors in json string format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jsonAuthParams;
 
   /**
    * Optional. Any additional parameters needed for FEDERATED.
@@ -61,7 +68,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig
   }
 
   /**
-   * Optional. Any authentication parameters specific to FEDERATED.
+   * Optional. Any authentication parameters specific to FEDERATED connectors.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAuthParams() {
@@ -69,11 +76,28 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig
   }
 
   /**
-   * Optional. Any authentication parameters specific to FEDERATED.
+   * Optional. Any authentication parameters specific to FEDERATED connectors.
    * @param authParams authParams or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig setAuthParams(java.util.Map<String, java.lang.Object> authParams) {
     this.authParams = authParams;
+    return this;
+  }
+
+  /**
+   * Optional. Any authentication parameters specific to FEDERATED connectors in json string format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJsonAuthParams() {
+    return jsonAuthParams;
+  }
+
+  /**
+   * Optional. Any authentication parameters specific to FEDERATED connectors in json string format.
+   * @param jsonAuthParams jsonAuthParams or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig setJsonAuthParams(java.lang.String jsonAuthParams) {
+    this.jsonAuthParams = jsonAuthParams;
     return this;
   }
 

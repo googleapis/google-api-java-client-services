@@ -4216,8 +4216,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Uses the per-user refresh token minted with AcquireAndStoreRefreshToken to generate and return a
            * new access token and its details. Takes the access token from cache if available. Rotates the
            * stored refresh token if needed. Uses the end user identity to return the user specific access
-           * token. Does *not* return the credentials configured by the administrator. Used by Agentspace
-           * action execution and Agentspace UI.
+           * token. Does *not* return the credentials configured by the administrator. Used by action
+           * execution and UI.
            *
            * Create a request for the method "dataConnector.acquireAccessToken".
            *
@@ -4246,8 +4246,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Uses the per-user refresh token minted with AcquireAndStoreRefreshToken to generate and return
              * a new access token and its details. Takes the access token from cache if available. Rotates the
              * stored refresh token if needed. Uses the end user identity to return the user specific access
-             * token. Does *not* return the credentials configured by the administrator. Used by Agentspace
-             * action execution and Agentspace UI.
+             * token. Does *not* return the credentials configured by the administrator. Used by action
+             * execution and UI.
              *
              * Create a request for the method "dataConnector.acquireAccessToken".
              *
@@ -7344,6 +7344,345 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               @Override
               public BatchGetDocumentsMetadata set(String parameterName, Object value) {
                 return (BatchGetDocumentsMetadata) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Retrieves a Branch.
+             *
+             * Create a request for the method "branches.get".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the branch to retrieve. Format:
+             *        `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`.
+             *        "default_branch" can be used as a special branch_id, it returns the default branch that
+             *        has been set for the document.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBranch> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+              /**
+               * Retrieves a Branch.
+               *
+               * Create a request for the method "branches.get".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the branch to retrieve. Format:
+             *        `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`.
+             *        "default_branch" can be used as a special branch_id, it returns the default branch that
+             *        has been set for the document.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBranch.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the branch to retrieve. Format:
+               * `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`.
+               * "default_branch" can be used as a special branch_id, it returns the default branch
+               * that has been set for the document.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the branch to retrieve. Format:
+             `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`. "default_branch"
+             can be used as a special branch_id, it returns the default branch that has been set for the
+             document.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the branch to retrieve. Format:
+               * `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`.
+               * "default_branch" can be used as a special branch_id, it returns the default branch
+               * that has been set for the document.
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+               * unspecified.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if unspecified.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /**
+               * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+               * unspecified.
+               */
+              public Get setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists all Branchs under the specified parent DataStore.
+             *
+             * Create a request for the method "branches.list".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent data store resource name.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListBranchesResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/branches";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Lists all Branchs under the specified parent DataStore.
+               *
+               * Create a request for the method "branches.list".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent data store resource name.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListBranchesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The parent data store resource name. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent data store resource name.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The parent data store resource name. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+               * unspecified.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if unspecified.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /**
+               * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+               * unspecified.
+               */
+              public List setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
               }
             }
 
@@ -30837,6 +31176,345 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public BatchGetDocumentsMetadata set(String parameterName, Object value) {
               return (BatchGetDocumentsMetadata) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves a Branch.
+           *
+           * Create a request for the method "branches.get".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the branch to retrieve. Format:
+           *        `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`.
+           *        "default_branch" can be used as a special branch_id, it returns the default branch that
+           *        has been set for the document.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBranch> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+            /**
+             * Retrieves a Branch.
+             *
+             * Create a request for the method "branches.get".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the branch to retrieve. Format:
+           *        `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`.
+           *        "default_branch" can be used as a special branch_id, it returns the default branch that
+           *        has been set for the document.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBranch.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the branch to retrieve. Format:
+             * `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`.
+             * "default_branch" can be used as a special branch_id, it returns the default branch
+             * that has been set for the document.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the branch to retrieve. Format:
+           `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`. "default_branch"
+           can be used as a special branch_id, it returns the default branch that has been set for the
+           document.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the branch to retrieve. Format:
+             * `projects/locations/global/dataStores/default_data_store/branches/some_branch_id`.
+             * "default_branch" can be used as a special branch_id, it returns the default branch
+             * that has been set for the document.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+             * unspecified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if unspecified.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+             * unspecified.
+             */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all Branchs under the specified parent DataStore.
+           *
+           * Create a request for the method "branches.list".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent data store resource name.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListBranchesResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/branches";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Lists all Branchs under the specified parent DataStore.
+             *
+             * Create a request for the method "branches.list".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent data store resource name.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListBranchesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent data store resource name. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent data store resource name.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent data store resource name. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+             * unspecified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if unspecified.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+             * unspecified.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
             }
           }
 

@@ -44,6 +44,13 @@ public final class GoogleCloudDiscoveryengineV1DataConnectorEndUserConfig extend
   private java.util.Map<String, java.lang.Object> authParams;
 
   /**
+   * Optional. Any authentication parameters specific to EUA connectors in json string format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jsonAuthParams;
+
+  /**
    * Optional. The tenant project the connector is connected to.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class GoogleCloudDiscoveryengineV1DataConnectorEndUserConfig extend
    */
   public GoogleCloudDiscoveryengineV1DataConnectorEndUserConfig setAuthParams(java.util.Map<String, java.lang.Object> authParams) {
     this.authParams = authParams;
+    return this;
+  }
+
+  /**
+   * Optional. Any authentication parameters specific to EUA connectors in json string format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJsonAuthParams() {
+    return jsonAuthParams;
+  }
+
+  /**
+   * Optional. Any authentication parameters specific to EUA connectors in json string format.
+   * @param jsonAuthParams jsonAuthParams or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataConnectorEndUserConfig setJsonAuthParams(java.lang.String jsonAuthParams) {
+    this.jsonAuthParams = jsonAuthParams;
     return this;
   }
 

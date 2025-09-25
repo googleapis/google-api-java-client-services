@@ -17,9 +17,9 @@
 package com.google.api.services.discoveryengine.v1.model;
 
 /**
- * SearchAddonSpec is used to disable add-ons for search as per new repricing model. Refer go/vais-
- * repricing-prd. By default if the SearchAddonSpec is not specified, we consider that the customer
- * wants to enable them wherever applicable.
+ * SearchAddonSpec is used to disable add-ons for search as per new repricing model. By default if
+ * the SearchAddonSpec is not specified, we consider that the customer wants to enable them wherever
+ * applicable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

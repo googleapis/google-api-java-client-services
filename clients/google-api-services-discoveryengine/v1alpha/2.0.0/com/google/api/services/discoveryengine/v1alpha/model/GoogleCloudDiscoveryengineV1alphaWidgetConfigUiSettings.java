@@ -113,7 +113,8 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
    * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation`
+   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation` *
+   * `disable-onedrive-upload`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +322,8 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
    * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation`
+   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation` *
+   * `disable-onedrive-upload`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -332,7 +334,8 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
    * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation`
+   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation` *
+   * `disable-onedrive-upload`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {

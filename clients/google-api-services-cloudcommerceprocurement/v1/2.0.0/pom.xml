@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudcommerceprocurement</artifactId>
-  <version>v1-rev20250914-2.0.0</version>
-  <name>Cloud Commerce Partner Procurement API v1-rev20250914-2.0.0</name>
+  <version>v1-rev20250923-2.0.0</version>
+  <name>Cloud Commerce Partner Procurement API v1-rev20250923-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

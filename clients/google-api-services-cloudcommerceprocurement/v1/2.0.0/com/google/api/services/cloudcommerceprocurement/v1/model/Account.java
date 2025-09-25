@@ -72,9 +72,10 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String provider;
 
   /**
-   * The reseller parent billing account of the account's corresponding billing account, applicable
-   * only when the corresponding billing account is a subaccount of a reseller. Included in
-   * responses only for view ACCOUNT_VIEW_FULL. Format: billingAccounts/{billing_account_id}
+   * Output only. The reseller parent billing account of the account's corresponding billing
+   * account, applicable only when the corresponding billing account is a subaccount of a reseller.
+   * Included in responses only for view: ACCOUNT_VIEW_FULL. Format:
+   * billingAccounts/{billing_account_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,9 +195,10 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The reseller parent billing account of the account's corresponding billing account, applicable
-   * only when the corresponding billing account is a subaccount of a reseller. Included in
-   * responses only for view ACCOUNT_VIEW_FULL. Format: billingAccounts/{billing_account_id}
+   * Output only. The reseller parent billing account of the account's corresponding billing
+   * account, applicable only when the corresponding billing account is a subaccount of a reseller.
+   * Included in responses only for view: ACCOUNT_VIEW_FULL. Format:
+   * billingAccounts/{billing_account_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getResellerParentBillingAccount() {
@@ -204,9 +206,10 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The reseller parent billing account of the account's corresponding billing account, applicable
-   * only when the corresponding billing account is a subaccount of a reseller. Included in
-   * responses only for view ACCOUNT_VIEW_FULL. Format: billingAccounts/{billing_account_id}
+   * Output only. The reseller parent billing account of the account's corresponding billing
+   * account, applicable only when the corresponding billing account is a subaccount of a reseller.
+   * Included in responses only for view: ACCOUNT_VIEW_FULL. Format:
+   * billingAccounts/{billing_account_id}
    * @param resellerParentBillingAccount resellerParentBillingAccount or {@code null} for none
    */
   public Account setResellerParentBillingAccount(java.lang.String resellerParentBillingAccount) {

@@ -38,9 +38,9 @@ public final class GoogleCloudContactcenterinsightsV1QueryMetricsResponse extend
   private java.lang.String location;
 
   /**
-   * The macro average slice contains aggregated averages across the selected dimension. i.e. if
-   * group_by agent is specified this field will contain the average across all agents. This field
-   * is only populated if the request specifies a Dimension.
+   * The macro average slice contains aggregated averages across all selected dimensions. i.e. if
+   * group_by agent and scorecard_id is specified, this field will contain the average across all
+   * agents and all scorecards. This field is only populated if the request specifies a Dimension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +80,9 @@ public final class GoogleCloudContactcenterinsightsV1QueryMetricsResponse extend
   }
 
   /**
-   * The macro average slice contains aggregated averages across the selected dimension. i.e. if
-   * group_by agent is specified this field will contain the average across all agents. This field
-   * is only populated if the request specifies a Dimension.
+   * The macro average slice contains aggregated averages across all selected dimensions. i.e. if
+   * group_by agent and scorecard_id is specified, this field will contain the average across all
+   * agents and all scorecards. This field is only populated if the request specifies a Dimension.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1QueryMetricsResponseSlice getMacroAverageSlice() {
@@ -90,9 +90,9 @@ public final class GoogleCloudContactcenterinsightsV1QueryMetricsResponse extend
   }
 
   /**
-   * The macro average slice contains aggregated averages across the selected dimension. i.e. if
-   * group_by agent is specified this field will contain the average across all agents. This field
-   * is only populated if the request specifies a Dimension.
+   * The macro average slice contains aggregated averages across all selected dimensions. i.e. if
+   * group_by agent and scorecard_id is specified, this field will contain the average across all
+   * agents and all scorecards. This field is only populated if the request specifies a Dimension.
    * @param macroAverageSlice macroAverageSlice or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1QueryMetricsResponse setMacroAverageSlice(GoogleCloudContactcenterinsightsV1QueryMetricsResponseSlice macroAverageSlice) {

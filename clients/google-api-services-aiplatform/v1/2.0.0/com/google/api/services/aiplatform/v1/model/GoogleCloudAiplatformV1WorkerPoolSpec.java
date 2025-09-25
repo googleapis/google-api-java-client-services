@@ -44,6 +44,19 @@ public final class GoogleCloudAiplatformV1WorkerPoolSpec extends com.google.api.
   private GoogleCloudAiplatformV1DiskSpec diskSpec;
 
   /**
+   * Optional. List of Lustre mounts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1LustreMount> lustreMounts;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1LustreMount used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1LustreMount.class);
+  }
+
+  /**
    * Optional. Immutable. The specification of a single machine.
    * The value may be {@code null}.
    */
@@ -108,6 +121,23 @@ public final class GoogleCloudAiplatformV1WorkerPoolSpec extends com.google.api.
    */
   public GoogleCloudAiplatformV1WorkerPoolSpec setDiskSpec(GoogleCloudAiplatformV1DiskSpec diskSpec) {
     this.diskSpec = diskSpec;
+    return this;
+  }
+
+  /**
+   * Optional. List of Lustre mounts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1LustreMount> getLustreMounts() {
+    return lustreMounts;
+  }
+
+  /**
+   * Optional. List of Lustre mounts.
+   * @param lustreMounts lustreMounts or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1WorkerPoolSpec setLustreMounts(java.util.List<GoogleCloudAiplatformV1LustreMount> lustreMounts) {
+    this.lustreMounts = lustreMounts;
     return this;
   }
 

@@ -74,7 +74,7 @@ public final class GoogleCloudAiplatformV1EvaluationItem extends com.google.api.
   private GoogleCloudAiplatformV1EvaluationResult evaluationResponse;
 
   /**
-   * The GCS object where the request or response is stored.
+   * The Cloud Storage object where the request or response is stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +205,7 @@ public final class GoogleCloudAiplatformV1EvaluationItem extends com.google.api.
   }
 
   /**
-   * The GCS object where the request or response is stored.
+   * The Cloud Storage object where the request or response is stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -213,7 +213,7 @@ public final class GoogleCloudAiplatformV1EvaluationItem extends com.google.api.
   }
 
   /**
-   * The GCS object where the request or response is stored.
+   * The Cloud Storage object where the request or response is stored.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1EvaluationItem setGcsUri(java.lang.String gcsUri) {

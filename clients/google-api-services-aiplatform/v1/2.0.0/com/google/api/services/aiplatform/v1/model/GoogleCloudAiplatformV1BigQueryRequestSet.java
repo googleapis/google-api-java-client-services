@@ -46,8 +46,8 @@ public final class GoogleCloudAiplatformV1BigQueryRequestSet extends com.google.
   private java.lang.String promptColumn;
 
   /**
-   * Optional. The name of the column that contains the rubrics. This will be in
-   * evaluation_rubric.RubricGroup format (cl/762595858).
+   * Optional. The name of the column that contains the rubrics. This is in
+   * evaluation_rubric.RubricGroup format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,8 +106,8 @@ public final class GoogleCloudAiplatformV1BigQueryRequestSet extends com.google.
   }
 
   /**
-   * Optional. The name of the column that contains the rubrics. This will be in
-   * evaluation_rubric.RubricGroup format (cl/762595858).
+   * Optional. The name of the column that contains the rubrics. This is in
+   * evaluation_rubric.RubricGroup format.
    * @return value or {@code null} for none
    */
   public java.lang.String getRubricsColumn() {
@@ -115,8 +115,8 @@ public final class GoogleCloudAiplatformV1BigQueryRequestSet extends com.google.
   }
 
   /**
-   * Optional. The name of the column that contains the rubrics. This will be in
-   * evaluation_rubric.RubricGroup format (cl/762595858).
+   * Optional. The name of the column that contains the rubrics. This is in
+   * evaluation_rubric.RubricGroup format.
    * @param rubricsColumn rubricsColumn or {@code null} for none
    */
   public GoogleCloudAiplatformV1BigQueryRequestSet setRubricsColumn(java.lang.String rubricsColumn) {

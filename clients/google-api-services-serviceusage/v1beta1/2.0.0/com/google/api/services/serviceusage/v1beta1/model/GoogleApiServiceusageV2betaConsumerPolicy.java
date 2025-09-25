@@ -56,8 +56,7 @@ public final class GoogleApiServiceusageV2betaConsumerPolicy extends com.google.
   private java.util.List<GoogleApiServiceusageV2betaEnableRule> enableRules;
 
   /**
-   * Output only. An opaque tag indicating the current version of the policy, used for concurrency
-   * control.
+   * An opaque tag indicating the current version of the policy, used for concurrency control.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,8 +138,7 @@ public final class GoogleApiServiceusageV2betaConsumerPolicy extends com.google.
   }
 
   /**
-   * Output only. An opaque tag indicating the current version of the policy, used for concurrency
-   * control.
+   * An opaque tag indicating the current version of the policy, used for concurrency control.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -148,8 +146,7 @@ public final class GoogleApiServiceusageV2betaConsumerPolicy extends com.google.
   }
 
   /**
-   * Output only. An opaque tag indicating the current version of the policy, used for concurrency
-   * control.
+   * An opaque tag indicating the current version of the policy, used for concurrency control.
    * @param etag etag or {@code null} for none
    */
   public GoogleApiServiceusageV2betaConsumerPolicy setEtag(java.lang.String etag) {

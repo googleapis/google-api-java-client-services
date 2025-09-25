@@ -113,6 +113,17 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String operationType;
 
   /**
+   * The context for pre-check major version upgrade operation, if applicable. This field is only
+   * populated when the operation_type is PRE_CHECK_MAJOR_VERSION_UPGRADE. The
+   * PreCheckMajorVersionUpgradeContext message itself contains the details for that pre-check, such
+   * as the target database version for the upgrade and the results of the check (including any
+   * warnings or errors found).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PreCheckMajorVersionUpgradeContext preCheckMajorVersionUpgradeContext;
+
+  /**
    * The URI of this resource.
    * The value may be {@code null}.
    */
@@ -362,6 +373,31 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setOperationType(java.lang.String operationType) {
     this.operationType = operationType;
+    return this;
+  }
+
+  /**
+   * The context for pre-check major version upgrade operation, if applicable. This field is only
+   * populated when the operation_type is PRE_CHECK_MAJOR_VERSION_UPGRADE. The
+   * PreCheckMajorVersionUpgradeContext message itself contains the details for that pre-check, such
+   * as the target database version for the upgrade and the results of the check (including any
+   * warnings or errors found).
+   * @return value or {@code null} for none
+   */
+  public PreCheckMajorVersionUpgradeContext getPreCheckMajorVersionUpgradeContext() {
+    return preCheckMajorVersionUpgradeContext;
+  }
+
+  /**
+   * The context for pre-check major version upgrade operation, if applicable. This field is only
+   * populated when the operation_type is PRE_CHECK_MAJOR_VERSION_UPGRADE. The
+   * PreCheckMajorVersionUpgradeContext message itself contains the details for that pre-check, such
+   * as the target database version for the upgrade and the results of the check (including any
+   * warnings or errors found).
+   * @param preCheckMajorVersionUpgradeContext preCheckMajorVersionUpgradeContext or {@code null} for none
+   */
+  public Operation setPreCheckMajorVersionUpgradeContext(PreCheckMajorVersionUpgradeContext preCheckMajorVersionUpgradeContext) {
+    this.preCheckMajorVersionUpgradeContext = preCheckMajorVersionUpgradeContext;
     return this;
   }
 

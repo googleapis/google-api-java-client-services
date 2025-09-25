@@ -25,7 +25,7 @@ package com.google.api.services.sqladmin;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/cloud-sql/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/sql/docs" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -5890,6 +5890,144 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Execute MVU Pre-checks
+     *
+     * Create a request for the method "instances.preCheckMajorVersionUpgrade".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link PreCheckMajorVersionUpgrade#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+     * @param content the {@link com.google.api.services.sqladmin.model.InstancesPreCheckMajorVersionUpgradeRequest}
+     * @return the request
+     */
+    public PreCheckMajorVersionUpgrade preCheckMajorVersionUpgrade(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesPreCheckMajorVersionUpgradeRequest content) throws java.io.IOException {
+      PreCheckMajorVersionUpgrade result = new PreCheckMajorVersionUpgrade(project, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class PreCheckMajorVersionUpgrade extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/preCheckMajorVersionUpgrade";
+
+      /**
+       * Execute MVU Pre-checks
+       *
+       * Create a request for the method "instances.preCheckMajorVersionUpgrade".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link PreCheckMajorVersionUpgrade#execute()} method to invoke
+       * the remote operation. <p> {@link PreCheckMajorVersionUpgrade#initialize(com.google.api.client.g
+       * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.InstancesPreCheckMajorVersionUpgradeRequest}
+       * @since 1.13
+       */
+      protected PreCheckMajorVersionUpgrade(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesPreCheckMajorVersionUpgradeRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade set$Xgafv(java.lang.String $Xgafv) {
+        return (PreCheckMajorVersionUpgrade) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setAccessToken(java.lang.String accessToken) {
+        return (PreCheckMajorVersionUpgrade) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setAlt(java.lang.String alt) {
+        return (PreCheckMajorVersionUpgrade) super.setAlt(alt);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setCallback(java.lang.String callback) {
+        return (PreCheckMajorVersionUpgrade) super.setCallback(callback);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setFields(java.lang.String fields) {
+        return (PreCheckMajorVersionUpgrade) super.setFields(fields);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setKey(java.lang.String key) {
+        return (PreCheckMajorVersionUpgrade) super.setKey(key);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setOauthToken(java.lang.String oauthToken) {
+        return (PreCheckMajorVersionUpgrade) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (PreCheckMajorVersionUpgrade) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setQuotaUser(java.lang.String quotaUser) {
+        return (PreCheckMajorVersionUpgrade) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setUploadType(java.lang.String uploadType) {
+        return (PreCheckMajorVersionUpgrade) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade setUploadProtocol(java.lang.String uploadProtocol) {
+        return (PreCheckMajorVersionUpgrade) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public PreCheckMajorVersionUpgrade setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public PreCheckMajorVersionUpgrade setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public PreCheckMajorVersionUpgrade set(String parameterName, Object value) {
+        return (PreCheckMajorVersionUpgrade) super.set(parameterName, value);
+      }
+    }
+    /**
      * Promotes the read replica instance to be an independent Cloud SQL primary instance. Using this
      * operation might cause your instance to restart.
      *
@@ -7641,7 +7779,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   public class Operations {
 
     /**
-     * Cancels an instance operation that has been performed on an instance.
+     * Cancels an instance operation that has been performed on an instance. Ordinarily, this method
+     * name should be `CancelSqlOperation`.
      *
      * Create a request for the method "operations.cancel".
      *
@@ -7663,7 +7802,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/operations/{operation}/cancel";
 
       /**
-       * Cancels an instance operation that has been performed on an instance.
+       * Cancels an instance operation that has been performed on an instance. Ordinarily, this method
+       * name should be `CancelSqlOperation`.
        *
        * Create a request for the method "operations.cancel".
        *

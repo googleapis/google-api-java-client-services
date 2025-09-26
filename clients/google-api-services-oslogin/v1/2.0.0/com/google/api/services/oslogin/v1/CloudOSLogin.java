@@ -134,6 +134,188 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudOSLogin oslogin = new CloudOSLogin(...);}
+   *   {@code CloudOSLogin.Projects.List request = oslogin.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudOSLogin oslogin = new CloudOSLogin(...);}
+     *   {@code CloudOSLogin.Locations.List request = oslogin.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * Signs an SSH public key for a user to authenticate to a virtual machine on Google Compute Engine.
+       *
+       * Create a request for the method "locations.signSshPublicKey".
+       *
+       * This request holds the parameters needed by the oslogin server.  After setting any optional
+       * parameters, call the {@link SignSshPublicKey#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent for the signing request. Format: projects/{project}/locations/{location}
+       * @param content the {@link com.google.api.services.oslogin.v1.model.SignSshPublicKeyRequest}
+       * @return the request
+       */
+      public SignSshPublicKey signSshPublicKey(java.lang.String parent, com.google.api.services.oslogin.v1.model.SignSshPublicKeyRequest content) throws java.io.IOException {
+        SignSshPublicKey result = new SignSshPublicKey(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SignSshPublicKey extends CloudOSLoginRequest<com.google.api.services.oslogin.v1.model.SignSshPublicKeyResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:signSshPublicKey";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Signs an SSH public key for a user to authenticate to a virtual machine on Google Compute
+         * Engine.
+         *
+         * Create a request for the method "locations.signSshPublicKey".
+         *
+         * This request holds the parameters needed by the the oslogin server.  After setting any optional
+         * parameters, call the {@link SignSshPublicKey#execute()} method to invoke the remote operation.
+         * <p> {@link SignSshPublicKey#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+         * ClientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param parent Required. The parent for the signing request. Format: projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.oslogin.v1.model.SignSshPublicKeyRequest}
+         * @since 1.13
+         */
+        protected SignSshPublicKey(java.lang.String parent, com.google.api.services.oslogin.v1.model.SignSshPublicKeyRequest content) {
+          super(CloudOSLogin.this, "POST", REST_PATH, content, com.google.api.services.oslogin.v1.model.SignSshPublicKeyResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public SignSshPublicKey set$Xgafv(java.lang.String $Xgafv) {
+          return (SignSshPublicKey) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SignSshPublicKey setAccessToken(java.lang.String accessToken) {
+          return (SignSshPublicKey) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SignSshPublicKey setAlt(java.lang.String alt) {
+          return (SignSshPublicKey) super.setAlt(alt);
+        }
+
+        @Override
+        public SignSshPublicKey setCallback(java.lang.String callback) {
+          return (SignSshPublicKey) super.setCallback(callback);
+        }
+
+        @Override
+        public SignSshPublicKey setFields(java.lang.String fields) {
+          return (SignSshPublicKey) super.setFields(fields);
+        }
+
+        @Override
+        public SignSshPublicKey setKey(java.lang.String key) {
+          return (SignSshPublicKey) super.setKey(key);
+        }
+
+        @Override
+        public SignSshPublicKey setOauthToken(java.lang.String oauthToken) {
+          return (SignSshPublicKey) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SignSshPublicKey setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SignSshPublicKey) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SignSshPublicKey setQuotaUser(java.lang.String quotaUser) {
+          return (SignSshPublicKey) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SignSshPublicKey setUploadType(java.lang.String uploadType) {
+          return (SignSshPublicKey) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SignSshPublicKey setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SignSshPublicKey) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent for the signing request. Format:
+         * projects/{project}/locations/{location}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent for the signing request. Format: projects/{project}/locations/{location}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent for the signing request. Format:
+         * projects/{project}/locations/{location}
+         */
+        public SignSshPublicKey setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public SignSshPublicKey set(String parameterName, Object value) {
+          return (SignSshPublicKey) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Users collection.
    *
    * <p>The typical use is:</p>

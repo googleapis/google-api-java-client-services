@@ -166,6 +166,15 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.Long scale;
 
   /**
+   * Optional. Precision (maximum number of total digits in base 10) for seconds of TIMESTAMP type.
+   * Possible values include: * 6 (Default, for TIMESTAMP type with microsecond precision) * 12 (For
+   * TIMESTAMP type with picosecond precision)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long timestampPrecision;
+
+  /**
    * Required. The field data type. Possible values include: * STRING * BYTES * INTEGER (or INT64) *
    * FLOAT (or FLOAT64) * BOOLEAN (or BOOL) * TIMESTAMP * DATE * TIME * DATETIME * GEOGRAPHY *
    * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) * RANGE Use of RECORD/STRUCT indicates that
@@ -477,6 +486,27 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    */
   public TableFieldSchema setScale(java.lang.Long scale) {
     this.scale = scale;
+    return this;
+  }
+
+  /**
+   * Optional. Precision (maximum number of total digits in base 10) for seconds of TIMESTAMP type.
+   * Possible values include: * 6 (Default, for TIMESTAMP type with microsecond precision) * 12 (For
+   * TIMESTAMP type with picosecond precision)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTimestampPrecision() {
+    return timestampPrecision;
+  }
+
+  /**
+   * Optional. Precision (maximum number of total digits in base 10) for seconds of TIMESTAMP type.
+   * Possible values include: * 6 (Default, for TIMESTAMP type with microsecond precision) * 12 (For
+   * TIMESTAMP type with picosecond precision)
+   * @param timestampPrecision timestampPrecision or {@code null} for none
+   */
+  public TableFieldSchema setTimestampPrecision(java.lang.Long timestampPrecision) {
+    this.timestampPrecision = timestampPrecision;
     return this;
   }
 

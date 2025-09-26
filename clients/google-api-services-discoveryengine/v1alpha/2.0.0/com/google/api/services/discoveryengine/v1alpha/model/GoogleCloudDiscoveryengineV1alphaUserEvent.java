@@ -152,11 +152,11 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * Required. User event type. Allowed values are: Generic values: * `search`: Search for
    * Documents. * `view-item`: Detailed page view of a Document. * `view-item-list`: View of a panel
    * or ordered list of Documents. * `view-home-page`: View of the home page. * `view-category-
-   * page`: View of a category page, e.g. Home > Men > Jeans * `add-feedback`: Add a user feedback.
-   * Retail-related values: * `add-to-cart`: Add an item(s) to cart, e.g. in Retail online shopping
-   * * `purchase`: Purchase an item(s) Media-related values: * `media-play`: Start/resume watching a
-   * video, playing a song, etc. * `media-complete`: Finished or stopped midway through a video,
-   * song, etc. Custom conversion value: * `conversion`: Customer defined conversion event.
+   * page`: View of a category page, e.g. Home > Men > Jeans Retail-related values: * `add-to-cart`:
+   * Add an item(s) to cart, e.g. in Retail online shopping * `purchase`: Purchase an item(s) Media-
+   * related values: * `media-play`: Start/resume watching a video, playing a song, etc. * `media-
+   * complete`: Finished or stopped midway through a video, song, etc. Custom conversion value: *
+   * `conversion`: Customer defined conversion event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -516,11 +516,11 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * Required. User event type. Allowed values are: Generic values: * `search`: Search for
    * Documents. * `view-item`: Detailed page view of a Document. * `view-item-list`: View of a panel
    * or ordered list of Documents. * `view-home-page`: View of the home page. * `view-category-
-   * page`: View of a category page, e.g. Home > Men > Jeans * `add-feedback`: Add a user feedback.
-   * Retail-related values: * `add-to-cart`: Add an item(s) to cart, e.g. in Retail online shopping
-   * * `purchase`: Purchase an item(s) Media-related values: * `media-play`: Start/resume watching a
-   * video, playing a song, etc. * `media-complete`: Finished or stopped midway through a video,
-   * song, etc. Custom conversion value: * `conversion`: Customer defined conversion event.
+   * page`: View of a category page, e.g. Home > Men > Jeans Retail-related values: * `add-to-cart`:
+   * Add an item(s) to cart, e.g. in Retail online shopping * `purchase`: Purchase an item(s) Media-
+   * related values: * `media-play`: Start/resume watching a video, playing a song, etc. * `media-
+   * complete`: Finished or stopped midway through a video, song, etc. Custom conversion value: *
+   * `conversion`: Customer defined conversion event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -531,11 +531,11 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * Required. User event type. Allowed values are: Generic values: * `search`: Search for
    * Documents. * `view-item`: Detailed page view of a Document. * `view-item-list`: View of a panel
    * or ordered list of Documents. * `view-home-page`: View of the home page. * `view-category-
-   * page`: View of a category page, e.g. Home > Men > Jeans * `add-feedback`: Add a user feedback.
-   * Retail-related values: * `add-to-cart`: Add an item(s) to cart, e.g. in Retail online shopping
-   * * `purchase`: Purchase an item(s) Media-related values: * `media-play`: Start/resume watching a
-   * video, playing a song, etc. * `media-complete`: Finished or stopped midway through a video,
-   * song, etc. Custom conversion value: * `conversion`: Customer defined conversion event.
+   * page`: View of a category page, e.g. Home > Men > Jeans Retail-related values: * `add-to-cart`:
+   * Add an item(s) to cart, e.g. in Retail online shopping * `purchase`: Purchase an item(s) Media-
+   * related values: * `media-play`: Start/resume watching a video, playing a song, etc. * `media-
+   * complete`: Finished or stopped midway through a video, song, etc. Custom conversion value: *
+   * `conversion`: Customer defined conversion event.
    * @param eventType eventType or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaUserEvent setEventType(java.lang.String eventType) {

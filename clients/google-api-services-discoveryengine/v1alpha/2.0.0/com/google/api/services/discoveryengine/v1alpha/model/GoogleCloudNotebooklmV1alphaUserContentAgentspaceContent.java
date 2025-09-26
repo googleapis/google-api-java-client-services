@@ -30,28 +30,35 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The full document name in Agentspace.
+   * Optional. The full resource name of the Agentspace document. Format: `projects/{project}/locati
+   * ons/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{do
+   * cument_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentName;
 
   /**
-   * Optional. Engine to verify the permission of the document.
+   * Optional. Engine to verify the permission of the document. Format:
+   * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String engineName;
 
   /**
-   * Optional. The full idea name for IdeaForge.
+   * Optional. Resource name of the idea forge instance. Format: `projects/{project}/locations/{loca
+   * tion}/collections/{collection}/engines/{engine}/sessions/{session}/ideaForgeInstances/{instance
+   * }`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ideaforgeIdeaName;
 
   /**
-   * Optional. The full document name in Agentspace.
+   * Optional. The full resource name of the Agentspace document. Format: `projects/{project}/locati
+   * ons/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{do
+   * cument_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentName() {
@@ -59,7 +66,9 @@ public final class GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent exte
   }
 
   /**
-   * Optional. The full document name in Agentspace.
+   * Optional. The full resource name of the Agentspace document. Format: `projects/{project}/locati
+   * ons/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{do
+   * cument_id}`.
    * @param documentName documentName or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent setDocumentName(java.lang.String documentName) {
@@ -68,7 +77,8 @@ public final class GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent exte
   }
 
   /**
-   * Optional. Engine to verify the permission of the document.
+   * Optional. Engine to verify the permission of the document. Format:
+   * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEngineName() {
@@ -76,7 +86,8 @@ public final class GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent exte
   }
 
   /**
-   * Optional. Engine to verify the permission of the document.
+   * Optional. Engine to verify the permission of the document. Format:
+   * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`.
    * @param engineName engineName or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent setEngineName(java.lang.String engineName) {
@@ -85,7 +96,9 @@ public final class GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent exte
   }
 
   /**
-   * Optional. The full idea name for IdeaForge.
+   * Optional. Resource name of the idea forge instance. Format: `projects/{project}/locations/{loca
+   * tion}/collections/{collection}/engines/{engine}/sessions/{session}/ideaForgeInstances/{instance
+   * }`
    * @return value or {@code null} for none
    */
   public java.lang.String getIdeaforgeIdeaName() {
@@ -93,7 +106,9 @@ public final class GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent exte
   }
 
   /**
-   * Optional. The full idea name for IdeaForge.
+   * Optional. Resource name of the idea forge instance. Format: `projects/{project}/locations/{loca
+   * tion}/collections/{collection}/engines/{engine}/sessions/{session}/ideaForgeInstances/{instance
+   * }`
    * @param ideaforgeIdeaName ideaforgeIdeaName or {@code null} for none
    */
   public GoogleCloudNotebooklmV1alphaUserContentAgentspaceContent setIdeaforgeIdeaName(java.lang.String ideaforgeIdeaName) {

@@ -38,6 +38,17 @@ public final class PhpSettings extends com.google.api.client.json.GenericJson {
   private CommonLanguageSettings common;
 
   /**
+   * The package name to use in Php. Clobbers the php_namespace option set in the protobuf. This
+   * should be used **only** by APIs who have already set the language_settings.php.package_name"
+   * field in gapic.yaml. API teams should use the protobuf php_namespace option where possible.
+   * Example of a YAML configuration:: publishing: library_settings: php_settings: library_package:
+   * Google\Cloud\PubSub\V1
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String libraryPackage;
+
+  /**
    * Some settings.
    * @return value or {@code null} for none
    */
@@ -51,6 +62,31 @@ public final class PhpSettings extends com.google.api.client.json.GenericJson {
    */
   public PhpSettings setCommon(CommonLanguageSettings common) {
     this.common = common;
+    return this;
+  }
+
+  /**
+   * The package name to use in Php. Clobbers the php_namespace option set in the protobuf. This
+   * should be used **only** by APIs who have already set the language_settings.php.package_name"
+   * field in gapic.yaml. API teams should use the protobuf php_namespace option where possible.
+   * Example of a YAML configuration:: publishing: library_settings: php_settings: library_package:
+   * Google\Cloud\PubSub\V1
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLibraryPackage() {
+    return libraryPackage;
+  }
+
+  /**
+   * The package name to use in Php. Clobbers the php_namespace option set in the protobuf. This
+   * should be used **only** by APIs who have already set the language_settings.php.package_name"
+   * field in gapic.yaml. API teams should use the protobuf php_namespace option where possible.
+   * Example of a YAML configuration:: publishing: library_settings: php_settings: library_package:
+   * Google\Cloud\PubSub\V1
+   * @param libraryPackage libraryPackage or {@code null} for none
+   */
+  public PhpSettings setLibraryPackage(java.lang.String libraryPackage) {
+    this.libraryPackage = libraryPackage;
     return this;
   }
 

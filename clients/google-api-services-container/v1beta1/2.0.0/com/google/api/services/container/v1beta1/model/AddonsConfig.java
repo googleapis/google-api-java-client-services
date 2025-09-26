@@ -40,8 +40,8 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private CloudRunConfig cloudRunConfig;
 
   /**
-   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP
-   * services through the Kubernetes API
+   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted Google
+   * Cloud services through the Kubernetes API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private GcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig;
 
   /**
-   * Configuration for the GCP Filestore CSI driver.
+   * Configuration for the Filestore CSI driver.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,8 +187,8 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP
-   * services through the Kubernetes API
+   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted Google
+   * Cloud services through the Kubernetes API.
    * @return value or {@code null} for none
    */
   public ConfigConnectorConfig getConfigConnectorConfig() {
@@ -196,8 +196,8 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP
-   * services through the Kubernetes API
+   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted Google
+   * Cloud services through the Kubernetes API.
    * @param configConnectorConfig configConnectorConfig or {@code null} for none
    */
   public AddonsConfig setConfigConnectorConfig(ConfigConnectorConfig configConnectorConfig) {
@@ -240,7 +240,7 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the GCP Filestore CSI driver.
+   * Configuration for the Filestore CSI driver.
    * @return value or {@code null} for none
    */
   public GcpFilestoreCsiDriverConfig getGcpFilestoreCsiDriverConfig() {
@@ -248,7 +248,7 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the GCP Filestore CSI driver.
+   * Configuration for the Filestore CSI driver.
    * @param gcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig or {@code null} for none
    */
   public AddonsConfig setGcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {

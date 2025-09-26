@@ -225,7 +225,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String endpoint;
 
   /**
-   * GKE Enterprise Configuration.
+   * GKE Enterprise Configuration. Deprecated: GKE Enterprise features are now available without an
+   * Enterprise tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -732,7 +733,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private WorkloadCertificates workloadCertificates;
 
   /**
-   * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+   * Configuration for the use of Kubernetes Service Accounts in IAM policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1211,7 +1212,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GKE Enterprise Configuration.
+   * GKE Enterprise Configuration. Deprecated: GKE Enterprise features are now available without an
+   * Enterprise tier.
    * @return value or {@code null} for none
    */
   public EnterpriseConfig getEnterpriseConfig() {
@@ -1219,7 +1221,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GKE Enterprise Configuration.
+   * GKE Enterprise Configuration. Deprecated: GKE Enterprise features are now available without an
+   * Enterprise tier.
    * @param enterpriseConfig enterpriseConfig or {@code null} for none
    */
   public Cluster setEnterpriseConfig(EnterpriseConfig enterpriseConfig) {
@@ -2408,7 +2411,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+   * Configuration for the use of Kubernetes Service Accounts in IAM policies.
    * @return value or {@code null} for none
    */
   public WorkloadIdentityConfig getWorkloadIdentityConfig() {
@@ -2416,7 +2419,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+   * Configuration for the use of Kubernetes Service Accounts in IAM policies.
    * @param workloadIdentityConfig workloadIdentityConfig or {@code null} for none
    */
   public Cluster setWorkloadIdentityConfig(WorkloadIdentityConfig workloadIdentityConfig) {

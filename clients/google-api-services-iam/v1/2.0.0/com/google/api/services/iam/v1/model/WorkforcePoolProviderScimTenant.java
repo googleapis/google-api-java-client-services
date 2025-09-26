@@ -49,14 +49,14 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   private java.util.Map<String, java.lang.String> claimMapping;
 
   /**
-   * Optional. The user-specified description of the scim tenant. Cannot exceed 256 characters.
+   * Optional. The description of the scim tenant. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. The user-specified display name of the scim tenant. Cannot exceed 32 characters.
+   * Optional. The display name of the scim tenant. Cannot exceed 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. The user-specified description of the scim tenant. Cannot exceed 256 characters.
+   * Optional. The description of the scim tenant. Cannot exceed 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -134,7 +134,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. The user-specified description of the scim tenant. Cannot exceed 256 characters.
+   * Optional. The description of the scim tenant. Cannot exceed 256 characters.
    * @param description description or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setDescription(java.lang.String description) {
@@ -143,7 +143,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. The user-specified display name of the scim tenant. Cannot exceed 32 characters.
+   * Optional. The display name of the scim tenant. Cannot exceed 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -151,7 +151,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. The user-specified display name of the scim tenant. Cannot exceed 32 characters.
+   * Optional. The display name of the scim tenant. Cannot exceed 32 characters.
    * @param displayName displayName or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setDisplayName(java.lang.String displayName) {

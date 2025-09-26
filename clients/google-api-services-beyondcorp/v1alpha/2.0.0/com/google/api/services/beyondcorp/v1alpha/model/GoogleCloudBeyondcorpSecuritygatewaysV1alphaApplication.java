@@ -48,9 +48,9 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
    * Required. Endpoint matchers associated with an application. A combination of hostname and ports
    * as endpoint matchers is used to match the application. Match conditions for OR logic. An array
    * of match conditions to allow for multiple matching criteria. The rule is considered a match if
-   * one of the conditions is met. The conditions can be one of the following combinations
-   * (Hostname), (Hostname & Ports) EXAMPLES: Hostname - ("*.example.com"), ("xyz.example.com")
-   * Hostname and Ports - ("example.com" and "22"), ("example.com" and "22,33") etc
+   * one of the conditions is met. The conditions should be the following combination: (Hostname &
+   * Ports) EXAMPLES: Hostname and Ports - ("*.example.com", "443"), ("example.com" and "22"),
+   * ("example.com" and "22,33") etc
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,6 +62,13 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Type of the external application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String schema;
 
   /**
    * Output only. Timestamp when the resource was last modified.
@@ -117,9 +124,9 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
    * Required. Endpoint matchers associated with an application. A combination of hostname and ports
    * as endpoint matchers is used to match the application. Match conditions for OR logic. An array
    * of match conditions to allow for multiple matching criteria. The rule is considered a match if
-   * one of the conditions is met. The conditions can be one of the following combinations
-   * (Hostname), (Hostname & Ports) EXAMPLES: Hostname - ("*.example.com"), ("xyz.example.com")
-   * Hostname and Ports - ("example.com" and "22"), ("example.com" and "22,33") etc
+   * one of the conditions is met. The conditions should be the following combination: (Hostname &
+   * Ports) EXAMPLES: Hostname and Ports - ("*.example.com", "443"), ("example.com" and "22"),
+   * ("example.com" and "22,33") etc
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher> getEndpointMatchers() {
@@ -130,9 +137,9 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
    * Required. Endpoint matchers associated with an application. A combination of hostname and ports
    * as endpoint matchers is used to match the application. Match conditions for OR logic. An array
    * of match conditions to allow for multiple matching criteria. The rule is considered a match if
-   * one of the conditions is met. The conditions can be one of the following combinations
-   * (Hostname), (Hostname & Ports) EXAMPLES: Hostname - ("*.example.com"), ("xyz.example.com")
-   * Hostname and Ports - ("example.com" and "22"), ("example.com" and "22,33") etc
+   * one of the conditions is met. The conditions should be the following combination: (Hostname &
+   * Ports) EXAMPLES: Hostname and Ports - ("*.example.com", "443"), ("example.com" and "22"),
+   * ("example.com" and "22,33") etc
    * @param endpointMatchers endpointMatchers or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication setEndpointMatchers(java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher> endpointMatchers) {
@@ -154,6 +161,23 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Type of the external application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSchema() {
+    return schema;
+  }
+
+  /**
+   * Optional. Type of the external application.
+   * @param schema schema or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication setSchema(java.lang.String schema) {
+    this.schema = schema;
     return this;
   }
 

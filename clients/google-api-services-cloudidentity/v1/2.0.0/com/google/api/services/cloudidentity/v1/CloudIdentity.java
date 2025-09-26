@@ -3169,10 +3169,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple properties
        * are provided, only DeviceUsers having all of these properties are considered as matches - i.e.
        * the query behaves like an AND. Different platforms require different amounts of information from
-       * the caller to ensure that the DeviceUser is uniquely identified. - iOS: No properties need to be
-       * passed, the caller's credentials are sufficient to identify the corresponding DeviceUser. -
-       * Android: Specifying the 'android_id' field is required. - Desktop: Specifying the
-       * 'raw_resource_id' field is required.
+       * the caller to ensure that the DeviceUser is uniquely identified. - iOS: Specifying the 'partner'
+       * and 'ios_device_id' fields is required. - Android: Specifying the 'android_id' field is required.
+       * - Desktop: Specifying the 'raw_resource_id' field is required.
        *
        * Create a request for the method "deviceUsers.lookup".
        *
@@ -3201,10 +3200,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * with the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple
          * properties are provided, only DeviceUsers having all of these properties are considered as
          * matches - i.e. the query behaves like an AND. Different platforms require different amounts of
-         * information from the caller to ensure that the DeviceUser is uniquely identified. - iOS: No
-         * properties need to be passed, the caller's credentials are sufficient to identify the
-         * corresponding DeviceUser. - Android: Specifying the 'android_id' field is required. - Desktop:
-         * Specifying the 'raw_resource_id' field is required.
+         * information from the caller to ensure that the DeviceUser is uniquely identified. - iOS:
+         * Specifying the 'partner' and 'ios_device_id' fields is required. - Android: Specifying the
+         * 'android_id' field is required. - Desktop: Specifying the 'raw_resource_id' field is required.
          *
          * Create a request for the method "deviceUsers.lookup".
          *
@@ -3343,6 +3341,32 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
+         * Optional. The partner-specified device identifier assigned to the iOS device that
+         * initiated the Lookup API call. This string must match the value of the iosDeviceId key in
+         * the app config dictionary provided to Google Workspace apps.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String iosDeviceId;
+
+        /** Optional. The partner-specified device identifier assigned to the iOS device that initiated the
+       Lookup API call. This string must match the value of the iosDeviceId key in the app config
+       dictionary provided to Google Workspace apps.
+         */
+        public java.lang.String getIosDeviceId() {
+          return iosDeviceId;
+        }
+
+        /**
+         * Optional. The partner-specified device identifier assigned to the iOS device that
+         * initiated the Lookup API call. This string must match the value of the iosDeviceId key in
+         * the app config dictionary provided to Google Workspace apps.
+         */
+        public Lookup setIosDeviceId(java.lang.String iosDeviceId) {
+          this.iosDeviceId = iosDeviceId;
+          return this;
+        }
+
+        /**
          * The maximum number of DeviceUsers to return. If unspecified, at most 20 DeviceUsers will
          * be returned. The maximum value is 20; values above 20 will be coerced to 20.
          */
@@ -3392,10 +3416,33 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
+         * Optional. The partner ID of the calling iOS app. This string must match the value of the
+         * partner key within the app configuration dictionary provided to Google Workspace apps.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String partner;
+
+        /** Optional. The partner ID of the calling iOS app. This string must match the value of the partner
+       key within the app configuration dictionary provided to Google Workspace apps.
+         */
+        public java.lang.String getPartner() {
+          return partner;
+        }
+
+        /**
+         * Optional. The partner ID of the calling iOS app. This string must match the value of the
+         * partner key within the app configuration dictionary provided to Google Workspace apps.
+         */
+        public Lookup setPartner(java.lang.String partner) {
+          this.partner = partner;
+          return this;
+        }
+
+        /**
          * Raw Resource Id used by Google Endpoint Verification. If the user is enrolled into Google
          * Endpoint Verification, this id will be saved as the 'device_resource_id' field in the
-         * following platform dependent files. * macOS: ~/.secureConnect/context_aware_config.json *
-         * Windows: %USERPROFILE%\AppData\Local\Google\Endpoint Verification\accounts.json * Linux:
+         * following platform dependent files. Mac: ~/.secureConnect/context_aware_config.json
+         * Windows: C:\Users\%USERPROFILE%\.secureConnect\context_aware_config.json Linux:
          * ~/.secureConnect/context_aware_config.json
          */
         @com.google.api.client.util.Key
@@ -3403,8 +3450,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /** Raw Resource Id used by Google Endpoint Verification. If the user is enrolled into Google Endpoint
        Verification, this id will be saved as the 'device_resource_id' field in the following platform
-       dependent files. * macOS: ~/.secureConnect/context_aware_config.json * Windows:
-       %USERPROFILE%\AppData\Local\Google\Endpoint Verification\accounts.json * Linux:
+       dependent files. Mac: ~/.secureConnect/context_aware_config.json Windows:
+       C:\Users\%USERPROFILE%\.secureConnect\context_aware_config.json Linux:
        ~/.secureConnect/context_aware_config.json
          */
         public java.lang.String getRawResourceId() {
@@ -3414,8 +3461,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Raw Resource Id used by Google Endpoint Verification. If the user is enrolled into Google
          * Endpoint Verification, this id will be saved as the 'device_resource_id' field in the
-         * following platform dependent files. * macOS: ~/.secureConnect/context_aware_config.json *
-         * Windows: %USERPROFILE%\AppData\Local\Google\Endpoint Verification\accounts.json * Linux:
+         * following platform dependent files. Mac: ~/.secureConnect/context_aware_config.json
+         * Windows: C:\Users\%USERPROFILE%\.secureConnect\context_aware_config.json Linux:
          * ~/.secureConnect/context_aware_config.json
          */
         public Lookup setRawResourceId(java.lang.String rawResourceId) {

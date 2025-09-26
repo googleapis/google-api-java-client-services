@@ -9510,6 +9510,136 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
           }
           /**
+           * Execute the integration in draft state
+           *
+           * Create a request for the method "versions.test".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link Test#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Auto-generated primary key.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestIntegrationsRequest}
+           * @return the request
+           */
+          public Test test(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestIntegrationsRequest content) throws java.io.IOException {
+            Test result = new Test(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Test extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestIntegrationsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:test";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+            /**
+             * Execute the integration in draft state
+             *
+             * Create a request for the method "versions.test".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link Test#execute()} method to invoke the remote operation. <p>
+             * {@link Test#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Auto-generated primary key.
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestIntegrationsRequest}
+             * @since 1.13
+             */
+            protected Test(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestIntegrationsRequest content) {
+              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestIntegrationsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Test set$Xgafv(java.lang.String $Xgafv) {
+              return (Test) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Test setAccessToken(java.lang.String accessToken) {
+              return (Test) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Test setAlt(java.lang.String alt) {
+              return (Test) super.setAlt(alt);
+            }
+
+            @Override
+            public Test setCallback(java.lang.String callback) {
+              return (Test) super.setCallback(callback);
+            }
+
+            @Override
+            public Test setFields(java.lang.String fields) {
+              return (Test) super.setFields(fields);
+            }
+
+            @Override
+            public Test setKey(java.lang.String key) {
+              return (Test) super.setKey(key);
+            }
+
+            @Override
+            public Test setOauthToken(java.lang.String oauthToken) {
+              return (Test) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Test setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Test) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Test setQuotaUser(java.lang.String quotaUser) {
+              return (Test) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Test setUploadType(java.lang.String uploadType) {
+              return (Test) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Test setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Test) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Output only. Auto-generated primary key. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Auto-generated primary key.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Output only. Auto-generated primary key. */
+            public Test setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Test set(String parameterName, Object value) {
+              return (Test) super.set(parameterName, value);
+            }
+          }
+          /**
            * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED" after
            * validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an
            * exception if the version being snapshot is not ACTIVE. Audit fields added include action,

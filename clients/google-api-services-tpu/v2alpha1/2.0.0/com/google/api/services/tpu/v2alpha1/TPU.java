@@ -3594,6 +3594,145 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
+         * Gets the maintenance info for a queued resource.
+         *
+         * Create a request for the method "queuedResources.getMaintenanceInfo".
+         *
+         * This request holds the parameters needed by the tpu server.  After setting any optional
+         * parameters, call the {@link GetMaintenanceInfo#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The QueuedResource name.
+         * @return the request
+         */
+        public GetMaintenanceInfo getMaintenanceInfo(java.lang.String name) throws java.io.IOException {
+          GetMaintenanceInfo result = new GetMaintenanceInfo(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetMaintenanceInfo extends TPURequest<com.google.api.services.tpu.v2alpha1.model.GetMaintenanceInfoResponse> {
+
+          private static final String REST_PATH = "v2alpha1/{+name}:getMaintenanceInfo";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+
+          /**
+           * Gets the maintenance info for a queued resource.
+           *
+           * Create a request for the method "queuedResources.getMaintenanceInfo".
+           *
+           * This request holds the parameters needed by the the tpu server.  After setting any optional
+           * parameters, call the {@link GetMaintenanceInfo#execute()} method to invoke the remote
+           * operation. <p> {@link GetMaintenanceInfo#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The QueuedResource name.
+           * @since 1.13
+           */
+          protected GetMaintenanceInfo(java.lang.String name) {
+            super(TPU.this, "GET", REST_PATH, null, com.google.api.services.tpu.v2alpha1.model.GetMaintenanceInfoResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetMaintenanceInfo set$Xgafv(java.lang.String $Xgafv) {
+            return (GetMaintenanceInfo) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetMaintenanceInfo setAccessToken(java.lang.String accessToken) {
+            return (GetMaintenanceInfo) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetMaintenanceInfo setAlt(java.lang.String alt) {
+            return (GetMaintenanceInfo) super.setAlt(alt);
+          }
+
+          @Override
+          public GetMaintenanceInfo setCallback(java.lang.String callback) {
+            return (GetMaintenanceInfo) super.setCallback(callback);
+          }
+
+          @Override
+          public GetMaintenanceInfo setFields(java.lang.String fields) {
+            return (GetMaintenanceInfo) super.setFields(fields);
+          }
+
+          @Override
+          public GetMaintenanceInfo setKey(java.lang.String key) {
+            return (GetMaintenanceInfo) super.setKey(key);
+          }
+
+          @Override
+          public GetMaintenanceInfo setOauthToken(java.lang.String oauthToken) {
+            return (GetMaintenanceInfo) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetMaintenanceInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetMaintenanceInfo) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetMaintenanceInfo setQuotaUser(java.lang.String quotaUser) {
+            return (GetMaintenanceInfo) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetMaintenanceInfo setUploadType(java.lang.String uploadType) {
+            return (GetMaintenanceInfo) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetMaintenanceInfo setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetMaintenanceInfo) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The QueuedResource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The QueuedResource name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The QueuedResource name. */
+          public GetMaintenanceInfo setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetMaintenanceInfo set(String parameterName, Object value) {
+            return (GetMaintenanceInfo) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists queued resources.
          *
          * Create a request for the method "queuedResources.list".

@@ -89,7 +89,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private java.util.Map<String, java.lang.String> attributeMapping;
 
   /**
-   * Optional. A user-specified description of the provider. Cannot exceed 256 characters.
+   * Optional. A description of the provider. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private java.lang.Boolean disabled;
 
   /**
-   * Optional. A user-specified display name for the provider. Cannot exceed 32 characters.
+   * Optional. A display name for the provider. Cannot exceed 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -302,7 +302,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A user-specified description of the provider. Cannot exceed 256 characters.
+   * Optional. A description of the provider. Cannot exceed 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -310,7 +310,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A user-specified description of the provider. Cannot exceed 256 characters.
+   * Optional. A description of the provider. Cannot exceed 256 characters.
    * @param description description or {@code null} for none
    */
   public WorkforcePoolProvider setDescription(java.lang.String description) {
@@ -359,7 +359,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A user-specified display name for the provider. Cannot exceed 32 characters.
+   * Optional. A display name for the provider. Cannot exceed 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -367,7 +367,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A user-specified display name for the provider. Cannot exceed 32 characters.
+   * Optional. A display name for the provider. Cannot exceed 32 characters.
    * @param displayName displayName or {@code null} for none
    */
   public WorkforcePoolProvider setDisplayName(java.lang.String displayName) {

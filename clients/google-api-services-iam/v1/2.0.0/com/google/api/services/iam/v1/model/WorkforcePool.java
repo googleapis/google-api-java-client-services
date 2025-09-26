@@ -41,7 +41,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   private AccessRestrictions accessRestrictions;
 
   /**
-   * Optional. A user-specified description of the pool. Cannot exceed 256 characters.
+   * Optional. A description of the pool. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean disabled;
 
   /**
-   * Optional. A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32
-   * characters.
+   * Optional. A display name for the pool. Cannot exceed 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +126,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A user-specified description of the pool. Cannot exceed 256 characters.
+   * Optional. A description of the pool. Cannot exceed 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -135,7 +134,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A user-specified description of the pool. Cannot exceed 256 characters.
+   * Optional. A description of the pool. Cannot exceed 256 characters.
    * @param description description or {@code null} for none
    */
   public WorkforcePool setDescription(java.lang.String description) {
@@ -165,8 +164,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32
-   * characters.
+   * Optional. A display name for the pool. Cannot exceed 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -174,8 +172,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32
-   * characters.
+   * Optional. A display name for the pool. Cannot exceed 32 characters.
    * @param displayName displayName or {@code null} for none
    */
   public WorkforcePool setDisplayName(java.lang.String displayName) {

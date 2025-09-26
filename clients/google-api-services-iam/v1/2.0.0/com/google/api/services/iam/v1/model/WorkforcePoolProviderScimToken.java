@@ -32,7 +32,7 @@ package com.google.api.services.iam.v1.model;
 public final class WorkforcePoolProviderScimToken extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The user-specified display name of the scim token. Cannot exceed 32 characters.
+   * Optional. The display name of the scim token. Cannot exceed 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   private java.lang.String state;
 
   /**
-   * Optional. The user-specified display name of the scim token. Cannot exceed 32 characters.
+   * Optional. The display name of the scim token. Cannot exceed 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -71,7 +71,7 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   }
 
   /**
-   * Optional. The user-specified display name of the scim token. Cannot exceed 32 characters.
+   * Optional. The display name of the scim token. Cannot exceed 32 characters.
    * @param displayName displayName or {@code null} for none
    */
   public WorkforcePoolProviderScimToken setDisplayName(java.lang.String displayName) {

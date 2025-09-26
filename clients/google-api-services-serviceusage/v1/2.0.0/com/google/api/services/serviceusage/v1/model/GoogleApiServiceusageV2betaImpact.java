@@ -44,6 +44,15 @@ public final class GoogleApiServiceusageV2betaImpact extends com.google.api.clie
   private java.lang.String impactType;
 
   /**
+   * Output only. This field will be populated only for the `DEPENDENCY_MISSING_DEPENDENCIES` impact
+   * type. Example: `services/compute.googleapis.com`. Impact.detail will be in format : `missing
+   * service dependency: {missing_dependency}.`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String missingDependency;
+
+  /**
    * Output only. User friendly impact detail in a free form message.
    * @return value or {@code null} for none
    */
@@ -74,6 +83,27 @@ public final class GoogleApiServiceusageV2betaImpact extends com.google.api.clie
    */
   public GoogleApiServiceusageV2betaImpact setImpactType(java.lang.String impactType) {
     this.impactType = impactType;
+    return this;
+  }
+
+  /**
+   * Output only. This field will be populated only for the `DEPENDENCY_MISSING_DEPENDENCIES` impact
+   * type. Example: `services/compute.googleapis.com`. Impact.detail will be in format : `missing
+   * service dependency: {missing_dependency}.`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMissingDependency() {
+    return missingDependency;
+  }
+
+  /**
+   * Output only. This field will be populated only for the `DEPENDENCY_MISSING_DEPENDENCIES` impact
+   * type. Example: `services/compute.googleapis.com`. Impact.detail will be in format : `missing
+   * service dependency: {missing_dependency}.`
+   * @param missingDependency missingDependency or {@code null} for none
+   */
+  public GoogleApiServiceusageV2betaImpact setMissingDependency(java.lang.String missingDependency) {
+    this.missingDependency = missingDependency;
     return this;
   }
 

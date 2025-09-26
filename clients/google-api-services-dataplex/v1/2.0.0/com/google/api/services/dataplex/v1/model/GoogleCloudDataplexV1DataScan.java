@@ -25,7 +25,10 @@ package com.google.api.services.dataplex.v1.model;
  * null percent, cardinality, min/max/mean, etc). For more information, see About data profiling
  * (https://cloud.google.com/dataplex/docs/data-profiling-overview). Data discovery: scans data in
  * Cloud Storage buckets to extract and then catalog metadata. For more information, see Discover
- * and catalog Cloud Storage data (https://cloud.google.com/bigquery/docs/automatic-discovery).
+ * and catalog Cloud Storage data (https://cloud.google.com/bigquery/docs/automatic-discovery). Data
+ * documentation: analyzes the table details and generates insights including descriptions and
+ * sample SQL queries for the table. For more information, see Generate data insights in BigQuery
+ * (https://cloud.google.com/bigquery/docs/data-insights).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -64,6 +67,20 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataDiscoverySpec dataDiscoverySpec;
+
+  /**
+   * Output only. The result of a data documentation scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDocumentationResult dataDocumentationResult;
+
+  /**
+   * Settings for a data documentation scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDocumentationSpec dataDocumentationSpec;
 
   /**
    * Output only. The result of a data profile scan.
@@ -232,6 +249,40 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
    */
   public GoogleCloudDataplexV1DataScan setDataDiscoverySpec(GoogleCloudDataplexV1DataDiscoverySpec dataDiscoverySpec) {
     this.dataDiscoverySpec = dataDiscoverySpec;
+    return this;
+  }
+
+  /**
+   * Output only. The result of a data documentation scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationResult getDataDocumentationResult() {
+    return dataDocumentationResult;
+  }
+
+  /**
+   * Output only. The result of a data documentation scan.
+   * @param dataDocumentationResult dataDocumentationResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setDataDocumentationResult(GoogleCloudDataplexV1DataDocumentationResult dataDocumentationResult) {
+    this.dataDocumentationResult = dataDocumentationResult;
+    return this;
+  }
+
+  /**
+   * Settings for a data documentation scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationSpec getDataDocumentationSpec() {
+    return dataDocumentationSpec;
+  }
+
+  /**
+   * Settings for a data documentation scan.
+   * @param dataDocumentationSpec dataDocumentationSpec or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setDataDocumentationSpec(GoogleCloudDataplexV1DataDocumentationSpec dataDocumentationSpec) {
+    this.dataDocumentationSpec = dataDocumentationSpec;
     return this;
   }
 

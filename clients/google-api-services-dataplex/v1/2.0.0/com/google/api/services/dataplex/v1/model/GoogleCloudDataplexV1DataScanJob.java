@@ -51,6 +51,20 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
   private GoogleCloudDataplexV1DataDiscoverySpec dataDiscoverySpec;
 
   /**
+   * Output only. The result of a data documentation scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDocumentationResult dataDocumentationResult;
+
+  /**
+   * Output only. Settings for a data documentation scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDocumentationSpec dataDocumentationSpec;
+
+  /**
    * Output only. The result of a data profile scan.
    * The value may be {@code null}.
    */
@@ -177,6 +191,40 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
    */
   public GoogleCloudDataplexV1DataScanJob setDataDiscoverySpec(GoogleCloudDataplexV1DataDiscoverySpec dataDiscoverySpec) {
     this.dataDiscoverySpec = dataDiscoverySpec;
+    return this;
+  }
+
+  /**
+   * Output only. The result of a data documentation scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationResult getDataDocumentationResult() {
+    return dataDocumentationResult;
+  }
+
+  /**
+   * Output only. The result of a data documentation scan.
+   * @param dataDocumentationResult dataDocumentationResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanJob setDataDocumentationResult(GoogleCloudDataplexV1DataDocumentationResult dataDocumentationResult) {
+    this.dataDocumentationResult = dataDocumentationResult;
+    return this;
+  }
+
+  /**
+   * Output only. Settings for a data documentation scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationSpec getDataDocumentationSpec() {
+    return dataDocumentationSpec;
+  }
+
+  /**
+   * Output only. Settings for a data documentation scan.
+   * @param dataDocumentationSpec dataDocumentationSpec or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanJob setDataDocumentationSpec(GoogleCloudDataplexV1DataDocumentationSpec dataDocumentationSpec) {
+    this.dataDocumentationSpec = dataDocumentationSpec;
     return this;
   }
 

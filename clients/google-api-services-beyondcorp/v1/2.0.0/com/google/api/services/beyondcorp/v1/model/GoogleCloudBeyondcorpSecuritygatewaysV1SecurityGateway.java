@@ -78,6 +78,20 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extend
   private java.lang.String name;
 
   /**
+   * Optional. Shared proxy configuration for all apps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig proxyProtocolConfig;
+
+  /**
+   * Optional. Settings related to the Service Discovery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery serviceDiscovery;
+
+  /**
    * Output only. The operational state of the SecurityGateway.
    * The value may be {@code null}.
    */
@@ -190,6 +204,40 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extend
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Shared proxy configuration for all apps.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig getProxyProtocolConfig() {
+    return proxyProtocolConfig;
+  }
+
+  /**
+   * Optional. Shared proxy configuration for all apps.
+   * @param proxyProtocolConfig proxyProtocolConfig or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway setProxyProtocolConfig(GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig proxyProtocolConfig) {
+    this.proxyProtocolConfig = proxyProtocolConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Settings related to the Service Discovery.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery getServiceDiscovery() {
+    return serviceDiscovery;
+  }
+
+  /**
+   * Optional. Settings related to the Service Discovery.
+   * @param serviceDiscovery serviceDiscovery or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway setServiceDiscovery(GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery serviceDiscovery) {
+    this.serviceDiscovery = serviceDiscovery;
     return this;
   }
 

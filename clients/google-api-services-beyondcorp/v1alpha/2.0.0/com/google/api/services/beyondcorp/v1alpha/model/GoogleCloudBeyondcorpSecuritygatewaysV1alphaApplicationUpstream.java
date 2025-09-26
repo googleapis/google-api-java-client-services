@@ -37,11 +37,25 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstre
   private GoogleCloudBeyondcorpSecuritygatewaysV1alphaEgressPolicy egressPolicy;
 
   /**
+   * List of the external endpoints to forward traffic to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstreamExternal external;
+
+  /**
    * Network to forward traffic to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstreamNetwork network;
+
+  /**
+   * Optional. Enables proxy protocol configuration for the upstream.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConfig proxyProtocol;
 
   /**
    * Optional. Routing policy information.
@@ -61,6 +75,23 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstre
   }
 
   /**
+   * List of the external endpoints to forward traffic to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstreamExternal getExternal() {
+    return external;
+  }
+
+  /**
+   * List of the external endpoints to forward traffic to.
+   * @param external external or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstream setExternal(GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstreamExternal external) {
+    this.external = external;
+    return this;
+  }
+
+  /**
    * Network to forward traffic to.
    * @return value or {@code null} for none
    */
@@ -74,6 +105,23 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstre
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstream setNetwork(GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstreamNetwork network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. Enables proxy protocol configuration for the upstream.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConfig getProxyProtocol() {
+    return proxyProtocol;
+  }
+
+  /**
+   * Optional. Enables proxy protocol configuration for the upstream.
+   * @param proxyProtocol proxyProtocol or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationUpstream setProxyProtocol(GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConfig proxyProtocol) {
+    this.proxyProtocol = proxyProtocol;
     return this;
   }
 

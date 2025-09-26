@@ -37,7 +37,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1EndpointMatcher extend
   private java.lang.String hostname;
 
   /**
-   * Optional. Ports of the application.
+   * Required. Ports of the application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1EndpointMatcher extend
   }
 
   /**
-   * Optional. Ports of the application.
+   * Required. Ports of the application.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getPorts() {
@@ -69,7 +69,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1EndpointMatcher extend
   }
 
   /**
-   * Optional. Ports of the application.
+   * Required. Ports of the application.
    * @param ports ports or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1EndpointMatcher setPorts(java.util.List<java.lang.Integer> ports) {

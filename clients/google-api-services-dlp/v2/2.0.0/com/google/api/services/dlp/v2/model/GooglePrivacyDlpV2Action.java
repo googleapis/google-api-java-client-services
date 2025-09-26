@@ -62,6 +62,13 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   private GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog publishFindingsToCloudDataCatalog;
 
   /**
+   * Publish findings as an aspect to Dataplex Universal Catalog.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2PublishFindingsToDataplexCatalog publishFindingsToDataplexCatalog;
+
+  /**
    * Publish summary to Cloud Security Command Center (Alpha).
    * The value may be {@code null}.
    */
@@ -151,6 +158,23 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
    */
   public GooglePrivacyDlpV2Action setPublishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog publishFindingsToCloudDataCatalog) {
     this.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;
+    return this;
+  }
+
+  /**
+   * Publish findings as an aspect to Dataplex Universal Catalog.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2PublishFindingsToDataplexCatalog getPublishFindingsToDataplexCatalog() {
+    return publishFindingsToDataplexCatalog;
+  }
+
+  /**
+   * Publish findings as an aspect to Dataplex Universal Catalog.
+   * @param publishFindingsToDataplexCatalog publishFindingsToDataplexCatalog or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Action setPublishFindingsToDataplexCatalog(GooglePrivacyDlpV2PublishFindingsToDataplexCatalog publishFindingsToDataplexCatalog) {
+    this.publishFindingsToDataplexCatalog = publishFindingsToDataplexCatalog;
     return this;
   }
 

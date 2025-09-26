@@ -32,6 +32,15 @@ package com.google.api.services.backupdr.v1.model;
 public final class DataSourceGcpResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. AlloyDBClusterDataSourceProperties has a subset of AlloyDB cluster properties that
+   * are useful at the Datasource level. Currently none of its child properties are auditable. If
+   * new auditable properties are added, the AUDIT annotation should be added.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AlloyDBClusterDataSourceProperties alloyDbClusterDatasourceProperties;
+
+  /**
    * Output only. CloudSqlInstanceDataSourceProperties has a subset of Cloud SQL Instance properties
    * that are useful at the Datasource level.
    * The value may be {@code null}.
@@ -76,6 +85,27 @@ public final class DataSourceGcpResource extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Output only. AlloyDBClusterDataSourceProperties has a subset of AlloyDB cluster properties that
+   * are useful at the Datasource level. Currently none of its child properties are auditable. If
+   * new auditable properties are added, the AUDIT annotation should be added.
+   * @return value or {@code null} for none
+   */
+  public AlloyDBClusterDataSourceProperties getAlloyDbClusterDatasourceProperties() {
+    return alloyDbClusterDatasourceProperties;
+  }
+
+  /**
+   * Output only. AlloyDBClusterDataSourceProperties has a subset of AlloyDB cluster properties that
+   * are useful at the Datasource level. Currently none of its child properties are auditable. If
+   * new auditable properties are added, the AUDIT annotation should be added.
+   * @param alloyDbClusterDatasourceProperties alloyDbClusterDatasourceProperties or {@code null} for none
+   */
+  public DataSourceGcpResource setAlloyDbClusterDatasourceProperties(AlloyDBClusterDataSourceProperties alloyDbClusterDatasourceProperties) {
+    this.alloyDbClusterDatasourceProperties = alloyDbClusterDatasourceProperties;
+    return this;
+  }
 
   /**
    * Output only. CloudSqlInstanceDataSourceProperties has a subset of Cloud SQL Instance properties

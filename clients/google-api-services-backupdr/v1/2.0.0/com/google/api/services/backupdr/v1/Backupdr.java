@@ -319,7 +319,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the backupdr server.  After setting any optional
        * parameters, call the {@link GetTrial#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the trial to retrieve.
+       * @param name Required. The project for which trial details need to be retrieved. Format:
+       *        projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
        * @return the request
        */
       public GetTrial getTrial(java.lang.String name) throws java.io.IOException {
@@ -346,7 +347,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * GetTrial#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the trial to retrieve.
+         * @param name Required. The project for which trial details need to be retrieved. Format:
+       *        projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
          * @since 1.13
          */
         protected GetTrial(java.lang.String name) {
@@ -424,17 +426,24 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           return (GetTrial) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The name of the trial to retrieve. */
+        /**
+         * Required. The project for which trial details need to be retrieved. Format:
+         * projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the trial to retrieve.
+        /** Required. The project for which trial details need to be retrieved. Format:
+       projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The name of the trial to retrieve. */
+        /**
+         * Required. The project for which trial details need to be retrieved. Format:
+         * projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
+         */
         public GetTrial setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10467,7 +10476,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the backupdr server.  After setting any optional
          * parameters, call the {@link Subscribe#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource where this trial will be created.
+         * @param parent Required. The project where this trial will be created. Format:
+         *        projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
          * @param content the {@link com.google.api.services.backupdr.v1.model.SubscribeTrialRequest}
          * @return the request
          */
@@ -10495,7 +10505,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * Subscribe#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource where this trial will be created.
+           * @param parent Required. The project where this trial will be created. Format:
+         *        projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
            * @param content the {@link com.google.api.services.backupdr.v1.model.SubscribeTrialRequest}
            * @since 1.13
            */
@@ -10564,17 +10575,24 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             return (Subscribe) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource where this trial will be created. */
+          /**
+           * Required. The project where this trial will be created. Format:
+           * projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource where this trial will be created.
+          /** Required. The project where this trial will be created. Format:
+         projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource where this trial will be created. */
+          /**
+           * Required. The project where this trial will be created. Format:
+           * projects/{project}/locations/{location} Supported Locations are - us, eu and asia.
+           */
           public Subscribe setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

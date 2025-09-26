@@ -31,6 +31,13 @@ package com.google.api.services.backupdr.v1.model;
 public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. AlloyDB specific backup properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AlloyDbClusterBackupProperties alloyDbBackupProperties;
+
+  /**
    * Output only. Backup Appliance specific backup properties.
    * The value may be {@code null}.
    */
@@ -180,6 +187,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. AlloyDB specific backup properties.
+   * @return value or {@code null} for none
+   */
+  public AlloyDbClusterBackupProperties getAlloyDbBackupProperties() {
+    return alloyDbBackupProperties;
+  }
+
+  /**
+   * Output only. AlloyDB specific backup properties.
+   * @param alloyDbBackupProperties alloyDbBackupProperties or {@code null} for none
+   */
+  public Backup setAlloyDbBackupProperties(AlloyDbClusterBackupProperties alloyDbBackupProperties) {
+    this.alloyDbBackupProperties = alloyDbBackupProperties;
+    return this;
+  }
 
   /**
    * Output only. Backup Appliance specific backup properties.

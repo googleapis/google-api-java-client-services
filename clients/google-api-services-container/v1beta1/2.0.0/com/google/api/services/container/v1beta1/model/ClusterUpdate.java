@@ -205,7 +205,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean desiredEnablePrivateEndpoint;
 
   /**
-   * The desired enterprise configuration for the cluster.
+   * The desired enterprise configuration for the cluster. Deprecated: GKE Enterprise features are
+   * now available without an Enterprise tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1076,7 +1077,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired enterprise configuration for the cluster.
+   * The desired enterprise configuration for the cluster. Deprecated: GKE Enterprise features are
+   * now available without an Enterprise tier.
    * @return value or {@code null} for none
    */
   public DesiredEnterpriseConfig getDesiredEnterpriseConfig() {
@@ -1084,7 +1086,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired enterprise configuration for the cluster.
+   * The desired enterprise configuration for the cluster. Deprecated: GKE Enterprise features are
+   * now available without an Enterprise tier.
    * @param desiredEnterpriseConfig desiredEnterpriseConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredEnterpriseConfig(DesiredEnterpriseConfig desiredEnterpriseConfig) {

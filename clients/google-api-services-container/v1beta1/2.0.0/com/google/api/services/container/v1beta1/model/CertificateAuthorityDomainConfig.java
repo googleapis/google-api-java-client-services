@@ -40,7 +40,7 @@ public final class CertificateAuthorityDomainConfig extends com.google.api.clien
   private java.util.List<java.lang.String> fqdns;
 
   /**
-   * Google Secret Manager (GCP) certificate configuration.
+   * Secret Manager certificate configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class CertificateAuthorityDomainConfig extends com.google.api.clien
   }
 
   /**
-   * Google Secret Manager (GCP) certificate configuration.
+   * Secret Manager certificate configuration.
    * @return value or {@code null} for none
    */
   public GCPSecretManagerCertificateConfig getGcpSecretManagerCertificateConfig() {
@@ -74,7 +74,7 @@ public final class CertificateAuthorityDomainConfig extends com.google.api.clien
   }
 
   /**
-   * Google Secret Manager (GCP) certificate configuration.
+   * Secret Manager certificate configuration.
    * @param gcpSecretManagerCertificateConfig gcpSecretManagerCertificateConfig or {@code null} for none
    */
   public CertificateAuthorityDomainConfig setGcpSecretManagerCertificateConfig(GCPSecretManagerCertificateConfig gcpSecretManagerCertificateConfig) {

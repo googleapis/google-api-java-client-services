@@ -32,15 +32,6 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1Processor extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. SchemaVersion used by the Processor. It is the same as Processor's
-   * DatasetSchema.schema_version Format is
-   * `projects/{project}/locations/{location}/schemas/{schema}/schemaVersions/{schema_version}
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String activeSchemaVersion;
-
-  /**
    * Output only. The time the processor was created.
    * The value may be {@code null}.
    */
@@ -119,27 +110,6 @@ public final class GoogleCloudDocumentaiV1Processor extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
-
-  /**
-   * Optional. SchemaVersion used by the Processor. It is the same as Processor's
-   * DatasetSchema.schema_version Format is
-   * `projects/{project}/locations/{location}/schemas/{schema}/schemaVersions/{schema_version}
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getActiveSchemaVersion() {
-    return activeSchemaVersion;
-  }
-
-  /**
-   * Optional. SchemaVersion used by the Processor. It is the same as Processor's
-   * DatasetSchema.schema_version Format is
-   * `projects/{project}/locations/{location}/schemas/{schema}/schemaVersions/{schema_version}
-   * @param activeSchemaVersion activeSchemaVersion or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1Processor setActiveSchemaVersion(java.lang.String activeSchemaVersion) {
-    this.activeSchemaVersion = activeSchemaVersion;
-    return this;
-  }
 
   /**
    * Output only. The time the processor was created.

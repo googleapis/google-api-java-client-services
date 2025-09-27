@@ -46,7 +46,7 @@ public final class YoutubeAndPartnersThirdPartyMeasurementSettings extends com.g
 
   /**
    * The third-party vendors measuring brand safety. The following third-party vendors are
-   * applicable: * `THIRD_PARTY_VENDOR_ZERF` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
+   * applicable: * `THIRD_PARTY_VENDOR_ZEFR` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
    * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
    * The value may be {@code null}.
    */
@@ -110,7 +110,7 @@ public final class YoutubeAndPartnersThirdPartyMeasurementSettings extends com.g
 
   /**
    * The third-party vendors measuring brand safety. The following third-party vendors are
-   * applicable: * `THIRD_PARTY_VENDOR_ZERF` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
+   * applicable: * `THIRD_PARTY_VENDOR_ZEFR` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
    * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
    * @return value or {@code null} for none
    */
@@ -120,7 +120,7 @@ public final class YoutubeAndPartnersThirdPartyMeasurementSettings extends com.g
 
   /**
    * The third-party vendors measuring brand safety. The following third-party vendors are
-   * applicable: * `THIRD_PARTY_VENDOR_ZERF` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
+   * applicable: * `THIRD_PARTY_VENDOR_ZEFR` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
    * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
    * @param brandSafetyVendorConfigs brandSafetyVendorConfigs or {@code null} for none
    */

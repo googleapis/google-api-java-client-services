@@ -30,16 +30,16 @@ package com.google.api.services.chat.v1.model;
 public final class MessageDeletedEventData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The deleted message. Only the `name`, `createTime`, `deleteTime`, and `deletionMetadata` fields
-   * are populated.
+   * The deleted message. Only the `name`, `createTime`, and `deletionMetadata` fields are
+   * populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Message message;
 
   /**
-   * The deleted message. Only the `name`, `createTime`, `deleteTime`, and `deletionMetadata` fields
-   * are populated.
+   * The deleted message. Only the `name`, `createTime`, and `deletionMetadata` fields are
+   * populated.
    * @return value or {@code null} for none
    */
   public Message getMessage() {
@@ -47,8 +47,8 @@ public final class MessageDeletedEventData extends com.google.api.client.json.Ge
   }
 
   /**
-   * The deleted message. Only the `name`, `createTime`, `deleteTime`, and `deletionMetadata` fields
-   * are populated.
+   * The deleted message. Only the `name`, `createTime`, and `deletionMetadata` fields are
+   * populated.
    * @param message message or {@code null} for none
    */
   public MessageDeletedEventData setMessage(Message message) {

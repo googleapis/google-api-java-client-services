@@ -51,6 +51,14 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   private java.lang.String description;
 
   /**
+   * [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs
+   * only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableEnhancedIpv4Allocation;
+
+  /**
    * The IP address range, in CIDR format, represented by this sub public delegated prefix.
    * The value may be {@code null}.
    */
@@ -141,6 +149,25 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
    */
   public PublicDelegatedPrefixPublicDelegatedSubPrefix setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs
+   * only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableEnhancedIpv4Allocation() {
+    return enableEnhancedIpv4Allocation;
+  }
+
+  /**
+   * [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs
+   * only.
+   * @param enableEnhancedIpv4Allocation enableEnhancedIpv4Allocation or {@code null} for none
+   */
+  public PublicDelegatedPrefixPublicDelegatedSubPrefix setEnableEnhancedIpv4Allocation(java.lang.Boolean enableEnhancedIpv4Allocation) {
+    this.enableEnhancedIpv4Allocation = enableEnhancedIpv4Allocation;
     return this;
   }
 

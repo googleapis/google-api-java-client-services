@@ -201,6 +201,21 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private String disasterRecoveryRoleChangedTime;
 
   /**
+   * Optional. The encryption key used to encrypt the Autonomous Database. Updating this field will
+   * add a new entry in the `encryption_key_history_entries` field with the former version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionKey encryptionKey;
+
+  /**
+   * Output only. The history of the encryption keys used to encrypt the Autonomous Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EncryptionKeyHistoryEntry> encryptionKeyHistoryEntries;
+
+  /**
    * Output only. This field indicates the number of seconds of data loss during a Data Guard
    * failover.
    * The value may be {@code null}.
@@ -423,6 +438,14 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.String secretId;
+
+  /**
+   * Output only. An Oracle-managed Google Cloud service account on which customers can grant roles
+   * to access resources in the customer project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAgentEmail;
 
   /**
    * Output only. The SQL Web Developer URL for the Autonomous Database.
@@ -873,6 +896,42 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
    */
   public AutonomousDatabaseProperties setDisasterRecoveryRoleChangedTime(String disasterRecoveryRoleChangedTime) {
     this.disasterRecoveryRoleChangedTime = disasterRecoveryRoleChangedTime;
+    return this;
+  }
+
+  /**
+   * Optional. The encryption key used to encrypt the Autonomous Database. Updating this field will
+   * add a new entry in the `encryption_key_history_entries` field with the former version.
+   * @return value or {@code null} for none
+   */
+  public EncryptionKey getEncryptionKey() {
+    return encryptionKey;
+  }
+
+  /**
+   * Optional. The encryption key used to encrypt the Autonomous Database. Updating this field will
+   * add a new entry in the `encryption_key_history_entries` field with the former version.
+   * @param encryptionKey encryptionKey or {@code null} for none
+   */
+  public AutonomousDatabaseProperties setEncryptionKey(EncryptionKey encryptionKey) {
+    this.encryptionKey = encryptionKey;
+    return this;
+  }
+
+  /**
+   * Output only. The history of the encryption keys used to encrypt the Autonomous Database.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EncryptionKeyHistoryEntry> getEncryptionKeyHistoryEntries() {
+    return encryptionKeyHistoryEntries;
+  }
+
+  /**
+   * Output only. The history of the encryption keys used to encrypt the Autonomous Database.
+   * @param encryptionKeyHistoryEntries encryptionKeyHistoryEntries or {@code null} for none
+   */
+  public AutonomousDatabaseProperties setEncryptionKeyHistoryEntries(java.util.List<EncryptionKeyHistoryEntry> encryptionKeyHistoryEntries) {
+    this.encryptionKeyHistoryEntries = encryptionKeyHistoryEntries;
     return this;
   }
 
@@ -1414,6 +1473,25 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
    */
   public AutonomousDatabaseProperties setSecretId(java.lang.String secretId) {
     this.secretId = secretId;
+    return this;
+  }
+
+  /**
+   * Output only. An Oracle-managed Google Cloud service account on which customers can grant roles
+   * to access resources in the customer project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAgentEmail() {
+    return serviceAgentEmail;
+  }
+
+  /**
+   * Output only. An Oracle-managed Google Cloud service account on which customers can grant roles
+   * to access resources in the customer project.
+   * @param serviceAgentEmail serviceAgentEmail or {@code null} for none
+   */
+  public AutonomousDatabaseProperties setServiceAgentEmail(java.lang.String serviceAgentEmail) {
+    this.serviceAgentEmail = serviceAgentEmail;
     return this;
   }
 

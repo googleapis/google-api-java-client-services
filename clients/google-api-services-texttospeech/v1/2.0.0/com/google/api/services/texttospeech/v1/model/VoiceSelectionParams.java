@@ -61,6 +61,14 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
   private java.lang.String modelName;
 
   /**
+   * Optional. The configuration for a Gemini multi-speaker text-to-speech setup. Enables the use of
+   * two distinct voices in a single synthesis request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiSpeakerVoiceConfig multiSpeakerVoiceConfig;
+
+  /**
    * The name of the voice. If both the name and the gender are not set, the service will choose a
    * voice based on the other parameters such as language_code.
    * The value may be {@code null}.
@@ -152,6 +160,25 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
    */
   public VoiceSelectionParams setModelName(java.lang.String modelName) {
     this.modelName = modelName;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for a Gemini multi-speaker text-to-speech setup. Enables the use of
+   * two distinct voices in a single synthesis request.
+   * @return value or {@code null} for none
+   */
+  public MultiSpeakerVoiceConfig getMultiSpeakerVoiceConfig() {
+    return multiSpeakerVoiceConfig;
+  }
+
+  /**
+   * Optional. The configuration for a Gemini multi-speaker text-to-speech setup. Enables the use of
+   * two distinct voices in a single synthesis request.
+   * @param multiSpeakerVoiceConfig multiSpeakerVoiceConfig or {@code null} for none
+   */
+  public VoiceSelectionParams setMultiSpeakerVoiceConfig(MultiSpeakerVoiceConfig multiSpeakerVoiceConfig) {
+    this.multiSpeakerVoiceConfig = multiSpeakerVoiceConfig;
     return this;
   }
 

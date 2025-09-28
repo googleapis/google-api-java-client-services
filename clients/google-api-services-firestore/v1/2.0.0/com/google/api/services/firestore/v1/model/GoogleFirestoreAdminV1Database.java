@@ -100,6 +100,15 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String etag;
 
   /**
+   * Optional. The Firestore API data access mode to use for this database. If not set on write: -
+   * the default value is DATA_ACCESS_MODE_DISABLED for Enterprise Edition. - the default value is
+   * DATA_ACCESS_MODE_ENABLED for Standard Edition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String firestoreDataAccessMode;
+
+  /**
    * Output only. Background: Free tier is the ability of a Firestore database to use a small amount
    * of resources every day without being charged. Once usage exceeds the free tier limit further
    * usage is charged. Whether this database can make use of the free tier. Only one database per
@@ -130,6 +139,15 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String locationId;
 
   /**
+   * Optional. The MongoDB compatible API data access mode to use for this database. If not set on
+   * write, the default value is DATA_ACCESS_MODE_ENABLED for Enterprise Edition. The value is
+   * always DATA_ACCESS_MODE_DISABLED for Standard Edition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mongodbCompatibleDataAccessMode;
+
+  /**
    * The resource name of the Database. Format: `projects/{project}/databases/{database}`
    * The value may be {@code null}.
    */
@@ -150,6 +168,13 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String previousId;
+
+  /**
+   * Immutable. The default Realtime Updates mode to use for this database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String realtimeUpdatesMode;
 
   /**
    * Output only. Information about the provenance of this database.
@@ -367,6 +392,27 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
+   * Optional. The Firestore API data access mode to use for this database. If not set on write: -
+   * the default value is DATA_ACCESS_MODE_DISABLED for Enterprise Edition. - the default value is
+   * DATA_ACCESS_MODE_ENABLED for Standard Edition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFirestoreDataAccessMode() {
+    return firestoreDataAccessMode;
+  }
+
+  /**
+   * Optional. The Firestore API data access mode to use for this database. If not set on write: -
+   * the default value is DATA_ACCESS_MODE_DISABLED for Enterprise Edition. - the default value is
+   * DATA_ACCESS_MODE_ENABLED for Standard Edition.
+   * @param firestoreDataAccessMode firestoreDataAccessMode or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setFirestoreDataAccessMode(java.lang.String firestoreDataAccessMode) {
+    this.firestoreDataAccessMode = firestoreDataAccessMode;
+    return this;
+  }
+
+  /**
    * Output only. Background: Free tier is the ability of a Firestore database to use a small amount
    * of resources every day without being charged. Once usage exceeds the free tier limit further
    * usage is charged. Whether this database can make use of the free tier. Only one database per
@@ -436,6 +482,27 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
+   * Optional. The MongoDB compatible API data access mode to use for this database. If not set on
+   * write, the default value is DATA_ACCESS_MODE_ENABLED for Enterprise Edition. The value is
+   * always DATA_ACCESS_MODE_DISABLED for Standard Edition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMongodbCompatibleDataAccessMode() {
+    return mongodbCompatibleDataAccessMode;
+  }
+
+  /**
+   * Optional. The MongoDB compatible API data access mode to use for this database. If not set on
+   * write, the default value is DATA_ACCESS_MODE_ENABLED for Enterprise Edition. The value is
+   * always DATA_ACCESS_MODE_DISABLED for Standard Edition.
+   * @param mongodbCompatibleDataAccessMode mongodbCompatibleDataAccessMode or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setMongodbCompatibleDataAccessMode(java.lang.String mongodbCompatibleDataAccessMode) {
+    this.mongodbCompatibleDataAccessMode = mongodbCompatibleDataAccessMode;
+    return this;
+  }
+
+  /**
    * The resource name of the Database. Format: `projects/{project}/databases/{database}`
    * @return value or {@code null} for none
    */
@@ -485,6 +552,23 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setPreviousId(java.lang.String previousId) {
     this.previousId = previousId;
+    return this;
+  }
+
+  /**
+   * Immutable. The default Realtime Updates mode to use for this database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRealtimeUpdatesMode() {
+    return realtimeUpdatesMode;
+  }
+
+  /**
+   * Immutable. The default Realtime Updates mode to use for this database.
+   * @param realtimeUpdatesMode realtimeUpdatesMode or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setRealtimeUpdatesMode(java.lang.String realtimeUpdatesMode) {
+    this.realtimeUpdatesMode = realtimeUpdatesMode;
     return this;
   }
 

@@ -64,7 +64,7 @@ public final class ExclusionWindow extends com.google.api.client.json.GenericJso
   private Date singleOccurrenceDate;
 
   /**
-   * Required. Specifies the start time of the window using time of the day in UTC.
+   * Optional. Specifies the start time of the window using time of the day in UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class ExclusionWindow extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Specifies the start time of the window using time of the day in UTC.
+   * Optional. Specifies the start time of the window using time of the day in UTC.
    * @return value or {@code null} for none
    */
   public TimeOfDay getStartTime() {
@@ -159,7 +159,7 @@ public final class ExclusionWindow extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Specifies the start time of the window using time of the day in UTC.
+   * Optional. Specifies the start time of the window using time of the day in UTC.
    * @param startTime startTime or {@code null} for none
    */
   public ExclusionWindow setStartTime(TimeOfDay startTime) {

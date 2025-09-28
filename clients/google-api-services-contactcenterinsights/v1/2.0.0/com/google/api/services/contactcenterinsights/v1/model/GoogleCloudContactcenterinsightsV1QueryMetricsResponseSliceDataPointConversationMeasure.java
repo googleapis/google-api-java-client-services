@@ -59,7 +59,10 @@ public final class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDa
   private String averageDuration;
 
   /**
-   * Average QA normalized score. Will exclude 0's in average calculation.
+   * The average normalized QA score for a scorecard. When computing the average across a set of
+   * conversations, if a conversation has been evaluated with multiple revisions of a scorecard,
+   * only the latest revision results will be used. Will exclude 0's in average calculation. Will be
+   * only populated if the request specifies a dimension of QA_SCORECARD_ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +173,10 @@ public final class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDa
   }
 
   /**
-   * Average QA normalized score. Will exclude 0's in average calculation.
+   * The average normalized QA score for a scorecard. When computing the average across a set of
+   * conversations, if a conversation has been evaluated with multiple revisions of a scorecard,
+   * only the latest revision results will be used. Will exclude 0's in average calculation. Will be
+   * only populated if the request specifies a dimension of QA_SCORECARD_ID.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAverageQaNormalizedScore() {
@@ -178,7 +184,10 @@ public final class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDa
   }
 
   /**
-   * Average QA normalized score. Will exclude 0's in average calculation.
+   * The average normalized QA score for a scorecard. When computing the average across a set of
+   * conversations, if a conversation has been evaluated with multiple revisions of a scorecard,
+   * only the latest revision results will be used. Will exclude 0's in average calculation. Will be
+   * only populated if the request specifies a dimension of QA_SCORECARD_ID.
    * @param averageQaNormalizedScore averageQaNormalizedScore or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPointConversationMeasure setAverageQaNormalizedScore(java.lang.Double averageQaNormalizedScore) {

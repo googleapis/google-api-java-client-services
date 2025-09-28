@@ -31,14 +31,32 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The agent's name
+   * Optional. The agent's deployment display name. Only applicable to automated agents. This will
+   * be populated for AGENT_DEPLOYMENT_ID dimensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentDeploymentDisplayName;
+
+  /**
+   * Optional. The agent's deployment ID. Only applicable to automated agents. This will be
+   * populated for AGENT and AGENT_DEPLOYMENT_ID dimensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentDeploymentId;
+
+  /**
+   * Optional. The agent's name This will be populated for AGENT, AGENT_TEAM, AGENT_VERSION_ID, and
+   * AGENT_DEPLOYMENT_ID dimensions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentDisplayName;
 
   /**
-   * Optional. A user-specified string representing the agent.
+   * Optional. A user-specified string representing the agent. This will be populated for AGENT,
+   * AGENT_TEAM, AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +70,62 @@ public final class GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMeta
   private java.lang.String agentTeam;
 
   /**
-   * Optional. The agent's name
+   * Optional. The agent's version display name. Only applicable to automated agents. This will be
+   * populated for AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentVersionDisplayName;
+
+  /**
+   * Optional. The agent's version ID. Only applicable to automated agents. This will be populated
+   * for AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentVersionId;
+
+  /**
+   * Optional. The agent's deployment display name. Only applicable to automated agents. This will
+   * be populated for AGENT_DEPLOYMENT_ID dimensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentDeploymentDisplayName() {
+    return agentDeploymentDisplayName;
+  }
+
+  /**
+   * Optional. The agent's deployment display name. Only applicable to automated agents. This will
+   * be populated for AGENT_DEPLOYMENT_ID dimensions.
+   * @param agentDeploymentDisplayName agentDeploymentDisplayName or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMetadata setAgentDeploymentDisplayName(java.lang.String agentDeploymentDisplayName) {
+    this.agentDeploymentDisplayName = agentDeploymentDisplayName;
+    return this;
+  }
+
+  /**
+   * Optional. The agent's deployment ID. Only applicable to automated agents. This will be
+   * populated for AGENT and AGENT_DEPLOYMENT_ID dimensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentDeploymentId() {
+    return agentDeploymentId;
+  }
+
+  /**
+   * Optional. The agent's deployment ID. Only applicable to automated agents. This will be
+   * populated for AGENT and AGENT_DEPLOYMENT_ID dimensions.
+   * @param agentDeploymentId agentDeploymentId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMetadata setAgentDeploymentId(java.lang.String agentDeploymentId) {
+    this.agentDeploymentId = agentDeploymentId;
+    return this;
+  }
+
+  /**
+   * Optional. The agent's name This will be populated for AGENT, AGENT_TEAM, AGENT_VERSION_ID, and
+   * AGENT_DEPLOYMENT_ID dimensions.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentDisplayName() {
@@ -60,7 +133,8 @@ public final class GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMeta
   }
 
   /**
-   * Optional. The agent's name
+   * Optional. The agent's name This will be populated for AGENT, AGENT_TEAM, AGENT_VERSION_ID, and
+   * AGENT_DEPLOYMENT_ID dimensions.
    * @param agentDisplayName agentDisplayName or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMetadata setAgentDisplayName(java.lang.String agentDisplayName) {
@@ -69,7 +143,8 @@ public final class GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMeta
   }
 
   /**
-   * Optional. A user-specified string representing the agent.
+   * Optional. A user-specified string representing the agent. This will be populated for AGENT,
+   * AGENT_TEAM, AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentId() {
@@ -77,7 +152,8 @@ public final class GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMeta
   }
 
   /**
-   * Optional. A user-specified string representing the agent.
+   * Optional. A user-specified string representing the agent. This will be populated for AGENT,
+   * AGENT_TEAM, AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
    * @param agentId agentId or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMetadata setAgentId(java.lang.String agentId) {
@@ -99,6 +175,44 @@ public final class GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMeta
    */
   public GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMetadata setAgentTeam(java.lang.String agentTeam) {
     this.agentTeam = agentTeam;
+    return this;
+  }
+
+  /**
+   * Optional. The agent's version display name. Only applicable to automated agents. This will be
+   * populated for AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentVersionDisplayName() {
+    return agentVersionDisplayName;
+  }
+
+  /**
+   * Optional. The agent's version display name. Only applicable to automated agents. This will be
+   * populated for AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
+   * @param agentVersionDisplayName agentVersionDisplayName or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMetadata setAgentVersionDisplayName(java.lang.String agentVersionDisplayName) {
+    this.agentVersionDisplayName = agentVersionDisplayName;
+    return this;
+  }
+
+  /**
+   * Optional. The agent's version ID. Only applicable to automated agents. This will be populated
+   * for AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentVersionId() {
+    return agentVersionId;
+  }
+
+  /**
+   * Optional. The agent's version ID. Only applicable to automated agents. This will be populated
+   * for AGENT_VERSION_ID, and AGENT_DEPLOYMENT_ID dimensions.
+   * @param agentVersionId agentVersionId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMetadata setAgentVersionId(java.lang.String agentVersionId) {
+    this.agentVersionId = agentVersionId;
     return this;
   }
 

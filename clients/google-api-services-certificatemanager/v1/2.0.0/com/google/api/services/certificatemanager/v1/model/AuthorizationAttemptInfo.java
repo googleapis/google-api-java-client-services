@@ -31,6 +31,13 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class AuthorizationAttemptInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The timestamp, when the authorization attempt was made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String attemptTime;
+
+  /**
    * Output only. Human readable explanation for reaching the state. Provided to help address the
    * configuration issues. Not guaranteed to be stable. For programmatic access use FailureReason
    * enum.
@@ -59,6 +66,31 @@ public final class AuthorizationAttemptInfo extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. Troubleshooting information for the authorization attempt. This field is only
+   * populated if the authorization attempt failed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Troubleshooting troubleshooting;
+
+  /**
+   * Output only. The timestamp, when the authorization attempt was made.
+   * @return value or {@code null} for none
+   */
+  public String getAttemptTime() {
+    return attemptTime;
+  }
+
+  /**
+   * Output only. The timestamp, when the authorization attempt was made.
+   * @param attemptTime attemptTime or {@code null} for none
+   */
+  public AuthorizationAttemptInfo setAttemptTime(String attemptTime) {
+    this.attemptTime = attemptTime;
+    return this;
+  }
 
   /**
    * Output only. Human readable explanation for reaching the state. Provided to help address the
@@ -129,6 +161,25 @@ public final class AuthorizationAttemptInfo extends com.google.api.client.json.G
    */
   public AuthorizationAttemptInfo setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Troubleshooting information for the authorization attempt. This field is only
+   * populated if the authorization attempt failed.
+   * @return value or {@code null} for none
+   */
+  public Troubleshooting getTroubleshooting() {
+    return troubleshooting;
+  }
+
+  /**
+   * Output only. Troubleshooting information for the authorization attempt. This field is only
+   * populated if the authorization attempt failed.
+   * @param troubleshooting troubleshooting or {@code null} for none
+   */
+  public AuthorizationAttemptInfo setTroubleshooting(Troubleshooting troubleshooting) {
+    this.troubleshooting = troubleshooting;
     return this;
   }
 

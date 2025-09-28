@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class NamedSet extends com.google.api.client.json.GenericJson {
 
   /**
+   * An optional description of named set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * CEL expressions that are comparable to constructs of this set's type (see Policy Language).
    * The value may be {@code null}.
    */
@@ -67,6 +74,23 @@ public final class NamedSet extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * An optional description of named set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * An optional description of named set.
+   * @param description description or {@code null} for none
+   */
+  public NamedSet setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * CEL expressions that are comparable to constructs of this set's type (see Policy Language).

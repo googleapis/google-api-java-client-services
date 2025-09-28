@@ -59,6 +59,14 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
+   * network_attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVpcScopedDns;
+
+  /**
    * Fingerprint hash of contents stored in this network interface. This field will be ignored when
    * inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided
    * in order to update the NetworkInterface. The request will fail with error 400 Bad Request if
@@ -261,6 +269,25 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setAliasIpRanges(java.util.List<AliasIpRange> aliasIpRanges) {
     this.aliasIpRanges = aliasIpRanges;
+    return this;
+  }
+
+  /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
+   * network_attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVpcScopedDns() {
+    return enableVpcScopedDns;
+  }
+
+  /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
+   * network_attachment.
+   * @param enableVpcScopedDns enableVpcScopedDns or {@code null} for none
+   */
+  public NetworkInterface setEnableVpcScopedDns(java.lang.Boolean enableVpcScopedDns) {
+    this.enableVpcScopedDns = enableVpcScopedDns;
     return this;
   }
 

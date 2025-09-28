@@ -71,6 +71,19 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
+   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
+   * BYOIP. The PDP must support enhanced IPv4 allocations. Use one of the following formats to
+   * specify a PDP when reserving an external IPv4 address using BYOIP. - Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/projectId/regions/region
+   * /publicDelegatedPrefixes/pdp-name - Partial URL, as in -
+   * projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name -
+   * regions/region/publicDelegatedPrefixes/pdp-name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipCollection;
+
+  /**
    * The IP version that will be used by this address. Valid options are IPV4 or IPV6.
    * The value may be {@code null}.
    */
@@ -299,6 +312,35 @@ public final class Address extends com.google.api.client.json.GenericJson {
    */
   public Address setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
+   * BYOIP. The PDP must support enhanced IPv4 allocations. Use one of the following formats to
+   * specify a PDP when reserving an external IPv4 address using BYOIP. - Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/projectId/regions/region
+   * /publicDelegatedPrefixes/pdp-name - Partial URL, as in -
+   * projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name -
+   * regions/region/publicDelegatedPrefixes/pdp-name
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpCollection() {
+    return ipCollection;
+  }
+
+  /**
+   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
+   * BYOIP. The PDP must support enhanced IPv4 allocations. Use one of the following formats to
+   * specify a PDP when reserving an external IPv4 address using BYOIP. - Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/projectId/regions/region
+   * /publicDelegatedPrefixes/pdp-name - Partial URL, as in -
+   * projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name -
+   * regions/region/publicDelegatedPrefixes/pdp-name
+   * @param ipCollection ipCollection or {@code null} for none
+   */
+  public Address setIpCollection(java.lang.String ipCollection) {
+    this.ipCollection = ipCollection;
     return this;
   }
 

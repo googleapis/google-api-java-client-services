@@ -30,6 +30,20 @@ package com.google.api.services.compute.model;
 public final class NetworkPolicyTrafficClassificationRuleAction extends com.google.api.client.json.GenericJson {
 
   /**
+   * The traffic class that should be applied to the matching packet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dscpMode;
+
+  /**
+   * Custom DSCP value from 0-63 range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer dscpValue;
+
+  /**
    * The field type could be one of: TRAFFIC_CLASS or DSCP.
    * The value may be {@code null}.
    */
@@ -44,11 +58,52 @@ public final class NetworkPolicyTrafficClassificationRuleAction extends com.goog
   private java.lang.Integer fieldValue;
 
   /**
+   * The traffic class that should be applied to the matching packet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trafficClass;
+
+  /**
    * Always "apply_traffic_classification" for traffic classification rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The traffic class that should be applied to the matching packet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDscpMode() {
+    return dscpMode;
+  }
+
+  /**
+   * The traffic class that should be applied to the matching packet.
+   * @param dscpMode dscpMode or {@code null} for none
+   */
+  public NetworkPolicyTrafficClassificationRuleAction setDscpMode(java.lang.String dscpMode) {
+    this.dscpMode = dscpMode;
+    return this;
+  }
+
+  /**
+   * Custom DSCP value from 0-63 range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDscpValue() {
+    return dscpValue;
+  }
+
+  /**
+   * Custom DSCP value from 0-63 range.
+   * @param dscpValue dscpValue or {@code null} for none
+   */
+  public NetworkPolicyTrafficClassificationRuleAction setDscpValue(java.lang.Integer dscpValue) {
+    this.dscpValue = dscpValue;
+    return this;
+  }
 
   /**
    * The field type could be one of: TRAFFIC_CLASS or DSCP.
@@ -81,6 +136,23 @@ public final class NetworkPolicyTrafficClassificationRuleAction extends com.goog
    */
   public NetworkPolicyTrafficClassificationRuleAction setFieldValue(java.lang.Integer fieldValue) {
     this.fieldValue = fieldValue;
+    return this;
+  }
+
+  /**
+   * The traffic class that should be applied to the matching packet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrafficClass() {
+    return trafficClass;
+  }
+
+  /**
+   * The traffic class that should be applied to the matching packet.
+   * @param trafficClass trafficClass or {@code null} for none
+   */
+  public NetworkPolicyTrafficClassificationRuleAction setTrafficClass(java.lang.String trafficClass) {
+    this.trafficClass = trafficClass;
     return this;
   }
 

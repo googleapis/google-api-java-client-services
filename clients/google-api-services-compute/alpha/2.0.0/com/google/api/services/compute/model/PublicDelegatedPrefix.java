@@ -63,6 +63,14 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String description;
 
   /**
+   * [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs
+   * only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableEnhancedIpv4Allocation;
+
+  /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
    * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
@@ -264,6 +272,25 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    */
   public PublicDelegatedPrefix setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs
+   * only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableEnhancedIpv4Allocation() {
+    return enableEnhancedIpv4Allocation;
+  }
+
+  /**
+   * [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs
+   * only.
+   * @param enableEnhancedIpv4Allocation enableEnhancedIpv4Allocation or {@code null} for none
+   */
+  public PublicDelegatedPrefix setEnableEnhancedIpv4Allocation(java.lang.Boolean enableEnhancedIpv4Allocation) {
+    this.enableEnhancedIpv4Allocation = enableEnhancedIpv4Allocation;
     return this;
   }
 

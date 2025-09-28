@@ -45,6 +45,20 @@ public final class GoogleCloudContactcenterinsightsV1ConversationQualityMetadata
   private java.lang.String agentType;
 
   /**
+   * The agent's deployment display name. Only applicable to automated agents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentDisplayName;
+
+  /**
+   * The agent's deployment ID. Only applicable to automated agents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentId;
+
+  /**
    * The agent's name.
    * The value may be {@code null}.
    */
@@ -81,6 +95,20 @@ public final class GoogleCloudContactcenterinsightsV1ConversationQualityMetadata
   private java.util.List<java.lang.String> teams;
 
   /**
+   * The agent's version display name. Only applicable to automated agents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String versionDisplayName;
+
+  /**
+   * The agent's version ID. Only applicable to automated agents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String versionId;
+
+  /**
    * A user-specified string representing the agent.
    * @return value or {@code null} for none
    */
@@ -111,6 +139,40 @@ public final class GoogleCloudContactcenterinsightsV1ConversationQualityMetadata
    */
   public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setAgentType(java.lang.String agentType) {
     this.agentType = agentType;
+    return this;
+  }
+
+  /**
+   * The agent's deployment display name. Only applicable to automated agents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentDisplayName() {
+    return deploymentDisplayName;
+  }
+
+  /**
+   * The agent's deployment display name. Only applicable to automated agents.
+   * @param deploymentDisplayName deploymentDisplayName or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setDeploymentDisplayName(java.lang.String deploymentDisplayName) {
+    this.deploymentDisplayName = deploymentDisplayName;
+    return this;
+  }
+
+  /**
+   * The agent's deployment ID. Only applicable to automated agents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentId() {
+    return deploymentId;
+  }
+
+  /**
+   * The agent's deployment ID. Only applicable to automated agents.
+   * @param deploymentId deploymentId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setDeploymentId(java.lang.String deploymentId) {
+    this.deploymentId = deploymentId;
     return this;
   }
 
@@ -198,6 +260,40 @@ public final class GoogleCloudContactcenterinsightsV1ConversationQualityMetadata
    */
   public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setTeams(java.util.List<java.lang.String> teams) {
     this.teams = teams;
+    return this;
+  }
+
+  /**
+   * The agent's version display name. Only applicable to automated agents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersionDisplayName() {
+    return versionDisplayName;
+  }
+
+  /**
+   * The agent's version display name. Only applicable to automated agents.
+   * @param versionDisplayName versionDisplayName or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setVersionDisplayName(java.lang.String versionDisplayName) {
+    this.versionDisplayName = versionDisplayName;
+    return this;
+  }
+
+  /**
+   * The agent's version ID. Only applicable to automated agents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersionId() {
+    return versionId;
+  }
+
+  /**
+   * The agent's version ID. Only applicable to automated agents.
+   * @param versionId versionId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setVersionId(java.lang.String versionId) {
+    this.versionId = versionId;
     return this;
   }
 

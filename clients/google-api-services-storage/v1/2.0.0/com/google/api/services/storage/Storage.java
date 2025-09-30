@@ -2963,6 +2963,28 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * If true, return a list of bucket resource names for buckets that are in unreachable
+       * locations.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnPartialSuccess;
+
+      /** If true, return a list of bucket resource names for buckets that are in unreachable locations.
+       */
+      public java.lang.Boolean getReturnPartialSuccess() {
+        return returnPartialSuccess;
+      }
+
+      /**
+       * If true, return a list of bucket resource names for buckets that are in unreachable
+       * locations.
+       */
+      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+        this.returnPartialSuccess = returnPartialSuccess;
+        return this;
+      }
+
+      /**
        * If true, only soft-deleted bucket versions will be returned. The default is false. For more
        * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
        */

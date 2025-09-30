@@ -59,6 +59,13 @@ public final class Buckets extends com.google.api.client.json.GenericJson {
   private java.lang.String nextPageToken;
 
   /**
+   * The list of bucket resource names that could not be reached during the listing operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The list of items.
    * @return value or {@code null} for none
    */
@@ -108,6 +115,23 @@ public final class Buckets extends com.google.api.client.json.GenericJson {
    */
   public Buckets setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The list of bucket resource names that could not be reached during the listing operation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * The list of bucket resource names that could not be reached during the listing operation.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public Buckets setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

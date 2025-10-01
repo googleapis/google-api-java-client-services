@@ -60,8 +60,7 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
   private GoogleCloudDiscoveryengineV1betaEngineCommonConfig commonConfig;
 
   /**
-   * Optional. Configuration for configurable billing approach. See go/vais-repricing-billing-dd for
-   * more details.
+   * Optional. Configuration for configurable billing approach.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +104,9 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation` *
-   * `disable-onedrive-upload`
+   * sharing` * `personalization-memory` * `disable-agent-sharing` * `disable-image-generation` *
+   * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-
+   * google-drive-upload`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,8 +234,7 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
   }
 
   /**
-   * Optional. Configuration for configurable billing approach. See go/vais-repricing-billing-dd for
-   * more details.
+   * Optional. Configuration for configurable billing approach.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigurableBillingApproach() {
@@ -243,8 +242,7 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
   }
 
   /**
-   * Optional. Configuration for configurable billing approach. See go/vais-repricing-billing-dd for
-   * more details.
+   * Optional. Configuration for configurable billing approach.
    * @param configurableBillingApproach configurableBillingApproach or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaEngine setConfigurableBillingApproach(java.lang.String configurableBillingApproach) {
@@ -335,8 +333,9 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation` *
-   * `disable-onedrive-upload`
+   * sharing` * `personalization-memory` * `disable-agent-sharing` * `disable-image-generation` *
+   * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-
+   * google-drive-upload`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -348,8 +347,9 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `disable-image-generation` * `disable-video-generation` *
-   * `disable-onedrive-upload`
+   * sharing` * `personalization-memory` * `disable-agent-sharing` * `disable-image-generation` *
+   * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-
+   * google-drive-upload`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaEngine setFeatures(java.util.Map<String, java.lang.String> features) {

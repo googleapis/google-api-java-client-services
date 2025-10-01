@@ -47,6 +47,15 @@ public final class GoogleCloudDiscoveryengineV1SessionTurn extends com.google.ap
   private GoogleCloudDiscoveryengineV1Answer detailedAnswer;
 
   /**
+   * Output only. In ConversationalSearchService.GetSession API, if
+   * GetSessionRequest.include_answer_details is set to true, this field will be populated when
+   * getting assistant session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1AssistAnswer detailedAssistAnswer;
+
+  /**
    * Optional. The user query. May not be set if this turn is merely regenerating an answer to a
    * different turn
    * The value may be {@code null}.
@@ -100,6 +109,27 @@ public final class GoogleCloudDiscoveryengineV1SessionTurn extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1SessionTurn setDetailedAnswer(GoogleCloudDiscoveryengineV1Answer detailedAnswer) {
     this.detailedAnswer = detailedAnswer;
+    return this;
+  }
+
+  /**
+   * Output only. In ConversationalSearchService.GetSession API, if
+   * GetSessionRequest.include_answer_details is set to true, this field will be populated when
+   * getting assistant session.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistAnswer getDetailedAssistAnswer() {
+    return detailedAssistAnswer;
+  }
+
+  /**
+   * Output only. In ConversationalSearchService.GetSession API, if
+   * GetSessionRequest.include_answer_details is set to true, this field will be populated when
+   * getting assistant session.
+   * @param detailedAssistAnswer detailedAssistAnswer or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SessionTurn setDetailedAssistAnswer(GoogleCloudDiscoveryengineV1AssistAnswer detailedAssistAnswer) {
+    this.detailedAssistAnswer = detailedAssistAnswer;
     return this;
   }
 

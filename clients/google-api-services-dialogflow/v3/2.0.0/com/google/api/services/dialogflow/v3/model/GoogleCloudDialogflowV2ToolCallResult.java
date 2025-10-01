@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   private java.lang.String action;
 
   /**
+   * Optional. The answer record associated with this tool call result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String answerRecord;
+
+  /**
    * Only populated if the response content is utf-8 encoded.
    * The value may be {@code null}.
    */
@@ -86,6 +93,23 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
    */
   public GoogleCloudDialogflowV2ToolCallResult setAction(java.lang.String action) {
     this.action = action;
+    return this;
+  }
+
+  /**
+   * Optional. The answer record associated with this tool call result.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnswerRecord() {
+    return answerRecord;
+  }
+
+  /**
+   * Optional. The answer record associated with this tool call result.
+   * @param answerRecord answerRecord or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ToolCallResult setAnswerRecord(java.lang.String answerRecord) {
+    this.answerRecord = answerRecord;
     return this;
   }
 

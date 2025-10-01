@@ -135,6 +135,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private InsertPageBreakRequest insertPageBreak;
 
   /**
+   * Inserts a person mention.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertPersonRequest insertPerson;
+
+  /**
    * Inserts a section break at the specified location.
    * The value may be {@code null}.
    */
@@ -512,6 +519,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setInsertPageBreak(InsertPageBreakRequest insertPageBreak) {
     this.insertPageBreak = insertPageBreak;
+    return this;
+  }
+
+  /**
+   * Inserts a person mention.
+   * @return value or {@code null} for none
+   */
+  public InsertPersonRequest getInsertPerson() {
+    return insertPerson;
+  }
+
+  /**
+   * Inserts a person mention.
+   * @param insertPerson insertPerson or {@code null} for none
+   */
+  public Request setInsertPerson(InsertPersonRequest insertPerson) {
+    this.insertPerson = insertPerson;
     return this;
   }
 

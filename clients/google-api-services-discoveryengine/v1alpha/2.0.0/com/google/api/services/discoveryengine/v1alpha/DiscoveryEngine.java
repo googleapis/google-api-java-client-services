@@ -46421,6 +46421,513 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * An accessor for creating requests from the LicenseConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.LicenseConfigs.List request = discoveryengine.licenseConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public LicenseConfigs licenseConfigs() {
+        return new LicenseConfigs();
+      }
+
+      /**
+       * The "licenseConfigs" collection of methods.
+       */
+      public class LicenseConfigs {
+
+        /**
+         * Creates a LicenseConfig
+         *
+         * Create a request for the method "licenseConfigs.create".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/licenseConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a LicenseConfig
+           *
+           * Create a request for the method "licenseConfigs.create".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The ID to use for the LicenseConfig, which will become the final component of
+           * the LicenseConfig's resource name. We are using the tier (product edition) name as the
+           * license config id such as `search` or `search_and_assistant`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String licenseConfigId;
+
+          /** Optional. The ID to use for the LicenseConfig, which will become the final component of the
+         LicenseConfig's resource name. We are using the tier (product edition) name as the license config
+         id such as `search` or `search_and_assistant`.
+           */
+          public java.lang.String getLicenseConfigId() {
+            return licenseConfigId;
+          }
+
+          /**
+           * Optional. The ID to use for the LicenseConfig, which will become the final component of
+           * the LicenseConfig's resource name. We are using the tier (product edition) name as the
+           * license config id such as `search` or `search_and_assistant`.
+           */
+          public Create setLicenseConfigId(java.lang.String licenseConfigId) {
+            this.licenseConfigId = licenseConfigId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a LicenseConfig.
+         *
+         * Create a request for the method "licenseConfigs.get".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Full resource name of LicenseConfig, such as
+         *        `projects/{project}/locations/{location}/licenseConfigs`. If the caller does not have
+         *        permission to access the LicenseConfig, regardless of whether or not it exists, a
+         *        PERMISSION_DENIED error is returned. If the requested LicenseConfig does not exist, a
+         *        NOT_FOUND error is returned.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/licenseConfigs/[^/]+$");
+
+          /**
+           * Gets a LicenseConfig.
+           *
+           * Create a request for the method "licenseConfigs.get".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Full resource name of LicenseConfig, such as
+         *        `projects/{project}/locations/{location}/licenseConfigs`. If the caller does not have
+         *        permission to access the LicenseConfig, regardless of whether or not it exists, a
+         *        PERMISSION_DENIED error is returned. If the requested LicenseConfig does not exist, a
+         *        NOT_FOUND error is returned.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/licenseConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of LicenseConfig, such as
+           * `projects/{project}/locations/{location}/licenseConfigs`. If the caller does not have
+           * permission to access the LicenseConfig, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested LicenseConfig does not exist, a
+           * NOT_FOUND error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Full resource name of LicenseConfig, such as
+         `projects/{project}/locations/{location}/licenseConfigs`. If the caller does not have permission to
+         access the LicenseConfig, regardless of whether or not it exists, a PERMISSION_DENIED error is
+         returned. If the requested LicenseConfig does not exist, a NOT_FOUND error is returned.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Full resource name of LicenseConfig, such as
+           * `projects/{project}/locations/{location}/licenseConfigs`. If the caller does not have
+           * permission to access the LicenseConfig, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested LicenseConfig does not exist, a
+           * NOT_FOUND error is returned.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/licenseConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the LicenseConfig
+         *
+         * Create a request for the method "licenseConfigs.patch".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. Identifier. The fully qualified resource name of the license config. Format:
+         *        `projects/{project}/locations/{location}/licenseConfigs/{license_config}`
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/licenseConfigs/[^/]+$");
+
+          /**
+           * Updates the LicenseConfig
+           *
+           * Create a request for the method "licenseConfigs.patch".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. Identifier. The fully qualified resource name of the license config. Format:
+         *        `projects/{project}/locations/{location}/licenseConfigs/{license_config}`
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig content) {
+            super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLicenseConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/licenseConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. Identifier. The fully qualified resource name of the license config. Format:
+           * `projects/{project}/locations/{location}/licenseConfigs/{license_config}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. Identifier. The fully qualified resource name of the license config. Format:
+         `projects/{project}/locations/{location}/licenseConfigs/{license_config}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. Identifier. The fully qualified resource name of the license config. Format:
+           * `projects/{project}/locations/{location}/licenseConfigs/{license_config}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/licenseConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Indicates which fields in the provided LicenseConfig to update. If an
+           * unsupported or unknown field is provided, an INVALID_ARGUMENT error is returned.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Indicates which fields in the provided LicenseConfig to update. If an unsupported or
+         unknown field is provided, an INVALID_ARGUMENT error is returned.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Indicates which fields in the provided LicenseConfig to update. If an
+           * unsupported or unknown field is provided, an INVALID_ARGUMENT error is returned.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Notebooks collection.
        *
        * <p>The typical use is:</p>

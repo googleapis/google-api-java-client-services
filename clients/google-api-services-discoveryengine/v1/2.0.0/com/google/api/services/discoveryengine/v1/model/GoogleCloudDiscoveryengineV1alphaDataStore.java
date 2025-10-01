@@ -62,8 +62,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private GoogleCloudDiscoveryengineV1alphaCmekConfig cmekConfig;
 
   /**
-   * Optional. Configuration for configurable billing approach. See go/vais-repricing-billing-dd for
-   * more details, only apply to non-Spark UCS Search.
+   * Optional. Configuration for configurable billing approach. See
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -289,8 +288,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   }
 
   /**
-   * Optional. Configuration for configurable billing approach. See go/vais-repricing-billing-dd for
-   * more details, only apply to non-Spark UCS Search.
+   * Optional. Configuration for configurable billing approach. See
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigurableBillingApproach() {
@@ -298,8 +296,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   }
 
   /**
-   * Optional. Configuration for configurable billing approach. See go/vais-repricing-billing-dd for
-   * more details, only apply to non-Spark UCS Search.
+   * Optional. Configuration for configurable billing approach. See
    * @param configurableBillingApproach configurableBillingApproach or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setConfigurableBillingApproach(java.lang.String configurableBillingApproach) {

@@ -54,7 +54,8 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   /**
    * Optional. User provided package spec of the ReasoningEngine. Ignored when users directly
    * specify a deployment image through `deployment_spec.first_party_image_override`, but keeping
-   * the field_behavior to avoid introducing breaking changes.
+   * the field_behavior to avoid introducing breaking changes. The `deployment_source` field should
+   * not be set if `package_spec` is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +127,8 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   /**
    * Optional. User provided package spec of the ReasoningEngine. Ignored when users directly
    * specify a deployment image through `deployment_spec.first_party_image_override`, but keeping
-   * the field_behavior to avoid introducing breaking changes.
+   * the field_behavior to avoid introducing breaking changes. The `deployment_source` field should
+   * not be set if `package_spec` is specified.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec getPackageSpec() {
@@ -136,7 +138,8 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   /**
    * Optional. User provided package spec of the ReasoningEngine. Ignored when users directly
    * specify a deployment image through `deployment_spec.first_party_image_override`, but keeping
-   * the field_behavior to avoid introducing breaking changes.
+   * the field_behavior to avoid introducing breaking changes. The `deployment_source` field should
+   * not be set if `package_spec` is specified.
    * @param packageSpec packageSpec or {@code null} for none
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpec setPackageSpec(GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec packageSpec) {

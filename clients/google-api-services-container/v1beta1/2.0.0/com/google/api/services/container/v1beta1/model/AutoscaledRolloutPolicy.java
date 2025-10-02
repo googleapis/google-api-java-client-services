@@ -31,6 +31,33 @@ package com.google.api.services.container.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class AutoscaledRolloutPolicy extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Time to wait after cordoning the blue pool before draining the nodes. Defaults to 3
+   * days. The value can be set between 0 and 7 days, inclusive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String waitForDrainDuration;
+
+  /**
+   * Optional. Time to wait after cordoning the blue pool before draining the nodes. Defaults to 3
+   * days. The value can be set between 0 and 7 days, inclusive.
+   * @return value or {@code null} for none
+   */
+  public String getWaitForDrainDuration() {
+    return waitForDrainDuration;
+  }
+
+  /**
+   * Optional. Time to wait after cordoning the blue pool before draining the nodes. Defaults to 3
+   * days. The value can be set between 0 and 7 days, inclusive.
+   * @param waitForDrainDuration waitForDrainDuration or {@code null} for none
+   */
+  public AutoscaledRolloutPolicy setWaitForDrainDuration(String waitForDrainDuration) {
+    this.waitForDrainDuration = waitForDrainDuration;
+    return this;
+  }
+
   @Override
   public AutoscaledRolloutPolicy set(String fieldName, Object value) {
     return (AutoscaledRolloutPolicy) super.set(fieldName, value);

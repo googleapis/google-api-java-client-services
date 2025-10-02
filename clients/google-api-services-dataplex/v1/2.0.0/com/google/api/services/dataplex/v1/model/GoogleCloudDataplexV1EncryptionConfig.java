@@ -38,6 +38,13 @@ public final class GoogleCloudDataplexV1EncryptionConfig extends com.google.api.
   private String createTime;
 
   /**
+   * Optional. Represent the state of CMEK opt-in for metastore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableMetastoreEncryption;
+
+  /**
    * Output only. The state of encryption of the databases.
    * The value may be {@code null}.
    */
@@ -96,6 +103,23 @@ public final class GoogleCloudDataplexV1EncryptionConfig extends com.google.api.
    */
   public GoogleCloudDataplexV1EncryptionConfig setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Represent the state of CMEK opt-in for metastore.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableMetastoreEncryption() {
+    return enableMetastoreEncryption;
+  }
+
+  /**
+   * Optional. Represent the state of CMEK opt-in for metastore.
+   * @param enableMetastoreEncryption enableMetastoreEncryption or {@code null} for none
+   */
+  public GoogleCloudDataplexV1EncryptionConfig setEnableMetastoreEncryption(java.lang.Boolean enableMetastoreEncryption) {
+    this.enableMetastoreEncryption = enableMetastoreEncryption;
     return this;
   }
 

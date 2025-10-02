@@ -31,7 +31,7 @@ public final class GoogleCloudDataplexV1DataDocumentationResultTableResult exten
 
   /**
    * Output only. The service-qualified full resource name of the cloud resource. Ex:
-   * bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class GoogleCloudDataplexV1DataDocumentationResultTableResult exten
 
   /**
    * Output only. The service-qualified full resource name of the cloud resource. Ex:
-   * bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -75,7 +75,7 @@ public final class GoogleCloudDataplexV1DataDocumentationResultTableResult exten
 
   /**
    * Output only. The service-qualified full resource name of the cloud resource. Ex:
-   * bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1DataDocumentationResultTableResult setName(java.lang.String name) {

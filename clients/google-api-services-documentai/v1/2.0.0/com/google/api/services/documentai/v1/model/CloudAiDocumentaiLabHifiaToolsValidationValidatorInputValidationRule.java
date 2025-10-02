@@ -31,11 +31,23 @@ package com.google.api.services.documentai.v1.model;
 public final class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule childAlignmentRule;
+
+  /**
    * Description of the validation rule. This has no use but for documentation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleEntityAlignmentRule entityAlignmentRule;
 
   /**
    * The value may be {@code null}.
@@ -63,6 +75,21 @@ public final class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidat
   private java.lang.String name;
 
   /**
+   * @return value or {@code null} for none
+   */
+  public CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule getChildAlignmentRule() {
+    return childAlignmentRule;
+  }
+
+  /**
+   * @param childAlignmentRule childAlignmentRule or {@code null} for none
+   */
+  public CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule setChildAlignmentRule(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule childAlignmentRule) {
+    this.childAlignmentRule = childAlignmentRule;
+    return this;
+  }
+
+  /**
    * Description of the validation rule. This has no use but for documentation
    * @return value or {@code null} for none
    */
@@ -76,6 +103,21 @@ public final class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidat
    */
   public CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleEntityAlignmentRule getEntityAlignmentRule() {
+    return entityAlignmentRule;
+  }
+
+  /**
+   * @param entityAlignmentRule entityAlignmentRule or {@code null} for none
+   */
+  public CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule setEntityAlignmentRule(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleEntityAlignmentRule entityAlignmentRule) {
+    this.entityAlignmentRule = entityAlignmentRule;
     return this;
   }
 

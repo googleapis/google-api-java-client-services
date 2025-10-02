@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Mesesage of response of list rules
+ * Message wrappes a list of invalid rules.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,64 +27,46 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListRulesResponse extends com.google.api.client.json.GenericJson {
+public final class InvalidRulesWrapper extends com.google.api.client.json.GenericJson {
 
   /**
-   * A wrapper of the invalid rules that failed to be validated.
+   * The invalid rules that failed to be validated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private InvalidRulesWrapper invalidRulesWrapper;
+  private java.util.List<InvalidRule> invalidRules;
+
+  static {
+    // hack to force ProGuard to consider InvalidRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(InvalidRule.class);
+  }
 
   /**
-   * all rules in response
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Rule> rules;
-
-  /**
-   * A wrapper of the invalid rules that failed to be validated.
+   * The invalid rules that failed to be validated.
    * @return value or {@code null} for none
    */
-  public InvalidRulesWrapper getInvalidRulesWrapper() {
-    return invalidRulesWrapper;
+  public java.util.List<InvalidRule> getInvalidRules() {
+    return invalidRules;
   }
 
   /**
-   * A wrapper of the invalid rules that failed to be validated.
-   * @param invalidRulesWrapper invalidRulesWrapper or {@code null} for none
+   * The invalid rules that failed to be validated.
+   * @param invalidRules invalidRules or {@code null} for none
    */
-  public ListRulesResponse setInvalidRulesWrapper(InvalidRulesWrapper invalidRulesWrapper) {
-    this.invalidRulesWrapper = invalidRulesWrapper;
-    return this;
-  }
-
-  /**
-   * all rules in response
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Rule> getRules() {
-    return rules;
-  }
-
-  /**
-   * all rules in response
-   * @param rules rules or {@code null} for none
-   */
-  public ListRulesResponse setRules(java.util.List<Rule> rules) {
-    this.rules = rules;
+  public InvalidRulesWrapper setInvalidRules(java.util.List<InvalidRule> invalidRules) {
+    this.invalidRules = invalidRules;
     return this;
   }
 
   @Override
-  public ListRulesResponse set(String fieldName, Object value) {
-    return (ListRulesResponse) super.set(fieldName, value);
+  public InvalidRulesWrapper set(String fieldName, Object value) {
+    return (InvalidRulesWrapper) super.set(fieldName, value);
   }
 
   @Override
-  public ListRulesResponse clone() {
-    return (ListRulesResponse) super.clone();
+  public InvalidRulesWrapper clone() {
+    return (InvalidRulesWrapper) super.clone();
   }
 
 }

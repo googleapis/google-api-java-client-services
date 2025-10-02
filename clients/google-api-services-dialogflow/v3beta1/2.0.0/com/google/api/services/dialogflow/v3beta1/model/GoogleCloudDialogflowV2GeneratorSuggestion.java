@@ -30,6 +30,13 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Suggestion to coach the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2AgentCoachingSuggestion agentCoachingSuggestion;
+
+  /**
    * Optional. Free form suggestion.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo> toolCallInfo;
+
+  /**
+   * Optional. Suggestion to coach the agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AgentCoachingSuggestion getAgentCoachingSuggestion() {
+    return agentCoachingSuggestion;
+  }
+
+  /**
+   * Optional. Suggestion to coach the agent.
+   * @param agentCoachingSuggestion agentCoachingSuggestion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2GeneratorSuggestion setAgentCoachingSuggestion(GoogleCloudDialogflowV2AgentCoachingSuggestion agentCoachingSuggestion) {
+    this.agentCoachingSuggestion = agentCoachingSuggestion;
+    return this;
+  }
 
   /**
    * Optional. Free form suggestion.

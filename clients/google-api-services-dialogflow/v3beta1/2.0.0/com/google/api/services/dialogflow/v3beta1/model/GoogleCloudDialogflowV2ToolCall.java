@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowV2ToolCall extends com.google.api.client
   private java.lang.String action;
 
   /**
+   * Optional. The answer record associated with this tool call.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String answerRecord;
+
+  /**
    * Output only. Create time of the tool call.
    * The value may be {@code null}.
    */
@@ -51,11 +58,32 @@ public final class GoogleCloudDialogflowV2ToolCall extends com.google.api.client
   private java.util.Map<String, java.lang.Object> inputParameters;
 
   /**
+   * Output only. State of the tool call.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tool;
+
+  /**
+   * Optional. A human readable description of the tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String toolDisplayDetails;
+
+  /**
+   * Optional. A human readable short name of the tool, to be shown on the UI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String toolDisplayName;
 
   /**
    * Optional. The name of the tool's action associated with this call.
@@ -71,6 +99,23 @@ public final class GoogleCloudDialogflowV2ToolCall extends com.google.api.client
    */
   public GoogleCloudDialogflowV2ToolCall setAction(java.lang.String action) {
     this.action = action;
+    return this;
+  }
+
+  /**
+   * Optional. The answer record associated with this tool call.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnswerRecord() {
+    return answerRecord;
+  }
+
+  /**
+   * Optional. The answer record associated with this tool call.
+   * @param answerRecord answerRecord or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ToolCall setAnswerRecord(java.lang.String answerRecord) {
+    this.answerRecord = answerRecord;
     return this;
   }
 
@@ -109,6 +154,23 @@ public final class GoogleCloudDialogflowV2ToolCall extends com.google.api.client
   }
 
   /**
+   * Output only. State of the tool call.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the tool call.
+   * @param state state or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ToolCall setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
    * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * @return value or {@code null} for none
    */
@@ -122,6 +184,40 @@ public final class GoogleCloudDialogflowV2ToolCall extends com.google.api.client
    */
   public GoogleCloudDialogflowV2ToolCall setTool(java.lang.String tool) {
     this.tool = tool;
+    return this;
+  }
+
+  /**
+   * Optional. A human readable description of the tool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getToolDisplayDetails() {
+    return toolDisplayDetails;
+  }
+
+  /**
+   * Optional. A human readable description of the tool.
+   * @param toolDisplayDetails toolDisplayDetails or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ToolCall setToolDisplayDetails(java.lang.String toolDisplayDetails) {
+    this.toolDisplayDetails = toolDisplayDetails;
+    return this;
+  }
+
+  /**
+   * Optional. A human readable short name of the tool, to be shown on the UI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getToolDisplayName() {
+    return toolDisplayName;
+  }
+
+  /**
+   * Optional. A human readable short name of the tool, to be shown on the UI.
+   * @param toolDisplayName toolDisplayName or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ToolCall setToolDisplayName(java.lang.String toolDisplayName) {
+    this.toolDisplayName = toolDisplayName;
     return this;
   }
 

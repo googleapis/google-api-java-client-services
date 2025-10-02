@@ -53,6 +53,13 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   private java.lang.Long milliDcuSeconds;
 
   /**
+   * Optional. Slot usage in (milliSlot x seconds).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliSlotSeconds;
+
+  /**
    * Optional. Shuffle storage usage in (GB x seconds) (see Dataproc Serverless pricing
    * (https://cloud.google.com/dataproc-serverless/pricing)).
    * The value may be {@code null}.
@@ -119,6 +126,23 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
    */
   public UsageMetrics setMilliDcuSeconds(java.lang.Long milliDcuSeconds) {
     this.milliDcuSeconds = milliDcuSeconds;
+    return this;
+  }
+
+  /**
+   * Optional. Slot usage in (milliSlot x seconds).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliSlotSeconds() {
+    return milliSlotSeconds;
+  }
+
+  /**
+   * Optional. Slot usage in (milliSlot x seconds).
+   * @param milliSlotSeconds milliSlotSeconds or {@code null} for none
+   */
+  public UsageMetrics setMilliSlotSeconds(java.lang.Long milliSlotSeconds) {
+    this.milliSlotSeconds = milliSlotSeconds;
     return this;
   }
 

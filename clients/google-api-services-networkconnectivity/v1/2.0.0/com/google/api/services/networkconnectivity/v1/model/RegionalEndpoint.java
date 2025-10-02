@@ -86,7 +86,7 @@ public final class RegionalEndpoint extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * The name of the VPC network for this private regional endpoint. Format:
+   * Optional. The name of the VPC network for this private regional endpoint. Format:
    * `projects/{project}/global/networks/{network}`
    * The value may be {@code null}.
    */
@@ -103,7 +103,7 @@ public final class RegionalEndpoint extends com.google.api.client.json.GenericJs
   private java.lang.String pscForwardingRule;
 
   /**
-   * The name of the subnetwork from which the IP address will be allocated. Format:
+   * Optional. The name of the subnetwork from which the IP address will be allocated. Format:
    * `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
    * The value may be {@code null}.
    */
@@ -257,7 +257,7 @@ public final class RegionalEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the VPC network for this private regional endpoint. Format:
+   * Optional. The name of the VPC network for this private regional endpoint. Format:
    * `projects/{project}/global/networks/{network}`
    * @return value or {@code null} for none
    */
@@ -266,7 +266,7 @@ public final class RegionalEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the VPC network for this private regional endpoint. Format:
+   * Optional. The name of the VPC network for this private regional endpoint. Format:
    * `projects/{project}/global/networks/{network}`
    * @param network network or {@code null} for none
    */
@@ -297,7 +297,7 @@ public final class RegionalEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the subnetwork from which the IP address will be allocated. Format:
+   * Optional. The name of the subnetwork from which the IP address will be allocated. Format:
    * `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
    * @return value or {@code null} for none
    */
@@ -306,7 +306,7 @@ public final class RegionalEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the subnetwork from which the IP address will be allocated. Format:
+   * Optional. The name of the subnetwork from which the IP address will be allocated. Format:
    * `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
    * @param subnetwork subnetwork or {@code null} for none
    */

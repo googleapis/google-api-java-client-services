@@ -46,7 +46,7 @@ public final class Transport extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String advertisedRoutes;
+  private java.util.List<java.lang.String> advertisedRoutes;
 
   /**
    * Required. Bandwidth of the Transport. This must be one of the supported bandwidths for the
@@ -184,7 +184,7 @@ public final class Transport extends com.google.api.client.json.GenericJson {
    * Both IPv4 and IPv6 addresses are supported.
    * @return value or {@code null} for none
    */
-  public java.lang.String getAdvertisedRoutes() {
+  public java.util.List<java.lang.String> getAdvertisedRoutes() {
     return advertisedRoutes;
   }
 
@@ -193,7 +193,7 @@ public final class Transport extends com.google.api.client.json.GenericJson {
    * Both IPv4 and IPv6 addresses are supported.
    * @param advertisedRoutes advertisedRoutes or {@code null} for none
    */
-  public Transport setAdvertisedRoutes(java.lang.String advertisedRoutes) {
+  public Transport setAdvertisedRoutes(java.util.List<java.lang.String> advertisedRoutes) {
     this.advertisedRoutes = advertisedRoutes;
     return this;
   }

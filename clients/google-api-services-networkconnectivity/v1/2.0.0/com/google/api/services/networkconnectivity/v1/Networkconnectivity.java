@@ -174,6 +174,154 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
     public class Locations {
 
       /**
+       * CheckConsumerConfig validates the consumer network and project for potential PSC connection
+       * creation. This method performs several checks, including: - Validating the existence and
+       * permissions of the service class. - Ensuring the consumer network exists and is accessible. -
+       * Verifying XPN relationships if applicable. - Checking for compatible IP versions between the
+       * consumer network and the requested version. This method performs a dynamic IAM check for the
+       * `networkconnectivity.serviceClasses.use` permission on the service class resource in the Prepare
+       * phase.
+       *
+       * Create a request for the method "locations.checkConsumerConfig".
+       *
+       * This request holds the parameters needed by the networkconnectivity server.  After setting any
+       * optional parameters, call the {@link CheckConsumerConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param location Required. The location resource path. Example: - projects/{project}/locations/{location}
+       * @param content the {@link com.google.api.services.networkconnectivity.v1.model.CheckConsumerConfigRequest}
+       * @return the request
+       */
+      public CheckConsumerConfig checkConsumerConfig(java.lang.String location, com.google.api.services.networkconnectivity.v1.model.CheckConsumerConfigRequest content) throws java.io.IOException {
+        CheckConsumerConfig result = new CheckConsumerConfig(location, content);
+        initialize(result);
+        return result;
+      }
+
+      public class CheckConsumerConfig extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.CheckConsumerConfigResponse> {
+
+        private static final String REST_PATH = "v1/{+location}:checkConsumerConfig";
+
+        private final java.util.regex.Pattern LOCATION_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * CheckConsumerConfig validates the consumer network and project for potential PSC connection
+         * creation. This method performs several checks, including: - Validating the existence and
+         * permissions of the service class. - Ensuring the consumer network exists and is accessible. -
+         * Verifying XPN relationships if applicable. - Checking for compatible IP versions between the
+         * consumer network and the requested version. This method performs a dynamic IAM check for the
+         * `networkconnectivity.serviceClasses.use` permission on the service class resource in the
+         * Prepare phase.
+         *
+         * Create a request for the method "locations.checkConsumerConfig".
+         *
+         * This request holds the parameters needed by the the networkconnectivity server.  After setting
+         * any optional parameters, call the {@link CheckConsumerConfig#execute()} method to invoke the
+         * remote operation. <p> {@link CheckConsumerConfig#initialize(com.google.api.client.googleapis.se
+         * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param location Required. The location resource path. Example: - projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.networkconnectivity.v1.model.CheckConsumerConfigRequest}
+         * @since 1.13
+         */
+        protected CheckConsumerConfig(java.lang.String location, com.google.api.services.networkconnectivity.v1.model.CheckConsumerConfigRequest content) {
+          super(Networkconnectivity.this, "POST", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.CheckConsumerConfigResponse.class);
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public CheckConsumerConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (CheckConsumerConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CheckConsumerConfig setAccessToken(java.lang.String accessToken) {
+          return (CheckConsumerConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CheckConsumerConfig setAlt(java.lang.String alt) {
+          return (CheckConsumerConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public CheckConsumerConfig setCallback(java.lang.String callback) {
+          return (CheckConsumerConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public CheckConsumerConfig setFields(java.lang.String fields) {
+          return (CheckConsumerConfig) super.setFields(fields);
+        }
+
+        @Override
+        public CheckConsumerConfig setKey(java.lang.String key) {
+          return (CheckConsumerConfig) super.setKey(key);
+        }
+
+        @Override
+        public CheckConsumerConfig setOauthToken(java.lang.String oauthToken) {
+          return (CheckConsumerConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CheckConsumerConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CheckConsumerConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CheckConsumerConfig setQuotaUser(java.lang.String quotaUser) {
+          return (CheckConsumerConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CheckConsumerConfig setUploadType(java.lang.String uploadType) {
+          return (CheckConsumerConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CheckConsumerConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CheckConsumerConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The location resource path. Example: - projects/{project}/locations/{location}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Required. The location resource path. Example: - projects/{project}/locations/{location}
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /**
+         * Required. The location resource path. Example: - projects/{project}/locations/{location}
+         */
+        public CheckConsumerConfig setLocation(java.lang.String location) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.location = location;
+          return this;
+        }
+
+        @Override
+        public CheckConsumerConfig set(String parameterName, Object value) {
+          return (CheckConsumerConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets information about a location.
        *
        * Create a request for the method "locations.get".
@@ -10513,6 +10661,40 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           /** The standard list page token. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** When set to `true`, operations that are reachable are returned as normal, and those that are
+         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
+         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
+         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
+         explicitly documented otherwise in service or product specific documentation.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 

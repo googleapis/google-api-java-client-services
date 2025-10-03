@@ -100,6 +100,14 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
   private java.lang.String ipRange;
 
   /**
+   * Output only. Indicates whether the instance is version locked. If true, the instance will not
+   * be updated by automated runtime rollouts. This is only supported for Apigee X instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isVersionLocked;
+
+  /**
    * Output only. Time the instance was last modified in milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -112,6 +120,14 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
+
+  /**
+   * Optional. Apigee customers can set the preferred window to perform maintenance on the instance
+   * (day of the week and time of day).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1MaintenanceUpdatePolicy maintenanceUpdatePolicy;
 
   /**
    * Required. Resource ID of the instance. Values must match the regular expression
@@ -144,6 +160,15 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String runtimeVersion;
+
+  /**
+   * Output only. Time and date of the scheduled maintenance for this instance. This field is only
+   * populated for instances that have opted into Maintenance Window and if there is an upcoming
+   * maintenance. Cleared once the maintenance is complete.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1ScheduledMaintenance scheduledMaintenance;
 
   /**
    * Output only. Resource name of the service attachment created for the instance in the format:
@@ -327,6 +352,25 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
   }
 
   /**
+   * Output only. Indicates whether the instance is version locked. If true, the instance will not
+   * be updated by automated runtime rollouts. This is only supported for Apigee X instances.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsVersionLocked() {
+    return isVersionLocked;
+  }
+
+  /**
+   * Output only. Indicates whether the instance is version locked. If true, the instance will not
+   * be updated by automated runtime rollouts. This is only supported for Apigee X instances.
+   * @param isVersionLocked isVersionLocked or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Instance setIsVersionLocked(java.lang.Boolean isVersionLocked) {
+    this.isVersionLocked = isVersionLocked;
+    return this;
+  }
+
+  /**
    * Output only. Time the instance was last modified in milliseconds since epoch.
    * @return value or {@code null} for none
    */
@@ -357,6 +401,25 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
    */
   public GoogleCloudApigeeV1Instance setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Optional. Apigee customers can set the preferred window to perform maintenance on the instance
+   * (day of the week and time of day).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1MaintenanceUpdatePolicy getMaintenanceUpdatePolicy() {
+    return maintenanceUpdatePolicy;
+  }
+
+  /**
+   * Optional. Apigee customers can set the preferred window to perform maintenance on the instance
+   * (day of the week and time of day).
+   * @param maintenanceUpdatePolicy maintenanceUpdatePolicy or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Instance setMaintenanceUpdatePolicy(GoogleCloudApigeeV1MaintenanceUpdatePolicy maintenanceUpdatePolicy) {
+    this.maintenanceUpdatePolicy = maintenanceUpdatePolicy;
     return this;
   }
 
@@ -433,6 +496,27 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
    */
   public GoogleCloudApigeeV1Instance setRuntimeVersion(java.lang.String runtimeVersion) {
     this.runtimeVersion = runtimeVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Time and date of the scheduled maintenance for this instance. This field is only
+   * populated for instances that have opted into Maintenance Window and if there is an upcoming
+   * maintenance. Cleared once the maintenance is complete.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ScheduledMaintenance getScheduledMaintenance() {
+    return scheduledMaintenance;
+  }
+
+  /**
+   * Output only. Time and date of the scheduled maintenance for this instance. This field is only
+   * populated for instances that have opted into Maintenance Window and if there is an upcoming
+   * maintenance. Cleared once the maintenance is complete.
+   * @param scheduledMaintenance scheduledMaintenance or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Instance setScheduledMaintenance(GoogleCloudApigeeV1ScheduledMaintenance scheduledMaintenance) {
+    this.scheduledMaintenance = scheduledMaintenance;
     return this;
   }
 

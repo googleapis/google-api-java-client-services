@@ -4085,15 +4085,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         public class ScimTenants {
 
           /**
-           * Creates a new WorkforcePoolProviderScimTenant in a WorkforcePoolProvider. You cannot reuse the
-           * name of a deleted scim tenant until 30 days after deletion.
+           * Agentspace only. Creates a new WorkforcePoolProviderScimTenant in a WorkforcePoolProvider. You
+           * cannot reuse the name of a deleted SCIM tenant until 30 days after deletion.
            *
            * Create a request for the method "scimTenants.create".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent to create scim tenant. Format:
+           * @param parent Required. Agentspace only. The parent to create SCIM tenant. Format:
            *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
            * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
            * @return the request
@@ -4112,8 +4112,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
 
             /**
-             * Creates a new WorkforcePoolProviderScimTenant in a WorkforcePoolProvider. You cannot reuse the
-             * name of a deleted scim tenant until 30 days after deletion.
+             * Agentspace only. Creates a new WorkforcePoolProviderScimTenant in a WorkforcePoolProvider. You
+             * cannot reuse the name of a deleted SCIM tenant until 30 days after deletion.
              *
              * Create a request for the method "scimTenants.create".
              *
@@ -4122,7 +4122,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent to create scim tenant. Format:
+             * @param parent Required. Agentspace only. The parent to create SCIM tenant. Format:
            *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
              * @since 1.13
@@ -4193,13 +4193,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The parent to create scim tenant. Format:
+             * Required. Agentspace only. The parent to create SCIM tenant. Format:
              * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent to create scim tenant. Format:
+            /** Required. Agentspace only. The parent to create SCIM tenant. Format:
            'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             public java.lang.String getParent() {
@@ -4207,7 +4207,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The parent to create scim tenant. Format:
+             * Required. Agentspace only. The parent to create SCIM tenant. Format:
              * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             public Create setParent(java.lang.String parent) {
@@ -4221,24 +4221,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The ID to use for the scim tenant, which becomes the final component of the
-             * resource name. This value should be 4-32 characters, and may contain the characters
-             * [a-z0-9-].
+             * Required. Agentspace only. The ID to use for the SCIM tenant, which becomes the final
+             * component of the resource name. This value should be 4-32 characters, containing the
+             * characters [a-z0-9-].
              */
             @com.google.api.client.util.Key
             private java.lang.String workforcePoolProviderScimTenantId;
 
-            /** Required. The ID to use for the scim tenant, which becomes the final component of the resource
-           name. This value should be 4-32 characters, and may contain the characters [a-z0-9-].
+            /** Required. Agentspace only. The ID to use for the SCIM tenant, which becomes the final component of
+           the resource name. This value should be 4-32 characters, containing the characters [a-z0-9-].
              */
             public java.lang.String getWorkforcePoolProviderScimTenantId() {
               return workforcePoolProviderScimTenantId;
             }
 
             /**
-             * Required. The ID to use for the scim tenant, which becomes the final component of the
-             * resource name. This value should be 4-32 characters, and may contain the characters
-             * [a-z0-9-].
+             * Required. Agentspace only. The ID to use for the SCIM tenant, which becomes the final
+             * component of the resource name. This value should be 4-32 characters, containing the
+             * characters [a-z0-9-].
              */
             public Create setWorkforcePoolProviderScimTenantId(java.lang.String workforcePoolProviderScimTenantId) {
               this.workforcePoolProviderScimTenantId = workforcePoolProviderScimTenantId;
@@ -4251,17 +4251,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Deletes a WorkforcePoolProviderScimTenant. You can undelete a scim tenant for 30 days. After 30
-           * days, deletion is permanent. You cannot update deleted scim tenants. However, you can view and
-           * list them.
+           * Agentspace only. Deletes a WorkforcePoolProviderScimTenant. You can undelete a SCIM tenant for 30
+           * days. After 30 days, deletion is permanent. You cannot update deleted SCIM tenants. However, you
+           * can view and list them.
            *
            * Create a request for the method "scimTenants.delete".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the scim tenant to delete. Format: `locations/{location}/workforcePools/{workf
-           *        orce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+           * @param name Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/{location}/work
+           *        forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4278,9 +4278,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
             /**
-             * Deletes a WorkforcePoolProviderScimTenant. You can undelete a scim tenant for 30 days. After 30
-             * days, deletion is permanent. You cannot update deleted scim tenants. However, you can view and
-             * list them.
+             * Agentspace only. Deletes a WorkforcePoolProviderScimTenant. You can undelete a SCIM tenant for
+             * 30 days. After 30 days, deletion is permanent. You cannot update deleted SCIM tenants. However,
+             * you can view and list them.
              *
              * Create a request for the method "scimTenants.delete".
              *
@@ -4289,8 +4289,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the scim tenant to delete. Format: `locations/{location}/workforcePools/{workf
-           *        orce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * @param name Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/{location}/work
+           *        forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -4359,22 +4359,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The name of the scim tenant to delete. Format: `locations/{location}/workfo
-             * rcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/
+             * {location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_ten
+             * ant}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the scim tenant to delete. Format: `locations/{location}/workforcePools/{work
-           force_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+            /** Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/{location}/wor
+           kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the scim tenant to delete. Format: `locations/{location}/workfo
-             * rcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/
+             * {location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_ten
+             * ant}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4392,15 +4394,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Gets an individual WorkforcePoolProviderScimTenant.
+           * Agentspace only. Gets an individual WorkforcePoolProviderScimTenant.
            *
            * Create a request for the method "scimTenants.get".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the scim tenant to retrieve. Format: `locations/{location}/workforcePools/{wor
-           *        kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+           * @param name Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `locations/{location}/wo
+           *        rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -4417,7 +4419,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
             /**
-             * Gets an individual WorkforcePoolProviderScimTenant.
+             * Agentspace only. Gets an individual WorkforcePoolProviderScimTenant.
              *
              * Create a request for the method "scimTenants.get".
              *
@@ -4426,8 +4428,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the scim tenant to retrieve. Format: `locations/{location}/workforcePools/{wor
-           *        kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * @param name Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `locations/{location}/wo
+           *        rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -4506,22 +4508,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The name of the scim tenant to retrieve. Format: `locations/{location}/work
-             * forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `location
+             * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_t
+             * enant}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the scim tenant to retrieve. Format: `locations/{location}/workforcePools/{wo
-           rkforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+            /** Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `locations/{location}/w
+           orkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the scim tenant to retrieve. Format: `locations/{location}/work
-             * forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `location
+             * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_t
+             * enant}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4539,15 +4543,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Lists all non-deleted WorkforcePoolProviderScimTenants in a WorkforcePoolProvider. If
-           * `show_deleted` is set to `true`, then deleted scim tenants are also listed.
+           * Agentspace only. Lists all non-deleted WorkforcePoolProviderScimTenants in a
+           * WorkforcePoolProvider. If `show_deleted` is set to `true`, then deleted SCIM tenants are also
+           * listed.
            *
            * Create a request for the method "scimTenants.list".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent to list scim tenants. Format:
+           * @param parent Required. Agentspace only. The parent to list SCIM tenants. Format:
            *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
            * @return the request
            */
@@ -4565,8 +4570,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
 
             /**
-             * Lists all non-deleted WorkforcePoolProviderScimTenants in a WorkforcePoolProvider. If
-             * `show_deleted` is set to `true`, then deleted scim tenants are also listed.
+             * Agentspace only. Lists all non-deleted WorkforcePoolProviderScimTenants in a
+             * WorkforcePoolProvider. If `show_deleted` is set to `true`, then deleted SCIM tenants are also
+             * listed.
              *
              * Create a request for the method "scimTenants.list".
              *
@@ -4575,7 +4581,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent to list scim tenants. Format:
+             * @param parent Required. Agentspace only. The parent to list SCIM tenants. Format:
            *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              * @since 1.13
              */
@@ -4655,13 +4661,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The parent to list scim tenants. Format:
+             * Required. Agentspace only. The parent to list SCIM tenants. Format:
              * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent to list scim tenants. Format:
+            /** Required. Agentspace only. The parent to list SCIM tenants. Format:
            'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             public java.lang.String getParent() {
@@ -4669,7 +4675,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The parent to list scim tenants. Format:
+             * Required. Agentspace only. The parent to list SCIM tenants. Format:
              * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             public List setParent(java.lang.String parent) {
@@ -4683,22 +4689,22 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Optional. The maximum number of scim tenants to return. If unspecified, at most 1
-             * scim tenant will be returned.
+             * Optional. Agentspace only. The maximum number of SCIM tenants to return. If
+             * unspecified, at most 1 scim tenant will be returned.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of scim tenants to return. If unspecified, at most 1 scim tenant will
-           be returned.
+            /** Optional. Agentspace only. The maximum number of SCIM tenants to return. If unspecified, at most 1
+           scim tenant will be returned.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Optional. The maximum number of scim tenants to return. If unspecified, at most 1
-             * scim tenant will be returned.
+             * Optional. Agentspace only. The maximum number of SCIM tenants to return. If
+             * unspecified, at most 1 scim tenant will be returned.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -4706,39 +4712,39 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Optional. A page token, received from a previous `ListScimTenants` call. Provide this
-             * to retrieve the subsequent page.
+             * Optional. Agentspace only. A page token, received from a previous `ListScimTenants`
+             * call. Provide this to retrieve the subsequent page.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. A page token, received from a previous `ListScimTenants` call. Provide this to retrieve
-           the subsequent page.
+            /** Optional. Agentspace only. A page token, received from a previous `ListScimTenants` call. Provide
+           this to retrieve the subsequent page.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional. A page token, received from a previous `ListScimTenants` call. Provide this
-             * to retrieve the subsequent page.
+             * Optional. Agentspace only. A page token, received from a previous `ListScimTenants`
+             * call. Provide this to retrieve the subsequent page.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
             }
 
-            /** Optional. Whether to return soft-deleted scim tenants. */
+            /** Optional. Agentspace only. Whether to return soft-deleted SCIM tenants. */
             @com.google.api.client.util.Key
             private java.lang.Boolean showDeleted;
 
-            /** Optional. Whether to return soft-deleted scim tenants.
+            /** Optional. Agentspace only. Whether to return soft-deleted SCIM tenants.
              */
             public java.lang.Boolean getShowDeleted() {
               return showDeleted;
             }
 
-            /** Optional. Whether to return soft-deleted scim tenants. */
+            /** Optional. Agentspace only. Whether to return soft-deleted SCIM tenants. */
             public List setShowDeleted(java.lang.Boolean showDeleted) {
               this.showDeleted = showDeleted;
               return this;
@@ -4750,14 +4756,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Updates an existing WorkforcePoolProviderScimTenant.
+           * Agentspace only. Updates an existing WorkforcePoolProviderScimTenant.
            *
            * Create a request for the method "scimTenants.patch".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Identifier. The resource name of the SCIM Tenant. Format:
+           * @param name Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
            *        `locations/{location}/workforcePools/{workforce_pool}/providers/
            *        {workforce_pool_provider}/scimTenants/{scim_tenant}`
            * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
@@ -4777,7 +4783,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
             /**
-             * Updates an existing WorkforcePoolProviderScimTenant.
+             * Agentspace only. Updates an existing WorkforcePoolProviderScimTenant.
              *
              * Create a request for the method "scimTenants.patch".
              *
@@ -4786,7 +4792,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Identifier. The resource name of the SCIM Tenant. Format:
+             * @param name Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
            *        `locations/{location}/workforcePools/{workforce_pool}/providers/
            *        {workforce_pool_provider}/scimTenants/{scim_tenant}`
              * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
@@ -4858,14 +4864,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Identifier. The resource name of the SCIM Tenant. Format:
+             * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
              * `locations/{location}/workforcePools/{workforce_pool}/providers/
              * {workforce_pool_provider}/scimTenants/{scim_tenant}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Identifier. The resource name of the SCIM Tenant. Format:
+            /** Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
            `locations/{location}/workforcePools/{workforce_pool}/providers/
            {workforce_pool_provider}/scimTenants/{scim_tenant}`
              */
@@ -4874,7 +4880,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Identifier. The resource name of the SCIM Tenant. Format:
+             * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
              * `locations/{location}/workforcePools/{workforce_pool}/providers/
              * {workforce_pool_provider}/scimTenants/{scim_tenant}`
              */
@@ -4888,17 +4894,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               return this;
             }
 
-            /** Optional. The list of fields to update. */
+            /** Optional. Agentspace only. The list of fields to update. */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Optional. The list of fields to update.
+            /** Optional. Agentspace only. The list of fields to update.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** Optional. The list of fields to update. */
+            /** Optional. Agentspace only. The list of fields to update. */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -4910,15 +4916,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Undeletes a WorkforcePoolProviderScimTenant, as long as it was deleted fewer than 30 days ago.
+           * Agentspace only. Undeletes a WorkforcePoolProviderScimTenant, that was deleted fewer than 30 days
+           * ago.
            *
            * Create a request for the method "scimTenants.undelete".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the scim tenant to undelete. Format: `locations/{location}/workforcePools/{wor
-           *        kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+           * @param name Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `locations/{location}/wo
+           *        rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
            * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTenantRequest}
            * @return the request
            */
@@ -4936,7 +4943,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
             /**
-             * Undeletes a WorkforcePoolProviderScimTenant, as long as it was deleted fewer than 30 days ago.
+             * Agentspace only. Undeletes a WorkforcePoolProviderScimTenant, that was deleted fewer than 30
+             * days ago.
              *
              * Create a request for the method "scimTenants.undelete".
              *
@@ -4946,8 +4954,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the scim tenant to undelete. Format: `locations/{location}/workforcePools/{wor
-           *        kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * @param name Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `locations/{location}/wo
+           *        rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTenantRequest}
              * @since 1.13
              */
@@ -5017,22 +5025,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The name of the scim tenant to undelete. Format: `locations/{location}/work
-             * forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `location
+             * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_t
+             * enant}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the scim tenant to undelete. Format: `locations/{location}/workforcePools/{wo
-           rkforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+            /** Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `locations/{location}/w
+           orkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the scim tenant to undelete. Format: `locations/{location}/work
-             * forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `location
+             * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_t
+             * enant}`
              */
             public Undelete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5071,16 +5081,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           public class Tokens {
 
             /**
-             * Creates a new WorkforcePoolProviderScimToken in a WorkforcePoolProviderScimTenant. You cannot
-             * reuse the name of a deleted SCIM token until 30 days after deletion.
+             * Agentspace only. Creates a new WorkforcePoolProviderScimToken in a
+             * WorkforcePoolProviderScimTenant. You cannot reuse the name of a deleted SCIM token until 30 days
+             * after deletion.
              *
              * Create a request for the method "tokens.create".
              *
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent tenant to create scim token. Format: 'locations/{location}/workforcePools/{work
-             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+             * @param parent Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locations/{location}/wor
+             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
              * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
              * @return the request
              */
@@ -5098,8 +5109,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
               /**
-               * Creates a new WorkforcePoolProviderScimToken in a WorkforcePoolProviderScimTenant. You cannot
-               * reuse the name of a deleted SCIM token until 30 days after deletion.
+               * Agentspace only. Creates a new WorkforcePoolProviderScimToken in a
+               * WorkforcePoolProviderScimTenant. You cannot reuse the name of a deleted SCIM token until 30
+               * days after deletion.
                *
                * Create a request for the method "tokens.create".
                *
@@ -5108,8 +5120,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent tenant to create scim token. Format: 'locations/{location}/workforcePools/{work
-             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               * @param parent Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locations/{location}/wor
+             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
                * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
                * @since 1.13
                */
@@ -5179,22 +5191,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. The parent tenant to create scim token. Format: 'locations/{location}/wor
-               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               * Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locatio
+               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
+               * m_tenant}'
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent tenant to create scim token. Format: 'locations/{location}/workforcePools/{wor
-             kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+              /** Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locations/{location}/wo
+             rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent tenant to create scim token. Format: 'locations/{location}/wor
-               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               * Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locatio
+               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
+               * m_tenant}'
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5207,24 +5221,25 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. The ID to use for the scim token, which becomes the final component of
-               * the resource name. This value should be 4-32 characters and follow this pattern:
-               * "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
+               * Required. Agentspace only. The ID to use for the SCIM token, which becomes the
+               * final component of the resource name. This value should be 4-32 characters and
+               * follow the pattern: "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
                */
               @com.google.api.client.util.Key
               private java.lang.String workforcePoolProviderScimTokenId;
 
-              /** Required. The ID to use for the scim token, which becomes the final component of the resource name.
-             This value should be 4-32 characters and follow this pattern: "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
+              /** Required. Agentspace only. The ID to use for the SCIM token, which becomes the final component of
+             the resource name. This value should be 4-32 characters and follow the pattern:
+             "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
                */
               public java.lang.String getWorkforcePoolProviderScimTokenId() {
                 return workforcePoolProviderScimTokenId;
               }
 
               /**
-               * Required. The ID to use for the scim token, which becomes the final component of
-               * the resource name. This value should be 4-32 characters and follow this pattern:
-               * "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
+               * Required. Agentspace only. The ID to use for the SCIM token, which becomes the
+               * final component of the resource name. This value should be 4-32 characters and
+               * follow the pattern: "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
                */
               public Create setWorkforcePoolProviderScimTokenId(java.lang.String workforcePoolProviderScimTokenId) {
                 this.workforcePoolProviderScimTokenId = workforcePoolProviderScimTokenId;
@@ -5237,17 +5252,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Deletes a WorkforcePoolProviderScimToken. You can undelete a scim token for 30 days. After 30
-             * days, deletion is permanent. You cannot update deleted scim tokens. However, you can view and
-             * list them.
+             * Agentspace only. Deletes a WorkforcePoolProviderScimToken. You can undelete a SCIM token for 30
+             * days. After 30 days, the SCIM token is permanently deleted. You cannot update deleted SCIM
+             * tokens, however, you can view and list them.
              *
              * Create a request for the method "tokens.delete".
              *
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the scim token to delete. Format: `locations/{location}/workforcePools/{workfo
-             *        rce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+             * @param name Required. Agentspace only. The name of the SCIM token to delete. Format: `locations/{location}/workf
+             *        orcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5264,9 +5279,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
 
               /**
-               * Deletes a WorkforcePoolProviderScimToken. You can undelete a scim token for 30 days. After 30
-               * days, deletion is permanent. You cannot update deleted scim tokens. However, you can view and
-               * list them.
+               * Agentspace only. Deletes a WorkforcePoolProviderScimToken. You can undelete a SCIM token for 30
+               * days. After 30 days, the SCIM token is permanently deleted. You cannot update deleted SCIM
+               * tokens, however, you can view and list them.
                *
                * Create a request for the method "tokens.delete".
                *
@@ -5275,8 +5290,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the scim token to delete. Format: `locations/{location}/workforcePools/{workfo
-             *        rce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               * @param name Required. Agentspace only. The name of the SCIM token to delete. Format: `locations/{location}/workf
+             *        orcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -5345,24 +5360,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. The name of the scim token to delete. Format: `locations/{location}/workf
-               * orcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{t
-               * oken}`
+               * Required. Agentspace only. The name of the SCIM token to delete. Format: `locations
+               * /{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_
+               * tenant}/tokens/{token}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the scim token to delete. Format: `locations/{location}/workforcePools/{workf
-             orce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+              /** Required. Agentspace only. The name of the SCIM token to delete. Format: `locations/{location}/work
+             forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The name of the scim token to delete. Format: `locations/{location}/workf
-               * orcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{t
-               * oken}`
+               * Required. Agentspace only. The name of the SCIM token to delete. Format: `locations
+               * /{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_
+               * tenant}/tokens/{token}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -5380,15 +5395,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Gets an individual WorkforcePoolProviderScimToken.
+             * Agentspace only. Gets an individual WorkforcePoolProviderScimToken.
              *
              * Create a request for the method "tokens.get".
              *
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the scim token to retrieve. Format: `locations/{location}/workforcePools/{work
-             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+             * @param name Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locations/{location}/wor
+             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}
+             *        `
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -5405,7 +5421,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
 
               /**
-               * Gets an individual WorkforcePoolProviderScimToken.
+               * Agentspace only. Gets an individual WorkforcePoolProviderScimToken.
                *
                * Create a request for the method "tokens.get".
                *
@@ -5414,8 +5430,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the scim token to retrieve. Format: `locations/{location}/workforcePools/{work
-             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               * @param name Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locations/{location}/wor
+             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}
+             *        `
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -5494,24 +5511,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. The name of the scim token to retrieve. Format: `locations/{location}/wor
-               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
-               * {token}`
+               * Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locatio
+               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
+               * m_tenant}/tokens/{token}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the scim token to retrieve. Format: `locations/{location}/workforcePools/{wor
-             kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+              /** Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locations/{location}/wo
+             rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The name of the scim token to retrieve. Format: `locations/{location}/wor
-               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
-               * {token}`
+               * Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locatio
+               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
+               * m_tenant}/tokens/{token}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -5529,16 +5546,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Lists all non-deleted WorkforcePoolProviderScimTokenss in a WorkforcePoolProviderScimTenant. If
-             * `show_deleted` is set to `true`, then deleted SCIM tokens are also listed.
+             * Agentspace only. Lists all non-deleted WorkforcePoolProviderScimTokenss in a
+             * WorkforcePoolProviderScimTenant. If `show_deleted` is set to `true`, then deleted SCIM tokens are
+             * also listed.
              *
              * Create a request for the method "tokens.list".
              *
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePools/{workforce_po
-             *        ol}/providers/{provider}/scimTenants/{scim_tenant}'
+             * @param parent Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{location}/workforcePo
+             *        ols/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -5555,8 +5573,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
               /**
-               * Lists all non-deleted WorkforcePoolProviderScimTokenss in a WorkforcePoolProviderScimTenant. If
-               * `show_deleted` is set to `true`, then deleted SCIM tokens are also listed.
+               * Agentspace only. Lists all non-deleted WorkforcePoolProviderScimTokenss in a
+               * WorkforcePoolProviderScimTenant. If `show_deleted` is set to `true`, then deleted SCIM tokens
+               * are also listed.
                *
                * Create a request for the method "tokens.list".
                *
@@ -5565,8 +5584,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePools/{workforce_po
-             *        ol}/providers/{provider}/scimTenants/{scim_tenant}'
+               * @param parent Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{location}/workforcePo
+             *        ols/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -5645,22 +5664,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePo
-               * ols/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               * Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{loca
+               * tion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant
+               * }'
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePools/{workforce_p
-             ool}/providers/{provider}/scimTenants/{scim_tenant}'
+              /** Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{location}/workforceP
+             ools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent to list scim tokens. Format: 'locations/{location}/workforcePo
-               * ols/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               * Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{loca
+               * tion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant
+               * }'
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5673,22 +5694,22 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Optional. The maximum number of scim tokens to return. If unspecified, at most 2
-               * scim tokens will be returned.
+               * Optional. Agentspace only. The maximum number of scim tokens to return. If
+               * unspecified, at most 2 SCIM tokens will be returned.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Optional. The maximum number of scim tokens to return. If unspecified, at most 2 scim tokens will
-             be returned.
+              /** Optional. Agentspace only. The maximum number of scim tokens to return. If unspecified, at most 2
+             SCIM tokens will be returned.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Optional. The maximum number of scim tokens to return. If unspecified, at most 2
-               * scim tokens will be returned.
+               * Optional. Agentspace only. The maximum number of scim tokens to return. If
+               * unspecified, at most 2 SCIM tokens will be returned.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -5696,22 +5717,22 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Optional. A page token, received from a previous
+               * Optional. Agentspace only. A page token, received from a previous
                * `ListWorkforcePoolProviderScimTokens` call. Provide this to retrieve the subsequent
                * page.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Optional. A page token, received from a previous `ListWorkforcePoolProviderScimTokens` call.
-             Provide this to retrieve the subsequent page.
+              /** Optional. Agentspace only. A page token, received from a previous
+             `ListWorkforcePoolProviderScimTokens` call. Provide this to retrieve the subsequent page.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * Optional. A page token, received from a previous
+               * Optional. Agentspace only. A page token, received from a previous
                * `ListWorkforcePoolProviderScimTokens` call. Provide this to retrieve the subsequent
                * page.
                */
@@ -5720,17 +5741,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 return this;
               }
 
-              /** Optional. Whether to return soft-deleted scim tokens. */
+              /** Optional. Agentspace only. Whether to return soft-deleted scim tokens. */
               @com.google.api.client.util.Key
               private java.lang.Boolean showDeleted;
 
-              /** Optional. Whether to return soft-deleted scim tokens.
+              /** Optional. Agentspace only. Whether to return soft-deleted scim tokens.
                */
               public java.lang.Boolean getShowDeleted() {
                 return showDeleted;
               }
 
-              /** Optional. Whether to return soft-deleted scim tokens. */
+              /** Optional. Agentspace only. Whether to return soft-deleted scim tokens. */
               public List setShowDeleted(java.lang.Boolean showDeleted) {
                 this.showDeleted = showDeleted;
                 return this;
@@ -5742,14 +5763,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Updates an existing WorkforcePoolProviderScimToken.
+             * Agentspace only. Updates an existing WorkforcePoolProviderScimToken.
              *
              * Create a request for the method "tokens.patch".
              *
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Identifier. The resource name of the SCIM Token. Format:
+             * @param name Identifier. Agentspace only. The resource name of the SCIM Token. Format:
              *        `locations/{location}/workforcePools/{workforce_pool}/providers/
              *        {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
              * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
@@ -5769,7 +5790,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
 
               /**
-               * Updates an existing WorkforcePoolProviderScimToken.
+               * Agentspace only. Updates an existing WorkforcePoolProviderScimToken.
                *
                * Create a request for the method "tokens.patch".
                *
@@ -5778,7 +5799,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Identifier. The resource name of the SCIM Token. Format:
+               * @param name Identifier. Agentspace only. The resource name of the SCIM Token. Format:
              *        `locations/{location}/workforcePools/{workforce_pool}/providers/
              *        {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
                * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
@@ -5850,14 +5871,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Identifier. The resource name of the SCIM Token. Format:
+               * Identifier. Agentspace only. The resource name of the SCIM Token. Format:
                * `locations/{location}/workforcePools/{workforce_pool}/providers/
                * {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Identifier. The resource name of the SCIM Token. Format:
+              /** Identifier. Agentspace only. The resource name of the SCIM Token. Format:
              `locations/{location}/workforcePools/{workforce_pool}/providers/
              {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
@@ -5866,7 +5887,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Identifier. The resource name of the SCIM Token. Format:
+               * Identifier. Agentspace only. The resource name of the SCIM Token. Format:
                * `locations/{location}/workforcePools/{workforce_pool}/providers/
                * {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
@@ -5880,17 +5901,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 return this;
               }
 
-              /** Optional. The list of fields to update. */
+              /** Optional. Agentspace only. The list of fields to update. */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Optional. The list of fields to update.
+              /** Optional. Agentspace only. The list of fields to update.
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /** Optional. The list of fields to update. */
+              /** Optional. Agentspace only. The list of fields to update. */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -5902,15 +5923,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Undeletes a WorkforcePoolProviderScimToken, as long as it was deleted fewer than 30 days ago.
+             * Agentspace only. Undeletes a WorkforcePoolProviderScimToken,that was deleted fewer than 30 days
+             * ago.
              *
              * Create a request for the method "tokens.undelete".
              *
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the scim token to undelete. Format: `locations/{location}/workforcePools/{work
-             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+             * @param name Required. Agentspace only. The name of the SCIM token to undelete. Format: `locations/{location}/wor
+             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}
+             *        `
              * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTokenRequest}
              * @return the request
              */
@@ -5928,7 +5951,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
 
               /**
-               * Undeletes a WorkforcePoolProviderScimToken, as long as it was deleted fewer than 30 days ago.
+               * Agentspace only. Undeletes a WorkforcePoolProviderScimToken,that was deleted fewer than 30 days
+               * ago.
                *
                * Create a request for the method "tokens.undelete".
                *
@@ -5938,8 +5962,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the scim token to undelete. Format: `locations/{location}/workforcePools/{work
-             *        force_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               * @param name Required. Agentspace only. The name of the SCIM token to undelete. Format: `locations/{location}/wor
+             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}
+             *        `
                * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTokenRequest}
                * @since 1.13
                */
@@ -6009,24 +6034,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. The name of the scim token to undelete. Format: `locations/{location}/wor
-               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
-               * {token}`
+               * Required. Agentspace only. The name of the SCIM token to undelete. Format: `locatio
+               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
+               * m_tenant}/tokens/{token}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the scim token to undelete. Format: `locations/{location}/workforcePools/{wor
-             kforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+              /** Required. Agentspace only. The name of the SCIM token to undelete. Format: `locations/{location}/wo
+             rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The name of the scim token to undelete. Format: `locations/{location}/wor
-               * kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
-               * {token}`
+               * Required. Agentspace only. The name of the SCIM token to undelete. Format: `locatio
+               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
+               * m_tenant}/tokens/{token}`
                */
               public Undelete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -13271,7 +13296,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Identifier. The resource name of the managed identity.
+             * @param name Output only. The resource name of the managed identity.
              * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity}
              * @return the request
              */
@@ -13298,7 +13323,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Identifier. The resource name of the managed identity.
+               * @param name Output only. The resource name of the managed identity.
                * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity}
                * @since 1.13
                */
@@ -13367,17 +13392,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Identifier. The resource name of the managed identity. */
+              /** Output only. The resource name of the managed identity. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Identifier. The resource name of the managed identity.
+              /** Output only. The resource name of the managed identity.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Identifier. The resource name of the managed identity. */
+              /** Output only. The resource name of the managed identity. */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15157,7 +15182,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Identifier. The resource name of the provider.
+           * @param name Output only. The resource name of the provider.
            * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider}
            * @return the request
            */
@@ -15184,7 +15209,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Identifier. The resource name of the provider.
+             * @param name Output only. The resource name of the provider.
              * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider}
              * @since 1.13
              */
@@ -15253,17 +15278,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Identifier. The resource name of the provider. */
+            /** Output only. The resource name of the provider. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Identifier. The resource name of the provider.
+            /** Output only. The resource name of the provider.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Identifier. The resource name of the provider. */
+            /** Output only. The resource name of the provider. */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

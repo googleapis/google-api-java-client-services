@@ -18,7 +18,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 
 /**
  * Replace UID with a new generated UID. Supported [Value Representation]
- * (http://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): UI
+ * (https://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): UI
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

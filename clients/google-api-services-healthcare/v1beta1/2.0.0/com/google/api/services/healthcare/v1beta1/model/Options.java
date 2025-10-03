@@ -38,7 +38,7 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Apply `Action.clean_image` to
-   * [`PixelData`](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html) as
+   * [`PixelData`](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html) as
    * configured.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Set `Action` for [`StudyInstanceUID`, `SeriesInstanceUID`, `SOPInstanceUID`, and `MediaStorageS
-   * OPInstanceUID`](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html).
+   * OPInstanceUID`](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Apply `Action.clean_image` to
-   * [`PixelData`](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html) as
+   * [`PixelData`](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html) as
    * configured.
    * @return value or {@code null} for none
    */
@@ -82,7 +82,7 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Apply `Action.clean_image` to
-   * [`PixelData`](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html) as
+   * [`PixelData`](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html) as
    * configured.
    * @param cleanImage cleanImage or {@code null} for none
    */
@@ -93,7 +93,7 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Set `Action` for [`StudyInstanceUID`, `SeriesInstanceUID`, `SOPInstanceUID`, and `MediaStorageS
-   * OPInstanceUID`](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html).
+   * OPInstanceUID`](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html).
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryIds() {
@@ -102,7 +102,7 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Set `Action` for [`StudyInstanceUID`, `SeriesInstanceUID`, `SOPInstanceUID`, and `MediaStorageS
-   * OPInstanceUID`](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html).
+   * OPInstanceUID`](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html).
    * @param primaryIds primaryIds or {@code null} for none
    */
   public Options setPrimaryIds(java.lang.String primaryIds) {

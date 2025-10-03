@@ -53,6 +53,15 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   private MultiplexedSessionPrecommitToken precommitToken;
 
   /**
+   * If `TransactionOptions.isolation_level` is set to `IsolationLevel.REPEATABLE_READ`, then the
+   * snapshot timestamp is the timestamp at which all reads in the transaction ran. This timestamp
+   * is never returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String snapshotTimestamp;
+
+  /**
    * The statistics about this `Commit`. Not returned by default. For more information, see
    * CommitRequest.return_commit_stats.
    * @return value or {@code null} for none
@@ -104,6 +113,27 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
    */
   public CommitResponse setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
     this.precommitToken = precommitToken;
+    return this;
+  }
+
+  /**
+   * If `TransactionOptions.isolation_level` is set to `IsolationLevel.REPEATABLE_READ`, then the
+   * snapshot timestamp is the timestamp at which all reads in the transaction ran. This timestamp
+   * is never returned.
+   * @return value or {@code null} for none
+   */
+  public String getSnapshotTimestamp() {
+    return snapshotTimestamp;
+  }
+
+  /**
+   * If `TransactionOptions.isolation_level` is set to `IsolationLevel.REPEATABLE_READ`, then the
+   * snapshot timestamp is the timestamp at which all reads in the transaction ran. This timestamp
+   * is never returned.
+   * @param snapshotTimestamp snapshotTimestamp or {@code null} for none
+   */
+  public CommitResponse setSnapshotTimestamp(String snapshotTimestamp) {
+    this.snapshotTimestamp = snapshotTimestamp;
     return this;
   }
 

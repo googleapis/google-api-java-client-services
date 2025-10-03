@@ -127,8 +127,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String incrementalBackupChainId;
 
   /**
-   * Output only. The instance partition(s) storing the backup. This is the same as the list of the
-   * instance partition(s) that the database had footprint in at the backup's `version_time`.
+   * Output only. The instance partition storing the backup. This is the same as the list of the
+   * instance partitions that the database recorded at the backup's `version_time`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -438,8 +438,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The instance partition(s) storing the backup. This is the same as the list of the
-   * instance partition(s) that the database had footprint in at the backup's `version_time`.
+   * Output only. The instance partition storing the backup. This is the same as the list of the
+   * instance partitions that the database recorded at the backup's `version_time`.
    * @return value or {@code null} for none
    */
   public java.util.List<BackupInstancePartition> getInstancePartitions() {
@@ -447,8 +447,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The instance partition(s) storing the backup. This is the same as the list of the
-   * instance partition(s) that the database had footprint in at the backup's `version_time`.
+   * Output only. The instance partition storing the backup. This is the same as the list of the
+   * instance partitions that the database recorded at the backup's `version_time`.
    * @param instancePartitions instancePartitions or {@code null} for none
    */
   public Backup setInstancePartitions(java.util.List<BackupInstancePartition> instancePartitions) {

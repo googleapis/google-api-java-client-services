@@ -83,7 +83,7 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
   private java.util.List<java.lang.String> statements;
 
   /**
-   * Output only. When true, indicates that the operation is throttled e.g. due to resource
+   * Output only. When true, indicates that the operation is throttled, for example, due to resource
    * constraints. When resources become available the operation will resume and this field will be
    * false again.
    * The value may be {@code null}.
@@ -189,7 +189,7 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
   }
 
   /**
-   * Output only. When true, indicates that the operation is throttled e.g. due to resource
+   * Output only. When true, indicates that the operation is throttled, for example, due to resource
    * constraints. When resources become available the operation will resume and this field will be
    * false again.
    * @return value or {@code null} for none
@@ -199,7 +199,7 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
   }
 
   /**
-   * Output only. When true, indicates that the operation is throttled e.g. due to resource
+   * Output only. When true, indicates that the operation is throttled, for example, due to resource
    * constraints. When resources become available the operation will resume and this field will be
    * false again.
    * @param throttled throttled or {@code null} for none

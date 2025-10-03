@@ -31,11 +31,11 @@ public final class InstanceEncryptionConfig extends com.google.api.client.json.G
 
   /**
    * Optional. This field is maintained for backwards compatibility. For new callers, we recommend
-   * using `kms_key_names` to specify the KMS key. `kms_key_name` should only be used if the
-   * location of the KMS key matches the database instance’s configuration (location) exactly. E.g.
-   * The KMS location is in us-central1 or nam3 and the database instance is also in us-central1 or
-   * nam3. The Cloud KMS key to be used for encrypting and decrypting the database. Values are of
-   * the form `projects//locations//keyRings//cryptoKeys/`.
+   * using `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the location of the
+   * KMS key matches the database instance's configuration (location) exactly. For example, if the
+   * KMS location is in `us-central1` or `nam3`, then the database instance must also be in `us-
+   * central1` or `nam3`. The Cloud KMS key that is used to encrypt and decrypt the restored
+   * database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,11 +58,11 @@ public final class InstanceEncryptionConfig extends com.google.api.client.json.G
 
   /**
    * Optional. This field is maintained for backwards compatibility. For new callers, we recommend
-   * using `kms_key_names` to specify the KMS key. `kms_key_name` should only be used if the
-   * location of the KMS key matches the database instance’s configuration (location) exactly. E.g.
-   * The KMS location is in us-central1 or nam3 and the database instance is also in us-central1 or
-   * nam3. The Cloud KMS key to be used for encrypting and decrypting the database. Values are of
-   * the form `projects//locations//keyRings//cryptoKeys/`.
+   * using `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the location of the
+   * KMS key matches the database instance's configuration (location) exactly. For example, if the
+   * KMS location is in `us-central1` or `nam3`, then the database instance must also be in `us-
+   * central1` or `nam3`. The Cloud KMS key that is used to encrypt and decrypt the restored
+   * database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -71,11 +71,11 @@ public final class InstanceEncryptionConfig extends com.google.api.client.json.G
 
   /**
    * Optional. This field is maintained for backwards compatibility. For new callers, we recommend
-   * using `kms_key_names` to specify the KMS key. `kms_key_name` should only be used if the
-   * location of the KMS key matches the database instance’s configuration (location) exactly. E.g.
-   * The KMS location is in us-central1 or nam3 and the database instance is also in us-central1 or
-   * nam3. The Cloud KMS key to be used for encrypting and decrypting the database. Values are of
-   * the form `projects//locations//keyRings//cryptoKeys/`.
+   * using `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the location of the
+   * KMS key matches the database instance's configuration (location) exactly. For example, if the
+   * KMS location is in `us-central1` or `nam3`, then the database instance must also be in `us-
+   * central1` or `nam3`. The Cloud KMS key that is used to encrypt and decrypt the restored
+   * database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public InstanceEncryptionConfig setKmsKeyName(java.lang.String kmsKeyName) {

@@ -17,8 +17,8 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Represents a scim tenant. Used for provisioning and managing identity data (such as Users and
- * Groups) in cross-domain environments.
+ * Agentspace only. Represents a SCIM tenant. Used for provisioning and managing identity data (such
+ * as Users and Groups) in cross-domain environments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -32,7 +32,7 @@ package com.google.api.services.iam.v1.model;
 public final class WorkforcePoolProviderScimTenant extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Represents the base URI as defined in [RFC 7644, Section
+   * Output only. Agentspace only. Represents the base URI as defined in [RFC 7644, Section
    * 1.3](https://datatracker.ietf.org/doc/html/rfc7644#section-1.3). Clients must use this as the
    * root address for managing resources under the tenant. Format:
    * https://iamscim.googleapis.com/{version}/{tenant_id}/
@@ -42,28 +42,28 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   private java.lang.String baseUri;
 
   /**
-   * Optional. Maps BYOID claims to SCIM claims.
+   * Optional. Agentspace only. Maps BYOID claims to SCIM claims.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> claimMapping;
 
   /**
-   * Optional. The description of the scim tenant. Cannot exceed 256 characters.
+   * Optional. Agentspace only. The description of the SCIM tenant. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. The display name of the scim tenant. Cannot exceed 32 characters.
+   * Optional. Agentspace only. The display name of the SCIM tenant. Cannot exceed 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Identifier. The resource name of the SCIM Tenant. Format:
+   * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
    * `locations/{location}/workforcePools/{workforce_pool}/providers/
    * {workforce_pool_provider}/scimTenants/{scim_tenant}`
    * The value may be {@code null}.
@@ -72,21 +72,30 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   private java.lang.String name;
 
   /**
-   * Output only. The timestamp when the scim tenant is going to be purged.
+   * Output only. Agentspace only. The timestamp that represents the time when the SCIM tenant is
+   * purged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String purgeTime;
 
   /**
-   * Output only. The state of the tenant.
+   * Output only. Service Agent created by SCIM Tenant API. SCIM tokens created under this tenant
+   * will be attached to this service agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAgent;
+
+  /**
+   * Output only. Agentspace only. The state of the tenant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. Represents the base URI as defined in [RFC 7644, Section
+   * Output only. Agentspace only. Represents the base URI as defined in [RFC 7644, Section
    * 1.3](https://datatracker.ietf.org/doc/html/rfc7644#section-1.3). Clients must use this as the
    * root address for managing resources under the tenant. Format:
    * https://iamscim.googleapis.com/{version}/{tenant_id}/
@@ -97,7 +106,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. Represents the base URI as defined in [RFC 7644, Section
+   * Output only. Agentspace only. Represents the base URI as defined in [RFC 7644, Section
    * 1.3](https://datatracker.ietf.org/doc/html/rfc7644#section-1.3). Clients must use this as the
    * root address for managing resources under the tenant. Format:
    * https://iamscim.googleapis.com/{version}/{tenant_id}/
@@ -109,7 +118,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. Maps BYOID claims to SCIM claims.
+   * Optional. Agentspace only. Maps BYOID claims to SCIM claims.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getClaimMapping() {
@@ -117,7 +126,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. Maps BYOID claims to SCIM claims.
+   * Optional. Agentspace only. Maps BYOID claims to SCIM claims.
    * @param claimMapping claimMapping or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setClaimMapping(java.util.Map<String, java.lang.String> claimMapping) {
@@ -126,7 +135,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. The description of the scim tenant. Cannot exceed 256 characters.
+   * Optional. Agentspace only. The description of the SCIM tenant. Cannot exceed 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -134,7 +143,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. The description of the scim tenant. Cannot exceed 256 characters.
+   * Optional. Agentspace only. The description of the SCIM tenant. Cannot exceed 256 characters.
    * @param description description or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setDescription(java.lang.String description) {
@@ -143,7 +152,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. The display name of the scim tenant. Cannot exceed 32 characters.
+   * Optional. Agentspace only. The display name of the SCIM tenant. Cannot exceed 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -151,7 +160,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. The display name of the scim tenant. Cannot exceed 32 characters.
+   * Optional. Agentspace only. The display name of the SCIM tenant. Cannot exceed 32 characters.
    * @param displayName displayName or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setDisplayName(java.lang.String displayName) {
@@ -160,7 +169,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Identifier. The resource name of the SCIM Tenant. Format:
+   * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
    * `locations/{location}/workforcePools/{workforce_pool}/providers/
    * {workforce_pool_provider}/scimTenants/{scim_tenant}`
    * @return value or {@code null} for none
@@ -170,7 +179,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Identifier. The resource name of the SCIM Tenant. Format:
+   * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
    * `locations/{location}/workforcePools/{workforce_pool}/providers/
    * {workforce_pool_provider}/scimTenants/{scim_tenant}`
    * @param name name or {@code null} for none
@@ -181,7 +190,8 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. The timestamp when the scim tenant is going to be purged.
+   * Output only. Agentspace only. The timestamp that represents the time when the SCIM tenant is
+   * purged.
    * @return value or {@code null} for none
    */
   public String getPurgeTime() {
@@ -189,7 +199,8 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. The timestamp when the scim tenant is going to be purged.
+   * Output only. Agentspace only. The timestamp that represents the time when the SCIM tenant is
+   * purged.
    * @param purgeTime purgeTime or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setPurgeTime(String purgeTime) {
@@ -198,7 +209,26 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. The state of the tenant.
+   * Output only. Service Agent created by SCIM Tenant API. SCIM tokens created under this tenant
+   * will be attached to this service agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAgent() {
+    return serviceAgent;
+  }
+
+  /**
+   * Output only. Service Agent created by SCIM Tenant API. SCIM tokens created under this tenant
+   * will be attached to this service agent.
+   * @param serviceAgent serviceAgent or {@code null} for none
+   */
+  public WorkforcePoolProviderScimTenant setServiceAgent(java.lang.String serviceAgent) {
+    this.serviceAgent = serviceAgent;
+    return this;
+  }
+
+  /**
+   * Output only. Agentspace only. The state of the tenant.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -206,7 +236,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. The state of the tenant.
+   * Output only. Agentspace only. The state of the tenant.
    * @param state state or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setState(java.lang.String state) {

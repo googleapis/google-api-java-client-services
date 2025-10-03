@@ -17,7 +17,7 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Response message for ListWorkforcePoolProviderScimTokens.
+ * Agentspace only. Response message for ListWorkforcePoolProviderScimTokens.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -31,23 +31,23 @@ package com.google.api.services.iam.v1.model;
 public final class ListWorkforcePoolProviderScimTokensResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A token, which can be sent as `page_token` to retrieve the next page. If this field
-   * is omitted, there are no subsequent pages.
+   * Optional. Agentspace only. A token, which can be sent as `page_token` to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. A list of scim tokens.
+   * Output only. Agentspace only. A list of SCIM tokens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WorkforcePoolProviderScimToken> workforcePoolProviderScimTokens;
 
   /**
-   * Optional. A token, which can be sent as `page_token` to retrieve the next page. If this field
-   * is omitted, there are no subsequent pages.
+   * Optional. Agentspace only. A token, which can be sent as `page_token` to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -55,8 +55,8 @@ public final class ListWorkforcePoolProviderScimTokensResponse extends com.googl
   }
 
   /**
-   * Optional. A token, which can be sent as `page_token` to retrieve the next page. If this field
-   * is omitted, there are no subsequent pages.
+   * Optional. Agentspace only. A token, which can be sent as `page_token` to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListWorkforcePoolProviderScimTokensResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -65,7 +65,7 @@ public final class ListWorkforcePoolProviderScimTokensResponse extends com.googl
   }
 
   /**
-   * Output only. A list of scim tokens.
+   * Output only. Agentspace only. A list of SCIM tokens.
    * @return value or {@code null} for none
    */
   public java.util.List<WorkforcePoolProviderScimToken> getWorkforcePoolProviderScimTokens() {
@@ -73,7 +73,7 @@ public final class ListWorkforcePoolProviderScimTokensResponse extends com.googl
   }
 
   /**
-   * Output only. A list of scim tokens.
+   * Output only. Agentspace only. A list of SCIM tokens.
    * @param workforcePoolProviderScimTokens workforcePoolProviderScimTokens or {@code null} for none
    */
   public ListWorkforcePoolProviderScimTokensResponse setWorkforcePoolProviderScimTokens(java.util.List<WorkforcePoolProviderScimToken> workforcePoolProviderScimTokens) {

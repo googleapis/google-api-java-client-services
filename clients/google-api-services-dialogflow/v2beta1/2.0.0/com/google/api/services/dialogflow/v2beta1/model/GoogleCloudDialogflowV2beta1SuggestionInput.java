@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the selection of a suggestion.
+ * Represents the action to take for a tool call that requires confirmation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,9 +30,15 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ID of a suggestion selected by the human agent. The suggestion(s) were generated
-   * in a previous call to request Dialogflow assist. The format is:
-   * `projects//locations//answerRecords/` where is an alphanumeric string.
+   * Optional. The type of action to take with the tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String action;
+
+  /**
+   * Required. Format: `projects//locations//answerRecords/` The answer record associated with the
+   * tool call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,20 +52,21 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   private GoogleCloudDialogflowV2beta1IntentInput intentInput;
 
   /**
-   * In Dialogflow assist for v3, the user can submit a form by sending a SuggestionInput. The form
-   * is uniquely determined by the answer_record field, which identifies a v3 QueryResult containing
-   * the current page. The form parameters are specified via the parameters field. Depending on your
-   * protocol or client library language, this is a map, associative array, symbol table,
-   * dictionary, or JSON object composed of a collection of (MapKey, MapValue) pairs: * MapKey type:
-   * string * MapKey value: parameter name * MapValue type: If parameter's entity type is a
-   * composite entity then use map, otherwise, depending on the parameter value type, it could be
-   * one of string, number, boolean, null, list or map. * MapValue value: If parameter's entity type
-   * is a composite entity then use map from composite entity property names to property values,
-   * otherwise, use parameter value.
+   * Parameters to be used for the tool call. If not provided, the tool will be called without any
+   * parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
+
+  /**
+   * Optional. Time when the current suggest input is sent. For tool calls, this timestamp (along
+   * with the answer record) will be included in the corresponding tool call result so that it can
+   * be identified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String sendTime;
 
   /**
    * Optional. If the customer edited the suggestion before using it, include the revised text here.
@@ -69,9 +76,25 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   private GoogleCloudDialogflowV2beta1TextInput textOverride;
 
   /**
-   * Required. The ID of a suggestion selected by the human agent. The suggestion(s) were generated
-   * in a previous call to request Dialogflow assist. The format is:
-   * `projects//locations//answerRecords/` where is an alphanumeric string.
+   * Optional. The type of action to take with the tool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAction() {
+    return action;
+  }
+
+  /**
+   * Optional. The type of action to take with the tool.
+   * @param action action or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SuggestionInput setAction(java.lang.String action) {
+    this.action = action;
+    return this;
+  }
+
+  /**
+   * Required. Format: `projects//locations//answerRecords/` The answer record associated with the
+   * tool call.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -79,9 +102,8 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Required. The ID of a suggestion selected by the human agent. The suggestion(s) were generated
-   * in a previous call to request Dialogflow assist. The format is:
-   * `projects//locations//answerRecords/` where is an alphanumeric string.
+   * Required. Format: `projects//locations//answerRecords/` The answer record associated with the
+   * tool call.
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionInput setAnswerRecord(java.lang.String answerRecord) {
@@ -107,16 +129,8 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * In Dialogflow assist for v3, the user can submit a form by sending a SuggestionInput. The form
-   * is uniquely determined by the answer_record field, which identifies a v3 QueryResult containing
-   * the current page. The form parameters are specified via the parameters field. Depending on your
-   * protocol or client library language, this is a map, associative array, symbol table,
-   * dictionary, or JSON object composed of a collection of (MapKey, MapValue) pairs: * MapKey type:
-   * string * MapKey value: parameter name * MapValue type: If parameter's entity type is a
-   * composite entity then use map, otherwise, depending on the parameter value type, it could be
-   * one of string, number, boolean, null, list or map. * MapValue value: If parameter's entity type
-   * is a composite entity then use map from composite entity property names to property values,
-   * otherwise, use parameter value.
+   * Parameters to be used for the tool call. If not provided, the tool will be called without any
+   * parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -124,20 +138,33 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * In Dialogflow assist for v3, the user can submit a form by sending a SuggestionInput. The form
-   * is uniquely determined by the answer_record field, which identifies a v3 QueryResult containing
-   * the current page. The form parameters are specified via the parameters field. Depending on your
-   * protocol or client library language, this is a map, associative array, symbol table,
-   * dictionary, or JSON object composed of a collection of (MapKey, MapValue) pairs: * MapKey type:
-   * string * MapKey value: parameter name * MapValue type: If parameter's entity type is a
-   * composite entity then use map, otherwise, depending on the parameter value type, it could be
-   * one of string, number, boolean, null, list or map. * MapValue value: If parameter's entity type
-   * is a composite entity then use map from composite entity property names to property values,
-   * otherwise, use parameter value.
+   * Parameters to be used for the tool call. If not provided, the tool will be called without any
+   * parameters.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionInput setParameters(java.util.Map<String, java.lang.Object> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Optional. Time when the current suggest input is sent. For tool calls, this timestamp (along
+   * with the answer record) will be included in the corresponding tool call result so that it can
+   * be identified.
+   * @return value or {@code null} for none
+   */
+  public String getSendTime() {
+    return sendTime;
+  }
+
+  /**
+   * Optional. Time when the current suggest input is sent. For tool calls, this timestamp (along
+   * with the answer record) will be included in the corresponding tool call result so that it can
+   * be identified.
+   * @param sendTime sendTime or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SuggestionInput setSendTime(String sendTime) {
+    this.sendTime = sendTime;
     return this;
   }
 

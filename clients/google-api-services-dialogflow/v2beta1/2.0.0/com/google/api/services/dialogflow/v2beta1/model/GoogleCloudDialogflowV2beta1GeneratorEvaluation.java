@@ -83,6 +83,24 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluation extends com.g
   private java.lang.String name;
 
   /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of the model. The field
+   * is an aggregated value of ZI status of its underlying dependencies. See more details in
+   * go/zicy-resource-placement#resource-status
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Separation status of the model. The
+   * field is an aggregated value of ZS status of its underlying dependencies. See more details in
+   * go/zicy-resource-placement#resource-status
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. Only available when the summarization generator is provided.
    * The value may be {@code null}.
    */
@@ -213,6 +231,48 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluation extends com.g
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of the model. The field
+   * is an aggregated value of ZI status of its underlying dependencies. See more details in
+   * go/zicy-resource-placement#resource-status
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of the model. The field
+   * is an aggregated value of ZI status of its underlying dependencies. See more details in
+   * go/zicy-resource-placement#resource-status
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1GeneratorEvaluation setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Separation status of the model. The
+   * field is an aggregated value of ZS status of its underlying dependencies. See more details in
+   * go/zicy-resource-placement#resource-status
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Separation status of the model. The
+   * field is an aggregated value of ZS status of its underlying dependencies. See more details in
+   * go/zicy-resource-placement#resource-status
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1GeneratorEvaluation setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

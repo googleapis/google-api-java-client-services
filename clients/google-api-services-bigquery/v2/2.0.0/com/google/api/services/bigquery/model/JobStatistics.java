@@ -125,6 +125,16 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> quotaDeferments;
 
   /**
+   * Output only. The reservation group path of the reservation assigned to this job. This field has
+   * a limit of 10 nested reservation groups. This is to maintain consistency between reservatins
+   * info schema and jobs info schema. The first reservation group is the root reservation group and
+   * the last is the leaf or lowest level reservation group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> reservationGroupPath;
+
+  /**
    * Output only. Job resource usage breakdown by reservation. This field reported misleading
    * information and will no longer be populated.
    * The value may be {@code null}.
@@ -426,6 +436,29 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setQuotaDeferments(java.util.List<java.lang.String> quotaDeferments) {
     this.quotaDeferments = quotaDeferments;
+    return this;
+  }
+
+  /**
+   * Output only. The reservation group path of the reservation assigned to this job. This field has
+   * a limit of 10 nested reservation groups. This is to maintain consistency between reservatins
+   * info schema and jobs info schema. The first reservation group is the root reservation group and
+   * the last is the leaf or lowest level reservation group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReservationGroupPath() {
+    return reservationGroupPath;
+  }
+
+  /**
+   * Output only. The reservation group path of the reservation assigned to this job. This field has
+   * a limit of 10 nested reservation groups. This is to maintain consistency between reservatins
+   * info schema and jobs info schema. The first reservation group is the root reservation group and
+   * the last is the leaf or lowest level reservation group.
+   * @param reservationGroupPath reservationGroupPath or {@code null} for none
+   */
+  public JobStatistics setReservationGroupPath(java.util.List<java.lang.String> reservationGroupPath) {
+    this.reservationGroupPath = reservationGroupPath;
     return this;
   }
 

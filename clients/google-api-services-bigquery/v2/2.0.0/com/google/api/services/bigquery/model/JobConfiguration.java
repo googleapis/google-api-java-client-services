@@ -88,9 +88,11 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   private JobConfigurationLoad load;
 
   /**
-   * Optional. INTERNAL: DO NOT USE. The maximum rate of slot consumption to allow for this job. If
-   * set, the number of slots used to execute the job will be throttled to try and keep its slot
-   * consumption below the requested rate.
+   * Optional. A target limit on the rate of slot consumption by this job. If set to a value > 0,
+   * BigQuery will attempt to limit the rate of slot consumption by this job to keep it below the
+   * configured limit, even if the job is eligible for more slots based on fair scheduling. The
+   * unused slots will be available for other jobs and queries to use. Note: This feature is not yet
+   * generally available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,9 +253,11 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. INTERNAL: DO NOT USE. The maximum rate of slot consumption to allow for this job. If
-   * set, the number of slots used to execute the job will be throttled to try and keep its slot
-   * consumption below the requested rate.
+   * Optional. A target limit on the rate of slot consumption by this job. If set to a value > 0,
+   * BigQuery will attempt to limit the rate of slot consumption by this job to keep it below the
+   * configured limit, even if the job is eligible for more slots based on fair scheduling. The
+   * unused slots will be available for other jobs and queries to use. Note: This feature is not yet
+   * generally available.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxSlots() {
@@ -261,9 +265,11 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. INTERNAL: DO NOT USE. The maximum rate of slot consumption to allow for this job. If
-   * set, the number of slots used to execute the job will be throttled to try and keep its slot
-   * consumption below the requested rate.
+   * Optional. A target limit on the rate of slot consumption by this job. If set to a value > 0,
+   * BigQuery will attempt to limit the rate of slot consumption by this job to keep it below the
+   * configured limit, even if the job is eligible for more slots based on fair scheduling. The
+   * unused slots will be available for other jobs and queries to use. Note: This feature is not yet
+   * generally available.
    * @param maxSlots maxSlots or {@code null} for none
    */
   public JobConfiguration setMaxSlots(java.lang.Integer maxSlots) {

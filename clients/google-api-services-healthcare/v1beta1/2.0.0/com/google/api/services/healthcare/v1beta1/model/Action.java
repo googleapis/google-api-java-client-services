@@ -32,7 +32,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * Inspect image and transform sensitive burnt-in text. Doesn't apply to elements nested in a
    * sequence, which revert to `Keep`. Supported
-   * [tags](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html): PixelData
+   * [tags](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html):
+   * PixelData
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * Recursively apply DICOM de-id to tags nested in a sequence. Supported [Value Representation]
-   * (http://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): SQ
+   * (https://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): SQ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +79,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * Replace UID with a new generated UID. Supported [Value Representation]
-   * (http://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): UI
+   * (https://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): UI
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +102,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * Inspect image and transform sensitive burnt-in text. Doesn't apply to elements nested in a
    * sequence, which revert to `Keep`. Supported
-   * [tags](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html): PixelData
+   * [tags](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html):
+   * PixelData
    * @return value or {@code null} for none
    */
   public ImageConfig getCleanImageTag() {
@@ -111,7 +113,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * Inspect image and transform sensitive burnt-in text. Doesn't apply to elements nested in a
    * sequence, which revert to `Keep`. Supported
-   * [tags](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html): PixelData
+   * [tags](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part06/chapter_6.html):
+   * PixelData
    * @param cleanImageTag cleanImageTag or {@code null} for none
    */
   public Action setCleanImageTag(ImageConfig cleanImageTag) {
@@ -193,7 +196,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * Recursively apply DICOM de-id to tags nested in a sequence. Supported [Value Representation]
-   * (http://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): SQ
+   * (https://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): SQ
    * @return value or {@code null} for none
    */
   public RecurseTag getRecurseTag() {
@@ -202,7 +205,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * Recursively apply DICOM de-id to tags nested in a sequence. Supported [Value Representation]
-   * (http://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): SQ
+   * (https://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): SQ
    * @param recurseTag recurseTag or {@code null} for none
    */
   public Action setRecurseTag(RecurseTag recurseTag) {
@@ -212,7 +215,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * Replace UID with a new generated UID. Supported [Value Representation]
-   * (http://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): UI
+   * (https://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): UI
    * @return value or {@code null} for none
    */
   public RegenUidTag getRegenUidTag() {
@@ -221,7 +224,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * Replace UID with a new generated UID. Supported [Value Representation]
-   * (http://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): UI
+   * (https://dicom.nema.org/medical/dicom/2018e/output/chtml/part05/sect_6.2.html#table_6.2-1): UI
    * @param regenUidTag regenUidTag or {@code null} for none
    */
   public Action setRegenUidTag(RegenUidTag regenUidTag) {

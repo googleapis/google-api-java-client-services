@@ -18,11 +18,11 @@ package com.google.api.services.healthcare.v1beta1.model;
 
 /**
  * This option is based on the DICOM Standard's [Clean Descriptors
- * Option](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part15/sect_E.3.5.html), and the
+ * Option](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part15/sect_E.3.5.html), and the
  * `CleanText` `Action` is applied to all the specified fields. When cleaning text, the process
  * attempts to transform phrases matching any of the tags marked for removal (action codes D, Z, X,
  * and U) in the [Basic
- * Profile](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part15/chapter_E.html). These
+ * Profile](https://dicom.nema.org/medical/dicom/2018e/output/chtml/part15/chapter_E.html). These
  * contextual phrases are replaced with the token "[CTX]". This option uses an additional infoType
  * during inspection.
  *

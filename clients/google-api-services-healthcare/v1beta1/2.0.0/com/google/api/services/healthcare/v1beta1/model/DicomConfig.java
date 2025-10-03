@@ -56,7 +56,7 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
    * UIDs by default based on the DICOM Standard's reasoning: "Whilst these UIDs cannot be mapped
    * directly to an individual out of context, given access to the original images, or to a database
    * of the original images containing the UIDs, it would be possible to recover the individual's
-   * identity." http://dicom.nema.org/medical/dicom/current/output/chtml/part15/sect_E.3.9.html
+   * identity." https://dicom.nema.org/medical/dicom/current/output/chtml/part15/sect_E.3.9.html
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
    * UIDs by default based on the DICOM Standard's reasoning: "Whilst these UIDs cannot be mapped
    * directly to an individual out of context, given access to the original images, or to a database
    * of the original images containing the UIDs, it would be possible to recover the individual's
-   * identity." http://dicom.nema.org/medical/dicom/current/output/chtml/part15/sect_E.3.9.html
+   * identity." https://dicom.nema.org/medical/dicom/current/output/chtml/part15/sect_E.3.9.html
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipIdRedaction() {
@@ -132,7 +132,7 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
    * UIDs by default based on the DICOM Standard's reasoning: "Whilst these UIDs cannot be mapped
    * directly to an individual out of context, given access to the original images, or to a database
    * of the original images containing the UIDs, it would be possible to recover the individual's
-   * identity." http://dicom.nema.org/medical/dicom/current/output/chtml/part15/sect_E.3.9.html
+   * identity." https://dicom.nema.org/medical/dicom/current/output/chtml/part15/sect_E.3.9.html
    * @param skipIdRedaction skipIdRedaction or {@code null} for none
    */
   public DicomConfig setSkipIdRedaction(java.lang.Boolean skipIdRedaction) {

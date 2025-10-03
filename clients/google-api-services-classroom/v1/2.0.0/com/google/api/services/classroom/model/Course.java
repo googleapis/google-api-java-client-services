@@ -104,7 +104,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The gradebook settings that specify how a student's overall grade for the course will be
-   * calculated and who it will be displayed to. Read-only
+   * calculated and who it will be displayed to. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -361,7 +361,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The gradebook settings that specify how a student's overall grade for the course will be
-   * calculated and who it will be displayed to. Read-only
+   * calculated and who it will be displayed to. Read-only.
    * @return value or {@code null} for none
    */
   public GradebookSettings getGradebookSettings() {
@@ -370,7 +370,7 @@ public final class Course extends com.google.api.client.json.GenericJson {
 
   /**
    * The gradebook settings that specify how a student's overall grade for the course will be
-   * calculated and who it will be displayed to. Read-only
+   * calculated and who it will be displayed to. Read-only.
    * @param gradebookSettings gradebookSettings or {@code null} for none
    */
   public Course setGradebookSettings(GradebookSettings gradebookSettings) {

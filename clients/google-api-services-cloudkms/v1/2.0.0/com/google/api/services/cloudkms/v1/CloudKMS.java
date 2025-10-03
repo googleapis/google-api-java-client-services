@@ -302,7 +302,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     * Gets the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
      *
      * Create a request for the method "folders.getKajPolicyConfig".
      *
@@ -326,7 +326,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^folders/[^/]+/kajPolicyConfig$");
 
       /**
-       * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       * Gets the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
        *
        * Create a request for the method "folders.getKajPolicyConfig".
        *
@@ -605,7 +605,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     * Updates the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
      *
      * Create a request for the method "folders.updateKajPolicyConfig".
      *
@@ -632,7 +632,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^folders/[^/]+/kajPolicyConfig$");
 
       /**
-       * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       * Updates the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
        *
        * Create a request for the method "folders.updateKajPolicyConfig".
        *
@@ -785,7 +785,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
   public class Organizations {
 
     /**
-     * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     * Gets the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
      *
      * Create a request for the method "organizations.getKajPolicyConfig".
      *
@@ -809,7 +809,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^organizations/[^/]+/kajPolicyConfig$");
 
       /**
-       * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       * Gets the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
        *
        * Create a request for the method "organizations.getKajPolicyConfig".
        *
@@ -924,7 +924,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     * Updates the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
      *
      * Create a request for the method "organizations.updateKajPolicyConfig".
      *
@@ -951,7 +951,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^organizations/[^/]+/kajPolicyConfig$");
 
       /**
-       * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       * Updates the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
        *
        * Create a request for the method "organizations.updateKajPolicyConfig".
        *
@@ -1252,7 +1252,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     * Gets the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
      *
      * Create a request for the method "projects.getKajPolicyConfig".
      *
@@ -1276,7 +1276,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^projects/[^/]+/kajPolicyConfig$");
 
       /**
-       * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       * Gets the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
        *
        * Create a request for the method "projects.getKajPolicyConfig".
        *
@@ -2014,7 +2014,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     * Updates the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
      *
      * Create a request for the method "projects.updateKajPolicyConfig".
      *
@@ -2041,7 +2041,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^projects/[^/]+/kajPolicyConfig$");
 
       /**
-       * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       * Updates the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
        *
        * Create a request for the method "projects.updateKajPolicyConfig".
        *

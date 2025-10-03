@@ -452,6 +452,20 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String timestampFormat;
 
   /**
+   * Precisions (maximum number of total digits in base 10) for seconds of TIMESTAMP types that are
+   * allowed to the destination table for autodetection mode. Available for the formats: CSV. For
+   * the CSV Format, Possible values include: Not Specified, [], or [6]: timestamp(6) for all auto
+   * detected TIMESTAMP columns [6, 12]: timestamp(6) for all auto detected TIMESTAMP columns that
+   * have less than 6 digits of subseconds. timestamp(12) for all auto detected TIMESTAMP columns
+   * that have more than 6 digits of subseconds. [12]: timestamp(12) for all auto detected TIMESTAMP
+   * columns. The order of the elements in this array is ignored. Inputs that have higher precision
+   * than the highest target precision in this array will be truncated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> timestampTargetPrecision;
+
+  /**
    * Optional. If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the
    * corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for
    * example, INTEGER).
@@ -1428,6 +1442,37 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setTimestampFormat(java.lang.String timestampFormat) {
     this.timestampFormat = timestampFormat;
+    return this;
+  }
+
+  /**
+   * Precisions (maximum number of total digits in base 10) for seconds of TIMESTAMP types that are
+   * allowed to the destination table for autodetection mode. Available for the formats: CSV. For
+   * the CSV Format, Possible values include: Not Specified, [], or [6]: timestamp(6) for all auto
+   * detected TIMESTAMP columns [6, 12]: timestamp(6) for all auto detected TIMESTAMP columns that
+   * have less than 6 digits of subseconds. timestamp(12) for all auto detected TIMESTAMP columns
+   * that have more than 6 digits of subseconds. [12]: timestamp(12) for all auto detected TIMESTAMP
+   * columns. The order of the elements in this array is ignored. Inputs that have higher precision
+   * than the highest target precision in this array will be truncated.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getTimestampTargetPrecision() {
+    return timestampTargetPrecision;
+  }
+
+  /**
+   * Precisions (maximum number of total digits in base 10) for seconds of TIMESTAMP types that are
+   * allowed to the destination table for autodetection mode. Available for the formats: CSV. For
+   * the CSV Format, Possible values include: Not Specified, [], or [6]: timestamp(6) for all auto
+   * detected TIMESTAMP columns [6, 12]: timestamp(6) for all auto detected TIMESTAMP columns that
+   * have less than 6 digits of subseconds. timestamp(12) for all auto detected TIMESTAMP columns
+   * that have more than 6 digits of subseconds. [12]: timestamp(12) for all auto detected TIMESTAMP
+   * columns. The order of the elements in this array is ignored. Inputs that have higher precision
+   * than the highest target precision in this array will be truncated.
+   * @param timestampTargetPrecision timestampTargetPrecision or {@code null} for none
+   */
+  public JobConfigurationLoad setTimestampTargetPrecision(java.util.List<java.lang.Integer> timestampTargetPrecision) {
+    this.timestampTargetPrecision = timestampTargetPrecision;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Configuration for a read pool instance.
+ * Message describing a BackupDrPitrSource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -27,67 +27,67 @@ package com.google.api.services.alloydb.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ReadPoolConfig extends com.google.api.client.json.GenericJson {
+public final class BackupDrPitrSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Autoscaling configuration for the read pool instance. If not set, the read pool instance will
-   * not be autoscaled.
+   * Required. The name of the backup resource with the format: * projects/{project}/locations/{loca
+   * tion}/backupVaults/{backupvault_id}/dataSources/{datasource_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AutoScalingConfig autoScalingConfig;
+  private java.lang.String dataSource;
 
   /**
-   * Read capacity, i.e. number of nodes in a read pool instance.
+   * Required. The point in time to restore to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer nodeCount;
+  private String pointInTime;
 
   /**
-   * Autoscaling configuration for the read pool instance. If not set, the read pool instance will
-   * not be autoscaled.
+   * Required. The name of the backup resource with the format: * projects/{project}/locations/{loca
+   * tion}/backupVaults/{backupvault_id}/dataSources/{datasource_id}
    * @return value or {@code null} for none
    */
-  public AutoScalingConfig getAutoScalingConfig() {
-    return autoScalingConfig;
+  public java.lang.String getDataSource() {
+    return dataSource;
   }
 
   /**
-   * Autoscaling configuration for the read pool instance. If not set, the read pool instance will
-   * not be autoscaled.
-   * @param autoScalingConfig autoScalingConfig or {@code null} for none
+   * Required. The name of the backup resource with the format: * projects/{project}/locations/{loca
+   * tion}/backupVaults/{backupvault_id}/dataSources/{datasource_id}
+   * @param dataSource dataSource or {@code null} for none
    */
-  public ReadPoolConfig setAutoScalingConfig(AutoScalingConfig autoScalingConfig) {
-    this.autoScalingConfig = autoScalingConfig;
+  public BackupDrPitrSource setDataSource(java.lang.String dataSource) {
+    this.dataSource = dataSource;
     return this;
   }
 
   /**
-   * Read capacity, i.e. number of nodes in a read pool instance.
+   * Required. The point in time to restore to.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getNodeCount() {
-    return nodeCount;
+  public String getPointInTime() {
+    return pointInTime;
   }
 
   /**
-   * Read capacity, i.e. number of nodes in a read pool instance.
-   * @param nodeCount nodeCount or {@code null} for none
+   * Required. The point in time to restore to.
+   * @param pointInTime pointInTime or {@code null} for none
    */
-  public ReadPoolConfig setNodeCount(java.lang.Integer nodeCount) {
-    this.nodeCount = nodeCount;
+  public BackupDrPitrSource setPointInTime(String pointInTime) {
+    this.pointInTime = pointInTime;
     return this;
   }
 
   @Override
-  public ReadPoolConfig set(String fieldName, Object value) {
-    return (ReadPoolConfig) super.set(fieldName, value);
+  public BackupDrPitrSource set(String fieldName, Object value) {
+    return (BackupDrPitrSource) super.set(fieldName, value);
   }
 
   @Override
-  public ReadPoolConfig clone() {
-    return (ReadPoolConfig) super.clone();
+  public BackupDrPitrSource clone() {
+    return (BackupDrPitrSource) super.clone();
   }
 
 }

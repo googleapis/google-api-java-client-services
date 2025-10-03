@@ -57,6 +57,20 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private BackupSource backupSource;
 
   /**
+   * Output only. Cluster created from a BackupDR backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupDrBackupSource backupdrBackupSource;
+
+  /**
+   * Output only. Output only information about BackupDR protection for this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupDrInfo backupdrInfo;
+
+  /**
    * Output only. Cluster created from CloudSQL snapshot.
    * The value may be {@code null}.
    */
@@ -348,6 +362,40 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setBackupSource(BackupSource backupSource) {
     this.backupSource = backupSource;
+    return this;
+  }
+
+  /**
+   * Output only. Cluster created from a BackupDR backup.
+   * @return value or {@code null} for none
+   */
+  public BackupDrBackupSource getBackupdrBackupSource() {
+    return backupdrBackupSource;
+  }
+
+  /**
+   * Output only. Cluster created from a BackupDR backup.
+   * @param backupdrBackupSource backupdrBackupSource or {@code null} for none
+   */
+  public Cluster setBackupdrBackupSource(BackupDrBackupSource backupdrBackupSource) {
+    this.backupdrBackupSource = backupdrBackupSource;
+    return this;
+  }
+
+  /**
+   * Output only. Output only information about BackupDR protection for this cluster.
+   * @return value or {@code null} for none
+   */
+  public BackupDrInfo getBackupdrInfo() {
+    return backupdrInfo;
+  }
+
+  /**
+   * Output only. Output only information about BackupDR protection for this cluster.
+   * @param backupdrInfo backupdrInfo or {@code null} for none
+   */
+  public Cluster setBackupdrInfo(BackupDrInfo backupdrInfo) {
+    this.backupdrInfo = backupdrInfo;
     return this;
   }
 

@@ -7179,22 +7179,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Query string search. Should be of the form "". Complete documentation is at
-       * https://developers.google.com/workspace/admin/directory/v1/guides/search-groups
+       * Query string search. Contains one or more search clauses, each with a field, operator, and
+       * value. For complete documentation, go to [Search for
+       * groups](https://developers.google.com/workspace/admin/directory/v1/guides/search-groups).
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Query string search. Should be of the form "". Complete documentation is at
-     https://developers.google.com/workspace/admin/directory/v1/guides/search-groups
+      /** Query string search. Contains one or more search clauses, each with a field, operator, and value.
+     For complete documentation, go to [Search for
+     groups](https://developers.google.com/workspace/admin/directory/v1/guides/search-groups).
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Query string search. Should be of the form "". Complete documentation is at
-       * https://developers.google.com/workspace/admin/directory/v1/guides/search-groups
+       * Query string search. Contains one or more search clauses, each with a field, operator, and
+       * value. For complete documentation, go to [Search for
+       * groups](https://developers.google.com/workspace/admin/directory/v1/guides/search-groups).
        */
       public List setQuery(java.lang.String query) {
         this.query = query;
@@ -12689,39 +12692,42 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * String query used to filter results. Should be of the form "field operator value" where
-         * field can be any of supported fields and operators can be any of supported operations.
-         * Operators include '=' for exact match, '!=' for mismatch and ':' for prefix match or HAS
-         * match where applicable. For prefix match, the value should always be followed by a *.
-         * Logical operators NOT and AND are supported (in this order of precedence). Supported
-         * fields include `generatedResourceName`, `name`, `buildingId`, `floor_name`, `capacity`,
-         * `featureInstances.feature.name`, `resourceEmail`, `resourceCategory`. For example
-         * `buildingId=US-NYC-9TH AND featureInstances.feature.name:Phone`.
+         * String query used to filter results. Contains one or more search clauses, each with a
+         * field, operator, and value. A field can be any of supported fields and operators can be
+         * any of supported operations. Operators include '=' for exact match, '!=' for mismatch and
+         * ':' for prefix match or HAS match where applicable. For prefix match, the value should
+         * always be followed by a *. Logical operators NOT and AND are supported (in this order of
+         * precedence). Supported fields include `generatedResourceName`, `name`, `buildingId`,
+         * `floor_name`, `capacity`, `featureInstances.feature.name`, `resourceEmail`,
+         * `resourceCategory`. For example `buildingId=US-NYC-9TH AND
+         * featureInstances.feature.name:Phone`.
          */
         @com.google.api.client.util.Key
         private java.lang.String query;
 
-        /** String query used to filter results. Should be of the form "field operator value" where field can
-       be any of supported fields and operators can be any of supported operations. Operators include '='
-       for exact match, '!=' for mismatch and ':' for prefix match or HAS match where applicable. For
-       prefix match, the value should always be followed by a *. Logical operators NOT and AND are
-       supported (in this order of precedence). Supported fields include `generatedResourceName`, `name`,
-       `buildingId`, `floor_name`, `capacity`, `featureInstances.feature.name`, `resourceEmail`,
-       `resourceCategory`. For example `buildingId=US-NYC-9TH AND featureInstances.feature.name:Phone`.
+        /** String query used to filter results. Contains one or more search clauses, each with a field,
+       operator, and value. A field can be any of supported fields and operators can be any of supported
+       operations. Operators include '=' for exact match, '!=' for mismatch and ':' for prefix match or
+       HAS match where applicable. For prefix match, the value should always be followed by a *. Logical
+       operators NOT and AND are supported (in this order of precedence). Supported fields include
+       `generatedResourceName`, `name`, `buildingId`, `floor_name`, `capacity`,
+       `featureInstances.feature.name`, `resourceEmail`, `resourceCategory`. For example `buildingId=US-
+       NYC-9TH AND featureInstances.feature.name:Phone`.
          */
         public java.lang.String getQuery() {
           return query;
         }
 
         /**
-         * String query used to filter results. Should be of the form "field operator value" where
-         * field can be any of supported fields and operators can be any of supported operations.
-         * Operators include '=' for exact match, '!=' for mismatch and ':' for prefix match or HAS
-         * match where applicable. For prefix match, the value should always be followed by a *.
-         * Logical operators NOT and AND are supported (in this order of precedence). Supported
-         * fields include `generatedResourceName`, `name`, `buildingId`, `floor_name`, `capacity`,
-         * `featureInstances.feature.name`, `resourceEmail`, `resourceCategory`. For example
-         * `buildingId=US-NYC-9TH AND featureInstances.feature.name:Phone`.
+         * String query used to filter results. Contains one or more search clauses, each with a
+         * field, operator, and value. A field can be any of supported fields and operators can be
+         * any of supported operations. Operators include '=' for exact match, '!=' for mismatch and
+         * ':' for prefix match or HAS match where applicable. For prefix match, the value should
+         * always be followed by a *. Logical operators NOT and AND are supported (in this order of
+         * precedence). Supported fields include `generatedResourceName`, `name`, `buildingId`,
+         * `floor_name`, `capacity`, `featureInstances.feature.name`, `resourceEmail`,
+         * `resourceCategory`. For example `buildingId=US-NYC-9TH AND
+         * featureInstances.feature.name:Phone`.
          */
         public List setQuery(java.lang.String query) {
           this.query = query;
@@ -18897,22 +18903,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Query string search. Should be of the form "". Complete documentation is at
-       * https://developers.google.com/workspace/admin/directory/v1/guides/search-users
+       * Query string search. Contains one or more search clauses, each with a field, operator, and
+       * value. For complete documentation, go to [Search for
+       * users](https://developers.google.com/workspace/admin/directory/v1/guides/search-users).
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Query string search. Should be of the form "". Complete documentation is at
-     https://developers.google.com/workspace/admin/directory/v1/guides/search-users
+      /** Query string search. Contains one or more search clauses, each with a field, operator, and value.
+     For complete documentation, go to [Search for
+     users](https://developers.google.com/workspace/admin/directory/v1/guides/search-users).
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Query string search. Should be of the form "". Complete documentation is at
-       * https://developers.google.com/workspace/admin/directory/v1/guides/search-users
+       * Query string search. Contains one or more search clauses, each with a field, operator, and
+       * value. For complete documentation, go to [Search for
+       * users](https://developers.google.com/workspace/admin/directory/v1/guides/search-users).
        */
       public Watch setQuery(java.lang.String query) {
         this.query = query;

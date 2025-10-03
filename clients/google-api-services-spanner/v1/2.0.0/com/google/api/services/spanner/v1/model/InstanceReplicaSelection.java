@@ -30,14 +30,14 @@ package com.google.api.services.spanner.v1.model;
 public final class InstanceReplicaSelection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the location of the replicas (e.g., "us-central1").
+   * Required. Name of the location of the replicas (for example, "us-central1").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * Required. Name of the location of the replicas (e.g., "us-central1").
+   * Required. Name of the location of the replicas (for example, "us-central1").
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -45,7 +45,7 @@ public final class InstanceReplicaSelection extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Name of the location of the replicas (e.g., "us-central1").
+   * Required. Name of the location of the replicas (for example, "us-central1").
    * @param location location or {@code null} for none
    */
   public InstanceReplicaSelection setLocation(java.lang.String location) {

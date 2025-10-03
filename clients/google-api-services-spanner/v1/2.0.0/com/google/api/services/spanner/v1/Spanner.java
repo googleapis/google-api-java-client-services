@@ -4692,10 +4692,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The name of the instance in which the backup will be created. This must be the same
-         *        instance that contains the database the backup will be created from. The backup will be
-         *        stored in the location(s) specified in the instance configuration of this instance. Values
-         *        are of the form `projects//instances/`.
+         * @param parent Required. The name of the instance in which the backup is created. This must be the same instance
+         *        that contains the database the backup is created from. The backup will be stored in the
+         *        locations specified in the instance configuration of this instance. Values are of the form
+         *        `projects//instances/`.
          * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
          * @return the request
          */
@@ -4727,10 +4727,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The name of the instance in which the backup will be created. This must be the same
-         *        instance that contains the database the backup will be created from. The backup will be
-         *        stored in the location(s) specified in the instance configuration of this instance. Values
-         *        are of the form `projects//instances/`.
+           * @param parent Required. The name of the instance in which the backup is created. This must be the same instance
+         *        that contains the database the backup is created from. The backup will be stored in the
+         *        locations specified in the instance configuration of this instance. Values are of the form
+         *        `projects//instances/`.
            * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
            * @since 1.13
            */
@@ -4800,17 +4800,17 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The name of the instance in which the backup will be created. This must be
-           * the same instance that contains the database the backup will be created from. The
-           * backup will be stored in the location(s) specified in the instance configuration of
-           * this instance. Values are of the form `projects//instances/`.
+           * Required. The name of the instance in which the backup is created. This must be the
+           * same instance that contains the database the backup is created from. The backup will be
+           * stored in the locations specified in the instance configuration of this instance.
+           * Values are of the form `projects//instances/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The name of the instance in which the backup will be created. This must be the same
-         instance that contains the database the backup will be created from. The backup will be stored in
-         the location(s) specified in the instance configuration of this instance. Values are of the form
+          /** Required. The name of the instance in which the backup is created. This must be the same instance
+         that contains the database the backup is created from. The backup will be stored in the locations
+         specified in the instance configuration of this instance. Values are of the form
          `projects//instances/`.
            */
           public java.lang.String getParent() {
@@ -4818,10 +4818,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The name of the instance in which the backup will be created. This must be
-           * the same instance that contains the database the backup will be created from. The
-           * backup will be stored in the location(s) specified in the instance configuration of
-           * this instance. Values are of the form `projects//instances/`.
+           * Required. The name of the instance in which the backup is created. This must be the
+           * same instance that contains the database the backup is created from. The backup will be
+           * stored in the locations specified in the instance configuration of this instance.
+           * Values are of the form `projects//instances/`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4873,14 +4873,23 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Optional. The Cloud KMS key that will be used to protect the backup. This field should
-           * be set only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the
-           * form `projects//locations//keyRings//cryptoKeys/`.
+           * Optional. This field is maintained for backwards compatibility. For new callers, we
+           * recommend using `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the
+           * location of the KMS key matches the database instance's configuration (location)
+           * exactly. For example, if the KMS location is in `us-central1` or `nam3`, then the
+           * database instance must also be in `us-central1` or `nam3`. The Cloud KMS key that is
+           * used to encrypt and decrypt the restored database. Set this field only when
+           * encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
+           * `projects//locations//keyRings//cryptoKeys/`.
            */
           @com.google.api.client.util.Key("encryptionConfig.kmsKeyName")
           private java.lang.String encryptionConfigKmsKeyName;
 
-          /** Optional. The Cloud KMS key that will be used to protect the backup. This field should be set only
+          /** Optional. This field is maintained for backwards compatibility. For new callers, we recommend using
+         `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the location of the KMS key
+         matches the database instance's configuration (location) exactly. For example, if the KMS location
+         is in `us-central1` or `nam3`, then the database instance must also be in `us-central1` or `nam3`.
+         The Cloud KMS key that is used to encrypt and decrypt the restored database. Set this field only
          when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
          `projects//locations//keyRings//cryptoKeys/`.
            */
@@ -4889,9 +4898,14 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Optional. The Cloud KMS key that will be used to protect the backup. This field should
-           * be set only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the
-           * form `projects//locations//keyRings//cryptoKeys/`.
+           * Optional. This field is maintained for backwards compatibility. For new callers, we
+           * recommend using `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the
+           * location of the KMS key matches the database instance's configuration (location)
+           * exactly. For example, if the KMS location is in `us-central1` or `nam3`, then the
+           * database instance must also be in `us-central1` or `nam3`. The Cloud KMS key that is
+           * used to encrypt and decrypt the restored database. Set this field only when
+           * encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
+           * `projects//locations//keyRings//cryptoKeys/`.
            */
           public Create setEncryptionConfigKmsKeyName(java.lang.String encryptionConfigKmsKeyName) {
             this.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
@@ -5799,28 +5813,28 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. A mask specifying which fields (e.g. `expire_time`) in the Backup resource
-           * should be updated. This mask is relative to the Backup resource, not to the request
-           * message. The field mask must always be specified; this prevents any future fields from
-           * being erased accidentally by clients that do not know about them.
+           * Required. A mask specifying which fields (for example, `expire_time`) in the backup
+           * resource should be updated. This mask is relative to the backup resource, not to the
+           * request message. The field mask must always be specified; this prevents any future
+           * fields from being erased accidentally by clients that do not know about them.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. A mask specifying which fields (e.g. `expire_time`) in the Backup resource should be
-         updated. This mask is relative to the Backup resource, not to the request message. The field mask
-         must always be specified; this prevents any future fields from being erased accidentally by clients
-         that do not know about them.
+          /** Required. A mask specifying which fields (for example, `expire_time`) in the backup resource should
+         be updated. This mask is relative to the backup resource, not to the request message. The field
+         mask must always be specified; this prevents any future fields from being erased accidentally by
+         clients that do not know about them.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. A mask specifying which fields (e.g. `expire_time`) in the Backup resource
-           * should be updated. This mask is relative to the Backup resource, not to the request
-           * message. The field mask must always be specified; this prevents any future fields from
-           * being erased accidentally by clients that do not know about them.
+           * Required. A mask specifying which fields (for example, `expire_time`) in the backup
+           * resource should be updated. This mask is relative to the backup resource, not to the
+           * request message. The field mask must always be specified; this prevents any future
+           * fields from being erased accidentally by clients that do not know about them.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -9177,7 +9191,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Updates the schema of a Cloud Spanner database by creating/altering/dropping tables, columns,
          * indexes, etc. The returned long-running operation will have a name of the format `/operations/`
-         * and can be used to track execution of the schema change(s). The metadata field type is
+         * and can be used to track execution of the schema changes. The metadata field type is
          * UpdateDatabaseDdlMetadata. The operation has no response.
          *
          * Create a request for the method "databases.updateDdl".
@@ -9205,7 +9219,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Updates the schema of a Cloud Spanner database by creating/altering/dropping tables, columns,
            * indexes, etc. The returned long-running operation will have a name of the format `/operations/`
-           * and can be used to track execution of the schema change(s). The metadata field type is
+           * and can be used to track execution of the schema changes. The metadata field type is
            * UpdateDatabaseDdlMetadata. The operation has no response.
            *
            * Create a request for the method "databases.updateDdl".

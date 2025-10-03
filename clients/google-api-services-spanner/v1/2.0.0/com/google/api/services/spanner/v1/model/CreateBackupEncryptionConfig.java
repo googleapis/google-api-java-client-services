@@ -37,9 +37,13 @@ public final class CreateBackupEncryptionConfig extends com.google.api.client.js
   private java.lang.String encryptionType;
 
   /**
-   * Optional. The Cloud KMS key that will be used to protect the backup. This field should be set
-   * only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
-   * `projects//locations//keyRings//cryptoKeys/`.
+   * Optional. This field is maintained for backwards compatibility. For new callers, we recommend
+   * using `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the location of the
+   * KMS key matches the database instance's configuration (location) exactly. For example, if the
+   * KMS location is in `us-central1` or `nam3`, then the database instance must also be in `us-
+   * central1` or `nam3`. The Cloud KMS key that is used to encrypt and decrypt the restored
+   * database. Set this field only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are
+   * of the form `projects//locations//keyRings//cryptoKeys/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,9 +82,13 @@ public final class CreateBackupEncryptionConfig extends com.google.api.client.js
   }
 
   /**
-   * Optional. The Cloud KMS key that will be used to protect the backup. This field should be set
-   * only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
-   * `projects//locations//keyRings//cryptoKeys/`.
+   * Optional. This field is maintained for backwards compatibility. For new callers, we recommend
+   * using `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the location of the
+   * KMS key matches the database instance's configuration (location) exactly. For example, if the
+   * KMS location is in `us-central1` or `nam3`, then the database instance must also be in `us-
+   * central1` or `nam3`. The Cloud KMS key that is used to encrypt and decrypt the restored
+   * database. Set this field only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are
+   * of the form `projects//locations//keyRings//cryptoKeys/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -88,9 +96,13 @@ public final class CreateBackupEncryptionConfig extends com.google.api.client.js
   }
 
   /**
-   * Optional. The Cloud KMS key that will be used to protect the backup. This field should be set
-   * only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
-   * `projects//locations//keyRings//cryptoKeys/`.
+   * Optional. This field is maintained for backwards compatibility. For new callers, we recommend
+   * using `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the location of the
+   * KMS key matches the database instance's configuration (location) exactly. For example, if the
+   * KMS location is in `us-central1` or `nam3`, then the database instance must also be in `us-
+   * central1` or `nam3`. The Cloud KMS key that is used to encrypt and decrypt the restored
+   * database. Set this field only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are
+   * of the form `projects//locations//keyRings//cryptoKeys/`.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public CreateBackupEncryptionConfig setKmsKeyName(java.lang.String kmsKeyName) {

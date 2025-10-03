@@ -30,6 +30,14 @@ package com.google.api.services.spanner.v1.model;
 public final class AdaptMessageResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Indicates whether this is the last AdaptMessageResponse in the stream. This field may
+   * be optionally set by the server. Clients should not rely on this field being set in all cases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean last;
+
+  /**
    * Optional. Uninterpreted bytes from the underlying wire protocol.
    * The value may be {@code null}.
    */
@@ -42,6 +50,25 @@ public final class AdaptMessageResponse extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> stateUpdates;
+
+  /**
+   * Optional. Indicates whether this is the last AdaptMessageResponse in the stream. This field may
+   * be optionally set by the server. Clients should not rely on this field being set in all cases.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLast() {
+    return last;
+  }
+
+  /**
+   * Optional. Indicates whether this is the last AdaptMessageResponse in the stream. This field may
+   * be optionally set by the server. Clients should not rely on this field being set in all cases.
+   * @param last last or {@code null} for none
+   */
+  public AdaptMessageResponse setLast(java.lang.Boolean last) {
+    this.last = last;
+    return this;
+  }
 
   /**
    * Optional. Uninterpreted bytes from the underlying wire protocol.

@@ -31,33 +31,33 @@ package com.google.api.services.spanner.v1.model;
 public final class DdlStatementActionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The action for the DDL statement, e.g. CREATE, ALTER, DROP, GRANT, etc. This field is a non-
-   * empty string.
+   * The action for the DDL statement, for example, CREATE, ALTER, DROP, GRANT, etc. This field is a
+   * non-empty string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * The entity name(s) being operated on the DDL statement. E.g. 1. For statement "CREATE TABLE
-   * t1(...)", `entity_names` = ["t1"]. 2. For statement "GRANT ROLE r1, r2 ...", `entity_names` =
-   * ["r1", "r2"]. 3. For statement "ANALYZE", `entity_names` = [].
+   * The entity names being operated on the DDL statement. For example, 1. For statement "CREATE
+   * TABLE t1(...)", `entity_names` = ["t1"]. 2. For statement "GRANT ROLE r1, r2 ...",
+   * `entity_names` = ["r1", "r2"]. 3. For statement "ANALYZE", `entity_names` = [].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entityNames;
 
   /**
-   * The entity type for the DDL statement, e.g. TABLE, INDEX, VIEW, etc. This field can be empty
-   * string for some DDL statement, e.g. for statement "ANALYZE", `entity_type` = "".
+   * The entity type for the DDL statement, for example, TABLE, INDEX, VIEW, etc. This field can be
+   * empty string for some DDL statement, for example, for statement "ANALYZE", `entity_type` = "".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityType;
 
   /**
-   * The action for the DDL statement, e.g. CREATE, ALTER, DROP, GRANT, etc. This field is a non-
-   * empty string.
+   * The action for the DDL statement, for example, CREATE, ALTER, DROP, GRANT, etc. This field is a
+   * non-empty string.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -65,8 +65,8 @@ public final class DdlStatementActionInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * The action for the DDL statement, e.g. CREATE, ALTER, DROP, GRANT, etc. This field is a non-
-   * empty string.
+   * The action for the DDL statement, for example, CREATE, ALTER, DROP, GRANT, etc. This field is a
+   * non-empty string.
    * @param action action or {@code null} for none
    */
   public DdlStatementActionInfo setAction(java.lang.String action) {
@@ -75,9 +75,9 @@ public final class DdlStatementActionInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * The entity name(s) being operated on the DDL statement. E.g. 1. For statement "CREATE TABLE
-   * t1(...)", `entity_names` = ["t1"]. 2. For statement "GRANT ROLE r1, r2 ...", `entity_names` =
-   * ["r1", "r2"]. 3. For statement "ANALYZE", `entity_names` = [].
+   * The entity names being operated on the DDL statement. For example, 1. For statement "CREATE
+   * TABLE t1(...)", `entity_names` = ["t1"]. 2. For statement "GRANT ROLE r1, r2 ...",
+   * `entity_names` = ["r1", "r2"]. 3. For statement "ANALYZE", `entity_names` = [].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntityNames() {
@@ -85,9 +85,9 @@ public final class DdlStatementActionInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * The entity name(s) being operated on the DDL statement. E.g. 1. For statement "CREATE TABLE
-   * t1(...)", `entity_names` = ["t1"]. 2. For statement "GRANT ROLE r1, r2 ...", `entity_names` =
-   * ["r1", "r2"]. 3. For statement "ANALYZE", `entity_names` = [].
+   * The entity names being operated on the DDL statement. For example, 1. For statement "CREATE
+   * TABLE t1(...)", `entity_names` = ["t1"]. 2. For statement "GRANT ROLE r1, r2 ...",
+   * `entity_names` = ["r1", "r2"]. 3. For statement "ANALYZE", `entity_names` = [].
    * @param entityNames entityNames or {@code null} for none
    */
   public DdlStatementActionInfo setEntityNames(java.util.List<java.lang.String> entityNames) {
@@ -96,8 +96,8 @@ public final class DdlStatementActionInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * The entity type for the DDL statement, e.g. TABLE, INDEX, VIEW, etc. This field can be empty
-   * string for some DDL statement, e.g. for statement "ANALYZE", `entity_type` = "".
+   * The entity type for the DDL statement, for example, TABLE, INDEX, VIEW, etc. This field can be
+   * empty string for some DDL statement, for example, for statement "ANALYZE", `entity_type` = "".
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityType() {
@@ -105,8 +105,8 @@ public final class DdlStatementActionInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * The entity type for the DDL statement, e.g. TABLE, INDEX, VIEW, etc. This field can be empty
-   * string for some DDL statement, e.g. for statement "ANALYZE", `entity_type` = "".
+   * The entity type for the DDL statement, for example, TABLE, INDEX, VIEW, etc. This field can be
+   * empty string for some DDL statement, for example, for statement "ANALYZE", `entity_type` = "".
    * @param entityType entityType or {@code null} for none
    */
   public DdlStatementActionInfo setEntityType(java.lang.String entityType) {

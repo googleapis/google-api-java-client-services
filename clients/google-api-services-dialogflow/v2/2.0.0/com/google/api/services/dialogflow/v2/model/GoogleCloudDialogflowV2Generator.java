@@ -30,6 +30,13 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2Generator extends com.google.api.client.json.GenericJson {
 
   /**
+   * Input of prebuilt Agent Coaching feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2AgentCoachingContext agentCoachingContext;
+
+  /**
    * Output only. Creation time of this generator.
    * The value may be {@code null}.
    */
@@ -75,6 +82,13 @@ public final class GoogleCloudDialogflowV2Generator extends com.google.api.clien
   private java.lang.String publishedModel;
 
   /**
+   * Optional. Configuration for suggestion deduping. This is only applicable to AI Coach feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2SuggestionDedupingConfig suggestionDedupingConfig;
+
+  /**
    * Input of prebuilt Summarization feature.
    * The value may be {@code null}.
    */
@@ -103,6 +117,23 @@ public final class GoogleCloudDialogflowV2Generator extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Input of prebuilt Agent Coaching feature.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AgentCoachingContext getAgentCoachingContext() {
+    return agentCoachingContext;
+  }
+
+  /**
+   * Input of prebuilt Agent Coaching feature.
+   * @param agentCoachingContext agentCoachingContext or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Generator setAgentCoachingContext(GoogleCloudDialogflowV2AgentCoachingContext agentCoachingContext) {
+    this.agentCoachingContext = agentCoachingContext;
+    return this;
+  }
 
   /**
    * Output only. Creation time of this generator.
@@ -209,6 +240,23 @@ public final class GoogleCloudDialogflowV2Generator extends com.google.api.clien
    */
   public GoogleCloudDialogflowV2Generator setPublishedModel(java.lang.String publishedModel) {
     this.publishedModel = publishedModel;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for suggestion deduping. This is only applicable to AI Coach feature.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SuggestionDedupingConfig getSuggestionDedupingConfig() {
+    return suggestionDedupingConfig;
+  }
+
+  /**
+   * Optional. Configuration for suggestion deduping. This is only applicable to AI Coach feature.
+   * @param suggestionDedupingConfig suggestionDedupingConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Generator setSuggestionDedupingConfig(GoogleCloudDialogflowV2SuggestionDedupingConfig suggestionDedupingConfig) {
+    this.suggestionDedupingConfig = suggestionDedupingConfig;
     return this;
   }
 

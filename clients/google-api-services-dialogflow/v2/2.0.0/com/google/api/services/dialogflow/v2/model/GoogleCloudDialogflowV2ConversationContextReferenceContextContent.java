@@ -30,6 +30,14 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConversationContextReferenceContextContent extends com.google.api.client.json.GenericJson {
 
   /**
+   * If the context content was generated from a tool call, specify the answer record associated
+   * with the tool call. Format: `projects//locations//answerRecords/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String answerRecord;
+
+  /**
    * Required. The information ingested in a single request.
    * The value may be {@code null}.
    */
@@ -50,6 +58,25 @@ public final class GoogleCloudDialogflowV2ConversationContextReferenceContextCon
    */
   @com.google.api.client.util.Key
   private String ingestionTime;
+
+  /**
+   * If the context content was generated from a tool call, specify the answer record associated
+   * with the tool call. Format: `projects//locations//answerRecords/`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnswerRecord() {
+    return answerRecord;
+  }
+
+  /**
+   * If the context content was generated from a tool call, specify the answer record associated
+   * with the tool call. Format: `projects//locations//answerRecords/`.
+   * @param answerRecord answerRecord or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationContextReferenceContextContent setAnswerRecord(java.lang.String answerRecord) {
+    this.answerRecord = answerRecord;
+    return this;
+  }
 
   /**
    * Required. The information ingested in a single request.

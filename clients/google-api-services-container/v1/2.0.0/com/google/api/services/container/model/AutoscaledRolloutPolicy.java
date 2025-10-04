@@ -17,8 +17,8 @@
 package com.google.api.services.container.model;
 
 /**
- * DesiredEnterpriseConfig is a wrapper used for updating enterprise_config. Deprecated: GKE
- * Enterprise features are now available without an Enterprise tier.
+ * Autoscaled rollout policy utilizes the cluster autoscaler during blue-green upgrade to scale both
+ * the blue and green pools.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,40 +29,43 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DesiredEnterpriseConfig extends com.google.api.client.json.GenericJson {
+public final class AutoscaledRolloutPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * desired_tier specifies the desired tier of the cluster.
+   * Optional. Time to wait after cordoning the blue pool before draining the nodes. Defaults to 3
+   * days. The value can be set between 0 and 7 days, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String desiredTier;
+  private String waitForDrainDuration;
 
   /**
-   * desired_tier specifies the desired tier of the cluster.
+   * Optional. Time to wait after cordoning the blue pool before draining the nodes. Defaults to 3
+   * days. The value can be set between 0 and 7 days, inclusive.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDesiredTier() {
-    return desiredTier;
+  public String getWaitForDrainDuration() {
+    return waitForDrainDuration;
   }
 
   /**
-   * desired_tier specifies the desired tier of the cluster.
-   * @param desiredTier desiredTier or {@code null} for none
+   * Optional. Time to wait after cordoning the blue pool before draining the nodes. Defaults to 3
+   * days. The value can be set between 0 and 7 days, inclusive.
+   * @param waitForDrainDuration waitForDrainDuration or {@code null} for none
    */
-  public DesiredEnterpriseConfig setDesiredTier(java.lang.String desiredTier) {
-    this.desiredTier = desiredTier;
+  public AutoscaledRolloutPolicy setWaitForDrainDuration(String waitForDrainDuration) {
+    this.waitForDrainDuration = waitForDrainDuration;
     return this;
   }
 
   @Override
-  public DesiredEnterpriseConfig set(String fieldName, Object value) {
-    return (DesiredEnterpriseConfig) super.set(fieldName, value);
+  public AutoscaledRolloutPolicy set(String fieldName, Object value) {
+    return (AutoscaledRolloutPolicy) super.set(fieldName, value);
   }
 
   @Override
-  public DesiredEnterpriseConfig clone() {
-    return (DesiredEnterpriseConfig) super.clone();
+  public AutoscaledRolloutPolicy clone() {
+    return (AutoscaledRolloutPolicy) super.clone();
   }
 
 }

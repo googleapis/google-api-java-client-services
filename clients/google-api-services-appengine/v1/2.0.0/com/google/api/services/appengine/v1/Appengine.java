@@ -3848,22 +3848,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -4274,6 +4274,40 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         /** The standard list page token. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * When set to true, operations that are reachable are returned as normal, and those that
+         * are unreachable are returned in the ListOperationsResponse.unreachable field.This can
+         * only be true when reading across collections e.g. when parent is set to
+         * "projects/example/locations/-".This field is not by default supported and will result in
+         * an UNIMPLEMENTED error if set unless explicitly documented otherwise in service or
+         * product specific documentation.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean returnPartialSuccess;
+
+        /** When set to true, operations that are reachable are returned as normal, and those that are
+       unreachable are returned in the ListOperationsResponse.unreachable field.This can only be true when
+       reading across collections e.g. when parent is set to "projects/example/locations/-".This field is
+       not by default supported and will result in an UNIMPLEMENTED error if set unless explicitly
+       documented otherwise in service or product specific documentation.
+         */
+        public java.lang.Boolean getReturnPartialSuccess() {
+          return returnPartialSuccess;
+        }
+
+        /**
+         * When set to true, operations that are reachable are returned as normal, and those that
+         * are unreachable are returned in the ListOperationsResponse.unreachable field.This can
+         * only be true when reading across collections e.g. when parent is set to
+         * "projects/example/locations/-".This field is not by default supported and will result in
+         * an UNIMPLEMENTED error if set unless explicitly documented otherwise in service or
+         * product specific documentation.
+         */
+        public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+          this.returnPartialSuccess = returnPartialSuccess;
           return this;
         }
 
@@ -8444,6 +8478,190 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
+           * Deletes the specified domain mapping. A user must be authorized to administer the associated
+           * domain in order to delete a DomainMapping resource.
+           *
+           * Create a request for the method "domainMappings.delete".
+           *
+           * This request holds the parameters needed by the appengine server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param projectsId Part of `name`. Required. Name of the resource to delete. Example:
+           *        apps/myapp/domainMappings/example.com.
+           * @param locationsId Part of `name`. See documentation of `projectsId`.
+           * @param applicationsId Part of `name`. See documentation of `projectsId`.
+           * @param domainMappingsId Part of `name`. See documentation of `projectsId`.
+           * @return the request
+           */
+          public Delete delete(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String domainMappingsId) throws java.io.IOException {
+            Delete result = new Delete(projectsId, locationsId, applicationsId, domainMappingsId);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/domainMappings/{domainMappingsId}";
+
+            /**
+             * Deletes the specified domain mapping. A user must be authorized to administer the associated
+             * domain in order to delete a DomainMapping resource.
+             *
+             * Create a request for the method "domainMappings.delete".
+             *
+             * This request holds the parameters needed by the the appengine server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param projectsId Part of `name`. Required. Name of the resource to delete. Example:
+           *        apps/myapp/domainMappings/example.com.
+             * @param locationsId Part of `name`. See documentation of `projectsId`.
+             * @param applicationsId Part of `name`. See documentation of `projectsId`.
+             * @param domainMappingsId Part of `name`. See documentation of `projectsId`.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String domainMappingsId) {
+              super(Appengine.this, "DELETE", REST_PATH, null, com.google.api.services.appengine.v1.model.Operation.class);
+              this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+              this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+              this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+              this.domainMappingsId = com.google.api.client.util.Preconditions.checkNotNull(domainMappingsId, "Required parameter domainMappingsId must be specified.");
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Part of `name`. Required. Name of the resource to delete. Example:
+             * apps/myapp/domainMappings/example.com.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String projectsId;
+
+            /** Part of `name`. Required. Name of the resource to delete. Example:
+           apps/myapp/domainMappings/example.com.
+             */
+            public java.lang.String getProjectsId() {
+              return projectsId;
+            }
+
+            /**
+             * Part of `name`. Required. Name of the resource to delete. Example:
+             * apps/myapp/domainMappings/example.com.
+             */
+            public Delete setProjectsId(java.lang.String projectsId) {
+              this.projectsId = projectsId;
+              return this;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String locationsId;
+
+            /** Part of `name`. See documentation of `projectsId`.
+             */
+            public java.lang.String getLocationsId() {
+              return locationsId;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            public Delete setLocationsId(java.lang.String locationsId) {
+              this.locationsId = locationsId;
+              return this;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String applicationsId;
+
+            /** Part of `name`. See documentation of `projectsId`.
+             */
+            public java.lang.String getApplicationsId() {
+              return applicationsId;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            public Delete setApplicationsId(java.lang.String applicationsId) {
+              this.applicationsId = applicationsId;
+              return this;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String domainMappingsId;
+
+            /** Part of `name`. See documentation of `projectsId`.
+             */
+            public java.lang.String getDomainMappingsId() {
+              return domainMappingsId;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            public Delete setDomainMappingsId(java.lang.String domainMappingsId) {
+              this.domainMappingsId = domainMappingsId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the specified domain mapping.
            *
            * Create a request for the method "domainMappings.get".
@@ -8632,6 +8850,210 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the specified domain mapping. To map an SSL certificate to a domain mapping, update
+           * certificate_id to point to an AuthorizedCertificate resource. A user must be authorized to
+           * administer the associated domain in order to update a DomainMapping resource.
+           *
+           * Create a request for the method "domainMappings.patch".
+           *
+           * This request holds the parameters needed by the appengine server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param projectsId Part of `name`. Required. Name of the resource to update. Example:
+           *        apps/myapp/domainMappings/example.com.
+           * @param locationsId Part of `name`. See documentation of `projectsId`.
+           * @param applicationsId Part of `name`. See documentation of `projectsId`.
+           * @param domainMappingsId Part of `name`. See documentation of `projectsId`.
+           * @param content the {@link com.google.api.services.appengine.v1.model.DomainMapping}
+           * @return the request
+           */
+          public Patch patch(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String domainMappingsId, com.google.api.services.appengine.v1.model.DomainMapping content) throws java.io.IOException {
+            Patch result = new Patch(projectsId, locationsId, applicationsId, domainMappingsId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/domainMappings/{domainMappingsId}";
+
+            /**
+             * Updates the specified domain mapping. To map an SSL certificate to a domain mapping, update
+             * certificate_id to point to an AuthorizedCertificate resource. A user must be authorized to
+             * administer the associated domain in order to update a DomainMapping resource.
+             *
+             * Create a request for the method "domainMappings.patch".
+             *
+             * This request holds the parameters needed by the the appengine server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param projectsId Part of `name`. Required. Name of the resource to update. Example:
+           *        apps/myapp/domainMappings/example.com.
+             * @param locationsId Part of `name`. See documentation of `projectsId`.
+             * @param applicationsId Part of `name`. See documentation of `projectsId`.
+             * @param domainMappingsId Part of `name`. See documentation of `projectsId`.
+             * @param content the {@link com.google.api.services.appengine.v1.model.DomainMapping}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String domainMappingsId, com.google.api.services.appengine.v1.model.DomainMapping content) {
+              super(Appengine.this, "PATCH", REST_PATH, content, com.google.api.services.appengine.v1.model.Operation.class);
+              this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+              this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+              this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+              this.domainMappingsId = com.google.api.client.util.Preconditions.checkNotNull(domainMappingsId, "Required parameter domainMappingsId must be specified.");
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Part of `name`. Required. Name of the resource to update. Example:
+             * apps/myapp/domainMappings/example.com.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String projectsId;
+
+            /** Part of `name`. Required. Name of the resource to update. Example:
+           apps/myapp/domainMappings/example.com.
+             */
+            public java.lang.String getProjectsId() {
+              return projectsId;
+            }
+
+            /**
+             * Part of `name`. Required. Name of the resource to update. Example:
+             * apps/myapp/domainMappings/example.com.
+             */
+            public Patch setProjectsId(java.lang.String projectsId) {
+              this.projectsId = projectsId;
+              return this;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String locationsId;
+
+            /** Part of `name`. See documentation of `projectsId`.
+             */
+            public java.lang.String getLocationsId() {
+              return locationsId;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            public Patch setLocationsId(java.lang.String locationsId) {
+              this.locationsId = locationsId;
+              return this;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String applicationsId;
+
+            /** Part of `name`. See documentation of `projectsId`.
+             */
+            public java.lang.String getApplicationsId() {
+              return applicationsId;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            public Patch setApplicationsId(java.lang.String applicationsId) {
+              this.applicationsId = applicationsId;
+              return this;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String domainMappingsId;
+
+            /** Part of `name`. See documentation of `projectsId`.
+             */
+            public java.lang.String getDomainMappingsId() {
+              return domainMappingsId;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            public Patch setDomainMappingsId(java.lang.String domainMappingsId) {
+              this.domainMappingsId = domainMappingsId;
+              return this;
+            }
+
+            /** Required. Standard field mask for the set of fields to be updated. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Standard field mask for the set of fields to be updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. Standard field mask for the set of fields to be updated. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
 

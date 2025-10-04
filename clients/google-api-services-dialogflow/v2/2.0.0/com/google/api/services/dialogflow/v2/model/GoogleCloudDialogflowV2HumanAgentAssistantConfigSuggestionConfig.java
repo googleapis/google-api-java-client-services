@@ -41,6 +41,13 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   private java.lang.Boolean disableHighLatencyFeaturesSyncDelivery;
 
   /**
+   * Optional. If true, enable asynchronous execution of tools.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAsyncToolCall;
+
+  /**
    * Configuration of different suggestion features. One feature can have only one config.
    * The value may be {@code null}.
    */
@@ -68,6 +75,24 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   private java.lang.Boolean groupSuggestionResponses;
 
   /**
+   * Optional. Enable skipping event based suggestion if the suggestion is empty. For example, with
+   * this field disabled, Knowledge Assist feature sends a Pub/Sub message when there are no
+   * suggestions. Enabling this field will change the behavior to skip the Pub/Sub message in this
+   * situation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipEmptyEventBasedSuggestion;
+
+  /**
+   * Optional. If true, use unredacted transcript data (Supported features: AI_COACH) and use
+   * unredacted ingested context (Supported features: All Agent Assist features)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useUnredactedConversationData;
+
+  /**
    * Optional. When disable_high_latency_features_sync_delivery is true and using the AnalyzeContent
    * API, we will not deliver the responses from high latency features in the API response. The
    * human_agent_assistant_config.notification_config must be configured and
@@ -89,6 +114,23 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setDisableHighLatencyFeaturesSyncDelivery(java.lang.Boolean disableHighLatencyFeaturesSyncDelivery) {
     this.disableHighLatencyFeaturesSyncDelivery = disableHighLatencyFeaturesSyncDelivery;
+    return this;
+  }
+
+  /**
+   * Optional. If true, enable asynchronous execution of tools.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAsyncToolCall() {
+    return enableAsyncToolCall;
+  }
+
+  /**
+   * Optional. If true, enable asynchronous execution of tools.
+   * @param enableAsyncToolCall enableAsyncToolCall or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setEnableAsyncToolCall(java.lang.Boolean enableAsyncToolCall) {
+    this.enableAsyncToolCall = enableAsyncToolCall;
     return this;
   }
 
@@ -152,6 +194,48 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setGroupSuggestionResponses(java.lang.Boolean groupSuggestionResponses) {
     this.groupSuggestionResponses = groupSuggestionResponses;
+    return this;
+  }
+
+  /**
+   * Optional. Enable skipping event based suggestion if the suggestion is empty. For example, with
+   * this field disabled, Knowledge Assist feature sends a Pub/Sub message when there are no
+   * suggestions. Enabling this field will change the behavior to skip the Pub/Sub message in this
+   * situation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipEmptyEventBasedSuggestion() {
+    return skipEmptyEventBasedSuggestion;
+  }
+
+  /**
+   * Optional. Enable skipping event based suggestion if the suggestion is empty. For example, with
+   * this field disabled, Knowledge Assist feature sends a Pub/Sub message when there are no
+   * suggestions. Enabling this field will change the behavior to skip the Pub/Sub message in this
+   * situation.
+   * @param skipEmptyEventBasedSuggestion skipEmptyEventBasedSuggestion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setSkipEmptyEventBasedSuggestion(java.lang.Boolean skipEmptyEventBasedSuggestion) {
+    this.skipEmptyEventBasedSuggestion = skipEmptyEventBasedSuggestion;
+    return this;
+  }
+
+  /**
+   * Optional. If true, use unredacted transcript data (Supported features: AI_COACH) and use
+   * unredacted ingested context (Supported features: All Agent Assist features)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseUnredactedConversationData() {
+    return useUnredactedConversationData;
+  }
+
+  /**
+   * Optional. If true, use unredacted transcript data (Supported features: AI_COACH) and use
+   * unredacted ingested context (Supported features: All Agent Assist features)
+   * @param useUnredactedConversationData useUnredactedConversationData or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setUseUnredactedConversationData(java.lang.Boolean useUnredactedConversationData) {
+    this.useUnredactedConversationData = useUnredactedConversationData;
     return this;
   }
 

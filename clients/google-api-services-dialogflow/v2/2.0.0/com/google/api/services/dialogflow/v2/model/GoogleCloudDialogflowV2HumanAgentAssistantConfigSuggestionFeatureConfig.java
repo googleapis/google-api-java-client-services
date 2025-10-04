@@ -83,11 +83,29 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   private java.lang.Boolean enableQuerySuggestionWhenNoAnswer;
 
   /**
+   * Optional. Enable returning detailed reasons for suggestion results. For example, with this
+   * field disabled, Knowledge Search feature returns NotFound error when no answer is found for the
+   * input query. Enabling this field will change the behavior to return an OK response with
+   * detailed information indicating the lack of results. Supported features: KNOWLEDGE_SEARCH,
+   * KNOWLEDGE_ASSIST
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableResponseDebugInfo;
+
+  /**
    * Configs of query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig queryConfig;
+
+  /**
+   * Optional. Settings for Responsible AI checks. Supported features: KNOWLEDGE_ASSIST
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2RaiSettings raiSettings;
 
   /**
    * The suggestion feature.
@@ -231,6 +249,31 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
+   * Optional. Enable returning detailed reasons for suggestion results. For example, with this
+   * field disabled, Knowledge Search feature returns NotFound error when no answer is found for the
+   * input query. Enabling this field will change the behavior to return an OK response with
+   * detailed information indicating the lack of results. Supported features: KNOWLEDGE_SEARCH,
+   * KNOWLEDGE_ASSIST
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableResponseDebugInfo() {
+    return enableResponseDebugInfo;
+  }
+
+  /**
+   * Optional. Enable returning detailed reasons for suggestion results. For example, with this
+   * field disabled, Knowledge Search feature returns NotFound error when no answer is found for the
+   * input query. Enabling this field will change the behavior to return an OK response with
+   * detailed information indicating the lack of results. Supported features: KNOWLEDGE_SEARCH,
+   * KNOWLEDGE_ASSIST
+   * @param enableResponseDebugInfo enableResponseDebugInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setEnableResponseDebugInfo(java.lang.Boolean enableResponseDebugInfo) {
+    this.enableResponseDebugInfo = enableResponseDebugInfo;
+    return this;
+  }
+
+  /**
    * Configs of query.
    * @return value or {@code null} for none
    */
@@ -244,6 +287,23 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setQueryConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig queryConfig) {
     this.queryConfig = queryConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for Responsible AI checks. Supported features: KNOWLEDGE_ASSIST
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2RaiSettings getRaiSettings() {
+    return raiSettings;
+  }
+
+  /**
+   * Optional. Settings for Responsible AI checks. Supported features: KNOWLEDGE_ASSIST
+   * @param raiSettings raiSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setRaiSettings(GoogleCloudDialogflowV2RaiSettings raiSettings) {
+    this.raiSettings = raiSettings;
     return this;
   }
 

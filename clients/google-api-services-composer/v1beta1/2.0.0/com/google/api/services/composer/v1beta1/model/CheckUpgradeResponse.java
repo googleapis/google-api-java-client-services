@@ -37,6 +37,14 @@ public final class CheckUpgradeResponse extends com.google.api.client.json.Gener
   private java.lang.String buildLogUri;
 
   /**
+   * Output only. Contains information about environment configuration that is incompatible with the
+   * new image version, except for pypi modules conflicts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ConfigConflict> configConflicts;
+
+  /**
    * Output only. Whether build has succeeded or failed on modules conflicts.
    * The value may be {@code null}.
    */
@@ -80,6 +88,25 @@ public final class CheckUpgradeResponse extends com.google.api.client.json.Gener
    */
   public CheckUpgradeResponse setBuildLogUri(java.lang.String buildLogUri) {
     this.buildLogUri = buildLogUri;
+    return this;
+  }
+
+  /**
+   * Output only. Contains information about environment configuration that is incompatible with the
+   * new image version, except for pypi modules conflicts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ConfigConflict> getConfigConflicts() {
+    return configConflicts;
+  }
+
+  /**
+   * Output only. Contains information about environment configuration that is incompatible with the
+   * new image version, except for pypi modules conflicts.
+   * @param configConflicts configConflicts or {@code null} for none
+   */
+  public CheckUpgradeResponse setConfigConflicts(java.util.List<ConfigConflict> configConflicts) {
+    this.configConflicts = configConflicts;
     return this;
   }
 

@@ -17,8 +17,9 @@
 package com.google.api.services.container.model;
 
 /**
- * Collection of [GCP labels](https://{$universe.dns_names.final_documentation_domain}/resource-
- * manager/docs/creating-managing-labels).
+ * Collection of [Resource Manager
+ * labels](https://{$universe.dns_names.final_documentation_domain}/resource-manager/docs/creating-
+ * managing-labels).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

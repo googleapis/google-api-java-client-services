@@ -31,12 +31,26 @@ package com.google.api.services.container.model;
 public final class DNSEndpointConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Controls whether user traffic is allowed over this endpoint. Note that GCP-managed services may
-   * still use the endpoint even if this is false.
+   * Controls whether user traffic is allowed over this endpoint. Note that Google-managed services
+   * may still use the endpoint even if this is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowExternalTraffic;
+
+  /**
+   * Controls whether the k8s certs auth is allowed via DNS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableK8sCertsViaDns;
+
+  /**
+   * Controls whether the k8s token auth is allowed via DNS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableK8sTokensViaDns;
 
   /**
    * Output only. The cluster's DNS endpoint configuration. A DNS format address. This is accessible
@@ -48,8 +62,8 @@ public final class DNSEndpointConfig extends com.google.api.client.json.GenericJ
   private java.lang.String endpoint;
 
   /**
-   * Controls whether user traffic is allowed over this endpoint. Note that GCP-managed services may
-   * still use the endpoint even if this is false.
+   * Controls whether user traffic is allowed over this endpoint. Note that Google-managed services
+   * may still use the endpoint even if this is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowExternalTraffic() {
@@ -57,12 +71,46 @@ public final class DNSEndpointConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Controls whether user traffic is allowed over this endpoint. Note that GCP-managed services may
-   * still use the endpoint even if this is false.
+   * Controls whether user traffic is allowed over this endpoint. Note that Google-managed services
+   * may still use the endpoint even if this is false.
    * @param allowExternalTraffic allowExternalTraffic or {@code null} for none
    */
   public DNSEndpointConfig setAllowExternalTraffic(java.lang.Boolean allowExternalTraffic) {
     this.allowExternalTraffic = allowExternalTraffic;
+    return this;
+  }
+
+  /**
+   * Controls whether the k8s certs auth is allowed via DNS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableK8sCertsViaDns() {
+    return enableK8sCertsViaDns;
+  }
+
+  /**
+   * Controls whether the k8s certs auth is allowed via DNS.
+   * @param enableK8sCertsViaDns enableK8sCertsViaDns or {@code null} for none
+   */
+  public DNSEndpointConfig setEnableK8sCertsViaDns(java.lang.Boolean enableK8sCertsViaDns) {
+    this.enableK8sCertsViaDns = enableK8sCertsViaDns;
+    return this;
+  }
+
+  /**
+   * Controls whether the k8s token auth is allowed via DNS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableK8sTokensViaDns() {
+    return enableK8sTokensViaDns;
+  }
+
+  /**
+   * Controls whether the k8s token auth is allowed via DNS.
+   * @param enableK8sTokensViaDns enableK8sTokensViaDns or {@code null} for none
+   */
+  public DNSEndpointConfig setEnableK8sTokensViaDns(java.lang.Boolean enableK8sTokensViaDns) {
+    this.enableK8sTokensViaDns = enableK8sTokensViaDns;
     return this;
   }
 

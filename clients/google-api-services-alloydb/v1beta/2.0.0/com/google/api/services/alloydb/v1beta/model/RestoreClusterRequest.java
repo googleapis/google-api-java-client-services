@@ -38,6 +38,20 @@ public final class RestoreClusterRequest extends com.google.api.client.json.Gene
   private BackupSource backupSource;
 
   /**
+   * BackupDR backup source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupDrBackupSource backupdrBackupSource;
+
+  /**
+   * BackupDR source used for point in time recovery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupDrPitrSource backupdrPitrSource;
+
+  /**
    * Required. The resource being created
    * The value may be {@code null}.
    */
@@ -95,6 +109,40 @@ public final class RestoreClusterRequest extends com.google.api.client.json.Gene
    */
   public RestoreClusterRequest setBackupSource(BackupSource backupSource) {
     this.backupSource = backupSource;
+    return this;
+  }
+
+  /**
+   * BackupDR backup source.
+   * @return value or {@code null} for none
+   */
+  public BackupDrBackupSource getBackupdrBackupSource() {
+    return backupdrBackupSource;
+  }
+
+  /**
+   * BackupDR backup source.
+   * @param backupdrBackupSource backupdrBackupSource or {@code null} for none
+   */
+  public RestoreClusterRequest setBackupdrBackupSource(BackupDrBackupSource backupdrBackupSource) {
+    this.backupdrBackupSource = backupdrBackupSource;
+    return this;
+  }
+
+  /**
+   * BackupDR source used for point in time recovery.
+   * @return value or {@code null} for none
+   */
+  public BackupDrPitrSource getBackupdrPitrSource() {
+    return backupdrPitrSource;
+  }
+
+  /**
+   * BackupDR source used for point in time recovery.
+   * @param backupdrPitrSource backupdrPitrSource or {@code null} for none
+   */
+  public RestoreClusterRequest setBackupdrPitrSource(BackupDrPitrSource backupdrPitrSource) {
+    this.backupdrPitrSource = backupdrPitrSource;
     return this;
   }
 

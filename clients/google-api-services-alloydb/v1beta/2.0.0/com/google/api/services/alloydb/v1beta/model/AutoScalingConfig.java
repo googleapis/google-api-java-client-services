@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Configuration for a read pool instance.
+ * Configuration for autoscaling.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -27,67 +27,64 @@ package com.google.api.services.alloydb.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ReadPoolConfig extends com.google.api.client.json.GenericJson {
+public final class AutoScalingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Autoscaling configuration for the read pool instance. If not set, the read pool instance will
-   * not be autoscaled.
+   * Policy for the MIG autoscaler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AutoScalingConfig autoScalingConfig;
+  private Policy policy;
 
   /**
-   * Read capacity, i.e. number of nodes in a read pool instance.
+   * Optional list of schedules for the MIG autoscaler. If not set, no schedules are created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer nodeCount;
+  private java.util.List<Schedule> schedules;
 
   /**
-   * Autoscaling configuration for the read pool instance. If not set, the read pool instance will
-   * not be autoscaled.
+   * Policy for the MIG autoscaler.
    * @return value or {@code null} for none
    */
-  public AutoScalingConfig getAutoScalingConfig() {
-    return autoScalingConfig;
+  public Policy getPolicy() {
+    return policy;
   }
 
   /**
-   * Autoscaling configuration for the read pool instance. If not set, the read pool instance will
-   * not be autoscaled.
-   * @param autoScalingConfig autoScalingConfig or {@code null} for none
+   * Policy for the MIG autoscaler.
+   * @param policy policy or {@code null} for none
    */
-  public ReadPoolConfig setAutoScalingConfig(AutoScalingConfig autoScalingConfig) {
-    this.autoScalingConfig = autoScalingConfig;
+  public AutoScalingConfig setPolicy(Policy policy) {
+    this.policy = policy;
     return this;
   }
 
   /**
-   * Read capacity, i.e. number of nodes in a read pool instance.
+   * Optional list of schedules for the MIG autoscaler. If not set, no schedules are created.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getNodeCount() {
-    return nodeCount;
+  public java.util.List<Schedule> getSchedules() {
+    return schedules;
   }
 
   /**
-   * Read capacity, i.e. number of nodes in a read pool instance.
-   * @param nodeCount nodeCount or {@code null} for none
+   * Optional list of schedules for the MIG autoscaler. If not set, no schedules are created.
+   * @param schedules schedules or {@code null} for none
    */
-  public ReadPoolConfig setNodeCount(java.lang.Integer nodeCount) {
-    this.nodeCount = nodeCount;
+  public AutoScalingConfig setSchedules(java.util.List<Schedule> schedules) {
+    this.schedules = schedules;
     return this;
   }
 
   @Override
-  public ReadPoolConfig set(String fieldName, Object value) {
-    return (ReadPoolConfig) super.set(fieldName, value);
+  public AutoScalingConfig set(String fieldName, Object value) {
+    return (AutoScalingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ReadPoolConfig clone() {
-    return (ReadPoolConfig) super.clone();
+  public AutoScalingConfig clone() {
+    return (AutoScalingConfig) super.clone();
   }
 
 }

@@ -4314,6 +4314,40 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** When set to `true`, operations that are reachable are returned as normal, and those that are
+         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
+         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
+         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
+         explicitly documented otherwise in service or product specific documentation.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -5427,9 +5461,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
-         *        instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id.
-         *        Format: projects/{project}/locations/{location}/services/{service_id}
+         * @param name Identifier. The fully qualified name of this Service. In CreateServiceRequest, this field is
+         *        ignored, and instead composed from CreateServiceRequest.parent and
+         *        CreateServiceRequest.service_id. Format:
+         *        projects/{project}/locations/{location}/services/{service_id}
          * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
          * @return the request
          */
@@ -5456,9 +5491,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
-         *        instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id.
-         *        Format: projects/{project}/locations/{location}/services/{service_id}
+           * @param name Identifier. The fully qualified name of this Service. In CreateServiceRequest, this field is
+         *        ignored, and instead composed from CreateServiceRequest.parent and
+         *        CreateServiceRequest.service_id. Format:
+         *        projects/{project}/locations/{location}/services/{service_id}
            * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Service}
            * @since 1.13
            */
@@ -5528,25 +5564,25 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The fully qualified name of this Service. In CreateServiceRequest, this field is
-           * ignored, and instead composed from CreateServiceRequest.parent and
+           * Identifier. The fully qualified name of this Service. In CreateServiceRequest, this
+           * field is ignored, and instead composed from CreateServiceRequest.parent and
            * CreateServiceRequest.service_id. Format:
            * projects/{project}/locations/{location}/services/{service_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
-         instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format:
-         projects/{project}/locations/{location}/services/{service_id}
+          /** Identifier. The fully qualified name of this Service. In CreateServiceRequest, this field is
+         ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id.
+         Format: projects/{project}/locations/{location}/services/{service_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The fully qualified name of this Service. In CreateServiceRequest, this field is
-           * ignored, and instead composed from CreateServiceRequest.parent and
+           * Identifier. The fully qualified name of this Service. In CreateServiceRequest, this
+           * field is ignored, and instead composed from CreateServiceRequest.parent and
            * CreateServiceRequest.service_id. Format:
            * projects/{project}/locations/{location}/services/{service_id}
            */

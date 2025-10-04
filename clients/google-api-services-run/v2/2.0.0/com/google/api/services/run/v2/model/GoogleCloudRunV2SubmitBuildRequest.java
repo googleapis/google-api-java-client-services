@@ -37,6 +37,13 @@ public final class GoogleCloudRunV2SubmitBuildRequest extends com.google.api.cli
   private GoogleCloudRunV2BuildpacksBuild buildpackBuild;
 
   /**
+   * Optional. The client that initiated the build request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String client;
+
+  /**
    * Build the source using Docker. This means the source has a Dockerfile.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class GoogleCloudRunV2SubmitBuildRequest extends com.google.api.cli
    */
   public GoogleCloudRunV2SubmitBuildRequest setBuildpackBuild(GoogleCloudRunV2BuildpacksBuild buildpackBuild) {
     this.buildpackBuild = buildpackBuild;
+    return this;
+  }
+
+  /**
+   * Optional. The client that initiated the build request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClient() {
+    return client;
+  }
+
+  /**
+   * Optional. The client that initiated the build request.
+   * @param client client or {@code null} for none
+   */
+  public GoogleCloudRunV2SubmitBuildRequest setClient(java.lang.String client) {
+    this.client = client;
     return this;
   }
 

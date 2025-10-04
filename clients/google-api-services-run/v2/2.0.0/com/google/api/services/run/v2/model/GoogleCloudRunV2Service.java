@@ -237,8 +237,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private GoogleCloudRunV2MultiRegionSettings multiRegionSettings;
 
   /**
-   * The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
-   * instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format:
+   * Identifier. The fully qualified name of this Service. In CreateServiceRequest, this field is
+   * ignored, and instead composed from CreateServiceRequest.parent and
+   * CreateServiceRequest.service_id. Format:
    * projects/{project}/locations/{location}/services/{service_id}
    * The value may be {@code null}.
    */
@@ -828,8 +829,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
-   * instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format:
+   * Identifier. The fully qualified name of this Service. In CreateServiceRequest, this field is
+   * ignored, and instead composed from CreateServiceRequest.parent and
+   * CreateServiceRequest.service_id. Format:
    * projects/{project}/locations/{location}/services/{service_id}
    * @return value or {@code null} for none
    */
@@ -838,8 +840,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
-   * instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format:
+   * Identifier. The fully qualified name of this Service. In CreateServiceRequest, this field is
+   * ignored, and instead composed from CreateServiceRequest.parent and
+   * CreateServiceRequest.service_id. Format:
    * projects/{project}/locations/{location}/services/{service_id}
    * @param name name or {@code null} for none
    */

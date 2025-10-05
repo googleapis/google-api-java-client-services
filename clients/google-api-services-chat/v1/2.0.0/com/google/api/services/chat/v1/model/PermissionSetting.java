@@ -30,21 +30,21 @@ package com.google.api.services.chat.v1.model;
 public final class PermissionSetting extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether spaces managers have this permission.
+   * Optional. Whether space owners (`ROLE_MANAGER`) have this permission.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean managersAllowed;
 
   /**
-   * Optional. Whether non-manager members have this permission.
+   * Optional. Whether basic space members (`ROLE_MEMBER`) have this permission.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean membersAllowed;
 
   /**
-   * Optional. Whether spaces managers have this permission.
+   * Optional. Whether space owners (`ROLE_MANAGER`) have this permission.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getManagersAllowed() {
@@ -52,7 +52,7 @@ public final class PermissionSetting extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Whether spaces managers have this permission.
+   * Optional. Whether space owners (`ROLE_MANAGER`) have this permission.
    * @param managersAllowed managersAllowed or {@code null} for none
    */
   public PermissionSetting setManagersAllowed(java.lang.Boolean managersAllowed) {
@@ -61,7 +61,7 @@ public final class PermissionSetting extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Whether non-manager members have this permission.
+   * Optional. Whether basic space members (`ROLE_MEMBER`) have this permission.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMembersAllowed() {
@@ -69,7 +69,7 @@ public final class PermissionSetting extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Whether non-manager members have this permission.
+   * Optional. Whether basic space members (`ROLE_MEMBER`) have this permission.
    * @param membersAllowed membersAllowed or {@code null} for none
    */
   public PermissionSetting setMembersAllowed(java.lang.Boolean membersAllowed) {

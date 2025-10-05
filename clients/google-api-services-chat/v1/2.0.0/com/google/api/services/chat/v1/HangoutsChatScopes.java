@@ -44,6 +44,9 @@ public class HangoutsChatScopes {
   /** On their own behalf, apps in Google Chat can see, add, update, and remove members from conversations and spaces. */
   public static final String CHAT_APP_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.app.memberships";
 
+  /** On their own behalf, apps in Google Chat can see all messages and their associated reactions and message content. */
+  public static final String CHAT_APP_MESSAGES_READONLY = "https://www.googleapis.com/auth/chat.app.messages.readonly";
+
   /** On their own behalf, apps in Google Chat can create conversations and spaces and see or update their metadata (including history settings and access settings). */
   public static final String CHAT_APP_SPACES = "https://www.googleapis.com/auth/chat.app.spaces";
 
@@ -124,6 +127,7 @@ public class HangoutsChatScopes {
     set.add(CHAT_ADMIN_SPACES_READONLY);
     set.add(CHAT_APP_DELETE);
     set.add(CHAT_APP_MEMBERSHIPS);
+    set.add(CHAT_APP_MESSAGES_READONLY);
     set.add(CHAT_APP_SPACES);
     set.add(CHAT_APP_SPACES_CREATE);
     set.add(CHAT_BOT);

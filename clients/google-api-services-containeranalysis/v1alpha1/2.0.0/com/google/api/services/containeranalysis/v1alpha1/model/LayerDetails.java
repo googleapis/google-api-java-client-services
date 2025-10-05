@@ -44,6 +44,13 @@ public final class LayerDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The chain ID of the layer in the container image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chainId;
+
+  /**
    * The layer build command that was used to build the layer. This may not be found in all layers
    * depending on how the container image is built.
    * The value may be {@code null}.
@@ -79,6 +86,23 @@ public final class LayerDetails extends com.google.api.client.json.GenericJson {
    */
   public LayerDetails setBaseImages(java.util.List<BaseImage> baseImages) {
     this.baseImages = baseImages;
+    return this;
+  }
+
+  /**
+   * The chain ID of the layer in the container image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChainId() {
+    return chainId;
+  }
+
+  /**
+   * The chain ID of the layer in the container image.
+   * @param chainId chainId or {@code null} for none
+   */
+  public LayerDetails setChainId(java.lang.String chainId) {
+    this.chainId = chainId;
     return this;
   }
 

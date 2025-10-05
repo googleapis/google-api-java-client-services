@@ -150,6 +150,15 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ClusterMaintenanceSchedule maintenanceSchedule;
 
   /**
+   * Optional. This field can be used to trigger self service update to indicate the desired
+   * maintenance version. The input to this field can be determined by the
+   * available_maintenance_versions field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceVersion;
+
+  /**
    * Optional. Backups generated and managed by memorystore service.
    * The value may be {@code null}.
    */
@@ -588,6 +597,27 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setMaintenanceSchedule(ClusterMaintenanceSchedule maintenanceSchedule) {
     this.maintenanceSchedule = maintenanceSchedule;
+    return this;
+  }
+
+  /**
+   * Optional. This field can be used to trigger self service update to indicate the desired
+   * maintenance version. The input to this field can be determined by the
+   * available_maintenance_versions field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceVersion() {
+    return maintenanceVersion;
+  }
+
+  /**
+   * Optional. This field can be used to trigger self service update to indicate the desired
+   * maintenance version. The input to this field can be determined by the
+   * available_maintenance_versions field.
+   * @param maintenanceVersion maintenanceVersion or {@code null} for none
+   */
+  public Cluster setMaintenanceVersion(java.lang.String maintenanceVersion) {
+    this.maintenanceVersion = maintenanceVersion;
     return this;
   }
 

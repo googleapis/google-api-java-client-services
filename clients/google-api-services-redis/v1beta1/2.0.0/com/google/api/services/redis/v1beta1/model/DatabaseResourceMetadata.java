@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1beta1.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 27
+ * Common model for database resource instance metadata. Next ID: 29
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -137,6 +137,13 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private MachineConfiguration machineConfiguration;
+
+  /**
+   * Optional. Maintenance info for the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceMaintenanceInfo maintenanceInfo;
 
   /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
@@ -475,6 +482,23 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   public DatabaseResourceMetadata setMachineConfiguration(MachineConfiguration machineConfiguration) {
     this.machineConfiguration = machineConfiguration;
+    return this;
+  }
+
+  /**
+   * Optional. Maintenance info for the resource.
+   * @return value or {@code null} for none
+   */
+  public ResourceMaintenanceInfo getMaintenanceInfo() {
+    return maintenanceInfo;
+  }
+
+  /**
+   * Optional. Maintenance info for the resource.
+   * @param maintenanceInfo maintenanceInfo or {@code null} for none
+   */
+  public DatabaseResourceMetadata setMaintenanceInfo(ResourceMaintenanceInfo maintenanceInfo) {
+    this.maintenanceInfo = maintenanceInfo;
     return this;
   }
 

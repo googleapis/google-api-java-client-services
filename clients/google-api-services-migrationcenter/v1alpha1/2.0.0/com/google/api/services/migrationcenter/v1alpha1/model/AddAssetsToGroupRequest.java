@@ -40,7 +40,7 @@ public final class AddAssetsToGroupRequest extends com.google.api.client.json.Ge
 
   /**
    * Required. List of assets to be added. The maximum number of assets that can be added in a
-   * single request is 1000.
+   * single request is 2000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class AddAssetsToGroupRequest extends com.google.api.client.json.Ge
 
   /**
    * Required. List of assets to be added. The maximum number of assets that can be added in a
-   * single request is 1000.
+   * single request is 2000.
    * @return value or {@code null} for none
    */
   public AssetList getAssets() {
@@ -92,7 +92,7 @@ public final class AddAssetsToGroupRequest extends com.google.api.client.json.Ge
 
   /**
    * Required. List of assets to be added. The maximum number of assets that can be added in a
-   * single request is 1000.
+   * single request is 2000.
    * @param assets assets or {@code null} for none
    */
   public AddAssetsToGroupRequest setAssets(AssetList assets) {

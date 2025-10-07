@@ -45,6 +45,16 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String clusterUuid;
 
   /**
+   * Optional. Whether the request is submitted by Dataproc super user. If true, IAM will check
+   * 'dataproc.clusters.repair' permission instead of 'dataproc.clusters.update' permission. This is
+   * to give Dataproc superuser the ability to repair clusters without granting the overly broad
+   * update permission.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dataprocSuperUser;
+
+  /**
    * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning facilitates the
    * removal of cluster nodes without interrupting jobs in progress. The timeout specifies the
    * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
@@ -123,6 +133,29 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
    */
   public RepairClusterRequest setClusterUuid(java.lang.String clusterUuid) {
     this.clusterUuid = clusterUuid;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the request is submitted by Dataproc super user. If true, IAM will check
+   * 'dataproc.clusters.repair' permission instead of 'dataproc.clusters.update' permission. This is
+   * to give Dataproc superuser the ability to repair clusters without granting the overly broad
+   * update permission.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDataprocSuperUser() {
+    return dataprocSuperUser;
+  }
+
+  /**
+   * Optional. Whether the request is submitted by Dataproc super user. If true, IAM will check
+   * 'dataproc.clusters.repair' permission instead of 'dataproc.clusters.update' permission. This is
+   * to give Dataproc superuser the ability to repair clusters without granting the overly broad
+   * update permission.
+   * @param dataprocSuperUser dataprocSuperUser or {@code null} for none
+   */
+  public RepairClusterRequest setDataprocSuperUser(java.lang.Boolean dataprocSuperUser) {
+    this.dataprocSuperUser = dataprocSuperUser;
     return this;
   }
 

@@ -30,16 +30,20 @@ package com.google.api.services.compute.model;
 public final class UrlMapsValidateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the load balancer type(s) this validation request is for. Use EXTERNAL_MANAGED for
+   * Specifies the load balancer type(s) this validation request is for. UseEXTERNAL_MANAGED for
    * global external Application Load Balancers and regional external Application Load Balancers.
-   * Use EXTERNAL for classic Application Load Balancers. Use INTERNAL_MANAGED for internal
-   * Application Load Balancers. For more information, refer to Choosing a load balancer. If
-   * unspecified, the load balancing scheme will be inferred from the backend service resources this
-   * URL map references. If that can not be inferred (for example, this URL map only references
+   * Use EXTERNAL for classic Application Load Balancers.
+   *
+   * Use INTERNAL_MANAGED for internal Application Load Balancers. For more information, refer to
+   * Choosing a load balancer.
+   *
+   * If unspecified, the load balancing scheme will be inferred from the backend service resources
+   * this URL map references. If that can not be inferred (for example, this URL map only references
    * backend buckets, or this Url map is for rewrites and redirects only and doesn't reference any
-   * backends), EXTERNAL will be used as the default type. If specified, the scheme(s) must not
-   * conflict with the load balancing scheme of the backend service resources this Url map
-   * references.
+   * backends),EXTERNAL will be used as the default type.
+   *
+   * If specified, the scheme(s) must not conflict with the load balancing scheme of the backend
+   * service resources this Url map references.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,16 +57,20 @@ public final class UrlMapsValidateRequest extends com.google.api.client.json.Gen
   private UrlMap resource;
 
   /**
-   * Specifies the load balancer type(s) this validation request is for. Use EXTERNAL_MANAGED for
+   * Specifies the load balancer type(s) this validation request is for. UseEXTERNAL_MANAGED for
    * global external Application Load Balancers and regional external Application Load Balancers.
-   * Use EXTERNAL for classic Application Load Balancers. Use INTERNAL_MANAGED for internal
-   * Application Load Balancers. For more information, refer to Choosing a load balancer. If
-   * unspecified, the load balancing scheme will be inferred from the backend service resources this
-   * URL map references. If that can not be inferred (for example, this URL map only references
+   * Use EXTERNAL for classic Application Load Balancers.
+   *
+   * Use INTERNAL_MANAGED for internal Application Load Balancers. For more information, refer to
+   * Choosing a load balancer.
+   *
+   * If unspecified, the load balancing scheme will be inferred from the backend service resources
+   * this URL map references. If that can not be inferred (for example, this URL map only references
    * backend buckets, or this Url map is for rewrites and redirects only and doesn't reference any
-   * backends), EXTERNAL will be used as the default type. If specified, the scheme(s) must not
-   * conflict with the load balancing scheme of the backend service resources this Url map
-   * references.
+   * backends),EXTERNAL will be used as the default type.
+   *
+   * If specified, the scheme(s) must not conflict with the load balancing scheme of the backend
+   * service resources this Url map references.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLoadBalancingSchemes() {
@@ -70,16 +78,20 @@ public final class UrlMapsValidateRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies the load balancer type(s) this validation request is for. Use EXTERNAL_MANAGED for
+   * Specifies the load balancer type(s) this validation request is for. UseEXTERNAL_MANAGED for
    * global external Application Load Balancers and regional external Application Load Balancers.
-   * Use EXTERNAL for classic Application Load Balancers. Use INTERNAL_MANAGED for internal
-   * Application Load Balancers. For more information, refer to Choosing a load balancer. If
-   * unspecified, the load balancing scheme will be inferred from the backend service resources this
-   * URL map references. If that can not be inferred (for example, this URL map only references
+   * Use EXTERNAL for classic Application Load Balancers.
+   *
+   * Use INTERNAL_MANAGED for internal Application Load Balancers. For more information, refer to
+   * Choosing a load balancer.
+   *
+   * If unspecified, the load balancing scheme will be inferred from the backend service resources
+   * this URL map references. If that can not be inferred (for example, this URL map only references
    * backend buckets, or this Url map is for rewrites and redirects only and doesn't reference any
-   * backends), EXTERNAL will be used as the default type. If specified, the scheme(s) must not
-   * conflict with the load balancing scheme of the backend service resources this Url map
-   * references.
+   * backends),EXTERNAL will be used as the default type.
+   *
+   * If specified, the scheme(s) must not conflict with the load balancing scheme of the backend
+   * service resources this Url map references.
    * @param loadBalancingSchemes loadBalancingSchemes or {@code null} for none
    */
   public UrlMapsValidateRequest setLoadBalancingSchemes(java.util.List<java.lang.String> loadBalancingSchemes) {

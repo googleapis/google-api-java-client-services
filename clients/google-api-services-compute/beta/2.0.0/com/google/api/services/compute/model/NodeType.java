@@ -17,10 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represent a sole-tenant Node Type resource. Each node within a node group must have a node type.
- * A node type specifies the total amount of cores and memory for that node. Currently, the only
- * available node type is n1-node-96-624 node type that has 96 vCPUs and 624 GB of memory, available
- * in multiple zones. For more information read Node types.
+ * Represent a sole-tenant Node Type resource.
+ *
+ * Each node within a node group must have a node type. A node type specifies the total amount of
+ * cores and memory for that node. Currently, the only available node type is n1-node-96-624 node
+ * type that has 96 vCPUs and 624 GB of memory, available in multiple zones. For more information
+ * readNode types.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -40,7 +42,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   private java.lang.String cpuPlatform;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +77,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The type of the resource. Always compute#nodeType for node types.
+   * [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +143,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -149,7 +151,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NodeType setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -226,7 +228,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Always compute#nodeType for node types.
+   * [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -234,7 +236,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Always compute#nodeType for node types.
+   * [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
    * @param kind kind or {@code null} for none
    */
   public NodeType setKind(java.lang.String kind) {

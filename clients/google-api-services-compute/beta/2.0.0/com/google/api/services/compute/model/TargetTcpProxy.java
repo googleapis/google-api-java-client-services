@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Target TCP Proxy resource. A target TCP proxy is a component of a Proxy Network Load
- * Balancer. The forwarding rule references the target TCP proxy, and the target proxy then
- * references a backend service. For more information, read Proxy Network Load Balancer overview.
+ * Represents a Target TCP Proxy resource.
+ *
+ * A target TCP proxy is a component of a Proxy Network Load Balancer. The forwarding rule
+ * references the target TCP proxy, and the target proxy then references a backend service. For more
+ * information, readProxy Network Load Balancer overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,7 +34,7 @@ package com.google.api.services.compute.model;
 public final class TargetTcpProxy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +55,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#targetTcpProxy for target TCP proxies.
+   * [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target TCP proxies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +63,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -72,11 +74,15 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
-   * set up inbound traffic interception and bind to the IP address and port specified in the
-   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
-   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
-   * inbound requests and handles requests when it receives them. The default is false.
+   * loadBalancingScheme set toINTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +119,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   private java.lang.String service;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -121,7 +127,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public TargetTcpProxy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -164,7 +170,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#targetTcpProxy for target TCP proxies.
+   * [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target TCP proxies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -172,7 +178,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#targetTcpProxy for target TCP proxies.
+   * [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target TCP proxies.
    * @param kind kind or {@code null} for none
    */
   public TargetTcpProxy setKind(java.lang.String kind) {
@@ -182,7 +188,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -194,7 +200,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -207,11 +213,15 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
-   * set up inbound traffic interception and bind to the IP address and port specified in the
-   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
-   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
-   * inbound requests and handles requests when it receives them. The default is false.
+   * loadBalancingScheme set toINTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProxyBind() {
@@ -220,11 +230,15 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
-   * set up inbound traffic interception and bind to the IP address and port specified in the
-   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
-   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
-   * inbound requests and handles requests when it receives them. The default is false.
+   * loadBalancingScheme set toINTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
    * @param proxyBind proxyBind or {@code null} for none
    */
   public TargetTcpProxy setProxyBind(java.lang.Boolean proxyBind) {

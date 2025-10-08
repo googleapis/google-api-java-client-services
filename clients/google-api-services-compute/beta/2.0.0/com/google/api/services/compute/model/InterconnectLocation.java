@@ -17,9 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Interconnect Attachment (VLAN) Location resource. You can use this resource to find
- * location details about an Interconnect attachment (VLAN). For more information about interconnect
- * attachments, read Creating VLAN Attachments.
+ * Represents an Interconnect Attachment (VLAN) Location resource.
+ *
+ * You can use this resource to find location details about an Interconnect attachment (VLAN). For
+ * more information about interconnect attachments, read Creating VLAN Attachments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -50,7 +51,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of features available at this InterconnectLocation, which can take one of
-   * the following values: - IF_MACSEC
+   * the following values:        - IF_MACSEC    - IF_CROSS_SITE_NETWORK
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of link types available at this InterconnectLocation, which can take one of
-   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR -
+   * the following values:        - LINK_TYPE_ETHERNET_10G_LR    - LINK_TYPE_ETHERNET_100G_LR    -
    * LINK_TYPE_ETHERNET_400G_LR4
    * The value may be {@code null}.
    */
@@ -74,15 +75,15 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String city;
 
   /**
-   * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
-   * - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
+   * [Output Only] Continent for this location, which can take one of the following values:        -
+   * AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String continent;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +127,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#interconnectLocation for interconnect
+   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for interconnect
    * locations.
    * The value may be {@code null}.
    */
@@ -174,9 +175,9 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output Only] The status of this InterconnectLocation, which can take one of the following
-   * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
-   * Interconnects. - AVAILABLE: The InterconnectLocation is available for provisioning new
-   * Interconnects.
+   * values:        - CLOSED: The InterconnectLocation is closed and is unavailable for
+   * provisioning new Interconnects.    - AVAILABLE: The InterconnectLocation is available for
+   * provisioning new    Interconnects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +232,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of features available at this InterconnectLocation, which can take one of
-   * the following values: - IF_MACSEC
+   * the following values:        - IF_MACSEC    - IF_CROSS_SITE_NETWORK
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAvailableFeatures() {
@@ -240,7 +241,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of features available at this InterconnectLocation, which can take one of
-   * the following values: - IF_MACSEC
+   * the following values:        - IF_MACSEC    - IF_CROSS_SITE_NETWORK
    * @param availableFeatures availableFeatures or {@code null} for none
    */
   public InterconnectLocation setAvailableFeatures(java.util.List<java.lang.String> availableFeatures) {
@@ -250,7 +251,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of link types available at this InterconnectLocation, which can take one of
-   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR -
+   * the following values:        - LINK_TYPE_ETHERNET_10G_LR    - LINK_TYPE_ETHERNET_100G_LR    -
    * LINK_TYPE_ETHERNET_400G_LR4
    * @return value or {@code null} for none
    */
@@ -260,7 +261,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of link types available at this InterconnectLocation, which can take one of
-   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR -
+   * the following values:        - LINK_TYPE_ETHERNET_10G_LR    - LINK_TYPE_ETHERNET_100G_LR    -
    * LINK_TYPE_ETHERNET_400G_LR4
    * @param availableLinkTypes availableLinkTypes or {@code null} for none
    */
@@ -289,8 +290,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
-   * - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
+   * [Output Only] Continent for this location, which can take one of the following values:        -
+   * AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
    * @return value or {@code null} for none
    */
   public java.lang.String getContinent() {
@@ -298,8 +299,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
-   * - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
+   * [Output Only] Continent for this location, which can take one of the following values:        -
+   * AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
    * @param continent continent or {@code null} for none
    */
   public InterconnectLocation setContinent(java.lang.String continent) {
@@ -308,7 +309,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -316,7 +317,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InterconnectLocation setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -414,7 +415,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#interconnectLocation for interconnect
+   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for interconnect
    * locations.
    * @return value or {@code null} for none
    */
@@ -423,7 +424,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#interconnectLocation for interconnect
+   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for interconnect
    * locations.
    * @param kind kind or {@code null} for none
    */
@@ -527,9 +528,9 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output Only] The status of this InterconnectLocation, which can take one of the following
-   * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
-   * Interconnects. - AVAILABLE: The InterconnectLocation is available for provisioning new
-   * Interconnects.
+   * values:        - CLOSED: The InterconnectLocation is closed and is unavailable for
+   * provisioning new Interconnects.    - AVAILABLE: The InterconnectLocation is available for
+   * provisioning new    Interconnects.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -538,9 +539,9 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output Only] The status of this InterconnectLocation, which can take one of the following
-   * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
-   * Interconnects. - AVAILABLE: The InterconnectLocation is available for provisioning new
-   * Interconnects.
+   * values:        - CLOSED: The InterconnectLocation is closed and is unavailable for
+   * provisioning new Interconnects.    - AVAILABLE: The InterconnectLocation is available for
+   * provisioning new    Interconnects.
    * @param status status or {@code null} for none
    */
   public InterconnectLocation setStatus(java.lang.String status) {

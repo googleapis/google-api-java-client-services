@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * This reservation type allows to pre allocate specific instance configuration.
+ * This reservation type allows to pre allocate specific instance  configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -59,11 +59,12 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
 
   /**
    * Specifies the instance template to create the reservation. If you use this field, you must
-   * exclude the instanceProperties field. This field is optional, and it can be a full or partial
-   * URL. For example, the following are all valid URLs to an instance template: -
-   * https://www.googleapis.com/compute/v1/projects/project
-   * /global/instanceTemplates/instanceTemplate -
-   * projects/project/global/instanceTemplates/instanceTemplate -
+   * exclude the instanceProperties field.
+   *
+   * This field is optional, and it can be a full or partial URL. For example, the following are all
+   * valid URLs to an instance template:                - https://www.googleapis.com/compute/v1/proj
+   * ects/project/global/instanceTemplates/instanceTemplate       -
+   * projects/project/global/instanceTemplates/instanceTemplate       -
    * global/instanceTemplates/instanceTemplate
    * The value may be {@code null}.
    */
@@ -140,11 +141,12 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
 
   /**
    * Specifies the instance template to create the reservation. If you use this field, you must
-   * exclude the instanceProperties field. This field is optional, and it can be a full or partial
-   * URL. For example, the following are all valid URLs to an instance template: -
-   * https://www.googleapis.com/compute/v1/projects/project
-   * /global/instanceTemplates/instanceTemplate -
-   * projects/project/global/instanceTemplates/instanceTemplate -
+   * exclude the instanceProperties field.
+   *
+   * This field is optional, and it can be a full or partial URL. For example, the following are all
+   * valid URLs to an instance template:                - https://www.googleapis.com/compute/v1/proj
+   * ects/project/global/instanceTemplates/instanceTemplate       -
+   * projects/project/global/instanceTemplates/instanceTemplate       -
    * global/instanceTemplates/instanceTemplate
    * @return value or {@code null} for none
    */
@@ -154,11 +156,12 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
 
   /**
    * Specifies the instance template to create the reservation. If you use this field, you must
-   * exclude the instanceProperties field. This field is optional, and it can be a full or partial
-   * URL. For example, the following are all valid URLs to an instance template: -
-   * https://www.googleapis.com/compute/v1/projects/project
-   * /global/instanceTemplates/instanceTemplate -
-   * projects/project/global/instanceTemplates/instanceTemplate -
+   * exclude the instanceProperties field.
+   *
+   * This field is optional, and it can be a full or partial URL. For example, the following are all
+   * valid URLs to an instance template:                - https://www.googleapis.com/compute/v1/proj
+   * ects/project/global/instanceTemplates/instanceTemplate       -
+   * projects/project/global/instanceTemplates/instanceTemplate       -
    * global/instanceTemplates/instanceTemplate
    * @param sourceInstanceTemplate sourceInstanceTemplate or {@code null} for none
    */

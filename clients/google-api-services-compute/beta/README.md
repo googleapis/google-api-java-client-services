@@ -1,6 +1,6 @@
 # Compute Engine API Client Library for Java
 
-Creates and runs virtual machines on Google Cloud Platform. 
+Creates and runs virtual machines on Google Cloud Platform.
 
 This page contains information about getting started with the Compute Engine API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-compute</artifactId>
-      <version>beta-rev20250916-2.0.0</version>
+      <version>beta-rev20250930-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-compute:beta-rev20250916-2.0.0'
+  implementation 'com.google.apis:google-api-services-compute:beta-rev20250930-2.0.0'
 }
 ```
 

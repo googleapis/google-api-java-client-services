@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Informational metadata about Partner attachments from Partners to display to customers. These
+ * Informational metadata about Partner attachments from Partners to display to customers.  These
  * fields are propagated from PARTNER_PROVIDER attachments to their corresponding PARTNER
  * attachments.
  *

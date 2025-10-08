@@ -49,7 +49,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String byoipApiVersion;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +73,10 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicDelegatedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicDelegatedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,6 +98,14 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String ipCidrRange;
 
   /**
+   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from
+   * parent prefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
+
+  /**
    * If true, the prefix will be live migrated.
    * The value may be {@code null}.
    */
@@ -104,7 +113,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.Boolean isLiveMigration;
 
   /**
-   * [Output Only] Type of the resource. Always compute#publicDelegatedPrefix for public delegated
+   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public delegated
    * prefixes.
    * The value may be {@code null}.
    */
@@ -120,7 +129,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -161,10 +170,11 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
 
   /**
    * [Output Only] The status of the public delegated prefix, which can be one of following values:
-   * - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be
-   * created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and
-   * is active. - `ANNOUNCED` The public delegated prefix is announced and ready to use. -
-   * `DELETING` The public delegated prefix is being deprovsioned.
+   * - `INITIALIZING` The public delegated prefix is being initialized and      addresses cannot be
+   * created yet.      - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration
+   * prefix and is active.      - `ANNOUNCED` The public delegated prefix is announced and ready to
+   * use.      - `DELETING` The public delegated prefix is being deprovsioned.      - `ACTIVE` The
+   * public delegated prefix is ready to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,7 +219,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -217,7 +227,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public PublicDelegatedPrefix setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -264,9 +274,10 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicDelegatedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicDelegatedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -277,9 +288,10 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicDelegatedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicDelegatedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -292,9 +304,10 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicDelegatedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicDelegatedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -306,9 +319,10 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicDelegatedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicDelegatedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
    * @see #setFingerprint()
    *
    * <p>
@@ -359,6 +373,25 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
+   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from
+   * parent prefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from
+   * parent prefix.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public PublicDelegatedPrefix setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
+    return this;
+  }
+
+  /**
    * If true, the prefix will be live migrated.
    * @return value or {@code null} for none
    */
@@ -376,7 +409,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#publicDelegatedPrefix for public delegated
+   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public delegated
    * prefixes.
    * @return value or {@code null} for none
    */
@@ -385,7 +418,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#publicDelegatedPrefix for public delegated
+   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public delegated
    * prefixes.
    * @param kind kind or {@code null} for none
    */
@@ -413,7 +446,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -425,7 +458,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -510,10 +543,11 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
 
   /**
    * [Output Only] The status of the public delegated prefix, which can be one of following values:
-   * - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be
-   * created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and
-   * is active. - `ANNOUNCED` The public delegated prefix is announced and ready to use. -
-   * `DELETING` The public delegated prefix is being deprovsioned.
+   * - `INITIALIZING` The public delegated prefix is being initialized and      addresses cannot be
+   * created yet.      - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration
+   * prefix and is active.      - `ANNOUNCED` The public delegated prefix is announced and ready to
+   * use.      - `DELETING` The public delegated prefix is being deprovsioned.      - `ACTIVE` The
+   * public delegated prefix is ready to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -522,10 +556,11 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
 
   /**
    * [Output Only] The status of the public delegated prefix, which can be one of following values:
-   * - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be
-   * created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and
-   * is active. - `ANNOUNCED` The public delegated prefix is announced and ready to use. -
-   * `DELETING` The public delegated prefix is being deprovsioned.
+   * - `INITIALIZING` The public delegated prefix is being initialized and      addresses cannot be
+   * created yet.      - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration
+   * prefix and is active.      - `ANNOUNCED` The public delegated prefix is announced and ready to
+   * use.      - `DELETING` The public delegated prefix is being deprovsioned.      - `ACTIVE` The
+   * public delegated prefix is ready to use.
    * @param status status or {@code null} for none
    */
   public PublicDelegatedPrefix setStatus(java.lang.String status) {

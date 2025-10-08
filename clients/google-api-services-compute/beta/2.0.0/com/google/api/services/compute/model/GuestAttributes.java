@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class GuestAttributes extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Type of the resource. Always compute#guestAttributes for guest attributes entry.
+   * [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest attributes entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   private java.lang.String variableValue;
 
   /**
-   * [Output Only] Type of the resource. Always compute#guestAttributes for guest attributes entry.
+   * [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest attributes entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -81,7 +81,7 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#guestAttributes for guest attributes entry.
+   * [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest attributes entry.
    * @param kind kind or {@code null} for none
    */
   public GuestAttributes setKind(java.lang.String kind) {

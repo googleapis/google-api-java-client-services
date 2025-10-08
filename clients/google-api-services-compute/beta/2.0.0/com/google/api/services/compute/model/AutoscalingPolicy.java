@@ -35,9 +35,11 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    * Specifying an accurate initialization period improves autoscaler decisions. For example, when
    * scaling out, the autoscaler ignores data from VMs that are still initializing because those VMs
    * might not yet represent normal usage of your application. The default initialization period is
-   * 60 seconds. Initialization periods might vary because of numerous factors. We recommend that
-   * you test how long your application takes to initialize. To do this, create a VM and time your
-   * application's startup process.
+   * 60 seconds.
+   *
+   * Initialization periods might vary because of numerous factors. We recommend that you test how
+   * long your application takes to initialize. To do this, create a VM and time your application's
+   * startup process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,10 +86,12 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private java.lang.Integer minNumReplicas;
 
   /**
-   * Defines the operating mode for this policy. The following modes are available: - OFF: Disables
-   * the autoscaler but maintains its configuration. - ONLY_SCALE_OUT: Restricts the autoscaler to
-   * add VM instances only. - ON: Enables all autoscaler activities according to its policy. For
-   * more information, see "Turning off or restricting an autoscaler"
+   * Defines the operating mode for this policy. The following modes are available:        - OFF:
+   * Disables the autoscaler but maintains its    configuration.    - ONLY_SCALE_OUT: Restricts the
+   * autoscaler to add    VM instances only.    - ON: Enables all autoscaler activities according to
+   * its    policy.
+   *
+   * For more information, see  "Turning off or restricting an autoscaler"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,9 +124,11 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    * Specifying an accurate initialization period improves autoscaler decisions. For example, when
    * scaling out, the autoscaler ignores data from VMs that are still initializing because those VMs
    * might not yet represent normal usage of your application. The default initialization period is
-   * 60 seconds. Initialization periods might vary because of numerous factors. We recommend that
-   * you test how long your application takes to initialize. To do this, create a VM and time your
-   * application's startup process.
+   * 60 seconds.
+   *
+   * Initialization periods might vary because of numerous factors. We recommend that you test how
+   * long your application takes to initialize. To do this, create a VM and time your application's
+   * startup process.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCoolDownPeriodSec() {
@@ -135,9 +141,11 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    * Specifying an accurate initialization period improves autoscaler decisions. For example, when
    * scaling out, the autoscaler ignores data from VMs that are still initializing because those VMs
    * might not yet represent normal usage of your application. The default initialization period is
-   * 60 seconds. Initialization periods might vary because of numerous factors. We recommend that
-   * you test how long your application takes to initialize. To do this, create a VM and time your
-   * application's startup process.
+   * 60 seconds.
+   *
+   * Initialization periods might vary because of numerous factors. We recommend that you test how
+   * long your application takes to initialize. To do this, create a VM and time your application's
+   * startup process.
    * @param coolDownPeriodSec coolDownPeriodSec or {@code null} for none
    */
   public AutoscalingPolicy setCoolDownPeriodSec(java.lang.Integer coolDownPeriodSec) {
@@ -241,10 +249,12 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Defines the operating mode for this policy. The following modes are available: - OFF: Disables
-   * the autoscaler but maintains its configuration. - ONLY_SCALE_OUT: Restricts the autoscaler to
-   * add VM instances only. - ON: Enables all autoscaler activities according to its policy. For
-   * more information, see "Turning off or restricting an autoscaler"
+   * Defines the operating mode for this policy. The following modes are available:        - OFF:
+   * Disables the autoscaler but maintains its    configuration.    - ONLY_SCALE_OUT: Restricts the
+   * autoscaler to add    VM instances only.    - ON: Enables all autoscaler activities according to
+   * its    policy.
+   *
+   * For more information, see  "Turning off or restricting an autoscaler"
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -252,10 +262,12 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Defines the operating mode for this policy. The following modes are available: - OFF: Disables
-   * the autoscaler but maintains its configuration. - ONLY_SCALE_OUT: Restricts the autoscaler to
-   * add VM instances only. - ON: Enables all autoscaler activities according to its policy. For
-   * more information, see "Turning off or restricting an autoscaler"
+   * Defines the operating mode for this policy. The following modes are available:        - OFF:
+   * Disables the autoscaler but maintains its    configuration.    - ONLY_SCALE_OUT: Restricts the
+   * autoscaler to add    VM instances only.    - ON: Enables all autoscaler activities according to
+   * its    policy.
+   *
+   * For more information, see  "Turning off or restricting an autoscaler"
    * @param mode mode or {@code null} for none
    */
   public AutoscalingPolicy setMode(java.lang.String mode) {

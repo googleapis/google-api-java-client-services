@@ -30,9 +30,10 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * The default port used if the port number is not specified in the network endpoint. If the
-   * network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this field
-   * must not be specified. [Deprecated] This field is deprecated.
+   * The default port used if the port number is not specified in the network endpoint.
+   *
+   * If the network endpoint type is either GCE_VM_IP,SERVERLESS or PRIVATE_SERVICE_CONNECT, this
+   * field must not be specified. [Deprecated] This field is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,17 +56,18 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   private java.lang.String subnetwork;
 
   /**
-   * [Output Only] The URL of the zone where the network endpoint group is located. [Deprecated]
-   * This field is deprecated.
+   * [Output Only] The URL of thezone where the network endpoint group is located. [Deprecated] This
+   * field is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * The default port used if the port number is not specified in the network endpoint. If the
-   * network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this field
-   * must not be specified. [Deprecated] This field is deprecated.
+   * The default port used if the port number is not specified in the network endpoint.
+   *
+   * If the network endpoint type is either GCE_VM_IP,SERVERLESS or PRIVATE_SERVICE_CONNECT, this
+   * field must not be specified. [Deprecated] This field is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDefaultPort() {
@@ -73,9 +75,10 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * The default port used if the port number is not specified in the network endpoint. If the
-   * network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this field
-   * must not be specified. [Deprecated] This field is deprecated.
+   * The default port used if the port number is not specified in the network endpoint.
+   *
+   * If the network endpoint type is either GCE_VM_IP,SERVERLESS or PRIVATE_SERVICE_CONNECT, this
+   * field must not be specified. [Deprecated] This field is deprecated.
    * @param defaultPort defaultPort or {@code null} for none
    */
   public NetworkEndpointGroupLbNetworkEndpointGroup setDefaultPort(java.lang.Integer defaultPort) {
@@ -122,8 +125,8 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * [Output Only] The URL of the zone where the network endpoint group is located. [Deprecated]
-   * This field is deprecated.
+   * [Output Only] The URL of thezone where the network endpoint group is located. [Deprecated] This
+   * field is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -131,8 +134,8 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * [Output Only] The URL of the zone where the network endpoint group is located. [Deprecated]
-   * This field is deprecated.
+   * [Output Only] The URL of thezone where the network endpoint group is located. [Deprecated] This
+   * field is deprecated.
    * @param zone zone or {@code null} for none
    */
   public NetworkEndpointGroupLbNetworkEndpointGroup setZone(java.lang.String zone) {

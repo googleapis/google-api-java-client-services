@@ -39,7 +39,7 @@ public final class ResourceStatusScheduling extends com.google.api.client.json.G
   private java.lang.Integer availabilityDomain;
 
   /**
-   * Time in future when the instance will be terminated in RFC3339 text format.
+   * Time in future when the instance will be terminated inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class ResourceStatusScheduling extends com.google.api.client.json.G
   }
 
   /**
-   * Time in future when the instance will be terminated in RFC3339 text format.
+   * Time in future when the instance will be terminated inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerminationTimestamp() {
@@ -75,7 +75,7 @@ public final class ResourceStatusScheduling extends com.google.api.client.json.G
   }
 
   /**
-   * Time in future when the instance will be terminated in RFC3339 text format.
+   * Time in future when the instance will be terminated inRFC3339 text format.
    * @param terminationTimestamp terminationTimestamp or {@code null} for none
    */
   public ResourceStatusScheduling setTerminationTimestamp(java.lang.String terminationTimestamp) {

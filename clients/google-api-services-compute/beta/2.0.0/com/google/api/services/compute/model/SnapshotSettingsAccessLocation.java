@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class SnapshotSettingsAccessLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of regions that can restore a regional snapshot from the current region
+   * List of regions that can restore a regional  snapshot from the current region
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class SnapshotSettingsAccessLocation extends com.google.api.client.
   private java.lang.String policy;
 
   /**
-   * List of regions that can restore a regional snapshot from the current region
+   * List of regions that can restore a regional  snapshot from the current region
    * @return value or {@code null} for none
    */
   public java.util.Map<String, SnapshotSettingsAccessLocationAccessLocationPreference> getLocations() {
@@ -52,7 +52,7 @@ public final class SnapshotSettingsAccessLocation extends com.google.api.client.
   }
 
   /**
-   * List of regions that can restore a regional snapshot from the current region
+   * List of regions that can restore a regional  snapshot from the current region
    * @param locations locations or {@code null} for none
    */
   public SnapshotSettingsAccessLocation setLocations(java.util.Map<String, SnapshotSettingsAccessLocationAccessLocationPreference> locations) {

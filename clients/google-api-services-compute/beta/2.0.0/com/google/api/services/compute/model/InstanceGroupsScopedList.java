@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupsScopedList extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The list of instance groups that are contained in this scope.
+   * [Output Only] The list ofinstance groups that are contained in this scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
   private Warning warning;
 
   /**
-   * [Output Only] The list of instance groups that are contained in this scope.
+   * [Output Only] The list ofinstance groups that are contained in this scope.
    * @return value or {@code null} for none
    */
   public java.util.List<InstanceGroup> getInstanceGroups() {
@@ -59,7 +59,7 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] The list of instance groups that are contained in this scope.
+   * [Output Only] The list ofinstance groups that are contained in this scope.
    * @param instanceGroups instanceGroups or {@code null} for none
    */
   public InstanceGroupsScopedList setInstanceGroups(java.util.List<InstanceGroup> instanceGroups) {
@@ -111,8 +111,9 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
     private java.lang.String code;
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -151,8 +152,9 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -160,8 +162,9 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @param data data or {@code null} for none
      */
     public Warning setData(java.util.List<Data> data) {

@@ -17,9 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a health source. A health source resource specifies the source resources and the
- * health aggregation policy applied to the source resources to determine the aggregated health
- * status.
+ * Represents a health source.
+ *
+ * A health source resource specifies the source resources and the health aggregation policy applied
+ * to the source resources to determine the aggregated health status.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,7 +33,7 @@ package com.google.api.services.compute.model;
 public final class HealthSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,7 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#healthSource for health sources.
+   * [Output Only] Type of the resource. Alwayscompute#healthSource for health sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +81,7 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -114,26 +115,25 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the type of the HealthSource. The only allowed value is BACKEND_SERVICE. Must be
-   * specified when the HealthSource is created, and cannot be mutated.
+   * specified when theHealthSource is created, and cannot be mutated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceType;
 
   /**
-   * URLs to the source resources. Must be size 1. Must be a BackendService if the sourceType is
-   * BACKEND_SERVICE. The BackendService must have load balancing scheme INTERNAL or
-   * INTERNAL_MANAGED and must be regional and in the same region as the HealthSource (cross-region
-   * deployment for INTERNAL_MANAGED is not supported). The BackendService may use only IGs, MIGs,
-   * or NEGs of type GCE_VM_IP or GCE_VM_IP_PORT. The BackendService may not use haPolicy. Can be
-   * mutated.
+   * URLs to the source resources. Must be size 1. Must be aBackendService if the sourceType is
+   * BACKEND_SERVICE. TheBackendService must have load balancing schemeINTERNAL or INTERNAL_MANAGED
+   * and must be regional and in the same region as the HealthSource (cross-region deployment for
+   * INTERNAL_MANAGED is not supported). TheBackendService may use only IGs, MIGs, or NEGs of
+   * typeGCE_VM_IP or GCE_VM_IP_PORT. TheBackendService may not use haPolicy. Can be mutated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sources;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -141,7 +141,7 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public HealthSource setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -264,7 +264,7 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#healthSource for health sources.
+   * [Output Only] Type of the resource. Alwayscompute#healthSource for health sources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -272,7 +272,7 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#healthSource for health sources.
+   * [Output Only] Type of the resource. Alwayscompute#healthSource for health sources.
    * @param kind kind or {@code null} for none
    */
   public HealthSource setKind(java.lang.String kind) {
@@ -282,7 +282,7 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -294,7 +294,7 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -362,7 +362,7 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the type of the HealthSource. The only allowed value is BACKEND_SERVICE. Must be
-   * specified when the HealthSource is created, and cannot be mutated.
+   * specified when theHealthSource is created, and cannot be mutated.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceType() {
@@ -371,7 +371,7 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the type of the HealthSource. The only allowed value is BACKEND_SERVICE. Must be
-   * specified when the HealthSource is created, and cannot be mutated.
+   * specified when theHealthSource is created, and cannot be mutated.
    * @param sourceType sourceType or {@code null} for none
    */
   public HealthSource setSourceType(java.lang.String sourceType) {
@@ -380,12 +380,11 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URLs to the source resources. Must be size 1. Must be a BackendService if the sourceType is
-   * BACKEND_SERVICE. The BackendService must have load balancing scheme INTERNAL or
-   * INTERNAL_MANAGED and must be regional and in the same region as the HealthSource (cross-region
-   * deployment for INTERNAL_MANAGED is not supported). The BackendService may use only IGs, MIGs,
-   * or NEGs of type GCE_VM_IP or GCE_VM_IP_PORT. The BackendService may not use haPolicy. Can be
-   * mutated.
+   * URLs to the source resources. Must be size 1. Must be aBackendService if the sourceType is
+   * BACKEND_SERVICE. TheBackendService must have load balancing schemeINTERNAL or INTERNAL_MANAGED
+   * and must be regional and in the same region as the HealthSource (cross-region deployment for
+   * INTERNAL_MANAGED is not supported). TheBackendService may use only IGs, MIGs, or NEGs of
+   * typeGCE_VM_IP or GCE_VM_IP_PORT. TheBackendService may not use haPolicy. Can be mutated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSources() {
@@ -393,12 +392,11 @@ public final class HealthSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URLs to the source resources. Must be size 1. Must be a BackendService if the sourceType is
-   * BACKEND_SERVICE. The BackendService must have load balancing scheme INTERNAL or
-   * INTERNAL_MANAGED and must be regional and in the same region as the HealthSource (cross-region
-   * deployment for INTERNAL_MANAGED is not supported). The BackendService may use only IGs, MIGs,
-   * or NEGs of type GCE_VM_IP or GCE_VM_IP_PORT. The BackendService may not use haPolicy. Can be
-   * mutated.
+   * URLs to the source resources. Must be size 1. Must be aBackendService if the sourceType is
+   * BACKEND_SERVICE. TheBackendService must have load balancing schemeINTERNAL or INTERNAL_MANAGED
+   * and must be regional and in the same region as the HealthSource (cross-region deployment for
+   * INTERNAL_MANAGED is not supported). TheBackendService may use only IGs, MIGs, or NEGs of
+   * typeGCE_VM_IP or GCE_VM_IP_PORT. TheBackendService may not use haPolicy. Can be mutated.
    * @param sources sources or {@code null} for none
    */
   public HealthSource setSources(java.util.List<java.lang.String> sources) {

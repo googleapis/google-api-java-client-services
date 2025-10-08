@@ -54,7 +54,7 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
   private java.lang.Boolean disabled;
 
   /**
-   * [Output only] Type of the resource. Always compute#networkPolicyTrafficClassificationRule for
+   * [Output only] Type of the resource. Alwayscompute#networkPolicyTrafficClassificationRule for
    * network policy traffic classification rules
    * The value may be {@code null}.
    */
@@ -98,7 +98,7 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
    * If targetSecureTag are specified, then the traffic classification rule applies only to
    * instances in the VPC network that have one of those EFFECTIVE secure tags, if all the
    * targetSecureTag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may
-   * not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor
+   * not be set at the same time as targetServiceAccounts. If neithertargetServiceAccounts nor
    * targetSecureTag are specified, the traffic classification rule applies to all instances on the
    * specified network. Maximum number of target label tags allowed is 256.
    * The value may be {@code null}.
@@ -169,7 +169,7 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#networkPolicyTrafficClassificationRule for
+   * [Output only] Type of the resource. Alwayscompute#networkPolicyTrafficClassificationRule for
    * network policy traffic classification rules
    * @return value or {@code null} for none
    */
@@ -178,7 +178,7 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#networkPolicyTrafficClassificationRule for
+   * [Output only] Type of the resource. Alwayscompute#networkPolicyTrafficClassificationRule for
    * network policy traffic classification rules
    * @param kind kind or {@code null} for none
    */
@@ -268,7 +268,7 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
    * If targetSecureTag are specified, then the traffic classification rule applies only to
    * instances in the VPC network that have one of those EFFECTIVE secure tags, if all the
    * targetSecureTag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may
-   * not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor
+   * not be set at the same time as targetServiceAccounts. If neithertargetServiceAccounts nor
    * targetSecureTag are specified, the traffic classification rule applies to all instances on the
    * specified network. Maximum number of target label tags allowed is 256.
    * @return value or {@code null} for none
@@ -282,7 +282,7 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
    * If targetSecureTag are specified, then the traffic classification rule applies only to
    * instances in the VPC network that have one of those EFFECTIVE secure tags, if all the
    * targetSecureTag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may
-   * not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor
+   * not be set at the same time as targetServiceAccounts. If neithertargetServiceAccounts nor
    * targetSecureTag are specified, the traffic classification rule applies to all instances on the
    * specified network. Maximum number of target label tags allowed is 256.
    * @param targetSecureTags targetSecureTags or {@code null} for none

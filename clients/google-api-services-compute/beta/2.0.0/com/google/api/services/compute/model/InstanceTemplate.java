@@ -17,14 +17,21 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Instance Template resource. Google Compute Engine has two Instance Template
- * resources: * [Global](/compute/docs/reference/rest/beta/instanceTemplates) *
- * [Regional](/compute/docs/reference/rest/beta/regionInstanceTemplates) You can reuse a global
- * instance template in different regions whereas you can use a regional instance template in a
- * specified region only. If you want to reduce cross-region dependency or achieve data residency,
- * use a regional instance template. To create VMs, managed instance groups, and reservations, you
- * can use either global or regional instance templates. For more information, read Instance
- * Templates.
+ * Represents an Instance Template resource.
+ *
+ * Google Compute Engine has two Instance Template resources:
+ *
+ * * [Global](/compute/docs/reference/rest/beta/instanceTemplates) *
+ * [Regional](/compute/docs/reference/rest/beta/regionInstanceTemplates)
+ *
+ * You can reuse a global instance template in different regions whereas you can use a regional
+ * instance template in a specified region only. If you want to reduce cross-region dependency or
+ * achieve data residency, use a regional instance template.
+ *
+ * To create VMs, managed instance groups, and reservations, you can use either global or regional
+ * instance templates.
+ *
+ * For more information, readInstance Templates.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -37,7 +44,7 @@ package com.google.api.services.compute.model;
 public final class InstanceTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The creation timestamp for this instance template in RFC3339 text format.
+   * [Output Only] The creation timestamp for this instance template inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +66,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceTemplate for instance
+   * [Output Only] The resource type, which is alwayscompute#instanceTemplate for instance
    * templates.
    * The value may be {@code null}.
    */
@@ -68,7 +75,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -101,8 +108,8 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * The source instance used to create the template. You can provide this as a partial or full URL
-   * to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
+   * to the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance     -
    * projects/project/zones/zone/instances/instance
    * The value may be {@code null}.
    */
@@ -117,7 +124,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   private SourceInstanceParams sourceInstanceParams;
 
   /**
-   * [Output Only] The creation timestamp for this instance template in RFC3339 text format.
+   * [Output Only] The creation timestamp for this instance template inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -125,7 +132,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The creation timestamp for this instance template in RFC3339 text format.
+   * [Output Only] The creation timestamp for this instance template inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InstanceTemplate setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -170,7 +177,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceTemplate for instance
+   * [Output Only] The resource type, which is alwayscompute#instanceTemplate for instance
    * templates.
    * @return value or {@code null} for none
    */
@@ -179,7 +186,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceTemplate for instance
+   * [Output Only] The resource type, which is alwayscompute#instanceTemplate for instance
    * templates.
    * @param kind kind or {@code null} for none
    */
@@ -190,7 +197,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -202,7 +209,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -268,8 +275,8 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * The source instance used to create the template. You can provide this as a partial or full URL
-   * to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
+   * to the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance     -
    * projects/project/zones/zone/instances/instance
    * @return value or {@code null} for none
    */
@@ -279,8 +286,8 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * The source instance used to create the template. You can provide this as a partial or full URL
-   * to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
+   * to the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance     -
    * projects/project/zones/zone/instances/instance
    * @param sourceInstance sourceInstance or {@code null} for none
    */

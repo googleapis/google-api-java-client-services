@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class NetworkProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#networkProfile for network profiles.
+   * [Output Only] Type of the resource. Alwayscompute#networkProfile for network profiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -108,7 +108,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NetworkProfile setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -168,7 +168,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#networkProfile for network profiles.
+   * [Output Only] Type of the resource. Alwayscompute#networkProfile for network profiles.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -176,7 +176,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#networkProfile for network profiles.
+   * [Output Only] Type of the resource. Alwayscompute#networkProfile for network profiles.
    * @param kind kind or {@code null} for none
    */
   public NetworkProfile setKind(java.lang.String kind) {

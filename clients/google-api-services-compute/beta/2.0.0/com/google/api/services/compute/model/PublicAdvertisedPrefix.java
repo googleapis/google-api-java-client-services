@@ -39,7 +39,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String byoipApiVersion;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,9 +62,10 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicAdvertisedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicAdvertisedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicAdvertisedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicAdvertisedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicAdvertisedPrefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,14 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String ipCidrRange;
 
   /**
-   * [Output Only] Type of the resource. Always compute#publicAdvertisedPrefix for public advertised
+   * The internet access type for IPv6 Public Advertised Prefixes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
+
+  /**
+   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for public advertised
    * prefixes.
    * The value may be {@code null}.
    */
@@ -95,7 +103,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -106,10 +114,11 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
 
   /**
    * Specifies how child public delegated prefix will be scoped. It could be one of following
-   * values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take
-   * a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will
-   * take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1
-   * legacy prefix. This is output only value and no longer supported in BYOIP V2.
+   * values:              - `REGIONAL`: The public delegated prefix is regional only. The
+   * provisioning will take a few minutes.      - `GLOBAL`: The public delegated prefix is global
+   * only. The      provisioning will take ~4 weeks.      - `GLOBAL_AND_REGIONAL` [output only]: The
+   * public delegated prefixes is       BYOIP V1 legacy prefix. This is output only value and no
+   * longer       supported in BYOIP V2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,11 +147,11 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String sharedSecret;
 
   /**
-   * The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI
-   * validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse
-   * DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. -
-   * `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. -
-   * `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. -
+   * The status of the public advertised prefix. Possible values include:              - `INITIAL`:
+   * RPKI validation is complete.      - `PTR_CONFIGURED`: User has configured the PTR.      -
+   * `VALIDATED`: Reverse DNS lookup is successful.      - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS
+   * lookup failed.      - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being      configured.
+   * - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured.      -
    * `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
    * The value may be {@code null}.
    */
@@ -167,7 +176,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -175,7 +184,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public PublicAdvertisedPrefix setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -220,9 +229,10 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicAdvertisedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicAdvertisedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicAdvertisedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicAdvertisedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicAdvertisedPrefix.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -233,9 +243,10 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicAdvertisedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicAdvertisedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicAdvertisedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicAdvertisedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicAdvertisedPrefix.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -248,9 +259,10 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicAdvertisedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicAdvertisedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicAdvertisedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicAdvertisedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicAdvertisedPrefix.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -262,9 +274,10 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicAdvertisedPrefix.
-   * An up-to-date fingerprint must be provided in order to update the PublicAdvertisedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a PublicAdvertisedPrefix.
+   * An up-to-date fingerprint must be provided in order to update thePublicAdvertisedPrefix,
+   * otherwise the request will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a PublicAdvertisedPrefix.
    * @see #setFingerprint()
    *
    * <p>
@@ -315,7 +328,24 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#publicAdvertisedPrefix for public advertised
+   * The internet access type for IPv6 Public Advertised Prefixes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * The internet access type for IPv6 Public Advertised Prefixes.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public PublicAdvertisedPrefix setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
+    return this;
+  }
+
+  /**
+   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for public advertised
    * prefixes.
    * @return value or {@code null} for none
    */
@@ -324,7 +354,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#publicAdvertisedPrefix for public advertised
+   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for public advertised
    * prefixes.
    * @param kind kind or {@code null} for none
    */
@@ -335,7 +365,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -347,7 +377,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -360,10 +390,11 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
 
   /**
    * Specifies how child public delegated prefix will be scoped. It could be one of following
-   * values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take
-   * a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will
-   * take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1
-   * legacy prefix. This is output only value and no longer supported in BYOIP V2.
+   * values:              - `REGIONAL`: The public delegated prefix is regional only. The
+   * provisioning will take a few minutes.      - `GLOBAL`: The public delegated prefix is global
+   * only. The      provisioning will take ~4 weeks.      - `GLOBAL_AND_REGIONAL` [output only]: The
+   * public delegated prefixes is       BYOIP V1 legacy prefix. This is output only value and no
+   * longer       supported in BYOIP V2.
    * @return value or {@code null} for none
    */
   public java.lang.String getPdpScope() {
@@ -372,10 +403,11 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
 
   /**
    * Specifies how child public delegated prefix will be scoped. It could be one of following
-   * values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take
-   * a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will
-   * take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1
-   * legacy prefix. This is output only value and no longer supported in BYOIP V2.
+   * values:              - `REGIONAL`: The public delegated prefix is regional only. The
+   * provisioning will take a few minutes.      - `GLOBAL`: The public delegated prefix is global
+   * only. The      provisioning will take ~4 weeks.      - `GLOBAL_AND_REGIONAL` [output only]: The
+   * public delegated prefixes is       BYOIP V1 legacy prefix. This is output only value and no
+   * longer       supported in BYOIP V2.
    * @param pdpScope pdpScope or {@code null} for none
    */
   public PublicAdvertisedPrefix setPdpScope(java.lang.String pdpScope) {
@@ -437,11 +469,11 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI
-   * validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse
-   * DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. -
-   * `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. -
-   * `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. -
+   * The status of the public advertised prefix. Possible values include:              - `INITIAL`:
+   * RPKI validation is complete.      - `PTR_CONFIGURED`: User has configured the PTR.      -
+   * `VALIDATED`: Reverse DNS lookup is successful.      - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS
+   * lookup failed.      - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being      configured.
+   * - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured.      -
    * `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
    * @return value or {@code null} for none
    */
@@ -450,11 +482,11 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI
-   * validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse
-   * DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. -
-   * `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. -
-   * `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. -
+   * The status of the public advertised prefix. Possible values include:              - `INITIAL`:
+   * RPKI validation is complete.      - `PTR_CONFIGURED`: User has configured the PTR.      -
+   * `VALIDATED`: Reverse DNS lookup is successful.      - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS
+   * lookup failed.      - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being      configured.
+   * - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured.      -
    * `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
    * @param status status or {@code null} for none
    */

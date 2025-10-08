@@ -32,7 +32,7 @@ public final class InstanceGroupManagerParams extends com.google.api.client.json
   /**
    * Resource manager tags to bind to the managed instance group. The tags are key-value pairs. Keys
    * must be in the format tagKeys/123 and values in the format tagValues/456. For more information,
-   * see Manage tags for resources.
+   * seeManage tags for resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class InstanceGroupManagerParams extends com.google.api.client.json
   /**
    * Resource manager tags to bind to the managed instance group. The tags are key-value pairs. Keys
    * must be in the format tagKeys/123 and values in the format tagValues/456. For more information,
-   * see Manage tags for resources.
+   * seeManage tags for resources.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getResourceManagerTags() {
@@ -51,7 +51,7 @@ public final class InstanceGroupManagerParams extends com.google.api.client.json
   /**
    * Resource manager tags to bind to the managed instance group. The tags are key-value pairs. Keys
    * must be in the format tagKeys/123 and values in the format tagValues/456. For more information,
-   * see Manage tags for resources.
+   * seeManage tags for resources.
    * @param resourceManagerTags resourceManagerTags or {@code null} for none
    */
   public InstanceGroupManagerParams setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {

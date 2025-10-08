@@ -56,6 +56,13 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private ResourceStatusPhysicalHostTopology physicalHostTopology;
 
   /**
+   * [Output Only] Reservation information that the instance is consuming from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatusReservationConsumptionInfo reservationConsumptionInfo;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,6 +137,23 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setPhysicalHostTopology(ResourceStatusPhysicalHostTopology physicalHostTopology) {
     this.physicalHostTopology = physicalHostTopology;
+    return this;
+  }
+
+  /**
+   * [Output Only] Reservation information that the instance is consuming from.
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusReservationConsumptionInfo getReservationConsumptionInfo() {
+    return reservationConsumptionInfo;
+  }
+
+  /**
+   * [Output Only] Reservation information that the instance is consuming from.
+   * @param reservationConsumptionInfo reservationConsumptionInfo or {@code null} for none
+   */
+  public ResourceStatus setReservationConsumptionInfo(ResourceStatusReservationConsumptionInfo reservationConsumptionInfo) {
+    this.reservationConsumptionInfo = reservationConsumptionInfo;
     return this;
   }
 

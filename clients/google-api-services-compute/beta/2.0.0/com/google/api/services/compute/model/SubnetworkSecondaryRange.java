@@ -33,7 +33,7 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
    * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
-   * in the Valid ranges list.
+   * in theValid ranges list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
 
   /**
    * The name associated with this subnetwork secondary range, used when adding an alias IP range to
-   * a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be
+   * a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name must be
    * unique within the subnetwork.
    * The value may be {@code null}.
    */
@@ -59,7 +59,7 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
    * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
-   * in the Valid ranges list.
+   * in theValid ranges list.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -70,7 +70,7 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
    * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
-   * in the Valid ranges list.
+   * in theValid ranges list.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public SubnetworkSecondaryRange setIpCidrRange(java.lang.String ipCidrRange) {
@@ -80,7 +80,7 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
 
   /**
    * The name associated with this subnetwork secondary range, used when adding an alias IP range to
-   * a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be
+   * a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name must be
    * unique within the subnetwork.
    * @return value or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
 
   /**
    * The name associated with this subnetwork secondary range, used when adding an alias IP range to
-   * a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be
+   * a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name must be
    * unique within the subnetwork.
    * @param rangeName rangeName or {@code null} for none
    */

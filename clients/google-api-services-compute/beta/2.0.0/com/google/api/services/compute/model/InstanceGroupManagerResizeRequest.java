@@ -41,7 +41,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.Integer count;
 
   /**
-   * [Output Only] The creation timestamp for this resize request in RFC3339 text format.
+   * [Output Only] The creation timestamp for this resize request inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.util.List<PerInstanceConfig> instances;
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceGroupManagerResizeRequest for
+   * [Output Only] The resource type, which is alwayscompute#instanceGroupManagerResizeRequest for
    * resize requests.
    * The value may be {@code null}.
    */
@@ -79,15 +79,14 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String kind;
 
   /**
-   * The name of this resize request. The name must be 1-63 characters long, and comply with
-   * RFC1035.
+   * The name of this resize request. The name must be 1-63 characters long, and comply withRFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Output Only] The URL of a region where the resize request is located. Populated only for
+   * [Output Only] The URL of aregion where the resize request is located. Populated only for
    * regional resize requests.
    * The value may be {@code null}.
    */
@@ -139,7 +138,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private InstanceGroupManagerResizeRequestStatus status;
 
   /**
-   * [Output Only] The URL of a zone where the resize request is located. Populated only for zonal
+   * [Output Only] The URL of azone where the resize request is located. Populated only for zonal
    * resize requests.
    * The value may be {@code null}.
    */
@@ -166,7 +165,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The creation timestamp for this resize request in RFC3339 text format.
+   * [Output Only] The creation timestamp for this resize request inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -174,7 +173,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The creation timestamp for this resize request in RFC3339 text format.
+   * [Output Only] The creation timestamp for this resize request inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -238,7 +237,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceGroupManagerResizeRequest for
+   * [Output Only] The resource type, which is alwayscompute#instanceGroupManagerResizeRequest for
    * resize requests.
    * @return value or {@code null} for none
    */
@@ -247,7 +246,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceGroupManagerResizeRequest for
+   * [Output Only] The resource type, which is alwayscompute#instanceGroupManagerResizeRequest for
    * resize requests.
    * @param kind kind or {@code null} for none
    */
@@ -257,8 +256,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * The name of this resize request. The name must be 1-63 characters long, and comply with
-   * RFC1035.
+   * The name of this resize request. The name must be 1-63 characters long, and comply withRFC1035.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -266,8 +264,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * The name of this resize request. The name must be 1-63 characters long, and comply with
-   * RFC1035.
+   * The name of this resize request. The name must be 1-63 characters long, and comply withRFC1035.
    * @param name name or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setName(java.lang.String name) {
@@ -276,7 +273,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of a region where the resize request is located. Populated only for
+   * [Output Only] The URL of aregion where the resize request is located. Populated only for
    * regional resize requests.
    * @return value or {@code null} for none
    */
@@ -285,7 +282,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of a region where the resize request is located. Populated only for
+   * [Output Only] The URL of aregion where the resize request is located. Populated only for
    * regional resize requests.
    * @param region region or {@code null} for none
    */
@@ -401,7 +398,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of a zone where the resize request is located. Populated only for zonal
+   * [Output Only] The URL of azone where the resize request is located. Populated only for zonal
    * resize requests.
    * @return value or {@code null} for none
    */
@@ -410,7 +407,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of a zone where the resize request is located. Populated only for zonal
+   * [Output Only] The URL of azone where the resize request is located. Populated only for zonal
    * resize requests.
    * @param zone zone or {@code null} for none
    */

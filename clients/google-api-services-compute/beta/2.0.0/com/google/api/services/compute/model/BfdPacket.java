@@ -30,22 +30,21 @@ package com.google.api.services.compute.model;
 public final class BfdPacket extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Authentication Present bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Authentication Present bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean authenticationPresent;
 
   /**
-   * The Control Plane Independent bit of the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Control Plane Independent bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean controlPlaneIndependent;
 
   /**
-   * The demand bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The demand bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,73 +53,72 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   /**
    * The diagnostic code specifies the local system's reason for the last change in session state.
    * This allows remote systems to determine the reason that the previous session failed, for
-   * example. These diagnostic codes are specified in section 4.1 of RFC5880
+   * example. These diagnostic codes are specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diagnostic;
 
   /**
-   * The Final bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Final bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("final")
   private java.lang.Boolean final__;
 
   /**
-   * The length of the BFD Control packet in bytes. This is specified in section 4.1 of RFC5880
+   * The length of the BFD Control packet in bytes. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long length;
 
   /**
-   * The Required Min Echo RX Interval value in the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Required Min Echo RX Interval value in the BFD packet. This is specified in section 4.1
+   * ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long minEchoRxIntervalMs;
 
   /**
-   * The Required Min RX Interval value in the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Required Min RX Interval value in the BFD packet. This is specified in section 4.1
+   * ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long minRxIntervalMs;
 
   /**
-   * The Desired Min TX Interval value in the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Desired Min TX Interval value in the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long minTxIntervalMs;
 
   /**
-   * The detection time multiplier of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The detection time multiplier of the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long multiplier;
 
   /**
-   * The multipoint bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The multipoint bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean multipoint;
 
   /**
-   * The My Discriminator value in the BFD packet. This is specified in section 4.1 of RFC5880
+   * The My Discriminator value in the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long myDiscriminator;
 
   /**
-   * The Poll bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Poll bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,28 +126,28 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
 
   /**
    * The current BFD session state as seen by the transmitting system. These states are specified in
-   * section 4.1 of RFC5880
+   * section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The version number of the BFD protocol, as specified in section 4.1 of RFC5880.
+   * The version number of the BFD protocol, as specified in section 4.1 ofRFC5880.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long version;
 
   /**
-   * The Your Discriminator value in the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Your Discriminator value in the BFD packet. This is specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long yourDiscriminator;
 
   /**
-   * The Authentication Present bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Authentication Present bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAuthenticationPresent() {
@@ -157,7 +155,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Authentication Present bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Authentication Present bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param authenticationPresent authenticationPresent or {@code null} for none
    */
   public BfdPacket setAuthenticationPresent(java.lang.Boolean authenticationPresent) {
@@ -166,8 +164,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Control Plane Independent bit of the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Control Plane Independent bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getControlPlaneIndependent() {
@@ -175,8 +172,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Control Plane Independent bit of the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Control Plane Independent bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param controlPlaneIndependent controlPlaneIndependent or {@code null} for none
    */
   public BfdPacket setControlPlaneIndependent(java.lang.Boolean controlPlaneIndependent) {
@@ -185,7 +181,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The demand bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The demand bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDemand() {
@@ -193,7 +189,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The demand bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The demand bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param demand demand or {@code null} for none
    */
   public BfdPacket setDemand(java.lang.Boolean demand) {
@@ -204,7 +200,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   /**
    * The diagnostic code specifies the local system's reason for the last change in session state.
    * This allows remote systems to determine the reason that the previous session failed, for
-   * example. These diagnostic codes are specified in section 4.1 of RFC5880
+   * example. These diagnostic codes are specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.String getDiagnostic() {
@@ -214,7 +210,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   /**
    * The diagnostic code specifies the local system's reason for the last change in session state.
    * This allows remote systems to determine the reason that the previous session failed, for
-   * example. These diagnostic codes are specified in section 4.1 of RFC5880
+   * example. These diagnostic codes are specified in section 4.1 ofRFC5880
    * @param diagnostic diagnostic or {@code null} for none
    */
   public BfdPacket setDiagnostic(java.lang.String diagnostic) {
@@ -223,7 +219,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Final bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Final bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFinal() {
@@ -231,7 +227,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Final bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Final bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param final__ final__ or {@code null} for none
    */
   public BfdPacket setFinal(java.lang.Boolean final__) {
@@ -240,7 +236,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The length of the BFD Control packet in bytes. This is specified in section 4.1 of RFC5880
+   * The length of the BFD Control packet in bytes. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Long getLength() {
@@ -248,7 +244,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The length of the BFD Control packet in bytes. This is specified in section 4.1 of RFC5880
+   * The length of the BFD Control packet in bytes. This is specified in section 4.1 ofRFC5880
    * @param length length or {@code null} for none
    */
   public BfdPacket setLength(java.lang.Long length) {
@@ -257,8 +253,8 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Required Min Echo RX Interval value in the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Required Min Echo RX Interval value in the BFD packet. This is specified in section 4.1
+   * ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinEchoRxIntervalMs() {
@@ -266,8 +262,8 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Required Min Echo RX Interval value in the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Required Min Echo RX Interval value in the BFD packet. This is specified in section 4.1
+   * ofRFC5880
    * @param minEchoRxIntervalMs minEchoRxIntervalMs or {@code null} for none
    */
   public BfdPacket setMinEchoRxIntervalMs(java.lang.Long minEchoRxIntervalMs) {
@@ -276,8 +272,8 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Required Min RX Interval value in the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Required Min RX Interval value in the BFD packet. This is specified in section 4.1
+   * ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinRxIntervalMs() {
@@ -285,8 +281,8 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Required Min RX Interval value in the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Required Min RX Interval value in the BFD packet. This is specified in section 4.1
+   * ofRFC5880
    * @param minRxIntervalMs minRxIntervalMs or {@code null} for none
    */
   public BfdPacket setMinRxIntervalMs(java.lang.Long minRxIntervalMs) {
@@ -295,8 +291,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Desired Min TX Interval value in the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Desired Min TX Interval value in the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinTxIntervalMs() {
@@ -304,8 +299,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Desired Min TX Interval value in the BFD packet. This is specified in section 4.1 of
-   * RFC5880
+   * The Desired Min TX Interval value in the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param minTxIntervalMs minTxIntervalMs or {@code null} for none
    */
   public BfdPacket setMinTxIntervalMs(java.lang.Long minTxIntervalMs) {
@@ -314,7 +308,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The detection time multiplier of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The detection time multiplier of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Long getMultiplier() {
@@ -322,7 +316,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The detection time multiplier of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The detection time multiplier of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param multiplier multiplier or {@code null} for none
    */
   public BfdPacket setMultiplier(java.lang.Long multiplier) {
@@ -331,7 +325,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The multipoint bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The multipoint bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMultipoint() {
@@ -339,7 +333,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The multipoint bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The multipoint bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param multipoint multipoint or {@code null} for none
    */
   public BfdPacket setMultipoint(java.lang.Boolean multipoint) {
@@ -348,7 +342,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The My Discriminator value in the BFD packet. This is specified in section 4.1 of RFC5880
+   * The My Discriminator value in the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Long getMyDiscriminator() {
@@ -356,7 +350,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The My Discriminator value in the BFD packet. This is specified in section 4.1 of RFC5880
+   * The My Discriminator value in the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param myDiscriminator myDiscriminator or {@code null} for none
    */
   public BfdPacket setMyDiscriminator(java.lang.Long myDiscriminator) {
@@ -365,7 +359,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Poll bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Poll bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPoll() {
@@ -373,7 +367,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Poll bit of the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Poll bit of the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param poll poll or {@code null} for none
    */
   public BfdPacket setPoll(java.lang.Boolean poll) {
@@ -383,7 +377,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
 
   /**
    * The current BFD session state as seen by the transmitting system. These states are specified in
-   * section 4.1 of RFC5880
+   * section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -392,7 +386,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
 
   /**
    * The current BFD session state as seen by the transmitting system. These states are specified in
-   * section 4.1 of RFC5880
+   * section 4.1 ofRFC5880
    * @param state state or {@code null} for none
    */
   public BfdPacket setState(java.lang.String state) {
@@ -401,7 +395,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version number of the BFD protocol, as specified in section 4.1 of RFC5880.
+   * The version number of the BFD protocol, as specified in section 4.1 ofRFC5880.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVersion() {
@@ -409,7 +403,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version number of the BFD protocol, as specified in section 4.1 of RFC5880.
+   * The version number of the BFD protocol, as specified in section 4.1 ofRFC5880.
    * @param version version or {@code null} for none
    */
   public BfdPacket setVersion(java.lang.Long version) {
@@ -418,7 +412,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Your Discriminator value in the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Your Discriminator value in the BFD packet. This is specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.Long getYourDiscriminator() {
@@ -426,7 +420,7 @@ public final class BfdPacket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Your Discriminator value in the BFD packet. This is specified in section 4.1 of RFC5880
+   * The Your Discriminator value in the BFD packet. This is specified in section 4.1 ofRFC5880
    * @param yourDiscriminator yourDiscriminator or {@code null} for none
    */
   public BfdPacket setYourDiscriminator(java.lang.Long yourDiscriminator) {

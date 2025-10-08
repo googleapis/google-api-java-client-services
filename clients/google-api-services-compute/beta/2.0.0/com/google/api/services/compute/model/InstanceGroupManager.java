@@ -17,10 +17,14 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Managed Instance Group resource. An instance group is a collection of VM instances
- * that you can manage as a single entity. For more information, read Instance groups. For zonal
- * Managed Instance Group, use the instanceGroupManagers resource. For regional Managed Instance
- * Group, use the regionInstanceGroupManagers resource.
+ * Represents a Managed Instance Group resource.
+ *
+ * An instance group is a collection of VM instances that you can manage as a single entity. For
+ * more information, readInstance groups.
+ *
+ * For zonal Managed Instance Group, use the instanceGroupManagers resource.
+ *
+ * For regional Managed Instance Group, use theregionInstanceGroupManagers resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -48,12 +52,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The base instance name is a prefix that you want to attach to the names of all VMs in a MIG.
-   * The maximum character length is 58 and the name must comply with RFC1035 format. When a VM is
-   * created in the group, the MIG appends a hyphen and a random four-character string to the base
-   * instance name. If you want the MIG to assign sequential numbers instead of a random string,
-   * then end the base instance name with a hyphen followed by one or more hash symbols. The hash
-   * symbols indicate the number of digits. For example, a base instance name of "vm-###" results in
-   * "vm-001" as a VM name. @pattern
+   * The maximum character length is 58 and the name must comply with RFC1035 format.
+   *
+   * When a VM is created in the group, the MIG appends a hyphen and a random four-character string
+   * to the base instance name. If you want the MIG to assign sequential numbers instead of a random
+   * string, then end the base instance name with a hyphen followed by one or more hash symbols. The
+   * hash symbols indicate the number of digits. For example, a base instance name of "vm-###"
+   * results in "vm-001" as a VM name. @pattern
    * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,51}-#{1,10}(\\[[0-9]{1,10}\\])?))
    * The value may be {@code null}.
    */
@@ -61,7 +66,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String baseInstanceName;
 
   /**
-   * [Output Only] The creation timestamp for this managed instance group in RFC3339 text format.
+   * [Output Only] The creation timestamp for this managed instance group inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +96,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private DistributionPolicy distributionPolicy;
 
   /**
-   * The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The
+   * The action to perform in case of zone failure. Only one value is supported,NO_FAILOVER. The
    * default is NO_FAILOVER.
    * The value may be {@code null}.
    */
@@ -101,9 +106,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
-   * InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,15 +146,15 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * The URL of the instance template that is specified for this managed instance group. The group
    * uses this template to create all new instances in the managed instance group. The templates for
-   * existing instances in the group do not change unless you run recreateInstances, run
-   * applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
+   * existing instances in the group do not change unless you run recreateInstances,
+   * runapplyUpdatesToInstances, or set the group'supdatePolicy.type to PROACTIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceTemplate;
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceGroupManager for managed
+   * [Output Only] The resource type, which is alwayscompute#instanceGroupManager for managed
    * instance groups.
    * The value may be {@code null}.
    */
@@ -171,8 +176,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String multiMig;
 
   /**
-   * The name of the managed instance group. The name must be 1-63 characters long, and comply with
-   * RFC1035.
+   * The name of the managed instance group. The name must be 1-63 characters long, and comply
+   * withRFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +200,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private InstanceGroupManagerParams params;
 
   /**
-   * [Output Only] The URL of the region where the managed instance group resides (for regional
+   * [Output Only] The URL of theregion where the managed instance group resides (for regional
    * resources).
    * The value may be {@code null}.
    */
@@ -262,7 +267,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private InstanceGroupManagerStatus status;
 
   /**
-   * The URLs for all TargetPool resources to which instances in the instanceGroup field are added.
+   * The URLs for all TargetPool resources to which instances in theinstanceGroup field are added.
    * The target pools automatically apply to all of the instances in the managed instance group.
    * The value may be {@code null}.
    */
@@ -287,8 +292,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The target number of stopped instances for this managed instance group. This number changes
-   * when you: - Stop instance using the stopInstances method or start instances using the
-   * startInstances method. - Manually change the targetStoppedSize using the update method.
+   * when you:         - Stop instance using the stopInstances    method or start instances using
+   * the startInstances    method.    - Manually change the targetStoppedSize using the update
+   * method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,8 +302,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The target number of suspended instances for this managed instance group. This number changes
-   * when you: - Suspend instance using the suspendInstances method or resume instances using the
-   * resumeInstances method. - Manually change the targetSuspendedSize using the update method.
+   * when you:         - Suspend instance using the suspendInstances    method or resume instances
+   * using the resumeInstances    method.    - Manually change the targetSuspendedSize using the
+   * update    method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -311,19 +318,20 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private InstanceGroupManagerUpdatePolicy updatePolicy;
 
   /**
-   * Specifies the instance templates used by this managed instance group to create instances. Each
-   * version is defined by an instanceTemplate and a name. Every version can appear at most once per
-   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
-   * relationships between these fields. Exactly one version must leave the targetSize field unset.
-   * That version will be applied to all remaining instances. For more information, read about
-   * canary updates.
+   * Specifies the instance templates used by this managed instance group to create instances.
+   *
+   * Each version is defined by an instanceTemplate and aname. Every version can appear at most once
+   * per instance group. This field overrides the top-level instanceTemplate field. Read more about
+   * therelationships between these fields. Exactly one version must leave thetargetSize field
+   * unset. That version will be applied to all remaining instances. For more information, read
+   * aboutcanary updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<InstanceGroupManagerVersion> versions;
 
   /**
-   * [Output Only] The URL of a zone where the managed instance group is located (for zonal
+   * [Output Only] The URL of azone where the managed instance group is located (for zonal
    * resources).
    * The value may be {@code null}.
    */
@@ -366,12 +374,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The base instance name is a prefix that you want to attach to the names of all VMs in a MIG.
-   * The maximum character length is 58 and the name must comply with RFC1035 format. When a VM is
-   * created in the group, the MIG appends a hyphen and a random four-character string to the base
-   * instance name. If you want the MIG to assign sequential numbers instead of a random string,
-   * then end the base instance name with a hyphen followed by one or more hash symbols. The hash
-   * symbols indicate the number of digits. For example, a base instance name of "vm-###" results in
-   * "vm-001" as a VM name. @pattern
+   * The maximum character length is 58 and the name must comply with RFC1035 format.
+   *
+   * When a VM is created in the group, the MIG appends a hyphen and a random four-character string
+   * to the base instance name. If you want the MIG to assign sequential numbers instead of a random
+   * string, then end the base instance name with a hyphen followed by one or more hash symbols. The
+   * hash symbols indicate the number of digits. For example, a base instance name of "vm-###"
+   * results in "vm-001" as a VM name. @pattern
    * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,51}-#{1,10}(\\[[0-9]{1,10}\\])?))
    * @return value or {@code null} for none
    */
@@ -381,12 +390,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The base instance name is a prefix that you want to attach to the names of all VMs in a MIG.
-   * The maximum character length is 58 and the name must comply with RFC1035 format. When a VM is
-   * created in the group, the MIG appends a hyphen and a random four-character string to the base
-   * instance name. If you want the MIG to assign sequential numbers instead of a random string,
-   * then end the base instance name with a hyphen followed by one or more hash symbols. The hash
-   * symbols indicate the number of digits. For example, a base instance name of "vm-###" results in
-   * "vm-001" as a VM name. @pattern
+   * The maximum character length is 58 and the name must comply with RFC1035 format.
+   *
+   * When a VM is created in the group, the MIG appends a hyphen and a random four-character string
+   * to the base instance name. If you want the MIG to assign sequential numbers instead of a random
+   * string, then end the base instance name with a hyphen followed by one or more hash symbols. The
+   * hash symbols indicate the number of digits. For example, a base instance name of "vm-###"
+   * results in "vm-001" as a VM name. @pattern
    * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,51}-#{1,10}(\\[[0-9]{1,10}\\])?))
    * @param baseInstanceName baseInstanceName or {@code null} for none
    */
@@ -396,7 +406,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The creation timestamp for this managed instance group in RFC3339 text format.
+   * [Output Only] The creation timestamp for this managed instance group inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -404,7 +414,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The creation timestamp for this managed instance group in RFC3339 text format.
+   * [Output Only] The creation timestamp for this managed instance group inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InstanceGroupManager setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -468,7 +478,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The
+   * The action to perform in case of zone failure. Only one value is supported,NO_FAILOVER. The
    * default is NO_FAILOVER.
    * @return value or {@code null} for none
    */
@@ -477,7 +487,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The
+   * The action to perform in case of zone failure. Only one value is supported,NO_FAILOVER. The
    * default is NO_FAILOVER.
    * @param failoverAction failoverAction or {@code null} for none
    */
@@ -489,9 +499,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
-   * InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -502,9 +512,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
-   * InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -517,9 +527,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
-   * InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -531,9 +541,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
-   * InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * @see #setFingerprint()
    *
    * <p>
@@ -620,8 +630,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * The URL of the instance template that is specified for this managed instance group. The group
    * uses this template to create all new instances in the managed instance group. The templates for
-   * existing instances in the group do not change unless you run recreateInstances, run
-   * applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
+   * existing instances in the group do not change unless you run recreateInstances,
+   * runapplyUpdatesToInstances, or set the group'supdatePolicy.type to PROACTIVE.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceTemplate() {
@@ -631,8 +641,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * The URL of the instance template that is specified for this managed instance group. The group
    * uses this template to create all new instances in the managed instance group. The templates for
-   * existing instances in the group do not change unless you run recreateInstances, run
-   * applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
+   * existing instances in the group do not change unless you run recreateInstances,
+   * runapplyUpdatesToInstances, or set the group'supdatePolicy.type to PROACTIVE.
    * @param instanceTemplate instanceTemplate or {@code null} for none
    */
   public InstanceGroupManager setInstanceTemplate(java.lang.String instanceTemplate) {
@@ -641,7 +651,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceGroupManager for managed
+   * [Output Only] The resource type, which is alwayscompute#instanceGroupManager for managed
    * instance groups.
    * @return value or {@code null} for none
    */
@@ -650,7 +660,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceGroupManager for managed
+   * [Output Only] The resource type, which is alwayscompute#instanceGroupManager for managed
    * instance groups.
    * @param kind kind or {@code null} for none
    */
@@ -694,8 +704,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The name of the managed instance group. The name must be 1-63 characters long, and comply with
-   * RFC1035.
+   * The name of the managed instance group. The name must be 1-63 characters long, and comply
+   * withRFC1035.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -703,8 +713,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The name of the managed instance group. The name must be 1-63 characters long, and comply with
-   * RFC1035.
+   * The name of the managed instance group. The name must be 1-63 characters long, and comply
+   * withRFC1035.
    * @param name name or {@code null} for none
    */
   public InstanceGroupManager setName(java.lang.String name) {
@@ -751,7 +761,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the region where the managed instance group resides (for regional
+   * [Output Only] The URL of theregion where the managed instance group resides (for regional
    * resources).
    * @return value or {@code null} for none
    */
@@ -760,7 +770,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the region where the managed instance group resides (for regional
+   * [Output Only] The URL of theregion where the managed instance group resides (for regional
    * resources).
    * @param region region or {@code null} for none
    */
@@ -912,7 +922,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The URLs for all TargetPool resources to which instances in the instanceGroup field are added.
+   * The URLs for all TargetPool resources to which instances in theinstanceGroup field are added.
    * The target pools automatically apply to all of the instances in the managed instance group.
    * @return value or {@code null} for none
    */
@@ -921,7 +931,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The URLs for all TargetPool resources to which instances in the instanceGroup field are added.
+   * The URLs for all TargetPool resources to which instances in theinstanceGroup field are added.
    * The target pools automatically apply to all of the instances in the managed instance group.
    * @param targetPools targetPools or {@code null} for none
    */
@@ -970,8 +980,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The target number of stopped instances for this managed instance group. This number changes
-   * when you: - Stop instance using the stopInstances method or start instances using the
-   * startInstances method. - Manually change the targetStoppedSize using the update method.
+   * when you:         - Stop instance using the stopInstances    method or start instances using
+   * the startInstances    method.    - Manually change the targetStoppedSize using the update
+   * method.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTargetStoppedSize() {
@@ -980,8 +991,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The target number of stopped instances for this managed instance group. This number changes
-   * when you: - Stop instance using the stopInstances method or start instances using the
-   * startInstances method. - Manually change the targetStoppedSize using the update method.
+   * when you:         - Stop instance using the stopInstances    method or start instances using
+   * the startInstances    method.    - Manually change the targetStoppedSize using the update
+   * method.
    * @param targetStoppedSize targetStoppedSize or {@code null} for none
    */
   public InstanceGroupManager setTargetStoppedSize(java.lang.Integer targetStoppedSize) {
@@ -991,8 +1003,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The target number of suspended instances for this managed instance group. This number changes
-   * when you: - Suspend instance using the suspendInstances method or resume instances using the
-   * resumeInstances method. - Manually change the targetSuspendedSize using the update method.
+   * when you:         - Suspend instance using the suspendInstances    method or resume instances
+   * using the resumeInstances    method.    - Manually change the targetSuspendedSize using the
+   * update    method.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTargetSuspendedSize() {
@@ -1001,8 +1014,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The target number of suspended instances for this managed instance group. This number changes
-   * when you: - Suspend instance using the suspendInstances method or resume instances using the
-   * resumeInstances method. - Manually change the targetSuspendedSize using the update method.
+   * when you:         - Suspend instance using the suspendInstances    method or resume instances
+   * using the resumeInstances    method.    - Manually change the targetSuspendedSize using the
+   * update    method.
    * @param targetSuspendedSize targetSuspendedSize or {@code null} for none
    */
   public InstanceGroupManager setTargetSuspendedSize(java.lang.Integer targetSuspendedSize) {
@@ -1028,12 +1042,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies the instance templates used by this managed instance group to create instances. Each
-   * version is defined by an instanceTemplate and a name. Every version can appear at most once per
-   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
-   * relationships between these fields. Exactly one version must leave the targetSize field unset.
-   * That version will be applied to all remaining instances. For more information, read about
-   * canary updates.
+   * Specifies the instance templates used by this managed instance group to create instances.
+   *
+   * Each version is defined by an instanceTemplate and aname. Every version can appear at most once
+   * per instance group. This field overrides the top-level instanceTemplate field. Read more about
+   * therelationships between these fields. Exactly one version must leave thetargetSize field
+   * unset. That version will be applied to all remaining instances. For more information, read
+   * aboutcanary updates.
    * @return value or {@code null} for none
    */
   public java.util.List<InstanceGroupManagerVersion> getVersions() {
@@ -1041,12 +1056,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies the instance templates used by this managed instance group to create instances. Each
-   * version is defined by an instanceTemplate and a name. Every version can appear at most once per
-   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
-   * relationships between these fields. Exactly one version must leave the targetSize field unset.
-   * That version will be applied to all remaining instances. For more information, read about
-   * canary updates.
+   * Specifies the instance templates used by this managed instance group to create instances.
+   *
+   * Each version is defined by an instanceTemplate and aname. Every version can appear at most once
+   * per instance group. This field overrides the top-level instanceTemplate field. Read more about
+   * therelationships between these fields. Exactly one version must leave thetargetSize field
+   * unset. That version will be applied to all remaining instances. For more information, read
+   * aboutcanary updates.
    * @param versions versions or {@code null} for none
    */
   public InstanceGroupManager setVersions(java.util.List<InstanceGroupManagerVersion> versions) {
@@ -1055,7 +1071,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of a zone where the managed instance group is located (for zonal
+   * [Output Only] The URL of azone where the managed instance group is located (for zonal
    * resources).
    * @return value or {@code null} for none
    */
@@ -1064,7 +1080,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of a zone where the managed instance group is located (for zonal
+   * [Output Only] The URL of azone where the managed instance group is located (for zonal
    * resources).
    * @param zone zone or {@code null} for none
    */

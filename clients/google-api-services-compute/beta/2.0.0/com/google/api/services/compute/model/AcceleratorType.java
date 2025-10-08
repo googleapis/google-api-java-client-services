@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Accelerator Type resource. Google Cloud Platform provides graphics processing units
- * (accelerators) that you can add to VM instances to improve or accelerate performance when working
- * with intensive workloads. For more information, read GPUs on Compute Engine.
+ * Represents an Accelerator Type resource.
+ *
+ * Google Cloud Platform provides graphics processing units (accelerators) that you can add to VM
+ * instances to improve or accelerate performance when working with intensive workloads. For more
+ * information, readGPUs on Compute Engine.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,7 +34,7 @@ package com.google.api.services.compute.model;
 public final class AcceleratorType extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +62,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The type of the resource. Always compute#acceleratorType for accelerator types.
+   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for accelerator types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +99,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   private java.lang.String zone;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -105,7 +107,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public AcceleratorType setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -165,7 +167,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The type of the resource. Always compute#acceleratorType for accelerator types.
+   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for accelerator types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -173,7 +175,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The type of the resource. Always compute#acceleratorType for accelerator types.
+   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for accelerator types.
    * @param kind kind or {@code null} for none
    */
   public AcceleratorType setKind(java.lang.String kind) {

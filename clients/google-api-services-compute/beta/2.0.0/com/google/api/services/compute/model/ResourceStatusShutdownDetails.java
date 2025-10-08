@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for ResourceStatusShutdownDetails.
+ * Specifies if the instance is in `PENDING_STOP` state or there is a programmed stop scheduled.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,30 +30,35 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusShutdownDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * The duration for graceful shutdown. Only applicable when `stop_state=PENDING_STOP`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Duration maxDuration;
 
   /**
+   * Past timestamp indicating the beginning of current `stopState` in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestTimestamp;
 
   /**
+   * Current stopping state of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stopState;
 
   /**
+   * Target instance state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetState;
 
   /**
+   * The duration for graceful shutdown. Only applicable when `stop_state=PENDING_STOP`.
    * @return value or {@code null} for none
    */
   public Duration getMaxDuration() {
@@ -61,6 +66,7 @@ public final class ResourceStatusShutdownDetails extends com.google.api.client.j
   }
 
   /**
+   * The duration for graceful shutdown. Only applicable when `stop_state=PENDING_STOP`.
    * @param maxDuration maxDuration or {@code null} for none
    */
   public ResourceStatusShutdownDetails setMaxDuration(Duration maxDuration) {
@@ -69,6 +75,7 @@ public final class ResourceStatusShutdownDetails extends com.google.api.client.j
   }
 
   /**
+   * Past timestamp indicating the beginning of current `stopState` in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestTimestamp() {
@@ -76,6 +83,7 @@ public final class ResourceStatusShutdownDetails extends com.google.api.client.j
   }
 
   /**
+   * Past timestamp indicating the beginning of current `stopState` in RFC3339 text format.
    * @param requestTimestamp requestTimestamp or {@code null} for none
    */
   public ResourceStatusShutdownDetails setRequestTimestamp(java.lang.String requestTimestamp) {
@@ -84,6 +92,7 @@ public final class ResourceStatusShutdownDetails extends com.google.api.client.j
   }
 
   /**
+   * Current stopping state of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getStopState() {
@@ -91,6 +100,7 @@ public final class ResourceStatusShutdownDetails extends com.google.api.client.j
   }
 
   /**
+   * Current stopping state of the instance.
    * @param stopState stopState or {@code null} for none
    */
   public ResourceStatusShutdownDetails setStopState(java.lang.String stopState) {
@@ -99,6 +109,7 @@ public final class ResourceStatusShutdownDetails extends com.google.api.client.j
   }
 
   /**
+   * Target instance state.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetState() {
@@ -106,6 +117,7 @@ public final class ResourceStatusShutdownDetails extends com.google.api.client.j
   }
 
   /**
+   * Target instance state.
    * @param targetState targetState or {@code null} for none
    */
   public ResourceStatusShutdownDetails setTargetState(java.lang.String targetState) {

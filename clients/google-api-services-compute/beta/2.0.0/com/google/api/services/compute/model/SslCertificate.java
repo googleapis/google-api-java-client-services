@@ -17,17 +17,25 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an SSL certificate resource. Google Compute Engine has two SSL certificate resources:
+ * Represents an SSL certificate resource.
+ *
+ * Google Compute Engine has two SSL certificate resources:
+ *
  * * [Global](/compute/docs/reference/rest/beta/sslCertificates) *
- * [Regional](/compute/docs/reference/rest/beta/regionSslCertificates) The global SSL certificates
- * (sslCertificates) are used by: - Global external Application Load Balancers - Classic Application
- * Load Balancers - Proxy Network Load Balancers (with target SSL proxies) The regional SSL
- * certificates (regionSslCertificates) are used by: - Regional external Application Load Balancers
- * - Regional internal Application Load Balancers Optionally, certificate file contents that you
- * upload can contain a set of up to five PEM-encoded certificates. The API call creates an object
- * (sslCertificate) that holds this data. You can use SSL keys and certificates to secure
- * connections to a load balancer. For more information, read Creating and using SSL certificates,
- * SSL certificates quotas and limits, and Troubleshooting SSL certificates.
+ * [Regional](/compute/docs/reference/rest/beta/regionSslCertificates)
+ *
+ * The global SSL certificates (sslCertificates) are used by:        - Global external Application
+ * Load Balancers    - Classic Application Load Balancers    - Proxy Network Load Balancers (with
+ * target SSL proxies)
+ *
+ * The regional SSL certificates (regionSslCertificates) are used by:        - Regional external
+ * Application Load Balancers    - Regional internal Application Load Balancers
+ *
+ * Optionally, certificate file contents that you upload can contain a set of up to five PEM-encoded
+ * certificates. The API call creates an object (sslCertificate) that holds this data. You can use
+ * SSL keys and certificates to secure connections to a load balancer. For more information, read
+ * Creating and using SSL certificates,SSL certificates quotas and limits, and Troubleshooting SSL
+ * certificates.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -49,7 +57,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String certificate;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +85,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#sslCertificate for SSL certificates.
+   * [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL certificates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +100,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -140,7 +148,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
 
   /**
    * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not
-   * specified, the certificate is self-managed and the fields certificate and private_key are used.
+   * specified, the certificate is self-managed and the fieldscertificate and private_key are used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +176,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -176,7 +184,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public SslCertificate setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -236,7 +244,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#sslCertificate for SSL certificates.
+   * [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL certificates.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -244,7 +252,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#sslCertificate for SSL certificates.
+   * [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL certificates.
    * @param kind kind or {@code null} for none
    */
   public SslCertificate setKind(java.lang.String kind) {
@@ -271,7 +279,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -283,7 +291,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -385,7 +393,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
 
   /**
    * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not
-   * specified, the certificate is self-managed and the fields certificate and private_key are used.
+   * specified, the certificate is self-managed and the fieldscertificate and private_key are used.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -394,7 +402,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
 
   /**
    * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not
-   * specified, the certificate is self-managed and the fields certificate and private_key are used.
+   * specified, the certificate is self-managed and the fieldscertificate and private_key are used.
    * @param type type or {@code null} for none
    */
   public SslCertificate setType(java.lang.String type) {

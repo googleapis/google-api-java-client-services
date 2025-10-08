@@ -33,6 +33,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   /**
    * In response to a preflight request, setting this to true indicates that the actual request can
    * include user credentials. This field translates to the Access-Control-Allow-Credentials header.
+   *
    * Default is false.
    * The value may be {@code null}.
    */
@@ -55,17 +56,23 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a regular expression that matches allowed origins. For more information, see regular
-   * expression syntax . An origin is allowed if it matches either an item in allowOrigins or an
-   * item in allowOriginRegexes. Regular expressions can only be used when the loadBalancingScheme
-   * is set to INTERNAL_SELF_MANAGED.
+   * expression syntax.
+   *
+   * An origin is allowed if it matches either an item inallowOrigins or an item
+   * inallowOriginRegexes.
+   *
+   * Regular expressions can only be used when the loadBalancingScheme is set to
+   * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowOriginRegexes;
 
   /**
-   * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it
-   * matches either an item in allowOrigins or an item in allowOriginRegexes.
+   * Specifies the list of origins that is allowed to do CORS requests.
+   *
+   * An origin is allowed if it matches either an item inallowOrigins or an item
+   * inallowOriginRegexes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,6 +104,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   /**
    * In response to a preflight request, setting this to true indicates that the actual request can
    * include user credentials. This field translates to the Access-Control-Allow-Credentials header.
+   *
    * Default is false.
    * @return value or {@code null} for none
    */
@@ -107,6 +115,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   /**
    * In response to a preflight request, setting this to true indicates that the actual request can
    * include user credentials. This field translates to the Access-Control-Allow-Credentials header.
+   *
    * Default is false.
    * @param allowCredentials allowCredentials or {@code null} for none
    */
@@ -151,9 +160,13 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a regular expression that matches allowed origins. For more information, see regular
-   * expression syntax . An origin is allowed if it matches either an item in allowOrigins or an
-   * item in allowOriginRegexes. Regular expressions can only be used when the loadBalancingScheme
-   * is set to INTERNAL_SELF_MANAGED.
+   * expression syntax.
+   *
+   * An origin is allowed if it matches either an item inallowOrigins or an item
+   * inallowOriginRegexes.
+   *
+   * Regular expressions can only be used when the loadBalancingScheme is set to
+   * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowOriginRegexes() {
@@ -162,9 +175,13 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a regular expression that matches allowed origins. For more information, see regular
-   * expression syntax . An origin is allowed if it matches either an item in allowOrigins or an
-   * item in allowOriginRegexes. Regular expressions can only be used when the loadBalancingScheme
-   * is set to INTERNAL_SELF_MANAGED.
+   * expression syntax.
+   *
+   * An origin is allowed if it matches either an item inallowOrigins or an item
+   * inallowOriginRegexes.
+   *
+   * Regular expressions can only be used when the loadBalancingScheme is set to
+   * INTERNAL_SELF_MANAGED.
    * @param allowOriginRegexes allowOriginRegexes or {@code null} for none
    */
   public CorsPolicy setAllowOriginRegexes(java.util.List<java.lang.String> allowOriginRegexes) {
@@ -173,8 +190,10 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it
-   * matches either an item in allowOrigins or an item in allowOriginRegexes.
+   * Specifies the list of origins that is allowed to do CORS requests.
+   *
+   * An origin is allowed if it matches either an item inallowOrigins or an item
+   * inallowOriginRegexes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowOrigins() {
@@ -182,8 +201,10 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it
-   * matches either an item in allowOrigins or an item in allowOriginRegexes.
+   * Specifies the list of origins that is allowed to do CORS requests.
+   *
+   * An origin is allowed if it matches either an item inallowOrigins or an item
+   * inallowOriginRegexes.
    * @param allowOrigins allowOrigins or {@code null} for none
    */
   public CorsPolicy setAllowOrigins(java.util.List<java.lang.String> allowOrigins) {

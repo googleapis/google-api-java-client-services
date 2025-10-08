@@ -31,8 +31,8 @@ public final class SecurityPolicyRuleMatcherConfigLayer4Config extends com.googl
 
   /**
    * The IP protocol to which this rule applies. The protocol type is required when creating a
-   * firewall rule. This value can either be one of the following well known protocol strings (tcp,
-   * udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+   * firewall rule. This value can either be one of the following well known protocol strings
+   * (tcp,udp, icmp, esp,ah, ipip, sctp), or the IP protocol number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,8 +41,11 @@ public final class SecurityPolicyRuleMatcherConfigLayer4Config extends com.googl
   /**
    * An optional list of ports to which this rule applies. This field is only applicable for UDP or
    * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-   * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
-   * ["12345-12349"]. This field may only be specified when versioned_expr is set to FIREWALL.
+   * applies to connections through any port.
+   *
+   * Example inputs include: ["22"],["80","443"], and ["12345-12349"].
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +53,8 @@ public final class SecurityPolicyRuleMatcherConfigLayer4Config extends com.googl
 
   /**
    * The IP protocol to which this rule applies. The protocol type is required when creating a
-   * firewall rule. This value can either be one of the following well known protocol strings (tcp,
-   * udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+   * firewall rule. This value can either be one of the following well known protocol strings
+   * (tcp,udp, icmp, esp,ah, ipip, sctp), or the IP protocol number.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpProtocol() {
@@ -60,8 +63,8 @@ public final class SecurityPolicyRuleMatcherConfigLayer4Config extends com.googl
 
   /**
    * The IP protocol to which this rule applies. The protocol type is required when creating a
-   * firewall rule. This value can either be one of the following well known protocol strings (tcp,
-   * udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+   * firewall rule. This value can either be one of the following well known protocol strings
+   * (tcp,udp, icmp, esp,ah, ipip, sctp), or the IP protocol number.
    * @param ipProtocol ipProtocol or {@code null} for none
    */
   public SecurityPolicyRuleMatcherConfigLayer4Config setIpProtocol(java.lang.String ipProtocol) {
@@ -72,8 +75,11 @@ public final class SecurityPolicyRuleMatcherConfigLayer4Config extends com.googl
   /**
    * An optional list of ports to which this rule applies. This field is only applicable for UDP or
    * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-   * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
-   * ["12345-12349"]. This field may only be specified when versioned_expr is set to FIREWALL.
+   * applies to connections through any port.
+   *
+   * Example inputs include: ["22"],["80","443"], and ["12345-12349"].
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPorts() {
@@ -83,8 +89,11 @@ public final class SecurityPolicyRuleMatcherConfigLayer4Config extends com.googl
   /**
    * An optional list of ports to which this rule applies. This field is only applicable for UDP or
    * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-   * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
-   * ["12345-12349"]. This field may only be specified when versioned_expr is set to FIREWALL.
+   * applies to connections through any port.
+   *
+   * Example inputs include: ["22"],["80","443"], and ["12345-12349"].
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @param ports ports or {@code null} for none
    */
   public SecurityPolicyRuleMatcherConfigLayer4Config setPorts(java.util.List<java.lang.String> ports) {

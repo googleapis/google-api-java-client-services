@@ -31,9 +31,12 @@ public final class PacketMirroringMirroredResourceInfo extends com.google.api.cl
 
   /**
    * A set of virtual machine instances that are being mirrored. They must live in zones contained
-   * in the same region as this packetMirroring. Note that this config will apply only to those
-   * network interfaces of the Instances that belong to the network specified in this
-   * packetMirroring. You may specify a maximum of 50 Instances.
+   * in the same region as this packetMirroring.
+   *
+   * Note that this config will apply only to those network interfaces of the Instances that belong
+   * to the network specified in this packetMirroring.
+   *
+   * You may specify a maximum of 50 Instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +44,9 @@ public final class PacketMirroringMirroredResourceInfo extends com.google.api.cl
 
   /**
    * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must
-   * live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+   * live in the same region as this packetMirroring.
+   *
+   * You may specify a maximum of 5 subnetworks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +62,12 @@ public final class PacketMirroringMirroredResourceInfo extends com.google.api.cl
 
   /**
    * A set of virtual machine instances that are being mirrored. They must live in zones contained
-   * in the same region as this packetMirroring. Note that this config will apply only to those
-   * network interfaces of the Instances that belong to the network specified in this
-   * packetMirroring. You may specify a maximum of 50 Instances.
+   * in the same region as this packetMirroring.
+   *
+   * Note that this config will apply only to those network interfaces of the Instances that belong
+   * to the network specified in this packetMirroring.
+   *
+   * You may specify a maximum of 50 Instances.
    * @return value or {@code null} for none
    */
   public java.util.List<PacketMirroringMirroredResourceInfoInstanceInfo> getInstances() {
@@ -68,9 +76,12 @@ public final class PacketMirroringMirroredResourceInfo extends com.google.api.cl
 
   /**
    * A set of virtual machine instances that are being mirrored. They must live in zones contained
-   * in the same region as this packetMirroring. Note that this config will apply only to those
-   * network interfaces of the Instances that belong to the network specified in this
-   * packetMirroring. You may specify a maximum of 50 Instances.
+   * in the same region as this packetMirroring.
+   *
+   * Note that this config will apply only to those network interfaces of the Instances that belong
+   * to the network specified in this packetMirroring.
+   *
+   * You may specify a maximum of 50 Instances.
    * @param instances instances or {@code null} for none
    */
   public PacketMirroringMirroredResourceInfo setInstances(java.util.List<PacketMirroringMirroredResourceInfoInstanceInfo> instances) {
@@ -80,7 +91,9 @@ public final class PacketMirroringMirroredResourceInfo extends com.google.api.cl
 
   /**
    * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must
-   * live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+   * live in the same region as this packetMirroring.
+   *
+   * You may specify a maximum of 5 subnetworks.
    * @return value or {@code null} for none
    */
   public java.util.List<PacketMirroringMirroredResourceInfoSubnetInfo> getSubnetworks() {
@@ -89,7 +102,9 @@ public final class PacketMirroringMirroredResourceInfo extends com.google.api.cl
 
   /**
    * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must
-   * live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
+   * live in the same region as this packetMirroring.
+   *
+   * You may specify a maximum of 5 subnetworks.
    * @param subnetworks subnetworks or {@code null} for none
    */
   public PacketMirroringMirroredResourceInfo setSubnetworks(java.util.List<PacketMirroringMirroredResourceInfoSubnetInfo> subnetworks) {

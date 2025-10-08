@@ -37,7 +37,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   private InstanceGroupManagerStatusAllInstancesConfig allInstancesConfig;
 
   /**
-   * [Output Only] The URL of the Autoscaler that targets this instance group manager.
+   * [Output Only] The URL of theAutoscaler that targets this instance group manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The URL of the Autoscaler that targets this instance group manager.
+   * [Output Only] The URL of theAutoscaler that targets this instance group manager.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoscaler() {
@@ -102,7 +102,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The URL of the Autoscaler that targets this instance group manager.
+   * [Output Only] The URL of theAutoscaler that targets this instance group manager.
    * @param autoscaler autoscaler or {@code null} for none
    */
   public InstanceGroupManagerStatus setAutoscaler(java.lang.String autoscaler) {

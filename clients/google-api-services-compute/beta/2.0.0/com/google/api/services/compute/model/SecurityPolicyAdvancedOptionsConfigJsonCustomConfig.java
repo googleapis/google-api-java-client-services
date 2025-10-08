@@ -30,20 +30,28 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyAdvancedOptionsConfigJsonCustomConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of custom Content-Type header values to apply the JSON parsing. As per RFC 1341, a
-   * Content-Type header value has the following format: Content-Type := type "/" subtype *[";"
-   * parameter] When configuring a custom Content-Type header value, only the type/subtype needs to
-   * be specified, and the parameters should be excluded.
+   * A list of custom Content-Type header values to apply the JSON parsing.
+   *
+   * As per RFC 1341, a Content-Type header value has the following format:
+   *
+   * Content-Type := type "/" subtype *[";" parameter]
+   *
+   * When configuring a custom Content-Type header value, only the type/subtype needs to be
+   * specified, and the parameters should be excluded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> contentTypes;
 
   /**
-   * A list of custom Content-Type header values to apply the JSON parsing. As per RFC 1341, a
-   * Content-Type header value has the following format: Content-Type := type "/" subtype *[";"
-   * parameter] When configuring a custom Content-Type header value, only the type/subtype needs to
-   * be specified, and the parameters should be excluded.
+   * A list of custom Content-Type header values to apply the JSON parsing.
+   *
+   * As per RFC 1341, a Content-Type header value has the following format:
+   *
+   * Content-Type := type "/" subtype *[";" parameter]
+   *
+   * When configuring a custom Content-Type header value, only the type/subtype needs to be
+   * specified, and the parameters should be excluded.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContentTypes() {
@@ -51,10 +59,14 @@ public final class SecurityPolicyAdvancedOptionsConfigJsonCustomConfig extends c
   }
 
   /**
-   * A list of custom Content-Type header values to apply the JSON parsing. As per RFC 1341, a
-   * Content-Type header value has the following format: Content-Type := type "/" subtype *[";"
-   * parameter] When configuring a custom Content-Type header value, only the type/subtype needs to
-   * be specified, and the parameters should be excluded.
+   * A list of custom Content-Type header values to apply the JSON parsing.
+   *
+   * As per RFC 1341, a Content-Type header value has the following format:
+   *
+   * Content-Type := type "/" subtype *[";" parameter]
+   *
+   * When configuring a custom Content-Type header value, only the type/subtype needs to be
+   * specified, and the parameters should be excluded.
    * @param contentTypes contentTypes or {@code null} for none
    */
   public SecurityPolicyAdvancedOptionsConfigJsonCustomConfig setContentTypes(java.util.List<java.lang.String> contentTypes) {

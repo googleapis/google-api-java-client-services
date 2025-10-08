@@ -37,7 +37,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   private java.lang.Long diskCount;
 
   /**
-   * [Output Only] Timestamp of the last successful resize in RFC3339 text format.
+   * [Output Only] Timestamp of the last successful resize inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Timestamp of the last successful resize in RFC3339 text format.
+   * [Output Only] Timestamp of the last successful resize inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastResizeTimestamp() {
@@ -131,7 +131,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Timestamp of the last successful resize in RFC3339 text format.
+   * [Output Only] Timestamp of the last successful resize inRFC3339 text format.
    * @param lastResizeTimestamp lastResizeTimestamp or {@code null} for none
    */
   public StoragePoolResourceStatus setLastResizeTimestamp(java.lang.String lastResizeTimestamp) {

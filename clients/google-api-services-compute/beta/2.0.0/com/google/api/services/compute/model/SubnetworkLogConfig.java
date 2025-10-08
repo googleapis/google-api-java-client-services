@@ -69,8 +69,8 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
 
   /**
    * Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all,
-   * none or a subset of metadata fields should be added to the reported VPC flow logs. Default is
-   * EXCLUDE_ALL_METADATA.
+   * none or a subset of metadata fields should be added to the reported VPC flow logs. Default
+   * isEXCLUDE_ALL_METADATA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,8 +174,8 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
 
   /**
    * Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all,
-   * none or a subset of metadata fields should be added to the reported VPC flow logs. Default is
-   * EXCLUDE_ALL_METADATA.
+   * none or a subset of metadata fields should be added to the reported VPC flow logs. Default
+   * isEXCLUDE_ALL_METADATA.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetadata() {
@@ -184,8 +184,8 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
 
   /**
    * Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all,
-   * none or a subset of metadata fields should be added to the reported VPC flow logs. Default is
-   * EXCLUDE_ALL_METADATA.
+   * none or a subset of metadata fields should be added to the reported VPC flow logs. Default
+   * isEXCLUDE_ALL_METADATA.
    * @param metadata metadata or {@code null} for none
    */
   public SubnetworkLogConfig setMetadata(java.lang.String metadata) {

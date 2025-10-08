@@ -30,22 +30,29 @@ package com.google.api.services.compute.model;
 public final class HttpHeaderMatch extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value should exactly match contents of exactMatch. Only one of exactMatch, prefixMatch,
-   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * The value should exactly match contents of exactMatch.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exactMatch;
 
   /**
-   * The name of the HTTP header to match. For matching against the HTTP request's authority, use a
-   * headerMatch with the header name ":authority". For matching a request's method, use the
-   * headerName ":method". When the URL map is bound to a target gRPC proxy that has the
-   * validateForProxyless field set to true, only non-binary user-specified custom metadata and the
-   * `content-type` header are supported. The following transport-level headers cannot be used in
-   * header matching rules: `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-
-   * encoding`, `content-encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-
-   * attempts`, `grpc-tags-bin`, `grpc-timeout` and `grpc-trace-bin`.
+   * The name of the HTTP header to match.
+   *
+   * For matching against the HTTP request's authority, use a headerMatch with the header name
+   * ":authority".
+   *
+   * For matching a request's method, use the headerName ":method".
+   *
+   * When the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to
+   * true, only non-binary user-specified custom metadata and the `content-type` header are
+   * supported. The following transport-level headers cannot be used in header matching rules:
+   * `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-encoding`, `content-
+   * encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-attempts`, `grpc-tags-
+   * bin`, `grpc-timeout` and `grpc-trace-bin`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,15 +61,19 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   /**
    * If set to false, the headerMatch is considered a match if the preceding match criteria are met.
    * If set to true, the headerMatch is considered a match if the preceding match criteria are NOT
-   * met. The default setting is false.
+   * met.
+   *
+   * The default setting is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean invertMatch;
 
   /**
-   * The value of the header must start with the contents of prefixMatch. Only one of exactMatch,
-   * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * The value of the header must start with the contents ofprefixMatch.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +81,10 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * A header with the contents of headerName must exist. The match takes place whether or not the
-   * request's header has a value. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch,
-   * presentMatch or rangeMatch must be set.
+   * request's header has a value.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,39 +92,52 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * The header value must be an integer and its value must be in the range specified in rangeMatch.
-   * If the header does not contain an integer, number or is empty, the match fails. For example for
-   * a range [-5, 0] - -3 will match. - 0 will not match. - 0.25 will not match. - -3someString will
-   * not match. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
-   * rangeMatch must be set. rangeMatch is not supported for load balancers that have
-   * loadBalancingScheme set to EXTERNAL.
+   * If the header does not contain an integer, number or is empty, the match fails.
+   *
+   * For example for a range [-5, 0]               - -3 will match.       - 0 will not match.
+   * - 0.25 will not match.       - -3someString will not match.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
+   *
+   * rangeMatch is not supported for load balancers that have loadBalancingScheme set to EXTERNAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Int64RangeMatch rangeMatch;
 
   /**
-   * The value of the header must match the regular expression specified in regexMatch. For more
-   * information about regular expression syntax, see Syntax. For matching against a port specified
-   * in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression
-   * that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch, prefixMatch,
-   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Regular expressions can only
-   * be used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+   * The value of the header must match the regular expression specified inregexMatch. For more
+   * information about regular expression syntax, see Syntax.
+   *
+   * For matching against a port specified in the HTTP request, use a headerMatch with headerName
+   * set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
+   *
+   * Regular expressions can only be used when the loadBalancingScheme is set to
+   * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regexMatch;
 
   /**
-   * The value of the header must end with the contents of suffixMatch. Only one of exactMatch,
-   * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * The value of the header must end with the contents ofsuffixMatch.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String suffixMatch;
 
   /**
-   * The value should exactly match contents of exactMatch. Only one of exactMatch, prefixMatch,
-   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * The value should exactly match contents of exactMatch.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * @return value or {@code null} for none
    */
   public java.lang.String getExactMatch() {
@@ -119,8 +145,10 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The value should exactly match contents of exactMatch. Only one of exactMatch, prefixMatch,
-   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * The value should exactly match contents of exactMatch.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * @param exactMatch exactMatch or {@code null} for none
    */
   public HttpHeaderMatch setExactMatch(java.lang.String exactMatch) {
@@ -129,14 +157,19 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the HTTP header to match. For matching against the HTTP request's authority, use a
-   * headerMatch with the header name ":authority". For matching a request's method, use the
-   * headerName ":method". When the URL map is bound to a target gRPC proxy that has the
-   * validateForProxyless field set to true, only non-binary user-specified custom metadata and the
-   * `content-type` header are supported. The following transport-level headers cannot be used in
-   * header matching rules: `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-
-   * encoding`, `content-encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-
-   * attempts`, `grpc-tags-bin`, `grpc-timeout` and `grpc-trace-bin`.
+   * The name of the HTTP header to match.
+   *
+   * For matching against the HTTP request's authority, use a headerMatch with the header name
+   * ":authority".
+   *
+   * For matching a request's method, use the headerName ":method".
+   *
+   * When the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to
+   * true, only non-binary user-specified custom metadata and the `content-type` header are
+   * supported. The following transport-level headers cannot be used in header matching rules:
+   * `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-encoding`, `content-
+   * encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-attempts`, `grpc-tags-
+   * bin`, `grpc-timeout` and `grpc-trace-bin`.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeaderName() {
@@ -144,14 +177,19 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the HTTP header to match. For matching against the HTTP request's authority, use a
-   * headerMatch with the header name ":authority". For matching a request's method, use the
-   * headerName ":method". When the URL map is bound to a target gRPC proxy that has the
-   * validateForProxyless field set to true, only non-binary user-specified custom metadata and the
-   * `content-type` header are supported. The following transport-level headers cannot be used in
-   * header matching rules: `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-
-   * encoding`, `content-encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-
-   * attempts`, `grpc-tags-bin`, `grpc-timeout` and `grpc-trace-bin`.
+   * The name of the HTTP header to match.
+   *
+   * For matching against the HTTP request's authority, use a headerMatch with the header name
+   * ":authority".
+   *
+   * For matching a request's method, use the headerName ":method".
+   *
+   * When the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to
+   * true, only non-binary user-specified custom metadata and the `content-type` header are
+   * supported. The following transport-level headers cannot be used in header matching rules:
+   * `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-encoding`, `content-
+   * encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-attempts`, `grpc-tags-
+   * bin`, `grpc-timeout` and `grpc-trace-bin`.
    * @param headerName headerName or {@code null} for none
    */
   public HttpHeaderMatch setHeaderName(java.lang.String headerName) {
@@ -162,7 +200,9 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   /**
    * If set to false, the headerMatch is considered a match if the preceding match criteria are met.
    * If set to true, the headerMatch is considered a match if the preceding match criteria are NOT
-   * met. The default setting is false.
+   * met.
+   *
+   * The default setting is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInvertMatch() {
@@ -172,7 +212,9 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   /**
    * If set to false, the headerMatch is considered a match if the preceding match criteria are met.
    * If set to true, the headerMatch is considered a match if the preceding match criteria are NOT
-   * met. The default setting is false.
+   * met.
+   *
+   * The default setting is false.
    * @param invertMatch invertMatch or {@code null} for none
    */
   public HttpHeaderMatch setInvertMatch(java.lang.Boolean invertMatch) {
@@ -181,8 +223,10 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The value of the header must start with the contents of prefixMatch. Only one of exactMatch,
-   * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * The value of the header must start with the contents ofprefixMatch.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrefixMatch() {
@@ -190,8 +234,10 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The value of the header must start with the contents of prefixMatch. Only one of exactMatch,
-   * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * The value of the header must start with the contents ofprefixMatch.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * @param prefixMatch prefixMatch or {@code null} for none
    */
   public HttpHeaderMatch setPrefixMatch(java.lang.String prefixMatch) {
@@ -201,8 +247,10 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * A header with the contents of headerName must exist. The match takes place whether or not the
-   * request's header has a value. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch,
-   * presentMatch or rangeMatch must be set.
+   * request's header has a value.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPresentMatch() {
@@ -211,8 +259,10 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * A header with the contents of headerName must exist. The match takes place whether or not the
-   * request's header has a value. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch,
-   * presentMatch or rangeMatch must be set.
+   * request's header has a value.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * @param presentMatch presentMatch or {@code null} for none
    */
   public HttpHeaderMatch setPresentMatch(java.lang.Boolean presentMatch) {
@@ -222,11 +272,15 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * The header value must be an integer and its value must be in the range specified in rangeMatch.
-   * If the header does not contain an integer, number or is empty, the match fails. For example for
-   * a range [-5, 0] - -3 will match. - 0 will not match. - 0.25 will not match. - -3someString will
-   * not match. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
-   * rangeMatch must be set. rangeMatch is not supported for load balancers that have
-   * loadBalancingScheme set to EXTERNAL.
+   * If the header does not contain an integer, number or is empty, the match fails.
+   *
+   * For example for a range [-5, 0]               - -3 will match.       - 0 will not match.
+   * - 0.25 will not match.       - -3someString will not match.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
+   *
+   * rangeMatch is not supported for load balancers that have loadBalancingScheme set to EXTERNAL.
    * @return value or {@code null} for none
    */
   public Int64RangeMatch getRangeMatch() {
@@ -235,11 +289,15 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * The header value must be an integer and its value must be in the range specified in rangeMatch.
-   * If the header does not contain an integer, number or is empty, the match fails. For example for
-   * a range [-5, 0] - -3 will match. - 0 will not match. - 0.25 will not match. - -3someString will
-   * not match. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
-   * rangeMatch must be set. rangeMatch is not supported for load balancers that have
-   * loadBalancingScheme set to EXTERNAL.
+   * If the header does not contain an integer, number or is empty, the match fails.
+   *
+   * For example for a range [-5, 0]               - -3 will match.       - 0 will not match.
+   * - 0.25 will not match.       - -3someString will not match.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
+   *
+   * rangeMatch is not supported for load balancers that have loadBalancingScheme set to EXTERNAL.
    * @param rangeMatch rangeMatch or {@code null} for none
    */
   public HttpHeaderMatch setRangeMatch(Int64RangeMatch rangeMatch) {
@@ -248,12 +306,17 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The value of the header must match the regular expression specified in regexMatch. For more
-   * information about regular expression syntax, see Syntax. For matching against a port specified
-   * in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression
-   * that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch, prefixMatch,
-   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Regular expressions can only
-   * be used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+   * The value of the header must match the regular expression specified inregexMatch. For more
+   * information about regular expression syntax, see Syntax.
+   *
+   * For matching against a port specified in the HTTP request, use a headerMatch with headerName
+   * set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
+   *
+   * Regular expressions can only be used when the loadBalancingScheme is set to
+   * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -261,12 +324,17 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The value of the header must match the regular expression specified in regexMatch. For more
-   * information about regular expression syntax, see Syntax. For matching against a port specified
-   * in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression
-   * that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch, prefixMatch,
-   * suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Regular expressions can only
-   * be used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+   * The value of the header must match the regular expression specified inregexMatch. For more
+   * information about regular expression syntax, see Syntax.
+   *
+   * For matching against a port specified in the HTTP request, use a headerMatch with headerName
+   * set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
+   *
+   * Regular expressions can only be used when the loadBalancingScheme is set to
+   * INTERNAL_SELF_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpHeaderMatch setRegexMatch(java.lang.String regexMatch) {
@@ -275,8 +343,10 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The value of the header must end with the contents of suffixMatch. Only one of exactMatch,
-   * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * The value of the header must end with the contents ofsuffixMatch.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSuffixMatch() {
@@ -284,8 +354,10 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The value of the header must end with the contents of suffixMatch. Only one of exactMatch,
-   * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
+   * The value of the header must end with the contents ofsuffixMatch.
+   *
+   * Only one of exactMatch, prefixMatch,suffixMatch, regexMatch,presentMatch or rangeMatch must be
+   * set.
    * @param suffixMatch suffixMatch or {@code null} for none
    */
   public HttpHeaderMatch setSuffixMatch(java.lang.String suffixMatch) {

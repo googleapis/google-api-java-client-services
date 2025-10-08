@@ -87,6 +87,13 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   private java.lang.String allowExternalIpAccess;
 
   /**
+   * Specifies whether firewall policy can be attached to the network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allowFirewallPolicy;
+
+  /**
    * Specifies whether Cloud Interconnect creation is allowed.
    * The value may be {@code null}.
    */
@@ -183,6 +190,12 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String allowVpn;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> firewallPolicyTypes;
 
   /**
    * If set, limits the interface types that the network supports. If empty, all interface types are
@@ -362,6 +375,23 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
    */
   public NetworkProfileNetworkFeatures setAllowExternalIpAccess(java.lang.String allowExternalIpAccess) {
     this.allowExternalIpAccess = allowExternalIpAccess;
+    return this;
+  }
+
+  /**
+   * Specifies whether firewall policy can be attached to the network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllowFirewallPolicy() {
+    return allowFirewallPolicy;
+  }
+
+  /**
+   * Specifies whether firewall policy can be attached to the network.
+   * @param allowFirewallPolicy allowFirewallPolicy or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setAllowFirewallPolicy(java.lang.String allowFirewallPolicy) {
+    this.allowFirewallPolicy = allowFirewallPolicy;
     return this;
   }
 
@@ -600,6 +630,21 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
    */
   public NetworkProfileNetworkFeatures setAllowVpn(java.lang.String allowVpn) {
     this.allowVpn = allowVpn;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFirewallPolicyTypes() {
+    return firewallPolicyTypes;
+  }
+
+  /**
+   * @param firewallPolicyTypes firewallPolicyTypes or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setFirewallPolicyTypes(java.util.List<java.lang.String> firewallPolicyTypes) {
+    this.firewallPolicyTypes = firewallPolicyTypes;
     return this;
   }
 

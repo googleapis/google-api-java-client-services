@@ -30,12 +30,13 @@ package com.google.api.services.compute.model;
 public final class WireProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration of the bandwidth allocation, one of the following: - ALLOCATE_PER_WIRE:
-   * configures a separate unmetered bandwidth allocation (and associated charges) for each wire in
-   * the group. - SHARED_WITH_WIRE_GROUP: this is the default behavior, which configures one
-   * unmetered bandwidth allocation for the wire group. The unmetered bandwidth is divided equally
-   * across each wire in the group, but dynamic throttling reallocates unused unmetered bandwidth
-   * from unused or underused wires to other wires in the group.
+   * The configuration of the bandwidth allocation, one of the following:        -
+   * ALLOCATE_PER_WIRE: configures a separate unmetered bandwidth allocation    (and associated
+   * charges) for each wire in the group.    - SHARED_WITH_WIRE_GROUP: this is the default behavior,
+   * which configures    one unmetered bandwidth allocation for the wire group. The unmetered
+   * bandwidth is divided equally across each wire in the group, but dynamic    throttling
+   * reallocates unused unmetered bandwidth from unused or underused    wires to other wires in the
+   * group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,28 +44,29 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
 
   /**
    * The unmetered bandwidth in Gigabits per second, using decimal units. `10` is 10 Gbps, `100` is
-   * 100 Gbps.
+   * 100 Gbps. The bandwidth must be greater than 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long bandwidthUnmetered;
 
   /**
-   * Response when a fault is detected in a pseudowire: - NONE: default. - DISABLE_PORT: set the
-   * port line protocol down when inline probes detect a fault. This setting is only permitted on
-   * port mode pseudowires.
+   * Response when a fault is detected in a pseudowire:        - NONE: default.    - DISABLE_PORT:
+   * set the port line protocol down when inline probes    detect a fault. This setting is only
+   * permitted on port mode    pseudowires.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String faultResponse;
 
   /**
-   * The configuration of the bandwidth allocation, one of the following: - ALLOCATE_PER_WIRE:
-   * configures a separate unmetered bandwidth allocation (and associated charges) for each wire in
-   * the group. - SHARED_WITH_WIRE_GROUP: this is the default behavior, which configures one
-   * unmetered bandwidth allocation for the wire group. The unmetered bandwidth is divided equally
-   * across each wire in the group, but dynamic throttling reallocates unused unmetered bandwidth
-   * from unused or underused wires to other wires in the group.
+   * The configuration of the bandwidth allocation, one of the following:        -
+   * ALLOCATE_PER_WIRE: configures a separate unmetered bandwidth allocation    (and associated
+   * charges) for each wire in the group.    - SHARED_WITH_WIRE_GROUP: this is the default behavior,
+   * which configures    one unmetered bandwidth allocation for the wire group. The unmetered
+   * bandwidth is divided equally across each wire in the group, but dynamic    throttling
+   * reallocates unused unmetered bandwidth from unused or underused    wires to other wires in the
+   * group.
    * @return value or {@code null} for none
    */
   public java.lang.String getBandwidthAllocation() {
@@ -72,12 +74,13 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The configuration of the bandwidth allocation, one of the following: - ALLOCATE_PER_WIRE:
-   * configures a separate unmetered bandwidth allocation (and associated charges) for each wire in
-   * the group. - SHARED_WITH_WIRE_GROUP: this is the default behavior, which configures one
-   * unmetered bandwidth allocation for the wire group. The unmetered bandwidth is divided equally
-   * across each wire in the group, but dynamic throttling reallocates unused unmetered bandwidth
-   * from unused or underused wires to other wires in the group.
+   * The configuration of the bandwidth allocation, one of the following:        -
+   * ALLOCATE_PER_WIRE: configures a separate unmetered bandwidth allocation    (and associated
+   * charges) for each wire in the group.    - SHARED_WITH_WIRE_GROUP: this is the default behavior,
+   * which configures    one unmetered bandwidth allocation for the wire group. The unmetered
+   * bandwidth is divided equally across each wire in the group, but dynamic    throttling
+   * reallocates unused unmetered bandwidth from unused or underused    wires to other wires in the
+   * group.
    * @param bandwidthAllocation bandwidthAllocation or {@code null} for none
    */
   public WireProperties setBandwidthAllocation(java.lang.String bandwidthAllocation) {
@@ -87,7 +90,7 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
 
   /**
    * The unmetered bandwidth in Gigabits per second, using decimal units. `10` is 10 Gbps, `100` is
-   * 100 Gbps.
+   * 100 Gbps. The bandwidth must be greater than 0.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBandwidthUnmetered() {
@@ -96,7 +99,7 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
 
   /**
    * The unmetered bandwidth in Gigabits per second, using decimal units. `10` is 10 Gbps, `100` is
-   * 100 Gbps.
+   * 100 Gbps. The bandwidth must be greater than 0.
    * @param bandwidthUnmetered bandwidthUnmetered or {@code null} for none
    */
   public WireProperties setBandwidthUnmetered(java.lang.Long bandwidthUnmetered) {
@@ -105,9 +108,9 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Response when a fault is detected in a pseudowire: - NONE: default. - DISABLE_PORT: set the
-   * port line protocol down when inline probes detect a fault. This setting is only permitted on
-   * port mode pseudowires.
+   * Response when a fault is detected in a pseudowire:        - NONE: default.    - DISABLE_PORT:
+   * set the port line protocol down when inline probes    detect a fault. This setting is only
+   * permitted on port mode    pseudowires.
    * @return value or {@code null} for none
    */
   public java.lang.String getFaultResponse() {
@@ -115,9 +118,9 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Response when a fault is detected in a pseudowire: - NONE: default. - DISABLE_PORT: set the
-   * port line protocol down when inline probes detect a fault. This setting is only permitted on
-   * port mode pseudowires.
+   * Response when a fault is detected in a pseudowire:        - NONE: default.    - DISABLE_PORT:
+   * set the port line protocol down when inline probes    detect a fault. This setting is only
+   * permitted on port mode    pseudowires.
    * @param faultResponse faultResponse or {@code null} for none
    */
   public WireProperties setFaultResponse(java.lang.String faultResponse) {

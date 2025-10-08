@@ -73,7 +73,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
   private java.lang.Float detectionRelativeToBaselineQps;
 
   /**
-   * The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within
+   * The name must be 1-63 characters long, and comply withRFC1035. The name must be unique within
    * the security policy.
    * The value may be {@code null}.
    */
@@ -194,7 +194,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
   }
 
   /**
-   * The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within
+   * The name must be 1-63 characters long, and comply withRFC1035. The name must be unique within
    * the security policy.
    * @return value or {@code null} for none
    */
@@ -203,7 +203,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
   }
 
   /**
-   * The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within
+   * The name must be 1-63 characters long, and comply withRFC1035. The name must be unique within
    * the security policy.
    * @param name name or {@code null} for none
    */

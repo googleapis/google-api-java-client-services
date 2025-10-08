@@ -32,7 +32,7 @@ public final class InstanceGroupManagerStatusVersionTarget extends com.google.ap
   /**
    * [Output Only] A bit indicating whether version target has been reached in this managed instance
    * group, i.e. all instances are in their target version. Instances' target version are specified
-   * by version field on Instance Group Manager.
+   * byversion field on Instance Group Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class InstanceGroupManagerStatusVersionTarget extends com.google.ap
   /**
    * [Output Only] A bit indicating whether version target has been reached in this managed instance
    * group, i.e. all instances are in their target version. Instances' target version are specified
-   * by version field on Instance Group Manager.
+   * byversion field on Instance Group Manager.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsReached() {
@@ -51,7 +51,7 @@ public final class InstanceGroupManagerStatusVersionTarget extends com.google.ap
   /**
    * [Output Only] A bit indicating whether version target has been reached in this managed instance
    * group, i.e. all instances are in their target version. Instances' target version are specified
-   * by version field on Instance Group Manager.
+   * byversion field on Instance Group Manager.
    * @param isReached isReached or {@code null} for none
    */
   public InstanceGroupManagerStatusVersionTarget setIsReached(java.lang.Boolean isReached) {

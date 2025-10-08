@@ -30,8 +30,9 @@ package com.google.api.services.compute.model;
 public final class AutoscalingPolicyCpuUtilization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are: *
-   * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
+   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+   *
+   * * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
    * demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves
    * availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated
    * demand.
@@ -42,20 +43,24 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
 
   /**
    * The target CPU utilization that the autoscaler maintains. Must be a float value in the range
-   * (0, 1]. If not specified, the default is 0.6. If the CPU level is below the target utilization,
-   * the autoscaler scales in the number of instances until it reaches the minimum number of
-   * instances you specified or until the average CPU of your instances reaches the target
-   * utilization. If the average CPU is above the target utilization, the autoscaler scales out
-   * until it reaches the maximum number of instances you specified or until the average utilization
-   * reaches the target utilization.
+   * (0, 1]. If not specified, the default is0.6.
+   *
+   * If the CPU level is below the target utilization, the autoscaler scales in the number of
+   * instances until it reaches the minimum number of instances you specified or until the average
+   * CPU of your instances reaches the target utilization.
+   *
+   * If the average CPU is above the target utilization, the autoscaler scales out until it reaches
+   * the maximum number of instances you specified or until the average utilization reaches the
+   * target utilization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double utilizationTarget;
 
   /**
-   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are: *
-   * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
+   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+   *
+   * * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
    * demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves
    * availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated
    * demand.
@@ -66,8 +71,9 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
   }
 
   /**
-   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are: *
-   * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
+   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+   *
+   * * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
    * demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves
    * availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated
    * demand.
@@ -80,12 +86,15 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
 
   /**
    * The target CPU utilization that the autoscaler maintains. Must be a float value in the range
-   * (0, 1]. If not specified, the default is 0.6. If the CPU level is below the target utilization,
-   * the autoscaler scales in the number of instances until it reaches the minimum number of
-   * instances you specified or until the average CPU of your instances reaches the target
-   * utilization. If the average CPU is above the target utilization, the autoscaler scales out
-   * until it reaches the maximum number of instances you specified or until the average utilization
-   * reaches the target utilization.
+   * (0, 1]. If not specified, the default is0.6.
+   *
+   * If the CPU level is below the target utilization, the autoscaler scales in the number of
+   * instances until it reaches the minimum number of instances you specified or until the average
+   * CPU of your instances reaches the target utilization.
+   *
+   * If the average CPU is above the target utilization, the autoscaler scales out until it reaches
+   * the maximum number of instances you specified or until the average utilization reaches the
+   * target utilization.
    * @return value or {@code null} for none
    */
   public java.lang.Double getUtilizationTarget() {
@@ -94,12 +103,15 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
 
   /**
    * The target CPU utilization that the autoscaler maintains. Must be a float value in the range
-   * (0, 1]. If not specified, the default is 0.6. If the CPU level is below the target utilization,
-   * the autoscaler scales in the number of instances until it reaches the minimum number of
-   * instances you specified or until the average CPU of your instances reaches the target
-   * utilization. If the average CPU is above the target utilization, the autoscaler scales out
-   * until it reaches the maximum number of instances you specified or until the average utilization
-   * reaches the target utilization.
+   * (0, 1]. If not specified, the default is0.6.
+   *
+   * If the CPU level is below the target utilization, the autoscaler scales in the number of
+   * instances until it reaches the minimum number of instances you specified or until the average
+   * CPU of your instances reaches the target utilization.
+   *
+   * If the average CPU is above the target utilization, the autoscaler scales out until it reaches
+   * the maximum number of instances you specified or until the average utilization reaches the
+   * target utilization.
    * @param utilizationTarget utilizationTarget or {@code null} for none
    */
   public AutoscalingPolicyCpuUtilization setUtilizationTarget(java.lang.Double utilizationTarget) {

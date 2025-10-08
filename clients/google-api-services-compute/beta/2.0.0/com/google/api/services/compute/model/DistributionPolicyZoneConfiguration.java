@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class DistributionPolicyZoneConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The URL of the zone. The zone must exist in the region where the managed instance group is
+   * The URL of thezone. The zone must exist in the region where the managed instance group is
    * located.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class DistributionPolicyZoneConfiguration extends com.google.api.cl
   private java.lang.String zone;
 
   /**
-   * The URL of the zone. The zone must exist in the region where the managed instance group is
+   * The URL of thezone. The zone must exist in the region where the managed instance group is
    * located.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class DistributionPolicyZoneConfiguration extends com.google.api.cl
   }
 
   /**
-   * The URL of the zone. The zone must exist in the region where the managed instance group is
+   * The URL of thezone. The zone must exist in the region where the managed instance group is
    * located.
    * @param zone zone or {@code null} for none
    */

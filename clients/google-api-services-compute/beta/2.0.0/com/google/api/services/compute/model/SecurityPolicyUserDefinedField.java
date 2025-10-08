@@ -30,11 +30,14 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyUserDefinedField extends com.google.api.client.json.GenericJson {
 
   /**
-   * The base relative to which 'offset' is measured. Possible values are: - IPV4: Points to the
-   * beginning of the IPv4 header. - IPV6: Points to the beginning of the IPv6 header. - TCP: Points
-   * to the beginning of the TCP header, skipping over any IPv4 options or IPv6 extension headers.
-   * Not present for non-first fragments. - UDP: Points to the beginning of the UDP header, skipping
-   * over any IPv4 options or IPv6 extension headers. Not present for non-first fragments. required
+   * The base relative to which 'offset' is measured. Possible values are:        - IPV4: Points to
+   * the beginning of the IPv4 header.    - IPV6: Points to the beginning of the IPv6 header.    -
+   * TCP: Points to the beginning of the TCP header, skipping    over any IPv4 options or IPv6
+   * extension headers. Not present for    non-first fragments.    - UDP: Points to the beginning of
+   * the UDP header, skipping    over any IPv4 options or IPv6 extension headers. Not present for
+   * non-first fragments.
+   *
+   * required
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,11 +74,14 @@ public final class SecurityPolicyUserDefinedField extends com.google.api.client.
   private java.lang.Integer size;
 
   /**
-   * The base relative to which 'offset' is measured. Possible values are: - IPV4: Points to the
-   * beginning of the IPv4 header. - IPV6: Points to the beginning of the IPv6 header. - TCP: Points
-   * to the beginning of the TCP header, skipping over any IPv4 options or IPv6 extension headers.
-   * Not present for non-first fragments. - UDP: Points to the beginning of the UDP header, skipping
-   * over any IPv4 options or IPv6 extension headers. Not present for non-first fragments. required
+   * The base relative to which 'offset' is measured. Possible values are:        - IPV4: Points to
+   * the beginning of the IPv4 header.    - IPV6: Points to the beginning of the IPv6 header.    -
+   * TCP: Points to the beginning of the TCP header, skipping    over any IPv4 options or IPv6
+   * extension headers. Not present for    non-first fragments.    - UDP: Points to the beginning of
+   * the UDP header, skipping    over any IPv4 options or IPv6 extension headers. Not present for
+   * non-first fragments.
+   *
+   * required
    * @return value or {@code null} for none
    */
   public java.lang.String getBase() {
@@ -83,11 +89,14 @@ public final class SecurityPolicyUserDefinedField extends com.google.api.client.
   }
 
   /**
-   * The base relative to which 'offset' is measured. Possible values are: - IPV4: Points to the
-   * beginning of the IPv4 header. - IPV6: Points to the beginning of the IPv6 header. - TCP: Points
-   * to the beginning of the TCP header, skipping over any IPv4 options or IPv6 extension headers.
-   * Not present for non-first fragments. - UDP: Points to the beginning of the UDP header, skipping
-   * over any IPv4 options or IPv6 extension headers. Not present for non-first fragments. required
+   * The base relative to which 'offset' is measured. Possible values are:        - IPV4: Points to
+   * the beginning of the IPv4 header.    - IPV6: Points to the beginning of the IPv6 header.    -
+   * TCP: Points to the beginning of the TCP header, skipping    over any IPv4 options or IPv6
+   * extension headers. Not present for    non-first fragments.    - UDP: Points to the beginning of
+   * the UDP header, skipping    over any IPv4 options or IPv6 extension headers. Not present for
+   * non-first fragments.
+   *
+   * required
    * @param base base or {@code null} for none
    */
   public SecurityPolicyUserDefinedField setBase(java.lang.String base) {

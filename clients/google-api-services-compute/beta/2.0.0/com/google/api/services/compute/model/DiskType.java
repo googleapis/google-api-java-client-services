@@ -17,13 +17,21 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Disk Type resource. Google Compute Engine has two Disk Type resources: *
- * [Regional](/compute/docs/reference/rest/beta/regionDiskTypes) *
- * [Zonal](/compute/docs/reference/rest/beta/diskTypes) You can choose from a variety of disk types
- * based on your needs. For more information, read Storage options. The diskTypes resource
- * represents disk types for a zonal persistent disk. For more information, read Zonal persistent
- * disks. The regionDiskTypes resource represents disk types for a regional persistent disk. For
- * more information, read Regional persistent disks.
+ * Represents a Disk Type resource.
+ *
+ * Google Compute Engine has two Disk Type resources:
+ *
+ * * [Regional](/compute/docs/reference/rest/beta/regionDiskTypes) *
+ * [Zonal](/compute/docs/reference/rest/beta/diskTypes)
+ *
+ * You can choose from a variety of disk types based on your needs. For more information,
+ * readStorage options.
+ *
+ * The diskTypes resource represents disk types for a zonal persistent disk. For more information,
+ * readZonal persistent disks.
+ *
+ * The regionDiskTypes resource represents disk types for a regional persistent disk. For more
+ * information, read Regional persistent disks.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -36,7 +44,7 @@ package com.google.api.services.compute.model;
 public final class DiskType extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +124,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   private java.lang.String zone;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -124,7 +132,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public DiskType setCreationTimestamp(java.lang.String creationTimestamp) {

@@ -37,8 +37,9 @@ public final class OrganizationSecurityPoliciesListAssociationsResponse extends 
   private java.util.List<SecurityPolicyAssociation> associations;
 
   /**
-   * [Output Only] Type of securityPolicy associations. Always
-   * compute#organizationSecurityPoliciesListAssociations for lists of securityPolicy associations.
+   * [Output Only] Type of securityPolicy associations.
+   * Alwayscompute#organizationSecurityPoliciesListAssociations for lists of securityPolicy
+   * associations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +63,9 @@ public final class OrganizationSecurityPoliciesListAssociationsResponse extends 
   }
 
   /**
-   * [Output Only] Type of securityPolicy associations. Always
-   * compute#organizationSecurityPoliciesListAssociations for lists of securityPolicy associations.
+   * [Output Only] Type of securityPolicy associations.
+   * Alwayscompute#organizationSecurityPoliciesListAssociations for lists of securityPolicy
+   * associations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -71,8 +73,9 @@ public final class OrganizationSecurityPoliciesListAssociationsResponse extends 
   }
 
   /**
-   * [Output Only] Type of securityPolicy associations. Always
-   * compute#organizationSecurityPoliciesListAssociations for lists of securityPolicy associations.
+   * [Output Only] Type of securityPolicy associations.
+   * Alwayscompute#organizationSecurityPoliciesListAssociations for lists of securityPolicy
+   * associations.
    * @param kind kind or {@code null} for none
    */
   public OrganizationSecurityPoliciesListAssociationsResponse setKind(java.lang.String kind) {

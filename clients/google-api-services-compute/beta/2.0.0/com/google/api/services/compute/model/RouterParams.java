@@ -34,9 +34,9 @@ public final class RouterParams extends com.google.api.client.json.GenericJson {
    * keys/values to set on the resource should be specified in either ID { : } or Namespaced format
    * { : }. For example the following are valid inputs: * {"tagKeys/333" : "tagValues/444",
    * "tagKeys/123" : "tagValues/456"} * {"123/environment" : "production", "345/abc" : "xyz"} Note:
-   * * Invalid combinations of ID & namespaced format is not supported. For instance:
+   * * Invalid combinations of ID & namespaced format is not supported. For   instance:
    * {"123/environment" : "tagValues/444"} is invalid. * Inconsistent format is not supported. For
-   * instance: {"tagKeys/333" : "tagValues/444", "123/env" : "prod"} is invalid.
+   * instance:   {"tagKeys/333" : "tagValues/444", "123/env" : "prod"} is invalid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +47,9 @@ public final class RouterParams extends com.google.api.client.json.GenericJson {
    * keys/values to set on the resource should be specified in either ID { : } or Namespaced format
    * { : }. For example the following are valid inputs: * {"tagKeys/333" : "tagValues/444",
    * "tagKeys/123" : "tagValues/456"} * {"123/environment" : "production", "345/abc" : "xyz"} Note:
-   * * Invalid combinations of ID & namespaced format is not supported. For instance:
+   * * Invalid combinations of ID & namespaced format is not supported. For   instance:
    * {"123/environment" : "tagValues/444"} is invalid. * Inconsistent format is not supported. For
-   * instance: {"tagKeys/333" : "tagValues/444", "123/env" : "prod"} is invalid.
+   * instance:   {"tagKeys/333" : "tagValues/444", "123/env" : "prod"} is invalid.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getResourceManagerTags() {
@@ -61,9 +61,9 @@ public final class RouterParams extends com.google.api.client.json.GenericJson {
    * keys/values to set on the resource should be specified in either ID { : } or Namespaced format
    * { : }. For example the following are valid inputs: * {"tagKeys/333" : "tagValues/444",
    * "tagKeys/123" : "tagValues/456"} * {"123/environment" : "production", "345/abc" : "xyz"} Note:
-   * * Invalid combinations of ID & namespaced format is not supported. For instance:
+   * * Invalid combinations of ID & namespaced format is not supported. For   instance:
    * {"123/environment" : "tagValues/444"} is invalid. * Inconsistent format is not supported. For
-   * instance: {"tagKeys/333" : "tagValues/444", "123/env" : "prod"} is invalid.
+   * instance:   {"tagKeys/333" : "tagValues/444", "123/env" : "prod"} is invalid.
    * @param resourceManagerTags resourceManagerTags or {@code null} for none
    */
   public RouterParams setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {

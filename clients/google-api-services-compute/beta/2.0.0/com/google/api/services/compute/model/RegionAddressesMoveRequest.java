@@ -38,11 +38,12 @@ public final class RegionAddressesMoveRequest extends com.google.api.client.json
 
   /**
    * The URL of the destination address to move to. This can be a full or partial URL. For example,
-   * the following are all valid URLs to a address: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region /addresses/address -
-   * projects/project/regions/region/addresses/address Note that destination project must be
-   * different from the source project. So /regions/region/addresses/address is not valid partial
-   * url.
+   * the following are all valid URLs to a address:        -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/addresses/address     -
+   * projects/project/regions/region/addresses/address
+   *
+   * Note that destination project must be different from the source project.
+   * So/regions/region/addresses/address is not valid partial url.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,11 +68,12 @@ public final class RegionAddressesMoveRequest extends com.google.api.client.json
 
   /**
    * The URL of the destination address to move to. This can be a full or partial URL. For example,
-   * the following are all valid URLs to a address: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region /addresses/address -
-   * projects/project/regions/region/addresses/address Note that destination project must be
-   * different from the source project. So /regions/region/addresses/address is not valid partial
-   * url.
+   * the following are all valid URLs to a address:        -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/addresses/address     -
+   * projects/project/regions/region/addresses/address
+   *
+   * Note that destination project must be different from the source project.
+   * So/regions/region/addresses/address is not valid partial url.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationAddress() {
@@ -80,11 +82,12 @@ public final class RegionAddressesMoveRequest extends com.google.api.client.json
 
   /**
    * The URL of the destination address to move to. This can be a full or partial URL. For example,
-   * the following are all valid URLs to a address: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region /addresses/address -
-   * projects/project/regions/region/addresses/address Note that destination project must be
-   * different from the source project. So /regions/region/addresses/address is not valid partial
-   * url.
+   * the following are all valid URLs to a address:        -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/addresses/address     -
+   * projects/project/regions/region/addresses/address
+   *
+   * Note that destination project must be different from the source project.
+   * So/regions/region/addresses/address is not valid partial url.
    * @param destinationAddress destinationAddress or {@code null} for none
    */
   public RegionAddressesMoveRequest setDestinationAddress(java.lang.String destinationAddress) {

@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a ServiceAttachment resource. A service attachment represents a service that a
- * producer has exposed. It encapsulates the load balancer which fronts the service runs and a list
- * of NAT IP ranges that the producers uses to represent the consumers connecting to the service.
+ * Represents a ServiceAttachment resource.
+ *
+ * A service attachment represents a service that a producer has exposed. It encapsulates the load
+ * balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to
+ * represent the consumers connecting to the service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -71,7 +73,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> consumerRejectLists;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +123,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#serviceAttachment for service attachments.
+   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +138,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -165,11 +167,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * The number of consumer spokes that connected Private Service Connect endpoints can be
    * propagated to through Network Connectivity Center. This limit lets the service producer limit
    * how many propagated Private Service Connect connections can be established to this service
-   * attachment from a single consumer. If the connection preference of the service attachment is
-   * ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer
-   * accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the
-   * limit applies to each project that contains a connected endpoint. If unspecified, the default
-   * propagated connection limit is 250.
+   * attachment from a single consumer.
+   *
+   * If the connection preference of the service attachment is ACCEPT_MANUAL, the limit applies to
+   * each project or network that is listed in the consumer accept list. If the connection
+   * preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each project
+   * that contains a connected endpoint.
+   *
+   * If unspecified, the default propagated connection limit is 250.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,12 +189,13 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * This flag determines whether a consumer accept/reject list change can reconcile the statuses of
-   * existing ACCEPTED or REJECTED PSC endpoints. - If false, connection policy update will only
-   * affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain
-   * untouched regardless how the connection policy is modified . - If true, update will affect both
-   * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
-   * moved to REJECTED if its project is added to the reject list. For newly created service
-   * attachment, this boolean defaults to false.
+   * existing ACCEPTED or REJECTED PSC endpoints.             -  If false, connection policy update
+   * will only affect existing PENDING     PSC endpoints. Existing ACCEPTED/REJECTED endpoints will
+   * remain untouched     regardless how the connection policy is modified .     -  If true,
+   * update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For     example, an
+   * ACCEPTED PSC endpoint will be moved to REJECTED if its project     is added to the reject list.
+   *
+   * For newly created service attachment, this boolean defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,8 +226,10 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * When a tunneling config is set on this service attachment it will encapsulate traffic between
-   * consumer and producer. When tunneling is enabled: - nat_subnets must be unset -
-   * enable_proxy_protocol must be false - producer_forwarding_rule must be a L4 ILB. -
+   * consumer and producer.
+   *
+   * When tunneling is enabled:             -  nat_subnets must be unset      -
+   * enable_proxy_protocol must be false      -  producer_forwarding_rule must be a L4 ILB.     -
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -318,7 +326,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -326,7 +334,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ServiceAttachment setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -472,7 +480,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#serviceAttachment for service attachments.
+   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service attachments.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -480,7 +488,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#serviceAttachment for service attachments.
+   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service attachments.
    * @param kind kind or {@code null} for none
    */
   public ServiceAttachment setKind(java.lang.String kind) {
@@ -507,7 +515,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -519,7 +527,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -572,11 +580,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * The number of consumer spokes that connected Private Service Connect endpoints can be
    * propagated to through Network Connectivity Center. This limit lets the service producer limit
    * how many propagated Private Service Connect connections can be established to this service
-   * attachment from a single consumer. If the connection preference of the service attachment is
-   * ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer
-   * accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the
-   * limit applies to each project that contains a connected endpoint. If unspecified, the default
-   * propagated connection limit is 250.
+   * attachment from a single consumer.
+   *
+   * If the connection preference of the service attachment is ACCEPT_MANUAL, the limit applies to
+   * each project or network that is listed in the consumer accept list. If the connection
+   * preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each project
+   * that contains a connected endpoint.
+   *
+   * If unspecified, the default propagated connection limit is 250.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPropagatedConnectionLimit() {
@@ -587,11 +598,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    * The number of consumer spokes that connected Private Service Connect endpoints can be
    * propagated to through Network Connectivity Center. This limit lets the service producer limit
    * how many propagated Private Service Connect connections can be established to this service
-   * attachment from a single consumer. If the connection preference of the service attachment is
-   * ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer
-   * accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the
-   * limit applies to each project that contains a connected endpoint. If unspecified, the default
-   * propagated connection limit is 250.
+   * attachment from a single consumer.
+   *
+   * If the connection preference of the service attachment is ACCEPT_MANUAL, the limit applies to
+   * each project or network that is listed in the consumer accept list. If the connection
+   * preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each project
+   * that contains a connected endpoint.
+   *
+   * If unspecified, the default propagated connection limit is 250.
    * @param propagatedConnectionLimit propagatedConnectionLimit or {@code null} for none
    */
   public ServiceAttachment setPropagatedConnectionLimit(java.lang.Long propagatedConnectionLimit) {
@@ -618,12 +632,13 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * This flag determines whether a consumer accept/reject list change can reconcile the statuses of
-   * existing ACCEPTED or REJECTED PSC endpoints. - If false, connection policy update will only
-   * affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain
-   * untouched regardless how the connection policy is modified . - If true, update will affect both
-   * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
-   * moved to REJECTED if its project is added to the reject list. For newly created service
-   * attachment, this boolean defaults to false.
+   * existing ACCEPTED or REJECTED PSC endpoints.             -  If false, connection policy update
+   * will only affect existing PENDING     PSC endpoints. Existing ACCEPTED/REJECTED endpoints will
+   * remain untouched     regardless how the connection policy is modified .     -  If true,
+   * update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For     example, an
+   * ACCEPTED PSC endpoint will be moved to REJECTED if its project     is added to the reject list.
+   *
+   * For newly created service attachment, this boolean defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconcileConnections() {
@@ -632,12 +647,13 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * This flag determines whether a consumer accept/reject list change can reconcile the statuses of
-   * existing ACCEPTED or REJECTED PSC endpoints. - If false, connection policy update will only
-   * affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain
-   * untouched regardless how the connection policy is modified . - If true, update will affect both
-   * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
-   * moved to REJECTED if its project is added to the reject list. For newly created service
-   * attachment, this boolean defaults to false.
+   * existing ACCEPTED or REJECTED PSC endpoints.             -  If false, connection policy update
+   * will only affect existing PENDING     PSC endpoints. Existing ACCEPTED/REJECTED endpoints will
+   * remain untouched     regardless how the connection policy is modified .     -  If true,
+   * update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For     example, an
+   * ACCEPTED PSC endpoint will be moved to REJECTED if its project     is added to the reject list.
+   *
+   * For newly created service attachment, this boolean defaults to false.
    * @param reconcileConnections reconcileConnections or {@code null} for none
    */
   public ServiceAttachment setReconcileConnections(java.lang.Boolean reconcileConnections) {
@@ -702,8 +718,10 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * When a tunneling config is set on this service attachment it will encapsulate traffic between
-   * consumer and producer. When tunneling is enabled: - nat_subnets must be unset -
-   * enable_proxy_protocol must be false - producer_forwarding_rule must be a L4 ILB. -
+   * consumer and producer.
+   *
+   * When tunneling is enabled:             -  nat_subnets must be unset      -
+   * enable_proxy_protocol must be false      -  producer_forwarding_rule must be a L4 ILB.     -
    * @return value or {@code null} for none
    */
   public ServiceAttachmentTunnelingConfig getTunnelingConfig() {
@@ -712,8 +730,10 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
 
   /**
    * When a tunneling config is set on this service attachment it will encapsulate traffic between
-   * consumer and producer. When tunneling is enabled: - nat_subnets must be unset -
-   * enable_proxy_protocol must be false - producer_forwarding_rule must be a L4 ILB. -
+   * consumer and producer.
+   *
+   * When tunneling is enabled:             -  nat_subnets must be unset      -
+   * enable_proxy_protocol must be false      -  producer_forwarding_rule must be a L4 ILB.     -
    * @param tunnelingConfig tunnelingConfig or {@code null} for none
    */
   public ServiceAttachment setTunnelingConfig(ServiceAttachmentTunnelingConfig tunnelingConfig) {

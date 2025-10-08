@@ -31,34 +31,34 @@ package com.google.api.services.compute.model;
 public final class WireGroupProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of the wire group, one of the following: - WIRE: a single pseudowire over two
-   * Interconnect connections with no redundancy. - REDUNDANT: two pseudowires over four
-   * Interconnect connections, with two connections in one metro and two connections in another
-   * metro. Each redundant pair of Interconnect connections spans both edge availability domains of
-   * the metro. Each pseudowire connects Interconnect connections in matching edge availability
-   * domains of the two metros. - BOX_AND_CROSS: four pseudowires over four Interconnect
-   * connections, with two connections in one metro and two connections in another metro. Each
-   * redundant pair of Interconnect connections spans both edge availability domains of the metro.
-   * Two pseudowires connect Interconnect connections in matching edge availability domains of the
-   * two metros. Two additional pseudowires connect the non-matching edge availability domains of
-   * the two metros.
+   * The type of the wire group, one of the following:        - WIRE: a single pseudowire over two
+   * Interconnect connections with no    redundancy.    - REDUNDANT: two pseudowires over four
+   * Interconnect connections, with    two connections in one metro and two connections in another
+   * metro.    Each redundant pair of Interconnect connections spans both edge    availability
+   * domains of the metro. Each pseudowire connects Interconnect    connections in matching edge
+   * availability domains of the two metros.    - BOX_AND_CROSS: four pseudowires over four
+   * Interconnect connections,    with two connections in one metro and two connections in another
+   * metro.    Each redundant pair of Interconnect connections spans both edge    availability
+   * domains of the metro. Two pseudowires connect Interconnect    connections in matching edge
+   * availability domains of the two metros.    Two additional pseudowires connect the non-matching
+   * edge availability    domains of the two metros.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The type of the wire group, one of the following: - WIRE: a single pseudowire over two
-   * Interconnect connections with no redundancy. - REDUNDANT: two pseudowires over four
-   * Interconnect connections, with two connections in one metro and two connections in another
-   * metro. Each redundant pair of Interconnect connections spans both edge availability domains of
-   * the metro. Each pseudowire connects Interconnect connections in matching edge availability
-   * domains of the two metros. - BOX_AND_CROSS: four pseudowires over four Interconnect
-   * connections, with two connections in one metro and two connections in another metro. Each
-   * redundant pair of Interconnect connections spans both edge availability domains of the metro.
-   * Two pseudowires connect Interconnect connections in matching edge availability domains of the
-   * two metros. Two additional pseudowires connect the non-matching edge availability domains of
-   * the two metros.
+   * The type of the wire group, one of the following:        - WIRE: a single pseudowire over two
+   * Interconnect connections with no    redundancy.    - REDUNDANT: two pseudowires over four
+   * Interconnect connections, with    two connections in one metro and two connections in another
+   * metro.    Each redundant pair of Interconnect connections spans both edge    availability
+   * domains of the metro. Each pseudowire connects Interconnect    connections in matching edge
+   * availability domains of the two metros.    - BOX_AND_CROSS: four pseudowires over four
+   * Interconnect connections,    with two connections in one metro and two connections in another
+   * metro.    Each redundant pair of Interconnect connections spans both edge    availability
+   * domains of the metro. Two pseudowires connect Interconnect    connections in matching edge
+   * availability domains of the two metros.    Two additional pseudowires connect the non-matching
+   * edge availability    domains of the two metros.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -66,17 +66,17 @@ public final class WireGroupProperties extends com.google.api.client.json.Generi
   }
 
   /**
-   * The type of the wire group, one of the following: - WIRE: a single pseudowire over two
-   * Interconnect connections with no redundancy. - REDUNDANT: two pseudowires over four
-   * Interconnect connections, with two connections in one metro and two connections in another
-   * metro. Each redundant pair of Interconnect connections spans both edge availability domains of
-   * the metro. Each pseudowire connects Interconnect connections in matching edge availability
-   * domains of the two metros. - BOX_AND_CROSS: four pseudowires over four Interconnect
-   * connections, with two connections in one metro and two connections in another metro. Each
-   * redundant pair of Interconnect connections spans both edge availability domains of the metro.
-   * Two pseudowires connect Interconnect connections in matching edge availability domains of the
-   * two metros. Two additional pseudowires connect the non-matching edge availability domains of
-   * the two metros.
+   * The type of the wire group, one of the following:        - WIRE: a single pseudowire over two
+   * Interconnect connections with no    redundancy.    - REDUNDANT: two pseudowires over four
+   * Interconnect connections, with    two connections in one metro and two connections in another
+   * metro.    Each redundant pair of Interconnect connections spans both edge    availability
+   * domains of the metro. Each pseudowire connects Interconnect    connections in matching edge
+   * availability domains of the two metros.    - BOX_AND_CROSS: four pseudowires over four
+   * Interconnect connections,    with two connections in one metro and two connections in another
+   * metro.    Each redundant pair of Interconnect connections spans both edge    availability
+   * domains of the metro. Two pseudowires connect Interconnect    connections in matching edge
+   * availability domains of the two metros.    Two additional pseudowires connect the non-matching
+   * edge availability    domains of the two metros.
    * @param type type or {@code null} for none
    */
   public WireGroupProperties setType(java.lang.String type) {

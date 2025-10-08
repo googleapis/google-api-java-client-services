@@ -32,9 +32,9 @@ public final class RegionInstanceGroupsSetNamedPortsRequest extends com.google.a
   /**
    * The fingerprint of the named ports information for this instance group. Use this optional
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
-   * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
-   * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * Obtain the fingerprint with theinstanceGroups.get method. Then, include the fingerprint in your
+   * request to ensure that you do not overwrite changes that were applied from another concurrent
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,9 +56,9 @@ public final class RegionInstanceGroupsSetNamedPortsRequest extends com.google.a
   /**
    * The fingerprint of the named ports information for this instance group. Use this optional
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
-   * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
-   * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * Obtain the fingerprint with theinstanceGroups.get method. Then, include the fingerprint in your
+   * request to ensure that you do not overwrite changes that were applied from another concurrent
+   * request.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -69,9 +69,9 @@ public final class RegionInstanceGroupsSetNamedPortsRequest extends com.google.a
   /**
    * The fingerprint of the named ports information for this instance group. Use this optional
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
-   * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
-   * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * Obtain the fingerprint with theinstanceGroups.get method. Then, include the fingerprint in your
+   * request to ensure that you do not overwrite changes that were applied from another concurrent
+   * request.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -84,9 +84,9 @@ public final class RegionInstanceGroupsSetNamedPortsRequest extends com.google.a
   /**
    * The fingerprint of the named ports information for this instance group. Use this optional
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
-   * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
-   * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * Obtain the fingerprint with theinstanceGroups.get method. Then, include the fingerprint in your
+   * request to ensure that you do not overwrite changes that were applied from another concurrent
+   * request.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -98,9 +98,9 @@ public final class RegionInstanceGroupsSetNamedPortsRequest extends com.google.a
   /**
    * The fingerprint of the named ports information for this instance group. Use this optional
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
-   * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
-   * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * Obtain the fingerprint with theinstanceGroups.get method. Then, include the fingerprint in your
+   * request to ensure that you do not overwrite changes that were applied from another concurrent
+   * request.
    * @see #setFingerprint()
    *
    * <p>

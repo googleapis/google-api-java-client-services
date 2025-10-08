@@ -30,26 +30,32 @@ package com.google.api.services.compute.model;
 public final class RouterMd5AuthenticationKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value
-   * from the previous configuration. This is allowed if the key with the same name existed before
-   * the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
+   * [Input only] Value of the key.
+   *
+   * For patch and update calls, it can be skipped to copy the value from the previous
+   * configuration. This is allowed if the key with the same name existed before the operation.
+   * Maximum length is 80 characters. Can only contain printable ASCII characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Name used to identify the key. Must be unique within a router. Must be referenced by exactly
-   * one bgpPeer. Must comply with RFC1035.
+   * Name used to identify the key.
+   *
+   * Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply
+   * withRFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value
-   * from the previous configuration. This is allowed if the key with the same name existed before
-   * the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
+   * [Input only] Value of the key.
+   *
+   * For patch and update calls, it can be skipped to copy the value from the previous
+   * configuration. This is allowed if the key with the same name existed before the operation.
+   * Maximum length is 80 characters. Can only contain printable ASCII characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -57,9 +63,11 @@ public final class RouterMd5AuthenticationKey extends com.google.api.client.json
   }
 
   /**
-   * [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value
-   * from the previous configuration. This is allowed if the key with the same name existed before
-   * the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
+   * [Input only] Value of the key.
+   *
+   * For patch and update calls, it can be skipped to copy the value from the previous
+   * configuration. This is allowed if the key with the same name existed before the operation.
+   * Maximum length is 80 characters. Can only contain printable ASCII characters.
    * @param key key or {@code null} for none
    */
   public RouterMd5AuthenticationKey setKey(java.lang.String key) {
@@ -68,8 +76,10 @@ public final class RouterMd5AuthenticationKey extends com.google.api.client.json
   }
 
   /**
-   * Name used to identify the key. Must be unique within a router. Must be referenced by exactly
-   * one bgpPeer. Must comply with RFC1035.
+   * Name used to identify the key.
+   *
+   * Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply
+   * withRFC1035.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -77,8 +87,10 @@ public final class RouterMd5AuthenticationKey extends com.google.api.client.json
   }
 
   /**
-   * Name used to identify the key. Must be unique within a router. Must be referenced by exactly
-   * one bgpPeer. Must comply with RFC1035.
+   * Name used to identify the key.
+   *
+   * Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply
+   * withRFC1035.
    * @param name name or {@code null} for none
    */
   public RouterMd5AuthenticationKey setName(java.lang.String name) {

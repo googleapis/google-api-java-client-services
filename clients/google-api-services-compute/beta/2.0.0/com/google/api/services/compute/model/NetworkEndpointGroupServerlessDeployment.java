@@ -17,9 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Configuration for a serverless network endpoint group (NEG). The platform must be provided. Note:
- * The target backend service must be in the same project and located in the same region as the
- * Serverless NEG.
+ * Configuration for a serverless network endpoint group (NEG). Theplatform must be provided.
+ *
+ * Note: The target backend service must be in the same project and located in the same region as
+ * the Serverless NEG.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -41,21 +42,25 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
 
   /**
    * The user-defined name of the workload/instance. This value must be provided explicitly or in
-   * the urlMask. The resource identified by this value is platform-specific and is as follows: 1.
-   * API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function
-   * name 4. Cloud Run: The service name
+   * the urlMask. The resource identified by this value is platform-specific and is as follows:
+   *
+   *              1. API Gateway: The gateway ID      2. App Engine: The service name      3. Cloud
+   * Functions: The function name      4. Cloud Run: The service name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resource;
 
   /**
-   * An URL mask is one of the main components of the Cloud Function. A template to parse platform-
-   * specific fields from a request URL. URL mask allows for routing to multiple resources on the
-   * same serverless platform without having to create multiple Network Endpoint Groups and backend
-   * resources. The fields parsed by this template are platform-specific and are as follows: 1. API
-   * Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function
-   * name 4. Cloud Run: The service and tag
+   * An URL mask is one of the main components of the Cloud Function.
+   *
+   * A template to parse platform-specific fields from a request URL. URL mask allows for routing to
+   * multiple resources on the same serverless platform without having to create multiple Network
+   * Endpoint Groups and backend resources. The fields parsed by this template are platform-specific
+   * and are as follows:
+   *
+   *              1. API Gateway: The gateway ID      2. App Engine: The service and version      3.
+   * Cloud Functions: The function name      4. Cloud Run: The service and tag
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +68,10 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
 
   /**
    * The optional resource version. The version identified by this value is platform-specific and is
-   * follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused
-   * 4. Cloud Run: The service tag
+   * follows:
+   *
+   *              1. API Gateway: Unused      2. App Engine: The service version      3. Cloud
+   * Functions: Unused      4. Cloud Run: The service tag
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +98,10 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
 
   /**
    * The user-defined name of the workload/instance. This value must be provided explicitly or in
-   * the urlMask. The resource identified by this value is platform-specific and is as follows: 1.
-   * API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function
-   * name 4. Cloud Run: The service name
+   * the urlMask. The resource identified by this value is platform-specific and is as follows:
+   *
+   *              1. API Gateway: The gateway ID      2. App Engine: The service name      3. Cloud
+   * Functions: The function name      4. Cloud Run: The service name
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -102,9 +110,10 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
 
   /**
    * The user-defined name of the workload/instance. This value must be provided explicitly or in
-   * the urlMask. The resource identified by this value is platform-specific and is as follows: 1.
-   * API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function
-   * name 4. Cloud Run: The service name
+   * the urlMask. The resource identified by this value is platform-specific and is as follows:
+   *
+   *              1. API Gateway: The gateway ID      2. App Engine: The service name      3. Cloud
+   * Functions: The function name      4. Cloud Run: The service name
    * @param resource resource or {@code null} for none
    */
   public NetworkEndpointGroupServerlessDeployment setResource(java.lang.String resource) {
@@ -113,12 +122,15 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   }
 
   /**
-   * An URL mask is one of the main components of the Cloud Function. A template to parse platform-
-   * specific fields from a request URL. URL mask allows for routing to multiple resources on the
-   * same serverless platform without having to create multiple Network Endpoint Groups and backend
-   * resources. The fields parsed by this template are platform-specific and are as follows: 1. API
-   * Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function
-   * name 4. Cloud Run: The service and tag
+   * An URL mask is one of the main components of the Cloud Function.
+   *
+   * A template to parse platform-specific fields from a request URL. URL mask allows for routing to
+   * multiple resources on the same serverless platform without having to create multiple Network
+   * Endpoint Groups and backend resources. The fields parsed by this template are platform-specific
+   * and are as follows:
+   *
+   *              1. API Gateway: The gateway ID      2. App Engine: The service and version      3.
+   * Cloud Functions: The function name      4. Cloud Run: The service and tag
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlMask() {
@@ -126,12 +138,15 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   }
 
   /**
-   * An URL mask is one of the main components of the Cloud Function. A template to parse platform-
-   * specific fields from a request URL. URL mask allows for routing to multiple resources on the
-   * same serverless platform without having to create multiple Network Endpoint Groups and backend
-   * resources. The fields parsed by this template are platform-specific and are as follows: 1. API
-   * Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function
-   * name 4. Cloud Run: The service and tag
+   * An URL mask is one of the main components of the Cloud Function.
+   *
+   * A template to parse platform-specific fields from a request URL. URL mask allows for routing to
+   * multiple resources on the same serverless platform without having to create multiple Network
+   * Endpoint Groups and backend resources. The fields parsed by this template are platform-specific
+   * and are as follows:
+   *
+   *              1. API Gateway: The gateway ID      2. App Engine: The service and version      3.
+   * Cloud Functions: The function name      4. Cloud Run: The service and tag
    * @param urlMask urlMask or {@code null} for none
    */
   public NetworkEndpointGroupServerlessDeployment setUrlMask(java.lang.String urlMask) {
@@ -141,8 +156,10 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
 
   /**
    * The optional resource version. The version identified by this value is platform-specific and is
-   * follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused
-   * 4. Cloud Run: The service tag
+   * follows:
+   *
+   *              1. API Gateway: Unused      2. App Engine: The service version      3. Cloud
+   * Functions: Unused      4. Cloud Run: The service tag
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -151,8 +168,10 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
 
   /**
    * The optional resource version. The version identified by this value is platform-specific and is
-   * follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused
-   * 4. Cloud Run: The service tag
+   * follows:
+   *
+   *              1. API Gateway: Unused      2. App Engine: The service version      3. Cloud
+   * Functions: Unused      4. Cloud Run: The service tag
    * @param version version or {@code null} for none
    */
   public NetworkEndpointGroupServerlessDeployment setVersion(java.lang.String version) {

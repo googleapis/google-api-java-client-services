@@ -20,7 +20,9 @@ package com.google.api.services.compute.model;
  * The `Status` type defines a logical error model that is suitable for different programming
  * environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc).
  * Each `Status` message contains three pieces of data: error code, error message, and error
- * details. You can find out more about this error model and how to work with it in the [API Design
+ * details.
+ *
+ * You can find out more about this error model and how to work with it in the [API Design
  * Guide](https://cloud.google.com/apis/design/errors).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -41,7 +43,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   private java.lang.Integer code;
 
   /**
-   * A list of messages that carry the error details. There is a common set of message types for
+   * A list of messages that carry the error details.  There is a common set of message types for
    * APIs to use.
    * The value may be {@code null}.
    */
@@ -75,7 +77,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of messages that carry the error details. There is a common set of message types for
+   * A list of messages that carry the error details.  There is a common set of message types for
    * APIs to use.
    * @return value or {@code null} for none
    */
@@ -84,7 +86,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of messages that carry the error details. There is a common set of message types for
+   * A list of messages that carry the error details.  There is a common set of message types for
    * APIs to use.
    * @param details details or {@code null} for none
    */

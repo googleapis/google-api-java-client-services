@@ -32,8 +32,10 @@ public final class BackendServiceLocalityLoadBalancingPolicyConfigPolicy extends
   /**
    * The name of a locality load-balancing policy. Valid values include ROUND_ROBIN and, for Java
    * clients, LEAST_REQUEST. For information about these values, see the description of
-   * localityLbPolicy. Do not specify the same policy more than once for a backend. If you do, the
-   * configuration is rejected.
+   * localityLbPolicy.
+   *
+   * Do not specify the same policy more than once for a backend. If you do, the configuration is
+   * rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +44,10 @@ public final class BackendServiceLocalityLoadBalancingPolicyConfigPolicy extends
   /**
    * The name of a locality load-balancing policy. Valid values include ROUND_ROBIN and, for Java
    * clients, LEAST_REQUEST. For information about these values, see the description of
-   * localityLbPolicy. Do not specify the same policy more than once for a backend. If you do, the
-   * configuration is rejected.
+   * localityLbPolicy.
+   *
+   * Do not specify the same policy more than once for a backend. If you do, the configuration is
+   * rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -53,8 +57,10 @@ public final class BackendServiceLocalityLoadBalancingPolicyConfigPolicy extends
   /**
    * The name of a locality load-balancing policy. Valid values include ROUND_ROBIN and, for Java
    * clients, LEAST_REQUEST. For information about these values, see the description of
-   * localityLbPolicy. Do not specify the same policy more than once for a backend. If you do, the
-   * configuration is rejected.
+   * localityLbPolicy.
+   *
+   * Do not specify the same policy more than once for a backend. If you do, the configuration is
+   * rejected.
    * @param name name or {@code null} for none
    */
   public BackendServiceLocalityLoadBalancingPolicyConfigPolicy setName(java.lang.String name) {

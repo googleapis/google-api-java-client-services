@@ -38,10 +38,13 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   private java.lang.String defaultRolloutTime;
 
   /**
-   * Location based rollout policies to apply to the resource. Currently only zone names are
-   * supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects
-   * an RFC3339 timestamp on or after which the update is considered rolled out to the specified
-   * location.
+   * Location based rollout policies to apply to the resource.
+   *
+   * Currently only zone names are supported and must be represented as valid URLs, like: zones/us-
+   * central1-a.
+   *
+   * The value expects an RFC3339 timestamp on or after which the update is considered rolled out to
+   * the specified location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,10 +70,13 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Location based rollout policies to apply to the resource. Currently only zone names are
-   * supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects
-   * an RFC3339 timestamp on or after which the update is considered rolled out to the specified
-   * location.
+   * Location based rollout policies to apply to the resource.
+   *
+   * Currently only zone names are supported and must be represented as valid URLs, like: zones/us-
+   * central1-a.
+   *
+   * The value expects an RFC3339 timestamp on or after which the update is considered rolled out to
+   * the specified location.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLocationRolloutPolicies() {
@@ -78,10 +84,13 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Location based rollout policies to apply to the resource. Currently only zone names are
-   * supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects
-   * an RFC3339 timestamp on or after which the update is considered rolled out to the specified
-   * location.
+   * Location based rollout policies to apply to the resource.
+   *
+   * Currently only zone names are supported and must be represented as valid URLs, like: zones/us-
+   * central1-a.
+   *
+   * The value expects an RFC3339 timestamp on or after which the update is considered rolled out to
+   * the specified location.
    * @param locationRolloutPolicies locationRolloutPolicies or {@code null} for none
    */
   public RolloutPolicy setLocationRolloutPolicies(java.util.Map<String, java.lang.String> locationRolloutPolicies) {

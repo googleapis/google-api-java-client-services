@@ -88,6 +88,14 @@ public final class SubscriptionLineItem extends com.google.api.client.json.Gener
   private java.util.List<SubscriptionPromotionSpec> lineItemPromotionSpecs;
 
   /**
+   * Identifier. Resource name of the line item. Format:
+   * partners/{partner}/subscriptions/{subscription}/lineItems/{lineItem}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Output only. Details only set for a ONE_TIME recurrence line item.
    * The value may be {@code null}.
    */
@@ -255,6 +263,25 @@ public final class SubscriptionLineItem extends com.google.api.client.json.Gener
    */
   public SubscriptionLineItem setLineItemPromotionSpecs(java.util.List<SubscriptionPromotionSpec> lineItemPromotionSpecs) {
     this.lineItemPromotionSpecs = lineItemPromotionSpecs;
+    return this;
+  }
+
+  /**
+   * Identifier. Resource name of the line item. Format:
+   * partners/{partner}/subscriptions/{subscription}/lineItems/{lineItem}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Identifier. Resource name of the line item. Format:
+   * partners/{partner}/subscriptions/{subscription}/lineItems/{lineItem}
+   * @param name name or {@code null} for none
+   */
+  public SubscriptionLineItem setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

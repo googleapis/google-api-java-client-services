@@ -114,6 +114,19 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String canonicalLink;
 
   /**
+   * Rules for carrier-based shipping.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CarrierShipping> carrierShipping;
+
+  static {
+    // hack to force ProGuard to consider CarrierShipping used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CarrierShipping.class);
+  }
+
+  /**
    * Product Certifications, for example for energy efficiency labeling of products recorded in the
    * [EU EPREL](https://eprel.ec.europa.eu/screen/home) database. See the [Help
    * Center](https://support.google.com/merchants/answer/13528839) article for more information.
@@ -959,6 +972,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setCanonicalLink(java.lang.String canonicalLink) {
     this.canonicalLink = canonicalLink;
+    return this;
+  }
+
+  /**
+   * Rules for carrier-based shipping.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CarrierShipping> getCarrierShipping() {
+    return carrierShipping;
+  }
+
+  /**
+   * Rules for carrier-based shipping.
+   * @param carrierShipping carrierShipping or {@code null} for none
+   */
+  public ProductAttributes setCarrierShipping(java.util.List<CarrierShipping> carrierShipping) {
+    this.carrierShipping = carrierShipping;
     return this;
   }
 

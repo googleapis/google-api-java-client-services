@@ -49,6 +49,14 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
   private java.lang.String name;
 
   /**
+   * Optional. Ordered `Parts` that constitute a function response. Parts may have different IANA
+   * MIME types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1FunctionResponsePart> parts;
+
+  /**
    * Required. The function response in JSON object format. Use "output" key to specify function
    * output and "error" key to specify error details (if any). If "output" and "error" keys are not
    * specified, then whole "response" is treated as function output.
@@ -92,6 +100,25 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
    */
   public GoogleCloudAiplatformV1beta1FunctionResponse setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Ordered `Parts` that constitute a function response. Parts may have different IANA
+   * MIME types.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1FunctionResponsePart> getParts() {
+    return parts;
+  }
+
+  /**
+   * Optional. Ordered `Parts` that constitute a function response. Parts may have different IANA
+   * MIME types.
+   * @param parts parts or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FunctionResponse setParts(java.util.List<GoogleCloudAiplatformV1beta1FunctionResponsePart> parts) {
+    this.parts = parts;
     return this;
   }
 

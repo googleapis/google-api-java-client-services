@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1beta1SpeechConfig extends com.google.a
   private java.lang.String languageCode;
 
   /**
+   * The configuration for a multi-speaker text-to-speech request. This field is mutually exclusive
+   * with `voice_config`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1MultiSpeakerVoiceConfig multiSpeakerVoiceConfig;
+
+  /**
    * The configuration for the speaker to use.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class GoogleCloudAiplatformV1beta1SpeechConfig extends com.google.a
    */
   public GoogleCloudAiplatformV1beta1SpeechConfig setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * The configuration for a multi-speaker text-to-speech request. This field is mutually exclusive
+   * with `voice_config`.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MultiSpeakerVoiceConfig getMultiSpeakerVoiceConfig() {
+    return multiSpeakerVoiceConfig;
+  }
+
+  /**
+   * The configuration for a multi-speaker text-to-speech request. This field is mutually exclusive
+   * with `voice_config`.
+   * @param multiSpeakerVoiceConfig multiSpeakerVoiceConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SpeechConfig setMultiSpeakerVoiceConfig(GoogleCloudAiplatformV1beta1MultiSpeakerVoiceConfig multiSpeakerVoiceConfig) {
+    this.multiSpeakerVoiceConfig = multiSpeakerVoiceConfig;
     return this;
   }
 

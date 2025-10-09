@@ -38,7 +38,7 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
 
   /**
    * APKs to install in addition to those being directly tested. These will be installed after the
-   * app under test. Currently capped at 100.
+   * app under test. Limited to a combined total of 100 initial setup and additional files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Initial setup APKs to install before the app under test is installed. Currently
-   * capped at 100.
+   * Optional. Initial setup APKs to install before the app under test is installed. Limited to a
+   * combined total of 100 initial setup and additional files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +146,7 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
 
   /**
    * APKs to install in addition to those being directly tested. These will be installed after the
-   * app under test. Currently capped at 100.
+   * app under test. Limited to a combined total of 100 initial setup and additional files.
    * @return value or {@code null} for none
    */
   public java.util.List<Apk> getAdditionalApks() {
@@ -155,7 +155,7 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
 
   /**
    * APKs to install in addition to those being directly tested. These will be installed after the
-   * app under test. Currently capped at 100.
+   * app under test. Limited to a combined total of 100 initial setup and additional files.
    * @param additionalApks additionalApks or {@code null} for none
    */
   public TestSetup setAdditionalApks(java.util.List<Apk> additionalApks) {
@@ -242,8 +242,8 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Initial setup APKs to install before the app under test is installed. Currently
-   * capped at 100.
+   * Optional. Initial setup APKs to install before the app under test is installed. Limited to a
+   * combined total of 100 initial setup and additional files.
    * @return value or {@code null} for none
    */
   public java.util.List<Apk> getInitialSetupApks() {
@@ -251,8 +251,8 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Initial setup APKs to install before the app under test is installed. Currently
-   * capped at 100.
+   * Optional. Initial setup APKs to install before the app under test is installed. Limited to a
+   * combined total of 100 initial setup and additional files.
    * @param initialSetupApks initialSetupApks or {@code null} for none
    */
   public TestSetup setInitialSetupApks(java.util.List<Apk> initialSetupApks) {

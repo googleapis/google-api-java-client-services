@@ -3993,7 +3993,8 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
           /**
            * Creates a GitRepositoryLink. Upon linking a Git Repository, Developer Connect will configure the
            * Git Repository to send webhook events to Developer Connect. Connections that use Firebase GitHub
-           * Application will have events forwarded to the Firebase service. All other Connections will have
+           * Application will have events forwarded to the Firebase service. Connections that use Gemini Code
+           * Assist will have events forwarded to Gemini Code Assist service. All other Connections will have
            * events forwarded to Cloud Build.
            *
            * Create a request for the method "gitRepositoryLinks.create".
@@ -4021,8 +4022,9 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             /**
              * Creates a GitRepositoryLink. Upon linking a Git Repository, Developer Connect will configure
              * the Git Repository to send webhook events to Developer Connect. Connections that use Firebase
-             * GitHub Application will have events forwarded to the Firebase service. All other Connections
-             * will have events forwarded to Cloud Build.
+             * GitHub Application will have events forwarded to the Firebase service. Connections that use
+             * Gemini Code Assist will have events forwarded to Gemini Code Assist service. All other
+             * Connections will have events forwarded to Cloud Build.
              *
              * Create a request for the method "gitRepositoryLinks.create".
              *

@@ -32,7 +32,7 @@ public final class GoogleChromeManagementVersionsV1GenericCaConnection extends c
 
   /**
    * Output only. A string that references the administrator-provided configuration for the
-   * certification authority service. This field can be missing if no configuration was given.
+   * certification authority service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class GoogleChromeManagementVersionsV1GenericCaConnection extends c
 
   /**
    * Output only. A string that references the administrator-provided configuration for the
-   * certification authority service. This field can be missing if no configuration was given.
+   * certification authority service.
    * @return value or {@code null} for none
    */
   public java.lang.String getCaConnectionAdapterConfigReference() {
@@ -49,7 +49,7 @@ public final class GoogleChromeManagementVersionsV1GenericCaConnection extends c
 
   /**
    * Output only. A string that references the administrator-provided configuration for the
-   * certification authority service. This field can be missing if no configuration was given.
+   * certification authority service.
    * @param caConnectionAdapterConfigReference caConnectionAdapterConfigReference or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1GenericCaConnection setCaConnectionAdapterConfigReference(java.lang.String caConnectionAdapterConfigReference) {

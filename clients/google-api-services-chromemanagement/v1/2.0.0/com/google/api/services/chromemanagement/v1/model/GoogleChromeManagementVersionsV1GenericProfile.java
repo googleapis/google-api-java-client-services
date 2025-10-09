@@ -32,7 +32,7 @@ public final class GoogleChromeManagementVersionsV1GenericProfile extends com.go
 
   /**
    * Output only. A string that references the administrator-provided configuration for the
-   * certificate provisioning profile. This field can be missing if no configuration was given.
+   * certificate provisioning profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class GoogleChromeManagementVersionsV1GenericProfile extends com.go
 
   /**
    * Output only. A string that references the administrator-provided configuration for the
-   * certificate provisioning profile. This field can be missing if no configuration was given.
+   * certificate provisioning profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getProfileAdapterConfigReference() {
@@ -49,7 +49,7 @@ public final class GoogleChromeManagementVersionsV1GenericProfile extends com.go
 
   /**
    * Output only. A string that references the administrator-provided configuration for the
-   * certificate provisioning profile. This field can be missing if no configuration was given.
+   * certificate provisioning profile.
    * @param profileAdapterConfigReference profileAdapterConfigReference or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1GenericProfile setProfileAdapterConfigReference(java.lang.String profileAdapterConfigReference) {

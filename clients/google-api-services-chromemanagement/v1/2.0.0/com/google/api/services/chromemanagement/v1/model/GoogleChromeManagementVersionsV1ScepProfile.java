@@ -32,7 +32,7 @@ public final class GoogleChromeManagementVersionsV1ScepProfile extends com.googl
 
   /**
    * Output only. The certificate template name as defined by the admin on their on-prem
-   * infrastructure. This is identifiable by the customer's CA.
+   * infrastructure. The Certificate Authority uses this name to identify the certificate template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class GoogleChromeManagementVersionsV1ScepProfile extends com.googl
 
   /**
    * Output only. The certificate template name as defined by the admin on their on-prem
-   * infrastructure. This is identifiable by the customer's CA.
+   * infrastructure. The Certificate Authority uses this name to identify the certificate template.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificateTemplateName() {
@@ -105,7 +105,7 @@ public final class GoogleChromeManagementVersionsV1ScepProfile extends com.googl
 
   /**
    * Output only. The certificate template name as defined by the admin on their on-prem
-   * infrastructure. This is identifiable by the customer's CA.
+   * infrastructure. The Certificate Authority uses this name to identify the certificate template.
    * @param certificateTemplateName certificateTemplateName or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1ScepProfile setCertificateTemplateName(java.lang.String certificateTemplateName) {

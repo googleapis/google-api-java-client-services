@@ -38,7 +38,7 @@ public final class GoogleChromeManagementVersionsV1SubjectAltName extends com.go
   private java.lang.String type;
 
   /**
-   * Output only. The value of the subject alternative name with respoect to the `type`.
+   * Output only. The value of the subject alternative name with respect to the `type`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleChromeManagementVersionsV1SubjectAltName extends com.go
   }
 
   /**
-   * Output only. The value of the subject alternative name with respoect to the `type`.
+   * Output only. The value of the subject alternative name with respect to the `type`.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -70,7 +70,7 @@ public final class GoogleChromeManagementVersionsV1SubjectAltName extends com.go
   }
 
   /**
-   * Output only. The value of the subject alternative name with respoect to the `type`.
+   * Output only. The value of the subject alternative name with respect to the `type`.
    * @param value value or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1SubjectAltName setValue(java.lang.String value) {

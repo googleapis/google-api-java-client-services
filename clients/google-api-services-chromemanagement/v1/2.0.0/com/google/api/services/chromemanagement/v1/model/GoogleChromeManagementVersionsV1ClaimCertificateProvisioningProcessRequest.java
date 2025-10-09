@@ -17,7 +17,7 @@
 package com.google.api.services.chromemanagement.v1.model;
 
 /**
- * Describes a SCEP Certificate Authority Connection.
+ * Request message for claiming a certificate provisioning process.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation
@@ -28,43 +28,40 @@ package com.google.api.services.chromemanagement.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleChromeManagementVersionsV1ScepCaConnection extends com.google.api.client.json.GenericJson {
+public final class GoogleChromeManagementVersionsV1ClaimCertificateProvisioningProcessRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A string that references the administrator-provided configuration for the
-   * certification authority service.
+   * Required. The instance id of the caller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String caConnectionAdapterConfigReference;
+  private java.lang.String callerInstanceId;
 
   /**
-   * Output only. A string that references the administrator-provided configuration for the
-   * certification authority service.
+   * Required. The instance id of the caller.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCaConnectionAdapterConfigReference() {
-    return caConnectionAdapterConfigReference;
+  public java.lang.String getCallerInstanceId() {
+    return callerInstanceId;
   }
 
   /**
-   * Output only. A string that references the administrator-provided configuration for the
-   * certification authority service.
-   * @param caConnectionAdapterConfigReference caConnectionAdapterConfigReference or {@code null} for none
+   * Required. The instance id of the caller.
+   * @param callerInstanceId callerInstanceId or {@code null} for none
    */
-  public GoogleChromeManagementVersionsV1ScepCaConnection setCaConnectionAdapterConfigReference(java.lang.String caConnectionAdapterConfigReference) {
-    this.caConnectionAdapterConfigReference = caConnectionAdapterConfigReference;
+  public GoogleChromeManagementVersionsV1ClaimCertificateProvisioningProcessRequest setCallerInstanceId(java.lang.String callerInstanceId) {
+    this.callerInstanceId = callerInstanceId;
     return this;
   }
 
   @Override
-  public GoogleChromeManagementVersionsV1ScepCaConnection set(String fieldName, Object value) {
-    return (GoogleChromeManagementVersionsV1ScepCaConnection) super.set(fieldName, value);
+  public GoogleChromeManagementVersionsV1ClaimCertificateProvisioningProcessRequest set(String fieldName, Object value) {
+    return (GoogleChromeManagementVersionsV1ClaimCertificateProvisioningProcessRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleChromeManagementVersionsV1ScepCaConnection clone() {
-    return (GoogleChromeManagementVersionsV1ScepCaConnection) super.clone();
+  public GoogleChromeManagementVersionsV1ClaimCertificateProvisioningProcessRequest clone() {
+    return (GoogleChromeManagementVersionsV1ClaimCertificateProvisioningProcessRequest) super.clone();
   }
 
 }

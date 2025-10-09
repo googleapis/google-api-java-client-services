@@ -203,6 +203,13 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends 
   private GoogleChromeManagementVersionsV1ReportingData reportingData;
 
   /**
+   * Output only. Whether the profile supports FCM notifications.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsFcmNotifications;
+
+  /**
    * Output only. Email address of the user to which the profile belongs.
    * The value may be {@code null}.
    */
@@ -629,6 +636,23 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends 
    */
   public GoogleChromeManagementVersionsV1ChromeBrowserProfile setReportingData(GoogleChromeManagementVersionsV1ReportingData reportingData) {
     this.reportingData = reportingData;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the profile supports FCM notifications.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsFcmNotifications() {
+    return supportsFcmNotifications;
+  }
+
+  /**
+   * Output only. Whether the profile supports FCM notifications.
+   * @param supportsFcmNotifications supportsFcmNotifications or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1ChromeBrowserProfile setSupportsFcmNotifications(java.lang.Boolean supportsFcmNotifications) {
+    this.supportsFcmNotifications = supportsFcmNotifications;
     return this;
   }
 

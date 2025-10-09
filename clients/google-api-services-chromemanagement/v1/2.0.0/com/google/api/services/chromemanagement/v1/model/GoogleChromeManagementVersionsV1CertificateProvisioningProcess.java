@@ -124,9 +124,10 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   private java.lang.String signature;
 
   /**
-   * Output only. The signature algorithm that the adapter expects the client and backend components
-   * to use when processing `sign_data`. This field is only present after the `SignData` operation
-   * has been initiated.
+   * Output only. The signature algorithm that the client and backend components use when processing
+   * `sign_data`. If the `profile_type` is a `GenericProfile`, this field will only be present after
+   * the `SignData` operation was initiated. If the `profile_type` is a `ScepProfile`, the field
+   * will always be present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -433,9 +434,10 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   }
 
   /**
-   * Output only. The signature algorithm that the adapter expects the client and backend components
-   * to use when processing `sign_data`. This field is only present after the `SignData` operation
-   * has been initiated.
+   * Output only. The signature algorithm that the client and backend components use when processing
+   * `sign_data`. If the `profile_type` is a `GenericProfile`, this field will only be present after
+   * the `SignData` operation was initiated. If the `profile_type` is a `ScepProfile`, the field
+   * will always be present.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignatureAlgorithm() {
@@ -443,9 +445,10 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   }
 
   /**
-   * Output only. The signature algorithm that the adapter expects the client and backend components
-   * to use when processing `sign_data`. This field is only present after the `SignData` operation
-   * has been initiated.
+   * Output only. The signature algorithm that the client and backend components use when processing
+   * `sign_data`. If the `profile_type` is a `GenericProfile`, this field will only be present after
+   * the `SignData` operation was initiated. If the `profile_type` is a `ScepProfile`, the field
+   * will always be present.
    * @param signatureAlgorithm signatureAlgorithm or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1CertificateProvisioningProcess setSignatureAlgorithm(java.lang.String signatureAlgorithm) {

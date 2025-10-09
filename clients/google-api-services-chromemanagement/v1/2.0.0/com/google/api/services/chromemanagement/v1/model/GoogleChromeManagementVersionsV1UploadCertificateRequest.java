@@ -17,7 +17,7 @@
 package com.google.api.services.chromemanagement.v1.model;
 
 /**
- * Describes a SCEP Certificate Authority Connection.
+ * Request message for uploading an issued certificate for a certificate provisioning process.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation
@@ -28,43 +28,40 @@ package com.google.api.services.chromemanagement.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleChromeManagementVersionsV1ScepCaConnection extends com.google.api.client.json.GenericJson {
+public final class GoogleChromeManagementVersionsV1UploadCertificateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A string that references the administrator-provided configuration for the
-   * certification authority service.
+   * Required. The issued certificate in PEM format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String caConnectionAdapterConfigReference;
+  private java.lang.String certificatePem;
 
   /**
-   * Output only. A string that references the administrator-provided configuration for the
-   * certification authority service.
+   * Required. The issued certificate in PEM format.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCaConnectionAdapterConfigReference() {
-    return caConnectionAdapterConfigReference;
+  public java.lang.String getCertificatePem() {
+    return certificatePem;
   }
 
   /**
-   * Output only. A string that references the administrator-provided configuration for the
-   * certification authority service.
-   * @param caConnectionAdapterConfigReference caConnectionAdapterConfigReference or {@code null} for none
+   * Required. The issued certificate in PEM format.
+   * @param certificatePem certificatePem or {@code null} for none
    */
-  public GoogleChromeManagementVersionsV1ScepCaConnection setCaConnectionAdapterConfigReference(java.lang.String caConnectionAdapterConfigReference) {
-    this.caConnectionAdapterConfigReference = caConnectionAdapterConfigReference;
+  public GoogleChromeManagementVersionsV1UploadCertificateRequest setCertificatePem(java.lang.String certificatePem) {
+    this.certificatePem = certificatePem;
     return this;
   }
 
   @Override
-  public GoogleChromeManagementVersionsV1ScepCaConnection set(String fieldName, Object value) {
-    return (GoogleChromeManagementVersionsV1ScepCaConnection) super.set(fieldName, value);
+  public GoogleChromeManagementVersionsV1UploadCertificateRequest set(String fieldName, Object value) {
+    return (GoogleChromeManagementVersionsV1UploadCertificateRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleChromeManagementVersionsV1ScepCaConnection clone() {
-    return (GoogleChromeManagementVersionsV1ScepCaConnection) super.clone();
+  public GoogleChromeManagementVersionsV1UploadCertificateRequest clone() {
+    return (GoogleChromeManagementVersionsV1UploadCertificateRequest) super.clone();
   }
 
 }

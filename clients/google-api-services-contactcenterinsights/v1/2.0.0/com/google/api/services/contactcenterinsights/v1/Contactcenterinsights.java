@@ -11927,8 +11927,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
            * The list of fields to be updated. All possible fields can be updated by passing `*`, or
            * a subset of the following updateable fields can be provided: * `agent_id` *
            * `language_code` * `labels` * `metadata` * `quality_metadata` * `call_metadata` *
-           * `start_time` * `expire_time` or `ttl` * `data_source.gcs_source.audio_uri` or
-           * `data_source.dialogflow_source.audio_uri`
+           * `start_time` * `expire_time` or `ttl` * `data_source.gcs_source.audio_uri` or *
+           * `data_source.dialogflow_source.audio_uri` * `data_source.screen_recordings`
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -11936,7 +11936,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           /** The list of fields to be updated. All possible fields can be updated by passing `*`, or a subset of
          the following updateable fields can be provided: * `agent_id` * `language_code` * `labels` *
          `metadata` * `quality_metadata` * `call_metadata` * `start_time` * `expire_time` or `ttl` *
-         `data_source.gcs_source.audio_uri` or `data_source.dialogflow_source.audio_uri`
+         `data_source.gcs_source.audio_uri` or * `data_source.dialogflow_source.audio_uri` *
+         `data_source.screen_recordings`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -11946,8 +11947,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
            * The list of fields to be updated. All possible fields can be updated by passing `*`, or
            * a subset of the following updateable fields can be provided: * `agent_id` *
            * `language_code` * `labels` * `metadata` * `quality_metadata` * `call_metadata` *
-           * `start_time` * `expire_time` or `ttl` * `data_source.gcs_source.audio_uri` or
-           * `data_source.dialogflow_source.audio_uri`
+           * `start_time` * `expire_time` or `ttl` * `data_source.gcs_source.audio_uri` or *
+           * `data_source.dialogflow_source.audio_uri` * `data_source.screen_recordings`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

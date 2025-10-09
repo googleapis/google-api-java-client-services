@@ -155,7 +155,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean useStreamingEngineResourceBasedBilling;
 
   /**
-   * A description of the process that generated the request.
+   * Optional. A description of the process that generated the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -493,7 +493,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A description of the process that generated the request.
+   * Optional. A description of the process that generated the request.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getUserAgent() {
@@ -501,7 +501,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A description of the process that generated the request.
+   * Optional. A description of the process that generated the request.
    * @param userAgent userAgent or {@code null} for none
    */
   public Environment setUserAgent(java.util.Map<String, java.lang.Object> userAgent) {

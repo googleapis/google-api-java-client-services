@@ -102,6 +102,16 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   private GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig;
 
   /**
+   * Optional. The path to a Cloud Storage bucket containing conversation screen recordings. If
+   * provided, Insights will search in the bucket for a screen recording file matching the
+   * conversation data source object name prefix. If matches are found, these file URIs will be
+   * stored in the conversation screen recordings field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String screenRecordingBucketUri;
+
+  /**
    * Optional. Default Speech-to-Text resources to use while ingesting audio files. Optional, CCAI
    * Insights will create a default if not provided. This applies to conversations ingested from the
    * `UploadConversation` and `IngestConversations` endpoints, including conversations coming from
@@ -270,6 +280,29 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    */
   public GoogleCloudContactcenterinsightsV1Settings setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig) {
     this.redactionConfig = redactionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The path to a Cloud Storage bucket containing conversation screen recordings. If
+   * provided, Insights will search in the bucket for a screen recording file matching the
+   * conversation data source object name prefix. If matches are found, these file URIs will be
+   * stored in the conversation screen recordings field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScreenRecordingBucketUri() {
+    return screenRecordingBucketUri;
+  }
+
+  /**
+   * Optional. The path to a Cloud Storage bucket containing conversation screen recordings. If
+   * provided, Insights will search in the bucket for a screen recording file matching the
+   * conversation data source object name prefix. If matches are found, these file URIs will be
+   * stored in the conversation screen recordings field.
+   * @param screenRecordingBucketUri screenRecordingBucketUri or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Settings setScreenRecordingBucketUri(java.lang.String screenRecordingBucketUri) {
+    this.screenRecordingBucketUri = screenRecordingBucketUri;
     return this;
   }
 

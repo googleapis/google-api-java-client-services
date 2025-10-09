@@ -270,6 +270,156 @@ public class TravelImpactModel extends com.google.api.client.googleapis.services
       }
     }
     /**
+     * Stateless method to retrieve GHG emissions estimates for a set of flight segments for Scope 3
+     * reporting. The response will contain all entries that match the input Scope3FlightSegment flight
+     * segments, in the same order provided. The estimates will be computed using the following
+     * cascading logic (using the first one that is available): 1. TIM-based emissions given origin,
+     * destination, carrier, flightNumber, departureDate, and cabinClass. 2. Typical flight emissions
+     * given origin, destination, year in departureDate, and cabinClass. 3. Distance-based emissions
+     * calculated using distanceKm, year in departureDate, and cabinClass. If there are no estimates
+     * available for a certain flight with any of the three methods, the response will return a
+     * Scope3FlightEmissions object with empty emission fields. The request will still be considered
+     * successful. Generally, missing emissions estimates occur when the flight is unknown to the server
+     * (e.g. no specific flight exists, or typical flight emissions are not available for the requested
+     * pair). The request will fail with an `INVALID_ARGUMENT` error if: * The request contains more
+     * than 1,000 flight legs. * The input flight leg is missing one or more identifiers. For example,
+     * missing origin/destination without a valid distance for TIM_EMISSIONS or TYPICAL_FLIGHT_EMISSIONS
+     * type matching, or missing distance for a DISTANCE_BASED_EMISSIONS type matching (if you want to
+     * fallback to distance-based emissions or want a distance-based emissions estimate, you need to
+     * specify a distance). * The flight date is before 2019 (Scope 3 data is only available for 2019
+     * and after). * The flight distance is not between 0 and 25,000,000,000,000,000 km. * Missing cabin
+     * class. Because the request is processed with fallback logic, it is possible that misconfigured
+     * requests return valid emissions estimates using fallback methods. For example, if a request has
+     * the wrong flight number but specifies the origin and destination, the request will still succeed,
+     * but the returned emissions will be based solely on the typical flight emissions. Similarly, if a
+     * request is missing the origin for a typical flight emissions request, but specifies a valid
+     * distance, the request could succeed based solely on the distance-based emissions. Consequently,
+     * one should check the source of the returned emissions (source) to confirm the results are as
+     * expected.
+     *
+     * Create a request for the method "flights.computeScope3FlightEmissions".
+     *
+     * This request holds the parameters needed by the travelimpactmodel server.  After setting any
+     * optional parameters, call the {@link ComputeScope3FlightEmissions#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param content the {@link com.google.api.services.travelimpactmodel.v1.model.ComputeScope3FlightEmissionsRequest}
+     * @return the request
+     */
+    public ComputeScope3FlightEmissions computeScope3FlightEmissions(com.google.api.services.travelimpactmodel.v1.model.ComputeScope3FlightEmissionsRequest content) throws java.io.IOException {
+      ComputeScope3FlightEmissions result = new ComputeScope3FlightEmissions(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ComputeScope3FlightEmissions extends TravelImpactModelRequest<com.google.api.services.travelimpactmodel.v1.model.ComputeScope3FlightEmissionsResponse> {
+
+      private static final String REST_PATH = "v1/flights:computeScope3FlightEmissions";
+
+      /**
+       * Stateless method to retrieve GHG emissions estimates for a set of flight segments for Scope 3
+       * reporting. The response will contain all entries that match the input Scope3FlightSegment
+       * flight segments, in the same order provided. The estimates will be computed using the following
+       * cascading logic (using the first one that is available): 1. TIM-based emissions given origin,
+       * destination, carrier, flightNumber, departureDate, and cabinClass. 2. Typical flight emissions
+       * given origin, destination, year in departureDate, and cabinClass. 3. Distance-based emissions
+       * calculated using distanceKm, year in departureDate, and cabinClass. If there are no estimates
+       * available for a certain flight with any of the three methods, the response will return a
+       * Scope3FlightEmissions object with empty emission fields. The request will still be considered
+       * successful. Generally, missing emissions estimates occur when the flight is unknown to the
+       * server (e.g. no specific flight exists, or typical flight emissions are not available for the
+       * requested pair). The request will fail with an `INVALID_ARGUMENT` error if: * The request
+       * contains more than 1,000 flight legs. * The input flight leg is missing one or more
+       * identifiers. For example, missing origin/destination without a valid distance for TIM_EMISSIONS
+       * or TYPICAL_FLIGHT_EMISSIONS type matching, or missing distance for a DISTANCE_BASED_EMISSIONS
+       * type matching (if you want to fallback to distance-based emissions or want a distance-based
+       * emissions estimate, you need to specify a distance). * The flight date is before 2019 (Scope 3
+       * data is only available for 2019 and after). * The flight distance is not between 0 and
+       * 25,000,000,000,000,000 km. * Missing cabin class. Because the request is processed with
+       * fallback logic, it is possible that misconfigured requests return valid emissions estimates
+       * using fallback methods. For example, if a request has the wrong flight number but specifies the
+       * origin and destination, the request will still succeed, but the returned emissions will be
+       * based solely on the typical flight emissions. Similarly, if a request is missing the origin for
+       * a typical flight emissions request, but specifies a valid distance, the request could succeed
+       * based solely on the distance-based emissions. Consequently, one should check the source of the
+       * returned emissions (source) to confirm the results are as expected.
+       *
+       * Create a request for the method "flights.computeScope3FlightEmissions".
+       *
+       * This request holds the parameters needed by the the travelimpactmodel server.  After setting
+       * any optional parameters, call the {@link ComputeScope3FlightEmissions#execute()} method to
+       * invoke the remote operation. <p> {@link ComputeScope3FlightEmissions#initialize(com.google.api.
+       * client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.travelimpactmodel.v1.model.ComputeScope3FlightEmissionsRequest}
+       * @since 1.13
+       */
+      protected ComputeScope3FlightEmissions(com.google.api.services.travelimpactmodel.v1.model.ComputeScope3FlightEmissionsRequest content) {
+        super(TravelImpactModel.this, "POST", REST_PATH, content, com.google.api.services.travelimpactmodel.v1.model.ComputeScope3FlightEmissionsResponse.class);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions set$Xgafv(java.lang.String $Xgafv) {
+        return (ComputeScope3FlightEmissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setAccessToken(java.lang.String accessToken) {
+        return (ComputeScope3FlightEmissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setAlt(java.lang.String alt) {
+        return (ComputeScope3FlightEmissions) super.setAlt(alt);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setCallback(java.lang.String callback) {
+        return (ComputeScope3FlightEmissions) super.setCallback(callback);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setFields(java.lang.String fields) {
+        return (ComputeScope3FlightEmissions) super.setFields(fields);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setKey(java.lang.String key) {
+        return (ComputeScope3FlightEmissions) super.setKey(key);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setOauthToken(java.lang.String oauthToken) {
+        return (ComputeScope3FlightEmissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ComputeScope3FlightEmissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setQuotaUser(java.lang.String quotaUser) {
+        return (ComputeScope3FlightEmissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setUploadType(java.lang.String uploadType) {
+        return (ComputeScope3FlightEmissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ComputeScope3FlightEmissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ComputeScope3FlightEmissions set(String parameterName, Object value) {
+        return (ComputeScope3FlightEmissions) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves typical flight emissions estimates between two airports, also known as a market. If
      * there are no estimates available for a certain market, the response will return the market object
      * with empty emission fields. The request will still be considered successful. Details on how the

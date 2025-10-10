@@ -30,27 +30,27 @@ package com.google.api.services.compute.model;
 public final class NetworksAddPeeringRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field will be deprecated soon. Use exchange_subnet_routes in network_peering instead.
+   * This field will be deprecated soon. Useexchange_subnet_routes in network_peering instead.
    * Indicates whether full mesh connectivity is created and managed automatically between peered
    * networks. Currently this field should always be true since Google Compute Engine will
-   * automatically create and manage subnetwork routes between two networks when peering state is
-   * ACTIVE.
+   * automatically create and manage subnetwork routes between two networks when peering state
+   * isACTIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean autoCreateRoutes;
 
   /**
-   * This field will be deprecated soon. Use export_custom_routes in network_peering instead.
-   * Whether to export the custom routes to peer network.
+   * This field will be deprecated soon. Useexport_custom_routes in network_peering instead. Whether
+   * to export the custom routes to peer network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean exportCustomRoutes;
 
   /**
-   * This field will be deprecated soon. Use import_custom_routes in network_peering instead.
-   * Whether to import the custom routes from peer network.
+   * This field will be deprecated soon. Useimport_custom_routes in network_peering instead. Whether
+   * to import the custom routes from peer network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
 
   /**
    * Network peering parameters. In order to specify route policies for peering using import and
-   * export custom routes, you must specify all peering related parameters (name, peer network,
-   * exchange_subnet_routes) in the network_peering field. The corresponding fields in
+   * export custom routes, you must specify all peering related parameters (name, peer
+   * network,exchange_subnet_routes) in the network_peering field. The corresponding fields in
    * NetworksAddPeeringRequest will be deprecated soon.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   private NetworkPeering networkPeering;
 
   /**
-   * URL of the peer network. It can be either full URL or partial URL. The peer network may belong
+   * URL of the peer network.  It can be either full URL or partial URL. The peer network may belong
    * to a different project. If the partial URL does not contain project, it is assumed that the
    * peer network is in the same project as the current network.
    * The value may be {@code null}.
@@ -83,11 +83,11 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   private java.lang.String peerNetwork;
 
   /**
-   * This field will be deprecated soon. Use exchange_subnet_routes in network_peering instead.
+   * This field will be deprecated soon. Useexchange_subnet_routes in network_peering instead.
    * Indicates whether full mesh connectivity is created and managed automatically between peered
    * networks. Currently this field should always be true since Google Compute Engine will
-   * automatically create and manage subnetwork routes between two networks when peering state is
-   * ACTIVE.
+   * automatically create and manage subnetwork routes between two networks when peering state
+   * isACTIVE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateRoutes() {
@@ -95,11 +95,11 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   }
 
   /**
-   * This field will be deprecated soon. Use exchange_subnet_routes in network_peering instead.
+   * This field will be deprecated soon. Useexchange_subnet_routes in network_peering instead.
    * Indicates whether full mesh connectivity is created and managed automatically between peered
    * networks. Currently this field should always be true since Google Compute Engine will
-   * automatically create and manage subnetwork routes between two networks when peering state is
-   * ACTIVE.
+   * automatically create and manage subnetwork routes between two networks when peering state
+   * isACTIVE.
    * @param autoCreateRoutes autoCreateRoutes or {@code null} for none
    */
   public NetworksAddPeeringRequest setAutoCreateRoutes(java.lang.Boolean autoCreateRoutes) {
@@ -108,8 +108,8 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   }
 
   /**
-   * This field will be deprecated soon. Use export_custom_routes in network_peering instead.
-   * Whether to export the custom routes to peer network.
+   * This field will be deprecated soon. Useexport_custom_routes in network_peering instead. Whether
+   * to export the custom routes to peer network.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExportCustomRoutes() {
@@ -117,8 +117,8 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   }
 
   /**
-   * This field will be deprecated soon. Use export_custom_routes in network_peering instead.
-   * Whether to export the custom routes to peer network.
+   * This field will be deprecated soon. Useexport_custom_routes in network_peering instead. Whether
+   * to export the custom routes to peer network.
    * @param exportCustomRoutes exportCustomRoutes or {@code null} for none
    */
   public NetworksAddPeeringRequest setExportCustomRoutes(java.lang.Boolean exportCustomRoutes) {
@@ -127,8 +127,8 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   }
 
   /**
-   * This field will be deprecated soon. Use import_custom_routes in network_peering instead.
-   * Whether to import the custom routes from peer network.
+   * This field will be deprecated soon. Useimport_custom_routes in network_peering instead. Whether
+   * to import the custom routes from peer network.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImportCustomRoutes() {
@@ -136,8 +136,8 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   }
 
   /**
-   * This field will be deprecated soon. Use import_custom_routes in network_peering instead.
-   * Whether to import the custom routes from peer network.
+   * This field will be deprecated soon. Useimport_custom_routes in network_peering instead. Whether
+   * to import the custom routes from peer network.
    * @param importCustomRoutes importCustomRoutes or {@code null} for none
    */
   public NetworksAddPeeringRequest setImportCustomRoutes(java.lang.Boolean importCustomRoutes) {
@@ -164,8 +164,8 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
 
   /**
    * Network peering parameters. In order to specify route policies for peering using import and
-   * export custom routes, you must specify all peering related parameters (name, peer network,
-   * exchange_subnet_routes) in the network_peering field. The corresponding fields in
+   * export custom routes, you must specify all peering related parameters (name, peer
+   * network,exchange_subnet_routes) in the network_peering field. The corresponding fields in
    * NetworksAddPeeringRequest will be deprecated soon.
    * @return value or {@code null} for none
    */
@@ -175,8 +175,8 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
 
   /**
    * Network peering parameters. In order to specify route policies for peering using import and
-   * export custom routes, you must specify all peering related parameters (name, peer network,
-   * exchange_subnet_routes) in the network_peering field. The corresponding fields in
+   * export custom routes, you must specify all peering related parameters (name, peer
+   * network,exchange_subnet_routes) in the network_peering field. The corresponding fields in
    * NetworksAddPeeringRequest will be deprecated soon.
    * @param networkPeering networkPeering or {@code null} for none
    */
@@ -186,7 +186,7 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   }
 
   /**
-   * URL of the peer network. It can be either full URL or partial URL. The peer network may belong
+   * URL of the peer network.  It can be either full URL or partial URL. The peer network may belong
    * to a different project. If the partial URL does not contain project, it is assumed that the
    * peer network is in the same project as the current network.
    * @return value or {@code null} for none
@@ -196,7 +196,7 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   }
 
   /**
-   * URL of the peer network. It can be either full URL or partial URL. The peer network may belong
+   * URL of the peer network.  It can be either full URL or partial URL. The peer network may belong
    * to a different project. If the partial URL does not contain project, it is assumed that the
    * peer network is in the same project as the current network.
    * @param peerNetwork peerNetwork or {@code null} for none

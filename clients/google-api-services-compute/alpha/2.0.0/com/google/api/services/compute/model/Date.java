@@ -19,11 +19,15 @@ package com.google.api.services.compute.model;
 /**
  * Represents a whole or partial calendar date, such as a birthday. The time of day and time zone
  * are either specified elsewhere or are insignificant. The date is relative to the Gregorian
- * Calendar. This can represent one of the following: * A full date, with non-zero year, month, and
- * day values. * A month and day, with a zero year (for example, an anniversary). * A year on its
- * own, with a zero month and a zero day. * A year and month, with a zero day (for example, a credit
- * card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime *
- * google.protobuf.Timestamp
+ * Calendar. This can represent one of the following:
+ *
+ * * A full date, with non-zero year, month, and day values. * A month and day, with a zero year
+ * (for example, an anniversary). * A year on its own, with a zero month and a zero day. * A year
+ * and month, with a zero day (for example, a credit card expiration   date).
+ *
+ * Related types:
+ *
+ * * google.type.TimeOfDay * google.type.DateTime * google.protobuf.Timestamp
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -37,7 +37,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   private java.lang.Integer count;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   private java.lang.Integer inUseHostCount;
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservationBlock for reservation blocks.
+   * [Output Only] Type of the resource. Alwayscompute#reservationBlock for reservation blocks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +172,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -180,7 +180,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ReservationBlock setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -259,7 +259,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservationBlock for reservation blocks.
+   * [Output Only] Type of the resource. Alwayscompute#reservationBlock for reservation blocks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -267,7 +267,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservationBlock for reservation blocks.
+   * [Output Only] Type of the resource. Alwayscompute#reservationBlock for reservation blocks.
    * @param kind kind or {@code null} for none
    */
   public ReservationBlock setKind(java.lang.String kind) {

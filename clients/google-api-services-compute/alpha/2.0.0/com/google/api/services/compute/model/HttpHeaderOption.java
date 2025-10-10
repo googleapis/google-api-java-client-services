@@ -45,9 +45,10 @@ public final class HttpHeaderOption extends com.google.api.client.json.GenericJs
 
   /**
    * If false, headerValue is appended to any values that already exist for the header. If true,
-   * headerValue is set for the header, discarding any values that were set for that header. The
-   * default value is true, unless a variable is present in headerValue, in which case the default
-   * value is false. .
+   * headerValue is set for the header, discarding any values that were set for that header.
+   *
+   * The default value is true, unless a variable is present in headerValue, in which case the
+   * default value is false. .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +90,10 @@ public final class HttpHeaderOption extends com.google.api.client.json.GenericJs
 
   /**
    * If false, headerValue is appended to any values that already exist for the header. If true,
-   * headerValue is set for the header, discarding any values that were set for that header. The
-   * default value is true, unless a variable is present in headerValue, in which case the default
-   * value is false. .
+   * headerValue is set for the header, discarding any values that were set for that header.
+   *
+   * The default value is true, unless a variable is present in headerValue, in which case the
+   * default value is false. .
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReplace() {
@@ -100,9 +102,10 @@ public final class HttpHeaderOption extends com.google.api.client.json.GenericJs
 
   /**
    * If false, headerValue is appended to any values that already exist for the header. If true,
-   * headerValue is set for the header, discarding any values that were set for that header. The
-   * default value is true, unless a variable is present in headerValue, in which case the default
-   * value is false. .
+   * headerValue is set for the header, discarding any values that were set for that header.
+   *
+   * The default value is true, unless a variable is present in headerValue, in which case the
+   * default value is false. .
    * @param replace replace or {@code null} for none
    */
   public HttpHeaderOption setReplace(java.lang.Boolean replace) {

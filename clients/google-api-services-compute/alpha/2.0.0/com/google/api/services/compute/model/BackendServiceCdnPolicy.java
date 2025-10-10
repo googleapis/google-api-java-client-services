@@ -46,17 +46,18 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   private CacheKeyPolicy cacheKeyPolicy;
 
   /**
-   * Specifies the cache setting for all responses from this backend. The possible values are:
-   * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
-   * without these headers will not be cached at Google's edge, and will require a full trip to the
-   * origin on every request, potentially impacting performance and increasing load on the origin
-   * server. FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache"
-   * directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching
-   * private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static
-   * content, including common image formats, media (video and audio), and web assets (JavaScript
-   * and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content
-   * (including HTML), will not be cached. If no value is provided for cdnPolicy.cacheMode, it
-   * defaults to CACHE_ALL_STATIC.
+   * Specifies the cache setting for all responses from this backend. The possible values
+   * are:USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content.
+   * Responses without these headers will not be cached at Google's edge, and will require a full
+   * trip to the origin on every request, potentially impacting performance and increasing load on
+   * the origin server.FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-
+   * cache" directives in Cache-Control response headers. Warning: this may result in Cloud CDN
+   * caching private, per-user (user identifiable) content.CACHE_ALL_STATIC Automatically cache
+   * static content, including common image formats, media (video and audio), and web assets
+   * (JavaScript and CSS). Requests and responses that are marked as uncacheable, as well as dynamic
+   * content (including HTML), will not be cached.
+   *
+   * If no value is provided for cdnPolicy.cacheMode, it defaults to CACHE_ALL_STATIC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +65,8 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
 
   /**
    * Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-
-   * age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and
-   * default_ttl is used for the response max-age directive, along with a "public" directive. For
+   * age (or Expires) value sent to the client.  With FORCE_CACHE_ALL, the lesser of client_ttl and
+   * default_ttl is used for the response max-age directive, along with a "public" directive.  For
    * cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if
    * specified), or else sets the response max-age directive to the lesser of the client_ttl and
    * default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is
@@ -152,7 +153,7 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   /**
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
-   * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
+   * (3600s).  When serving responses to signed URL requests, Cloud CDN will internally behave as
    * though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header,
    * regardless of any existing Cache-Control header. The actual headers served in responses will
    * not be altered.
@@ -207,17 +208,18 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Specifies the cache setting for all responses from this backend. The possible values are:
-   * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
-   * without these headers will not be cached at Google's edge, and will require a full trip to the
-   * origin on every request, potentially impacting performance and increasing load on the origin
-   * server. FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache"
-   * directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching
-   * private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static
-   * content, including common image formats, media (video and audio), and web assets (JavaScript
-   * and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content
-   * (including HTML), will not be cached. If no value is provided for cdnPolicy.cacheMode, it
-   * defaults to CACHE_ALL_STATIC.
+   * Specifies the cache setting for all responses from this backend. The possible values
+   * are:USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content.
+   * Responses without these headers will not be cached at Google's edge, and will require a full
+   * trip to the origin on every request, potentially impacting performance and increasing load on
+   * the origin server.FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-
+   * cache" directives in Cache-Control response headers. Warning: this may result in Cloud CDN
+   * caching private, per-user (user identifiable) content.CACHE_ALL_STATIC Automatically cache
+   * static content, including common image formats, media (video and audio), and web assets
+   * (JavaScript and CSS). Requests and responses that are marked as uncacheable, as well as dynamic
+   * content (including HTML), will not be cached.
+   *
+   * If no value is provided for cdnPolicy.cacheMode, it defaults to CACHE_ALL_STATIC.
    * @return value or {@code null} for none
    */
   public java.lang.String getCacheMode() {
@@ -225,17 +227,18 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Specifies the cache setting for all responses from this backend. The possible values are:
-   * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
-   * without these headers will not be cached at Google's edge, and will require a full trip to the
-   * origin on every request, potentially impacting performance and increasing load on the origin
-   * server. FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache"
-   * directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching
-   * private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static
-   * content, including common image formats, media (video and audio), and web assets (JavaScript
-   * and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content
-   * (including HTML), will not be cached. If no value is provided for cdnPolicy.cacheMode, it
-   * defaults to CACHE_ALL_STATIC.
+   * Specifies the cache setting for all responses from this backend. The possible values
+   * are:USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content.
+   * Responses without these headers will not be cached at Google's edge, and will require a full
+   * trip to the origin on every request, potentially impacting performance and increasing load on
+   * the origin server.FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-
+   * cache" directives in Cache-Control response headers. Warning: this may result in Cloud CDN
+   * caching private, per-user (user identifiable) content.CACHE_ALL_STATIC Automatically cache
+   * static content, including common image formats, media (video and audio), and web assets
+   * (JavaScript and CSS). Requests and responses that are marked as uncacheable, as well as dynamic
+   * content (including HTML), will not be cached.
+   *
+   * If no value is provided for cdnPolicy.cacheMode, it defaults to CACHE_ALL_STATIC.
    * @param cacheMode cacheMode or {@code null} for none
    */
   public BackendServiceCdnPolicy setCacheMode(java.lang.String cacheMode) {
@@ -245,8 +248,8 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
 
   /**
    * Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-
-   * age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and
-   * default_ttl is used for the response max-age directive, along with a "public" directive. For
+   * age (or Expires) value sent to the client.  With FORCE_CACHE_ALL, the lesser of client_ttl and
+   * default_ttl is used for the response max-age directive, along with a "public" directive.  For
    * cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if
    * specified), or else sets the response max-age directive to the lesser of the client_ttl and
    * default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is
@@ -260,8 +263,8 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
 
   /**
    * Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-
-   * age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and
-   * default_ttl is used for the response max-age directive, along with a "public" directive. For
+   * age (or Expires) value sent to the client.  With FORCE_CACHE_ALL, the lesser of client_ttl and
+   * default_ttl is used for the response max-age directive, along with a "public" directive.  For
    * cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if
    * specified), or else sets the response max-age directive to the lesser of the client_ttl and
    * default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is
@@ -441,7 +444,7 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   /**
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
-   * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
+   * (3600s).  When serving responses to signed URL requests, Cloud CDN will internally behave as
    * though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header,
    * regardless of any existing Cache-Control header. The actual headers served in responses will
    * not be altered.
@@ -454,7 +457,7 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   /**
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
-   * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
+   * (3600s).  When serving responses to signed URL requests, Cloud CDN will internally behave as
    * though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header,
    * regardless of any existing Cache-Control header. The actual headers served in responses will
    * not be altered.

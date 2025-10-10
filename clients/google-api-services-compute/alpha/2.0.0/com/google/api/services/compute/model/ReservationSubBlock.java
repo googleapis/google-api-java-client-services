@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class ReservationSubBlock extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] Slice info for the reservation subBlock.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AcceleratorTopologiesInfo acceleratorTopologiesInfo;
+
+  /**
    * [Output Only] The number of hosts that are allocated in this reservation subBlock.
    * The value may be {@code null}.
    */
@@ -37,7 +44,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.Integer count;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +80,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.Integer inUseHostCount;
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservationSubBlock for reservation
+   * [Output Only] Type of the resource. Alwayscompute#reservationSubBlock for reservation
    * subBlocks.
    * The value may be {@code null}.
    */
@@ -132,6 +139,23 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.String zone;
 
   /**
+   * [Output Only] Slice info for the reservation subBlock.
+   * @return value or {@code null} for none
+   */
+  public AcceleratorTopologiesInfo getAcceleratorTopologiesInfo() {
+    return acceleratorTopologiesInfo;
+  }
+
+  /**
+   * [Output Only] Slice info for the reservation subBlock.
+   * @param acceleratorTopologiesInfo acceleratorTopologiesInfo or {@code null} for none
+   */
+  public ReservationSubBlock setAcceleratorTopologiesInfo(AcceleratorTopologiesInfo acceleratorTopologiesInfo) {
+    this.acceleratorTopologiesInfo = acceleratorTopologiesInfo;
+    return this;
+  }
+
+  /**
    * [Output Only] The number of hosts that are allocated in this reservation subBlock.
    * @return value or {@code null} for none
    */
@@ -149,7 +173,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -157,7 +181,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ReservationSubBlock setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -236,7 +260,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservationSubBlock for reservation
+   * [Output Only] Type of the resource. Alwayscompute#reservationSubBlock for reservation
    * subBlocks.
    * @return value or {@code null} for none
    */
@@ -245,7 +269,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservationSubBlock for reservation
+   * [Output Only] Type of the resource. Alwayscompute#reservationSubBlock for reservation
    * subBlocks.
    * @param kind kind or {@code null} for none
    */

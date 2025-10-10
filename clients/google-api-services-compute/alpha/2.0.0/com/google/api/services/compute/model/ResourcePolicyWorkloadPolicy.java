@@ -37,6 +37,14 @@ public final class ResourcePolicyWorkloadPolicy extends com.google.api.client.js
   private java.lang.String acceleratorTopology;
 
   /**
+   * Specifies the connection mode for the accelerator topology. If not specified, the default is
+   * AUTO_CONNECT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String acceleratorTopologyMode;
+
+  /**
    * Specifies the maximum distance between instances.
    * The value may be {@code null}.
    */
@@ -64,6 +72,25 @@ public final class ResourcePolicyWorkloadPolicy extends com.google.api.client.js
    */
   public ResourcePolicyWorkloadPolicy setAcceleratorTopology(java.lang.String acceleratorTopology) {
     this.acceleratorTopology = acceleratorTopology;
+    return this;
+  }
+
+  /**
+   * Specifies the connection mode for the accelerator topology. If not specified, the default is
+   * AUTO_CONNECT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAcceleratorTopologyMode() {
+    return acceleratorTopologyMode;
+  }
+
+  /**
+   * Specifies the connection mode for the accelerator topology. If not specified, the default is
+   * AUTO_CONNECT.
+   * @param acceleratorTopologyMode acceleratorTopologyMode or {@code null} for none
+   */
+  public ResourcePolicyWorkloadPolicy setAcceleratorTopologyMode(java.lang.String acceleratorTopologyMode) {
+    this.acceleratorTopologyMode = acceleratorTopologyMode;
     return this;
   }
 

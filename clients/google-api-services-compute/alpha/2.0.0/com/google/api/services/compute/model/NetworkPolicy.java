@@ -37,7 +37,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   private java.util.List<NetworkPolicyAssociation> associations;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   private java.math.BigInteger id;
 
   /**
-   * [Output only] Type of the resource. Always compute#networkPolicy for network policies
+   * [Output only] Type of the resource. Alwayscompute#networkPolicy for network policies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -134,7 +134,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NetworkPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -177,7 +177,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#networkPolicy for network policies
+   * [Output only] Type of the resource. Alwayscompute#networkPolicy for network policies
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -185,7 +185,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#networkPolicy for network policies
+   * [Output only] Type of the resource. Alwayscompute#networkPolicy for network policies
    * @param kind kind or {@code null} for none
    */
   public NetworkPolicy setKind(java.lang.String kind) {

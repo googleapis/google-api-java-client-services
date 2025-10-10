@@ -30,16 +30,17 @@ package com.google.api.services.compute.model;
 public final class BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field indicates whether zonal affinity is enabled or not. The possible values are: -
-   * ZONAL_AFFINITY_DISABLED: Default Value. Zonal Affinity is disabled. The load balancer
-   * distributes new connections to all healthy backend endpoints across all zones. -
-   * ZONAL_AFFINITY_STAY_WITHIN_ZONE: Zonal Affinity is enabled. The load balancer distributes new
-   * connections to all healthy backend endpoints in the local zone only. If there are no healthy
-   * backend endpoints in the local zone, the load balancer distributes new connections to all
-   * backend endpoints in the local zone. - ZONAL_AFFINITY_SPILL_CROSS_ZONE: Zonal Affinity is
-   * enabled. The load balancer distributes new connections to all healthy backend endpoints in the
-   * local zone only. If there aren't enough healthy backend endpoints in the local zone, the load
-   * balancer distributes new connections to all healthy backend endpoints across all zones.
+   * This field indicates whether zonal affinity is enabled or not. The possible values are:
+   * - ZONAL_AFFINITY_DISABLED: Default Value. Zonal Affinity    is disabled. The load balancer
+   * distributes new connections to all    healthy backend endpoints across all zones.    -
+   * ZONAL_AFFINITY_STAY_WITHIN_ZONE: Zonal Affinity is    enabled. The load balancer distributes
+   * new connections to all healthy    backend endpoints in the local zone only. If there are no
+   * healthy    backend endpoints in the local zone, the load balancer distributes    new
+   * connections to all backend endpoints in the local zone.    - ZONAL_AFFINITY_SPILL_CROSS_ZONE:
+   * Zonal Affinity is    enabled. The load balancer distributes new connections to all healthy
+   * backend endpoints in the local zone only. If there aren't enough    healthy backend endpoints
+   * in the local zone, the load balancer    distributes new connections to all healthy backend
+   * endpoints across all    zones.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,16 +59,17 @@ public final class BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity 
   private java.lang.Float spilloverRatio;
 
   /**
-   * This field indicates whether zonal affinity is enabled or not. The possible values are: -
-   * ZONAL_AFFINITY_DISABLED: Default Value. Zonal Affinity is disabled. The load balancer
-   * distributes new connections to all healthy backend endpoints across all zones. -
-   * ZONAL_AFFINITY_STAY_WITHIN_ZONE: Zonal Affinity is enabled. The load balancer distributes new
-   * connections to all healthy backend endpoints in the local zone only. If there are no healthy
-   * backend endpoints in the local zone, the load balancer distributes new connections to all
-   * backend endpoints in the local zone. - ZONAL_AFFINITY_SPILL_CROSS_ZONE: Zonal Affinity is
-   * enabled. The load balancer distributes new connections to all healthy backend endpoints in the
-   * local zone only. If there aren't enough healthy backend endpoints in the local zone, the load
-   * balancer distributes new connections to all healthy backend endpoints across all zones.
+   * This field indicates whether zonal affinity is enabled or not. The possible values are:
+   * - ZONAL_AFFINITY_DISABLED: Default Value. Zonal Affinity    is disabled. The load balancer
+   * distributes new connections to all    healthy backend endpoints across all zones.    -
+   * ZONAL_AFFINITY_STAY_WITHIN_ZONE: Zonal Affinity is    enabled. The load balancer distributes
+   * new connections to all healthy    backend endpoints in the local zone only. If there are no
+   * healthy    backend endpoints in the local zone, the load balancer distributes    new
+   * connections to all backend endpoints in the local zone.    - ZONAL_AFFINITY_SPILL_CROSS_ZONE:
+   * Zonal Affinity is    enabled. The load balancer distributes new connections to all healthy
+   * backend endpoints in the local zone only. If there aren't enough    healthy backend endpoints
+   * in the local zone, the load balancer    distributes new connections to all healthy backend
+   * endpoints across all    zones.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpillover() {
@@ -75,16 +77,17 @@ public final class BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity 
   }
 
   /**
-   * This field indicates whether zonal affinity is enabled or not. The possible values are: -
-   * ZONAL_AFFINITY_DISABLED: Default Value. Zonal Affinity is disabled. The load balancer
-   * distributes new connections to all healthy backend endpoints across all zones. -
-   * ZONAL_AFFINITY_STAY_WITHIN_ZONE: Zonal Affinity is enabled. The load balancer distributes new
-   * connections to all healthy backend endpoints in the local zone only. If there are no healthy
-   * backend endpoints in the local zone, the load balancer distributes new connections to all
-   * backend endpoints in the local zone. - ZONAL_AFFINITY_SPILL_CROSS_ZONE: Zonal Affinity is
-   * enabled. The load balancer distributes new connections to all healthy backend endpoints in the
-   * local zone only. If there aren't enough healthy backend endpoints in the local zone, the load
-   * balancer distributes new connections to all healthy backend endpoints across all zones.
+   * This field indicates whether zonal affinity is enabled or not. The possible values are:
+   * - ZONAL_AFFINITY_DISABLED: Default Value. Zonal Affinity    is disabled. The load balancer
+   * distributes new connections to all    healthy backend endpoints across all zones.    -
+   * ZONAL_AFFINITY_STAY_WITHIN_ZONE: Zonal Affinity is    enabled. The load balancer distributes
+   * new connections to all healthy    backend endpoints in the local zone only. If there are no
+   * healthy    backend endpoints in the local zone, the load balancer distributes    new
+   * connections to all backend endpoints in the local zone.    - ZONAL_AFFINITY_SPILL_CROSS_ZONE:
+   * Zonal Affinity is    enabled. The load balancer distributes new connections to all healthy
+   * backend endpoints in the local zone only. If there aren't enough    healthy backend endpoints
+   * in the local zone, the load balancer    distributes new connections to all healthy backend
+   * endpoints across all    zones.
    * @param spillover spillover or {@code null} for none
    */
   public BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity setSpillover(java.lang.String spillover) {

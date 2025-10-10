@@ -72,8 +72,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Boolean enableLogging;
 
   /**
-   * [Output only] Type of the resource. Returns compute#firewallPolicyRule for firewall rules and
-   * compute#packetMirroringRule for packet mirroring rules.
+   * [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall rules
+   * andcompute#packetMirroringRule for packet mirroring rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,20 +122,20 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A list of forwarding rules to which this rule applies. This field allows you to control which
-   * load balancers get this rule. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/forwardingRules/forwardingRule -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /forwardingRules/forwardingRule - projects/project/global/ forwardingRules/forwardingRule -
-   * projects/project/regions/region/forwardingRules/ forwardingRule
+   * load balancers get this rule. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/forwardingRules/forwardingRule
+   * - https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forward
+   * ingRule      - projects/project/global/      forwardingRules/forwardingRule      -
+   * projects/project/regions/region/forwardingRules/      forwardingRule
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> targetForwardingRules;
 
   /**
-   * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
-   * will receive the rule.
+   * A list of network resource URLs to which this rule applies.  This field allows you to control
+   * which network's VMs get this rule.  If this field is left blank, all VMs within the
+   * organization will receive the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,8 +145,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    * A list of secure tags that controls which instances the firewall rule applies to. If
    * targetSecureTag are specified, then the firewall rule applies only to instances in the VPC
    * network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in
-   * INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same
-   * time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are
+   * INEFFECTIVE state, then this rule will be ignored.targetSecureTag may not be set at the same
+   * time astargetServiceAccounts. If neither targetServiceAccounts nortargetSecureTag are
    * specified, the firewall rule applies to all instances on the specified network. Maximum number
    * of target label tags allowed is 256.
    * The value may be {@code null}.
@@ -274,8 +274,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Returns compute#firewallPolicyRule for firewall rules and
-   * compute#packetMirroringRule for packet mirroring rules.
+   * [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall rules
+   * andcompute#packetMirroringRule for packet mirroring rules.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -283,8 +283,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Returns compute#firewallPolicyRule for firewall rules and
-   * compute#packetMirroringRule for packet mirroring rules.
+   * [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall rules
+   * andcompute#packetMirroringRule for packet mirroring rules.
    * @param kind kind or {@code null} for none
    */
   public FirewallPolicyRule setKind(java.lang.String kind) {
@@ -391,11 +391,11 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A list of forwarding rules to which this rule applies. This field allows you to control which
-   * load balancers get this rule. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/forwardingRules/forwardingRule -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /forwardingRules/forwardingRule - projects/project/global/ forwardingRules/forwardingRule -
-   * projects/project/regions/region/forwardingRules/ forwardingRule
+   * load balancers get this rule. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/forwardingRules/forwardingRule
+   * - https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forward
+   * ingRule      - projects/project/global/      forwardingRules/forwardingRule      -
+   * projects/project/regions/region/forwardingRules/      forwardingRule
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetForwardingRules() {
@@ -404,11 +404,11 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A list of forwarding rules to which this rule applies. This field allows you to control which
-   * load balancers get this rule. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/forwardingRules/forwardingRule -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /forwardingRules/forwardingRule - projects/project/global/ forwardingRules/forwardingRule -
-   * projects/project/regions/region/forwardingRules/ forwardingRule
+   * load balancers get this rule. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/forwardingRules/forwardingRule
+   * - https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forward
+   * ingRule      - projects/project/global/      forwardingRules/forwardingRule      -
+   * projects/project/regions/region/forwardingRules/      forwardingRule
    * @param targetForwardingRules targetForwardingRules or {@code null} for none
    */
   public FirewallPolicyRule setTargetForwardingRules(java.util.List<java.lang.String> targetForwardingRules) {
@@ -417,9 +417,9 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
-   * will receive the rule.
+   * A list of network resource URLs to which this rule applies.  This field allows you to control
+   * which network's VMs get this rule.  If this field is left blank, all VMs within the
+   * organization will receive the rule.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetResources() {
@@ -427,9 +427,9 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
-   * will receive the rule.
+   * A list of network resource URLs to which this rule applies.  This field allows you to control
+   * which network's VMs get this rule.  If this field is left blank, all VMs within the
+   * organization will receive the rule.
    * @param targetResources targetResources or {@code null} for none
    */
   public FirewallPolicyRule setTargetResources(java.util.List<java.lang.String> targetResources) {
@@ -441,8 +441,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    * A list of secure tags that controls which instances the firewall rule applies to. If
    * targetSecureTag are specified, then the firewall rule applies only to instances in the VPC
    * network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in
-   * INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same
-   * time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are
+   * INEFFECTIVE state, then this rule will be ignored.targetSecureTag may not be set at the same
+   * time astargetServiceAccounts. If neither targetServiceAccounts nortargetSecureTag are
    * specified, the firewall rule applies to all instances on the specified network. Maximum number
    * of target label tags allowed is 256.
    * @return value or {@code null} for none
@@ -455,8 +455,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    * A list of secure tags that controls which instances the firewall rule applies to. If
    * targetSecureTag are specified, then the firewall rule applies only to instances in the VPC
    * network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in
-   * INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same
-   * time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are
+   * INEFFECTIVE state, then this rule will be ignored.targetSecureTag may not be set at the same
+   * time astargetServiceAccounts. If neither targetServiceAccounts nortargetSecureTag are
    * specified, the firewall rule applies to all instances on the specified network. Maximum number
    * of target label tags allowed is 256.
    * @param targetSecureTags targetSecureTags or {@code null} for none

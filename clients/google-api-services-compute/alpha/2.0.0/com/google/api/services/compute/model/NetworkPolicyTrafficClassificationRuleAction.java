@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class NetworkPolicyTrafficClassificationRuleAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * The traffic class that should be applied to the matching packet.
+   * DSCP mode. When set to AUTO, the DSCP value will be picked automatically based on selected
+   * trafficClass. Otherwise,dscpValue needs to be explicitly specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,8 @@ public final class NetworkPolicyTrafficClassificationRuleAction extends com.goog
   private java.lang.String type;
 
   /**
-   * The traffic class that should be applied to the matching packet.
+   * DSCP mode. When set to AUTO, the DSCP value will be picked automatically based on selected
+   * trafficClass. Otherwise,dscpValue needs to be explicitly specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getDscpMode() {
@@ -80,7 +82,8 @@ public final class NetworkPolicyTrafficClassificationRuleAction extends com.goog
   }
 
   /**
-   * The traffic class that should be applied to the matching packet.
+   * DSCP mode. When set to AUTO, the DSCP value will be picked automatically based on selected
+   * trafficClass. Otherwise,dscpValue needs to be explicitly specified.
    * @param dscpMode dscpMode or {@code null} for none
    */
   public NetworkPolicyTrafficClassificationRuleAction setDscpMode(java.lang.String dscpMode) {

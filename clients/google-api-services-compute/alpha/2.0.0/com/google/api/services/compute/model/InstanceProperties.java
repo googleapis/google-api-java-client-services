@@ -41,7 +41,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    * Enables instances created based on these properties to send packets with source IP addresses
    * other than their own and receive packets with destination IP addresses other than their own. If
    * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
-   * resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding
+   * resource, specify true. If unsure, leave this set tofalse. See theEnable IP forwarding
    * documentation for more information.
    * The value may be {@code null}.
    */
@@ -138,8 +138,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * The metadata key/value pairs to assign to instances that are created from these properties.
-   * These pairs can consist of custom metadata or predefined keys. See Project and instance
-   * metadata for more information.
+   * These pairs can consist of custom metadata or predefined keys. SeeProject and instance metadata
+   * for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,8 +147,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or
-   * newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as
-   * minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information,
+   * newer cpu/platform. Applicable values are the friendly names of CPU platforms, such
+   * asminCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy Bridge". For more information,
    * read Specifying a Minimum CPU Platform.
    * The value may be {@code null}.
    */
@@ -185,7 +185,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.lang.String postKeyRevocationActionType;
 
   /**
-   * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
+   * The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as
    * default. Note that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
    */
@@ -294,7 +294,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    * Enables instances created based on these properties to send packets with source IP addresses
    * other than their own and receive packets with destination IP addresses other than their own. If
    * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
-   * resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding
+   * resource, specify true. If unsure, leave this set tofalse. See theEnable IP forwarding
    * documentation for more information.
    * @return value or {@code null} for none
    */
@@ -306,7 +306,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    * Enables instances created based on these properties to send packets with source IP addresses
    * other than their own and receive packets with destination IP addresses other than their own. If
    * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
-   * resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding
+   * resource, specify true. If unsure, leave this set tofalse. See theEnable IP forwarding
    * documentation for more information.
    * @param canIpForward canIpForward or {@code null} for none
    */
@@ -499,8 +499,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * The metadata key/value pairs to assign to instances that are created from these properties.
-   * These pairs can consist of custom metadata or predefined keys. See Project and instance
-   * metadata for more information.
+   * These pairs can consist of custom metadata or predefined keys. SeeProject and instance metadata
+   * for more information.
    * @return value or {@code null} for none
    */
   public Metadata getMetadata() {
@@ -509,8 +509,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * The metadata key/value pairs to assign to instances that are created from these properties.
-   * These pairs can consist of custom metadata or predefined keys. See Project and instance
-   * metadata for more information.
+   * These pairs can consist of custom metadata or predefined keys. SeeProject and instance metadata
+   * for more information.
    * @param metadata metadata or {@code null} for none
    */
   public InstanceProperties setMetadata(Metadata metadata) {
@@ -520,8 +520,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or
-   * newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as
-   * minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information,
+   * newer cpu/platform. Applicable values are the friendly names of CPU platforms, such
+   * asminCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy Bridge". For more information,
    * read Specifying a Minimum CPU Platform.
    * @return value or {@code null} for none
    */
@@ -531,8 +531,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or
-   * newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as
-   * minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information,
+   * newer cpu/platform. Applicable values are the friendly names of CPU platforms, such
+   * asminCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy Bridge". For more information,
    * read Specifying a Minimum CPU Platform.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
@@ -612,7 +612,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
+   * The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as
    * default. Note that for MachineImage, this is not supported yet.
    * @return value or {@code null} for none
    */
@@ -621,7 +621,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
+   * The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as
    * default. Note that for MachineImage, this is not supported yet.
    * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
    */

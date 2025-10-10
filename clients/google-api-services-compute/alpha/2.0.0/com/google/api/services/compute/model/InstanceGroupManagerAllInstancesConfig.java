@@ -30,22 +30,26 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerAllInstancesConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Properties to set on all instances in the group. You can add or modify properties using the
-   * instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting
-   * allInstancesConfig on the group, you must update the group's instances to apply the
-   * configuration. To apply the configuration, set the group's updatePolicy.type field to use
-   * proactive updates or use the applyUpdatesToInstances method.
+   * Properties to set on all instances in the group.
+   *
+   * You can add or modify properties using theinstanceGroupManagers.patch
+   * orregionInstanceGroupManagers.patch. After settingallInstancesConfig on the group, you must
+   * update the group's instances to apply the configuration. To apply the configuration, set the
+   * group's updatePolicy.type field to use proactive updates or use the applyUpdatesToInstances
+   * method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstancePropertiesPatch properties;
 
   /**
-   * Properties to set on all instances in the group. You can add or modify properties using the
-   * instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting
-   * allInstancesConfig on the group, you must update the group's instances to apply the
-   * configuration. To apply the configuration, set the group's updatePolicy.type field to use
-   * proactive updates or use the applyUpdatesToInstances method.
+   * Properties to set on all instances in the group.
+   *
+   * You can add or modify properties using theinstanceGroupManagers.patch
+   * orregionInstanceGroupManagers.patch. After settingallInstancesConfig on the group, you must
+   * update the group's instances to apply the configuration. To apply the configuration, set the
+   * group's updatePolicy.type field to use proactive updates or use the applyUpdatesToInstances
+   * method.
    * @return value or {@code null} for none
    */
   public InstancePropertiesPatch getProperties() {
@@ -53,11 +57,13 @@ public final class InstanceGroupManagerAllInstancesConfig extends com.google.api
   }
 
   /**
-   * Properties to set on all instances in the group. You can add or modify properties using the
-   * instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting
-   * allInstancesConfig on the group, you must update the group's instances to apply the
-   * configuration. To apply the configuration, set the group's updatePolicy.type field to use
-   * proactive updates or use the applyUpdatesToInstances method.
+   * Properties to set on all instances in the group.
+   *
+   * You can add or modify properties using theinstanceGroupManagers.patch
+   * orregionInstanceGroupManagers.patch. After settingallInstancesConfig on the group, you must
+   * update the group's instances to apply the configuration. To apply the configuration, set the
+   * group's updatePolicy.type field to use proactive updates or use the applyUpdatesToInstances
+   * method.
    * @param properties properties or {@code null} for none
    */
   public InstanceGroupManagerAllInstancesConfig setProperties(InstancePropertiesPatch properties) {

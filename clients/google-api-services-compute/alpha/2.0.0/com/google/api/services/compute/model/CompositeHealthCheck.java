@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a composite health check. A composite health check resource specifies the health
- * source resources and the health destination resource to which the aggregated health result from
- * the health source resources is delivered.
+ * Represents a composite health check.
+ *
+ * A composite health check resource specifies the health source resources and the health
+ * destination resource to which the aggregated health result from the health source resources is
+ * delivered.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,7 +34,7 @@ package com.google.api.services.compute.model;
 public final class CompositeHealthCheck extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +59,9 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   private java.lang.String fingerprint;
 
   /**
-   * URL to the destination resource. Must be set. Must be a ForwardingRule. The ForwardingRule must
-   * have load balancing scheme INTERNAL or INTERNAL_MANAGED and must be regional and in the same
-   * region as the CompositeHealthCheck (cross-region deployment for INTERNAL_MANAGED is not
+   * URL to the destination resource. Must be set. Must be aForwardingRule. The ForwardingRule must
+   * have load balancing scheme INTERNAL orINTERNAL_MANAGED and must be regional and in the same
+   * region as the CompositeHealthCheck (cross-region deployment forINTERNAL_MANAGED is not
    * supported). Can be mutated.
    * The value may be {@code null}.
    */
@@ -69,7 +71,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   /**
    * URLs to the HealthSource resources whose results are AND'ed. I.e. he aggregated result is is
    * HEALTHY only if all sources are HEALTHY. Must have at least 1. Must not have more than 10. Must
-   * be regional and in the same region as the CompositeHealthCheck. Can be mutated.
+   * be regional and in the same region as theCompositeHealthCheck. Can be mutated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +85,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#compositeHealthCheck for composite health
+   * [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for composite health
    * checks.
    * The value may be {@code null}.
    */
@@ -92,7 +94,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -125,7 +127,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -133,7 +135,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public CompositeHealthCheck setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -220,9 +222,9 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   }
 
   /**
-   * URL to the destination resource. Must be set. Must be a ForwardingRule. The ForwardingRule must
-   * have load balancing scheme INTERNAL or INTERNAL_MANAGED and must be regional and in the same
-   * region as the CompositeHealthCheck (cross-region deployment for INTERNAL_MANAGED is not
+   * URL to the destination resource. Must be set. Must be aForwardingRule. The ForwardingRule must
+   * have load balancing scheme INTERNAL orINTERNAL_MANAGED and must be regional and in the same
+   * region as the CompositeHealthCheck (cross-region deployment forINTERNAL_MANAGED is not
    * supported). Can be mutated.
    * @return value or {@code null} for none
    */
@@ -231,9 +233,9 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   }
 
   /**
-   * URL to the destination resource. Must be set. Must be a ForwardingRule. The ForwardingRule must
-   * have load balancing scheme INTERNAL or INTERNAL_MANAGED and must be regional and in the same
-   * region as the CompositeHealthCheck (cross-region deployment for INTERNAL_MANAGED is not
+   * URL to the destination resource. Must be set. Must be aForwardingRule. The ForwardingRule must
+   * have load balancing scheme INTERNAL orINTERNAL_MANAGED and must be regional and in the same
+   * region as the CompositeHealthCheck (cross-region deployment forINTERNAL_MANAGED is not
    * supported). Can be mutated.
    * @param healthDestination healthDestination or {@code null} for none
    */
@@ -245,7 +247,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   /**
    * URLs to the HealthSource resources whose results are AND'ed. I.e. he aggregated result is is
    * HEALTHY only if all sources are HEALTHY. Must have at least 1. Must not have more than 10. Must
-   * be regional and in the same region as the CompositeHealthCheck. Can be mutated.
+   * be regional and in the same region as theCompositeHealthCheck. Can be mutated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHealthSources() {
@@ -255,7 +257,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   /**
    * URLs to the HealthSource resources whose results are AND'ed. I.e. he aggregated result is is
    * HEALTHY only if all sources are HEALTHY. Must have at least 1. Must not have more than 10. Must
-   * be regional and in the same region as the CompositeHealthCheck. Can be mutated.
+   * be regional and in the same region as theCompositeHealthCheck. Can be mutated.
    * @param healthSources healthSources or {@code null} for none
    */
   public CompositeHealthCheck setHealthSources(java.util.List<java.lang.String> healthSources) {
@@ -281,7 +283,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#compositeHealthCheck for composite health
+   * [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for composite health
    * checks.
    * @return value or {@code null} for none
    */
@@ -290,7 +292,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#compositeHealthCheck for composite health
+   * [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for composite health
    * checks.
    * @param kind kind or {@code null} for none
    */
@@ -301,7 +303,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -313,7 +315,7 @@ public final class CompositeHealthCheck extends com.google.api.client.json.Gener
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.

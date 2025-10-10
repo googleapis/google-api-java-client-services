@@ -42,8 +42,8 @@ public final class ClientTlsSettings extends com.google.api.client.json.GenericJ
    * Indicates whether connections to this port should be secured using TLS. The value of this field
    * determines how TLS is enforced. This can be set to one of the following values: DISABLE: Do not
    * setup a TLS connection to the backends. SIMPLE: Originate a TLS connection to the backends.
-   * MUTUAL: Secure connections to the backends using mutual TLS by presenting client certificates
-   * for authentication.
+   * MUTUAL: Secure connections to the backends using mutual TLS by presenting         client
+   * certificates for authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class ClientTlsSettings extends com.google.api.client.json.GenericJ
    * Indicates whether connections to this port should be secured using TLS. The value of this field
    * determines how TLS is enforced. This can be set to one of the following values: DISABLE: Do not
    * setup a TLS connection to the backends. SIMPLE: Originate a TLS connection to the backends.
-   * MUTUAL: Secure connections to the backends using mutual TLS by presenting client certificates
-   * for authentication.
+   * MUTUAL: Secure connections to the backends using mutual TLS by presenting         client
+   * certificates for authentication.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -101,8 +101,8 @@ public final class ClientTlsSettings extends com.google.api.client.json.GenericJ
    * Indicates whether connections to this port should be secured using TLS. The value of this field
    * determines how TLS is enforced. This can be set to one of the following values: DISABLE: Do not
    * setup a TLS connection to the backends. SIMPLE: Originate a TLS connection to the backends.
-   * MUTUAL: Secure connections to the backends using mutual TLS by presenting client certificates
-   * for authentication.
+   * MUTUAL: Secure connections to the backends using mutual TLS by presenting         client
+   * certificates for authentication.
    * @param mode mode or {@code null} for none
    */
   public ClientTlsSettings setMode(java.lang.String mode) {

@@ -17,9 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Zone resource. A zone is a deployment area. These deployment areas are subsets of a
- * region. For example the zone us-east1-b is located in the us-east1 region. For more information,
- * read Regions and Zones.
+ * Represents a Zone resource.
+ *
+ * A zone is a deployment area. These deployment areas are subsets of a region. For example the zone
+ * us-east1-b is located in theus-east1 region. For more information, readRegions and Zones.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -39,7 +40,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> availableCpuPlatforms;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +96,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Status of the zone, either UP or DOWN.
+   * [Output Only] Status of the zone, either UP orDOWN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +127,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -134,7 +135,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Zone setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -262,7 +263,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status of the zone, either UP or DOWN.
+   * [Output Only] Status of the zone, either UP orDOWN.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -270,7 +271,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status of the zone, either UP or DOWN.
+   * [Output Only] Status of the zone, either UP orDOWN.
    * @param status status or {@code null} for none
    */
   public Zone setStatus(java.lang.String status) {

@@ -56,7 +56,7 @@ public final class AuthenticationPolicy extends com.google.api.client.json.Gener
    * defined, or failed, principal will be left unset. In other words, binding rule does not affect
    * the decision to accept or reject request. This field can be set to one of the following:
    * USE_PEER: Principal will be set to the identity from peer authentication. USE_ORIGIN: Principal
-   * will be set to the identity from origin authentication.
+   * will be set to the identity from origin             authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class AuthenticationPolicy extends com.google.api.client.json.Gener
    * defined, or failed, principal will be left unset. In other words, binding rule does not affect
    * the decision to accept or reject request. This field can be set to one of the following:
    * USE_PEER: Principal will be set to the identity from peer authentication. USE_ORIGIN: Principal
-   * will be set to the identity from origin authentication.
+   * will be set to the identity from origin             authentication.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalBinding() {
@@ -134,7 +134,7 @@ public final class AuthenticationPolicy extends com.google.api.client.json.Gener
    * defined, or failed, principal will be left unset. In other words, binding rule does not affect
    * the decision to accept or reject request. This field can be set to one of the following:
    * USE_PEER: Principal will be set to the identity from peer authentication. USE_ORIGIN: Principal
-   * will be set to the identity from origin authentication.
+   * will be set to the identity from origin             authentication.
    * @param principalBinding principalBinding or {@code null} for none
    */
   public AuthenticationPolicy setPrincipalBinding(java.lang.String principalBinding) {

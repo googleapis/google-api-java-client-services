@@ -151,7 +151,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private java.lang.String routerApplianceInstance;
 
   /**
-   * The state of the BGP session. For a list of possible values for this field, see BGP session
+   * The state of the BGP session. For a list of possible values for this field, seeBGP session
    * states.
    * The value may be {@code null}.
    */
@@ -173,7 +173,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private java.lang.String statusReason;
 
   /**
-   * Time this session has been up. Format: 14 years, 51 weeks, 6 days, 23 hours, 59 minutes, 59
+   * Time this session has been up. Format:  14 years, 51 weeks, 6 days, 23 hours, 59 minutes, 59
    * seconds
    * The value may be {@code null}.
    */
@@ -181,7 +181,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private java.lang.String uptime;
 
   /**
-   * Time this session has been up, in seconds. Format: 145
+   * Time this session has been up, in seconds. Format:  145
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -466,7 +466,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * The state of the BGP session. For a list of possible values for this field, see BGP session
+   * The state of the BGP session. For a list of possible values for this field, seeBGP session
    * states.
    * @return value or {@code null} for none
    */
@@ -475,7 +475,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * The state of the BGP session. For a list of possible values for this field, see BGP session
+   * The state of the BGP session. For a list of possible values for this field, seeBGP session
    * states.
    * @param state state or {@code null} for none
    */
@@ -519,7 +519,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * Time this session has been up. Format: 14 years, 51 weeks, 6 days, 23 hours, 59 minutes, 59
+   * Time this session has been up. Format:  14 years, 51 weeks, 6 days, 23 hours, 59 minutes, 59
    * seconds
    * @return value or {@code null} for none
    */
@@ -528,7 +528,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * Time this session has been up. Format: 14 years, 51 weeks, 6 days, 23 hours, 59 minutes, 59
+   * Time this session has been up. Format:  14 years, 51 weeks, 6 days, 23 hours, 59 minutes, 59
    * seconds
    * @param uptime uptime or {@code null} for none
    */
@@ -538,7 +538,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * Time this session has been up, in seconds. Format: 145
+   * Time this session has been up, in seconds. Format:  145
    * @return value or {@code null} for none
    */
   public java.lang.String getUptimeSeconds() {
@@ -546,7 +546,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * Time this session has been up, in seconds. Format: 145
+   * Time this session has been up, in seconds. Format:  145
    * @param uptimeSeconds uptimeSeconds or {@code null} for none
    */
   public RouterStatusBgpPeerStatus setUptimeSeconds(java.lang.String uptimeSeconds) {

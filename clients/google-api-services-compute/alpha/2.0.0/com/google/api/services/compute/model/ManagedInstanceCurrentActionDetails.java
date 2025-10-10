@@ -38,17 +38,17 @@ public final class ManagedInstanceCurrentActionDetails extends com.google.api.cl
   /**
    * [Output Only] Details of the current action that the managed instance group has scheduled for
    * the instance. Contains trigger for the current action, and methodName in case it was triggered
-   * by API call. Possible values for trigger: - API Any API call. - PROACTIVE_UPDATE Proactive
-   * updater scheduled an update on this managed instance. - AUTOSCALING Instance being
-   * deleted/created after a decision from the Autoscaler. - REDISTRIBUTION The regional managed
-   * instance group is moving instances between zones to restore balance. - STANDBY_REFILL The
-   * managed instance group is refilling the Standby Pool (stopped/suspended virtual machines) after
-   * scale up. - MAINTENANCE Manual maintenance. - FAILED_CREATION The managed instance group is
-   * handling failed instance creation. - INSTANCE_FAILURE The managed instance group is handling
-   * instance failure, according to the Instance Lifecycle Policy. - FAILED_HEALTH_CHECK The managed
-   * instance group is handling failed health check, according to the Instance Lifecycle Policy. -
-   * TERMINATION_TIMESTAMP Instance reached termination time, thus managed instance group
-   * stops/deletes it.
+   * by API call. Possible values for trigger:        - API Any API call.    - PROACTIVE_UPDATE
+   * Proactive updater scheduled an update    on this managed instance.    - AUTOSCALING Instance
+   * being deleted/created after a    decision from the Autoscaler.    - REDISTRIBUTION The regional
+   * managed instance group is    moving instances between zones to restore balance.    -
+   * STANDBY_REFILL The managed instance group is refilling    the Standby Pool (stopped/suspended
+   * virtual machines) after scale    up.    - MAINTENANCE Manual maintenance.    - FAILED_CREATION
+   * The managed instance group is handling    failed instance creation.    - INSTANCE_FAILURE The
+   * managed instance group is handling    instance failure, according to    the Instance Lifecycle
+   * Policy.    - FAILED_HEALTH_CHECK The managed instance group is    handling failed health check,
+   * according to the Instance Lifecycle    Policy.    - TERMINATION_TIMESTAMP Instance reached
+   * termination time,    thus managed instance group stops/deletes it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,17 +72,17 @@ public final class ManagedInstanceCurrentActionDetails extends com.google.api.cl
   /**
    * [Output Only] Details of the current action that the managed instance group has scheduled for
    * the instance. Contains trigger for the current action, and methodName in case it was triggered
-   * by API call. Possible values for trigger: - API Any API call. - PROACTIVE_UPDATE Proactive
-   * updater scheduled an update on this managed instance. - AUTOSCALING Instance being
-   * deleted/created after a decision from the Autoscaler. - REDISTRIBUTION The regional managed
-   * instance group is moving instances between zones to restore balance. - STANDBY_REFILL The
-   * managed instance group is refilling the Standby Pool (stopped/suspended virtual machines) after
-   * scale up. - MAINTENANCE Manual maintenance. - FAILED_CREATION The managed instance group is
-   * handling failed instance creation. - INSTANCE_FAILURE The managed instance group is handling
-   * instance failure, according to the Instance Lifecycle Policy. - FAILED_HEALTH_CHECK The managed
-   * instance group is handling failed health check, according to the Instance Lifecycle Policy. -
-   * TERMINATION_TIMESTAMP Instance reached termination time, thus managed instance group
-   * stops/deletes it.
+   * by API call. Possible values for trigger:        - API Any API call.    - PROACTIVE_UPDATE
+   * Proactive updater scheduled an update    on this managed instance.    - AUTOSCALING Instance
+   * being deleted/created after a    decision from the Autoscaler.    - REDISTRIBUTION The regional
+   * managed instance group is    moving instances between zones to restore balance.    -
+   * STANDBY_REFILL The managed instance group is refilling    the Standby Pool (stopped/suspended
+   * virtual machines) after scale    up.    - MAINTENANCE Manual maintenance.    - FAILED_CREATION
+   * The managed instance group is handling    failed instance creation.    - INSTANCE_FAILURE The
+   * managed instance group is handling    instance failure, according to    the Instance Lifecycle
+   * Policy.    - FAILED_HEALTH_CHECK The managed instance group is    handling failed health check,
+   * according to the Instance Lifecycle    Policy.    - TERMINATION_TIMESTAMP Instance reached
+   * termination time,    thus managed instance group stops/deletes it.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrigger() {
@@ -92,17 +92,17 @@ public final class ManagedInstanceCurrentActionDetails extends com.google.api.cl
   /**
    * [Output Only] Details of the current action that the managed instance group has scheduled for
    * the instance. Contains trigger for the current action, and methodName in case it was triggered
-   * by API call. Possible values for trigger: - API Any API call. - PROACTIVE_UPDATE Proactive
-   * updater scheduled an update on this managed instance. - AUTOSCALING Instance being
-   * deleted/created after a decision from the Autoscaler. - REDISTRIBUTION The regional managed
-   * instance group is moving instances between zones to restore balance. - STANDBY_REFILL The
-   * managed instance group is refilling the Standby Pool (stopped/suspended virtual machines) after
-   * scale up. - MAINTENANCE Manual maintenance. - FAILED_CREATION The managed instance group is
-   * handling failed instance creation. - INSTANCE_FAILURE The managed instance group is handling
-   * instance failure, according to the Instance Lifecycle Policy. - FAILED_HEALTH_CHECK The managed
-   * instance group is handling failed health check, according to the Instance Lifecycle Policy. -
-   * TERMINATION_TIMESTAMP Instance reached termination time, thus managed instance group
-   * stops/deletes it.
+   * by API call. Possible values for trigger:        - API Any API call.    - PROACTIVE_UPDATE
+   * Proactive updater scheduled an update    on this managed instance.    - AUTOSCALING Instance
+   * being deleted/created after a    decision from the Autoscaler.    - REDISTRIBUTION The regional
+   * managed instance group is    moving instances between zones to restore balance.    -
+   * STANDBY_REFILL The managed instance group is refilling    the Standby Pool (stopped/suspended
+   * virtual machines) after scale    up.    - MAINTENANCE Manual maintenance.    - FAILED_CREATION
+   * The managed instance group is handling    failed instance creation.    - INSTANCE_FAILURE The
+   * managed instance group is handling    instance failure, according to    the Instance Lifecycle
+   * Policy.    - FAILED_HEALTH_CHECK The managed instance group is    handling failed health check,
+   * according to the Instance Lifecycle    Policy.    - TERMINATION_TIMESTAMP Instance reached
+   * termination time,    thus managed instance group stops/deletes it.
    * @param trigger trigger or {@code null} for none
    */
   public ManagedInstanceCurrentActionDetails setTrigger(java.lang.String trigger) {

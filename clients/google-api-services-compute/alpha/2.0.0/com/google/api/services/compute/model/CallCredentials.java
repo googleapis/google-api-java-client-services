@@ -32,9 +32,9 @@ public final class CallCredentials extends com.google.api.client.json.GenericJso
 
   /**
    * The type of call credentials to use for GRPC requests to the SDS server. This field can be set
-   * to one of the following: - GCE_VM: The local GCE VM service account credentials are used to
-   * access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the
-   * SDS server.
+   * to one of the following:        - GCE_VM: The local GCE VM service account credentials are used
+   * to access    the SDS server.    - FROM_PLUGIN: Custom authenticator credentials are used to
+   * access the    SDS server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +49,9 @@ public final class CallCredentials extends com.google.api.client.json.GenericJso
 
   /**
    * The type of call credentials to use for GRPC requests to the SDS server. This field can be set
-   * to one of the following: - GCE_VM: The local GCE VM service account credentials are used to
-   * access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the
-   * SDS server.
+   * to one of the following:        - GCE_VM: The local GCE VM service account credentials are used
+   * to access    the SDS server.    - FROM_PLUGIN: Custom authenticator credentials are used to
+   * access the    SDS server.
    * @return value or {@code null} for none
    */
   public java.lang.String getCallCredentialType() {
@@ -60,9 +60,9 @@ public final class CallCredentials extends com.google.api.client.json.GenericJso
 
   /**
    * The type of call credentials to use for GRPC requests to the SDS server. This field can be set
-   * to one of the following: - GCE_VM: The local GCE VM service account credentials are used to
-   * access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the
-   * SDS server.
+   * to one of the following:        - GCE_VM: The local GCE VM service account credentials are used
+   * to access    the SDS server.    - FROM_PLUGIN: Custom authenticator credentials are used to
+   * access the    SDS server.
    * @param callCredentialType callCredentialType or {@code null} for none
    */
   public CallCredentials setCallCredentialType(java.lang.String callCredentialType) {

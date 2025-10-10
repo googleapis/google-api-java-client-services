@@ -58,13 +58,15 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
   /**
    * Maximum number of instances that can be unavailable when autohealing. When 'percent' is used,
    * the value is rounded if necessary. The instance is considered available if all of the following
-   * conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE
-   * (in particular its liveness health check result was observed to be HEALTHY at least once as it
-   * passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default,
-   * number of concurrently autohealed instances is smaller than the managed instance group target
-   * size. However, if a zonal managed instance group has only one instance, or a regional managed
-   * instance group has only one instance per zone, autohealing will recreate these instances when
-   * they become unhealthy.
+   * conditions are satisfied:  1. Instance's status is RUNNING.  2. Instance's currentAction is
+   * NONE (in particular its liveness health     check result was observed to be HEALTHY at least
+   * once as it passed     VERIFYING).  3. There is no outgoing action on an instance triggered by
+   * IGM.
+   *
+   * By default, number of concurrently autohealed instances is smaller than the managed instance
+   * group target size. However, if a zonal managed instance group has only one instance, or a
+   * regional managed instance group has only one instance per zone, autohealing will recreate these
+   * instances when they become unhealthy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,13 +136,15 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
   /**
    * Maximum number of instances that can be unavailable when autohealing. When 'percent' is used,
    * the value is rounded if necessary. The instance is considered available if all of the following
-   * conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE
-   * (in particular its liveness health check result was observed to be HEALTHY at least once as it
-   * passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default,
-   * number of concurrently autohealed instances is smaller than the managed instance group target
-   * size. However, if a zonal managed instance group has only one instance, or a regional managed
-   * instance group has only one instance per zone, autohealing will recreate these instances when
-   * they become unhealthy.
+   * conditions are satisfied:  1. Instance's status is RUNNING.  2. Instance's currentAction is
+   * NONE (in particular its liveness health     check result was observed to be HEALTHY at least
+   * once as it passed     VERIFYING).  3. There is no outgoing action on an instance triggered by
+   * IGM.
+   *
+   * By default, number of concurrently autohealed instances is smaller than the managed instance
+   * group target size. However, if a zonal managed instance group has only one instance, or a
+   * regional managed instance group has only one instance per zone, autohealing will recreate these
+   * instances when they become unhealthy.
    * @return value or {@code null} for none
    */
   public FixedOrPercent getMaxUnavailable() {
@@ -150,13 +154,15 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
   /**
    * Maximum number of instances that can be unavailable when autohealing. When 'percent' is used,
    * the value is rounded if necessary. The instance is considered available if all of the following
-   * conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE
-   * (in particular its liveness health check result was observed to be HEALTHY at least once as it
-   * passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default,
-   * number of concurrently autohealed instances is smaller than the managed instance group target
-   * size. However, if a zonal managed instance group has only one instance, or a regional managed
-   * instance group has only one instance per zone, autohealing will recreate these instances when
-   * they become unhealthy.
+   * conditions are satisfied:  1. Instance's status is RUNNING.  2. Instance's currentAction is
+   * NONE (in particular its liveness health     check result was observed to be HEALTHY at least
+   * once as it passed     VERIFYING).  3. There is no outgoing action on an instance triggered by
+   * IGM.
+   *
+   * By default, number of concurrently autohealed instances is smaller than the managed instance
+   * group target size. However, if a zonal managed instance group has only one instance, or a
+   * regional managed instance group has only one instance per zone, autohealing will recreate these
+   * instances when they become unhealthy.
    * @param maxUnavailable maxUnavailable or {@code null} for none
    */
   public InstanceGroupManagerAutoHealingPolicy setMaxUnavailable(FixedOrPercent maxUnavailable) {

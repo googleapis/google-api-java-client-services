@@ -37,7 +37,7 @@ public final class HaControllerStatusZoneStatusLastError extends com.google.api.
   private Errors errors;
 
   /**
-   * [Output Only] Show timestamp only if there is an error. RFC3339 text format.
+   * [Output Only] Show timestamp only if there is an error.RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class HaControllerStatusZoneStatusLastError extends com.google.api.
   }
 
   /**
-   * [Output Only] Show timestamp only if there is an error. RFC3339 text format.
+   * [Output Only] Show timestamp only if there is an error.RFC3339 text format.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -69,7 +69,7 @@ public final class HaControllerStatusZoneStatusLastError extends com.google.api.
   }
 
   /**
-   * [Output Only] Show timestamp only if there is an error. RFC3339 text format.
+   * [Output Only] Show timestamp only if there is an error.RFC3339 text format.
    * @param timestamp timestamp or {@code null} for none
    */
   public HaControllerStatusZoneStatusLastError setTimestamp(String timestamp) {

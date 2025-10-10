@@ -30,16 +30,16 @@ package com.google.api.services.compute.model;
 public final class TargetSslProxiesSetProxyHeaderRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new type of proxy header to append before sending data to the backend. NONE or PROXY_V1 are
-   * allowed.
+   * The new type of proxy header to append before sending data to the backend.  NONE or PROXY_V1
+   * are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String proxyHeader;
 
   /**
-   * The new type of proxy header to append before sending data to the backend. NONE or PROXY_V1 are
-   * allowed.
+   * The new type of proxy header to append before sending data to the backend.  NONE or PROXY_V1
+   * are allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getProxyHeader() {
@@ -47,8 +47,8 @@ public final class TargetSslProxiesSetProxyHeaderRequest extends com.google.api.
   }
 
   /**
-   * The new type of proxy header to append before sending data to the backend. NONE or PROXY_V1 are
-   * allowed.
+   * The new type of proxy header to append before sending data to the backend.  NONE or PROXY_V1
+   * are allowed.
    * @param proxyHeader proxyHeader or {@code null} for none
    */
   public TargetSslProxiesSetProxyHeaderRequest setProxyHeader(java.lang.String proxyHeader) {

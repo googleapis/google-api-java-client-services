@@ -47,9 +47,9 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
 
   /**
    * The other disk asynchronously replicated to or from the current disk. You can provide this as a
-   * partial or full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+   * partial or full URL to the resource. For example, the following are valid values:
+   * - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk     -
+   * projects/project/zones/zone/disks/disk     - zones/zone/disks/disk
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,9 +106,9 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
 
   /**
    * The other disk asynchronously replicated to or from the current disk. You can provide this as a
-   * partial or full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+   * partial or full URL to the resource. For example, the following are valid values:
+   * - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk     -
+   * projects/project/zones/zone/disks/disk     - zones/zone/disks/disk
    * @return value or {@code null} for none
    */
   public java.lang.String getDisk() {
@@ -117,9 +117,9 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
 
   /**
    * The other disk asynchronously replicated to or from the current disk. You can provide this as a
-   * partial or full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+   * partial or full URL to the resource. For example, the following are valid values:
+   * - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk     -
+   * projects/project/zones/zone/disks/disk     - zones/zone/disks/disk
    * @param disk disk or {@code null} for none
    */
   public DiskAsyncReplication setDisk(java.lang.String disk) {

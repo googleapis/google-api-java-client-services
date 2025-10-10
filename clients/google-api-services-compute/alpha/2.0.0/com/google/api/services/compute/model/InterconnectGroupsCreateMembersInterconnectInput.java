@@ -61,21 +61,24 @@ public final class InterconnectGroupsCreateMembersInterconnectInput extends com.
   private java.lang.String facility;
 
   /**
-   * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed
-   * interconnection shared between customers though a partner. - DEDICATED: A dedicated physical
-   * interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of
-   * DEDICATED.
+   * Type of interconnect, which can take one of the following values:        - PARTNER: A partner-
+   * managed interconnection shared between    customers though a partner.     - DEDICATED: A
+   * dedicated physical    interconnection with the customer.
+   *
+   *  Note that a value IT_PRIVATE has been deprecated in favor of DEDICATED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String interconnectType;
 
   /**
-   * Type of link requested, which can take one of the following values: -
-   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G
-   * Ethernet with LR optics. - LINK_TYPE_ETHERNET_400G_LR4: A 400G Ethernet with LR4 optics. Note
-   * that this field indicates the speed of each of the links in the bundle, not the speed of the
-   * entire bundle.
+   * Type of link requested, which can take one of the following values:        -
+   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics    - LINK_TYPE_ETHERNET_100G_LR: A
+   * 100G Ethernet with LR optics.    - LINK_TYPE_ETHERNET_400G_LR4: A 400G Ethernet with LR4
+   * optics.
+   *
+   *  Note that this field indicates the speed of each of the links in the bundle, not the speed of
+   * the entire bundle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,10 +117,11 @@ public final class InterconnectGroupsCreateMembersInterconnectInput extends com.
 
   /**
    * Optional. List of features requested for this Interconnect connection, which can take one of
-   * the following values: - IF_MACSEC If specified then the connection is created on MACsec capable
-   * hardware ports. If not specified, the default value is false, which allocates non-MACsec
-   * capable ports first if available. This parameter can be provided only with Interconnect INSERT.
-   * It isn't valid for Interconnect PATCH.
+   * the following values:        - IF_MACSEC: If specified, then the connection is created on
+   * MACsec    capable hardware ports. If not specified, non-MACsec capable ports will    also be
+   * considered.    - IF_CROSS_SITE_NETWORK: If specified, then the connection is created
+   * exclusively for Cross-Site Networking. The connection can not be used for    Cross-Site
+   * Networking unless this feature is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,10 +209,11 @@ public final class InterconnectGroupsCreateMembersInterconnectInput extends com.
   }
 
   /**
-   * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed
-   * interconnection shared between customers though a partner. - DEDICATED: A dedicated physical
-   * interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of
-   * DEDICATED.
+   * Type of interconnect, which can take one of the following values:        - PARTNER: A partner-
+   * managed interconnection shared between    customers though a partner.     - DEDICATED: A
+   * dedicated physical    interconnection with the customer.
+   *
+   *  Note that a value IT_PRIVATE has been deprecated in favor of DEDICATED.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterconnectType() {
@@ -216,10 +221,11 @@ public final class InterconnectGroupsCreateMembersInterconnectInput extends com.
   }
 
   /**
-   * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed
-   * interconnection shared between customers though a partner. - DEDICATED: A dedicated physical
-   * interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of
-   * DEDICATED.
+   * Type of interconnect, which can take one of the following values:        - PARTNER: A partner-
+   * managed interconnection shared between    customers though a partner.     - DEDICATED: A
+   * dedicated physical    interconnection with the customer.
+   *
+   *  Note that a value IT_PRIVATE has been deprecated in favor of DEDICATED.
    * @param interconnectType interconnectType or {@code null} for none
    */
   public InterconnectGroupsCreateMembersInterconnectInput setInterconnectType(java.lang.String interconnectType) {
@@ -228,11 +234,13 @@ public final class InterconnectGroupsCreateMembersInterconnectInput extends com.
   }
 
   /**
-   * Type of link requested, which can take one of the following values: -
-   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G
-   * Ethernet with LR optics. - LINK_TYPE_ETHERNET_400G_LR4: A 400G Ethernet with LR4 optics. Note
-   * that this field indicates the speed of each of the links in the bundle, not the speed of the
-   * entire bundle.
+   * Type of link requested, which can take one of the following values:        -
+   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics    - LINK_TYPE_ETHERNET_100G_LR: A
+   * 100G Ethernet with LR optics.    - LINK_TYPE_ETHERNET_400G_LR4: A 400G Ethernet with LR4
+   * optics.
+   *
+   *  Note that this field indicates the speed of each of the links in the bundle, not the speed of
+   * the entire bundle.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkType() {
@@ -240,11 +248,13 @@ public final class InterconnectGroupsCreateMembersInterconnectInput extends com.
   }
 
   /**
-   * Type of link requested, which can take one of the following values: -
-   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G
-   * Ethernet with LR optics. - LINK_TYPE_ETHERNET_400G_LR4: A 400G Ethernet with LR4 optics. Note
-   * that this field indicates the speed of each of the links in the bundle, not the speed of the
-   * entire bundle.
+   * Type of link requested, which can take one of the following values:        -
+   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics    - LINK_TYPE_ETHERNET_100G_LR: A
+   * 100G Ethernet with LR optics.    - LINK_TYPE_ETHERNET_400G_LR4: A 400G Ethernet with LR4
+   * optics.
+   *
+   *  Note that this field indicates the speed of each of the links in the bundle, not the speed of
+   * the entire bundle.
    * @param linkType linkType or {@code null} for none
    */
   public InterconnectGroupsCreateMembersInterconnectInput setLinkType(java.lang.String linkType) {
@@ -325,10 +335,11 @@ public final class InterconnectGroupsCreateMembersInterconnectInput extends com.
 
   /**
    * Optional. List of features requested for this Interconnect connection, which can take one of
-   * the following values: - IF_MACSEC If specified then the connection is created on MACsec capable
-   * hardware ports. If not specified, the default value is false, which allocates non-MACsec
-   * capable ports first if available. This parameter can be provided only with Interconnect INSERT.
-   * It isn't valid for Interconnect PATCH.
+   * the following values:        - IF_MACSEC: If specified, then the connection is created on
+   * MACsec    capable hardware ports. If not specified, non-MACsec capable ports will    also be
+   * considered.    - IF_CROSS_SITE_NETWORK: If specified, then the connection is created
+   * exclusively for Cross-Site Networking. The connection can not be used for    Cross-Site
+   * Networking unless this feature is specified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRequestedFeatures() {
@@ -337,10 +348,11 @@ public final class InterconnectGroupsCreateMembersInterconnectInput extends com.
 
   /**
    * Optional. List of features requested for this Interconnect connection, which can take one of
-   * the following values: - IF_MACSEC If specified then the connection is created on MACsec capable
-   * hardware ports. If not specified, the default value is false, which allocates non-MACsec
-   * capable ports first if available. This parameter can be provided only with Interconnect INSERT.
-   * It isn't valid for Interconnect PATCH.
+   * the following values:        - IF_MACSEC: If specified, then the connection is created on
+   * MACsec    capable hardware ports. If not specified, non-MACsec capable ports will    also be
+   * considered.    - IF_CROSS_SITE_NETWORK: If specified, then the connection is created
+   * exclusively for Cross-Site Networking. The connection can not be used for    Cross-Site
+   * Networking unless this feature is specified.
    * @param requestedFeatures requestedFeatures or {@code null} for none
    */
   public InterconnectGroupsCreateMembersInterconnectInput setRequestedFeatures(java.util.List<java.lang.String> requestedFeatures) {

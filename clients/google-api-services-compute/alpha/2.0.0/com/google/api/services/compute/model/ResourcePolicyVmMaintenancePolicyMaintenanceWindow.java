@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * A maintenance window for VMs. When set, we restrict our maintenance operations to this window.
+ * A maintenance window for VMs.  When set, we restrict our maintenance operations to this window.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

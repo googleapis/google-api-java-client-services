@@ -37,7 +37,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   private java.lang.String activationStatus;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -118,7 +118,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public PreviewFeature setCreationTimestamp(java.lang.String creationTimestamp) {

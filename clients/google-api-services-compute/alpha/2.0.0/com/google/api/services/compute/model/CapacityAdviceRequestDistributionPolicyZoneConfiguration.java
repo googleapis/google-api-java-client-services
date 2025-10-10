@@ -30,14 +30,18 @@ package com.google.api.services.compute.model;
 public final class CapacityAdviceRequestDistributionPolicyZoneConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The URL of the zone.
+   * The URL of the zone. It can be a partial or full URL. For example, the following are valid
+   * values:               - https://www.googleapis.com/compute/v1/projects/project/zones/zone     -
+   * projects/project/zones/zone     - zones/zone
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * The URL of the zone.
+   * The URL of the zone. It can be a partial or full URL. For example, the following are valid
+   * values:               - https://www.googleapis.com/compute/v1/projects/project/zones/zone     -
+   * projects/project/zones/zone     - zones/zone
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -45,7 +49,9 @@ public final class CapacityAdviceRequestDistributionPolicyZoneConfiguration exte
   }
 
   /**
-   * The URL of the zone.
+   * The URL of the zone. It can be a partial or full URL. For example, the following are valid
+   * values:               - https://www.googleapis.com/compute/v1/projects/project/zones/zone     -
+   * projects/project/zones/zone     - zones/zone
    * @param zone zone or {@code null} for none
    */
   public CapacityAdviceRequestDistributionPolicyZoneConfiguration setZone(java.lang.String zone) {

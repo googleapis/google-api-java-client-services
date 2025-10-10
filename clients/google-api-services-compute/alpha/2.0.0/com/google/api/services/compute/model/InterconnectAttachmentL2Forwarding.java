@@ -31,10 +31,13 @@ public final class InterconnectAttachmentL2Forwarding extends com.google.api.cli
 
   /**
    * Optional. A map of VLAN tags to appliances and optional inner mapping rules. If VLANs are not
-   * explicitly mapped to any appliance, the defaultApplianceIpAddress is used. Each VLAN tag can be
-   * a single number or a range of numbers in the range of 1 to 4094, e.g., "1" or "4001-4094". Non-
-   * empty and non-overlapping VLAN tag ranges are enforced, and violating operations will be
-   * rejected. The VLAN tags in the Ethernet header must use an ethertype value of 0x88A8 or 0x8100.
+   * explicitly mapped to any appliance, the defaultApplianceIpAddress is used.
+   *
+   * Each VLAN tag can be a single number or a range of numbers in the range of 1 to 4094, e.g., "1"
+   * or "4001-4094". Non-empty and non-overlapping VLAN tag ranges are enforced, and violating
+   * operations will be rejected.
+   *
+   * The VLAN tags in the Ethernet header must use an ethertype value of 0x88A8 or 0x8100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +45,9 @@ public final class InterconnectAttachmentL2Forwarding extends com.google.api.cli
 
   /**
    * Optional. A single IPv4 or IPv6 address used as the default destination IP when there is no
-   * VLAN mapping result found. Unset field (null-value) indicates the unmatched packet should be
-   * dropped.
+   * VLAN mapping result found.
+   *
+   * Unset field (null-value) indicates the unmatched packet should be dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,10 +80,13 @@ public final class InterconnectAttachmentL2Forwarding extends com.google.api.cli
 
   /**
    * Optional. A map of VLAN tags to appliances and optional inner mapping rules. If VLANs are not
-   * explicitly mapped to any appliance, the defaultApplianceIpAddress is used. Each VLAN tag can be
-   * a single number or a range of numbers in the range of 1 to 4094, e.g., "1" or "4001-4094". Non-
-   * empty and non-overlapping VLAN tag ranges are enforced, and violating operations will be
-   * rejected. The VLAN tags in the Ethernet header must use an ethertype value of 0x88A8 or 0x8100.
+   * explicitly mapped to any appliance, the defaultApplianceIpAddress is used.
+   *
+   * Each VLAN tag can be a single number or a range of numbers in the range of 1 to 4094, e.g., "1"
+   * or "4001-4094". Non-empty and non-overlapping VLAN tag ranges are enforced, and violating
+   * operations will be rejected.
+   *
+   * The VLAN tags in the Ethernet header must use an ethertype value of 0x88A8 or 0x8100.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, InterconnectAttachmentL2ForwardingApplianceMapping> getApplianceMappings() {
@@ -88,10 +95,13 @@ public final class InterconnectAttachmentL2Forwarding extends com.google.api.cli
 
   /**
    * Optional. A map of VLAN tags to appliances and optional inner mapping rules. If VLANs are not
-   * explicitly mapped to any appliance, the defaultApplianceIpAddress is used. Each VLAN tag can be
-   * a single number or a range of numbers in the range of 1 to 4094, e.g., "1" or "4001-4094". Non-
-   * empty and non-overlapping VLAN tag ranges are enforced, and violating operations will be
-   * rejected. The VLAN tags in the Ethernet header must use an ethertype value of 0x88A8 or 0x8100.
+   * explicitly mapped to any appliance, the defaultApplianceIpAddress is used.
+   *
+   * Each VLAN tag can be a single number or a range of numbers in the range of 1 to 4094, e.g., "1"
+   * or "4001-4094". Non-empty and non-overlapping VLAN tag ranges are enforced, and violating
+   * operations will be rejected.
+   *
+   * The VLAN tags in the Ethernet header must use an ethertype value of 0x88A8 or 0x8100.
    * @param applianceMappings applianceMappings or {@code null} for none
    */
   public InterconnectAttachmentL2Forwarding setApplianceMappings(java.util.Map<String, InterconnectAttachmentL2ForwardingApplianceMapping> applianceMappings) {
@@ -101,8 +111,9 @@ public final class InterconnectAttachmentL2Forwarding extends com.google.api.cli
 
   /**
    * Optional. A single IPv4 or IPv6 address used as the default destination IP when there is no
-   * VLAN mapping result found. Unset field (null-value) indicates the unmatched packet should be
-   * dropped.
+   * VLAN mapping result found.
+   *
+   * Unset field (null-value) indicates the unmatched packet should be dropped.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultApplianceIpAddress() {
@@ -111,8 +122,9 @@ public final class InterconnectAttachmentL2Forwarding extends com.google.api.cli
 
   /**
    * Optional. A single IPv4 or IPv6 address used as the default destination IP when there is no
-   * VLAN mapping result found. Unset field (null-value) indicates the unmatched packet should be
-   * dropped.
+   * VLAN mapping result found.
+   *
+   * Unset field (null-value) indicates the unmatched packet should be dropped.
    * @param defaultApplianceIpAddress defaultApplianceIpAddress or {@code null} for none
    */
   public InterconnectAttachmentL2Forwarding setDefaultApplianceIpAddress(java.lang.String defaultApplianceIpAddress) {

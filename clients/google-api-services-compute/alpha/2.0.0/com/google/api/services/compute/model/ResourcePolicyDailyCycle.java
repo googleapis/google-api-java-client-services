@@ -47,7 +47,7 @@ public final class ResourcePolicyDailyCycle extends com.google.api.client.json.G
 
   /**
    * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00,
-   * 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+   * 08:00,12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class ResourcePolicyDailyCycle extends com.google.api.client.json.G
 
   /**
    * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00,
-   * 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+   * 08:00,12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartTime() {
@@ -102,7 +102,7 @@ public final class ResourcePolicyDailyCycle extends com.google.api.client.json.G
 
   /**
    * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00,
-   * 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+   * 08:00,12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
    * @param startTime startTime or {@code null} for none
    */
   public ResourcePolicyDailyCycle setStartTime(java.lang.String startTime) {

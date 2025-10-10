@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a License resource. A License represents billing and aggregate usage data for public
- * and marketplace images. *Caution* This resource is intended for use only by third-party partners
- * who are creating Cloud Marketplace images.
+ * Represents a License resource.
+ *
+ * A License represents billing and aggregate usage data forpublic andmarketplace images. Caution*
+ * This resource is intended for use only by third-party partners who are creatingCloud Marketplace
+ * images.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -54,7 +56,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean chargesUseFee;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +115,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean multiTenantOnly;
 
   /**
-   * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
+   * Name of the resource. The name must be 1-63 characters long and comply withRFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +183,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean transferable;
 
   /**
-   * [Output Only] Last update timestamp in RFC3339 text format.
+   * [Output Only] Last update timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,7 +243,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -249,7 +251,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public License setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -383,7 +385,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
+   * Name of the resource. The name must be 1-63 characters long and comply withRFC1035.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -391,7 +393,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
+   * Name of the resource. The name must be 1-63 characters long and comply withRFC1035.
    * @param name name or {@code null} for none
    */
   public License setName(java.lang.String name) {
@@ -546,7 +548,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last update timestamp in RFC3339 text format.
+   * [Output Only] Last update timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateTimestamp() {
@@ -554,7 +556,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last update timestamp in RFC3339 text format.
+   * [Output Only] Last update timestamp inRFC3339 text format.
    * @param updateTimestamp updateTimestamp or {@code null} for none
    */
   public License setUpdateTimestamp(java.lang.String updateTimestamp) {

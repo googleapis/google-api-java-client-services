@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Target Pool resource. Target pools are used with external passthrough Network Load
- * Balancers. A target pool references member instances, an associated legacy HttpHealthCheck
- * resource, and, optionally, a backup target pool. For more information, read Using target pools.
+ * Represents a Target Pool resource.
+ *
+ * Target pools are used with external passthrough Network Load Balancers. A target pool references
+ * member instances, an associated legacy HttpHealthCheck resource, and, optionally, a backup target
+ * pool. For more information, readUsing target pools.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -34,20 +36,22 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   /**
    * The server-defined URL for the resource. This field is applicable only when the containing
    * target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is
-   * properly set to a value between [0, 1]. backupPool and failoverRatio together define the
+   * properly set to a value between [0, 1].backupPool and failoverRatio together define the
    * fallback behavior of the primary target pool: if the ratio of the healthy instances in the
-   * primary pool is at or below failoverRatio, traffic arriving at the load-balanced IP will be
-   * directed to the backup pool. In case where failoverRatio and backupPool are not set, or all the
-   * instances in the backup pool are unhealthy, the traffic will be directed back to the primary
-   * pool in the "force" mode, where traffic will be spread to the healthy instances with the best
-   * effort, or to all instances when no instance is healthy.
+   * primary pool is at or belowfailoverRatio, traffic arriving at the load-balanced IP will be
+   * directed to the backup pool.
+   *
+   * In case where failoverRatio and backupPool are not set, or all the instances in the backup pool
+   * are unhealthy, the traffic will be directed back to the primary pool in the "force" mode, where
+   * traffic will be spread to the healthy instances with the best effort, or to all instances when
+   * no instance is healthy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backupPool;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,13 +67,16 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   /**
    * This field is applicable only when the containing target pool is serving a forwarding rule as
    * the primary pool (i.e., not as a backup pool to some other target pool). The value of the field
-   * must be in [0, 1]. If set, backupPool must also be set. They together define the fallback
-   * behavior of the primary target pool: if the ratio of the healthy instances in the primary pool
-   * is at or below this number, traffic arriving at the load-balanced IP will be directed to the
-   * backup pool. In case where failoverRatio is not set or all the instances in the backup pool are
-   * unhealthy, the traffic will be directed back to the primary pool in the "force" mode, where
-   * traffic will be spread to the healthy instances with the best effort, or to all instances when
-   * no instance is healthy.
+   * must be in [0, 1].
+   *
+   * If set, backupPool must also be set. They together define the fallback behavior of the primary
+   * target pool: if the ratio of the healthy instances in the primary pool is at or below this
+   * number, traffic arriving at the load-balanced IP will be directed to the backup pool.
+   *
+   * In case where failoverRatio is not set or all the instances in the backup pool are unhealthy,
+   * the traffic will be directed back to the primary pool in the "force" mode, where traffic will
+   * be spread to the healthy instances with the best effort, or to all instances when no instance
+   * is healthy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +115,7 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -147,10 +154,10 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Session affinity option, must be one of the following values: NONE: Connections from the same
-   * client IP may go to any instance in the pool. CLIENT_IP: Connections from the same client IP
-   * will go to the same instance in the pool while that instance remains healthy. CLIENT_IP_PROTO:
-   * Connections from the same client IP with the same IP protocol will go to the same instance in
-   * the pool while that instance remains healthy.
+   * client IP may go to any     instance in the pool.  CLIENT_IP: Connections from the same client
+   * IP will go     to the same instance in     the pool while that instance remains healthy.
+   * CLIENT_IP_PROTO: Connections from the same client IP     with the same IP protocol will go to
+   * the same instance in the     pool while that instance remains healthy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,13 +166,15 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   /**
    * The server-defined URL for the resource. This field is applicable only when the containing
    * target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is
-   * properly set to a value between [0, 1]. backupPool and failoverRatio together define the
+   * properly set to a value between [0, 1].backupPool and failoverRatio together define the
    * fallback behavior of the primary target pool: if the ratio of the healthy instances in the
-   * primary pool is at or below failoverRatio, traffic arriving at the load-balanced IP will be
-   * directed to the backup pool. In case where failoverRatio and backupPool are not set, or all the
-   * instances in the backup pool are unhealthy, the traffic will be directed back to the primary
-   * pool in the "force" mode, where traffic will be spread to the healthy instances with the best
-   * effort, or to all instances when no instance is healthy.
+   * primary pool is at or belowfailoverRatio, traffic arriving at the load-balanced IP will be
+   * directed to the backup pool.
+   *
+   * In case where failoverRatio and backupPool are not set, or all the instances in the backup pool
+   * are unhealthy, the traffic will be directed back to the primary pool in the "force" mode, where
+   * traffic will be spread to the healthy instances with the best effort, or to all instances when
+   * no instance is healthy.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupPool() {
@@ -175,13 +184,15 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   /**
    * The server-defined URL for the resource. This field is applicable only when the containing
    * target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is
-   * properly set to a value between [0, 1]. backupPool and failoverRatio together define the
+   * properly set to a value between [0, 1].backupPool and failoverRatio together define the
    * fallback behavior of the primary target pool: if the ratio of the healthy instances in the
-   * primary pool is at or below failoverRatio, traffic arriving at the load-balanced IP will be
-   * directed to the backup pool. In case where failoverRatio and backupPool are not set, or all the
-   * instances in the backup pool are unhealthy, the traffic will be directed back to the primary
-   * pool in the "force" mode, where traffic will be spread to the healthy instances with the best
-   * effort, or to all instances when no instance is healthy.
+   * primary pool is at or belowfailoverRatio, traffic arriving at the load-balanced IP will be
+   * directed to the backup pool.
+   *
+   * In case where failoverRatio and backupPool are not set, or all the instances in the backup pool
+   * are unhealthy, the traffic will be directed back to the primary pool in the "force" mode, where
+   * traffic will be spread to the healthy instances with the best effort, or to all instances when
+   * no instance is healthy.
    * @param backupPool backupPool or {@code null} for none
    */
   public TargetPool setBackupPool(java.lang.String backupPool) {
@@ -190,7 +201,7 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -198,7 +209,7 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public TargetPool setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -226,13 +237,16 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   /**
    * This field is applicable only when the containing target pool is serving a forwarding rule as
    * the primary pool (i.e., not as a backup pool to some other target pool). The value of the field
-   * must be in [0, 1]. If set, backupPool must also be set. They together define the fallback
-   * behavior of the primary target pool: if the ratio of the healthy instances in the primary pool
-   * is at or below this number, traffic arriving at the load-balanced IP will be directed to the
-   * backup pool. In case where failoverRatio is not set or all the instances in the backup pool are
-   * unhealthy, the traffic will be directed back to the primary pool in the "force" mode, where
-   * traffic will be spread to the healthy instances with the best effort, or to all instances when
-   * no instance is healthy.
+   * must be in [0, 1].
+   *
+   * If set, backupPool must also be set. They together define the fallback behavior of the primary
+   * target pool: if the ratio of the healthy instances in the primary pool is at or below this
+   * number, traffic arriving at the load-balanced IP will be directed to the backup pool.
+   *
+   * In case where failoverRatio is not set or all the instances in the backup pool are unhealthy,
+   * the traffic will be directed back to the primary pool in the "force" mode, where traffic will
+   * be spread to the healthy instances with the best effort, or to all instances when no instance
+   * is healthy.
    * @return value or {@code null} for none
    */
   public java.lang.Float getFailoverRatio() {
@@ -242,13 +256,16 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   /**
    * This field is applicable only when the containing target pool is serving a forwarding rule as
    * the primary pool (i.e., not as a backup pool to some other target pool). The value of the field
-   * must be in [0, 1]. If set, backupPool must also be set. They together define the fallback
-   * behavior of the primary target pool: if the ratio of the healthy instances in the primary pool
-   * is at or below this number, traffic arriving at the load-balanced IP will be directed to the
-   * backup pool. In case where failoverRatio is not set or all the instances in the backup pool are
-   * unhealthy, the traffic will be directed back to the primary pool in the "force" mode, where
-   * traffic will be spread to the healthy instances with the best effort, or to all instances when
-   * no instance is healthy.
+   * must be in [0, 1].
+   *
+   * If set, backupPool must also be set. They together define the fallback behavior of the primary
+   * target pool: if the ratio of the healthy instances in the primary pool is at or below this
+   * number, traffic arriving at the load-balanced IP will be directed to the backup pool.
+   *
+   * In case where failoverRatio is not set or all the instances in the backup pool are unhealthy,
+   * the traffic will be directed back to the primary pool in the "force" mode, where traffic will
+   * be spread to the healthy instances with the best effort, or to all instances when no instance
+   * is healthy.
    * @param failoverRatio failoverRatio or {@code null} for none
    */
   public TargetPool setFailoverRatio(java.lang.Float failoverRatio) {
@@ -332,7 +349,7 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -344,7 +361,7 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -425,10 +442,10 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Session affinity option, must be one of the following values: NONE: Connections from the same
-   * client IP may go to any instance in the pool. CLIENT_IP: Connections from the same client IP
-   * will go to the same instance in the pool while that instance remains healthy. CLIENT_IP_PROTO:
-   * Connections from the same client IP with the same IP protocol will go to the same instance in
-   * the pool while that instance remains healthy.
+   * client IP may go to any     instance in the pool.  CLIENT_IP: Connections from the same client
+   * IP will go     to the same instance in     the pool while that instance remains healthy.
+   * CLIENT_IP_PROTO: Connections from the same client IP     with the same IP protocol will go to
+   * the same instance in the     pool while that instance remains healthy.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionAffinity() {
@@ -437,10 +454,10 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Session affinity option, must be one of the following values: NONE: Connections from the same
-   * client IP may go to any instance in the pool. CLIENT_IP: Connections from the same client IP
-   * will go to the same instance in the pool while that instance remains healthy. CLIENT_IP_PROTO:
-   * Connections from the same client IP with the same IP protocol will go to the same instance in
-   * the pool while that instance remains healthy.
+   * client IP may go to any     instance in the pool.  CLIENT_IP: Connections from the same client
+   * IP will go     to the same instance in     the pool while that instance remains healthy.
+   * CLIENT_IP_PROTO: Connections from the same client IP     with the same IP protocol will go to
+   * the same instance in the     pool while that instance remains healthy.
    * @param sessionAffinity sessionAffinity or {@code null} for none
    */
   public TargetPool setSessionAffinity(java.lang.String sessionAffinity) {

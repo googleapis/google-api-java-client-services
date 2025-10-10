@@ -48,10 +48,10 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] A label that identifies the wire. The format of this label combines the existing
    * labels of the wire group endpoints and Interconnect connections used by this wire in
-   * alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where: -
-   * ENDPOINT_A and ENDPOINT_B: are the labels that you entered as map keys when you specified the
-   * wire group endpoint objects. - CONNECTION_A1 and CONNECTION_B1: are the labels that you entered
-   * as map keys when you specified the wire group Interconnect objects.
+   * alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
+   * - ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys when you specified
+   * the wire group endpoint    objects.    - CONNECTION_A1 and CONNECTION_B1: are the    labels
+   * that you entered as map keys when you specified the wire group    Interconnect objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,10 +105,10 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] A label that identifies the wire. The format of this label combines the existing
    * labels of the wire group endpoints and Interconnect connections used by this wire in
-   * alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where: -
-   * ENDPOINT_A and ENDPOINT_B: are the labels that you entered as map keys when you specified the
-   * wire group endpoint objects. - CONNECTION_A1 and CONNECTION_B1: are the labels that you entered
-   * as map keys when you specified the wire group Interconnect objects.
+   * alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
+   * - ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys when you specified
+   * the wire group endpoint    objects.    - CONNECTION_A1 and CONNECTION_B1: are the    labels
+   * that you entered as map keys when you specified the wire group    Interconnect objects.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -118,10 +118,10 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] A label that identifies the wire. The format of this label combines the existing
    * labels of the wire group endpoints and Interconnect connections used by this wire in
-   * alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where: -
-   * ENDPOINT_A and ENDPOINT_B: are the labels that you entered as map keys when you specified the
-   * wire group endpoint objects. - CONNECTION_A1 and CONNECTION_B1: are the labels that you entered
-   * as map keys when you specified the wire group Interconnect objects.
+   * alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
+   * - ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys when you specified
+   * the wire group endpoint    objects.    - CONNECTION_A1 and CONNECTION_B1: are the    labels
+   * that you entered as map keys when you specified the wire group    Interconnect objects.
    * @param label label or {@code null} for none
    */
   public Wire setLabel(java.lang.String label) {

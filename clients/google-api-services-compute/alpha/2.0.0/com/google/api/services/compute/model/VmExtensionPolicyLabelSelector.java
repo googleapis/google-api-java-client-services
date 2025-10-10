@@ -31,10 +31,13 @@ public final class VmExtensionPolicyLabelSelector extends com.google.api.client.
 
   /**
    * Optional. A map of key-value pairs representing VM labels. VMs must have all of the labels
-   * specified in this map to be selected (logical AND). e.g. If the `inclusion_labels` are
-   * {("key1", "value1"), ("key2", "value2")}, the VM labels must contain both ("key1", "value1")
-   * and ("key2", "value2") to be selected. If the VM labels are ("key1", "value1") and
-   * ("something", "else"), it will not be selected. If the map is empty, it's considered a match.
+   * specified in this map to be selected (logical AND).
+   *
+   * e.g. If the `inclusion_labels` are {("key1", "value1"), ("key2", "value2")}, the VM labels must
+   * contain both ("key1", "value1") and ("key2", "value2") to be selected. If the VM labels are
+   * ("key1", "value1") and ("something", "else"), it will not be selected.
+   *
+   * If the map is empty, it's considered a match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,10 +45,13 @@ public final class VmExtensionPolicyLabelSelector extends com.google.api.client.
 
   /**
    * Optional. A map of key-value pairs representing VM labels. VMs must have all of the labels
-   * specified in this map to be selected (logical AND). e.g. If the `inclusion_labels` are
-   * {("key1", "value1"), ("key2", "value2")}, the VM labels must contain both ("key1", "value1")
-   * and ("key2", "value2") to be selected. If the VM labels are ("key1", "value1") and
-   * ("something", "else"), it will not be selected. If the map is empty, it's considered a match.
+   * specified in this map to be selected (logical AND).
+   *
+   * e.g. If the `inclusion_labels` are {("key1", "value1"), ("key2", "value2")}, the VM labels must
+   * contain both ("key1", "value1") and ("key2", "value2") to be selected. If the VM labels are
+   * ("key1", "value1") and ("something", "else"), it will not be selected.
+   *
+   * If the map is empty, it's considered a match.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getInclusionLabels() {
@@ -54,10 +60,13 @@ public final class VmExtensionPolicyLabelSelector extends com.google.api.client.
 
   /**
    * Optional. A map of key-value pairs representing VM labels. VMs must have all of the labels
-   * specified in this map to be selected (logical AND). e.g. If the `inclusion_labels` are
-   * {("key1", "value1"), ("key2", "value2")}, the VM labels must contain both ("key1", "value1")
-   * and ("key2", "value2") to be selected. If the VM labels are ("key1", "value1") and
-   * ("something", "else"), it will not be selected. If the map is empty, it's considered a match.
+   * specified in this map to be selected (logical AND).
+   *
+   * e.g. If the `inclusion_labels` are {("key1", "value1"), ("key2", "value2")}, the VM labels must
+   * contain both ("key1", "value1") and ("key2", "value2") to be selected. If the VM labels are
+   * ("key1", "value1") and ("something", "else"), it will not be selected.
+   *
+   * If the map is empty, it's considered a match.
    * @param inclusionLabels inclusionLabels or {@code null} for none
    */
   public VmExtensionPolicyLabelSelector setInclusionLabels(java.util.Map<String, java.lang.String> inclusionLabels) {

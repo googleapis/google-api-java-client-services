@@ -33,7 +33,8 @@ public final class MutualTls extends com.google.api.client.json.GenericJson {
   /**
    * Specifies if the server TLS is configured to be strict or permissive. This field can be set to
    * one of the following: STRICT: Client certificate must be presented, connection is in TLS.
-   * PERMISSIVE: Client certificate can be omitted, connection can be either plaintext or TLS.
+   * PERMISSIVE: Client certificate can be omitted, connection can be either             plaintext
+   * or TLS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,7 +43,8 @@ public final class MutualTls extends com.google.api.client.json.GenericJson {
   /**
    * Specifies if the server TLS is configured to be strict or permissive. This field can be set to
    * one of the following: STRICT: Client certificate must be presented, connection is in TLS.
-   * PERMISSIVE: Client certificate can be omitted, connection can be either plaintext or TLS.
+   * PERMISSIVE: Client certificate can be omitted, connection can be either             plaintext
+   * or TLS.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -52,7 +54,8 @@ public final class MutualTls extends com.google.api.client.json.GenericJson {
   /**
    * Specifies if the server TLS is configured to be strict or permissive. This field can be set to
    * one of the following: STRICT: Client certificate must be presented, connection is in TLS.
-   * PERMISSIVE: Client certificate can be omitted, connection can be either plaintext or TLS.
+   * PERMISSIVE: Client certificate can be omitted, connection can be either             plaintext
+   * or TLS.
    * @param mode mode or {@code null} for none
    */
   public MutualTls setMode(java.lang.String mode) {

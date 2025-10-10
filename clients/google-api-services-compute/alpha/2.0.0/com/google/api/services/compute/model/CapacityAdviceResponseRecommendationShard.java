@@ -45,7 +45,9 @@ public final class CapacityAdviceResponseRecommendationShard extends com.google.
   private java.lang.String machineType;
 
   /**
-   * Provisioning model of the recommended capacity.
+   * The provisioning model that you want to view recommendations for. Set to: SPOT.
+   *
+   * For more information, see Compute Engine instances provisioning models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +93,9 @@ public final class CapacityAdviceResponseRecommendationShard extends com.google.
   }
 
   /**
-   * Provisioning model of the recommended capacity.
+   * The provisioning model that you want to view recommendations for. Set to: SPOT.
+   *
+   * For more information, see Compute Engine instances provisioning models.
    * @return value or {@code null} for none
    */
   public java.lang.String getProvisioningModel() {
@@ -99,7 +103,9 @@ public final class CapacityAdviceResponseRecommendationShard extends com.google.
   }
 
   /**
-   * Provisioning model of the recommended capacity.
+   * The provisioning model that you want to view recommendations for. Set to: SPOT.
+   *
+   * For more information, see Compute Engine instances provisioning models.
    * @param provisioningModel provisioningModel or {@code null} for none
    */
   public CapacityAdviceResponseRecommendationShard setProvisioningModel(java.lang.String provisioningModel) {

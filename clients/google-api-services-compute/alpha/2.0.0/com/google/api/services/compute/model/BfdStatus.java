@@ -77,7 +77,7 @@ public final class BfdStatus extends com.google.api.client.json.GenericJson {
   /**
    * The diagnostic code specifies the local system's reason for the last change in session state.
    * This allows remote systems to determine the reason that the previous session failed, for
-   * example. These diagnostic codes are specified in section 4.1 of RFC5880
+   * example. These diagnostic codes are specified in section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class BfdStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The current BFD session state as seen by the transmitting system. These states are specified in
-   * section 4.1 of RFC5880
+   * section 4.1 ofRFC5880
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,7 +244,7 @@ public final class BfdStatus extends com.google.api.client.json.GenericJson {
   /**
    * The diagnostic code specifies the local system's reason for the last change in session state.
    * This allows remote systems to determine the reason that the previous session failed, for
-   * example. These diagnostic codes are specified in section 4.1 of RFC5880
+   * example. These diagnostic codes are specified in section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalDiagnostic() {
@@ -254,7 +254,7 @@ public final class BfdStatus extends com.google.api.client.json.GenericJson {
   /**
    * The diagnostic code specifies the local system's reason for the last change in session state.
    * This allows remote systems to determine the reason that the previous session failed, for
-   * example. These diagnostic codes are specified in section 4.1 of RFC5880
+   * example. These diagnostic codes are specified in section 4.1 ofRFC5880
    * @param localDiagnostic localDiagnostic or {@code null} for none
    */
   public BfdStatus setLocalDiagnostic(java.lang.String localDiagnostic) {
@@ -264,7 +264,7 @@ public final class BfdStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The current BFD session state as seen by the transmitting system. These states are specified in
-   * section 4.1 of RFC5880
+   * section 4.1 ofRFC5880
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalState() {
@@ -273,7 +273,7 @@ public final class BfdStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The current BFD session state as seen by the transmitting system. These states are specified in
-   * section 4.1 of RFC5880
+   * section 4.1 ofRFC5880
    * @param localState localState or {@code null} for none
    */
   public BfdStatus setLocalState(java.lang.String localState) {

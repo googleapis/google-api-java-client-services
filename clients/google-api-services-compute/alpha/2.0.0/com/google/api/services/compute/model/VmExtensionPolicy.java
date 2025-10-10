@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class VmExtensionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   private java.util.List<VmExtensionPolicyInstanceSelector> instanceSelectors;
 
   /**
-   * [Output Only] Type of the resource. Always compute#vmExtensionPolicy.
+   * [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -131,14 +131,14 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String state;
 
   /**
-   * [Output Only] Update timestamp in RFC3339 text format.
+   * [Output Only] Update timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String updateTimestamp;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -146,7 +146,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public VmExtensionPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -244,7 +244,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#vmExtensionPolicy.
+   * [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -252,7 +252,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#vmExtensionPolicy.
+   * [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
    * @param kind kind or {@code null} for none
    */
   public VmExtensionPolicy setKind(java.lang.String kind) {
@@ -279,7 +279,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -291,7 +291,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -379,7 +379,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Update timestamp in RFC3339 text format.
+   * [Output Only] Update timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateTimestamp() {
@@ -387,7 +387,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Update timestamp in RFC3339 text format.
+   * [Output Only] Update timestamp inRFC3339 text format.
    * @param updateTimestamp updateTimestamp or {@code null} for none
    */
   public VmExtensionPolicy setUpdateTimestamp(java.lang.String updateTimestamp) {

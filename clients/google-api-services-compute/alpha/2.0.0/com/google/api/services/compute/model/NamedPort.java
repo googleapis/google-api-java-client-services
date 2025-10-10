@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class NamedPort extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+   * The name for this named port. The name must be 1-63 characters long, and comply withRFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class NamedPort extends com.google.api.client.json.GenericJson {
   private java.lang.Integer port;
 
   /**
-   * The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+   * The name for this named port. The name must be 1-63 characters long, and comply withRFC1035.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -52,7 +52,7 @@ public final class NamedPort extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+   * The name for this named port. The name must be 1-63 characters long, and comply withRFC1035.
    * @param name name or {@code null} for none
    */
   public NamedPort setName(java.lang.String name) {

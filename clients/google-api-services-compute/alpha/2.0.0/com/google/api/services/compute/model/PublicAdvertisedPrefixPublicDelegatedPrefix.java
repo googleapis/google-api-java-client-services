@@ -58,8 +58,8 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefix extends com.googl
   private java.lang.String region;
 
   /**
-   * The status of the public delegated prefix. Possible values are: INITIALIZING: The public
-   * delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The
+   * The status of the public delegated prefix. Possible values are:   INITIALIZING: The public
+   * delegated prefix is being initialized and     addresses cannot be created yet.   ANNOUNCED: The
    * public delegated prefix is active.
    * The value may be {@code null}.
    */
@@ -135,8 +135,8 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefix extends com.googl
   }
 
   /**
-   * The status of the public delegated prefix. Possible values are: INITIALIZING: The public
-   * delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The
+   * The status of the public delegated prefix. Possible values are:   INITIALIZING: The public
+   * delegated prefix is being initialized and     addresses cannot be created yet.   ANNOUNCED: The
    * public delegated prefix is active.
    * @return value or {@code null} for none
    */
@@ -145,8 +145,8 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefix extends com.googl
   }
 
   /**
-   * The status of the public delegated prefix. Possible values are: INITIALIZING: The public
-   * delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The
+   * The status of the public delegated prefix. Possible values are:   INITIALIZING: The public
+   * delegated prefix is being initialized and     addresses cannot be created yet.   ANNOUNCED: The
    * public delegated prefix is active.
    * @param status status or {@code null} for none
    */

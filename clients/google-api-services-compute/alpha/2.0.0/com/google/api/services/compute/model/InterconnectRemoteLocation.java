@@ -17,8 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Cross-Cloud Interconnect Remote Location resource. You can use this resource to find
- * remote location details about an Interconnect attachment (VLAN).
+ * Represents a Cross-Cloud Interconnect Remote Location resource.
+ *
+ * You can use this resource to find remote location details about an Interconnect attachment
+ * (VLAN).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -63,15 +65,15 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   private InterconnectRemoteLocationConstraints constraints;
 
   /**
-   * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
-   * - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
+   * [Output Only] Continent for this location, which can take one of the following values:        -
+   * AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String continent;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +108,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#interconnectRemoteLocation for interconnect
+   * [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for interconnect
    * remote locations.
    * The value may be {@code null}.
    */
@@ -191,9 +193,9 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
 
   /**
    * [Output Only] The status of this InterconnectRemoteLocation, which can take one of the
-   * following values: - CLOSED: The InterconnectRemoteLocation is closed and is unavailable for
-   * provisioning new Cross-Cloud Interconnects. - AVAILABLE: The InterconnectRemoteLocation is
-   * available for provisioning new Cross-Cloud Interconnects.
+   * following values:        - CLOSED: The InterconnectRemoteLocation is closed and is unavailable
+   * for provisioning new Cross-Cloud Interconnects.     - AVAILABLE: The
+   * InterconnectRemoteLocation is available for provisioning new    Cross-Cloud Interconnects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -276,8 +278,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
-   * - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
+   * [Output Only] Continent for this location, which can take one of the following values:        -
+   * AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
    * @return value or {@code null} for none
    */
   public java.lang.String getContinent() {
@@ -285,8 +287,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
-   * - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
+   * [Output Only] Continent for this location, which can take one of the following values:        -
+   * AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
    * @param continent continent or {@code null} for none
    */
   public InterconnectRemoteLocation setContinent(java.lang.String continent) {
@@ -295,7 +297,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -303,7 +305,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InterconnectRemoteLocation setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -380,7 +382,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#interconnectRemoteLocation for interconnect
+   * [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for interconnect
    * remote locations.
    * @return value or {@code null} for none
    */
@@ -389,7 +391,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#interconnectRemoteLocation for interconnect
+   * [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for interconnect
    * remote locations.
    * @param kind kind or {@code null} for none
    */
@@ -582,9 +584,9 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
 
   /**
    * [Output Only] The status of this InterconnectRemoteLocation, which can take one of the
-   * following values: - CLOSED: The InterconnectRemoteLocation is closed and is unavailable for
-   * provisioning new Cross-Cloud Interconnects. - AVAILABLE: The InterconnectRemoteLocation is
-   * available for provisioning new Cross-Cloud Interconnects.
+   * following values:        - CLOSED: The InterconnectRemoteLocation is closed and is unavailable
+   * for provisioning new Cross-Cloud Interconnects.     - AVAILABLE: The
+   * InterconnectRemoteLocation is available for provisioning new    Cross-Cloud Interconnects.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -593,9 +595,9 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
 
   /**
    * [Output Only] The status of this InterconnectRemoteLocation, which can take one of the
-   * following values: - CLOSED: The InterconnectRemoteLocation is closed and is unavailable for
-   * provisioning new Cross-Cloud Interconnects. - AVAILABLE: The InterconnectRemoteLocation is
-   * available for provisioning new Cross-Cloud Interconnects.
+   * following values:        - CLOSED: The InterconnectRemoteLocation is closed and is unavailable
+   * for provisioning new Cross-Cloud Interconnects.     - AVAILABLE: The
+   * InterconnectRemoteLocation is available for provisioning new    Cross-Cloud Interconnects.
    * @param status status or {@code null} for none
    */
   public InterconnectRemoteLocation setStatus(java.lang.String status) {

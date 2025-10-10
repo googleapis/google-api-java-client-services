@@ -31,7 +31,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
 
   /**
    * The distribution shape to which the group converges either proactively or on resize events
-   * (depending on the value set in updatePolicy.instanceRedistributionType).
+   * (depending on the value set inupdatePolicy.instanceRedistributionType).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
 
   /**
    * The distribution shape to which the group converges either proactively or on resize events
-   * (depending on the value set in updatePolicy.instanceRedistributionType).
+   * (depending on the value set inupdatePolicy.instanceRedistributionType).
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetShape() {
@@ -55,7 +55,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
 
   /**
    * The distribution shape to which the group converges either proactively or on resize events
-   * (depending on the value set in updatePolicy.instanceRedistributionType).
+   * (depending on the value set inupdatePolicy.instanceRedistributionType).
    * @param targetShape targetShape or {@code null} for none
    */
   public DistributionPolicy setTargetShape(java.lang.String targetShape) {

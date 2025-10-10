@@ -31,7 +31,7 @@ public final class ConnectionDraining extends com.google.api.client.json.Generic
 
   /**
    * Configures a duration timeout for existing requests on a removed backend instance. For
-   * supported load balancers and protocols, as described in Enabling connection draining.
+   * supported load balancers and protocols, as described inEnabling connection draining.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class ConnectionDraining extends com.google.api.client.json.Generic
 
   /**
    * Configures a duration timeout for existing requests on a removed backend instance. For
-   * supported load balancers and protocols, as described in Enabling connection draining.
+   * supported load balancers and protocols, as described inEnabling connection draining.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDrainingTimeoutSec() {
@@ -48,7 +48,7 @@ public final class ConnectionDraining extends com.google.api.client.json.Generic
 
   /**
    * Configures a duration timeout for existing requests on a removed backend instance. For
-   * supported load balancers and protocols, as described in Enabling connection draining.
+   * supported load balancers and protocols, as described inEnabling connection draining.
    * @param drainingTimeoutSec drainingTimeoutSec or {@code null} for none
    */
   public ConnectionDraining setDrainingTimeoutSec(java.lang.Integer drainingTimeoutSec) {

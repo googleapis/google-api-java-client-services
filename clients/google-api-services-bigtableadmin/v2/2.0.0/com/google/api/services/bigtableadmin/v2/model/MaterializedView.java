@@ -31,6 +31,22 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class MaterializedView extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Map from cluster ID to per-cluster materialized view state. If it could not be
+   * determined whether or not the materialized view has data in a particular cluster (for example,
+   * if its zone is unavailable), then there will be an entry for the cluster with `STATE_NOT_KNOWN`
+   * state. Views: `REPLICATION_VIEW`, `FULL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleBigtableAdminV2MaterializedViewClusterState> clusterStates;
+
+  static {
+    // hack to force ProGuard to consider GoogleBigtableAdminV2MaterializedViewClusterState used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleBigtableAdminV2MaterializedViewClusterState.class);
+  }
+
+  /**
    * Set to true to make the MaterializedView protected against deletion. Views: `SCHEMA_VIEW`,
    * `REPLICATION_VIEW`, `FULL`.
    * The value may be {@code null}.
@@ -62,6 +78,29 @@ public final class MaterializedView extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
+
+  /**
+   * Output only. Map from cluster ID to per-cluster materialized view state. If it could not be
+   * determined whether or not the materialized view has data in a particular cluster (for example,
+   * if its zone is unavailable), then there will be an entry for the cluster with `STATE_NOT_KNOWN`
+   * state. Views: `REPLICATION_VIEW`, `FULL`.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleBigtableAdminV2MaterializedViewClusterState> getClusterStates() {
+    return clusterStates;
+  }
+
+  /**
+   * Output only. Map from cluster ID to per-cluster materialized view state. If it could not be
+   * determined whether or not the materialized view has data in a particular cluster (for example,
+   * if its zone is unavailable), then there will be an entry for the cluster with `STATE_NOT_KNOWN`
+   * state. Views: `REPLICATION_VIEW`, `FULL`.
+   * @param clusterStates clusterStates or {@code null} for none
+   */
+  public MaterializedView setClusterStates(java.util.Map<String, GoogleBigtableAdminV2MaterializedViewClusterState> clusterStates) {
+    this.clusterStates = clusterStates;
+    return this;
+  }
 
   /**
    * Set to true to make the MaterializedView protected against deletion. Views: `SCHEMA_VIEW`,

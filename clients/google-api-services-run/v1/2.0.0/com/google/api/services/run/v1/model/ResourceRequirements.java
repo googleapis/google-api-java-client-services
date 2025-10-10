@@ -30,10 +30,11 @@ package com.google.api.services.run.v1.model;
 public final class ResourceRequirements extends com.google.api.client.json.GenericJson {
 
   /**
-   * Limits describes the maximum amount of compute resources allowed. Only 'cpu' and 'memory' keys
-   * are supported. * For supported 'cpu' values, go to
+   * Limits describes the maximum amount of compute resources allowed. Only 'cpu', 'memory' and
+   * 'nvidia.com/gpu' keys are supported. * For supported 'cpu' values, go to
    * https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory' values and syntax,
-   * go to https://cloud.google.com/run/docs/configuring/memory-limits
+   * go to https://cloud.google.com/run/docs/configuring/memory-limits. * The only supported
+   * 'nvidia.com/gpu' value is '1'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,10 +52,11 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> requests;
 
   /**
-   * Limits describes the maximum amount of compute resources allowed. Only 'cpu' and 'memory' keys
-   * are supported. * For supported 'cpu' values, go to
+   * Limits describes the maximum amount of compute resources allowed. Only 'cpu', 'memory' and
+   * 'nvidia.com/gpu' keys are supported. * For supported 'cpu' values, go to
    * https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory' values and syntax,
-   * go to https://cloud.google.com/run/docs/configuring/memory-limits
+   * go to https://cloud.google.com/run/docs/configuring/memory-limits. * The only supported
+   * 'nvidia.com/gpu' value is '1'.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLimits() {
@@ -62,10 +64,11 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Limits describes the maximum amount of compute resources allowed. Only 'cpu' and 'memory' keys
-   * are supported. * For supported 'cpu' values, go to
+   * Limits describes the maximum amount of compute resources allowed. Only 'cpu', 'memory' and
+   * 'nvidia.com/gpu' keys are supported. * For supported 'cpu' values, go to
    * https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory' values and syntax,
-   * go to https://cloud.google.com/run/docs/configuring/memory-limits
+   * go to https://cloud.google.com/run/docs/configuring/memory-limits. * The only supported
+   * 'nvidia.com/gpu' value is '1'.
    * @param limits limits or {@code null} for none
    */
   public ResourceRequirements setLimits(java.util.Map<String, java.lang.String> limits) {

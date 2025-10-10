@@ -4353,6 +4353,152 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Deprecated: Checks the existence of a refresh token for the EUC user for a given connection and
+           * returns its details. Use AcquireAccessToken instead and then check the validity of the returned
+           * token by asking the 3rd party system. There's no way to know for sure if a refresh token is valid
+           * without asking the 3rd party system.
+           *
+           * Create a request for the method "dataConnector.checkRefreshToken".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link CheckRefreshToken#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the connector for which a token is queried.
+           * @return the request
+           */
+          public CheckRefreshToken checkRefreshToken(java.lang.String name) throws java.io.IOException {
+            CheckRefreshToken result = new CheckRefreshToken(name);
+            initialize(result);
+            return result;
+          }
+
+          public class CheckRefreshToken extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckRefreshTokenResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+name}:checkRefreshToken";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+
+            /**
+             * Deprecated: Checks the existence of a refresh token for the EUC user for a given connection and
+             * returns its details. Use AcquireAccessToken instead and then check the validity of the returned
+             * token by asking the 3rd party system. There's no way to know for sure if a refresh token is
+             * valid without asking the 3rd party system.
+             *
+             * Create a request for the method "dataConnector.checkRefreshToken".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link CheckRefreshToken#execute()} method to invoke the remote
+             * operation. <p> {@link CheckRefreshToken#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the connector for which a token is queried.
+             * @since 1.13
+             */
+            protected CheckRefreshToken(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckRefreshTokenResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public CheckRefreshToken set$Xgafv(java.lang.String $Xgafv) {
+              return (CheckRefreshToken) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CheckRefreshToken setAccessToken(java.lang.String accessToken) {
+              return (CheckRefreshToken) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CheckRefreshToken setAlt(java.lang.String alt) {
+              return (CheckRefreshToken) super.setAlt(alt);
+            }
+
+            @Override
+            public CheckRefreshToken setCallback(java.lang.String callback) {
+              return (CheckRefreshToken) super.setCallback(callback);
+            }
+
+            @Override
+            public CheckRefreshToken setFields(java.lang.String fields) {
+              return (CheckRefreshToken) super.setFields(fields);
+            }
+
+            @Override
+            public CheckRefreshToken setKey(java.lang.String key) {
+              return (CheckRefreshToken) super.setKey(key);
+            }
+
+            @Override
+            public CheckRefreshToken setOauthToken(java.lang.String oauthToken) {
+              return (CheckRefreshToken) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CheckRefreshToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CheckRefreshToken) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CheckRefreshToken setQuotaUser(java.lang.String quotaUser) {
+              return (CheckRefreshToken) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CheckRefreshToken setUploadType(java.lang.String uploadType) {
+              return (CheckRefreshToken) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CheckRefreshToken setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CheckRefreshToken) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name of the connector for which a token is queried. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the connector for which a token is queried.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name of the connector for which a token is queried. */
+            public CheckRefreshToken setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public CheckRefreshToken set(String parameterName, Object value) {
+              return (CheckRefreshToken) super.set(parameterName, value);
+            }
+          }
+          /**
            * Get the secret for the associated connector.
            *
            * Create a request for the method "dataConnector.getConnectorSecret".
@@ -22138,6 +22284,155 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Get Workspace settings for the end user.
+           *
+           * Create a request for the method "engines.getWorkspaceSettings".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link GetWorkspaceSettings#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. Full Engine resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
+           * @return the request
+           */
+          public GetWorkspaceSettings getWorkspaceSettings(java.lang.String name) throws java.io.IOException {
+            GetWorkspaceSettings result = new GetWorkspaceSettings(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetWorkspaceSettings extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWorkspaceSettings> {
+
+            private static final String REST_PATH = "v1alpha/{+name}:getWorkspaceSettings";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+            /**
+             * Get Workspace settings for the end user.
+             *
+             * Create a request for the method "engines.getWorkspaceSettings".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link GetWorkspaceSettings#execute()} method to invoke the
+             * remote operation. <p> {@link GetWorkspaceSettings#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. Full Engine resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
+             * @since 1.13
+             */
+            protected GetWorkspaceSettings(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWorkspaceSettings.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetWorkspaceSettings set$Xgafv(java.lang.String $Xgafv) {
+              return (GetWorkspaceSettings) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetWorkspaceSettings setAccessToken(java.lang.String accessToken) {
+              return (GetWorkspaceSettings) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetWorkspaceSettings setAlt(java.lang.String alt) {
+              return (GetWorkspaceSettings) super.setAlt(alt);
+            }
+
+            @Override
+            public GetWorkspaceSettings setCallback(java.lang.String callback) {
+              return (GetWorkspaceSettings) super.setCallback(callback);
+            }
+
+            @Override
+            public GetWorkspaceSettings setFields(java.lang.String fields) {
+              return (GetWorkspaceSettings) super.setFields(fields);
+            }
+
+            @Override
+            public GetWorkspaceSettings setKey(java.lang.String key) {
+              return (GetWorkspaceSettings) super.setKey(key);
+            }
+
+            @Override
+            public GetWorkspaceSettings setOauthToken(java.lang.String oauthToken) {
+              return (GetWorkspaceSettings) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetWorkspaceSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetWorkspaceSettings) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetWorkspaceSettings setQuotaUser(java.lang.String quotaUser) {
+              return (GetWorkspaceSettings) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetWorkspaceSettings setUploadType(java.lang.String uploadType) {
+              return (GetWorkspaceSettings) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetWorkspaceSettings setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetWorkspaceSettings) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full Engine resource name. Format: `projects/{project}/locations/{location}
+             * /collections/{collection_id}/engines/{engine_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Full Engine resource name. Format:
+           `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Full Engine resource name. Format: `projects/{project}/locations/{location}
+             * /collections/{collection_id}/engines/{engine_id}`
+             */
+            public GetWorkspaceSettings setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetWorkspaceSettings set(String parameterName, Object value) {
+              return (GetWorkspaceSettings) super.set(parameterName, value);
             }
           }
           /**

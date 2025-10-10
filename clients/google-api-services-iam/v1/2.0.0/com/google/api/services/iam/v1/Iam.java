@@ -4388,6 +4388,22 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               return this;
             }
 
+            /** Optional. Deletes the SCIM tenant immediately. This operation cannot be undone. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean hardDelete;
+
+            /** Optional. Deletes the SCIM tenant immediately. This operation cannot be undone.
+             */
+            public java.lang.Boolean getHardDelete() {
+              return hardDelete;
+            }
+
+            /** Optional. Deletes the SCIM tenant immediately. This operation cannot be undone. */
+            public Delete setHardDelete(java.lang.Boolean hardDelete) {
+              this.hardDelete = hardDelete;
+              return this;
+            }
+
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);

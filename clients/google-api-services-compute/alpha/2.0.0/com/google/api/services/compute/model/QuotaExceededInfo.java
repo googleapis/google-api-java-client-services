@@ -37,7 +37,7 @@ public final class QuotaExceededInfo extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> dimensions;
 
   /**
-   * Future quota limit being rolled out. The limit's unit depends on the quota type or metric.
+   * Future quota limit being rolled out. The limit's unit depends on the quota  type or metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class QuotaExceededInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Future quota limit being rolled out. The limit's unit depends on the quota type or metric.
+   * Future quota limit being rolled out. The limit's unit depends on the quota  type or metric.
    * @return value or {@code null} for none
    */
   public java.lang.Double getFutureLimit() {
@@ -97,7 +97,7 @@ public final class QuotaExceededInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Future quota limit being rolled out. The limit's unit depends on the quota type or metric.
+   * Future quota limit being rolled out. The limit's unit depends on the quota  type or metric.
    * @param futureLimit futureLimit or {@code null} for none
    */
   public QuotaExceededInfo setFutureLimit(java.lang.Double futureLimit) {

@@ -31,7 +31,7 @@ package com.google.api.services.compute.model;
 public final class HttpFilterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration needed to enable the networkservices.HttpFilter resource. The configuration
+   * The configuration needed to enable thenetworkservices.HttpFilter resource. The configuration
    * must be YAML formatted and only contain fields defined in the protobuf identified in
    * configTypeUrl
    * The value may be {@code null}.
@@ -41,7 +41,7 @@ public final class HttpFilterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * The fully qualified versioned proto3 type url of the protobuf that the filter expects for its
-   * contextual settings, for example: type.googleapis.com/google.protobuf.Struct
+   * contextual settings, for example:type.googleapis.com/google.protobuf.Struct
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class HttpFilterConfig extends com.google.api.client.json.GenericJs
   private java.lang.String filterName;
 
   /**
-   * The configuration needed to enable the networkservices.HttpFilter resource. The configuration
+   * The configuration needed to enable thenetworkservices.HttpFilter resource. The configuration
    * must be YAML formatted and only contain fields defined in the protobuf identified in
    * configTypeUrl
    * @return value or {@code null} for none
@@ -66,7 +66,7 @@ public final class HttpFilterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The configuration needed to enable the networkservices.HttpFilter resource. The configuration
+   * The configuration needed to enable thenetworkservices.HttpFilter resource. The configuration
    * must be YAML formatted and only contain fields defined in the protobuf identified in
    * configTypeUrl
    * @param config config or {@code null} for none
@@ -78,7 +78,7 @@ public final class HttpFilterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * The fully qualified versioned proto3 type url of the protobuf that the filter expects for its
-   * contextual settings, for example: type.googleapis.com/google.protobuf.Struct
+   * contextual settings, for example:type.googleapis.com/google.protobuf.Struct
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigTypeUrl() {
@@ -87,7 +87,7 @@ public final class HttpFilterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * The fully qualified versioned proto3 type url of the protobuf that the filter expects for its
-   * contextual settings, for example: type.googleapis.com/google.protobuf.Struct
+   * contextual settings, for example:type.googleapis.com/google.protobuf.Struct
    * @param configTypeUrl configTypeUrl or {@code null} for none
    */
   public HttpFilterConfig setConfigTypeUrl(java.lang.String configTypeUrl) {

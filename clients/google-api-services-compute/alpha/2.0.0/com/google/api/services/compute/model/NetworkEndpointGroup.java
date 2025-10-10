@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a collection of network endpoints. A network endpoint group (NEG) defines how a set of
- * endpoints should be reached, whether they are reachable, and where they are located. For more
- * information about using NEGs for different use cases, see Network endpoint groups overview.
+ * Represents a collection of network endpoints.
+ *
+ * A network endpoint group (NEG) defines how a set of endpoints should be reached, whether they are
+ * reachable, and where they are located. For more information about using NEGs for different use
+ * cases, seeNetwork endpoint groups overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -39,7 +41,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
+   * Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or
    * cloudFunction may be set.
    * The value may be {@code null}.
    */
@@ -47,7 +49,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private NetworkEndpointGroupAppEngine appEngine;
 
   /**
-   * Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
+   * Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or
    * cloudFunction may be set.
    * The value may be {@code null}.
    */
@@ -55,7 +57,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private NetworkEndpointGroupCloudFunction cloudFunction;
 
   /**
-   * Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
+   * Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or
    * cloudFunction may be set.
    * The value may be {@code null}.
    */
@@ -63,16 +65,17 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private NetworkEndpointGroupCloudRun cloudRun;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
 
   /**
-   * The default port used if the port number is not specified in the network endpoint. Optional. If
-   * the network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this
-   * field must not be specified.
+   * The default port used if the port number is not specified in the network endpoint.
+   *
+   * Optional. If the network endpoint type is either GCE_VM_IP,SERVERLESS or
+   * PRIVATE_SERVICE_CONNECT, this field must not be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +96,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint
+   * [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network endpoint
    * group.
    * The value may be {@code null}.
    */
@@ -110,7 +113,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -128,16 +131,16 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String network;
 
   /**
-   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP,
-   * GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
-   * PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
+   * Type of network endpoints in this network endpoint group. Can be one ofGCE_VM_IP,
+   * GCE_VM_IP_PORT,NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT,INTERNET_IP_PORT,
+   * SERVERLESS,PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkEndpointType;
 
   /**
-   * Optional. Only valid when networkEndpointType is PRIVATE_SERVICE_CONNECT.
+   * Optional. Only valid when networkEndpointType isPRIVATE_SERVICE_CONNECT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,14 +149,15 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   /**
    * The target service url used to set up private service connection to a Google API or a PSC
    * Producer Service Attachment. An example value is: asia-northeast3-cloudkms.googleapis.com.
-   * Optional. Only valid when networkEndpointType is PRIVATE_SERVICE_CONNECT.
+   *
+   * Optional. Only valid when networkEndpointType isPRIVATE_SERVICE_CONNECT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pscTargetService;
 
   /**
-   * [Output Only] The URL of the region where the network endpoint group is located.
+   * [Output Only] The URL of theregion where the network endpoint group is located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,8 +178,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String selfLinkWithId;
 
   /**
-   * Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine,
-   * cloudFunction or serverlessDeployment may be set.
+   * Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine, cloudFunction
+   * orserverlessDeployment may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,14 +200,14 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String subnetwork;
 
   /**
-   * Specify the type of this network endpoint group. Only LOAD_BALANCING is valid for now.
+   * Specify the type of this network endpoint group. OnlyLOAD_BALANCING is valid for now.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * [Output Only] The URL of the zone where the network endpoint group is located.
+   * [Output Only] The URL of thezone where the network endpoint group is located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,7 +231,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
+   * Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or
    * cloudFunction may be set.
    * @return value or {@code null} for none
    */
@@ -236,7 +240,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
+   * Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or
    * cloudFunction may be set.
    * @param appEngine appEngine or {@code null} for none
    */
@@ -246,7 +250,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
+   * Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or
    * cloudFunction may be set.
    * @return value or {@code null} for none
    */
@@ -255,7 +259,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
+   * Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or
    * cloudFunction may be set.
    * @param cloudFunction cloudFunction or {@code null} for none
    */
@@ -265,7 +269,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
+   * Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or
    * cloudFunction may be set.
    * @return value or {@code null} for none
    */
@@ -274,7 +278,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
+   * Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or
    * cloudFunction may be set.
    * @param cloudRun cloudRun or {@code null} for none
    */
@@ -284,7 +288,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -292,7 +296,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NetworkEndpointGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -301,9 +305,10 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * The default port used if the port number is not specified in the network endpoint. Optional. If
-   * the network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this
-   * field must not be specified.
+   * The default port used if the port number is not specified in the network endpoint.
+   *
+   * Optional. If the network endpoint type is either GCE_VM_IP,SERVERLESS or
+   * PRIVATE_SERVICE_CONNECT, this field must not be specified.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDefaultPort() {
@@ -311,9 +316,10 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * The default port used if the port number is not specified in the network endpoint. Optional. If
-   * the network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this
-   * field must not be specified.
+   * The default port used if the port number is not specified in the network endpoint.
+   *
+   * Optional. If the network endpoint type is either GCE_VM_IP,SERVERLESS or
+   * PRIVATE_SERVICE_CONNECT, this field must not be specified.
    * @param defaultPort defaultPort or {@code null} for none
    */
   public NetworkEndpointGroup setDefaultPort(java.lang.Integer defaultPort) {
@@ -356,7 +362,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint
+   * [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network endpoint
    * group.
    * @return value or {@code null} for none
    */
@@ -365,7 +371,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint
+   * [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network endpoint
    * group.
    * @param kind kind or {@code null} for none
    */
@@ -395,7 +401,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -407,7 +413,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -438,9 +444,9 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP,
-   * GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
-   * PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
+   * Type of network endpoints in this network endpoint group. Can be one ofGCE_VM_IP,
+   * GCE_VM_IP_PORT,NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT,INTERNET_IP_PORT,
+   * SERVERLESS,PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkEndpointType() {
@@ -448,9 +454,9 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP,
-   * GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
-   * PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
+   * Type of network endpoints in this network endpoint group. Can be one ofGCE_VM_IP,
+   * GCE_VM_IP_PORT,NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT,INTERNET_IP_PORT,
+   * SERVERLESS,PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
    * @param networkEndpointType networkEndpointType or {@code null} for none
    */
   public NetworkEndpointGroup setNetworkEndpointType(java.lang.String networkEndpointType) {
@@ -459,7 +465,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Only valid when networkEndpointType is PRIVATE_SERVICE_CONNECT.
+   * Optional. Only valid when networkEndpointType isPRIVATE_SERVICE_CONNECT.
    * @return value or {@code null} for none
    */
   public NetworkEndpointGroupPscData getPscData() {
@@ -467,7 +473,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Only valid when networkEndpointType is PRIVATE_SERVICE_CONNECT.
+   * Optional. Only valid when networkEndpointType isPRIVATE_SERVICE_CONNECT.
    * @param pscData pscData or {@code null} for none
    */
   public NetworkEndpointGroup setPscData(NetworkEndpointGroupPscData pscData) {
@@ -478,7 +484,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   /**
    * The target service url used to set up private service connection to a Google API or a PSC
    * Producer Service Attachment. An example value is: asia-northeast3-cloudkms.googleapis.com.
-   * Optional. Only valid when networkEndpointType is PRIVATE_SERVICE_CONNECT.
+   *
+   * Optional. Only valid when networkEndpointType isPRIVATE_SERVICE_CONNECT.
    * @return value or {@code null} for none
    */
   public java.lang.String getPscTargetService() {
@@ -488,7 +495,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   /**
    * The target service url used to set up private service connection to a Google API or a PSC
    * Producer Service Attachment. An example value is: asia-northeast3-cloudkms.googleapis.com.
-   * Optional. Only valid when networkEndpointType is PRIVATE_SERVICE_CONNECT.
+   *
+   * Optional. Only valid when networkEndpointType isPRIVATE_SERVICE_CONNECT.
    * @param pscTargetService pscTargetService or {@code null} for none
    */
   public NetworkEndpointGroup setPscTargetService(java.lang.String pscTargetService) {
@@ -497,7 +505,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the region where the network endpoint group is located.
+   * [Output Only] The URL of theregion where the network endpoint group is located.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -505,7 +513,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the region where the network endpoint group is located.
+   * [Output Only] The URL of theregion where the network endpoint group is located.
    * @param region region or {@code null} for none
    */
   public NetworkEndpointGroup setRegion(java.lang.String region) {
@@ -548,8 +556,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine,
-   * cloudFunction or serverlessDeployment may be set.
+   * Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine, cloudFunction
+   * orserverlessDeployment may be set.
    * @return value or {@code null} for none
    */
   public NetworkEndpointGroupServerlessDeployment getServerlessDeployment() {
@@ -557,8 +565,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine,
-   * cloudFunction or serverlessDeployment may be set.
+   * Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine, cloudFunction
+   * orserverlessDeployment may be set.
    * @param serverlessDeployment serverlessDeployment or {@code null} for none
    */
   public NetworkEndpointGroup setServerlessDeployment(NetworkEndpointGroupServerlessDeployment serverlessDeployment) {
@@ -601,7 +609,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specify the type of this network endpoint group. Only LOAD_BALANCING is valid for now.
+   * Specify the type of this network endpoint group. OnlyLOAD_BALANCING is valid for now.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -609,7 +617,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specify the type of this network endpoint group. Only LOAD_BALANCING is valid for now.
+   * Specify the type of this network endpoint group. OnlyLOAD_BALANCING is valid for now.
    * @param type type or {@code null} for none
    */
   public NetworkEndpointGroup setType(java.lang.String type) {
@@ -618,7 +626,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the zone where the network endpoint group is located.
+   * [Output Only] The URL of thezone where the network endpoint group is located.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -626,7 +634,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the zone where the network endpoint group is located.
+   * [Output Only] The URL of thezone where the network endpoint group is located.
    * @param zone zone or {@code null} for none
    */
   public NetworkEndpointGroup setZone(java.lang.String zone) {

@@ -17,8 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a reservation resource. A reservation ensures that capacity is held in a specific zone
- * even if the reserved VMs are not running. For more information, read Reserving zonal resources.
+ * Represents a reservation resource.  A reservation ensures that capacity is held in a specific
+ * zone even if the reserved VMs are not running. For more information, read  Reserving zonal
+ * resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -53,7 +54,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String commitment;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +69,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private Duration deleteAfterDuration;
 
   /**
-   * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp
-   * is represented in RFC3339 text format.
+   * Absolute time in future when the reservation will be  auto-deleted by Compute Engine. Timestamp
+   * is represented inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +106,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservations for reservations.
+   * [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,10 +122,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,10 +223,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean specificReservationRequired;
 
   /**
-   * [Output Only] The status of the reservation. - CREATING: Reservation resources are being
-   * allocated. - READY: Reservation resources have been allocated, and the reservation is ready for
-   * use. - DELETING: Reservation deletion is in progress. - UPDATING: Reservation update is in
-   * progress.
+   * [Output Only] The status of the reservation.              - CREATING: Reservation resources are
+   * being        allocated.      - READY: Reservation resources have been allocated,        and the
+   * reservation is ready for use.      - DELETING: Reservation deletion is in progress.      -
+   * UPDATING: Reservation update is in progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -293,7 +294,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -301,7 +302,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Reservation setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -329,8 +330,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp
-   * is represented in RFC3339 text format.
+   * Absolute time in future when the reservation will be  auto-deleted by Compute Engine. Timestamp
+   * is represented inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeleteAtTime() {
@@ -338,8 +339,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp
-   * is represented in RFC3339 text format.
+   * Absolute time in future when the reservation will be  auto-deleted by Compute Engine. Timestamp
+   * is represented inRFC3339 text format.
    * @param deleteAtTime deleteAtTime or {@code null} for none
    */
   public Reservation setDeleteAtTime(java.lang.String deleteAtTime) {
@@ -418,7 +419,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservations for reservations.
+   * [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -426,7 +427,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservations for reservations.
+   * [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
    * @param kind kind or {@code null} for none
    */
   public Reservation setKind(java.lang.String kind) {
@@ -455,10 +456,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -467,10 +468,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @param name name or {@code null} for none
    */
   public Reservation setName(java.lang.String name) {
@@ -697,10 +698,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the reservation. - CREATING: Reservation resources are being
-   * allocated. - READY: Reservation resources have been allocated, and the reservation is ready for
-   * use. - DELETING: Reservation deletion is in progress. - UPDATING: Reservation update is in
-   * progress.
+   * [Output Only] The status of the reservation.              - CREATING: Reservation resources are
+   * being        allocated.      - READY: Reservation resources have been allocated,        and the
+   * reservation is ready for use.      - DELETING: Reservation deletion is in progress.      -
+   * UPDATING: Reservation update is in progress.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -708,10 +709,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the reservation. - CREATING: Reservation resources are being
-   * allocated. - READY: Reservation resources have been allocated, and the reservation is ready for
-   * use. - DELETING: Reservation deletion is in progress. - UPDATING: Reservation update is in
-   * progress.
+   * [Output Only] The status of the reservation.              - CREATING: Reservation resources are
+   * being        allocated.      - READY: Reservation resources have been allocated,        and the
+   * reservation is ready for use.      - DELETING: Reservation deletion is in progress.      -
+   * UPDATING: Reservation update is in progress.
    * @param status status or {@code null} for none
    */
   public Reservation setStatus(java.lang.String status) {

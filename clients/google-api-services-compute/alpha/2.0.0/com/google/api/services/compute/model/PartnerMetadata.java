@@ -39,7 +39,7 @@ public final class PartnerMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Partner Metadata assigned to the instance. A map from a subdomain to entries map. Subdomain
-   * name must be compliant with RFC1035 definition. The total size of all keys and values must be
+   * name must be compliant withRFC1035 definition. The total size of all keys and values must be
    * less than 2MB. Subdomain 'metadata.compute.googleapis.com' is reserverd for instance's
    * metadata.
    * The value may be {@code null}.
@@ -94,7 +94,7 @@ public final class PartnerMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Partner Metadata assigned to the instance. A map from a subdomain to entries map. Subdomain
-   * name must be compliant with RFC1035 definition. The total size of all keys and values must be
+   * name must be compliant withRFC1035 definition. The total size of all keys and values must be
    * less than 2MB. Subdomain 'metadata.compute.googleapis.com' is reserverd for instance's
    * metadata.
    * @return value or {@code null} for none
@@ -105,7 +105,7 @@ public final class PartnerMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Partner Metadata assigned to the instance. A map from a subdomain to entries map. Subdomain
-   * name must be compliant with RFC1035 definition. The total size of all keys and values must be
+   * name must be compliant withRFC1035 definition. The total size of all keys and values must be
    * less than 2MB. Subdomain 'metadata.compute.googleapis.com' is reserverd for instance's
    * metadata.
    * @param partnerMetadata partnerMetadata or {@code null} for none

@@ -20,8 +20,8 @@ package com.google.api.services.compute.model;
  * AccessLocation is only used for regional snapshot. It contains which regions are allowed to
  * create a regional snapshot from disks located in the given region/zone. It includes key-value
  * pairs designed to store the following structure. The keys should match their corresponding
- * values, which must be provided: access_location: { locations { us-central1 { region: "us-
- * central1" }, asia-west2 { region: "asia-west2" } } }
+ * values, which must be provided: access_location: {  locations {   us-central1 {    region: "us-
+ * central1"    },   asia-west2 {     region: "asia-west2"   }  } }
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

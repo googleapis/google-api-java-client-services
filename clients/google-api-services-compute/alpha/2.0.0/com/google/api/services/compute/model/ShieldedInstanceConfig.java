@@ -30,28 +30,28 @@ package com.google.api.services.compute.model;
 public final class ShieldedInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines whether the instance has integrity monitoring enabled. Enabled by default.
+   * Defines whether the instance has integrity monitoring enabled.Enabled by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableIntegrityMonitoring;
 
   /**
-   * Defines whether the instance has Secure Boot enabled. Disabled by default.
+   * Defines whether the instance has Secure Boot enabled.Disabled by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableSecureBoot;
 
   /**
-   * Defines whether the instance has the vTPM enabled. Enabled by default.
+   * Defines whether the instance has the vTPM enabled.Enabled by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableVtpm;
 
   /**
-   * Defines whether the instance has integrity monitoring enabled. Enabled by default.
+   * Defines whether the instance has integrity monitoring enabled.Enabled by default.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableIntegrityMonitoring() {
@@ -59,7 +59,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Defines whether the instance has integrity monitoring enabled. Enabled by default.
+   * Defines whether the instance has integrity monitoring enabled.Enabled by default.
    * @param enableIntegrityMonitoring enableIntegrityMonitoring or {@code null} for none
    */
   public ShieldedInstanceConfig setEnableIntegrityMonitoring(java.lang.Boolean enableIntegrityMonitoring) {
@@ -68,7 +68,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Defines whether the instance has Secure Boot enabled. Disabled by default.
+   * Defines whether the instance has Secure Boot enabled.Disabled by default.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSecureBoot() {
@@ -76,7 +76,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Defines whether the instance has Secure Boot enabled. Disabled by default.
+   * Defines whether the instance has Secure Boot enabled.Disabled by default.
    * @param enableSecureBoot enableSecureBoot or {@code null} for none
    */
   public ShieldedInstanceConfig setEnableSecureBoot(java.lang.Boolean enableSecureBoot) {
@@ -85,7 +85,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Defines whether the instance has the vTPM enabled. Enabled by default.
+   * Defines whether the instance has the vTPM enabled.Enabled by default.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableVtpm() {
@@ -93,7 +93,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Defines whether the instance has the vTPM enabled. Enabled by default.
+   * Defines whether the instance has the vTPM enabled.Enabled by default.
    * @param enableVtpm enableVtpm or {@code null} for none
    */
   public ShieldedInstanceConfig setEnableVtpm(java.lang.Boolean enableVtpm) {

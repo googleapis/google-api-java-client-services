@@ -41,7 +41,7 @@ public final class HTTP2HealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * The TCP port number to which the health check prober sends packets. The default value is 443.
-   * Valid values are 1 through 65535.
+   * Valid values are 1 through65535.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,20 +56,21 @@ public final class HTTP2HealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * Specifies how a port is selected for health checking. Can be one of the following values:
-   * USE_FIXED_PORT: Specifies a port number explicitly using the port field in the health check.
+   * USE_FIXED_PORT: Specifies a port number explicitly using theport field  in the health check.
    * Supported by backend services for passthrough load balancers and backend services for proxy
    * load balancers. Not supported by target pools. The health check supports all backends supported
    * by the backend service provided the backend can be health checked. For example, GCE_VM_IP
    * network endpoint groups, GCE_VM_IP_PORT network endpoint groups, and instance group backends.
-   * USE_NAMED_PORT: Not supported. USE_SERVING_PORT: Provides an indirect method of specifying the
+   * USE_NAMED_PORT: Not supported.  USE_SERVING_PORT: Provides an indirect method of specifying the
    * health check port by referring to the backend service. Only supported by backend services for
-   * proxy load balancers. Not supported by target pools. Not supported by backend services for
-   * passthrough load balancers. Supports all backends that can be health checked; for example,
-   * GCE_VM_IP_PORT network endpoint groups and instance group backends. For GCE_VM_IP_PORT network
-   * endpoint group backends, the health check uses the port number specified for each endpoint in
-   * the network endpoint group. For instance group backends, the health check uses the port number
-   * determined by looking up the backend service's named port in the instance group's list of named
-   * ports.
+   * proxy load balancers. Not supported by target pools.  Not supported by backend services for
+   * passthrough load balancers. Supports all backends that can be health checked; for
+   * example,GCE_VM_IP_PORT network endpoint groups and instance group backends.
+   *
+   * For GCE_VM_IP_PORT network endpoint group backends, the health check uses the port number
+   * specified for each endpoint in the network endpoint group.  For instance group backends, the
+   * health check uses the port number determined by looking up the backend service's named port in
+   * the instance group's list of named ports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +85,8 @@ public final class HTTP2HealthCheck extends com.google.api.client.json.GenericJs
   private java.lang.String proxyHeader;
 
   /**
-   * The request path of the HTTP/2 health check request. The default value is /. Must comply with
-   * RFC3986.
+   * The request path of the HTTP/2 health check request. The default value is/. Must comply
+   * withRFC3986.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +134,7 @@ public final class HTTP2HealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * The TCP port number to which the health check prober sends packets. The default value is 443.
-   * Valid values are 1 through 65535.
+   * Valid values are 1 through65535.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -142,7 +143,7 @@ public final class HTTP2HealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * The TCP port number to which the health check prober sends packets. The default value is 443.
-   * Valid values are 1 through 65535.
+   * Valid values are 1 through65535.
    * @param port port or {@code null} for none
    */
   public HTTP2HealthCheck setPort(java.lang.Integer port) {
@@ -169,20 +170,21 @@ public final class HTTP2HealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * Specifies how a port is selected for health checking. Can be one of the following values:
-   * USE_FIXED_PORT: Specifies a port number explicitly using the port field in the health check.
+   * USE_FIXED_PORT: Specifies a port number explicitly using theport field  in the health check.
    * Supported by backend services for passthrough load balancers and backend services for proxy
    * load balancers. Not supported by target pools. The health check supports all backends supported
    * by the backend service provided the backend can be health checked. For example, GCE_VM_IP
    * network endpoint groups, GCE_VM_IP_PORT network endpoint groups, and instance group backends.
-   * USE_NAMED_PORT: Not supported. USE_SERVING_PORT: Provides an indirect method of specifying the
+   * USE_NAMED_PORT: Not supported.  USE_SERVING_PORT: Provides an indirect method of specifying the
    * health check port by referring to the backend service. Only supported by backend services for
-   * proxy load balancers. Not supported by target pools. Not supported by backend services for
-   * passthrough load balancers. Supports all backends that can be health checked; for example,
-   * GCE_VM_IP_PORT network endpoint groups and instance group backends. For GCE_VM_IP_PORT network
-   * endpoint group backends, the health check uses the port number specified for each endpoint in
-   * the network endpoint group. For instance group backends, the health check uses the port number
-   * determined by looking up the backend service's named port in the instance group's list of named
-   * ports.
+   * proxy load balancers. Not supported by target pools.  Not supported by backend services for
+   * passthrough load balancers. Supports all backends that can be health checked; for
+   * example,GCE_VM_IP_PORT network endpoint groups and instance group backends.
+   *
+   * For GCE_VM_IP_PORT network endpoint group backends, the health check uses the port number
+   * specified for each endpoint in the network endpoint group.  For instance group backends, the
+   * health check uses the port number determined by looking up the backend service's named port in
+   * the instance group's list of named ports.
    * @return value or {@code null} for none
    */
   public java.lang.String getPortSpecification() {
@@ -191,20 +193,21 @@ public final class HTTP2HealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * Specifies how a port is selected for health checking. Can be one of the following values:
-   * USE_FIXED_PORT: Specifies a port number explicitly using the port field in the health check.
+   * USE_FIXED_PORT: Specifies a port number explicitly using theport field  in the health check.
    * Supported by backend services for passthrough load balancers and backend services for proxy
    * load balancers. Not supported by target pools. The health check supports all backends supported
    * by the backend service provided the backend can be health checked. For example, GCE_VM_IP
    * network endpoint groups, GCE_VM_IP_PORT network endpoint groups, and instance group backends.
-   * USE_NAMED_PORT: Not supported. USE_SERVING_PORT: Provides an indirect method of specifying the
+   * USE_NAMED_PORT: Not supported.  USE_SERVING_PORT: Provides an indirect method of specifying the
    * health check port by referring to the backend service. Only supported by backend services for
-   * proxy load balancers. Not supported by target pools. Not supported by backend services for
-   * passthrough load balancers. Supports all backends that can be health checked; for example,
-   * GCE_VM_IP_PORT network endpoint groups and instance group backends. For GCE_VM_IP_PORT network
-   * endpoint group backends, the health check uses the port number specified for each endpoint in
-   * the network endpoint group. For instance group backends, the health check uses the port number
-   * determined by looking up the backend service's named port in the instance group's list of named
-   * ports.
+   * proxy load balancers. Not supported by target pools.  Not supported by backend services for
+   * passthrough load balancers. Supports all backends that can be health checked; for
+   * example,GCE_VM_IP_PORT network endpoint groups and instance group backends.
+   *
+   * For GCE_VM_IP_PORT network endpoint group backends, the health check uses the port number
+   * specified for each endpoint in the network endpoint group.  For instance group backends, the
+   * health check uses the port number determined by looking up the backend service's named port in
+   * the instance group's list of named ports.
    * @param portSpecification portSpecification or {@code null} for none
    */
   public HTTP2HealthCheck setPortSpecification(java.lang.String portSpecification) {
@@ -232,8 +235,8 @@ public final class HTTP2HealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The request path of the HTTP/2 health check request. The default value is /. Must comply with
-   * RFC3986.
+   * The request path of the HTTP/2 health check request. The default value is/. Must comply
+   * withRFC3986.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestPath() {
@@ -241,8 +244,8 @@ public final class HTTP2HealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The request path of the HTTP/2 health check request. The default value is /. Must comply with
-   * RFC3986.
+   * The request path of the HTTP/2 health check request. The default value is/. Must comply
+   * withRFC3986.
    * @param requestPath requestPath or {@code null} for none
    */
   public HTTP2HealthCheck setRequestPath(java.lang.String requestPath) {

@@ -17,9 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * A full or valid partial URL to a health check. For example, the following are valid URLs: -
- * https://www.googleapis.com/compute/beta/projects/project-id/global/httpHealthChecks/health-check
- * - projects/project-id/global/httpHealthChecks/health-check - global/httpHealthChecks/health-check
+ * A full or valid partial URL to a health check. For example, the following are valid URLs:
+ * - https://www.googleapis.com/compute/beta/projects/project-id/global/httpHealthChecks/health-
+ * check    - projects/project-id/global/httpHealthChecks/health-check    -
+ * global/httpHealthChecks/health-check
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class SourceDiskEncryptionKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * The customer-supplied encryption key of the source disk. Required if the source disk is
+   * Thecustomer-supplied encryption key of the source disk. Required if the source disk is
    * protected by a customer-supplied encryption key.
    * The value may be {@code null}.
    */
@@ -39,16 +39,16 @@ public final class SourceDiskEncryptionKey extends com.google.api.client.json.Ge
 
   /**
    * URL of the disk attached to the source instance. This can be a full or valid partial URL. For
-   * example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+   * example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk     -
+   * projects/project/zones/zone/disks/disk     - zones/zone/disks/disk
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceDisk;
 
   /**
-   * The customer-supplied encryption key of the source disk. Required if the source disk is
+   * Thecustomer-supplied encryption key of the source disk. Required if the source disk is
    * protected by a customer-supplied encryption key.
    * @return value or {@code null} for none
    */
@@ -57,7 +57,7 @@ public final class SourceDiskEncryptionKey extends com.google.api.client.json.Ge
   }
 
   /**
-   * The customer-supplied encryption key of the source disk. Required if the source disk is
+   * Thecustomer-supplied encryption key of the source disk. Required if the source disk is
    * protected by a customer-supplied encryption key.
    * @param diskEncryptionKey diskEncryptionKey or {@code null} for none
    */
@@ -68,9 +68,9 @@ public final class SourceDiskEncryptionKey extends com.google.api.client.json.Ge
 
   /**
    * URL of the disk attached to the source instance. This can be a full or valid partial URL. For
-   * example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+   * example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk     -
+   * projects/project/zones/zone/disks/disk     - zones/zone/disks/disk
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDisk() {
@@ -79,9 +79,9 @@ public final class SourceDiskEncryptionKey extends com.google.api.client.json.Ge
 
   /**
    * URL of the disk attached to the source instance. This can be a full or valid partial URL. For
-   * example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+   * example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk     -
+   * projects/project/zones/zone/disks/disk     - zones/zone/disks/disk
    * @param sourceDisk sourceDisk or {@code null} for none
    */
   public SourceDiskEncryptionKey setSourceDisk(java.lang.String sourceDisk) {

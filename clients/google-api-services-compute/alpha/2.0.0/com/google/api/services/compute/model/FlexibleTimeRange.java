@@ -18,8 +18,10 @@ package com.google.api.services.compute.model;
 
 /**
  * A flexible specification of a time range that has 3 points of flexibility: (1) a flexible start
- * time, (2) a flexible end time, (3) a flexible duration. It is possible to specify a contradictory
- * time range that cannot be matched by any Interval. This causes a validation error.
+ * time, (2) a flexible end time, (3) a flexible duration.
+ *
+ * It is possible to specify a contradictory time range that cannot be matched by any Interval. This
+ * causes a validation error.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

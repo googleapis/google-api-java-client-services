@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusAcceleratorStatusPassedScan extends com.google.api.client.json.GenericJson {
 
   /**
-   * The end time of the passed scan in RFC3339 text format.
+   * The end time of the passed scan inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class ResourceStatusAcceleratorStatusPassedScan extends com.google.
   private java.lang.String name;
 
   /**
-   * The start time of the passed scan in RFC3339 text format.
+   * The start time of the passed scan inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class ResourceStatusAcceleratorStatusPassedScan extends com.google.
   private java.lang.String version;
 
   /**
-   * The end time of the passed scan in RFC3339 text format.
+   * The end time of the passed scan inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndTime() {
@@ -64,7 +64,7 @@ public final class ResourceStatusAcceleratorStatusPassedScan extends com.google.
   }
 
   /**
-   * The end time of the passed scan in RFC3339 text format.
+   * The end time of the passed scan inRFC3339 text format.
    * @param endTime endTime or {@code null} for none
    */
   public ResourceStatusAcceleratorStatusPassedScan setEndTime(java.lang.String endTime) {
@@ -88,7 +88,7 @@ public final class ResourceStatusAcceleratorStatusPassedScan extends com.google.
   }
 
   /**
-   * The start time of the passed scan in RFC3339 text format.
+   * The start time of the passed scan inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartTime() {
@@ -96,7 +96,7 @@ public final class ResourceStatusAcceleratorStatusPassedScan extends com.google.
   }
 
   /**
-   * The start time of the passed scan in RFC3339 text format.
+   * The start time of the passed scan inRFC3339 text format.
    * @param startTime startTime or {@code null} for none
    */
   public ResourceStatusAcceleratorStatusPassedScan setStartTime(java.lang.String startTime) {

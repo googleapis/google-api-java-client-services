@@ -37,7 +37,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   private Money canceledCommitment;
 
   /**
-   * [Output Only] An optional last update time of canceled_commitment. RFC3339 text format.
+   * [Output Only] An optional last update time of canceled_commitment.RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   private Money cancellationFee;
 
   /**
-   * [Output Only] An optional, cancellation fee expiration time. RFC3339 text format.
+   * [Output Only] An optional, cancellation fee expiration time.RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional last update time of canceled_commitment. RFC3339 text format.
+   * [Output Only] An optional last update time of canceled_commitment.RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCanceledCommitmentLastUpdatedTimestamp() {
@@ -91,7 +91,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional last update time of canceled_commitment. RFC3339 text format.
+   * [Output Only] An optional last update time of canceled_commitment.RFC3339 text format.
    * @param canceledCommitmentLastUpdatedTimestamp canceledCommitmentLastUpdatedTimestamp or {@code null} for none
    */
   public CommitmentResourceStatusCancellationInformation setCanceledCommitmentLastUpdatedTimestamp(java.lang.String canceledCommitmentLastUpdatedTimestamp) {
@@ -136,7 +136,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional, cancellation fee expiration time. RFC3339 text format.
+   * [Output Only] An optional, cancellation fee expiration time.RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCancellationFeeExpirationTimestamp() {
@@ -144,7 +144,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional, cancellation fee expiration time. RFC3339 text format.
+   * [Output Only] An optional, cancellation fee expiration time.RFC3339 text format.
    * @param cancellationFeeExpirationTimestamp cancellationFeeExpirationTimestamp or {@code null} for none
    */
   public CommitmentResourceStatusCancellationInformation setCancellationFeeExpirationTimestamp(java.lang.String cancellationFeeExpirationTimestamp) {

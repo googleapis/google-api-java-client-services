@@ -37,7 +37,7 @@ public final class QueuingPolicy extends com.google.api.client.json.GenericJson 
   private Duration validUntilDuration;
 
   /**
-   * Absolute deadline for waiting for capacity in RFC3339 text format.
+   * Absolute deadline for waiting for capacity inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class QueuingPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Absolute deadline for waiting for capacity in RFC3339 text format.
+   * Absolute deadline for waiting for capacity inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getValidUntilTime() {
@@ -69,7 +69,7 @@ public final class QueuingPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Absolute deadline for waiting for capacity in RFC3339 text format.
+   * Absolute deadline for waiting for capacity inRFC3339 text format.
    * @param validUntilTime validUntilTime or {@code null} for none
    */
   public QueuingPolicy setValidUntilTime(java.lang.String validUntilTime) {

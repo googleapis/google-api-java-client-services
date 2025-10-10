@@ -46,10 +46,9 @@ public final class BulkInsertDiskResource extends com.google.api.client.json.Gen
 
   /**
    * The URL of the DiskConsistencyGroupPolicy for the group of disks to clone. This may be a full
-   * or partial URL, such as: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /resourcePolicies/resourcePolicy -
-   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * or partial URL, such as:              -         https://www.googleapis.com/compute/v1/projects/
+   * project/regions/region/resourcePolicies/resourcePolicy            -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy            -
    * regions/region/resourcePolicies/resourcePolicy
    * The value may be {@code null}.
    */
@@ -92,10 +91,9 @@ public final class BulkInsertDiskResource extends com.google.api.client.json.Gen
 
   /**
    * The URL of the DiskConsistencyGroupPolicy for the group of disks to clone. This may be a full
-   * or partial URL, such as: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /resourcePolicies/resourcePolicy -
-   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * or partial URL, such as:              -         https://www.googleapis.com/compute/v1/projects/
+   * project/regions/region/resourcePolicies/resourcePolicy            -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy            -
    * regions/region/resourcePolicies/resourcePolicy
    * @return value or {@code null} for none
    */
@@ -105,10 +103,9 @@ public final class BulkInsertDiskResource extends com.google.api.client.json.Gen
 
   /**
    * The URL of the DiskConsistencyGroupPolicy for the group of disks to clone. This may be a full
-   * or partial URL, such as: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /resourcePolicies/resourcePolicy -
-   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * or partial URL, such as:              -         https://www.googleapis.com/compute/v1/projects/
+   * project/regions/region/resourcePolicies/resourcePolicy            -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy            -
    * regions/region/resourcePolicies/resourcePolicy
    * @param sourceConsistencyGroupPolicy sourceConsistencyGroupPolicy or {@code null} for none
    */

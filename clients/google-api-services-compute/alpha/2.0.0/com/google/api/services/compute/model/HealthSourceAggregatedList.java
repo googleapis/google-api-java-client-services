@@ -52,7 +52,7 @@ public final class HealthSourceAggregatedList extends com.google.api.client.json
 
   /**
    * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
    * parameter pageToken in the next list request. Subsequent list requests will have their own
    * nextPageToken to continue paging through the results.
    * The value may be {@code null}.
@@ -66,6 +66,13 @@ public final class HealthSourceAggregatedList extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * [Output Only] Unreachable resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachables;
 
   /**
    * [Output Only] Informational warning message.
@@ -127,7 +134,7 @@ public final class HealthSourceAggregatedList extends com.google.api.client.json
 
   /**
    * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
    * parameter pageToken in the next list request. Subsequent list requests will have their own
    * nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
@@ -138,7 +145,7 @@ public final class HealthSourceAggregatedList extends com.google.api.client.json
 
   /**
    * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
    * parameter pageToken in the next list request. Subsequent list requests will have their own
    * nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
@@ -162,6 +169,23 @@ public final class HealthSourceAggregatedList extends com.google.api.client.json
    */
   public HealthSourceAggregatedList setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachables() {
+    return unreachables;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @param unreachables unreachables or {@code null} for none
+   */
+  public HealthSourceAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {
+    this.unreachables = unreachables;
     return this;
   }
 
@@ -206,8 +230,9 @@ public final class HealthSourceAggregatedList extends com.google.api.client.json
     private java.lang.String code;
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -246,8 +271,9 @@ public final class HealthSourceAggregatedList extends com.google.api.client.json
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -255,8 +281,9 @@ public final class HealthSourceAggregatedList extends com.google.api.client.json
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @param data data or {@code null} for none
      */
     public Warning setData(java.util.List<Data> data) {

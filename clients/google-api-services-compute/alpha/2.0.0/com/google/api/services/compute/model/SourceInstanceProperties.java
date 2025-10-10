@@ -34,7 +34,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
    * Enables instances created based on this machine image to send packets with source IP addresses
    * other than their own and receive packets with destination IP addresses other than their own. If
    * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
-   * resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding
+   * resource, specify true. If unsure, leave this set tofalse. See theEnable IP forwarding
    * documentation for more information.
    * The value may be {@code null}.
    */
@@ -107,8 +107,8 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
 
   /**
    * The metadata key/value pairs to assign to instances that are created from this machine image.
-   * These pairs can consist of custom metadata or predefined keys. See Project and instance
-   * metadata for more information.
+   * These pairs can consist of custom metadata or predefined keys. SeeProject and instance metadata
+   * for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   /**
    * Minimum cpu/platform to be used by instances created from this machine image. The instance may
    * be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names
-   * of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy
+   * of CPU platforms, such as minCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy
    * Bridge". For more information, read Specifying a Minimum CPU Platform.
    * The value may be {@code null}.
    */
@@ -169,7 +169,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   /**
    * A list of tags to apply to the instances that are created from this machine image. The tags
    * identify valid sources or targets for network firewalls. The setTags method can modify this
-   * list of tags. Each tag within the list must comply with RFC1035.
+   * list of tags. Each tag within the list must comply withRFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,7 +179,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
    * Enables instances created based on this machine image to send packets with source IP addresses
    * other than their own and receive packets with destination IP addresses other than their own. If
    * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
-   * resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding
+   * resource, specify true. If unsure, leave this set tofalse. See theEnable IP forwarding
    * documentation for more information.
    * @return value or {@code null} for none
    */
@@ -191,7 +191,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
    * Enables instances created based on this machine image to send packets with source IP addresses
    * other than their own and receive packets with destination IP addresses other than their own. If
    * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
-   * resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding
+   * resource, specify true. If unsure, leave this set tofalse. See theEnable IP forwarding
    * documentation for more information.
    * @param canIpForward canIpForward or {@code null} for none
    */
@@ -327,8 +327,8 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
 
   /**
    * The metadata key/value pairs to assign to instances that are created from this machine image.
-   * These pairs can consist of custom metadata or predefined keys. See Project and instance
-   * metadata for more information.
+   * These pairs can consist of custom metadata or predefined keys. SeeProject and instance metadata
+   * for more information.
    * @return value or {@code null} for none
    */
   public Metadata getMetadata() {
@@ -337,8 +337,8 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
 
   /**
    * The metadata key/value pairs to assign to instances that are created from this machine image.
-   * These pairs can consist of custom metadata or predefined keys. See Project and instance
-   * metadata for more information.
+   * These pairs can consist of custom metadata or predefined keys. SeeProject and instance metadata
+   * for more information.
    * @param metadata metadata or {@code null} for none
    */
   public SourceInstanceProperties setMetadata(Metadata metadata) {
@@ -349,7 +349,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   /**
    * Minimum cpu/platform to be used by instances created from this machine image. The instance may
    * be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names
-   * of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy
+   * of CPU platforms, such as minCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy
    * Bridge". For more information, read Specifying a Minimum CPU Platform.
    * @return value or {@code null} for none
    */
@@ -360,7 +360,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   /**
    * Minimum cpu/platform to be used by instances created from this machine image. The instance may
    * be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names
-   * of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy
+   * of CPU platforms, such as minCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy
    * Bridge". For more information, read Specifying a Minimum CPU Platform.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
@@ -444,7 +444,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   /**
    * A list of tags to apply to the instances that are created from this machine image. The tags
    * identify valid sources or targets for network firewalls. The setTags method can modify this
-   * list of tags. Each tag within the list must comply with RFC1035.
+   * list of tags. Each tag within the list must comply withRFC1035.
    * @return value or {@code null} for none
    */
   public Tags getTags() {
@@ -454,7 +454,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   /**
    * A list of tags to apply to the instances that are created from this machine image. The tags
    * identify valid sources or targets for network firewalls. The setTags method can modify this
-   * list of tags. Each tag within the list must comply with RFC1035.
+   * list of tags. Each tag within the list must comply withRFC1035.
    * @param tags tags or {@code null} for none
    */
   public SourceInstanceProperties setTags(Tags tags) {

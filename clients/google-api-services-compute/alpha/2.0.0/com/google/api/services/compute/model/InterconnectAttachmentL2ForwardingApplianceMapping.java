@@ -31,18 +31,20 @@ public final class InterconnectAttachmentL2ForwardingApplianceMapping extends co
 
   /**
    * Optional. A single IPv4 or IPv6 address used as the destination IP address for ingress packets
-   * that match on a VLAN tag, but do not match a more specific inner VLAN tag. Unset field (null-
-   * value) indicates both VLAN tags are required to be mapped. Otherwise, defaultApplianceIpAddress
-   * is used.
+   * that match on a VLAN tag, but do not match a more specific inner VLAN tag.
+   *
+   * Unset field (null-value) indicates both VLAN tags are required to be mapped. Otherwise,
+   * defaultApplianceIpAddress is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String applianceIpAddress;
 
   /**
-   * Optional. Used to match against the inner VLAN when the packet contains two VLAN tags. A list
-   * of mapping rules from inner VLAN tags to IP addresses. If the inner VLAN is not explicitly
-   * mapped to an IP address range, the applianceIpAddress is used.
+   * Optional. Used to match against the inner VLAN when the packet contains two VLAN tags.
+   *
+   * A list of mapping rules from inner VLAN tags to IP addresses. If the inner VLAN is not
+   * explicitly mapped to an IP address range, the applianceIpAddress is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +59,10 @@ public final class InterconnectAttachmentL2ForwardingApplianceMapping extends co
 
   /**
    * Optional. A single IPv4 or IPv6 address used as the destination IP address for ingress packets
-   * that match on a VLAN tag, but do not match a more specific inner VLAN tag. Unset field (null-
-   * value) indicates both VLAN tags are required to be mapped. Otherwise, defaultApplianceIpAddress
-   * is used.
+   * that match on a VLAN tag, but do not match a more specific inner VLAN tag.
+   *
+   * Unset field (null-value) indicates both VLAN tags are required to be mapped. Otherwise,
+   * defaultApplianceIpAddress is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getApplianceIpAddress() {
@@ -68,9 +71,10 @@ public final class InterconnectAttachmentL2ForwardingApplianceMapping extends co
 
   /**
    * Optional. A single IPv4 or IPv6 address used as the destination IP address for ingress packets
-   * that match on a VLAN tag, but do not match a more specific inner VLAN tag. Unset field (null-
-   * value) indicates both VLAN tags are required to be mapped. Otherwise, defaultApplianceIpAddress
-   * is used.
+   * that match on a VLAN tag, but do not match a more specific inner VLAN tag.
+   *
+   * Unset field (null-value) indicates both VLAN tags are required to be mapped. Otherwise,
+   * defaultApplianceIpAddress is used.
    * @param applianceIpAddress applianceIpAddress or {@code null} for none
    */
   public InterconnectAttachmentL2ForwardingApplianceMapping setApplianceIpAddress(java.lang.String applianceIpAddress) {
@@ -79,9 +83,10 @@ public final class InterconnectAttachmentL2ForwardingApplianceMapping extends co
   }
 
   /**
-   * Optional. Used to match against the inner VLAN when the packet contains two VLAN tags. A list
-   * of mapping rules from inner VLAN tags to IP addresses. If the inner VLAN is not explicitly
-   * mapped to an IP address range, the applianceIpAddress is used.
+   * Optional. Used to match against the inner VLAN when the packet contains two VLAN tags.
+   *
+   * A list of mapping rules from inner VLAN tags to IP addresses. If the inner VLAN is not
+   * explicitly mapped to an IP address range, the applianceIpAddress is used.
    * @return value or {@code null} for none
    */
   public java.util.List<InterconnectAttachmentL2ForwardingApplianceMappingInnerVlanToApplianceMapping> getInnerVlanToApplianceMappings() {
@@ -89,9 +94,10 @@ public final class InterconnectAttachmentL2ForwardingApplianceMapping extends co
   }
 
   /**
-   * Optional. Used to match against the inner VLAN when the packet contains two VLAN tags. A list
-   * of mapping rules from inner VLAN tags to IP addresses. If the inner VLAN is not explicitly
-   * mapped to an IP address range, the applianceIpAddress is used.
+   * Optional. Used to match against the inner VLAN when the packet contains two VLAN tags.
+   *
+   * A list of mapping rules from inner VLAN tags to IP addresses. If the inner VLAN is not
+   * explicitly mapped to an IP address range, the applianceIpAddress is used.
    * @param innerVlanToApplianceMappings innerVlanToApplianceMappings or {@code null} for none
    */
   public InterconnectAttachmentL2ForwardingApplianceMapping setInnerVlanToApplianceMappings(java.util.List<InterconnectAttachmentL2ForwardingApplianceMappingInnerVlanToApplianceMapping> innerVlanToApplianceMappings) {

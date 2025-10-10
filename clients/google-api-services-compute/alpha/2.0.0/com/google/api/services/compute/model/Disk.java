@@ -17,13 +17,21 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Persistent Disk resource. Google Compute Engine has two Disk resources: *
- * [Zonal](/compute/docs/reference/rest/alpha/disks) *
- * [Regional](/compute/docs/reference/rest/alpha/regionDisks) Persistent disks are required for
- * running your VM instances. Create both boot and non-boot (data) persistent disks. For more
- * information, read Persistent Disks. For more storage options, read Storage options. The disks
- * resource represents a zonal persistent disk. For more information, read Zonal persistent disks.
- * The regionDisks resource represents a regional persistent disk. For more information, read
+ * Represents a Persistent Disk resource.
+ *
+ * Google Compute Engine has two Disk resources:
+ *
+ * * [Zonal](/compute/docs/reference/rest/alpha/disks) *
+ * [Regional](/compute/docs/reference/rest/alpha/regionDisks)
+ *
+ * Persistent disks are required for running your VM instances. Create both boot and non-boot (data)
+ * persistent disks. For more information, read Persistent Disks. For more storage options, read
+ * Storage options.
+ *
+ * The disks resource represents a zonal persistent disk. For more information, readZonal persistent
+ * disks.
+ *
+ * The regionDisks resource represents a regional persistent disk.  For more information, read
  * Regional resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -37,11 +45,13 @@ package com.google.api.services.compute.model;
 public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
-   * The access mode of the disk. - READ_WRITE_SINGLE: The default AccessMode, means the disk can be
-   * attached to single instance in RW mode. - READ_WRITE_MANY: The AccessMode means the disk can be
-   * attached to multiple instances in RW mode. - READ_ONLY_MANY: The AccessMode means the disk can
-   * be attached to multiple instances in RO mode. The AccessMode is only valid for Hyperdisk disk
-   * types.
+   * The access mode of the disk.              - READ_WRITE_SINGLE: The default AccessMode, means
+   * the      disk can be attached to single instance in RW mode.      - READ_WRITE_MANY: The
+   * AccessMode means the disk can be      attached to multiple instances in RW mode.      -
+   * READ_ONLY_MANY: The AccessMode means the disk can be      attached to multiple instances in RO
+   * mode.
+   *
+   * The AccessMode is only valid for Hyperdisk disk types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +79,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, DiskAsyncReplicationList> asyncSecondaryDisks;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,18 +93,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Encrypts the disk using a customer-supplied encryption key or a customer-managed encryption
-   * key. Encryption keys do not protect access to metadata of the disk. After you encrypt a disk
-   * with a customer-supplied key, you must provide the same key if you use the disk later. For
-   * example, to create a disk snapshot, to create a disk image, to create a machine image, or to
-   * attach the disk to a virtual machine. After you encrypt a disk with a customer-managed key, the
-   * diskEncryptionKey.kmsKeyName is set to a key *version* name once the disk is created. The disk
-   * is encrypted with this version of the key. In the response, diskEncryptionKey.kmsKeyName
-   * appears in the following format: "diskEncryptionKey.kmsKeyName":
-   * "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
-   * /cryptoKeysVersions/version If you do not provide an encryption key when creating the disk,
-   * then the disk is encrypted using an automatically generated key and you don't need to provide a
-   * key to use the disk later.
+   * Encrypts the disk using a customer-supplied encryption key or a  customer-managed encryption
+   * key.
+   *
+   * Encryption keys do not protect access to metadata of the disk.
+   *
+   * After you encrypt a disk with a customer-supplied key, you must provide the same key if you use
+   * the disk later. For example, to create a disk snapshot, to create a disk image, to create a
+   * machine image, or to attach the disk to a virtual machine.
+   *
+   * After you encrypt a disk with a customer-managed key, thediskEncryptionKey.kmsKeyName is set to
+   * a key *version* name once the disk is created. The disk is encrypted with this version of the
+   * key. In the response, diskEncryptionKey.kmsKeyName appears in the following format:
+   *
+   * "diskEncryptionKey.kmsKeyName": "projects/kms_project_id/locations/region/keyRings/
+   * key_region/cryptoKeys/key /cryptoKeysVersions/version
+   *
+   * If you do not provide an encryption key when creating the disk, then the  disk is encrypted
+   * using an automatically generated key and you don't need  to provide a key to use the disk
+   * later.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +149,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI
-   * or NVME. The default is SCSI.
+   * or NVME. The default isSCSI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("interface")
@@ -150,8 +167,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a disk.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,14 +183,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * [Output Only] Last attach timestamp in RFC3339 text format.
+   * [Output Only] Last attach timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastAttachTimestamp;
 
   /**
-   * [Output Only] Last detach timestamp in RFC3339 text format.
+   * [Output Only] Last detach timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,13 +221,15 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The field indicates if the disk is created from a locked source image. Attachment
    * of a disk created from a locked source image will cause the following operations to become
-   * irreversibly prohibited: - R/W or R/O disk attachment to any other instance - Disk detachment.
-   * And the disk can only be deleted when the instance is deleted - Creation of images or snapshots
-   * - Disk cloning Furthermore, the instance with at least one disk with locked flag set to true
-   * will be prohibited from performing the operations below: - Further attachment of secondary
-   * disks. - Detachment of any disks - Create machine images - Create instance template - Delete
-   * the instance with --keep-disk parameter set to true for locked disks - Attach a locked disk
-   * with --auto-delete parameter set to false
+   * irreversibly prohibited:        - R/W or R/O disk attachment to any other instance    - Disk
+   * detachment. And the disk can only be deleted when the instance    is deleted    - Creation of
+   * images or snapshots    - Disk cloning
+   *
+   * Furthermore, the instance with at least one disk with locked flag set to true will be
+   * prohibited from performing the operations below:        - Further attachment of secondary
+   * disks.    - Detachment of any disks    - Create machine images    - Create instance template
+   * - Delete the instance with --keep-disk parameter set to true for locked    disks    - Attach a
+   * locked disk with --auto-delete parameter set to false
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,7 +244,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -261,7 +281,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per
    * second that the disk can handle. Values must be between 10,000 and 120,000. For more details,
-   * see the Extreme persistent disk documentation.
+   * see theExtreme persistent disk documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -336,9 +356,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk
-   * using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create
-   * an empty persistent disk. If you specify this field along with a source, the value of sizeGb
-   * must not be less than the size of the source. Acceptable values are greater than 0.
+   * using thesourceImage, sourceSnapshot, orsourceDisk parameter, or specify it alone to create an
+   * empty persistent disk.
+   *
+   * If you specify this field along with a source, the value ofsizeGb must not be less than the
+   * size of the source. Acceptable values are greater than 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -362,11 +384,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source disk used to create this disk. You can provide this as a partial or full URL to the
-   * resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk -
-   * projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk -
-   * zones/zone/disks/disk - regions/region/disks/disk
+   * resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk            -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/disks/disk            -
+   * projects/project/zones/zone/disks/disk            -
+   * projects/project/regions/region/disks/disk            -         zones/zone/disks/disk
+   * -         regions/region/disks/disk
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -384,21 +407,33 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source image used to create this disk. If the source image is deleted, this field will not
-   * be set. To create a disk with one of the public operating system images, specify the image by
-   * its family name. For example, specify family/debian-9 to use the latest Debian 9 image:
-   * projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a
-   * public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD
+   * be set.
+   *
+   * To create a disk with one of the public operating system images, specify the image by its
+   * family name. For example, specifyfamily/debian-9 to use the latest Debian 9 image:
+   *
+   * projects/debian-cloud/global/images/family/debian-9
+   *
+   * Alternatively, use a specific version of a public operating system image:
+   *
+   * projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD
+   *
    * To create a disk with a custom image that you created, specify the image name in the following
-   * format: global/images/my-custom-image You can also specify a custom image by its image family,
-   * which returns the latest version of the image in that family. Replace the image name with
-   * family/family-name: global/images/family/my-image-family
+   * format:
+   *
+   * global/images/my-custom-image
+   *
+   * You can also specify a custom image by its image family, which returns the latest version of
+   * the image in that family. Replace the image name with family/family-name:
+   *
+   * global/images/family/my-image-family
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceImage;
 
   /**
-   * The customer-supplied encryption key of the source image. Required if the source image is
+   * Thecustomer-supplied encryption key of the source image. Required if the source image is
    * protected by a customer-supplied encryption key.
    * The value may be {@code null}.
    */
@@ -417,10 +452,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source instant snapshot used to create this disk. You can provide this as a partial or full
-   * URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
-   * /instantSnapshots/instantSnapshot -
-   * projects/project/zones/zone/instantSnapshots/instantSnapshot -
+   * URL to the resource. For example, the following are valid values:              - https://www.go
+   * ogleapis.com/compute/v1/projects/project/zones/zone/instantSnapshots/instantSnapshot      -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot     -
    * zones/zone/instantSnapshots/instantSnapshot
    * The value may be {@code null}.
    */
@@ -440,9 +474,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The machine image to create the disk from. You can provide this as a partial or full URL to the
-   * resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/machineImages/machineImage -
-   * projects/project/global/machineImages/machineImage - global/machineImages/machineImage
+   * resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/machineImages/machineImage     -
+   * projects/project/global/machineImages/machineImage      - global/machineImages/machineImage
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -457,8 +491,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceMachineImageDiskDeviceName;
 
   /**
-   * The customer-supplied encryption key of the source machine image. Required if the source
-   * machine image is protected by a customer-supplied encryption key.
+   * Thecustomer-supplied encryption key of the source machine image. Required if the source machine
+   * image is protected by a customer-supplied encryption key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -477,16 +511,16 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source snapshot used to create this disk. You can provide this as a partial or full URL to
-   * the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/snapshots/snapshot -
-   * projects/project/global/snapshots/snapshot - global/snapshots/snapshot
+   * the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot     -
+   * projects/project/global/snapshots/snapshot      - global/snapshots/snapshot
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceSnapshot;
 
   /**
-   * The customer-supplied encryption key of the source snapshot. Required if the source snapshot is
+   * Thecustomer-supplied encryption key of the source snapshot. Required if the source snapshot is
    * protected by a customer-supplied encryption key.
    * The value may be {@code null}.
    */
@@ -515,9 +549,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceStorageObject;
 
   /**
-   * [Output Only] The status of disk creation. - CREATING: Disk is provisioning. - RESTORING:
-   * Source data is being copied into the disk. - FAILED: Disk creation failed. - READY: Disk is
-   * ready for use. - DELETING: Disk is deleting.
+   * [Output Only] The status of disk creation.              - CREATING: Disk is provisioning.
+   * - RESTORING: Source data is being copied into the      disk.      - FAILED: Disk creation
+   * failed.      - READY: Disk is ready for use.      - DELETING: Disk is deleting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -525,9 +559,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The storage pool in which the new disk is created. You can provide this as a partial or full
-   * URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool -
-   * projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
+   * URL to the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/storagePools/storagePool
+   * - projects/project/zones/zone/storagePools/storagePool     -
+   * zones/zone/storagePools/storagePool
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -542,7 +577,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See
+   * this when creating the disk. For example:projects/project/zones/zone/diskTypes/pd-ssd. See
    * Persistent disk types.
    * The value may be {@code null}.
    */
@@ -553,6 +588,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
    * be modified after the disk is created. This includes a list of URLs to the license resource.
    * For example, to provide a debian license:
+   *
    * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
    * The value may be {@code null}.
    */
@@ -560,8 +596,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> userLicenses;
 
   /**
-   * [Output Only] Links to the users of the disk (attached instances) in form:
-   * projects/project/zones/zone/instances/instance
+   * [Output Only] Links to the users of the disk (attached instances) in
+   * form:projects/project/zones/zone/instances/instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -576,11 +612,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String zone;
 
   /**
-   * The access mode of the disk. - READ_WRITE_SINGLE: The default AccessMode, means the disk can be
-   * attached to single instance in RW mode. - READ_WRITE_MANY: The AccessMode means the disk can be
-   * attached to multiple instances in RW mode. - READ_ONLY_MANY: The AccessMode means the disk can
-   * be attached to multiple instances in RO mode. The AccessMode is only valid for Hyperdisk disk
-   * types.
+   * The access mode of the disk.              - READ_WRITE_SINGLE: The default AccessMode, means
+   * the      disk can be attached to single instance in RW mode.      - READ_WRITE_MANY: The
+   * AccessMode means the disk can be      attached to multiple instances in RW mode.      -
+   * READ_ONLY_MANY: The AccessMode means the disk can be      attached to multiple instances in RO
+   * mode.
+   *
+   * The AccessMode is only valid for Hyperdisk disk types.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessMode() {
@@ -588,11 +626,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The access mode of the disk. - READ_WRITE_SINGLE: The default AccessMode, means the disk can be
-   * attached to single instance in RW mode. - READ_WRITE_MANY: The AccessMode means the disk can be
-   * attached to multiple instances in RW mode. - READ_ONLY_MANY: The AccessMode means the disk can
-   * be attached to multiple instances in RO mode. The AccessMode is only valid for Hyperdisk disk
-   * types.
+   * The access mode of the disk.              - READ_WRITE_SINGLE: The default AccessMode, means
+   * the      disk can be attached to single instance in RW mode.      - READ_WRITE_MANY: The
+   * AccessMode means the disk can be      attached to multiple instances in RW mode.      -
+   * READ_ONLY_MANY: The AccessMode means the disk can be      attached to multiple instances in RO
+   * mode.
+   *
+   * The AccessMode is only valid for Hyperdisk disk types.
    * @param accessMode accessMode or {@code null} for none
    */
   public Disk setAccessMode(java.lang.String accessMode) {
@@ -652,7 +692,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -660,7 +700,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Disk setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -686,18 +726,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encrypts the disk using a customer-supplied encryption key or a customer-managed encryption
-   * key. Encryption keys do not protect access to metadata of the disk. After you encrypt a disk
-   * with a customer-supplied key, you must provide the same key if you use the disk later. For
-   * example, to create a disk snapshot, to create a disk image, to create a machine image, or to
-   * attach the disk to a virtual machine. After you encrypt a disk with a customer-managed key, the
-   * diskEncryptionKey.kmsKeyName is set to a key *version* name once the disk is created. The disk
-   * is encrypted with this version of the key. In the response, diskEncryptionKey.kmsKeyName
-   * appears in the following format: "diskEncryptionKey.kmsKeyName":
-   * "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
-   * /cryptoKeysVersions/version If you do not provide an encryption key when creating the disk,
-   * then the disk is encrypted using an automatically generated key and you don't need to provide a
-   * key to use the disk later.
+   * Encrypts the disk using a customer-supplied encryption key or a  customer-managed encryption
+   * key.
+   *
+   * Encryption keys do not protect access to metadata of the disk.
+   *
+   * After you encrypt a disk with a customer-supplied key, you must provide the same key if you use
+   * the disk later. For example, to create a disk snapshot, to create a disk image, to create a
+   * machine image, or to attach the disk to a virtual machine.
+   *
+   * After you encrypt a disk with a customer-managed key, thediskEncryptionKey.kmsKeyName is set to
+   * a key *version* name once the disk is created. The disk is encrypted with this version of the
+   * key. In the response, diskEncryptionKey.kmsKeyName appears in the following format:
+   *
+   * "diskEncryptionKey.kmsKeyName": "projects/kms_project_id/locations/region/keyRings/
+   * key_region/cryptoKeys/key /cryptoKeysVersions/version
+   *
+   * If you do not provide an encryption key when creating the disk, then the  disk is encrypted
+   * using an automatically generated key and you don't need  to provide a key to use the disk
+   * later.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getDiskEncryptionKey() {
@@ -705,18 +752,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encrypts the disk using a customer-supplied encryption key or a customer-managed encryption
-   * key. Encryption keys do not protect access to metadata of the disk. After you encrypt a disk
-   * with a customer-supplied key, you must provide the same key if you use the disk later. For
-   * example, to create a disk snapshot, to create a disk image, to create a machine image, or to
-   * attach the disk to a virtual machine. After you encrypt a disk with a customer-managed key, the
-   * diskEncryptionKey.kmsKeyName is set to a key *version* name once the disk is created. The disk
-   * is encrypted with this version of the key. In the response, diskEncryptionKey.kmsKeyName
-   * appears in the following format: "diskEncryptionKey.kmsKeyName":
-   * "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
-   * /cryptoKeysVersions/version If you do not provide an encryption key when creating the disk,
-   * then the disk is encrypted using an automatically generated key and you don't need to provide a
-   * key to use the disk later.
+   * Encrypts the disk using a customer-supplied encryption key or a  customer-managed encryption
+   * key.
+   *
+   * Encryption keys do not protect access to metadata of the disk.
+   *
+   * After you encrypt a disk with a customer-supplied key, you must provide the same key if you use
+   * the disk later. For example, to create a disk snapshot, to create a disk image, to create a
+   * machine image, or to attach the disk to a virtual machine.
+   *
+   * After you encrypt a disk with a customer-managed key, thediskEncryptionKey.kmsKeyName is set to
+   * a key *version* name once the disk is created. The disk is encrypted with this version of the
+   * key. In the response, diskEncryptionKey.kmsKeyName appears in the following format:
+   *
+   * "diskEncryptionKey.kmsKeyName": "projects/kms_project_id/locations/region/keyRings/
+   * key_region/cryptoKeys/key /cryptoKeysVersions/version
+   *
+   * If you do not provide an encryption key when creating the disk, then the  disk is encrypted
+   * using an automatically generated key and you don't need  to provide a key to use the disk
+   * later.
    * @param diskEncryptionKey diskEncryptionKey or {@code null} for none
    */
   public Disk setDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
@@ -798,7 +852,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI
-   * or NVME. The default is SCSI.
+   * or NVME. The default isSCSI.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterface() {
@@ -807,7 +861,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI
-   * or NVME. The default is SCSI.
+   * or NVME. The default isSCSI.
    * @param interface__ interface__ or {@code null} for none
    */
   public Disk setInterface(java.lang.String interface__) {
@@ -837,8 +891,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a disk.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a disk.
    * @see #decodeLabelFingerprint()
    * @return value or {@code null} for none
    */
@@ -851,8 +906,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a disk.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a disk.
    * @see #getLabelFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -867,8 +923,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a disk.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a disk.
    * @see #encodeLabelFingerprint()
    * @param labelFingerprint labelFingerprint or {@code null} for none
    */
@@ -882,8 +939,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a disk.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a disk.
    * @see #setLabelFingerprint()
    *
    * <p>
@@ -915,7 +973,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last attach timestamp in RFC3339 text format.
+   * [Output Only] Last attach timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastAttachTimestamp() {
@@ -923,7 +981,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last attach timestamp in RFC3339 text format.
+   * [Output Only] Last attach timestamp inRFC3339 text format.
    * @param lastAttachTimestamp lastAttachTimestamp or {@code null} for none
    */
   public Disk setLastAttachTimestamp(java.lang.String lastAttachTimestamp) {
@@ -932,7 +990,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last detach timestamp in RFC3339 text format.
+   * [Output Only] Last detach timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastDetachTimestamp() {
@@ -940,7 +998,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last detach timestamp in RFC3339 text format.
+   * [Output Only] Last detach timestamp inRFC3339 text format.
    * @param lastDetachTimestamp lastDetachTimestamp or {@code null} for none
    */
   public Disk setLastDetachTimestamp(java.lang.String lastDetachTimestamp) {
@@ -1004,13 +1062,15 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The field indicates if the disk is created from a locked source image. Attachment
    * of a disk created from a locked source image will cause the following operations to become
-   * irreversibly prohibited: - R/W or R/O disk attachment to any other instance - Disk detachment.
-   * And the disk can only be deleted when the instance is deleted - Creation of images or snapshots
-   * - Disk cloning Furthermore, the instance with at least one disk with locked flag set to true
-   * will be prohibited from performing the operations below: - Further attachment of secondary
-   * disks. - Detachment of any disks - Create machine images - Create instance template - Delete
-   * the instance with --keep-disk parameter set to true for locked disks - Attach a locked disk
-   * with --auto-delete parameter set to false
+   * irreversibly prohibited:        - R/W or R/O disk attachment to any other instance    - Disk
+   * detachment. And the disk can only be deleted when the instance    is deleted    - Creation of
+   * images or snapshots    - Disk cloning
+   *
+   * Furthermore, the instance with at least one disk with locked flag set to true will be
+   * prohibited from performing the operations below:        - Further attachment of secondary
+   * disks.    - Detachment of any disks    - Create machine images    - Create instance template
+   * - Delete the instance with --keep-disk parameter set to true for locked    disks    - Attach a
+   * locked disk with --auto-delete parameter set to false
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocked() {
@@ -1020,13 +1080,15 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The field indicates if the disk is created from a locked source image. Attachment
    * of a disk created from a locked source image will cause the following operations to become
-   * irreversibly prohibited: - R/W or R/O disk attachment to any other instance - Disk detachment.
-   * And the disk can only be deleted when the instance is deleted - Creation of images or snapshots
-   * - Disk cloning Furthermore, the instance with at least one disk with locked flag set to true
-   * will be prohibited from performing the operations below: - Further attachment of secondary
-   * disks. - Detachment of any disks - Create machine images - Create instance template - Delete
-   * the instance with --keep-disk parameter set to true for locked disks - Attach a locked disk
-   * with --auto-delete parameter set to false
+   * irreversibly prohibited:        - R/W or R/O disk attachment to any other instance    - Disk
+   * detachment. And the disk can only be deleted when the instance    is deleted    - Creation of
+   * images or snapshots    - Disk cloning
+   *
+   * Furthermore, the instance with at least one disk with locked flag set to true will be
+   * prohibited from performing the operations below:        - Further attachment of secondary
+   * disks.    - Detachment of any disks    - Create machine images    - Create instance template
+   * - Delete the instance with --keep-disk parameter set to true for locked    disks    - Attach a
+   * locked disk with --auto-delete parameter set to false
    * @param locked locked or {@code null} for none
    */
   public Disk setLocked(java.lang.Boolean locked) {
@@ -1053,7 +1115,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -1065,7 +1127,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -1138,7 +1200,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per
    * second that the disk can handle. Values must be between 10,000 and 120,000. For more details,
-   * see the Extreme persistent disk documentation.
+   * see theExtreme persistent disk documentation.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProvisionedIops() {
@@ -1148,7 +1210,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per
    * second that the disk can handle. Values must be between 10,000 and 120,000. For more details,
-   * see the Extreme persistent disk documentation.
+   * see theExtreme persistent disk documentation.
    * @param provisionedIops provisionedIops or {@code null} for none
    */
   public Disk setProvisionedIops(java.lang.Long provisionedIops) {
@@ -1319,9 +1381,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk
-   * using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create
-   * an empty persistent disk. If you specify this field along with a source, the value of sizeGb
-   * must not be less than the size of the source. Acceptable values are greater than 0.
+   * using thesourceImage, sourceSnapshot, orsourceDisk parameter, or specify it alone to create an
+   * empty persistent disk.
+   *
+   * If you specify this field along with a source, the value ofsizeGb must not be less than the
+   * size of the source. Acceptable values are greater than 0.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -1330,9 +1394,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk
-   * using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create
-   * an empty persistent disk. If you specify this field along with a source, the value of sizeGb
-   * must not be less than the size of the source. Acceptable values are greater than 0.
+   * using thesourceImage, sourceSnapshot, orsourceDisk parameter, or specify it alone to create an
+   * empty persistent disk.
+   *
+   * If you specify this field along with a source, the value ofsizeGb must not be less than the
+   * size of the source. Acceptable values are greater than 0.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public Disk setSizeGb(java.lang.Long sizeGb) {
@@ -1380,11 +1446,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source disk used to create this disk. You can provide this as a partial or full URL to the
-   * resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk -
-   * projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk -
-   * zones/zone/disks/disk - regions/region/disks/disk
+   * resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk            -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/disks/disk            -
+   * projects/project/zones/zone/disks/disk            -
+   * projects/project/regions/region/disks/disk            -         zones/zone/disks/disk
+   * -         regions/region/disks/disk
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDisk() {
@@ -1393,11 +1460,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source disk used to create this disk. You can provide this as a partial or full URL to the
-   * resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk -
-   * projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk -
-   * zones/zone/disks/disk - regions/region/disks/disk
+   * resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk            -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/disks/disk            -
+   * projects/project/zones/zone/disks/disk            -
+   * projects/project/regions/region/disks/disk            -         zones/zone/disks/disk
+   * -         regions/region/disks/disk
    * @param sourceDisk sourceDisk or {@code null} for none
    */
   public Disk setSourceDisk(java.lang.String sourceDisk) {
@@ -1430,14 +1498,26 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source image used to create this disk. If the source image is deleted, this field will not
-   * be set. To create a disk with one of the public operating system images, specify the image by
-   * its family name. For example, specify family/debian-9 to use the latest Debian 9 image:
-   * projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a
-   * public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD
+   * be set.
+   *
+   * To create a disk with one of the public operating system images, specify the image by its
+   * family name. For example, specifyfamily/debian-9 to use the latest Debian 9 image:
+   *
+   * projects/debian-cloud/global/images/family/debian-9
+   *
+   * Alternatively, use a specific version of a public operating system image:
+   *
+   * projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD
+   *
    * To create a disk with a custom image that you created, specify the image name in the following
-   * format: global/images/my-custom-image You can also specify a custom image by its image family,
-   * which returns the latest version of the image in that family. Replace the image name with
-   * family/family-name: global/images/family/my-image-family
+   * format:
+   *
+   * global/images/my-custom-image
+   *
+   * You can also specify a custom image by its image family, which returns the latest version of
+   * the image in that family. Replace the image name with family/family-name:
+   *
+   * global/images/family/my-image-family
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImage() {
@@ -1446,14 +1526,26 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source image used to create this disk. If the source image is deleted, this field will not
-   * be set. To create a disk with one of the public operating system images, specify the image by
-   * its family name. For example, specify family/debian-9 to use the latest Debian 9 image:
-   * projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a
-   * public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD
+   * be set.
+   *
+   * To create a disk with one of the public operating system images, specify the image by its
+   * family name. For example, specifyfamily/debian-9 to use the latest Debian 9 image:
+   *
+   * projects/debian-cloud/global/images/family/debian-9
+   *
+   * Alternatively, use a specific version of a public operating system image:
+   *
+   * projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD
+   *
    * To create a disk with a custom image that you created, specify the image name in the following
-   * format: global/images/my-custom-image You can also specify a custom image by its image family,
-   * which returns the latest version of the image in that family. Replace the image name with
-   * family/family-name: global/images/family/my-image-family
+   * format:
+   *
+   * global/images/my-custom-image
+   *
+   * You can also specify a custom image by its image family, which returns the latest version of
+   * the image in that family. Replace the image name with family/family-name:
+   *
+   * global/images/family/my-image-family
    * @param sourceImage sourceImage or {@code null} for none
    */
   public Disk setSourceImage(java.lang.String sourceImage) {
@@ -1462,7 +1554,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer-supplied encryption key of the source image. Required if the source image is
+   * Thecustomer-supplied encryption key of the source image. Required if the source image is
    * protected by a customer-supplied encryption key.
    * @return value or {@code null} for none
    */
@@ -1471,7 +1563,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer-supplied encryption key of the source image. Required if the source image is
+   * Thecustomer-supplied encryption key of the source image. Required if the source image is
    * protected by a customer-supplied encryption key.
    * @param sourceImageEncryptionKey sourceImageEncryptionKey or {@code null} for none
    */
@@ -1505,10 +1597,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source instant snapshot used to create this disk. You can provide this as a partial or full
-   * URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
-   * /instantSnapshots/instantSnapshot -
-   * projects/project/zones/zone/instantSnapshots/instantSnapshot -
+   * URL to the resource. For example, the following are valid values:              - https://www.go
+   * ogleapis.com/compute/v1/projects/project/zones/zone/instantSnapshots/instantSnapshot      -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot     -
    * zones/zone/instantSnapshots/instantSnapshot
    * @return value or {@code null} for none
    */
@@ -1518,10 +1609,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source instant snapshot used to create this disk. You can provide this as a partial or full
-   * URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
-   * /instantSnapshots/instantSnapshot -
-   * projects/project/zones/zone/instantSnapshots/instantSnapshot -
+   * URL to the resource. For example, the following are valid values:              - https://www.go
+   * ogleapis.com/compute/v1/projects/project/zones/zone/instantSnapshots/instantSnapshot      -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot     -
    * zones/zone/instantSnapshots/instantSnapshot
    * @param sourceInstantSnapshot sourceInstantSnapshot or {@code null} for none
    */
@@ -1557,9 +1647,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The machine image to create the disk from. You can provide this as a partial or full URL to the
-   * resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/machineImages/machineImage -
-   * projects/project/global/machineImages/machineImage - global/machineImages/machineImage
+   * resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/machineImages/machineImage     -
+   * projects/project/global/machineImages/machineImage      - global/machineImages/machineImage
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceMachineImage() {
@@ -1568,9 +1658,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The machine image to create the disk from. You can provide this as a partial or full URL to the
-   * resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/machineImages/machineImage -
-   * projects/project/global/machineImages/machineImage - global/machineImages/machineImage
+   * resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/machineImages/machineImage     -
+   * projects/project/global/machineImages/machineImage      - global/machineImages/machineImage
    * @param sourceMachineImage sourceMachineImage or {@code null} for none
    */
   public Disk setSourceMachineImage(java.lang.String sourceMachineImage) {
@@ -1598,8 +1688,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer-supplied encryption key of the source machine image. Required if the source
-   * machine image is protected by a customer-supplied encryption key.
+   * Thecustomer-supplied encryption key of the source machine image. Required if the source machine
+   * image is protected by a customer-supplied encryption key.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getSourceMachineImageEncryptionKey() {
@@ -1607,8 +1697,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer-supplied encryption key of the source machine image. Required if the source
-   * machine image is protected by a customer-supplied encryption key.
+   * Thecustomer-supplied encryption key of the source machine image. Required if the source machine
+   * image is protected by a customer-supplied encryption key.
    * @param sourceMachineImageEncryptionKey sourceMachineImageEncryptionKey or {@code null} for none
    */
   public Disk setSourceMachineImageEncryptionKey(CustomerEncryptionKey sourceMachineImageEncryptionKey) {
@@ -1643,9 +1733,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source snapshot used to create this disk. You can provide this as a partial or full URL to
-   * the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/snapshots/snapshot -
-   * projects/project/global/snapshots/snapshot - global/snapshots/snapshot
+   * the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot     -
+   * projects/project/global/snapshots/snapshot      - global/snapshots/snapshot
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -1654,9 +1744,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The source snapshot used to create this disk. You can provide this as a partial or full URL to
-   * the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/snapshots/snapshot -
-   * projects/project/global/snapshots/snapshot - global/snapshots/snapshot
+   * the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot     -
+   * projects/project/global/snapshots/snapshot      - global/snapshots/snapshot
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public Disk setSourceSnapshot(java.lang.String sourceSnapshot) {
@@ -1665,7 +1755,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer-supplied encryption key of the source snapshot. Required if the source snapshot is
+   * Thecustomer-supplied encryption key of the source snapshot. Required if the source snapshot is
    * protected by a customer-supplied encryption key.
    * @return value or {@code null} for none
    */
@@ -1674,7 +1764,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer-supplied encryption key of the source snapshot. Required if the source snapshot is
+   * Thecustomer-supplied encryption key of the source snapshot. Required if the source snapshot is
    * protected by a customer-supplied encryption key.
    * @param sourceSnapshotEncryptionKey sourceSnapshotEncryptionKey or {@code null} for none
    */
@@ -1732,9 +1822,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation. - CREATING: Disk is provisioning. - RESTORING:
-   * Source data is being copied into the disk. - FAILED: Disk creation failed. - READY: Disk is
-   * ready for use. - DELETING: Disk is deleting.
+   * [Output Only] The status of disk creation.              - CREATING: Disk is provisioning.
+   * - RESTORING: Source data is being copied into the      disk.      - FAILED: Disk creation
+   * failed.      - READY: Disk is ready for use.      - DELETING: Disk is deleting.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1742,9 +1832,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation. - CREATING: Disk is provisioning. - RESTORING:
-   * Source data is being copied into the disk. - FAILED: Disk creation failed. - READY: Disk is
-   * ready for use. - DELETING: Disk is deleting.
+   * [Output Only] The status of disk creation.              - CREATING: Disk is provisioning.
+   * - RESTORING: Source data is being copied into the      disk.      - FAILED: Disk creation
+   * failed.      - READY: Disk is ready for use.      - DELETING: Disk is deleting.
    * @param status status or {@code null} for none
    */
   public Disk setStatus(java.lang.String status) {
@@ -1754,9 +1844,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The storage pool in which the new disk is created. You can provide this as a partial or full
-   * URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool -
-   * projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
+   * URL to the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/storagePools/storagePool
+   * - projects/project/zones/zone/storagePools/storagePool     -
+   * zones/zone/storagePools/storagePool
    * @return value or {@code null} for none
    */
   public java.lang.String getStoragePool() {
@@ -1765,9 +1856,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The storage pool in which the new disk is created. You can provide this as a partial or full
-   * URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool -
-   * projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
+   * URL to the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/storagePools/storagePool
+   * - projects/project/zones/zone/storagePools/storagePool     -
+   * zones/zone/storagePools/storagePool
    * @param storagePool storagePool or {@code null} for none
    */
   public Disk setStoragePool(java.lang.String storagePool) {
@@ -1794,7 +1886,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See
+   * this when creating the disk. For example:projects/project/zones/zone/diskTypes/pd-ssd. See
    * Persistent disk types.
    * @return value or {@code null} for none
    */
@@ -1804,7 +1896,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See
+   * this when creating the disk. For example:projects/project/zones/zone/diskTypes/pd-ssd. See
    * Persistent disk types.
    * @param type type or {@code null} for none
    */
@@ -1817,6 +1909,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
    * be modified after the disk is created. This includes a list of URLs to the license resource.
    * For example, to provide a debian license:
+   *
    * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
    * @return value or {@code null} for none
    */
@@ -1828,6 +1921,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
    * be modified after the disk is created. This includes a list of URLs to the license resource.
    * For example, to provide a debian license:
+   *
    * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
    * @param userLicenses userLicenses or {@code null} for none
    */
@@ -1837,8 +1931,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Links to the users of the disk (attached instances) in form:
-   * projects/project/zones/zone/instances/instance
+   * [Output Only] Links to the users of the disk (attached instances) in
+   * form:projects/project/zones/zone/instances/instance
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUsers() {
@@ -1846,8 +1940,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Links to the users of the disk (attached instances) in form:
-   * projects/project/zones/zone/instances/instance
+   * [Output Only] Links to the users of the disk (attached instances) in
+   * form:projects/project/zones/zone/instances/instance
    * @param users users or {@code null} for none
    */
   public Disk setUsers(java.util.List<java.lang.String> users) {

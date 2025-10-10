@@ -31,10 +31,9 @@ public final class InstantSnapshotGroupParameters extends com.google.api.client.
 
   /**
    * The source instant snapshot group used to create disks. You can provide this as a partial or
-   * full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
-   * /instantSnapshotGroups/instantSnapshotGroup -
-   * projects/project/zones/zone/instantSnapshotGroups/instantSnapshotGroup -
+   * full URL to the resource. For example, the following are valid values:              - https://w
+   * ww.googleapis.com/compute/v1/projects/project/zones/zone/instantSnapshotGroups/instantSnapshotG
+   * roup      - projects/project/zones/zone/instantSnapshotGroups/instantSnapshotGroup      -
    * zones/zone/instantSnapshotGroups/instantSnapshotGroup
    * The value may be {@code null}.
    */
@@ -43,10 +42,9 @@ public final class InstantSnapshotGroupParameters extends com.google.api.client.
 
   /**
    * The source instant snapshot group used to create disks. You can provide this as a partial or
-   * full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
-   * /instantSnapshotGroups/instantSnapshotGroup -
-   * projects/project/zones/zone/instantSnapshotGroups/instantSnapshotGroup -
+   * full URL to the resource. For example, the following are valid values:              - https://w
+   * ww.googleapis.com/compute/v1/projects/project/zones/zone/instantSnapshotGroups/instantSnapshotG
+   * roup      - projects/project/zones/zone/instantSnapshotGroups/instantSnapshotGroup      -
    * zones/zone/instantSnapshotGroups/instantSnapshotGroup
    * @return value or {@code null} for none
    */
@@ -56,10 +54,9 @@ public final class InstantSnapshotGroupParameters extends com.google.api.client.
 
   /**
    * The source instant snapshot group used to create disks. You can provide this as a partial or
-   * full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
-   * /instantSnapshotGroups/instantSnapshotGroup -
-   * projects/project/zones/zone/instantSnapshotGroups/instantSnapshotGroup -
+   * full URL to the resource. For example, the following are valid values:              - https://w
+   * ww.googleapis.com/compute/v1/projects/project/zones/zone/instantSnapshotGroups/instantSnapshotG
+   * roup      - projects/project/zones/zone/instantSnapshotGroups/instantSnapshotGroup      -
    * zones/zone/instantSnapshotGroups/instantSnapshotGroup
    * @param sourceInstantSnapshotGroup sourceInstantSnapshotGroup or {@code null} for none
    */

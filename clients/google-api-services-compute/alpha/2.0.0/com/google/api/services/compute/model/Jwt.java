@@ -41,7 +41,8 @@ public final class Jwt extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies the issuer that issued the JWT, which is usually a URL or an email address.
-   * Examples: https://securetoken.google.com, 1234567-compute@developer.gserviceaccount.com
+   * Examples: https://securetoken.google.com,
+   * 1234567-compute@developer.gserviceaccount.com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,10 +57,17 @@ public final class Jwt extends com.google.api.client.json.GenericJson {
 
   /**
    * jwt_headers and jwt_params define where to extract the JWT from an HTTP request. If no explicit
-   * location is specified, the following default locations are tried in order: 1. The Authorization
-   * header using the Bearer schema. See `here `_. Example: Authorization: Bearer . 2.
-   * `access_token` query parameter. See `this `_ Multiple JWTs can be verified for a request. Each
-   * JWT has to be extracted from the locations its issuer specified or from the default locations.
+   * location is specified, the following default locations are tried in order:
+   *
+   * 1. The Authorization header using the Bearer schema. See `here     `_. Example:
+   *
+   *       Authorization: Bearer .
+   *
+   * 2. `access_token` query parameter. See `this `_
+   *
+   * Multiple JWTs can be verified for a request. Each JWT has to be extracted from the locations
+   * its issuer specified or from the default locations.
+   *
    * This field is set if JWT is sent in a request header. This field specifies the header name. For
    * example, if `header=x-goog-iap-jwt-assertion`, the header format will be x-goog-iap-jwt-
    * assertion: .
@@ -100,7 +108,8 @@ public final class Jwt extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies the issuer that issued the JWT, which is usually a URL or an email address.
-   * Examples: https://securetoken.google.com, 1234567-compute@developer.gserviceaccount.com
+   * Examples: https://securetoken.google.com,
+   * 1234567-compute@developer.gserviceaccount.com
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuer() {
@@ -109,7 +118,8 @@ public final class Jwt extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies the issuer that issued the JWT, which is usually a URL or an email address.
-   * Examples: https://securetoken.google.com, 1234567-compute@developer.gserviceaccount.com
+   * Examples: https://securetoken.google.com,
+   * 1234567-compute@developer.gserviceaccount.com
    * @param issuer issuer or {@code null} for none
    */
   public Jwt setIssuer(java.lang.String issuer) {
@@ -136,10 +146,17 @@ public final class Jwt extends com.google.api.client.json.GenericJson {
 
   /**
    * jwt_headers and jwt_params define where to extract the JWT from an HTTP request. If no explicit
-   * location is specified, the following default locations are tried in order: 1. The Authorization
-   * header using the Bearer schema. See `here `_. Example: Authorization: Bearer . 2.
-   * `access_token` query parameter. See `this `_ Multiple JWTs can be verified for a request. Each
-   * JWT has to be extracted from the locations its issuer specified or from the default locations.
+   * location is specified, the following default locations are tried in order:
+   *
+   * 1. The Authorization header using the Bearer schema. See `here     `_. Example:
+   *
+   *       Authorization: Bearer .
+   *
+   * 2. `access_token` query parameter. See `this `_
+   *
+   * Multiple JWTs can be verified for a request. Each JWT has to be extracted from the locations
+   * its issuer specified or from the default locations.
+   *
    * This field is set if JWT is sent in a request header. This field specifies the header name. For
    * example, if `header=x-goog-iap-jwt-assertion`, the header format will be x-goog-iap-jwt-
    * assertion: .
@@ -151,10 +168,17 @@ public final class Jwt extends com.google.api.client.json.GenericJson {
 
   /**
    * jwt_headers and jwt_params define where to extract the JWT from an HTTP request. If no explicit
-   * location is specified, the following default locations are tried in order: 1. The Authorization
-   * header using the Bearer schema. See `here `_. Example: Authorization: Bearer . 2.
-   * `access_token` query parameter. See `this `_ Multiple JWTs can be verified for a request. Each
-   * JWT has to be extracted from the locations its issuer specified or from the default locations.
+   * location is specified, the following default locations are tried in order:
+   *
+   * 1. The Authorization header using the Bearer schema. See `here     `_. Example:
+   *
+   *       Authorization: Bearer .
+   *
+   * 2. `access_token` query parameter. See `this `_
+   *
+   * Multiple JWTs can be verified for a request. Each JWT has to be extracted from the locations
+   * its issuer specified or from the default locations.
+   *
    * This field is set if JWT is sent in a request header. This field specifies the header name. For
    * example, if `header=x-goog-iap-jwt-assertion`, the header format will be x-goog-iap-jwt-
    * assertion: .

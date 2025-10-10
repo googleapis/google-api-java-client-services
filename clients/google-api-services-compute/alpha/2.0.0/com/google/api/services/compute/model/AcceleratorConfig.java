@@ -37,10 +37,10 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   private java.lang.Integer acceleratorCount;
 
   /**
-   * Full or partial URL of the accelerator type resource to attach to this instance. For example:
-   * projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating
-   * an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full
-   * list of accelerator types.
+   * Full or partial URL of the accelerator type resource to attach to this instance. For
+   * example:projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are
+   * creating an instance template, specify only the accelerator name. See GPUs on Compute Engine
+   * for a full list of accelerator types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,10 +64,10 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Full or partial URL of the accelerator type resource to attach to this instance. For example:
-   * projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating
-   * an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full
-   * list of accelerator types.
+   * Full or partial URL of the accelerator type resource to attach to this instance. For
+   * example:projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are
+   * creating an instance template, specify only the accelerator name. See GPUs on Compute Engine
+   * for a full list of accelerator types.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -75,10 +75,10 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Full or partial URL of the accelerator type resource to attach to this instance. For example:
-   * projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating
-   * an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full
-   * list of accelerator types.
+   * Full or partial URL of the accelerator type resource to attach to this instance. For
+   * example:projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are
+   * creating an instance template, specify only the accelerator name. See GPUs on Compute Engine
+   * for a full list of accelerator types.
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public AcceleratorConfig setAcceleratorType(java.lang.String acceleratorType) {

@@ -47,8 +47,9 @@ public final class NetworkInterfaceSubInterface extends com.google.api.client.js
    * If specified, this subnetwork must belong to the same network as that of the network interface.
    * If not specified the subnet of network interface will be used. If you specify this property,
    * you can specify the subnetwork as a full or partial URL. For example, the following are all
-   * valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
+   * valid URLs:               -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork
+   * - regions/region/subnetworks/subnetwork
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +101,9 @@ public final class NetworkInterfaceSubInterface extends com.google.api.client.js
    * If specified, this subnetwork must belong to the same network as that of the network interface.
    * If not specified the subnet of network interface will be used. If you specify this property,
    * you can specify the subnetwork as a full or partial URL. For example, the following are all
-   * valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
+   * valid URLs:               -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork
+   * - regions/region/subnetworks/subnetwork
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -112,8 +114,9 @@ public final class NetworkInterfaceSubInterface extends com.google.api.client.js
    * If specified, this subnetwork must belong to the same network as that of the network interface.
    * If not specified the subnet of network interface will be used. If you specify this property,
    * you can specify the subnetwork as a full or partial URL. For example, the following are all
-   * valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
+   * valid URLs:               -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork
+   * - regions/region/subnetworks/subnetwork
    * @param subnetwork subnetwork or {@code null} for none
    */
   public NetworkInterfaceSubInterface setSubnetwork(java.lang.String subnetwork) {

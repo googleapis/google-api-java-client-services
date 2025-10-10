@@ -38,9 +38,10 @@ public final class SnapshotGroupParameters extends com.google.api.client.json.Ge
 
   /**
    * The source snapshot group used to create disks. You can provide this as a partial or full URL
-   * to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/snapshotGroups/snapshotGroup -
-   * projects/project/global/snapshotGroups/snapshotGroup - global/snapshotGroups/snapshotGroup
+   * to the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/snapshotGroups/snapshotGroup
+   * - projects/project/global/snapshotGroups/snapshotGroup      -
+   * global/snapshotGroups/snapshotGroup
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,7 @@ public final class SnapshotGroupParameters extends com.google.api.client.json.Ge
 
   /**
    * URL of the disk type resource describing which disk type to use to create disks. Provide this
-   * when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See
+   * when creating the disk. For example:projects/project/zones/zone/diskTypes/pd-ssd. See
    * Persistent disk types.
    * The value may be {@code null}.
    */
@@ -74,9 +75,10 @@ public final class SnapshotGroupParameters extends com.google.api.client.json.Ge
 
   /**
    * The source snapshot group used to create disks. You can provide this as a partial or full URL
-   * to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/snapshotGroups/snapshotGroup -
-   * projects/project/global/snapshotGroups/snapshotGroup - global/snapshotGroups/snapshotGroup
+   * to the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/snapshotGroups/snapshotGroup
+   * - projects/project/global/snapshotGroups/snapshotGroup      -
+   * global/snapshotGroups/snapshotGroup
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshotGroup() {
@@ -85,9 +87,10 @@ public final class SnapshotGroupParameters extends com.google.api.client.json.Ge
 
   /**
    * The source snapshot group used to create disks. You can provide this as a partial or full URL
-   * to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project /global/snapshotGroups/snapshotGroup -
-   * projects/project/global/snapshotGroups/snapshotGroup - global/snapshotGroups/snapshotGroup
+   * to the resource. For example, the following are valid values:              -
+   * https://www.googleapis.com/compute/v1/projects/project/global/snapshotGroups/snapshotGroup
+   * - projects/project/global/snapshotGroups/snapshotGroup      -
+   * global/snapshotGroups/snapshotGroup
    * @param sourceSnapshotGroup sourceSnapshotGroup or {@code null} for none
    */
   public SnapshotGroupParameters setSourceSnapshotGroup(java.lang.String sourceSnapshotGroup) {
@@ -97,7 +100,7 @@ public final class SnapshotGroupParameters extends com.google.api.client.json.Ge
 
   /**
    * URL of the disk type resource describing which disk type to use to create disks. Provide this
-   * when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See
+   * when creating the disk. For example:projects/project/zones/zone/diskTypes/pd-ssd. See
    * Persistent disk types.
    * @return value or {@code null} for none
    */
@@ -107,7 +110,7 @@ public final class SnapshotGroupParameters extends com.google.api.client.json.Ge
 
   /**
    * URL of the disk type resource describing which disk type to use to create disks. Provide this
-   * when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See
+   * when creating the disk. For example:projects/project/zones/zone/diskTypes/pd-ssd. See
    * Persistent disk types.
    * @param type type or {@code null} for none
    */

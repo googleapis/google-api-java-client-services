@@ -18,10 +18,11 @@ package com.google.api.services.compute.model;
 
 /**
  * This is the object for storing the detail information about the Resource Policy that will be set
- * as default ones for the Disks that is using the DiskSettings. It contains: - one target Resource
- * Policy referenced by its Fully-Qualified URL, - [output only] Disk Types that will be excluded
- * from using this Resource Policy, - Other filtering support (e.g. Label filtering) for Default
- * Resource Policy can be added here as well
+ * as default ones for the Disks that is using the DiskSettings.
+ *
+ * It contains: - one target Resource Policy referenced by its Fully-Qualified URL, - [output only]
+ * Disk Types that will be excluded from using this   Resource Policy, - Other filtering support
+ * (e.g. Label filtering) for Default Resource   Policy can be added here as well
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

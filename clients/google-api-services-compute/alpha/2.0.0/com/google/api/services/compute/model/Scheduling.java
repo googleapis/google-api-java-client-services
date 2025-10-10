@@ -32,8 +32,10 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
-   * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
-   * true so an instance is automatically restarted if it is terminated by Compute Engine.
+   * instances.Preemptible instances cannot be automatically restarted.
+   *
+   * By default, this is set to true so an instance is automatically restarted if it is terminated
+   * by Compute Engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +89,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String instanceTerminationAction;
 
   /**
-   * Defines whether the instance is tolerant of higher cpu latency. This can only be set during
-   * instance creation, or when the instance is not currently running. It must not be set if the
-   * preemptible option is also set.
+   * Defines whether the instance is tolerant of higher cpu latency.  This can only be set during
+   * instance creation, or when the instance is not currently running.  It must not be set if
+   * thepreemptible option is also set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +146,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer minNodeCpus;
 
   /**
-   * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
+   * A set of node affinity and anti-affinity configurations. Refer toConfiguring node affinity for
    * more information. Overrides reservationAffinity.
    * The value may be {@code null}.
    */
@@ -153,8 +155,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines the maintenance behavior for this instance. For standard instances, the default
-   * behavior is MIGRATE. For preemptible instances, the default and only possible behavior is
-   * TERMINATE. For more information, see Set VM host maintenance policy.
+   * behavior is MIGRATE. Forpreemptible instances, the default and only possible behavior is
+   * TERMINATE. For more information, see  Set  VM host maintenance policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,17 +170,17 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines whether the instance is preemptible. This can only be set during instance creation or
-   * while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle
-   * for more information on the possible instance states.
+   * while the instance isstopped and therefore, in a `TERMINATED` state. SeeInstance Life Cycle for
+   * more information on the possible instance states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preemptible;
 
   /**
-   * Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off
-   * signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2
-   * Soft Off signal is triggered.
+   * Specifies the Metadata Service preemption notice duration before the  GCE ACPI G2 Soft  Off
+   * signal is triggered for Spot  VMs only. If not specified, there will be no wait before the G2
+   * Soft  Off signal is triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,10 +195,13 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * DEPRECATED: please use skipGuestOsShutdown. Timeout between GCE ACPI G2 Soft Off and ACPI G3
-   * Mechanical Off during shutdown operation of VM. For Standard VMs values between 0s and 120s are
-   * allowed. For Spot and Preemptible VMs supported values are between 0s and 30s. If no value is
-   * specified for shutdownDuration, default values are 90s for Standard VMs and 30s for
-   * Spot/Preemptible VMs.
+   * Mechanical Off during shutdown operation of VM.
+   *
+   * For Standard VMs values between 0s and 120s are allowed. For Spot and Preemptible VMs supported
+   * values are between 0s and 30s.
+   *
+   * If no value is specified for shutdownDuration, default values are 90s for Standard VMs and 30s
+   * for Spot/Preemptible VMs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +216,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean skipGuestOsShutdown;
 
   /**
-   * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
+   * Specifies the timestamp, when the instance will be terminated, inRFC3339 text format. If
    * specified, the instance termination action will be performed at the termination time.
    * The value may be {@code null}.
    */
@@ -229,8 +234,10 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
-   * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
-   * true so an instance is automatically restarted if it is terminated by Compute Engine.
+   * instances.Preemptible instances cannot be automatically restarted.
+   *
+   * By default, this is set to true so an instance is automatically restarted if it is terminated
+   * by Compute Engine.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutomaticRestart() {
@@ -240,8 +247,10 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
-   * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
-   * true so an instance is automatically restarted if it is terminated by Compute Engine.
+   * instances.Preemptible instances cannot be automatically restarted.
+   *
+   * By default, this is set to true so an instance is automatically restarted if it is terminated
+   * by Compute Engine.
    * @param automaticRestart automaticRestart or {@code null} for none
    */
   public Scheduling setAutomaticRestart(java.lang.Boolean automaticRestart) {
@@ -362,9 +371,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines whether the instance is tolerant of higher cpu latency. This can only be set during
-   * instance creation, or when the instance is not currently running. It must not be set if the
-   * preemptible option is also set.
+   * Defines whether the instance is tolerant of higher cpu latency.  This can only be set during
+   * instance creation, or when the instance is not currently running.  It must not be set if
+   * thepreemptible option is also set.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLatencyTolerant() {
@@ -372,9 +381,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines whether the instance is tolerant of higher cpu latency. This can only be set during
-   * instance creation, or when the instance is not currently running. It must not be set if the
-   * preemptible option is also set.
+   * Defines whether the instance is tolerant of higher cpu latency.  This can only be set during
+   * instance creation, or when the instance is not currently running.  It must not be set if
+   * thepreemptible option is also set.
    * @param latencyTolerant latencyTolerant or {@code null} for none
    */
   public Scheduling setLatencyTolerant(java.lang.Boolean latencyTolerant) {
@@ -497,7 +506,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
+   * A set of node affinity and anti-affinity configurations. Refer toConfiguring node affinity for
    * more information. Overrides reservationAffinity.
    * @return value or {@code null} for none
    */
@@ -506,7 +515,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
+   * A set of node affinity and anti-affinity configurations. Refer toConfiguring node affinity for
    * more information. Overrides reservationAffinity.
    * @param nodeAffinities nodeAffinities or {@code null} for none
    */
@@ -517,8 +526,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines the maintenance behavior for this instance. For standard instances, the default
-   * behavior is MIGRATE. For preemptible instances, the default and only possible behavior is
-   * TERMINATE. For more information, see Set VM host maintenance policy.
+   * behavior is MIGRATE. Forpreemptible instances, the default and only possible behavior is
+   * TERMINATE. For more information, see  Set  VM host maintenance policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getOnHostMaintenance() {
@@ -527,8 +536,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines the maintenance behavior for this instance. For standard instances, the default
-   * behavior is MIGRATE. For preemptible instances, the default and only possible behavior is
-   * TERMINATE. For more information, see Set VM host maintenance policy.
+   * behavior is MIGRATE. Forpreemptible instances, the default and only possible behavior is
+   * TERMINATE. For more information, see  Set  VM host maintenance policy.
    * @param onHostMaintenance onHostMaintenance or {@code null} for none
    */
   public Scheduling setOnHostMaintenance(java.lang.String onHostMaintenance) {
@@ -553,8 +562,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines whether the instance is preemptible. This can only be set during instance creation or
-   * while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle
-   * for more information on the possible instance states.
+   * while the instance isstopped and therefore, in a `TERMINATED` state. SeeInstance Life Cycle for
+   * more information on the possible instance states.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreemptible() {
@@ -563,8 +572,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines whether the instance is preemptible. This can only be set during instance creation or
-   * while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle
-   * for more information on the possible instance states.
+   * while the instance isstopped and therefore, in a `TERMINATED` state. SeeInstance Life Cycle for
+   * more information on the possible instance states.
    * @param preemptible preemptible or {@code null} for none
    */
   public Scheduling setPreemptible(java.lang.Boolean preemptible) {
@@ -573,9 +582,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off
-   * signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2
-   * Soft Off signal is triggered.
+   * Specifies the Metadata Service preemption notice duration before the  GCE ACPI G2 Soft  Off
+   * signal is triggered for Spot  VMs only. If not specified, there will be no wait before the G2
+   * Soft  Off signal is triggered.
    * @return value or {@code null} for none
    */
   public Duration getPreemptionNoticeDuration() {
@@ -583,9 +592,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off
-   * signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2
-   * Soft Off signal is triggered.
+   * Specifies the Metadata Service preemption notice duration before the  GCE ACPI G2 Soft  Off
+   * signal is triggered for Spot  VMs only. If not specified, there will be no wait before the G2
+   * Soft  Off signal is triggered.
    * @param preemptionNoticeDuration preemptionNoticeDuration or {@code null} for none
    */
   public Scheduling setPreemptionNoticeDuration(Duration preemptionNoticeDuration) {
@@ -612,10 +621,13 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * DEPRECATED: please use skipGuestOsShutdown. Timeout between GCE ACPI G2 Soft Off and ACPI G3
-   * Mechanical Off during shutdown operation of VM. For Standard VMs values between 0s and 120s are
-   * allowed. For Spot and Preemptible VMs supported values are between 0s and 30s. If no value is
-   * specified for shutdownDuration, default values are 90s for Standard VMs and 30s for
-   * Spot/Preemptible VMs.
+   * Mechanical Off during shutdown operation of VM.
+   *
+   * For Standard VMs values between 0s and 120s are allowed. For Spot and Preemptible VMs supported
+   * values are between 0s and 30s.
+   *
+   * If no value is specified for shutdownDuration, default values are 90s for Standard VMs and 30s
+   * for Spot/Preemptible VMs.
    * @return value or {@code null} for none
    */
   public Duration getShutdownTimeout() {
@@ -624,10 +636,13 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
    * DEPRECATED: please use skipGuestOsShutdown. Timeout between GCE ACPI G2 Soft Off and ACPI G3
-   * Mechanical Off during shutdown operation of VM. For Standard VMs values between 0s and 120s are
-   * allowed. For Spot and Preemptible VMs supported values are between 0s and 30s. If no value is
-   * specified for shutdownDuration, default values are 90s for Standard VMs and 30s for
-   * Spot/Preemptible VMs.
+   * Mechanical Off during shutdown operation of VM.
+   *
+   * For Standard VMs values between 0s and 120s are allowed. For Spot and Preemptible VMs supported
+   * values are between 0s and 30s.
+   *
+   * If no value is specified for shutdownDuration, default values are 90s for Standard VMs and 30s
+   * for Spot/Preemptible VMs.
    * @param shutdownTimeout shutdownTimeout or {@code null} for none
    */
   public Scheduling setShutdownTimeout(Duration shutdownTimeout) {
@@ -655,7 +670,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
+   * Specifies the timestamp, when the instance will be terminated, inRFC3339 text format. If
    * specified, the instance termination action will be performed at the termination time.
    * @return value or {@code null} for none
    */
@@ -664,7 +679,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
+   * Specifies the timestamp, when the instance will be terminated, inRFC3339 text format. If
    * specified, the instance termination action will be performed at the termination time.
    * @param terminationTime terminationTime or {@code null} for none
    */

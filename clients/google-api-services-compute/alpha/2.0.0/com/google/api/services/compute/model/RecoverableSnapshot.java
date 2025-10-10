@@ -17,8 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a RecoverableSnapshot resource. A RecoverableSnapshot represents a snapshot in recycle
- * bin.
+ * Represents a RecoverableSnapshot resource.
+ *
+ * A RecoverableSnapshot represents a snapshot in recycle bin.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -31,7 +32,7 @@ package com.google.api.services.compute.model;
 public final class RecoverableSnapshot extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#recoverableSnapshot for RecoverableSnapshot
+   * [Output Only] Type of the resource. Alwayscompute#recoverableSnapshot for RecoverableSnapshot
    * resources.
    * The value may be {@code null}.
    */
@@ -61,7 +62,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
 
   /**
    * Identifier. Name of the recoverable snapshot generated on the deletion of the snapshot. The
-   * name will be 1-63 characters long, and comply with RFC1035. Specifically, the name will be 1-63
+   * name will be 1-63 characters long, and comply withRFC1035. Specifically, the name will be 1-63
    * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
    * first character will be a lowercase letter, and all following characters can be a dash,
    * lowercase letter, or digit, except the last character, which cannot be a dash.
@@ -78,7 +79,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   private RecoverableSnapshotOriginalSnapshot originalResource;
 
   /**
-   * [Output Only] Purge timestamp of recoverable snapshot in RFC3339 text format.
+   * [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +121,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   private java.lang.String status;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -128,7 +129,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public RecoverableSnapshot setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -171,7 +172,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#recoverableSnapshot for RecoverableSnapshot
+   * [Output Only] Type of the resource. Alwayscompute#recoverableSnapshot for RecoverableSnapshot
    * resources.
    * @return value or {@code null} for none
    */
@@ -180,7 +181,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#recoverableSnapshot for RecoverableSnapshot
+   * [Output Only] Type of the resource. Alwayscompute#recoverableSnapshot for RecoverableSnapshot
    * resources.
    * @param kind kind or {@code null} for none
    */
@@ -191,7 +192,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
 
   /**
    * Identifier. Name of the recoverable snapshot generated on the deletion of the snapshot. The
-   * name will be 1-63 characters long, and comply with RFC1035. Specifically, the name will be 1-63
+   * name will be 1-63 characters long, and comply withRFC1035. Specifically, the name will be 1-63
    * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
    * first character will be a lowercase letter, and all following characters can be a dash,
    * lowercase letter, or digit, except the last character, which cannot be a dash.
@@ -203,7 +204,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
 
   /**
    * Identifier. Name of the recoverable snapshot generated on the deletion of the snapshot. The
-   * name will be 1-63 characters long, and comply with RFC1035. Specifically, the name will be 1-63
+   * name will be 1-63 characters long, and comply withRFC1035. Specifically, the name will be 1-63
    * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
    * first character will be a lowercase letter, and all following characters can be a dash,
    * lowercase letter, or digit, except the last character, which cannot be a dash.
@@ -232,7 +233,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Purge timestamp of recoverable snapshot in RFC3339 text format.
+   * [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurgeTimestamp() {
@@ -240,7 +241,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Purge timestamp of recoverable snapshot in RFC3339 text format.
+   * [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
    * @param purgeTimestamp purgeTimestamp or {@code null} for none
    */
   public RecoverableSnapshot setPurgeTimestamp(java.lang.String purgeTimestamp) {

@@ -17,15 +17,20 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Backend Service resource. A backend service defines how Google Cloud load balancers
- * distribute traffic. The backend service configuration contains a set of values, such as the
- * protocol used to connect to backends, various distribution and session settings, health checks,
- * and timeouts. These settings provide fine-grained control over how your load balancer behaves.
- * Most of the settings have default values that allow for easy configuration if you need to get
- * started quickly. Backend services in Google Compute Engine can be either regionally or globally
- * scoped. * [Global](https://cloud.google.com/compute/docs/reference/rest/alpha/backendServices) *
- * [Regional](https://cloud.google.com/compute/docs/reference/rest/alpha/regionBackendServices) For
- * more information, see Backend Services.
+ * Represents a Backend Service resource.
+ *
+ * A backend service defines how Google Cloud load balancers distribute traffic. The backend service
+ * configuration contains a set of values, such as the protocol used to connect to backends, various
+ * distribution and session settings, health checks, and timeouts. These settings provide fine-
+ * grained control over how your load balancer behaves. Most of the settings have default values
+ * that allow for easy configuration if you need to get started quickly.
+ *
+ * Backend services in Google Compute Engine can be either regionally or globally scoped.
+ *
+ * * [Global](https://cloud.google.com/compute/docs/reference/rest/alpha/backendServices) *
+ * [Regional](https://cloud.google.com/compute/docs/reference/rest/alpha/regionBackendServices)
+ *
+ * For more information, seeBackend Services.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -39,11 +44,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Lifetime of cookies in seconds. This setting is applicable to Application Load Balancers and
-   * Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0,
-   * the cookie is non-persistent and lasts only until the end of the browser session (or
-   * equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when the backend
-   * service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity.
+   *
+   * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
+   * (or equivalent). The maximum allowed value is two weeks (1,209,600).
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +109,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Connection Tracking configuration for this BackendService. Connection tracking policy settings
    * are only available for external passthrough Network Load Balancers and internal passthrough
-   * Network Load Balancers. connectionTrackingPolicy cannot be specified with haPolicy.
+   * Network Load Balancers.
+   *
+   * connectionTrackingPolicy cannot be specified with haPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,10 +122,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * headers, cookies or other properties. This load balancing policy is applicable only for HTTP
    * connections. The affinity to a particular destination host will be lost when one or more hosts
    * are added/removed from the destination service. This field specifies parameters that control
-   * consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or
-   * RING_HASH. This field is applicable to either: - A regional backend service with the
-   * service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-   * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
+   * consistent hashing. This field is only applicable whenlocalityLbPolicy is set to MAGLEV
+   * orRING_HASH.
+   *
+   * This field is applicable to either:        - A regional backend service with the
+   * service_protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED.     - A global backend service with the    load_balancing_scheme set to
    * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
@@ -124,14 +135,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private ConsistentHashLoadBalancerSettings consistentHash;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
 
   /**
-   * List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+   * List of custom metrics that are used for theWEIGHTED_ROUND_ROBIN locality_lb_policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,15 +198,17 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
-   * TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be
-   * changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the
-   * loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE
-   * state can be used to migrate traffic by percentage using
-   * externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be
-   * set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the
-   * state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state
-   * can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all
-   * traffic back to EXTERNAL.
+   * TEST_ALL_TRAFFIC.
+   *
+   * To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE.
+   * The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to
+   * EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic by
+   * percentage using externalManagedMigrationTestingPercentage.
+   *
+   * Rolling back a migration requires the states to be set in reverse order. So changing the scheme
+   * from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same
+   * time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to
+   * EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,10 +216,16 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Determines the fraction of requests that should be processed by the Global external Application
-   * Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options
-   * will slightly affect this routing behavior, for more details, see: Session Affinity. This value
-   * can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when using
-   * the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
+   * Load Balancer.
+   *
+   * The value of this field must be in the range [0, 100].
+   *
+   * Session affinity options will slightly affect this routing behavior, for more details,
+   * see:Session Affinity.
+   *
+   * This value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL
+   * (when using the classic Application Load Balancer) and the migration state is
+   * TEST_BY_PERCENTAGE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,8 +236,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * load balancers that have configurable failover: [Internal passthrough Network Load
    * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
    * [external passthrough Network Load Balancers](https://cloud.google.com/load-
-   * balancing/docs/network/networklb-failover-overview). failoverPolicy cannot be specified with
-   * haPolicy.
+   * balancing/docs/network/networklb-failover-overview).
+   *
+   * failoverPolicy cannot be specified with haPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,8 +248,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
    * date fingerprint must be provided in order to update the BackendService, otherwise the request
-   * will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request
-   * to retrieve a BackendService.
+   * will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,19 +258,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Configures self-managed High Availability (HA) for External and Internal Protocol Forwarding.
+   *
    * The backends of this regional backend service must only specify zonal network endpoint groups
-   * (NEGs) of type GCE_VM_IP. When haPolicy is set for an Internal Passthrough Network Load
-   * Balancer, the regional backend service must set the network field. All zonal NEGs must belong
-   * to the same network. However, individual NEGs can belong to different subnetworks of that
-   * network. When haPolicy is specified, the set of attached network endpoints across all backends
-   * comprise an High Availability domain from which one endpoint is selected as the active endpoint
-   * (the leader) that receives all traffic. haPolicy can be added only at backend service creation
-   * time. Once set up, it cannot be deleted. Note that haPolicy is not for load balancing, and
-   * therefore cannot be specified with sessionAffinity, connectionTrackingPolicy, and
-   * failoverPolicy. haPolicy requires customers to be responsible for tracking backend endpoint
-   * health and electing a leader among the healthy endpoints. Therefore, haPolicy cannot be
-   * specified with healthChecks. haPolicy can only be specified for External Passthrough Network
-   * Load Balancers and Internal Passthrough Network Load Balancers.
+   * (NEGs) of type GCE_VM_IP.
+   *
+   * When haPolicy is set for an Internal Passthrough Network Load Balancer, the regional backend
+   * service must set the network field. All zonal NEGs must belong to the same network. However,
+   * individual NEGs can belong to different subnetworks of that network.
+   *
+   * When haPolicy is specified, the set of attached network endpoints across all backends comprise
+   * an High Availability domain from which one endpoint is selected as the active endpoint (the
+   * leader) that receives all traffic.
+   *
+   * haPolicy can be added only at backend service creation time. Once set up, it cannot be deleted.
+   *
+   * Note that haPolicy is not for load balancing, and therefore cannot be specified with
+   * sessionAffinity, connectionTrackingPolicy, and failoverPolicy.
+   *
+   * haPolicy requires customers to be responsible for tracking backend endpoint health and electing
+   * a leader among the healthy endpoints. Therefore, haPolicy cannot be specified with
+   * healthChecks.
+   *
+   * haPolicy can only be specified for External Passthrough Network Load Balancers and Internal
+   * Passthrough Network Load Balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,7 +292,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * health checks. See Load balancer guide. Currently, at most one health check can be specified
    * for each backend service. Backend services with instance group or zonal NEG backends must have
    * a health check unless haPolicy is specified. Backend services with internet or serverless NEG
-   * backends must not have a health check. healthChecks[] cannot be specified with haPolicy.
+   * backends must not have a health check.
+   *
+   * healthChecks[] cannot be specified with haPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,19 +317,22 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies a preference for traffic sent from the proxy to the backend (or from the client to
-   * the backend for proxyless gRPC). The possible values are: - IPV4_ONLY: Only send IPv4 traffic
-   * to the backends of the backend service (Instance Group, Managed Instance Group, Network
-   * Endpoint Group), regardless of traffic from the client to the proxy. Only IPv4 health checks
-   * are used to check the health of the backends. This is the default setting. - PREFER_IPV6:
-   * Prioritize the connection to the endpoint's IPv6 address over its IPv4 address (provided there
-   * is a healthy IPv6 address). - IPV6_ONLY: Only send IPv6 traffic to the backends of the backend
-   * service (Instance Group, Managed Instance Group, Network Endpoint Group), regardless of traffic
-   * from the client to the proxy. Only IPv6 health checks are used to check the health of the
-   * backends. This field is applicable to either: - Advanced global external Application Load
-   * Balancer (load balancing scheme EXTERNAL_MANAGED), - Regional external Application Load
-   * Balancer, - Internal proxy Network Load Balancer (load balancing scheme INTERNAL_MANAGED), -
-   * Regional internal Application Load Balancer (load balancing scheme INTERNAL_MANAGED), - Traffic
-   * Director with Envoy proxies and proxyless gRPC (load balancing scheme INTERNAL_SELF_MANAGED).
+   * the backend for proxyless gRPC). The possible values are:        - IPV4_ONLY: Only send IPv4
+   * traffic to the backends of the    backend service (Instance Group, Managed Instance Group,
+   * Network Endpoint    Group), regardless of traffic from the client to the proxy. Only IPv4
+   * health checks are used to check the health of the backends. This is the    default setting.
+   * - PREFER_IPV6: Prioritize the connection to the endpoint's    IPv6 address over its IPv4
+   * address (provided there is a healthy IPv6    address).    - IPV6_ONLY: Only send IPv6 traffic
+   * to the backends of the    backend service (Instance Group, Managed Instance Group, Network
+   * Endpoint    Group), regardless of traffic from the client to the proxy. Only IPv6    health
+   * checks are used to check the health of the backends.
+   *
+   * This field is applicable to either:        -  Advanced global external Application Load
+   * Balancer (load balancing    scheme EXTERNAL_MANAGED),     -  Regional external Application Load
+   * Balancer,     -  Internal proxy Network Load Balancer (load balancing    scheme
+   * INTERNAL_MANAGED),     -  Regional internal Application Load    Balancer (load balancing scheme
+   * INTERNAL_MANAGED),     -  Traffic    Director with Envoy proxies and proxyless gRPC (load
+   * balancing scheme    INTERNAL_SELF_MANAGED).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -311,7 +347,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the load balancer type. A backend service created for one type of load balancer
-   * cannot be used with another. For more information, refer to Choosing a load balancer.
+   * cannot be used with another. For more information, refer toChoosing a load balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,42 +357,45 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * A list of locality load-balancing policies to be used in order of preference. When you use
    * localityLbPolicies, you must set at least one value for either the localityLbPolicies[].policy
    * or the localityLbPolicies[].customPolicy field. localityLbPolicies overrides any value set in
-   * the localityLbPolicy field. For an example of how to use this field, see Define a list of
-   * preferred policies. Caution: This field and its children are intended for use in a service mesh
-   * that includes gRPC clients only. Envoy proxies can't use backend services that have this
-   * configuration.
+   * the localityLbPolicy field.
+   *
+   * For an example of how to use this field, seeDefine a list of preferred policies.
+   *
+   * Caution: This field and its children are intended for use in a service mesh that includes gRPC
+   * clients only. Envoy proxies can't use backend services that have this configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<BackendServiceLocalityLoadBalancingPolicyConfig> localityLbPolicies;
 
   /**
-   * The load balancing algorithm used within the scope of the locality. The possible values are: -
-   * ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin
-   * order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy
-   * hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash
-   * load balancer implements consistent hashing to backends. The algorithm has the property that
-   * the addition/removal of a host from a set of N hosts only affects 1/N of the requests. -
-   * RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host
-   * is selected based on the client connection metadata, i.e., connections are opened to the same
-   * address as the destination address of the incoming connection before the connection was
-   * redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load
-   * balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host
-   * selection times. For more information about Maglev, see Maglev: A Fast and Reliable Software
-   * Network Load Balancer. - WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round Robin Load Balancing
-   * using weights computed from Backend reported Custom Metrics. If set, the Backend Service
-   * responses are expected to contain non-standard HTTP response header field Endpoint-Load-
-   * Metrics. The reported metrics to use for computing the weights are specified via the
-   * customMetrics field. This field is applicable to either: - A regional backend service with the
-   * service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-   * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
-   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If sessionAffinity is not
-   * configured—that is, if session affinity remains at the default value of NONE—then the default
-   * value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to a value other than
-   * NONE, then the default value for localityLbPolicy is MAGLEV. Only ROUND_ROBIN and RING_HASH are
-   * supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true. localityLbPolicy cannot be specified
-   * with haPolicy.
+   * The load balancing algorithm used within the scope of the locality. The possible values are:
+   * - ROUND_ROBIN: This is a simple policy in which each healthy    backend is selected in round
+   * robin order. This is the default.    - LEAST_REQUEST: An O(1) algorithm which    selects two
+   * random healthy hosts and picks the host which has fewer active    requests.    - RING_HASH: The
+   * ring/modulo hash load balancer implements    consistent hashing to backends. The algorithm has
+   * the property that the    addition/removal of a host from a set of N hosts only affects 1/N of
+   * the    requests.    - RANDOM: The load balancer selects a random healthy    host.    -
+   * ORIGINAL_DESTINATION: Backend host is selected    based on the client connection metadata,
+   * i.e., connections are opened to    the same address as the destination address of the incoming
+   * connection    before the connection was redirected to the load balancer.    - MAGLEV: used as a
+   * drop in replacement for the ring hash    load balancer. Maglev is not as stable as ring hash
+   * but has faster table    lookup build times and host selection times. For more information about
+   * Maglev, see Maglev:    A Fast and Reliable Software Network Load Balancer.    -
+   * WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round Robin    Load Balancing using weights
+   * computed from Backend reported Custom Metrics.    If set, the Backend Service responses are
+   * expected to contain non-standard    HTTP response header field Endpoint-Load-Metrics. The
+   * reported    metrics to use for computing the weights are specified via thecustomMetrics field.
+   * This field is applicable to either:       - A regional backend service with the
+   * service_protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED.        - A global backend service with the       load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or       EXTERNAL_MANAGED.            If
+   * sessionAffinity is not configured—that is, if session    affinity remains at the default value
+   * of NONE—then the    default value for localityLbPolicy    is ROUND_ROBIN. If session affinity
+   * is set to a value other    than NONE,    then the default value for localityLbPolicy isMAGLEV.
+   * Only ROUND_ROBIN and RING_HASH are supported    when the backend service is referenced by a URL
+   * map that is bound to    target gRPC proxy that has validateForProxyless field set to true.
+   * localityLbPolicy cannot be specified with haPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -373,10 +412,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Specifies the default maximum duration (timeout) for streams to this service. Duration is
    * computed from the beginning of the stream until the response has been completely processed,
-   * including all retries. A stream that does not complete in this duration is closed. If not
-   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value
-   * can be overridden in the PathMatcher configuration of the UrlMap that references this backend
-   * service. This field is only allowed when the loadBalancingScheme of the backend service is
+   * including all retries. A stream that does not complete in this duration is closed.
+   *
+   * If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
+   *
+   * This value can be overridden in the PathMatcher configuration of the UrlMap that references
+   * this backend service.
+   *
+   * This field is only allowed when the loadBalancingScheme of the backend service is
    * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
@@ -393,7 +436,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -403,11 +446,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * The URL of the network to which this backend service belongs. This field must be set for
-   * Internal Passthrough Network Load Balancers when the haPolicy is enabled, and for External
-   * Passthrough Network Load Balancers when the haPolicy fastIpMove is enabled. This field can only
-   * be specified when the load balancing scheme is set to INTERNAL, or when the load balancing
-   * scheme is set to EXTERNAL and haPolicy fastIpMove is enabled.
+   * The URL of the network to which this backend service belongs.
+   *
+   * This field must be set for Internal Passthrough Network Load Balancers when the haPolicy is
+   * enabled, and for External Passthrough Network Load Balancers when the haPolicy fastIpMove is
+   * enabled.
+   *
+   * This field can only be specified when the load balancing scheme is set toINTERNAL, or when the
+   * load balancing scheme is set toEXTERNAL and haPolicy fastIpMove is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -415,6 +461,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Configures traffic steering properties of internal passthrough Network Load Balancers.
+   *
    * networkPassThroughLbTrafficPolicy cannot be specified with haPolicy.
    * The value may be {@code null}.
    */
@@ -424,23 +471,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
    * of each individual proxy instance that processes the traffic for the given backend service. If
-   * not set, this feature is considered disabled. Results of the outlier detection algorithm
-   * (ejection of endpoints from the load balancing pool and returning them back to the pool) are
-   * executed independently by each proxy instance of the load balancer. In most cases, more than
-   * one proxy instance handles the traffic received by a backend service. Thus, it is possible that
-   * an unhealthy endpoint is detected and ejected by only some of the proxies, and while this
-   * happens, other proxies may continue to send requests to the same unhealthy endpoint until they
-   * detect and eject the unhealthy endpoint. Applicable backend endpoints can be: - VM instances in
-   * an Instance Group - Endpoints in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT) - Endpoints in a
-   * Hybrid Connectivity NEG (NON_GCP_PRIVATE_IP_PORT) - Serverless NEGs, that resolve to Cloud Run,
-   * App Engine, or Cloud Functions Services - Private Service Connect NEGs, that resolve to Google-
-   * managed regional API endpoints or managed services published using Private Service Connect
-   * Applicable backend service types can be: - A global backend service with the
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. - A regional backend
-   * service with the serviceProtocol set to HTTP, HTTPS, HTTP2 or H2C, and loadBalancingScheme set
-   * to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not supported for Serverless NEGs. Not supported when
-   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * not set, this feature is considered disabled.
+   *
+   * Results of the outlier detection algorithm (ejection of endpoints from the load balancing pool
+   * and returning them back to the pool) are executed independently by each proxy instance of the
+   * load balancer. In most cases, more than one proxy instance handles the traffic received by a
+   * backend service. Thus, it is possible that an unhealthy endpoint is detected and ejected by
+   * only some of the proxies, and while this happens, other proxies may continue to send requests
+   * to the same unhealthy endpoint until they detect and eject the unhealthy endpoint.
+   *
+   * Applicable backend endpoints can be:        - VM instances in an Instance Group    - Endpoints
+   * in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT)    - Endpoints in a Hybrid Connectivity NEG
+   * (NON_GCP_PRIVATE_IP_PORT)    - Serverless NEGs, that resolve to Cloud Run, App Engine, or Cloud
+   * Functions Services     - Private Service Connect NEGs, that resolve to    Google-managed
+   * regional API endpoints or managed services published using    Private Service Connect
+   *
+   * Applicable backend service types can be:        - A global backend service with the
+   * loadBalancingScheme set to    INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.     - A regional
+   * backend    service with the serviceProtocol set to HTTP, HTTPS, HTTP2 or H2C, and
+   * loadBalancingScheme set to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not    supported for
+   * Serverless NEGs.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -475,11 +528,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String portName;
 
   /**
-   * The protocol this BackendService uses to communicate with backends. Possible values are HTTP,
-   * HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic
-   * Director configuration. Refer to the documentation for the load balancers or for Traffic
-   * Director for more information. Must be set to GRPC when the backend service is referenced by a
-   * URL map that is bound to target gRPC proxy.
+   * The protocol this BackendService uses to communicate with backends.
+   *
+   * Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen
+   * load balancer or Traffic Director configuration. Refer to the documentation for the load
+   * balancers or for Traffic Director for more information.
+   *
+   * Must be set to GRPC when the backend service is referenced by a URL map that is bound to target
+   * gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -525,26 +581,34 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String selfLinkWithId;
 
   /**
-   * URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is
-   * INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
+   * URLs of networkservices.ServiceBinding resources.
+   *
+   * Can only be set if load balancing scheme is INTERNAL_SELF_MANAGED. If set, lists of backends
+   * and health checks must be both empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> serviceBindings;
 
   /**
-   * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
-   * EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
+   * URL to networkservices.ServiceLbPolicy resource.
+   *
+   * Can only be set if load balancing scheme is EXTERNAL_MANAGED, INTERNAL_MANAGED or
+   * INTERNAL_SELF_MANAGED and the scope is global.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceLbPolicy;
 
   /**
-   * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported
-   * when the backend service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true. For more details, see: [Session
-   * Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
+   * Type of session affinity to use. The default is NONE.
+   *
+   * Only NONE and HEADER_FIELD are supported when the backend service is referenced by a URL map
+   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   *
+   * For more details, see: [Session Affinity](https://cloud.google.com/load-balancing/docs/backend-
+   * service#session_affinity).
+   *
    * sessionAffinity cannot be specified with haPolicy.
    * The value may be {@code null}.
    */
@@ -553,7 +617,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Describes the HTTP cookie used for stateful session affinity. This field is applicable and
-   * required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+   * required if the sessionAffinity is set toSTRONG_COOKIE_AFFINITY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -569,9 +633,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The backend service timeout has a different meaning depending on the type of load balancer. For
    * more information see, Backend service settings. The default is 30 seconds. The full range of
-   * timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden
-   * in the PathMatcher configuration of the UrlMap that references this backend service. Not
-   * supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * timeout values allowed goes from 1 through 2,147,483,647 seconds.
+   *
+   * This value can be overridden in the PathMatcher configuration of the UrlMap that references
+   * this backend service.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
    * proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
    * The value may be {@code null}.
    */
@@ -595,11 +662,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The network scope of the backends that can be added to the backend service. This field can be
-   * either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A backend service with the VPC scope set to
-   * GLOBAL_VPC_NETWORK is only allowed to have backends in global VPC networks. When the VPC scope
-   * is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have backends in regional
-   * networks in the same scope as the backend service. Note: if not specified then
-   * GLOBAL_VPC_NETWORK will be used.
+   * either GLOBAL_VPC_NETWORK orREGIONAL_VPC_NETWORK.
+   *
+   * A backend service with the VPC scope set to GLOBAL_VPC_NETWORK is only allowed to have backends
+   * in global VPC networks.
+   *
+   * When the VPC scope is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have
+   * backends in regional networks in the same scope as the backend service. Note: if not specified
+   * then GLOBAL_VPC_NETWORK will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -607,11 +677,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Lifetime of cookies in seconds. This setting is applicable to Application Load Balancers and
-   * Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0,
-   * the cookie is non-persistent and lasts only until the end of the browser session (or
-   * equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when the backend
-   * service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity.
+   *
+   * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
+   * (or equivalent). The maximum allowed value is two weeks (1,209,600).
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAffinityCookieTtlSec() {
@@ -620,11 +692,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Lifetime of cookies in seconds. This setting is applicable to Application Load Balancers and
-   * Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0,
-   * the cookie is non-persistent and lasts only until the end of the browser session (or
-   * equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when the backend
-   * service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity.
+   *
+   * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
+   * (or equivalent). The maximum allowed value is two weeks (1,209,600).
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param affinityCookieTtlSec affinityCookieTtlSec or {@code null} for none
    */
   public BackendService setAffinityCookieTtlSec(java.lang.Integer affinityCookieTtlSec) {
@@ -741,7 +815,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Connection Tracking configuration for this BackendService. Connection tracking policy settings
    * are only available for external passthrough Network Load Balancers and internal passthrough
-   * Network Load Balancers. connectionTrackingPolicy cannot be specified with haPolicy.
+   * Network Load Balancers.
+   *
+   * connectionTrackingPolicy cannot be specified with haPolicy.
    * @return value or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy getConnectionTrackingPolicy() {
@@ -751,7 +827,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Connection Tracking configuration for this BackendService. Connection tracking policy settings
    * are only available for external passthrough Network Load Balancers and internal passthrough
-   * Network Load Balancers. connectionTrackingPolicy cannot be specified with haPolicy.
+   * Network Load Balancers.
+   *
+   * connectionTrackingPolicy cannot be specified with haPolicy.
    * @param connectionTrackingPolicy connectionTrackingPolicy or {@code null} for none
    */
   public BackendService setConnectionTrackingPolicy(BackendServiceConnectionTrackingPolicy connectionTrackingPolicy) {
@@ -764,10 +842,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * headers, cookies or other properties. This load balancing policy is applicable only for HTTP
    * connections. The affinity to a particular destination host will be lost when one or more hosts
    * are added/removed from the destination service. This field specifies parameters that control
-   * consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or
-   * RING_HASH. This field is applicable to either: - A regional backend service with the
-   * service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-   * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
+   * consistent hashing. This field is only applicable whenlocalityLbPolicy is set to MAGLEV
+   * orRING_HASH.
+   *
+   * This field is applicable to either:        - A regional backend service with the
+   * service_protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED.     - A global backend service with the    load_balancing_scheme set to
    * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
@@ -780,10 +860,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * headers, cookies or other properties. This load balancing policy is applicable only for HTTP
    * connections. The affinity to a particular destination host will be lost when one or more hosts
    * are added/removed from the destination service. This field specifies parameters that control
-   * consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or
-   * RING_HASH. This field is applicable to either: - A regional backend service with the
-   * service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-   * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
+   * consistent hashing. This field is only applicable whenlocalityLbPolicy is set to MAGLEV
+   * orRING_HASH.
+   *
+   * This field is applicable to either:        - A regional backend service with the
+   * service_protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED.     - A global backend service with the    load_balancing_scheme set to
    * INTERNAL_SELF_MANAGED.
    * @param consistentHash consistentHash or {@code null} for none
    */
@@ -793,7 +875,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -801,7 +883,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public BackendService setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -810,7 +892,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+   * List of custom metrics that are used for theWEIGHTED_ROUND_ROBIN locality_lb_policy.
    * @return value or {@code null} for none
    */
   public java.util.List<BackendServiceCustomMetric> getCustomMetrics() {
@@ -818,7 +900,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+   * List of custom metrics that are used for theWEIGHTED_ROUND_ROBIN locality_lb_policy.
    * @param customMetrics customMetrics or {@code null} for none
    */
   public BackendService setCustomMetrics(java.util.List<BackendServiceCustomMetric> customMetrics) {
@@ -942,15 +1024,17 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
-   * TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be
-   * changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the
-   * loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE
-   * state can be used to migrate traffic by percentage using
-   * externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be
-   * set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the
-   * state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state
-   * can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all
-   * traffic back to EXTERNAL.
+   * TEST_ALL_TRAFFIC.
+   *
+   * To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE.
+   * The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to
+   * EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic by
+   * percentage using externalManagedMigrationTestingPercentage.
+   *
+   * Rolling back a migration requires the states to be set in reverse order. So changing the scheme
+   * from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same
+   * time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to
+   * EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalManagedMigrationState() {
@@ -959,15 +1043,17 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
-   * TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be
-   * changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the
-   * loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE
-   * state can be used to migrate traffic by percentage using
-   * externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be
-   * set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the
-   * state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state
-   * can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all
-   * traffic back to EXTERNAL.
+   * TEST_ALL_TRAFFIC.
+   *
+   * To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE.
+   * The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to
+   * EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic by
+   * percentage using externalManagedMigrationTestingPercentage.
+   *
+   * Rolling back a migration requires the states to be set in reverse order. So changing the scheme
+   * from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same
+   * time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to
+   * EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
    * @param externalManagedMigrationState externalManagedMigrationState or {@code null} for none
    */
   public BackendService setExternalManagedMigrationState(java.lang.String externalManagedMigrationState) {
@@ -977,10 +1063,16 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Determines the fraction of requests that should be processed by the Global external Application
-   * Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options
-   * will slightly affect this routing behavior, for more details, see: Session Affinity. This value
-   * can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when using
-   * the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
+   * Load Balancer.
+   *
+   * The value of this field must be in the range [0, 100].
+   *
+   * Session affinity options will slightly affect this routing behavior, for more details,
+   * see:Session Affinity.
+   *
+   * This value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL
+   * (when using the classic Application Load Balancer) and the migration state is
+   * TEST_BY_PERCENTAGE.
    * @return value or {@code null} for none
    */
   public java.lang.Float getExternalManagedMigrationTestingPercentage() {
@@ -989,10 +1081,16 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Determines the fraction of requests that should be processed by the Global external Application
-   * Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options
-   * will slightly affect this routing behavior, for more details, see: Session Affinity. This value
-   * can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when using
-   * the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
+   * Load Balancer.
+   *
+   * The value of this field must be in the range [0, 100].
+   *
+   * Session affinity options will slightly affect this routing behavior, for more details,
+   * see:Session Affinity.
+   *
+   * This value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL
+   * (when using the classic Application Load Balancer) and the migration state is
+   * TEST_BY_PERCENTAGE.
    * @param externalManagedMigrationTestingPercentage externalManagedMigrationTestingPercentage or {@code null} for none
    */
   public BackendService setExternalManagedMigrationTestingPercentage(java.lang.Float externalManagedMigrationTestingPercentage) {
@@ -1005,8 +1103,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * load balancers that have configurable failover: [Internal passthrough Network Load
    * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
    * [external passthrough Network Load Balancers](https://cloud.google.com/load-
-   * balancing/docs/network/networklb-failover-overview). failoverPolicy cannot be specified with
-   * haPolicy.
+   * balancing/docs/network/networklb-failover-overview).
+   *
+   * failoverPolicy cannot be specified with haPolicy.
    * @return value or {@code null} for none
    */
   public BackendServiceFailoverPolicy getFailoverPolicy() {
@@ -1018,8 +1117,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * load balancers that have configurable failover: [Internal passthrough Network Load
    * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
    * [external passthrough Network Load Balancers](https://cloud.google.com/load-
-   * balancing/docs/network/networklb-failover-overview). failoverPolicy cannot be specified with
-   * haPolicy.
+   * balancing/docs/network/networklb-failover-overview).
+   *
+   * failoverPolicy cannot be specified with haPolicy.
    * @param failoverPolicy failoverPolicy or {@code null} for none
    */
   public BackendService setFailoverPolicy(BackendServiceFailoverPolicy failoverPolicy) {
@@ -1031,8 +1131,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
    * date fingerprint must be provided in order to update the BackendService, otherwise the request
-   * will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request
-   * to retrieve a BackendService.
+   * will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -1044,8 +1145,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
    * date fingerprint must be provided in order to update the BackendService, otherwise the request
-   * will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request
-   * to retrieve a BackendService.
+   * will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -1059,8 +1161,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
    * date fingerprint must be provided in order to update the BackendService, otherwise the request
-   * will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request
-   * to retrieve a BackendService.
+   * will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -1073,8 +1176,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
    * date fingerprint must be provided in order to update the BackendService, otherwise the request
-   * will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request
-   * to retrieve a BackendService.
+   * will fail with error 412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * @see #setFingerprint()
    *
    * <p>
@@ -1090,19 +1194,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Configures self-managed High Availability (HA) for External and Internal Protocol Forwarding.
+   *
    * The backends of this regional backend service must only specify zonal network endpoint groups
-   * (NEGs) of type GCE_VM_IP. When haPolicy is set for an Internal Passthrough Network Load
-   * Balancer, the regional backend service must set the network field. All zonal NEGs must belong
-   * to the same network. However, individual NEGs can belong to different subnetworks of that
-   * network. When haPolicy is specified, the set of attached network endpoints across all backends
-   * comprise an High Availability domain from which one endpoint is selected as the active endpoint
-   * (the leader) that receives all traffic. haPolicy can be added only at backend service creation
-   * time. Once set up, it cannot be deleted. Note that haPolicy is not for load balancing, and
-   * therefore cannot be specified with sessionAffinity, connectionTrackingPolicy, and
-   * failoverPolicy. haPolicy requires customers to be responsible for tracking backend endpoint
-   * health and electing a leader among the healthy endpoints. Therefore, haPolicy cannot be
-   * specified with healthChecks. haPolicy can only be specified for External Passthrough Network
-   * Load Balancers and Internal Passthrough Network Load Balancers.
+   * (NEGs) of type GCE_VM_IP.
+   *
+   * When haPolicy is set for an Internal Passthrough Network Load Balancer, the regional backend
+   * service must set the network field. All zonal NEGs must belong to the same network. However,
+   * individual NEGs can belong to different subnetworks of that network.
+   *
+   * When haPolicy is specified, the set of attached network endpoints across all backends comprise
+   * an High Availability domain from which one endpoint is selected as the active endpoint (the
+   * leader) that receives all traffic.
+   *
+   * haPolicy can be added only at backend service creation time. Once set up, it cannot be deleted.
+   *
+   * Note that haPolicy is not for load balancing, and therefore cannot be specified with
+   * sessionAffinity, connectionTrackingPolicy, and failoverPolicy.
+   *
+   * haPolicy requires customers to be responsible for tracking backend endpoint health and electing
+   * a leader among the healthy endpoints. Therefore, haPolicy cannot be specified with
+   * healthChecks.
+   *
+   * haPolicy can only be specified for External Passthrough Network Load Balancers and Internal
+   * Passthrough Network Load Balancers.
    * @return value or {@code null} for none
    */
   public BackendServiceHAPolicy getHaPolicy() {
@@ -1111,19 +1225,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Configures self-managed High Availability (HA) for External and Internal Protocol Forwarding.
+   *
    * The backends of this regional backend service must only specify zonal network endpoint groups
-   * (NEGs) of type GCE_VM_IP. When haPolicy is set for an Internal Passthrough Network Load
-   * Balancer, the regional backend service must set the network field. All zonal NEGs must belong
-   * to the same network. However, individual NEGs can belong to different subnetworks of that
-   * network. When haPolicy is specified, the set of attached network endpoints across all backends
-   * comprise an High Availability domain from which one endpoint is selected as the active endpoint
-   * (the leader) that receives all traffic. haPolicy can be added only at backend service creation
-   * time. Once set up, it cannot be deleted. Note that haPolicy is not for load balancing, and
-   * therefore cannot be specified with sessionAffinity, connectionTrackingPolicy, and
-   * failoverPolicy. haPolicy requires customers to be responsible for tracking backend endpoint
-   * health and electing a leader among the healthy endpoints. Therefore, haPolicy cannot be
-   * specified with healthChecks. haPolicy can only be specified for External Passthrough Network
-   * Load Balancers and Internal Passthrough Network Load Balancers.
+   * (NEGs) of type GCE_VM_IP.
+   *
+   * When haPolicy is set for an Internal Passthrough Network Load Balancer, the regional backend
+   * service must set the network field. All zonal NEGs must belong to the same network. However,
+   * individual NEGs can belong to different subnetworks of that network.
+   *
+   * When haPolicy is specified, the set of attached network endpoints across all backends comprise
+   * an High Availability domain from which one endpoint is selected as the active endpoint (the
+   * leader) that receives all traffic.
+   *
+   * haPolicy can be added only at backend service creation time. Once set up, it cannot be deleted.
+   *
+   * Note that haPolicy is not for load balancing, and therefore cannot be specified with
+   * sessionAffinity, connectionTrackingPolicy, and failoverPolicy.
+   *
+   * haPolicy requires customers to be responsible for tracking backend endpoint health and electing
+   * a leader among the healthy endpoints. Therefore, haPolicy cannot be specified with
+   * healthChecks.
+   *
+   * haPolicy can only be specified for External Passthrough Network Load Balancers and Internal
+   * Passthrough Network Load Balancers.
    * @param haPolicy haPolicy or {@code null} for none
    */
   public BackendService setHaPolicy(BackendServiceHAPolicy haPolicy) {
@@ -1137,7 +1261,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * health checks. See Load balancer guide. Currently, at most one health check can be specified
    * for each backend service. Backend services with instance group or zonal NEG backends must have
    * a health check unless haPolicy is specified. Backend services with internet or serverless NEG
-   * backends must not have a health check. healthChecks[] cannot be specified with haPolicy.
+   * backends must not have a health check.
+   *
+   * healthChecks[] cannot be specified with haPolicy.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHealthChecks() {
@@ -1150,7 +1276,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * health checks. See Load balancer guide. Currently, at most one health check can be specified
    * for each backend service. Backend services with instance group or zonal NEG backends must have
    * a health check unless haPolicy is specified. Backend services with internet or serverless NEG
-   * backends must not have a health check. healthChecks[] cannot be specified with haPolicy.
+   * backends must not have a health check.
+   *
+   * healthChecks[] cannot be specified with haPolicy.
    * @param healthChecks healthChecks or {@code null} for none
    */
   public BackendService setHealthChecks(java.util.List<java.lang.String> healthChecks) {
@@ -1196,19 +1324,22 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies a preference for traffic sent from the proxy to the backend (or from the client to
-   * the backend for proxyless gRPC). The possible values are: - IPV4_ONLY: Only send IPv4 traffic
-   * to the backends of the backend service (Instance Group, Managed Instance Group, Network
-   * Endpoint Group), regardless of traffic from the client to the proxy. Only IPv4 health checks
-   * are used to check the health of the backends. This is the default setting. - PREFER_IPV6:
-   * Prioritize the connection to the endpoint's IPv6 address over its IPv4 address (provided there
-   * is a healthy IPv6 address). - IPV6_ONLY: Only send IPv6 traffic to the backends of the backend
-   * service (Instance Group, Managed Instance Group, Network Endpoint Group), regardless of traffic
-   * from the client to the proxy. Only IPv6 health checks are used to check the health of the
-   * backends. This field is applicable to either: - Advanced global external Application Load
-   * Balancer (load balancing scheme EXTERNAL_MANAGED), - Regional external Application Load
-   * Balancer, - Internal proxy Network Load Balancer (load balancing scheme INTERNAL_MANAGED), -
-   * Regional internal Application Load Balancer (load balancing scheme INTERNAL_MANAGED), - Traffic
-   * Director with Envoy proxies and proxyless gRPC (load balancing scheme INTERNAL_SELF_MANAGED).
+   * the backend for proxyless gRPC). The possible values are:        - IPV4_ONLY: Only send IPv4
+   * traffic to the backends of the    backend service (Instance Group, Managed Instance Group,
+   * Network Endpoint    Group), regardless of traffic from the client to the proxy. Only IPv4
+   * health checks are used to check the health of the backends. This is the    default setting.
+   * - PREFER_IPV6: Prioritize the connection to the endpoint's    IPv6 address over its IPv4
+   * address (provided there is a healthy IPv6    address).    - IPV6_ONLY: Only send IPv6 traffic
+   * to the backends of the    backend service (Instance Group, Managed Instance Group, Network
+   * Endpoint    Group), regardless of traffic from the client to the proxy. Only IPv6    health
+   * checks are used to check the health of the backends.
+   *
+   * This field is applicable to either:        -  Advanced global external Application Load
+   * Balancer (load balancing    scheme EXTERNAL_MANAGED),     -  Regional external Application Load
+   * Balancer,     -  Internal proxy Network Load Balancer (load balancing    scheme
+   * INTERNAL_MANAGED),     -  Regional internal Application Load    Balancer (load balancing scheme
+   * INTERNAL_MANAGED),     -  Traffic    Director with Envoy proxies and proxyless gRPC (load
+   * balancing scheme    INTERNAL_SELF_MANAGED).
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddressSelectionPolicy() {
@@ -1217,19 +1348,22 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies a preference for traffic sent from the proxy to the backend (or from the client to
-   * the backend for proxyless gRPC). The possible values are: - IPV4_ONLY: Only send IPv4 traffic
-   * to the backends of the backend service (Instance Group, Managed Instance Group, Network
-   * Endpoint Group), regardless of traffic from the client to the proxy. Only IPv4 health checks
-   * are used to check the health of the backends. This is the default setting. - PREFER_IPV6:
-   * Prioritize the connection to the endpoint's IPv6 address over its IPv4 address (provided there
-   * is a healthy IPv6 address). - IPV6_ONLY: Only send IPv6 traffic to the backends of the backend
-   * service (Instance Group, Managed Instance Group, Network Endpoint Group), regardless of traffic
-   * from the client to the proxy. Only IPv6 health checks are used to check the health of the
-   * backends. This field is applicable to either: - Advanced global external Application Load
-   * Balancer (load balancing scheme EXTERNAL_MANAGED), - Regional external Application Load
-   * Balancer, - Internal proxy Network Load Balancer (load balancing scheme INTERNAL_MANAGED), -
-   * Regional internal Application Load Balancer (load balancing scheme INTERNAL_MANAGED), - Traffic
-   * Director with Envoy proxies and proxyless gRPC (load balancing scheme INTERNAL_SELF_MANAGED).
+   * the backend for proxyless gRPC). The possible values are:        - IPV4_ONLY: Only send IPv4
+   * traffic to the backends of the    backend service (Instance Group, Managed Instance Group,
+   * Network Endpoint    Group), regardless of traffic from the client to the proxy. Only IPv4
+   * health checks are used to check the health of the backends. This is the    default setting.
+   * - PREFER_IPV6: Prioritize the connection to the endpoint's    IPv6 address over its IPv4
+   * address (provided there is a healthy IPv6    address).    - IPV6_ONLY: Only send IPv6 traffic
+   * to the backends of the    backend service (Instance Group, Managed Instance Group, Network
+   * Endpoint    Group), regardless of traffic from the client to the proxy. Only IPv6    health
+   * checks are used to check the health of the backends.
+   *
+   * This field is applicable to either:        -  Advanced global external Application Load
+   * Balancer (load balancing    scheme EXTERNAL_MANAGED),     -  Regional external Application Load
+   * Balancer,     -  Internal proxy Network Load Balancer (load balancing    scheme
+   * INTERNAL_MANAGED),     -  Regional internal Application Load    Balancer (load balancing scheme
+   * INTERNAL_MANAGED),     -  Traffic    Director with Envoy proxies and proxyless gRPC (load
+   * balancing scheme    INTERNAL_SELF_MANAGED).
    * @param ipAddressSelectionPolicy ipAddressSelectionPolicy or {@code null} for none
    */
   public BackendService setIpAddressSelectionPolicy(java.lang.String ipAddressSelectionPolicy) {
@@ -1256,7 +1390,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the load balancer type. A backend service created for one type of load balancer
-   * cannot be used with another. For more information, refer to Choosing a load balancer.
+   * cannot be used with another. For more information, refer toChoosing a load balancer.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -1265,7 +1399,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the load balancer type. A backend service created for one type of load balancer
-   * cannot be used with another. For more information, refer to Choosing a load balancer.
+   * cannot be used with another. For more information, refer toChoosing a load balancer.
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public BackendService setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
@@ -1277,10 +1411,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * A list of locality load-balancing policies to be used in order of preference. When you use
    * localityLbPolicies, you must set at least one value for either the localityLbPolicies[].policy
    * or the localityLbPolicies[].customPolicy field. localityLbPolicies overrides any value set in
-   * the localityLbPolicy field. For an example of how to use this field, see Define a list of
-   * preferred policies. Caution: This field and its children are intended for use in a service mesh
-   * that includes gRPC clients only. Envoy proxies can't use backend services that have this
-   * configuration.
+   * the localityLbPolicy field.
+   *
+   * For an example of how to use this field, seeDefine a list of preferred policies.
+   *
+   * Caution: This field and its children are intended for use in a service mesh that includes gRPC
+   * clients only. Envoy proxies can't use backend services that have this configuration.
    * @return value or {@code null} for none
    */
   public java.util.List<BackendServiceLocalityLoadBalancingPolicyConfig> getLocalityLbPolicies() {
@@ -1291,10 +1427,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * A list of locality load-balancing policies to be used in order of preference. When you use
    * localityLbPolicies, you must set at least one value for either the localityLbPolicies[].policy
    * or the localityLbPolicies[].customPolicy field. localityLbPolicies overrides any value set in
-   * the localityLbPolicy field. For an example of how to use this field, see Define a list of
-   * preferred policies. Caution: This field and its children are intended for use in a service mesh
-   * that includes gRPC clients only. Envoy proxies can't use backend services that have this
-   * configuration.
+   * the localityLbPolicy field.
+   *
+   * For an example of how to use this field, seeDefine a list of preferred policies.
+   *
+   * Caution: This field and its children are intended for use in a service mesh that includes gRPC
+   * clients only. Envoy proxies can't use backend services that have this configuration.
    * @param localityLbPolicies localityLbPolicies or {@code null} for none
    */
   public BackendService setLocalityLbPolicies(java.util.List<BackendServiceLocalityLoadBalancingPolicyConfig> localityLbPolicies) {
@@ -1303,32 +1441,33 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The load balancing algorithm used within the scope of the locality. The possible values are: -
-   * ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin
-   * order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy
-   * hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash
-   * load balancer implements consistent hashing to backends. The algorithm has the property that
-   * the addition/removal of a host from a set of N hosts only affects 1/N of the requests. -
-   * RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host
-   * is selected based on the client connection metadata, i.e., connections are opened to the same
-   * address as the destination address of the incoming connection before the connection was
-   * redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load
-   * balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host
-   * selection times. For more information about Maglev, see Maglev: A Fast and Reliable Software
-   * Network Load Balancer. - WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round Robin Load Balancing
-   * using weights computed from Backend reported Custom Metrics. If set, the Backend Service
-   * responses are expected to contain non-standard HTTP response header field Endpoint-Load-
-   * Metrics. The reported metrics to use for computing the weights are specified via the
-   * customMetrics field. This field is applicable to either: - A regional backend service with the
-   * service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-   * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
-   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If sessionAffinity is not
-   * configured—that is, if session affinity remains at the default value of NONE—then the default
-   * value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to a value other than
-   * NONE, then the default value for localityLbPolicy is MAGLEV. Only ROUND_ROBIN and RING_HASH are
-   * supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true. localityLbPolicy cannot be specified
-   * with haPolicy.
+   * The load balancing algorithm used within the scope of the locality. The possible values are:
+   * - ROUND_ROBIN: This is a simple policy in which each healthy    backend is selected in round
+   * robin order. This is the default.    - LEAST_REQUEST: An O(1) algorithm which    selects two
+   * random healthy hosts and picks the host which has fewer active    requests.    - RING_HASH: The
+   * ring/modulo hash load balancer implements    consistent hashing to backends. The algorithm has
+   * the property that the    addition/removal of a host from a set of N hosts only affects 1/N of
+   * the    requests.    - RANDOM: The load balancer selects a random healthy    host.    -
+   * ORIGINAL_DESTINATION: Backend host is selected    based on the client connection metadata,
+   * i.e., connections are opened to    the same address as the destination address of the incoming
+   * connection    before the connection was redirected to the load balancer.    - MAGLEV: used as a
+   * drop in replacement for the ring hash    load balancer. Maglev is not as stable as ring hash
+   * but has faster table    lookup build times and host selection times. For more information about
+   * Maglev, see Maglev:    A Fast and Reliable Software Network Load Balancer.    -
+   * WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round Robin    Load Balancing using weights
+   * computed from Backend reported Custom Metrics.    If set, the Backend Service responses are
+   * expected to contain non-standard    HTTP response header field Endpoint-Load-Metrics. The
+   * reported    metrics to use for computing the weights are specified via thecustomMetrics field.
+   * This field is applicable to either:       - A regional backend service with the
+   * service_protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED.        - A global backend service with the       load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or       EXTERNAL_MANAGED.            If
+   * sessionAffinity is not configured—that is, if session    affinity remains at the default value
+   * of NONE—then the    default value for localityLbPolicy    is ROUND_ROBIN. If session affinity
+   * is set to a value other    than NONE,    then the default value for localityLbPolicy isMAGLEV.
+   * Only ROUND_ROBIN and RING_HASH are supported    when the backend service is referenced by a URL
+   * map that is bound to    target gRPC proxy that has validateForProxyless field set to true.
+   * localityLbPolicy cannot be specified with haPolicy.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalityLbPolicy() {
@@ -1336,32 +1475,33 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The load balancing algorithm used within the scope of the locality. The possible values are: -
-   * ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin
-   * order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy
-   * hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash
-   * load balancer implements consistent hashing to backends. The algorithm has the property that
-   * the addition/removal of a host from a set of N hosts only affects 1/N of the requests. -
-   * RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host
-   * is selected based on the client connection metadata, i.e., connections are opened to the same
-   * address as the destination address of the incoming connection before the connection was
-   * redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load
-   * balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host
-   * selection times. For more information about Maglev, see Maglev: A Fast and Reliable Software
-   * Network Load Balancer. - WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round Robin Load Balancing
-   * using weights computed from Backend reported Custom Metrics. If set, the Backend Service
-   * responses are expected to contain non-standard HTTP response header field Endpoint-Load-
-   * Metrics. The reported metrics to use for computing the weights are specified via the
-   * customMetrics field. This field is applicable to either: - A regional backend service with the
-   * service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-   * INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to
-   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If sessionAffinity is not
-   * configured—that is, if session affinity remains at the default value of NONE—then the default
-   * value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to a value other than
-   * NONE, then the default value for localityLbPolicy is MAGLEV. Only ROUND_ROBIN and RING_HASH are
-   * supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true. localityLbPolicy cannot be specified
-   * with haPolicy.
+   * The load balancing algorithm used within the scope of the locality. The possible values are:
+   * - ROUND_ROBIN: This is a simple policy in which each healthy    backend is selected in round
+   * robin order. This is the default.    - LEAST_REQUEST: An O(1) algorithm which    selects two
+   * random healthy hosts and picks the host which has fewer active    requests.    - RING_HASH: The
+   * ring/modulo hash load balancer implements    consistent hashing to backends. The algorithm has
+   * the property that the    addition/removal of a host from a set of N hosts only affects 1/N of
+   * the    requests.    - RANDOM: The load balancer selects a random healthy    host.    -
+   * ORIGINAL_DESTINATION: Backend host is selected    based on the client connection metadata,
+   * i.e., connections are opened to    the same address as the destination address of the incoming
+   * connection    before the connection was redirected to the load balancer.    - MAGLEV: used as a
+   * drop in replacement for the ring hash    load balancer. Maglev is not as stable as ring hash
+   * but has faster table    lookup build times and host selection times. For more information about
+   * Maglev, see Maglev:    A Fast and Reliable Software Network Load Balancer.    -
+   * WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round Robin    Load Balancing using weights
+   * computed from Backend reported Custom Metrics.    If set, the Backend Service responses are
+   * expected to contain non-standard    HTTP response header field Endpoint-Load-Metrics. The
+   * reported    metrics to use for computing the weights are specified via thecustomMetrics field.
+   * This field is applicable to either:       - A regional backend service with the
+   * service_protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED.        - A global backend service with the       load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or       EXTERNAL_MANAGED.            If
+   * sessionAffinity is not configured—that is, if session    affinity remains at the default value
+   * of NONE—then the    default value for localityLbPolicy    is ROUND_ROBIN. If session affinity
+   * is set to a value other    than NONE,    then the default value for localityLbPolicy isMAGLEV.
+   * Only ROUND_ROBIN and RING_HASH are supported    when the backend service is referenced by a URL
+   * map that is bound to    target gRPC proxy that has validateForProxyless field set to true.
+   * localityLbPolicy cannot be specified with haPolicy.
    * @param localityLbPolicy localityLbPolicy or {@code null} for none
    */
   public BackendService setLocalityLbPolicy(java.lang.String localityLbPolicy) {
@@ -1391,10 +1531,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Specifies the default maximum duration (timeout) for streams to this service. Duration is
    * computed from the beginning of the stream until the response has been completely processed,
-   * including all retries. A stream that does not complete in this duration is closed. If not
-   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value
-   * can be overridden in the PathMatcher configuration of the UrlMap that references this backend
-   * service. This field is only allowed when the loadBalancingScheme of the backend service is
+   * including all retries. A stream that does not complete in this duration is closed.
+   *
+   * If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
+   *
+   * This value can be overridden in the PathMatcher configuration of the UrlMap that references
+   * this backend service.
+   *
+   * This field is only allowed when the loadBalancingScheme of the backend service is
    * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
@@ -1405,10 +1549,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Specifies the default maximum duration (timeout) for streams to this service. Duration is
    * computed from the beginning of the stream until the response has been completely processed,
-   * including all retries. A stream that does not complete in this duration is closed. If not
-   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value
-   * can be overridden in the PathMatcher configuration of the UrlMap that references this backend
-   * service. This field is only allowed when the loadBalancingScheme of the backend service is
+   * including all retries. A stream that does not complete in this duration is closed.
+   *
+   * If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
+   *
+   * This value can be overridden in the PathMatcher configuration of the UrlMap that references
+   * this backend service.
+   *
+   * This field is only allowed when the loadBalancingScheme of the backend service is
    * INTERNAL_SELF_MANAGED.
    * @param maxStreamDuration maxStreamDuration or {@code null} for none
    */
@@ -1438,7 +1586,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -1450,7 +1598,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -1462,11 +1610,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The URL of the network to which this backend service belongs. This field must be set for
-   * Internal Passthrough Network Load Balancers when the haPolicy is enabled, and for External
-   * Passthrough Network Load Balancers when the haPolicy fastIpMove is enabled. This field can only
-   * be specified when the load balancing scheme is set to INTERNAL, or when the load balancing
-   * scheme is set to EXTERNAL and haPolicy fastIpMove is enabled.
+   * The URL of the network to which this backend service belongs.
+   *
+   * This field must be set for Internal Passthrough Network Load Balancers when the haPolicy is
+   * enabled, and for External Passthrough Network Load Balancers when the haPolicy fastIpMove is
+   * enabled.
+   *
+   * This field can only be specified when the load balancing scheme is set toINTERNAL, or when the
+   * load balancing scheme is set toEXTERNAL and haPolicy fastIpMove is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -1474,11 +1625,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The URL of the network to which this backend service belongs. This field must be set for
-   * Internal Passthrough Network Load Balancers when the haPolicy is enabled, and for External
-   * Passthrough Network Load Balancers when the haPolicy fastIpMove is enabled. This field can only
-   * be specified when the load balancing scheme is set to INTERNAL, or when the load balancing
-   * scheme is set to EXTERNAL and haPolicy fastIpMove is enabled.
+   * The URL of the network to which this backend service belongs.
+   *
+   * This field must be set for Internal Passthrough Network Load Balancers when the haPolicy is
+   * enabled, and for External Passthrough Network Load Balancers when the haPolicy fastIpMove is
+   * enabled.
+   *
+   * This field can only be specified when the load balancing scheme is set toINTERNAL, or when the
+   * load balancing scheme is set toEXTERNAL and haPolicy fastIpMove is enabled.
    * @param network network or {@code null} for none
    */
   public BackendService setNetwork(java.lang.String network) {
@@ -1488,6 +1642,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Configures traffic steering properties of internal passthrough Network Load Balancers.
+   *
    * networkPassThroughLbTrafficPolicy cannot be specified with haPolicy.
    * @return value or {@code null} for none
    */
@@ -1497,6 +1652,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Configures traffic steering properties of internal passthrough Network Load Balancers.
+   *
    * networkPassThroughLbTrafficPolicy cannot be specified with haPolicy.
    * @param networkPassThroughLbTrafficPolicy networkPassThroughLbTrafficPolicy or {@code null} for none
    */
@@ -1508,23 +1664,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
    * of each individual proxy instance that processes the traffic for the given backend service. If
-   * not set, this feature is considered disabled. Results of the outlier detection algorithm
-   * (ejection of endpoints from the load balancing pool and returning them back to the pool) are
-   * executed independently by each proxy instance of the load balancer. In most cases, more than
-   * one proxy instance handles the traffic received by a backend service. Thus, it is possible that
-   * an unhealthy endpoint is detected and ejected by only some of the proxies, and while this
-   * happens, other proxies may continue to send requests to the same unhealthy endpoint until they
-   * detect and eject the unhealthy endpoint. Applicable backend endpoints can be: - VM instances in
-   * an Instance Group - Endpoints in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT) - Endpoints in a
-   * Hybrid Connectivity NEG (NON_GCP_PRIVATE_IP_PORT) - Serverless NEGs, that resolve to Cloud Run,
-   * App Engine, or Cloud Functions Services - Private Service Connect NEGs, that resolve to Google-
-   * managed regional API endpoints or managed services published using Private Service Connect
-   * Applicable backend service types can be: - A global backend service with the
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. - A regional backend
-   * service with the serviceProtocol set to HTTP, HTTPS, HTTP2 or H2C, and loadBalancingScheme set
-   * to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not supported for Serverless NEGs. Not supported when
-   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * not set, this feature is considered disabled.
+   *
+   * Results of the outlier detection algorithm (ejection of endpoints from the load balancing pool
+   * and returning them back to the pool) are executed independently by each proxy instance of the
+   * load balancer. In most cases, more than one proxy instance handles the traffic received by a
+   * backend service. Thus, it is possible that an unhealthy endpoint is detected and ejected by
+   * only some of the proxies, and while this happens, other proxies may continue to send requests
+   * to the same unhealthy endpoint until they detect and eject the unhealthy endpoint.
+   *
+   * Applicable backend endpoints can be:        - VM instances in an Instance Group    - Endpoints
+   * in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT)    - Endpoints in a Hybrid Connectivity NEG
+   * (NON_GCP_PRIVATE_IP_PORT)    - Serverless NEGs, that resolve to Cloud Run, App Engine, or Cloud
+   * Functions Services     - Private Service Connect NEGs, that resolve to    Google-managed
+   * regional API endpoints or managed services published using    Private Service Connect
+   *
+   * Applicable backend service types can be:        - A global backend service with the
+   * loadBalancingScheme set to    INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.     - A regional
+   * backend    service with the serviceProtocol set to HTTP, HTTPS, HTTP2 or H2C, and
+   * loadBalancingScheme set to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not    supported for
+   * Serverless NEGs.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public OutlierDetection getOutlierDetection() {
@@ -1534,23 +1696,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
    * of each individual proxy instance that processes the traffic for the given backend service. If
-   * not set, this feature is considered disabled. Results of the outlier detection algorithm
-   * (ejection of endpoints from the load balancing pool and returning them back to the pool) are
-   * executed independently by each proxy instance of the load balancer. In most cases, more than
-   * one proxy instance handles the traffic received by a backend service. Thus, it is possible that
-   * an unhealthy endpoint is detected and ejected by only some of the proxies, and while this
-   * happens, other proxies may continue to send requests to the same unhealthy endpoint until they
-   * detect and eject the unhealthy endpoint. Applicable backend endpoints can be: - VM instances in
-   * an Instance Group - Endpoints in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT) - Endpoints in a
-   * Hybrid Connectivity NEG (NON_GCP_PRIVATE_IP_PORT) - Serverless NEGs, that resolve to Cloud Run,
-   * App Engine, or Cloud Functions Services - Private Service Connect NEGs, that resolve to Google-
-   * managed regional API endpoints or managed services published using Private Service Connect
-   * Applicable backend service types can be: - A global backend service with the
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. - A regional backend
-   * service with the serviceProtocol set to HTTP, HTTPS, HTTP2 or H2C, and loadBalancingScheme set
-   * to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not supported for Serverless NEGs. Not supported when
-   * the backend service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * not set, this feature is considered disabled.
+   *
+   * Results of the outlier detection algorithm (ejection of endpoints from the load balancing pool
+   * and returning them back to the pool) are executed independently by each proxy instance of the
+   * load balancer. In most cases, more than one proxy instance handles the traffic received by a
+   * backend service. Thus, it is possible that an unhealthy endpoint is detected and ejected by
+   * only some of the proxies, and while this happens, other proxies may continue to send requests
+   * to the same unhealthy endpoint until they detect and eject the unhealthy endpoint.
+   *
+   * Applicable backend endpoints can be:        - VM instances in an Instance Group    - Endpoints
+   * in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT)    - Endpoints in a Hybrid Connectivity NEG
+   * (NON_GCP_PRIVATE_IP_PORT)    - Serverless NEGs, that resolve to Cloud Run, App Engine, or Cloud
+   * Functions Services     - Private Service Connect NEGs, that resolve to    Google-managed
+   * regional API endpoints or managed services published using    Private Service Connect
+   *
+   * Applicable backend service types can be:        - A global backend service with the
+   * loadBalancingScheme set to    INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.     - A regional
+   * backend    service with the serviceProtocol set to HTTP, HTTPS, HTTP2 or H2C, and
+   * loadBalancingScheme set to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not    supported for
+   * Serverless NEGs.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param outlierDetection outlierDetection or {@code null} for none
    */
   public BackendService setOutlierDetection(OutlierDetection outlierDetection) {
@@ -1624,11 +1792,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The protocol this BackendService uses to communicate with backends. Possible values are HTTP,
-   * HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic
-   * Director configuration. Refer to the documentation for the load balancers or for Traffic
-   * Director for more information. Must be set to GRPC when the backend service is referenced by a
-   * URL map that is bound to target gRPC proxy.
+   * The protocol this BackendService uses to communicate with backends.
+   *
+   * Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen
+   * load balancer or Traffic Director configuration. Refer to the documentation for the load
+   * balancers or for Traffic Director for more information.
+   *
+   * Must be set to GRPC when the backend service is referenced by a URL map that is bound to target
+   * gRPC proxy.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -1636,11 +1807,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The protocol this BackendService uses to communicate with backends. Possible values are HTTP,
-   * HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic
-   * Director configuration. Refer to the documentation for the load balancers or for Traffic
-   * Director for more information. Must be set to GRPC when the backend service is referenced by a
-   * URL map that is bound to target gRPC proxy.
+   * The protocol this BackendService uses to communicate with backends.
+   *
+   * Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen
+   * load balancer or Traffic Director configuration. Refer to the documentation for the load
+   * balancers or for Traffic Director for more information.
+   *
+   * Must be set to GRPC when the backend service is referenced by a URL map that is bound to target
+   * gRPC proxy.
    * @param protocol protocol or {@code null} for none
    */
   public BackendService setProtocol(java.lang.String protocol) {
@@ -1742,8 +1916,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is
-   * INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
+   * URLs of networkservices.ServiceBinding resources.
+   *
+   * Can only be set if load balancing scheme is INTERNAL_SELF_MANAGED. If set, lists of backends
+   * and health checks must be both empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServiceBindings() {
@@ -1751,8 +1927,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is
-   * INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
+   * URLs of networkservices.ServiceBinding resources.
+   *
+   * Can only be set if load balancing scheme is INTERNAL_SELF_MANAGED. If set, lists of backends
+   * and health checks must be both empty.
    * @param serviceBindings serviceBindings or {@code null} for none
    */
   public BackendService setServiceBindings(java.util.List<java.lang.String> serviceBindings) {
@@ -1761,8 +1939,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
-   * EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
+   * URL to networkservices.ServiceLbPolicy resource.
+   *
+   * Can only be set if load balancing scheme is EXTERNAL_MANAGED, INTERNAL_MANAGED or
+   * INTERNAL_SELF_MANAGED and the scope is global.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceLbPolicy() {
@@ -1770,8 +1950,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
-   * EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
+   * URL to networkservices.ServiceLbPolicy resource.
+   *
+   * Can only be set if load balancing scheme is EXTERNAL_MANAGED, INTERNAL_MANAGED or
+   * INTERNAL_SELF_MANAGED and the scope is global.
    * @param serviceLbPolicy serviceLbPolicy or {@code null} for none
    */
   public BackendService setServiceLbPolicy(java.lang.String serviceLbPolicy) {
@@ -1780,10 +1962,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported
-   * when the backend service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true. For more details, see: [Session
-   * Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
+   * Type of session affinity to use. The default is NONE.
+   *
+   * Only NONE and HEADER_FIELD are supported when the backend service is referenced by a URL map
+   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   *
+   * For more details, see: [Session Affinity](https://cloud.google.com/load-balancing/docs/backend-
+   * service#session_affinity).
+   *
    * sessionAffinity cannot be specified with haPolicy.
    * @return value or {@code null} for none
    */
@@ -1792,10 +1978,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported
-   * when the backend service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true. For more details, see: [Session
-   * Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
+   * Type of session affinity to use. The default is NONE.
+   *
+   * Only NONE and HEADER_FIELD are supported when the backend service is referenced by a URL map
+   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   *
+   * For more details, see: [Session Affinity](https://cloud.google.com/load-balancing/docs/backend-
+   * service#session_affinity).
+   *
    * sessionAffinity cannot be specified with haPolicy.
    * @param sessionAffinity sessionAffinity or {@code null} for none
    */
@@ -1806,7 +1996,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Describes the HTTP cookie used for stateful session affinity. This field is applicable and
-   * required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+   * required if the sessionAffinity is set toSTRONG_COOKIE_AFFINITY.
    * @return value or {@code null} for none
    */
   public BackendServiceHttpCookie getStrongSessionAffinityCookie() {
@@ -1815,7 +2005,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Describes the HTTP cookie used for stateful session affinity. This field is applicable and
-   * required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+   * required if the sessionAffinity is set toSTRONG_COOKIE_AFFINITY.
    * @param strongSessionAffinityCookie strongSessionAffinityCookie or {@code null} for none
    */
   public BackendService setStrongSessionAffinityCookie(BackendServiceHttpCookie strongSessionAffinityCookie) {
@@ -1843,9 +2033,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The backend service timeout has a different meaning depending on the type of load balancer. For
    * more information see, Backend service settings. The default is 30 seconds. The full range of
-   * timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden
-   * in the PathMatcher configuration of the UrlMap that references this backend service. Not
-   * supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * timeout values allowed goes from 1 through 2,147,483,647 seconds.
+   *
+   * This value can be overridden in the PathMatcher configuration of the UrlMap that references
+   * this backend service.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
    * proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
    * @return value or {@code null} for none
    */
@@ -1856,9 +2049,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The backend service timeout has a different meaning depending on the type of load balancer. For
    * more information see, Backend service settings. The default is 30 seconds. The full range of
-   * timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden
-   * in the PathMatcher configuration of the UrlMap that references this backend service. Not
-   * supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * timeout values allowed goes from 1 through 2,147,483,647 seconds.
+   *
+   * This value can be overridden in the PathMatcher configuration of the UrlMap that references
+   * this backend service.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
    * proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
    * @param timeoutSec timeoutSec or {@code null} for none
    */
@@ -1905,11 +2101,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The network scope of the backends that can be added to the backend service. This field can be
-   * either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A backend service with the VPC scope set to
-   * GLOBAL_VPC_NETWORK is only allowed to have backends in global VPC networks. When the VPC scope
-   * is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have backends in regional
-   * networks in the same scope as the backend service. Note: if not specified then
-   * GLOBAL_VPC_NETWORK will be used.
+   * either GLOBAL_VPC_NETWORK orREGIONAL_VPC_NETWORK.
+   *
+   * A backend service with the VPC scope set to GLOBAL_VPC_NETWORK is only allowed to have backends
+   * in global VPC networks.
+   *
+   * When the VPC scope is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have
+   * backends in regional networks in the same scope as the backend service. Note: if not specified
+   * then GLOBAL_VPC_NETWORK will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getVpcNetworkScope() {
@@ -1918,11 +2117,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The network scope of the backends that can be added to the backend service. This field can be
-   * either GLOBAL_VPC_NETWORK or REGIONAL_VPC_NETWORK. A backend service with the VPC scope set to
-   * GLOBAL_VPC_NETWORK is only allowed to have backends in global VPC networks. When the VPC scope
-   * is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have backends in regional
-   * networks in the same scope as the backend service. Note: if not specified then
-   * GLOBAL_VPC_NETWORK will be used.
+   * either GLOBAL_VPC_NETWORK orREGIONAL_VPC_NETWORK.
+   *
+   * A backend service with the VPC scope set to GLOBAL_VPC_NETWORK is only allowed to have backends
+   * in global VPC networks.
+   *
+   * When the VPC scope is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have
+   * backends in regional networks in the same scope as the backend service. Note: if not specified
+   * then GLOBAL_VPC_NETWORK will be used.
    * @param vpcNetworkScope vpcNetworkScope or {@code null} for none
    */
   public BackendService setVpcNetworkScope(java.lang.String vpcNetworkScope) {

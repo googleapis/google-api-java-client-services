@@ -31,8 +31,8 @@ public final class ExternalVpnGatewayInterface extends com.google.api.client.jso
 
   /**
    * The numeric ID of this interface. The allowed input values for this id for different redundancy
-   * types of external VPN gateway: - SINGLE_IP_INTERNALLY_REDUNDANT - 0 - TWO_IPS_REDUNDANCY - 0, 1
-   * - FOUR_IPS_REDUNDANCY - 0, 1, 2, 3
+   * types of external VPN gateway:        - SINGLE_IP_INTERNALLY_REDUNDANT - 0    -
+   * TWO_IPS_REDUNDANCY - 0, 1    - FOUR_IPS_REDUNDANCY - 0, 1, 2, 3
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +60,8 @@ public final class ExternalVpnGatewayInterface extends com.google.api.client.jso
 
   /**
    * The numeric ID of this interface. The allowed input values for this id for different redundancy
-   * types of external VPN gateway: - SINGLE_IP_INTERNALLY_REDUNDANT - 0 - TWO_IPS_REDUNDANCY - 0, 1
-   * - FOUR_IPS_REDUNDANCY - 0, 1, 2, 3
+   * types of external VPN gateway:        - SINGLE_IP_INTERNALLY_REDUNDANT - 0    -
+   * TWO_IPS_REDUNDANCY - 0, 1    - FOUR_IPS_REDUNDANCY - 0, 1, 2, 3
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -70,8 +70,8 @@ public final class ExternalVpnGatewayInterface extends com.google.api.client.jso
 
   /**
    * The numeric ID of this interface. The allowed input values for this id for different redundancy
-   * types of external VPN gateway: - SINGLE_IP_INTERNALLY_REDUNDANT - 0 - TWO_IPS_REDUNDANCY - 0, 1
-   * - FOUR_IPS_REDUNDANCY - 0, 1, 2, 3
+   * types of external VPN gateway:        - SINGLE_IP_INTERNALLY_REDUNDANT - 0    -
+   * TWO_IPS_REDUNDANCY - 0, 1    - FOUR_IPS_REDUNDANCY - 0, 1, 2, 3
    * @param id id or {@code null} for none
    */
   public ExternalVpnGatewayInterface setId(java.lang.Long id) {

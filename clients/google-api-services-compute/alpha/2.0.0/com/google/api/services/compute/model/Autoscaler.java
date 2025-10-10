@@ -17,13 +17,19 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Autoscaler resource. Google Compute Engine has two Autoscaler resources: *
- * [Zonal](/compute/docs/reference/rest/alpha/autoscalers) *
- * [Regional](/compute/docs/reference/rest/alpha/regionAutoscalers) Use autoscalers to automatically
- * add or delete instances from a managed instance group according to your defined autoscaling
- * policy. For more information, read Autoscaling Groups of Instances. For zonal managed instance
- * groups resource, use the autoscaler resource. For regional managed instance groups, use the
- * regionAutoscalers resource.
+ * Represents an Autoscaler resource.
+ *
+ * Google Compute Engine has two Autoscaler resources:
+ *
+ * * [Zonal](/compute/docs/reference/rest/alpha/autoscalers) *
+ * [Regional](/compute/docs/reference/rest/alpha/regionAutoscalers)
+ *
+ * Use autoscalers to automatically add or delete instances from a managed instance group according
+ * to your defined autoscaling policy. For more information, read Autoscaling Groups of Instances.
+ *
+ * For zonal managed instance groups resource, use the autoscaler resource.
+ *
+ * For regional managed instance groups, use theregionAutoscalers resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -37,16 +43,17 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * The configuration parameters for the autoscaling algorithm. You can define one or more signals
-   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If
-   * none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or
-   * 60%.
+   * for an autoscaler: cpuUtilization,customMetricUtilizations, andloadBalancingUtilization.
+   *
+   * If none of these are specified, the default will be to autoscale based oncpuUtilization to 0.6
+   * or 60%.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AutoscalingPolicy autoscalingPolicy;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +82,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -95,7 +102,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.Integer recommendedSize;
 
   /**
-   * [Output Only] URL of the region where the instance group resides (for autoscalers living in
+   * [Output Only] URL of theregion where the instance group resides (for autoscalers living in
    * regional scope).
    * The value may be {@code null}.
    */
@@ -124,11 +131,14 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
-   * PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is
-   * being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be
-   * present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users.
-   * Details are present in the statusDetails field. New values might be added in the future.
+   * [Output Only] The status of the autoscaler configuration. Current set of possible values:
+   * - PENDING:      Autoscaler backend hasn't read new/updated configuration.    - DELETING:
+   * Configuration is being deleted.    - ACTIVE:      Configuration is acknowledged to be
+   * effective. Some warnings might      be present in the statusDetails field.    - ERROR:
+   * Configuration has errors. Actionable for users. Details are present in      the statusDetails
+   * field.
+   *
+   * New values might be added in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +146,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Human-readable details about the current state of the autoscaler. Read the
-   * documentation for Commonly returned status messages for examples of status messages you might
+   * documentation forCommonly returned status messages for examples of status messages you might
    * encounter.
    * The value may be {@code null}.
    */
@@ -152,7 +162,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String target;
 
   /**
-   * [Output Only] URL of the zone where the instance group resides (for autoscalers living in zonal
+   * [Output Only] URL of thezone where the instance group resides (for autoscalers living in zonal
    * scope).
    * The value may be {@code null}.
    */
@@ -161,9 +171,10 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * The configuration parameters for the autoscaling algorithm. You can define one or more signals
-   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If
-   * none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or
-   * 60%.
+   * for an autoscaler: cpuUtilization,customMetricUtilizations, andloadBalancingUtilization.
+   *
+   * If none of these are specified, the default will be to autoscale based oncpuUtilization to 0.6
+   * or 60%.
    * @return value or {@code null} for none
    */
   public AutoscalingPolicy getAutoscalingPolicy() {
@@ -172,9 +183,10 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * The configuration parameters for the autoscaling algorithm. You can define one or more signals
-   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If
-   * none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or
-   * 60%.
+   * for an autoscaler: cpuUtilization,customMetricUtilizations, andloadBalancingUtilization.
+   *
+   * If none of these are specified, the default will be to autoscale based oncpuUtilization to 0.6
+   * or 60%.
    * @param autoscalingPolicy autoscalingPolicy or {@code null} for none
    */
   public Autoscaler setAutoscalingPolicy(AutoscalingPolicy autoscalingPolicy) {
@@ -183,7 +195,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -191,7 +203,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Autoscaler setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -252,7 +264,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -264,7 +276,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -299,7 +311,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the instance group resides (for autoscalers living in
+   * [Output Only] URL of theregion where the instance group resides (for autoscalers living in
    * regional scope).
    * @return value or {@code null} for none
    */
@@ -308,7 +320,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the instance group resides (for autoscalers living in
+   * [Output Only] URL of theregion where the instance group resides (for autoscalers living in
    * regional scope).
    * @param region region or {@code null} for none
    */
@@ -369,11 +381,14 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
-   * PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is
-   * being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be
-   * present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users.
-   * Details are present in the statusDetails field. New values might be added in the future.
+   * [Output Only] The status of the autoscaler configuration. Current set of possible values:
+   * - PENDING:      Autoscaler backend hasn't read new/updated configuration.    - DELETING:
+   * Configuration is being deleted.    - ACTIVE:      Configuration is acknowledged to be
+   * effective. Some warnings might      be present in the statusDetails field.    - ERROR:
+   * Configuration has errors. Actionable for users. Details are present in      the statusDetails
+   * field.
+   *
+   * New values might be added in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -381,11 +396,14 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
-   * PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is
-   * being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be
-   * present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users.
-   * Details are present in the statusDetails field. New values might be added in the future.
+   * [Output Only] The status of the autoscaler configuration. Current set of possible values:
+   * - PENDING:      Autoscaler backend hasn't read new/updated configuration.    - DELETING:
+   * Configuration is being deleted.    - ACTIVE:      Configuration is acknowledged to be
+   * effective. Some warnings might      be present in the statusDetails field.    - ERROR:
+   * Configuration has errors. Actionable for users. Details are present in      the statusDetails
+   * field.
+   *
+   * New values might be added in the future.
    * @param status status or {@code null} for none
    */
   public Autoscaler setStatus(java.lang.String status) {
@@ -395,7 +413,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Human-readable details about the current state of the autoscaler. Read the
-   * documentation for Commonly returned status messages for examples of status messages you might
+   * documentation forCommonly returned status messages for examples of status messages you might
    * encounter.
    * @return value or {@code null} for none
    */
@@ -405,7 +423,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Human-readable details about the current state of the autoscaler. Read the
-   * documentation for Commonly returned status messages for examples of status messages you might
+   * documentation forCommonly returned status messages for examples of status messages you might
    * encounter.
    * @param statusDetails statusDetails or {@code null} for none
    */
@@ -434,7 +452,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the zone where the instance group resides (for autoscalers living in zonal
+   * [Output Only] URL of thezone where the instance group resides (for autoscalers living in zonal
    * scope).
    * @return value or {@code null} for none
    */
@@ -443,7 +461,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the zone where the instance group resides (for autoscalers living in zonal
+   * [Output Only] URL of thezone where the instance group resides (for autoscalers living in zonal
    * scope).
    * @param zone zone or {@code null} for none
    */

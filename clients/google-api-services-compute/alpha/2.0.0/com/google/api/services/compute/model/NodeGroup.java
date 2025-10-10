@@ -17,10 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a sole-tenant Node Group resource. A sole-tenant node is a physical server that is
- * dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep
- * your instances physically separated from instances in other projects, or to group your instances
- * together on the same host hardware. For more information, read Sole-tenant nodes.
+ * Represents a sole-tenant Node Group resource.
+ *
+ * A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your
+ * specific project. Use sole-tenant nodes to keep your instances physically separated from
+ * instances in other projects, or to group your instances together on the same host hardware. For
+ * more information, readSole-tenant nodes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -40,7 +42,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private NodeGroupAutoscalingPolicy autoscalingPolicy;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +69,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The type of the resource. Always compute#nodeGroup for node group.
+   * [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +94,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one
-   * of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
+   * of: DEFAULT,RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
    * more information, see Maintenance policies.
    * The value may be {@code null}.
    */
@@ -107,10 +109,10 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +184,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -190,7 +192,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NodeGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -276,7 +278,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Always compute#nodeGroup for node group.
+   * [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -284,7 +286,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Always compute#nodeGroup for node group.
+   * [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
    * @param kind kind or {@code null} for none
    */
   public NodeGroup setKind(java.lang.String kind) {
@@ -334,7 +336,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one
-   * of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
+   * of: DEFAULT,RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
    * more information, see Maintenance policies.
    * @return value or {@code null} for none
    */
@@ -344,7 +346,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one
-   * of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
+   * of: DEFAULT,RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
    * more information, see Maintenance policies.
    * @param maintenancePolicy maintenancePolicy or {@code null} for none
    */
@@ -370,10 +372,10 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -382,10 +384,10 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @param name name or {@code null} for none
    */
   public NodeGroup setName(java.lang.String name) {

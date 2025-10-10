@@ -64,7 +64,7 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or
+   * Local BGP Autonomous System Number (ASN). Must be anRFC6996 private ASN, either 16-bit or
    * 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this
    * router will have the same local ASN.
    * The value may be {@code null}.
@@ -75,20 +75,25 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   /**
    * Explicitly specifies a range of valid BGP Identifiers for this Router. It is provided as a
    * link-local IPv4 range (from 169.254.0.0/16), of size at least /30, even if the BGP sessions are
-   * over IPv6. It must not overlap with any IPv4 BGP session ranges. Other vendors commonly call
-   * this "router ID".
+   * over IPv6. It must not overlap with any IPv4 BGP session ranges.
+   *
+   * Other vendors commonly call this "router ID".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String identifierRange;
 
   /**
-   * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is
-   * three times the interval at which keepalive messages are sent, and the hold time is the maximum
-   * number of seconds allowed to elapse between successive keepalive messages that BGP receives
-   * from a peer. BGP will use the smaller of either the local hold time value or the peer's hold
-   * time value as the hold time for the BGP connection between the two peers. If set, this value
-   * must be between 20 and 60. The default is 20.
+   * The interval in seconds between BGP keepalive messages that are sent to the peer.
+   *
+   * Hold time is three times the interval at which keepalive messages are sent, and the hold time
+   * is the maximum number of seconds allowed to elapse between successive keepalive messages that
+   * BGP receives from a peer.
+   *
+   * BGP will use the smaller of either the local hold time value or the peer's hold time value as
+   * the hold time for the BGP connection between the two peers.
+   *
+   * If set, this value must be between 20 and 60. The default is 20.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +165,7 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or
+   * Local BGP Autonomous System Number (ASN). Must be anRFC6996 private ASN, either 16-bit or
    * 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this
    * router will have the same local ASN.
    * @return value or {@code null} for none
@@ -170,7 +175,7 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or
+   * Local BGP Autonomous System Number (ASN). Must be anRFC6996 private ASN, either 16-bit or
    * 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this
    * router will have the same local ASN.
    * @param asn asn or {@code null} for none
@@ -183,8 +188,9 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   /**
    * Explicitly specifies a range of valid BGP Identifiers for this Router. It is provided as a
    * link-local IPv4 range (from 169.254.0.0/16), of size at least /30, even if the BGP sessions are
-   * over IPv6. It must not overlap with any IPv4 BGP session ranges. Other vendors commonly call
-   * this "router ID".
+   * over IPv6. It must not overlap with any IPv4 BGP session ranges.
+   *
+   * Other vendors commonly call this "router ID".
    * @return value or {@code null} for none
    */
   public java.lang.String getIdentifierRange() {
@@ -194,8 +200,9 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   /**
    * Explicitly specifies a range of valid BGP Identifiers for this Router. It is provided as a
    * link-local IPv4 range (from 169.254.0.0/16), of size at least /30, even if the BGP sessions are
-   * over IPv6. It must not overlap with any IPv4 BGP session ranges. Other vendors commonly call
-   * this "router ID".
+   * over IPv6. It must not overlap with any IPv4 BGP session ranges.
+   *
+   * Other vendors commonly call this "router ID".
    * @param identifierRange identifierRange or {@code null} for none
    */
   public RouterBgp setIdentifierRange(java.lang.String identifierRange) {
@@ -204,12 +211,16 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is
-   * three times the interval at which keepalive messages are sent, and the hold time is the maximum
-   * number of seconds allowed to elapse between successive keepalive messages that BGP receives
-   * from a peer. BGP will use the smaller of either the local hold time value or the peer's hold
-   * time value as the hold time for the BGP connection between the two peers. If set, this value
-   * must be between 20 and 60. The default is 20.
+   * The interval in seconds between BGP keepalive messages that are sent to the peer.
+   *
+   * Hold time is three times the interval at which keepalive messages are sent, and the hold time
+   * is the maximum number of seconds allowed to elapse between successive keepalive messages that
+   * BGP receives from a peer.
+   *
+   * BGP will use the smaller of either the local hold time value or the peer's hold time value as
+   * the hold time for the BGP connection between the two peers.
+   *
+   * If set, this value must be between 20 and 60. The default is 20.
    * @return value or {@code null} for none
    */
   public java.lang.Long getKeepaliveInterval() {
@@ -217,12 +228,16 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is
-   * three times the interval at which keepalive messages are sent, and the hold time is the maximum
-   * number of seconds allowed to elapse between successive keepalive messages that BGP receives
-   * from a peer. BGP will use the smaller of either the local hold time value or the peer's hold
-   * time value as the hold time for the BGP connection between the two peers. If set, this value
-   * must be between 20 and 60. The default is 20.
+   * The interval in seconds between BGP keepalive messages that are sent to the peer.
+   *
+   * Hold time is three times the interval at which keepalive messages are sent, and the hold time
+   * is the maximum number of seconds allowed to elapse between successive keepalive messages that
+   * BGP receives from a peer.
+   *
+   * BGP will use the smaller of either the local hold time value or the peer's hold time value as
+   * the hold time for the BGP connection between the two peers.
+   *
+   * If set, this value must be between 20 and 60. The default is 20.
    * @param keepaliveInterval keepaliveInterval or {@code null} for none
    */
   public RouterBgp setKeepaliveInterval(java.lang.Long keepaliveInterval) {

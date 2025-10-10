@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class MultiMigMember extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp of this multi-MIG member in RFC3339 text format.
+   * [Output Only] Creation timestamp of this multi-MIG member inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class MultiMigMember extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
-   * Type of the resource. Always compute#multiMigMember for a list of multi-MIG members.
+   * Type of the resource. Alwayscompute#multiMigMember for a list of multi-MIG members.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class MultiMigMember extends com.google.api.client.json.GenericJson
   private MultiMigMemberStatus status;
 
   /**
-   * [Output Only] Creation timestamp of this multi-MIG member in RFC3339 text format.
+   * [Output Only] Creation timestamp of this multi-MIG member inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -88,7 +88,7 @@ public final class MultiMigMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp of this multi-MIG member in RFC3339 text format.
+   * [Output Only] Creation timestamp of this multi-MIG member inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public MultiMigMember setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -116,7 +116,7 @@ public final class MultiMigMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of the resource. Always compute#multiMigMember for a list of multi-MIG members.
+   * Type of the resource. Alwayscompute#multiMigMember for a list of multi-MIG members.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -124,7 +124,7 @@ public final class MultiMigMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of the resource. Always compute#multiMigMember for a list of multi-MIG members.
+   * Type of the resource. Alwayscompute#multiMigMember for a list of multi-MIG members.
    * @param kind kind or {@code null} for none
    */
   public MultiMigMember setKind(java.lang.String kind) {

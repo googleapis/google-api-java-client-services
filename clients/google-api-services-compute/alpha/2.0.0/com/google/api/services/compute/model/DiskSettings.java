@@ -38,9 +38,13 @@ public final class DiskSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional parameter for storing the default resource policies that will be used for the Disks
-   * created in the given scope. The Key is a string type, provided by customers to uniquely
-   * identify the default Resource Policy entry. The Value is a Default ResourcePolicyDetails Object
-   * used to represent the detailed information of the Resource Policy entry.
+   * created in the given scope.
+   *
+   * The Key is a string type, provided by customers to uniquely identify the default Resource
+   * Policy entry.
+   *
+   * The Value is a Default ResourcePolicyDetails Object used to represent the detailed information
+   * of the Resource Policy entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +69,13 @@ public final class DiskSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional parameter for storing the default resource policies that will be used for the Disks
-   * created in the given scope. The Key is a string type, provided by customers to uniquely
-   * identify the default Resource Policy entry. The Value is a Default ResourcePolicyDetails Object
-   * used to represent the detailed information of the Resource Policy entry.
+   * created in the given scope.
+   *
+   * The Key is a string type, provided by customers to uniquely identify the default Resource
+   * Policy entry.
+   *
+   * The Value is a Default ResourcePolicyDetails Object used to represent the detailed information
+   * of the Resource Policy entry.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, DiskSettingsResourcePolicyDetails> getDefaultResourcePolicies() {
@@ -76,9 +84,13 @@ public final class DiskSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional parameter for storing the default resource policies that will be used for the Disks
-   * created in the given scope. The Key is a string type, provided by customers to uniquely
-   * identify the default Resource Policy entry. The Value is a Default ResourcePolicyDetails Object
-   * used to represent the detailed information of the Resource Policy entry.
+   * created in the given scope.
+   *
+   * The Key is a string type, provided by customers to uniquely identify the default Resource
+   * Policy entry.
+   *
+   * The Value is a Default ResourcePolicyDetails Object used to represent the detailed information
+   * of the Resource Policy entry.
    * @param defaultResourcePolicies defaultResourcePolicies or {@code null} for none
    */
   public DiskSettings setDefaultResourcePolicies(java.util.Map<String, DiskSettingsResourcePolicyDetails> defaultResourcePolicies) {

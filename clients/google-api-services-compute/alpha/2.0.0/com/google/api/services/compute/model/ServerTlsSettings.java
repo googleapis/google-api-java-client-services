@@ -46,9 +46,9 @@ public final class ServerTlsSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Indicates whether connections should be secured using TLS. The value of this field determines
-   * how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections
-   * with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by
-   * presenting client certificates for authentication.
+   * how TLS is enforced. This field can be set to one of the following:        -  SIMPLE Secure
+   * connections with standard TLS semantics.    -  MUTUAL Secure connections to the backends using
+   * mutual    TLS by presenting client certificates for authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,9 +92,9 @@ public final class ServerTlsSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Indicates whether connections should be secured using TLS. The value of this field determines
-   * how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections
-   * with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by
-   * presenting client certificates for authentication.
+   * how TLS is enforced. This field can be set to one of the following:        -  SIMPLE Secure
+   * connections with standard TLS semantics.    -  MUTUAL Secure connections to the backends using
+   * mutual    TLS by presenting client certificates for authentication.
    * @return value or {@code null} for none
    */
   public java.lang.String getTlsMode() {
@@ -103,9 +103,9 @@ public final class ServerTlsSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Indicates whether connections should be secured using TLS. The value of this field determines
-   * how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections
-   * with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by
-   * presenting client certificates for authentication.
+   * how TLS is enforced. This field can be set to one of the following:        -  SIMPLE Secure
+   * connections with standard TLS semantics.    -  MUTUAL Secure connections to the backends using
+   * mutual    TLS by presenting client certificates for authentication.
    * @param tlsMode tlsMode or {@code null} for none
    */
   public ServerTlsSettings setTlsMode(java.lang.String tlsMode) {

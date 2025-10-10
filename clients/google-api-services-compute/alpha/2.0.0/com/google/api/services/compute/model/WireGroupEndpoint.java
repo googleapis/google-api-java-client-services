@@ -32,7 +32,7 @@ public final class WireGroupEndpoint extends com.google.api.client.json.GenericJ
 
   /**
    * A map that contains the redundant Interconnect connections. Specify key-value pairs for the map
-   * as follows: - Key: an RFC1035 user-specified label. - Value: an Interconnect object.
+   * as follows:        - Key: an RFC1035 user-specified label.    - Value: an Interconnect object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class WireGroupEndpoint extends com.google.api.client.json.GenericJ
 
   /**
    * A map that contains the redundant Interconnect connections. Specify key-value pairs for the map
-   * as follows: - Key: an RFC1035 user-specified label. - Value: an Interconnect object.
+   * as follows:        - Key: an RFC1035 user-specified label.    - Value: an Interconnect object.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, WireGroupEndpointInterconnect> getInterconnects() {
@@ -49,7 +49,7 @@ public final class WireGroupEndpoint extends com.google.api.client.json.GenericJ
 
   /**
    * A map that contains the redundant Interconnect connections. Specify key-value pairs for the map
-   * as follows: - Key: an RFC1035 user-specified label. - Value: an Interconnect object.
+   * as follows:        - Key: an RFC1035 user-specified label.    - Value: an Interconnect object.
    * @param interconnects interconnects or {@code null} for none
    */
   public WireGroupEndpoint setInterconnects(java.util.Map<String, WireGroupEndpointInterconnect> interconnects) {

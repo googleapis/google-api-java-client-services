@@ -79,7 +79,7 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
 
   /**
    * [Output Only] Zones used to explain this blocker in more detail. Format is "zone1" and/or
-   * "zone2". This will be set for some blockers (like MISSING_ZONE) but does not apply to others.
+   * "zone2". This will be set for some blockers (like  MISSING_ZONE) but does not apply to others.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +199,7 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
 
   /**
    * [Output Only] Zones used to explain this blocker in more detail. Format is "zone1" and/or
-   * "zone2". This will be set for some blockers (like MISSING_ZONE) but does not apply to others.
+   * "zone2". This will be set for some blockers (like  MISSING_ZONE) but does not apply to others.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getZones() {
@@ -208,7 +208,7 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
 
   /**
    * [Output Only] Zones used to explain this blocker in more detail. Format is "zone1" and/or
-   * "zone2". This will be set for some blockers (like MISSING_ZONE) but does not apply to others.
+   * "zone2". This will be set for some blockers (like  MISSING_ZONE) but does not apply to others.
    * @param zones zones or {@code null} for none
    */
   public InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedSlaBlockers setZones(java.util.List<java.lang.String> zones) {

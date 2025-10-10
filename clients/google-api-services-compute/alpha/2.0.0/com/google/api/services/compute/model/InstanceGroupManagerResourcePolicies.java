@@ -31,10 +31,9 @@ public final class InstanceGroupManagerResourcePolicies extends com.google.api.c
 
   /**
    * The URL of the workload policy that is specified for this managed instance group. It can be a
-   * full or partial URL. For example, the following are all valid URLs to a workload policy: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /resourcePolicies/resourcePolicy -
-   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * full or partial URL. For example, the following are all valid URLs to a workload policy:
+   * - https://www.googleapis.com/compute/v1/projects/project/regions/region/resourcePolicies/resour
+   * cePolicy       - projects/project/regions/region/resourcePolicies/resourcePolicy       -
    * regions/region/resourcePolicies/resourcePolicy
    * The value may be {@code null}.
    */
@@ -43,10 +42,9 @@ public final class InstanceGroupManagerResourcePolicies extends com.google.api.c
 
   /**
    * The URL of the workload policy that is specified for this managed instance group. It can be a
-   * full or partial URL. For example, the following are all valid URLs to a workload policy: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /resourcePolicies/resourcePolicy -
-   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * full or partial URL. For example, the following are all valid URLs to a workload policy:
+   * - https://www.googleapis.com/compute/v1/projects/project/regions/region/resourcePolicies/resour
+   * cePolicy       - projects/project/regions/region/resourcePolicies/resourcePolicy       -
    * regions/region/resourcePolicies/resourcePolicy
    * @return value or {@code null} for none
    */
@@ -56,10 +54,9 @@ public final class InstanceGroupManagerResourcePolicies extends com.google.api.c
 
   /**
    * The URL of the workload policy that is specified for this managed instance group. It can be a
-   * full or partial URL. For example, the following are all valid URLs to a workload policy: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /resourcePolicies/resourcePolicy -
-   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * full or partial URL. For example, the following are all valid URLs to a workload policy:
+   * - https://www.googleapis.com/compute/v1/projects/project/regions/region/resourcePolicies/resour
+   * cePolicy       - projects/project/regions/region/resourcePolicies/resourcePolicy       -
    * regions/region/resourcePolicies/resourcePolicy
    * @param workloadPolicy workloadPolicy or {@code null} for none
    */

@@ -40,12 +40,12 @@ public final class WireGroupWireInputs extends com.google.api.client.json.Generi
 
   /**
    * The overridden properties for the wire. Any properties that are not overridden are omitted from
-   * the object. Review the following guidelines: - If you apply wire overrides to a wire and its
-   * wire group bandwidth configuration is set to `SHARED_WITH_WIRE_GROUP`, the `meteredBandwidth`
-   * and `unmeteredBandwidth` properties must not differ from the wire group. - Overrides generate a
-   * `configurationNotice`. Ensure that differences in wire configuration are temporary. An example
-   * use case for wire overrides is slowly rolling out configuration changes to individual wires in
-   * a wire group.
+   * the object. Review the following guidelines:        - If you apply wire overrides to a wire and
+   * its wire group bandwidth    configuration is set to `SHARED_WITH_WIRE_GROUP`, the
+   * `meteredBandwidth` and `unmeteredBandwidth` properties must not differ    from the wire group.
+   * - Overrides generate a `configurationNotice`. Ensure that differences    in wire configuration
+   * are temporary. An example use case for wire    overrides is slowly rolling out configuration
+   * changes to individual wires    in a wire group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,12 +72,12 @@ public final class WireGroupWireInputs extends com.google.api.client.json.Generi
 
   /**
    * The overridden properties for the wire. Any properties that are not overridden are omitted from
-   * the object. Review the following guidelines: - If you apply wire overrides to a wire and its
-   * wire group bandwidth configuration is set to `SHARED_WITH_WIRE_GROUP`, the `meteredBandwidth`
-   * and `unmeteredBandwidth` properties must not differ from the wire group. - Overrides generate a
-   * `configurationNotice`. Ensure that differences in wire configuration are temporary. An example
-   * use case for wire overrides is slowly rolling out configuration changes to individual wires in
-   * a wire group.
+   * the object. Review the following guidelines:        - If you apply wire overrides to a wire and
+   * its wire group bandwidth    configuration is set to `SHARED_WITH_WIRE_GROUP`, the
+   * `meteredBandwidth` and `unmeteredBandwidth` properties must not differ    from the wire group.
+   * - Overrides generate a `configurationNotice`. Ensure that differences    in wire configuration
+   * are temporary. An example use case for wire    overrides is slowly rolling out configuration
+   * changes to individual wires    in a wire group.
    * @return value or {@code null} for none
    */
   public WireProperties getWirePropertyOverrides() {
@@ -86,12 +86,12 @@ public final class WireGroupWireInputs extends com.google.api.client.json.Generi
 
   /**
    * The overridden properties for the wire. Any properties that are not overridden are omitted from
-   * the object. Review the following guidelines: - If you apply wire overrides to a wire and its
-   * wire group bandwidth configuration is set to `SHARED_WITH_WIRE_GROUP`, the `meteredBandwidth`
-   * and `unmeteredBandwidth` properties must not differ from the wire group. - Overrides generate a
-   * `configurationNotice`. Ensure that differences in wire configuration are temporary. An example
-   * use case for wire overrides is slowly rolling out configuration changes to individual wires in
-   * a wire group.
+   * the object. Review the following guidelines:        - If you apply wire overrides to a wire and
+   * its wire group bandwidth    configuration is set to `SHARED_WITH_WIRE_GROUP`, the
+   * `meteredBandwidth` and `unmeteredBandwidth` properties must not differ    from the wire group.
+   * - Overrides generate a `configurationNotice`. Ensure that differences    in wire configuration
+   * are temporary. An example use case for wire    overrides is slowly rolling out configuration
+   * changes to individual wires    in a wire group.
    * @param wirePropertyOverrides wirePropertyOverrides or {@code null} for none
    */
   public WireGroupWireInputs setWirePropertyOverrides(WireProperties wirePropertyOverrides) {

@@ -41,7 +41,9 @@ public final class InterconnectAttachmentL2ForwardingApplianceMappingInnerVlanTo
    * Required in this object. Used to match the inner VLAN tag on the packet. Each entry can be a
    * single number or a range of numbers in the range of 1 to 4094, e.g., ["1", "4001-4094"] is
    * valid. Non-empty and Non-overlapping VLAN tag ranges are enforced, and violating operations
-   * will be rejected. The inner VLAN tags must have an ethertype value of 0x8100.
+   * will be rejected.
+   *
+   * The inner VLAN tags must have an ethertype value of 0x8100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +72,9 @@ public final class InterconnectAttachmentL2ForwardingApplianceMappingInnerVlanTo
    * Required in this object. Used to match the inner VLAN tag on the packet. Each entry can be a
    * single number or a range of numbers in the range of 1 to 4094, e.g., ["1", "4001-4094"] is
    * valid. Non-empty and Non-overlapping VLAN tag ranges are enforced, and violating operations
-   * will be rejected. The inner VLAN tags must have an ethertype value of 0x8100.
+   * will be rejected.
+   *
+   * The inner VLAN tags must have an ethertype value of 0x8100.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInnerVlanTags() {
@@ -81,7 +85,9 @@ public final class InterconnectAttachmentL2ForwardingApplianceMappingInnerVlanTo
    * Required in this object. Used to match the inner VLAN tag on the packet. Each entry can be a
    * single number or a range of numbers in the range of 1 to 4094, e.g., ["1", "4001-4094"] is
    * valid. Non-empty and Non-overlapping VLAN tag ranges are enforced, and violating operations
-   * will be rejected. The inner VLAN tags must have an ethertype value of 0x8100.
+   * will be rejected.
+   *
+   * The inner VLAN tags must have an ethertype value of 0x8100.
    * @param innerVlanTags innerVlanTags or {@code null} for none
    */
   public InterconnectAttachmentL2ForwardingApplianceMappingInnerVlanToApplianceMapping setInnerVlanTags(java.util.List<java.lang.String> innerVlanTags) {

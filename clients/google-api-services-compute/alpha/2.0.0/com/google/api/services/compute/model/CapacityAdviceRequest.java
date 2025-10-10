@@ -52,6 +52,13 @@ public final class CapacityAdviceRequest extends com.google.api.client.json.Gene
   private CapacityAdviceRequestInstanceProperties instanceProperties;
 
   /**
+   * Size of requested capacity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer size;
+
+  /**
    * Policy specifying the distribution of instances across zones within the requested region.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class CapacityAdviceRequest extends com.google.api.client.json.Gene
    */
   public CapacityAdviceRequest setInstanceProperties(CapacityAdviceRequestInstanceProperties instanceProperties) {
     this.instanceProperties = instanceProperties;
+    return this;
+  }
+
+  /**
+   * Size of requested capacity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSize() {
+    return size;
+  }
+
+  /**
+   * Size of requested capacity.
+   * @param size size or {@code null} for none
+   */
+  public CapacityAdviceRequest setSize(java.lang.Integer size) {
+    this.size = size;
     return this;
   }
 

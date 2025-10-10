@@ -73,7 +73,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private FutureReservationCommitmentInfo commitmentInfo;
 
   /**
-   * [Output Only] The creation timestamp for this future reservation in RFC3339 text format.
+   * [Output Only] The creation timestamp for this future reservation inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#futureReservation for future reservations.
+   * [Output Only] Type of the resource. Alwayscompute#futureReservation for future reservations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,10 +118,10 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +158,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.String reservationMode;
 
   /**
-   * Name of reservations where the capacity is provisioned at the time of delivery of future
+   * Name of reservations where the capacity is provisioned at the time of delivery of  future
    * reservations. If the reservation with the given name does not exist already, it is created
    * automatically at the time of Approval with INACTIVE state till specified start-time. Either
    * provide the reservation_name or a name_prefix.
@@ -334,7 +334,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The creation timestamp for this future reservation in RFC3339 text format.
+   * [Output Only] The creation timestamp for this future reservation inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -342,7 +342,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The creation timestamp for this future reservation in RFC3339 text format.
+   * [Output Only] The creation timestamp for this future reservation inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public FutureReservation setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -423,7 +423,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#futureReservation for future reservations.
+   * [Output Only] Type of the resource. Alwayscompute#futureReservation for future reservations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -431,7 +431,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#futureReservation for future reservations.
+   * [Output Only] Type of the resource. Alwayscompute#futureReservation for future reservations.
    * @param kind kind or {@code null} for none
    */
   public FutureReservation setKind(java.lang.String kind) {
@@ -441,10 +441,10 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -453,10 +453,10 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @param name name or {@code null} for none
    */
   public FutureReservation setName(java.lang.String name) {
@@ -537,7 +537,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of reservations where the capacity is provisioned at the time of delivery of future
+   * Name of reservations where the capacity is provisioned at the time of delivery of  future
    * reservations. If the reservation with the given name does not exist already, it is created
    * automatically at the time of Approval with INACTIVE state till specified start-time. Either
    * provide the reservation_name or a name_prefix.
@@ -548,7 +548,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of reservations where the capacity is provisioned at the time of delivery of future
+   * Name of reservations where the capacity is provisioned at the time of delivery of  future
    * reservations. If the reservation with the given name does not exist already, it is created
    * automatically at the time of Approval with INACTIVE state till specified start-time. Either
    * provide the reservation_name or a name_prefix.

@@ -47,7 +47,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   private InterconnectAttachmentGroupConfigured configured;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
    * Opaque system-generated token that uniquely identifies the configuration. If provided when
    * patching a configuration in update mode, the provided token must match the current token or the
    * update is rejected. This provides a reliable means of doing read-modify-write (optimistic
-   * locking) as described by AIP 154.
+   * locking) as described byAIP 154.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -162,7 +162,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -170,7 +170,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InterconnectAttachmentGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -199,7 +199,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
    * Opaque system-generated token that uniquely identifies the configuration. If provided when
    * patching a configuration in update mode, the provided token must match the current token or the
    * update is rejected. This provides a reliable means of doing read-modify-write (optimistic
-   * locking) as described by AIP 154.
+   * locking) as described byAIP 154.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -210,7 +210,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
    * Opaque system-generated token that uniquely identifies the configuration. If provided when
    * patching a configuration in update mode, the provided token must match the current token or the
    * update is rejected. This provides a reliable means of doing read-modify-write (optimistic
-   * locking) as described by AIP 154.
+   * locking) as described byAIP 154.
    * @param etag etag or {@code null} for none
    */
   public InterconnectAttachmentGroup setEtag(java.lang.String etag) {
@@ -305,7 +305,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -317,7 +317,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.

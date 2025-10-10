@@ -37,7 +37,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   private java.lang.Boolean canReschedule;
 
   /**
-   * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
+   * [Output Only] The date when the maintenance will take place. This value is inRFC3339 text
    * format. DEPRECATED: Use window_start_time instead.
    * The value may be {@code null}.
    */
@@ -82,7 +82,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   private UpcomingMaintenanceTimeWindow startTimeWindow;
 
   /**
-   * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
+   * [Output Only] The time when the maintenance will take place. This value is inRFC3339 text
    * format. DEPRECATED: Use window_start_time instead.
    * The value may be {@code null}.
    */
@@ -130,7 +130,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
+   * [Output Only] The date when the maintenance will take place. This value is inRFC3339 text
    * format. DEPRECATED: Use window_start_time instead.
    * @return value or {@code null} for none
    */
@@ -139,7 +139,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
+   * [Output Only] The date when the maintenance will take place. This value is inRFC3339 text
    * format. DEPRECATED: Use window_start_time instead.
    * @param date date or {@code null} for none
    */
@@ -238,7 +238,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
+   * [Output Only] The time when the maintenance will take place. This value is inRFC3339 text
    * format. DEPRECATED: Use window_start_time instead.
    * @return value or {@code null} for none
    */
@@ -247,7 +247,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
+   * [Output Only] The time when the maintenance will take place. This value is inRFC3339 text
    * format. DEPRECATED: Use window_start_time instead.
    * @param time time or {@code null} for none
    */

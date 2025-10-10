@@ -33,7 +33,7 @@ public final class HaControllerZoneConfigurationReservationAffinity extends com.
 
   /**
    * Specifies the type of reservation from which this instance can consume resources:
-   * ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved
+   * ANY_RESERVATION (default),SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved
    * instances for examples.
    * The value may be {@code null}.
    */
@@ -41,8 +41,8 @@ public final class HaControllerZoneConfigurationReservationAffinity extends com.
   private java.lang.String consumeReservationType;
 
   /**
-   * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by
-   * name, specify googleapis.com/reservation-name as the key and specify the name of your
+   * Corresponds to the label key of a reservation resource. To target aSPECIFIC_RESERVATION by
+   * name, specifygoogleapis.com/reservation-name as the key and specify the name of your
    * reservation as its value.
    * The value may be {@code null}.
    */
@@ -60,7 +60,7 @@ public final class HaControllerZoneConfigurationReservationAffinity extends com.
 
   /**
    * Specifies the type of reservation from which this instance can consume resources:
-   * ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved
+   * ANY_RESERVATION (default),SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved
    * instances for examples.
    * @return value or {@code null} for none
    */
@@ -70,7 +70,7 @@ public final class HaControllerZoneConfigurationReservationAffinity extends com.
 
   /**
    * Specifies the type of reservation from which this instance can consume resources:
-   * ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved
+   * ANY_RESERVATION (default),SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved
    * instances for examples.
    * @param consumeReservationType consumeReservationType or {@code null} for none
    */
@@ -80,8 +80,8 @@ public final class HaControllerZoneConfigurationReservationAffinity extends com.
   }
 
   /**
-   * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by
-   * name, specify googleapis.com/reservation-name as the key and specify the name of your
+   * Corresponds to the label key of a reservation resource. To target aSPECIFIC_RESERVATION by
+   * name, specifygoogleapis.com/reservation-name as the key and specify the name of your
    * reservation as its value.
    * @return value or {@code null} for none
    */
@@ -90,8 +90,8 @@ public final class HaControllerZoneConfigurationReservationAffinity extends com.
   }
 
   /**
-   * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by
-   * name, specify googleapis.com/reservation-name as the key and specify the name of your
+   * Corresponds to the label key of a reservation resource. To target aSPECIFIC_RESERVATION by
+   * name, specifygoogleapis.com/reservation-name as the key and specify the name of your
    * reservation as its value.
    * @param key key or {@code null} for none
    */

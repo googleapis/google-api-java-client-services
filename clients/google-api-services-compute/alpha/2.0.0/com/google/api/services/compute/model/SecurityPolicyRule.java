@@ -31,19 +31,20 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Action to perform when the rule is matched. The following are the valid actions: - allow:
-   * allow access to target. - deny(STATUS): deny access to target, returns the HTTP response code
-   * specified. Valid values for `STATUS` are 403, 404, and 502. - rate_based_ban: limit client
-   * traffic to the configured threshold and ban the client if the traffic exceeds the threshold.
-   * Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be
-   * set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA
-   * redirect, or an external URL-based redirect via a 302 response. Parameters for this action can
-   * be configured via redirectOptions. This action is only supported in Global Security Policies of
-   * type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure
-   * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
-   * - fairshare (preview only): when traffic reaches the threshold limit, requests from the clients
-   * matching this rule begin to be rate-limited using the Fair Share algorithm. This action is only
-   * allowed in security policies of type `CLOUD_ARMOR_INTERNAL_SERVICE`.
+   * The Action to perform when the rule is matched. The following are the valid actions:        -
+   * allow: allow access to target.    - deny(STATUS): deny access to target, returns the    HTTP
+   * response code specified. Valid values for `STATUS`    are 403, 404, and 502.    -
+   * rate_based_ban: limit client traffic to the configured    threshold and ban the client if the
+   * traffic exceeds the threshold.    Configure parameters for this action in RateLimitOptions.
+   * Requires    rate_limit_options to be set.    - redirect: redirect to a different target. This
+   * can    either be an internal reCAPTCHA redirect, or an external URL-based    redirect via a 302
+   * response. Parameters for this action can be configured    via redirectOptions. This action is
+   * only supported in Global Security    Policies of type CLOUD_ARMOR.    - throttle: limit
+   * client traffic to the configured threshold. Configure parameters for this    action in
+   * rateLimitOptions. Requires rate_limit_options to be set for    this.    - fairshare (preview
+   * only): when traffic reaches the    threshold limit, requests from the clients matching this
+   * rule begin to be    rate-limited using the Fair Share algorithm. This action is only allowed
+   * in security policies of type `CLOUD_ARMOR_INTERNAL_SERVICE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +68,9 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
    * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
-   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules. This field may only be
-   * specified when the versioned_expr is set to FIREWALL.
+   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+   *
+   * This field may only be specified when the versioned_expr is set to FIREWALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +85,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private SecurityPolicyRuleHttpHeaderAction headerAction;
 
   /**
-   * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
+   * [Output only] Type of the resource. Alwayscompute#securityPolicyRule for security policy rules
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,21 +101,33 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming packets are evaluated against for CLOUD_ARMOR_NETWORK security
-   * policies. If it matches, the corresponding 'action' is enforced. The match criteria for a rule
-   * consists of built-in match fields (like 'srcIpRanges') and potentially multiple user-defined
-   * match fields ('userDefinedFields'). Field values may be extracted directly from the packet or
-   * derived from it (e.g. 'srcRegionCodes'). Some fields may not be present in every packet (e.g.
-   * 'srcPorts'). A user-defined field is only present if the base header is found in the packet and
-   * the entire field is in bounds. Each match field may specify which values can match it, listing
-   * one or more ranges, prefixes, or exact values that are considered a match for the field. A
-   * field value must be present in order to match a specified match field. If no match values are
-   * specified for a match field, then any field value is considered to match it, and it's not
-   * required to be present. For strings specifying '*' is also equivalent to match all. For a
-   * packet to match a rule, all specified match fields must match the corresponding field values
-   * derived from the packet. Example: networkMatch: srcIpRanges: - "192.0.2.0/24" -
-   * "198.51.100.0/24" userDefinedFields: - name: "ipv4_fragment_offset" values: - "1-0x1fff" The
-   * above match condition matches packets with a source IP in 192.0.2.0/24 or 198.51.100.0/24 and a
-   * user-defined field named "ipv4_fragment_offset" with a value between 1 and 0x1fff inclusive.
+   * policies. If it matches, the corresponding 'action' is enforced.
+   *
+   * The match criteria for a rule consists of built-in match fields (like 'srcIpRanges') and
+   * potentially multiple user-defined match fields ('userDefinedFields').
+   *
+   * Field values may be extracted directly from the packet or derived from it (e.g.
+   * 'srcRegionCodes'). Some fields may not be present in every packet (e.g. 'srcPorts'). A user-
+   * defined field is only present if the base header is found in the packet and the entire field is
+   * in bounds.
+   *
+   * Each match field may specify which values can match it, listing one or more ranges, prefixes,
+   * or exact values that are considered a match for the field. A field value must be present in
+   * order to match a specified match field. If no match values are specified for a match field,
+   * then any field value is considered to match it, and it's not required to be present. For
+   * strings specifying '*' is also equivalent to match all.
+   *
+   * For a packet to match a rule, all specified match fields must match the corresponding field
+   * values derived from the packet.
+   *
+   * Example:
+   *
+   * networkMatch:   srcIpRanges:   - "192.0.2.0/24"   - "198.51.100.0/24"   userDefinedFields:   -
+   * name: "ipv4_fragment_offset"     values:     - "1-0x1fff"
+   *
+   * The above match condition matches packets with a source IP in 192.0.2.0/24 or 198.51.100.0/24
+   * and a user-defined field named "ipv4_fragment_offset" with a value between 1 and 0x1fff
+   * inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,9 +205,11 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Integer ruleTupleCount;
 
   /**
-   * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
-   * will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
+   * A list of network resource URLs to which this rule applies.  This field allows you to control
+   * which network's VMs get this rule.  If this field is left blank, all VMs within the
+   * organization will receive the rule.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,19 +223,20 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> targetServiceAccounts;
 
   /**
-   * The Action to perform when the rule is matched. The following are the valid actions: - allow:
-   * allow access to target. - deny(STATUS): deny access to target, returns the HTTP response code
-   * specified. Valid values for `STATUS` are 403, 404, and 502. - rate_based_ban: limit client
-   * traffic to the configured threshold and ban the client if the traffic exceeds the threshold.
-   * Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be
-   * set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA
-   * redirect, or an external URL-based redirect via a 302 response. Parameters for this action can
-   * be configured via redirectOptions. This action is only supported in Global Security Policies of
-   * type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure
-   * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
-   * - fairshare (preview only): when traffic reaches the threshold limit, requests from the clients
-   * matching this rule begin to be rate-limited using the Fair Share algorithm. This action is only
-   * allowed in security policies of type `CLOUD_ARMOR_INTERNAL_SERVICE`.
+   * The Action to perform when the rule is matched. The following are the valid actions:        -
+   * allow: allow access to target.    - deny(STATUS): deny access to target, returns the    HTTP
+   * response code specified. Valid values for `STATUS`    are 403, 404, and 502.    -
+   * rate_based_ban: limit client traffic to the configured    threshold and ban the client if the
+   * traffic exceeds the threshold.    Configure parameters for this action in RateLimitOptions.
+   * Requires    rate_limit_options to be set.    - redirect: redirect to a different target. This
+   * can    either be an internal reCAPTCHA redirect, or an external URL-based    redirect via a 302
+   * response. Parameters for this action can be configured    via redirectOptions. This action is
+   * only supported in Global Security    Policies of type CLOUD_ARMOR.    - throttle: limit
+   * client traffic to the configured threshold. Configure parameters for this    action in
+   * rateLimitOptions. Requires rate_limit_options to be set for    this.    - fairshare (preview
+   * only): when traffic reaches the    threshold limit, requests from the clients matching this
+   * rule begin to be    rate-limited using the Fair Share algorithm. This action is only allowed
+   * in security policies of type `CLOUD_ARMOR_INTERNAL_SERVICE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -227,19 +244,20 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Action to perform when the rule is matched. The following are the valid actions: - allow:
-   * allow access to target. - deny(STATUS): deny access to target, returns the HTTP response code
-   * specified. Valid values for `STATUS` are 403, 404, and 502. - rate_based_ban: limit client
-   * traffic to the configured threshold and ban the client if the traffic exceeds the threshold.
-   * Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be
-   * set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA
-   * redirect, or an external URL-based redirect via a 302 response. Parameters for this action can
-   * be configured via redirectOptions. This action is only supported in Global Security Policies of
-   * type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure
-   * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
-   * - fairshare (preview only): when traffic reaches the threshold limit, requests from the clients
-   * matching this rule begin to be rate-limited using the Fair Share algorithm. This action is only
-   * allowed in security policies of type `CLOUD_ARMOR_INTERNAL_SERVICE`.
+   * The Action to perform when the rule is matched. The following are the valid actions:        -
+   * allow: allow access to target.    - deny(STATUS): deny access to target, returns the    HTTP
+   * response code specified. Valid values for `STATUS`    are 403, 404, and 502.    -
+   * rate_based_ban: limit client traffic to the configured    threshold and ban the client if the
+   * traffic exceeds the threshold.    Configure parameters for this action in RateLimitOptions.
+   * Requires    rate_limit_options to be set.    - redirect: redirect to a different target. This
+   * can    either be an internal reCAPTCHA redirect, or an external URL-based    redirect via a 302
+   * response. Parameters for this action can be configured    via redirectOptions. This action is
+   * only supported in Global Security    Policies of type CLOUD_ARMOR.    - throttle: limit
+   * client traffic to the configured threshold. Configure parameters for this    action in
+   * rateLimitOptions. Requires rate_limit_options to be set for    this.    - fairshare (preview
+   * only): when traffic reaches the    threshold limit, requests from the clients matching this
+   * rule begin to be    rate-limited using the Fair Share algorithm. This action is only allowed
+   * in security policies of type `CLOUD_ARMOR_INTERNAL_SERVICE`.
    * @param action action or {@code null} for none
    */
   public SecurityPolicyRule setAction(java.lang.String action) {
@@ -286,8 +304,9 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
    * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
-   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules. This field may only be
-   * specified when the versioned_expr is set to FIREWALL.
+   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+   *
+   * This field may only be specified when the versioned_expr is set to FIREWALL.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableLogging() {
@@ -297,8 +316,9 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
    * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
-   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules. This field may only be
-   * specified when the versioned_expr is set to FIREWALL.
+   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
+   *
+   * This field may only be specified when the versioned_expr is set to FIREWALL.
    * @param enableLogging enableLogging or {@code null} for none
    */
   public SecurityPolicyRule setEnableLogging(java.lang.Boolean enableLogging) {
@@ -326,7 +346,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
+   * [Output only] Type of the resource. Alwayscompute#securityPolicyRule for security policy rules
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -334,7 +354,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
+   * [Output only] Type of the resource. Alwayscompute#securityPolicyRule for security policy rules
    * @param kind kind or {@code null} for none
    */
   public SecurityPolicyRule setKind(java.lang.String kind) {
@@ -363,21 +383,33 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming packets are evaluated against for CLOUD_ARMOR_NETWORK security
-   * policies. If it matches, the corresponding 'action' is enforced. The match criteria for a rule
-   * consists of built-in match fields (like 'srcIpRanges') and potentially multiple user-defined
-   * match fields ('userDefinedFields'). Field values may be extracted directly from the packet or
-   * derived from it (e.g. 'srcRegionCodes'). Some fields may not be present in every packet (e.g.
-   * 'srcPorts'). A user-defined field is only present if the base header is found in the packet and
-   * the entire field is in bounds. Each match field may specify which values can match it, listing
-   * one or more ranges, prefixes, or exact values that are considered a match for the field. A
-   * field value must be present in order to match a specified match field. If no match values are
-   * specified for a match field, then any field value is considered to match it, and it's not
-   * required to be present. For strings specifying '*' is also equivalent to match all. For a
-   * packet to match a rule, all specified match fields must match the corresponding field values
-   * derived from the packet. Example: networkMatch: srcIpRanges: - "192.0.2.0/24" -
-   * "198.51.100.0/24" userDefinedFields: - name: "ipv4_fragment_offset" values: - "1-0x1fff" The
-   * above match condition matches packets with a source IP in 192.0.2.0/24 or 198.51.100.0/24 and a
-   * user-defined field named "ipv4_fragment_offset" with a value between 1 and 0x1fff inclusive.
+   * policies. If it matches, the corresponding 'action' is enforced.
+   *
+   * The match criteria for a rule consists of built-in match fields (like 'srcIpRanges') and
+   * potentially multiple user-defined match fields ('userDefinedFields').
+   *
+   * Field values may be extracted directly from the packet or derived from it (e.g.
+   * 'srcRegionCodes'). Some fields may not be present in every packet (e.g. 'srcPorts'). A user-
+   * defined field is only present if the base header is found in the packet and the entire field is
+   * in bounds.
+   *
+   * Each match field may specify which values can match it, listing one or more ranges, prefixes,
+   * or exact values that are considered a match for the field. A field value must be present in
+   * order to match a specified match field. If no match values are specified for a match field,
+   * then any field value is considered to match it, and it's not required to be present. For
+   * strings specifying '*' is also equivalent to match all.
+   *
+   * For a packet to match a rule, all specified match fields must match the corresponding field
+   * values derived from the packet.
+   *
+   * Example:
+   *
+   * networkMatch:   srcIpRanges:   - "192.0.2.0/24"   - "198.51.100.0/24"   userDefinedFields:   -
+   * name: "ipv4_fragment_offset"     values:     - "1-0x1fff"
+   *
+   * The above match condition matches packets with a source IP in 192.0.2.0/24 or 198.51.100.0/24
+   * and a user-defined field named "ipv4_fragment_offset" with a value between 1 and 0x1fff
+   * inclusive.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleNetworkMatcher getNetworkMatch() {
@@ -386,21 +418,33 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming packets are evaluated against for CLOUD_ARMOR_NETWORK security
-   * policies. If it matches, the corresponding 'action' is enforced. The match criteria for a rule
-   * consists of built-in match fields (like 'srcIpRanges') and potentially multiple user-defined
-   * match fields ('userDefinedFields'). Field values may be extracted directly from the packet or
-   * derived from it (e.g. 'srcRegionCodes'). Some fields may not be present in every packet (e.g.
-   * 'srcPorts'). A user-defined field is only present if the base header is found in the packet and
-   * the entire field is in bounds. Each match field may specify which values can match it, listing
-   * one or more ranges, prefixes, or exact values that are considered a match for the field. A
-   * field value must be present in order to match a specified match field. If no match values are
-   * specified for a match field, then any field value is considered to match it, and it's not
-   * required to be present. For strings specifying '*' is also equivalent to match all. For a
-   * packet to match a rule, all specified match fields must match the corresponding field values
-   * derived from the packet. Example: networkMatch: srcIpRanges: - "192.0.2.0/24" -
-   * "198.51.100.0/24" userDefinedFields: - name: "ipv4_fragment_offset" values: - "1-0x1fff" The
-   * above match condition matches packets with a source IP in 192.0.2.0/24 or 198.51.100.0/24 and a
-   * user-defined field named "ipv4_fragment_offset" with a value between 1 and 0x1fff inclusive.
+   * policies. If it matches, the corresponding 'action' is enforced.
+   *
+   * The match criteria for a rule consists of built-in match fields (like 'srcIpRanges') and
+   * potentially multiple user-defined match fields ('userDefinedFields').
+   *
+   * Field values may be extracted directly from the packet or derived from it (e.g.
+   * 'srcRegionCodes'). Some fields may not be present in every packet (e.g. 'srcPorts'). A user-
+   * defined field is only present if the base header is found in the packet and the entire field is
+   * in bounds.
+   *
+   * Each match field may specify which values can match it, listing one or more ranges, prefixes,
+   * or exact values that are considered a match for the field. A field value must be present in
+   * order to match a specified match field. If no match values are specified for a match field,
+   * then any field value is considered to match it, and it's not required to be present. For
+   * strings specifying '*' is also equivalent to match all.
+   *
+   * For a packet to match a rule, all specified match fields must match the corresponding field
+   * values derived from the packet.
+   *
+   * Example:
+   *
+   * networkMatch:   srcIpRanges:   - "192.0.2.0/24"   - "198.51.100.0/24"   userDefinedFields:   -
+   * name: "ipv4_fragment_offset"     values:     - "1-0x1fff"
+   *
+   * The above match condition matches packets with a source IP in 192.0.2.0/24 or 198.51.100.0/24
+   * and a user-defined field named "ipv4_fragment_offset" with a value between 1 and 0x1fff
+   * inclusive.
    * @param networkMatch networkMatch or {@code null} for none
    */
   public SecurityPolicyRule setNetworkMatch(SecurityPolicyRuleNetworkMatcher networkMatch) {
@@ -578,9 +622,11 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
-   * will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
+   * A list of network resource URLs to which this rule applies.  This field allows you to control
+   * which network's VMs get this rule.  If this field is left blank, all VMs within the
+   * organization will receive the rule.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetResources() {
@@ -588,9 +634,11 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
-   * will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
+   * A list of network resource URLs to which this rule applies.  This field allows you to control
+   * which network's VMs get this rule.  If this field is left blank, all VMs within the
+   * organization will receive the rule.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @param targetResources targetResources or {@code null} for none
    */
   public SecurityPolicyRule setTargetResources(java.util.List<java.lang.String> targetResources) {

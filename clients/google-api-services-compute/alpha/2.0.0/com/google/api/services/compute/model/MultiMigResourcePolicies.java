@@ -32,10 +32,9 @@ public final class MultiMigResourcePolicies extends com.google.api.client.json.G
 
   /**
    * The URL of the workload policy for this multi-MIG. It can be a full or partial URL. For
-   * example, the following are all valid URLs to a workload policy: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /resourcePolicies/resourcePolicy -
-   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * example, the following are all valid URLs to a workload policy:                - https://www.go
+   * ogleapis.com/compute/v1/projects/project/regions/region/resourcePolicies/resourcePolicy       -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy       -
    * regions/region/resourcePolicies/resourcePolicy
    * The value may be {@code null}.
    */
@@ -44,10 +43,9 @@ public final class MultiMigResourcePolicies extends com.google.api.client.json.G
 
   /**
    * The URL of the workload policy for this multi-MIG. It can be a full or partial URL. For
-   * example, the following are all valid URLs to a workload policy: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /resourcePolicies/resourcePolicy -
-   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * example, the following are all valid URLs to a workload policy:                - https://www.go
+   * ogleapis.com/compute/v1/projects/project/regions/region/resourcePolicies/resourcePolicy       -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy       -
    * regions/region/resourcePolicies/resourcePolicy
    * @return value or {@code null} for none
    */
@@ -57,10 +55,9 @@ public final class MultiMigResourcePolicies extends com.google.api.client.json.G
 
   /**
    * The URL of the workload policy for this multi-MIG. It can be a full or partial URL. For
-   * example, the following are all valid URLs to a workload policy: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /resourcePolicies/resourcePolicy -
-   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * example, the following are all valid URLs to a workload policy:                - https://www.go
+   * ogleapis.com/compute/v1/projects/project/regions/region/resourcePolicies/resourcePolicy       -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy       -
    * regions/region/resourcePolicies/resourcePolicy
    * @param workloadPolicy workloadPolicy or {@code null} for none
    */

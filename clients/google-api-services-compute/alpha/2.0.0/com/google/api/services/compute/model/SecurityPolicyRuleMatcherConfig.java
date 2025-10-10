@@ -30,23 +30,27 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+   * CIDR IP address range.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> destIpRanges;
 
   /**
-   * Pairs of IP protocols and ports that the rule should match. This field may only be specified
-   * when versioned_expr is set to FIREWALL.
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SecurityPolicyRuleMatcherConfigDestinationPort> destPorts;
 
   /**
-   * Pairs of IP protocols and ports that the rule should match. This field may only be specified
-   * when versioned_expr is set to FIREWALL.
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +64,9 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   private java.util.List<java.lang.String> srcIpRanges;
 
   /**
-   * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+   * CIDR IP address range.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestIpRanges() {
@@ -68,7 +74,9 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   }
 
   /**
-   * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+   * CIDR IP address range.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @param destIpRanges destIpRanges or {@code null} for none
    */
   public SecurityPolicyRuleMatcherConfig setDestIpRanges(java.util.List<java.lang.String> destIpRanges) {
@@ -77,8 +85,9 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   }
 
   /**
-   * Pairs of IP protocols and ports that the rule should match. This field may only be specified
-   * when versioned_expr is set to FIREWALL.
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @return value or {@code null} for none
    */
   public java.util.List<SecurityPolicyRuleMatcherConfigDestinationPort> getDestPorts() {
@@ -86,8 +95,9 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   }
 
   /**
-   * Pairs of IP protocols and ports that the rule should match. This field may only be specified
-   * when versioned_expr is set to FIREWALL.
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @param destPorts destPorts or {@code null} for none
    */
   public SecurityPolicyRuleMatcherConfig setDestPorts(java.util.List<SecurityPolicyRuleMatcherConfigDestinationPort> destPorts) {
@@ -96,8 +106,9 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   }
 
   /**
-   * Pairs of IP protocols and ports that the rule should match. This field may only be specified
-   * when versioned_expr is set to FIREWALL.
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @return value or {@code null} for none
    */
   public java.util.List<SecurityPolicyRuleMatcherConfigLayer4Config> getLayer4Configs() {
@@ -105,8 +116,9 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   }
 
   /**
-   * Pairs of IP protocols and ports that the rule should match. This field may only be specified
-   * when versioned_expr is set to FIREWALL.
+   * Pairs of IP protocols and ports that the rule should match.
+   *
+   * This field may only be specified when versioned_expr is set to FIREWALL.
    * @param layer4Configs layer4Configs or {@code null} for none
    */
   public SecurityPolicyRuleMatcherConfig setLayer4Configs(java.util.List<SecurityPolicyRuleMatcherConfigLayer4Config> layer4Configs) {

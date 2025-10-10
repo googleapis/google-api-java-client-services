@@ -17,10 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Packet Mirroring resource. Packet Mirroring clones the traffic of specified
- * instances in your Virtual Private Cloud (VPC) network and forwards it to a collector destination,
- * such as an instance group of an internal TCP/UDP load balancer, for analysis or examination. For
- * more information about setting up Packet Mirroring, see Using Packet Mirroring.
+ * Represents a Packet Mirroring resource.
+ *
+ * Packet Mirroring clones the traffic of specified instances in your Virtual Private Cloud (VPC)
+ * network and forwards it to a collector destination, such as an instance group of an internal
+ * TCP/UDP load balancer, for analysis or examination. For more information about setting up Packet
+ * Mirroring, seeUsing Packet Mirroring.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -33,16 +35,15 @@ package com.google.api.services.compute.model;
 public final class PacketMirroring extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as
-   * collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector
-   * set to true.
+   * The Forwarding Rule resource of typeloadBalancingScheme=INTERNAL that will be used as collector
+   * for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PacketMirroringForwardingRuleInfo collectorIlb;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +58,9 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
 
   /**
    * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet
-   * mirroring policy will not be enforced on the network. The default is TRUE.
+   * mirroring policy will not be enforced on the network.
+   *
+   * The default is TRUE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +81,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#packetMirroring for packet mirrorings.
+   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet mirrorings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +97,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -115,8 +118,9 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   /**
    * The priority of applying this configuration. Priority is used to break ties in cases where
    * there is more than one matching rule. In the case of two rules that apply for a given Instance,
-   * the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0
-   * through 65535.
+   * the one with the lowest-numbered priority value wins.
+   *
+   * Default value is 1000. Valid range is 0 through 65535.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,9 +148,8 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   private java.lang.String selfLinkWithId;
 
   /**
-   * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as
-   * collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector
-   * set to true.
+   * The Forwarding Rule resource of typeloadBalancingScheme=INTERNAL that will be used as collector
+   * for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
    * @return value or {@code null} for none
    */
   public PacketMirroringForwardingRuleInfo getCollectorIlb() {
@@ -154,9 +157,8 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as
-   * collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector
-   * set to true.
+   * The Forwarding Rule resource of typeloadBalancingScheme=INTERNAL that will be used as collector
+   * for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
    * @param collectorIlb collectorIlb or {@code null} for none
    */
   public PacketMirroring setCollectorIlb(PacketMirroringForwardingRuleInfo collectorIlb) {
@@ -165,7 +167,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -173,7 +175,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public PacketMirroring setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -200,7 +202,9 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
 
   /**
    * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet
-   * mirroring policy will not be enforced on the network. The default is TRUE.
+   * mirroring policy will not be enforced on the network.
+   *
+   * The default is TRUE.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnable() {
@@ -209,7 +213,9 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
 
   /**
    * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet
-   * mirroring policy will not be enforced on the network. The default is TRUE.
+   * mirroring policy will not be enforced on the network.
+   *
+   * The default is TRUE.
    * @param enable enable or {@code null} for none
    */
   public PacketMirroring setEnable(java.lang.String enable) {
@@ -252,7 +258,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#packetMirroring for packet mirrorings.
+   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet mirrorings.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -260,7 +266,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#packetMirroring for packet mirrorings.
+   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet mirrorings.
    * @param kind kind or {@code null} for none
    */
   public PacketMirroring setKind(java.lang.String kind) {
@@ -289,7 +295,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -301,7 +307,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -336,8 +342,9 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   /**
    * The priority of applying this configuration. Priority is used to break ties in cases where
    * there is more than one matching rule. In the case of two rules that apply for a given Instance,
-   * the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0
-   * through 65535.
+   * the one with the lowest-numbered priority value wins.
+   *
+   * Default value is 1000. Valid range is 0 through 65535.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriority() {
@@ -347,8 +354,9 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   /**
    * The priority of applying this configuration. Priority is used to break ties in cases where
    * there is more than one matching rule. In the case of two rules that apply for a given Instance,
-   * the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0
-   * through 65535.
+   * the one with the lowest-numbered priority value wins.
+   *
+   * Default value is 1000. Valid range is 0 through 65535.
    * @param priority priority or {@code null} for none
    */
   public PacketMirroring setPriority(java.lang.Long priority) {

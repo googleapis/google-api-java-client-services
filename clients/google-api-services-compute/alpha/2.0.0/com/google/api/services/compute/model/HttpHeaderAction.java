@@ -31,7 +31,7 @@ package com.google.api.services.compute.model;
 public final class HttpHeaderAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Headers to add to a matching request before forwarding the request to the backendService.
+   * Headers to add to a matching request before forwarding the request to thebackendService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> responseHeadersToRemove;
 
   /**
-   * Headers to add to a matching request before forwarding the request to the backendService.
+   * Headers to add to a matching request before forwarding the request to thebackendService.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpHeaderOption> getRequestHeadersToAdd() {
@@ -69,7 +69,7 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Headers to add to a matching request before forwarding the request to the backendService.
+   * Headers to add to a matching request before forwarding the request to thebackendService.
    * @param requestHeadersToAdd requestHeadersToAdd or {@code null} for none
    */
   public HttpHeaderAction setRequestHeadersToAdd(java.util.List<HttpHeaderOption> requestHeadersToAdd) {

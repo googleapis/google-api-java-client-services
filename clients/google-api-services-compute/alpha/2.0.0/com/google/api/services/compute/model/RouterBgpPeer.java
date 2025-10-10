@@ -38,11 +38,12 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * User-specified list of prefix groups to advertise in custom mode, which currently supports the
-   * following option: - ALL_SUBNETS: Advertises all of the router's own VPC subnets. This excludes
-   * any routes learned for subnets that use VPC Network Peering. Note that this field can only be
-   * populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the
-   * "bgp" message). These groups are advertised in addition to any specified prefixes. Leave this
-   * field blank to advertise no custom groups.
+   * following option:        - ALL_SUBNETS: Advertises all of the router's own VPC subnets. This
+   * excludes any routes learned for subnets that use    VPC Network Peering.
+   *
+   * Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list
+   * defined for the router (in the "bgp" message). These groups are advertised in addition to any
+   * specified prefixes. Leave this field blank to advertise no custom groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,9 +97,11 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.Integer customLearnedRoutePriority;
 
   /**
-   * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
-   * terminated and all associated routing information is removed. If set to TRUE, the peer
-   * connection can be established with routing information. The default is TRUE.
+   * The status of the BGP peer connection.
+   *
+   * If set to FALSE, any active session with the peer is terminated and all associated routing
+   * information is removed. If set to TRUE, the peer connection can be established with routing
+   * information. The default is TRUE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,11 +175,12 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String linkedCustomHardware;
 
   /**
-   * [Output Only] The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the
-   * default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer
-   * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
-   * of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when
-   * the PARTNER InterconnectAttachment is created, updated, or deleted.
+   * [Output Only] The resource that configures and manages this BGP peer.        -  MANAGED_BY_USER
+   * is the default value and can be managed by you    or other users    - MANAGED_BY_ATTACHMENT is
+   * a BGP peer that is configured and managed    by Cloud Interconnect, specifically by an
+   * InterconnectAttachment of type    PARTNER. Google automatically creates, updates, and deletes
+   * this type of    BGP peer when the PARTNER InterconnectAttachment is created, updated,    or
+   * deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +195,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String md5AuthenticationKeyName;
 
   /**
-   * Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035.
+   * Name of this BGP peer. The name must be 1-63 characters long, and comply withRFC1035.
    * Specifically, the name must be 1-63 characters long and match the regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
    * all following characters must be a dash, lowercase letter, or digit, except the last character,
@@ -258,11 +262,12 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * User-specified list of prefix groups to advertise in custom mode, which currently supports the
-   * following option: - ALL_SUBNETS: Advertises all of the router's own VPC subnets. This excludes
-   * any routes learned for subnets that use VPC Network Peering. Note that this field can only be
-   * populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the
-   * "bgp" message). These groups are advertised in addition to any specified prefixes. Leave this
-   * field blank to advertise no custom groups.
+   * following option:        - ALL_SUBNETS: Advertises all of the router's own VPC subnets. This
+   * excludes any routes learned for subnets that use    VPC Network Peering.
+   *
+   * Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list
+   * defined for the router (in the "bgp" message). These groups are advertised in addition to any
+   * specified prefixes. Leave this field blank to advertise no custom groups.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdvertisedGroups() {
@@ -271,11 +276,12 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * User-specified list of prefix groups to advertise in custom mode, which currently supports the
-   * following option: - ALL_SUBNETS: Advertises all of the router's own VPC subnets. This excludes
-   * any routes learned for subnets that use VPC Network Peering. Note that this field can only be
-   * populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the
-   * "bgp" message). These groups are advertised in addition to any specified prefixes. Leave this
-   * field blank to advertise no custom groups.
+   * following option:        - ALL_SUBNETS: Advertises all of the router's own VPC subnets. This
+   * excludes any routes learned for subnets that use    VPC Network Peering.
+   *
+   * Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list
+   * defined for the router (in the "bgp" message). These groups are advertised in addition to any
+   * specified prefixes. Leave this field blank to advertise no custom groups.
    * @param advertisedGroups advertisedGroups or {@code null} for none
    */
   public RouterBgpPeer setAdvertisedGroups(java.util.List<java.lang.String> advertisedGroups) {
@@ -381,9 +387,11 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
-   * terminated and all associated routing information is removed. If set to TRUE, the peer
-   * connection can be established with routing information. The default is TRUE.
+   * The status of the BGP peer connection.
+   *
+   * If set to FALSE, any active session with the peer is terminated and all associated routing
+   * information is removed. If set to TRUE, the peer connection can be established with routing
+   * information. The default is TRUE.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnable() {
@@ -391,9 +399,11 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
-   * terminated and all associated routing information is removed. If set to TRUE, the peer
-   * connection can be established with routing information. The default is TRUE.
+   * The status of the BGP peer connection.
+   *
+   * If set to FALSE, any active session with the peer is terminated and all associated routing
+   * information is removed. If set to TRUE, the peer connection can be established with routing
+   * information. The default is TRUE.
    * @param enable enable or {@code null} for none
    */
   public RouterBgpPeer setEnable(java.lang.String enable) {
@@ -563,11 +573,12 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the
-   * default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer
-   * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
-   * of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when
-   * the PARTNER InterconnectAttachment is created, updated, or deleted.
+   * [Output Only] The resource that configures and manages this BGP peer.        -  MANAGED_BY_USER
+   * is the default value and can be managed by you    or other users    - MANAGED_BY_ATTACHMENT is
+   * a BGP peer that is configured and managed    by Cloud Interconnect, specifically by an
+   * InterconnectAttachment of type    PARTNER. Google automatically creates, updates, and deletes
+   * this type of    BGP peer when the PARTNER InterconnectAttachment is created, updated,    or
+   * deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagementType() {
@@ -575,11 +586,12 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the
-   * default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer
-   * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
-   * of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when
-   * the PARTNER InterconnectAttachment is created, updated, or deleted.
+   * [Output Only] The resource that configures and manages this BGP peer.        -  MANAGED_BY_USER
+   * is the default value and can be managed by you    or other users    - MANAGED_BY_ATTACHMENT is
+   * a BGP peer that is configured and managed    by Cloud Interconnect, specifically by an
+   * InterconnectAttachment of type    PARTNER. Google automatically creates, updates, and deletes
+   * this type of    BGP peer when the PARTNER InterconnectAttachment is created, updated,    or
+   * deleted.
    * @param managementType managementType or {@code null} for none
    */
   public RouterBgpPeer setManagementType(java.lang.String managementType) {
@@ -607,7 +619,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035.
+   * Name of this BGP peer. The name must be 1-63 characters long, and comply withRFC1035.
    * Specifically, the name must be 1-63 characters long and match the regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
    * all following characters must be a dash, lowercase letter, or digit, except the last character,
@@ -619,7 +631,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035.
+   * Name of this BGP peer. The name must be 1-63 characters long, and comply withRFC1035.
    * Specifically, the name must be 1-63 characters long and match the regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
    * all following characters must be a dash, lowercase letter, or digit, except the last character,

@@ -53,10 +53,11 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean boot;
 
   /**
-   * Specifies a unique device name of your choice that is reflected into the /dev/disk/by-
+   * Specifies a unique device name of your choice that is reflected into the/dev/disk/by-
    * id/google-* tree of a Linux operating system running within the instance. This name can be used
-   * to reference the device for mounting, resizing, and so on, from within the instance. If not
-   * specified, the server chooses a default device name to apply to this disk, in the form
+   * to reference the device for mounting, resizing, and so on, from within the instance.
+   *
+   * If not specified, the server chooses a default device name to apply to this disk, in the form
    * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
    * applicable for persistent disks.
    * The value may be {@code null}.
@@ -65,17 +66,26 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String deviceName;
 
   /**
-   * Encrypts or decrypts a disk using a customer-supplied encryption key. If you are creating a new
-   * disk, this field encrypts the new disk using an encryption key that you provide. If you are
-   * attaching an existing disk that is already encrypted, this field decrypts the disk using the
-   * customer-supplied encryption key. If you encrypt a disk using a customer-supplied key, you must
-   * provide the same key again when you attempt to use this resource at a later time. For example,
-   * you must provide the key when you create a snapshot or an image from the disk or when you
-   * attach the disk to a virtual machine instance. If you do not provide an encryption key, then
-   * the disk will be encrypted using an automatically generated key and you do not need to provide
-   * a key to use the disk later. Note: Instance templates do not store customer-supplied encryption
-   * keys, so you cannot use your own keys to encrypt disks in a managed instance group. You cannot
-   * create VMs that have disks with customer-supplied keys using the bulk insert method.
+   * Encrypts or decrypts a disk using acustomer-supplied encryption key.
+   *
+   * If you are creating a new disk, this field encrypts the new disk using an encryption key that
+   * you provide. If you are attaching an existing disk that is already encrypted, this field
+   * decrypts the disk using the customer-supplied encryption key.
+   *
+   * If you encrypt a disk using a customer-supplied key, you must provide the same key again when
+   * you attempt to use this resource at a later time. For example, you must provide the key when
+   * you create a snapshot or an image from the disk or when you attach the disk to a virtual
+   * machine instance.
+   *
+   * If you do not provide an encryption key, then the disk will be encrypted using an automatically
+   * generated key and you do not need to provide a key to use the disk later.
+   *
+   * Note:
+   *
+   * Instance templates do not storecustomer-supplied encryption keys, so you cannot use your own
+   * keys to encrypt disks in amanaged instance group.
+   *
+   * You cannot create VMs that have disks with customer-supplied keys using the bulk insert method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +126,10 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   /**
    * [Input Only] Specifies the parameters for a new disk that will be created alongside the new
    * instance. Use initialization parameters to create boot disks or local SSDs attached to the new
-   * instance. This property is mutually exclusive with the source property; you can only define one
-   * or the other, but not both.
+   * instance.
+   *
+   * This property is mutually exclusive with the source property; you can only define one or the
+   * other, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,15 +138,14 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   /**
    * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. For
    * most machine types, the default is SCSI. Local SSDs can use either NVME or SCSI. In certain
-   * configurations, persistent disks can use NVMe. For more information, see About persistent
-   * disks.
+   * configurations, persistent disks can use NVMe. For more information, seeAbout persistent disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("interface")
   private java.lang.String interface__;
 
   /**
-   * [Output Only] Type of the resource. Always compute#attachedDisk for attached disks.
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +170,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean locked;
 
   /**
-   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
+   * The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If not specified, the
    * default is to attach the disk in READ_WRITE mode.
    * The value may be {@code null}.
    */
@@ -184,18 +195,22 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
-   * new instance boot disk, one of initializeParams.sourceImage or initializeParams.sourceSnapshot
-   * or disks.source is required. If desired, you can also attach existing non-root persistent disks
-   * using this property. This field is only applicable for persistent disks. Note that for
-   * InstanceTemplate, specify the disk name for zonal disk, and the URL for regional disk.
+   * new instance boot disk, one ofinitializeParams.sourceImage orinitializeParams.sourceSnapshot or
+   * disks.source is required.
+   *
+   * If desired, you can also attach existing non-root persistent disks using this property. This
+   * field is only applicable for persistent disks.
+   *
+   * Note that for InstanceTemplate, specify the disk name for zonal disk, and the URL for regional
+   * disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is
-   * PERSISTENT.
+   * Specifies the type of the disk, either SCRATCH orPERSISTENT. If not specified, the default
+   * isPERSISTENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -266,10 +281,11 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies a unique device name of your choice that is reflected into the /dev/disk/by-
+   * Specifies a unique device name of your choice that is reflected into the/dev/disk/by-
    * id/google-* tree of a Linux operating system running within the instance. This name can be used
-   * to reference the device for mounting, resizing, and so on, from within the instance. If not
-   * specified, the server chooses a default device name to apply to this disk, in the form
+   * to reference the device for mounting, resizing, and so on, from within the instance.
+   *
+   * If not specified, the server chooses a default device name to apply to this disk, in the form
    * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
    * applicable for persistent disks.
    * @return value or {@code null} for none
@@ -279,10 +295,11 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies a unique device name of your choice that is reflected into the /dev/disk/by-
+   * Specifies a unique device name of your choice that is reflected into the/dev/disk/by-
    * id/google-* tree of a Linux operating system running within the instance. This name can be used
-   * to reference the device for mounting, resizing, and so on, from within the instance. If not
-   * specified, the server chooses a default device name to apply to this disk, in the form
+   * to reference the device for mounting, resizing, and so on, from within the instance.
+   *
+   * If not specified, the server chooses a default device name to apply to this disk, in the form
    * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
    * applicable for persistent disks.
    * @param deviceName deviceName or {@code null} for none
@@ -293,17 +310,26 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encrypts or decrypts a disk using a customer-supplied encryption key. If you are creating a new
-   * disk, this field encrypts the new disk using an encryption key that you provide. If you are
-   * attaching an existing disk that is already encrypted, this field decrypts the disk using the
-   * customer-supplied encryption key. If you encrypt a disk using a customer-supplied key, you must
-   * provide the same key again when you attempt to use this resource at a later time. For example,
-   * you must provide the key when you create a snapshot or an image from the disk or when you
-   * attach the disk to a virtual machine instance. If you do not provide an encryption key, then
-   * the disk will be encrypted using an automatically generated key and you do not need to provide
-   * a key to use the disk later. Note: Instance templates do not store customer-supplied encryption
-   * keys, so you cannot use your own keys to encrypt disks in a managed instance group. You cannot
-   * create VMs that have disks with customer-supplied keys using the bulk insert method.
+   * Encrypts or decrypts a disk using acustomer-supplied encryption key.
+   *
+   * If you are creating a new disk, this field encrypts the new disk using an encryption key that
+   * you provide. If you are attaching an existing disk that is already encrypted, this field
+   * decrypts the disk using the customer-supplied encryption key.
+   *
+   * If you encrypt a disk using a customer-supplied key, you must provide the same key again when
+   * you attempt to use this resource at a later time. For example, you must provide the key when
+   * you create a snapshot or an image from the disk or when you attach the disk to a virtual
+   * machine instance.
+   *
+   * If you do not provide an encryption key, then the disk will be encrypted using an automatically
+   * generated key and you do not need to provide a key to use the disk later.
+   *
+   * Note:
+   *
+   * Instance templates do not storecustomer-supplied encryption keys, so you cannot use your own
+   * keys to encrypt disks in amanaged instance group.
+   *
+   * You cannot create VMs that have disks with customer-supplied keys using the bulk insert method.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getDiskEncryptionKey() {
@@ -311,17 +337,26 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encrypts or decrypts a disk using a customer-supplied encryption key. If you are creating a new
-   * disk, this field encrypts the new disk using an encryption key that you provide. If you are
-   * attaching an existing disk that is already encrypted, this field decrypts the disk using the
-   * customer-supplied encryption key. If you encrypt a disk using a customer-supplied key, you must
-   * provide the same key again when you attempt to use this resource at a later time. For example,
-   * you must provide the key when you create a snapshot or an image from the disk or when you
-   * attach the disk to a virtual machine instance. If you do not provide an encryption key, then
-   * the disk will be encrypted using an automatically generated key and you do not need to provide
-   * a key to use the disk later. Note: Instance templates do not store customer-supplied encryption
-   * keys, so you cannot use your own keys to encrypt disks in a managed instance group. You cannot
-   * create VMs that have disks with customer-supplied keys using the bulk insert method.
+   * Encrypts or decrypts a disk using acustomer-supplied encryption key.
+   *
+   * If you are creating a new disk, this field encrypts the new disk using an encryption key that
+   * you provide. If you are attaching an existing disk that is already encrypted, this field
+   * decrypts the disk using the customer-supplied encryption key.
+   *
+   * If you encrypt a disk using a customer-supplied key, you must provide the same key again when
+   * you attempt to use this resource at a later time. For example, you must provide the key when
+   * you create a snapshot or an image from the disk or when you attach the disk to a virtual
+   * machine instance.
+   *
+   * If you do not provide an encryption key, then the disk will be encrypted using an automatically
+   * generated key and you do not need to provide a key to use the disk later.
+   *
+   * Note:
+   *
+   * Instance templates do not storecustomer-supplied encryption keys, so you cannot use your own
+   * keys to encrypt disks in amanaged instance group.
+   *
+   * You cannot create VMs that have disks with customer-supplied keys using the bulk insert method.
    * @param diskEncryptionKey diskEncryptionKey or {@code null} for none
    */
   public AttachedDisk setDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
@@ -408,8 +443,10 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   /**
    * [Input Only] Specifies the parameters for a new disk that will be created alongside the new
    * instance. Use initialization parameters to create boot disks or local SSDs attached to the new
-   * instance. This property is mutually exclusive with the source property; you can only define one
-   * or the other, but not both.
+   * instance.
+   *
+   * This property is mutually exclusive with the source property; you can only define one or the
+   * other, but not both.
    * @return value or {@code null} for none
    */
   public AttachedDiskInitializeParams getInitializeParams() {
@@ -419,8 +456,10 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   /**
    * [Input Only] Specifies the parameters for a new disk that will be created alongside the new
    * instance. Use initialization parameters to create boot disks or local SSDs attached to the new
-   * instance. This property is mutually exclusive with the source property; you can only define one
-   * or the other, but not both.
+   * instance.
+   *
+   * This property is mutually exclusive with the source property; you can only define one or the
+   * other, but not both.
    * @param initializeParams initializeParams or {@code null} for none
    */
   public AttachedDisk setInitializeParams(AttachedDiskInitializeParams initializeParams) {
@@ -431,8 +470,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   /**
    * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. For
    * most machine types, the default is SCSI. Local SSDs can use either NVME or SCSI. In certain
-   * configurations, persistent disks can use NVMe. For more information, see About persistent
-   * disks.
+   * configurations, persistent disks can use NVMe. For more information, seeAbout persistent disks.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterface() {
@@ -442,8 +480,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   /**
    * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. For
    * most machine types, the default is SCSI. Local SSDs can use either NVME or SCSI. In certain
-   * configurations, persistent disks can use NVMe. For more information, see About persistent
-   * disks.
+   * configurations, persistent disks can use NVMe. For more information, seeAbout persistent disks.
    * @param interface__ interface__ or {@code null} for none
    */
   public AttachedDisk setInterface(java.lang.String interface__) {
@@ -452,7 +489,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#attachedDisk for attached disks.
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -460,7 +497,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#attachedDisk for attached disks.
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * @param kind kind or {@code null} for none
    */
   public AttachedDisk setKind(java.lang.String kind) {
@@ -511,7 +548,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
+   * The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If not specified, the
    * default is to attach the disk in READ_WRITE mode.
    * @return value or {@code null} for none
    */
@@ -520,7 +557,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
+   * The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If not specified, the
    * default is to attach the disk in READ_WRITE mode.
    * @param mode mode or {@code null} for none
    */
@@ -569,10 +606,14 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
-   * new instance boot disk, one of initializeParams.sourceImage or initializeParams.sourceSnapshot
-   * or disks.source is required. If desired, you can also attach existing non-root persistent disks
-   * using this property. This field is only applicable for persistent disks. Note that for
-   * InstanceTemplate, specify the disk name for zonal disk, and the URL for regional disk.
+   * new instance boot disk, one ofinitializeParams.sourceImage orinitializeParams.sourceSnapshot or
+   * disks.source is required.
+   *
+   * If desired, you can also attach existing non-root persistent disks using this property. This
+   * field is only applicable for persistent disks.
+   *
+   * Note that for InstanceTemplate, specify the disk name for zonal disk, and the URL for regional
+   * disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -581,10 +622,14 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
-   * new instance boot disk, one of initializeParams.sourceImage or initializeParams.sourceSnapshot
-   * or disks.source is required. If desired, you can also attach existing non-root persistent disks
-   * using this property. This field is only applicable for persistent disks. Note that for
-   * InstanceTemplate, specify the disk name for zonal disk, and the URL for regional disk.
+   * new instance boot disk, one ofinitializeParams.sourceImage orinitializeParams.sourceSnapshot or
+   * disks.source is required.
+   *
+   * If desired, you can also attach existing non-root persistent disks using this property. This
+   * field is only applicable for persistent disks.
+   *
+   * Note that for InstanceTemplate, specify the disk name for zonal disk, and the URL for regional
+   * disk.
    * @param source source or {@code null} for none
    */
   public AttachedDisk setSource(java.lang.String source) {
@@ -593,8 +638,8 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is
-   * PERSISTENT.
+   * Specifies the type of the disk, either SCRATCH orPERSISTENT. If not specified, the default
+   * isPERSISTENT.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -602,8 +647,8 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is
-   * PERSISTENT.
+   * Specifies the type of the disk, either SCRATCH orPERSISTENT. If not specified, the default
+   * isPERSISTENT.
    * @param type type or {@code null} for none
    */
   public AttachedDisk setType(java.lang.String type) {

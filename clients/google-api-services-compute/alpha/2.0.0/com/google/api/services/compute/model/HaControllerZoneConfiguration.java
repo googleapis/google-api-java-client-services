@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class HaControllerZoneConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of node affinity configurations. Refer to Configuring node affinity for more information.
+   * A set of node affinity configurations. Refer toConfiguring node affinity for more information.
    * Overrides reservationAffinity.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class HaControllerZoneConfiguration extends com.google.api.client.j
   private HaControllerZoneConfigurationReservationAffinity reservationAffinity;
 
   /**
-   * A set of node affinity configurations. Refer to Configuring node affinity for more information.
+   * A set of node affinity configurations. Refer toConfiguring node affinity for more information.
    * Overrides reservationAffinity.
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class HaControllerZoneConfiguration extends com.google.api.client.j
   }
 
   /**
-   * A set of node affinity configurations. Refer to Configuring node affinity for more information.
+   * A set of node affinity configurations. Refer toConfiguring node affinity for more information.
    * Overrides reservationAffinity.
    * @param nodeAffinities nodeAffinities or {@code null} for none
    */

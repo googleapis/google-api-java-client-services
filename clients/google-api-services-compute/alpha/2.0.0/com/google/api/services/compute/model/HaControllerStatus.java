@@ -45,7 +45,7 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   private HaControllerStatusFailoverProgress lastFailoverInfo;
 
   /**
-   * [Output Only] Indicates if the failover is currently in-progress.
+   * [Output Only]  Indicates if the failover is currently in-progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +120,7 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Indicates if the failover is currently in-progress.
+   * [Output Only]  Indicates if the failover is currently in-progress.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOngoingFailover() {
@@ -128,7 +128,7 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Indicates if the failover is currently in-progress.
+   * [Output Only]  Indicates if the failover is currently in-progress.
    * @param ongoingFailover ongoingFailover or {@code null} for none
    */
   public HaControllerStatus setOngoingFailover(java.lang.Boolean ongoingFailover) {

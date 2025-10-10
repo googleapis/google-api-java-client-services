@@ -19,8 +19,8 @@ package com.google.api.services.compute.model;
 /**
  * A full or valid partial URL to a health check service. For example, the following are valid URLs:
  * - https://www.googleapis.com/compute/beta/projects/project-id/regions/us-
- * west1/healthCheckServices/health-check-service - projects/project-id/regions/us-
- * west1/healthCheckServices/health-check-service - regions/us-west1/healthCheckServices/health-
+ * west1/healthCheckServices/health-check-service    - projects/project-id/regions/us-
+ * west1/healthCheckServices/health-check-service    - regions/us-west1/healthCheckServices/health-
  * check-service
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

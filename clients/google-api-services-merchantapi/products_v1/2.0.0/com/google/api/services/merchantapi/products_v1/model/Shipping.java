@@ -38,6 +38,26 @@ public final class Shipping extends com.google.api.client.json.GenericJson {
   private java.lang.String country;
 
   /**
+   * The handling cutoff time until which an order has to be placed to be processed in the same day.
+   * This is a string in format of HHMM (e.g. `1530`) for 3:30 PM. If not configured, the cutoff
+   * time will be defaulted to 8AM PST and `handling_cutoff_timezone` will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String handlingCutoffTime;
+
+  /**
+   * [Timezone identifier](https://developers.google.com/adwords/api/docs/appendix/codes-
+   * formats#timezone-ids) For example `Europe/Zurich`. This field only applies if
+   * `handling_cutoff_time` is set. If `handling_cutoff_time` is set but this field is not set, the
+   * shipping destination timezone will be used. If both fields are not set, the handling cutoff
+   * time will default to 8AM PST.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String handlingCutoffTimezone;
+
+  /**
    * The location where the shipping is applicable, represented by a location group name.
    * The value may be {@code null}.
    */
@@ -139,6 +159,52 @@ public final class Shipping extends com.google.api.client.json.GenericJson {
    */
   public Shipping setCountry(java.lang.String country) {
     this.country = country;
+    return this;
+  }
+
+  /**
+   * The handling cutoff time until which an order has to be placed to be processed in the same day.
+   * This is a string in format of HHMM (e.g. `1530`) for 3:30 PM. If not configured, the cutoff
+   * time will be defaulted to 8AM PST and `handling_cutoff_timezone` will be ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHandlingCutoffTime() {
+    return handlingCutoffTime;
+  }
+
+  /**
+   * The handling cutoff time until which an order has to be placed to be processed in the same day.
+   * This is a string in format of HHMM (e.g. `1530`) for 3:30 PM. If not configured, the cutoff
+   * time will be defaulted to 8AM PST and `handling_cutoff_timezone` will be ignored.
+   * @param handlingCutoffTime handlingCutoffTime or {@code null} for none
+   */
+  public Shipping setHandlingCutoffTime(java.lang.String handlingCutoffTime) {
+    this.handlingCutoffTime = handlingCutoffTime;
+    return this;
+  }
+
+  /**
+   * [Timezone identifier](https://developers.google.com/adwords/api/docs/appendix/codes-
+   * formats#timezone-ids) For example `Europe/Zurich`. This field only applies if
+   * `handling_cutoff_time` is set. If `handling_cutoff_time` is set but this field is not set, the
+   * shipping destination timezone will be used. If both fields are not set, the handling cutoff
+   * time will default to 8AM PST.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHandlingCutoffTimezone() {
+    return handlingCutoffTimezone;
+  }
+
+  /**
+   * [Timezone identifier](https://developers.google.com/adwords/api/docs/appendix/codes-
+   * formats#timezone-ids) For example `Europe/Zurich`. This field only applies if
+   * `handling_cutoff_time` is set. If `handling_cutoff_time` is set but this field is not set, the
+   * shipping destination timezone will be used. If both fields are not set, the handling cutoff
+   * time will default to 8AM PST.
+   * @param handlingCutoffTimezone handlingCutoffTimezone or {@code null} for none
+   */
+  public Shipping setHandlingCutoffTimezone(java.lang.String handlingCutoffTimezone) {
+    this.handlingCutoffTimezone = handlingCutoffTimezone;
     return this;
   }
 

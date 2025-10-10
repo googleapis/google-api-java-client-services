@@ -339,6 +339,19 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> gtins;
 
   /**
+   * The handling cutoff times for shipping.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HandlingCutoffTime> handlingCutoffTimes;
+
+  static {
+    // hack to force ProGuard to consider HandlingCutoffTime used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HandlingCutoffTime.class);
+  }
+
+  /**
    * Set this value to false when the item does not have unique product identifiers appropriate to
    * its category, such as GTIN, MPN, and brand. Defaults to true, if not provided.
    * The value may be {@code null}.
@@ -1464,6 +1477,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setGtins(java.util.List<java.lang.String> gtins) {
     this.gtins = gtins;
+    return this;
+  }
+
+  /**
+   * The handling cutoff times for shipping.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HandlingCutoffTime> getHandlingCutoffTimes() {
+    return handlingCutoffTimes;
+  }
+
+  /**
+   * The handling cutoff times for shipping.
+   * @param handlingCutoffTimes handlingCutoffTimes or {@code null} for none
+   */
+  public ProductAttributes setHandlingCutoffTimes(java.util.List<HandlingCutoffTime> handlingCutoffTimes) {
+    this.handlingCutoffTimes = handlingCutoffTimes;
     return this;
   }
 

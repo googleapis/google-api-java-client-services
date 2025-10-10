@@ -38,6 +38,14 @@ public final class GoogleCloudSecuritycenterV2CloudDlpDataProfile extends com.go
   private java.lang.String dataProfile;
 
   /**
+   * Type of information detected by SDP. Info type includes name, version and sensitivity of the
+   * detected information type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV2InfoType> infoTypes;
+
+  /**
    * The resource hierarchy level at which the data profile was generated.
    * The value may be {@code null}.
    */
@@ -58,6 +66,25 @@ public final class GoogleCloudSecuritycenterV2CloudDlpDataProfile extends com.go
    */
   public GoogleCloudSecuritycenterV2CloudDlpDataProfile setDataProfile(java.lang.String dataProfile) {
     this.dataProfile = dataProfile;
+    return this;
+  }
+
+  /**
+   * Type of information detected by SDP. Info type includes name, version and sensitivity of the
+   * detected information type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV2InfoType> getInfoTypes() {
+    return infoTypes;
+  }
+
+  /**
+   * Type of information detected by SDP. Info type includes name, version and sensitivity of the
+   * detected information type.
+   * @param infoTypes infoTypes or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2CloudDlpDataProfile setInfoTypes(java.util.List<GoogleCloudSecuritycenterV2InfoType> infoTypes) {
+    this.infoTypes = infoTypes;
     return this;
   }
 

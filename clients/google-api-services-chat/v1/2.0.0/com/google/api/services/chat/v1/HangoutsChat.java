@@ -25,7 +25,7 @@ package com.google.api.services.chat.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/hangouts/chat" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/chat" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

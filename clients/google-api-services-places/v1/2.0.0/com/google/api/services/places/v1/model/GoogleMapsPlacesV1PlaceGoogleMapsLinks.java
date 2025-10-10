@@ -38,7 +38,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   private java.lang.String directionsUri;
 
   /**
-   * A link to show reviews of this place on Google Maps.
+   * A link to show photos of this place on Google Maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to show reviews of this place on Google Maps.
+   * A link to show photos of this place on Google Maps.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhotosUri() {
@@ -93,7 +93,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to show reviews of this place on Google Maps.
+   * A link to show photos of this place on Google Maps.
    * @param photosUri photosUri or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceGoogleMapsLinks setPhotosUri(java.lang.String photosUri) {

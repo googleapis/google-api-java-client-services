@@ -73,7 +73,7 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
 
   /**
    * The role of subnetwork. Currently, this field is only used when purpose is set to
-   * GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An
+   * GLOBAL_MANAGED_PROXY orREGIONAL_MANAGED_PROXY. The value can be set toACTIVE or BACKUP. An
    * ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a
    * region. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently
    * draining. This field can be updated with a patch request.
@@ -91,9 +91,10 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
 
   /**
    * The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4
-   * addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
-   * addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation
-   * time and updated using patch.
+   * addresses only. If set toIPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
+   * addresses. If not specified, IPV4_ONLY is used.
+   *
+   * This field can be both set at resource creation time and updated usingpatch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,7 +211,7 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
 
   /**
    * The role of subnetwork. Currently, this field is only used when purpose is set to
-   * GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An
+   * GLOBAL_MANAGED_PROXY orREGIONAL_MANAGED_PROXY. The value can be set toACTIVE or BACKUP. An
    * ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a
    * region. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently
    * draining. This field can be updated with a patch request.
@@ -222,7 +223,7 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
 
   /**
    * The role of subnetwork. Currently, this field is only used when purpose is set to
-   * GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An
+   * GLOBAL_MANAGED_PROXY orREGIONAL_MANAGED_PROXY. The value can be set toACTIVE or BACKUP. An
    * ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a
    * region. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently
    * draining. This field can be updated with a patch request.
@@ -252,9 +253,10 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
 
   /**
    * The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4
-   * addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
-   * addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation
-   * time and updated using patch.
+   * addresses only. If set toIPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
+   * addresses. If not specified, IPV4_ONLY is used.
+   *
+   * This field can be both set at resource creation time and updated usingpatch.
    * @return value or {@code null} for none
    */
   public java.lang.String getStackType() {
@@ -263,9 +265,10 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
 
   /**
    * The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4
-   * addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
-   * addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation
-   * time and updated using patch.
+   * addresses only. If set toIPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6
+   * addresses. If not specified, IPV4_ONLY is used.
+   *
+   * This field can be both set at resource creation time and updated usingpatch.
    * @param stackType stackType or {@code null} for none
    */
   public UsableSubnetwork setStackType(java.lang.String stackType) {

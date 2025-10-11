@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Route resource. A route defines a path from VM instances in the VPC network to a
- * specific destination. This destination can be inside or outside the VPC network. For more
- * information, read the Routes overview.
+ * Represents a Route resource.
+ *
+ * A route defines a path from VM instances in the VPC network to a specific destination. This
+ * destination can be inside or outside the VPC network. For more information, read theRoutes
+ * overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -39,7 +41,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.util.List<RouteAsPath> asPaths;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +79,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
    * a lowercase letter, and all following characters (except for the last character) must be a
    * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
@@ -95,7 +97,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL to a gateway that should handle matching packets. You can only specify the internet
-   * gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-
+   * gateway using a full or partial valid URL: projects/project/global/gateways/default-internet-
    * gateway
    * The value may be {@code null}.
    */
@@ -111,14 +113,17 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHopHub;
 
   /**
-   * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
+   * The URL to a forwarding rule of typeloadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
-   * URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule If an IP
-   * address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6 address in
-   * RFC 4291 format. For example, the following are all valid IP addresses: - 10.128.0.56 -
-   * 2001:db8::2d9:51:0:0 - 2001:db8:0:0:2d9:51:0:0 IPv6 addresses will be displayed using RFC 5952
-   * compressed format (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
+   * URLs:               - https://www.googleapis.com/compute/v1/projects/project/regions/region/for
+   * wardingRules/forwardingRule     - regions/region/forwardingRules/forwardingRule
+   *
+   * If an IP address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6
+   * address in RFC 4291 format. For example, the following are all valid IP addresses:
+   * - 10.128.0.56       - 2001:db8::2d9:51:0:0       - 2001:db8:0:0:2d9:51:0:0
+   *
+   * IPv6 addresses will be displayed using RFC 5952 compressed format (e.g. 2001:db8::2d9:51:0:0).
+   * Should never be an IPv4-mapped IPv6 address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,8 +223,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The type of this route, which can be one of the following values: - 'TRANSIT' for
    * a transit route that this router learned from another Cloud Router and will readvertise to one
-   * of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned
-   * from a BGP peer of this router - 'STATIC' for a static route
+   * of its BGP peers  - 'SUBNET' for a route from a subnet of the VPC  - 'BGP' for a route learned
+   * from a BGP peer of this router  - 'STATIC' for a static route
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,7 +276,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -279,7 +284,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Route setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -361,7 +366,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
    * a lowercase letter, and all following characters (except for the last character) must be a
    * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
@@ -373,7 +378,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
    * a lowercase letter, and all following characters (except for the last character) must be a
    * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
@@ -403,7 +408,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL to a gateway that should handle matching packets. You can only specify the internet
-   * gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-
+   * gateway using a full or partial valid URL: projects/project/global/gateways/default-internet-
    * gateway
    * @return value or {@code null} for none
    */
@@ -413,7 +418,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL to a gateway that should handle matching packets. You can only specify the internet
-   * gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-
+   * gateway using a full or partial valid URL: projects/project/global/gateways/default-internet-
    * gateway
    * @param nextHopGateway nextHopGateway or {@code null} for none
    */
@@ -442,14 +447,17 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
+   * The URL to a forwarding rule of typeloadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
-   * URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule If an IP
-   * address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6 address in
-   * RFC 4291 format. For example, the following are all valid IP addresses: - 10.128.0.56 -
-   * 2001:db8::2d9:51:0:0 - 2001:db8:0:0:2d9:51:0:0 IPv6 addresses will be displayed using RFC 5952
-   * compressed format (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
+   * URLs:               - https://www.googleapis.com/compute/v1/projects/project/regions/region/for
+   * wardingRules/forwardingRule     - regions/region/forwardingRules/forwardingRule
+   *
+   * If an IP address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6
+   * address in RFC 4291 format. For example, the following are all valid IP addresses:
+   * - 10.128.0.56       - 2001:db8::2d9:51:0:0       - 2001:db8:0:0:2d9:51:0:0
+   *
+   * IPv6 addresses will be displayed using RFC 5952 compressed format (e.g. 2001:db8::2d9:51:0:0).
+   * Should never be an IPv4-mapped IPv6 address.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextHopIlb() {
@@ -457,14 +465,17 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
+   * The URL to a forwarding rule of typeloadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
-   * URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule If an IP
-   * address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6 address in
-   * RFC 4291 format. For example, the following are all valid IP addresses: - 10.128.0.56 -
-   * 2001:db8::2d9:51:0:0 - 2001:db8:0:0:2d9:51:0:0 IPv6 addresses will be displayed using RFC 5952
-   * compressed format (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
+   * URLs:               - https://www.googleapis.com/compute/v1/projects/project/regions/region/for
+   * wardingRules/forwardingRule     - regions/region/forwardingRules/forwardingRule
+   *
+   * If an IP address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6
+   * address in RFC 4291 format. For example, the following are all valid IP addresses:
+   * - 10.128.0.56       - 2001:db8::2d9:51:0:0       - 2001:db8:0:0:2d9:51:0:0
+   *
+   * IPv6 addresses will be displayed using RFC 5952 compressed format (e.g. 2001:db8::2d9:51:0:0).
+   * Should never be an IPv4-mapped IPv6 address.
    * @param nextHopIlb nextHopIlb or {@code null} for none
    */
   public Route setNextHopIlb(java.lang.String nextHopIlb) {
@@ -690,8 +701,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The type of this route, which can be one of the following values: - 'TRANSIT' for
    * a transit route that this router learned from another Cloud Router and will readvertise to one
-   * of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned
-   * from a BGP peer of this router - 'STATIC' for a static route
+   * of its BGP peers  - 'SUBNET' for a route from a subnet of the VPC  - 'BGP' for a route learned
+   * from a BGP peer of this router  - 'STATIC' for a static route
    * @return value or {@code null} for none
    */
   public java.lang.String getRouteType() {
@@ -701,8 +712,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The type of this route, which can be one of the following values: - 'TRANSIT' for
    * a transit route that this router learned from another Cloud Router and will readvertise to one
-   * of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned
-   * from a BGP peer of this router - 'STATIC' for a static route
+   * of its BGP peers  - 'SUBNET' for a route from a subnet of the VPC  - 'BGP' for a route learned
+   * from a BGP peer of this router  - 'STATIC' for a static route
    * @param routeType routeType or {@code null} for none
    */
   public Route setRouteType(java.lang.String routeType) {
@@ -787,8 +798,9 @@ public final class Route extends com.google.api.client.json.GenericJson {
     private java.lang.String code;
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -827,8 +839,9 @@ public final class Route extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -836,8 +849,9 @@ public final class Route extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @param data data or {@code null} for none
      */
     public Warnings setData(java.util.List<Data> data) {

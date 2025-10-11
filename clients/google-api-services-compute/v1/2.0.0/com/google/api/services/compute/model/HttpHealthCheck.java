@@ -17,10 +17,13 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a legacy HTTP Health Check resource. Legacy HTTP health checks are now only required
- * by target pool-based network load balancers. For all other load balancers, including backend
- * service-based network load balancers, and for managed instance group auto-healing, you must use
- * modern (non-legacy) health checks. For more information, see Health checks overview .
+ * Represents a legacy HTTP Health Check resource.
+ *
+ * Legacy HTTP health checks are now only required by target pool-based network load balancers. For
+ * all other load balancers, including backend service-based network load balancers, and for managed
+ * instance group auto-healing, you must use modern (non-legacy) health checks.
+ *
+ * For more information, seeHealth checks overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -33,14 +36,14 @@ package com.google.api.services.compute.model;
 public final class HttpHealthCheck extends com.google.api.client.json.GenericJson {
 
   /**
-   * How often (in seconds) to send a health check. The default value is 5 seconds.
+   * How often (in seconds) to send a health check. The default value is5 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer checkIntervalSec;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +80,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#httpHealthCheck for HTTP health checks.
+   * [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP health checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +88,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -95,15 +98,15 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * The TCP port number for the HTTP health check request. The default value is 80.
+   * The TCP port number for the HTTP health check request. The default value is80.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * The request path of the HTTP health check request. The default value is /. This field does not
-   * support query parameters. Must comply with RFC3986.
+   * The request path of the HTTP health check request. The default value is/. This field does not
+   * support query parameters. Must comply withRFC3986.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +120,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   private java.lang.String selfLink;
 
   /**
-   * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is
+   * How long (in seconds) to wait before claiming failure. The default value is5 seconds. It is
    * invalid for timeoutSec to have greater value than checkIntervalSec.
    * The value may be {@code null}.
    */
@@ -133,7 +136,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   private java.lang.Integer unhealthyThreshold;
 
   /**
-   * How often (in seconds) to send a health check. The default value is 5 seconds.
+   * How often (in seconds) to send a health check. The default value is5 seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCheckIntervalSec() {
@@ -141,7 +144,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * How often (in seconds) to send a health check. The default value is 5 seconds.
+   * How often (in seconds) to send a health check. The default value is5 seconds.
    * @param checkIntervalSec checkIntervalSec or {@code null} for none
    */
   public HttpHealthCheck setCheckIntervalSec(java.lang.Integer checkIntervalSec) {
@@ -150,7 +153,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -158,7 +161,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public HttpHealthCheck setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -239,7 +242,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#httpHealthCheck for HTTP health checks.
+   * [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP health checks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -247,7 +250,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#httpHealthCheck for HTTP health checks.
+   * [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP health checks.
    * @param kind kind or {@code null} for none
    */
   public HttpHealthCheck setKind(java.lang.String kind) {
@@ -257,7 +260,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -269,7 +272,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -281,7 +284,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The TCP port number for the HTTP health check request. The default value is 80.
+   * The TCP port number for the HTTP health check request. The default value is80.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -289,7 +292,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The TCP port number for the HTTP health check request. The default value is 80.
+   * The TCP port number for the HTTP health check request. The default value is80.
    * @param port port or {@code null} for none
    */
   public HttpHealthCheck setPort(java.lang.Integer port) {
@@ -298,8 +301,8 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The request path of the HTTP health check request. The default value is /. This field does not
-   * support query parameters. Must comply with RFC3986.
+   * The request path of the HTTP health check request. The default value is/. This field does not
+   * support query parameters. Must comply withRFC3986.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestPath() {
@@ -307,8 +310,8 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The request path of the HTTP health check request. The default value is /. This field does not
-   * support query parameters. Must comply with RFC3986.
+   * The request path of the HTTP health check request. The default value is/. This field does not
+   * support query parameters. Must comply withRFC3986.
    * @param requestPath requestPath or {@code null} for none
    */
   public HttpHealthCheck setRequestPath(java.lang.String requestPath) {
@@ -334,7 +337,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is
+   * How long (in seconds) to wait before claiming failure. The default value is5 seconds. It is
    * invalid for timeoutSec to have greater value than checkIntervalSec.
    * @return value or {@code null} for none
    */
@@ -343,7 +346,7 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is
+   * How long (in seconds) to wait before claiming failure. The default value is5 seconds. It is
    * invalid for timeoutSec to have greater value than checkIntervalSec.
    * @param timeoutSec timeoutSec or {@code null} for none
    */

@@ -17,15 +17,22 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Target HTTP Proxy resource. Google Compute Engine has two Target HTTP Proxy
- * resources: * [Global](/compute/docs/reference/rest/v1/targetHttpProxies) *
- * [Regional](/compute/docs/reference/rest/v1/regionTargetHttpProxies) A target HTTP proxy is a
- * component of Google Cloud HTTP load balancers. * targetHttpProxies are used by global external
- * Application Load Balancers, classic Application Load Balancers, cross-region internal Application
- * Load Balancers, and Traffic Director. * regionTargetHttpProxies are used by regional internal
- * Application Load Balancers and regional external Application Load Balancers. Forwarding rules
- * reference a target HTTP proxy, and the target proxy then references a URL map. For more
- * information, read Using Target Proxies and Forwarding rule concepts.
+ * Represents a Target HTTP Proxy resource.
+ *
+ * Google Compute Engine has two Target HTTP Proxy resources:
+ *
+ * * [Global](/compute/docs/reference/rest/v1/targetHttpProxies) *
+ * [Regional](/compute/docs/reference/rest/v1/regionTargetHttpProxies)
+ *
+ * A target HTTP proxy is a component of Google Cloud HTTP load balancers.
+ *
+ * * targetHttpProxies are used by global external Application Load Balancers,   classic Application
+ * Load Balancers, cross-region internal Application Load   Balancers, and Traffic Director. *
+ * regionTargetHttpProxies are used by regional internal Application Load   Balancers and regional
+ * external Application Load Balancers.
+ *
+ * Forwarding rules reference a target HTTP proxy, and the target proxy then references a URL map.
+ * For more information, readUsing Target Proxies and  Forwarding rule concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -38,7 +45,7 @@ package com.google.api.services.compute.model;
 public final class TargetHttpProxy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +72,12 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   /**
    * Specifies how long to keep a connection open, after completing a response, while there is no
    * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
-   * seconds) will be used. For global external Application Load Balancers, the minimum allowed
-   * value is 5 seconds and the maximum allowed value is 1200 seconds. For classic Application Load
-   * Balancers, this option is not supported.
+   * seconds) will be used.
+   *
+   * For global external Application Load Balancers, the minimum allowed value is 5 seconds and the
+   * maximum allowed value is 1200 seconds.
+   *
+   * For classic Application Load Balancers, this option is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +99,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -100,11 +110,15 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
-   * set up inbound traffic interception and bind to the IP address and port specified in the
-   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
-   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
-   * inbound requests and handles requests when it receives them. The default is false.
+   * loadBalancingScheme set toINTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +147,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   private java.lang.String urlMap;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -141,7 +155,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public TargetHttpProxy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -230,9 +244,12 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   /**
    * Specifies how long to keep a connection open, after completing a response, while there is no
    * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
-   * seconds) will be used. For global external Application Load Balancers, the minimum allowed
-   * value is 5 seconds and the maximum allowed value is 1200 seconds. For classic Application Load
-   * Balancers, this option is not supported.
+   * seconds) will be used.
+   *
+   * For global external Application Load Balancers, the minimum allowed value is 5 seconds and the
+   * maximum allowed value is 1200 seconds.
+   *
+   * For classic Application Load Balancers, this option is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHttpKeepAliveTimeoutSec() {
@@ -242,9 +259,12 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   /**
    * Specifies how long to keep a connection open, after completing a response, while there is no
    * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
-   * seconds) will be used. For global external Application Load Balancers, the minimum allowed
-   * value is 5 seconds and the maximum allowed value is 1200 seconds. For classic Application Load
-   * Balancers, this option is not supported.
+   * seconds) will be used.
+   *
+   * For global external Application Load Balancers, the minimum allowed value is 5 seconds and the
+   * maximum allowed value is 1200 seconds.
+   *
+   * For classic Application Load Balancers, this option is not supported.
    * @param httpKeepAliveTimeoutSec httpKeepAliveTimeoutSec or {@code null} for none
    */
   public TargetHttpProxy setHttpKeepAliveTimeoutSec(java.lang.Integer httpKeepAliveTimeoutSec) {
@@ -288,7 +308,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -300,7 +320,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -313,11 +333,15 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
-   * set up inbound traffic interception and bind to the IP address and port specified in the
-   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
-   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
-   * inbound requests and handles requests when it receives them. The default is false.
+   * loadBalancingScheme set toINTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProxyBind() {
@@ -326,11 +350,15 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
-   * set up inbound traffic interception and bind to the IP address and port specified in the
-   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
-   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
-   * inbound requests and handles requests when it receives them. The default is false.
+   * loadBalancingScheme set toINTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
    * @param proxyBind proxyBind or {@code null} for none
    */
   public TargetHttpProxy setProxyBind(java.lang.Boolean proxyBind) {

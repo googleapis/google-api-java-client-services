@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class HealthCheckService extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,15 +56,15 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
 
   /**
    * A list of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
-   * than 10 for regional HealthCheckService, and not more than 1 for global HealthCheckService.
-   * HealthCheck resources must have portSpecification=USE_SERVING_PORT or
-   * portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be
-   * regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix
-   * of regional and global HealthChecks is not supported. Multiple regional HealthChecks must
-   * belong to the same region. Regional HealthChecks must belong to the same region as zones of
-   * NetworkEndpointGroups. For global HealthCheckService using global INTERNET_IP_PORT
+   * than 10 for regionalHealthCheckService, and not more than 1 for
+   * globalHealthCheckService.HealthCheck resources must haveportSpecification=USE_SERVING_PORT
+   * orportSpecification=USE_FIXED_PORT. For regional HealthCheckService, theHealthCheck must be
+   * regional and in the same region. For global HealthCheckService,HealthCheck must be global. Mix
+   * of regional and globalHealthChecks is not supported. Multiple regionalHealthChecks must belong
+   * to the same region. RegionalHealthChecks must belong to the same region as zones
+   * ofNetworkEndpointGroups. For globalHealthCheckService using globalINTERNET_IP_PORT
    * NetworkEndpointGroups, the global HealthChecks must specify sourceRegions, and HealthChecks
-   * that specify sourceRegions can only be used with global INTERNET_IP_PORT NetworkEndpointGroups.
+   * that specify sourceRegions can only be used with global INTERNET_IP_PORTNetworkEndpointGroups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,11 +72,12 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
 
   /**
    * Optional. Policy for how the results from multiple health checks for the same endpoint are
-   * aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth
-   * message is returned for each pair in the health check service. - AND. If any health check of an
-   * endpoint reports UNHEALTHY, then UNHEALTHY is the HealthState of the endpoint. If all health
-   * checks report HEALTHY, the HealthState of the endpoint is HEALTHY. . This is only allowed with
-   * regional HealthCheckService.
+   * aggregated. Defaults to NO_AGGREGATION if unspecified.        - NO_AGGREGATION. An
+   * EndpointHealth message is    returned for each  pair in the health check    service.    - AND.
+   * If any health check of an endpoint reportsUNHEALTHY, then UNHEALTHY is theHealthState of the
+   * endpoint. If all health checks reportHEALTHY, the HealthState of the endpoint isHEALTHY.
+   *
+   * . This is only allowed with regional HealthCheckService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +91,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   private java.math.BigInteger id;
 
   /**
-   * [Output only] Type of the resource. Always compute#healthCheckServicefor health check services.
+   * [Output only] Type of the resource. Alwayscompute#healthCheckServicefor health check services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,19 +109,19 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional
-   * HealthCheckService, NEGs must be in zones in the region of the HealthCheckService. For global
-   * HealthCheckServices, the NetworkEndpointGroups must be global INTERNET_IP_PORT.
+   * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100.  For
+   * regionalHealthCheckService, NEGs must be in zones in the region of the HealthCheckService. For
+   * globalHealthCheckServices, the NetworkEndpointGroups must be global INTERNET_IP_PORT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> networkEndpointGroups;
 
   /**
-   * A list of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of
-   * endpoints for receiving notifications of change in health status. For regional
-   * HealthCheckService, NotificationEndpoint must be regional and in the same region. For global
-   * HealthCheckService, NotificationEndpoint must be global.
+   * A list of URLs to the NotificationEndpoint resources. Must not have more than 10.  A list of
+   * endpoints for receiving notifications of change in health status. For
+   * regionalHealthCheckService,NotificationEndpoint must be regional and in the same region. For
+   * global HealthCheckService,NotificationEndpoint must be global.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +144,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -151,7 +152,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public HealthCheckService setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -239,15 +240,15 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
 
   /**
    * A list of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
-   * than 10 for regional HealthCheckService, and not more than 1 for global HealthCheckService.
-   * HealthCheck resources must have portSpecification=USE_SERVING_PORT or
-   * portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be
-   * regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix
-   * of regional and global HealthChecks is not supported. Multiple regional HealthChecks must
-   * belong to the same region. Regional HealthChecks must belong to the same region as zones of
-   * NetworkEndpointGroups. For global HealthCheckService using global INTERNET_IP_PORT
+   * than 10 for regionalHealthCheckService, and not more than 1 for
+   * globalHealthCheckService.HealthCheck resources must haveportSpecification=USE_SERVING_PORT
+   * orportSpecification=USE_FIXED_PORT. For regional HealthCheckService, theHealthCheck must be
+   * regional and in the same region. For global HealthCheckService,HealthCheck must be global. Mix
+   * of regional and globalHealthChecks is not supported. Multiple regionalHealthChecks must belong
+   * to the same region. RegionalHealthChecks must belong to the same region as zones
+   * ofNetworkEndpointGroups. For globalHealthCheckService using globalINTERNET_IP_PORT
    * NetworkEndpointGroups, the global HealthChecks must specify sourceRegions, and HealthChecks
-   * that specify sourceRegions can only be used with global INTERNET_IP_PORT NetworkEndpointGroups.
+   * that specify sourceRegions can only be used with global INTERNET_IP_PORTNetworkEndpointGroups.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHealthChecks() {
@@ -256,15 +257,15 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
 
   /**
    * A list of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
-   * than 10 for regional HealthCheckService, and not more than 1 for global HealthCheckService.
-   * HealthCheck resources must have portSpecification=USE_SERVING_PORT or
-   * portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be
-   * regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix
-   * of regional and global HealthChecks is not supported. Multiple regional HealthChecks must
-   * belong to the same region. Regional HealthChecks must belong to the same region as zones of
-   * NetworkEndpointGroups. For global HealthCheckService using global INTERNET_IP_PORT
+   * than 10 for regionalHealthCheckService, and not more than 1 for
+   * globalHealthCheckService.HealthCheck resources must haveportSpecification=USE_SERVING_PORT
+   * orportSpecification=USE_FIXED_PORT. For regional HealthCheckService, theHealthCheck must be
+   * regional and in the same region. For global HealthCheckService,HealthCheck must be global. Mix
+   * of regional and globalHealthChecks is not supported. Multiple regionalHealthChecks must belong
+   * to the same region. RegionalHealthChecks must belong to the same region as zones
+   * ofNetworkEndpointGroups. For globalHealthCheckService using globalINTERNET_IP_PORT
    * NetworkEndpointGroups, the global HealthChecks must specify sourceRegions, and HealthChecks
-   * that specify sourceRegions can only be used with global INTERNET_IP_PORT NetworkEndpointGroups.
+   * that specify sourceRegions can only be used with global INTERNET_IP_PORTNetworkEndpointGroups.
    * @param healthChecks healthChecks or {@code null} for none
    */
   public HealthCheckService setHealthChecks(java.util.List<java.lang.String> healthChecks) {
@@ -274,11 +275,12 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
 
   /**
    * Optional. Policy for how the results from multiple health checks for the same endpoint are
-   * aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth
-   * message is returned for each pair in the health check service. - AND. If any health check of an
-   * endpoint reports UNHEALTHY, then UNHEALTHY is the HealthState of the endpoint. If all health
-   * checks report HEALTHY, the HealthState of the endpoint is HEALTHY. . This is only allowed with
-   * regional HealthCheckService.
+   * aggregated. Defaults to NO_AGGREGATION if unspecified.        - NO_AGGREGATION. An
+   * EndpointHealth message is    returned for each  pair in the health check    service.    - AND.
+   * If any health check of an endpoint reportsUNHEALTHY, then UNHEALTHY is theHealthState of the
+   * endpoint. If all health checks reportHEALTHY, the HealthState of the endpoint isHEALTHY.
+   *
+   * . This is only allowed with regional HealthCheckService.
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthStatusAggregationPolicy() {
@@ -287,11 +289,12 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
 
   /**
    * Optional. Policy for how the results from multiple health checks for the same endpoint are
-   * aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth
-   * message is returned for each pair in the health check service. - AND. If any health check of an
-   * endpoint reports UNHEALTHY, then UNHEALTHY is the HealthState of the endpoint. If all health
-   * checks report HEALTHY, the HealthState of the endpoint is HEALTHY. . This is only allowed with
-   * regional HealthCheckService.
+   * aggregated. Defaults to NO_AGGREGATION if unspecified.        - NO_AGGREGATION. An
+   * EndpointHealth message is    returned for each  pair in the health check    service.    - AND.
+   * If any health check of an endpoint reportsUNHEALTHY, then UNHEALTHY is theHealthState of the
+   * endpoint. If all health checks reportHEALTHY, the HealthState of the endpoint isHEALTHY.
+   *
+   * . This is only allowed with regional HealthCheckService.
    * @param healthStatusAggregationPolicy healthStatusAggregationPolicy or {@code null} for none
    */
   public HealthCheckService setHealthStatusAggregationPolicy(java.lang.String healthStatusAggregationPolicy) {
@@ -317,7 +320,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#healthCheckServicefor health check services.
+   * [Output only] Type of the resource. Alwayscompute#healthCheckServicefor health check services.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -325,7 +328,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#healthCheckServicefor health check services.
+   * [Output only] Type of the resource. Alwayscompute#healthCheckServicefor health check services.
    * @param kind kind or {@code null} for none
    */
   public HealthCheckService setKind(java.lang.String kind) {
@@ -359,9 +362,9 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional
-   * HealthCheckService, NEGs must be in zones in the region of the HealthCheckService. For global
-   * HealthCheckServices, the NetworkEndpointGroups must be global INTERNET_IP_PORT.
+   * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100.  For
+   * regionalHealthCheckService, NEGs must be in zones in the region of the HealthCheckService. For
+   * globalHealthCheckServices, the NetworkEndpointGroups must be global INTERNET_IP_PORT.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNetworkEndpointGroups() {
@@ -369,9 +372,9 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional
-   * HealthCheckService, NEGs must be in zones in the region of the HealthCheckService. For global
-   * HealthCheckServices, the NetworkEndpointGroups must be global INTERNET_IP_PORT.
+   * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100.  For
+   * regionalHealthCheckService, NEGs must be in zones in the region of the HealthCheckService. For
+   * globalHealthCheckServices, the NetworkEndpointGroups must be global INTERNET_IP_PORT.
    * @param networkEndpointGroups networkEndpointGroups or {@code null} for none
    */
   public HealthCheckService setNetworkEndpointGroups(java.util.List<java.lang.String> networkEndpointGroups) {
@@ -380,10 +383,10 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of
-   * endpoints for receiving notifications of change in health status. For regional
-   * HealthCheckService, NotificationEndpoint must be regional and in the same region. For global
-   * HealthCheckService, NotificationEndpoint must be global.
+   * A list of URLs to the NotificationEndpoint resources. Must not have more than 10.  A list of
+   * endpoints for receiving notifications of change in health status. For
+   * regionalHealthCheckService,NotificationEndpoint must be regional and in the same region. For
+   * global HealthCheckService,NotificationEndpoint must be global.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNotificationEndpoints() {
@@ -391,10 +394,10 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of
-   * endpoints for receiving notifications of change in health status. For regional
-   * HealthCheckService, NotificationEndpoint must be regional and in the same region. For global
-   * HealthCheckService, NotificationEndpoint must be global.
+   * A list of URLs to the NotificationEndpoint resources. Must not have more than 10.  A list of
+   * endpoints for receiving notifications of change in health status. For
+   * regionalHealthCheckService,NotificationEndpoint must be regional and in the same region. For
+   * global HealthCheckService,NotificationEndpoint must be global.
    * @param notificationEndpoints notificationEndpoints or {@code null} for none
    */
   public HealthCheckService setNotificationEndpoints(java.util.List<java.lang.String> notificationEndpoints) {

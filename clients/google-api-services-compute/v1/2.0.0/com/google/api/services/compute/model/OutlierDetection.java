@@ -31,9 +31,10 @@ package com.google.api.services.compute.model;
 public final class OutlierDetection extends com.google.api.client.json.GenericJson {
 
   /**
-   * The base time that a backend endpoint is ejected for. Defaults to 30000ms or 30s. After a
-   * backend endpoint is returned back to the load balancing pool, it can be ejected again in
-   * another ejection analysis. Thus, the total ejection time is equal to the base ejection time
+   * The base time that a backend endpoint is ejected for. Defaults to 30000ms or 30s.
+   *
+   * After a backend endpoint is returned back to the load balancing pool, it can be ejected again
+   * in another ejection analysis. Thus, the total ejection time is equal to the base ejection time
    * multiplied by the number of times the backend endpoint has been ejected. Defaults to 30000ms or
    * 30s.
    * The value may be {@code null}.
@@ -80,7 +81,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a backend endpoint will be ejected when an outlier status is
    * detected through success rate statistics. This setting can be used to disable ejection or to
-   * ramp it up slowly. Defaults to 100. Not supported when the backend service uses Serverless NEG.
+   * ramp it up slowly. Defaults to 100.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +111,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
    * The number of backend endpoints in the load balancing pool that must have enough request volume
    * to detect success rate outliers. If the number of backend endpoints is fewer than this setting,
    * outlier detection via success rate statistics is not performed for any backend endpoint in the
-   * load balancing pool. Defaults to 5. Not supported when the backend service uses Serverless NEG.
+   * load balancing pool. Defaults to 5.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,8 +123,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
    * The minimum number of total requests that must be collected in one interval (as defined by the
    * interval duration above) to include this backend endpoint in success rate based outlier
    * detection. If the volume is lower than this setting, outlier detection via success rate
-   * statistics is not performed for that backend endpoint. Defaults to 100. Not supported when the
-   * backend service uses Serverless NEG.
+   * statistics is not performed for that backend endpoint. Defaults to 100.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,17 +136,19 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
    * ejection threshold is the difference between the mean success rate, and the product of this
    * factor and the standard deviation of the mean success rate: mean - (stdev *
    * successRateStdevFactor). This factor is divided by a thousand to get a double. That is, if the
-   * desired factor is 1.9, the runtime value should be 1900. Defaults to 1900. Not supported when
-   * the backend service uses Serverless NEG.
+   * desired factor is 1.9, the runtime value should be 1900. Defaults to 1900.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer successRateStdevFactor;
 
   /**
-   * The base time that a backend endpoint is ejected for. Defaults to 30000ms or 30s. After a
-   * backend endpoint is returned back to the load balancing pool, it can be ejected again in
-   * another ejection analysis. Thus, the total ejection time is equal to the base ejection time
+   * The base time that a backend endpoint is ejected for. Defaults to 30000ms or 30s.
+   *
+   * After a backend endpoint is returned back to the load balancing pool, it can be ejected again
+   * in another ejection analysis. Thus, the total ejection time is equal to the base ejection time
    * multiplied by the number of times the backend endpoint has been ejected. Defaults to 30000ms or
    * 30s.
    * @return value or {@code null} for none
@@ -150,9 +158,10 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The base time that a backend endpoint is ejected for. Defaults to 30000ms or 30s. After a
-   * backend endpoint is returned back to the load balancing pool, it can be ejected again in
-   * another ejection analysis. Thus, the total ejection time is equal to the base ejection time
+   * The base time that a backend endpoint is ejected for. Defaults to 30000ms or 30s.
+   *
+   * After a backend endpoint is returned back to the load balancing pool, it can be ejected again
+   * in another ejection analysis. Thus, the total ejection time is equal to the base ejection time
    * multiplied by the number of times the backend endpoint has been ejected. Defaults to 30000ms or
    * 30s.
    * @param baseEjectionTime baseEjectionTime or {@code null} for none
@@ -249,7 +258,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a backend endpoint will be ejected when an outlier status is
    * detected through success rate statistics. This setting can be used to disable ejection or to
-   * ramp it up slowly. Defaults to 100. Not supported when the backend service uses Serverless NEG.
+   * ramp it up slowly. Defaults to 100.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEnforcingSuccessRate() {
@@ -259,7 +270,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
   /**
    * The percentage chance that a backend endpoint will be ejected when an outlier status is
    * detected through success rate statistics. This setting can be used to disable ejection or to
-   * ramp it up slowly. Defaults to 100. Not supported when the backend service uses Serverless NEG.
+   * ramp it up slowly. Defaults to 100.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * @param enforcingSuccessRate enforcingSuccessRate or {@code null} for none
    */
   public OutlierDetection setEnforcingSuccessRate(java.lang.Integer enforcingSuccessRate) {
@@ -313,7 +326,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
    * The number of backend endpoints in the load balancing pool that must have enough request volume
    * to detect success rate outliers. If the number of backend endpoints is fewer than this setting,
    * outlier detection via success rate statistics is not performed for any backend endpoint in the
-   * load balancing pool. Defaults to 5. Not supported when the backend service uses Serverless NEG.
+   * load balancing pool. Defaults to 5.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuccessRateMinimumHosts() {
@@ -324,7 +339,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
    * The number of backend endpoints in the load balancing pool that must have enough request volume
    * to detect success rate outliers. If the number of backend endpoints is fewer than this setting,
    * outlier detection via success rate statistics is not performed for any backend endpoint in the
-   * load balancing pool. Defaults to 5. Not supported when the backend service uses Serverless NEG.
+   * load balancing pool. Defaults to 5.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * @param successRateMinimumHosts successRateMinimumHosts or {@code null} for none
    */
   public OutlierDetection setSuccessRateMinimumHosts(java.lang.Integer successRateMinimumHosts) {
@@ -336,8 +353,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
    * The minimum number of total requests that must be collected in one interval (as defined by the
    * interval duration above) to include this backend endpoint in success rate based outlier
    * detection. If the volume is lower than this setting, outlier detection via success rate
-   * statistics is not performed for that backend endpoint. Defaults to 100. Not supported when the
-   * backend service uses Serverless NEG.
+   * statistics is not performed for that backend endpoint. Defaults to 100.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuccessRateRequestVolume() {
@@ -348,8 +366,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
    * The minimum number of total requests that must be collected in one interval (as defined by the
    * interval duration above) to include this backend endpoint in success rate based outlier
    * detection. If the volume is lower than this setting, outlier detection via success rate
-   * statistics is not performed for that backend endpoint. Defaults to 100. Not supported when the
-   * backend service uses Serverless NEG.
+   * statistics is not performed for that backend endpoint. Defaults to 100.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * @param successRateRequestVolume successRateRequestVolume or {@code null} for none
    */
   public OutlierDetection setSuccessRateRequestVolume(java.lang.Integer successRateRequestVolume) {
@@ -362,8 +381,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
    * ejection threshold is the difference between the mean success rate, and the product of this
    * factor and the standard deviation of the mean success rate: mean - (stdev *
    * successRateStdevFactor). This factor is divided by a thousand to get a double. That is, if the
-   * desired factor is 1.9, the runtime value should be 1900. Defaults to 1900. Not supported when
-   * the backend service uses Serverless NEG.
+   * desired factor is 1.9, the runtime value should be 1900. Defaults to 1900.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuccessRateStdevFactor() {
@@ -375,8 +395,9 @@ public final class OutlierDetection extends com.google.api.client.json.GenericJs
    * ejection threshold is the difference between the mean success rate, and the product of this
    * factor and the standard deviation of the mean success rate: mean - (stdev *
    * successRateStdevFactor). This factor is divided by a thousand to get a double. That is, if the
-   * desired factor is 1.9, the runtime value should be 1900. Defaults to 1900. Not supported when
-   * the backend service uses Serverless NEG.
+   * desired factor is 1.9, the runtime value should be 1900. Defaults to 1900.
+   *
+   * Not supported when the backend service uses Serverless NEG.
    * @param successRateStdevFactor successRateStdevFactor or {@code null} for none
    */
   public OutlierDetection setSuccessRateStdevFactor(java.lang.Integer successRateStdevFactor) {

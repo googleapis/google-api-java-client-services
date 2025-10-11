@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Interconnect Attachment (VLAN) resource. You can use Interconnect attachments
- * (VLANS) to connect your Virtual Private Cloud networks to your on-premises networks through an
- * Interconnect. For more information, read Creating VLAN Attachments.
+ * Represents an Interconnect Attachment (VLAN) resource.
+ *
+ * You can use Interconnect attachments (VLANS) to connect your Virtual Private Cloud networks to
+ * your on-premises networks through an Interconnect. For more information, read Creating VLAN
+ * Attachments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -49,10 +51,11 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * Provisioned bandwidth capacity for the interconnect attachment. For attachments of type
    * DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner
    * that is operating the interconnect must set the bandwidth. Output only for PARTNER type,
-   * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
-   * BPS_50M: 50 Mbit/s - BPS_100M: 100 Mbit/s - BPS_200M: 200 Mbit/s - BPS_300M: 300 Mbit/s -
-   * BPS_400M: 400 Mbit/s - BPS_500M: 500 Mbit/s - BPS_1G: 1 Gbit/s - BPS_2G: 2 Gbit/s - BPS_5G: 5
-   * Gbit/s - BPS_10G: 10 Gbit/s - BPS_20G: 20 Gbit/s - BPS_50G: 50 Gbit/s - BPS_100G: 100 Gbit/s
+   * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values:        -
+   * BPS_50M: 50 Mbit/s    - BPS_100M: 100 Mbit/s    - BPS_200M: 200 Mbit/s    - BPS_300M: 300
+   * Mbit/s    - BPS_400M: 400 Mbit/s    - BPS_500M: 500 Mbit/s    - BPS_1G: 1 Gbit/s    - BPS_2G: 2
+   * Gbit/s    - BPS_5G: 5 Gbit/s    - BPS_10G: 10 Gbit/s    - BPS_20G: 20 Gbit/s    - BPS_50G: 50
+   * Gbit/s    - BPS_100G: 100 Gbit/s
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +112,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private InterconnectAttachmentConfigurationConstraints configurationConstraints;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,11 +159,13 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Input only. Desired availability domain for the attachment. Only available for type PARTNER, at
-   * creation time, and can take one of the following values: - AVAILABILITY_DOMAIN_ANY -
-   * AVAILABILITY_DOMAIN_1 - AVAILABILITY_DOMAIN_2 For improved reliability, customers should
-   * configure a pair of attachments, one per availability domain. The selected availability domain
-   * will be provided to the Partner via the pairing key, so that the provisioned circuit will lie
-   * in the specified domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
+   * creation time, and can take one of the following values:        - AVAILABILITY_DOMAIN_ANY    -
+   * AVAILABILITY_DOMAIN_1    - AVAILABILITY_DOMAIN_2
+   *
+   * For improved reliability, customers should configure a pair of attachments, one per
+   * availability domain. The selected availability domain will be provided to the Partner via the
+   * pairing key, so that the provisioned circuit will lie in the specified domain. If not
+   * specified, the value will default to AVAILABILITY_DOMAIN_ANY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,12 +174,12 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   /**
    * Indicates the user-supplied encryption option of this VLAN attachment (interconnectAttachment).
    * Can only be specified at attachment creation for PARTNER or DEDICATED attachments. Possible
-   * values are: - NONE - This is the default value, which means that the VLAN attachment carries
-   * unencrypted traffic. VMs are able to send traffic to, or receive traffic from, such a VLAN
-   * attachment. - IPSEC - The VLAN attachment carries only encrypted traffic that is encrypted by
-   * an IPsec device, such as an HA VPN gateway or third-party IPsec VPN. VMs cannot directly send
-   * traffic to, or receive traffic from, such a VLAN attachment. To use *HA VPN over Cloud
-   * Interconnect*, the VLAN attachment must be created with this option.
+   * values are:        - NONE - This is the default value, which means that the    VLAN attachment
+   * carries unencrypted traffic. VMs are able to send    traffic to, or receive traffic from, such
+   * a VLAN attachment.    - IPSEC - The VLAN attachment carries only encrypted    traffic that is
+   * encrypted by an IPsec device, such as an HA VPN gateway or    third-party IPsec VPN. VMs cannot
+   * directly send traffic to, or receive    traffic from, such a VLAN attachment. To use *HA VPN
+   * over Cloud    Interconnect*, the VLAN attachment must be created with this    option.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +224,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> ipsecInternalAddresses;
 
   /**
-   * [Output Only] Type of the resource. Always compute#interconnectAttachment for interconnect
+   * [Output Only] Type of the resource. Alwayscompute#interconnectAttachment for interconnect
    * attachments.
    * The value may be {@code null}.
    */
@@ -231,16 +236,17 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * a hash of the labels set used for optimistic locking. The fingerprint is initially generated by
    * Compute Engine and changes after every request to modify or update labels. You must always
    * provide an up-to-date fingerprint hash in order to update or change labels, otherwise the
-   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
-   * request to retrieve an InterconnectAttachment.
+   * request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InterconnectAttachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String labelFingerprint;
 
   /**
-   * Labels for this resource. These can only be added or modified by the setLabels method. Each
-   * label key/value pair must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by thesetLabels method. Each
+   * label key/value pair must comply withRFC1035. Label values may be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,7 +263,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -268,9 +274,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * [Output Only] The current status of whether or not this interconnect attachment is functional,
-   * which can take one of the following values: - OS_ACTIVE: The attachment has been turned up and
-   * is ready to use. - OS_UNPROVISIONED: The attachment is not ready to use yet, because turnup is
-   * not complete.
+   * which can take one of the following values:        - OS_ACTIVE: The attachment has been turned
+   * up and is ready to    use.     - OS_UNPROVISIONED: The attachment is not ready to use yet,
+   * because turnup is not complete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -322,8 +328,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   /**
    * [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this field
    * contains the interconnect's remote location service provider. Example values: "Amazon Web
-   * Services" "Microsoft Azure". The field is set only for attachments on Cross-Cloud Interconnect
-   * connections. Its value is copied from the InterconnectRemoteLocation remoteService field.
+   * Services" "Microsoft Azure".
+   *
+   * The field is set only for attachments on Cross-Cloud Interconnect connections. Its value is
+   * copied from the InterconnectRemoteLocation remoteService field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,8 +362,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * The stack type for this interconnect attachment to identify whether the IPv6 feature is enabled
-   * or not. If not specified, IPV4_ONLY will be used. This field can be both set at interconnect
-   * attachments creation and update interconnect attachment operations.
+   * or not. If not specified, IPV4_ONLY will be used.
+   *
+   * This field can be both set at interconnect attachments creation and update interconnect
+   * attachment operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -366,37 +376,40 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
    * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
    * are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take
-   * one of the following values: - ACTIVE: The attachment has been turned up and is ready to use. -
-   * UNPROVISIONED: The attachment is not ready to use yet, because turnup is not complete. -
-   * PENDING_PARTNER: A newly-created PARTNER attachment that has not yet been configured on the
-   * Partner side. - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the process of
-   * provisioning after a PARTNER_PROVIDER attachment was created that references it. -
-   * PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER attachment that is waiting for a customer to
-   * activate it. - DEFUNCT: The attachment was deleted externally and is no longer functional. This
-   * could be because the associated Interconnect was removed, or because the other side of a
-   * Partner attachment was deleted.
+   * one of the following values:        - ACTIVE: The attachment has been turned up and is ready to
+   * use.    - UNPROVISIONED: The attachment is not ready to use yet, because turnup    is not
+   * complete.    - PENDING_PARTNER: A newly-created PARTNER attachment that has not yet    been
+   * configured on the Partner side.    - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the
+   * process of    provisioning after a PARTNER_PROVIDER attachment was created that    references
+   * it.     - PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER    attachment that is waiting for a
+   * customer to activate it.     - DEFUNCT:    The attachment was deleted externally and is no
+   * longer functional. This    could be because the associated Interconnect was removed, or because
+   * the    other side of a Partner attachment was deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Input only. Length of the IPv4 subnet mask. Allowed values: - 29 (default) - 30 The default
-   * value is 29, except for Cross-Cloud Interconnect connections that use an
+   * Input only. Length of the IPv4 subnet mask. Allowed values:             - 29 (default)     - 30
+   *
+   * The default value is 29, except for Cross-Cloud Interconnect connections that use an
    * InterconnectRemoteLocation with a constraints.subnetLengthRange.min equal to 30. For example,
    * connections that use an Azure remote location fall into this category. In these cases, the
-   * default value is 30, and requesting 29 returns an error. Where both 29 and 30 are allowed, 29
-   * is preferred, because it gives Google Cloud Support more debugging visibility.
+   * default value is 30, and requesting 29 returns an error.
+   *
+   * Where both 29 and 30 are allowed, 29 is preferred, because it gives Google Cloud Support more
+   * debugging visibility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer subnetLength;
 
   /**
-   * The type of interconnect attachment this is, which can take one of the following values: -
-   * DEDICATED: an attachment to a Dedicated Interconnect. - PARTNER: an attachment to a Partner
-   * Interconnect, created by the customer. - PARTNER_PROVIDER: an attachment to a Partner
-   * Interconnect, created by the partner.
+   * The type of interconnect attachment this is, which can take one of the following values:
+   * - DEDICATED: an attachment to a Dedicated Interconnect.    - PARTNER: an attachment to a
+   * Partner Interconnect, created by the    customer.    - PARTNER_PROVIDER: an attachment to a
+   * Partner Interconnect, created by    the partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -448,10 +461,11 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * Provisioned bandwidth capacity for the interconnect attachment. For attachments of type
    * DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner
    * that is operating the interconnect must set the bandwidth. Output only for PARTNER type,
-   * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
-   * BPS_50M: 50 Mbit/s - BPS_100M: 100 Mbit/s - BPS_200M: 200 Mbit/s - BPS_300M: 300 Mbit/s -
-   * BPS_400M: 400 Mbit/s - BPS_500M: 500 Mbit/s - BPS_1G: 1 Gbit/s - BPS_2G: 2 Gbit/s - BPS_5G: 5
-   * Gbit/s - BPS_10G: 10 Gbit/s - BPS_20G: 20 Gbit/s - BPS_50G: 50 Gbit/s - BPS_100G: 100 Gbit/s
+   * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values:        -
+   * BPS_50M: 50 Mbit/s    - BPS_100M: 100 Mbit/s    - BPS_200M: 200 Mbit/s    - BPS_300M: 300
+   * Mbit/s    - BPS_400M: 400 Mbit/s    - BPS_500M: 500 Mbit/s    - BPS_1G: 1 Gbit/s    - BPS_2G: 2
+   * Gbit/s    - BPS_5G: 5 Gbit/s    - BPS_10G: 10 Gbit/s    - BPS_20G: 20 Gbit/s    - BPS_50G: 50
+   * Gbit/s    - BPS_100G: 100 Gbit/s
    * @return value or {@code null} for none
    */
   public java.lang.String getBandwidth() {
@@ -462,10 +476,11 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * Provisioned bandwidth capacity for the interconnect attachment. For attachments of type
    * DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner
    * that is operating the interconnect must set the bandwidth. Output only for PARTNER type,
-   * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
-   * BPS_50M: 50 Mbit/s - BPS_100M: 100 Mbit/s - BPS_200M: 200 Mbit/s - BPS_300M: 300 Mbit/s -
-   * BPS_400M: 400 Mbit/s - BPS_500M: 500 Mbit/s - BPS_1G: 1 Gbit/s - BPS_2G: 2 Gbit/s - BPS_5G: 5
-   * Gbit/s - BPS_10G: 10 Gbit/s - BPS_20G: 20 Gbit/s - BPS_50G: 50 Gbit/s - BPS_100G: 100 Gbit/s
+   * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values:        -
+   * BPS_50M: 50 Mbit/s    - BPS_100M: 100 Mbit/s    - BPS_200M: 200 Mbit/s    - BPS_300M: 300
+   * Mbit/s    - BPS_400M: 400 Mbit/s    - BPS_500M: 500 Mbit/s    - BPS_1G: 1 Gbit/s    - BPS_2G: 2
+   * Gbit/s    - BPS_5G: 5 Gbit/s    - BPS_10G: 10 Gbit/s    - BPS_20G: 20 Gbit/s    - BPS_50G: 50
+   * Gbit/s    - BPS_100G: 100 Gbit/s
    * @param bandwidth bandwidth or {@code null} for none
    */
   public InterconnectAttachment setBandwidth(java.lang.String bandwidth) {
@@ -592,7 +607,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -600,7 +615,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InterconnectAttachment setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -703,11 +718,13 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Input only. Desired availability domain for the attachment. Only available for type PARTNER, at
-   * creation time, and can take one of the following values: - AVAILABILITY_DOMAIN_ANY -
-   * AVAILABILITY_DOMAIN_1 - AVAILABILITY_DOMAIN_2 For improved reliability, customers should
-   * configure a pair of attachments, one per availability domain. The selected availability domain
-   * will be provided to the Partner via the pairing key, so that the provisioned circuit will lie
-   * in the specified domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
+   * creation time, and can take one of the following values:        - AVAILABILITY_DOMAIN_ANY    -
+   * AVAILABILITY_DOMAIN_1    - AVAILABILITY_DOMAIN_2
+   *
+   * For improved reliability, customers should configure a pair of attachments, one per
+   * availability domain. The selected availability domain will be provided to the Partner via the
+   * pairing key, so that the provisioned circuit will lie in the specified domain. If not
+   * specified, the value will default to AVAILABILITY_DOMAIN_ANY.
    * @return value or {@code null} for none
    */
   public java.lang.String getEdgeAvailabilityDomain() {
@@ -716,11 +733,13 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Input only. Desired availability domain for the attachment. Only available for type PARTNER, at
-   * creation time, and can take one of the following values: - AVAILABILITY_DOMAIN_ANY -
-   * AVAILABILITY_DOMAIN_1 - AVAILABILITY_DOMAIN_2 For improved reliability, customers should
-   * configure a pair of attachments, one per availability domain. The selected availability domain
-   * will be provided to the Partner via the pairing key, so that the provisioned circuit will lie
-   * in the specified domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
+   * creation time, and can take one of the following values:        - AVAILABILITY_DOMAIN_ANY    -
+   * AVAILABILITY_DOMAIN_1    - AVAILABILITY_DOMAIN_2
+   *
+   * For improved reliability, customers should configure a pair of attachments, one per
+   * availability domain. The selected availability domain will be provided to the Partner via the
+   * pairing key, so that the provisioned circuit will lie in the specified domain. If not
+   * specified, the value will default to AVAILABILITY_DOMAIN_ANY.
    * @param edgeAvailabilityDomain edgeAvailabilityDomain or {@code null} for none
    */
   public InterconnectAttachment setEdgeAvailabilityDomain(java.lang.String edgeAvailabilityDomain) {
@@ -731,12 +750,12 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   /**
    * Indicates the user-supplied encryption option of this VLAN attachment (interconnectAttachment).
    * Can only be specified at attachment creation for PARTNER or DEDICATED attachments. Possible
-   * values are: - NONE - This is the default value, which means that the VLAN attachment carries
-   * unencrypted traffic. VMs are able to send traffic to, or receive traffic from, such a VLAN
-   * attachment. - IPSEC - The VLAN attachment carries only encrypted traffic that is encrypted by
-   * an IPsec device, such as an HA VPN gateway or third-party IPsec VPN. VMs cannot directly send
-   * traffic to, or receive traffic from, such a VLAN attachment. To use *HA VPN over Cloud
-   * Interconnect*, the VLAN attachment must be created with this option.
+   * values are:        - NONE - This is the default value, which means that the    VLAN attachment
+   * carries unencrypted traffic. VMs are able to send    traffic to, or receive traffic from, such
+   * a VLAN attachment.    - IPSEC - The VLAN attachment carries only encrypted    traffic that is
+   * encrypted by an IPsec device, such as an HA VPN gateway or    third-party IPsec VPN. VMs cannot
+   * directly send traffic to, or receive    traffic from, such a VLAN attachment. To use *HA VPN
+   * over Cloud    Interconnect*, the VLAN attachment must be created with this    option.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncryption() {
@@ -746,12 +765,12 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   /**
    * Indicates the user-supplied encryption option of this VLAN attachment (interconnectAttachment).
    * Can only be specified at attachment creation for PARTNER or DEDICATED attachments. Possible
-   * values are: - NONE - This is the default value, which means that the VLAN attachment carries
-   * unencrypted traffic. VMs are able to send traffic to, or receive traffic from, such a VLAN
-   * attachment. - IPSEC - The VLAN attachment carries only encrypted traffic that is encrypted by
-   * an IPsec device, such as an HA VPN gateway or third-party IPsec VPN. VMs cannot directly send
-   * traffic to, or receive traffic from, such a VLAN attachment. To use *HA VPN over Cloud
-   * Interconnect*, the VLAN attachment must be created with this option.
+   * values are:        - NONE - This is the default value, which means that the    VLAN attachment
+   * carries unencrypted traffic. VMs are able to send    traffic to, or receive traffic from, such
+   * a VLAN attachment.    - IPSEC - The VLAN attachment carries only encrypted    traffic that is
+   * encrypted by an IPsec device, such as an HA VPN gateway or    third-party IPsec VPN. VMs cannot
+   * directly send traffic to, or receive    traffic from, such a VLAN attachment. To use *HA VPN
+   * over Cloud    Interconnect*, the VLAN attachment must be created with this    option.
    * @param encryption encryption or {@code null} for none
    */
   public InterconnectAttachment setEncryption(java.lang.String encryption) {
@@ -848,7 +867,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#interconnectAttachment for interconnect
+   * [Output Only] Type of the resource. Alwayscompute#interconnectAttachment for interconnect
    * attachments.
    * @return value or {@code null} for none
    */
@@ -857,7 +876,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#interconnectAttachment for interconnect
+   * [Output Only] Type of the resource. Alwayscompute#interconnectAttachment for interconnect
    * attachments.
    * @param kind kind or {@code null} for none
    */
@@ -871,8 +890,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * a hash of the labels set used for optimistic locking. The fingerprint is initially generated by
    * Compute Engine and changes after every request to modify or update labels. You must always
    * provide an up-to-date fingerprint hash in order to update or change labels, otherwise the
-   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
-   * request to retrieve an InterconnectAttachment.
+   * request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InterconnectAttachment.
    * @see #decodeLabelFingerprint()
    * @return value or {@code null} for none
    */
@@ -885,8 +905,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * a hash of the labels set used for optimistic locking. The fingerprint is initially generated by
    * Compute Engine and changes after every request to modify or update labels. You must always
    * provide an up-to-date fingerprint hash in order to update or change labels, otherwise the
-   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
-   * request to retrieve an InterconnectAttachment.
+   * request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InterconnectAttachment.
    * @see #getLabelFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -901,8 +922,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * a hash of the labels set used for optimistic locking. The fingerprint is initially generated by
    * Compute Engine and changes after every request to modify or update labels. You must always
    * provide an up-to-date fingerprint hash in order to update or change labels, otherwise the
-   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
-   * request to retrieve an InterconnectAttachment.
+   * request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InterconnectAttachment.
    * @see #encodeLabelFingerprint()
    * @param labelFingerprint labelFingerprint or {@code null} for none
    */
@@ -916,8 +938,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * a hash of the labels set used for optimistic locking. The fingerprint is initially generated by
    * Compute Engine and changes after every request to modify or update labels. You must always
    * provide an up-to-date fingerprint hash in order to update or change labels, otherwise the
-   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
-   * request to retrieve an InterconnectAttachment.
+   * request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve an InterconnectAttachment.
    * @see #setLabelFingerprint()
    *
    * <p>
@@ -932,8 +955,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Labels for this resource. These can only be added or modified by the setLabels method. Each
-   * label key/value pair must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by thesetLabels method. Each
+   * label key/value pair must comply withRFC1035. Label values may be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -941,8 +964,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Labels for this resource. These can only be added or modified by the setLabels method. Each
-   * label key/value pair must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by thesetLabels method. Each
+   * label key/value pair must comply withRFC1035. Label values may be empty.
    * @param labels labels or {@code null} for none
    */
   public InterconnectAttachment setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -973,7 +996,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -985,7 +1008,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -998,9 +1021,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * [Output Only] The current status of whether or not this interconnect attachment is functional,
-   * which can take one of the following values: - OS_ACTIVE: The attachment has been turned up and
-   * is ready to use. - OS_UNPROVISIONED: The attachment is not ready to use yet, because turnup is
-   * not complete.
+   * which can take one of the following values:        - OS_ACTIVE: The attachment has been turned
+   * up and is ready to    use.     - OS_UNPROVISIONED: The attachment is not ready to use yet,
+   * because turnup is not complete.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationalStatus() {
@@ -1009,9 +1032,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * [Output Only] The current status of whether or not this interconnect attachment is functional,
-   * which can take one of the following values: - OS_ACTIVE: The attachment has been turned up and
-   * is ready to use. - OS_UNPROVISIONED: The attachment is not ready to use yet, because turnup is
-   * not complete.
+   * which can take one of the following values:        - OS_ACTIVE: The attachment has been turned
+   * up and is ready to    use.     - OS_UNPROVISIONED: The attachment is not ready to use yet,
+   * because turnup is not complete.
    * @param operationalStatus operationalStatus or {@code null} for none
    */
   public InterconnectAttachment setOperationalStatus(java.lang.String operationalStatus) {
@@ -1123,8 +1146,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   /**
    * [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this field
    * contains the interconnect's remote location service provider. Example values: "Amazon Web
-   * Services" "Microsoft Azure". The field is set only for attachments on Cross-Cloud Interconnect
-   * connections. Its value is copied from the InterconnectRemoteLocation remoteService field.
+   * Services" "Microsoft Azure".
+   *
+   * The field is set only for attachments on Cross-Cloud Interconnect connections. Its value is
+   * copied from the InterconnectRemoteLocation remoteService field.
    * @return value or {@code null} for none
    */
   public java.lang.String getRemoteService() {
@@ -1134,8 +1159,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   /**
    * [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this field
    * contains the interconnect's remote location service provider. Example values: "Amazon Web
-   * Services" "Microsoft Azure". The field is set only for attachments on Cross-Cloud Interconnect
-   * connections. Its value is copied from the InterconnectRemoteLocation remoteService field.
+   * Services" "Microsoft Azure".
+   *
+   * The field is set only for attachments on Cross-Cloud Interconnect connections. Its value is
+   * copied from the InterconnectRemoteLocation remoteService field.
    * @param remoteService remoteService or {@code null} for none
    */
   public InterconnectAttachment setRemoteService(java.lang.String remoteService) {
@@ -1200,8 +1227,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * The stack type for this interconnect attachment to identify whether the IPv6 feature is enabled
-   * or not. If not specified, IPV4_ONLY will be used. This field can be both set at interconnect
-   * attachments creation and update interconnect attachment operations.
+   * or not. If not specified, IPV4_ONLY will be used.
+   *
+   * This field can be both set at interconnect attachments creation and update interconnect
+   * attachment operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getStackType() {
@@ -1210,8 +1239,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * The stack type for this interconnect attachment to identify whether the IPv6 feature is enabled
-   * or not. If not specified, IPV4_ONLY will be used. This field can be both set at interconnect
-   * attachments creation and update interconnect attachment operations.
+   * or not. If not specified, IPV4_ONLY will be used.
+   *
+   * This field can be both set at interconnect attachments creation and update interconnect
+   * attachment operations.
    * @param stackType stackType or {@code null} for none
    */
   public InterconnectAttachment setStackType(java.lang.String stackType) {
@@ -1224,15 +1255,15 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
    * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
    * are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take
-   * one of the following values: - ACTIVE: The attachment has been turned up and is ready to use. -
-   * UNPROVISIONED: The attachment is not ready to use yet, because turnup is not complete. -
-   * PENDING_PARTNER: A newly-created PARTNER attachment that has not yet been configured on the
-   * Partner side. - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the process of
-   * provisioning after a PARTNER_PROVIDER attachment was created that references it. -
-   * PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER attachment that is waiting for a customer to
-   * activate it. - DEFUNCT: The attachment was deleted externally and is no longer functional. This
-   * could be because the associated Interconnect was removed, or because the other side of a
-   * Partner attachment was deleted.
+   * one of the following values:        - ACTIVE: The attachment has been turned up and is ready to
+   * use.    - UNPROVISIONED: The attachment is not ready to use yet, because turnup    is not
+   * complete.    - PENDING_PARTNER: A newly-created PARTNER attachment that has not yet    been
+   * configured on the Partner side.    - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the
+   * process of    provisioning after a PARTNER_PROVIDER attachment was created that    references
+   * it.     - PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER    attachment that is waiting for a
+   * customer to activate it.     - DEFUNCT:    The attachment was deleted externally and is no
+   * longer functional. This    could be because the associated Interconnect was removed, or because
+   * the    other side of a Partner attachment was deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -1244,15 +1275,15 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
    * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
    * are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take
-   * one of the following values: - ACTIVE: The attachment has been turned up and is ready to use. -
-   * UNPROVISIONED: The attachment is not ready to use yet, because turnup is not complete. -
-   * PENDING_PARTNER: A newly-created PARTNER attachment that has not yet been configured on the
-   * Partner side. - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the process of
-   * provisioning after a PARTNER_PROVIDER attachment was created that references it. -
-   * PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER attachment that is waiting for a customer to
-   * activate it. - DEFUNCT: The attachment was deleted externally and is no longer functional. This
-   * could be because the associated Interconnect was removed, or because the other side of a
-   * Partner attachment was deleted.
+   * one of the following values:        - ACTIVE: The attachment has been turned up and is ready to
+   * use.    - UNPROVISIONED: The attachment is not ready to use yet, because turnup    is not
+   * complete.    - PENDING_PARTNER: A newly-created PARTNER attachment that has not yet    been
+   * configured on the Partner side.    - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the
+   * process of    provisioning after a PARTNER_PROVIDER attachment was created that    references
+   * it.     - PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER    attachment that is waiting for a
+   * customer to activate it.     - DEFUNCT:    The attachment was deleted externally and is no
+   * longer functional. This    could be because the associated Interconnect was removed, or because
+   * the    other side of a Partner attachment was deleted.
    * @param state state or {@code null} for none
    */
   public InterconnectAttachment setState(java.lang.String state) {
@@ -1261,12 +1292,15 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Input only. Length of the IPv4 subnet mask. Allowed values: - 29 (default) - 30 The default
-   * value is 29, except for Cross-Cloud Interconnect connections that use an
+   * Input only. Length of the IPv4 subnet mask. Allowed values:             - 29 (default)     - 30
+   *
+   * The default value is 29, except for Cross-Cloud Interconnect connections that use an
    * InterconnectRemoteLocation with a constraints.subnetLengthRange.min equal to 30. For example,
    * connections that use an Azure remote location fall into this category. In these cases, the
-   * default value is 30, and requesting 29 returns an error. Where both 29 and 30 are allowed, 29
-   * is preferred, because it gives Google Cloud Support more debugging visibility.
+   * default value is 30, and requesting 29 returns an error.
+   *
+   * Where both 29 and 30 are allowed, 29 is preferred, because it gives Google Cloud Support more
+   * debugging visibility.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSubnetLength() {
@@ -1274,12 +1308,15 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Input only. Length of the IPv4 subnet mask. Allowed values: - 29 (default) - 30 The default
-   * value is 29, except for Cross-Cloud Interconnect connections that use an
+   * Input only. Length of the IPv4 subnet mask. Allowed values:             - 29 (default)     - 30
+   *
+   * The default value is 29, except for Cross-Cloud Interconnect connections that use an
    * InterconnectRemoteLocation with a constraints.subnetLengthRange.min equal to 30. For example,
    * connections that use an Azure remote location fall into this category. In these cases, the
-   * default value is 30, and requesting 29 returns an error. Where both 29 and 30 are allowed, 29
-   * is preferred, because it gives Google Cloud Support more debugging visibility.
+   * default value is 30, and requesting 29 returns an error.
+   *
+   * Where both 29 and 30 are allowed, 29 is preferred, because it gives Google Cloud Support more
+   * debugging visibility.
    * @param subnetLength subnetLength or {@code null} for none
    */
   public InterconnectAttachment setSubnetLength(java.lang.Integer subnetLength) {
@@ -1288,10 +1325,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * The type of interconnect attachment this is, which can take one of the following values: -
-   * DEDICATED: an attachment to a Dedicated Interconnect. - PARTNER: an attachment to a Partner
-   * Interconnect, created by the customer. - PARTNER_PROVIDER: an attachment to a Partner
-   * Interconnect, created by the partner.
+   * The type of interconnect attachment this is, which can take one of the following values:
+   * - DEDICATED: an attachment to a Dedicated Interconnect.    - PARTNER: an attachment to a
+   * Partner Interconnect, created by the    customer.    - PARTNER_PROVIDER: an attachment to a
+   * Partner Interconnect, created by    the partner.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -1299,10 +1336,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * The type of interconnect attachment this is, which can take one of the following values: -
-   * DEDICATED: an attachment to a Dedicated Interconnect. - PARTNER: an attachment to a Partner
-   * Interconnect, created by the customer. - PARTNER_PROVIDER: an attachment to a Partner
-   * Interconnect, created by the partner.
+   * The type of interconnect attachment this is, which can take one of the following values:
+   * - DEDICATED: an attachment to a Dedicated Interconnect.    - PARTNER: an attachment to a
+   * Partner Interconnect, created by the    customer.    - PARTNER_PROVIDER: an attachment to a
+   * Partner Interconnect, created by    the partner.
    * @param type type or {@code null} for none
    */
   public InterconnectAttachment setType(java.lang.String type) {

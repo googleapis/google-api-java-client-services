@@ -39,7 +39,9 @@ public final class HttpFaultDelay extends com.google.api.client.json.GenericJson
 
   /**
    * The percentage of traffic for connections, operations, or requests for which a delay is
-   * introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+   * introduced as part of fault injection.
+   *
+   * The value must be from 0.0 to 100.0 inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +66,9 @@ public final class HttpFaultDelay extends com.google.api.client.json.GenericJson
 
   /**
    * The percentage of traffic for connections, operations, or requests for which a delay is
-   * introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+   * introduced as part of fault injection.
+   *
+   * The value must be from 0.0 to 100.0 inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPercentage() {
@@ -73,7 +77,9 @@ public final class HttpFaultDelay extends com.google.api.client.json.GenericJson
 
   /**
    * The percentage of traffic for connections, operations, or requests for which a delay is
-   * introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+   * introduced as part of fault injection.
+   *
+   * The value must be from 0.0 to 100.0 inclusive.
    * @param percentage percentage or {@code null} for none
    */
   public HttpFaultDelay setPercentage(java.lang.Double percentage) {

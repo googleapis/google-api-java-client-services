@@ -18,7 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * In contrast to a single BackendService in HttpRouteAction to which all matching traffic is
- * directed to, WeightedBackendService allows traffic to be split across multiple backend services.
+ * directed to,WeightedBackendService allows traffic to be split across multiple backend services.
  * The volume of traffic for each backend service is proportional to the weight specified in each
  * WeightedBackendService
  *
@@ -35,7 +35,7 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
   /**
    * The full or partial URL to the default BackendService resource. Before forwarding the request
    * to backendService, the load balancer applies any relevant headerActions specified as part of
-   * this backendServiceWeight.
+   * thisbackendServiceWeight.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,23 +43,32 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
 
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
-   * backendService. headerAction specified here take effect before headerAction in the enclosing
-   * HttpRouteRule, PathMatcher and UrlMap. headerAction is not supported for load balancers that
-   * have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to a
-   * target gRPC proxy that has validateForProxyless field set to true.
+   * backendService.
+   *
+   * headerAction specified here take effect beforeheaderAction in the enclosing
+   * HttpRouteRule,PathMatcher and UrlMap.
+   *
+   * headerAction is not supported for load balancers that have their loadBalancingScheme set to
+   * EXTERNAL.
+   *
+   * Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless
+   * field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HttpHeaderAction headerAction;
 
   /**
-   * Specifies the fraction of traffic sent to a backend service, computed as weight / (sum of all
-   * weightedBackendService weights in routeAction) . The selection of a backend service is
-   * determined only for new traffic. Once a user's request has been directed to a backend service,
-   * subsequent requests are sent to the same backend service as determined by the backend service's
-   * session affinity policy. Don't configure session affinity if you're using weighted traffic
-   * splitting. If you do, the weighted traffic splitting configuration takes precedence. The value
-   * must be from 0 to 1000.
+   * Specifies the fraction of traffic sent to a backend service, computed asweight / (sum of all
+   * weightedBackendService weights in routeAction).
+   *
+   * The selection of a backend service is determined only for new traffic. Once a user's request
+   * has been directed to a backend service, subsequent requests are sent to the same backend
+   * service as determined by the backend service's session affinity policy. Don't configure session
+   * affinity if you're using weighted traffic splitting. If you do, the weighted traffic splitting
+   * configuration takes precedence.
+   *
+   * The value must be from 0 to 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +77,7 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
   /**
    * The full or partial URL to the default BackendService resource. Before forwarding the request
    * to backendService, the load balancer applies any relevant headerActions specified as part of
-   * this backendServiceWeight.
+   * thisbackendServiceWeight.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendService() {
@@ -78,7 +87,7 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
   /**
    * The full or partial URL to the default BackendService resource. Before forwarding the request
    * to backendService, the load balancer applies any relevant headerActions specified as part of
-   * this backendServiceWeight.
+   * thisbackendServiceWeight.
    * @param backendService backendService or {@code null} for none
    */
   public WeightedBackendService setBackendService(java.lang.String backendService) {
@@ -88,10 +97,16 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
 
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
-   * backendService. headerAction specified here take effect before headerAction in the enclosing
-   * HttpRouteRule, PathMatcher and UrlMap. headerAction is not supported for load balancers that
-   * have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to a
-   * target gRPC proxy that has validateForProxyless field set to true.
+   * backendService.
+   *
+   * headerAction specified here take effect beforeheaderAction in the enclosing
+   * HttpRouteRule,PathMatcher and UrlMap.
+   *
+   * headerAction is not supported for load balancers that have their loadBalancingScheme set to
+   * EXTERNAL.
+   *
+   * Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless
+   * field set to true.
    * @return value or {@code null} for none
    */
   public HttpHeaderAction getHeaderAction() {
@@ -100,10 +115,16 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
 
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
-   * backendService. headerAction specified here take effect before headerAction in the enclosing
-   * HttpRouteRule, PathMatcher and UrlMap. headerAction is not supported for load balancers that
-   * have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to a
-   * target gRPC proxy that has validateForProxyless field set to true.
+   * backendService.
+   *
+   * headerAction specified here take effect beforeheaderAction in the enclosing
+   * HttpRouteRule,PathMatcher and UrlMap.
+   *
+   * headerAction is not supported for load balancers that have their loadBalancingScheme set to
+   * EXTERNAL.
+   *
+   * Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless
+   * field set to true.
    * @param headerAction headerAction or {@code null} for none
    */
   public WeightedBackendService setHeaderAction(HttpHeaderAction headerAction) {
@@ -112,13 +133,16 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies the fraction of traffic sent to a backend service, computed as weight / (sum of all
-   * weightedBackendService weights in routeAction) . The selection of a backend service is
-   * determined only for new traffic. Once a user's request has been directed to a backend service,
-   * subsequent requests are sent to the same backend service as determined by the backend service's
-   * session affinity policy. Don't configure session affinity if you're using weighted traffic
-   * splitting. If you do, the weighted traffic splitting configuration takes precedence. The value
-   * must be from 0 to 1000.
+   * Specifies the fraction of traffic sent to a backend service, computed asweight / (sum of all
+   * weightedBackendService weights in routeAction).
+   *
+   * The selection of a backend service is determined only for new traffic. Once a user's request
+   * has been directed to a backend service, subsequent requests are sent to the same backend
+   * service as determined by the backend service's session affinity policy. Don't configure session
+   * affinity if you're using weighted traffic splitting. If you do, the weighted traffic splitting
+   * configuration takes precedence.
+   *
+   * The value must be from 0 to 1000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getWeight() {
@@ -126,13 +150,16 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies the fraction of traffic sent to a backend service, computed as weight / (sum of all
-   * weightedBackendService weights in routeAction) . The selection of a backend service is
-   * determined only for new traffic. Once a user's request has been directed to a backend service,
-   * subsequent requests are sent to the same backend service as determined by the backend service's
-   * session affinity policy. Don't configure session affinity if you're using weighted traffic
-   * splitting. If you do, the weighted traffic splitting configuration takes precedence. The value
-   * must be from 0 to 1000.
+   * Specifies the fraction of traffic sent to a backend service, computed asweight / (sum of all
+   * weightedBackendService weights in routeAction).
+   *
+   * The selection of a backend service is determined only for new traffic. Once a user's request
+   * has been directed to a backend service, subsequent requests are sent to the same backend
+   * service as determined by the backend service's session affinity policy. Don't configure session
+   * affinity if you're using weighted traffic splitting. If you do, the weighted traffic splitting
+   * configuration takes precedence.
+   *
+   * The value must be from 0 to 1000.
    * @param weight weight or {@code null} for none
    */
   public WeightedBackendService setWeight(java.lang.Long weight) {

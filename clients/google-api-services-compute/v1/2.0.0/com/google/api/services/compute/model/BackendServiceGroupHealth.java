@@ -45,7 +45,7 @@ public final class BackendServiceGroupHealth extends com.google.api.client.json.
   private java.util.List<HealthStatus> healthStatus;
 
   /**
-   * [Output Only] Type of resource. Always compute#backendServiceGroupHealth for the health of
+   * [Output Only] Type of resource. Alwayscompute#backendServiceGroupHealth for the health of
    * backend services.
    * The value may be {@code null}.
    */
@@ -89,7 +89,7 @@ public final class BackendServiceGroupHealth extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#backendServiceGroupHealth for the health of
+   * [Output Only] Type of resource. Alwayscompute#backendServiceGroupHealth for the health of
    * backend services.
    * @return value or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class BackendServiceGroupHealth extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#backendServiceGroupHealth for the health of
+   * [Output Only] Type of resource. Alwayscompute#backendServiceGroupHealth for the health of
    * backend services.
    * @param kind kind or {@code null} for none
    */

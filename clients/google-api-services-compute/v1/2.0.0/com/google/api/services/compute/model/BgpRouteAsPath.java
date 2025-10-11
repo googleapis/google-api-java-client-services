@@ -37,6 +37,15 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.Integer> asns;
 
   /**
+   * [Output only] ASNs in the path segment. This field is for better support of 32 bit ASNs as the
+   * other asns field suffers from overflow when the ASN is larger. When type is SEQUENCE, these are
+   * ordered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Long> asns32;
+
+  /**
    * [Output only] Type of AS-PATH segment (SEQUENCE or SET)
    * The value may be {@code null}.
    */
@@ -57,6 +66,27 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
    */
   public BgpRouteAsPath setAsns(java.util.List<java.lang.Integer> asns) {
     this.asns = asns;
+    return this;
+  }
+
+  /**
+   * [Output only] ASNs in the path segment. This field is for better support of 32 bit ASNs as the
+   * other asns field suffers from overflow when the ASN is larger. When type is SEQUENCE, these are
+   * ordered.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getAsns32() {
+    return asns32;
+  }
+
+  /**
+   * [Output only] ASNs in the path segment. This field is for better support of 32 bit ASNs as the
+   * other asns field suffers from overflow when the ASN is larger. When type is SEQUENCE, these are
+   * ordered.
+   * @param asns32 asns32 or {@code null} for none
+   */
+  public BgpRouteAsPath setAsns32(java.util.List<java.lang.Long> asns32) {
+    this.asns32 = asns32;
     return this;
   }
 

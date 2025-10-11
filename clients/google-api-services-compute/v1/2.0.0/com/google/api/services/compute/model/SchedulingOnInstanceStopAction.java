@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Defines the behaviour for instances with the instance_termination_action STOP.
+ * Defines the behaviour for instances with the instance_termination_actionSTOP.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

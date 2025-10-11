@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class NetworkEdgeSecurityService extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,9 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   private java.math.BigInteger id;
 
   /**
-   * [Output only] Type of the resource. Always compute#networkEdgeSecurityService for
+   * [Output only] Type of the resource. Alwayscompute#networkEdgeSecurityService for
    * NetworkEdgeSecurityServices
    * The value may be {@code null}.
    */
@@ -71,7 +72,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -111,7 +112,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -119,7 +120,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NetworkEdgeSecurityService setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -148,8 +149,9 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -161,8 +163,9 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -176,8 +179,9 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -190,8 +194,9 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
-   * make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
    * @see #setFingerprint()
    *
    * <p>
@@ -223,7 +228,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#networkEdgeSecurityService for
+   * [Output only] Type of the resource. Alwayscompute#networkEdgeSecurityService for
    * NetworkEdgeSecurityServices
    * @return value or {@code null} for none
    */
@@ -232,7 +237,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#networkEdgeSecurityService for
+   * [Output only] Type of the resource. Alwayscompute#networkEdgeSecurityService for
    * NetworkEdgeSecurityServices
    * @param kind kind or {@code null} for none
    */
@@ -243,7 +248,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -255,7 +260,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.

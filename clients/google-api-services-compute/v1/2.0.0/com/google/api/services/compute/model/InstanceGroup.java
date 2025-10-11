@@ -17,12 +17,20 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Instance Group resource. Instance Groups can be used to configure a target for load
- * balancing. Instance groups can either be managed or unmanaged. To create managed instance groups,
- * use the instanceGroupManager or regionInstanceGroupManager resource instead. Use zonal unmanaged
- * instance groups if you need to apply load balancing to groups of heterogeneous instances or if
- * you need to manage the instances yourself. You cannot create regional unmanaged instance groups.
- * For more information, read Instance groups.
+ * Represents an Instance Group resource.
+ *
+ * Instance Groups can be used to configure a target forload balancing.
+ *
+ * Instance groups can either be managed or unmanaged.
+ *
+ * To create  managed instance groups, use the instanceGroupManager orregionInstanceGroupManager
+ * resource instead.
+ *
+ * Use zonal unmanaged instance groups if you need to applyload balancing to groups of heterogeneous
+ * instances or if you need to manage the instances yourself. You cannot create regional unmanaged
+ * instance groups.
+ *
+ * For more information, readInstance groups.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -35,7 +43,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The creation timestamp for this instance group in RFC3339 text format.
+   * [Output Only] The creation timestamp for this instance group inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,24 +72,27 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceGroup for instance groups.
+   * [Output Only] The resource type, which is alwayscompute#instanceGroup for instance groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
+   * The name of the instance group. The name must be 1-63 characters long, and comply withRFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. Assigns a name to a port number. For example: {name: "http", port: 80} This allows
-   * the system to reference ports by the assigned name instead of a port number. Named ports can
-   * also contain multiple ports. For example: [{name: "app1", port: 8080}, {name: "app1", port:
-   * 8081}, {name: "app2", port: 8082}] Named ports apply to all instances in this instance group.
+   * Optional. Assigns a name to a port number. For example:{name: "http", port: 80}
+   *
+   * This allows the system to reference ports by the assigned name instead of a port number. Named
+   * ports can also contain multiple ports. For example:[{name: "app1", port: 8080}, {name: "app1",
+   * port: 8081}, {name: "app2", port: 8082}]
+   *
+   * Named ports apply to all instances in this instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +108,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
-   * [Output Only] The URL of the region where the instance group is located (for regional
+   * [Output Only] The URL of theregion where the instance group is located (for regional
    * resources).
    * The value may be {@code null}.
    */
@@ -128,14 +139,14 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   private java.lang.String subnetwork;
 
   /**
-   * [Output Only] The URL of the zone where the instance group is located (for zonal resources).
+   * [Output Only] The URL of thezone where the instance group is located (for zonal resources).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * [Output Only] The creation timestamp for this instance group in RFC3339 text format.
+   * [Output Only] The creation timestamp for this instance group inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -143,7 +154,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The creation timestamp for this instance group in RFC3339 text format.
+   * [Output Only] The creation timestamp for this instance group inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InstanceGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -235,7 +246,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceGroup for instance groups.
+   * [Output Only] The resource type, which is alwayscompute#instanceGroup for instance groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -243,7 +254,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#instanceGroup for instance groups.
+   * [Output Only] The resource type, which is alwayscompute#instanceGroup for instance groups.
    * @param kind kind or {@code null} for none
    */
   public InstanceGroup setKind(java.lang.String kind) {
@@ -252,7 +263,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
+   * The name of the instance group. The name must be 1-63 characters long, and comply withRFC1035.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -260,7 +271,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
+   * The name of the instance group. The name must be 1-63 characters long, and comply withRFC1035.
    * @param name name or {@code null} for none
    */
   public InstanceGroup setName(java.lang.String name) {
@@ -269,10 +280,13 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Assigns a name to a port number. For example: {name: "http", port: 80} This allows
-   * the system to reference ports by the assigned name instead of a port number. Named ports can
-   * also contain multiple ports. For example: [{name: "app1", port: 8080}, {name: "app1", port:
-   * 8081}, {name: "app2", port: 8082}] Named ports apply to all instances in this instance group.
+   * Optional. Assigns a name to a port number. For example:{name: "http", port: 80}
+   *
+   * This allows the system to reference ports by the assigned name instead of a port number. Named
+   * ports can also contain multiple ports. For example:[{name: "app1", port: 8080}, {name: "app1",
+   * port: 8081}, {name: "app2", port: 8082}]
+   *
+   * Named ports apply to all instances in this instance group.
    * @return value or {@code null} for none
    */
   public java.util.List<NamedPort> getNamedPorts() {
@@ -280,10 +294,13 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Assigns a name to a port number. For example: {name: "http", port: 80} This allows
-   * the system to reference ports by the assigned name instead of a port number. Named ports can
-   * also contain multiple ports. For example: [{name: "app1", port: 8080}, {name: "app1", port:
-   * 8081}, {name: "app2", port: 8082}] Named ports apply to all instances in this instance group.
+   * Optional. Assigns a name to a port number. For example:{name: "http", port: 80}
+   *
+   * This allows the system to reference ports by the assigned name instead of a port number. Named
+   * ports can also contain multiple ports. For example:[{name: "app1", port: 8080}, {name: "app1",
+   * port: 8081}, {name: "app2", port: 8082}]
+   *
+   * Named ports apply to all instances in this instance group.
    * @param namedPorts namedPorts or {@code null} for none
    */
   public InstanceGroup setNamedPorts(java.util.List<NamedPort> namedPorts) {
@@ -313,7 +330,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The URL of the region where the instance group is located (for regional
+   * [Output Only] The URL of theregion where the instance group is located (for regional
    * resources).
    * @return value or {@code null} for none
    */
@@ -322,7 +339,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The URL of the region where the instance group is located (for regional
+   * [Output Only] The URL of theregion where the instance group is located (for regional
    * resources).
    * @param region region or {@code null} for none
    */
@@ -387,7 +404,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The URL of the zone where the instance group is located (for zonal resources).
+   * [Output Only] The URL of thezone where the instance group is located (for zonal resources).
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -395,7 +412,7 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The URL of the zone where the instance group is located (for zonal resources).
+   * [Output Only] The URL of thezone where the instance group is located (for zonal resources).
    * @param zone zone or {@code null} for none
    */
   public InstanceGroup setZone(java.lang.String zone) {

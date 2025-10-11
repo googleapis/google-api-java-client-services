@@ -18,7 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * Represents a Resource Policy resource. You can use resource policies to schedule actions for some
- * Compute Engine resources. For example, you can use them to schedule persistent disk snapshots.
+ * Compute Engine resources. For example, you can use them toschedule persistent disk snapshots.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private ResourcePolicyInstanceSchedulePolicy instanceSchedulePolicy;
 
   /**
-   * [Output Only] Type of the resource. Always compute#resource_policies for resource policies.
+   * [Output Only] Type of the resource. Alwayscompute#resource_policies for resource policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,10 +80,10 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +131,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private ResourcePolicyWorkloadPolicy workloadPolicy;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -139,7 +139,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ResourcePolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -231,7 +231,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#resource_policies for resource policies.
+   * [Output Only] Type of the resource. Alwayscompute#resource_policies for resource policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -239,7 +239,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#resource_policies for resource policies.
+   * [Output Only] Type of the resource. Alwayscompute#resource_policies for resource policies.
    * @param kind kind or {@code null} for none
    */
   public ResourcePolicy setKind(java.lang.String kind) {
@@ -249,10 +249,10 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -261,10 +261,10 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
-   * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
-   * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-   * which means the first character must be a lowercase letter, and all following characters must
-   * be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   * resource name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @param name name or {@code null} for none
    */
   public ResourcePolicy setName(java.lang.String name) {

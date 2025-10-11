@@ -40,7 +40,7 @@ public final class PreservedStatePreservedDisk extends com.google.api.client.jso
   private java.lang.String autoDelete;
 
   /**
-   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
+   * The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If not specified, the
    * default is to attach the disk in READ_WRITE mode.
    * The value may be {@code null}.
    */
@@ -78,7 +78,7 @@ public final class PreservedStatePreservedDisk extends com.google.api.client.jso
   }
 
   /**
-   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
+   * The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If not specified, the
    * default is to attach the disk in READ_WRITE mode.
    * @return value or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class PreservedStatePreservedDisk extends com.google.api.client.jso
   }
 
   /**
-   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
+   * The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If not specified, the
    * default is to attach the disk in READ_WRITE mode.
    * @param mode mode or {@code null} for none
    */

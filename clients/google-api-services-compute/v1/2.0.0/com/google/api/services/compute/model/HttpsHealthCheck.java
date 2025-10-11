@@ -17,11 +17,14 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a legacy HTTPS Health Check resource. Legacy HTTPS health checks have been deprecated.
- * If you are using a target pool-based network load balancer, you must use a legacy HTTP (not
- * HTTPS) health check. For all other load balancers, including backend service-based network load
- * balancers, and for managed instance group auto-healing, you must use modern (non-legacy) health
- * checks. For more information, see Health checks overview .
+ * Represents a legacy HTTPS Health Check resource.
+ *
+ * Legacy HTTPS health checks have been deprecated. If you are using a target pool-based network
+ * load balancer, you must use a legacy HTTP (not HTTPS) health check. For all other load balancers,
+ * including backend service-based network load balancers, and for managed instance group auto-
+ * healing, you must use modern (non-legacy) health checks.
+ *
+ * For more information, seeHealth checks overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -41,7 +44,7 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
   private java.lang.Integer checkIntervalSec;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +89,7 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -103,8 +106,8 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
   private java.lang.Integer port;
 
   /**
-   * The request path of the HTTPS health check request. The default value is "/". Must comply with
-   * RFC3986.
+   * The request path of the HTTPS health check request. The default value is "/". Must comply
+   * withRFC3986.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +154,7 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -159,7 +162,7 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public HttpsHealthCheck setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -258,7 +261,7 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -270,7 +273,7 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
    * letter, or digit, except the last character, which cannot be a dash.
@@ -299,8 +302,8 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The request path of the HTTPS health check request. The default value is "/". Must comply with
-   * RFC3986.
+   * The request path of the HTTPS health check request. The default value is "/". Must comply
+   * withRFC3986.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestPath() {
@@ -308,8 +311,8 @@ public final class HttpsHealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The request path of the HTTPS health check request. The default value is "/". Must comply with
-   * RFC3986.
+   * The request path of the HTTPS health check request. The default value is "/". Must comply
+   * withRFC3986.
    * @param requestPath requestPath or {@code null} for none
    */
   public HttpsHealthCheck setRequestPath(java.lang.String requestPath) {

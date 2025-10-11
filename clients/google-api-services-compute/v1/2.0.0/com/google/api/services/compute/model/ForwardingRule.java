@@ -17,14 +17,18 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Forwarding Rule resource. Forwarding rule resources in Google Cloud can be either
- * regional or global in scope: *
- * [Global](https://cloud.google.com/compute/docs/reference/rest/v1/globalForwardingRules) *
- * [Regional](https://cloud.google.com/compute/docs/reference/rest/v1/forwardingRules) A forwarding
- * rule and its corresponding IP address represent the frontend configuration of a Google Cloud load
- * balancer. Forwarding rules can also reference target instances and Cloud VPN Classic gateways
- * (targetVpnGateway). For more information, read Forwarding rule concepts and Using protocol
- * forwarding.
+ * Represents a Forwarding Rule resource.
+ *
+ * Forwarding rule resources in Google Cloud can be either regional or global in scope:
+ *
+ * * [Global](https://cloud.google.com/compute/docs/reference/rest/v1/globalForwardingRules) *
+ * [Regional](https://cloud.google.com/compute/docs/reference/rest/v1/forwardingRules)
+ *
+ * A forwarding rule and its corresponding IP address represent the frontend configuration of a
+ * Google Cloud load balancer. Forwarding rules can also reference target instances and Cloud VPN
+ * Classic gateways (targetVpnGateway).
+ *
+ * For more information, read Forwarding rule concepts and Using protocol forwarding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -40,31 +44,42 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * IP address for which this forwarding rule accepts traffic. When a client sends traffic to this
    * IP address, the forwarding rule directs the traffic to the referenced target or backendService.
    * While creating a forwarding rule, specifying an IPAddress is required under the following
-   * circumstances: - When the target is set to targetGrpcProxy and validateForProxyless is set to
-   * true, the IPAddress should be set to 0.0.0.0. - When the target is a Private Service Connect
-   * Google APIs bundle, you must specify an IPAddress. Otherwise, you can optionally specify an IP
-   * address that references an existing static (reserved) IP address resource. When omitted, Google
-   * Cloud assigns an ephemeral IP address. Use one of the following formats to specify an IP
-   * address while creating a forwarding rule: * IP address number, as in `100.1.2.3` * IPv6 address
-   * range, as in `2600:1234::/96` * Full resource URL, as in
-   * https://www.googleapis.com/compute/v1/projects/ project_id/regions/region/addresses/address-
-   * name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-
-   * name - regions/region/addresses/address-name - global/addresses/address-name - address-name The
-   * forwarding rule's target or backendService, and in most cases, also the loadBalancingScheme,
-   * determine the type of IP address that you can use. For detailed information, see [IP address
-   * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
-   * concepts#ip_address_specifications). When reading an IPAddress, the API always returns the IP
-   * address number.
+   * circumstances:
+   *
+   *        - When the target is set to targetGrpcProxy andvalidateForProxyless is set to true,
+   * theIPAddress should be set to 0.0.0.0.    - When the target is a Private Service Connect Google
+   * APIs    bundle, you must specify an IPAddress.
+   *
+   * Otherwise, you can optionally specify an IP address that references an existing static
+   * (reserved) IP address resource. When omitted, Google Cloud assigns an ephemeral IP address.
+   *
+   * Use one of the following formats to specify an IP address while creating a forwarding rule:
+   *
+   * * IP address number, as in `100.1.2.3` * IPv6 address range, as in `2600:1234::/96` * Full
+   * resource URL, as
+   * inhttps://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-
+   * name * Partial URL or by name, as in:        -
+   * projects/project_id/regions/region/addresses/address-name    -
+   * regions/region/addresses/address-name    - global/addresses/address-name    - address-name
+   *
+   * The forwarding rule's target or backendService, and in most cases, also the
+   * loadBalancingScheme, determine the type of IP address that you can use. For detailed
+   * information, see [IP address specifications](https://cloud.google.com/load-
+   * balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+   *
+   * When reading an IPAddress, the API always returns the IP address number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("IPAddress")
   private java.lang.String iPAddress;
 
   /**
-   * The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP,
-   * UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different
-   * load balancing products as described in [Load balancing
-   * features](https://cloud.google.com/load-
+   * The IP protocol to which this rule applies.
+   *
+   * For protocol forwarding, valid options are TCP, UDP, ESP,AH, SCTP, ICMP andL3_DEFAULT.
+   *
+   * The valid IP protocols are different for different load balancing products as described in
+   * [Load balancing features](https://cloud.google.com/load-
    * balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
    * The value may be {@code null}.
    */
@@ -74,13 +89,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
    * ports in the specified range will be forwarded to the backends configured with this forwarding
-   * rule. The allPorts field has the following limitations: - It requires that the forwarding rule
-   * IPProtocol be TCP, UDP, SCTP, or L3_DEFAULT. - It's applicable only to the following products:
-   * internal passthrough Network Load Balancers, backend service-based external passthrough Network
-   * Load Balancers, and internal and external protocol forwarding. - Set this field to true to
-   * allow packets addressed to any port or packets lacking destination port information (for
-   * example, UDP fragments after the first fragment) to be forwarded to the backends configured
-   * with this forwarding rule. The L3_DEFAULT protocol requires allPorts be set to true.
+   * rule.
+   *
+   * The allPorts field has the following limitations:        - It requires that the forwarding rule
+   * IPProtocol be TCP,    UDP, SCTP, or L3_DEFAULT.    - It's applicable only to the following
+   * products: internal passthrough    Network Load Balancers, backend service-based external
+   * passthrough Network    Load Balancers, and internal and external protocol forwarding.    - Set
+   * this field to true to allow packets addressed to any port or    packets lacking destination
+   * port information (for example, UDP fragments    after the first fragment) to be forwarded to
+   * the backends configured with    this forwarding rule. The L3_DEFAULT protocol requiresallPorts
+   * be set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +143,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String baseForwardingRule;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,16 +158,18 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the canary migration state for the backend buckets attached to this forwarding rule.
-   * Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration
-   * from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be
-   * changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED.
-   * Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic to backend buckets
-   * attached to this forwarding rule by percentage using
-   * externalManagedBackendBucketMigrationTestingPercentage. Rolling back a migration requires the
-   * states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL
-   * requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the
-   * TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be
-   * used to migrate all traffic back to EXTERNAL.
+   * Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
+   *
+   * To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE.
+   * The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to
+   * EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic to
+   * backend buckets attached to this forwarding rule by percentage using
+   * externalManagedBackendBucketMigrationTestingPercentage.
+   *
+   * Rolling back a migration requires the states to be set in reverse order. So changing the scheme
+   * from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same
+   * time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to
+   * EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,9 +177,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Determines the fraction of requests to backend buckets that should be processed by the global
-   * external Application Load Balancer. The value of this field must be in the range [0, 100]. This
-   * value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when
-   * using the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
+   * external Application Load Balancer.
+   *
+   * The value of this field must be in the range [0, 100].
+   *
+   * This value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL
+   * (when using the classic Application Load Balancer) and the migration state is
+   * TEST_BY_PERCENTAGE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,8 +193,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
    * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
-   * another concurrent request. To see the latest fingerprint, make a get() request to retrieve a
-   * ForwardingRule.
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,11 +210,12 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in
-   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-
-   * PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
-   * https://www.googleapis.com/compute/v1/projects/project_id/regions/region
-   * /publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
-   * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name -
+   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode.
+   *
+   * Use one of the following formats to specify a sub-PDP when creating an IPv6 NetLB forwarding
+   * rule using BYOIP: Full resource URL, as inhttps://www.googleapis.com/compute/v1/projects/projec
+   * t_id/regions/region/publicDelegatedPrefixes/sub-pdp-name Partial URL, as in:        -
+   * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name    -
    * regions/region/publicDelegatedPrefixes/sub-pdp-name
    * The value may be {@code null}.
    */
@@ -197,7 +223,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String ipCollection;
 
   /**
-   * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6.
+   * The IP Version that will be used by this forwarding rule.  Valid options are IPV4 or IPV6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,16 +232,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * Indicates whether or not this load balancer can be used as a collector for packet mirroring. To
    * prevent mirroring loops, instances behind this load balancer will not have their traffic
-   * mirrored even if a PacketMirroring rule applies to them. This can only be set to true for load
-   * balancers that have their loadBalancingScheme set to INTERNAL.
+   * mirrored even if aPacketMirroring rule applies to them. This can only be set to true for load
+   * balancers that have theirloadBalancingScheme set to INTERNAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isMirroringCollector;
 
   /**
-   * [Output Only] Type of the resource. Always compute#forwardingRule for forwarding rule
-   * resources.
+   * [Output Only] Type of the resource. Alwayscompute#forwardingRule for forwarding rule resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,24 +251,26 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a ForwardingRule.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String labelFingerprint;
 
   /**
-   * Labels for this resource. These can only be added or modified by the setLabels method. Each
-   * label key/value pair must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by thesetLabels method. Each
+   * label key/value pair must comply withRFC1035. Label values may be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Specifies the forwarding rule type. For more information about forwarding rules, refer to
-   * Forwarding rule concepts.
+   * Specifies the forwarding rule type.
+   *
+   * For more information about forwarding rules, refer to Forwarding rule concepts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,15 +280,20 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Opaque filter criteria used by load balancer to restrict routing configuration to a limited set
    * of xDS compliant clients. In their xDS requests to load balancer, xDS clients present node
    * metadata. When there is a match, the relevant configuration is made available to those proxies.
-   * Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule
-   * are not visible to those proxies. For each metadataFilter in this list, if its
-   * filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
-   * corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL,
-   * then all of its filterLabels must match with corresponding labels provided in the metadata. If
-   * multiple metadataFilters are specified, all of them need to be satisfied in order to be
-   * considered a match. metadataFilters specified here will be applifed before those specified in
-   * the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers
-   * that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * Otherwise, all the resources (e.g.TargetHttpProxy, UrlMap) referenced by the ForwardingRule are
+   * not visible to those proxies.
+   *
+   * For each metadataFilter in this list, if itsfilterMatchCriteria is set to MATCH_ANY, at least
+   * one of thefilterLabels must match the corresponding label provided in the metadata. If its
+   * filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
+   * corresponding labels provided in the metadata. If multiplemetadataFilters are specified, all of
+   * them need to be satisfied in order to be considered a match.
+   *
+   * metadataFilters specified here will be applifed before those specified in the UrlMap that
+   * thisForwardingRule references.
+   *
+   * metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set
+   * toINTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -269,24 +301,29 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash. For Private Service
-   * Connect forwarding rules that forward traffic to Google APIs, the forwarding rule name must be
-   * a 1-20 characters string with lowercase letters and numbers and must start with a letter.
+   * letter, or digit, except the last character, which cannot be a dash.
+   *
+   * For Private Service Connect forwarding rules that forward traffic to Google APIs, the
+   * forwarding rule name must be a 1-20 characters string with lowercase letters and numbers and
+   * must start with a letter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * This field is not used for global external load balancing. For internal passthrough Network
-   * Load Balancers, this field identifies the network that the load balanced IP should belong to
-   * for this forwarding rule. If the subnetwork is specified, the network of the subnetwork will be
-   * used. If neither subnetwork nor this field is specified, the default network will be used. For
-   * Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be
-   * provided.
+   * This field is not used for global external load balancing.
+   *
+   * For internal passthrough Network Load Balancers, this field identifies the network that the
+   * load balanced IP should belong to for this forwarding rule. If the subnetwork is specified, the
+   * network of the subnetwork will be used. If neither subnetwork nor this field is specified, the
+   * default network will be used.
+   *
+   * For Private Service Connect forwarding rules that forward traffic to Google APIs, a network
+   * must be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -294,10 +331,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This signifies the networking tier used for configuring this load balancer and can only take
-   * the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are
-   * PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is
-   * not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal
-   * to the networkTier of the Address.
+   * the following values:PREMIUM, STANDARD.
+   *
+   * For regional ForwardingRule, the valid values are PREMIUM andSTANDARD. For
+   * GlobalForwardingRule, the valid value isPREMIUM.
+   *
+   * If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this
+   * value must be equal to the networkTier of the Address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -315,15 +355,22 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
    * ports in the specified range will be forwarded to the backends configured with this forwarding
-   * rule. The portRange field has the following limitations: - It requires that the forwarding rule
-   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: external
-   * passthrough Network Load Balancers, internal and external proxy Network Load Balancers,
-   * internal and external Application Load Balancers, external protocol forwarding, and Classic
-   * VPN. - Some products have restrictions on what ports can be used. See port specifications for
-   * details. For external forwarding rules, two or more forwarding rules cannot use the same
-   * [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. For internal forwarding
-   * rules within the same VPC network, two or more forwarding rules cannot use the same [IPAddress,
-   * IPProtocol] pair, and cannot have overlapping portRanges. @pattern: \\d+(?:-\\d+)?
+   * rule.
+   *
+   * The portRange field has the following limitations:        - It requires that the forwarding
+   * rule IPProtocol be TCP,    UDP, or SCTP, and    - It's applicable only to the following
+   * products: external passthrough    Network Load Balancers, internal and external proxy Network
+   * Load Balancers,    internal and external Application Load Balancers, external protocol
+   * forwarding, and Classic VPN.    - Some products have restrictions on what ports can be used.
+   * See     port specifications for details.
+   *
+   * For external forwarding rules, two or more forwarding rules cannot use the same [IPAddress,
+   * IPProtocol] pair, and cannot have overlappingportRanges.
+   *
+   * For internal forwarding rules within the same VPC network, two or more forwarding rules cannot
+   * use the same [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges.
+   *
+   * @pattern: \\d+(?:-\\d+)?
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,15 +379,21 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
    * ports in the specified range will be forwarded to the backends configured with this forwarding
-   * rule. The ports field has the following limitations: - It requires that the forwarding rule
-   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: internal
-   * passthrough Network Load Balancers, backend service-based external passthrough Network Load
-   * Balancers, and internal protocol forwarding. - You can specify a list of up to five ports by
-   * number, separated by commas. The ports can be contiguous or discontiguous. For external
-   * forwarding rules, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair
-   * if they share at least one port number. For internal forwarding rules within the same VPC
-   * network, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair if they
-   * share at least one port number. @pattern: \\d+(?:-\\d+)?
+   * rule.
+   *
+   * The ports field has the following limitations:        - It requires that the forwarding rule
+   * IPProtocol be TCP,    UDP, or SCTP, and    - It's applicable only to the following products:
+   * internal passthrough    Network Load Balancers, backend service-based external passthrough
+   * Network    Load Balancers, and internal protocol forwarding.    - You can specify a list of up
+   * to five ports by number, separated by    commas. The ports can be contiguous or discontiguous.
+   *
+   * For external forwarding rules, two or more forwarding rules cannot use the same [IPAddress,
+   * IPProtocol] pair if they share at least one port number.
+   *
+   * For internal forwarding rules within the same VPC network, two or more forwarding rules cannot
+   * use the same [IPAddress, IPProtocol] pair if they share at least one port number.
+   *
+   * @pattern: \\d+(?:-\\d+)?
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -392,20 +445,23 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * An optional prefix to the service name for this forwarding rule. If specified, the prefix is
-   * the first label of the fully qualified service name. The label must be 1-63 characters long,
-   * and comply with RFC1035. Specifically, the label must be 1-63 characters long and match the
-   * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
-   * lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
-   * except the last character, which cannot be a dash. This field is only used for internal load
-   * balancing.
+   * the first label of the fully qualified service name.
+   *
+   * The label must be 1-63 characters long, and comply withRFC1035. Specifically, the label must be
+   * 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means
+   * the first character must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a dash.
+   *
+   * This field is only used for internal load balancing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceLabel;
 
   /**
-   * [Output Only] The internal fully qualified service name for this forwarding rule. This field is
-   * only used for internal load balancing.
+   * [Output Only] The internal fully qualified service name for this forwarding rule.
+   *
+   * This field is only used for internal load balancing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -415,7 +471,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * If not empty, this forwarding rule will only forward the traffic when the source IP address
    * matches one of the IP addresses or CIDR ranges set here. Note that a forwarding rule can only
    * have up to 64 source IP ranges, and this field can only be used with a regional forwarding rule
-   * whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for
+   * whose scheme isEXTERNAL. Each source_ip_range entry should be either an IP address (for
    * example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).
    * The value may be {@code null}.
    */
@@ -425,25 +481,29 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field identifies the subnetwork that the load balanced IP should belong to for this
    * forwarding rule, used with internal load balancers and external passthrough Network Load
-   * Balancers with IPv6. If the network specified is in auto subnet mode, this field is optional.
-   * However, a subnetwork must be specified if the network is in custom subnet mode or when
-   * creating external forwarding rule with IPv6.
+   * Balancers with IPv6.
+   *
+   * If the network specified is in auto subnet mode, this field is optional. However, a subnetwork
+   * must be specified if the network is in custom subnet mode or when creating external forwarding
+   * rule with IPv6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
 
   /**
-   * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
+   * The URL of the target resource to receive the matched traffic.  For regional forwarding rules,
    * this target must be in the same region as the forwarding rule. For global forwarding rules,
-   * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. - For load balancers, see the "Target" column in [Port
-   * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
-   * concepts#ip_address_specifications). - For Private Service Connect forwarding rules that
-   * forward traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc -
-   * APIs that support VPC Service Controls. - all-apis - All supported Google APIs. - For Private
-   * Service Connect forwarding rules that forward traffic to managed services, the target must be a
-   * service attachment. The target is not mutable once set as a service attachment.
+   * this target must be a global load balancing resource.
+   *
+   * The forwarded traffic must be of a type appropriate to the target object.              -  For
+   * load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-
+   * balancing/docs/forwarding-rule-concepts#ip_address_specifications).      -  For Private Service
+   * Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported
+   * Google API bundle:                            -  vpc-sc -  APIs that support VPC Service
+   * Controls.              -  all-apis - All supported Google APIs.                        -  For
+   * Private Service Connect forwarding rules that forward traffic to managed services, the target
+   * must be a service attachment. The target is not mutable once set as a service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -453,21 +513,30 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * IP address for which this forwarding rule accepts traffic. When a client sends traffic to this
    * IP address, the forwarding rule directs the traffic to the referenced target or backendService.
    * While creating a forwarding rule, specifying an IPAddress is required under the following
-   * circumstances: - When the target is set to targetGrpcProxy and validateForProxyless is set to
-   * true, the IPAddress should be set to 0.0.0.0. - When the target is a Private Service Connect
-   * Google APIs bundle, you must specify an IPAddress. Otherwise, you can optionally specify an IP
-   * address that references an existing static (reserved) IP address resource. When omitted, Google
-   * Cloud assigns an ephemeral IP address. Use one of the following formats to specify an IP
-   * address while creating a forwarding rule: * IP address number, as in `100.1.2.3` * IPv6 address
-   * range, as in `2600:1234::/96` * Full resource URL, as in
-   * https://www.googleapis.com/compute/v1/projects/ project_id/regions/region/addresses/address-
-   * name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-
-   * name - regions/region/addresses/address-name - global/addresses/address-name - address-name The
-   * forwarding rule's target or backendService, and in most cases, also the loadBalancingScheme,
-   * determine the type of IP address that you can use. For detailed information, see [IP address
-   * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
-   * concepts#ip_address_specifications). When reading an IPAddress, the API always returns the IP
-   * address number.
+   * circumstances:
+   *
+   *        - When the target is set to targetGrpcProxy andvalidateForProxyless is set to true,
+   * theIPAddress should be set to 0.0.0.0.    - When the target is a Private Service Connect Google
+   * APIs    bundle, you must specify an IPAddress.
+   *
+   * Otherwise, you can optionally specify an IP address that references an existing static
+   * (reserved) IP address resource. When omitted, Google Cloud assigns an ephemeral IP address.
+   *
+   * Use one of the following formats to specify an IP address while creating a forwarding rule:
+   *
+   * * IP address number, as in `100.1.2.3` * IPv6 address range, as in `2600:1234::/96` * Full
+   * resource URL, as
+   * inhttps://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-
+   * name * Partial URL or by name, as in:        -
+   * projects/project_id/regions/region/addresses/address-name    -
+   * regions/region/addresses/address-name    - global/addresses/address-name    - address-name
+   *
+   * The forwarding rule's target or backendService, and in most cases, also the
+   * loadBalancingScheme, determine the type of IP address that you can use. For detailed
+   * information, see [IP address specifications](https://cloud.google.com/load-
+   * balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+   *
+   * When reading an IPAddress, the API always returns the IP address number.
    * @return value or {@code null} for none
    */
   public java.lang.String getIPAddress() {
@@ -478,21 +547,30 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * IP address for which this forwarding rule accepts traffic. When a client sends traffic to this
    * IP address, the forwarding rule directs the traffic to the referenced target or backendService.
    * While creating a forwarding rule, specifying an IPAddress is required under the following
-   * circumstances: - When the target is set to targetGrpcProxy and validateForProxyless is set to
-   * true, the IPAddress should be set to 0.0.0.0. - When the target is a Private Service Connect
-   * Google APIs bundle, you must specify an IPAddress. Otherwise, you can optionally specify an IP
-   * address that references an existing static (reserved) IP address resource. When omitted, Google
-   * Cloud assigns an ephemeral IP address. Use one of the following formats to specify an IP
-   * address while creating a forwarding rule: * IP address number, as in `100.1.2.3` * IPv6 address
-   * range, as in `2600:1234::/96` * Full resource URL, as in
-   * https://www.googleapis.com/compute/v1/projects/ project_id/regions/region/addresses/address-
-   * name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-
-   * name - regions/region/addresses/address-name - global/addresses/address-name - address-name The
-   * forwarding rule's target or backendService, and in most cases, also the loadBalancingScheme,
-   * determine the type of IP address that you can use. For detailed information, see [IP address
-   * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
-   * concepts#ip_address_specifications). When reading an IPAddress, the API always returns the IP
-   * address number.
+   * circumstances:
+   *
+   *        - When the target is set to targetGrpcProxy andvalidateForProxyless is set to true,
+   * theIPAddress should be set to 0.0.0.0.    - When the target is a Private Service Connect Google
+   * APIs    bundle, you must specify an IPAddress.
+   *
+   * Otherwise, you can optionally specify an IP address that references an existing static
+   * (reserved) IP address resource. When omitted, Google Cloud assigns an ephemeral IP address.
+   *
+   * Use one of the following formats to specify an IP address while creating a forwarding rule:
+   *
+   * * IP address number, as in `100.1.2.3` * IPv6 address range, as in `2600:1234::/96` * Full
+   * resource URL, as
+   * inhttps://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-
+   * name * Partial URL or by name, as in:        -
+   * projects/project_id/regions/region/addresses/address-name    -
+   * regions/region/addresses/address-name    - global/addresses/address-name    - address-name
+   *
+   * The forwarding rule's target or backendService, and in most cases, also the
+   * loadBalancingScheme, determine the type of IP address that you can use. For detailed
+   * information, see [IP address specifications](https://cloud.google.com/load-
+   * balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+   *
+   * When reading an IPAddress, the API always returns the IP address number.
    * @param iPAddress iPAddress or {@code null} for none
    */
   public ForwardingRule setIPAddress(java.lang.String iPAddress) {
@@ -501,10 +579,12 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP,
-   * UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different
-   * load balancing products as described in [Load balancing
-   * features](https://cloud.google.com/load-
+   * The IP protocol to which this rule applies.
+   *
+   * For protocol forwarding, valid options are TCP, UDP, ESP,AH, SCTP, ICMP andL3_DEFAULT.
+   *
+   * The valid IP protocols are different for different load balancing products as described in
+   * [Load balancing features](https://cloud.google.com/load-
    * balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
    * @return value or {@code null} for none
    */
@@ -513,10 +593,12 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP,
-   * UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different
-   * load balancing products as described in [Load balancing
-   * features](https://cloud.google.com/load-
+   * The IP protocol to which this rule applies.
+   *
+   * For protocol forwarding, valid options are TCP, UDP, ESP,AH, SCTP, ICMP andL3_DEFAULT.
+   *
+   * The valid IP protocols are different for different load balancing products as described in
+   * [Load balancing features](https://cloud.google.com/load-
    * balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
    * @param iPProtocol iPProtocol or {@code null} for none
    */
@@ -528,13 +610,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
    * ports in the specified range will be forwarded to the backends configured with this forwarding
-   * rule. The allPorts field has the following limitations: - It requires that the forwarding rule
-   * IPProtocol be TCP, UDP, SCTP, or L3_DEFAULT. - It's applicable only to the following products:
-   * internal passthrough Network Load Balancers, backend service-based external passthrough Network
-   * Load Balancers, and internal and external protocol forwarding. - Set this field to true to
-   * allow packets addressed to any port or packets lacking destination port information (for
-   * example, UDP fragments after the first fragment) to be forwarded to the backends configured
-   * with this forwarding rule. The L3_DEFAULT protocol requires allPorts be set to true.
+   * rule.
+   *
+   * The allPorts field has the following limitations:        - It requires that the forwarding rule
+   * IPProtocol be TCP,    UDP, SCTP, or L3_DEFAULT.    - It's applicable only to the following
+   * products: internal passthrough    Network Load Balancers, backend service-based external
+   * passthrough Network    Load Balancers, and internal and external protocol forwarding.    - Set
+   * this field to true to allow packets addressed to any port or    packets lacking destination
+   * port information (for example, UDP fragments    after the first fragment) to be forwarded to
+   * the backends configured with    this forwarding rule. The L3_DEFAULT protocol requiresallPorts
+   * be set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllPorts() {
@@ -544,13 +629,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
    * ports in the specified range will be forwarded to the backends configured with this forwarding
-   * rule. The allPorts field has the following limitations: - It requires that the forwarding rule
-   * IPProtocol be TCP, UDP, SCTP, or L3_DEFAULT. - It's applicable only to the following products:
-   * internal passthrough Network Load Balancers, backend service-based external passthrough Network
-   * Load Balancers, and internal and external protocol forwarding. - Set this field to true to
-   * allow packets addressed to any port or packets lacking destination port information (for
-   * example, UDP fragments after the first fragment) to be forwarded to the backends configured
-   * with this forwarding rule. The L3_DEFAULT protocol requires allPorts be set to true.
+   * rule.
+   *
+   * The allPorts field has the following limitations:        - It requires that the forwarding rule
+   * IPProtocol be TCP,    UDP, SCTP, or L3_DEFAULT.    - It's applicable only to the following
+   * products: internal passthrough    Network Load Balancers, backend service-based external
+   * passthrough Network    Load Balancers, and internal and external protocol forwarding.    - Set
+   * this field to true to allow packets addressed to any port or    packets lacking destination
+   * port information (for example, UDP fragments    after the first fragment) to be forwarded to
+   * the backends configured with    this forwarding rule. The L3_DEFAULT protocol requiresallPorts
+   * be set to true.
    * @param allPorts allPorts or {@code null} for none
    */
   public ForwardingRule setAllPorts(java.lang.Boolean allPorts) {
@@ -647,7 +735,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -655,7 +743,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ForwardingRule setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -682,16 +770,18 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the canary migration state for the backend buckets attached to this forwarding rule.
-   * Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration
-   * from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be
-   * changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED.
-   * Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic to backend buckets
-   * attached to this forwarding rule by percentage using
-   * externalManagedBackendBucketMigrationTestingPercentage. Rolling back a migration requires the
-   * states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL
-   * requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the
-   * TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be
-   * used to migrate all traffic back to EXTERNAL.
+   * Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
+   *
+   * To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE.
+   * The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to
+   * EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic to
+   * backend buckets attached to this forwarding rule by percentage using
+   * externalManagedBackendBucketMigrationTestingPercentage.
+   *
+   * Rolling back a migration requires the states to be set in reverse order. So changing the scheme
+   * from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same
+   * time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to
+   * EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalManagedBackendBucketMigrationState() {
@@ -700,16 +790,18 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the canary migration state for the backend buckets attached to this forwarding rule.
-   * Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration
-   * from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be
-   * changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED.
-   * Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic to backend buckets
-   * attached to this forwarding rule by percentage using
-   * externalManagedBackendBucketMigrationTestingPercentage. Rolling back a migration requires the
-   * states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL
-   * requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the
-   * TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be
-   * used to migrate all traffic back to EXTERNAL.
+   * Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
+   *
+   * To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE.
+   * The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to
+   * EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic to
+   * backend buckets attached to this forwarding rule by percentage using
+   * externalManagedBackendBucketMigrationTestingPercentage.
+   *
+   * Rolling back a migration requires the states to be set in reverse order. So changing the scheme
+   * from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same
+   * time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to
+   * EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
    * @param externalManagedBackendBucketMigrationState externalManagedBackendBucketMigrationState or {@code null} for none
    */
   public ForwardingRule setExternalManagedBackendBucketMigrationState(java.lang.String externalManagedBackendBucketMigrationState) {
@@ -719,9 +811,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Determines the fraction of requests to backend buckets that should be processed by the global
-   * external Application Load Balancer. The value of this field must be in the range [0, 100]. This
-   * value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when
-   * using the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
+   * external Application Load Balancer.
+   *
+   * The value of this field must be in the range [0, 100].
+   *
+   * This value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL
+   * (when using the classic Application Load Balancer) and the migration state is
+   * TEST_BY_PERCENTAGE.
    * @return value or {@code null} for none
    */
   public java.lang.Float getExternalManagedBackendBucketMigrationTestingPercentage() {
@@ -730,9 +826,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Determines the fraction of requests to backend buckets that should be processed by the global
-   * external Application Load Balancer. The value of this field must be in the range [0, 100]. This
-   * value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when
-   * using the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
+   * external Application Load Balancer.
+   *
+   * The value of this field must be in the range [0, 100].
+   *
+   * This value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL
+   * (when using the classic Application Load Balancer) and the migration state is
+   * TEST_BY_PERCENTAGE.
    * @param externalManagedBackendBucketMigrationTestingPercentage externalManagedBackendBucketMigrationTestingPercentage or {@code null} for none
    */
   public ForwardingRule setExternalManagedBackendBucketMigrationTestingPercentage(java.lang.Float externalManagedBackendBucketMigrationTestingPercentage) {
@@ -744,8 +844,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
    * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
-   * another concurrent request. To see the latest fingerprint, make a get() request to retrieve a
-   * ForwardingRule.
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -757,8 +858,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
    * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
-   * another concurrent request. To see the latest fingerprint, make a get() request to retrieve a
-   * ForwardingRule.
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -772,8 +874,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
    * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
-   * another concurrent request. To see the latest fingerprint, make a get() request to retrieve a
-   * ForwardingRule.
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -786,8 +889,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
    * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
-   * another concurrent request. To see the latest fingerprint, make a get() request to retrieve a
-   * ForwardingRule.
+   * another concurrent request.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * @see #setFingerprint()
    *
    * <p>
@@ -820,11 +924,12 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in
-   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-
-   * PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
-   * https://www.googleapis.com/compute/v1/projects/project_id/regions/region
-   * /publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
-   * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name -
+   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode.
+   *
+   * Use one of the following formats to specify a sub-PDP when creating an IPv6 NetLB forwarding
+   * rule using BYOIP: Full resource URL, as inhttps://www.googleapis.com/compute/v1/projects/projec
+   * t_id/regions/region/publicDelegatedPrefixes/sub-pdp-name Partial URL, as in:        -
+   * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name    -
    * regions/region/publicDelegatedPrefixes/sub-pdp-name
    * @return value or {@code null} for none
    */
@@ -834,11 +939,12 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in
-   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-
-   * PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
-   * https://www.googleapis.com/compute/v1/projects/project_id/regions/region
-   * /publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
-   * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name -
+   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode.
+   *
+   * Use one of the following formats to specify a sub-PDP when creating an IPv6 NetLB forwarding
+   * rule using BYOIP: Full resource URL, as inhttps://www.googleapis.com/compute/v1/projects/projec
+   * t_id/regions/region/publicDelegatedPrefixes/sub-pdp-name Partial URL, as in:        -
+   * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name    -
    * regions/region/publicDelegatedPrefixes/sub-pdp-name
    * @param ipCollection ipCollection or {@code null} for none
    */
@@ -848,7 +954,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6.
+   * The IP Version that will be used by this forwarding rule.  Valid options are IPV4 or IPV6.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpVersion() {
@@ -856,7 +962,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6.
+   * The IP Version that will be used by this forwarding rule.  Valid options are IPV4 or IPV6.
    * @param ipVersion ipVersion or {@code null} for none
    */
   public ForwardingRule setIpVersion(java.lang.String ipVersion) {
@@ -867,8 +973,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * Indicates whether or not this load balancer can be used as a collector for packet mirroring. To
    * prevent mirroring loops, instances behind this load balancer will not have their traffic
-   * mirrored even if a PacketMirroring rule applies to them. This can only be set to true for load
-   * balancers that have their loadBalancingScheme set to INTERNAL.
+   * mirrored even if aPacketMirroring rule applies to them. This can only be set to true for load
+   * balancers that have theirloadBalancingScheme set to INTERNAL.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsMirroringCollector() {
@@ -878,8 +984,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * Indicates whether or not this load balancer can be used as a collector for packet mirroring. To
    * prevent mirroring loops, instances behind this load balancer will not have their traffic
-   * mirrored even if a PacketMirroring rule applies to them. This can only be set to true for load
-   * balancers that have their loadBalancingScheme set to INTERNAL.
+   * mirrored even if aPacketMirroring rule applies to them. This can only be set to true for load
+   * balancers that have theirloadBalancingScheme set to INTERNAL.
    * @param isMirroringCollector isMirroringCollector or {@code null} for none
    */
   public ForwardingRule setIsMirroringCollector(java.lang.Boolean isMirroringCollector) {
@@ -888,8 +994,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#forwardingRule for forwarding rule
-   * resources.
+   * [Output Only] Type of the resource. Alwayscompute#forwardingRule for forwarding rule resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -897,8 +1002,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#forwardingRule for forwarding rule
-   * resources.
+   * [Output Only] Type of the resource. Alwayscompute#forwardingRule for forwarding rule resources.
    * @param kind kind or {@code null} for none
    */
   public ForwardingRule setKind(java.lang.String kind) {
@@ -911,8 +1015,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a ForwardingRule.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * @see #decodeLabelFingerprint()
    * @return value or {@code null} for none
    */
@@ -925,8 +1030,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a ForwardingRule.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * @see #getLabelFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -941,8 +1047,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a ForwardingRule.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * @see #encodeLabelFingerprint()
    * @param labelFingerprint labelFingerprint or {@code null} for none
    */
@@ -956,8 +1063,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * labels set used for optimistic locking. The fingerprint is initially generated by Compute
    * Engine and changes after every request to modify or update labels. You must always provide an
    * up-to-date fingerprint hash in order to update or change labels, otherwise the request will
-   * fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to
-   * retrieve a ForwardingRule.
+   * fail with error412 conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a ForwardingRule.
    * @see #setLabelFingerprint()
    *
    * <p>
@@ -972,8 +1080,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Labels for this resource. These can only be added or modified by the setLabels method. Each
-   * label key/value pair must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by thesetLabels method. Each
+   * label key/value pair must comply withRFC1035. Label values may be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -981,8 +1089,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Labels for this resource. These can only be added or modified by the setLabels method. Each
-   * label key/value pair must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by thesetLabels method. Each
+   * label key/value pair must comply withRFC1035. Label values may be empty.
    * @param labels labels or {@code null} for none
    */
   public ForwardingRule setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -991,8 +1099,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the forwarding rule type. For more information about forwarding rules, refer to
-   * Forwarding rule concepts.
+   * Specifies the forwarding rule type.
+   *
+   * For more information about forwarding rules, refer to Forwarding rule concepts.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -1000,8 +1109,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the forwarding rule type. For more information about forwarding rules, refer to
-   * Forwarding rule concepts.
+   * Specifies the forwarding rule type.
+   *
+   * For more information about forwarding rules, refer to Forwarding rule concepts.
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public ForwardingRule setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
@@ -1013,15 +1123,20 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Opaque filter criteria used by load balancer to restrict routing configuration to a limited set
    * of xDS compliant clients. In their xDS requests to load balancer, xDS clients present node
    * metadata. When there is a match, the relevant configuration is made available to those proxies.
-   * Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule
-   * are not visible to those proxies. For each metadataFilter in this list, if its
-   * filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
-   * corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL,
-   * then all of its filterLabels must match with corresponding labels provided in the metadata. If
-   * multiple metadataFilters are specified, all of them need to be satisfied in order to be
-   * considered a match. metadataFilters specified here will be applifed before those specified in
-   * the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers
-   * that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * Otherwise, all the resources (e.g.TargetHttpProxy, UrlMap) referenced by the ForwardingRule are
+   * not visible to those proxies.
+   *
+   * For each metadataFilter in this list, if itsfilterMatchCriteria is set to MATCH_ANY, at least
+   * one of thefilterLabels must match the corresponding label provided in the metadata. If its
+   * filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
+   * corresponding labels provided in the metadata. If multiplemetadataFilters are specified, all of
+   * them need to be satisfied in order to be considered a match.
+   *
+   * metadataFilters specified here will be applifed before those specified in the UrlMap that
+   * thisForwardingRule references.
+   *
+   * metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set
+   * toINTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.util.List<MetadataFilter> getMetadataFilters() {
@@ -1032,15 +1147,20 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * Opaque filter criteria used by load balancer to restrict routing configuration to a limited set
    * of xDS compliant clients. In their xDS requests to load balancer, xDS clients present node
    * metadata. When there is a match, the relevant configuration is made available to those proxies.
-   * Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule
-   * are not visible to those proxies. For each metadataFilter in this list, if its
-   * filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
-   * corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL,
-   * then all of its filterLabels must match with corresponding labels provided in the metadata. If
-   * multiple metadataFilters are specified, all of them need to be satisfied in order to be
-   * considered a match. metadataFilters specified here will be applifed before those specified in
-   * the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers
-   * that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * Otherwise, all the resources (e.g.TargetHttpProxy, UrlMap) referenced by the ForwardingRule are
+   * not visible to those proxies.
+   *
+   * For each metadataFilter in this list, if itsfilterMatchCriteria is set to MATCH_ANY, at least
+   * one of thefilterLabels must match the corresponding label provided in the metadata. If its
+   * filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
+   * corresponding labels provided in the metadata. If multiplemetadataFilters are specified, all of
+   * them need to be satisfied in order to be considered a match.
+   *
+   * metadataFilters specified here will be applifed before those specified in the UrlMap that
+   * thisForwardingRule references.
+   *
+   * metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set
+   * toINTERNAL_SELF_MANAGED.
    * @param metadataFilters metadataFilters or {@code null} for none
    */
   public ForwardingRule setMetadataFilters(java.util.List<MetadataFilter> metadataFilters) {
@@ -1050,12 +1170,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash. For Private Service
-   * Connect forwarding rules that forward traffic to Google APIs, the forwarding rule name must be
-   * a 1-20 characters string with lowercase letters and numbers and must start with a letter.
+   * letter, or digit, except the last character, which cannot be a dash.
+   *
+   * For Private Service Connect forwarding rules that forward traffic to Google APIs, the
+   * forwarding rule name must be a 1-20 characters string with lowercase letters and numbers and
+   * must start with a letter.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -1064,12 +1186,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
    * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash. For Private Service
-   * Connect forwarding rules that forward traffic to Google APIs, the forwarding rule name must be
-   * a 1-20 characters string with lowercase letters and numbers and must start with a letter.
+   * letter, or digit, except the last character, which cannot be a dash.
+   *
+   * For Private Service Connect forwarding rules that forward traffic to Google APIs, the
+   * forwarding rule name must be a 1-20 characters string with lowercase letters and numbers and
+   * must start with a letter.
    * @param name name or {@code null} for none
    */
   public ForwardingRule setName(java.lang.String name) {
@@ -1078,12 +1202,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is not used for global external load balancing. For internal passthrough Network
-   * Load Balancers, this field identifies the network that the load balanced IP should belong to
-   * for this forwarding rule. If the subnetwork is specified, the network of the subnetwork will be
-   * used. If neither subnetwork nor this field is specified, the default network will be used. For
-   * Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be
-   * provided.
+   * This field is not used for global external load balancing.
+   *
+   * For internal passthrough Network Load Balancers, this field identifies the network that the
+   * load balanced IP should belong to for this forwarding rule. If the subnetwork is specified, the
+   * network of the subnetwork will be used. If neither subnetwork nor this field is specified, the
+   * default network will be used.
+   *
+   * For Private Service Connect forwarding rules that forward traffic to Google APIs, a network
+   * must be provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -1091,12 +1218,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is not used for global external load balancing. For internal passthrough Network
-   * Load Balancers, this field identifies the network that the load balanced IP should belong to
-   * for this forwarding rule. If the subnetwork is specified, the network of the subnetwork will be
-   * used. If neither subnetwork nor this field is specified, the default network will be used. For
-   * Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be
-   * provided.
+   * This field is not used for global external load balancing.
+   *
+   * For internal passthrough Network Load Balancers, this field identifies the network that the
+   * load balanced IP should belong to for this forwarding rule. If the subnetwork is specified, the
+   * network of the subnetwork will be used. If neither subnetwork nor this field is specified, the
+   * default network will be used.
+   *
+   * For Private Service Connect forwarding rules that forward traffic to Google APIs, a network
+   * must be provided.
    * @param network network or {@code null} for none
    */
   public ForwardingRule setNetwork(java.lang.String network) {
@@ -1106,10 +1236,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This signifies the networking tier used for configuring this load balancer and can only take
-   * the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are
-   * PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is
-   * not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal
-   * to the networkTier of the Address.
+   * the following values:PREMIUM, STANDARD.
+   *
+   * For regional ForwardingRule, the valid values are PREMIUM andSTANDARD. For
+   * GlobalForwardingRule, the valid value isPREMIUM.
+   *
+   * If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this
+   * value must be equal to the networkTier of the Address.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkTier() {
@@ -1118,10 +1251,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This signifies the networking tier used for configuring this load balancer and can only take
-   * the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are
-   * PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is
-   * not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal
-   * to the networkTier of the Address.
+   * the following values:PREMIUM, STANDARD.
+   *
+   * For regional ForwardingRule, the valid values are PREMIUM andSTANDARD. For
+   * GlobalForwardingRule, the valid value isPREMIUM.
+   *
+   * If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this
+   * value must be equal to the networkTier of the Address.
    * @param networkTier networkTier or {@code null} for none
    */
   public ForwardingRule setNetworkTier(java.lang.String networkTier) {
@@ -1153,15 +1289,22 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
    * ports in the specified range will be forwarded to the backends configured with this forwarding
-   * rule. The portRange field has the following limitations: - It requires that the forwarding rule
-   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: external
-   * passthrough Network Load Balancers, internal and external proxy Network Load Balancers,
-   * internal and external Application Load Balancers, external protocol forwarding, and Classic
-   * VPN. - Some products have restrictions on what ports can be used. See port specifications for
-   * details. For external forwarding rules, two or more forwarding rules cannot use the same
-   * [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. For internal forwarding
-   * rules within the same VPC network, two or more forwarding rules cannot use the same [IPAddress,
-   * IPProtocol] pair, and cannot have overlapping portRanges. @pattern: \\d+(?:-\\d+)?
+   * rule.
+   *
+   * The portRange field has the following limitations:        - It requires that the forwarding
+   * rule IPProtocol be TCP,    UDP, or SCTP, and    - It's applicable only to the following
+   * products: external passthrough    Network Load Balancers, internal and external proxy Network
+   * Load Balancers,    internal and external Application Load Balancers, external protocol
+   * forwarding, and Classic VPN.    - Some products have restrictions on what ports can be used.
+   * See     port specifications for details.
+   *
+   * For external forwarding rules, two or more forwarding rules cannot use the same [IPAddress,
+   * IPProtocol] pair, and cannot have overlappingportRanges.
+   *
+   * For internal forwarding rules within the same VPC network, two or more forwarding rules cannot
+   * use the same [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges.
+   *
+   * @pattern: \\d+(?:-\\d+)?
    * @return value or {@code null} for none
    */
   public java.lang.String getPortRange() {
@@ -1171,15 +1314,22 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
    * ports in the specified range will be forwarded to the backends configured with this forwarding
-   * rule. The portRange field has the following limitations: - It requires that the forwarding rule
-   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: external
-   * passthrough Network Load Balancers, internal and external proxy Network Load Balancers,
-   * internal and external Application Load Balancers, external protocol forwarding, and Classic
-   * VPN. - Some products have restrictions on what ports can be used. See port specifications for
-   * details. For external forwarding rules, two or more forwarding rules cannot use the same
-   * [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges. For internal forwarding
-   * rules within the same VPC network, two or more forwarding rules cannot use the same [IPAddress,
-   * IPProtocol] pair, and cannot have overlapping portRanges. @pattern: \\d+(?:-\\d+)?
+   * rule.
+   *
+   * The portRange field has the following limitations:        - It requires that the forwarding
+   * rule IPProtocol be TCP,    UDP, or SCTP, and    - It's applicable only to the following
+   * products: external passthrough    Network Load Balancers, internal and external proxy Network
+   * Load Balancers,    internal and external Application Load Balancers, external protocol
+   * forwarding, and Classic VPN.    - Some products have restrictions on what ports can be used.
+   * See     port specifications for details.
+   *
+   * For external forwarding rules, two or more forwarding rules cannot use the same [IPAddress,
+   * IPProtocol] pair, and cannot have overlappingportRanges.
+   *
+   * For internal forwarding rules within the same VPC network, two or more forwarding rules cannot
+   * use the same [IPAddress, IPProtocol] pair, and cannot have overlapping portRanges.
+   *
+   * @pattern: \\d+(?:-\\d+)?
    * @param portRange portRange or {@code null} for none
    */
   public ForwardingRule setPortRange(java.lang.String portRange) {
@@ -1190,15 +1340,21 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
    * ports in the specified range will be forwarded to the backends configured with this forwarding
-   * rule. The ports field has the following limitations: - It requires that the forwarding rule
-   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: internal
-   * passthrough Network Load Balancers, backend service-based external passthrough Network Load
-   * Balancers, and internal protocol forwarding. - You can specify a list of up to five ports by
-   * number, separated by commas. The ports can be contiguous or discontiguous. For external
-   * forwarding rules, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair
-   * if they share at least one port number. For internal forwarding rules within the same VPC
-   * network, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair if they
-   * share at least one port number. @pattern: \\d+(?:-\\d+)?
+   * rule.
+   *
+   * The ports field has the following limitations:        - It requires that the forwarding rule
+   * IPProtocol be TCP,    UDP, or SCTP, and    - It's applicable only to the following products:
+   * internal passthrough    Network Load Balancers, backend service-based external passthrough
+   * Network    Load Balancers, and internal protocol forwarding.    - You can specify a list of up
+   * to five ports by number, separated by    commas. The ports can be contiguous or discontiguous.
+   *
+   * For external forwarding rules, two or more forwarding rules cannot use the same [IPAddress,
+   * IPProtocol] pair if they share at least one port number.
+   *
+   * For internal forwarding rules within the same VPC network, two or more forwarding rules cannot
+   * use the same [IPAddress, IPProtocol] pair if they share at least one port number.
+   *
+   * @pattern: \\d+(?:-\\d+)?
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPorts() {
@@ -1208,15 +1364,21 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
    * ports in the specified range will be forwarded to the backends configured with this forwarding
-   * rule. The ports field has the following limitations: - It requires that the forwarding rule
-   * IPProtocol be TCP, UDP, or SCTP, and - It's applicable only to the following products: internal
-   * passthrough Network Load Balancers, backend service-based external passthrough Network Load
-   * Balancers, and internal protocol forwarding. - You can specify a list of up to five ports by
-   * number, separated by commas. The ports can be contiguous or discontiguous. For external
-   * forwarding rules, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair
-   * if they share at least one port number. For internal forwarding rules within the same VPC
-   * network, two or more forwarding rules cannot use the same [IPAddress, IPProtocol] pair if they
-   * share at least one port number. @pattern: \\d+(?:-\\d+)?
+   * rule.
+   *
+   * The ports field has the following limitations:        - It requires that the forwarding rule
+   * IPProtocol be TCP,    UDP, or SCTP, and    - It's applicable only to the following products:
+   * internal passthrough    Network Load Balancers, backend service-based external passthrough
+   * Network    Load Balancers, and internal protocol forwarding.    - You can specify a list of up
+   * to five ports by number, separated by    commas. The ports can be contiguous or discontiguous.
+   *
+   * For external forwarding rules, two or more forwarding rules cannot use the same [IPAddress,
+   * IPProtocol] pair if they share at least one port number.
+   *
+   * For internal forwarding rules within the same VPC network, two or more forwarding rules cannot
+   * use the same [IPAddress, IPProtocol] pair if they share at least one port number.
+   *
+   * @pattern: \\d+(?:-\\d+)?
    * @param ports ports or {@code null} for none
    */
   public ForwardingRule setPorts(java.util.List<java.lang.String> ports) {
@@ -1332,12 +1494,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * An optional prefix to the service name for this forwarding rule. If specified, the prefix is
-   * the first label of the fully qualified service name. The label must be 1-63 characters long,
-   * and comply with RFC1035. Specifically, the label must be 1-63 characters long and match the
-   * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
-   * lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
-   * except the last character, which cannot be a dash. This field is only used for internal load
-   * balancing.
+   * the first label of the fully qualified service name.
+   *
+   * The label must be 1-63 characters long, and comply withRFC1035. Specifically, the label must be
+   * 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means
+   * the first character must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a dash.
+   *
+   * This field is only used for internal load balancing.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceLabel() {
@@ -1346,12 +1510,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * An optional prefix to the service name for this forwarding rule. If specified, the prefix is
-   * the first label of the fully qualified service name. The label must be 1-63 characters long,
-   * and comply with RFC1035. Specifically, the label must be 1-63 characters long and match the
-   * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
-   * lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
-   * except the last character, which cannot be a dash. This field is only used for internal load
-   * balancing.
+   * the first label of the fully qualified service name.
+   *
+   * The label must be 1-63 characters long, and comply withRFC1035. Specifically, the label must be
+   * 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means
+   * the first character must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a dash.
+   *
+   * This field is only used for internal load balancing.
    * @param serviceLabel serviceLabel or {@code null} for none
    */
   public ForwardingRule setServiceLabel(java.lang.String serviceLabel) {
@@ -1360,8 +1526,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The internal fully qualified service name for this forwarding rule. This field is
-   * only used for internal load balancing.
+   * [Output Only] The internal fully qualified service name for this forwarding rule.
+   *
+   * This field is only used for internal load balancing.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceName() {
@@ -1369,8 +1536,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The internal fully qualified service name for this forwarding rule. This field is
-   * only used for internal load balancing.
+   * [Output Only] The internal fully qualified service name for this forwarding rule.
+   *
+   * This field is only used for internal load balancing.
    * @param serviceName serviceName or {@code null} for none
    */
   public ForwardingRule setServiceName(java.lang.String serviceName) {
@@ -1382,7 +1550,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * If not empty, this forwarding rule will only forward the traffic when the source IP address
    * matches one of the IP addresses or CIDR ranges set here. Note that a forwarding rule can only
    * have up to 64 source IP ranges, and this field can only be used with a regional forwarding rule
-   * whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for
+   * whose scheme isEXTERNAL. Each source_ip_range entry should be either an IP address (for
    * example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).
    * @return value or {@code null} for none
    */
@@ -1394,7 +1562,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * If not empty, this forwarding rule will only forward the traffic when the source IP address
    * matches one of the IP addresses or CIDR ranges set here. Note that a forwarding rule can only
    * have up to 64 source IP ranges, and this field can only be used with a regional forwarding rule
-   * whose scheme is EXTERNAL. Each source_ip_range entry should be either an IP address (for
+   * whose scheme isEXTERNAL. Each source_ip_range entry should be either an IP address (for
    * example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).
    * @param sourceIpRanges sourceIpRanges or {@code null} for none
    */
@@ -1406,9 +1574,11 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field identifies the subnetwork that the load balanced IP should belong to for this
    * forwarding rule, used with internal load balancers and external passthrough Network Load
-   * Balancers with IPv6. If the network specified is in auto subnet mode, this field is optional.
-   * However, a subnetwork must be specified if the network is in custom subnet mode or when
-   * creating external forwarding rule with IPv6.
+   * Balancers with IPv6.
+   *
+   * If the network specified is in auto subnet mode, this field is optional. However, a subnetwork
+   * must be specified if the network is in custom subnet mode or when creating external forwarding
+   * rule with IPv6.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -1418,9 +1588,11 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field identifies the subnetwork that the load balanced IP should belong to for this
    * forwarding rule, used with internal load balancers and external passthrough Network Load
-   * Balancers with IPv6. If the network specified is in auto subnet mode, this field is optional.
-   * However, a subnetwork must be specified if the network is in custom subnet mode or when
-   * creating external forwarding rule with IPv6.
+   * Balancers with IPv6.
+   *
+   * If the network specified is in auto subnet mode, this field is optional. However, a subnetwork
+   * must be specified if the network is in custom subnet mode or when creating external forwarding
+   * rule with IPv6.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public ForwardingRule setSubnetwork(java.lang.String subnetwork) {
@@ -1429,16 +1601,18 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
+   * The URL of the target resource to receive the matched traffic.  For regional forwarding rules,
    * this target must be in the same region as the forwarding rule. For global forwarding rules,
-   * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. - For load balancers, see the "Target" column in [Port
-   * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
-   * concepts#ip_address_specifications). - For Private Service Connect forwarding rules that
-   * forward traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc -
-   * APIs that support VPC Service Controls. - all-apis - All supported Google APIs. - For Private
-   * Service Connect forwarding rules that forward traffic to managed services, the target must be a
-   * service attachment. The target is not mutable once set as a service attachment.
+   * this target must be a global load balancing resource.
+   *
+   * The forwarded traffic must be of a type appropriate to the target object.              -  For
+   * load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-
+   * balancing/docs/forwarding-rule-concepts#ip_address_specifications).      -  For Private Service
+   * Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported
+   * Google API bundle:                            -  vpc-sc -  APIs that support VPC Service
+   * Controls.              -  all-apis - All supported Google APIs.                        -  For
+   * Private Service Connect forwarding rules that forward traffic to managed services, the target
+   * must be a service attachment. The target is not mutable once set as a service attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -1446,16 +1620,18 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
+   * The URL of the target resource to receive the matched traffic.  For regional forwarding rules,
    * this target must be in the same region as the forwarding rule. For global forwarding rules,
-   * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. - For load balancers, see the "Target" column in [Port
-   * specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-
-   * concepts#ip_address_specifications). - For Private Service Connect forwarding rules that
-   * forward traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc -
-   * APIs that support VPC Service Controls. - all-apis - All supported Google APIs. - For Private
-   * Service Connect forwarding rules that forward traffic to managed services, the target must be a
-   * service attachment. The target is not mutable once set as a service attachment.
+   * this target must be a global load balancing resource.
+   *
+   * The forwarded traffic must be of a type appropriate to the target object.              -  For
+   * load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-
+   * balancing/docs/forwarding-rule-concepts#ip_address_specifications).      -  For Private Service
+   * Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported
+   * Google API bundle:                            -  vpc-sc -  APIs that support VPC Service
+   * Controls.              -  all-apis - All supported Google APIs.                        -  For
+   * Private Service Connect forwarding rules that forward traffic to managed services, the target
+   * must be a service attachment. The target is not mutable once set as a service attachment.
    * @param target target or {@code null} for none
    */
   public ForwardingRule setTarget(java.lang.String target) {

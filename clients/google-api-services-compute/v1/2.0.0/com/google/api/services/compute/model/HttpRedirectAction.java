@@ -31,7 +31,9 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The host that is used in the redirect response instead of the one that was supplied in the
-   * request. The value must be from 1 to 255 characters.
+   * request.
+   *
+   * The value must be from 1 to 255 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,9 +41,12 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * If set to true, the URL scheme in the redirected request is set to HTTPS. If set to false, the
-   * URL scheme of the redirected request remains the same as that of the request. This must only be
-   * set for URL maps used in TargetHttpProxys. Setting this true for TargetHttpsProxy is not
-   * permitted. The default is set to false.
+   * URL scheme of the redirected request remains the same as that of the request.
+   *
+   * This must only be set for URL maps used inTargetHttpProxys. Setting this true
+   * forTargetHttpsProxy is not permitted.
+   *
+   * The default is set to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +54,12 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The path that is used in the redirect response instead of the one that was supplied in the
-   * request. pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or
-   * neither. If neither is supplied, the path of the original request is used for the redirect. The
-   * value must be from 1 to 1024 characters.
+   * request.
+   *
+   * pathRedirect cannot be supplied together withprefixRedirect. Supply one alone or neither. If
+   * neither is supplied, the path of the original request is used for the redirect.
+   *
+   * The value must be from 1 to 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,20 +67,25 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the
-   * remaining portion of the URL before redirecting the request. prefixRedirect cannot be supplied
-   * together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of
-   * the original request is used for the redirect. The value must be from 1 to 1024 characters.
+   * remaining portion of the URL before redirecting the request.
+   *
+   * prefixRedirect cannot be supplied together withpathRedirect. Supply one alone or neither. If
+   * neither is supplied, the path of the original request is used for the redirect.
+   *
+   * The value must be from 1 to 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String prefixRedirect;
 
   /**
-   * The HTTP Status code to use for this RedirectAction. Supported values are: -
-   * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301. - FOUND, which
-   * corresponds to 302. - SEE_OTHER which corresponds to 303. - TEMPORARY_REDIRECT, which
-   * corresponds to 307. In this case, the request method is retained. - PERMANENT_REDIRECT, which
-   * corresponds to 308. In this case, the request method is retained.
+   * The HTTP Status code to use for this RedirectAction.
+   *
+   * Supported values are:        - MOVED_PERMANENTLY_DEFAULT, which is the default value and
+   * corresponds    to 301.    - FOUND, which corresponds to 302.    - SEE_OTHER which corresponds
+   * to 303.    - TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request    method
+   * is retained.    - PERMANENT_REDIRECT, which corresponds to 308. In this case, the request
+   * method is retained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,6 +94,7 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
   /**
    * If set to true, any accompanying query portion of the original URL is removed before
    * redirecting the request. If set to false, the query portion of the original URL is retained.
+   *
    * The default is set to false.
    * The value may be {@code null}.
    */
@@ -89,7 +103,9 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The host that is used in the redirect response instead of the one that was supplied in the
-   * request. The value must be from 1 to 255 characters.
+   * request.
+   *
+   * The value must be from 1 to 255 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getHostRedirect() {
@@ -98,7 +114,9 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The host that is used in the redirect response instead of the one that was supplied in the
-   * request. The value must be from 1 to 255 characters.
+   * request.
+   *
+   * The value must be from 1 to 255 characters.
    * @param hostRedirect hostRedirect or {@code null} for none
    */
   public HttpRedirectAction setHostRedirect(java.lang.String hostRedirect) {
@@ -108,9 +126,12 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * If set to true, the URL scheme in the redirected request is set to HTTPS. If set to false, the
-   * URL scheme of the redirected request remains the same as that of the request. This must only be
-   * set for URL maps used in TargetHttpProxys. Setting this true for TargetHttpsProxy is not
-   * permitted. The default is set to false.
+   * URL scheme of the redirected request remains the same as that of the request.
+   *
+   * This must only be set for URL maps used inTargetHttpProxys. Setting this true
+   * forTargetHttpsProxy is not permitted.
+   *
+   * The default is set to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHttpsRedirect() {
@@ -119,9 +140,12 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * If set to true, the URL scheme in the redirected request is set to HTTPS. If set to false, the
-   * URL scheme of the redirected request remains the same as that of the request. This must only be
-   * set for URL maps used in TargetHttpProxys. Setting this true for TargetHttpsProxy is not
-   * permitted. The default is set to false.
+   * URL scheme of the redirected request remains the same as that of the request.
+   *
+   * This must only be set for URL maps used inTargetHttpProxys. Setting this true
+   * forTargetHttpsProxy is not permitted.
+   *
+   * The default is set to false.
    * @param httpsRedirect httpsRedirect or {@code null} for none
    */
   public HttpRedirectAction setHttpsRedirect(java.lang.Boolean httpsRedirect) {
@@ -131,9 +155,12 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The path that is used in the redirect response instead of the one that was supplied in the
-   * request. pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or
-   * neither. If neither is supplied, the path of the original request is used for the redirect. The
-   * value must be from 1 to 1024 characters.
+   * request.
+   *
+   * pathRedirect cannot be supplied together withprefixRedirect. Supply one alone or neither. If
+   * neither is supplied, the path of the original request is used for the redirect.
+   *
+   * The value must be from 1 to 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPathRedirect() {
@@ -142,9 +169,12 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The path that is used in the redirect response instead of the one that was supplied in the
-   * request. pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or
-   * neither. If neither is supplied, the path of the original request is used for the redirect. The
-   * value must be from 1 to 1024 characters.
+   * request.
+   *
+   * pathRedirect cannot be supplied together withprefixRedirect. Supply one alone or neither. If
+   * neither is supplied, the path of the original request is used for the redirect.
+   *
+   * The value must be from 1 to 1024 characters.
    * @param pathRedirect pathRedirect or {@code null} for none
    */
   public HttpRedirectAction setPathRedirect(java.lang.String pathRedirect) {
@@ -154,9 +184,12 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the
-   * remaining portion of the URL before redirecting the request. prefixRedirect cannot be supplied
-   * together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of
-   * the original request is used for the redirect. The value must be from 1 to 1024 characters.
+   * remaining portion of the URL before redirecting the request.
+   *
+   * prefixRedirect cannot be supplied together withpathRedirect. Supply one alone or neither. If
+   * neither is supplied, the path of the original request is used for the redirect.
+   *
+   * The value must be from 1 to 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrefixRedirect() {
@@ -165,9 +198,12 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
 
   /**
    * The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the
-   * remaining portion of the URL before redirecting the request. prefixRedirect cannot be supplied
-   * together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of
-   * the original request is used for the redirect. The value must be from 1 to 1024 characters.
+   * remaining portion of the URL before redirecting the request.
+   *
+   * prefixRedirect cannot be supplied together withpathRedirect. Supply one alone or neither. If
+   * neither is supplied, the path of the original request is used for the redirect.
+   *
+   * The value must be from 1 to 1024 characters.
    * @param prefixRedirect prefixRedirect or {@code null} for none
    */
   public HttpRedirectAction setPrefixRedirect(java.lang.String prefixRedirect) {
@@ -176,11 +212,13 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
   }
 
   /**
-   * The HTTP Status code to use for this RedirectAction. Supported values are: -
-   * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301. - FOUND, which
-   * corresponds to 302. - SEE_OTHER which corresponds to 303. - TEMPORARY_REDIRECT, which
-   * corresponds to 307. In this case, the request method is retained. - PERMANENT_REDIRECT, which
-   * corresponds to 308. In this case, the request method is retained.
+   * The HTTP Status code to use for this RedirectAction.
+   *
+   * Supported values are:        - MOVED_PERMANENTLY_DEFAULT, which is the default value and
+   * corresponds    to 301.    - FOUND, which corresponds to 302.    - SEE_OTHER which corresponds
+   * to 303.    - TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request    method
+   * is retained.    - PERMANENT_REDIRECT, which corresponds to 308. In this case, the request
+   * method is retained.
    * @return value or {@code null} for none
    */
   public java.lang.String getRedirectResponseCode() {
@@ -188,11 +226,13 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
   }
 
   /**
-   * The HTTP Status code to use for this RedirectAction. Supported values are: -
-   * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301. - FOUND, which
-   * corresponds to 302. - SEE_OTHER which corresponds to 303. - TEMPORARY_REDIRECT, which
-   * corresponds to 307. In this case, the request method is retained. - PERMANENT_REDIRECT, which
-   * corresponds to 308. In this case, the request method is retained.
+   * The HTTP Status code to use for this RedirectAction.
+   *
+   * Supported values are:        - MOVED_PERMANENTLY_DEFAULT, which is the default value and
+   * corresponds    to 301.    - FOUND, which corresponds to 302.    - SEE_OTHER which corresponds
+   * to 303.    - TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request    method
+   * is retained.    - PERMANENT_REDIRECT, which corresponds to 308. In this case, the request
+   * method is retained.
    * @param redirectResponseCode redirectResponseCode or {@code null} for none
    */
   public HttpRedirectAction setRedirectResponseCode(java.lang.String redirectResponseCode) {
@@ -203,6 +243,7 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
   /**
    * If set to true, any accompanying query portion of the original URL is removed before
    * redirecting the request. If set to false, the query portion of the original URL is retained.
+   *
    * The default is set to false.
    * @return value or {@code null} for none
    */
@@ -213,6 +254,7 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
   /**
    * If set to true, any accompanying query portion of the original URL is removed before
    * redirecting the request. If set to false, the query portion of the original URL is retained.
+   *
    * The default is set to false.
    * @param stripQuery stripQuery or {@code null} for none
    */

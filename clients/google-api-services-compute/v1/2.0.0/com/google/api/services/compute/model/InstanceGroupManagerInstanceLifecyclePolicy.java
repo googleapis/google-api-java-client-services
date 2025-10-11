@@ -31,10 +31,10 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
 
   /**
    * The action that a MIG performs on a failed or an unhealthy VM. A VM is marked as unhealthy when
-   * the application running on that VM fails a health check. Valid values are - REPAIR (default):
-   * MIG automatically repairs a failed or an unhealthy VM by recreating it. For more information,
-   * see About repairing VMs in a MIG. - DO_NOTHING: MIG does not repair a failed or an unhealthy
-   * VM.
+   * the application running on that VM fails a health check. Valid values are         - REPAIR
+   * (default): MIG automatically repairs a failed or    an unhealthy VM by recreating it. For more
+   * information, see About    repairing VMs in a MIG.    - DO_NOTHING: MIG does not repair a failed
+   * or an unhealthy    VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,10 +42,12 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
 
   /**
    * A bit indicating whether to forcefully apply the group's latest configuration when repairing a
-   * VM. Valid options are: - NO (default): If configuration updates are available, they are not
-   * forcefully applied during repair. Instead, configuration updates are applied according to the
-   * group's update policy. - YES: If configuration updates are available, they are applied during
-   * repair.
+   * VM. Valid options are:
+   *
+   *              -  NO (default): If configuration updates are available, they are not
+   * forcefully applied during repair. Instead, configuration updates are      applied according to
+   * the group's update policy.          -  YES: If configuration updates are available, they are
+   * applied      during repair.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,10 +55,10 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
 
   /**
    * The action that a MIG performs on a failed or an unhealthy VM. A VM is marked as unhealthy when
-   * the application running on that VM fails a health check. Valid values are - REPAIR (default):
-   * MIG automatically repairs a failed or an unhealthy VM by recreating it. For more information,
-   * see About repairing VMs in a MIG. - DO_NOTHING: MIG does not repair a failed or an unhealthy
-   * VM.
+   * the application running on that VM fails a health check. Valid values are         - REPAIR
+   * (default): MIG automatically repairs a failed or    an unhealthy VM by recreating it. For more
+   * information, see About    repairing VMs in a MIG.    - DO_NOTHING: MIG does not repair a failed
+   * or an unhealthy    VM.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultActionOnFailure() {
@@ -65,10 +67,10 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
 
   /**
    * The action that a MIG performs on a failed or an unhealthy VM. A VM is marked as unhealthy when
-   * the application running on that VM fails a health check. Valid values are - REPAIR (default):
-   * MIG automatically repairs a failed or an unhealthy VM by recreating it. For more information,
-   * see About repairing VMs in a MIG. - DO_NOTHING: MIG does not repair a failed or an unhealthy
-   * VM.
+   * the application running on that VM fails a health check. Valid values are         - REPAIR
+   * (default): MIG automatically repairs a failed or    an unhealthy VM by recreating it. For more
+   * information, see About    repairing VMs in a MIG.    - DO_NOTHING: MIG does not repair a failed
+   * or an unhealthy    VM.
    * @param defaultActionOnFailure defaultActionOnFailure or {@code null} for none
    */
   public InstanceGroupManagerInstanceLifecyclePolicy setDefaultActionOnFailure(java.lang.String defaultActionOnFailure) {
@@ -78,10 +80,12 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
 
   /**
    * A bit indicating whether to forcefully apply the group's latest configuration when repairing a
-   * VM. Valid options are: - NO (default): If configuration updates are available, they are not
-   * forcefully applied during repair. Instead, configuration updates are applied according to the
-   * group's update policy. - YES: If configuration updates are available, they are applied during
-   * repair.
+   * VM. Valid options are:
+   *
+   *              -  NO (default): If configuration updates are available, they are not
+   * forcefully applied during repair. Instead, configuration updates are      applied according to
+   * the group's update policy.          -  YES: If configuration updates are available, they are
+   * applied      during repair.
    * @return value or {@code null} for none
    */
   public java.lang.String getForceUpdateOnRepair() {
@@ -90,10 +94,12 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
 
   /**
    * A bit indicating whether to forcefully apply the group's latest configuration when repairing a
-   * VM. Valid options are: - NO (default): If configuration updates are available, they are not
-   * forcefully applied during repair. Instead, configuration updates are applied according to the
-   * group's update policy. - YES: If configuration updates are available, they are applied during
-   * repair.
+   * VM. Valid options are:
+   *
+   *              -  NO (default): If configuration updates are available, they are not
+   * forcefully applied during repair. Instead, configuration updates are      applied according to
+   * the group's update policy.          -  YES: If configuration updates are available, they are
+   * applied      during repair.
    * @param forceUpdateOnRepair forceUpdateOnRepair or {@code null} for none
    */
   public InstanceGroupManagerInstanceLifecyclePolicy setForceUpdateOnRepair(java.lang.String forceUpdateOnRepair) {

@@ -30,10 +30,13 @@ package com.google.api.services.compute.model;
 public final class HttpFaultAbort extends com.google.api.client.json.GenericJson {
 
   /**
-   * The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive.
-   * For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping
-   * table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently
-   * not supported by Traffic Director.
+   * The HTTP status code used to abort the request.
+   *
+   * The value must be from 200 to 599 inclusive.
+   *
+   * For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this
+   * mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is
+   * currently not supported by Traffic Director.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,17 +44,22 @@ public final class HttpFaultAbort extends com.google.api.client.json.GenericJson
 
   /**
    * The percentage of traffic for connections, operations, or requests that is aborted as part of
-   * fault injection. The value must be from 0.0 to 100.0 inclusive.
+   * fault injection.
+   *
+   * The value must be from 0.0 to 100.0 inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double percentage;
 
   /**
-   * The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive.
-   * For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping
-   * table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently
-   * not supported by Traffic Director.
+   * The HTTP status code used to abort the request.
+   *
+   * The value must be from 200 to 599 inclusive.
+   *
+   * For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this
+   * mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is
+   * currently not supported by Traffic Director.
    * @return value or {@code null} for none
    */
   public java.lang.Long getHttpStatus() {
@@ -59,10 +67,13 @@ public final class HttpFaultAbort extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive.
-   * For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping
-   * table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently
-   * not supported by Traffic Director.
+   * The HTTP status code used to abort the request.
+   *
+   * The value must be from 200 to 599 inclusive.
+   *
+   * For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this
+   * mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is
+   * currently not supported by Traffic Director.
    * @param httpStatus httpStatus or {@code null} for none
    */
   public HttpFaultAbort setHttpStatus(java.lang.Long httpStatus) {
@@ -72,7 +83,9 @@ public final class HttpFaultAbort extends com.google.api.client.json.GenericJson
 
   /**
    * The percentage of traffic for connections, operations, or requests that is aborted as part of
-   * fault injection. The value must be from 0.0 to 100.0 inclusive.
+   * fault injection.
+   *
+   * The value must be from 0.0 to 100.0 inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPercentage() {
@@ -81,7 +94,9 @@ public final class HttpFaultAbort extends com.google.api.client.json.GenericJson
 
   /**
    * The percentage of traffic for connections, operations, or requests that is aborted as part of
-   * fault injection. The value must be from 0.0 to 100.0 inclusive.
+   * fault injection.
+   *
+   * The value must be from 0.0 to 100.0 inclusive.
    * @param percentage percentage or {@code null} for none
    */
   public HttpFaultAbort setPercentage(java.lang.Double percentage) {

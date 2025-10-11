@@ -32,7 +32,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Applies to ipv6AccessConfigs only. The first IPv6 address of the external IPv6 range associated
-   * with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To
+   * with this instance, prefix length is stored inexternalIpv6PrefixLength in ipv6AccessConfig. To
    * use a static external IP address, it must be unused and in the same region as the instance's
    * zone. If not specified, Google Cloud will automatically assign an external IPv6 address from
    * the instance's subnetwork.
@@ -49,7 +49,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer externalIpv6PrefixLength;
 
   /**
-   * [Output Only] Type of the resource. Always compute#accessConfig for access configs.
+   * [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of this access configuration. In accessConfigs (IPv4), the default and recommended
-   * name is External NAT, but you can use any arbitrary string, such as My external IP or Network
+   * name is External NAT, but you can use any arbitrary string, such as My external IP orNetwork
    * Access. In ipv6AccessConfigs, the recommend name is External IPv6.
    * The value may be {@code null}.
    */
@@ -65,7 +65,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Applies to accessConfigs (IPv4) only. An external IP address associated with this instance.
+   * Applies to accessConfigs (IPv4) only. Anexternal IP address associated with this instance.
    * Specify an unused static external IP address available to the project or leave this field
    * undefined to use an IP from a shared ephemeral IP address pool. If you specify a static
    * external IP address, it must live in the same region as the zone of the instance.
@@ -76,20 +76,24 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the networking tier used for configuring this access configuration and can only
-   * take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid
-   * external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig
-   * with a valid external IP address is specified, it must match that of the networkTier associated
-   * with the Address resource owning that IP.
+   * take the following values: PREMIUM,STANDARD.
+   *
+   * If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be
+   * created with this networkTier.
+   *
+   * If an AccessConfig with a valid external IP address is specified, it must match that of the
+   * networkTier associated with the Address resource owning that IP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkTier;
 
   /**
-   * The DNS domain name for the public PTR record. You can set this field only if the
-   * `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in
-   * ipv6AccessConfig, a default PTR record will be created for first IP in associated external IPv6
-   * range.
+   * The DNS domain name for the public PTR record.
+   *
+   * You can set this field only if the `setPublicPtr` field is enabled inaccessConfig. If this
+   * field is unspecified inipv6AccessConfig, a default PTR record will be created for first IP in
+   * associated external IPv6 range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,8 +108,10 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of
-   * the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR
-   * record will be created if the VM has external IPv6 range associated.
+   * the instance to a DNS domain name.
+   *
+   * This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has
+   * external IPv6 range associated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +119,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of configuration. In accessConfigs (IPv4), the default and only option is
-   * ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6.
+   * ONE_TO_ONE_NAT. Inipv6AccessConfigs, the default and only option isDIRECT_IPV6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +127,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Applies to ipv6AccessConfigs only. The first IPv6 address of the external IPv6 range associated
-   * with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To
+   * with this instance, prefix length is stored inexternalIpv6PrefixLength in ipv6AccessConfig. To
    * use a static external IP address, it must be unused and in the same region as the instance's
    * zone. If not specified, Google Cloud will automatically assign an external IPv6 address from
    * the instance's subnetwork.
@@ -133,7 +139,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Applies to ipv6AccessConfigs only. The first IPv6 address of the external IPv6 range associated
-   * with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To
+   * with this instance, prefix length is stored inexternalIpv6PrefixLength in ipv6AccessConfig. To
    * use a static external IP address, it must be unused and in the same region as the instance's
    * zone. If not specified, Google Cloud will automatically assign an external IPv6 address from
    * the instance's subnetwork.
@@ -162,7 +168,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#accessConfig for access configs.
+   * [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -170,7 +176,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#accessConfig for access configs.
+   * [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
    * @param kind kind or {@code null} for none
    */
   public AccessConfig setKind(java.lang.String kind) {
@@ -180,7 +186,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of this access configuration. In accessConfigs (IPv4), the default and recommended
-   * name is External NAT, but you can use any arbitrary string, such as My external IP or Network
+   * name is External NAT, but you can use any arbitrary string, such as My external IP orNetwork
    * Access. In ipv6AccessConfigs, the recommend name is External IPv6.
    * @return value or {@code null} for none
    */
@@ -190,7 +196,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of this access configuration. In accessConfigs (IPv4), the default and recommended
-   * name is External NAT, but you can use any arbitrary string, such as My external IP or Network
+   * name is External NAT, but you can use any arbitrary string, such as My external IP orNetwork
    * Access. In ipv6AccessConfigs, the recommend name is External IPv6.
    * @param name name or {@code null} for none
    */
@@ -200,7 +206,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Applies to accessConfigs (IPv4) only. An external IP address associated with this instance.
+   * Applies to accessConfigs (IPv4) only. Anexternal IP address associated with this instance.
    * Specify an unused static external IP address available to the project or leave this field
    * undefined to use an IP from a shared ephemeral IP address pool. If you specify a static
    * external IP address, it must live in the same region as the zone of the instance.
@@ -211,7 +217,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Applies to accessConfigs (IPv4) only. An external IP address associated with this instance.
+   * Applies to accessConfigs (IPv4) only. Anexternal IP address associated with this instance.
    * Specify an unused static external IP address available to the project or leave this field
    * undefined to use an IP from a shared ephemeral IP address pool. If you specify a static
    * external IP address, it must live in the same region as the zone of the instance.
@@ -224,10 +230,13 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the networking tier used for configuring this access configuration and can only
-   * take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid
-   * external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig
-   * with a valid external IP address is specified, it must match that of the networkTier associated
-   * with the Address resource owning that IP.
+   * take the following values: PREMIUM,STANDARD.
+   *
+   * If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be
+   * created with this networkTier.
+   *
+   * If an AccessConfig with a valid external IP address is specified, it must match that of the
+   * networkTier associated with the Address resource owning that IP.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkTier() {
@@ -236,10 +245,13 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the networking tier used for configuring this access configuration and can only
-   * take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid
-   * external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig
-   * with a valid external IP address is specified, it must match that of the networkTier associated
-   * with the Address resource owning that IP.
+   * take the following values: PREMIUM,STANDARD.
+   *
+   * If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be
+   * created with this networkTier.
+   *
+   * If an AccessConfig with a valid external IP address is specified, it must match that of the
+   * networkTier associated with the Address resource owning that IP.
    * @param networkTier networkTier or {@code null} for none
    */
   public AccessConfig setNetworkTier(java.lang.String networkTier) {
@@ -248,10 +260,11 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DNS domain name for the public PTR record. You can set this field only if the
-   * `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in
-   * ipv6AccessConfig, a default PTR record will be created for first IP in associated external IPv6
-   * range.
+   * The DNS domain name for the public PTR record.
+   *
+   * You can set this field only if the `setPublicPtr` field is enabled inaccessConfig. If this
+   * field is unspecified inipv6AccessConfig, a default PTR record will be created for first IP in
+   * associated external IPv6 range.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicPtrDomainName() {
@@ -259,10 +272,11 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DNS domain name for the public PTR record. You can set this field only if the
-   * `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in
-   * ipv6AccessConfig, a default PTR record will be created for first IP in associated external IPv6
-   * range.
+   * The DNS domain name for the public PTR record.
+   *
+   * You can set this field only if the `setPublicPtr` field is enabled inaccessConfig. If this
+   * field is unspecified inipv6AccessConfig, a default PTR record will be created for first IP in
+   * associated external IPv6 range.
    * @param publicPtrDomainName publicPtrDomainName or {@code null} for none
    */
   public AccessConfig setPublicPtrDomainName(java.lang.String publicPtrDomainName) {
@@ -289,8 +303,10 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of
-   * the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR
-   * record will be created if the VM has external IPv6 range associated.
+   * the instance to a DNS domain name.
+   *
+   * This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has
+   * external IPv6 range associated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSetPublicPtr() {
@@ -299,8 +315,10 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of
-   * the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR
-   * record will be created if the VM has external IPv6 range associated.
+   * the instance to a DNS domain name.
+   *
+   * This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has
+   * external IPv6 range associated.
    * @param setPublicPtr setPublicPtr or {@code null} for none
    */
   public AccessConfig setSetPublicPtr(java.lang.Boolean setPublicPtr) {
@@ -310,7 +328,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of configuration. In accessConfigs (IPv4), the default and only option is
-   * ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6.
+   * ONE_TO_ONE_NAT. Inipv6AccessConfigs, the default and only option isDIRECT_IPV6.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -319,7 +337,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of configuration. In accessConfigs (IPv4), the default and only option is
-   * ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6.
+   * ONE_TO_ONE_NAT. Inipv6AccessConfigs, the default and only option isDIRECT_IPV6.
    * @param type type or {@code null} for none
    */
   public AccessConfig setType(java.lang.String type) {

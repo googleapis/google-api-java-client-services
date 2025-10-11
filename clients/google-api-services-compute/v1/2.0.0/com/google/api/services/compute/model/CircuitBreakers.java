@@ -31,6 +31,7 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of connections to the backend service. If not specified, there is no limit.
+   *
    * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
    * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
@@ -40,8 +41,10 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of pending requests allowed to the backend service. If not specified, there
-   * is no limit. Not supported when the backend service is referenced by a URL map that is bound to
-   * target gRPC proxy that has validateForProxyless field set to true.
+   * is no limit.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,9 +61,10 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   /**
    * Maximum requests for a single connection to the backend service. This parameter is respected by
    * both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this
-   * parameter to 1 will effectively disable keep alive. Not supported when the backend service is
-   * referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field
-   * set to true.
+   * parameter to 1 will effectively disable keep alive.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +72,10 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of parallel retries allowed to the backend cluster. If not specified, the
-   * default is 1. Not supported when the backend service is referenced by a URL map that is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * default is 1.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,6 +83,7 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of connections to the backend service. If not specified, there is no limit.
+   *
    * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
    * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
@@ -87,6 +94,7 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of connections to the backend service. If not specified, there is no limit.
+   *
    * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
    * proxy that has validateForProxyless field set to true.
    * @param maxConnections maxConnections or {@code null} for none
@@ -98,8 +106,10 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of pending requests allowed to the backend service. If not specified, there
-   * is no limit. Not supported when the backend service is referenced by a URL map that is bound to
-   * target gRPC proxy that has validateForProxyless field set to true.
+   * is no limit.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxPendingRequests() {
@@ -108,8 +118,10 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of pending requests allowed to the backend service. If not specified, there
-   * is no limit. Not supported when the backend service is referenced by a URL map that is bound to
-   * target gRPC proxy that has validateForProxyless field set to true.
+   * is no limit.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param maxPendingRequests maxPendingRequests or {@code null} for none
    */
   public CircuitBreakers setMaxPendingRequests(java.lang.Integer maxPendingRequests) {
@@ -139,9 +151,10 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   /**
    * Maximum requests for a single connection to the backend service. This parameter is respected by
    * both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this
-   * parameter to 1 will effectively disable keep alive. Not supported when the backend service is
-   * referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field
-   * set to true.
+   * parameter to 1 will effectively disable keep alive.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxRequestsPerConnection() {
@@ -151,9 +164,10 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
   /**
    * Maximum requests for a single connection to the backend service. This parameter is respected by
    * both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this
-   * parameter to 1 will effectively disable keep alive. Not supported when the backend service is
-   * referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field
-   * set to true.
+   * parameter to 1 will effectively disable keep alive.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param maxRequestsPerConnection maxRequestsPerConnection or {@code null} for none
    */
   public CircuitBreakers setMaxRequestsPerConnection(java.lang.Integer maxRequestsPerConnection) {
@@ -163,8 +177,10 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of parallel retries allowed to the backend cluster. If not specified, the
-   * default is 1. Not supported when the backend service is referenced by a URL map that is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * default is 1.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxRetries() {
@@ -173,8 +189,10 @@ public final class CircuitBreakers extends com.google.api.client.json.GenericJso
 
   /**
    * The maximum number of parallel retries allowed to the backend cluster. If not specified, the
-   * default is 1. Not supported when the backend service is referenced by a URL map that is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * default is 1.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param maxRetries maxRetries or {@code null} for none
    */
   public CircuitBreakers setMaxRetries(java.lang.Integer maxRetries) {

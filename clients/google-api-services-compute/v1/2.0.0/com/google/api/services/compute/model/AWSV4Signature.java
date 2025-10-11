@@ -34,7 +34,9 @@ public final class AWSV4Signature extends com.google.api.client.json.GenericJson
   /**
    * The access key used for s3 bucket authentication. Required for updating or creating a backend
    * that uses AWS v4 signature authentication, but will not be returned as part of the
-   * configuration when queried with a REST API GET request. @InputOnly
+   * configuration when queried with a REST API GET request.
+   *
+   * @InputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +59,7 @@ public final class AWSV4Signature extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the cloud region of your origin. This is a free-form field with the name of the
-   * region your cloud uses to host your origin. For example, "us-east-1" for AWS or "us-ashburn-1"
+   * region your cloud uses to host your origin.  For example, "us-east-1" for AWS or "us-ashburn-1"
    * for OCI.
    * The value may be {@code null}.
    */
@@ -67,7 +69,9 @@ public final class AWSV4Signature extends com.google.api.client.json.GenericJson
   /**
    * The access key used for s3 bucket authentication. Required for updating or creating a backend
    * that uses AWS v4 signature authentication, but will not be returned as part of the
-   * configuration when queried with a REST API GET request. @InputOnly
+   * configuration when queried with a REST API GET request.
+   *
+   * @InputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessKey() {
@@ -77,7 +81,9 @@ public final class AWSV4Signature extends com.google.api.client.json.GenericJson
   /**
    * The access key used for s3 bucket authentication. Required for updating or creating a backend
    * that uses AWS v4 signature authentication, but will not be returned as part of the
-   * configuration when queried with a REST API GET request. @InputOnly
+   * configuration when queried with a REST API GET request.
+   *
+   * @InputOnly
    * @param accessKey accessKey or {@code null} for none
    */
   public AWSV4Signature setAccessKey(java.lang.String accessKey) {
@@ -123,7 +129,7 @@ public final class AWSV4Signature extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the cloud region of your origin. This is a free-form field with the name of the
-   * region your cloud uses to host your origin. For example, "us-east-1" for AWS or "us-ashburn-1"
+   * region your cloud uses to host your origin.  For example, "us-east-1" for AWS or "us-ashburn-1"
    * for OCI.
    * @return value or {@code null} for none
    */
@@ -133,7 +139,7 @@ public final class AWSV4Signature extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the cloud region of your origin. This is a free-form field with the name of the
-   * region your cloud uses to host your origin. For example, "us-east-1" for AWS or "us-ashburn-1"
+   * region your cloud uses to host your origin.  For example, "us-east-1" for AWS or "us-ashburn-1"
    * for OCI.
    * @param originRegion originRegion or {@code null} for none
    */

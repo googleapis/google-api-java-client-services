@@ -65,11 +65,11 @@ public final class DeprecationStatus extends com.google.api.client.json.GenericJ
   private java.lang.String replacement;
 
   /**
-   * The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED.
-   * Operations which communicate the end of life date for an image, can use ACTIVE. Operations
-   * which create a new resource using a DEPRECATED resource will return successfully, but with a
-   * warning indicating the deprecated resource and recommending its replacement. Operations which
-   * use OBSOLETE or DELETED resources will be rejected and result in an error.
+   * The deprecation state of this resource. This can be ACTIVE,DEPRECATED, OBSOLETE, or DELETED.
+   * Operations which communicate the end of life date for an image, can useACTIVE. Operations which
+   * create a new resource using aDEPRECATED resource will return successfully, but with a warning
+   * indicating the deprecated resource and recommending its replacement. Operations which use
+   * OBSOLETE orDELETED resources will be rejected and result in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,11 +158,11 @@ public final class DeprecationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED.
-   * Operations which communicate the end of life date for an image, can use ACTIVE. Operations
-   * which create a new resource using a DEPRECATED resource will return successfully, but with a
-   * warning indicating the deprecated resource and recommending its replacement. Operations which
-   * use OBSOLETE or DELETED resources will be rejected and result in an error.
+   * The deprecation state of this resource. This can be ACTIVE,DEPRECATED, OBSOLETE, or DELETED.
+   * Operations which communicate the end of life date for an image, can useACTIVE. Operations which
+   * create a new resource using aDEPRECATED resource will return successfully, but with a warning
+   * indicating the deprecated resource and recommending its replacement. Operations which use
+   * OBSOLETE orDELETED resources will be rejected and result in an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -170,11 +170,11 @@ public final class DeprecationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED.
-   * Operations which communicate the end of life date for an image, can use ACTIVE. Operations
-   * which create a new resource using a DEPRECATED resource will return successfully, but with a
-   * warning indicating the deprecated resource and recommending its replacement. Operations which
-   * use OBSOLETE or DELETED resources will be rejected and result in an error.
+   * The deprecation state of this resource. This can be ACTIVE,DEPRECATED, OBSOLETE, or DELETED.
+   * Operations which communicate the end of life date for an image, can useACTIVE. Operations which
+   * create a new resource using aDEPRECATED resource will return successfully, but with a warning
+   * indicating the deprecated resource and recommending its replacement. Operations which use
+   * OBSOLETE orDELETED resources will be rejected and result in an error.
    * @param state state or {@code null} for none
    */
   public DeprecationStatus setState(java.lang.String state) {

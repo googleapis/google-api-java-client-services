@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Node Affinity: the configuration of desired nodes onto which this Instance could be scheduled.
+ * Node Affinity: the configuration of desired nodes onto which this Instance  could be scheduled.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class SchedulingNodeAffinity extends com.google.api.client.json.Gen
   private java.lang.String key;
 
   /**
-   * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for
+   * Defines the operation of node selection. Valid operators areIN for affinity and NOT_IN for
    * anti-affinity.
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class SchedulingNodeAffinity extends com.google.api.client.json.Gen
   }
 
   /**
-   * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for
+   * Defines the operation of node selection. Valid operators areIN for affinity and NOT_IN for
    * anti-affinity.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class SchedulingNodeAffinity extends com.google.api.client.json.Gen
   }
 
   /**
-   * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for
+   * Defines the operation of node selection. Valid operators areIN for affinity and NOT_IN for
    * anti-affinity.
    * @param operator operator or {@code null} for none
    */

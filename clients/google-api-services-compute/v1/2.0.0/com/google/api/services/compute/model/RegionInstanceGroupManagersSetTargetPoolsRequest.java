@@ -38,8 +38,8 @@ public final class RegionInstanceGroupManagersSetTargetPoolsRequest extends com.
   private java.lang.String fingerprint;
 
   /**
-   * The URL of all TargetPool resources to which instances in the instanceGroup field are added.
-   * The target pools automatically apply to all of the instances in the managed instance group.
+   * The URL of all TargetPool resources to which instances in theinstanceGroup field are added. The
+   * target pools automatically apply to all of the instances in the managed instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +95,8 @@ public final class RegionInstanceGroupManagersSetTargetPoolsRequest extends com.
   }
 
   /**
-   * The URL of all TargetPool resources to which instances in the instanceGroup field are added.
-   * The target pools automatically apply to all of the instances in the managed instance group.
+   * The URL of all TargetPool resources to which instances in theinstanceGroup field are added. The
+   * target pools automatically apply to all of the instances in the managed instance group.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetPools() {
@@ -104,8 +104,8 @@ public final class RegionInstanceGroupManagersSetTargetPoolsRequest extends com.
   }
 
   /**
-   * The URL of all TargetPool resources to which instances in the instanceGroup field are added.
-   * The target pools automatically apply to all of the instances in the managed instance group.
+   * The URL of all TargetPool resources to which instances in theinstanceGroup field are added. The
+   * target pools automatically apply to all of the instances in the managed instance group.
    * @param targetPools targetPools or {@code null} for none
    */
   public RegionInstanceGroupManagersSetTargetPoolsRequest setTargetPools(java.util.List<java.lang.String> targetPools) {

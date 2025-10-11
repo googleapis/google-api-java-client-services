@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class StoragePoolType extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#storagePoolType for storage pool types.
+   * [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   private java.lang.String zone;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -158,7 +158,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public StoragePoolType setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -218,7 +218,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#storagePoolType for storage pool types.
+   * [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -226,7 +226,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#storagePoolType for storage pool types.
+   * [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool types.
    * @param kind kind or {@code null} for none
    */
   public StoragePoolType setKind(java.lang.String kind) {

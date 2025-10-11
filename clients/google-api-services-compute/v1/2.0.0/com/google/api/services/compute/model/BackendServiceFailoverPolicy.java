@@ -38,7 +38,9 @@ package com.google.api.services.compute.model;
 public final class BackendServiceFailoverPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * This can be set to true only if the protocol is TCP. The default is false.
+   * This can be set to true only if the protocol isTCP.
+   *
+   * The default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +49,7 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   /**
    * If set to true, connections to the load balancer are dropped when all primary and all backup
    * backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs
-   * when all primary and all backup backend VMs are unhealthy. For load balancers that have
+   * when all primary and all backup backend VMs are  unhealthy. For load balancers that have
    * configurable failover: [Internal passthrough Network Load
    * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
    * [external passthrough Network Load Balancers](https://cloud.google.com/load-
@@ -58,7 +60,7 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   private java.lang.Boolean dropTrafficIfUnhealthy;
 
   /**
-   * The value of the field must be in the range [0, 1]. If the value is 0, the load balancer
+   * The value of the field must be in the range[0, 1]. If the value is 0, the load balancer
    * performs a failover when the number of healthy primary VMs equals zero. For all other values,
    * the load balancer performs a failover when the total number of healthy primary VMs is less than
    * this ratio. For load balancers that have configurable failover: [Internal TCP/UDP Load
@@ -71,7 +73,9 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   private java.lang.Float failoverRatio;
 
   /**
-   * This can be set to true only if the protocol is TCP. The default is false.
+   * This can be set to true only if the protocol isTCP.
+   *
+   * The default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableConnectionDrainOnFailover() {
@@ -79,7 +83,9 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   }
 
   /**
-   * This can be set to true only if the protocol is TCP. The default is false.
+   * This can be set to true only if the protocol isTCP.
+   *
+   * The default is false.
    * @param disableConnectionDrainOnFailover disableConnectionDrainOnFailover or {@code null} for none
    */
   public BackendServiceFailoverPolicy setDisableConnectionDrainOnFailover(java.lang.Boolean disableConnectionDrainOnFailover) {
@@ -90,7 +96,7 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   /**
    * If set to true, connections to the load balancer are dropped when all primary and all backup
    * backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs
-   * when all primary and all backup backend VMs are unhealthy. For load balancers that have
+   * when all primary and all backup backend VMs are  unhealthy. For load balancers that have
    * configurable failover: [Internal passthrough Network Load
    * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
    * [external passthrough Network Load Balancers](https://cloud.google.com/load-
@@ -104,7 +110,7 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   /**
    * If set to true, connections to the load balancer are dropped when all primary and all backup
    * backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs
-   * when all primary and all backup backend VMs are unhealthy. For load balancers that have
+   * when all primary and all backup backend VMs are  unhealthy. For load balancers that have
    * configurable failover: [Internal passthrough Network Load
    * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
    * [external passthrough Network Load Balancers](https://cloud.google.com/load-
@@ -117,7 +123,7 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   }
 
   /**
-   * The value of the field must be in the range [0, 1]. If the value is 0, the load balancer
+   * The value of the field must be in the range[0, 1]. If the value is 0, the load balancer
    * performs a failover when the number of healthy primary VMs equals zero. For all other values,
    * the load balancer performs a failover when the total number of healthy primary VMs is less than
    * this ratio. For load balancers that have configurable failover: [Internal TCP/UDP Load
@@ -131,7 +137,7 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   }
 
   /**
-   * The value of the field must be in the range [0, 1]. If the value is 0, the load balancer
+   * The value of the field must be in the range[0, 1]. If the value is 0, the load balancer
    * performs a failover when the number of healthy primary VMs equals zero. For all other values,
    * the load balancer performs a failover when the total number of healthy primary VMs is less than
    * this ratio. For load balancers that have configurable failover: [Internal TCP/UDP Load

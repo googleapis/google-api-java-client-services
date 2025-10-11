@@ -31,7 +31,7 @@ public final class InstancesSetMachineTypeRequest extends com.google.api.client.
 
   /**
    * Full or partial URL of the machine type resource. See Machine Types for a full list of machine
-   * types. For example: zones/us-central1-f/machineTypes/n1-standard-1
+   * types. For example:zones/us-central1-f/machineTypes/n1-standard-1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class InstancesSetMachineTypeRequest extends com.google.api.client.
 
   /**
    * Full or partial URL of the machine type resource. See Machine Types for a full list of machine
-   * types. For example: zones/us-central1-f/machineTypes/n1-standard-1
+   * types. For example:zones/us-central1-f/machineTypes/n1-standard-1
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -48,7 +48,7 @@ public final class InstancesSetMachineTypeRequest extends com.google.api.client.
 
   /**
    * Full or partial URL of the machine type resource. See Machine Types for a full list of machine
-   * types. For example: zones/us-central1-f/machineTypes/n1-standard-1
+   * types. For example:zones/us-central1-f/machineTypes/n1-standard-1
    * @param machineType machineType or {@code null} for none
    */
   public InstancesSetMachineTypeRequest setMachineType(java.lang.String machineType) {

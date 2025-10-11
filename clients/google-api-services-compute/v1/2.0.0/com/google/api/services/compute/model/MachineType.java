@@ -17,8 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Machine Type resource. You can use specific machine types for your VM instances
- * based on performance and pricing requirements. For more information, read Machine Types.
+ * Represents a Machine Type resource.
+ *
+ * You can use specific machine types for your VM instances based on performance and pricing
+ * requirements. For more information, readMachine Types.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -51,7 +53,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   private java.lang.String architecture;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,15 +96,15 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   private java.lang.Integer imageSpaceGb;
 
   /**
-   * [Output Only] Whether this machine type has a shared CPU. See Shared-core machine types for
-   * more information.
+   * [Output Only] Whether this machine type has a shared CPU. SeeShared-core machine types for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isSharedCpu;
 
   /**
-   * [Output Only] The type of the resource. Always compute#machineType for machine types.
+   * [Output Only] The type of the resource. Alwayscompute#machineType for machine types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,7 +187,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -193,7 +195,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public MachineType setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -289,8 +291,8 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Whether this machine type has a shared CPU. See Shared-core machine types for
-   * more information.
+   * [Output Only] Whether this machine type has a shared CPU. SeeShared-core machine types for more
+   * information.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsSharedCpu() {
@@ -298,8 +300,8 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Whether this machine type has a shared CPU. See Shared-core machine types for
-   * more information.
+   * [Output Only] Whether this machine type has a shared CPU. SeeShared-core machine types for more
+   * information.
    * @param isSharedCpu isSharedCpu or {@code null} for none
    */
   public MachineType setIsSharedCpu(java.lang.Boolean isSharedCpu) {
@@ -308,7 +310,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Always compute#machineType for machine types.
+   * [Output Only] The type of the resource. Alwayscompute#machineType for machine types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -316,7 +318,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Always compute#machineType for machine types.
+   * [Output Only] The type of the resource. Alwayscompute#machineType for machine types.
    * @param kind kind or {@code null} for none
    */
   public MachineType setKind(java.lang.String kind) {
@@ -449,7 +451,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
     private java.lang.Integer guestAcceleratorCount;
 
     /**
-     * The accelerator type resource name, not a full URL, e.g. nvidia-tesla-t4.
+     * The accelerator type resource name, not a full URL, e.g.nvidia-tesla-t4.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -473,7 +475,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The accelerator type resource name, not a full URL, e.g. nvidia-tesla-t4.
+     * The accelerator type resource name, not a full URL, e.g.nvidia-tesla-t4.
      * @return value or {@code null} for none
      */
     public java.lang.String getGuestAcceleratorType() {
@@ -481,7 +483,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The accelerator type resource name, not a full URL, e.g. nvidia-tesla-t4.
+     * The accelerator type resource name, not a full URL, e.g.nvidia-tesla-t4.
      * @param guestAcceleratorType guestAcceleratorType or {@code null} for none
      */
     public Accelerators setGuestAcceleratorType(java.lang.String guestAcceleratorType) {

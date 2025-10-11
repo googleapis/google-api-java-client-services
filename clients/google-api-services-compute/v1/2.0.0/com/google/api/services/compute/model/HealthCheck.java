@@ -17,15 +17,28 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a health check resource. Google Compute Engine has two health check resources: *
- * [Regional](/compute/docs/reference/rest/v1/regionHealthChecks) *
- * [Global](/compute/docs/reference/rest/v1/healthChecks) These health check resources can be used
- * for load balancing and for autohealing VMs in a managed instance group (MIG). **Load balancing**
+ * Represents a health check resource.
+ *
+ * Google Compute Engine has two health check resources:
+ *
+ * * [Regional](/compute/docs/reference/rest/v1/regionHealthChecks) *
+ * [Global](/compute/docs/reference/rest/v1/healthChecks)
+ *
+ * These health check resources can be used for load balancing and for autohealing VMs in a managed
+ * instance group (MIG).
+ *
+ * **Load balancing**
+ *
  * Health check requirements vary depending on the type of load balancer. For details about the type
  * of health check supported for each load balancer and corresponding backend type, see Health
- * checks overview: Load balancer guide. **Autohealing in MIGs** The health checks that you use for
- * autohealing VMs in a MIG can be either regional or global. For more information, see Set up an
- * application health check and autohealing. For more information, see Health checks overview.
+ * checks overview: Load balancer guide.
+ *
+ * **Autohealing in MIGs**
+ *
+ * The health checks that you use for autohealing VMs in a MIG can be either regional or global. For
+ * more information, see  Set up an application health check and autohealing.
+ *
+ * For more information, seeHealth checks overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -45,7 +58,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.lang.Integer checkIntervalSec;
 
   /**
-   * [Output Only] Creation timestamp in 3339 text format.
+   * [Output Only] Creation timestamp in3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +126,8 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters
-   * long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with
+   * 1-63 characters long, and comply withRFC1035. For example, a name that is 1-63 characters long,
+   * matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with
    * RFC1035. This regular expression describes a name where the first character is a lowercase
    * letter, and all following characters are a dash, lowercase letter, or digit, except the last
    * character, which isn't a dash.
@@ -124,7 +137,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * [Output Only] Region where the health check resides. Not applicable to global health checks.
+   * [Output Only] Region where the health check resides.  Not applicable to global health checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,10 +155,10 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    * then exactly 3 regions should be specified. The region names must be valid names of Google
    * Cloud regions. This can only be set for global health check. If this list is non-empty, then
    * there are restrictions on what other health check fields are supported and what other resources
-   * can use this health check: - SSL, HTTP2, and GRPC protocols are not supported. - The TCP
-   * request field is not supported. - The proxyHeader field for HTTP, HTTPS, and TCP is not
-   * supported. - The checkIntervalSec field must be at least 30. - The health check cannot be used
-   * with BackendService nor with managed instance group auto-healing.
+   * can use this health check:        - SSL, HTTP2, and GRPC protocols are not supported.    - The
+   * TCP request field is not supported.    - The proxyHeader field for HTTP, HTTPS, and TCP is not
+   * supported.    - The checkIntervalSec field must be at least 30.    - The health check cannot be
+   * used with BackendService nor with managed    instance group auto-healing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,8 +185,8 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.lang.Integer timeoutSec;
 
   /**
-   * Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS, HTTP2 or GRPC. Exactly one
-   * of the protocol-specific health check fields must be specified, which must match type field.
+   * Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2 or GRPC. Exactly one
+   * of the protocol-specific health check fields must be specified, which must matchtype field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +218,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in 3339 text format.
+   * [Output Only] Creation timestamp in3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -213,7 +226,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in 3339 text format.
+   * [Output Only] Creation timestamp in3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public HealthCheck setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -370,8 +383,8 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters
-   * long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with
+   * 1-63 characters long, and comply withRFC1035. For example, a name that is 1-63 characters long,
+   * matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with
    * RFC1035. This regular expression describes a name where the first character is a lowercase
    * letter, and all following characters are a dash, lowercase letter, or digit, except the last
    * character, which isn't a dash.
@@ -383,8 +396,8 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters
-   * long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with
+   * 1-63 characters long, and comply withRFC1035. For example, a name that is 1-63 characters long,
+   * matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with
    * RFC1035. This regular expression describes a name where the first character is a lowercase
    * letter, and all following characters are a dash, lowercase letter, or digit, except the last
    * character, which isn't a dash.
@@ -396,7 +409,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Region where the health check resides. Not applicable to global health checks.
+   * [Output Only] Region where the health check resides.  Not applicable to global health checks.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -404,7 +417,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Region where the health check resides. Not applicable to global health checks.
+   * [Output Only] Region where the health check resides.  Not applicable to global health checks.
    * @param region region or {@code null} for none
    */
   public HealthCheck setRegion(java.lang.String region) {
@@ -434,10 +447,10 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    * then exactly 3 regions should be specified. The region names must be valid names of Google
    * Cloud regions. This can only be set for global health check. If this list is non-empty, then
    * there are restrictions on what other health check fields are supported and what other resources
-   * can use this health check: - SSL, HTTP2, and GRPC protocols are not supported. - The TCP
-   * request field is not supported. - The proxyHeader field for HTTP, HTTPS, and TCP is not
-   * supported. - The checkIntervalSec field must be at least 30. - The health check cannot be used
-   * with BackendService nor with managed instance group auto-healing.
+   * can use this health check:        - SSL, HTTP2, and GRPC protocols are not supported.    - The
+   * TCP request field is not supported.    - The proxyHeader field for HTTP, HTTPS, and TCP is not
+   * supported.    - The checkIntervalSec field must be at least 30.    - The health check cannot be
+   * used with BackendService nor with managed    instance group auto-healing.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSourceRegions() {
@@ -449,10 +462,10 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    * then exactly 3 regions should be specified. The region names must be valid names of Google
    * Cloud regions. This can only be set for global health check. If this list is non-empty, then
    * there are restrictions on what other health check fields are supported and what other resources
-   * can use this health check: - SSL, HTTP2, and GRPC protocols are not supported. - The TCP
-   * request field is not supported. - The proxyHeader field for HTTP, HTTPS, and TCP is not
-   * supported. - The checkIntervalSec field must be at least 30. - The health check cannot be used
-   * with BackendService nor with managed instance group auto-healing.
+   * can use this health check:        - SSL, HTTP2, and GRPC protocols are not supported.    - The
+   * TCP request field is not supported.    - The proxyHeader field for HTTP, HTTPS, and TCP is not
+   * supported.    - The checkIntervalSec field must be at least 30.    - The health check cannot be
+   * used with BackendService nor with managed    instance group auto-healing.
    * @param sourceRegions sourceRegions or {@code null} for none
    */
   public HealthCheck setSourceRegions(java.util.List<java.lang.String> sourceRegions) {
@@ -510,8 +523,8 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS, HTTP2 or GRPC. Exactly one
-   * of the protocol-specific health check fields must be specified, which must match type field.
+   * Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2 or GRPC. Exactly one
+   * of the protocol-specific health check fields must be specified, which must matchtype field.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -519,8 +532,8 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS, HTTP2 or GRPC. Exactly one
-   * of the protocol-specific health check fields must be specified, which must match type field.
+   * Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2 or GRPC. Exactly one
+   * of the protocol-specific health check fields must be specified, which must matchtype field.
    * @param type type or {@code null} for none
    */
   public HealthCheck setType(java.lang.String type) {

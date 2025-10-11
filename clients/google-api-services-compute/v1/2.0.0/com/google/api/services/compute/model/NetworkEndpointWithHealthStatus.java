@@ -30,8 +30,9 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpointWithHealthStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output only] The health status of network endpoint. Optional. Displayed only if the network
-   * endpoint has centralized health checking configured.
+   * [Output only] The health status of network endpoint.
+   *
+   * Optional. Displayed only if the network endpoint has centralized health checking configured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +52,9 @@ public final class NetworkEndpointWithHealthStatus extends com.google.api.client
   private NetworkEndpoint networkEndpoint;
 
   /**
-   * [Output only] The health status of network endpoint. Optional. Displayed only if the network
-   * endpoint has centralized health checking configured.
+   * [Output only] The health status of network endpoint.
+   *
+   * Optional. Displayed only if the network endpoint has centralized health checking configured.
    * @return value or {@code null} for none
    */
   public java.util.List<HealthStatusForNetworkEndpoint> getHealths() {
@@ -60,8 +62,9 @@ public final class NetworkEndpointWithHealthStatus extends com.google.api.client
   }
 
   /**
-   * [Output only] The health status of network endpoint. Optional. Displayed only if the network
-   * endpoint has centralized health checking configured.
+   * [Output only] The health status of network endpoint.
+   *
+   * Optional. Displayed only if the network endpoint has centralized health checking configured.
    * @param healths healths or {@code null} for none
    */
   public NetworkEndpointWithHealthStatus setHealths(java.util.List<HealthStatusForNetworkEndpoint> healths) {

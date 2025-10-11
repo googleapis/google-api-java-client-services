@@ -17,15 +17,24 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Operation resource. Google Compute Engine has three Operation resources: *
- * [Global](/compute/docs/reference/rest/v1/globalOperations) *
+ * Represents an Operation resource.
+ *
+ * Google Compute Engine has three Operation resources:
+ *
+ * * [Global](/compute/docs/reference/rest/v1/globalOperations) *
  * [Regional](/compute/docs/reference/rest/v1/regionOperations) *
- * [Zonal](/compute/docs/reference/rest/v1/zoneOperations) You can use an operation resource to
- * manage asynchronous API requests. For more information, read Handling API responses. Operations
- * can be global, regional or zonal. - For global operations, use the `globalOperations` resource. -
- * For regional operations, use the `regionOperations` resource. - For zonal operations, use the
- * `zoneOperations` resource. For more information, read Global, Regional, and Zonal Resources. Note
- * that completed Operation resources have a limited retention period.
+ * [Zonal](/compute/docs/reference/rest/v1/zoneOperations)
+ *
+ * You can use an operation resource to manage asynchronous API requests. For more information,
+ * readHandling API responses.
+ *
+ * Operations can be global, regional or zonal.        - For global operations, use the
+ * `globalOperations`    resource.     - For regional operations, use the    `regionOperations`
+ * resource.     - For zonal operations, use    the `zoneOperations` resource.
+ *
+ * For more information, read Global, Regional, and Zonal Resources.
+ *
+ * Note that completed Operation resources have a limited  retention period.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -61,7 +70,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * [Output Only] The time that this operation was completed. This value is in RFC3339 text format.
+   * [Output Only] The time that this operation was completed. This value is inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +109,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The time that this operation was requested. This value is in RFC3339 text format.
+   * [Output Only] The time that this operation was requested. This value is inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,7 +184,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private SetCommonInstanceMetadataOperationMetadata setCommonInstanceMetadataOperationMetadata;
 
   /**
-   * [Output Only] The time that this operation was started by the server. This value is in RFC3339
+   * [Output Only] The time that this operation was started by the server. This value is inRFC3339
    * text format.
    * The value may be {@code null}.
    */
@@ -299,7 +308,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The time that this operation was completed. This value is in RFC3339 text format.
+   * [Output Only] The time that this operation was completed. This value is inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndTime() {
@@ -307,7 +316,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The time that this operation was completed. This value is in RFC3339 text format.
+   * [Output Only] The time that this operation was completed. This value is inRFC3339 text format.
    * @param endTime endTime or {@code null} for none
    */
   public Operation setEndTime(java.lang.String endTime) {
@@ -392,7 +401,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The time that this operation was requested. This value is in RFC3339 text format.
+   * [Output Only] The time that this operation was requested. This value is inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getInsertTime() {
@@ -400,7 +409,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The time that this operation was requested. This value is in RFC3339 text format.
+   * [Output Only] The time that this operation was requested. This value is inRFC3339 text format.
    * @param insertTime insertTime or {@code null} for none
    */
   public Operation setInsertTime(java.lang.String insertTime) {
@@ -572,7 +581,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The time that this operation was started by the server. This value is in RFC3339
+   * [Output Only] The time that this operation was started by the server. This value is inRFC3339
    * text format.
    * @return value or {@code null} for none
    */
@@ -581,7 +590,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The time that this operation was started by the server. This value is in RFC3339
+   * [Output Only] The time that this operation was started by the server. This value is inRFC3339
    * text format.
    * @param startTime startTime or {@code null} for none
    */
@@ -1020,8 +1029,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
     private java.lang.String code;
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1060,8 +1070,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -1069,8 +1080,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @param data data or {@code null} for none
      */
     public Warnings setData(java.util.List<Data> data) {

@@ -32,10 +32,10 @@ package com.google.api.services.compute.model;
 public final class NetworkPeering extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates
+   * This field will be deprecated soon. Use theexchange_subnet_routes field instead. Indicates
    * whether full mesh connectivity is created and managed automatically between peered networks.
    * Currently this field should always be true since Google Compute Engine will automatically
-   * create and manage subnetwork routes between two networks when peering state is ACTIVE.
+   * create and manage subnetwork routes between two networks when peering state isACTIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +51,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   /**
    * Indicates whether full mesh connectivity is created and managed automatically between peered
    * networks. Currently this field should always be true since Google Compute Engine will
-   * automatically create and manage subnetwork routes between two networks when peering state is
-   * ACTIVE.
+   * automatically create and manage subnetwork routes between two networks when peering state
+   * isACTIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * Whether subnet routes with public IP range are exported. The default value is true, all subnet
-   * routes are exported. IPv4 special-use ranges are always exported to peers and are not
-   * controlled by this field.
+   * routes are exported.IPv4 special-use ranges are always exported to peers and are not controlled
+   * by this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Boolean importCustomRoutes;
 
   /**
-   * Whether subnet routes with public IP range are imported. The default value is false. IPv4
+   * Whether subnet routes with public IP range are imported. The default value is false.IPv4
    * special-use ranges are always imported from peers and are not controlled by this field.
    * The value may be {@code null}.
    */
@@ -91,7 +91,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * Name of this peering. Provided by the client when the peering is created. The name must comply
-   * with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression
+   * withRFC1035. Specifically, the name must be 1-63 characters long and match regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the
    * following characters must be a dash, lowercase letter, or digit, except the last character,
    * which cannot be a dash.
@@ -148,10 +148,10 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.String updateStrategy;
 
   /**
-   * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates
+   * This field will be deprecated soon. Use theexchange_subnet_routes field instead. Indicates
    * whether full mesh connectivity is created and managed automatically between peered networks.
    * Currently this field should always be true since Google Compute Engine will automatically
-   * create and manage subnetwork routes between two networks when peering state is ACTIVE.
+   * create and manage subnetwork routes between two networks when peering state isACTIVE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateRoutes() {
@@ -159,10 +159,10 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates
+   * This field will be deprecated soon. Use theexchange_subnet_routes field instead. Indicates
    * whether full mesh connectivity is created and managed automatically between peered networks.
    * Currently this field should always be true since Google Compute Engine will automatically
-   * create and manage subnetwork routes between two networks when peering state is ACTIVE.
+   * create and manage subnetwork routes between two networks when peering state isACTIVE.
    * @param autoCreateRoutes autoCreateRoutes or {@code null} for none
    */
   public NetworkPeering setAutoCreateRoutes(java.lang.Boolean autoCreateRoutes) {
@@ -190,8 +190,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   /**
    * Indicates whether full mesh connectivity is created and managed automatically between peered
    * networks. Currently this field should always be true since Google Compute Engine will
-   * automatically create and manage subnetwork routes between two networks when peering state is
-   * ACTIVE.
+   * automatically create and manage subnetwork routes between two networks when peering state
+   * isACTIVE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExchangeSubnetRoutes() {
@@ -201,8 +201,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   /**
    * Indicates whether full mesh connectivity is created and managed automatically between peered
    * networks. Currently this field should always be true since Google Compute Engine will
-   * automatically create and manage subnetwork routes between two networks when peering state is
-   * ACTIVE.
+   * automatically create and manage subnetwork routes between two networks when peering state
+   * isACTIVE.
    * @param exchangeSubnetRoutes exchangeSubnetRoutes or {@code null} for none
    */
   public NetworkPeering setExchangeSubnetRoutes(java.lang.Boolean exchangeSubnetRoutes) {
@@ -229,8 +229,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * Whether subnet routes with public IP range are exported. The default value is true, all subnet
-   * routes are exported. IPv4 special-use ranges are always exported to peers and are not
-   * controlled by this field.
+   * routes are exported.IPv4 special-use ranges are always exported to peers and are not controlled
+   * by this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExportSubnetRoutesWithPublicIp() {
@@ -239,8 +239,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * Whether subnet routes with public IP range are exported. The default value is true, all subnet
-   * routes are exported. IPv4 special-use ranges are always exported to peers and are not
-   * controlled by this field.
+   * routes are exported.IPv4 special-use ranges are always exported to peers and are not controlled
+   * by this field.
    * @param exportSubnetRoutesWithPublicIp exportSubnetRoutesWithPublicIp or {@code null} for none
    */
   public NetworkPeering setExportSubnetRoutesWithPublicIp(java.lang.Boolean exportSubnetRoutesWithPublicIp) {
@@ -266,7 +266,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether subnet routes with public IP range are imported. The default value is false. IPv4
+   * Whether subnet routes with public IP range are imported. The default value is false.IPv4
    * special-use ranges are always imported from peers and are not controlled by this field.
    * @return value or {@code null} for none
    */
@@ -275,7 +275,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether subnet routes with public IP range are imported. The default value is false. IPv4
+   * Whether subnet routes with public IP range are imported. The default value is false.IPv4
    * special-use ranges are always imported from peers and are not controlled by this field.
    * @param importSubnetRoutesWithPublicIp importSubnetRoutesWithPublicIp or {@code null} for none
    */
@@ -286,7 +286,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * Name of this peering. Provided by the client when the peering is created. The name must comply
-   * with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression
+   * withRFC1035. Specifically, the name must be 1-63 characters long and match regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the
    * following characters must be a dash, lowercase letter, or digit, except the last character,
    * which cannot be a dash.
@@ -298,7 +298,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * Name of this peering. Provided by the client when the peering is created. The name must comply
-   * with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression
+   * withRFC1035. Specifically, the name must be 1-63 characters long and match regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the
    * following characters must be a dash, lowercase letter, or digit, except the last character,
    * which cannot be a dash.

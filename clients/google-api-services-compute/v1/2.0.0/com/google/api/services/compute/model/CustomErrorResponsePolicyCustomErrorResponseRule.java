@@ -31,12 +31,15 @@ package com.google.api.services.compute.model;
 public final class CustomErrorResponsePolicyCustomErrorResponseRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Valid values include: - A number between 400 and 599: For example 401 or 503, in which case the
-   * load balancer applies the policy if the error code exactly matches this value. - 5xx: Load
-   * Balancer will apply the policy if the backend service responds with any response code in the
-   * range of 500 to 599. - 4xx: Load Balancer will apply the policy if the backend service responds
-   * with any response code in the range of 400 to 499. Values must be unique within
-   * matchResponseCodes and across all errorResponseRules of CustomErrorResponsePolicy.
+   * Valid values include:              - A number between 400 and 599: For example      401 or 503,
+   * in which case the load balancer      applies the policy if the error code exactly matches this
+   * value.      - 5xx: Load Balancer will apply the policy if the      backend service responds
+   * with any response code in the range of      500 to 599.     - 4xx: Load      Balancer will
+   * apply the policy if the backend service responds with any      response code in the range of
+   * 400 to      499.
+   *
+   * Values must be unique within matchResponseCodes and across allerrorResponseRules
+   * ofCustomErrorResponsePolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,22 +55,29 @@ public final class CustomErrorResponsePolicyCustomErrorResponseRule extends com.
   private java.lang.Integer overrideResponseCode;
 
   /**
-   * The full path to a file within backendBucket . For example: /errors/defaultError.html path must
-   * start with a leading slash. path cannot have trailing slashes. If the file is not available in
-   * backendBucket or the load balancer cannot reach the BackendBucket, a simple Not Found Error is
-   * returned to the client. The value must be from 1 to 1024 characters
+   * The full path to a file within backendBucket . For example:/errors/defaultError.html
+   *
+   * path must start with a leading slash. path cannot have trailing slashes.
+   *
+   * If the file is not available in backendBucket  or the load balancer cannot reach the
+   * BackendBucket, a simpleNot Found Error is returned to the client.
+   *
+   * The value must be from 1 to 1024 characters
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Valid values include: - A number between 400 and 599: For example 401 or 503, in which case the
-   * load balancer applies the policy if the error code exactly matches this value. - 5xx: Load
-   * Balancer will apply the policy if the backend service responds with any response code in the
-   * range of 500 to 599. - 4xx: Load Balancer will apply the policy if the backend service responds
-   * with any response code in the range of 400 to 499. Values must be unique within
-   * matchResponseCodes and across all errorResponseRules of CustomErrorResponsePolicy.
+   * Valid values include:              - A number between 400 and 599: For example      401 or 503,
+   * in which case the load balancer      applies the policy if the error code exactly matches this
+   * value.      - 5xx: Load Balancer will apply the policy if the      backend service responds
+   * with any response code in the range of      500 to 599.     - 4xx: Load      Balancer will
+   * apply the policy if the backend service responds with any      response code in the range of
+   * 400 to      499.
+   *
+   * Values must be unique within matchResponseCodes and across allerrorResponseRules
+   * ofCustomErrorResponsePolicy.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMatchResponseCodes() {
@@ -75,12 +85,15 @@ public final class CustomErrorResponsePolicyCustomErrorResponseRule extends com.
   }
 
   /**
-   * Valid values include: - A number between 400 and 599: For example 401 or 503, in which case the
-   * load balancer applies the policy if the error code exactly matches this value. - 5xx: Load
-   * Balancer will apply the policy if the backend service responds with any response code in the
-   * range of 500 to 599. - 4xx: Load Balancer will apply the policy if the backend service responds
-   * with any response code in the range of 400 to 499. Values must be unique within
-   * matchResponseCodes and across all errorResponseRules of CustomErrorResponsePolicy.
+   * Valid values include:              - A number between 400 and 599: For example      401 or 503,
+   * in which case the load balancer      applies the policy if the error code exactly matches this
+   * value.      - 5xx: Load Balancer will apply the policy if the      backend service responds
+   * with any response code in the range of      500 to 599.     - 4xx: Load      Balancer will
+   * apply the policy if the backend service responds with any      response code in the range of
+   * 400 to      499.
+   *
+   * Values must be unique within matchResponseCodes and across allerrorResponseRules
+   * ofCustomErrorResponsePolicy.
    * @param matchResponseCodes matchResponseCodes or {@code null} for none
    */
   public CustomErrorResponsePolicyCustomErrorResponseRule setMatchResponseCodes(java.util.List<java.lang.String> matchResponseCodes) {
@@ -110,10 +123,14 @@ public final class CustomErrorResponsePolicyCustomErrorResponseRule extends com.
   }
 
   /**
-   * The full path to a file within backendBucket . For example: /errors/defaultError.html path must
-   * start with a leading slash. path cannot have trailing slashes. If the file is not available in
-   * backendBucket or the load balancer cannot reach the BackendBucket, a simple Not Found Error is
-   * returned to the client. The value must be from 1 to 1024 characters
+   * The full path to a file within backendBucket . For example:/errors/defaultError.html
+   *
+   * path must start with a leading slash. path cannot have trailing slashes.
+   *
+   * If the file is not available in backendBucket  or the load balancer cannot reach the
+   * BackendBucket, a simpleNot Found Error is returned to the client.
+   *
+   * The value must be from 1 to 1024 characters
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -121,10 +138,14 @@ public final class CustomErrorResponsePolicyCustomErrorResponseRule extends com.
   }
 
   /**
-   * The full path to a file within backendBucket . For example: /errors/defaultError.html path must
-   * start with a leading slash. path cannot have trailing slashes. If the file is not available in
-   * backendBucket or the load balancer cannot reach the BackendBucket, a simple Not Found Error is
-   * returned to the client. The value must be from 1 to 1024 characters
+   * The full path to a file within backendBucket . For example:/errors/defaultError.html
+   *
+   * path must start with a leading slash. path cannot have trailing slashes.
+   *
+   * If the file is not available in backendBucket  or the load balancer cannot reach the
+   * BackendBucket, a simpleNot Found Error is returned to the client.
+   *
+   * The value must be from 1 to 1024 characters
    * @param path path or {@code null} for none
    */
   public CustomErrorResponsePolicyCustomErrorResponseRule setPath(java.lang.String path) {

@@ -37,7 +37,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.Integer count;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.Integer inUseCount;
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservationSubBlock for reservation
+   * [Output Only] Type of the resource. Alwayscompute#reservationSubBlock for reservation
    * subBlocks.
    * The value may be {@code null}.
    */
@@ -141,7 +141,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -149,7 +149,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ReservationSubBlock setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -209,7 +209,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservationSubBlock for reservation
+   * [Output Only] Type of the resource. Alwayscompute#reservationSubBlock for reservation
    * subBlocks.
    * @return value or {@code null} for none
    */
@@ -218,7 +218,7 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#reservationSubBlock for reservation
+   * [Output Only] Type of the resource. Alwayscompute#reservationSubBlock for reservation
    * subBlocks.
    * @param kind kind or {@code null} for none
    */

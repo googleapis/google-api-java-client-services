@@ -33,7 +33,7 @@ public final class UsageExportLocation extends com.google.api.client.json.Generi
   /**
    * The name of an existing bucket in Cloud Storage where the usage report object is stored. The
    * Google Service Account is granted write access to this bucket. This can either be the bucket
-   * name by itself, such as example-bucket, or the bucket name with gs:// or
+   * name by itself, such asexample-bucket, or the bucket name with gs:// or
    * https://storage.googleapis.com/ in front of it, such as gs://example-bucket.
    * The value may be {@code null}.
    */
@@ -41,10 +41,11 @@ public final class UsageExportLocation extends com.google.api.client.json.Generi
   private java.lang.String bucketName;
 
   /**
-   * An optional prefix for the name of the usage report object stored in bucketName. If not
-   * supplied, defaults to usage_gce. The report is stored as a CSV file named
-   * report_name_prefix_gce_YYYYMMDD.csv where YYYYMMDD is the day of the usage according to Pacific
-   * Time. If you supply a prefix, it should conform to Cloud Storage object naming conventions.
+   * An optional prefix for the name of the usage report object stored inbucketName. If not
+   * supplied, defaults tousage_gce. The report is stored as a CSV file
+   * namedreport_name_prefix_gce_YYYYMMDD.csv whereYYYYMMDD is the day of the usage according to
+   * Pacific Time. If you supply a prefix, it should conform to Cloud Storageobject naming
+   * conventions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,7 @@ public final class UsageExportLocation extends com.google.api.client.json.Generi
   /**
    * The name of an existing bucket in Cloud Storage where the usage report object is stored. The
    * Google Service Account is granted write access to this bucket. This can either be the bucket
-   * name by itself, such as example-bucket, or the bucket name with gs:// or
+   * name by itself, such asexample-bucket, or the bucket name with gs:// or
    * https://storage.googleapis.com/ in front of it, such as gs://example-bucket.
    * @return value or {@code null} for none
    */
@@ -64,7 +65,7 @@ public final class UsageExportLocation extends com.google.api.client.json.Generi
   /**
    * The name of an existing bucket in Cloud Storage where the usage report object is stored. The
    * Google Service Account is granted write access to this bucket. This can either be the bucket
-   * name by itself, such as example-bucket, or the bucket name with gs:// or
+   * name by itself, such asexample-bucket, or the bucket name with gs:// or
    * https://storage.googleapis.com/ in front of it, such as gs://example-bucket.
    * @param bucketName bucketName or {@code null} for none
    */
@@ -74,10 +75,11 @@ public final class UsageExportLocation extends com.google.api.client.json.Generi
   }
 
   /**
-   * An optional prefix for the name of the usage report object stored in bucketName. If not
-   * supplied, defaults to usage_gce. The report is stored as a CSV file named
-   * report_name_prefix_gce_YYYYMMDD.csv where YYYYMMDD is the day of the usage according to Pacific
-   * Time. If you supply a prefix, it should conform to Cloud Storage object naming conventions.
+   * An optional prefix for the name of the usage report object stored inbucketName. If not
+   * supplied, defaults tousage_gce. The report is stored as a CSV file
+   * namedreport_name_prefix_gce_YYYYMMDD.csv whereYYYYMMDD is the day of the usage according to
+   * Pacific Time. If you supply a prefix, it should conform to Cloud Storageobject naming
+   * conventions.
    * @return value or {@code null} for none
    */
   public java.lang.String getReportNamePrefix() {
@@ -85,10 +87,11 @@ public final class UsageExportLocation extends com.google.api.client.json.Generi
   }
 
   /**
-   * An optional prefix for the name of the usage report object stored in bucketName. If not
-   * supplied, defaults to usage_gce. The report is stored as a CSV file named
-   * report_name_prefix_gce_YYYYMMDD.csv where YYYYMMDD is the day of the usage according to Pacific
-   * Time. If you supply a prefix, it should conform to Cloud Storage object naming conventions.
+   * An optional prefix for the name of the usage report object stored inbucketName. If not
+   * supplied, defaults tousage_gce. The report is stored as a CSV file
+   * namedreport_name_prefix_gce_YYYYMMDD.csv whereYYYYMMDD is the day of the usage according to
+   * Pacific Time. If you supply a prefix, it should conform to Cloud Storageobject naming
+   * conventions.
    * @param reportNamePrefix reportNamePrefix or {@code null} for none
    */
   public UsageExportLocation setReportNamePrefix(java.lang.String reportNamePrefix) {

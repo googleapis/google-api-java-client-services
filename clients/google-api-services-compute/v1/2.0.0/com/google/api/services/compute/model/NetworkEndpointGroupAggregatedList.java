@@ -44,7 +44,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   private java.util.Map<String, NetworkEndpointGroupsScopedList> items;
 
   /**
-   * [Output Only] The resource type, which is always compute#networkEndpointGroupAggregatedList for
+   * [Output Only] The resource type, which is alwayscompute#networkEndpointGroupAggregatedList for
    * aggregated lists of network endpoint groups.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
 
   /**
    * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
    * parameter pageToken in the next list request. Subsequent list requests will have their own
    * nextPageToken to continue paging through the results.
    * The value may be {@code null}.
@@ -117,7 +117,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#networkEndpointGroupAggregatedList for
+   * [Output Only] The resource type, which is alwayscompute#networkEndpointGroupAggregatedList for
    * aggregated lists of network endpoint groups.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] The resource type, which is always compute#networkEndpointGroupAggregatedList for
+   * [Output Only] The resource type, which is alwayscompute#networkEndpointGroupAggregatedList for
    * aggregated lists of network endpoint groups.
    * @param kind kind or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
 
   /**
    * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
    * parameter pageToken in the next list request. Subsequent list requests will have their own
    * nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
@@ -148,7 +148,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
 
   /**
    * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
    * parameter pageToken in the next list request. Subsequent list requests will have their own
    * nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
@@ -233,8 +233,9 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
     private java.lang.String code;
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -273,8 +274,9 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -282,8 +284,9 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @param data data or {@code null} for none
      */
     public Warning setData(java.util.List<Data> data) {

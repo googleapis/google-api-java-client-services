@@ -38,7 +38,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
 
   /**
    * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
-   * default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+   * default isSCSI. For performance characteristics of SCSI over NVMe, seeLocal SSD performance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("interface")
@@ -63,7 +63,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
 
   /**
    * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
-   * default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+   * default isSCSI. For performance characteristics of SCSI over NVMe, seeLocal SSD performance.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterface() {
@@ -72,7 +72,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
 
   /**
    * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
-   * default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+   * default isSCSI. For performance characteristics of SCSI over NVMe, seeLocal SSD performance.
    * @param interface__ interface__ or {@code null} for none
    */
   public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk setInterface(java.lang.String interface__) {

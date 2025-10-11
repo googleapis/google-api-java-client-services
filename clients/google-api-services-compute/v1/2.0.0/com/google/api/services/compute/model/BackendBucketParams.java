@@ -35,7 +35,7 @@ public final class BackendBucketParams extends com.google.api.client.json.Generi
    * resource should be specified in either ID { : } or Namespaced format { : }. For example the
    * following are valid inputs: * {"tagKeys/333" : "tagValues/444", "tagKeys/123" :
    * "tagValues/456"} * {"123/environment" : "production", "345/abc" : "xyz"} Note: * Invalid
-   * combinations of ID & namespaced format is not supported. For instance: {"123/environment" :
+   * combinations of ID & namespaced format is not supported. For   instance: {"123/environment" :
    * "tagValues/444"} is invalid.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class BackendBucketParams extends com.google.api.client.json.Generi
    * resource should be specified in either ID { : } or Namespaced format { : }. For example the
    * following are valid inputs: * {"tagKeys/333" : "tagValues/444", "tagKeys/123" :
    * "tagValues/456"} * {"123/environment" : "production", "345/abc" : "xyz"} Note: * Invalid
-   * combinations of ID & namespaced format is not supported. For instance: {"123/environment" :
+   * combinations of ID & namespaced format is not supported. For   instance: {"123/environment" :
    * "tagValues/444"} is invalid.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class BackendBucketParams extends com.google.api.client.json.Generi
    * resource should be specified in either ID { : } or Namespaced format { : }. For example the
    * following are valid inputs: * {"tagKeys/333" : "tagValues/444", "tagKeys/123" :
    * "tagValues/456"} * {"123/environment" : "production", "345/abc" : "xyz"} Note: * Invalid
-   * combinations of ID & namespaced format is not supported. For instance: {"123/environment" :
+   * combinations of ID & namespaced format is not supported. For   instance: {"123/environment" :
    * "tagValues/444"} is invalid.
    * @param resourceManagerTags resourceManagerTags or {@code null} for none
    */

@@ -31,9 +31,10 @@ public final class TargetPoolsRemoveHealthCheckRequest extends com.google.api.cl
 
   /**
    * Health check URL to be removed. This can be a full or valid partial URL. For example, the
-   * following are valid URLs: - https://www.googleapis.com/compute/beta/projects/project
-   * /global/httpHealthChecks/health-check - projects/project/global/httpHealthChecks/health-check -
-   * global/httpHealthChecks/health-check
+   * following are valid URLs:        -
+   * https://www.googleapis.com/compute/beta/projects/project/global/httpHealthChecks/health-check
+   * - projects/project/global/httpHealthChecks/health-check    - global/httpHealthChecks/health-
+   * check
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +48,10 @@ public final class TargetPoolsRemoveHealthCheckRequest extends com.google.api.cl
 
   /**
    * Health check URL to be removed. This can be a full or valid partial URL. For example, the
-   * following are valid URLs: - https://www.googleapis.com/compute/beta/projects/project
-   * /global/httpHealthChecks/health-check - projects/project/global/httpHealthChecks/health-check -
-   * global/httpHealthChecks/health-check
+   * following are valid URLs:        -
+   * https://www.googleapis.com/compute/beta/projects/project/global/httpHealthChecks/health-check
+   * - projects/project/global/httpHealthChecks/health-check    - global/httpHealthChecks/health-
+   * check
    * @return value or {@code null} for none
    */
   public java.util.List<HealthCheckReference> getHealthChecks() {
@@ -58,9 +60,10 @@ public final class TargetPoolsRemoveHealthCheckRequest extends com.google.api.cl
 
   /**
    * Health check URL to be removed. This can be a full or valid partial URL. For example, the
-   * following are valid URLs: - https://www.googleapis.com/compute/beta/projects/project
-   * /global/httpHealthChecks/health-check - projects/project/global/httpHealthChecks/health-check -
-   * global/httpHealthChecks/health-check
+   * following are valid URLs:        -
+   * https://www.googleapis.com/compute/beta/projects/project/global/httpHealthChecks/health-check
+   * - projects/project/global/httpHealthChecks/health-check    - global/httpHealthChecks/health-
+   * check
    * @param healthChecks healthChecks or {@code null} for none
    */
   public TargetPoolsRemoveHealthCheckRequest setHealthChecks(java.util.List<HealthCheckReference> healthChecks) {

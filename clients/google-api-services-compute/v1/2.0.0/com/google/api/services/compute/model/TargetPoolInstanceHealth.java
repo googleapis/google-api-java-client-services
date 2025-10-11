@@ -42,8 +42,8 @@ public final class TargetPoolInstanceHealth extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#targetPoolInstanceHealth when checking the
-   * health of an instance.
+   * [Output Only] Type of resource. Alwayscompute#targetPoolInstanceHealth when checking the health
+   * of an instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class TargetPoolInstanceHealth extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#targetPoolInstanceHealth when checking the
-   * health of an instance.
+   * [Output Only] Type of resource. Alwayscompute#targetPoolInstanceHealth when checking the health
+   * of an instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -74,8 +74,8 @@ public final class TargetPoolInstanceHealth extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#targetPoolInstanceHealth when checking the
-   * health of an instance.
+   * [Output Only] Type of resource. Alwayscompute#targetPoolInstanceHealth when checking the health
+   * of an instance.
    * @param kind kind or {@code null} for none
    */
   public TargetPoolInstanceHealth setKind(java.lang.String kind) {

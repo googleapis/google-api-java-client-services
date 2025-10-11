@@ -31,24 +31,27 @@ package com.google.api.services.compute.model;
 public final class MetadataFilterLabelMatch extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of metadata label. The name can have a maximum length of 1024 characters and must be at
-   * least 1 character long.
+   * Name of metadata label.
+   *
+   *  The name can have a maximum length of 1024 characters and must be at least 1 character long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The value of the label must match the specified value. value can have a maximum length of 1024
-   * characters.
+   * The value of the label must match the specified value.
+   *
+   * value can have a maximum length of 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Name of metadata label. The name can have a maximum length of 1024 characters and must be at
-   * least 1 character long.
+   * Name of metadata label.
+   *
+   *  The name can have a maximum length of 1024 characters and must be at least 1 character long.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -56,8 +59,9 @@ public final class MetadataFilterLabelMatch extends com.google.api.client.json.G
   }
 
   /**
-   * Name of metadata label. The name can have a maximum length of 1024 characters and must be at
-   * least 1 character long.
+   * Name of metadata label.
+   *
+   *  The name can have a maximum length of 1024 characters and must be at least 1 character long.
    * @param name name or {@code null} for none
    */
   public MetadataFilterLabelMatch setName(java.lang.String name) {
@@ -66,8 +70,9 @@ public final class MetadataFilterLabelMatch extends com.google.api.client.json.G
   }
 
   /**
-   * The value of the label must match the specified value. value can have a maximum length of 1024
-   * characters.
+   * The value of the label must match the specified value.
+   *
+   * value can have a maximum length of 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -75,8 +80,9 @@ public final class MetadataFilterLabelMatch extends com.google.api.client.json.G
   }
 
   /**
-   * The value of the label must match the specified value. value can have a maximum length of 1024
-   * characters.
+   * The value of the label must match the specified value.
+   *
+   * value can have a maximum length of 1024 characters.
    * @param value value or {@code null} for none
    */
   public MetadataFilterLabelMatch setValue(java.lang.String value) {

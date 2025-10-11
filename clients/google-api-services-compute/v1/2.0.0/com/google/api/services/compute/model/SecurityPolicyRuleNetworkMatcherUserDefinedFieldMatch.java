@@ -38,7 +38,7 @@ public final class SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch extends
 
   /**
    * Matching values of the field. Each element can be a 32-bit unsigned decimal or hexadecimal
-   * (starting with "0x") number (e.g. "64") or range (e.g. "0x400-0x7ff").
+   * (starting with "0x") number (e.g. "64") or range (e.g.  "0x400-0x7ff").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch extends
 
   /**
    * Matching values of the field. Each element can be a 32-bit unsigned decimal or hexadecimal
-   * (starting with "0x") number (e.g. "64") or range (e.g. "0x400-0x7ff").
+   * (starting with "0x") number (e.g. "64") or range (e.g.  "0x400-0x7ff").
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -72,7 +72,7 @@ public final class SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch extends
 
   /**
    * Matching values of the field. Each element can be a 32-bit unsigned decimal or hexadecimal
-   * (starting with "0x") number (e.g. "64") or range (e.g. "0x400-0x7ff").
+   * (starting with "0x") number (e.g. "64") or range (e.g.  "0x400-0x7ff").
    * @param values values or {@code null} for none
    */
   public SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch setValues(java.util.List<java.lang.String> values) {

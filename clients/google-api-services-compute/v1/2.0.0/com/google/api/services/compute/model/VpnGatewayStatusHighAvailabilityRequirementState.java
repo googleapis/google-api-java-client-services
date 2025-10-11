@@ -32,7 +32,7 @@ public final class VpnGatewayStatusHighAvailabilityRequirementState extends com.
 
   /**
    * Indicates the high availability requirement state for the VPN connection. Valid values are
-   * CONNECTION_REDUNDANCY_MET, CONNECTION_REDUNDANCY_NOT_MET.
+   * CONNECTION_REDUNDANCY_MET,CONNECTION_REDUNDANCY_NOT_MET.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class VpnGatewayStatusHighAvailabilityRequirementState extends com.
 
   /**
    * Indicates the high availability requirement state for the VPN connection. Valid values are
-   * CONNECTION_REDUNDANCY_MET, CONNECTION_REDUNDANCY_NOT_MET.
+   * CONNECTION_REDUNDANCY_MET,CONNECTION_REDUNDANCY_NOT_MET.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -57,7 +57,7 @@ public final class VpnGatewayStatusHighAvailabilityRequirementState extends com.
 
   /**
    * Indicates the high availability requirement state for the VPN connection. Valid values are
-   * CONNECTION_REDUNDANCY_MET, CONNECTION_REDUNDANCY_NOT_MET.
+   * CONNECTION_REDUNDANCY_MET,CONNECTION_REDUNDANCY_NOT_MET.
    * @param state state or {@code null} for none
    */
   public VpnGatewayStatusHighAvailabilityRequirementState setState(java.lang.String state) {

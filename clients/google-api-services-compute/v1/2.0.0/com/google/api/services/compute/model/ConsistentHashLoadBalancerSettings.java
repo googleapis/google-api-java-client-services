@@ -32,9 +32,10 @@ public final class ConsistentHashLoadBalancerSettings extends com.google.api.cli
   /**
    * Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash
    * key for the consistent hash load balancer. If the cookie is not present, it will be generated.
-   * This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Not supported when the
-   * backend service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,7 +43,7 @@ public final class ConsistentHashLoadBalancerSettings extends com.google.api.cli
 
   /**
    * The hash based on the value of the specified header field. This field is applicable if the
-   * sessionAffinity is set to HEADER_FIELD.
+   * sessionAffinity is set toHEADER_FIELD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,9 +61,10 @@ public final class ConsistentHashLoadBalancerSettings extends com.google.api.cli
   /**
    * Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash
    * key for the consistent hash load balancer. If the cookie is not present, it will be generated.
-   * This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Not supported when the
-   * backend service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public ConsistentHashLoadBalancerSettingsHttpCookie getHttpCookie() {
@@ -72,9 +74,10 @@ public final class ConsistentHashLoadBalancerSettings extends com.google.api.cli
   /**
    * Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash
    * key for the consistent hash load balancer. If the cookie is not present, it will be generated.
-   * This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Not supported when the
-   * backend service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param httpCookie httpCookie or {@code null} for none
    */
   public ConsistentHashLoadBalancerSettings setHttpCookie(ConsistentHashLoadBalancerSettingsHttpCookie httpCookie) {
@@ -84,7 +87,7 @@ public final class ConsistentHashLoadBalancerSettings extends com.google.api.cli
 
   /**
    * The hash based on the value of the specified header field. This field is applicable if the
-   * sessionAffinity is set to HEADER_FIELD.
+   * sessionAffinity is set toHEADER_FIELD.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpHeaderName() {
@@ -93,7 +96,7 @@ public final class ConsistentHashLoadBalancerSettings extends com.google.api.cli
 
   /**
    * The hash based on the value of the specified header field. This field is applicable if the
-   * sessionAffinity is set to HEADER_FIELD.
+   * sessionAffinity is set toHEADER_FIELD.
    * @param httpHeaderName httpHeaderName or {@code null} for none
    */
   public ConsistentHashLoadBalancerSettings setHttpHeaderName(java.lang.String httpHeaderName) {

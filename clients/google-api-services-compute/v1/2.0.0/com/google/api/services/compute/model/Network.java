@@ -17,8 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a VPC Network resource. Networks connect resources to each other and to the internet.
- * For more information, read Virtual Private Cloud (VPC) Network.
+ * Represents a VPC Network resource.
+ *
+ * Networks connect resources to each other and to the internet. For more information, readVirtual
+ * Private Cloud (VPC) Network.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,7 +34,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on
-   * this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the
+   * this network. This range is aCIDR specification, for example:192.168.0.0/16. Provided by the
    * client when the network is created.
    * The value may be {@code null}.
    */
@@ -40,18 +42,22 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String iPv4Range;
 
   /**
-   * Must be set to create a VPC network. If not set, a legacy network is created. When set to true,
-   * the VPC network is created in auto mode. When set to false, the VPC network is created in
-   * custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a
-   * predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC
-   * networks, you can add subnets using the subnetworks insert method.
+   * Must be set to create a VPC network. If not set, a legacy network is created.
+   *
+   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
+   * is created in custom mode.
+   *
+   * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
+   * range as described inAuto mode VPC network IP ranges.
+   *
+   * For custom mode VPC networks, you can add subnets using the subnetworksinsert method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean autoCreateSubnetworks;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +129,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
    * a lowercase letter, and all following characters (except for the last character) must be a
    * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
@@ -142,9 +148,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * A full or partial URL of the network profile to apply to this network. This field can be set
-   * only at resource creation time. For example, the following are valid URLs: - https://www.google
-   * apis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_profile_na
-   * me} - projects/{project_id}/global/networkProfiles/{network_profile_name}
+   * only at resource creation time. For example, the following are valid URLs:         - https://ww
+   * w.googleapis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_pr
+   * ofile_name}    - projects/{project_id}/global/networkProfiles/{network_profile_name}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +172,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkPeering> peerings;
 
   /**
-   * The network-level routing configuration for this network. Used by Cloud Router to determine
+   * The network-level routing configuration for this network.  Used by Cloud Router to determine
    * what type of network-wide routing behavior to enforce.
    * The value may be {@code null}.
    */
@@ -196,7 +202,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on
-   * this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the
+   * this network. This range is aCIDR specification, for example:192.168.0.0/16. Provided by the
    * client when the network is created.
    * @return value or {@code null} for none
    */
@@ -206,7 +212,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on
-   * this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the
+   * this network. This range is aCIDR specification, for example:192.168.0.0/16. Provided by the
    * client when the network is created.
    * @param iPv4Range iPv4Range or {@code null} for none
    */
@@ -216,11 +222,15 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Must be set to create a VPC network. If not set, a legacy network is created. When set to true,
-   * the VPC network is created in auto mode. When set to false, the VPC network is created in
-   * custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a
-   * predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC
-   * networks, you can add subnets using the subnetworks insert method.
+   * Must be set to create a VPC network. If not set, a legacy network is created.
+   *
+   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
+   * is created in custom mode.
+   *
+   * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
+   * range as described inAuto mode VPC network IP ranges.
+   *
+   * For custom mode VPC networks, you can add subnets using the subnetworksinsert method.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateSubnetworks() {
@@ -228,11 +238,15 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Must be set to create a VPC network. If not set, a legacy network is created. When set to true,
-   * the VPC network is created in auto mode. When set to false, the VPC network is created in
-   * custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a
-   * predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC
-   * networks, you can add subnets using the subnetworks insert method.
+   * Must be set to create a VPC network. If not set, a legacy network is created.
+   *
+   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
+   * is created in custom mode.
+   *
+   * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
+   * range as described inAuto mode VPC network IP ranges.
+   *
+   * For custom mode VPC networks, you can add subnets using the subnetworksinsert method.
    * @param autoCreateSubnetworks autoCreateSubnetworks or {@code null} for none
    */
   public Network setAutoCreateSubnetworks(java.lang.Boolean autoCreateSubnetworks) {
@@ -241,7 +255,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -249,7 +263,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Network setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -411,7 +425,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
    * a lowercase letter, and all following characters (except for the last character) must be a
    * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
@@ -423,7 +437,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
    * a lowercase letter, and all following characters (except for the last character) must be a
    * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
@@ -455,9 +469,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * A full or partial URL of the network profile to apply to this network. This field can be set
-   * only at resource creation time. For example, the following are valid URLs: - https://www.google
-   * apis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_profile_na
-   * me} - projects/{project_id}/global/networkProfiles/{network_profile_name}
+   * only at resource creation time. For example, the following are valid URLs:         - https://ww
+   * w.googleapis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_pr
+   * ofile_name}    - projects/{project_id}/global/networkProfiles/{network_profile_name}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkProfile() {
@@ -466,9 +480,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * A full or partial URL of the network profile to apply to this network. This field can be set
-   * only at resource creation time. For example, the following are valid URLs: - https://www.google
-   * apis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_profile_na
-   * me} - projects/{project_id}/global/networkProfiles/{network_profile_name}
+   * only at resource creation time. For example, the following are valid URLs:         - https://ww
+   * w.googleapis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_pr
+   * ofile_name}    - projects/{project_id}/global/networkProfiles/{network_profile_name}
    * @param networkProfile networkProfile or {@code null} for none
    */
   public Network setNetworkProfile(java.lang.String networkProfile) {
@@ -513,7 +527,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The network-level routing configuration for this network. Used by Cloud Router to determine
+   * The network-level routing configuration for this network.  Used by Cloud Router to determine
    * what type of network-wide routing behavior to enforce.
    * @return value or {@code null} for none
    */
@@ -522,7 +536,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The network-level routing configuration for this network. Used by Cloud Router to determine
+   * The network-level routing configuration for this network.  Used by Cloud Router to determine
    * what type of network-wide routing behavior to enforce.
    * @param routingConfig routingConfig or {@code null} for none
    */

@@ -33,7 +33,7 @@ public final class StatefulPolicyPreservedStateDiskDevice extends com.google.api
    * These stateful disks will never be deleted during autohealing, update or VM instance recreate
    * operations. This flag is used to configure if the disk should be deleted after it is no longer
    * used by the group, e.g. when the given instance or the whole group is deleted. Note: disks
-   * attached in READ_ONLY mode cannot be auto-deleted.
+   * attached inREAD_ONLY mode cannot be auto-deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class StatefulPolicyPreservedStateDiskDevice extends com.google.api
    * These stateful disks will never be deleted during autohealing, update or VM instance recreate
    * operations. This flag is used to configure if the disk should be deleted after it is no longer
    * used by the group, e.g. when the given instance or the whole group is deleted. Note: disks
-   * attached in READ_ONLY mode cannot be auto-deleted.
+   * attached inREAD_ONLY mode cannot be auto-deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoDelete() {
@@ -54,7 +54,7 @@ public final class StatefulPolicyPreservedStateDiskDevice extends com.google.api
    * These stateful disks will never be deleted during autohealing, update or VM instance recreate
    * operations. This flag is used to configure if the disk should be deleted after it is no longer
    * used by the group, e.g. when the given instance or the whole group is deleted. Note: disks
-   * attached in READ_ONLY mode cannot be auto-deleted.
+   * attached inREAD_ONLY mode cannot be auto-deleted.
    * @param autoDelete autoDelete or {@code null} for none
    */
   public StatefulPolicyPreservedStateDiskDevice setAutoDelete(java.lang.String autoDelete) {

@@ -32,8 +32,8 @@ public final class InstanceGroupManagersSetInstanceTemplateRequest extends com.g
   /**
    * The URL of the instance template that is specified for this managed instance group. The group
    * uses this template to create all new instances in the managed instance group. The templates for
-   * existing instances in the group do not change unless you run recreateInstances, run
-   * applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
+   * existing instances in the group do not change unless you run recreateInstances,
+   * runapplyUpdatesToInstances, or set the group'supdatePolicy.type to PROACTIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class InstanceGroupManagersSetInstanceTemplateRequest extends com.g
   /**
    * The URL of the instance template that is specified for this managed instance group. The group
    * uses this template to create all new instances in the managed instance group. The templates for
-   * existing instances in the group do not change unless you run recreateInstances, run
-   * applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
+   * existing instances in the group do not change unless you run recreateInstances,
+   * runapplyUpdatesToInstances, or set the group'supdatePolicy.type to PROACTIVE.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceTemplate() {
@@ -53,8 +53,8 @@ public final class InstanceGroupManagersSetInstanceTemplateRequest extends com.g
   /**
    * The URL of the instance template that is specified for this managed instance group. The group
    * uses this template to create all new instances in the managed instance group. The templates for
-   * existing instances in the group do not change unless you run recreateInstances, run
-   * applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
+   * existing instances in the group do not change unless you run recreateInstances,
+   * runapplyUpdatesToInstances, or set the group'supdatePolicy.type to PROACTIVE.
    * @param instanceTemplate instanceTemplate or {@code null} for none
    */
   public InstanceGroupManagersSetInstanceTemplateRequest setInstanceTemplate(java.lang.String instanceTemplate) {

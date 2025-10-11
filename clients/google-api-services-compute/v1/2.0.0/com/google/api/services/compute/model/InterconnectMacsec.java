@@ -31,9 +31,9 @@ package com.google.api.services.compute.model;
 public final class InterconnectMacsec extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true, the Interconnect connection is configured with a should-secure MACsec security
+   * If set to true, the Interconnect connection is configured with ashould-secure MACsec security
    * policy, that allows the Google router to fallback to cleartext traffic if the MKA session
-   * cannot be established. By default, the Interconnect connection is configured with a must-secure
+   * cannot be established. By default, the Interconnect connection is configured with amust-secure
    * security policy that drops all traffic if the MKA session cannot be established with your
    * router.
    * The value may be {@code null}.
@@ -52,9 +52,9 @@ public final class InterconnectMacsec extends com.google.api.client.json.Generic
   private java.util.List<InterconnectMacsecPreSharedKey> preSharedKeys;
 
   /**
-   * If set to true, the Interconnect connection is configured with a should-secure MACsec security
+   * If set to true, the Interconnect connection is configured with ashould-secure MACsec security
    * policy, that allows the Google router to fallback to cleartext traffic if the MKA session
-   * cannot be established. By default, the Interconnect connection is configured with a must-secure
+   * cannot be established. By default, the Interconnect connection is configured with amust-secure
    * security policy that drops all traffic if the MKA session cannot be established with your
    * router.
    * @return value or {@code null} for none
@@ -64,9 +64,9 @@ public final class InterconnectMacsec extends com.google.api.client.json.Generic
   }
 
   /**
-   * If set to true, the Interconnect connection is configured with a should-secure MACsec security
+   * If set to true, the Interconnect connection is configured with ashould-secure MACsec security
    * policy, that allows the Google router to fallback to cleartext traffic if the MKA session
-   * cannot be established. By default, the Interconnect connection is configured with a must-secure
+   * cannot be established. By default, the Interconnect connection is configured with amust-secure
    * security policy that drops all traffic if the MKA session cannot be established with your
    * router.
    * @param failOpen failOpen or {@code null} for none

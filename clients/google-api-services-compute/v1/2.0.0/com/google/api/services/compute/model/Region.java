@@ -17,8 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Region resource. A region is a geographical area where a resource is located. For
- * more information, read Regions and Zones.
+ * Represents a Region resource.
+ *
+ * A region is a geographical area where a resource is located. For more information, readRegions
+ * and Zones.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -31,7 +33,7 @@ package com.google.api.services.compute.model;
 public final class Region extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +103,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Status of the region, either UP or DOWN.
+   * [Output Only] Status of the region, either UP orDOWN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +124,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> zones;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -130,7 +132,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Region setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -277,7 +279,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status of the region, either UP or DOWN.
+   * [Output Only] Status of the region, either UP orDOWN.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -285,7 +287,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status of the region, either UP or DOWN.
+   * [Output Only] Status of the region, either UP orDOWN.
    * @param status status or {@code null} for none
    */
   public Region setStatus(java.lang.String status) {
@@ -352,8 +354,9 @@ public final class Region extends com.google.api.client.json.GenericJson {
     private java.lang.String code;
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -392,8 +395,9 @@ public final class Region extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -401,8 +405,9 @@ public final class Region extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * [Output Only] Metadata about this warning in key: value format. For example:
+     *
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
      * @param data data or {@code null} for none
      */
     public QuotaStatusWarning setData(java.util.List<Data> data) {

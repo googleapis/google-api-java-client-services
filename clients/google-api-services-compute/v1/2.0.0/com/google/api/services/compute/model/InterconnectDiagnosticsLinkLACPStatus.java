@@ -44,9 +44,9 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
   private java.lang.String neighborSystemId;
 
   /**
-   * The state of a LACP link, which can take one of the following values: - ACTIVE: The link is
-   * configured and active within the bundle. - DETACHED: The link is not configured within the
-   * bundle. This means that the rest of the object should be empty.
+   * The state of a LACP link, which can take one of the following values:        - ACTIVE: The link
+   * is configured and active within the bundle.    - DETACHED: The link is not configured within
+   * the bundle. This means    that the rest of the object should be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +87,9 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
   }
 
   /**
-   * The state of a LACP link, which can take one of the following values: - ACTIVE: The link is
-   * configured and active within the bundle. - DETACHED: The link is not configured within the
-   * bundle. This means that the rest of the object should be empty.
+   * The state of a LACP link, which can take one of the following values:        - ACTIVE: The link
+   * is configured and active within the bundle.    - DETACHED: The link is not configured within
+   * the bundle. This means    that the rest of the object should be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -97,9 +97,9 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
   }
 
   /**
-   * The state of a LACP link, which can take one of the following values: - ACTIVE: The link is
-   * configured and active within the bundle. - DETACHED: The link is not configured within the
-   * bundle. This means that the rest of the object should be empty.
+   * The state of a LACP link, which can take one of the following values:        - ACTIVE: The link
+   * is configured and active within the bundle.    - DETACHED: The link is not configured within
+   * the bundle. This means    that the rest of the object should be empty.
    * @param state state or {@code null} for none
    */
   public InterconnectDiagnosticsLinkLACPStatus setState(java.lang.String state) {

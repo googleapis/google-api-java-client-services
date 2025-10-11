@@ -67,8 +67,8 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   private java.lang.Long diskSizeGb;
 
   /**
-   * [Output Only] URL of the disk type resource. For example: projects/project
-   * /zones/zone/diskTypes/pd-standard or pd-ssd
+   * [Output Only] URL of the disk type resource. For
+   * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   private java.lang.String interface__;
 
   /**
-   * [Output Only] Type of the resource. Always compute#attachedDisk for attached disks.
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> licenses;
 
   /**
-   * The mode in which this disk is attached to the source instance, either READ_WRITE or READ_ONLY.
+   * The mode in which this disk is attached to the source instance, eitherREAD_WRITE or READ_ONLY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +148,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   private java.lang.String storageBytesStatus;
 
   /**
-   * Specifies the type of the attached disk, either SCRATCH or PERSISTENT.
+   * Specifies the type of the attached disk, either SCRATCH orPERSISTENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,8 +244,8 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] URL of the disk type resource. For example: projects/project
-   * /zones/zone/diskTypes/pd-standard or pd-ssd
+   * [Output Only] URL of the disk type resource. For
+   * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -253,8 +253,8 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] URL of the disk type resource. For example: projects/project
-   * /zones/zone/diskTypes/pd-standard or pd-ssd
+   * [Output Only] URL of the disk type resource. For
+   * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    * @param diskType diskType or {@code null} for none
    */
   public SavedAttachedDisk setDiskType(java.lang.String diskType) {
@@ -316,7 +316,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#attachedDisk for attached disks.
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -324,7 +324,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#attachedDisk for attached disks.
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * @param kind kind or {@code null} for none
    */
   public SavedAttachedDisk setKind(java.lang.String kind) {
@@ -350,7 +350,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The mode in which this disk is attached to the source instance, either READ_WRITE or READ_ONLY.
+   * The mode in which this disk is attached to the source instance, eitherREAD_WRITE or READ_ONLY.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -358,7 +358,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The mode in which this disk is attached to the source instance, either READ_WRITE or READ_ONLY.
+   * The mode in which this disk is attached to the source instance, eitherREAD_WRITE or READ_ONLY.
    * @param mode mode or {@code null} for none
    */
   public SavedAttachedDisk setMode(java.lang.String mode) {
@@ -424,7 +424,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Specifies the type of the attached disk, either SCRATCH or PERSISTENT.
+   * Specifies the type of the attached disk, either SCRATCH orPERSISTENT.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -432,7 +432,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Specifies the type of the attached disk, either SCRATCH or PERSISTENT.
+   * Specifies the type of the attached disk, either SCRATCH orPERSISTENT.
    * @param type type or {@code null} for none
    */
   public SavedAttachedDisk setType(java.lang.String type) {

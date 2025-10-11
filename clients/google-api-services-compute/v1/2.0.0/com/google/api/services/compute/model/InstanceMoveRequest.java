@@ -31,9 +31,9 @@ public final class InstanceMoveRequest extends com.google.api.client.json.Generi
 
   /**
    * The URL of the destination zone to move the instance. This can be a full or partial URL. For
-   * example, the following are all valid URLs to a zone: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone - projects/project/zones/zone
-   * - zones/zone
+   * example, the following are all valid URLs to a zone:        -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone     -
+   * projects/project/zones/zone     - zones/zone
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,9 +41,9 @@ public final class InstanceMoveRequest extends com.google.api.client.json.Generi
 
   /**
    * The URL of the target instance to move. This can be a full or partial URL. For example, the
-   * following are all valid URLs to an instance: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
-   * projects/project/zones/zone/instances/instance - zones/zone/instances/instance
+   * following are all valid URLs to an instance:        -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance     -
+   * projects/project/zones/zone/instances/instance     - zones/zone/instances/instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,9 +51,9 @@ public final class InstanceMoveRequest extends com.google.api.client.json.Generi
 
   /**
    * The URL of the destination zone to move the instance. This can be a full or partial URL. For
-   * example, the following are all valid URLs to a zone: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone - projects/project/zones/zone
-   * - zones/zone
+   * example, the following are all valid URLs to a zone:        -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone     -
+   * projects/project/zones/zone     - zones/zone
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationZone() {
@@ -62,9 +62,9 @@ public final class InstanceMoveRequest extends com.google.api.client.json.Generi
 
   /**
    * The URL of the destination zone to move the instance. This can be a full or partial URL. For
-   * example, the following are all valid URLs to a zone: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone - projects/project/zones/zone
-   * - zones/zone
+   * example, the following are all valid URLs to a zone:        -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone     -
+   * projects/project/zones/zone     - zones/zone
    * @param destinationZone destinationZone or {@code null} for none
    */
   public InstanceMoveRequest setDestinationZone(java.lang.String destinationZone) {
@@ -74,9 +74,9 @@ public final class InstanceMoveRequest extends com.google.api.client.json.Generi
 
   /**
    * The URL of the target instance to move. This can be a full or partial URL. For example, the
-   * following are all valid URLs to an instance: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
-   * projects/project/zones/zone/instances/instance - zones/zone/instances/instance
+   * following are all valid URLs to an instance:        -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance     -
+   * projects/project/zones/zone/instances/instance     - zones/zone/instances/instance
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetInstance() {
@@ -85,9 +85,9 @@ public final class InstanceMoveRequest extends com.google.api.client.json.Generi
 
   /**
    * The URL of the target instance to move. This can be a full or partial URL. For example, the
-   * following are all valid URLs to an instance: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
-   * projects/project/zones/zone/instances/instance - zones/zone/instances/instance
+   * following are all valid URLs to an instance:        -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance     -
+   * projects/project/zones/zone/instances/instance     - zones/zone/instances/instance
    * @param targetInstance targetInstance or {@code null} for none
    */
   public InstanceMoveRequest setTargetInstance(java.lang.String targetInstance) {

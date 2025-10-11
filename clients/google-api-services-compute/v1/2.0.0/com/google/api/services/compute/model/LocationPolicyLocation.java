@@ -37,7 +37,7 @@ public final class LocationPolicyLocation extends com.google.api.client.json.Gen
   private LocationPolicyLocationConstraints constraints;
 
   /**
-   * Preference for a given location. Set to either ALLOW or DENY.
+   * Preference for a given location. Set to either ALLOW orDENY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class LocationPolicyLocation extends com.google.api.client.json.Gen
   }
 
   /**
-   * Preference for a given location. Set to either ALLOW or DENY.
+   * Preference for a given location. Set to either ALLOW orDENY.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreference() {
@@ -69,7 +69,7 @@ public final class LocationPolicyLocation extends com.google.api.client.json.Gen
   }
 
   /**
-   * Preference for a given location. Set to either ALLOW or DENY.
+   * Preference for a given location. Set to either ALLOW orDENY.
    * @param preference preference or {@code null} for none
    */
   public LocationPolicyLocation setPreference(java.lang.String preference) {

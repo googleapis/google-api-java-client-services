@@ -31,10 +31,12 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of the best dynamic routes for this Cloud Router's Virtual Private Cloud (VPC) network
-   * in the same region as this Cloud Router. Lists all of the best routes per prefix that are
-   * programmed into this region's VPC data plane. When global dynamic routing mode is turned on in
-   * the VPC network, this list can include cross-region dynamic routes from Cloud Routers in other
-   * regions.
+   * in the same region as this Cloud Router.
+   *
+   * Lists all of the best routes per prefix that are programmed into this region's VPC data plane.
+   *
+   * When global dynamic routing mode is turned on in the VPC network, this list can include cross-
+   * region dynamic routes from Cloud Routers in other regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +49,11 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the best BGP routes learned by this Cloud Router. It is possible that routes listed
-   * might not be programmed into the data plane, if the Google Cloud control plane finds a more
-   * optimal route for a prefix than a route learned by this Cloud Router.
+   * A list of the best BGP routes learned by this Cloud Router.
+   *
+   * It is possible that routes listed might not be programmed into the data plane, if the Google
+   * Cloud control plane finds a more optimal route for a prefix than a route learned by this Cloud
+   * Router.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,10 +86,12 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of the best dynamic routes for this Cloud Router's Virtual Private Cloud (VPC) network
-   * in the same region as this Cloud Router. Lists all of the best routes per prefix that are
-   * programmed into this region's VPC data plane. When global dynamic routing mode is turned on in
-   * the VPC network, this list can include cross-region dynamic routes from Cloud Routers in other
-   * regions.
+   * in the same region as this Cloud Router.
+   *
+   * Lists all of the best routes per prefix that are programmed into this region's VPC data plane.
+   *
+   * When global dynamic routing mode is turned on in the VPC network, this list can include cross-
+   * region dynamic routes from Cloud Routers in other regions.
    * @return value or {@code null} for none
    */
   public java.util.List<Route> getBestRoutes() {
@@ -94,10 +100,12 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of the best dynamic routes for this Cloud Router's Virtual Private Cloud (VPC) network
-   * in the same region as this Cloud Router. Lists all of the best routes per prefix that are
-   * programmed into this region's VPC data plane. When global dynamic routing mode is turned on in
-   * the VPC network, this list can include cross-region dynamic routes from Cloud Routers in other
-   * regions.
+   * in the same region as this Cloud Router.
+   *
+   * Lists all of the best routes per prefix that are programmed into this region's VPC data plane.
+   *
+   * When global dynamic routing mode is turned on in the VPC network, this list can include cross-
+   * region dynamic routes from Cloud Routers in other regions.
    * @param bestRoutes bestRoutes or {@code null} for none
    */
   public RouterStatus setBestRoutes(java.util.List<Route> bestRoutes) {
@@ -106,9 +114,11 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the best BGP routes learned by this Cloud Router. It is possible that routes listed
-   * might not be programmed into the data plane, if the Google Cloud control plane finds a more
-   * optimal route for a prefix than a route learned by this Cloud Router.
+   * A list of the best BGP routes learned by this Cloud Router.
+   *
+   * It is possible that routes listed might not be programmed into the data plane, if the Google
+   * Cloud control plane finds a more optimal route for a prefix than a route learned by this Cloud
+   * Router.
    * @return value or {@code null} for none
    */
   public java.util.List<Route> getBestRoutesForRouter() {
@@ -116,9 +126,11 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the best BGP routes learned by this Cloud Router. It is possible that routes listed
-   * might not be programmed into the data plane, if the Google Cloud control plane finds a more
-   * optimal route for a prefix than a route learned by this Cloud Router.
+   * A list of the best BGP routes learned by this Cloud Router.
+   *
+   * It is possible that routes listed might not be programmed into the data plane, if the Google
+   * Cloud control plane finds a more optimal route for a prefix than a route learned by this Cloud
+   * Router.
    * @param bestRoutesForRouter bestRoutesForRouter or {@code null} for none
    */
   public RouterStatus setBestRoutesForRouter(java.util.List<Route> bestRoutesForRouter) {

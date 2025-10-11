@@ -17,8 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Project resource. A project is used to organize resources in a Google Cloud Platform
- * environment. For more information, read about the Resource Hierarchy.
+ * Represents a Project resource.
+ *
+ * A project is used to organize resources in a Google Cloud Platform environment. For more
+ * information, read about the  Resource Hierarchy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,8 +34,9 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The Cloud Armor tier for this project. It can be one of the following values:
-   * CA_STANDARD, CA_ENTERPRISE_PAYGO. If this field is not specified, it is assumed to be
-   * CA_STANDARD.
+   * CA_STANDARD,CA_ENTERPRISE_PAYGO.
+   *
+   * If this field is not specified, it is assumed to beCA_STANDARD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +51,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private Metadata commonInstanceMetadata;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +59,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the default network tier used for configuring resources of the project and can
-   * only take the following values: PREMIUM, STANDARD. Initially the default network tier is
+   * only take the following values:PREMIUM, STANDARD. Initially the default network tier is
    * PREMIUM.
    * The value may be {@code null}.
    */
@@ -147,8 +150,9 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The Cloud Armor tier for this project. It can be one of the following values:
-   * CA_STANDARD, CA_ENTERPRISE_PAYGO. If this field is not specified, it is assumed to be
-   * CA_STANDARD.
+   * CA_STANDARD,CA_ENTERPRISE_PAYGO.
+   *
+   * If this field is not specified, it is assumed to beCA_STANDARD.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudArmorTier() {
@@ -157,8 +161,9 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The Cloud Armor tier for this project. It can be one of the following values:
-   * CA_STANDARD, CA_ENTERPRISE_PAYGO. If this field is not specified, it is assumed to be
-   * CA_STANDARD.
+   * CA_STANDARD,CA_ENTERPRISE_PAYGO.
+   *
+   * If this field is not specified, it is assumed to beCA_STANDARD.
    * @param cloudArmorTier cloudArmorTier or {@code null} for none
    */
   public Project setCloudArmorTier(java.lang.String cloudArmorTier) {
@@ -186,7 +191,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -194,7 +199,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Project setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -204,7 +209,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the default network tier used for configuring resources of the project and can
-   * only take the following values: PREMIUM, STANDARD. Initially the default network tier is
+   * only take the following values:PREMIUM, STANDARD. Initially the default network tier is
    * PREMIUM.
    * @return value or {@code null} for none
    */
@@ -214,7 +219,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the default network tier used for configuring resources of the project and can
-   * only take the following values: PREMIUM, STANDARD. Initially the default network tier is
+   * only take the following values:PREMIUM, STANDARD. Initially the default network tier is
    * PREMIUM.
    * @param defaultNetworkTier defaultNetworkTier or {@code null} for none
    */

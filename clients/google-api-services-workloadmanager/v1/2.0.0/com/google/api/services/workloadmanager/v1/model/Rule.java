@@ -30,6 +30,14 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Rule extends com.google.api.client.json.GenericJson {
 
   /**
+   * The CAI asset type of the rule is evaluating, for joined asset types, it will be the
+   * corresponding primary asset types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assetType;
+
+  /**
    * descrite rule in plain language
    * The value may be {@code null}.
    */
@@ -112,6 +120,25 @@ public final class Rule extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * The CAI asset type of the rule is evaluating, for joined asset types, it will be the
+   * corresponding primary asset types.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssetType() {
+    return assetType;
+  }
+
+  /**
+   * The CAI asset type of the rule is evaluating, for joined asset types, it will be the
+   * corresponding primary asset types.
+   * @param assetType assetType or {@code null} for none
+   */
+  public Rule setAssetType(java.lang.String assetType) {
+    this.assetType = assetType;
+    return this;
+  }
 
   /**
    * descrite rule in plain language

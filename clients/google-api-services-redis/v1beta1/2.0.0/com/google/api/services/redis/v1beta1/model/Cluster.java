@@ -62,6 +62,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private AutomatedBackupConfig automatedBackupConfig;
 
   /**
+   * Output only. This field is used to determine the available maintenance versions for the self
+   * service update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableMaintenanceVersions;
+
+  /**
    * Optional. Output only. The backup collection full resource name. Example:
    * projects/{project}/locations/{location}/backupCollections/{collection}
    * The value may be {@code null}.
@@ -104,6 +112,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<DiscoveryEndpoint> discoveryEndpoints;
+
+  /**
+   * Output only. This field represents the actual maintenance version of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveMaintenanceVersion;
 
   /**
    * Output only. Encryption information of the data at rest of the cluster.
@@ -389,6 +404,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. This field is used to determine the available maintenance versions for the self
+   * service update.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableMaintenanceVersions() {
+    return availableMaintenanceVersions;
+  }
+
+  /**
+   * Output only. This field is used to determine the available maintenance versions for the self
+   * service update.
+   * @param availableMaintenanceVersions availableMaintenanceVersions or {@code null} for none
+   */
+  public Cluster setAvailableMaintenanceVersions(java.util.List<java.lang.String> availableMaintenanceVersions) {
+    this.availableMaintenanceVersions = availableMaintenanceVersions;
+    return this;
+  }
+
+  /**
    * Optional. Output only. The backup collection full resource name. Example:
    * projects/{project}/locations/{location}/backupCollections/{collection}
    * @return value or {@code null} for none
@@ -491,6 +525,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setDiscoveryEndpoints(java.util.List<DiscoveryEndpoint> discoveryEndpoints) {
     this.discoveryEndpoints = discoveryEndpoints;
+    return this;
+  }
+
+  /**
+   * Output only. This field represents the actual maintenance version of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveMaintenanceVersion() {
+    return effectiveMaintenanceVersion;
+  }
+
+  /**
+   * Output only. This field represents the actual maintenance version of the cluster.
+   * @param effectiveMaintenanceVersion effectiveMaintenanceVersion or {@code null} for none
+   */
+  public Cluster setEffectiveMaintenanceVersion(java.lang.String effectiveMaintenanceVersion) {
+    this.effectiveMaintenanceVersion = effectiveMaintenanceVersion;
     return this;
   }
 

@@ -114,7 +114,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private String lastSuccessfulBackupTime;
 
   /**
-   * Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
+   * Output only. Identifier. The full name of the BackupPlan resource. Format:
+   * `projects/locations/backupPlans`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -383,7 +384,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
+   * Output only. Identifier. The full name of the BackupPlan resource. Format:
+   * `projects/locations/backupPlans`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -391,7 +393,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
+   * Output only. Identifier. The full name of the BackupPlan resource. Format:
+   * `projects/locations/backupPlans`
    * @param name name or {@code null} for none
    */
   public BackupPlan setName(java.lang.String name) {

@@ -144,7 +144,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean manual;
 
   /**
-   * Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
+   * Output only. Identifier. The fully qualified name of the Backup.
+   * `projects/locations/backupPlans/backups`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -549,7 +550,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
+   * Output only. Identifier. The fully qualified name of the Backup.
+   * `projects/locations/backupPlans/backups`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -557,7 +559,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
+   * Output only. Identifier. The fully qualified name of the Backup.
+   * `projects/locations/backupPlans/backups`
    * @param name name or {@code null} for none
    */
   public Backup setName(java.lang.String name) {

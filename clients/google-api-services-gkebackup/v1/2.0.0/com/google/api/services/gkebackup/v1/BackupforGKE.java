@@ -2791,7 +2791,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
+         * @param name Output only. Identifier. The full name of the BackupPlan resource. Format:
+         *        `projects/locations/backupPlans`
          * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupPlan}
          * @return the request
          */
@@ -2819,7 +2820,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
+           * @param name Output only. Identifier. The full name of the BackupPlan resource. Format:
+         *        `projects/locations/backupPlans`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupPlan}
            * @since 1.13
            */
@@ -2889,20 +2891,21 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Output only. The full name of the BackupPlan resource. Format:
+           * Output only. Identifier. The full name of the BackupPlan resource. Format:
            * `projects/locations/backupPlans`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
+          /** Output only. Identifier. The full name of the BackupPlan resource. Format:
+         `projects/locations/backupPlans`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. The full name of the BackupPlan resource. Format:
+           * Output only. Identifier. The full name of the BackupPlan resource. Format:
            * `projects/locations/backupPlans`
            */
           public Patch setName(java.lang.String name) {
@@ -4380,7 +4383,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
+           * @param name Output only. Identifier. The fully qualified name of the Backup.
+           *        `projects/locations/backupPlans/backups`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.Backup}
            * @return the request
            */
@@ -4408,7 +4412,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
+             * @param name Output only. Identifier. The fully qualified name of the Backup.
+           *        `projects/locations/backupPlans/backups`
              * @param content the {@link com.google.api.services.gkebackup.v1.model.Backup}
              * @since 1.13
              */
@@ -4478,20 +4483,21 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Output only. The fully qualified name of the Backup.
+             * Output only. Identifier. The fully qualified name of the Backup.
              * `projects/locations/backupPlans/backups`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The fully qualified name of the Backup. `projects/locations/backupPlans/backups`
+            /** Output only. Identifier. The fully qualified name of the Backup.
+           `projects/locations/backupPlans/backups`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Output only. The fully qualified name of the Backup.
+             * Output only. Identifier. The fully qualified name of the Backup.
              * `projects/locations/backupPlans/backups`
              */
             public Patch setName(java.lang.String name) {
@@ -6363,6 +6369,40 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           /** The standard list page token. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** When set to `true`, operations that are reachable are returned as normal, and those that are
+         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
+         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
+         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
+         explicitly documented otherwise in service or product specific documentation.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 
@@ -8626,7 +8666,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gkebackup server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The full name of the RestorePlan resource. Format: `projects/locations/restorePlans`.
+         * @param name Output only. Identifier. The full name of the RestorePlan resource. Format:
+         *        `projects/locations/restorePlans`.
          * @param content the {@link com.google.api.services.gkebackup.v1.model.RestorePlan}
          * @return the request
          */
@@ -8654,7 +8695,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The full name of the RestorePlan resource. Format: `projects/locations/restorePlans`.
+           * @param name Output only. Identifier. The full name of the RestorePlan resource. Format:
+         *        `projects/locations/restorePlans`.
            * @param content the {@link com.google.api.services.gkebackup.v1.model.RestorePlan}
            * @since 1.13
            */
@@ -8724,20 +8766,21 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Output only. The full name of the RestorePlan resource. Format:
+           * Output only. Identifier. The full name of the RestorePlan resource. Format:
            * `projects/locations/restorePlans`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The full name of the RestorePlan resource. Format: `projects/locations/restorePlans`.
+          /** Output only. Identifier. The full name of the RestorePlan resource. Format:
+         `projects/locations/restorePlans`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. The full name of the RestorePlan resource. Format:
+           * Output only. Identifier. The full name of the RestorePlan resource. Format:
            * `projects/locations/restorePlans`.
            */
           public Patch setName(java.lang.String name) {
@@ -10043,7 +10086,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gkebackup server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The full name of the Restore resource. Format:
+           * @param name Output only. Identifier. The full name of the Restore resource. Format:
            *        `projects/locations/restorePlans/restores`
            * @param content the {@link com.google.api.services.gkebackup.v1.model.Restore}
            * @return the request
@@ -10072,7 +10115,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The full name of the Restore resource. Format:
+             * @param name Output only. Identifier. The full name of the Restore resource. Format:
            *        `projects/locations/restorePlans/restores`
              * @param content the {@link com.google.api.services.gkebackup.v1.model.Restore}
              * @since 1.13
@@ -10143,13 +10186,13 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Output only. The full name of the Restore resource. Format:
+             * Output only. Identifier. The full name of the Restore resource. Format:
              * `projects/locations/restorePlans/restores`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The full name of the Restore resource. Format:
+            /** Output only. Identifier. The full name of the Restore resource. Format:
            `projects/locations/restorePlans/restores`
              */
             public java.lang.String getName() {
@@ -10157,7 +10200,7 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Output only. The full name of the Restore resource. Format:
+             * Output only. Identifier. The full name of the Restore resource. Format:
              * `projects/locations/restorePlans/restores`
              */
             public Patch setName(java.lang.String name) {

@@ -101,7 +101,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The full name of the Restore resource. Format:
+   * Output only. Identifier. The full name of the Restore resource. Format:
    * `projects/locations/restorePlans/restores`
    * The value may be {@code null}.
    */
@@ -355,7 +355,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The full name of the Restore resource. Format:
+   * Output only. Identifier. The full name of the Restore resource. Format:
    * `projects/locations/restorePlans/restores`
    * @return value or {@code null} for none
    */
@@ -364,7 +364,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The full name of the Restore resource. Format:
+   * Output only. Identifier. The full name of the Restore resource. Format:
    * `projects/locations/restorePlans/restores`
    * @param name name or {@code null} for none
    */

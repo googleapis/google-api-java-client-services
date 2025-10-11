@@ -39,10 +39,12 @@ public final class GoogleCloudRunV2ResourceRequirements extends com.google.api.c
   private java.lang.Boolean cpuIdle;
 
   /**
-   * Only `memory` and `cpu` keys in the map are supported. Notes: * The only supported values for
-   * CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. For more
-   * information, go to https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory'
-   * values and syntax, go to https://cloud.google.com/run/docs/configuring/memory-limits
+   * Only `memory`, `cpu` and `nvidia.com/gpu` keys in the map are supported. Notes: * The only
+   * supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of
+   * memory. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. * For
+   * supported 'memory' values and syntax, go to
+   * https://cloud.google.com/run/docs/configuring/memory-limits * The only supported
+   * 'nvidia.com/gpu' value is '1'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,10 +80,12 @@ public final class GoogleCloudRunV2ResourceRequirements extends com.google.api.c
   }
 
   /**
-   * Only `memory` and `cpu` keys in the map are supported. Notes: * The only supported values for
-   * CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. For more
-   * information, go to https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory'
-   * values and syntax, go to https://cloud.google.com/run/docs/configuring/memory-limits
+   * Only `memory`, `cpu` and `nvidia.com/gpu` keys in the map are supported. Notes: * The only
+   * supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of
+   * memory. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. * For
+   * supported 'memory' values and syntax, go to
+   * https://cloud.google.com/run/docs/configuring/memory-limits * The only supported
+   * 'nvidia.com/gpu' value is '1'.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLimits() {
@@ -89,10 +93,12 @@ public final class GoogleCloudRunV2ResourceRequirements extends com.google.api.c
   }
 
   /**
-   * Only `memory` and `cpu` keys in the map are supported. Notes: * The only supported values for
-   * CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. For more
-   * information, go to https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory'
-   * values and syntax, go to https://cloud.google.com/run/docs/configuring/memory-limits
+   * Only `memory`, `cpu` and `nvidia.com/gpu` keys in the map are supported. Notes: * The only
+   * supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of
+   * memory. For more information, go to https://cloud.google.com/run/docs/configuring/cpu. * For
+   * supported 'memory' values and syntax, go to
+   * https://cloud.google.com/run/docs/configuring/memory-limits * The only supported
+   * 'nvidia.com/gpu' value is '1'.
    * @param limits limits or {@code null} for none
    */
   public GoogleCloudRunV2ResourceRequirements setLimits(java.util.Map<String, java.lang.String> limits) {

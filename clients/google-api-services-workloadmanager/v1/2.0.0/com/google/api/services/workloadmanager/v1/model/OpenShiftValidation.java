@@ -30,6 +30,54 @@ package com.google.api.services.workloadmanager.v1.model;
 @SuppressWarnings("javadoc")
 public final class OpenShiftValidation extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Required. The OpenShift cluster ID (e.g. 8371bb05-7cac-4d38-82c0-0f58c4f6f936).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterId;
+
+  /**
+   * Required. The validation details of the OpenShift cluster in JSON format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> validationDetails;
+
+  /**
+   * Required. The OpenShift cluster ID (e.g. 8371bb05-7cac-4d38-82c0-0f58c4f6f936).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterId() {
+    return clusterId;
+  }
+
+  /**
+   * Required. The OpenShift cluster ID (e.g. 8371bb05-7cac-4d38-82c0-0f58c4f6f936).
+   * @param clusterId clusterId or {@code null} for none
+   */
+  public OpenShiftValidation setClusterId(java.lang.String clusterId) {
+    this.clusterId = clusterId;
+    return this;
+  }
+
+  /**
+   * Required. The validation details of the OpenShift cluster in JSON format.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getValidationDetails() {
+    return validationDetails;
+  }
+
+  /**
+   * Required. The validation details of the OpenShift cluster in JSON format.
+   * @param validationDetails validationDetails or {@code null} for none
+   */
+  public OpenShiftValidation setValidationDetails(java.util.Map<String, java.lang.Object> validationDetails) {
+    this.validationDetails = validationDetails;
+    return this;
+  }
+
   @Override
   public OpenShiftValidation set(String fieldName, Object value) {
     return (OpenShiftValidation) super.set(fieldName, value);

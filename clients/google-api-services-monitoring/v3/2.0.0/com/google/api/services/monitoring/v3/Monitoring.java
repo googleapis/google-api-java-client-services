@@ -2540,6 +2540,421 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
     }
     /**
+     * An accessor for creating requests from the Alerts collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Monitoring monitoring = new Monitoring(...);}
+     *   {@code Monitoring.Alerts.List request = monitoring.alerts().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Alerts alerts() {
+      return new Alerts();
+    }
+
+    /**
+     * The "alerts" collection of methods.
+     */
+    public class Alerts {
+
+      /**
+       * Gets a single alert.
+       *
+       * Create a request for the method "alerts.get".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the alert.The format is: projects/[PROJECT_ID_OR_NUMBER]/alerts/[ALERT_ID] The
+       *        [ALERT_ID] is a system-assigned unique identifier for the alert.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Alert> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/alerts/[^/]+$");
+
+        /**
+         * Gets a single alert.
+         *
+         * Create a request for the method "alerts.get".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the alert.The format is: projects/[PROJECT_ID_OR_NUMBER]/alerts/[ALERT_ID] The
+       *        [ALERT_ID] is a system-assigned unique identifier for the alert.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.Alert.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/alerts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the alert.The format is:
+         * projects/[PROJECT_ID_OR_NUMBER]/alerts/[ALERT_ID] The [ALERT_ID] is a system-assigned
+         * unique identifier for the alert.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the alert.The format is: projects/[PROJECT_ID_OR_NUMBER]/alerts/[ALERT_ID]
+       The [ALERT_ID] is a system-assigned unique identifier for the alert.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the alert.The format is:
+         * projects/[PROJECT_ID_OR_NUMBER]/alerts/[ALERT_ID] The [ALERT_ID] is a system-assigned
+         * unique identifier for the alert.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/alerts/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the existing alerts for the metrics scope of the project.
+       *
+       * Create a request for the method "alerts.list".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project to list alerts for.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ListAlertsResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}/alerts";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists the existing alerts for the metrics scope of the project.
+         *
+         * Create a request for the method "alerts.list".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project to list alerts for.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.ListAlertsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the project to list alerts for. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project to list alerts for.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The name of the project to list alerts for. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. An alert is returned if there is a match on any fields belonging to the alert
+         * or its subfields.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. An alert is returned if there is a match on any fields belonging to the alert or its
+       subfields.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. An alert is returned if there is a match on any fields belonging to the alert
+         * or its subfields.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. A comma-separated list of fields in Alert to use for sorting. The default sort
+         * direction is ascending. To specify descending order for a field, add a desc modifier. The
+         * following fields are supported: open_time close_timeFor example, close_time desc,
+         * open_time will return the alerts closed most recently, with ties broken in the order of
+         * older alerts listed first.If the field is not set, the results are sorted by open_time
+         * desc.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. A comma-separated list of fields in Alert to use for sorting. The default sort direction
+       is ascending. To specify descending order for a field, add a desc modifier. The following fields
+       are supported: open_time close_timeFor example, close_time desc, open_time will return the alerts
+       closed most recently, with ties broken in the order of older alerts listed first.If the field is
+       not set, the results are sorted by open_time desc.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. A comma-separated list of fields in Alert to use for sorting. The default sort
+         * direction is ascending. To specify descending order for a field, add a desc modifier. The
+         * following fields are supported: open_time close_timeFor example, close_time desc,
+         * open_time will return the alerts closed most recently, with ties broken in the order of
+         * older alerts listed first.If the field is not set, the results are sorted by open_time
+         * desc.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of results to return in a single response. If not set to a
+         * positive number, at most 50 alerts will be returned. The maximum value is 1000; values
+         * above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of results to return in a single response. If not set to a positive
+       number, at most 50 alerts will be returned. The maximum value is 1000; values above 1000 will be
+       coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of results to return in a single response. If not set to a
+         * positive number, at most 50 alerts will be returned. The maximum value is 1000; values
+         * above 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. If non-empty, page_token must contain a value returned as the next_page_token
+         * in a previous response to request the next set of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. If non-empty, page_token must contain a value returned as the next_page_token in a
+       previous response to request the next set of results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. If non-empty, page_token must contain a value returned as the next_page_token
+         * in a previous response to request the next set of results.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the CollectdTimeSeries collection.
      *
      * <p>The typical use is:</p>

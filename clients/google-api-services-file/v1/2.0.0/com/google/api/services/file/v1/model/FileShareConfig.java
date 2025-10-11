@@ -62,6 +62,15 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   private java.lang.String sourceBackup;
 
   /**
+   * The resource name of the BackupDR backup, in the format `projects/{project_id}/locations/{locat
+   * ion_id}/backupVaults/{backupvault_id}/dataSources/{datasource_id}/backups/{backup_id}`, TODO
+   * (b/443690479) - Remove visibility restrictions once the feature is ready
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceBackupdrBackup;
+
+  /**
    * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes.
    * @return value or {@code null} for none
    */
@@ -134,6 +143,27 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
    */
   public FileShareConfig setSourceBackup(java.lang.String sourceBackup) {
     this.sourceBackup = sourceBackup;
+    return this;
+  }
+
+  /**
+   * The resource name of the BackupDR backup, in the format `projects/{project_id}/locations/{locat
+   * ion_id}/backupVaults/{backupvault_id}/dataSources/{datasource_id}/backups/{backup_id}`, TODO
+   * (b/443690479) - Remove visibility restrictions once the feature is ready
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceBackupdrBackup() {
+    return sourceBackupdrBackup;
+  }
+
+  /**
+   * The resource name of the BackupDR backup, in the format `projects/{project_id}/locations/{locat
+   * ion_id}/backupVaults/{backupvault_id}/dataSources/{datasource_id}/backups/{backup_id}`, TODO
+   * (b/443690479) - Remove visibility restrictions once the feature is ready
+   * @param sourceBackupdrBackup sourceBackupdrBackup or {@code null} for none
+   */
+  public FileShareConfig setSourceBackupdrBackup(java.lang.String sourceBackupdrBackup) {
+    this.sourceBackupdrBackup = sourceBackupdrBackup;
     return this;
   }
 

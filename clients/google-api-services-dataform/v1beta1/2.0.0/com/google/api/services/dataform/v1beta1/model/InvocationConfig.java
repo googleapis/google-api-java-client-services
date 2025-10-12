@@ -52,6 +52,14 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   private java.util.List<Target> includedTargets;
 
   /**
+   * Optional. Specifies the priority for query execution in BigQuery. More information can be found
+   * at https://cloud.google.com/bigquery/docs/running-queries#queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String queryPriority;
+
+  /**
    * Optional. The service account to run workflow invocations under.
    * The value may be {@code null}.
    */
@@ -120,6 +128,25 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
    */
   public InvocationConfig setIncludedTargets(java.util.List<Target> includedTargets) {
     this.includedTargets = includedTargets;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the priority for query execution in BigQuery. More information can be found
+   * at https://cloud.google.com/bigquery/docs/running-queries#queries.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQueryPriority() {
+    return queryPriority;
+  }
+
+  /**
+   * Optional. Specifies the priority for query execution in BigQuery. More information can be found
+   * at https://cloud.google.com/bigquery/docs/running-queries#queries.
+   * @param queryPriority queryPriority or {@code null} for none
+   */
+  public InvocationConfig setQueryPriority(java.lang.String queryPriority) {
+    this.queryPriority = queryPriority;
     return this;
   }
 

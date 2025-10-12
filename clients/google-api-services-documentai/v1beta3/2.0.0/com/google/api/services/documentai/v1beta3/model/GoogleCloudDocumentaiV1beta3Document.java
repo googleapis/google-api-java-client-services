@@ -79,11 +79,38 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   private java.util.List<GoogleCloudDocumentaiV1beta3DocumentEntity> entities;
 
   /**
+   * The entity revision id that `document.entities` field is based on. If this field is set and
+   * `entities_revisions` is not empty, the entities in `document.entities` field are the entities
+   * in the entity revision with this id and `document.entity_validation_output` field is the
+   * `entity_validation_output` field in this entity revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entitiesRevisionId;
+
+  /**
+   * A list of entity revisions. The entity revisions are appended to the document in the processing
+   * order. This field can be used for comparing the entity extraction results at different stages
+   * of the processing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1beta3DocumentEntitiesRevision> entitiesRevisions;
+
+  /**
    * Placeholder. Relationship among Document.entities.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDocumentaiV1beta3DocumentEntityRelation> entityRelations;
+
+  /**
+   * The entity validation output for the document. This is the validation output for
+   * `document.entities` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentEntityValidationOutput entityValidationOutput;
 
   /**
    * Any error that occurred while processing this document.
@@ -295,6 +322,50 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   }
 
   /**
+   * The entity revision id that `document.entities` field is based on. If this field is set and
+   * `entities_revisions` is not empty, the entities in `document.entities` field are the entities
+   * in the entity revision with this id and `document.entity_validation_output` field is the
+   * `entity_validation_output` field in this entity revision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntitiesRevisionId() {
+    return entitiesRevisionId;
+  }
+
+  /**
+   * The entity revision id that `document.entities` field is based on. If this field is set and
+   * `entities_revisions` is not empty, the entities in `document.entities` field are the entities
+   * in the entity revision with this id and `document.entity_validation_output` field is the
+   * `entity_validation_output` field in this entity revision.
+   * @param entitiesRevisionId entitiesRevisionId or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Document setEntitiesRevisionId(java.lang.String entitiesRevisionId) {
+    this.entitiesRevisionId = entitiesRevisionId;
+    return this;
+  }
+
+  /**
+   * A list of entity revisions. The entity revisions are appended to the document in the processing
+   * order. This field can be used for comparing the entity extraction results at different stages
+   * of the processing.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1beta3DocumentEntitiesRevision> getEntitiesRevisions() {
+    return entitiesRevisions;
+  }
+
+  /**
+   * A list of entity revisions. The entity revisions are appended to the document in the processing
+   * order. This field can be used for comparing the entity extraction results at different stages
+   * of the processing.
+   * @param entitiesRevisions entitiesRevisions or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Document setEntitiesRevisions(java.util.List<GoogleCloudDocumentaiV1beta3DocumentEntitiesRevision> entitiesRevisions) {
+    this.entitiesRevisions = entitiesRevisions;
+    return this;
+  }
+
+  /**
    * Placeholder. Relationship among Document.entities.
    * @return value or {@code null} for none
    */
@@ -308,6 +379,25 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
    */
   public GoogleCloudDocumentaiV1beta3Document setEntityRelations(java.util.List<GoogleCloudDocumentaiV1beta3DocumentEntityRelation> entityRelations) {
     this.entityRelations = entityRelations;
+    return this;
+  }
+
+  /**
+   * The entity validation output for the document. This is the validation output for
+   * `document.entities` field.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentEntityValidationOutput getEntityValidationOutput() {
+    return entityValidationOutput;
+  }
+
+  /**
+   * The entity validation output for the document. This is the validation output for
+   * `document.entities` field.
+   * @param entityValidationOutput entityValidationOutput or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Document setEntityValidationOutput(GoogleCloudDocumentaiV1beta3DocumentEntityValidationOutput entityValidationOutput) {
+    this.entityValidationOutput = entityValidationOutput;
     return this;
   }
 

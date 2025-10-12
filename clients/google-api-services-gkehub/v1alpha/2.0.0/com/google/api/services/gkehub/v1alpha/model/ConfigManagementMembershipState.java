@@ -59,6 +59,13 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   private ConfigManagementHierarchyControllerState hierarchyControllerState;
 
   /**
+   * Output only. The Kubernetes API server version of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kubernetesApiServerVersion;
+
+  /**
    * Output only. Membership configuration in the cluster. This represents the actual state in the
    * cluster, while the MembershipSpec in the FeatureSpec represents the intended state
    * The value may be {@code null}.
@@ -147,6 +154,23 @@ public final class ConfigManagementMembershipState extends com.google.api.client
    */
   public ConfigManagementMembershipState setHierarchyControllerState(ConfigManagementHierarchyControllerState hierarchyControllerState) {
     this.hierarchyControllerState = hierarchyControllerState;
+    return this;
+  }
+
+  /**
+   * Output only. The Kubernetes API server version of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKubernetesApiServerVersion() {
+    return kubernetesApiServerVersion;
+  }
+
+  /**
+   * Output only. The Kubernetes API server version of the cluster.
+   * @param kubernetesApiServerVersion kubernetesApiServerVersion or {@code null} for none
+   */
+  public ConfigManagementMembershipState setKubernetesApiServerVersion(java.lang.String kubernetesApiServerVersion) {
+    this.kubernetesApiServerVersion = kubernetesApiServerVersion;
     return this;
   }
 

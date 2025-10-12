@@ -45,8 +45,8 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
   private java.lang.String database;
 
   /**
-   * Optional. Controls how the API should respond when the SQL execution result exceeds 10 MB. The
-   * default mode is to throw an error.
+   * Optional. Controls how the API should respond when the SQL execution result is incomplete due
+   * to the size limit or another error. The default mode is to throw an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +112,8 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Controls how the API should respond when the SQL execution result exceeds 10 MB. The
-   * default mode is to throw an error.
+   * Optional. Controls how the API should respond when the SQL execution result is incomplete due
+   * to the size limit or another error. The default mode is to throw an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartialResultMode() {
@@ -121,8 +121,8 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Controls how the API should respond when the SQL execution result exceeds 10 MB. The
-   * default mode is to throw an error.
+   * Optional. Controls how the API should respond when the SQL execution result is incomplete due
+   * to the size limit or another error. The default mode is to throw an error.
    * @param partialResultMode partialResultMode or {@code null} for none
    */
   public ExecuteSqlPayload setPartialResultMode(java.lang.String partialResultMode) {

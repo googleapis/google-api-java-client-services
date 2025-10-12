@@ -54,6 +54,14 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String host;
 
   /**
+   * Optional. The full email for an IAM user. For normal database users, this will not be filled.
+   * Only applicable to MySQL database users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iamEmail;
+
+  /**
    * Indicates if a group is active or inactive for IAM database authentication.
    * The value may be {@code null}.
    */
@@ -173,6 +181,25 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Optional. The full email for an IAM user. For normal database users, this will not be filled.
+   * Only applicable to MySQL database users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIamEmail() {
+    return iamEmail;
+  }
+
+  /**
+   * Optional. The full email for an IAM user. For normal database users, this will not be filled.
+   * Only applicable to MySQL database users.
+   * @param iamEmail iamEmail or {@code null} for none
+   */
+  public User setIamEmail(java.lang.String iamEmail) {
+    this.iamEmail = iamEmail;
     return this;
   }
 

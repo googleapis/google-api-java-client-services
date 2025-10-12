@@ -62,6 +62,15 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> authorizedGaeApplications;
 
   /**
+   * Optional. Cloud SQL for MySQL auto-upgrade configuration. When this parameter is set to true,
+   * auto-upgrade is enabled for MySQL 8.0 minor versions. The MySQL version must be 8.0.35 or
+   * higher.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoUpgradeEnabled;
+
+  /**
    * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone.
    * Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from
    * more than one zone in a region (it is highly available)./ For more information, see [Overview
@@ -436,6 +445,27 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setAuthorizedGaeApplications(java.util.List<java.lang.String> authorizedGaeApplications) {
     this.authorizedGaeApplications = authorizedGaeApplications;
+    return this;
+  }
+
+  /**
+   * Optional. Cloud SQL for MySQL auto-upgrade configuration. When this parameter is set to true,
+   * auto-upgrade is enabled for MySQL 8.0 minor versions. The MySQL version must be 8.0.35 or
+   * higher.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoUpgradeEnabled() {
+    return autoUpgradeEnabled;
+  }
+
+  /**
+   * Optional. Cloud SQL for MySQL auto-upgrade configuration. When this parameter is set to true,
+   * auto-upgrade is enabled for MySQL 8.0 minor versions. The MySQL version must be 8.0.35 or
+   * higher.
+   * @param autoUpgradeEnabled autoUpgradeEnabled or {@code null} for none
+   */
+  public Settings setAutoUpgradeEnabled(java.lang.Boolean autoUpgradeEnabled) {
+    this.autoUpgradeEnabled = autoUpgradeEnabled;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v2.model;
 
 /**
- * Response message for ConnectorAgentService.ListTools
+ * Model definition for ListResourcesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.connectors.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListToolsResponse extends com.google.api.client.json.GenericJson {
+public final class ListResourcesResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Metadata like service latency, etc.
@@ -37,18 +37,18 @@ public final class ListToolsResponse extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata;
 
   /**
-   * Next page token.
+   * Next page token if more resources available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of available tools.
+   * List of available resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Tool> tools;
+  private java.util.List<Resource> resources;
 
   /**
    * Metadata like service latency, etc.
@@ -62,13 +62,13 @@ public final class ListToolsResponse extends com.google.api.client.json.GenericJ
    * Metadata like service latency, etc.
    * @param metadata metadata or {@code null} for none
    */
-  public ListToolsResponse setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
+  public ListResourcesResponse setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
     this.metadata = metadata;
     return this;
   }
 
   /**
-   * Next page token.
+   * Next page token if more resources available.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -76,39 +76,39 @@ public final class ListToolsResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Next page token.
+   * Next page token if more resources available.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListToolsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListResourcesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * List of available tools.
+   * List of available resources.
    * @return value or {@code null} for none
    */
-  public java.util.List<Tool> getTools() {
-    return tools;
+  public java.util.List<Resource> getResources() {
+    return resources;
   }
 
   /**
-   * List of available tools.
-   * @param tools tools or {@code null} for none
+   * List of available resources.
+   * @param resources resources or {@code null} for none
    */
-  public ListToolsResponse setTools(java.util.List<Tool> tools) {
-    this.tools = tools;
+  public ListResourcesResponse setResources(java.util.List<Resource> resources) {
+    this.resources = resources;
     return this;
   }
 
   @Override
-  public ListToolsResponse set(String fieldName, Object value) {
-    return (ListToolsResponse) super.set(fieldName, value);
+  public ListResourcesResponse set(String fieldName, Object value) {
+    return (ListResourcesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListToolsResponse clone() {
-    return (ListToolsResponse) super.clone();
+  public ListResourcesResponse clone() {
+    return (ListResourcesResponse) super.clone();
   }
 
 }

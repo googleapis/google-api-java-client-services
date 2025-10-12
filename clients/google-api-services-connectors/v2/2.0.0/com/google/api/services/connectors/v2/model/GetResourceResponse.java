@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v2.model;
 
 /**
- * Response message for ConnectorAgentService.ExecuteTool
+ * Model definition for GetResourceResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,7 +27,14 @@ package com.google.api.services.connectors.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ExecuteToolResponse extends com.google.api.client.json.GenericJson {
+public final class GetResourceResponse extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The content of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String data;
 
   /**
    * Metadata like service latency, etc.
@@ -37,11 +44,56 @@ public final class ExecuteToolResponse extends com.google.api.client.json.Generi
   private java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata;
 
   /**
-   * Output from the tool execution.
+   * The MIME type of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> result;
+  private java.lang.String mimeType;
+
+  /**
+   * The content of the resource.
+   * @see #decodeData()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getData() {
+    return data;
+  }
+
+  /**
+   * The content of the resource.
+   * @see #getData()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeData() {
+    return com.google.api.client.util.Base64.decodeBase64(data);
+  }
+
+  /**
+   * The content of the resource.
+   * @see #encodeData()
+   * @param data data or {@code null} for none
+   */
+  public GetResourceResponse setData(java.lang.String data) {
+    this.data = data;
+    return this;
+  }
+
+  /**
+   * The content of the resource.
+   * @see #setData()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GetResourceResponse encodeData(byte[] data) {
+    this.data = com.google.api.client.util.Base64.encodeBase64URLSafeString(data);
+    return this;
+  }
 
   /**
    * Metadata like service latency, etc.
@@ -55,36 +107,36 @@ public final class ExecuteToolResponse extends com.google.api.client.json.Generi
    * Metadata like service latency, etc.
    * @param metadata metadata or {@code null} for none
    */
-  public ExecuteToolResponse setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
+  public GetResourceResponse setMetadata(java.util.Map<String, java.util.Map<String, java.lang.Object>> metadata) {
     this.metadata = metadata;
     return this;
   }
 
   /**
-   * Output from the tool execution.
+   * The MIME type of the resource.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getResult() {
-    return result;
+  public java.lang.String getMimeType() {
+    return mimeType;
   }
 
   /**
-   * Output from the tool execution.
-   * @param result result or {@code null} for none
+   * The MIME type of the resource.
+   * @param mimeType mimeType or {@code null} for none
    */
-  public ExecuteToolResponse setResult(java.util.Map<String, java.lang.Object> result) {
-    this.result = result;
+  public GetResourceResponse setMimeType(java.lang.String mimeType) {
+    this.mimeType = mimeType;
     return this;
   }
 
   @Override
-  public ExecuteToolResponse set(String fieldName, Object value) {
-    return (ExecuteToolResponse) super.set(fieldName, value);
+  public GetResourceResponse set(String fieldName, Object value) {
+    return (GetResourceResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ExecuteToolResponse clone() {
-    return (ExecuteToolResponse) super.clone();
+  public GetResourceResponse clone() {
+    return (GetResourceResponse) super.clone();
   }
 
 }

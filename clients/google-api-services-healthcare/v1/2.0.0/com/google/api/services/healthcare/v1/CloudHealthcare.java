@@ -10293,7 +10293,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-           *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+           *        `studies/{study_uid}/series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
            * @return the request
            */
           public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -10333,7 +10333,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-           *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+           *        `studies/{study_uid}/series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              * @since 1.13
              */
             protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -10449,13 +10449,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The path of the SearchForInstancesRequest DICOMweb request. For example,
-             * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+             * `instances`, `studies/{study_uid}/series/{series_uid}/instances`, or
+             * `studies/{study_uid}/instances`.
              */
             @com.google.api.client.util.Key
             private java.lang.String dicomWebPath;
 
             /** Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-           `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+           `studies/{study_uid}/series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              */
             public java.lang.String getDicomWebPath() {
               return dicomWebPath;
@@ -10463,7 +10464,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The path of the SearchForInstancesRequest DICOMweb request. For example,
-             * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+             * `instances`, `studies/{study_uid}/series/{series_uid}/instances`, or
+             * `studies/{study_uid}/instances`.
              */
             public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
               if (!getSuppressPatternChecks()) {
@@ -12893,7 +12895,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
              * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-             *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+             *        `studies/{study_uid}/series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              * @return the request
              */
             public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -12933,7 +12935,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
                * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-             *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+             *        `studies/{study_uid}/series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                * @since 1.13
                */
               protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -13049,13 +13051,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The path of the SearchForInstancesRequest DICOMweb request. For example,
-               * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+               * `instances`, `studies/{study_uid}/series/{series_uid}/instances`, or
+               * `studies/{study_uid}/instances`.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
               /** Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-             `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+             `studies/{study_uid}/series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
@@ -13063,7 +13066,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The path of the SearchForInstancesRequest DICOMweb request. For example,
-               * `instances`, `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+               * `instances`, `studies/{study_uid}/series/{series_uid}/instances`, or
+               * `studies/{study_uid}/instances`.
                */
               public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -14123,7 +14127,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
                * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-               *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+               *        `studies/{study_uid}/series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                * @return the request
                */
               public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -14163,7 +14167,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
                  * @param dicomWebPath Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-               *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+               *        `studies/{study_uid}/series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                  * @since 1.13
                  */
                 protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -14279,14 +14283,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * Required. The path of the SearchForInstancesRequest DICOMweb request. For
-                 * example, `instances`, `series/{series_uid}/instances`, or
+                 * example, `instances`, `studies/{study_uid}/series/{series_uid}/instances`, or
                  * `studies/{study_uid}/instances`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
                 /** Required. The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
-               `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+               `studies/{study_uid}/series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
@@ -14294,7 +14298,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * Required. The path of the SearchForInstancesRequest DICOMweb request. For
-                 * example, `instances`, `series/{series_uid}/instances`, or
+                 * example, `instances`, `studies/{study_uid}/series/{series_uid}/instances`, or
                  * `studies/{study_uid}/instances`.
                  */
                 public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
@@ -17148,11 +17152,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Export resources from the FHIR store to the specified destination. This method returns an
-           * Operation that can be used to track the status of the export by calling GetOperation. Immediate
-           * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
-           * error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
-           * Otherwise, when the operation finishes, a detailed response of type ExportResourcesResponse is
-           * returned in the response field. The metadata field type for this operation is OperationMetadata.
+           * Operation that can be used to track the status of the export by calling GetOperation. To improve
+           * performance, it is recommended to make the `type` filter as specific as possible, including only
+           * the resource types that are absolutely needed. This minimizes the size of the initial dataset to
+           * be processed and is the most effective way to improve performance. While post-filters like
+           * `_since` are useful for refining results, they do not speed up the initial data retrieval phase,
+           * which is primarily governed by the `type` filter. Immediate fatal errors appear in the error
+           * field, errors are also logged to Cloud Logging (see [Viewing error logs in Cloud
+           * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise, when the
+           * operation finishes, a detailed response of type ExportResourcesResponse is returned in the
+           * response field. The metadata field type for this operation is OperationMetadata.
            *
            * Create a request for the method "fhirStores.export".
            *
@@ -17180,12 +17189,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Export resources from the FHIR store to the specified destination. This method returns an
-             * Operation that can be used to track the status of the export by calling GetOperation. Immediate
-             * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
-             * error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
-             * Otherwise, when the operation finishes, a detailed response of type ExportResourcesResponse is
-             * returned in the response field. The metadata field type for this operation is
-             * OperationMetadata.
+             * Operation that can be used to track the status of the export by calling GetOperation. To
+             * improve performance, it is recommended to make the `type` filter as specific as possible,
+             * including only the resource types that are absolutely needed. This minimizes the size of the
+             * initial dataset to be processed and is the most effective way to improve performance. While
+             * post-filters like `_since` are useful for refining results, they do not speed up the initial
+             * data retrieval phase, which is primarily governed by the `type` filter. Immediate fatal errors
+             * appear in the error field, errors are also logged to Cloud Logging (see [Viewing error logs in
+             * Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise, when the
+             * operation finishes, a detailed response of type ExportResourcesResponse is returned in the
+             * response field. The metadata field type for this operation is OperationMetadata.
              *
              * Create a request for the method "fhirStores.export".
              *
@@ -27696,6 +27709,40 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /** The standard list page token. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * When set to `true`, operations that are reachable are returned as normal, and those
+             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+             * This can only be `true` when reading across collections e.g. when `parent` is set to
+             * `"projects/example/locations/-"`. This field is not by default supported and will
+             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+             * service or product specific documentation.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean returnPartialSuccess;
+
+            /** When set to `true`, operations that are reachable are returned as normal, and those that are
+           unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
+           when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
+           field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
+           explicitly documented otherwise in service or product specific documentation.
+             */
+            public java.lang.Boolean getReturnPartialSuccess() {
+              return returnPartialSuccess;
+            }
+
+            /**
+             * When set to `true`, operations that are reachable are returned as normal, and those
+             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+             * This can only be `true` when reading across collections e.g. when `parent` is set to
+             * `"projects/example/locations/-"`. This field is not by default supported and will
+             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+             * service or product specific documentation.
+             */
+            public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+              this.returnPartialSuccess = returnPartialSuccess;
               return this;
             }
 

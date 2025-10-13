@@ -18,13 +18,13 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Publish findings of a DlpJob to Dataplex Universal Catalog as a `sensitive-data-protection-job-
- * result` aspect. To learn more about aspects, see [Send inspection results to Dataplex Universal
- * Catalog as aspects](https://cloud.google.com/sensitive-data-protection/docs/add-aspects-
- * inspection-job). Aspects are persisted in Dataplex Universal Catalog storage and are governed by
- * service-specific policies for Dataplex Universal Catalog. For more information, see [Service
- * Specific Terms](https://cloud.google.com/terms/service-terms). Only a single instance of this
- * action can be specified. This action is allowed only if all resources being scanned are BigQuery
- * tables. Compatible with: Inspect
+ * result` aspect. For more information, see [Send inspection results to Dataplex Universal Catalog
+ * as aspects](https://cloud.google.com/sensitive-data-protection/docs/add-aspects-inspection-job).
+ * Aspects are stored in Dataplex Universal Catalog storage and are governed by service-specific
+ * policies for Dataplex Universal Catalog. For more information, see [Service Specific
+ * Terms](https://cloud.google.com/terms/service-terms). Only a single instance of this action can
+ * be specified. This action is allowed only if all resources being scanned are BigQuery tables.
+ * Compatible with: Inspect
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

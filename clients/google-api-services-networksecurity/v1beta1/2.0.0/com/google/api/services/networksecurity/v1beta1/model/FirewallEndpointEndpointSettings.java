@@ -29,6 +29,30 @@ package com.google.api.services.networksecurity.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class FirewallEndpointEndpointSettings extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean jumboFramesEnabled;
+
+  /**
+   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getJumboFramesEnabled() {
+    return jumboFramesEnabled;
+  }
+
+  /**
+   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default value is false.
+   * @param jumboFramesEnabled jumboFramesEnabled or {@code null} for none
+   */
+  public FirewallEndpointEndpointSettings setJumboFramesEnabled(java.lang.Boolean jumboFramesEnabled) {
+    this.jumboFramesEnabled = jumboFramesEnabled;
+    return this;
+  }
+
   @Override
   public FirewallEndpointEndpointSettings set(String fieldName, Object value) {
     return (FirewallEndpointEndpointSettings) super.set(fieldName, value);

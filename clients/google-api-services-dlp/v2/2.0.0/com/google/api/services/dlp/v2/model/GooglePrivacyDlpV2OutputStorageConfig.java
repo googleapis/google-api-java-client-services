@@ -44,9 +44,9 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
 
   /**
    * Store findings in an existing Cloud Storage bucket. Files will be generated with the job ID and
-   * file part number as the filename, and will contain findings in textproto format as
-   * SaveToGcsFindingsOutput. The file name will use the naming convention -, for example: my-job-
-   * id-2. Supported for Inspect jobs. The bucket must not be the same as the bucket being
+   * file part number as the filename and will contain findings in textproto format as
+   * SaveToGcsFindingsOutput. The filename will follow the naming convention `-`. Example: `my-job-
+   * id-2`. Supported for Inspect jobs. The bucket must not be the same as the bucket being
    * inspected. If storing findings to Cloud Storage, the output schema field should not be set. If
    * set, it will be ignored.
    * The value may be {@code null}.
@@ -98,9 +98,9 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
 
   /**
    * Store findings in an existing Cloud Storage bucket. Files will be generated with the job ID and
-   * file part number as the filename, and will contain findings in textproto format as
-   * SaveToGcsFindingsOutput. The file name will use the naming convention -, for example: my-job-
-   * id-2. Supported for Inspect jobs. The bucket must not be the same as the bucket being
+   * file part number as the filename and will contain findings in textproto format as
+   * SaveToGcsFindingsOutput. The filename will follow the naming convention `-`. Example: `my-job-
+   * id-2`. Supported for Inspect jobs. The bucket must not be the same as the bucket being
    * inspected. If storing findings to Cloud Storage, the output schema field should not be set. If
    * set, it will be ignored.
    * @return value or {@code null} for none
@@ -111,9 +111,9 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
 
   /**
    * Store findings in an existing Cloud Storage bucket. Files will be generated with the job ID and
-   * file part number as the filename, and will contain findings in textproto format as
-   * SaveToGcsFindingsOutput. The file name will use the naming convention -, for example: my-job-
-   * id-2. Supported for Inspect jobs. The bucket must not be the same as the bucket being
+   * file part number as the filename and will contain findings in textproto format as
+   * SaveToGcsFindingsOutput. The filename will follow the naming convention `-`. Example: `my-job-
+   * id-2`. Supported for Inspect jobs. The bucket must not be the same as the bucket being
    * inspected. If storing findings to Cloud Storage, the output schema field should not be set. If
    * set, it will be ignored.
    * @param storagePath storagePath or {@code null} for none

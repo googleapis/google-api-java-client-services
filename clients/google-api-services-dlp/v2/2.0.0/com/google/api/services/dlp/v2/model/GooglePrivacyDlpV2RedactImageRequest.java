@@ -39,6 +39,16 @@ public final class GooglePrivacyDlpV2RedactImageRequest extends com.google.api.c
   private GooglePrivacyDlpV2ByteContentItem byteItem;
 
   /**
+   * The full resource name of the de-identification template to use. Settings in the main
+   * `image_redaction_configs` field override the corresponding settings in this de-identification
+   * template. The request fails if the type of the template's deidentify_config is not
+   * image_transformations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deidentifyTemplate;
+
+  /**
    * The configuration for specifying what content to redact from images.
    * The value may be {@code null}.
    */
@@ -66,6 +76,17 @@ public final class GooglePrivacyDlpV2RedactImageRequest extends com.google.api.c
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
+   * The full resource name of the inspection template to use. Settings in the main `inspect_config`
+   * field override the corresponding settings in this inspection template. The merge behavior is as
+   * follows: - Singular field: The main field's value replaces the value of the corresponding field
+   * in the template. - Repeated fields: The field values are appended to the list defined in the
+   * template. - Sub-messages and groups: The fields are recursively merged.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inspectTemplate;
+
+  /**
    * Deprecated. This field has no effect.
    * The value may be {@code null}.
    */
@@ -86,6 +107,29 @@ public final class GooglePrivacyDlpV2RedactImageRequest extends com.google.api.c
    */
   public GooglePrivacyDlpV2RedactImageRequest setByteItem(GooglePrivacyDlpV2ByteContentItem byteItem) {
     this.byteItem = byteItem;
+    return this;
+  }
+
+  /**
+   * The full resource name of the de-identification template to use. Settings in the main
+   * `image_redaction_configs` field override the corresponding settings in this de-identification
+   * template. The request fails if the type of the template's deidentify_config is not
+   * image_transformations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeidentifyTemplate() {
+    return deidentifyTemplate;
+  }
+
+  /**
+   * The full resource name of the de-identification template to use. Settings in the main
+   * `image_redaction_configs` field override the corresponding settings in this de-identification
+   * template. The request fails if the type of the template's deidentify_config is not
+   * image_transformations.
+   * @param deidentifyTemplate deidentifyTemplate or {@code null} for none
+   */
+  public GooglePrivacyDlpV2RedactImageRequest setDeidentifyTemplate(java.lang.String deidentifyTemplate) {
+    this.deidentifyTemplate = deidentifyTemplate;
     return this;
   }
 
@@ -137,6 +181,31 @@ public final class GooglePrivacyDlpV2RedactImageRequest extends com.google.api.c
    */
   public GooglePrivacyDlpV2RedactImageRequest setInspectConfig(GooglePrivacyDlpV2InspectConfig inspectConfig) {
     this.inspectConfig = inspectConfig;
+    return this;
+  }
+
+  /**
+   * The full resource name of the inspection template to use. Settings in the main `inspect_config`
+   * field override the corresponding settings in this inspection template. The merge behavior is as
+   * follows: - Singular field: The main field's value replaces the value of the corresponding field
+   * in the template. - Repeated fields: The field values are appended to the list defined in the
+   * template. - Sub-messages and groups: The fields are recursively merged.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInspectTemplate() {
+    return inspectTemplate;
+  }
+
+  /**
+   * The full resource name of the inspection template to use. Settings in the main `inspect_config`
+   * field override the corresponding settings in this inspection template. The merge behavior is as
+   * follows: - Singular field: The main field's value replaces the value of the corresponding field
+   * in the template. - Repeated fields: The field values are appended to the list defined in the
+   * template. - Sub-messages and groups: The fields are recursively merged.
+   * @param inspectTemplate inspectTemplate or {@code null} for none
+   */
+  public GooglePrivacyDlpV2RedactImageRequest setInspectTemplate(java.lang.String inspectTemplate) {
+    this.inspectTemplate = inspectTemplate;
     return this;
   }
 

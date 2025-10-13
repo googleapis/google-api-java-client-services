@@ -4860,8 +4860,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the sqladmin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param project Project ID of the project that contains the instance.
-     * @param instance Database instance ID. This does not include the project ID.
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Database instance ID. This does not include the project ID.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String instance) throws java.io.IOException {
@@ -4884,8 +4884,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project Project ID of the project that contains the instance.
-       * @param instance Database instance ID. This does not include the project ID.
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Database instance ID. This does not include the project ID.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String instance) {
@@ -4959,33 +4959,33 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Project ID of the project that contains the instance. */
+      /** Required. Project ID of the project that contains the instance. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /** Project ID of the project that contains the instance.
+      /** Required. Project ID of the project that contains the instance.
        */
       public java.lang.String getProject() {
         return project;
       }
 
-      /** Project ID of the project that contains the instance. */
+      /** Required. Project ID of the project that contains the instance. */
       public Get setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
-      /** Database instance ID. This does not include the project ID. */
+      /** Required. Database instance ID. This does not include the project ID. */
       @com.google.api.client.util.Key
       private java.lang.String instance;
 
-      /** Database instance ID. This does not include the project ID.
+      /** Required. Database instance ID. This does not include the project ID.
        */
       public java.lang.String getInstance() {
         return instance;
       }
 
-      /** Database instance ID. This does not include the project ID. */
+      /** Required. Database instance ID. This does not include the project ID. */
       public Get setInstance(java.lang.String instance) {
         this.instance = instance;
         return this;
@@ -7917,8 +7917,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the sqladmin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param project Project ID of the project that contains the instance.
-     * @param operation Instance operation ID.
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param operation Required. Instance operation ID.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String operation) throws java.io.IOException {
@@ -7941,8 +7941,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project Project ID of the project that contains the instance.
-       * @param operation Instance operation ID.
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param operation Required. Instance operation ID.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String operation) {
@@ -8016,33 +8016,33 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Project ID of the project that contains the instance. */
+      /** Required. Project ID of the project that contains the instance. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /** Project ID of the project that contains the instance.
+      /** Required. Project ID of the project that contains the instance.
        */
       public java.lang.String getProject() {
         return project;
       }
 
-      /** Project ID of the project that contains the instance. */
+      /** Required. Project ID of the project that contains the instance. */
       public Get setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
-      /** Instance operation ID. */
+      /** Required. Instance operation ID. */
       @com.google.api.client.util.Key
       private java.lang.String operation;
 
-      /** Instance operation ID.
+      /** Required. Instance operation ID.
        */
       public java.lang.String getOperation() {
         return operation;
       }
 
-      /** Instance operation ID. */
+      /** Required. Instance operation ID. */
       public Get setOperation(java.lang.String operation) {
         this.operation = operation;
         return this;

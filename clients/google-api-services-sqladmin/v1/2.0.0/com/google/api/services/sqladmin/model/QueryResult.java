@@ -50,7 +50,8 @@ public final class QueryResult extends com.google.api.client.json.GenericJson {
   private java.lang.String message;
 
   /**
-   * Set to true if the SQL execution's result is truncated due to size limits.
+   * Set to true if the SQL execution's result is truncated due to size limits or an error
+   * retrieving results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,6 +63,13 @@ public final class QueryResult extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Row> rows;
+
+  /**
+   * If results were truncated due to an error, details of that error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status status;
 
   /**
    * List of columns included in the result. This also includes the data type of the column.
@@ -98,7 +106,8 @@ public final class QueryResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set to true if the SQL execution's result is truncated due to size limits.
+   * Set to true if the SQL execution's result is truncated due to size limits or an error
+   * retrieving results.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPartialResult() {
@@ -106,7 +115,8 @@ public final class QueryResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set to true if the SQL execution's result is truncated due to size limits.
+   * Set to true if the SQL execution's result is truncated due to size limits or an error
+   * retrieving results.
    * @param partialResult partialResult or {@code null} for none
    */
   public QueryResult setPartialResult(java.lang.Boolean partialResult) {
@@ -128,6 +138,23 @@ public final class QueryResult extends com.google.api.client.json.GenericJson {
    */
   public QueryResult setRows(java.util.List<Row> rows) {
     this.rows = rows;
+    return this;
+  }
+
+  /**
+   * If results were truncated due to an error, details of that error.
+   * @return value or {@code null} for none
+   */
+  public Status getStatus() {
+    return status;
+  }
+
+  /**
+   * If results were truncated due to an error, details of that error.
+   * @param status status or {@code null} for none
+   */
+  public QueryResult setStatus(Status status) {
+    this.status = status;
     return this;
   }
 

@@ -53,6 +53,13 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   private java.lang.String defaultHeaderId;
 
   /**
+   * Specifies document-level format settings, such as the document mode (pages vs pageless).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DocumentFormat documentFormat;
+
+  /**
    * The ID of the footer used only for even pages. The value of use_even_page_header_footer
    * determines whether to use the default_footer_id or this value for the footer on even pages. If
    * not set, there's no even page footer. This property is read-only.
@@ -233,6 +240,23 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
    */
   public DocumentStyle setDefaultHeaderId(java.lang.String defaultHeaderId) {
     this.defaultHeaderId = defaultHeaderId;
+    return this;
+  }
+
+  /**
+   * Specifies document-level format settings, such as the document mode (pages vs pageless).
+   * @return value or {@code null} for none
+   */
+  public DocumentFormat getDocumentFormat() {
+    return documentFormat;
+  }
+
+  /**
+   * Specifies document-level format settings, such as the document mode (pages vs pageless).
+   * @param documentFormat documentFormat or {@code null} for none
+   */
+  public DocumentStyle setDocumentFormat(DocumentFormat documentFormat) {
+    this.documentFormat = documentFormat;
     return this;
   }
 

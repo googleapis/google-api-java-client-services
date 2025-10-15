@@ -88,7 +88,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   private GoogleCloudRecaptchaenterpriseV1TestingOptions testingOptions;
 
   /**
-   * Optional. Settings for WAF
+   * Optional. Settings for Web Application Firewall (WAF).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,7 +238,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Optional. Settings for WAF
+   * Optional. Settings for Web Application Firewall (WAF).
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WafSettings getWafSettings() {
@@ -246,7 +246,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Optional. Settings for WAF
+   * Optional. Settings for Web Application Firewall (WAF).
    * @param wafSettings wafSettings or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Key setWafSettings(GoogleCloudRecaptchaenterpriseV1WafSettings wafSettings) {

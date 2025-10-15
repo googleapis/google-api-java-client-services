@@ -148,8 +148,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.String userIpAddress;
 
   /**
-   * Optional. Flag for running WAF token assessment. If enabled, the token must be specified, and
-   * have been created by a WAF-enabled key.
+   * Optional. Flag for running Web Application Firewall (WAF) token assessment. If enabled, the
+   * token must be specified, and have been created by a WAF-enabled key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -465,8 +465,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Flag for running WAF token assessment. If enabled, the token must be specified, and
-   * have been created by a WAF-enabled key.
+   * Optional. Flag for running Web Application Firewall (WAF) token assessment. If enabled, the
+   * token must be specified, and have been created by a WAF-enabled key.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWafTokenAssessment() {
@@ -474,8 +474,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. Flag for running WAF token assessment. If enabled, the token must be specified, and
-   * have been created by a WAF-enabled key.
+   * Optional. Flag for running Web Application Firewall (WAF) token assessment. If enabled, the
+   * token must be specified, and have been created by a WAF-enabled key.
    * @param wafTokenAssessment wafTokenAssessment or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setWafTokenAssessment(java.lang.Boolean wafTokenAssessment) {

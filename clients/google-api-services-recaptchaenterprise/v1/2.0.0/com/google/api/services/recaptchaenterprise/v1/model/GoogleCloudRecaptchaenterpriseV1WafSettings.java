@@ -31,21 +31,21 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1WafSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The WAF feature for which this key is enabled.
+   * Required. The Web Application Firewall (WAF) feature for which this key is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String wafFeature;
 
   /**
-   * Required. The WAF service that uses this key.
+   * Required. The Web Application Firewall (WAF) service that uses this key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String wafService;
 
   /**
-   * Required. The WAF feature for which this key is enabled.
+   * Required. The Web Application Firewall (WAF) feature for which this key is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getWafFeature() {
@@ -53,7 +53,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettings extends com.googl
   }
 
   /**
-   * Required. The WAF feature for which this key is enabled.
+   * Required. The Web Application Firewall (WAF) feature for which this key is enabled.
    * @param wafFeature wafFeature or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WafSettings setWafFeature(java.lang.String wafFeature) {
@@ -62,7 +62,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettings extends com.googl
   }
 
   /**
-   * Required. The WAF service that uses this key.
+   * Required. The Web Application Firewall (WAF) service that uses this key.
    * @return value or {@code null} for none
    */
   public java.lang.String getWafService() {
@@ -70,7 +70,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettings extends com.googl
   }
 
   /**
-   * Required. The WAF service that uses this key.
+   * Required. The Web Application Firewall (WAF) service that uses this key.
    * @param wafService wafService or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WafSettings setWafService(java.lang.String wafService) {

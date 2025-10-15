@@ -2585,7 +2585,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
       public class TestCases {
 
         /**
-         * Delete test cases.
+         * Deletes multiple test cases.
          *
          * Create a request for the method "testCases.batchDelete".
          *
@@ -2612,7 +2612,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
               java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
 
           /**
-           * Delete test cases.
+           * Deletes multiple test cases.
            *
            * Create a request for the method "testCases.batchDelete".
            *

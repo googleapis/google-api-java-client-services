@@ -31,6 +31,14 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class SpecificNonComplianceContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Additional context for non-compliance related to default application settings. See
+   * DEFAULT_APPLICATION_SETTING_FAILED_FOR_SCOPE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DefaultApplicationContext defaultApplicationContext;
+
+  /**
    * Additional context for non-compliance related to Wi-Fi configuration. See
    * ONC_WIFI_INVALID_VALUE and ONC_WIFI_API_LEVEL
    * The value may be {@code null}.
@@ -45,6 +53,25 @@ public final class SpecificNonComplianceContext extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private PasswordPoliciesContext passwordPoliciesContext;
+
+  /**
+   * Output only. Additional context for non-compliance related to default application settings. See
+   * DEFAULT_APPLICATION_SETTING_FAILED_FOR_SCOPE.
+   * @return value or {@code null} for none
+   */
+  public DefaultApplicationContext getDefaultApplicationContext() {
+    return defaultApplicationContext;
+  }
+
+  /**
+   * Output only. Additional context for non-compliance related to default application settings. See
+   * DEFAULT_APPLICATION_SETTING_FAILED_FOR_SCOPE.
+   * @param defaultApplicationContext defaultApplicationContext or {@code null} for none
+   */
+  public SpecificNonComplianceContext setDefaultApplicationContext(DefaultApplicationContext defaultApplicationContext) {
+    this.defaultApplicationContext = defaultApplicationContext;
+    return this;
+  }
 
   /**
    * Additional context for non-compliance related to Wi-Fi configuration. See

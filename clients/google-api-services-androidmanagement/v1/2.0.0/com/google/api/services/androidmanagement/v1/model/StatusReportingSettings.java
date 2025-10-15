@@ -53,6 +53,13 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   private java.lang.Boolean commonCriteriaModeEnabled;
 
   /**
+   * Optional. Whether defaultApplicationInfo reporting is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultApplicationInfoReportingEnabled;
+
+  /**
    * Whether device settings reporting is enabled.
    * The value may be {@code null}.
    */
@@ -161,6 +168,23 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
    */
   public StatusReportingSettings setCommonCriteriaModeEnabled(java.lang.Boolean commonCriteriaModeEnabled) {
     this.commonCriteriaModeEnabled = commonCriteriaModeEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Whether defaultApplicationInfo reporting is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultApplicationInfoReportingEnabled() {
+    return defaultApplicationInfoReportingEnabled;
+  }
+
+  /**
+   * Optional. Whether defaultApplicationInfo reporting is enabled.
+   * @param defaultApplicationInfoReportingEnabled defaultApplicationInfoReportingEnabled or {@code null} for none
+   */
+  public StatusReportingSettings setDefaultApplicationInfoReportingEnabled(java.lang.Boolean defaultApplicationInfoReportingEnabled) {
+    this.defaultApplicationInfoReportingEnabled = defaultApplicationInfoReportingEnabled;
     return this;
   }
 

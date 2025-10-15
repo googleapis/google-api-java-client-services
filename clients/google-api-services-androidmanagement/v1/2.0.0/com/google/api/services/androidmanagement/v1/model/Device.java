@@ -95,6 +95,25 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private CommonCriteriaModeInfo commonCriteriaModeInfo;
 
   /**
+   * Output only. The default application information for the DefaultApplicationType. This
+   * information is only available if defaultApplicationInfoReportingEnabled is true in the device's
+   * policy. Available on Android 16 and above.All app types are reported on fully managed devices.
+   * DEFAULT_BROWSER, DEFAULT_CALL_REDIRECTION, DEFAULT_CALL_SCREENING and DEFAULT_DIALER types are
+   * reported for the work profiles on company-owned devices with a work profile and personally-
+   * owned devices. DEFAULT_WALLET is also reported for company-owned devices with a work profile,
+   * but will only include work profile information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DefaultApplicationInfo> defaultApplicationInfo;
+
+  static {
+    // hack to force ProGuard to consider DefaultApplicationInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DefaultApplicationInfo.class);
+  }
+
+  /**
    * Device settings information. This information is only available if deviceSettingsEnabled is
    * true in the device's policy.
    * The value may be {@code null}.
@@ -451,6 +470,35 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setCommonCriteriaModeInfo(CommonCriteriaModeInfo commonCriteriaModeInfo) {
     this.commonCriteriaModeInfo = commonCriteriaModeInfo;
+    return this;
+  }
+
+  /**
+   * Output only. The default application information for the DefaultApplicationType. This
+   * information is only available if defaultApplicationInfoReportingEnabled is true in the device's
+   * policy. Available on Android 16 and above.All app types are reported on fully managed devices.
+   * DEFAULT_BROWSER, DEFAULT_CALL_REDIRECTION, DEFAULT_CALL_SCREENING and DEFAULT_DIALER types are
+   * reported for the work profiles on company-owned devices with a work profile and personally-
+   * owned devices. DEFAULT_WALLET is also reported for company-owned devices with a work profile,
+   * but will only include work profile information.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DefaultApplicationInfo> getDefaultApplicationInfo() {
+    return defaultApplicationInfo;
+  }
+
+  /**
+   * Output only. The default application information for the DefaultApplicationType. This
+   * information is only available if defaultApplicationInfoReportingEnabled is true in the device's
+   * policy. Available on Android 16 and above.All app types are reported on fully managed devices.
+   * DEFAULT_BROWSER, DEFAULT_CALL_REDIRECTION, DEFAULT_CALL_SCREENING and DEFAULT_DIALER types are
+   * reported for the work profiles on company-owned devices with a work profile and personally-
+   * owned devices. DEFAULT_WALLET is also reported for company-owned devices with a work profile,
+   * but will only include work profile information.
+   * @param defaultApplicationInfo defaultApplicationInfo or {@code null} for none
+   */
+  public Device setDefaultApplicationInfo(java.util.List<DefaultApplicationInfo> defaultApplicationInfo) {
+    this.defaultApplicationInfo = defaultApplicationInfo;
     return this;
   }
 

@@ -265,6 +265,24 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean debuggingFeaturesAllowed;
 
   /**
+   * Optional. The default application setting for supported types. If the default application is
+   * successfully set for at least one app type on a profile, users are prevented from changing any
+   * default applications on that profile.Only one DefaultApplicationSetting is allowed for each
+   * DefaultApplicationType.See Default application settings
+   * (https://developers.google.com/android/management/default-application-settings) guide for more
+   * details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DefaultApplicationSetting> defaultApplicationSettings;
+
+  static {
+    // hack to force ProGuard to consider DefaultApplicationSetting used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DefaultApplicationSetting.class);
+  }
+
+  /**
    * The default permission policy for runtime permission requests.
    * The value may be {@code null}.
    */
@@ -1369,6 +1387,33 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setDebuggingFeaturesAllowed(java.lang.Boolean debuggingFeaturesAllowed) {
     this.debuggingFeaturesAllowed = debuggingFeaturesAllowed;
+    return this;
+  }
+
+  /**
+   * Optional. The default application setting for supported types. If the default application is
+   * successfully set for at least one app type on a profile, users are prevented from changing any
+   * default applications on that profile.Only one DefaultApplicationSetting is allowed for each
+   * DefaultApplicationType.See Default application settings
+   * (https://developers.google.com/android/management/default-application-settings) guide for more
+   * details.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DefaultApplicationSetting> getDefaultApplicationSettings() {
+    return defaultApplicationSettings;
+  }
+
+  /**
+   * Optional. The default application setting for supported types. If the default application is
+   * successfully set for at least one app type on a profile, users are prevented from changing any
+   * default applications on that profile.Only one DefaultApplicationSetting is allowed for each
+   * DefaultApplicationType.See Default application settings
+   * (https://developers.google.com/android/management/default-application-settings) guide for more
+   * details.
+   * @param defaultApplicationSettings defaultApplicationSettings or {@code null} for none
+   */
+  public Policy setDefaultApplicationSettings(java.util.List<DefaultApplicationSetting> defaultApplicationSettings) {
+    this.defaultApplicationSettings = defaultApplicationSettings;
     return this;
   }
 

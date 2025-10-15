@@ -1719,6 +1719,38 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
           return this;
         }
 
+        /** number of duration units to be included. */
+        @com.google.api.client.util.Key("cycleOptions.initialCycleDuration.count")
+        private java.lang.Integer cycleOptionsInitialCycleDurationCount;
+
+        /** number of duration units to be included.
+         */
+        public java.lang.Integer getCycleOptionsInitialCycleDurationCount() {
+          return cycleOptionsInitialCycleDurationCount;
+        }
+
+        /** number of duration units to be included. */
+        public Provision setCycleOptionsInitialCycleDurationCount(java.lang.Integer cycleOptionsInitialCycleDurationCount) {
+          this.cycleOptionsInitialCycleDurationCount = cycleOptionsInitialCycleDurationCount;
+          return this;
+        }
+
+        /** The unit used for the duration */
+        @com.google.api.client.util.Key("cycleOptions.initialCycleDuration.unit")
+        private java.lang.String cycleOptionsInitialCycleDurationUnit;
+
+        /** The unit used for the duration
+         */
+        public java.lang.String getCycleOptionsInitialCycleDurationUnit() {
+          return cycleOptionsInitialCycleDurationUnit;
+        }
+
+        /** The unit used for the duration */
+        public Provision setCycleOptionsInitialCycleDurationUnit(java.lang.String cycleOptionsInitialCycleDurationUnit) {
+          this.cycleOptionsInitialCycleDurationUnit = cycleOptionsInitialCycleDurationUnit;
+          return this;
+        }
+
         /**
          * Required. Identifies the subscription resource on the Partner side. The value is
          * restricted to 63 ASCII characters at the maximum. If a subscription was previously
@@ -2186,6 +2218,194 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         }
       }
 
+      /**
+       * An accessor for creating requests from the LineItems collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code PaymentsResellerSubscription paymentsresellersubscription = new PaymentsResellerSubscription(...);}
+       *   {@code PaymentsResellerSubscription.LineItems.List request = paymentsresellersubscription.lineItems().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public LineItems lineItems() {
+        return new LineItems();
+      }
+
+      /**
+       * The "lineItems" collection of methods.
+       */
+      public class LineItems {
+
+        /**
+         * Updates a line item of a subscription. It should be autenticated with a service account.
+         *
+         * Create a request for the method "lineItems.patch".
+         *
+         * This request holds the parameters needed by the paymentsresellersubscription server.  After
+         * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Identifier. Resource name of the line item. Format:
+         *        partners/{partner}/subscriptions/{subscription}/lineItems/{lineItem}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.SubscriptionLineItem}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.SubscriptionLineItem content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.SubscriptionLineItem> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^partners/[^/]+/subscriptions/[^/]+/lineItems/[^/]+$");
+
+          /**
+           * Updates a line item of a subscription. It should be autenticated with a service account.
+           *
+           * Create a request for the method "lineItems.patch".
+           *
+           * This request holds the parameters needed by the the paymentsresellersubscription server.  After
+           * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Resource name of the line item. Format:
+         *        partners/{partner}/subscriptions/{subscription}/lineItems/{lineItem}
+           * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.SubscriptionLineItem}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.SubscriptionLineItem content) {
+            super(PaymentsResellerSubscription.this, "PATCH", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.SubscriptionLineItem.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^partners/[^/]+/subscriptions/[^/]+/lineItems/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Resource name of the line item. Format:
+           * partners/{partner}/subscriptions/{subscription}/lineItems/{lineItem}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Resource name of the line item. Format:
+         partners/{partner}/subscriptions/{subscription}/lineItems/{lineItem}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Resource name of the line item. Format:
+           * partners/{partner}/subscriptions/{subscription}/lineItems/{lineItem}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^partners/[^/]+/subscriptions/[^/]+/lineItems/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. The list of fields to update. Only a limited set of fields can be updated.
+           * The allowed fields are the following: -
+           * `product_payload.googleHomePayload.googleStructureId`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The list of fields to update. Only a limited set of fields can be updated. The allowed
+         fields are the following: - `product_payload.googleHomePayload.googleStructureId`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. The list of fields to update. Only a limited set of fields can be updated.
+           * The allowed fields are the following: -
+           * `product_payload.googleHomePayload.googleStructureId`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the UserSessions collection.

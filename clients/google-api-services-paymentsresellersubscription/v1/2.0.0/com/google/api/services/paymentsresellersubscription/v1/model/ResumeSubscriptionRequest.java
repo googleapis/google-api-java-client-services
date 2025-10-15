@@ -30,6 +30,30 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 @SuppressWarnings("javadoc")
 public final class ResumeSubscriptionRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The cycle options for the subscription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CycleOptions cycleOptions;
+
+  /**
+   * Optional. The cycle options for the subscription.
+   * @return value or {@code null} for none
+   */
+  public CycleOptions getCycleOptions() {
+    return cycleOptions;
+  }
+
+  /**
+   * Optional. The cycle options for the subscription.
+   * @param cycleOptions cycleOptions or {@code null} for none
+   */
+  public ResumeSubscriptionRequest setCycleOptions(CycleOptions cycleOptions) {
+    this.cycleOptions = cycleOptions;
+    return this;
+  }
+
   @Override
   public ResumeSubscriptionRequest set(String fieldName, Object value) {
     return (ResumeSubscriptionRequest) super.set(fieldName, value);

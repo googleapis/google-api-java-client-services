@@ -5730,23 +5730,23 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
-           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50
+           * Databases will be returned. The maximum value is 1000; values above 1000 will be reset
            * to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of items to return. If unspecified, a maximum of 50 System Versions
-         will be returned. The maximum value is 1000; values above 1000 will be reset to 1000.
+          /** Optional. The maximum number of items to return. If unspecified, a maximum of 50 Databases will be
+         returned. The maximum value is 1000; values above 1000 will be reset to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
-           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50
+           * Databases will be returned. The maximum value is 1000; values above 1000 will be reset
            * to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
@@ -5949,24 +5949,25 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
-           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
-           * to 1000.
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50
+           * DbSystemInitialStorageSizes will be returned. The maximum value is 1000; values above
+           * 1000 will be reset to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of items to return. If unspecified, a maximum of 50 System Versions
-         will be returned. The maximum value is 1000; values above 1000 will be reset to 1000.
+          /** Optional. The maximum number of items to return. If unspecified, a maximum of 50
+         DbSystemInitialStorageSizes will be returned. The maximum value is 1000; values above 1000 will be
+         reset to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
-           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
-           * to 1000.
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50
+           * DbSystemInitialStorageSizes will be returned. The maximum value is 1000; values above
+           * 1000 will be reset to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -7199,23 +7200,23 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
-           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50
+           * DbVersions will be returned. The maximum value is 1000; values above 1000 will be reset
            * to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of items to return. If unspecified, a maximum of 50 System Versions
-         will be returned. The maximum value is 1000; values above 1000 will be reset to 1000.
+          /** Optional. The maximum number of items to return. If unspecified, a maximum of 50 DbVersions will be
+         returned. The maximum value is 1000; values above 1000 will be reset to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. The maximum number of items to return. If unspecified, a maximum of 50 System
-           * Versions will be returned. The maximum value is 1000; values above 1000 will be reset
+           * Optional. The maximum number of items to return. If unspecified, a maximum of 50
+           * DbVersions will be returned. The maximum value is 1000; values above 1000 will be reset
            * to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
@@ -8575,6 +8576,216 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
         }
 
+        /**
+         * An accessor for creating requests from the DbNodes collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code OracleDatabase oracledatabase = new OracleDatabase(...);}
+         *   {@code OracleDatabase.DbNodes.List request = oracledatabase.dbNodes().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public DbNodes dbNodes() {
+          return new DbNodes();
+        }
+
+        /**
+         * The "dbNodes" collection of methods.
+         */
+        public class DbNodes {
+
+          /**
+           * Lists the database nodes of a VM Cluster.
+           *
+           * Create a request for the method "dbNodes.list".
+           *
+           * This request holds the parameters needed by the oracledatabase server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent value for database node in the following format:
+           *        projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ListDbNodesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/dbNodes";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/exadbVmClusters/[^/]+$");
+
+            /**
+             * Lists the database nodes of a VM Cluster.
+             *
+             * Create a request for the method "dbNodes.list".
+             *
+             * This request holds the parameters needed by the the oracledatabase server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent value for database node in the following format:
+           *        projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.ListDbNodesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/exadbVmClusters/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent value for database node in the following format:
+             * projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent value for database node in the following format:
+           projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent value for database node in the following format:
+             * projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/exadbVmClusters/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If unspecified, at most 50 db nodes
+             * will be returned. The maximum value is 1000; values above 1000 will be coerced to
+             * 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of items to return. If unspecified, at most 50 db nodes will be
+           returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If unspecified, at most 50 db nodes
+             * will be returned. The maximum value is 1000; values above 1000 will be coerced to
+             * 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. A token identifying a page of results the node should return. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results the node should return.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. A token identifying a page of results the node should return. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the ExascaleDbStorageVaults collection.

@@ -37,6 +37,20 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtable extend
   private GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtableAutoScaling autoScaling;
 
   /**
+   * Output only. Metadata of the Bigtable instance. Output only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtableBigtableMetadata bigtableMetadata;
+
+  /**
+   * Optional. It true, enable direct access to the Bigtable instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableDirectBigtableAccess;
+
+  /**
    * Required. Autoscaling config applied to Bigtable Instance.
    * @return value or {@code null} for none
    */
@@ -50,6 +64,40 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtable extend
    */
   public GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtable setAutoScaling(GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtableAutoScaling autoScaling) {
     this.autoScaling = autoScaling;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata of the Bigtable instance. Output only.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtableBigtableMetadata getBigtableMetadata() {
+    return bigtableMetadata;
+  }
+
+  /**
+   * Output only. Metadata of the Bigtable instance. Output only.
+   * @param bigtableMetadata bigtableMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtable setBigtableMetadata(GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtableBigtableMetadata bigtableMetadata) {
+    this.bigtableMetadata = bigtableMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. It true, enable direct access to the Bigtable instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableDirectBigtableAccess() {
+    return enableDirectBigtableAccess;
+  }
+
+  /**
+   * Optional. It true, enable direct access to the Bigtable instance.
+   * @param enableDirectBigtableAccess enableDirectBigtableAccess or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureOnlineStoreBigtable setEnableDirectBigtableAccess(java.lang.Boolean enableDirectBigtableAccess) {
+    this.enableDirectBigtableAccess = enableDirectBigtableAccess;
     return this;
   }
 

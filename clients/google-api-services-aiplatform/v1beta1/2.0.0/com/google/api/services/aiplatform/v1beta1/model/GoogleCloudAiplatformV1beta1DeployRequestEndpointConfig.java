@@ -78,6 +78,16 @@ public final class GoogleCloudAiplatformV1beta1DeployRequestEndpointConfig exten
   private java.lang.String endpointUserId;
 
   /**
+   * Optional. The labels with user-defined metadata to organize your Endpoints. Label keys and
+   * values can be no longer than 64 characters (Unicode codepoints), can only contain lowercase
+   * letters, numeric characters, underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Optional. Configuration for private service connect. If set, the endpoint will be exposed
    * through private service connect.
    * The value may be {@code null}.
@@ -190,6 +200,29 @@ public final class GoogleCloudAiplatformV1beta1DeployRequestEndpointConfig exten
    */
   public GoogleCloudAiplatformV1beta1DeployRequestEndpointConfig setEndpointUserId(java.lang.String endpointUserId) {
     this.endpointUserId = endpointUserId;
+    return this;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata to organize your Endpoints. Label keys and
+   * values can be no longer than 64 characters (Unicode codepoints), can only contain lowercase
+   * letters, numeric characters, underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata to organize your Endpoints. Label keys and
+   * values can be no longer than 64 characters (Unicode codepoints), can only contain lowercase
+   * letters, numeric characters, underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployRequestEndpointConfig setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

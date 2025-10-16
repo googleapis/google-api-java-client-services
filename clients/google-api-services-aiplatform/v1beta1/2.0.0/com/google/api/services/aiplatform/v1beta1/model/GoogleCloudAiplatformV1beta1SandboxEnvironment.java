@@ -31,6 +31,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1SandboxEnvironment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The connection information of the SandboxEnvironment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo connectionInfo;
+
+  /**
    * Output only. The timestamp when this SandboxEnvironment was created.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironment extends com.go
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. The connection information of the SandboxEnvironment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo getConnectionInfo() {
+    return connectionInfo;
+  }
+
+  /**
+   * Output only. The connection information of the SandboxEnvironment.
+   * @param connectionInfo connectionInfo or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironment setConnectionInfo(GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo connectionInfo) {
+    this.connectionInfo = connectionInfo;
+    return this;
+  }
 
   /**
    * Output only. The timestamp when this SandboxEnvironment was created.

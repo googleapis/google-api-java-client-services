@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentSpec extends co
   private GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecCodeExecutionEnvironment codeExecutionEnvironment;
 
   /**
+   * Optional. The computer use environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecComputerUseEnvironment computerUseEnvironment;
+
+  /**
    * Optional. The code execution environment.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentSpec extends co
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpec setCodeExecutionEnvironment(GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecCodeExecutionEnvironment codeExecutionEnvironment) {
     this.codeExecutionEnvironment = codeExecutionEnvironment;
+    return this;
+  }
+
+  /**
+   * Optional. The computer use environment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecComputerUseEnvironment getComputerUseEnvironment() {
+    return computerUseEnvironment;
+  }
+
+  /**
+   * Optional. The computer use environment.
+   * @param computerUseEnvironment computerUseEnvironment or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpec setComputerUseEnvironment(GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecComputerUseEnvironment computerUseEnvironment) {
+    this.computerUseEnvironment = computerUseEnvironment;
     return this;
   }
 

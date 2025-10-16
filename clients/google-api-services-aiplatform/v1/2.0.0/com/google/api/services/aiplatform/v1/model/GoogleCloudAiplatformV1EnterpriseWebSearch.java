@@ -30,12 +30,39 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EnterpriseWebSearch extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Sites with confidence level chosen & above this value will be blocked from the search
+   * results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String blockingConfidence;
+
+  /**
    * Optional. List of domains to be excluded from the search results. The default limit is 2000
    * domains.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludeDomains;
+
+  /**
+   * Optional. Sites with confidence level chosen & above this value will be blocked from the search
+   * results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBlockingConfidence() {
+    return blockingConfidence;
+  }
+
+  /**
+   * Optional. Sites with confidence level chosen & above this value will be blocked from the search
+   * results.
+   * @param blockingConfidence blockingConfidence or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EnterpriseWebSearch setBlockingConfidence(java.lang.String blockingConfidence) {
+    this.blockingConfidence = blockingConfidence;
+    return this;
+  }
 
   /**
    * Optional. List of domains to be excluded from the search results. The default limit is 2000

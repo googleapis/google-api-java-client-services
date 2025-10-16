@@ -101,6 +101,13 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   private java.lang.String name;
 
   /**
+   * The pre-tuned model for continuous tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PreTunedModel preTunedModel;
+
+  /**
    * The service account that the tuningJob workload runs as. If not specified, the Vertex AI Secure
    * Fine-Tuned Service Agent in the project will be used. See
    * https://cloud.google.com/iam/docs/service-agents#vertex-ai-secure-fine-tuning-service-agent
@@ -141,7 +148,9 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
 
   /**
    * Optional. The display name of the TunedModel. The name can be up to 128 characters long and can
-   * consist of any UTF-8 characters.
+   * consist of any UTF-8 characters. For continuous tuning, tuned_model_display_name will by
+   * default use the same display name as the pre-tuned model. If a new display name is provided,
+   * the tuning job will create a new model instead of a new version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -331,6 +340,23 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   }
 
   /**
+   * The pre-tuned model for continuous tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PreTunedModel getPreTunedModel() {
+    return preTunedModel;
+  }
+
+  /**
+   * The pre-tuned model for continuous tuning.
+   * @param preTunedModel preTunedModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1TuningJob setPreTunedModel(GoogleCloudAiplatformV1PreTunedModel preTunedModel) {
+    this.preTunedModel = preTunedModel;
+    return this;
+  }
+
+  /**
    * The service account that the tuningJob workload runs as. If not specified, the Vertex AI Secure
    * Fine-Tuned Service Agent in the project will be used. See
    * https://cloud.google.com/iam/docs/service-agents#vertex-ai-secure-fine-tuning-service-agent
@@ -425,7 +451,9 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
 
   /**
    * Optional. The display name of the TunedModel. The name can be up to 128 characters long and can
-   * consist of any UTF-8 characters.
+   * consist of any UTF-8 characters. For continuous tuning, tuned_model_display_name will by
+   * default use the same display name as the pre-tuned model. If a new display name is provided,
+   * the tuning job will create a new model instead of a new version.
    * @return value or {@code null} for none
    */
   public java.lang.String getTunedModelDisplayName() {
@@ -434,7 +462,9 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
 
   /**
    * Optional. The display name of the TunedModel. The name can be up to 128 characters long and can
-   * consist of any UTF-8 characters.
+   * consist of any UTF-8 characters. For continuous tuning, tuned_model_display_name will by
+   * default use the same display name as the pre-tuned model. If a new display name is provided,
+   * the tuning job will create a new model instead of a new version.
    * @param tunedModelDisplayName tunedModelDisplayName or {@code null} for none
    */
   public GoogleCloudAiplatformV1TuningJob setTunedModelDisplayName(java.lang.String tunedModelDisplayName) {

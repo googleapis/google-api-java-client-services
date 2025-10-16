@@ -53,6 +53,13 @@ public final class GoogleCloudDiscoveryengineV1betaSession extends com.google.ap
   private java.lang.Boolean isPinned;
 
   /**
+   * Optional. The labels for the session. Can be set as filter in ListSessionsRequest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> labels;
+
+  /**
    * Immutable. Fully qualified name
    * `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
    * The value may be {@code null}.
@@ -140,6 +147,23 @@ public final class GoogleCloudDiscoveryengineV1betaSession extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1betaSession setIsPinned(java.lang.Boolean isPinned) {
     this.isPinned = isPinned;
+    return this;
+  }
+
+  /**
+   * Optional. The labels for the session. Can be set as filter in ListSessionsRequest.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels for the session. Can be set as filter in ListSessionsRequest.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSession setLabels(java.util.List<java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

@@ -30,15 +30,15 @@ package com.google.api.services.dataproc.model;
 public final class UsageMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Accelerator type being used, if any
+   * Optional. DEPRECATED Accelerator type being used, if any
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acceleratorType;
 
   /**
-   * Optional. Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless pricing
-   * (https://cloud.google.com/dataproc-serverless/pricing)).
+   * Optional. DEPRECATED Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -68,7 +68,7 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. Accelerator type being used, if any
+   * Optional. DEPRECATED Accelerator type being used, if any
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -76,7 +76,7 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Accelerator type being used, if any
+   * Optional. DEPRECATED Accelerator type being used, if any
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public UsageMetrics setAcceleratorType(java.lang.String acceleratorType) {
@@ -85,8 +85,8 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless pricing
-   * (https://cloud.google.com/dataproc-serverless/pricing)).
+   * Optional. DEPRECATED Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
    * @return value or {@code null} for none
    */
   public java.lang.Long getMilliAcceleratorSeconds() {
@@ -94,8 +94,8 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless pricing
-   * (https://cloud.google.com/dataproc-serverless/pricing)).
+   * Optional. DEPRECATED Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
    * @param milliAcceleratorSeconds milliAcceleratorSeconds or {@code null} for none
    */
   public UsageMetrics setMilliAcceleratorSeconds(java.lang.Long milliAcceleratorSeconds) {

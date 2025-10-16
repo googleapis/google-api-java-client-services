@@ -97,7 +97,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. Resource manager tags (https://cloud.google.com/resource-manager/docs/tags/tags-
    * creating-and-managing) to add to all instances (see Use secure tags in Dataproc
-   * (https://cloud.google.com/dataproc/docs/guides/attach-secure-tags)).
+   * (https://cloud.google.com/dataproc/docs/guides/use-secure-tags)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +321,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. Resource manager tags (https://cloud.google.com/resource-manager/docs/tags/tags-
    * creating-and-managing) to add to all instances (see Use secure tags in Dataproc
-   * (https://cloud.google.com/dataproc/docs/guides/attach-secure-tags)).
+   * (https://cloud.google.com/dataproc/docs/guides/use-secure-tags)).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getResourceManagerTags() {
@@ -331,7 +331,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. Resource manager tags (https://cloud.google.com/resource-manager/docs/tags/tags-
    * creating-and-managing) to add to all instances (see Use secure tags in Dataproc
-   * (https://cloud.google.com/dataproc/docs/guides/attach-secure-tags)).
+   * (https://cloud.google.com/dataproc/docs/guides/use-secure-tags)).
    * @param resourceManagerTags resourceManagerTags or {@code null} for none
    */
   public GceClusterConfig setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {

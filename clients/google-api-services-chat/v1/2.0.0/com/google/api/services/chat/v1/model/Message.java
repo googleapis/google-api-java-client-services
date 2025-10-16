@@ -204,7 +204,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * the format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
    * string is the URL and the second is the rendered text—for example, ``. * Custom emoji using the
    * format `:{emoji_name}:`—for example, `:smile:`. This doesn't apply to Unicode emoji, such as
-   * `U+1F600` for a grinning face emoji. For more information, see [View text formatting sent in a
+   * `U+1F600` for a grinning face emoji. * Bullet list items using asterisks (`*`)—for example, `*
+   * item`. For more information, see [View text formatting sent in a
    * message](https://developers.google.com/workspace/chat/format-
    * messages#view_text_formatting_sent_in_a_message)
    * The value may be {@code null}.
@@ -625,7 +626,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * the format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
    * string is the URL and the second is the rendered text—for example, ``. * Custom emoji using the
    * format `:{emoji_name}:`—for example, `:smile:`. This doesn't apply to Unicode emoji, such as
-   * `U+1F600` for a grinning face emoji. For more information, see [View text formatting sent in a
+   * `U+1F600` for a grinning face emoji. * Bullet list items using asterisks (`*`)—for example, `*
+   * item`. For more information, see [View text formatting sent in a
    * message](https://developers.google.com/workspace/chat/format-
    * messages#view_text_formatting_sent_in_a_message)
    * @return value or {@code null} for none
@@ -643,7 +645,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * the format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
    * string is the URL and the second is the rendered text—for example, ``. * Custom emoji using the
    * format `:{emoji_name}:`—for example, `:smile:`. This doesn't apply to Unicode emoji, such as
-   * `U+1F600` for a grinning face emoji. For more information, see [View text formatting sent in a
+   * `U+1F600` for a grinning face emoji. * Bullet list items using asterisks (`*`)—for example, `*
+   * item`. For more information, see [View text formatting sent in a
    * message](https://developers.google.com/workspace/chat/format-
    * messages#view_text_formatting_sent_in_a_message)
    * @param formattedText formattedText or {@code null} for none

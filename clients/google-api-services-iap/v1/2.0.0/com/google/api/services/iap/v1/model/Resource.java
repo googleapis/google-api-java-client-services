@@ -62,12 +62,13 @@ public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
    * The locations of the resource. This field is used to determine whether the request is compliant
-   * with Trust Boundaries. Usage: - If unset or empty, the location of authorization is used as the
-   * target location. - For global resources: use a single value of "global". - For regional/multi-
-   * regional resources: use name of the GCP region(s) where the resource exists (e.g., ["us-east1",
-   * "us-west1"]). For multi-regional resources specify the name of each GCP region in the
-   * resource's multi-region. NOTE: Only GCP cloud region names are supported - go/cloud-region-
-   * names.
+   * with Trust Boundaries. Usage: - Must not be empty for services in-scope for Trust Boundaries.
+   * Once Trust Boundaries is GA, empty values will cause the request to be rejected if customers
+   * enforce Trust Boundaries on the parent CRM nodes. - For global resources: use a single value of
+   * "global". - For regional/multi-regional resources: use name of the GCP region(s) where the
+   * resource exists (e.g., ["us-east1", "us-west1"]). For multi-regional resources specify the name
+   * of each GCP region in the resource's multi-region. NOTE: Only GCP cloud region names are
+   * supported - go/cloud-region-names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,12 +197,13 @@ public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
    * The locations of the resource. This field is used to determine whether the request is compliant
-   * with Trust Boundaries. Usage: - If unset or empty, the location of authorization is used as the
-   * target location. - For global resources: use a single value of "global". - For regional/multi-
-   * regional resources: use name of the GCP region(s) where the resource exists (e.g., ["us-east1",
-   * "us-west1"]). For multi-regional resources specify the name of each GCP region in the
-   * resource's multi-region. NOTE: Only GCP cloud region names are supported - go/cloud-region-
-   * names.
+   * with Trust Boundaries. Usage: - Must not be empty for services in-scope for Trust Boundaries.
+   * Once Trust Boundaries is GA, empty values will cause the request to be rejected if customers
+   * enforce Trust Boundaries on the parent CRM nodes. - For global resources: use a single value of
+   * "global". - For regional/multi-regional resources: use name of the GCP region(s) where the
+   * resource exists (e.g., ["us-east1", "us-west1"]). For multi-regional resources specify the name
+   * of each GCP region in the resource's multi-region. NOTE: Only GCP cloud region names are
+   * supported - go/cloud-region-names.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -210,12 +212,13 @@ public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
    * The locations of the resource. This field is used to determine whether the request is compliant
-   * with Trust Boundaries. Usage: - If unset or empty, the location of authorization is used as the
-   * target location. - For global resources: use a single value of "global". - For regional/multi-
-   * regional resources: use name of the GCP region(s) where the resource exists (e.g., ["us-east1",
-   * "us-west1"]). For multi-regional resources specify the name of each GCP region in the
-   * resource's multi-region. NOTE: Only GCP cloud region names are supported - go/cloud-region-
-   * names.
+   * with Trust Boundaries. Usage: - Must not be empty for services in-scope for Trust Boundaries.
+   * Once Trust Boundaries is GA, empty values will cause the request to be rejected if customers
+   * enforce Trust Boundaries on the parent CRM nodes. - For global resources: use a single value of
+   * "global". - For regional/multi-regional resources: use name of the GCP region(s) where the
+   * resource exists (e.g., ["us-east1", "us-west1"]). For multi-regional resources specify the name
+   * of each GCP region in the resource's multi-region. NOTE: Only GCP cloud region names are
+   * supported - go/cloud-region-names.
    * @param locations locations or {@code null} for none
    */
   public Resource setLocations(java.util.List<java.lang.String> locations) {

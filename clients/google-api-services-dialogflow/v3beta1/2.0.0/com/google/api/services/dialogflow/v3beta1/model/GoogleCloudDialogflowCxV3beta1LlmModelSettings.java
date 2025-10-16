@@ -37,13 +37,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettings extends com.go
   private java.lang.String model;
 
   /**
-   * Generative model parameters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters parameters;
-
-  /**
    * The custom prompt to use.
    * The value may be {@code null}.
    */
@@ -64,23 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettings extends com.go
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettings setModel(java.lang.String model) {
     this.model = model;
-    return this;
-  }
-
-  /**
-   * Generative model parameters.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters getParameters() {
-    return parameters;
-  }
-
-  /**
-   * Generative model parameters.
-   * @param parameters parameters or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1LlmModelSettings setParameters(GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters parameters) {
-    this.parameters = parameters;
     return this;
   }
 

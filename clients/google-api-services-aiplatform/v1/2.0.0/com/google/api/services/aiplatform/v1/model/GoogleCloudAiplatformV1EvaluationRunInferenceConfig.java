@@ -37,7 +37,7 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   private GoogleCloudAiplatformV1GenerationConfig generationConfig;
 
   /**
-   * Required. The fully qualified name of the publisher model or endpoint to use. Publisher model
+   * Optional. The fully qualified name of the publisher model or endpoint to use. Publisher model
    * format: `projects/{project}/locations/{location}/publishers/models` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * The value may be {@code null}.
@@ -63,7 +63,7 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   }
 
   /**
-   * Required. The fully qualified name of the publisher model or endpoint to use. Publisher model
+   * Optional. The fully qualified name of the publisher model or endpoint to use. Publisher model
    * format: `projects/{project}/locations/{location}/publishers/models` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @return value or {@code null} for none
@@ -73,7 +73,7 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   }
 
   /**
-   * Required. The fully qualified name of the publisher model or endpoint to use. Publisher model
+   * Optional. The fully qualified name of the publisher model or endpoint to use. Publisher model
    * format: `projects/{project}/locations/{location}/publishers/models` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @param model model or {@code null} for none

@@ -48,8 +48,10 @@ public final class GoogleCloudAiplatformV1TunedModel extends com.google.api.clie
   /**
    * Output only. The resource name of the TunedModel. Format:
    * `projects/{project}/locations/{location}/models/{model}@{version_id}` When tuning from a base
-   * model, the version_id will be 1. For continuous tuning, the version id will be incremented by 1
-   * from the last version id in the parent model. E.g.,
+   * model, the version ID will be 1. For continuous tuning, if the provided
+   * tuned_model_display_name is set and different from parent model's display name, the tuned model
+   * will have a new parent model with version 1. Otherwise the version id will be incremented by 1
+   * from the last version ID in the parent model. E.g.,
    * `projects/{project}/locations/{location}/models/{model}@{last_version_id + 1}`
    * The value may be {@code null}.
    */
@@ -97,8 +99,10 @@ public final class GoogleCloudAiplatformV1TunedModel extends com.google.api.clie
   /**
    * Output only. The resource name of the TunedModel. Format:
    * `projects/{project}/locations/{location}/models/{model}@{version_id}` When tuning from a base
-   * model, the version_id will be 1. For continuous tuning, the version id will be incremented by 1
-   * from the last version id in the parent model. E.g.,
+   * model, the version ID will be 1. For continuous tuning, if the provided
+   * tuned_model_display_name is set and different from parent model's display name, the tuned model
+   * will have a new parent model with version 1. Otherwise the version id will be incremented by 1
+   * from the last version ID in the parent model. E.g.,
    * `projects/{project}/locations/{location}/models/{model}@{last_version_id + 1}`
    * @return value or {@code null} for none
    */
@@ -109,8 +113,10 @@ public final class GoogleCloudAiplatformV1TunedModel extends com.google.api.clie
   /**
    * Output only. The resource name of the TunedModel. Format:
    * `projects/{project}/locations/{location}/models/{model}@{version_id}` When tuning from a base
-   * model, the version_id will be 1. For continuous tuning, the version id will be incremented by 1
-   * from the last version id in the parent model. E.g.,
+   * model, the version ID will be 1. For continuous tuning, if the provided
+   * tuned_model_display_name is set and different from parent model's display name, the tuned model
+   * will have a new parent model with version 1. Otherwise the version id will be incremented by 1
+   * from the last version ID in the parent model. E.g.,
    * `projects/{project}/locations/{location}/models/{model}@{last_version_id + 1}`
    * @param model model or {@code null} for none
    */

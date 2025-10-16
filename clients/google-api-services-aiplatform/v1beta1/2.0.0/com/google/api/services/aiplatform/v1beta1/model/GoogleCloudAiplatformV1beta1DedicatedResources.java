@@ -63,6 +63,17 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   private GoogleCloudAiplatformV1beta1FlexStart flexStart;
 
   /**
+   * Immutable. Number of initial replicas being deployed on when scaling the workload up from zero
+   * or when creating the workload in case min_replica_count = 0. When min_replica_count > 0
+   * (meaning that the scale-to-zero feature is not enabled), initial_replica_count should not be
+   * set. When min_replica_count = 0 (meaning that the scale-to-zero feature is enabled),
+   * initial_replica_count should be larger than zero, but no greater than max_replica_count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer initialReplicaCount;
+
+  /**
    * Required. Immutable. The specification of a single machine being used.
    * The value may be {@code null}.
    */
@@ -104,6 +115,13 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.Integer requiredReplicaCount;
+
+  /**
+   * Optional. Specification for scale-to-zero feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DedicatedResourcesScaleToZeroSpec scaleToZeroSpec;
 
   /**
    * Optional. If true, schedule the deployment workload on [spot
@@ -168,6 +186,31 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
    */
   public GoogleCloudAiplatformV1beta1DedicatedResources setFlexStart(GoogleCloudAiplatformV1beta1FlexStart flexStart) {
     this.flexStart = flexStart;
+    return this;
+  }
+
+  /**
+   * Immutable. Number of initial replicas being deployed on when scaling the workload up from zero
+   * or when creating the workload in case min_replica_count = 0. When min_replica_count > 0
+   * (meaning that the scale-to-zero feature is not enabled), initial_replica_count should not be
+   * set. When min_replica_count = 0 (meaning that the scale-to-zero feature is enabled),
+   * initial_replica_count should be larger than zero, but no greater than max_replica_count.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInitialReplicaCount() {
+    return initialReplicaCount;
+  }
+
+  /**
+   * Immutable. Number of initial replicas being deployed on when scaling the workload up from zero
+   * or when creating the workload in case min_replica_count = 0. When min_replica_count > 0
+   * (meaning that the scale-to-zero feature is not enabled), initial_replica_count should not be
+   * set. When min_replica_count = 0 (meaning that the scale-to-zero feature is enabled),
+   * initial_replica_count should be larger than zero, but no greater than max_replica_count.
+   * @param initialReplicaCount initialReplicaCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DedicatedResources setInitialReplicaCount(java.lang.Integer initialReplicaCount) {
+    this.initialReplicaCount = initialReplicaCount;
     return this;
   }
 
@@ -266,6 +309,23 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
    */
   public GoogleCloudAiplatformV1beta1DedicatedResources setRequiredReplicaCount(java.lang.Integer requiredReplicaCount) {
     this.requiredReplicaCount = requiredReplicaCount;
+    return this;
+  }
+
+  /**
+   * Optional. Specification for scale-to-zero feature.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DedicatedResourcesScaleToZeroSpec getScaleToZeroSpec() {
+    return scaleToZeroSpec;
+  }
+
+  /**
+   * Optional. Specification for scale-to-zero feature.
+   * @param scaleToZeroSpec scaleToZeroSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DedicatedResources setScaleToZeroSpec(GoogleCloudAiplatformV1beta1DedicatedResourcesScaleToZeroSpec scaleToZeroSpec) {
+    this.scaleToZeroSpec = scaleToZeroSpec;
     return this;
   }
 

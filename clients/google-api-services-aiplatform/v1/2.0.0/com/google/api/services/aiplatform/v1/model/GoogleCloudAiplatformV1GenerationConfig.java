@@ -58,6 +58,13 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   private java.lang.Float frequencyPenalty;
 
   /**
+   * Optional. Config for image generation features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ImageConfig imageConfig;
+
+  /**
    * Optional. Logit probabilities.
    * The value may be {@code null}.
    */
@@ -259,6 +266,23 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1GenerationConfig setFrequencyPenalty(java.lang.Float frequencyPenalty) {
     this.frequencyPenalty = frequencyPenalty;
+    return this;
+  }
+
+  /**
+   * Optional. Config for image generation features.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImageConfig getImageConfig() {
+    return imageConfig;
+  }
+
+  /**
+   * Optional. Config for image generation features.
+   * @param imageConfig imageConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfig setImageConfig(GoogleCloudAiplatformV1ImageConfig imageConfig) {
+    this.imageConfig = imageConfig;
     return this;
   }
 

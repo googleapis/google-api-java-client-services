@@ -39,6 +39,13 @@ public final class GoogleCloudAiplatformV1FeatureView extends com.google.api.cli
   private GoogleCloudAiplatformV1FeatureViewBigQuerySource bigQuerySource;
 
   /**
+   * Output only. Metadata containing information about the Cloud Bigtable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1FeatureViewBigtableMetadata bigtableMetadata;
+
+  /**
    * Output only. Timestamp when this FeatureView was created.
    * The value may be {@code null}.
    */
@@ -168,6 +175,23 @@ public final class GoogleCloudAiplatformV1FeatureView extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1FeatureView setBigQuerySource(GoogleCloudAiplatformV1FeatureViewBigQuerySource bigQuerySource) {
     this.bigQuerySource = bigQuerySource;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata containing information about the Cloud Bigtable.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewBigtableMetadata getBigtableMetadata() {
+    return bigtableMetadata;
+  }
+
+  /**
+   * Output only. Metadata containing information about the Cloud Bigtable.
+   * @param bigtableMetadata bigtableMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureView setBigtableMetadata(GoogleCloudAiplatformV1FeatureViewBigtableMetadata bigtableMetadata) {
+    this.bigtableMetadata = bigtableMetadata;
     return this;
   }
 

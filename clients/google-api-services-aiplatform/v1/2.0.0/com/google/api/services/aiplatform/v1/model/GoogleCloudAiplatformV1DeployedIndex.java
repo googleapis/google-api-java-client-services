@@ -84,8 +84,8 @@ public final class GoogleCloudAiplatformV1DeployedIndex extends com.google.api.c
   private java.lang.String deploymentGroup;
 
   /**
-   * Optional. The deployment tier that the index is deployed to. DEPLOYMENT_TIER_UNSPECIFIED
-   * defaults to PERFORMANCE.
+   * Optional. The deployment tier that the index is deployed to. DEPLOYMENT_TIER_UNSPECIFIED will
+   * use a system-chosen default tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,8 +305,8 @@ public final class GoogleCloudAiplatformV1DeployedIndex extends com.google.api.c
   }
 
   /**
-   * Optional. The deployment tier that the index is deployed to. DEPLOYMENT_TIER_UNSPECIFIED
-   * defaults to PERFORMANCE.
+   * Optional. The deployment tier that the index is deployed to. DEPLOYMENT_TIER_UNSPECIFIED will
+   * use a system-chosen default tier.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentTier() {
@@ -314,8 +314,8 @@ public final class GoogleCloudAiplatformV1DeployedIndex extends com.google.api.c
   }
 
   /**
-   * Optional. The deployment tier that the index is deployed to. DEPLOYMENT_TIER_UNSPECIFIED
-   * defaults to PERFORMANCE.
+   * Optional. The deployment tier that the index is deployed to. DEPLOYMENT_TIER_UNSPECIFIED will
+   * use a system-chosen default tier.
    * @param deploymentTier deploymentTier or {@code null} for none
    */
   public GoogleCloudAiplatformV1DeployedIndex setDeploymentTier(java.lang.String deploymentTier) {

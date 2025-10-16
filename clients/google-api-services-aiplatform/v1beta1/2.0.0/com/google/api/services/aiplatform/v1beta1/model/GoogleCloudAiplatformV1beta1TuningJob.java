@@ -113,6 +113,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private java.lang.String experiment;
 
   /**
+   * Tuning Spec for Full Fine Tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FullFineTuningSpec fullFineTuningSpec;
+
+  /**
    * Optional. The labels with user-defined metadata to organize TuningJob and generated resources
    * such as Model and Endpoint. Label keys and values can be no longer than 64 characters (Unicode
    * codepoints), can only contain lowercase letters, numeric characters, underscores and dashes.
@@ -223,7 +230,9 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
 
   /**
    * Optional. The display name of the TunedModel. The name can be up to 128 characters long and can
-   * consist of any UTF-8 characters.
+   * consist of any UTF-8 characters. For continuous tuning, tuned_model_display_name will by
+   * default use the same display name as the pre-tuned model. If a new display name is provided,
+   * the tuning job will create a new model instead of a new version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -438,6 +447,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setExperiment(java.lang.String experiment) {
     this.experiment = experiment;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Full Fine Tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FullFineTuningSpec getFullFineTuningSpec() {
+    return fullFineTuningSpec;
+  }
+
+  /**
+   * Tuning Spec for Full Fine Tuning.
+   * @param fullFineTuningSpec fullFineTuningSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setFullFineTuningSpec(GoogleCloudAiplatformV1beta1FullFineTuningSpec fullFineTuningSpec) {
+    this.fullFineTuningSpec = fullFineTuningSpec;
     return this;
   }
 
@@ -703,7 +729,9 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
 
   /**
    * Optional. The display name of the TunedModel. The name can be up to 128 characters long and can
-   * consist of any UTF-8 characters.
+   * consist of any UTF-8 characters. For continuous tuning, tuned_model_display_name will by
+   * default use the same display name as the pre-tuned model. If a new display name is provided,
+   * the tuning job will create a new model instead of a new version.
    * @return value or {@code null} for none
    */
   public java.lang.String getTunedModelDisplayName() {
@@ -712,7 +740,9 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
 
   /**
    * Optional. The display name of the TunedModel. The name can be up to 128 characters long and can
-   * consist of any UTF-8 characters.
+   * consist of any UTF-8 characters. For continuous tuning, tuned_model_display_name will by
+   * default use the same display name as the pre-tuned model. If a new display name is provided,
+   * the tuning job will create a new model instead of a new version.
    * @param tunedModelDisplayName tunedModelDisplayName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1TuningJob setTunedModelDisplayName(java.lang.String tunedModelDisplayName) {

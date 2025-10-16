@@ -32,6 +32,13 @@ package com.google.api.services.dataproc.model;
 public final class YarnApplication extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The cumulative memory usage of the application for a job, measured in mb-seconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long memoryMbSeconds;
+
+  /**
    * Required. The application name.
    * The value may be {@code null}.
    */
@@ -60,6 +67,31 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingUrl;
+
+  /**
+   * Optional. The cumulative CPU time consumed by the application for a job, measured in vcore-
+   * seconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long vcoreSeconds;
+
+  /**
+   * Optional. The cumulative memory usage of the application for a job, measured in mb-seconds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMemoryMbSeconds() {
+    return memoryMbSeconds;
+  }
+
+  /**
+   * Optional. The cumulative memory usage of the application for a job, measured in mb-seconds.
+   * @param memoryMbSeconds memoryMbSeconds or {@code null} for none
+   */
+  public YarnApplication setMemoryMbSeconds(java.lang.Long memoryMbSeconds) {
+    this.memoryMbSeconds = memoryMbSeconds;
+    return this;
+  }
 
   /**
    * Required. The application name.
@@ -130,6 +162,25 @@ public final class YarnApplication extends com.google.api.client.json.GenericJso
    */
   public YarnApplication setTrackingUrl(java.lang.String trackingUrl) {
     this.trackingUrl = trackingUrl;
+    return this;
+  }
+
+  /**
+   * Optional. The cumulative CPU time consumed by the application for a job, measured in vcore-
+   * seconds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVcoreSeconds() {
+    return vcoreSeconds;
+  }
+
+  /**
+   * Optional. The cumulative CPU time consumed by the application for a job, measured in vcore-
+   * seconds.
+   * @param vcoreSeconds vcoreSeconds or {@code null} for none
+   */
+  public YarnApplication setVcoreSeconds(java.lang.Long vcoreSeconds) {
+    this.vcoreSeconds = vcoreSeconds;
     return this;
   }
 

@@ -45,6 +45,13 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   private String createTime;
 
   /**
+   * Optional. Immutable. Stores data classification of the aspect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataClassification;
+
+  /**
    * Optional. Description of the AspectType.
    * The value may be {@code null}.
    */
@@ -142,6 +149,23 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
    */
   public GoogleCloudDataplexV1AspectType setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Stores data classification of the aspect.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataClassification() {
+    return dataClassification;
+  }
+
+  /**
+   * Optional. Immutable. Stores data classification of the aspect.
+   * @param dataClassification dataClassification or {@code null} for none
+   */
+  public GoogleCloudDataplexV1AspectType setDataClassification(java.lang.String dataClassification) {
+    this.dataClassification = dataClassification;
     return this;
   }
 

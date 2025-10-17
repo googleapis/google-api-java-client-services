@@ -191,6 +191,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private MaintenanceUpdatePolicy maintenanceUpdatePolicy;
 
   /**
+   * Input only. Policy to use to automatically select the maintenance version to which to update
+   * the cluster's instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceVersionSelectionPolicy;
+
+  /**
    * Output only. Cluster created via DMS migration.
    * The value may be {@code null}.
    */
@@ -700,6 +708,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setMaintenanceUpdatePolicy(MaintenanceUpdatePolicy maintenanceUpdatePolicy) {
     this.maintenanceUpdatePolicy = maintenanceUpdatePolicy;
+    return this;
+  }
+
+  /**
+   * Input only. Policy to use to automatically select the maintenance version to which to update
+   * the cluster's instances.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceVersionSelectionPolicy() {
+    return maintenanceVersionSelectionPolicy;
+  }
+
+  /**
+   * Input only. Policy to use to automatically select the maintenance version to which to update
+   * the cluster's instances.
+   * @param maintenanceVersionSelectionPolicy maintenanceVersionSelectionPolicy or {@code null} for none
+   */
+  public Cluster setMaintenanceVersionSelectionPolicy(java.lang.String maintenanceVersionSelectionPolicy) {
+    this.maintenanceVersionSelectionPolicy = maintenanceVersionSelectionPolicy;
     return this;
   }
 

@@ -2593,7 +2593,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * any optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. The parent resource where these test cases will be deleted. Format:
+         * @param parent Required. The parent resource of the test cases being deleted. Format:
          *        `projects/{project_number}/apps/{app_id}`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest}
          * @return the request
@@ -2622,7 +2622,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource where these test cases will be deleted. Format:
+           * @param parent Required. The parent resource of the test cases being deleted. Format:
          *        `projects/{project_number}/apps/{app_id}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest}
            * @since 1.13
@@ -2693,13 +2693,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           }
 
           /**
-           * Required. The parent resource where these test cases will be deleted. Format:
+           * Required. The parent resource of the test cases being deleted. Format:
            * `projects/{project_number}/apps/{app_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource where these test cases will be deleted. Format:
+          /** Required. The parent resource of the test cases being deleted. Format:
          `projects/{project_number}/apps/{app_id}`
            */
           public java.lang.String getParent() {
@@ -2707,7 +2707,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           }
 
           /**
-           * Required. The parent resource where these test cases will be deleted. Format:
+           * Required. The parent resource of the test cases being deleted. Format:
            * `projects/{project_number}/apps/{app_id}`
            */
           public BatchDelete setParent(java.lang.String parent) {
@@ -2723,6 +2723,147 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           @Override
           public BatchDelete set(String parameterName, Object value) {
             return (BatchDelete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates multiple test cases.
+         *
+         * Create a request for the method "testCases.batchUpdate".
+         *
+         * This request holds the parameters needed by the firebaseappdistribution server.  After setting
+         * any optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The parent resource of the test cases being updated. Format:
+         *        `projects/{project_number}/apps/{app_id}`
+         * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchUpdateTestCasesRequest}
+         * @return the request
+         */
+        public BatchUpdate batchUpdate(java.lang.String parent, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchUpdateTestCasesRequest content) throws java.io.IOException {
+          BatchUpdate result = new BatchUpdate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchUpdate extends FirebaseAppDistributionRequest<com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchUpdateTestCasesResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/testCases:batchUpdate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+          /**
+           * Updates multiple test cases.
+           *
+           * Create a request for the method "testCases.batchUpdate".
+           *
+           * This request holds the parameters needed by the the firebaseappdistribution server.  After
+           * setting any optional parameters, call the {@link BatchUpdate#execute()} method to invoke the
+           * remote operation. <p> {@link
+           * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the test cases being updated. Format:
+         *        `projects/{project_number}/apps/{app_id}`
+           * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchUpdateTestCasesRequest}
+           * @since 1.13
+           */
+          protected BatchUpdate(java.lang.String parent, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchUpdateTestCasesRequest content) {
+            super(FirebaseAppDistribution.this, "POST", REST_PATH, content, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchUpdateTestCasesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchUpdate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchUpdate setAccessToken(java.lang.String accessToken) {
+            return (BatchUpdate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchUpdate setAlt(java.lang.String alt) {
+            return (BatchUpdate) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchUpdate setCallback(java.lang.String callback) {
+            return (BatchUpdate) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchUpdate setFields(java.lang.String fields) {
+            return (BatchUpdate) super.setFields(fields);
+          }
+
+          @Override
+          public BatchUpdate setKey(java.lang.String key) {
+            return (BatchUpdate) super.setKey(key);
+          }
+
+          @Override
+          public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+            return (BatchUpdate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+            return (BatchUpdate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchUpdate setUploadType(java.lang.String uploadType) {
+            return (BatchUpdate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the test cases being updated. Format:
+           * `projects/{project_number}/apps/{app_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the test cases being updated. Format:
+         `projects/{project_number}/apps/{app_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the test cases being updated. Format:
+           * `projects/{project_number}/apps/{app_id}`
+           */
+          public BatchUpdate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchUpdate set(String parameterName, Object value) {
+            return (BatchUpdate) super.set(parameterName, value);
           }
         }
         /**

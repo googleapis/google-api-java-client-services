@@ -173,6 +173,16 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private GoogleIamAdminV1WorkforcePoolProviderSaml saml;
 
   /**
+   * Optional. Agentspace only. Specifies whether the workforce identity pool provider uses SCIM-
+   * managed groups instead of the `google.groups` attribute mapping for authorization checks. The
+   * `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A request
+   * that enables both fields on the same workforce identity pool provider will produce an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scimUsage;
+
+  /**
    * Output only. The state of the provider.
    * The value may be {@code null}.
    */
@@ -496,6 +506,29 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    */
   public WorkforcePoolProvider setSaml(GoogleIamAdminV1WorkforcePoolProviderSaml saml) {
     this.saml = saml;
+    return this;
+  }
+
+  /**
+   * Optional. Agentspace only. Specifies whether the workforce identity pool provider uses SCIM-
+   * managed groups instead of the `google.groups` attribute mapping for authorization checks. The
+   * `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A request
+   * that enables both fields on the same workforce identity pool provider will produce an error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScimUsage() {
+    return scimUsage;
+  }
+
+  /**
+   * Optional. Agentspace only. Specifies whether the workforce identity pool provider uses SCIM-
+   * managed groups instead of the `google.groups` attribute mapping for authorization checks. The
+   * `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A request
+   * that enables both fields on the same workforce identity pool provider will produce an error.
+   * @param scimUsage scimUsage or {@code null} for none
+   */
+  public WorkforcePoolProvider setScimUsage(java.lang.String scimUsage) {
+    this.scimUsage = scimUsage;
     return this;
   }
 

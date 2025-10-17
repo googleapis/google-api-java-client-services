@@ -632,6 +632,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private SecretManagerConfig secretManagerConfig;
 
   /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecretSyncConfig secretSyncConfig;
+
+  /**
    * Enable/Disable Security Posture API features for the cluster.
    * The value may be {@code null}.
    */
@@ -2166,6 +2173,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setSecretManagerConfig(SecretManagerConfig secretManagerConfig) {
     this.secretManagerConfig = secretManagerConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   * @return value or {@code null} for none
+   */
+  public SecretSyncConfig getSecretSyncConfig() {
+    return secretSyncConfig;
+  }
+
+  /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   * @param secretSyncConfig secretSyncConfig or {@code null} for none
+   */
+  public Cluster setSecretSyncConfig(SecretSyncConfig secretSyncConfig) {
+    this.secretSyncConfig = secretSyncConfig;
     return this;
   }
 

@@ -65,6 +65,13 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   private java.lang.String gatewayIpAddress;
 
   /**
+   * Output only. The gateway IPv6 for this interface, if detected
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gatewayIpv6Address;
+
+  /**
    * Output only. Network connection guid.
    * The value may be {@code null}.
    */
@@ -72,11 +79,34 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   private java.lang.String guid;
 
   /**
+   * Output only. IPv6 addresses assigned to this network, if any. Each address is a string in
+   * standard IPv6 text representation (e.g., "2001:db8::1").
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ipv6Address;
+
+  /**
    * Output only. LAN IP address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lanIpAddress;
+
+  /**
+   * Output only. The maximum downstream bandwidth in Kilobits per second (Kbps), if reported by the
+   * network interface or connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long linkDownSpeedKbps;
+
+  /**
+   * Output only. Whether the network was detected as metered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean metered;
 
   /**
    * Output only. Receiving bit rate measured in Megabits per second.
@@ -204,6 +234,23 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   }
 
   /**
+   * Output only. The gateway IPv6 for this interface, if detected
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGatewayIpv6Address() {
+    return gatewayIpv6Address;
+  }
+
+  /**
+   * Output only. The gateway IPv6 for this interface, if detected
+   * @param gatewayIpv6Address gatewayIpv6Address or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setGatewayIpv6Address(java.lang.String gatewayIpv6Address) {
+    this.gatewayIpv6Address = gatewayIpv6Address;
+    return this;
+  }
+
+  /**
    * Output only. Network connection guid.
    * @return value or {@code null} for none
    */
@@ -221,6 +268,25 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
   }
 
   /**
+   * Output only. IPv6 addresses assigned to this network, if any. Each address is a string in
+   * standard IPv6 text representation (e.g., "2001:db8::1").
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIpv6Address() {
+    return ipv6Address;
+  }
+
+  /**
+   * Output only. IPv6 addresses assigned to this network, if any. Each address is a string in
+   * standard IPv6 text representation (e.g., "2001:db8::1").
+   * @param ipv6Address ipv6Address or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setIpv6Address(java.util.List<java.lang.String> ipv6Address) {
+    this.ipv6Address = ipv6Address;
+    return this;
+  }
+
+  /**
    * Output only. LAN IP address.
    * @return value or {@code null} for none
    */
@@ -234,6 +300,42 @@ public final class GoogleChromeManagementV1NetworkStatusReport extends com.googl
    */
   public GoogleChromeManagementV1NetworkStatusReport setLanIpAddress(java.lang.String lanIpAddress) {
     this.lanIpAddress = lanIpAddress;
+    return this;
+  }
+
+  /**
+   * Output only. The maximum downstream bandwidth in Kilobits per second (Kbps), if reported by the
+   * network interface or connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLinkDownSpeedKbps() {
+    return linkDownSpeedKbps;
+  }
+
+  /**
+   * Output only. The maximum downstream bandwidth in Kilobits per second (Kbps), if reported by the
+   * network interface or connection.
+   * @param linkDownSpeedKbps linkDownSpeedKbps or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setLinkDownSpeedKbps(java.lang.Long linkDownSpeedKbps) {
+    this.linkDownSpeedKbps = linkDownSpeedKbps;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the network was detected as metered.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMetered() {
+    return metered;
+  }
+
+  /**
+   * Output only. Whether the network was detected as metered.
+   * @param metered metered or {@code null} for none
+   */
+  public GoogleChromeManagementV1NetworkStatusReport setMetered(java.lang.Boolean metered) {
+    this.metered = metered;
     return this;
   }
 

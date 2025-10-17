@@ -75,6 +75,14 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
   private java.lang.String eventType;
 
   /**
+   * Output only. Payload for external display connected/disconnected event. Present only when
+   * `event_type` is `EXTERNAL_DISPLAY_CONNECTED` or `EXTERNAL_DISPLAY_DISCONNECTED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TelemetryExternalDisplayEvent externalDisplaysEvent;
+
+  /**
    * Output only. Payload for HTTPS latency change event. Present only when `event_type` is
    * `NETWORK_HTTPS_LATENCY_CHANGE`.
    * The value may be {@code null}.
@@ -245,6 +253,25 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
    */
   public GoogleChromeManagementV1TelemetryEvent setEventType(java.lang.String eventType) {
     this.eventType = eventType;
+    return this;
+  }
+
+  /**
+   * Output only. Payload for external display connected/disconnected event. Present only when
+   * `event_type` is `EXTERNAL_DISPLAY_CONNECTED` or `EXTERNAL_DISPLAY_DISCONNECTED`.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryExternalDisplayEvent getExternalDisplaysEvent() {
+    return externalDisplaysEvent;
+  }
+
+  /**
+   * Output only. Payload for external display connected/disconnected event. Present only when
+   * `event_type` is `EXTERNAL_DISPLAY_CONNECTED` or `EXTERNAL_DISPLAY_DISCONNECTED`.
+   * @param externalDisplaysEvent externalDisplaysEvent or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryEvent setExternalDisplaysEvent(GoogleChromeManagementV1TelemetryExternalDisplayEvent externalDisplaysEvent) {
+    this.externalDisplaysEvent = externalDisplaysEvent;
     return this;
   }
 

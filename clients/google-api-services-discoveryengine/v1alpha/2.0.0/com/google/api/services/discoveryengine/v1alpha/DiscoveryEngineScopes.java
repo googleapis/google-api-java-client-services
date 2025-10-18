@@ -29,6 +29,12 @@ public class DiscoveryEngineScopes {
   /** Search your organization's data in the Cloud Search index. */
   public static final String CLOUD_SEARCH_QUERY = "https://www.googleapis.com/auth/cloud_search.query";
 
+  /** View your Agentspace chat history, including uploaded files and generated reports and visualizations, and interact with the Agentspace assistant on your behalf.. */
+  public static final String DISCOVERYENGINE_ASSIST_READWRITE = "https://www.googleapis.com/auth/discoveryengine.assist.readwrite";
+
+  /** View, edit, create, and delete all your data associated with any Discovery Engine API product, such as Agentspace, Vertex AI Search, or NotebookLM Enterprise, including both end user data and administration or configuration data.. */
+  public static final String DISCOVERYENGINE_READWRITE = "https://www.googleapis.com/auth/discoveryengine.readwrite";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -38,6 +44,8 @@ public class DiscoveryEngineScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
     set.add(CLOUD_SEARCH_QUERY);
+    set.add(DISCOVERYENGINE_ASSIST_READWRITE);
+    set.add(DISCOVERYENGINE_READWRITE);
     return java.util.Collections.unmodifiableSet(set);
   }
 

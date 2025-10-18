@@ -43,6 +43,7 @@ public final class ResourceMaintenanceSchedule extends com.google.api.client.jso
    * example, for Cloud SQL resources, this can be used to capture if the maintenance window is in
    * Week1, Week2, Week5, etc. Non production resources are usually part of early phase. For more
    * details, refer to Cloud SQL resources - https://cloud.google.com/sql/docs/mysql/maintenance
+   * Deprecated. Use phase instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,6 +55,16 @@ public final class ResourceMaintenanceSchedule extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private TimeOfDay time;
+
+  /**
+   * Optional. Phase of the maintenance window. This is to capture order of maintenance. For
+   * example, for Cloud SQL resources, this can be used to capture if the maintenance window is in
+   * Week1, Week2, Week5, etc. Non production resources are usually part of early phase. For more
+   * details, refer to Cloud SQL resources - https://cloud.google.com/sql/docs/mysql/maintenance
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String week;
 
   /**
    * Optional. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
@@ -77,6 +88,7 @@ public final class ResourceMaintenanceSchedule extends com.google.api.client.jso
    * example, for Cloud SQL resources, this can be used to capture if the maintenance window is in
    * Week1, Week2, Week5, etc. Non production resources are usually part of early phase. For more
    * details, refer to Cloud SQL resources - https://cloud.google.com/sql/docs/mysql/maintenance
+   * Deprecated. Use phase instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhase() {
@@ -88,6 +100,7 @@ public final class ResourceMaintenanceSchedule extends com.google.api.client.jso
    * example, for Cloud SQL resources, this can be used to capture if the maintenance window is in
    * Week1, Week2, Week5, etc. Non production resources are usually part of early phase. For more
    * details, refer to Cloud SQL resources - https://cloud.google.com/sql/docs/mysql/maintenance
+   * Deprecated. Use phase instead.
    * @param phase phase or {@code null} for none
    */
   public ResourceMaintenanceSchedule setPhase(java.lang.String phase) {
@@ -109,6 +122,29 @@ public final class ResourceMaintenanceSchedule extends com.google.api.client.jso
    */
   public ResourceMaintenanceSchedule setTime(TimeOfDay time) {
     this.time = time;
+    return this;
+  }
+
+  /**
+   * Optional. Phase of the maintenance window. This is to capture order of maintenance. For
+   * example, for Cloud SQL resources, this can be used to capture if the maintenance window is in
+   * Week1, Week2, Week5, etc. Non production resources are usually part of early phase. For more
+   * details, refer to Cloud SQL resources - https://cloud.google.com/sql/docs/mysql/maintenance
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWeek() {
+    return week;
+  }
+
+  /**
+   * Optional. Phase of the maintenance window. This is to capture order of maintenance. For
+   * example, for Cloud SQL resources, this can be used to capture if the maintenance window is in
+   * Week1, Week2, Week5, etc. Non production resources are usually part of early phase. For more
+   * details, refer to Cloud SQL resources - https://cloud.google.com/sql/docs/mysql/maintenance
+   * @param week week or {@code null} for none
+   */
+  public ResourceMaintenanceSchedule setWeek(java.lang.String week) {
+    this.week = week;
     return this;
   }
 

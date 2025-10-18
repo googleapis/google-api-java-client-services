@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-chromewebstore</artifactId>
-  <version>v1.1-rev20251006-2.0.0</version>
-  <name>Chrome Web Store API v1.1-rev20251006-2.0.0</name>
+  <version>v1.1-rev20251015-2.0.0</version>
+  <name>Chrome Web Store API v1.1-rev20251015-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

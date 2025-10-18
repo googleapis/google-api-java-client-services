@@ -17,9 +17,7 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Dynamic profile ID is required for dynamic feed insert as the current GPA API only can create a
- * dynamic feed under profile context,even though the dynnamic feed itself don't need the dynamic
- * profile id. See
+ * Contains processing data for a video asset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
@@ -30,64 +28,64 @@ package com.google.api.services.dfareporting.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DynamicFeedsInsertRequest extends com.google.api.client.json.GenericJson {
+public final class VideoProcessingData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Dynamic feed to insert.
+   * For a FAILED processing state, the error reason discovered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DynamicFeed dynamicFeed;
+  private java.lang.String errorReason;
 
   /**
-   * Required. Dynamic profile ID of the inserted dynamic feed.
+   * Output only. The processing state of the studio creative asset.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long dynamicProfileId;
+  @com.google.api.client.util.Key
+  private java.lang.String processingState;
 
   /**
-   * Required. Dynamic feed to insert.
+   * For a FAILED processing state, the error reason discovered.
    * @return value or {@code null} for none
    */
-  public DynamicFeed getDynamicFeed() {
-    return dynamicFeed;
+  public java.lang.String getErrorReason() {
+    return errorReason;
   }
 
   /**
-   * Required. Dynamic feed to insert.
-   * @param dynamicFeed dynamicFeed or {@code null} for none
+   * For a FAILED processing state, the error reason discovered.
+   * @param errorReason errorReason or {@code null} for none
    */
-  public DynamicFeedsInsertRequest setDynamicFeed(DynamicFeed dynamicFeed) {
-    this.dynamicFeed = dynamicFeed;
+  public VideoProcessingData setErrorReason(java.lang.String errorReason) {
+    this.errorReason = errorReason;
     return this;
   }
 
   /**
-   * Required. Dynamic profile ID of the inserted dynamic feed.
+   * Output only. The processing state of the studio creative asset.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getDynamicProfileId() {
-    return dynamicProfileId;
+  public java.lang.String getProcessingState() {
+    return processingState;
   }
 
   /**
-   * Required. Dynamic profile ID of the inserted dynamic feed.
-   * @param dynamicProfileId dynamicProfileId or {@code null} for none
+   * Output only. The processing state of the studio creative asset.
+   * @param processingState processingState or {@code null} for none
    */
-  public DynamicFeedsInsertRequest setDynamicProfileId(java.lang.Long dynamicProfileId) {
-    this.dynamicProfileId = dynamicProfileId;
+  public VideoProcessingData setProcessingState(java.lang.String processingState) {
+    this.processingState = processingState;
     return this;
   }
 
   @Override
-  public DynamicFeedsInsertRequest set(String fieldName, Object value) {
-    return (DynamicFeedsInsertRequest) super.set(fieldName, value);
+  public VideoProcessingData set(String fieldName, Object value) {
+    return (VideoProcessingData) super.set(fieldName, value);
   }
 
   @Override
-  public DynamicFeedsInsertRequest clone() {
-    return (DynamicFeedsInsertRequest) super.clone();
+  public VideoProcessingData clone() {
+    return (VideoProcessingData) super.clone();
   }
 
 }

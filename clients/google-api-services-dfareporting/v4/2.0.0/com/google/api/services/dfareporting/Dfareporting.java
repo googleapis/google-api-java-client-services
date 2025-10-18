@@ -16590,6 +16590,224 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return (Insert) super.set(parameterName, value);
       }
     }
+    /**
+     * Retransforms a dynamic feed.
+     *
+     * Create a request for the method "dynamicFeeds.retransform".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Retransform#execute()} method to invoke the remote operation.
+     *
+     * @param dynamicFeedId Required. Dynamic feed ID.
+     * @return the request
+     */
+    public Retransform retransform(java.lang.Long dynamicFeedId) throws java.io.IOException {
+      Retransform result = new Retransform(dynamicFeedId);
+      initialize(result);
+      return result;
+    }
+
+    public class Retransform extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicFeed> {
+
+      private static final String REST_PATH = "studio/dynamicFeeds/{+dynamicFeedId}/retransform";
+
+      private final java.util.regex.Pattern DYNAMIC_FEED_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Retransforms a dynamic feed.
+       *
+       * Create a request for the method "dynamicFeeds.retransform".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Retransform#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Retransform#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param dynamicFeedId Required. Dynamic feed ID.
+       * @since 1.13
+       */
+      protected Retransform(java.lang.Long dynamicFeedId) {
+        super(Dfareporting.this, "POST", REST_PATH, null, com.google.api.services.dfareporting.model.DynamicFeed.class);
+        this.dynamicFeedId = com.google.api.client.util.Preconditions.checkNotNull(dynamicFeedId, "Required parameter dynamicFeedId must be specified.");
+      }
+
+      @Override
+      public Retransform set$Xgafv(java.lang.String $Xgafv) {
+        return (Retransform) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Retransform setAccessToken(java.lang.String accessToken) {
+        return (Retransform) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Retransform setAlt(java.lang.String alt) {
+        return (Retransform) super.setAlt(alt);
+      }
+
+      @Override
+      public Retransform setCallback(java.lang.String callback) {
+        return (Retransform) super.setCallback(callback);
+      }
+
+      @Override
+      public Retransform setFields(java.lang.String fields) {
+        return (Retransform) super.setFields(fields);
+      }
+
+      @Override
+      public Retransform setKey(java.lang.String key) {
+        return (Retransform) super.setKey(key);
+      }
+
+      @Override
+      public Retransform setOauthToken(java.lang.String oauthToken) {
+        return (Retransform) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Retransform setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Retransform) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Retransform setQuotaUser(java.lang.String quotaUser) {
+        return (Retransform) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Retransform setUploadType(java.lang.String uploadType) {
+        return (Retransform) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Retransform setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Retransform) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Dynamic feed ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long dynamicFeedId;
+
+      /** Required. Dynamic feed ID.
+       */
+      public java.lang.Long getDynamicFeedId() {
+        return dynamicFeedId;
+      }
+
+      /** Required. Dynamic feed ID. */
+      public Retransform setDynamicFeedId(java.lang.Long dynamicFeedId) {
+        this.dynamicFeedId = dynamicFeedId;
+        return this;
+      }
+
+      @Override
+      public Retransform set(String parameterName, Object value) {
+        return (Retransform) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates a new dynamic feed.
+     *
+     * Create a request for the method "dynamicFeeds.update".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.dfareporting.model.DynamicFeed}
+     * @return the request
+     */
+    public Update update(com.google.api.services.dfareporting.model.DynamicFeed content) throws java.io.IOException {
+      Update result = new Update(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicFeed> {
+
+      private static final String REST_PATH = "studio/dynamicFeeds";
+
+      /**
+       * Updates a new dynamic feed.
+       *
+       * Create a request for the method "dynamicFeeds.update".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.dfareporting.model.DynamicFeed}
+       * @since 1.13
+       */
+      protected Update(com.google.api.services.dfareporting.model.DynamicFeed content) {
+        super(Dfareporting.this, "PUT", REST_PATH, content, com.google.api.services.dfareporting.model.DynamicFeed.class);
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -16613,6 +16831,135 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
    */
   public class DynamicProfiles {
 
+    /**
+     * Generates code for a dynamic profile.
+     *
+     * Create a request for the method "dynamicProfiles.generateCode".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link GenerateCode#execute()} method to invoke the remote operation.
+     *
+     * @param dynamicProfileId Required. Dynamic profile ID.
+     * @return the request
+     */
+    public GenerateCode generateCode(java.lang.Long dynamicProfileId) throws java.io.IOException {
+      GenerateCode result = new GenerateCode(dynamicProfileId);
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateCode extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicProfileGenerateCodeResponse> {
+
+      private static final String REST_PATH = "studio/dynamicProfiles/{+dynamicProfileId}/generateCode";
+
+      private final java.util.regex.Pattern DYNAMIC_PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Generates code for a dynamic profile.
+       *
+       * Create a request for the method "dynamicProfiles.generateCode".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link GenerateCode#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GenerateCode#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param dynamicProfileId Required. Dynamic profile ID.
+       * @since 1.13
+       */
+      protected GenerateCode(java.lang.Long dynamicProfileId) {
+        super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.DynamicProfileGenerateCodeResponse.class);
+        this.dynamicProfileId = com.google.api.client.util.Preconditions.checkNotNull(dynamicProfileId, "Required parameter dynamicProfileId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GenerateCode set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateCode) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateCode setAccessToken(java.lang.String accessToken) {
+        return (GenerateCode) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateCode setAlt(java.lang.String alt) {
+        return (GenerateCode) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateCode setCallback(java.lang.String callback) {
+        return (GenerateCode) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateCode setFields(java.lang.String fields) {
+        return (GenerateCode) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateCode setKey(java.lang.String key) {
+        return (GenerateCode) super.setKey(key);
+      }
+
+      @Override
+      public GenerateCode setOauthToken(java.lang.String oauthToken) {
+        return (GenerateCode) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateCode setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateCode) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateCode setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateCode) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateCode setUploadType(java.lang.String uploadType) {
+        return (GenerateCode) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateCode setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateCode) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Dynamic profile ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long dynamicProfileId;
+
+      /** Required. Dynamic profile ID.
+       */
+      public java.lang.Long getDynamicProfileId() {
+        return dynamicProfileId;
+      }
+
+      /** Required. Dynamic profile ID. */
+      public GenerateCode setDynamicProfileId(java.lang.Long dynamicProfileId) {
+        this.dynamicProfileId = dynamicProfileId;
+        return this;
+      }
+
+      @Override
+      public GenerateCode set(String parameterName, Object value) {
+        return (GenerateCode) super.set(parameterName, value);
+      }
+    }
     /**
      * Gets a dynamic profile by ID.
      *
@@ -16838,6 +17185,125 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @Override
       public Insert set(String parameterName, Object value) {
         return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Publish for a dynamic profile.
+     *
+     * Create a request for the method "dynamicProfiles.publish".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Publish#execute()} method to invoke the remote operation.
+     *
+     * @param dynamicProfileId Required. Dynamic profile ID.
+     * @return the request
+     */
+    public Publish publish(java.lang.Long dynamicProfileId) throws java.io.IOException {
+      Publish result = new Publish(dynamicProfileId);
+      initialize(result);
+      return result;
+    }
+
+    public class Publish extends DfareportingRequest<Void> {
+
+      private static final String REST_PATH = "studio/dynamicProfiles/{+dynamicProfileId}/publish";
+
+      private final java.util.regex.Pattern DYNAMIC_PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Publish for a dynamic profile.
+       *
+       * Create a request for the method "dynamicProfiles.publish".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Publish#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Publish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param dynamicProfileId Required. Dynamic profile ID.
+       * @since 1.13
+       */
+      protected Publish(java.lang.Long dynamicProfileId) {
+        super(Dfareporting.this, "POST", REST_PATH, null, Void.class);
+        this.dynamicProfileId = com.google.api.client.util.Preconditions.checkNotNull(dynamicProfileId, "Required parameter dynamicProfileId must be specified.");
+      }
+
+      @Override
+      public Publish set$Xgafv(java.lang.String $Xgafv) {
+        return (Publish) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Publish setAccessToken(java.lang.String accessToken) {
+        return (Publish) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Publish setAlt(java.lang.String alt) {
+        return (Publish) super.setAlt(alt);
+      }
+
+      @Override
+      public Publish setCallback(java.lang.String callback) {
+        return (Publish) super.setCallback(callback);
+      }
+
+      @Override
+      public Publish setFields(java.lang.String fields) {
+        return (Publish) super.setFields(fields);
+      }
+
+      @Override
+      public Publish setKey(java.lang.String key) {
+        return (Publish) super.setKey(key);
+      }
+
+      @Override
+      public Publish setOauthToken(java.lang.String oauthToken) {
+        return (Publish) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Publish setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Publish) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Publish setQuotaUser(java.lang.String quotaUser) {
+        return (Publish) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Publish setUploadType(java.lang.String uploadType) {
+        return (Publish) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Publish setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Publish) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Dynamic profile ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long dynamicProfileId;
+
+      /** Required. Dynamic profile ID.
+       */
+      public java.lang.Long getDynamicProfileId() {
+        return dynamicProfileId;
+      }
+
+      /** Required. Dynamic profile ID. */
+      public Publish setDynamicProfileId(java.lang.Long dynamicProfileId) {
+        this.dynamicProfileId = dynamicProfileId;
+        return this;
+      }
+
+      @Override
+      public Publish set(String parameterName, Object value) {
+        return (Publish) super.set(parameterName, value);
       }
     }
     /**
@@ -32908,6 +33374,547 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the StudioCreativeAssets collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dfareporting dfareporting = new Dfareporting(...);}
+   *   {@code Dfareporting.StudioCreativeAssets.List request = dfareporting.studioCreativeAssets().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public StudioCreativeAssets studioCreativeAssets() {
+    return new StudioCreativeAssets();
+  }
+
+  /**
+   * The "studioCreativeAssets" collection of methods.
+   */
+  public class StudioCreativeAssets {
+
+    /**
+     * Inserts a new studio creative asset.
+     *
+     * Create a request for the method "studioCreativeAssets.insert".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.dfareporting.model.DfareportingStudioCreativeAssetsInsertRequest}
+     * @return the request
+     */
+    public Insert insert(com.google.api.services.dfareporting.model.DfareportingStudioCreativeAssetsInsertRequest content) throws java.io.IOException {
+      Insert result = new Insert(content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Inserts a new studio creative asset.
+     *
+     * Create a request for the method "studioCreativeAssets.insert".
+     *
+     * This request holds the parameters needed by the the dfareporting server.  After setting any
+     * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     *
+     * @param content the {@link com.google.api.services.dfareporting.model.DfareportingStudioCreativeAssetsInsertRequest} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Insert insert(com.google.api.services.dfareporting.model.DfareportingStudioCreativeAssetsInsertRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Insert result = new Insert(content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.StudioCreativeAssetsResponse> {
+
+      private static final String REST_PATH = "studio/creativeAssets";
+
+      /**
+       * Inserts a new studio creative asset.
+       *
+       * Create a request for the method "studioCreativeAssets.insert".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.dfareporting.model.DfareportingStudioCreativeAssetsInsertRequest}
+       * @since 1.13
+       */
+      protected Insert(com.google.api.services.dfareporting.model.DfareportingStudioCreativeAssetsInsertRequest content) {
+        super(Dfareporting.this, "POST", REST_PATH, content, com.google.api.services.dfareporting.model.StudioCreativeAssetsResponse.class);
+      }
+
+      /**
+       * Inserts a new studio creative asset.
+       *
+       * Create a request for the method "studioCreativeAssets.insert".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       *
+       * @param content the {@link com.google.api.services.dfareporting.model.DfareportingStudioCreativeAssetsInsertRequest} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content.
+       * @since 1.13
+       */
+      protected Insert(com.google.api.services.dfareporting.model.DfareportingStudioCreativeAssetsInsertRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(Dfareporting.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.dfareporting.model.StudioCreativeAssetsResponse.class);
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the StudioCreatives collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dfareporting dfareporting = new Dfareporting(...);}
+   *   {@code Dfareporting.StudioCreatives.List request = dfareporting.studioCreatives().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public StudioCreatives studioCreatives() {
+    return new StudioCreatives();
+  }
+
+  /**
+   * The "studioCreatives" collection of methods.
+   */
+  public class StudioCreatives {
+
+    /**
+     * Gets a studio creative by ID.
+     *
+     * Create a request for the method "studioCreatives.get".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param studioCreativeId Required. Studio creative ID.
+     * @return the request
+     */
+    public Get get(java.lang.Long studioCreativeId) throws java.io.IOException {
+      Get result = new Get(studioCreativeId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.StudioCreative> {
+
+      private static final String REST_PATH = "studio/creatives/{+studioCreativeId}";
+
+      private final java.util.regex.Pattern STUDIO_CREATIVE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets a studio creative by ID.
+       *
+       * Create a request for the method "studioCreatives.get".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param studioCreativeId Required. Studio creative ID.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long studioCreativeId) {
+        super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.StudioCreative.class);
+        this.studioCreativeId = com.google.api.client.util.Preconditions.checkNotNull(studioCreativeId, "Required parameter studioCreativeId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Studio creative ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long studioCreativeId;
+
+      /** Required. Studio creative ID.
+       */
+      public java.lang.Long getStudioCreativeId() {
+        return studioCreativeId;
+      }
+
+      /** Required. Studio creative ID. */
+      public Get setStudioCreativeId(java.lang.Long studioCreativeId) {
+        this.studioCreativeId = studioCreativeId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Inserts a new studio creative.
+     *
+     * Create a request for the method "studioCreatives.insert".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.dfareporting.model.StudioCreative}
+     * @return the request
+     */
+    public Insert insert(com.google.api.services.dfareporting.model.StudioCreative content) throws java.io.IOException {
+      Insert result = new Insert(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.StudioCreative> {
+
+      private static final String REST_PATH = "studio/creatives";
+
+      /**
+       * Inserts a new studio creative.
+       *
+       * Create a request for the method "studioCreatives.insert".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.dfareporting.model.StudioCreative}
+       * @since 1.13
+       */
+      protected Insert(com.google.api.services.dfareporting.model.StudioCreative content) {
+        super(Dfareporting.this, "POST", REST_PATH, content, com.google.api.services.dfareporting.model.StudioCreative.class);
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Publish for a studio creative.
+     *
+     * Create a request for the method "studioCreatives.publish".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Publish#execute()} method to invoke the remote operation.
+     *
+     * @param studioCreativeId Required. Studio creative ID.
+     * @return the request
+     */
+    public Publish publish(java.lang.Long studioCreativeId) throws java.io.IOException {
+      Publish result = new Publish(studioCreativeId);
+      initialize(result);
+      return result;
+    }
+
+    public class Publish extends DfareportingRequest<Void> {
+
+      private static final String REST_PATH = "studio/creatives/{+studioCreativeId}/publish";
+
+      private final java.util.regex.Pattern STUDIO_CREATIVE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Publish for a studio creative.
+       *
+       * Create a request for the method "studioCreatives.publish".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Publish#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Publish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param studioCreativeId Required. Studio creative ID.
+       * @since 1.13
+       */
+      protected Publish(java.lang.Long studioCreativeId) {
+        super(Dfareporting.this, "POST", REST_PATH, null, Void.class);
+        this.studioCreativeId = com.google.api.client.util.Preconditions.checkNotNull(studioCreativeId, "Required parameter studioCreativeId must be specified.");
+      }
+
+      @Override
+      public Publish set$Xgafv(java.lang.String $Xgafv) {
+        return (Publish) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Publish setAccessToken(java.lang.String accessToken) {
+        return (Publish) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Publish setAlt(java.lang.String alt) {
+        return (Publish) super.setAlt(alt);
+      }
+
+      @Override
+      public Publish setCallback(java.lang.String callback) {
+        return (Publish) super.setCallback(callback);
+      }
+
+      @Override
+      public Publish setFields(java.lang.String fields) {
+        return (Publish) super.setFields(fields);
+      }
+
+      @Override
+      public Publish setKey(java.lang.String key) {
+        return (Publish) super.setKey(key);
+      }
+
+      @Override
+      public Publish setOauthToken(java.lang.String oauthToken) {
+        return (Publish) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Publish setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Publish) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Publish setQuotaUser(java.lang.String quotaUser) {
+        return (Publish) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Publish setUploadType(java.lang.String uploadType) {
+        return (Publish) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Publish setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Publish) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Studio creative ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long studioCreativeId;
+
+      /** Required. Studio creative ID.
+       */
+      public java.lang.Long getStudioCreativeId() {
+        return studioCreativeId;
+      }
+
+      /** Required. Studio creative ID. */
+      public Publish setStudioCreativeId(java.lang.Long studioCreativeId) {
+        this.studioCreativeId = studioCreativeId;
+        return this;
+      }
+
+      @Override
+      public Publish set(String parameterName, Object value) {
+        return (Publish) super.set(parameterName, value);
       }
     }
 

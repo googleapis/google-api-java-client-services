@@ -79,7 +79,8 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   /**
    * Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of
    * decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time
-   * units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.
+   * units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration
+   * between 1ms and 1 second, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -334,7 +335,8 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   /**
    * Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of
    * decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time
-   * units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.
+   * units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration
+   * between 1ms and 1 second, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.String getCpuCfsQuotaPeriod() {
@@ -344,7 +346,8 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   /**
    * Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of
    * decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time
-   * units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.
+   * units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration
+   * between 1ms and 1 second, inclusive.
    * @param cpuCfsQuotaPeriod cpuCfsQuotaPeriod or {@code null} for none
    */
   public NodeKubeletConfig setCpuCfsQuotaPeriod(java.lang.String cpuCfsQuotaPeriod) {

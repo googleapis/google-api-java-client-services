@@ -39,6 +39,13 @@ public final class ContainerdConfig extends com.google.api.client.json.GenericJs
   private PrivateRegistryAccessConfig privateRegistryAccessConfig;
 
   /**
+   * Optional. WritableCgroups defines writable cgroups configuration for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WritableCgroups writableCgroups;
+
+  /**
    * PrivateRegistryAccessConfig is used to configure access configuration for private container
    * registries.
    * @return value or {@code null} for none
@@ -54,6 +61,23 @@ public final class ContainerdConfig extends com.google.api.client.json.GenericJs
    */
   public ContainerdConfig setPrivateRegistryAccessConfig(PrivateRegistryAccessConfig privateRegistryAccessConfig) {
     this.privateRegistryAccessConfig = privateRegistryAccessConfig;
+    return this;
+  }
+
+  /**
+   * Optional. WritableCgroups defines writable cgroups configuration for the node pool.
+   * @return value or {@code null} for none
+   */
+  public WritableCgroups getWritableCgroups() {
+    return writableCgroups;
+  }
+
+  /**
+   * Optional. WritableCgroups defines writable cgroups configuration for the node pool.
+   * @param writableCgroups writableCgroups or {@code null} for none
+   */
+  public ContainerdConfig setWritableCgroups(WritableCgroups writableCgroups) {
+    this.writableCgroups = writableCgroups;
     return this;
   }
 

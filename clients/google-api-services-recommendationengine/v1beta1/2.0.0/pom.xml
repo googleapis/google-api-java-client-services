@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-recommendationengine</artifactId>
-  <version>v1beta1-rev20230810-2.0.0</version>
-  <name>Recommendations AI (Beta) v1beta1-rev20230810-2.0.0</name>
+  <version>v1beta1-rev20251009-2.0.0</version>
+  <name>Recommendations AI (Beta) v1beta1-rev20251009-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

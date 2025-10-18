@@ -30,6 +30,16 @@ package com.google.api.services.docs.v1.model;
 public final class TabProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The emoji icon displayed with the tab. A valid emoji icon is represented by a non-
+   * empty Unicode string. Any set of characters that don't represent a single emoji is invalid. If
+   * an emoji is invalid, a 400 bad request error is returned. If this value is unset or empty, the
+   * tab will display the default tab icon.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iconEmoji;
+
+  /**
    * The zero-based index of the tab within the parent.
    * The value may be {@code null}.
    */
@@ -64,6 +74,29 @@ public final class TabProperties extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Optional. The emoji icon displayed with the tab. A valid emoji icon is represented by a non-
+   * empty Unicode string. Any set of characters that don't represent a single emoji is invalid. If
+   * an emoji is invalid, a 400 bad request error is returned. If this value is unset or empty, the
+   * tab will display the default tab icon.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIconEmoji() {
+    return iconEmoji;
+  }
+
+  /**
+   * Optional. The emoji icon displayed with the tab. A valid emoji icon is represented by a non-
+   * empty Unicode string. Any set of characters that don't represent a single emoji is invalid. If
+   * an emoji is invalid, a 400 bad request error is returned. If this value is unset or empty, the
+   * tab will display the default tab icon.
+   * @param iconEmoji iconEmoji or {@code null} for none
+   */
+  public TabProperties setIconEmoji(java.lang.String iconEmoji) {
+    this.iconEmoji = iconEmoji;
+    return this;
+  }
 
   /**
    * The zero-based index of the tab within the parent.

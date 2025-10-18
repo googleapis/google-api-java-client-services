@@ -25,7 +25,7 @@ package com.google.api.services.chromewebstore.v1_1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developer.chrome.com/webstore/api_index" target="_blank">API Documentation</a>
+ * <a href="https://developer.chrome.com/docs/webstore/api" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

@@ -8860,8 +8860,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Permissions {
 
     /**
-     * Creates a permission for a file or shared drive. **Warning:** Concurrent permissions operations
-     * on the same file are not supported; only the last update is applied.
+     * Creates a permission for a file or shared drive. For more information, see [Share files, folders,
+     * and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
+     * **Warning:** Concurrent permissions operations on the same file aren't supported; only the last
+     * update is applied.
      *
      * Create a request for the method "permissions.create".
      *
@@ -8883,8 +8885,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions";
 
       /**
-       * Creates a permission for a file or shared drive. **Warning:** Concurrent permissions operations
-       * on the same file are not supported; only the last update is applied.
+       * Creates a permission for a file or shared drive. For more information, see [Share files,
+       * folders, and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
+       * **Warning:** Concurrent permissions operations on the same file aren't supported; only the last
+       * update is applied.
        *
        * Create a request for the method "permissions.create".
        *
@@ -9080,28 +9084,28 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * This parameter will only take effect if the item is not in a shared drive and the request
-       * is attempting to transfer the ownership of the item. If set to `true`, the item will be
-       * moved to the new owner's My Drive root folder and all prior parents removed. If set to
-       * `false`, parents are not changed.
+       * This parameter only takes effect if the item isn't in a shared drive and the request is
+       * attempting to transfer the ownership of the item. If set to `true`, the item is moved to
+       * the new owner's My Drive root folder and all prior parents removed. If set to `false`,
+       * parents aren't changed.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean moveToNewOwnersRoot;
 
-      /** This parameter will only take effect if the item is not in a shared drive and the request is
-     attempting to transfer the ownership of the item. If set to `true`, the item will be moved to the
-     new owner's My Drive root folder and all prior parents removed. If set to `false`, parents are not
-     changed. [default: false]
+      /** This parameter only takes effect if the item isn't in a shared drive and the request is attempting
+     to transfer the ownership of the item. If set to `true`, the item is moved to the new owner's My
+     Drive root folder and all prior parents removed. If set to `false`, parents aren't changed.
+     [default: false]
        */
       public java.lang.Boolean getMoveToNewOwnersRoot() {
         return moveToNewOwnersRoot;
       }
 
       /**
-       * This parameter will only take effect if the item is not in a shared drive and the request
-       * is attempting to transfer the ownership of the item. If set to `true`, the item will be
-       * moved to the new owner's My Drive root folder and all prior parents removed. If set to
-       * `false`, parents are not changed.
+       * This parameter only takes effect if the item isn't in a shared drive and the request is
+       * attempting to transfer the ownership of the item. If set to `true`, the item is moved to
+       * the new owner's My Drive root folder and all prior parents removed. If set to `false`,
+       * parents aren't changed.
        */
       public Create setMoveToNewOwnersRoot(java.lang.Boolean moveToNewOwnersRoot) {
         this.moveToNewOwnersRoot = moveToNewOwnersRoot;
@@ -9125,10 +9129,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * This parameter will only take effect if the item is not in a shared drive and the request is
-     attempting to transfer the ownership of the item. If set to `true`, the item will be moved to the
-     new owner's My Drive root folder and all prior parents removed. If set to `false`, parents are not
-     changed.
+       * This parameter only takes effect if the item isn't in a shared drive and the request is attempting
+     to transfer the ownership of the item. If set to `true`, the item is moved to the new owner's My
+     Drive root folder and all prior parents removed. If set to `false`, parents aren't changed.
        * </p>
        */
       public boolean isMoveToNewOwnersRoot() {
@@ -9252,13 +9255,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to transfer ownership to the specified user and downgrade the current owner to a
-       * writer. This parameter is required as an acknowledgement of the side effect.
+       * writer. This parameter is required as an acknowledgement of the side effect. For more
+       * information, see [Transfer file
+       * ownership](https://developers.google.com/workspace/drive/api/guides/transfer-file).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean transferOwnership;
 
       /** Whether to transfer ownership to the specified user and downgrade the current owner to a writer.
-     This parameter is required as an acknowledgement of the side effect. [default: false]
+     This parameter is required as an acknowledgement of the side effect. For more information, see
+     [Transfer file ownership](https://developers.google.com/workspace/drive/api/guides/transfer-file).
+     [default: false]
        */
       public java.lang.Boolean getTransferOwnership() {
         return transferOwnership;
@@ -9266,7 +9273,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to transfer ownership to the specified user and downgrade the current owner to a
-       * writer. This parameter is required as an acknowledgement of the side effect.
+       * writer. This parameter is required as an acknowledgement of the side effect. For more
+       * information, see [Transfer file
+       * ownership](https://developers.google.com/workspace/drive/api/guides/transfer-file).
        */
       public Create setTransferOwnership(java.lang.Boolean transferOwnership) {
         this.transferOwnership = transferOwnership;
@@ -9291,7 +9300,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to transfer ownership to the specified user and downgrade the current owner to a writer.
-     This parameter is required as an acknowledgement of the side effect.
+     This parameter is required as an acknowledgement of the side effect. For more information, see
+     [Transfer file ownership](https://developers.google.com/workspace/drive/api/guides/transfer-file).
        * </p>
        */
       public boolean isTransferOwnership() {
@@ -9302,25 +9312,34 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
-      /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs. [default: false]
+      /** Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators). [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       public Create setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -9344,9 +9363,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators).
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -9362,8 +9384,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Deletes a permission. **Warning:** Concurrent permissions operations on the same file are not
-     * supported; only the last update is applied.
+     * Deletes a permission. For more information, see [Share files, folders, and
+     * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). **Warning:**
+     * Concurrent permissions operations on the same file aren't supported; only the last update is
+     * applied.
      *
      * Create a request for the method "permissions.delete".
      *
@@ -9385,8 +9409,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions/{permissionId}";
 
       /**
-       * Deletes a permission. **Warning:** Concurrent permissions operations on the same file are not
-       * supported; only the last update is applied.
+       * Deletes a permission. For more information, see [Share files, folders, and
+       * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). **Warning:**
+       * Concurrent permissions operations on the same file aren't supported; only the last update is
+       * applied.
        *
        * Create a request for the method "permissions.delete".
        *
@@ -9622,25 +9648,34 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
-      /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs. [default: false]
+      /** Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators). [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       public Delete setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -9664,9 +9699,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators).
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -9682,7 +9720,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Gets a permission by ID.
+     * Gets a permission by ID. For more information, see [Share files, folders, and
+     * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
      *
      * Create a request for the method "permissions.get".
      *
@@ -9704,7 +9743,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions/{permissionId}";
 
       /**
-       * Gets a permission by ID.
+       * Gets a permission by ID. For more information, see [Share files, folders, and
+       * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
        *
        * Create a request for the method "permissions.get".
        *
@@ -9907,25 +9947,34 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
-      /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs. [default: false]
+      /** Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators). [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       public Get setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -9949,9 +9998,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators).
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -9967,7 +10019,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists a file's or shared drive's permissions.
+     * Lists a file's or shared drive's permissions. For more information, see [Share files, folders,
+     * and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
      *
      * Create a request for the method "permissions.list".
      *
@@ -9988,7 +10041,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions";
 
       /**
-       * Lists a file's or shared drive's permissions.
+       * Lists a file's or shared drive's permissions. For more information, see [Share files, folders,
+       * and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
        *
        * Create a request for the method "permissions.list".
        *
@@ -10087,13 +10141,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -10101,7 +10155,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public List setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -10139,13 +10193,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response.
+       * the value of `nextPageToken` from the previous response.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** The token for continuing a previous list request on the next page. This should be set to the value
-     of 'nextPageToken' from the previous response.
+     of `nextPageToken` from the previous response.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -10153,7 +10207,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response.
+       * the value of `nextPageToken` from the previous response.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -10247,25 +10301,34 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
-      /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs. [default: false]
+      /** Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators). [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       public List setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -10289,9 +10352,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators).
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -10307,8 +10373,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a permission with patch semantics. **Warning:** Concurrent permissions operations on the
-     * same file are not supported; only the last update is applied.
+     * Updates a permission with patch semantics. For more information, see [Share files, folders, and
+     * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). **Warning:**
+     * Concurrent permissions operations on the same file aren't supported; only the last update is
+     * applied.
      *
      * Create a request for the method "permissions.update".
      *
@@ -10331,8 +10399,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions/{permissionId}";
 
       /**
-       * Updates a permission with patch semantics. **Warning:** Concurrent permissions operations on
-       * the same file are not supported; only the last update is applied.
+       * Updates a permission with patch semantics. For more information, see [Share files, folders, and
+       * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). **Warning:**
+       * Concurrent permissions operations on the same file aren't supported; only the last update is
+       * applied.
        *
        * Create a request for the method "permissions.update".
        *
@@ -10613,13 +10683,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to transfer ownership to the specified user and downgrade the current owner to a
-       * writer. This parameter is required as an acknowledgement of the side effect.
+       * writer. This parameter is required as an acknowledgement of the side effect. For more
+       * information, see [Transfer file
+       * ownership](https://developers.google.com//workspace/drive/api/guides/transfer-file).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean transferOwnership;
 
       /** Whether to transfer ownership to the specified user and downgrade the current owner to a writer.
-     This parameter is required as an acknowledgement of the side effect. [default: false]
+     This parameter is required as an acknowledgement of the side effect. For more information, see
+     [Transfer file ownership](https://developers.google.com//workspace/drive/api/guides/transfer-file).
+     [default: false]
        */
       public java.lang.Boolean getTransferOwnership() {
         return transferOwnership;
@@ -10627,7 +10701,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to transfer ownership to the specified user and downgrade the current owner to a
-       * writer. This parameter is required as an acknowledgement of the side effect.
+       * writer. This parameter is required as an acknowledgement of the side effect. For more
+       * information, see [Transfer file
+       * ownership](https://developers.google.com//workspace/drive/api/guides/transfer-file).
        */
       public Update setTransferOwnership(java.lang.Boolean transferOwnership) {
         this.transferOwnership = transferOwnership;
@@ -10652,7 +10728,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to transfer ownership to the specified user and downgrade the current owner to a writer.
-     This parameter is required as an acknowledgement of the side effect.
+     This parameter is required as an acknowledgement of the side effect. For more information, see
+     [Transfer file ownership](https://developers.google.com//workspace/drive/api/guides/transfer-file).
        * </p>
        */
       public boolean isTransferOwnership() {
@@ -10663,25 +10740,34 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
-      /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs. [default: false]
+      /** Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators). [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a shared drive and the requester is an
-       * administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following
+       * additional conditions are met, the requester is granted access: 1. The file ID parameter
+       * refers to a shared drive. 2. The requester is an administrator of the domain to which the
+       * shared drive belongs. For more information, see [Manage shared drives as domain
+       * administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+       * shareddrives#manage-administrators).
        */
       public Update setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -10705,9 +10791,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a shared drive and the requester is an administrator of
-     the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to `true`, and if the following additional
+     conditions are met, the requester is granted access: 1. The file ID parameter refers to a shared
+     drive. 2. The requester is an administrator of the domain to which the shared drive belongs. For
+     more information, see [Manage shared drives as domain
+     administrators](https://developers.google.com/workspace/drive/api/guides/manage-
+     shareddrives#manage-administrators).
        * </p>
        */
       public boolean isUseDomainAdminAccess() {

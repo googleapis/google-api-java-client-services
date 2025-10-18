@@ -17,9 +17,7 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Dynamic profile ID is required for dynamic feed insert as the current GPA API only can create a
- * dynamic feed under profile context,even though the dynnamic feed itself don't need the dynamic
- * profile id. See
+ * Dimension information for a studio creative.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
@@ -30,64 +28,64 @@ package com.google.api.services.dfareporting.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DynamicFeedsInsertRequest extends com.google.api.client.json.GenericJson {
+public final class StudioCreativeDimension extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Dynamic feed to insert.
+   * Height of the studio creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DynamicFeed dynamicFeed;
+  private java.lang.Integer height;
 
   /**
-   * Required. Dynamic profile ID of the inserted dynamic feed.
+   * Width of the studio creative.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long dynamicProfileId;
+  @com.google.api.client.util.Key
+  private java.lang.Integer width;
 
   /**
-   * Required. Dynamic feed to insert.
+   * Height of the studio creative.
    * @return value or {@code null} for none
    */
-  public DynamicFeed getDynamicFeed() {
-    return dynamicFeed;
+  public java.lang.Integer getHeight() {
+    return height;
   }
 
   /**
-   * Required. Dynamic feed to insert.
-   * @param dynamicFeed dynamicFeed or {@code null} for none
+   * Height of the studio creative.
+   * @param height height or {@code null} for none
    */
-  public DynamicFeedsInsertRequest setDynamicFeed(DynamicFeed dynamicFeed) {
-    this.dynamicFeed = dynamicFeed;
+  public StudioCreativeDimension setHeight(java.lang.Integer height) {
+    this.height = height;
     return this;
   }
 
   /**
-   * Required. Dynamic profile ID of the inserted dynamic feed.
+   * Width of the studio creative.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getDynamicProfileId() {
-    return dynamicProfileId;
+  public java.lang.Integer getWidth() {
+    return width;
   }
 
   /**
-   * Required. Dynamic profile ID of the inserted dynamic feed.
-   * @param dynamicProfileId dynamicProfileId or {@code null} for none
+   * Width of the studio creative.
+   * @param width width or {@code null} for none
    */
-  public DynamicFeedsInsertRequest setDynamicProfileId(java.lang.Long dynamicProfileId) {
-    this.dynamicProfileId = dynamicProfileId;
+  public StudioCreativeDimension setWidth(java.lang.Integer width) {
+    this.width = width;
     return this;
   }
 
   @Override
-  public DynamicFeedsInsertRequest set(String fieldName, Object value) {
-    return (DynamicFeedsInsertRequest) super.set(fieldName, value);
+  public StudioCreativeDimension set(String fieldName, Object value) {
+    return (StudioCreativeDimension) super.set(fieldName, value);
   }
 
   @Override
-  public DynamicFeedsInsertRequest clone() {
-    return (DynamicFeedsInsertRequest) super.clone();
+  public StudioCreativeDimension clone() {
+    return (StudioCreativeDimension) super.clone();
   }
 
 }

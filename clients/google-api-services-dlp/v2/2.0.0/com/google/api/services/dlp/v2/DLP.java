@@ -2825,11 +2825,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
            * must be `=` for project_id, dataset_id, and table_id. Other filters also support `!=`.
-           * The `profile_last_generated` filter also supports `<` and `>`. Examples: * project_id =
-           * 12345 AND status_code = 1 * project_id = 12345 AND sensitivity_level = HIGH *
-           * project_id = 12345 AND info_type = STREET_ADDRESS * profile_last_generated <
-           * "2025-01-01T00:00:00.000Z" The length of this field should be no more than 500
-           * characters.
+           * The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+           * https://google.aip.dev/160. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND info_type =
+           * STREET_ADDRESS * profile_last_generated < "2025-01-01T00:00:00.000Z" The length of this
+           * field should be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -2845,10 +2845,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
          `profile_last_generated`: Date and time the profile was last generated * The operator must be `=`
          for project_id, dataset_id, and table_id. Other filters also support `!=`. The
-         `profile_last_generated` filter also supports `<` and `>`. Examples: * project_id = 12345 AND
-         status_code = 1 * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
-         info_type = STREET_ADDRESS * profile_last_generated < "2025-01-01T00:00:00.000Z" The length of this
-         field should be no more than 500 characters.
+         `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+         https://google.aip.dev/160. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345
+         AND sensitivity_level = HIGH * project_id = 12345 AND info_type = STREET_ADDRESS *
+         profile_last_generated < "2025-01-01T00:00:00.000Z" The length of this field should be no more than
+         500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -2868,11 +2869,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
            * must be `=` for project_id, dataset_id, and table_id. Other filters also support `!=`.
-           * The `profile_last_generated` filter also supports `<` and `>`. Examples: * project_id =
-           * 12345 AND status_code = 1 * project_id = 12345 AND sensitivity_level = HIGH *
-           * project_id = 12345 AND info_type = STREET_ADDRESS * profile_last_generated <
-           * "2025-01-01T00:00:00.000Z" The length of this field should be no more than 500
-           * characters.
+           * The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+           * https://google.aip.dev/160. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND info_type =
+           * STREET_ADDRESS * profile_last_generated < "2025-01-01T00:00:00.000Z" The length of this
+           * field should be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3565,17 +3566,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR */
+          /**
+           * Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR The syntax is based
+           * on https://google.aip.dev/160.
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR
+          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR The syntax is based on
+         https://google.aip.dev/160.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR */
+          /**
+           * Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR The syntax is based
+           * on https://google.aip.dev/160.
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -3906,17 +3914,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR */
+          /**
+           * Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR The syntax is
+           * based on https://google.aip.dev/160.
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR
+          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR The syntax is based on
+         https://google.aip.dev/160.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR */
+          /**
+           * Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR The syntax is
+           * based on https://google.aip.dev/160.
+           */
           public Search setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -5954,11 +5969,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * 'start_time` - Corresponds to the time the job finished. * Supported fields for risk
            * analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds
            * to the time the job finished. - 'start_time` - Corresponds to the time the job
-           * finished. * The operator must be `=` or `!=`. Examples: * inspected_storage =
-           * cloud_storage AND state = done * inspected_storage = cloud_storage OR inspected_storage
-           * = bigquery * inspected_storage = cloud_storage AND (state = done OR state = canceled) *
-           * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-           * than 500 characters.
+           * finished. * The operator must be `=` or `!=`. The syntax is based on
+           * https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND state =
+           * done * inspected_storage = cloud_storage OR inspected_storage = bigquery *
+           * inspected_storage = cloud_storage AND (state = done OR state = canceled) * end_time >
+           * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+           * characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -5971,11 +5987,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          that created the job. - 'end_time` - Corresponds to the time the job finished. - 'start_time` -
          Corresponds to the time the job finished. * Supported fields for risk analysis jobs: - `state` -
          RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to the time the job finished. -
-         'start_time` - Corresponds to the time the job finished. * The operator must be `=` or `!=`.
-         Examples: * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage
-         OR inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR state =
-         canceled) * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-         than 500 characters.
+         'start_time` - Corresponds to the time the job finished. * The operator must be `=` or `!=`. The
+         syntax is based on https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND
+         state = done * inspected_storage = cloud_storage OR inspected_storage = bigquery *
+         inspected_storage = cloud_storage AND (state = done OR state = canceled) * end_time >
+         \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -5992,11 +6008,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * 'start_time` - Corresponds to the time the job finished. * Supported fields for risk
            * analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds
            * to the time the job finished. - 'start_time` - Corresponds to the time the job
-           * finished. * The operator must be `=` or `!=`. Examples: * inspected_storage =
-           * cloud_storage AND state = done * inspected_storage = cloud_storage OR inspected_storage
-           * = bigquery * inspected_storage = cloud_storage AND (state = done OR state = canceled) *
-           * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-           * than 500 characters.
+           * finished. * The operator must be `=` or `!=`. The syntax is based on
+           * https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND state =
+           * done * inspected_storage = cloud_storage OR inspected_storage = bigquery *
+           * inspected_storage = cloud_storage AND (state = done OR state = canceled) * end_time >
+           * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+           * characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -6560,12 +6577,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * `status_code`: an RPC status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
-           * `file_store_path = "gs://mybucket"` * `profile_last_generated <
-           * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than 500
-           * characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
+           * 12345 AND resource_visibility = PUBLIC` * `file_store_path = "gs://mybucket"` *
+           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
+           * be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -6580,11 +6597,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code`: an RPC status code as
          defined in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
          `profile_last_generated`: Date and time the profile was last generated * The operator must be `=`
-         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. Examples: * `project_id =
-         12345 AND status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
-         12345 AND resource_visibility = PUBLIC` * `file_store_path = "gs://mybucket"` *
-         `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should be no more
-         than 500 characters.
+         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+         https://google.aip.dev/160. Examples: * `project_id = 12345 AND status_code = 1` * `project_id =
+         12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
+         `file_store_path = "gs://mybucket"` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
+         length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -6603,12 +6620,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * `status_code`: an RPC status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
-           * `file_store_path = "gs://mybucket"` * `profile_last_generated <
-           * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than 500
-           * characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
+           * 12345 AND resource_visibility = PUBLIC` * `file_store_path = "gs://mybucket"` *
+           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
+           * be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -8537,11 +8554,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp,
            * surrounded by quotation marks. Nanoseconds are ignored. - 'error_count' - Number of
            * errors that have occurred while running. * The operator must be `=` or `!=` for status
-           * and inspected_storage. Examples: * inspected_storage = cloud_storage AND status =
-           * HEALTHY * inspected_storage = cloud_storage OR inspected_storage = bigquery *
-           * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY) *
-           * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no
-           * more than 500 characters.
+           * and inspected_storage. The syntax is based on https://google.aip.dev/160. Examples: *
+           * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
+           * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
+           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+           * length of this field should be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -8552,11 +8569,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          fields/values for inspect triggers: - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
          DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
          quotation marks. Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred
-         while running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
-         inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
-         inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = PAUSED OR state =
-         HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-         than 500 characters.
+         while running. * The operator must be `=` or `!=` for status and inspected_storage. The syntax is
+         based on https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND status =
+         HEALTHY * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+         cloud_storage AND (state = PAUSED OR state = HEALTHY) * last_run_time >
+         \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -8571,11 +8588,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp,
            * surrounded by quotation marks. Nanoseconds are ignored. - 'error_count' - Number of
            * errors that have occurred while running. * The operator must be `=` or `!=` for status
-           * and inspected_storage. Examples: * inspected_storage = cloud_storage AND status =
-           * HEALTHY * inspected_storage = cloud_storage OR inspected_storage = bigquery *
-           * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY) *
-           * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no
-           * more than 500 characters.
+           * and inspected_storage. The syntax is based on https://google.aip.dev/160. Examples: *
+           * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
+           * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
+           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+           * length of this field should be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -9150,10 +9167,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * HIGH|MODERATE|LOW - `status_code`: an RPC status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
-           * length of this field should be no more than 500 characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` *
+           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
+           * be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -9165,10 +9183,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          `data_risk_level`: HIGH|MODERATE|LOW - `status_code`: an RPC status code as defined in
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
          `profile_last_generated`: Date and time the profile was last generated * The operator must be `=`
-         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. Examples: * `project_id =
-         12345 AND status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` *
-         `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should be no more
-         than 500 characters.
+         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+         https://google.aip.dev/160. Examples: * `project_id = 12345 AND status_code = 1` * `project_id =
+         12345 AND sensitivity_level = HIGH` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
+         length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -9183,10 +9201,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * HIGH|MODERATE|LOW - `status_code`: an RPC status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
-           * length of this field should be no more than 500 characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` *
+           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
+           * be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -10651,11 +10670,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * `resource_visibility`: PUBLIC|RESTRICTED - `status_code`: an RPC status code as defined
            * in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
-           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
-           * be no more than 500 characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
+           * 12345 AND resource_visibility = PUBLIC` * `profile_last_generated <
+           * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than 500
+           * characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -10669,10 +10689,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          RPC status code as defined in
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
          `profile_last_generated`: Date and time the profile was last generated * The operator must be `=`
-         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. Examples: * `project_id =
-         12345 AND status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
-         12345 AND resource_visibility = PUBLIC` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
-         length of this field should be no more than 500 characters.
+         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+         https://google.aip.dev/160. Examples: * `project_id = 12345 AND status_code = 1` * `project_id =
+         12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
+         `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should be no more
+         than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -10688,11 +10709,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * `resource_visibility`: PUBLIC|RESTRICTED - `status_code`: an RPC status code as defined
            * in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
-           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
-           * be no more than 500 characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
+           * 12345 AND resource_visibility = PUBLIC` * `profile_last_generated <
+           * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than 500
+           * characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -14014,11 +14036,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Corresponds to the time the job finished. * Supported fields for risk analysis jobs: -
          * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to the time the job
          * finished. - 'start_time` - Corresponds to the time the job finished. * The operator must
-         * be `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
-         * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
-         * cloud_storage AND (state = done OR state = canceled) * end_time >
-         * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
-         * characters.
+         * be `=` or `!=`. The syntax is based on https://google.aip.dev/160. Examples: *
+         * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage OR
+         * inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR
+         * state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field
+         * should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -14031,11 +14053,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        that created the job. - 'end_time` - Corresponds to the time the job finished. - 'start_time` -
        Corresponds to the time the job finished. * Supported fields for risk analysis jobs: - `state` -
        RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to the time the job finished. -
-       'start_time` - Corresponds to the time the job finished. * The operator must be `=` or `!=`.
-       Examples: * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage
-       OR inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR state =
-       canceled) * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-       than 500 characters.
+       'start_time` - Corresponds to the time the job finished. * The operator must be `=` or `!=`. The
+       syntax is based on https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND
+       state = done * inspected_storage = cloud_storage OR inspected_storage = bigquery *
+       inspected_storage = cloud_storage AND (state = done OR state = canceled) * end_time >
+       \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -14052,11 +14074,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Corresponds to the time the job finished. * Supported fields for risk analysis jobs: -
          * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to the time the job
          * finished. - 'start_time` - Corresponds to the time the job finished. * The operator must
-         * be `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
-         * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
-         * cloud_storage AND (state = done OR state = canceled) * end_time >
-         * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
-         * characters.
+         * be `=` or `!=`. The syntax is based on https://google.aip.dev/160. Examples: *
+         * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage OR
+         * inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR
+         * state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field
+         * should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -16104,11 +16126,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
          * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
          * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
-         * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
-         * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
-         * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
-         * length of this field should be no more than 500 characters.
+         * running. * The operator must be `=` or `!=` for status and inspected_storage. The syntax
+         * is based on https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND
+         * status = HEALTHY * inspected_storage = cloud_storage OR inspected_storage = bigquery *
+         * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY) * last_run_time
+         * > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+         * characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -16119,11 +16142,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        fields/values for inspect triggers: - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
        DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
        quotation marks. Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred
-       while running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
-       inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
-       inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = PAUSED OR state =
-       HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-       than 500 characters.
+       while running. * The operator must be `=` or `!=` for status and inspected_storage. The syntax is
+       based on https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND status =
+       HEALTHY * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+       cloud_storage AND (state = PAUSED OR state = HEALTHY) * last_run_time >
+       \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -16137,11 +16160,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
          * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
          * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
-         * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
-         * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
-         * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
-         * length of this field should be no more than 500 characters.
+         * running. * The operator must be `=` or `!=` for status and inspected_storage. The syntax
+         * is based on https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND
+         * status = HEALTHY * inspected_storage = cloud_storage OR inspected_storage = bigquery *
+         * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY) * last_run_time
+         * > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+         * characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -16748,11 +16772,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
            * must be `=` for project_id, dataset_id, and table_id. Other filters also support `!=`.
-           * The `profile_last_generated` filter also supports `<` and `>`. Examples: * project_id =
-           * 12345 AND status_code = 1 * project_id = 12345 AND sensitivity_level = HIGH *
-           * project_id = 12345 AND info_type = STREET_ADDRESS * profile_last_generated <
-           * "2025-01-01T00:00:00.000Z" The length of this field should be no more than 500
-           * characters.
+           * The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+           * https://google.aip.dev/160. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND info_type =
+           * STREET_ADDRESS * profile_last_generated < "2025-01-01T00:00:00.000Z" The length of this
+           * field should be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -16768,10 +16792,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
          `profile_last_generated`: Date and time the profile was last generated * The operator must be `=`
          for project_id, dataset_id, and table_id. Other filters also support `!=`. The
-         `profile_last_generated` filter also supports `<` and `>`. Examples: * project_id = 12345 AND
-         status_code = 1 * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
-         info_type = STREET_ADDRESS * profile_last_generated < "2025-01-01T00:00:00.000Z" The length of this
-         field should be no more than 500 characters.
+         `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+         https://google.aip.dev/160. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345
+         AND sensitivity_level = HIGH * project_id = 12345 AND info_type = STREET_ADDRESS *
+         profile_last_generated < "2025-01-01T00:00:00.000Z" The length of this field should be no more than
+         500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -16791,11 +16816,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
            * must be `=` for project_id, dataset_id, and table_id. Other filters also support `!=`.
-           * The `profile_last_generated` filter also supports `<` and `>`. Examples: * project_id =
-           * 12345 AND status_code = 1 * project_id = 12345 AND sensitivity_level = HIGH *
-           * project_id = 12345 AND info_type = STREET_ADDRESS * profile_last_generated <
-           * "2025-01-01T00:00:00.000Z" The length of this field should be no more than 500
-           * characters.
+           * The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+           * https://google.aip.dev/160. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND info_type =
+           * STREET_ADDRESS * profile_last_generated < "2025-01-01T00:00:00.000Z" The length of this
+           * field should be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -17488,17 +17513,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR */
+          /**
+           * Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR The syntax is based
+           * on https://google.aip.dev/160.
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR
+          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR The syntax is based on
+         https://google.aip.dev/160.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR */
+          /**
+           * Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR The syntax is based
+           * on https://google.aip.dev/160.
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -17829,17 +17861,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR */
+          /**
+           * Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR The syntax is
+           * based on https://google.aip.dev/160.
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR
+          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR The syntax is based on
+         https://google.aip.dev/160.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR */
+          /**
+           * Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR The syntax is
+           * based on https://google.aip.dev/160.
+           */
           public Search setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -21288,11 +21327,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * 'start_time` - Corresponds to the time the job finished. * Supported fields for risk
            * analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds
            * to the time the job finished. - 'start_time` - Corresponds to the time the job
-           * finished. * The operator must be `=` or `!=`. Examples: * inspected_storage =
-           * cloud_storage AND state = done * inspected_storage = cloud_storage OR inspected_storage
-           * = bigquery * inspected_storage = cloud_storage AND (state = done OR state = canceled) *
-           * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-           * than 500 characters.
+           * finished. * The operator must be `=` or `!=`. The syntax is based on
+           * https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND state =
+           * done * inspected_storage = cloud_storage OR inspected_storage = bigquery *
+           * inspected_storage = cloud_storage AND (state = done OR state = canceled) * end_time >
+           * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+           * characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -21305,11 +21345,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          that created the job. - 'end_time` - Corresponds to the time the job finished. - 'start_time` -
          Corresponds to the time the job finished. * Supported fields for risk analysis jobs: - `state` -
          RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to the time the job finished. -
-         'start_time` - Corresponds to the time the job finished. * The operator must be `=` or `!=`.
-         Examples: * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage
-         OR inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR state =
-         canceled) * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-         than 500 characters.
+         'start_time` - Corresponds to the time the job finished. * The operator must be `=` or `!=`. The
+         syntax is based on https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND
+         state = done * inspected_storage = cloud_storage OR inspected_storage = bigquery *
+         inspected_storage = cloud_storage AND (state = done OR state = canceled) * end_time >
+         \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -21326,11 +21366,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * 'start_time` - Corresponds to the time the job finished. * Supported fields for risk
            * analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds
            * to the time the job finished. - 'start_time` - Corresponds to the time the job
-           * finished. * The operator must be `=` or `!=`. Examples: * inspected_storage =
-           * cloud_storage AND state = done * inspected_storage = cloud_storage OR inspected_storage
-           * = bigquery * inspected_storage = cloud_storage AND (state = done OR state = canceled) *
-           * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-           * than 500 characters.
+           * finished. * The operator must be `=` or `!=`. The syntax is based on
+           * https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND state =
+           * done * inspected_storage = cloud_storage OR inspected_storage = bigquery *
+           * inspected_storage = cloud_storage AND (state = done OR state = canceled) * end_time >
+           * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+           * characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -21894,12 +21935,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * `status_code`: an RPC status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
-           * `file_store_path = "gs://mybucket"` * `profile_last_generated <
-           * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than 500
-           * characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
+           * 12345 AND resource_visibility = PUBLIC` * `file_store_path = "gs://mybucket"` *
+           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
+           * be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -21914,11 +21955,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code`: an RPC status code as
          defined in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
          `profile_last_generated`: Date and time the profile was last generated * The operator must be `=`
-         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. Examples: * `project_id =
-         12345 AND status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
-         12345 AND resource_visibility = PUBLIC` * `file_store_path = "gs://mybucket"` *
-         `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should be no more
-         than 500 characters.
+         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+         https://google.aip.dev/160. Examples: * `project_id = 12345 AND status_code = 1` * `project_id =
+         12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
+         `file_store_path = "gs://mybucket"` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
+         length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -21937,12 +21978,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * `status_code`: an RPC status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
-           * `file_store_path = "gs://mybucket"` * `profile_last_generated <
-           * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than 500
-           * characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
+           * 12345 AND resource_visibility = PUBLIC` * `file_store_path = "gs://mybucket"` *
+           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
+           * be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -24356,11 +24397,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp,
            * surrounded by quotation marks. Nanoseconds are ignored. - 'error_count' - Number of
            * errors that have occurred while running. * The operator must be `=` or `!=` for status
-           * and inspected_storage. Examples: * inspected_storage = cloud_storage AND status =
-           * HEALTHY * inspected_storage = cloud_storage OR inspected_storage = bigquery *
-           * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY) *
-           * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no
-           * more than 500 characters.
+           * and inspected_storage. The syntax is based on https://google.aip.dev/160. Examples: *
+           * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
+           * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
+           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+           * length of this field should be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -24371,11 +24412,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          fields/values for inspect triggers: - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
          DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
          quotation marks. Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred
-         while running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
-         inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
-         inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = PAUSED OR state =
-         HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
-         than 500 characters.
+         while running. * The operator must be `=` or `!=` for status and inspected_storage. The syntax is
+         based on https://google.aip.dev/160. Examples: * inspected_storage = cloud_storage AND status =
+         HEALTHY * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+         cloud_storage AND (state = PAUSED OR state = HEALTHY) * last_run_time >
+         \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -24390,11 +24431,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp,
            * surrounded by quotation marks. Nanoseconds are ignored. - 'error_count' - Number of
            * errors that have occurred while running. * The operator must be `=` or `!=` for status
-           * and inspected_storage. Examples: * inspected_storage = cloud_storage AND status =
-           * HEALTHY * inspected_storage = cloud_storage OR inspected_storage = bigquery *
-           * inspected_storage = cloud_storage AND (state = PAUSED OR state = HEALTHY) *
-           * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no
-           * more than 500 characters.
+           * and inspected_storage. The syntax is based on https://google.aip.dev/160. Examples: *
+           * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
+           * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
+           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+           * length of this field should be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -24969,10 +25010,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * HIGH|MODERATE|LOW - `status_code`: an RPC status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
-           * length of this field should be no more than 500 characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` *
+           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
+           * be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -24984,10 +25026,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          `data_risk_level`: HIGH|MODERATE|LOW - `status_code`: an RPC status code as defined in
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
          `profile_last_generated`: Date and time the profile was last generated * The operator must be `=`
-         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. Examples: * `project_id =
-         12345 AND status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` *
-         `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should be no more
-         than 500 characters.
+         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+         https://google.aip.dev/160. Examples: * `project_id = 12345 AND status_code = 1` * `project_id =
+         12345 AND sensitivity_level = HIGH` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
+         length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -25002,10 +25044,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * HIGH|MODERATE|LOW - `status_code`: an RPC status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
-           * length of this field should be no more than 500 characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` *
+           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
+           * be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -26470,11 +26513,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * `resource_visibility`: PUBLIC|RESTRICTED - `status_code`: an RPC status code as defined
            * in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
-           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
-           * be no more than 500 characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
+           * 12345 AND resource_visibility = PUBLIC` * `profile_last_generated <
+           * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than 500
+           * characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -26488,10 +26532,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          RPC status code as defined in
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
          `profile_last_generated`: Date and time the profile was last generated * The operator must be `=`
-         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. Examples: * `project_id =
-         12345 AND status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
-         12345 AND resource_visibility = PUBLIC` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The
-         length of this field should be no more than 500 characters.
+         or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The syntax is based on
+         https://google.aip.dev/160. Examples: * `project_id = 12345 AND status_code = 1` * `project_id =
+         12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
+         `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should be no more
+         than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -26507,11 +26552,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * `resource_visibility`: PUBLIC|RESTRICTED - `status_code`: an RPC status code as defined
            * in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
            * `profile_last_generated`: Date and time the profile was last generated * The operator
-           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`.
-           * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
-           * sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` *
-           * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of this field should
-           * be no more than 500 characters.
+           * must be `=` or `!=`. The `profile_last_generated` filter also supports `<` and `>`. The
+           * syntax is based on https://google.aip.dev/160. Examples: * `project_id = 12345 AND
+           * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id =
+           * 12345 AND resource_visibility = PUBLIC` * `profile_last_generated <
+           * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than 500
+           * characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

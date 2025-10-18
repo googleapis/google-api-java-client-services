@@ -97,6 +97,16 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   private java.lang.String customTime;
 
   /**
+   * Optional. Updates objects retention lock configuration. Unset values will be ignored. Set empty
+   * values to clear the retention for the object with existing `Unlocked` retention mode. Object
+   * with existing `Locked` retention mode cannot be cleared or reduce retain_until_time. Refer to
+   * documentation in https://cloud.google.com/storage/docs/object-lock
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ObjectRetention objectRetention;
+
+  /**
    * Optional. Updates objects Cache-Control fixed metadata. Unset values will be ignored. Set empty
    * values to clear the metadata. Additionally, the value for Custom-Time cannot decrease. Refer to
    * documentation in https://cloud.google.com/storage/docs/metadata#caching_data.
@@ -246,6 +256,29 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
    */
   public PutMetadata setCustomTime(java.lang.String customTime) {
     this.customTime = customTime;
+    return this;
+  }
+
+  /**
+   * Optional. Updates objects retention lock configuration. Unset values will be ignored. Set empty
+   * values to clear the retention for the object with existing `Unlocked` retention mode. Object
+   * with existing `Locked` retention mode cannot be cleared or reduce retain_until_time. Refer to
+   * documentation in https://cloud.google.com/storage/docs/object-lock
+   * @return value or {@code null} for none
+   */
+  public ObjectRetention getObjectRetention() {
+    return objectRetention;
+  }
+
+  /**
+   * Optional. Updates objects retention lock configuration. Unset values will be ignored. Set empty
+   * values to clear the retention for the object with existing `Unlocked` retention mode. Object
+   * with existing `Locked` retention mode cannot be cleared or reduce retain_until_time. Refer to
+   * documentation in https://cloud.google.com/storage/docs/object-lock
+   * @param objectRetention objectRetention or {@code null} for none
+   */
+  public PutMetadata setObjectRetention(ObjectRetention objectRetention) {
+    this.objectRetention = objectRetention;
     return this;
   }
 

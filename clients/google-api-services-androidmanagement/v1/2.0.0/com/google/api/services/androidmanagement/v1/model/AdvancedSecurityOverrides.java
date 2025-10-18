@@ -73,7 +73,8 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   /**
    * Optional. Controls Memory Tagging Extension (MTE)
    * (https://source.android.com/docs/security/test/memory-safety/arm-mte) on the device. The device
-   * needs to be rebooted to apply changes to the MTE policy.
+   * needs to be rebooted to apply changes to the MTE policy. On Android 15 and above, a
+   * NonComplianceDetail with PENDING is reported if the policy change is pending a device reboot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +193,8 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   /**
    * Optional. Controls Memory Tagging Extension (MTE)
    * (https://source.android.com/docs/security/test/memory-safety/arm-mte) on the device. The device
-   * needs to be rebooted to apply changes to the MTE policy.
+   * needs to be rebooted to apply changes to the MTE policy. On Android 15 and above, a
+   * NonComplianceDetail with PENDING is reported if the policy change is pending a device reboot.
    * @return value or {@code null} for none
    */
   public java.lang.String getMtePolicy() {
@@ -202,7 +204,8 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   /**
    * Optional. Controls Memory Tagging Extension (MTE)
    * (https://source.android.com/docs/security/test/memory-safety/arm-mte) on the device. The device
-   * needs to be rebooted to apply changes to the MTE policy.
+   * needs to be rebooted to apply changes to the MTE policy. On Android 15 and above, a
+   * NonComplianceDetail with PENDING is reported if the policy change is pending a device reboot.
    * @param mtePolicy mtePolicy or {@code null} for none
    */
   public AdvancedSecurityOverrides setMtePolicy(java.lang.String mtePolicy) {

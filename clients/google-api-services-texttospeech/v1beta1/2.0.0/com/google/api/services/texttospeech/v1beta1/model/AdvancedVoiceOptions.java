@@ -38,6 +38,15 @@ public final class AdvancedVoiceOptions extends com.google.api.client.json.Gener
   private java.lang.Boolean lowLatencyJourneySynthesis;
 
   /**
+   * Optional. Input only. If true, relaxes safety filters for Gemini TTS. Only supported for
+   * accounts linked to Invoiced (Offline) Cloud billing accounts. Otherwise, will return result
+   * google.rpc.Code.INVALID_ARGUMENT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean relaxSafetyFilters;
+
+  /**
    * Only for Journey voices. If false, the synthesis is context aware and has a higher latency.
    * @return value or {@code null} for none
    */
@@ -51,6 +60,27 @@ public final class AdvancedVoiceOptions extends com.google.api.client.json.Gener
    */
   public AdvancedVoiceOptions setLowLatencyJourneySynthesis(java.lang.Boolean lowLatencyJourneySynthesis) {
     this.lowLatencyJourneySynthesis = lowLatencyJourneySynthesis;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. If true, relaxes safety filters for Gemini TTS. Only supported for
+   * accounts linked to Invoiced (Offline) Cloud billing accounts. Otherwise, will return result
+   * google.rpc.Code.INVALID_ARGUMENT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRelaxSafetyFilters() {
+    return relaxSafetyFilters;
+  }
+
+  /**
+   * Optional. Input only. If true, relaxes safety filters for Gemini TTS. Only supported for
+   * accounts linked to Invoiced (Offline) Cloud billing accounts. Otherwise, will return result
+   * google.rpc.Code.INVALID_ARGUMENT.
+   * @param relaxSafetyFilters relaxSafetyFilters or {@code null} for none
+   */
+  public AdvancedVoiceOptions setRelaxSafetyFilters(java.lang.Boolean relaxSafetyFilters) {
+    this.relaxSafetyFilters = relaxSafetyFilters;
     return this;
   }
 

@@ -48,8 +48,8 @@ public final class PermissionList extends com.google.api.client.json.GenericJson
   private java.lang.String nextPageToken;
 
   /**
-   * The list of permissions. If nextPageToken is populated, then this list may be incomplete and an
-   * additional page of results should be fetched.
+   * The list of permissions. If `nextPageToken` is populated, then this list may be incomplete and
+   * an additional page of results should be fetched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,8 +104,8 @@ public final class PermissionList extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of permissions. If nextPageToken is populated, then this list may be incomplete and an
-   * additional page of results should be fetched.
+   * The list of permissions. If `nextPageToken` is populated, then this list may be incomplete and
+   * an additional page of results should be fetched.
    * @return value or {@code null} for none
    */
   public java.util.List<Permission> getPermissions() {
@@ -113,8 +113,8 @@ public final class PermissionList extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of permissions. If nextPageToken is populated, then this list may be incomplete and an
-   * additional page of results should be fetched.
+   * The list of permissions. If `nextPageToken` is populated, then this list may be incomplete and
+   * an additional page of results should be fetched.
    * @param permissions permissions or {@code null} for none
    */
   public PermissionList setPermissions(java.util.List<Permission> permissions) {

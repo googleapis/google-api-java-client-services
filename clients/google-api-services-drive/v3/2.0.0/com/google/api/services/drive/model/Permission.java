@@ -18,11 +18,13 @@ package com.google.api.services.drive.model;
 
 /**
  * A permission for a file. A permission grants a user, group, domain, or the world access to a file
- * or a folder hierarchy. By default, permissions requests only return a subset of fields.
- * Permission kind, ID, type, and role are always returned. To retrieve specific fields, see
- * https://developers.google.com/workspace/drive/api/guides/fields-parameter. Some resource methods
- * (such as `permissions.update`) require a `permissionId`. Use the `permissions.list` method to
- * retrieve the ID for a file, folder, or shared drive.
+ * or a folder hierarchy. For more information, see [Share files, folders, and
+ * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). By default,
+ * permission requests only return a subset of fields. Permission `kind`, `ID`, `type`, and `role`
+ * are always returned. To retrieve specific fields, see [Return specific
+ * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter). Some resource
+ * methods (such as `permissions.update`) require a `permissionId`. Use the `permissions.list`
+ * method to retrieve the ID for a file, folder, or shared drive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -44,7 +46,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Whether the account associated with this permission has been deleted. This field
-   * only pertains to user and group permissions.
+   * only pertains to permissions of type `user` or `group`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +55,8 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The "pretty" name of the value of the permission. The following is a list of
    * examples for each type of permission: * `user` - User's full name, as defined for their Google
-   * account, such as "Joe Smith." * `group` - Name of the Google Group, such as "The Company
-   * Administrators." * `domain` - String domain name, such as "thecompany.com." * `anyone` - No
+   * Account, such as "Dana A." * `group` - Name of the Google Group, such as "The Company
+   * Administrators." * `domain` - String domain name, such as "cymbalgroup.com." * `anyone` - No
    * `displayName` is present.
    * The value may be {@code null}.
    */
@@ -86,14 +88,16 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The ID of this permission. This is a unique identifier for the grantee, and is
-   * published in User resources as `permissionId`. IDs should be treated as opaque values.
+   * published in the [User
+   * resource](https://developers.google.com/workspace/drive/api/reference/rest/v3/User) as
+   * `permissionId`. IDs should be treated as opaque values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * When true, only organizers, owners, and users with permissions added directly on the item can
+   * When `true`, only organizers, owners, and users with permissions added directly on the item can
    * access it.
    * The value may be {@code null}.
    */
@@ -110,15 +114,15 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the account associated with this permission is a pending owner. Only populated for
-   * `user` type permissions for files that are not in a shared drive.
+   * permissions of type `user` for files that aren't in a shared drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean pendingOwner;
 
   /**
-   * Output only. Details of whether the permissions on this item are inherited or directly on this
-   * item.
+   * Output only. Details of whether the permissions on this item are inherited or are directly on
+   * this item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,9 +142,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.String photoLink;
 
   /**
-   * The role granted by this permission. While new values may be supported in the future, the
-   * following are currently allowed: * `owner` * `organizer` * `fileOrganizer` * `writer` *
-   * `commenter` * `reader`
+   * The role granted by this permission. Supported values include: * `owner` * `organizer` *
+   * `fileOrganizer` * `writer` * `commenter` * `reader` For more information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,10 +164,10 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the grantee. Valid values are: * `user` * `group` * `domain` * `anyone` When
-   * creating a permission, if `type` is `user` or `group`, you must provide an `emailAddress` for
-   * the user or group. When `type` is `domain`, you must provide a `domain`. There isn't extra
-   * information required for an `anyone` type.
+   * The type of the grantee. Supported values include: * `user` * `group` * `domain` * `anyone`
+   * When creating a permission, if `type` is `user` or `group`, you must provide an `emailAddress`
+   * for the user or group. If `type` is `domain`, you must provide a `domain`. If `type` is
+   * `anyone`, no extra information is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,10 +175,11 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates the view for this permission. Only populated for permissions that belong to a view.
-   * published and metadata are the only supported values. - published: The permission's role is
-   * published_reader. - metadata: The item is only visible to the metadata view because the item
-   * has limited access and the scope has at least read access to the parent. Note: The metadata
-   * view is currently only supported on folders.
+   * The only supported values are `published` and `metadata`: * `published`: The permission's role
+   * is `publishedReader`. * `metadata`: The item is only visible to the `metadata` view because the
+   * item has limited access and the scope has at least read access to the parent. The `metadata`
+   * view is only supported on folders. For more information, see
+   * [Views](https://developers.google.com/workspace/drive/api/guides/ref-roles#views).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,7 +206,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Whether the account associated with this permission has been deleted. This field
-   * only pertains to user and group permissions.
+   * only pertains to permissions of type `user` or `group`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -210,7 +215,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Whether the account associated with this permission has been deleted. This field
-   * only pertains to user and group permissions.
+   * only pertains to permissions of type `user` or `group`.
    * @param deleted deleted or {@code null} for none
    */
   public Permission setDeleted(java.lang.Boolean deleted) {
@@ -221,8 +226,8 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The "pretty" name of the value of the permission. The following is a list of
    * examples for each type of permission: * `user` - User's full name, as defined for their Google
-   * account, such as "Joe Smith." * `group` - Name of the Google Group, such as "The Company
-   * Administrators." * `domain` - String domain name, such as "thecompany.com." * `anyone` - No
+   * Account, such as "Dana A." * `group` - Name of the Google Group, such as "The Company
+   * Administrators." * `domain` - String domain name, such as "cymbalgroup.com." * `anyone` - No
    * `displayName` is present.
    * @return value or {@code null} for none
    */
@@ -233,8 +238,8 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The "pretty" name of the value of the permission. The following is a list of
    * examples for each type of permission: * `user` - User's full name, as defined for their Google
-   * account, such as "Joe Smith." * `group` - Name of the Google Group, such as "The Company
-   * Administrators." * `domain` - String domain name, such as "thecompany.com." * `anyone` - No
+   * Account, such as "Dana A." * `group` - Name of the Google Group, such as "The Company
+   * Administrators." * `domain` - String domain name, such as "cymbalgroup.com." * `anyone` - No
    * `displayName` is present.
    * @param displayName displayName or {@code null} for none
    */
@@ -300,7 +305,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The ID of this permission. This is a unique identifier for the grantee, and is
-   * published in User resources as `permissionId`. IDs should be treated as opaque values.
+   * published in the [User
+   * resource](https://developers.google.com/workspace/drive/api/reference/rest/v3/User) as
+   * `permissionId`. IDs should be treated as opaque values.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -309,7 +316,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The ID of this permission. This is a unique identifier for the grantee, and is
-   * published in User resources as `permissionId`. IDs should be treated as opaque values.
+   * published in the [User
+   * resource](https://developers.google.com/workspace/drive/api/reference/rest/v3/User) as
+   * `permissionId`. IDs should be treated as opaque values.
    * @param id id or {@code null} for none
    */
   public Permission setId(java.lang.String id) {
@@ -318,7 +327,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When true, only organizers, owners, and users with permissions added directly on the item can
+   * When `true`, only organizers, owners, and users with permissions added directly on the item can
    * access it.
    * @return value or {@code null} for none
    */
@@ -327,7 +336,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When true, only organizers, owners, and users with permissions added directly on the item can
+   * When `true`, only organizers, owners, and users with permissions added directly on the item can
    * access it.
    * @param inheritedPermissionsDisabled inheritedPermissionsDisabled or {@code null} for none
    */
@@ -357,7 +366,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the account associated with this permission is a pending owner. Only populated for
-   * `user` type permissions for files that are not in a shared drive.
+   * permissions of type `user` for files that aren't in a shared drive.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPendingOwner() {
@@ -366,7 +375,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the account associated with this permission is a pending owner. Only populated for
-   * `user` type permissions for files that are not in a shared drive.
+   * permissions of type `user` for files that aren't in a shared drive.
    * @param pendingOwner pendingOwner or {@code null} for none
    */
   public Permission setPendingOwner(java.lang.Boolean pendingOwner) {
@@ -375,8 +384,8 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Details of whether the permissions on this item are inherited or directly on this
-   * item.
+   * Output only. Details of whether the permissions on this item are inherited or are directly on
+   * this item.
    * @return value or {@code null} for none
    */
   public java.util.List<PermissionDetails> getPermissionDetails() {
@@ -384,8 +393,8 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Details of whether the permissions on this item are inherited or directly on this
-   * item.
+   * Output only. Details of whether the permissions on this item are inherited or are directly on
+   * this item.
    * @param permissionDetails permissionDetails or {@code null} for none
    */
   public Permission setPermissionDetails(java.util.List<PermissionDetails> permissionDetails) {
@@ -411,9 +420,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The role granted by this permission. While new values may be supported in the future, the
-   * following are currently allowed: * `owner` * `organizer` * `fileOrganizer` * `writer` *
-   * `commenter` * `reader`
+   * The role granted by this permission. Supported values include: * `owner` * `organizer` *
+   * `fileOrganizer` * `writer` * `commenter` * `reader` For more information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -421,9 +430,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The role granted by this permission. While new values may be supported in the future, the
-   * following are currently allowed: * `owner` * `organizer` * `fileOrganizer` * `writer` *
-   * `commenter` * `reader`
+   * The role granted by this permission. Supported values include: * `owner` * `organizer` *
+   * `fileOrganizer` * `writer` * `commenter` * `reader` For more information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
    * @param role role or {@code null} for none
    */
   public Permission setRole(java.lang.String role) {
@@ -449,10 +458,10 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the grantee. Valid values are: * `user` * `group` * `domain` * `anyone` When
-   * creating a permission, if `type` is `user` or `group`, you must provide an `emailAddress` for
-   * the user or group. When `type` is `domain`, you must provide a `domain`. There isn't extra
-   * information required for an `anyone` type.
+   * The type of the grantee. Supported values include: * `user` * `group` * `domain` * `anyone`
+   * When creating a permission, if `type` is `user` or `group`, you must provide an `emailAddress`
+   * for the user or group. If `type` is `domain`, you must provide a `domain`. If `type` is
+   * `anyone`, no extra information is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -460,10 +469,10 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the grantee. Valid values are: * `user` * `group` * `domain` * `anyone` When
-   * creating a permission, if `type` is `user` or `group`, you must provide an `emailAddress` for
-   * the user or group. When `type` is `domain`, you must provide a `domain`. There isn't extra
-   * information required for an `anyone` type.
+   * The type of the grantee. Supported values include: * `user` * `group` * `domain` * `anyone`
+   * When creating a permission, if `type` is `user` or `group`, you must provide an `emailAddress`
+   * for the user or group. If `type` is `domain`, you must provide a `domain`. If `type` is
+   * `anyone`, no extra information is required.
    * @param type type or {@code null} for none
    */
   public Permission setType(java.lang.String type) {
@@ -473,10 +482,11 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates the view for this permission. Only populated for permissions that belong to a view.
-   * published and metadata are the only supported values. - published: The permission's role is
-   * published_reader. - metadata: The item is only visible to the metadata view because the item
-   * has limited access and the scope has at least read access to the parent. Note: The metadata
-   * view is currently only supported on folders.
+   * The only supported values are `published` and `metadata`: * `published`: The permission's role
+   * is `publishedReader`. * `metadata`: The item is only visible to the `metadata` view because the
+   * item has limited access and the scope has at least read access to the parent. The `metadata`
+   * view is only supported on folders. For more information, see
+   * [Views](https://developers.google.com/workspace/drive/api/guides/ref-roles#views).
    * @return value or {@code null} for none
    */
   public java.lang.String getView() {
@@ -485,10 +495,11 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates the view for this permission. Only populated for permissions that belong to a view.
-   * published and metadata are the only supported values. - published: The permission's role is
-   * published_reader. - metadata: The item is only visible to the metadata view because the item
-   * has limited access and the scope has at least read access to the parent. Note: The metadata
-   * view is currently only supported on folders.
+   * The only supported values are `published` and `metadata`: * `published`: The permission's role
+   * is `publishedReader`. * `metadata`: The item is only visible to the `metadata` view because the
+   * item has limited access and the scope has at least read access to the parent. The `metadata`
+   * view is only supported on folders. For more information, see
+   * [Views](https://developers.google.com/workspace/drive/api/guides/ref-roles#views).
    * @param view view or {@code null} for none
    */
   public Permission setView(java.lang.String view) {
@@ -528,17 +539,16 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     private java.lang.String inheritedFrom;
 
     /**
-     * Output only. The permission type for this user. While new values may be added in future, the
-     * following are currently possible: * `file` * `member`
+     * Output only. The permission type for this user. Supported values include: * `file` * `member`
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String permissionType;
 
     /**
-     * Output only. The primary role for this user. While new values may be added in the future, the
-     * following are currently possible: * `owner` * `organizer` * `fileOrganizer` * `writer` *
-     * `commenter` * `reader`
+     * Output only. The primary role for this user. Supported values include: * `owner` * `organizer`
+     * * `fileOrganizer` * `writer` * `commenter` * `reader` For more information, see [Roles and
+     * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -583,8 +593,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. The permission type for this user. While new values may be added in future, the
-     * following are currently possible: * `file` * `member`
+     * Output only. The permission type for this user. Supported values include: * `file` * `member`
      * @return value or {@code null} for none
      */
     public java.lang.String getPermissionType() {
@@ -592,8 +601,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. The permission type for this user. While new values may be added in future, the
-     * following are currently possible: * `file` * `member`
+     * Output only. The permission type for this user. Supported values include: * `file` * `member`
      * @param permissionType permissionType or {@code null} for none
      */
     public PermissionDetails setPermissionType(java.lang.String permissionType) {
@@ -602,9 +610,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. The primary role for this user. While new values may be added in the future, the
-     * following are currently possible: * `owner` * `organizer` * `fileOrganizer` * `writer` *
-     * `commenter` * `reader`
+     * Output only. The primary role for this user. Supported values include: * `owner` * `organizer`
+     * * `fileOrganizer` * `writer` * `commenter` * `reader` For more information, see [Roles and
+     * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
      * @return value or {@code null} for none
      */
     public java.lang.String getRole() {
@@ -612,9 +620,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. The primary role for this user. While new values may be added in the future, the
-     * following are currently possible: * `owner` * `organizer` * `fileOrganizer` * `writer` *
-     * `commenter` * `reader`
+     * Output only. The primary role for this user. Supported values include: * `owner` * `organizer`
+     * * `fileOrganizer` * `writer` * `commenter` * `reader` For more information, see [Roles and
+     * permissions](https://developers.google.com/workspace/drive/api/guides/ref-roles).
      * @param role role or {@code null} for none
      */
     public PermissionDetails setRole(java.lang.String role) {

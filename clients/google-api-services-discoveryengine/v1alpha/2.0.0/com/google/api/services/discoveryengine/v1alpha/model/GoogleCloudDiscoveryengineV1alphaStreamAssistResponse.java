@@ -51,7 +51,7 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistResponse extends
   private java.lang.String assistToken;
 
   /**
-   * Session information.
+   * Session information. Only included in the final StreamAssistResponse of the response stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistResponse extends
   }
 
   /**
-   * Session information.
+   * Session information. Only included in the final StreamAssistResponse of the response stream.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaStreamAssistResponseSessionInfo getSessionInfo() {
@@ -114,7 +114,7 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistResponse extends
   }
 
   /**
-   * Session information.
+   * Session information. Only included in the final StreamAssistResponse of the response stream.
    * @param sessionInfo sessionInfo or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaStreamAssistResponse setSessionInfo(GoogleCloudDiscoveryengineV1alphaStreamAssistResponseSessionInfo sessionInfo) {

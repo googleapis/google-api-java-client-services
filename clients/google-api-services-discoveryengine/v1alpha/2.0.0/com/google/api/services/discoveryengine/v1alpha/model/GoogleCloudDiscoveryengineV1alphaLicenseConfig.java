@@ -58,6 +58,13 @@ public final class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends com.go
   private java.lang.Boolean freeTrial;
 
   /**
+   * Output only. Whether the license config is for Gemini bundle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean geminiBundle;
+
+  /**
    * Required. Number of licenses purchased.
    * The value may be {@code null}.
    */
@@ -165,6 +172,23 @@ public final class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaLicenseConfig setFreeTrial(java.lang.Boolean freeTrial) {
     this.freeTrial = freeTrial;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the license config is for Gemini bundle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGeminiBundle() {
+    return geminiBundle;
+  }
+
+  /**
+   * Output only. Whether the license config is for Gemini bundle.
+   * @param geminiBundle geminiBundle or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaLicenseConfig setGeminiBundle(java.lang.Boolean geminiBundle) {
+    this.geminiBundle = geminiBundle;
     return this;
   }
 

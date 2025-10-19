@@ -31,12 +31,36 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class ProducerPscConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The specification for automatically creating a DNS record for this PSC connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutomatedDnsCreationSpec automatedDnsCreationSpec;
+
+  /**
    * The resource path of a service attachment. Example:
    * projects/{projectNumOrId}/regions/{region}/serviceAttachments/{resourceId}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAttachmentUri;
+
+  /**
+   * Optional. The specification for automatically creating a DNS record for this PSC connection.
+   * @return value or {@code null} for none
+   */
+  public AutomatedDnsCreationSpec getAutomatedDnsCreationSpec() {
+    return automatedDnsCreationSpec;
+  }
+
+  /**
+   * Optional. The specification for automatically creating a DNS record for this PSC connection.
+   * @param automatedDnsCreationSpec automatedDnsCreationSpec or {@code null} for none
+   */
+  public ProducerPscConfig setAutomatedDnsCreationSpec(AutomatedDnsCreationSpec automatedDnsCreationSpec) {
+    this.automatedDnsCreationSpec = automatedDnsCreationSpec;
+    return this;
+  }
 
   /**
    * The resource path of a service attachment. Example:

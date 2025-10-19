@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * Message for response to listing Transports.
+ * The status of DNS automation for a PSC connection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -28,88 +28,88 @@ package com.google.api.services.networkconnectivity.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListTransportsResponse extends com.google.api.client.json.GenericJson {
+public final class DnsAutomationStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token identifying a page of results the server should return.
+   * Output only. The error details if the state is CREATE_FAILED or DELETE_FAILED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private GoogleRpcStatus error;
 
   /**
-   * The list of Transport.
+   * Output only. The fully qualified domain name of the DNS record.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Transport> transports;
+  private java.lang.String fqdn;
 
   /**
-   * Unordered list. Locations that could not be reached.
+   * Output only. The current state of DNS automation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> unreachable;
+  private java.lang.String state;
 
   /**
-   * A token identifying a page of results the server should return.
+   * Output only. The error details if the state is CREATE_FAILED or DELETE_FAILED.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public GoogleRpcStatus getError() {
+    return error;
   }
 
   /**
-   * A token identifying a page of results the server should return.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * Output only. The error details if the state is CREATE_FAILED or DELETE_FAILED.
+   * @param error error or {@code null} for none
    */
-  public ListTransportsResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public DnsAutomationStatus setError(GoogleRpcStatus error) {
+    this.error = error;
     return this;
   }
 
   /**
-   * The list of Transport.
+   * Output only. The fully qualified domain name of the DNS record.
    * @return value or {@code null} for none
    */
-  public java.util.List<Transport> getTransports() {
-    return transports;
+  public java.lang.String getFqdn() {
+    return fqdn;
   }
 
   /**
-   * The list of Transport.
-   * @param transports transports or {@code null} for none
+   * Output only. The fully qualified domain name of the DNS record.
+   * @param fqdn fqdn or {@code null} for none
    */
-  public ListTransportsResponse setTransports(java.util.List<Transport> transports) {
-    this.transports = transports;
+  public DnsAutomationStatus setFqdn(java.lang.String fqdn) {
+    this.fqdn = fqdn;
     return this;
   }
 
   /**
-   * Unordered list. Locations that could not be reached.
+   * Output only. The current state of DNS automation.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getUnreachable() {
-    return unreachable;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * Unordered list. Locations that could not be reached.
-   * @param unreachable unreachable or {@code null} for none
+   * Output only. The current state of DNS automation.
+   * @param state state or {@code null} for none
    */
-  public ListTransportsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
-    this.unreachable = unreachable;
+  public DnsAutomationStatus setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   @Override
-  public ListTransportsResponse set(String fieldName, Object value) {
-    return (ListTransportsResponse) super.set(fieldName, value);
+  public DnsAutomationStatus set(String fieldName, Object value) {
+    return (DnsAutomationStatus) super.set(fieldName, value);
   }
 
   @Override
-  public ListTransportsResponse clone() {
-    return (ListTransportsResponse) super.clone();
+  public DnsAutomationStatus clone() {
+    return (DnsAutomationStatus) super.clone();
   }
 
 }

@@ -121,7 +121,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The name of this notebook instance. Format:
+   * Output only. Identifier. The name of this notebook instance. Format:
    * `projects/{project_id}/locations/{location}/instances/{instance_id}`
    * The value may be {@code null}.
    */
@@ -396,7 +396,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of this notebook instance. Format:
+   * Output only. Identifier. The name of this notebook instance. Format:
    * `projects/{project_id}/locations/{location}/instances/{instance_id}`
    * @return value or {@code null} for none
    */
@@ -405,7 +405,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of this notebook instance. Format:
+   * Output only. Identifier. The name of this notebook instance. Format:
    * `projects/{project_id}/locations/{location}/instances/{instance_id}`
    * @param name name or {@code null} for none
    */

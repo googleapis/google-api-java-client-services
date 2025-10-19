@@ -31,6 +31,14 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaAssistantGroundedContent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Source attribution of the generated content. See also https://cloud.google.com/vertex-
+   * ai/generative-ai/docs/learn/overview#citation_check
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaCitationMetadata citationMetadata;
+
+  /**
    * The content.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class GoogleCloudDiscoveryengineV1betaAssistantGroundedContent exte
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaAssistantGroundedContentTextGroundingMetadata textGroundingMetadata;
+
+  /**
+   * Source attribution of the generated content. See also https://cloud.google.com/vertex-
+   * ai/generative-ai/docs/learn/overview#citation_check
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaCitationMetadata getCitationMetadata() {
+    return citationMetadata;
+  }
+
+  /**
+   * Source attribution of the generated content. See also https://cloud.google.com/vertex-
+   * ai/generative-ai/docs/learn/overview#citation_check
+   * @param citationMetadata citationMetadata or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAssistantGroundedContent setCitationMetadata(GoogleCloudDiscoveryengineV1betaCitationMetadata citationMetadata) {
+    this.citationMetadata = citationMetadata;
+    return this;
+  }
 
   /**
    * The content.

@@ -30,13 +30,6 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaLicenseConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The alert policy config for this license config.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1betaAlertPolicyResourceConfig alertPolicyResourceConfig;
-
-  /**
    * Optional. Whether the license config should be auto renewed when it reaches the end date.
    * The value may be {@code null}.
    */
@@ -56,6 +49,13 @@ public final class GoogleCloudDiscoveryengineV1betaLicenseConfig extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean freeTrial;
+
+  /**
+   * Output only. Whether the license config is for Gemini bundle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean geminiBundle;
 
   /**
    * Required. Number of licenses purchased.
@@ -99,23 +99,6 @@ public final class GoogleCloudDiscoveryengineV1betaLicenseConfig extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.String subscriptionTier;
-
-  /**
-   * Optional. The alert policy config for this license config.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1betaAlertPolicyResourceConfig getAlertPolicyResourceConfig() {
-    return alertPolicyResourceConfig;
-  }
-
-  /**
-   * Optional. The alert policy config for this license config.
-   * @param alertPolicyResourceConfig alertPolicyResourceConfig or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1betaLicenseConfig setAlertPolicyResourceConfig(GoogleCloudDiscoveryengineV1betaAlertPolicyResourceConfig alertPolicyResourceConfig) {
-    this.alertPolicyResourceConfig = alertPolicyResourceConfig;
-    return this;
-  }
 
   /**
    * Optional. Whether the license config should be auto renewed when it reaches the end date.
@@ -165,6 +148,23 @@ public final class GoogleCloudDiscoveryengineV1betaLicenseConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1betaLicenseConfig setFreeTrial(java.lang.Boolean freeTrial) {
     this.freeTrial = freeTrial;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the license config is for Gemini bundle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGeminiBundle() {
+    return geminiBundle;
+  }
+
+  /**
+   * Output only. Whether the license config is for Gemini bundle.
+   * @param geminiBundle geminiBundle or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaLicenseConfig setGeminiBundle(java.lang.Boolean geminiBundle) {
+    this.geminiBundle = geminiBundle;
     return this;
   }
 

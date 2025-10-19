@@ -17,8 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * The contact info stored in resource level. If both project level and resource level is populated,
- * the resource level contact info will override the project level contact info.
+ * A collection of source attributions for a piece of content.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -28,40 +27,46 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1betaContactDetails extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaCitationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The email address of the contact.
+   * Output only. List of citations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String emailAddress;
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaCitation> citations;
 
-  /**
-   * Optional. The email address of the contact.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEmailAddress() {
-    return emailAddress;
+  static {
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1alphaCitation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1alphaCitation.class);
   }
 
   /**
-   * Optional. The email address of the contact.
-   * @param emailAddress emailAddress or {@code null} for none
+   * Output only. List of citations.
+   * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1betaContactDetails setEmailAddress(java.lang.String emailAddress) {
-    this.emailAddress = emailAddress;
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaCitation> getCitations() {
+    return citations;
+  }
+
+  /**
+   * Output only. List of citations.
+   * @param citations citations or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCitationMetadata setCitations(java.util.List<GoogleCloudDiscoveryengineV1alphaCitation> citations) {
+    this.citations = citations;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaContactDetails set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1betaContactDetails) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaCitationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaCitationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaContactDetails clone() {
-    return (GoogleCloudDiscoveryengineV1betaContactDetails) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaCitationMetadata clone() {
+    return (GoogleCloudDiscoveryengineV1alphaCitationMetadata) super.clone();
   }
 
 }

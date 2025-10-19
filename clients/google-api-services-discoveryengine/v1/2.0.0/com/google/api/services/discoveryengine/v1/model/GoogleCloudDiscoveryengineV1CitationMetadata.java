@@ -17,8 +17,7 @@
 package com.google.api.services.discoveryengine.v1.model;
 
 /**
- * The contact info stored in resource level. If both project level and resource level is populated,
- * the resource level contact info will override the project level contact info.
+ * A collection of source attributions for a piece of content.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -28,40 +27,46 @@ package com.google.api.services.discoveryengine.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1ContactDetails extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1CitationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The email address of the contact.
+   * Output only. List of citations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String emailAddress;
+  private java.util.List<GoogleCloudDiscoveryengineV1Citation> citations;
 
-  /**
-   * Optional. The email address of the contact.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEmailAddress() {
-    return emailAddress;
+  static {
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1Citation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1Citation.class);
   }
 
   /**
-   * Optional. The email address of the contact.
-   * @param emailAddress emailAddress or {@code null} for none
+   * Output only. List of citations.
+   * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1ContactDetails setEmailAddress(java.lang.String emailAddress) {
-    this.emailAddress = emailAddress;
+  public java.util.List<GoogleCloudDiscoveryengineV1Citation> getCitations() {
+    return citations;
+  }
+
+  /**
+   * Output only. List of citations.
+   * @param citations citations or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1CitationMetadata setCitations(java.util.List<GoogleCloudDiscoveryengineV1Citation> citations) {
+    this.citations = citations;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1ContactDetails set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1ContactDetails) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1CitationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1CitationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1ContactDetails clone() {
-    return (GoogleCloudDiscoveryengineV1ContactDetails) super.clone();
+  public GoogleCloudDiscoveryengineV1CitationMetadata clone() {
+    return (GoogleCloudDiscoveryengineV1CitationMetadata) super.clone();
   }
 
 }

@@ -1420,6 +1420,289 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * Gets configurable pricing usage stats.
+       *
+       * Create a request for the method "locations.getConfigurablePricingUsageStats".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link GetConfigurablePricingUsageStats#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param name Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
+       *        projects/{project}/locations/{location}/configurablePricingUsageStats
+       * @return the request
+       */
+      public GetConfigurablePricingUsageStats getConfigurablePricingUsageStats(java.lang.String name) throws java.io.IOException {
+        GetConfigurablePricingUsageStats result = new GetConfigurablePricingUsageStats(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetConfigurablePricingUsageStats extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStats> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/configurablePricingUsageStats$");
+
+        /**
+         * Gets configurable pricing usage stats.
+         *
+         * Create a request for the method "locations.getConfigurablePricingUsageStats".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link GetConfigurablePricingUsageStats#execute()} method to
+         * invoke the remote operation. <p> {@link GetConfigurablePricingUsageStats#initialize(com.google.
+         * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+         * instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
+       *        projects/{project}/locations/{location}/configurablePricingUsageStats
+         * @since 1.13
+         */
+        protected GetConfigurablePricingUsageStats(java.lang.String name) {
+          super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStats.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/configurablePricingUsageStats$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats set$Xgafv(java.lang.String $Xgafv) {
+          return (GetConfigurablePricingUsageStats) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setAccessToken(java.lang.String accessToken) {
+          return (GetConfigurablePricingUsageStats) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setAlt(java.lang.String alt) {
+          return (GetConfigurablePricingUsageStats) super.setAlt(alt);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setCallback(java.lang.String callback) {
+          return (GetConfigurablePricingUsageStats) super.setCallback(callback);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setFields(java.lang.String fields) {
+          return (GetConfigurablePricingUsageStats) super.setFields(fields);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setKey(java.lang.String key) {
+          return (GetConfigurablePricingUsageStats) super.setKey(key);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setOauthToken(java.lang.String oauthToken) {
+          return (GetConfigurablePricingUsageStats) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetConfigurablePricingUsageStats) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setQuotaUser(java.lang.String quotaUser) {
+          return (GetConfigurablePricingUsageStats) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setUploadType(java.lang.String uploadType) {
+          return (GetConfigurablePricingUsageStats) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetConfigurablePricingUsageStats) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
+         * projects/{project}/locations/{location}/configurablePricingUsageStats
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
+       projects/{project}/locations/{location}/configurablePricingUsageStats
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
+         * projects/{project}/locations/{location}/configurablePricingUsageStats
+         */
+        public GetConfigurablePricingUsageStats setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/configurablePricingUsageStats$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The metric types to return usage for. */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> metricTypes;
+
+        /** Optional. The metric types to return usage for.
+         */
+        public java.util.List<java.lang.String> getMetricTypes() {
+          return metricTypes;
+        }
+
+        /** Optional. The metric types to return usage for. */
+        public GetConfigurablePricingUsageStats setMetricTypes(java.util.List<java.lang.String> metricTypes) {
+          this.metricTypes = metricTypes;
+          return this;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        @com.google.api.client.util.Key("timeRange.endDate.day")
+        private java.lang.Integer timeRangeEndDateDay;
+
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
+         */
+        public java.lang.Integer getTimeRangeEndDateDay() {
+          return timeRangeEndDateDay;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        public GetConfigurablePricingUsageStats setTimeRangeEndDateDay(java.lang.Integer timeRangeEndDateDay) {
+          this.timeRangeEndDateDay = timeRangeEndDateDay;
+          return this;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        @com.google.api.client.util.Key("timeRange.endDate.month")
+        private java.lang.Integer timeRangeEndDateMonth;
+
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public java.lang.Integer getTimeRangeEndDateMonth() {
+          return timeRangeEndDateMonth;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public GetConfigurablePricingUsageStats setTimeRangeEndDateMonth(java.lang.Integer timeRangeEndDateMonth) {
+          this.timeRangeEndDateMonth = timeRangeEndDateMonth;
+          return this;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        @com.google.api.client.util.Key("timeRange.endDate.year")
+        private java.lang.Integer timeRangeEndDateYear;
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         */
+        public java.lang.Integer getTimeRangeEndDateYear() {
+          return timeRangeEndDateYear;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        public GetConfigurablePricingUsageStats setTimeRangeEndDateYear(java.lang.Integer timeRangeEndDateYear) {
+          this.timeRangeEndDateYear = timeRangeEndDateYear;
+          return this;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        @com.google.api.client.util.Key("timeRange.startDate.day")
+        private java.lang.Integer timeRangeStartDateDay;
+
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
+         */
+        public java.lang.Integer getTimeRangeStartDateDay() {
+          return timeRangeStartDateDay;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        public GetConfigurablePricingUsageStats setTimeRangeStartDateDay(java.lang.Integer timeRangeStartDateDay) {
+          this.timeRangeStartDateDay = timeRangeStartDateDay;
+          return this;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        @com.google.api.client.util.Key("timeRange.startDate.month")
+        private java.lang.Integer timeRangeStartDateMonth;
+
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public java.lang.Integer getTimeRangeStartDateMonth() {
+          return timeRangeStartDateMonth;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public GetConfigurablePricingUsageStats setTimeRangeStartDateMonth(java.lang.Integer timeRangeStartDateMonth) {
+          this.timeRangeStartDateMonth = timeRangeStartDateMonth;
+          return this;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        @com.google.api.client.util.Key("timeRange.startDate.year")
+        private java.lang.Integer timeRangeStartDateYear;
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         */
+        public java.lang.Integer getTimeRangeStartDateYear() {
+          return timeRangeStartDateYear;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        public GetConfigurablePricingUsageStats setTimeRangeStartDateYear(java.lang.Integer timeRangeStartDateYear) {
+          this.timeRangeStartDateYear = timeRangeStartDateYear;
+          return this;
+        }
+
+        @Override
+        public GetConfigurablePricingUsageStats set(String parameterName, Object value) {
+          return (GetConfigurablePricingUsageStats) super.set(parameterName, value);
+        }
+      }
+      /**
        * Obtains the time series data of organic or dedicated crawl rate for monitoring. When dedicated
        * crawl rate is not set, it will return vertex AI's organic crawl rate time series. Organic crawl
        * means Google automatically crawl the internet at its own convenience. When dedicated crawl rate

@@ -31,6 +31,13 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class ConsumerPscConnection extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The status of DNS automation for this PSC connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DnsAutomationStatus dnsAutomationStatus;
+
+  /**
    * The most recent error during operating this connection.
    * The value may be {@code null}.
    */
@@ -142,6 +149,23 @@ public final class ConsumerPscConnection extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. The status of DNS automation for this PSC connection.
+   * @return value or {@code null} for none
+   */
+  public DnsAutomationStatus getDnsAutomationStatus() {
+    return dnsAutomationStatus;
+  }
+
+  /**
+   * Output only. The status of DNS automation for this PSC connection.
+   * @param dnsAutomationStatus dnsAutomationStatus or {@code null} for none
+   */
+  public ConsumerPscConnection setDnsAutomationStatus(DnsAutomationStatus dnsAutomationStatus) {
+    this.dnsAutomationStatus = dnsAutomationStatus;
+    return this;
+  }
 
   /**
    * The most recent error during operating this connection.

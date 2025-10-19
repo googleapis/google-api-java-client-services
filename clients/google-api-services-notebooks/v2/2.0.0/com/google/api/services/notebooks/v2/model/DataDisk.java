@@ -62,6 +62,13 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String kmsKey;
 
   /**
+   * Optional. The resource policies to apply to the data disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> resourcePolicies;
+
+  /**
    * Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
    * @return value or {@code null} for none
    */
@@ -134,6 +141,23 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
    */
   public DataDisk setKmsKey(java.lang.String kmsKey) {
     this.kmsKey = kmsKey;
+    return this;
+  }
+
+  /**
+   * Optional. The resource policies to apply to the data disk.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResourcePolicies() {
+    return resourcePolicies;
+  }
+
+  /**
+   * Optional. The resource policies to apply to the data disk.
+   * @param resourcePolicies resourcePolicies or {@code null} for none
+   */
+  public DataDisk setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
+    this.resourcePolicies = resourcePolicies;
     return this;
   }
 

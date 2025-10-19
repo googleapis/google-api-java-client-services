@@ -445,22 +445,22 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
+       primarily intended for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
+         * is primarily intended for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -2121,7 +2121,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the notebooks server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The name of this notebook instance. Format:
+         * @param name Output only. Identifier. The name of this notebook instance. Format:
          *        `projects/{project_id}/locations/{location}/instances/{instance_id}`
          * @param content the {@link com.google.api.services.notebooks.v2.model.Instance}
          * @return the request
@@ -2150,7 +2150,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The name of this notebook instance. Format:
+           * @param name Output only. Identifier. The name of this notebook instance. Format:
          *        `projects/{project_id}/locations/{location}/instances/{instance_id}`
            * @param content the {@link com.google.api.services.notebooks.v2.model.Instance}
            * @since 1.13
@@ -2221,13 +2221,13 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Output only. The name of this notebook instance. Format:
+           * Output only. Identifier. The name of this notebook instance. Format:
            * `projects/{project_id}/locations/{location}/instances/{instance_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The name of this notebook instance. Format:
+          /** Output only. Identifier. The name of this notebook instance. Format:
          `projects/{project_id}/locations/{location}/instances/{instance_id}`
            */
           public java.lang.String getName() {
@@ -2235,7 +2235,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Output only. The name of this notebook instance. Format:
+           * Output only. Identifier. The name of this notebook instance. Format:
            * `projects/{project_id}/locations/{location}/instances/{instance_id}`
            */
           public Patch setName(java.lang.String name) {
@@ -4465,6 +4465,40 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           /** The standard list page token. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** When set to `true`, operations that are reachable are returned as normal, and those that are
+         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
+         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
+         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
+         explicitly documented otherwise in service or product specific documentation.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 

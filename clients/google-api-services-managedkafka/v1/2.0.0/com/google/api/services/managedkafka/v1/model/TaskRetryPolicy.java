@@ -17,12 +17,14 @@
 package com.google.api.services.managedkafka.v1.model;
 
 /**
- * Task Retry Policy is implemented on a best-effort basis. Retry delay will be exponential based on
- * provided minimum and maximum backoffs. https://en.wikipedia.org/wiki/Exponential_backoff. Note
- * that the delay between consecutive task restarts may not always precisely match the configured
- * settings. This can happen when the ConnectCluster is in rebalancing state or if the
- * ConnectCluster is unresponsive etc. The default values for minimum and maximum backoffs are 60
- * seconds and 30 minutes respectively.
+ * Task Retry Policy is implemented on a best-effort basis. The default policy retries tasks with a
+ * minimum_backoff of 60 seconds, and a maximum_backoff of 12 hours. You can disable the policy by
+ * setting the task_retry_disabled field to true. Retry delay will be exponential based on provided
+ * minimum and maximum backoffs. https://en.wikipedia.org/wiki/Exponential_backoff. Note that the
+ * delay between consecutive task restarts may not always precisely match the configured settings.
+ * This can happen when the ConnectCluster is in rebalancing state or if the ConnectCluster is
+ * unresponsive etc. The default values for minimum and maximum backoffs are 60 seconds and 12 hours
+ * respectively.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Managed Service for Apache Kafka API. For a detailed
@@ -50,6 +52,13 @@ public final class TaskRetryPolicy extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private String minimumBackoff;
+
+  /**
+   * Optional. If true, task retry is disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean taskRetryDisabled;
 
   /**
    * Optional. The maximum amount of time to wait before retrying a failed task. This sets an upper
@@ -86,6 +95,23 @@ public final class TaskRetryPolicy extends com.google.api.client.json.GenericJso
    */
   public TaskRetryPolicy setMinimumBackoff(String minimumBackoff) {
     this.minimumBackoff = minimumBackoff;
+    return this;
+  }
+
+  /**
+   * Optional. If true, task retry is disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTaskRetryDisabled() {
+    return taskRetryDisabled;
+  }
+
+  /**
+   * Optional. If true, task retry is disabled.
+   * @param taskRetryDisabled taskRetryDisabled or {@code null} for none
+   */
+  public TaskRetryPolicy setTaskRetryDisabled(java.lang.Boolean taskRetryDisabled) {
+    this.taskRetryDisabled = taskRetryDisabled;
     return this;
   }
 

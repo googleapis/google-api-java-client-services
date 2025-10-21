@@ -181,6 +181,15 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String scalingMode;
 
   /**
+   * Optional. The scheduling policy to use for jobs and queries running under this reservation. The
+   * scheduling policy controls how the reservation's resources are distributed. This feature is not
+   * yet generally available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchedulingPolicy schedulingPolicy;
+
+  /**
    * Optional. The current location of the reservation's secondary replica. This field is only set
    * for reservations using the managed disaster recovery feature. Users can set this in create
    * reservation calls to create a failover reservation or in update reservation calls to convert a
@@ -551,6 +560,27 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setScalingMode(java.lang.String scalingMode) {
     this.scalingMode = scalingMode;
+    return this;
+  }
+
+  /**
+   * Optional. The scheduling policy to use for jobs and queries running under this reservation. The
+   * scheduling policy controls how the reservation's resources are distributed. This feature is not
+   * yet generally available.
+   * @return value or {@code null} for none
+   */
+  public SchedulingPolicy getSchedulingPolicy() {
+    return schedulingPolicy;
+  }
+
+  /**
+   * Optional. The scheduling policy to use for jobs and queries running under this reservation. The
+   * scheduling policy controls how the reservation's resources are distributed. This feature is not
+   * yet generally available.
+   * @param schedulingPolicy schedulingPolicy or {@code null} for none
+   */
+  public Reservation setSchedulingPolicy(SchedulingPolicy schedulingPolicy) {
+    this.schedulingPolicy = schedulingPolicy;
     return this;
   }
 

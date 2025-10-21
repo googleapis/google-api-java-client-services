@@ -69,6 +69,16 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. The scheduling policy to use for jobs and queries of this assignee when running under
+   * the associated reservation. The scheduling policy controls how the reservation's resources are
+   * distributed. This overrides the default scheduling policy specified on the reservation. This
+   * feature is not yet generally available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchedulingPolicy schedulingPolicy;
+
+  /**
    * Output only. State of the assignment.
    * The value may be {@code null}.
    */
@@ -158,6 +168,29 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    */
   public Assignment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The scheduling policy to use for jobs and queries of this assignee when running under
+   * the associated reservation. The scheduling policy controls how the reservation's resources are
+   * distributed. This overrides the default scheduling policy specified on the reservation. This
+   * feature is not yet generally available.
+   * @return value or {@code null} for none
+   */
+  public SchedulingPolicy getSchedulingPolicy() {
+    return schedulingPolicy;
+  }
+
+  /**
+   * Optional. The scheduling policy to use for jobs and queries of this assignee when running under
+   * the associated reservation. The scheduling policy controls how the reservation's resources are
+   * distributed. This overrides the default scheduling policy specified on the reservation. This
+   * feature is not yet generally available.
+   * @param schedulingPolicy schedulingPolicy or {@code null} for none
+   */
+  public Assignment setSchedulingPolicy(SchedulingPolicy schedulingPolicy) {
+    this.schedulingPolicy = schedulingPolicy;
     return this;
   }
 

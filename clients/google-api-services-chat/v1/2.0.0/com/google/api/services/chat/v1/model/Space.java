@@ -66,7 +66,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
    * `customers/{customer}`, where `customer` is the `id` from the [Admin SDK customer
    * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers).
    * Private apps can also use the `customers/my_customer` alias to create the space in the same
-   * Google Workspace organization as the app. For DMs, this field isn't populated.
+   * Google Workspace organization as the app. This field isn't populated for direct messages (DMs)
+   * or when the space is created by non-Google Workspace users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,7 +301,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
    * `customers/{customer}`, where `customer` is the `id` from the [Admin SDK customer
    * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers).
    * Private apps can also use the `customers/my_customer` alias to create the space in the same
-   * Google Workspace organization as the app. For DMs, this field isn't populated.
+   * Google Workspace organization as the app. This field isn't populated for direct messages (DMs)
+   * or when the space is created by non-Google Workspace users.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomer() {
@@ -314,7 +316,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
    * `customers/{customer}`, where `customer` is the `id` from the [Admin SDK customer
    * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers).
    * Private apps can also use the `customers/my_customer` alias to create the space in the same
-   * Google Workspace organization as the app. For DMs, this field isn't populated.
+   * Google Workspace organization as the app. This field isn't populated for direct messages (DMs)
+   * or when the space is created by non-Google Workspace users.
    * @param customer customer or {@code null} for none
    */
   public Space setCustomer(java.lang.String customer) {

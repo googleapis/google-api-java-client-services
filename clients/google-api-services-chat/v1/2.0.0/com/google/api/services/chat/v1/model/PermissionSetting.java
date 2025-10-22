@@ -30,6 +30,13 @@ package com.google.api.services.chat.v1.model;
 public final class PermissionSetting extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether space managers `ROLE_ASSISTANT_MANAGER`) have this permission.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean assistantManagersAllowed;
+
+  /**
    * Optional. Whether space owners (`ROLE_MANAGER`) have this permission.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class PermissionSetting extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean membersAllowed;
+
+  /**
+   * Optional. Whether space managers `ROLE_ASSISTANT_MANAGER`) have this permission.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAssistantManagersAllowed() {
+    return assistantManagersAllowed;
+  }
+
+  /**
+   * Optional. Whether space managers `ROLE_ASSISTANT_MANAGER`) have this permission.
+   * @param assistantManagersAllowed assistantManagersAllowed or {@code null} for none
+   */
+  public PermissionSetting setAssistantManagersAllowed(java.lang.Boolean assistantManagersAllowed) {
+    this.assistantManagersAllowed = assistantManagersAllowed;
+    return this;
+  }
 
   /**
    * Optional. Whether space owners (`ROLE_MANAGER`) have this permission.

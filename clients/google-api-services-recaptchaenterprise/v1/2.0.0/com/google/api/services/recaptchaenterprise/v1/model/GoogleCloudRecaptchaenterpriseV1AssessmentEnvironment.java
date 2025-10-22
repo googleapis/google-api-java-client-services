@@ -35,9 +35,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AssessmentEnvironment extends
    * Optional. Identifies the client module initiating the CreateAssessment request. This can be the
    * link to the client module's project. Examples include: -
    * "github.com/GoogleCloudPlatform/recaptcha-enterprise-google-tag-manager" -
-   * "cloud.google.com/recaptcha/docs/implement-waf-akamai" -
-   * "cloud.google.com/recaptcha/docs/implement-waf-cloudflare" - "wordpress.org/plugins/recaptcha-
-   * something"
+   * "wordpress.org/plugins/recaptcha-something"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +52,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AssessmentEnvironment extends
    * Optional. Identifies the client module initiating the CreateAssessment request. This can be the
    * link to the client module's project. Examples include: -
    * "github.com/GoogleCloudPlatform/recaptcha-enterprise-google-tag-manager" -
-   * "cloud.google.com/recaptcha/docs/implement-waf-akamai" -
-   * "cloud.google.com/recaptcha/docs/implement-waf-cloudflare" - "wordpress.org/plugins/recaptcha-
-   * something"
+   * "wordpress.org/plugins/recaptcha-something"
    * @return value or {@code null} for none
    */
   public java.lang.String getClient() {
@@ -67,9 +63,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AssessmentEnvironment extends
    * Optional. Identifies the client module initiating the CreateAssessment request. This can be the
    * link to the client module's project. Examples include: -
    * "github.com/GoogleCloudPlatform/recaptcha-enterprise-google-tag-manager" -
-   * "cloud.google.com/recaptcha/docs/implement-waf-akamai" -
-   * "cloud.google.com/recaptcha/docs/implement-waf-cloudflare" - "wordpress.org/plugins/recaptcha-
-   * something"
+   * "wordpress.org/plugins/recaptcha-something"
    * @param client client or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AssessmentEnvironment setClient(java.lang.String client) {

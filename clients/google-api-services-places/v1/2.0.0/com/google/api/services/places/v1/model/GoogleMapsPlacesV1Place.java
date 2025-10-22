@@ -285,6 +285,25 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean menuForChildren;
 
   /**
+   * If this Place is permanently closed and has moved to a new Place, this field contains the new
+   * Place's resource name, in `places/{place_id}` format. If this Place moved multiple times, this
+   * field will represent the first moved place. This field will not be populated if this Place has
+   * not moved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String movedPlace;
+
+  /**
+   * If this Place is permanently closed and has moved to a new Place, this field contains the new
+   * Place's place ID. If this Place moved multiple times, this field will represent the first moved
+   * Place. This field will not be populated if this Place has not moved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String movedPlaceId;
+
+  /**
    * This Place's resource name, in `places/{place_id}` format. Can be used to look up the Place.
    * The value may be {@code null}.
    */
@@ -1209,6 +1228,50 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setMenuForChildren(java.lang.Boolean menuForChildren) {
     this.menuForChildren = menuForChildren;
+    return this;
+  }
+
+  /**
+   * If this Place is permanently closed and has moved to a new Place, this field contains the new
+   * Place's resource name, in `places/{place_id}` format. If this Place moved multiple times, this
+   * field will represent the first moved place. This field will not be populated if this Place has
+   * not moved.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMovedPlace() {
+    return movedPlace;
+  }
+
+  /**
+   * If this Place is permanently closed and has moved to a new Place, this field contains the new
+   * Place's resource name, in `places/{place_id}` format. If this Place moved multiple times, this
+   * field will represent the first moved place. This field will not be populated if this Place has
+   * not moved.
+   * @param movedPlace movedPlace or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setMovedPlace(java.lang.String movedPlace) {
+    this.movedPlace = movedPlace;
+    return this;
+  }
+
+  /**
+   * If this Place is permanently closed and has moved to a new Place, this field contains the new
+   * Place's place ID. If this Place moved multiple times, this field will represent the first moved
+   * Place. This field will not be populated if this Place has not moved.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMovedPlaceId() {
+    return movedPlaceId;
+  }
+
+  /**
+   * If this Place is permanently closed and has moved to a new Place, this field contains the new
+   * Place's place ID. If this Place moved multiple times, this field will represent the first moved
+   * Place. This field will not be populated if this Place has not moved.
+   * @param movedPlaceId movedPlaceId or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setMovedPlaceId(java.lang.String movedPlaceId) {
+    this.movedPlaceId = movedPlaceId;
     return this;
   }
 

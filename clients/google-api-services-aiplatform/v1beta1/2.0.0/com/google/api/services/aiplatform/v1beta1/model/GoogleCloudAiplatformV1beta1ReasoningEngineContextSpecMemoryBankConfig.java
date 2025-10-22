@@ -43,6 +43,13 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
   }
 
   /**
+   * If true, no memory revisions will be created for any requests to the Memory Bank.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableMemoryRevisions;
+
+  /**
    * Optional. Configuration for how to generate memories for the Memory Bank.
    * The value may be {@code null}.
    */
@@ -80,6 +87,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfig setCustomizationConfigs(java.util.List<GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfig> customizationConfigs) {
     this.customizationConfigs = customizationConfigs;
+    return this;
+  }
+
+  /**
+   * If true, no memory revisions will be created for any requests to the Memory Bank.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableMemoryRevisions() {
+    return disableMemoryRevisions;
+  }
+
+  /**
+   * If true, no memory revisions will be created for any requests to the Memory Bank.
+   * @param disableMemoryRevisions disableMemoryRevisions or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfig setDisableMemoryRevisions(java.lang.Boolean disableMemoryRevisions) {
+    this.disableMemoryRevisions = disableMemoryRevisions;
     return this;
   }
 

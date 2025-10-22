@@ -76,13 +76,6 @@ public final class GoogleCloudAiplatformV1beta1EventActions extends com.google.a
   private java.lang.String transferAgent;
 
   /**
-   * Deprecated. If set, the event transfers to the specified agent.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean transferToAgent;
-
-  /**
    * Optional. Indicates that the event is updating an artifact. key is the filename, value is the
    * version.
    * @return value or {@code null} for none
@@ -189,23 +182,6 @@ public final class GoogleCloudAiplatformV1beta1EventActions extends com.google.a
    */
   public GoogleCloudAiplatformV1beta1EventActions setTransferAgent(java.lang.String transferAgent) {
     this.transferAgent = transferAgent;
-    return this;
-  }
-
-  /**
-   * Deprecated. If set, the event transfers to the specified agent.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getTransferToAgent() {
-    return transferToAgent;
-  }
-
-  /**
-   * Deprecated. If set, the event transfers to the specified agent.
-   * @param transferToAgent transferToAgent or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1EventActions setTransferToAgent(java.lang.Boolean transferToAgent) {
-    this.transferToAgent = transferToAgent;
     return this;
   }
 

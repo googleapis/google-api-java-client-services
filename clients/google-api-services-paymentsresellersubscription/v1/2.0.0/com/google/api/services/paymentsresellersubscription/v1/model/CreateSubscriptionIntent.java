@@ -31,6 +31,13 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class CreateSubscriptionIntent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The cycle options for the subscription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CycleOptions cycleOptions;
+
+  /**
    * Required. The parent resource name, which is the identifier of the partner.
    * The value may be {@code null}.
    */
@@ -52,6 +59,23 @@ public final class CreateSubscriptionIntent extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String subscriptionId;
+
+  /**
+   * Optional. The cycle options for the subscription.
+   * @return value or {@code null} for none
+   */
+  public CycleOptions getCycleOptions() {
+    return cycleOptions;
+  }
+
+  /**
+   * Optional. The cycle options for the subscription.
+   * @param cycleOptions cycleOptions or {@code null} for none
+   */
+  public CreateSubscriptionIntent setCycleOptions(CycleOptions cycleOptions) {
+    this.cycleOptions = cycleOptions;
+    return this;
+  }
 
   /**
    * Required. The parent resource name, which is the identifier of the partner.

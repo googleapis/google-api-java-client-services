@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
   private java.lang.String description;
 
   /**
+   * Optional. Input only. If true, no revision will be created for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableMemoryRevisions;
+
+  /**
    * Optional. Display name of the Memory.
    * The value may be {@code null}.
    */
@@ -73,6 +80,21 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Input only. Timestamp of when the revision is considered expired. If not set, the
+   * memory revision will be kept until manually deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String revisionExpireTime;
+
+  /**
+   * Optional. Input only. The TTL for the revision. The expiration time is computed: now + TTL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String revisionTtl;
 
   /**
    * Required. Immutable. The scope of the Memory. Memories are isolated within their scope. The
@@ -128,6 +150,23 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Memory setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. If true, no revision will be created for this request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableMemoryRevisions() {
+    return disableMemoryRevisions;
+  }
+
+  /**
+   * Optional. Input only. If true, no revision will be created for this request.
+   * @param disableMemoryRevisions disableMemoryRevisions or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Memory setDisableMemoryRevisions(java.lang.Boolean disableMemoryRevisions) {
+    this.disableMemoryRevisions = disableMemoryRevisions;
     return this;
   }
 
@@ -202,6 +241,42 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Memory setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Timestamp of when the revision is considered expired. If not set, the
+   * memory revision will be kept until manually deleted.
+   * @return value or {@code null} for none
+   */
+  public String getRevisionExpireTime() {
+    return revisionExpireTime;
+  }
+
+  /**
+   * Optional. Input only. Timestamp of when the revision is considered expired. If not set, the
+   * memory revision will be kept until manually deleted.
+   * @param revisionExpireTime revisionExpireTime or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Memory setRevisionExpireTime(String revisionExpireTime) {
+    this.revisionExpireTime = revisionExpireTime;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The TTL for the revision. The expiration time is computed: now + TTL.
+   * @return value or {@code null} for none
+   */
+  public String getRevisionTtl() {
+    return revisionTtl;
+  }
+
+  /**
+   * Optional. Input only. The TTL for the revision. The expiration time is computed: now + TTL.
+   * @param revisionTtl revisionTtl or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Memory setRevisionTtl(String revisionTtl) {
+    this.revisionTtl = revisionTtl;
     return this;
   }
 

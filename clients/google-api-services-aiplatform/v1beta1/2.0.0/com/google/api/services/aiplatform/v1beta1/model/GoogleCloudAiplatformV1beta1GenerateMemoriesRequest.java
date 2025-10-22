@@ -55,6 +55,36 @@ public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequest extends c
   private java.lang.Boolean disableConsolidation;
 
   /**
+   * Optional. If true, no revisions will be created for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableMemoryRevisions;
+
+  /**
+   * Optional. Timestamp of when the revision is considered expired. If not set, the memory revision
+   * will be kept until manually deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String revisionExpireTime;
+
+  /**
+   * Optional. Labels to be applied to the generated memory revisions. For example, you can use this
+   * to label a revision with its data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> revisionLabels;
+
+  /**
+   * Optional. The TTL for the revision. The expiration time is computed: now + TTL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String revisionTtl;
+
+  /**
    * Optional. The scope of the memories that should be generated. Memories will be consolidated
    * across memories with the same scope. Must be provided unless the scope is defined in the source
    * content. If `scope` is provided, it will override the scope defined in the source content.
@@ -127,6 +157,78 @@ public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequest extends c
    */
   public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setDisableConsolidation(java.lang.Boolean disableConsolidation) {
     this.disableConsolidation = disableConsolidation;
+    return this;
+  }
+
+  /**
+   * Optional. If true, no revisions will be created for this request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableMemoryRevisions() {
+    return disableMemoryRevisions;
+  }
+
+  /**
+   * Optional. If true, no revisions will be created for this request.
+   * @param disableMemoryRevisions disableMemoryRevisions or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setDisableMemoryRevisions(java.lang.Boolean disableMemoryRevisions) {
+    this.disableMemoryRevisions = disableMemoryRevisions;
+    return this;
+  }
+
+  /**
+   * Optional. Timestamp of when the revision is considered expired. If not set, the memory revision
+   * will be kept until manually deleted.
+   * @return value or {@code null} for none
+   */
+  public String getRevisionExpireTime() {
+    return revisionExpireTime;
+  }
+
+  /**
+   * Optional. Timestamp of when the revision is considered expired. If not set, the memory revision
+   * will be kept until manually deleted.
+   * @param revisionExpireTime revisionExpireTime or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setRevisionExpireTime(String revisionExpireTime) {
+    this.revisionExpireTime = revisionExpireTime;
+    return this;
+  }
+
+  /**
+   * Optional. Labels to be applied to the generated memory revisions. For example, you can use this
+   * to label a revision with its data source.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getRevisionLabels() {
+    return revisionLabels;
+  }
+
+  /**
+   * Optional. Labels to be applied to the generated memory revisions. For example, you can use this
+   * to label a revision with its data source.
+   * @param revisionLabels revisionLabels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setRevisionLabels(java.util.Map<String, java.lang.String> revisionLabels) {
+    this.revisionLabels = revisionLabels;
+    return this;
+  }
+
+  /**
+   * Optional. The TTL for the revision. The expiration time is computed: now + TTL.
+   * @return value or {@code null} for none
+   */
+  public String getRevisionTtl() {
+    return revisionTtl;
+  }
+
+  /**
+   * Optional. The TTL for the revision. The expiration time is computed: now + TTL.
+   * @param revisionTtl revisionTtl or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setRevisionTtl(String revisionTtl) {
+    this.revisionTtl = revisionTtl;
     return this;
   }
 

@@ -46,6 +46,15 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
   private GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigTtlConfigGranularTtlConfig granularTtlConfig;
 
   /**
+   * Optional. The default TTL duration of the memory revisions in the Memory Bank. This applies to
+   * all operations that create a memory revision. If not set, a default TTL of 365 days will be
+   * used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String memoryRevisionDefaultTtl;
+
+  /**
    * Optional. The default TTL duration of the memories in the Memory Bank. This applies to all
    * operations that create or update a memory.
    * @return value or {@code null} for none
@@ -78,6 +87,27 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigTtlConfig setGranularTtlConfig(GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigTtlConfigGranularTtlConfig granularTtlConfig) {
     this.granularTtlConfig = granularTtlConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The default TTL duration of the memory revisions in the Memory Bank. This applies to
+   * all operations that create a memory revision. If not set, a default TTL of 365 days will be
+   * used.
+   * @return value or {@code null} for none
+   */
+  public String getMemoryRevisionDefaultTtl() {
+    return memoryRevisionDefaultTtl;
+  }
+
+  /**
+   * Optional. The default TTL duration of the memory revisions in the Memory Bank. This applies to
+   * all operations that create a memory revision. If not set, a default TTL of 365 days will be
+   * used.
+   * @param memoryRevisionDefaultTtl memoryRevisionDefaultTtl or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigTtlConfig setMemoryRevisionDefaultTtl(String memoryRevisionDefaultTtl) {
+    this.memoryRevisionDefaultTtl = memoryRevisionDefaultTtl;
     return this;
   }
 

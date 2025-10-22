@@ -41,6 +41,14 @@ public final class GoogleCloudAiplatformV1PredictRequest extends com.google.api.
   private java.util.List<java.lang.Object> instances;
 
   /**
+   * Optional. The user labels for Imagen billing usage only. Only Imagen supports labels. For other
+   * use cases, it will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * The parameters that govern the prediction. The schema of the parameters may be specified via
    * Endpoint's DeployedModels' Model's PredictSchemata's parameters_schema_uri.
    * The value may be {@code null}.
@@ -70,6 +78,25 @@ public final class GoogleCloudAiplatformV1PredictRequest extends com.google.api.
    */
   public GoogleCloudAiplatformV1PredictRequest setInstances(java.util.List<java.lang.Object> instances) {
     this.instances = instances;
+    return this;
+  }
+
+  /**
+   * Optional. The user labels for Imagen billing usage only. Only Imagen supports labels. For other
+   * use cases, it will be ignored.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The user labels for Imagen billing usage only. Only Imagen supports labels. For other
+   * use cases, it will be ignored.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PredictRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

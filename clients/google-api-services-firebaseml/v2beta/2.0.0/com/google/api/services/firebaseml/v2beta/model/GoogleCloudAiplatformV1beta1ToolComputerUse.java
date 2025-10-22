@@ -37,10 +37,11 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   private java.lang.String environment;
 
   /**
-   * Optional. By default, predefined functions are included in the final model call. Some of them
-   * can be explicitly excluded from being automatically included. This can serve two purposes: 1.
-   * Using a more restricted / different action space. 2. Improving the definitions / instructions
-   * of predefined functions.
+   * Optional. By default, [predefined functions](https://cloud.google.com/vertex-ai/generative-
+   * ai/docs/computer-use#supported-actions) are included in the final model call. Some of them can
+   * be explicitly excluded from being automatically included. This can serve two purposes: 1. Using
+   * a more restricted / different action space. 2. Improving the definitions / instructions of
+   * predefined functions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,10 +65,11 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   }
 
   /**
-   * Optional. By default, predefined functions are included in the final model call. Some of them
-   * can be explicitly excluded from being automatically included. This can serve two purposes: 1.
-   * Using a more restricted / different action space. 2. Improving the definitions / instructions
-   * of predefined functions.
+   * Optional. By default, [predefined functions](https://cloud.google.com/vertex-ai/generative-
+   * ai/docs/computer-use#supported-actions) are included in the final model call. Some of them can
+   * be explicitly excluded from being automatically included. This can serve two purposes: 1. Using
+   * a more restricted / different action space. 2. Improving the definitions / instructions of
+   * predefined functions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedPredefinedFunctions() {
@@ -75,10 +77,11 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   }
 
   /**
-   * Optional. By default, predefined functions are included in the final model call. Some of them
-   * can be explicitly excluded from being automatically included. This can serve two purposes: 1.
-   * Using a more restricted / different action space. 2. Improving the definitions / instructions
-   * of predefined functions.
+   * Optional. By default, [predefined functions](https://cloud.google.com/vertex-ai/generative-
+   * ai/docs/computer-use#supported-actions) are included in the final model call. Some of them can
+   * be explicitly excluded from being automatically included. This can serve two purposes: 1. Using
+   * a more restricted / different action space. 2. Improving the definitions / instructions of
+   * predefined functions.
    * @param excludedPredefinedFunctions excludedPredefinedFunctions or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ToolComputerUse setExcludedPredefinedFunctions(java.util.List<java.lang.String> excludedPredefinedFunctions) {

@@ -38,7 +38,7 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Customer managed crypto key resource full name. Format:
-   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}.
+   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Customer managed crypto key resource full name. Format:
-   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}.
+   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKeyName() {
@@ -122,7 +122,7 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Customer managed crypto key resource full name. Format:
-   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}.
+   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
    * @param cryptoKeyName cryptoKeyName or {@code null} for none
    */
   public KmsConfig setCryptoKeyName(java.lang.String cryptoKeyName) {

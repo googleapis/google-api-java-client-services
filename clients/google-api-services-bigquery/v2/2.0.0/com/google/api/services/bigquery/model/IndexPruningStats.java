@@ -37,6 +37,13 @@ public final class IndexPruningStats extends com.google.api.client.json.GenericJ
   private TableReference baseTable;
 
   /**
+   * The index id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String indexId;
+
+  /**
    * The number of parallel inputs after index pruning.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class IndexPruningStats extends com.google.api.client.json.GenericJ
    */
   public IndexPruningStats setBaseTable(TableReference baseTable) {
     this.baseTable = baseTable;
+    return this;
+  }
+
+  /**
+   * The index id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIndexId() {
+    return indexId;
+  }
+
+  /**
+   * The index id.
+   * @param indexId indexId or {@code null} for none
+   */
+  public IndexPruningStats setIndexId(java.lang.String indexId) {
+    this.indexId = indexId;
     return this;
   }
 

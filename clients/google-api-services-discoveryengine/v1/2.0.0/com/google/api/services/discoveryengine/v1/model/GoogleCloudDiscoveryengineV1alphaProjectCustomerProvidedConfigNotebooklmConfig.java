@@ -37,6 +37,14 @@ public final class GoogleCloudDiscoveryengineV1alphaProjectCustomerProvidedConfi
   private GoogleCloudDiscoveryengineV1alphaProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig modelArmorConfig;
 
   /**
+   * Optional. Whether to disable the notebook sharing feature for the project. Default to false if
+   * not specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean optOutNotebookSharing;
+
+  /**
    * Model Armor configuration to be used for sanitizing user prompts and LLM responses.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class GoogleCloudDiscoveryengineV1alphaProjectCustomerProvidedConfi
    */
   public GoogleCloudDiscoveryengineV1alphaProjectCustomerProvidedConfigNotebooklmConfig setModelArmorConfig(GoogleCloudDiscoveryengineV1alphaProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig modelArmorConfig) {
     this.modelArmorConfig = modelArmorConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to disable the notebook sharing feature for the project. Default to false if
+   * not specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOptOutNotebookSharing() {
+    return optOutNotebookSharing;
+  }
+
+  /**
+   * Optional. Whether to disable the notebook sharing feature for the project. Default to false if
+   * not specified.
+   * @param optOutNotebookSharing optOutNotebookSharing or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaProjectCustomerProvidedConfigNotebooklmConfig setOptOutNotebookSharing(java.lang.Boolean optOutNotebookSharing) {
+    this.optOutNotebookSharing = optOutNotebookSharing;
     return this;
   }
 

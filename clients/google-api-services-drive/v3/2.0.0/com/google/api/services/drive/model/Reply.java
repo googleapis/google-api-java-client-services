@@ -38,6 +38,14 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   private java.lang.String action;
 
   /**
+   * Output only. The email of the user who is assigned to this reply, if none is assigned this will
+   * be unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assigneeEmailAddress;
+
+  /**
    * Output only. The author of the reply. The author's email address and permission ID will not be
    * populated.
    * The value may be {@code null}.
@@ -89,6 +97,14 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Output only. The emails of the users who were mentioned in this reply, if none were mentioned
+   * this will be an empty list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> mentionedEmailAddresses;
+
+  /**
    * The last time the reply was modified (RFC 3339 date-time).
    * The value may be {@code null}.
    */
@@ -109,6 +125,25 @@ public final class Reply extends com.google.api.client.json.GenericJson {
    */
   public Reply setAction(java.lang.String action) {
     this.action = action;
+    return this;
+  }
+
+  /**
+   * Output only. The email of the user who is assigned to this reply, if none is assigned this will
+   * be unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssigneeEmailAddress() {
+    return assigneeEmailAddress;
+  }
+
+  /**
+   * Output only. The email of the user who is assigned to this reply, if none is assigned this will
+   * be unset.
+   * @param assigneeEmailAddress assigneeEmailAddress or {@code null} for none
+   */
+  public Reply setAssigneeEmailAddress(java.lang.String assigneeEmailAddress) {
+    this.assigneeEmailAddress = assigneeEmailAddress;
     return this;
   }
 
@@ -232,6 +267,25 @@ public final class Reply extends com.google.api.client.json.GenericJson {
    */
   public Reply setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Output only. The emails of the users who were mentioned in this reply, if none were mentioned
+   * this will be an empty list.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMentionedEmailAddresses() {
+    return mentionedEmailAddresses;
+  }
+
+  /**
+   * Output only. The emails of the users who were mentioned in this reply, if none were mentioned
+   * this will be an empty list.
+   * @param mentionedEmailAddresses mentionedEmailAddresses or {@code null} for none
+   */
+  public Reply setMentionedEmailAddresses(java.util.List<java.lang.String> mentionedEmailAddresses) {
+    this.mentionedEmailAddresses = mentionedEmailAddresses;
     return this;
   }
 

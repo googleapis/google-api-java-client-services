@@ -31,18 +31,18 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The shortcuts to display on the homepage. LINT.IfChange(max_shortcuts_number) LINT.Th
-   * enChange(//depot/google3/cloud/console/web/ai/unified_cloud_search/components/widget_preview/wi
-   * dget_homepage_shortcut_config_form.ts:max_shortcuts_number)
+   * Optional. The shortcuts to display on the homepage. LINT.IfChange(max_shortcuts_number)
+   * LINT.ThenChange( //depot/google3/cloud/console/web/ai/unified_cloud_search/components/widget_pr
+   * eview/widget_homepage_shortcut_config_form.ts:max_shortcuts_number )
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts;
 
   /**
-   * Optional. The shortcuts to display on the homepage. LINT.IfChange(max_shortcuts_number) LINT.Th
-   * enChange(//depot/google3/cloud/console/web/ai/unified_cloud_search/components/widget_preview/wi
-   * dget_homepage_shortcut_config_form.ts:max_shortcuts_number)
+   * Optional. The shortcuts to display on the homepage. LINT.IfChange(max_shortcuts_number)
+   * LINT.ThenChange( //depot/google3/cloud/console/web/ai/unified_cloud_search/components/widget_pr
+   * eview/widget_homepage_shortcut_config_form.ts:max_shortcuts_number )
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> getShortcuts() {
@@ -50,9 +50,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting 
   }
 
   /**
-   * Optional. The shortcuts to display on the homepage. LINT.IfChange(max_shortcuts_number) LINT.Th
-   * enChange(//depot/google3/cloud/console/web/ai/unified_cloud_search/components/widget_preview/wi
-   * dget_homepage_shortcut_config_form.ts:max_shortcuts_number)
+   * Optional. The shortcuts to display on the homepage. LINT.IfChange(max_shortcuts_number)
+   * LINT.ThenChange( //depot/google3/cloud/console/web/ai/unified_cloud_search/components/widget_pr
+   * eview/widget_homepage_shortcut_config_form.ts:max_shortcuts_number )
    * @param shortcuts shortcuts or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting setShortcuts(java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts) {

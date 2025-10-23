@@ -31,6 +31,13 @@ package com.google.api.services.developerconnect.v1.model;
 public final class RuntimeConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. App Hub Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppHubService appHubService;
+
+  /**
    * Output only. App Hub Workload.
    * The value may be {@code null}.
    */
@@ -43,6 +50,13 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private GKEWorkload gkeWorkload;
+
+  /**
+   * Output only. Cloud Run runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRun googleCloudRun;
 
   /**
    * Output only. The state of the Runtime.
@@ -58,6 +72,23 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Output only. App Hub Service.
+   * @return value or {@code null} for none
+   */
+  public AppHubService getAppHubService() {
+    return appHubService;
+  }
+
+  /**
+   * Output only. App Hub Service.
+   * @param appHubService appHubService or {@code null} for none
+   */
+  public RuntimeConfig setAppHubService(AppHubService appHubService) {
+    this.appHubService = appHubService;
+    return this;
+  }
 
   /**
    * Output only. App Hub Workload.
@@ -90,6 +121,23 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
    */
   public RuntimeConfig setGkeWorkload(GKEWorkload gkeWorkload) {
     this.gkeWorkload = gkeWorkload;
+    return this;
+  }
+
+  /**
+   * Output only. Cloud Run runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRun getGoogleCloudRun() {
+    return googleCloudRun;
+  }
+
+  /**
+   * Output only. Cloud Run runtime.
+   * @param googleCloudRun googleCloudRun or {@code null} for none
+   */
+  public RuntimeConfig setGoogleCloudRun(GoogleCloudRun googleCloudRun) {
+    this.googleCloudRun = googleCloudRun;
     return this;
   }
 

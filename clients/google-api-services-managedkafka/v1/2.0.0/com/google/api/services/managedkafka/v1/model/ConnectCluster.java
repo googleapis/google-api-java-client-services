@@ -98,7 +98,7 @@ public final class ConnectCluster extends com.google.api.client.json.GenericJson
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Output only. The current state of the cluster.
+   * Output only. The current state of the Kafka Connect cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,7 +273,7 @@ public final class ConnectCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current state of the cluster.
+   * Output only. The current state of the Kafka Connect cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -281,7 +281,7 @@ public final class ConnectCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current state of the cluster.
+   * Output only. The current state of the Kafka Connect cluster.
    * @param state state or {@code null} for none
    */
   public ConnectCluster setState(java.lang.String state) {

@@ -6754,6 +6754,299 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
+             * Fetch Backups for a given resource type.
+             *
+             * Create a request for the method "backups.fetchForResourceType".
+             *
+             * This request holds the parameters needed by the backupdr server.  After setting any optional
+             * parameters, call the {@link FetchForResourceType#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param parent Required. Datasources are the parent resource for the backups. Format:
+             *        projects/{project}/locations/{location}/backupVaults/{backupVaultId}/dataSources/{datasour
+             *        ceId}
+             * @return the request
+             */
+            public FetchForResourceType fetchForResourceType(java.lang.String parent) throws java.io.IOException {
+              FetchForResourceType result = new FetchForResourceType(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class FetchForResourceType extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchBackupsForResourceTypeResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/backups:fetchForResourceType";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+
+              /**
+               * Fetch Backups for a given resource type.
+               *
+               * Create a request for the method "backups.fetchForResourceType".
+               *
+               * This request holds the parameters needed by the the backupdr server.  After setting any
+               * optional parameters, call the {@link FetchForResourceType#execute()} method to invoke the
+               * remote operation. <p> {@link FetchForResourceType#initialize(com.google.api.client.googleapis.s
+               * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param parent Required. Datasources are the parent resource for the backups. Format:
+             *        projects/{project}/locations/{location}/backupVaults/{backupVaultId}/dataSources/{datasour
+             *        ceId}
+               * @since 1.13
+               */
+              protected FetchForResourceType(java.lang.String parent) {
+                super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.FetchBackupsForResourceTypeResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public FetchForResourceType set$Xgafv(java.lang.String $Xgafv) {
+                return (FetchForResourceType) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public FetchForResourceType setAccessToken(java.lang.String accessToken) {
+                return (FetchForResourceType) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public FetchForResourceType setAlt(java.lang.String alt) {
+                return (FetchForResourceType) super.setAlt(alt);
+              }
+
+              @Override
+              public FetchForResourceType setCallback(java.lang.String callback) {
+                return (FetchForResourceType) super.setCallback(callback);
+              }
+
+              @Override
+              public FetchForResourceType setFields(java.lang.String fields) {
+                return (FetchForResourceType) super.setFields(fields);
+              }
+
+              @Override
+              public FetchForResourceType setKey(java.lang.String key) {
+                return (FetchForResourceType) super.setKey(key);
+              }
+
+              @Override
+              public FetchForResourceType setOauthToken(java.lang.String oauthToken) {
+                return (FetchForResourceType) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public FetchForResourceType setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (FetchForResourceType) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public FetchForResourceType setQuotaUser(java.lang.String quotaUser) {
+                return (FetchForResourceType) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public FetchForResourceType setUploadType(java.lang.String uploadType) {
+                return (FetchForResourceType) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public FetchForResourceType setUploadProtocol(java.lang.String uploadProtocol) {
+                return (FetchForResourceType) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Datasources are the parent resource for the backups. Format: projects/{pr
+               * oject}/locations/{location}/backupVaults/{backupVaultId}/dataSources/{datasourceId}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Datasources are the parent resource for the backups. Format:
+             projects/{project}/locations/{location}/backupVaults/{backupVaultId}/dataSources/{datasourceId}
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Datasources are the parent resource for the backups. Format: projects/{pr
+               * oject}/locations/{location}/backupVaults/{backupVaultId}/dataSources/{datasourceId}
+               */
+              public FetchForResourceType setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. A filter expression that filters the results fetched in the response. The
+               * expression must specify the field name, a comparison operator, and the value that
+               * you want to use for filtering. Supported fields:
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. A filter expression that filters the results fetched in the response. The expression must
+             specify the field name, a comparison operator, and the value that you want to use for filtering.
+             Supported fields:
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. A filter expression that filters the results fetched in the response. The
+               * expression must specify the field name, a comparison operator, and the value that
+               * you want to use for filtering. Supported fields:
+               */
+              public FetchForResourceType setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. A comma-separated list of fields to order by, sorted in ascending order.
+               * Use "desc" after a field name for descending.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after
+             a field name for descending.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * Optional. A comma-separated list of fields to order by, sorted in ascending order.
+               * Use "desc" after a field name for descending.
+               */
+              public FetchForResourceType setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of Backups to return. The service may return fewer
+               * than this value. If unspecified, at most 50 Backups will be returned. The maximum
+               * value is 100; values above 100 will be coerced to 100.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of Backups to return. The service may return fewer than this value. If
+             unspecified, at most 50 Backups will be returned. The maximum value is 100; values above 100 will
+             be coerced to 100.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of Backups to return. The service may return fewer
+               * than this value. If unspecified, at most 50 Backups will be returned. The maximum
+               * value is 100; values above 100 will be coerced to 100.
+               */
+              public FetchForResourceType setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. A page token, received from a previous call of
+               * `FetchBackupsForResourceType`. Provide this to retrieve the subsequent page. When
+               * paginating, all other parameters provided to `FetchBackupsForResourceType` must
+               * match the call that provided the page token.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. A page token, received from a previous call of `FetchBackupsForResourceType`. Provide
+             this to retrieve the subsequent page. When paginating, all other parameters provided to
+             `FetchBackupsForResourceType` must match the call that provided the page token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. A page token, received from a previous call of
+               * `FetchBackupsForResourceType`. Provide this to retrieve the subsequent page. When
+               * paginating, all other parameters provided to `FetchBackupsForResourceType` must
+               * match the call that provided the page token.
+               */
+              public FetchForResourceType setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** Required. The type of the GCP resource. Ex: sqladmin.googleapis.com/Instance */
+              @com.google.api.client.util.Key
+              private java.lang.String resourceType;
+
+              /** Required. The type of the GCP resource. Ex: sqladmin.googleapis.com/Instance
+               */
+              public java.lang.String getResourceType() {
+                return resourceType;
+              }
+
+              /** Required. The type of the GCP resource. Ex: sqladmin.googleapis.com/Instance */
+              public FetchForResourceType setResourceType(java.lang.String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+              }
+
+              /**
+               * Optional. This parameter is used to specify the view of the backup. If not
+               * specified, the default view is BASIC.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Optional. This parameter is used to specify the view of the backup. If not specified, the default
+             view is BASIC.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /**
+               * Optional. This parameter is used to specify the view of the backup. If not
+               * specified, the default view is BASIC.
+               */
+              public FetchForResourceType setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public FetchForResourceType set(String parameterName, Object value) {
+                return (FetchForResourceType) super.set(parameterName, value);
+              }
+            }
+            /**
              * Gets details of a Backup.
              *
              * Create a request for the method "backups.get".
@@ -7987,6 +8280,260 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists DataSourceReferences for a given project and location.
+         *
+         * Create a request for the method "dataSourceReferences.list".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name. Format: projects/{project}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BackupdrRequest<com.google.api.services.backupdr.v1.model.ListDataSourceReferencesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/dataSourceReferences";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists DataSourceReferences for a given project and location.
+           *
+           * Create a request for the method "dataSourceReferences.list".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. Format: projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.ListDataSourceReferencesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. Format: projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. Format: projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. Format: projects/{project}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter expression that filters the results listed in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The following field and operator combinations are supported:
+           * * data_source_gcp_resource_info.gcp_resourcename with `=`, `!=` *
+           * data_source_gcp_resource_info.type with `=`, `!=`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter expression that filters the results listed in the response. The expression must
+         specify the field name, a comparison operator, and the value that you want to use for filtering.
+         The following field and operator combinations are supported: *
+         data_source_gcp_resource_info.gcp_resourcename with `=`, `!=` * data_source_gcp_resource_info.type
+         with `=`, `!=`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter expression that filters the results listed in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The following field and operator combinations are supported:
+           * * data_source_gcp_resource_info.gcp_resourcename with `=`, `!=` *
+           * data_source_gcp_resource_info.type with `=`, `!=`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. A comma-separated list of fields to order by, sorted in ascending order. Use
+           * "desc" after a field name for descending. Supported fields: * data_source *
+           * data_source_gcp_resource_info.gcp_resourcename
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after
+         a field name for descending. Supported fields: * data_source *
+         data_source_gcp_resource_info.gcp_resourcename
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. A comma-separated list of fields to order by, sorted in ascending order. Use
+           * "desc" after a field name for descending. Supported fields: * data_source *
+           * data_source_gcp_resource_info.gcp_resourcename
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of DataSourceReferences to return. The service may return
+           * fewer than this value. If unspecified, at most 50 DataSourceReferences will be
+           * returned. The maximum value is 100; values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of DataSourceReferences to return. The service may return fewer than
+         this value. If unspecified, at most 50 DataSourceReferences will be returned. The maximum value is
+         100; values above 100 will be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of DataSourceReferences to return. The service may return
+           * fewer than this value. If unspecified, at most 50 DataSourceReferences will be
+           * returned. The maximum value is 100; values above 100 will be coerced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListDataSourceReferences` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListDataSourceReferences` must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListDataSourceReferences` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListDataSourceReferences` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListDataSourceReferences` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListDataSourceReferences` must match the call that provided the page
+           * token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 

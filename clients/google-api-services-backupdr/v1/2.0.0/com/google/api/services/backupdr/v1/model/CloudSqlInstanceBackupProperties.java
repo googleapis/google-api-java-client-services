@@ -46,6 +46,20 @@ public final class CloudSqlInstanceBackupProperties extends com.google.api.clien
   private java.lang.Boolean finalBackup;
 
   /**
+   * Output only. The instance creation timestamp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String instanceCreateTime;
+
+  /**
+   * Output only. The instance delete timestamp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String instanceDeleteTime;
+
+  /**
    * Output only. The tier (or machine type) for this instance. Example: `db-custom-1-3840`
    * The value may be {@code null}.
    */
@@ -92,6 +106,40 @@ public final class CloudSqlInstanceBackupProperties extends com.google.api.clien
    */
   public CloudSqlInstanceBackupProperties setFinalBackup(java.lang.Boolean finalBackup) {
     this.finalBackup = finalBackup;
+    return this;
+  }
+
+  /**
+   * Output only. The instance creation timestamp.
+   * @return value or {@code null} for none
+   */
+  public String getInstanceCreateTime() {
+    return instanceCreateTime;
+  }
+
+  /**
+   * Output only. The instance creation timestamp.
+   * @param instanceCreateTime instanceCreateTime or {@code null} for none
+   */
+  public CloudSqlInstanceBackupProperties setInstanceCreateTime(String instanceCreateTime) {
+    this.instanceCreateTime = instanceCreateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The instance delete timestamp.
+   * @return value or {@code null} for none
+   */
+  public String getInstanceDeleteTime() {
+    return instanceDeleteTime;
+  }
+
+  /**
+   * Output only. The instance delete timestamp.
+   * @param instanceDeleteTime instanceDeleteTime or {@code null} for none
+   */
+  public CloudSqlInstanceBackupProperties setInstanceDeleteTime(String instanceDeleteTime) {
+    this.instanceDeleteTime = instanceDeleteTime;
     return this;
   }
 

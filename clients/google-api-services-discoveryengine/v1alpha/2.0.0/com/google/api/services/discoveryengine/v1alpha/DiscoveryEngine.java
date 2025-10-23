@@ -24156,6 +24156,886 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
 
+            /**
+             * An accessor for creating requests from the CannedQueries collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+             *   {@code DiscoveryEngine.CannedQueries.List request = discoveryengine.cannedQueries().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public CannedQueries cannedQueries() {
+              return new CannedQueries();
+            }
+
+            /**
+             * The "cannedQueries" collection of methods.
+             */
+            public class CannedQueries {
+
+              /**
+               * Creates a CannedQuery.
+               *
+               * Create a request for the method "cannedQueries.create".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/collections/{co
+               *        llection}/engines/{engine}/assistants/{assistant}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery}
+               * @return the request
+               */
+              public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery content) throws java.io.IOException {
+                Create result = new Create(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/cannedQueries";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+                /**
+                 * Creates a CannedQuery.
+                 *
+                 * Create a request for the method "cannedQueries.create".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/collections/{co
+               *        llection}/engines/{engine}/assistants/{assistant}`
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery}
+                 * @since 1.13
+                 */
+                protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Create set$Xgafv(java.lang.String $Xgafv) {
+                  return (Create) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Create setAccessToken(java.lang.String accessToken) {
+                  return (Create) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Create setAlt(java.lang.String alt) {
+                  return (Create) super.setAlt(alt);
+                }
+
+                @Override
+                public Create setCallback(java.lang.String callback) {
+                  return (Create) super.setCallback(callback);
+                }
+
+                @Override
+                public Create setFields(java.lang.String fields) {
+                  return (Create) super.setFields(fields);
+                }
+
+                @Override
+                public Create setKey(java.lang.String key) {
+                  return (Create) super.setKey(key);
+                }
+
+                @Override
+                public Create setOauthToken(java.lang.String oauthToken) {
+                  return (Create) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Create) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Create setQuotaUser(java.lang.String quotaUser) {
+                  return (Create) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Create setUploadType(java.lang.String uploadType) {
+                  return (Create) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Create) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent resource name. Format: `projects/{project}/locations/{locati
+                 * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent resource name. Format: `projects/{project}/locations/{location}/collections/{c
+               ollection}/engines/{engine}/assistants/{assistant}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent resource name. Format: `projects/{project}/locations/{locati
+                 * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+                 */
+                public Create setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Required. The ID to use for the canned query, which will become the final
+                 * component of the canned query's resource name. This field must conform to
+                 * [RFC-1034](https://tools.ietf.org/html/rfc1034) with a length limit of 63
+                 * characters.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String cannedQueryId;
+
+                /** Required. The ID to use for the canned query, which will become the final component of the canned
+               query's resource name. This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
+               with a length limit of 63 characters.
+                 */
+                public java.lang.String getCannedQueryId() {
+                  return cannedQueryId;
+                }
+
+                /**
+                 * Required. The ID to use for the canned query, which will become the final
+                 * component of the canned query's resource name. This field must conform to
+                 * [RFC-1034](https://tools.ietf.org/html/rfc1034) with a length limit of 63
+                 * characters.
+                 */
+                public Create setCannedQueryId(java.lang.String cannedQueryId) {
+                  this.cannedQueryId = cannedQueryId;
+                  return this;
+                }
+
+                @Override
+                public Create set(String parameterName, Object value) {
+                  return (Create) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Deletes a CannedQuery.
+               *
+               * Create a request for the method "cannedQueries.delete".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{location}/collections
+               *        /{collection}/engines/{engine}/assistants/{assistant}/cannedQueries/{canned_query}` If the
+               *        caller does not have permission to delete the canned query, regardless of whether or not
+               *        it exists, a `PERMISSION_DENIED` error is returned. If the canned query to delete does not
+               *        exist, a `NOT_FOUND` error is returned.
+               * @return the request
+               */
+              public Delete delete(java.lang.String name) throws java.io.IOException {
+                Delete result = new Delete(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleProtobufEmpty> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/cannedQueries/[^/]+$");
+
+                /**
+                 * Deletes a CannedQuery.
+                 *
+                 * Create a request for the method "cannedQueries.delete".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{location}/collections
+               *        /{collection}/engines/{engine}/assistants/{assistant}/cannedQueries/{canned_query}` If the
+               *        caller does not have permission to delete the canned query, regardless of whether or not
+               *        it exists, a `PERMISSION_DENIED` error is returned. If the canned query to delete does not
+               *        exist, a `NOT_FOUND` error is returned.
+                 * @since 1.13
+                 */
+                protected Delete(java.lang.String name) {
+                  super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleProtobufEmpty.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/cannedQueries/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Delete set$Xgafv(java.lang.String $Xgafv) {
+                  return (Delete) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Delete setAccessToken(java.lang.String accessToken) {
+                  return (Delete) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Delete setAlt(java.lang.String alt) {
+                  return (Delete) super.setAlt(alt);
+                }
+
+                @Override
+                public Delete setCallback(java.lang.String callback) {
+                  return (Delete) super.setCallback(callback);
+                }
+
+                @Override
+                public Delete setFields(java.lang.String fields) {
+                  return (Delete) super.setFields(fields);
+                }
+
+                @Override
+                public Delete setKey(java.lang.String key) {
+                  return (Delete) super.setKey(key);
+                }
+
+                @Override
+                public Delete setOauthToken(java.lang.String oauthToken) {
+                  return (Delete) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Delete) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Delete setQuotaUser(java.lang.String quotaUser) {
+                  return (Delete) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Delete setUploadType(java.lang.String uploadType) {
+                  return (Delete) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Delete) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{lo
+                 * cation}/collections/{collection}/engines/{engine}/assistants/{assistant}/cannedQu
+                 * eries/{canned_query}` If the caller does not have permission to delete the canned
+                 * query, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+                 * returned. If the canned query to delete does not exist, a `NOT_FOUND` error is
+                 * returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{location}/collection
+               s/{collection}/engines/{engine}/assistants/{assistant}/cannedQueries/{canned_query}` If the caller
+               does not have permission to delete the canned query, regardless of whether or not it exists, a
+               `PERMISSION_DENIED` error is returned. If the canned query to delete does not exist, a `NOT_FOUND`
+               error is returned.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{lo
+                 * cation}/collections/{collection}/engines/{engine}/assistants/{assistant}/cannedQu
+                 * eries/{canned_query}` If the caller does not have permission to delete the canned
+                 * query, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+                 * returned. If the canned query to delete does not exist, a `NOT_FOUND` error is
+                 * returned.
+                 */
+                public Delete setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/cannedQueries/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Delete set(String parameterName, Object value) {
+                  return (Delete) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Gets a CannedQuery.
+               *
+               * Create a request for the method "cannedQueries.get".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{location}/collections
+               *        /{collection}/engines/{engine}/assistants/{assistant}/cannedQueries/{canned_query}`
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/cannedQueries/[^/]+$");
+
+                /**
+                 * Gets a CannedQuery.
+                 *
+                 * Create a request for the method "cannedQueries.get".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{location}/collections
+               *        /{collection}/engines/{engine}/assistants/{assistant}/cannedQueries/{canned_query}`
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/cannedQueries/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{lo
+                 * cation}/collections/{collection}/engines/{engine}/assistants/{assistant}/cannedQu
+                 * eries/{canned_query}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{location}/collection
+               s/{collection}/engines/{engine}/assistants/{assistant}/cannedQueries/{canned_query}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Resource name of CannedQuery. Format: `projects/{project}/locations/{lo
+                 * cation}/collections/{collection}/engines/{engine}/assistants/{assistant}/cannedQu
+                 * eries/{canned_query}`
+                 */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/cannedQueries/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Lists all CannedQuerys under an Assistant.
+               *
+               * Create a request for the method "cannedQueries.list".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/collections/{co
+               *        llection}/engines/{engine}/assistants/{assistant}`
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListCannedQueriesResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/cannedQueries";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+                /**
+                 * Lists all CannedQuerys under an Assistant.
+                 *
+                 * Create a request for the method "cannedQueries.list".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/collections/{co
+               *        llection}/engines/{engine}/assistants/{assistant}`
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListCannedQueriesResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent resource name. Format: `projects/{project}/locations/{locati
+                 * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent resource name. Format: `projects/{project}/locations/{location}/collections/{c
+               ollection}/engines/{engine}/assistants/{assistant}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent resource name. Format: `projects/{project}/locations/{locati
+                 * on}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. The filter expression. Supported fields: * `enabled` * `google_defined`
+                 * Examples: * `enabled=true` * `google_defined=true` * `enabled=true AND
+                 * google_defined=true`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String filter;
+
+                /** Optional. The filter expression. Supported fields: * `enabled` * `google_defined` Examples: *
+               `enabled=true` * `google_defined=true` * `enabled=true AND google_defined=true`
+                 */
+                public java.lang.String getFilter() {
+                  return filter;
+                }
+
+                /**
+                 * Optional. The filter expression. Supported fields: * `enabled` * `google_defined`
+                 * Examples: * `enabled=true` * `google_defined=true` * `enabled=true AND
+                 * google_defined=true`
+                 */
+                public List setFilter(java.lang.String filter) {
+                  this.filter = filter;
+                  return this;
+                }
+
+                /**
+                 * Maximum number of canned queries to return. If unspecified, defaults to 100. The
+                 * maximum allowed value is 1000; anything above that will be coerced down to 1000.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** Maximum number of canned queries to return. If unspecified, defaults to 100. The maximum allowed
+               value is 1000; anything above that will be coerced down to 1000.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /**
+                 * Maximum number of canned queries to return. If unspecified, defaults to 100. The
+                 * maximum allowed value is 1000; anything above that will be coerced down to 1000.
+                 */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /**
+                 * A page token received from a previous CannedQueryService.ListCannedQueries call.
+                 * Provide this to retrieve the subsequent page. When paginating, all other
+                 * parameters provided to CannedQueryService.ListCannedQueries must match the call
+                 * that provided the page token.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** A page token received from a previous CannedQueryService.ListCannedQueries call. Provide this to
+               retrieve the subsequent page. When paginating, all other parameters provided to
+               CannedQueryService.ListCannedQueries must match the call that provided the page token.
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /**
+                 * A page token received from a previous CannedQueryService.ListCannedQueries call.
+                 * Provide this to retrieve the subsequent page. When paginating, all other
+                 * parameters provided to CannedQueryService.ListCannedQueries must match the call
+                 * that provided the page token.
+                 */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Updates a CannedQuery.
+               *
+               * Create a request for the method "cannedQueries.patch".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               *
+               * @param name Immutable. Resource name of the canned query. Format: `projects/{project}/locations/{location}/colle
+               *        ctions/{collection}/engines/{engine}/assistants/{assistant}/cannedQueries/{canned_query}`
+               *        It must be a UTF-8 encoded string with a length limit of 1024 characters.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery}
+               * @return the request
+               */
+              public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery content) throws java.io.IOException {
+                Patch result = new Patch(name, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/cannedQueries/[^/]+$");
+
+                /**
+                 * Updates a CannedQuery.
+                 *
+                 * Create a request for the method "cannedQueries.patch".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Immutable. Resource name of the canned query. Format: `projects/{project}/locations/{location}/colle
+               *        ctions/{collection}/engines/{engine}/assistants/{assistant}/cannedQueries/{canned_query}`
+               *        It must be a UTF-8 encoded string with a length limit of 1024 characters.
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery}
+                 * @since 1.13
+                 */
+                protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery content) {
+                  super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCannedQuery.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/cannedQueries/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Patch set$Xgafv(java.lang.String $Xgafv) {
+                  return (Patch) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Patch setAccessToken(java.lang.String accessToken) {
+                  return (Patch) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Patch setAlt(java.lang.String alt) {
+                  return (Patch) super.setAlt(alt);
+                }
+
+                @Override
+                public Patch setCallback(java.lang.String callback) {
+                  return (Patch) super.setCallback(callback);
+                }
+
+                @Override
+                public Patch setFields(java.lang.String fields) {
+                  return (Patch) super.setFields(fields);
+                }
+
+                @Override
+                public Patch setKey(java.lang.String key) {
+                  return (Patch) super.setKey(key);
+                }
+
+                @Override
+                public Patch setOauthToken(java.lang.String oauthToken) {
+                  return (Patch) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Patch) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Patch setQuotaUser(java.lang.String quotaUser) {
+                  return (Patch) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Patch setUploadType(java.lang.String uploadType) {
+                  return (Patch) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Patch) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Immutable. Resource name of the canned query. Format: `projects/{project}/locatio
+                 * ns/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}/ca
+                 * nnedQueries/{canned_query}` It must be a UTF-8 encoded string with a length limit
+                 * of 1024 characters.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Immutable. Resource name of the canned query. Format: `projects/{project}/locations/{location}/coll
+               ections/{collection}/engines/{engine}/assistants/{assistant}/cannedQueries/{canned_query}` It must
+               be a UTF-8 encoded string with a length limit of 1024 characters.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Immutable. Resource name of the canned query. Format: `projects/{project}/locatio
+                 * ns/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}/ca
+                 * nnedQueries/{canned_query}` It must be a UTF-8 encoded string with a length limit
+                 * of 1024 characters.
+                 */
+                public Patch setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/cannedQueries/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /** The list of fields to update. */
+                @com.google.api.client.util.Key
+                private String updateMask;
+
+                /** The list of fields to update.
+                 */
+                public String getUpdateMask() {
+                  return updateMask;
+                }
+
+                /** The list of fields to update. */
+                public Patch setUpdateMask(String updateMask) {
+                  this.updateMask = updateMask;
+                  return this;
+                }
+
+                @Override
+                public Patch set(String parameterName, Object value) {
+                  return (Patch) super.set(parameterName, value);
+                }
+              }
+
+            }
           }
           /**
            * An accessor for creating requests from the CompletionConfig collection.

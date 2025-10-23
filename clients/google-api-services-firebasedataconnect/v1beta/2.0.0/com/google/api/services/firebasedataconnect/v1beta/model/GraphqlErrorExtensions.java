@@ -58,12 +58,19 @@ public final class GraphqlErrorExtensions extends com.google.api.client.json.Gen
   private java.lang.String file;
 
   /**
-   * Distinguish which schema or connector the error originates from. It should be set on errors
-   * from control plane APIs (e.g. `UpdateSchema`, `UpdateConnector`).
+   * Warning level describes the severity and required action to suppress this warning when Firebase
+   * CLI run into it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String resource;
+  private java.lang.String warningLevel;
+
+  /**
+   * Workarounds provide suggestions to address the compile errors or warnings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Workaround> workarounds;
 
   /**
    * Maps to canonical gRPC codes. If not specified, it represents `Code.INTERNAL`.
@@ -129,21 +136,38 @@ public final class GraphqlErrorExtensions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Distinguish which schema or connector the error originates from. It should be set on errors
-   * from control plane APIs (e.g. `UpdateSchema`, `UpdateConnector`).
+   * Warning level describes the severity and required action to suppress this warning when Firebase
+   * CLI run into it.
    * @return value or {@code null} for none
    */
-  public java.lang.String getResource() {
-    return resource;
+  public java.lang.String getWarningLevel() {
+    return warningLevel;
   }
 
   /**
-   * Distinguish which schema or connector the error originates from. It should be set on errors
-   * from control plane APIs (e.g. `UpdateSchema`, `UpdateConnector`).
-   * @param resource resource or {@code null} for none
+   * Warning level describes the severity and required action to suppress this warning when Firebase
+   * CLI run into it.
+   * @param warningLevel warningLevel or {@code null} for none
    */
-  public GraphqlErrorExtensions setResource(java.lang.String resource) {
-    this.resource = resource;
+  public GraphqlErrorExtensions setWarningLevel(java.lang.String warningLevel) {
+    this.warningLevel = warningLevel;
+    return this;
+  }
+
+  /**
+   * Workarounds provide suggestions to address the compile errors or warnings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Workaround> getWorkarounds() {
+    return workarounds;
+  }
+
+  /**
+   * Workarounds provide suggestions to address the compile errors or warnings.
+   * @param workarounds workarounds or {@code null} for none
+   */
+  public GraphqlErrorExtensions setWorkarounds(java.util.List<Workaround> workarounds) {
+    this.workarounds = workarounds;
     return this;
   }
 

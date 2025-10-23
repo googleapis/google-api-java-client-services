@@ -82,6 +82,14 @@ public final class DataSourceReference extends com.google.api.client.json.Generi
   private java.lang.String name;
 
   /**
+   * Output only. Total size of the storage used by all backup resources for the referenced
+   * datasource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalStoredBytes;
+
+  /**
    * Output only. The time when the DataSourceReference was created.
    * @return value or {@code null} for none
    */
@@ -201,6 +209,25 @@ public final class DataSourceReference extends com.google.api.client.json.Generi
    */
   public DataSourceReference setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Total size of the storage used by all backup resources for the referenced
+   * datasource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalStoredBytes() {
+    return totalStoredBytes;
+  }
+
+  /**
+   * Output only. Total size of the storage used by all backup resources for the referenced
+   * datasource.
+   * @param totalStoredBytes totalStoredBytes or {@code null} for none
+   */
+  public DataSourceReference setTotalStoredBytes(java.lang.Long totalStoredBytes) {
+    this.totalStoredBytes = totalStoredBytes;
     return this;
   }
 

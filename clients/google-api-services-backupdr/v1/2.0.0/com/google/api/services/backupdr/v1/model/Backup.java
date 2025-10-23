@@ -129,6 +129,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private GCPBackupPlanInfo gcpBackupPlanInfo;
 
   /**
+   * Output only. Unique identifier of the GCP resource that is being backed up.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupGcpResource gcpResource;
+
+  /**
    * Optional. Resource labels to represent user provided metadata. No labels currently defined.
    * The value may be {@code null}.
    */
@@ -423,6 +430,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setGcpBackupPlanInfo(GCPBackupPlanInfo gcpBackupPlanInfo) {
     this.gcpBackupPlanInfo = gcpBackupPlanInfo;
+    return this;
+  }
+
+  /**
+   * Output only. Unique identifier of the GCP resource that is being backed up.
+   * @return value or {@code null} for none
+   */
+  public BackupGcpResource getGcpResource() {
+    return gcpResource;
+  }
+
+  /**
+   * Output only. Unique identifier of the GCP resource that is being backed up.
+   * @param gcpResource gcpResource or {@code null} for none
+   */
+  public Backup setGcpResource(BackupGcpResource gcpResource) {
+    this.gcpResource = gcpResource;
     return this;
   }
 

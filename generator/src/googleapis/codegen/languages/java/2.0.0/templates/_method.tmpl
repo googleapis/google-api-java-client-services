@@ -32,7 +32,7 @@ public {{ method.className }} {{ method.codeName }}({% parameter_list %}
       {% parameter %}content{% end_parameter %}
     {% endif %}
   {% end_parameter_list %});
-  initialize(result);
+  {{ api.className }}.this.initialize(result);
   return result;
 }
 {% if method.simple_upload_supported or method.resumable_upload_supported %}
@@ -80,7 +80,7 @@ public {{ method.className }} {{ method.codeName }}({% parameter_list %}
     {% endif %}
       {% parameter %}mediaContent{% end_parameter %}
   {% end_parameter_list %});
-  initialize(result);
+  {{ api.className }}.this.initialize(result);
   return result;
 }{% endif %}
 

@@ -73,6 +73,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Directory Services configuration for Kerberos-based authentication. Should only be
+   * set if protocol is "NFS_V4_1".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DirectoryServicesConfig directoryServices;
+
+  /**
    * Server-specified ETag for the instance resource to prevent simultaneous updates from
    * overwriting each other.
    * The value may be {@code null}.
@@ -322,6 +330,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Directory Services configuration for Kerberos-based authentication. Should only be
+   * set if protocol is "NFS_V4_1".
+   * @return value or {@code null} for none
+   */
+  public DirectoryServicesConfig getDirectoryServices() {
+    return directoryServices;
+  }
+
+  /**
+   * Optional. Directory Services configuration for Kerberos-based authentication. Should only be
+   * set if protocol is "NFS_V4_1".
+   * @param directoryServices directoryServices or {@code null} for none
+   */
+  public Instance setDirectoryServices(DirectoryServicesConfig directoryServices) {
+    this.directoryServices = directoryServices;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceConsumerAlert extends com.google.api.client.json.GenericJson {
 
   /**
-   * The details of the consumer alert message.ƒ
+   * The details of the consumer alert message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class GoogleMapsPlacesV1PlaceConsumerAlert extends com.google.api.c
   private java.lang.String overview;
 
   /**
-   * The details of the consumer alert message.ƒ
+   * The details of the consumer alert message.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceConsumerAlertDetails getDetails() {
@@ -60,7 +60,7 @@ public final class GoogleMapsPlacesV1PlaceConsumerAlert extends com.google.api.c
   }
 
   /**
-   * The details of the consumer alert message.ƒ
+   * The details of the consumer alert message.
    * @param details details or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceConsumerAlert setDetails(GoogleMapsPlacesV1PlaceConsumerAlertDetails details) {

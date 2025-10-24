@@ -17,7 +17,7 @@
 package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
- * The `User` message represents a user associated with a Merchant Center account. It is used to
+ * The `User` resource represents a user associated with a Merchant Center account. It is used to
  * manage user permissions and access rights within the account. For more information, see
  * [Frequently asked questions about people and access
  * levels](//support.google.com/merchants/answer/12160472).

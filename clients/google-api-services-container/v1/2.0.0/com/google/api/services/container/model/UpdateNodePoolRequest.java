@@ -167,7 +167,12 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
    * in which the node pool's nodes should be located. Changing the locations for a node pool will
    * result in nodes being either created or removed from the node pool, depending on whether
-   * locations are being added or removed.
+   * locations are being added or removed. Warning: It is recommended to update node pool locations
+   * in a standalone API call. Do not combine a location update with changes to other fields (such
+   * as `tags`, `labels`, `taints`, etc.) in the same request. Otherwise, the API performs a
+   * structural modification where changes to other fields will only apply to newly created nodes
+   * and will not be applied to existing nodes in the node pool. To ensure all nodes are updated
+   * consistently, use a separate API call for location changes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -627,7 +632,12 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
    * in which the node pool's nodes should be located. Changing the locations for a node pool will
    * result in nodes being either created or removed from the node pool, depending on whether
-   * locations are being added or removed.
+   * locations are being added or removed. Warning: It is recommended to update node pool locations
+   * in a standalone API call. Do not combine a location update with changes to other fields (such
+   * as `tags`, `labels`, `taints`, etc.) in the same request. Otherwise, the API performs a
+   * structural modification where changes to other fields will only apply to newly created nodes
+   * and will not be applied to existing nodes in the node pool. To ensure all nodes are updated
+   * consistently, use a separate API call for location changes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -639,7 +649,12 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
    * in which the node pool's nodes should be located. Changing the locations for a node pool will
    * result in nodes being either created or removed from the node pool, depending on whether
-   * locations are being added or removed.
+   * locations are being added or removed. Warning: It is recommended to update node pool locations
+   * in a standalone API call. Do not combine a location update with changes to other fields (such
+   * as `tags`, `labels`, `taints`, etc.) in the same request. Otherwise, the API performs a
+   * structural modification where changes to other fields will only apply to newly created nodes
+   * and will not be applied to existing nodes in the node pool. To ensure all nodes are updated
+   * consistently, use a separate API call for location changes.
    * @param locations locations or {@code null} for none
    */
   public UpdateNodePoolRequest setLocations(java.util.List<java.lang.String> locations) {

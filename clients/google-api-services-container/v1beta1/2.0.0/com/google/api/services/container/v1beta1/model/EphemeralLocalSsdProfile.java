@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Represents the Maintenance exclusion option.
+ * Swap on the local SSD shared with pod ephemeral storage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MaintenanceExclusionOptions extends com.google.api.client.json.GenericJson {
+public final class EphemeralLocalSsdProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * EndTimeBehavior specifies the behavior of the exclusion end time.
+   * Specifies the size of the swap space in gibibytes (GiB).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long swapSizeGib;
+
+  /**
+   * Specifies the size of the swap space as a percentage of the ephemeral local SSD capacity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String endTimeBehavior;
+  private java.lang.Integer swapSizePercent;
 
   /**
-   * Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String scope;
-
-  /**
-   * EndTimeBehavior specifies the behavior of the exclusion end time.
+   * Specifies the size of the swap space in gibibytes (GiB).
    * @return value or {@code null} for none
    */
-  public java.lang.String getEndTimeBehavior() {
-    return endTimeBehavior;
+  public java.lang.Long getSwapSizeGib() {
+    return swapSizeGib;
   }
 
   /**
-   * EndTimeBehavior specifies the behavior of the exclusion end time.
-   * @param endTimeBehavior endTimeBehavior or {@code null} for none
+   * Specifies the size of the swap space in gibibytes (GiB).
+   * @param swapSizeGib swapSizeGib or {@code null} for none
    */
-  public MaintenanceExclusionOptions setEndTimeBehavior(java.lang.String endTimeBehavior) {
-    this.endTimeBehavior = endTimeBehavior;
+  public EphemeralLocalSsdProfile setSwapSizeGib(java.lang.Long swapSizeGib) {
+    this.swapSizeGib = swapSizeGib;
     return this;
   }
 
   /**
-   * Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
+   * Specifies the size of the swap space as a percentage of the ephemeral local SSD capacity.
    * @return value or {@code null} for none
    */
-  public java.lang.String getScope() {
-    return scope;
+  public java.lang.Integer getSwapSizePercent() {
+    return swapSizePercent;
   }
 
   /**
-   * Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
-   * @param scope scope or {@code null} for none
+   * Specifies the size of the swap space as a percentage of the ephemeral local SSD capacity.
+   * @param swapSizePercent swapSizePercent or {@code null} for none
    */
-  public MaintenanceExclusionOptions setScope(java.lang.String scope) {
-    this.scope = scope;
+  public EphemeralLocalSsdProfile setSwapSizePercent(java.lang.Integer swapSizePercent) {
+    this.swapSizePercent = swapSizePercent;
     return this;
   }
 
   @Override
-  public MaintenanceExclusionOptions set(String fieldName, Object value) {
-    return (MaintenanceExclusionOptions) super.set(fieldName, value);
+  public EphemeralLocalSsdProfile set(String fieldName, Object value) {
+    return (EphemeralLocalSsdProfile) super.set(fieldName, value);
   }
 
   @Override
-  public MaintenanceExclusionOptions clone() {
-    return (MaintenanceExclusionOptions) super.clone();
+  public EphemeralLocalSsdProfile clone() {
+    return (EphemeralLocalSsdProfile) super.clone();
   }
 
 }

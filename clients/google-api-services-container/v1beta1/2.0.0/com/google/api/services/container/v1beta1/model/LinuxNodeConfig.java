@@ -45,6 +45,22 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
   private HugepagesConfig hugepages;
 
   /**
+   * Optional. Configuration for kernel module loading on nodes. When enabled, the node pool will be
+   * provisioned with a Container-Optimized OS image that enforces kernel module signature
+   * verification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeKernelModuleLoading nodeKernelModuleLoading;
+
+  /**
+   * Optional. Enables and configures swap space on nodes. If omitted, swap is disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SwapConfig swapConfig;
+
+  /**
    * The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.rmem_default net.core.wmem_default
@@ -114,6 +130,44 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   public LinuxNodeConfig setHugepages(HugepagesConfig hugepages) {
     this.hugepages = hugepages;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for kernel module loading on nodes. When enabled, the node pool will be
+   * provisioned with a Container-Optimized OS image that enforces kernel module signature
+   * verification.
+   * @return value or {@code null} for none
+   */
+  public NodeKernelModuleLoading getNodeKernelModuleLoading() {
+    return nodeKernelModuleLoading;
+  }
+
+  /**
+   * Optional. Configuration for kernel module loading on nodes. When enabled, the node pool will be
+   * provisioned with a Container-Optimized OS image that enforces kernel module signature
+   * verification.
+   * @param nodeKernelModuleLoading nodeKernelModuleLoading or {@code null} for none
+   */
+  public LinuxNodeConfig setNodeKernelModuleLoading(NodeKernelModuleLoading nodeKernelModuleLoading) {
+    this.nodeKernelModuleLoading = nodeKernelModuleLoading;
+    return this;
+  }
+
+  /**
+   * Optional. Enables and configures swap space on nodes. If omitted, swap is disabled.
+   * @return value or {@code null} for none
+   */
+  public SwapConfig getSwapConfig() {
+    return swapConfig;
+  }
+
+  /**
+   * Optional. Enables and configures swap space on nodes. If omitted, swap is disabled.
+   * @param swapConfig swapConfig or {@code null} for none
+   */
+  public LinuxNodeConfig setSwapConfig(SwapConfig swapConfig) {
+    this.swapConfig = swapConfig;
     return this;
   }
 

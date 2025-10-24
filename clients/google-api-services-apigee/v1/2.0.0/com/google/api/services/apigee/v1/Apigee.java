@@ -8274,6 +8274,360 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             return (Delete) super.set(parameterName, value);
           }
         }
+        /**
+         * Get the key value map scoped to an organization, environment, or API proxy.
+         *
+         * Create a request for the method "keyvaluemaps.get".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+         *        the Space resource path. To learn more, read the [Apigee Spaces
+         *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         *        administration/spaces/apigee-spaces-overview).
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+$");
+
+          /**
+           * Get the key value map scoped to an organization, environment, or API proxy.
+           *
+           * Create a request for the method "keyvaluemaps.get".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+         *        the Space resource path. To learn more, read the [Apigee Spaces
+         *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         *        administration/spaces/apigee-spaces-overview).
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to fetch the key value map. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under
+           * an API Proxy resource that has the `space` attribute set, IAM permissions are checked
+           * against the Space resource path. To learn more, read the [Apigee Spaces
+           * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+           * administration/spaces/apigee-spaces-overview).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         following structures in your request: *
+         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an API Proxy
+         resource that has the `space` attribute set, IAM permissions are checked against the Space resource
+         path. To learn more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+         platform/system-administration/spaces/apigee-spaces-overview).
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to fetch the key value map. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under
+           * an API Proxy resource that has the `space` attribute set, IAM permissions are checked
+           * against the Space resource path. To learn more, read the [Apigee Spaces
+           * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+           * administration/spaces/apigee-spaces-overview).
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update the key value map scoped to an organization, environment, or API proxy.
+         *
+         * Create a request for the method "keyvaluemaps.update".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+         *        the Space resource path. To learn more, read the [Apigee Spaces
+         *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         *        administration/spaces/apigee-spaces-overview).
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
+         * @return the request
+         */
+        public Update update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap content) throws java.io.IOException {
+          Update result = new Update(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Update extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+$");
+
+          /**
+           * Update the key value map scoped to an organization, environment, or API proxy.
+           *
+           * Create a request for the method "keyvaluemaps.update".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+           * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+         *        the Space resource path. To learn more, read the [Apigee Spaces
+         *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         *        administration/spaces/apigee-spaces-overview).
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
+           * @since 1.13
+           */
+          protected Update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap content) {
+            super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Update setAlt(java.lang.String alt) {
+            return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
+          }
+
+          @Override
+          public Update setFields(java.lang.String fields) {
+            return (Update) super.setFields(fields);
+          }
+
+          @Override
+          public Update setKey(java.lang.String key) {
+            return (Update) super.setKey(key);
+          }
+
+          @Override
+          public Update setOauthToken(java.lang.String oauthToken) {
+            return (Update) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Update) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Update setQuotaUser(java.lang.String quotaUser) {
+            return (Update) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to fetch the key value map. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under
+           * an API Proxy resource that has the `space` attribute set, IAM permissions are checked
+           * against the Space resource path. To learn more, read the [Apigee Spaces
+           * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+           * administration/spaces/apigee-spaces-overview).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         following structures in your request: *
+         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an API Proxy
+         resource that has the `space` attribute set, IAM permissions are checked against the Space resource
+         path. To learn more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+         platform/system-administration/spaces/apigee-spaces-overview).
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to fetch the key value map. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under
+           * an API Proxy resource that has the `space` attribute set, IAM permissions are checked
+           * against the Space resource path. To learn more, read the [Apigee Spaces
+           * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+           * administration/spaces/apigee-spaces-overview).
+           */
+          public Update setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/apis/[^/]+/keyvaluemaps/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Update set(String parameterName, Object value) {
+            return (Update) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Entries collection.
@@ -34019,6 +34373,360 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             return (Delete) super.set(parameterName, value);
           }
         }
+        /**
+         * Get the key value map scoped to an organization, environment, or API proxy.
+         *
+         * Create a request for the method "keyvaluemaps.get".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+         *        the Space resource path. To learn more, read the [Apigee Spaces
+         *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         *        administration/spaces/apigee-spaces-overview).
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+$");
+
+          /**
+           * Get the key value map scoped to an organization, environment, or API proxy.
+           *
+           * Create a request for the method "keyvaluemaps.get".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+         *        the Space resource path. To learn more, read the [Apigee Spaces
+         *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         *        administration/spaces/apigee-spaces-overview).
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to fetch the key value map. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under
+           * an API Proxy resource that has the `space` attribute set, IAM permissions are checked
+           * against the Space resource path. To learn more, read the [Apigee Spaces
+           * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+           * administration/spaces/apigee-spaces-overview).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         following structures in your request: *
+         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an API Proxy
+         resource that has the `space` attribute set, IAM permissions are checked against the Space resource
+         path. To learn more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+         platform/system-administration/spaces/apigee-spaces-overview).
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to fetch the key value map. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under
+           * an API Proxy resource that has the `space` attribute set, IAM permissions are checked
+           * against the Space resource path. To learn more, read the [Apigee Spaces
+           * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+           * administration/spaces/apigee-spaces-overview).
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update the key value map scoped to an organization, environment, or API proxy.
+         *
+         * Create a request for the method "keyvaluemaps.update".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+         *        the Space resource path. To learn more, read the [Apigee Spaces
+         *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         *        administration/spaces/apigee-spaces-overview).
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
+         * @return the request
+         */
+        public Update update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap content) throws java.io.IOException {
+          Update result = new Update(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Update extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+$");
+
+          /**
+           * Update the key value map scoped to an organization, environment, or API proxy.
+           *
+           * Create a request for the method "keyvaluemaps.update".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+           * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         *        following structures in your request: *
+         *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+         *        the Space resource path. To learn more, read the [Apigee Spaces
+         *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         *        administration/spaces/apigee-spaces-overview).
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
+           * @since 1.13
+           */
+          protected Update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap content) {
+            super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Update setAlt(java.lang.String alt) {
+            return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
+          }
+
+          @Override
+          public Update setFields(java.lang.String fields) {
+            return (Update) super.setFields(fields);
+          }
+
+          @Override
+          public Update setKey(java.lang.String key) {
+            return (Update) super.setKey(key);
+          }
+
+          @Override
+          public Update setOauthToken(java.lang.String oauthToken) {
+            return (Update) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Update) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Update setQuotaUser(java.lang.String quotaUser) {
+            return (Update) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to fetch the key value map. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under
+           * an API Proxy resource that has the `space` attribute set, IAM permissions are checked
+           * against the Space resource path. To learn more, read the [Apigee Spaces
+           * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+           * administration/spaces/apigee-spaces-overview).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+         following structures in your request: *
+         `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an API Proxy
+         resource that has the `space` attribute set, IAM permissions are checked against the Space resource
+         path. To learn more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+         platform/system-administration/spaces/apigee-spaces-overview).
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Scope as indicated by the URI in which to fetch the key value map. Use
+           * **one** of the following structures in your request: *
+           * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+           * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+           * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under
+           * an API Proxy resource that has the `space` attribute set, IAM permissions are checked
+           * against the Space resource path. To learn more, read the [Apigee Spaces
+           * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+           * administration/spaces/apigee-spaces-overview).
+           */
+          public Update setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/environments/[^/]+/keyvaluemaps/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Update set(String parameterName, Object value) {
+            return (Update) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Entries collection.
@@ -48933,6 +49641,360 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get the key value map scoped to an organization, environment, or API proxy.
+       *
+       * Create a request for the method "keyvaluemaps.get".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+       *        following structures in your request: *
+       *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+       *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+       *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+       *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+       *        the Space resource path. To learn more, read the [Apigee Spaces
+       *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+       *        administration/spaces/apigee-spaces-overview).
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/keyvaluemaps/[^/]+$");
+
+        /**
+         * Get the key value map scoped to an organization, environment, or API proxy.
+         *
+         * Create a request for the method "keyvaluemaps.get".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+       *        following structures in your request: *
+       *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+       *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+       *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+       *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+       *        the Space resource path. To learn more, read the [Apigee Spaces
+       *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+       *        administration/spaces/apigee-spaces-overview).
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/keyvaluemaps/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Scope as indicated by the URI in which to fetch the key value map. Use **one**
+         * of the following structures in your request: *
+         * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         * API Proxy resource that has the `space` attribute set, IAM permissions are checked
+         * against the Space resource path. To learn more, read the [Apigee Spaces
+         * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         * administration/spaces/apigee-spaces-overview).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+       following structures in your request: *
+       `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+       `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+       `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an API Proxy
+       resource that has the `space` attribute set, IAM permissions are checked against the Space resource
+       path. To learn more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+       platform/system-administration/spaces/apigee-spaces-overview).
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Scope as indicated by the URI in which to fetch the key value map. Use **one**
+         * of the following structures in your request: *
+         * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         * API Proxy resource that has the `space` attribute set, IAM permissions are checked
+         * against the Space resource path. To learn more, read the [Apigee Spaces
+         * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         * administration/spaces/apigee-spaces-overview).
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/keyvaluemaps/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update the key value map scoped to an organization, environment, or API proxy.
+       *
+       * Create a request for the method "keyvaluemaps.update".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+       *        following structures in your request: *
+       *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+       *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+       *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+       *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+       *        the Space resource path. To learn more, read the [Apigee Spaces
+       *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+       *        administration/spaces/apigee-spaces-overview).
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
+       * @return the request
+       */
+      public Update update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap content) throws java.io.IOException {
+        Update result = new Update(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Update extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/keyvaluemaps/[^/]+$");
+
+        /**
+         * Update the key value map scoped to an organization, environment, or API proxy.
+         *
+         * Create a request for the method "keyvaluemaps.update".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+         * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+       *        following structures in your request: *
+       *        `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+       *        `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+       *        `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+       *        API Proxy resource that has the `space` attribute set, IAM permissions are checked against
+       *        the Space resource path. To learn more, read the [Apigee Spaces
+       *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+       *        administration/spaces/apigee-spaces-overview).
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap}
+         * @since 1.13
+         */
+        protected Update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap content) {
+          super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1KeyValueMap.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/keyvaluemaps/[^/]+$");
+          }
+        }
+
+        @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Update setAlt(java.lang.String alt) {
+          return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
+        }
+
+        @Override
+        public Update setFields(java.lang.String fields) {
+          return (Update) super.setFields(fields);
+        }
+
+        @Override
+        public Update setKey(java.lang.String key) {
+          return (Update) super.setKey(key);
+        }
+
+        @Override
+        public Update setOauthToken(java.lang.String oauthToken) {
+          return (Update) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Update) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Update setQuotaUser(java.lang.String quotaUser) {
+          return (Update) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Scope as indicated by the URI in which to fetch the key value map. Use **one**
+         * of the following structures in your request: *
+         * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         * API Proxy resource that has the `space` attribute set, IAM permissions are checked
+         * against the Space resource path. To learn more, read the [Apigee Spaces
+         * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         * administration/spaces/apigee-spaces-overview).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Scope as indicated by the URI in which to fetch the key value map. Use **one** of the
+       following structures in your request: *
+       `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+       `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+       `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an API Proxy
+       resource that has the `space` attribute set, IAM permissions are checked against the Space resource
+       path. To learn more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+       platform/system-administration/spaces/apigee-spaces-overview).
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Scope as indicated by the URI in which to fetch the key value map. Use **one**
+         * of the following structures in your request: *
+         * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. *
+         * `organizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap}` *
+         * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`. If the KeyValueMap is under an
+         * API Proxy resource that has the `space` attribute set, IAM permissions are checked
+         * against the Space resource path. To learn more, read the [Apigee Spaces
+         * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+         * administration/spaces/apigee-spaces-overview).
+         */
+        public Update setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/keyvaluemaps/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Update set(String parameterName, Object value) {
+          return (Update) super.set(parameterName, value);
         }
       }
 

@@ -225,6 +225,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   private java.util.Map<String, GoogleCloudDiscoveryengineV1alphaWidgetConfigUIComponentField> fieldsUiComponentsMap;
 
   /**
+   * Output only. Whether the subscription is gemini bundle or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean geminiBundle;
+
+  /**
    * Optional. Describes the homepage settings of the widget.
    * The value may be {@code null}.
    */
@@ -766,6 +773,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfig setFieldsUiComponentsMap(java.util.Map<String, GoogleCloudDiscoveryengineV1alphaWidgetConfigUIComponentField> fieldsUiComponentsMap) {
     this.fieldsUiComponentsMap = fieldsUiComponentsMap;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the subscription is gemini bundle or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGeminiBundle() {
+    return geminiBundle;
+  }
+
+  /**
+   * Output only. Whether the subscription is gemini bundle or not.
+   * @param geminiBundle geminiBundle or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setGeminiBundle(java.lang.Boolean geminiBundle) {
+    this.geminiBundle = geminiBundle;
     return this;
   }
 

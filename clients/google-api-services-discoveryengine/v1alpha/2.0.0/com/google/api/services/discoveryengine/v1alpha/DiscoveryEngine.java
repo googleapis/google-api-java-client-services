@@ -134,6 +134,334 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the BillingAccounts collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+   *   {@code DiscoveryEngine.BillingAccounts.List request = discoveryengine.billingAccounts().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public BillingAccounts billingAccounts() {
+    return new BillingAccounts();
+  }
+
+  /**
+   * The "billingAccounts" collection of methods.
+   */
+  public class BillingAccounts {
+
+    /**
+     * An accessor for creating requests from the BillingAccountLicenseConfigs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+     *   {@code DiscoveryEngine.BillingAccountLicenseConfigs.List request = discoveryengine.billingAccountLicenseConfigs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public BillingAccountLicenseConfigs billingAccountLicenseConfigs() {
+      return new BillingAccountLicenseConfigs();
+    }
+
+    /**
+     * The "billingAccountLicenseConfigs" collection of methods.
+     */
+    public class BillingAccountLicenseConfigs {
+
+      /**
+       * Distributes a LicenseConfig from billing account level to project level.
+       *
+       * Create a request for the method "billingAccountLicenseConfigs.distributeLicenseConfig".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link DistributeLicenseConfig#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param billingAccountLicenseConfig Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{billing_accou
+       *        nt}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDistributeLicenseConfigRequest}
+       * @return the request
+       */
+      public DistributeLicenseConfig distributeLicenseConfig(java.lang.String billingAccountLicenseConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDistributeLicenseConfigRequest content) throws java.io.IOException {
+        DistributeLicenseConfig result = new DistributeLicenseConfig(billingAccountLicenseConfig, content);
+        initialize(result);
+        return result;
+      }
+
+      public class DistributeLicenseConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDistributeLicenseConfigResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+billingAccountLicenseConfig}:distributeLicenseConfig";
+
+        private final java.util.regex.Pattern BILLING_ACCOUNT_LICENSE_CONFIG_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+/billingAccountLicenseConfigs/[^/]+$");
+
+        /**
+         * Distributes a LicenseConfig from billing account level to project level.
+         *
+         * Create a request for the method "billingAccountLicenseConfigs.distributeLicenseConfig".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link DistributeLicenseConfig#execute()} method to invoke the
+         * remote operation. <p> {@link DistributeLicenseConfig#initialize(com.google.api.client.googleapi
+         * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param billingAccountLicenseConfig Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{billing_accou
+       *        nt}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDistributeLicenseConfigRequest}
+         * @since 1.13
+         */
+        protected DistributeLicenseConfig(java.lang.String billingAccountLicenseConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDistributeLicenseConfigRequest content) {
+          super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDistributeLicenseConfigResponse.class);
+          this.billingAccountLicenseConfig = com.google.api.client.util.Preconditions.checkNotNull(billingAccountLicenseConfig, "Required parameter billingAccountLicenseConfig must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(BILLING_ACCOUNT_LICENSE_CONFIG_PATTERN.matcher(billingAccountLicenseConfig).matches(),
+                "Parameter billingAccountLicenseConfig must conform to the pattern " +
+                "^billingAccounts/[^/]+/billingAccountLicenseConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public DistributeLicenseConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (DistributeLicenseConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public DistributeLicenseConfig setAccessToken(java.lang.String accessToken) {
+          return (DistributeLicenseConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public DistributeLicenseConfig setAlt(java.lang.String alt) {
+          return (DistributeLicenseConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public DistributeLicenseConfig setCallback(java.lang.String callback) {
+          return (DistributeLicenseConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public DistributeLicenseConfig setFields(java.lang.String fields) {
+          return (DistributeLicenseConfig) super.setFields(fields);
+        }
+
+        @Override
+        public DistributeLicenseConfig setKey(java.lang.String key) {
+          return (DistributeLicenseConfig) super.setKey(key);
+        }
+
+        @Override
+        public DistributeLicenseConfig setOauthToken(java.lang.String oauthToken) {
+          return (DistributeLicenseConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public DistributeLicenseConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (DistributeLicenseConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public DistributeLicenseConfig setQuotaUser(java.lang.String quotaUser) {
+          return (DistributeLicenseConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public DistributeLicenseConfig setUploadType(java.lang.String uploadType) {
+          return (DistributeLicenseConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public DistributeLicenseConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (DistributeLicenseConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{bi
+         * lling_account}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String billingAccountLicenseConfig;
+
+        /** Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{billing_acco
+       unt}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+         */
+        public java.lang.String getBillingAccountLicenseConfig() {
+          return billingAccountLicenseConfig;
+        }
+
+        /**
+         * Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{bi
+         * lling_account}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+         */
+        public DistributeLicenseConfig setBillingAccountLicenseConfig(java.lang.String billingAccountLicenseConfig) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(BILLING_ACCOUNT_LICENSE_CONFIG_PATTERN.matcher(billingAccountLicenseConfig).matches(),
+                "Parameter billingAccountLicenseConfig must conform to the pattern " +
+                "^billingAccounts/[^/]+/billingAccountLicenseConfigs/[^/]+$");
+          }
+          this.billingAccountLicenseConfig = billingAccountLicenseConfig;
+          return this;
+        }
+
+        @Override
+        public DistributeLicenseConfig set(String parameterName, Object value) {
+          return (DistributeLicenseConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * This method is called from the billing account side to retract the LicenseConfig from the given
+       * project back to the billing account.
+       *
+       * Create a request for the method "billingAccountLicenseConfigs.retractLicenseConfig".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link RetractLicenseConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param billingAccountLicenseConfig Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{billing_accou
+       *        nt}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRetractLicenseConfigRequest}
+       * @return the request
+       */
+      public RetractLicenseConfig retractLicenseConfig(java.lang.String billingAccountLicenseConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRetractLicenseConfigRequest content) throws java.io.IOException {
+        RetractLicenseConfig result = new RetractLicenseConfig(billingAccountLicenseConfig, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RetractLicenseConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRetractLicenseConfigResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+billingAccountLicenseConfig}:retractLicenseConfig";
+
+        private final java.util.regex.Pattern BILLING_ACCOUNT_LICENSE_CONFIG_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+/billingAccountLicenseConfigs/[^/]+$");
+
+        /**
+         * This method is called from the billing account side to retract the LicenseConfig from the given
+         * project back to the billing account.
+         *
+         * Create a request for the method "billingAccountLicenseConfigs.retractLicenseConfig".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link RetractLicenseConfig#execute()} method to invoke the
+         * remote operation. <p> {@link RetractLicenseConfig#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param billingAccountLicenseConfig Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{billing_accou
+       *        nt}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRetractLicenseConfigRequest}
+         * @since 1.13
+         */
+        protected RetractLicenseConfig(java.lang.String billingAccountLicenseConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRetractLicenseConfigRequest content) {
+          super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRetractLicenseConfigResponse.class);
+          this.billingAccountLicenseConfig = com.google.api.client.util.Preconditions.checkNotNull(billingAccountLicenseConfig, "Required parameter billingAccountLicenseConfig must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(BILLING_ACCOUNT_LICENSE_CONFIG_PATTERN.matcher(billingAccountLicenseConfig).matches(),
+                "Parameter billingAccountLicenseConfig must conform to the pattern " +
+                "^billingAccounts/[^/]+/billingAccountLicenseConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public RetractLicenseConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (RetractLicenseConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RetractLicenseConfig setAccessToken(java.lang.String accessToken) {
+          return (RetractLicenseConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RetractLicenseConfig setAlt(java.lang.String alt) {
+          return (RetractLicenseConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public RetractLicenseConfig setCallback(java.lang.String callback) {
+          return (RetractLicenseConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public RetractLicenseConfig setFields(java.lang.String fields) {
+          return (RetractLicenseConfig) super.setFields(fields);
+        }
+
+        @Override
+        public RetractLicenseConfig setKey(java.lang.String key) {
+          return (RetractLicenseConfig) super.setKey(key);
+        }
+
+        @Override
+        public RetractLicenseConfig setOauthToken(java.lang.String oauthToken) {
+          return (RetractLicenseConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RetractLicenseConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RetractLicenseConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RetractLicenseConfig setQuotaUser(java.lang.String quotaUser) {
+          return (RetractLicenseConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RetractLicenseConfig setUploadType(java.lang.String uploadType) {
+          return (RetractLicenseConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RetractLicenseConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RetractLicenseConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{bi
+         * lling_account}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String billingAccountLicenseConfig;
+
+        /** Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{billing_acco
+       unt}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+         */
+        public java.lang.String getBillingAccountLicenseConfig() {
+          return billingAccountLicenseConfig;
+        }
+
+        /**
+         * Required. Full resource name of BillingAccountLicenseConfig. Format: `billingAccounts/{bi
+         * lling_account}/billingAccountLicenseConfigs/{billing_account_license_config_id}`.
+         */
+        public RetractLicenseConfig setBillingAccountLicenseConfig(java.lang.String billingAccountLicenseConfig) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(BILLING_ACCOUNT_LICENSE_CONFIG_PATTERN.matcher(billingAccountLicenseConfig).matches(),
+                "Parameter billingAccountLicenseConfig must conform to the pattern " +
+                "^billingAccounts/[^/]+/billingAccountLicenseConfigs/[^/]+$");
+          }
+          this.billingAccountLicenseConfig = billingAccountLicenseConfig;
+          return this;
+        }
+
+        @Override
+        public RetractLicenseConfig set(String parameterName, Object value) {
+          return (RetractLicenseConfig) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Media collection.
    *
    * <p>The typical use is:</p>

@@ -31,15 +31,6 @@ package com.google.api.services.serviceusage.v1.model;
 public final class GoogleApiServiceusageV2betaConsumerPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Annotations is an unstructured key-value map stored with a policy that may be set by
-   * external tools to store and retrieve arbitrary metadata. They are not queryable and should be
-   * preserved when modifying objects. [AIP-128](https://google.aip.dev/128#annotations)
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> annotations;
-
-  /**
    * Output only. The time the policy was created. For singleton policies, this is the first touch
    * of the policy.
    * The value may be {@code null}.
@@ -77,27 +68,6 @@ public final class GoogleApiServiceusageV2betaConsumerPolicy extends com.google.
    */
   @com.google.api.client.util.Key
   private String updateTime;
-
-  /**
-   * Optional. Annotations is an unstructured key-value map stored with a policy that may be set by
-   * external tools to store and retrieve arbitrary metadata. They are not queryable and should be
-   * preserved when modifying objects. [AIP-128](https://google.aip.dev/128#annotations)
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getAnnotations() {
-    return annotations;
-  }
-
-  /**
-   * Optional. Annotations is an unstructured key-value map stored with a policy that may be set by
-   * external tools to store and retrieve arbitrary metadata. They are not queryable and should be
-   * preserved when modifying objects. [AIP-128](https://google.aip.dev/128#annotations)
-   * @param annotations annotations or {@code null} for none
-   */
-  public GoogleApiServiceusageV2betaConsumerPolicy setAnnotations(java.util.Map<String, java.lang.String> annotations) {
-    this.annotations = annotations;
-    return this;
-  }
 
   /**
    * Output only. The time the policy was created. For singleton policies, this is the first touch

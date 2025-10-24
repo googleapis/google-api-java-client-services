@@ -31,6 +31,15 @@ package com.google.api.services.container.v1beta1.model;
 public final class NodeNetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. The accelerator network profile for the node pool. For now the only valid value is
+   * "auto". If specified, the network configuration of the nodes in this node pool will be managed
+   * by this profile for the supported machine types, zone, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String acceleratorNetworkProfile;
+
+  /**
    * We specify the additional node networks for this node pool using this list. Each node network
    * corresponds to an additional interface
    * The value may be {@code null}.
@@ -146,6 +155,27 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * Immutable. The accelerator network profile for the node pool. For now the only valid value is
+   * "auto". If specified, the network configuration of the nodes in this node pool will be managed
+   * by this profile for the supported machine types, zone, etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAcceleratorNetworkProfile() {
+    return acceleratorNetworkProfile;
+  }
+
+  /**
+   * Immutable. The accelerator network profile for the node pool. For now the only valid value is
+   * "auto". If specified, the network configuration of the nodes in this node pool will be managed
+   * by this profile for the supported machine types, zone, etc.
+   * @param acceleratorNetworkProfile acceleratorNetworkProfile or {@code null} for none
+   */
+  public NodeNetworkConfig setAcceleratorNetworkProfile(java.lang.String acceleratorNetworkProfile) {
+    this.acceleratorNetworkProfile = acceleratorNetworkProfile;
+    return this;
+  }
 
   /**
    * We specify the additional node networks for this node pool using this list. Each node network

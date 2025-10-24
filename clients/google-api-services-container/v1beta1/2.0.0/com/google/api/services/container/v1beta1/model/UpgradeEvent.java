@@ -32,6 +32,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
 
   /**
+   * The current emulated version before the upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String currentEmulatedVersion;
+
+  /**
    * The current version before the upgrade.
    * The value may be {@code null}.
    */
@@ -68,11 +75,35 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceType;
 
   /**
+   * The target emulated version for the upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetEmulatedVersion;
+
+  /**
    * The target version for the upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetVersion;
+
+  /**
+   * The current emulated version before the upgrade.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurrentEmulatedVersion() {
+    return currentEmulatedVersion;
+  }
+
+  /**
+   * The current emulated version before the upgrade.
+   * @param currentEmulatedVersion currentEmulatedVersion or {@code null} for none
+   */
+  public UpgradeEvent setCurrentEmulatedVersion(java.lang.String currentEmulatedVersion) {
+    this.currentEmulatedVersion = currentEmulatedVersion;
+    return this;
+  }
 
   /**
    * The current version before the upgrade.
@@ -158,6 +189,23 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
    */
   public UpgradeEvent setResourceType(java.lang.String resourceType) {
     this.resourceType = resourceType;
+    return this;
+  }
+
+  /**
+   * The target emulated version for the upgrade.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetEmulatedVersion() {
+    return targetEmulatedVersion;
+  }
+
+  /**
+   * The target emulated version for the upgrade.
+   * @param targetEmulatedVersion targetEmulatedVersion or {@code null} for none
+   */
+  public UpgradeEvent setTargetEmulatedVersion(java.lang.String targetEmulatedVersion) {
+    this.targetEmulatedVersion = targetEmulatedVersion;
     return this;
   }
 

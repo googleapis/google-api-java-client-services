@@ -2867,6 +2867,147 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
           }
         }
         /**
+         * Clears cached test runs for a specific test case and device(s).
+         *
+         * Create a request for the method "testCases.clearTestCaseCache".
+         *
+         * This request holds the parameters needed by the firebaseappdistribution server.  After setting
+         * any optional parameters, call the {@link ClearTestCaseCache#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param testCase Required. The name of the test case resource for which to clear the cache. Format:
+         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaClearTestCaseCacheRequest}
+         * @return the request
+         */
+        public ClearTestCaseCache clearTestCaseCache(java.lang.String testCase, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaClearTestCaseCacheRequest content) throws java.io.IOException {
+          ClearTestCaseCache result = new ClearTestCaseCache(testCase, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ClearTestCaseCache extends FirebaseAppDistributionRequest<com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaClearTestCaseCacheResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+testCase}:clearTestCaseCache";
+
+          private final java.util.regex.Pattern TEST_CASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/testCases/[^/]+$");
+
+          /**
+           * Clears cached test runs for a specific test case and device(s).
+           *
+           * Create a request for the method "testCases.clearTestCaseCache".
+           *
+           * This request holds the parameters needed by the the firebaseappdistribution server.  After
+           * setting any optional parameters, call the {@link ClearTestCaseCache#execute()} method to invoke
+           * the remote operation. <p> {@link ClearTestCaseCache#initialize(com.google.api.client.googleapis
+           * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param testCase Required. The name of the test case resource for which to clear the cache. Format:
+         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaClearTestCaseCacheRequest}
+           * @since 1.13
+           */
+          protected ClearTestCaseCache(java.lang.String testCase, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaClearTestCaseCacheRequest content) {
+            super(FirebaseAppDistribution.this, "POST", REST_PATH, content, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaClearTestCaseCacheResponse.class);
+            this.testCase = com.google.api.client.util.Preconditions.checkNotNull(testCase, "Required parameter testCase must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TEST_CASE_PATTERN.matcher(testCase).matches(),
+                  "Parameter testCase must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/testCases/[^/]+$");
+            }
+          }
+
+          @Override
+          public ClearTestCaseCache set$Xgafv(java.lang.String $Xgafv) {
+            return (ClearTestCaseCache) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ClearTestCaseCache setAccessToken(java.lang.String accessToken) {
+            return (ClearTestCaseCache) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ClearTestCaseCache setAlt(java.lang.String alt) {
+            return (ClearTestCaseCache) super.setAlt(alt);
+          }
+
+          @Override
+          public ClearTestCaseCache setCallback(java.lang.String callback) {
+            return (ClearTestCaseCache) super.setCallback(callback);
+          }
+
+          @Override
+          public ClearTestCaseCache setFields(java.lang.String fields) {
+            return (ClearTestCaseCache) super.setFields(fields);
+          }
+
+          @Override
+          public ClearTestCaseCache setKey(java.lang.String key) {
+            return (ClearTestCaseCache) super.setKey(key);
+          }
+
+          @Override
+          public ClearTestCaseCache setOauthToken(java.lang.String oauthToken) {
+            return (ClearTestCaseCache) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ClearTestCaseCache setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ClearTestCaseCache) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ClearTestCaseCache setQuotaUser(java.lang.String quotaUser) {
+            return (ClearTestCaseCache) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ClearTestCaseCache setUploadType(java.lang.String uploadType) {
+            return (ClearTestCaseCache) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ClearTestCaseCache setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ClearTestCaseCache) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the test case resource for which to clear the cache. Format:
+           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String testCase;
+
+          /** Required. The name of the test case resource for which to clear the cache. Format:
+         `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           */
+          public java.lang.String getTestCase() {
+            return testCase;
+          }
+
+          /**
+           * Required. The name of the test case resource for which to clear the cache. Format:
+           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           */
+          public ClearTestCaseCache setTestCase(java.lang.String testCase) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TEST_CASE_PATTERN.matcher(testCase).matches(),
+                  "Parameter testCase must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+/testCases/[^/]+$");
+            }
+            this.testCase = testCase;
+            return this;
+          }
+
+          @Override
+          public ClearTestCaseCache set(String parameterName, Object value) {
+            return (ClearTestCaseCache) super.set(parameterName, value);
+          }
+        }
+        /**
          * Create a new test case.
          *
          * Create a request for the method "testCases.create".

@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Candidate for the logprobs token and score.
+ * A single token and its associated log probability.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,28 +30,34 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends com.google.api.client.json.GenericJson {
 
   /**
-   * The candidate's log probability.
+   * The log probability of this token. A higher value indicates that the model was more confident
+   * in this token. The log probability can be used to assess the relative likelihood of different
+   * tokens and to identify when the model is uncertain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float logProbability;
 
   /**
-   * The candidate's token string value.
+   * The token's string representation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String token;
 
   /**
-   * The candidate's token id value.
+   * The token's numerical ID. While the `token` field provides the string representation of the
+   * token, the `token_id` is the numerical representation that the model uses internally. This can
+   * be useful for developers who want to build custom logic based on the model's vocabulary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer tokenId;
 
   /**
-   * The candidate's log probability.
+   * The log probability of this token. A higher value indicates that the model was more confident
+   * in this token. The log probability can be used to assess the relative likelihood of different
+   * tokens and to identify when the model is uncertain.
    * @return value or {@code null} for none
    */
   public java.lang.Float getLogProbability() {
@@ -59,7 +65,9 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   }
 
   /**
-   * The candidate's log probability.
+   * The log probability of this token. A higher value indicates that the model was more confident
+   * in this token. The log probability can be used to assess the relative likelihood of different
+   * tokens and to identify when the model is uncertain.
    * @param logProbability logProbability or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1LogprobsResultCandidate setLogProbability(java.lang.Float logProbability) {
@@ -68,7 +76,7 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   }
 
   /**
-   * The candidate's token string value.
+   * The token's string representation.
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -76,7 +84,7 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   }
 
   /**
-   * The candidate's token string value.
+   * The token's string representation.
    * @param token token or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1LogprobsResultCandidate setToken(java.lang.String token) {
@@ -85,7 +93,9 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   }
 
   /**
-   * The candidate's token id value.
+   * The token's numerical ID. While the `token` field provides the string representation of the
+   * token, the `token_id` is the numerical representation that the model uses internally. This can
+   * be useful for developers who want to build custom logic based on the model's vocabulary.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTokenId() {
@@ -93,7 +103,9 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   }
 
   /**
-   * The candidate's token id value.
+   * The token's numerical ID. While the `token` field provides the string representation of the
+   * token, the `token_id` is the numerical representation that the model uses internally. This can
+   * be useful for developers who want to build custom logic based on the model's vocabulary.
    * @param tokenId tokenId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1LogprobsResultCandidate setTokenId(java.lang.Integer tokenId) {

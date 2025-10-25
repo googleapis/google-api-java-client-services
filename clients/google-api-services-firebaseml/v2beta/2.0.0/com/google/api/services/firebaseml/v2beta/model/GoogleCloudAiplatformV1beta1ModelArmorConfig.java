@@ -17,7 +17,9 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Configuration for Model Armor integrations of prompt and responses.
+ * Configuration for Model Armor. Model Armor is a Google Cloud service that provides safety and
+ * security filtering for prompts and responses. It helps protect your AI applications from risks
+ * such as harmful content, sensitive data leakage, and prompt injection attacks.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,21 +32,33 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1ModelArmorConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the Model Armor template to use for prompt sanitization.
+   * Optional. The resource name of the Model Armor template to use for prompt screening. A Model
+   * Armor template is a set of customized filters and thresholds that define how Model Armor
+   * screens content. If specified, Model Armor will use this template to check the user's prompt
+   * for safety and security risks before it is sent to the model. The name must be in the format
+   * `projects/{project}/locations/{location}/templates/{template}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String promptTemplateName;
 
   /**
-   * Optional. The name of the Model Armor template to use for response sanitization.
+   * Optional. The resource name of the Model Armor template to use for response screening. A Model
+   * Armor template is a set of customized filters and thresholds that define how Model Armor
+   * screens content. If specified, Model Armor will use this template to check the model's response
+   * for safety and security risks before it is returned to the user. The name must be in the format
+   * `projects/{project}/locations/{location}/templates/{template}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseTemplateName;
 
   /**
-   * Optional. The name of the Model Armor template to use for prompt sanitization.
+   * Optional. The resource name of the Model Armor template to use for prompt screening. A Model
+   * Armor template is a set of customized filters and thresholds that define how Model Armor
+   * screens content. If specified, Model Armor will use this template to check the user's prompt
+   * for safety and security risks before it is sent to the model. The name must be in the format
+   * `projects/{project}/locations/{location}/templates/{template}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPromptTemplateName() {
@@ -52,7 +66,11 @@ public final class GoogleCloudAiplatformV1beta1ModelArmorConfig extends com.goog
   }
 
   /**
-   * Optional. The name of the Model Armor template to use for prompt sanitization.
+   * Optional. The resource name of the Model Armor template to use for prompt screening. A Model
+   * Armor template is a set of customized filters and thresholds that define how Model Armor
+   * screens content. If specified, Model Armor will use this template to check the user's prompt
+   * for safety and security risks before it is sent to the model. The name must be in the format
+   * `projects/{project}/locations/{location}/templates/{template}`.
    * @param promptTemplateName promptTemplateName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelArmorConfig setPromptTemplateName(java.lang.String promptTemplateName) {
@@ -61,7 +79,11 @@ public final class GoogleCloudAiplatformV1beta1ModelArmorConfig extends com.goog
   }
 
   /**
-   * Optional. The name of the Model Armor template to use for response sanitization.
+   * Optional. The resource name of the Model Armor template to use for response screening. A Model
+   * Armor template is a set of customized filters and thresholds that define how Model Armor
+   * screens content. If specified, Model Armor will use this template to check the model's response
+   * for safety and security risks before it is returned to the user. The name must be in the format
+   * `projects/{project}/locations/{location}/templates/{template}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseTemplateName() {
@@ -69,7 +91,11 @@ public final class GoogleCloudAiplatformV1beta1ModelArmorConfig extends com.goog
   }
 
   /**
-   * Optional. The name of the Model Armor template to use for response sanitization.
+   * Optional. The resource name of the Model Armor template to use for response screening. A Model
+   * Armor template is a set of customized filters and thresholds that define how Model Armor
+   * screens content. If specified, Model Armor will use this template to check the model's response
+   * for safety and security risks before it is returned to the user. The name must be in the format
+   * `projects/{project}/locations/{location}/templates/{template}`.
    * @param responseTemplateName responseTemplateName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelArmorConfig setResponseTemplateName(java.lang.String responseTemplateName) {

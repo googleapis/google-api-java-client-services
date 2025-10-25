@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * The configuration for the prebuilt speaker to use.
+ * Configuration for a prebuilt voice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1PrebuiltVoiceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the preset voice to use.
+   * The name of the prebuilt voice to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String voiceName;
 
   /**
-   * The name of the preset voice to use.
+   * The name of the prebuilt voice to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getVoiceName() {
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1beta1PrebuiltVoiceConfig extends com.g
   }
 
   /**
-   * The name of the preset voice to use.
+   * The name of the prebuilt voice to use.
    * @param voiceName voiceName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PrebuiltVoiceConfig setVoiceName(java.lang.String voiceName) {

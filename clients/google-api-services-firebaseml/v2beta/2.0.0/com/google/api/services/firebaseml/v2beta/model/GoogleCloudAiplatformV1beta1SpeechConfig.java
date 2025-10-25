@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * The speech generation config.
+ * Configuration for speech generation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1SpeechConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * Optional. The language code (ISO 639-1) for the speech synthesis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +45,14 @@ public final class GoogleCloudAiplatformV1beta1SpeechConfig extends com.google.a
   private GoogleCloudAiplatformV1beta1MultiSpeakerVoiceConfig multiSpeakerVoiceConfig;
 
   /**
-   * The configuration for the speaker to use.
+   * The configuration for the voice to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1VoiceConfig voiceConfig;
 
   /**
-   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * Optional. The language code (ISO 639-1) for the speech synthesis.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -60,7 +60,7 @@ public final class GoogleCloudAiplatformV1beta1SpeechConfig extends com.google.a
   }
 
   /**
-   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * Optional. The language code (ISO 639-1) for the speech synthesis.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SpeechConfig setLanguageCode(java.lang.String languageCode) {
@@ -88,7 +88,7 @@ public final class GoogleCloudAiplatformV1beta1SpeechConfig extends com.google.a
   }
 
   /**
-   * The configuration for the speaker to use.
+   * The configuration for the voice to use.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1VoiceConfig getVoiceConfig() {
@@ -96,7 +96,7 @@ public final class GoogleCloudAiplatformV1beta1SpeechConfig extends com.google.a
   }
 
   /**
-   * The configuration for the speaker to use.
+   * The configuration for the voice to use.
    * @param voiceConfig voiceConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SpeechConfig setVoiceConfig(GoogleCloudAiplatformV1beta1VoiceConfig voiceConfig) {

@@ -17,7 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * URI based data.
+ * URI-based data. A FileData message contains a URI pointing to data of a specific media type. It
+ * is used to represent images, audio, and video stored in Google Cloud Storage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,17 +31,17 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1FileData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Display name of the file data. Used to provide a label or filename to distinguish
-   * file datas. This field is only returned in PromptMessage for prompt management. It is currently
-   * used in the Gemini GenerateContent calls only when server side tools (code_execution,
-   * google_search, and url_context) are enabled.
+   * Optional. The display name of the file. Used to provide a label or filename to distinguish
+   * files. This field is only returned in `PromptMessage` for prompt management. It is used in the
+   * Gemini calls only when server side tools (`code_execution`, `google_search`, and `url_context`)
+   * are enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. URI.
+   * Required. The URI of the file in Google Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,10 +55,10 @@ public final class GoogleCloudAiplatformV1beta1FileData extends com.google.api.c
   private java.lang.String mimeType;
 
   /**
-   * Optional. Display name of the file data. Used to provide a label or filename to distinguish
-   * file datas. This field is only returned in PromptMessage for prompt management. It is currently
-   * used in the Gemini GenerateContent calls only when server side tools (code_execution,
-   * google_search, and url_context) are enabled.
+   * Optional. The display name of the file. Used to provide a label or filename to distinguish
+   * files. This field is only returned in `PromptMessage` for prompt management. It is used in the
+   * Gemini calls only when server side tools (`code_execution`, `google_search`, and `url_context`)
+   * are enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -65,10 +66,10 @@ public final class GoogleCloudAiplatformV1beta1FileData extends com.google.api.c
   }
 
   /**
-   * Optional. Display name of the file data. Used to provide a label or filename to distinguish
-   * file datas. This field is only returned in PromptMessage for prompt management. It is currently
-   * used in the Gemini GenerateContent calls only when server side tools (code_execution,
-   * google_search, and url_context) are enabled.
+   * Optional. The display name of the file. Used to provide a label or filename to distinguish
+   * files. This field is only returned in `PromptMessage` for prompt management. It is used in the
+   * Gemini calls only when server side tools (`code_execution`, `google_search`, and `url_context`)
+   * are enabled.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FileData setDisplayName(java.lang.String displayName) {
@@ -77,7 +78,7 @@ public final class GoogleCloudAiplatformV1beta1FileData extends com.google.api.c
   }
 
   /**
-   * Required. URI.
+   * Required. The URI of the file in Google Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileUri() {
@@ -85,7 +86,7 @@ public final class GoogleCloudAiplatformV1beta1FileData extends com.google.api.c
   }
 
   /**
-   * Required. URI.
+   * Required. The URI of the file in Google Cloud Storage.
    * @param fileUri fileUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FileData setFileUri(java.lang.String fileUri) {

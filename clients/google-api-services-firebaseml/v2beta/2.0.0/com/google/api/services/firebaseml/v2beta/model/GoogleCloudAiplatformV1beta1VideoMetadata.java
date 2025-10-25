@@ -17,7 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Metadata describes the input video content.
+ * Provides metadata for a video, including the start and end offsets for clipping and the frame
+ * rate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -37,8 +38,8 @@ public final class GoogleCloudAiplatformV1beta1VideoMetadata extends com.google.
   private String endOffset;
 
   /**
-   * Optional. The frame rate of the video sent to the model. If not specified, the default value
-   * will be 1.0. The fps range is (0.0, 24.0].
+   * Optional. The frame rate of the video sent to the model. If not specified, the default value is
+   * 1.0. The valid range is (0.0, 24.0].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +70,8 @@ public final class GoogleCloudAiplatformV1beta1VideoMetadata extends com.google.
   }
 
   /**
-   * Optional. The frame rate of the video sent to the model. If not specified, the default value
-   * will be 1.0. The fps range is (0.0, 24.0].
+   * Optional. The frame rate of the video sent to the model. If not specified, the default value is
+   * 1.0. The valid range is (0.0, 24.0].
    * @return value or {@code null} for none
    */
   public java.lang.Double getFps() {
@@ -78,8 +79,8 @@ public final class GoogleCloudAiplatformV1beta1VideoMetadata extends com.google.
   }
 
   /**
-   * Optional. The frame rate of the video sent to the model. If not specified, the default value
-   * will be 1.0. The fps range is (0.0, 24.0].
+   * Optional. The frame rate of the video sent to the model. If not specified, the default value is
+   * 1.0. The valid range is (0.0, 24.0].
    * @param fps fps or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1VideoMetadata setFps(java.lang.Double fps) {

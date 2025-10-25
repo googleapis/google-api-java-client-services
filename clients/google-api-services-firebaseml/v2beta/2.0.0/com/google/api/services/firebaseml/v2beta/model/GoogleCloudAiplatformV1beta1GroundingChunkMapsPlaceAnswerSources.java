@@ -17,7 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Sources used to generate the place answer.
+ * The sources that were used to generate the place answer. This includes review snippets and photos
+ * that were used to generate the answer, as well as URIs to flag content.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,14 +31,14 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Snippets of reviews that are used to generate the answer.
+   * Snippets of reviews that were used to generate the answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet> reviewSnippets;
 
   /**
-   * Snippets of reviews that are used to generate the answer.
+   * Snippets of reviews that were used to generate the answer.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet> getReviewSnippets() {
@@ -45,7 +46,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSour
   }
 
   /**
-   * Snippets of reviews that are used to generate the answer.
+   * Snippets of reviews that were used to generate the answer.
    * @param reviewSnippets reviewSnippets or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSources setReviewSnippets(java.util.List<GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet> reviewSnippets) {

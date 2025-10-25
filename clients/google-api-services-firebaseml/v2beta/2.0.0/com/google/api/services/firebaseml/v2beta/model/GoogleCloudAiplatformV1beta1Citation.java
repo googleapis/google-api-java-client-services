@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Source attributions for content.
+ * A citation for a piece of generatedcontent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,49 +30,49 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. End index into the content.
+   * Output only. The end index of the citation in the content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer endIndex;
 
   /**
-   * Output only. License of the attribution.
+   * Output only. The license of the source of the citation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String license;
 
   /**
-   * Output only. Publication date of the attribution.
+   * Output only. The publication date of the source of the citation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date publicationDate;
 
   /**
-   * Output only. Start index into the content.
+   * Output only. The start index of the citation in the content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer startIndex;
 
   /**
-   * Output only. Title of the attribution.
+   * Output only. The title of the source of the citation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Output only. Url reference of the attribution.
+   * Output only. The URI of the source of the citation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Output only. End index into the content.
+   * Output only. The end index of the citation in the content.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndIndex() {
@@ -80,7 +80,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. End index into the content.
+   * Output only. The end index of the citation in the content.
    * @param endIndex endIndex or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Citation setEndIndex(java.lang.Integer endIndex) {
@@ -89,7 +89,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. License of the attribution.
+   * Output only. The license of the source of the citation.
    * @return value or {@code null} for none
    */
   public java.lang.String getLicense() {
@@ -97,7 +97,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. License of the attribution.
+   * Output only. The license of the source of the citation.
    * @param license license or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Citation setLicense(java.lang.String license) {
@@ -106,7 +106,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. Publication date of the attribution.
+   * Output only. The publication date of the source of the citation.
    * @return value or {@code null} for none
    */
   public Date getPublicationDate() {
@@ -114,7 +114,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. Publication date of the attribution.
+   * Output only. The publication date of the source of the citation.
    * @param publicationDate publicationDate or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Citation setPublicationDate(Date publicationDate) {
@@ -123,7 +123,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. Start index into the content.
+   * Output only. The start index of the citation in the content.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartIndex() {
@@ -131,7 +131,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. Start index into the content.
+   * Output only. The start index of the citation in the content.
    * @param startIndex startIndex or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Citation setStartIndex(java.lang.Integer startIndex) {
@@ -140,7 +140,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. Title of the attribution.
+   * Output only. The title of the source of the citation.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -148,7 +148,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. Title of the attribution.
+   * Output only. The title of the source of the citation.
    * @param title title or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Citation setTitle(java.lang.String title) {
@@ -157,7 +157,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. Url reference of the attribution.
+   * Output only. The URI of the source of the citation.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -165,7 +165,7 @@ public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.c
   }
 
   /**
-   * Output only. Url reference of the attribution.
+   * Output only. The URI of the source of the citation.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Citation setUri(java.lang.String uri) {

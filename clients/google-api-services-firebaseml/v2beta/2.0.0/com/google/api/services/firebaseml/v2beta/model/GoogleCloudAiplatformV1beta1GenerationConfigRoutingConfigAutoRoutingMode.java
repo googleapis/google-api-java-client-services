@@ -17,8 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * When automated routing is specified, the routing will be determined by the pretrained routing
- * model and customer provided model routing preference.
+ * The configuration for automated routing. When automated routing is specified, the routing will be
+ * determined by the pretrained routing model and customer provided model routing preference.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:

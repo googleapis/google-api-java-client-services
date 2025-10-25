@@ -17,8 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Configuration for a multi-speaker text-to-speech setup. Enables the use of up to two distinct
- * voices in a single synthesis request.
+ * Configuration for a multi-speaker text-to-speech request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:

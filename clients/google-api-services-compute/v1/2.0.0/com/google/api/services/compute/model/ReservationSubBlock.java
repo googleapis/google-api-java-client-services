@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class ReservationSubBlock extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] Slice info for the reservation subBlock.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AcceleratorTopologiesInfo acceleratorTopologiesInfo;
+
+  /**
    * [Output Only] The number of hosts that are allocated in this reservation subBlock.
    * The value may be {@code null}.
    */
@@ -122,6 +129,23 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * [Output Only] Slice info for the reservation subBlock.
+   * @return value or {@code null} for none
+   */
+  public AcceleratorTopologiesInfo getAcceleratorTopologiesInfo() {
+    return acceleratorTopologiesInfo;
+  }
+
+  /**
+   * [Output Only] Slice info for the reservation subBlock.
+   * @param acceleratorTopologiesInfo acceleratorTopologiesInfo or {@code null} for none
+   */
+  public ReservationSubBlock setAcceleratorTopologiesInfo(AcceleratorTopologiesInfo acceleratorTopologiesInfo) {
+    this.acceleratorTopologiesInfo = acceleratorTopologiesInfo;
+    return this;
+  }
 
   /**
    * [Output Only] The number of hosts that are allocated in this reservation subBlock.

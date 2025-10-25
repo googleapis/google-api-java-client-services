@@ -30,14 +30,18 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerInstanceLifecyclePolicyOnRepair extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies whether the MIG can change a VM's zone during a repair.
+   * Specifies whether the MIG can change a VM's zone during a repair. Valid values are:        - NO
+   * (default): MIG cannot change a VM's zone during a    repair.    - YES: MIG can select a
+   * different zone for the VM during    a repair.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String allowChangingZone;
 
   /**
-   * Specifies whether the MIG can change a VM's zone during a repair.
+   * Specifies whether the MIG can change a VM's zone during a repair. Valid values are:        - NO
+   * (default): MIG cannot change a VM's zone during a    repair.    - YES: MIG can select a
+   * different zone for the VM during    a repair.
    * @return value or {@code null} for none
    */
   public java.lang.String getAllowChangingZone() {
@@ -45,7 +49,9 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyOnRepair extends c
   }
 
   /**
-   * Specifies whether the MIG can change a VM's zone during a repair.
+   * Specifies whether the MIG can change a VM's zone during a repair. Valid values are:        - NO
+   * (default): MIG cannot change a VM's zone during a    repair.    - YES: MIG can select a
+   * different zone for the VM during    a repair.
    * @param allowChangingZone allowChangingZone or {@code null} for none
    */
   public InstanceGroupManagerInstanceLifecyclePolicyOnRepair setAllowChangingZone(java.lang.String allowChangingZone) {

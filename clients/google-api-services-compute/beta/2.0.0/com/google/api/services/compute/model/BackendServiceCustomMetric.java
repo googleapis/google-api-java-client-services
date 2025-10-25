@@ -38,8 +38,8 @@ public final class BackendServiceCustomMetric extends com.google.api.client.json
 
   /**
    * Name of a custom utilization signal. The name must be 1-64 characters long and match the
-   * regular expression[a-z]([-_.a-z0-9]*[a-z0-9])? which means that the first character must be a
-   * lowercase letter, and all following characters must be a dash, period, underscore, lowercase
+   * regular expression `[a-z]([-_.a-z0-9]*[a-z0-9])?` which means that the first character must be
+   * a lowercase letter, and all following characters must be a dash, period, underscore, lowercase
    * letter, or digit, except the last character, which cannot be a dash, period, or underscore. For
    * usage guidelines, see Custom Metrics balancing mode. This field can only be used for a global
    * or regional backend service with the loadBalancingScheme set to
@@ -68,8 +68,8 @@ public final class BackendServiceCustomMetric extends com.google.api.client.json
 
   /**
    * Name of a custom utilization signal. The name must be 1-64 characters long and match the
-   * regular expression[a-z]([-_.a-z0-9]*[a-z0-9])? which means that the first character must be a
-   * lowercase letter, and all following characters must be a dash, period, underscore, lowercase
+   * regular expression `[a-z]([-_.a-z0-9]*[a-z0-9])?` which means that the first character must be
+   * a lowercase letter, and all following characters must be a dash, period, underscore, lowercase
    * letter, or digit, except the last character, which cannot be a dash, period, or underscore. For
    * usage guidelines, see Custom Metrics balancing mode. This field can only be used for a global
    * or regional backend service with the loadBalancingScheme set to
@@ -82,8 +82,8 @@ public final class BackendServiceCustomMetric extends com.google.api.client.json
 
   /**
    * Name of a custom utilization signal. The name must be 1-64 characters long and match the
-   * regular expression[a-z]([-_.a-z0-9]*[a-z0-9])? which means that the first character must be a
-   * lowercase letter, and all following characters must be a dash, period, underscore, lowercase
+   * regular expression `[a-z]([-_.a-z0-9]*[a-z0-9])?` which means that the first character must be
+   * a lowercase letter, and all following characters must be a dash, period, underscore, lowercase
    * letter, or digit, except the last character, which cannot be a dash, period, or underscore. For
    * usage guidelines, see Custom Metrics balancing mode. This field can only be used for a global
    * or regional backend service with the loadBalancingScheme set to

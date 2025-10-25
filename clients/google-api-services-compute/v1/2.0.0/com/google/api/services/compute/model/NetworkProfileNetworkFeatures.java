@@ -115,6 +115,13 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   private java.lang.String allowMultiNicInSameNetwork;
 
   /**
+   * Specifies whether multicast is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allowMulticast;
+
+  /**
    * Specifies whether NCC is allowed.
    * The value may be {@code null}.
    */
@@ -191,6 +198,13 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> interfaceTypes;
+
+  /**
+   * Specifies which type of multicast is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String multicast;
 
   /**
    * Specifies which subnetwork purposes are supported.
@@ -434,6 +448,23 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
+   * Specifies whether multicast is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllowMulticast() {
+    return allowMulticast;
+  }
+
+  /**
+   * Specifies whether multicast is allowed.
+   * @param allowMulticast allowMulticast or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setAllowMulticast(java.lang.String allowMulticast) {
+    this.allowMulticast = allowMulticast;
+    return this;
+  }
+
+  /**
    * Specifies whether NCC is allowed.
    * @return value or {@code null} for none
    */
@@ -619,6 +650,23 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
    */
   public NetworkProfileNetworkFeatures setInterfaceTypes(java.util.List<java.lang.String> interfaceTypes) {
     this.interfaceTypes = interfaceTypes;
+    return this;
+  }
+
+  /**
+   * Specifies which type of multicast is supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMulticast() {
+    return multicast;
+  }
+
+  /**
+   * Specifies which type of multicast is supported.
+   * @param multicast multicast or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setMulticast(java.lang.String multicast) {
+    this.multicast = multicast;
     return this;
   }
 

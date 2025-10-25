@@ -32,7 +32,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   /**
    * Optional. When set to `TRUE`, the response from an extension service is allowed to set the
    * `com.google.envoy.dynamic_forwarding` namespace in the dynamic metadata. This field is not
-   * supported for plugin extensions. Setting it results in a validation error.
+   * supported for plugin extensions or AuthzExtensions. Setting it results in a validation error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,10 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The metadata provided here is included as part of the `metadata_context` (of type
-   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
-   * metadata is available under the namespace `com.google....`. For example:
+   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. For
+   * `AuthzExtension` resources, the metadata is available under the namespace
+   * `com.google.authz_extension.`. For other types of extensions, the metadata is available under
+   * the namespace `com.google....`. For example:
    * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
    * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
    * fully qualified resource name. This field must not be set for plugin extensions. Setting it
@@ -88,10 +90,10 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * Required. The name for this extension. The name is logged as part of the HTTP request logs. The
+   * Optional. The name for this extension. The name is logged as part of the HTTP request logs. The
    * name must conform with RFC-1034, is restricted to lower-cased letters, numbers and hyphens, and
    * can have a maximum length of 63 characters. Additionally, the first character must be a letter
-   * and the last a letter or a number.
+   * and the last a letter or a number. This field is required except for AuthzExtension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,10 +114,12 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Configures the send mode for response processing. If unspecified, the default value
-   * `STREAMED` is used. When this field is set to `FULL_DUPLEX_STREAMED`, `supported_events` must
-   * include both `RESPONSE_BODY` and `RESPONSE_TRAILERS`. This field can be set only for
-   * `LbTrafficExtension` resources, and only when the `service` field of the extension points to a
-   * `BackendService`.
+   * `STREAMED` is used. The field can only be set if `supported_events` includes `RESPONSE_BODY`.
+   * If `supported_events` includes `RESPONSE_BODY`, but `response_body_send_mode` is unset, the
+   * default value `STREAMED` is used. When this field is set to `FULL_DUPLEX_STREAMED`,
+   * `supported_events` must include both `RESPONSE_BODY` and `RESPONSE_TRAILERS`. This field can be
+   * set only for `LbTrafficExtension` resources, and only when the `service` field of the extension
+   * points to a `BackendService`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +148,9 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * called. For the `LbTrafficExtension` resource, this field is required. For the
    * `LbRouteExtension` resource, this field is optional. If unspecified, `REQUEST_HEADERS` event is
    * assumed as supported. For the `LbEdgeExtension` resource, this field is required and must only
-   * contain `REQUEST_HEADERS` event.
+   * contain `REQUEST_HEADERS` event. For the `AuthzExtension` resource, this field is optional.
+   * `REQUEST_HEADERS` is the only supported event. If unspecified, `REQUEST_HEADERS` event is
+   * assumed as supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +168,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   /**
    * Optional. When set to `TRUE`, the response from an extension service is allowed to set the
    * `com.google.envoy.dynamic_forwarding` namespace in the dynamic metadata. This field is not
-   * supported for plugin extensions. Setting it results in a validation error.
+   * supported for plugin extensions or AuthzExtensions. Setting it results in a validation error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowDynamicForwarding() {
@@ -172,7 +178,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   /**
    * Optional. When set to `TRUE`, the response from an extension service is allowed to set the
    * `com.google.envoy.dynamic_forwarding` namespace in the dynamic metadata. This field is not
-   * supported for plugin extensions. Setting it results in a validation error.
+   * supported for plugin extensions or AuthzExtensions. Setting it results in a validation error.
    * @param allowDynamicForwarding allowDynamicForwarding or {@code null} for none
    */
   public ExtensionChainExtension setAllowDynamicForwarding(java.lang.Boolean allowDynamicForwarding) {
@@ -251,8 +257,10 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The metadata provided here is included as part of the `metadata_context` (of type
-   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
-   * metadata is available under the namespace `com.google....`. For example:
+   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. For
+   * `AuthzExtension` resources, the metadata is available under the namespace
+   * `com.google.authz_extension.`. For other types of extensions, the metadata is available under
+   * the namespace `com.google....`. For example:
    * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
    * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
    * fully qualified resource name. This field must not be set for plugin extensions. Setting it
@@ -271,8 +279,10 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The metadata provided here is included as part of the `metadata_context` (of type
-   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
-   * metadata is available under the namespace `com.google....`. For example:
+   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. For
+   * `AuthzExtension` resources, the metadata is available under the namespace
+   * `com.google.authz_extension.`. For other types of extensions, the metadata is available under
+   * the namespace `com.google....`. For example:
    * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
    * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
    * fully qualified resource name. This field must not be set for plugin extensions. Setting it
@@ -291,10 +301,10 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The name for this extension. The name is logged as part of the HTTP request logs. The
+   * Optional. The name for this extension. The name is logged as part of the HTTP request logs. The
    * name must conform with RFC-1034, is restricted to lower-cased letters, numbers and hyphens, and
    * can have a maximum length of 63 characters. Additionally, the first character must be a letter
-   * and the last a letter or a number.
+   * and the last a letter or a number. This field is required except for AuthzExtension.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -302,10 +312,10 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The name for this extension. The name is logged as part of the HTTP request logs. The
+   * Optional. The name for this extension. The name is logged as part of the HTTP request logs. The
    * name must conform with RFC-1034, is restricted to lower-cased letters, numbers and hyphens, and
    * can have a maximum length of 63 characters. Additionally, the first character must be a letter
-   * and the last a letter or a number.
+   * and the last a letter or a number. This field is required except for AuthzExtension.
    * @param name name or {@code null} for none
    */
   public ExtensionChainExtension setName(java.lang.String name) {
@@ -344,10 +354,12 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Configures the send mode for response processing. If unspecified, the default value
-   * `STREAMED` is used. When this field is set to `FULL_DUPLEX_STREAMED`, `supported_events` must
-   * include both `RESPONSE_BODY` and `RESPONSE_TRAILERS`. This field can be set only for
-   * `LbTrafficExtension` resources, and only when the `service` field of the extension points to a
-   * `BackendService`.
+   * `STREAMED` is used. The field can only be set if `supported_events` includes `RESPONSE_BODY`.
+   * If `supported_events` includes `RESPONSE_BODY`, but `response_body_send_mode` is unset, the
+   * default value `STREAMED` is used. When this field is set to `FULL_DUPLEX_STREAMED`,
+   * `supported_events` must include both `RESPONSE_BODY` and `RESPONSE_TRAILERS`. This field can be
+   * set only for `LbTrafficExtension` resources, and only when the `service` field of the extension
+   * points to a `BackendService`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseBodySendMode() {
@@ -356,10 +368,12 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Configures the send mode for response processing. If unspecified, the default value
-   * `STREAMED` is used. When this field is set to `FULL_DUPLEX_STREAMED`, `supported_events` must
-   * include both `RESPONSE_BODY` and `RESPONSE_TRAILERS`. This field can be set only for
-   * `LbTrafficExtension` resources, and only when the `service` field of the extension points to a
-   * `BackendService`.
+   * `STREAMED` is used. The field can only be set if `supported_events` includes `RESPONSE_BODY`.
+   * If `supported_events` includes `RESPONSE_BODY`, but `response_body_send_mode` is unset, the
+   * default value `STREAMED` is used. When this field is set to `FULL_DUPLEX_STREAMED`,
+   * `supported_events` must include both `RESPONSE_BODY` and `RESPONSE_TRAILERS`. This field can be
+   * set only for `LbTrafficExtension` resources, and only when the `service` field of the extension
+   * points to a `BackendService`.
    * @param responseBodySendMode responseBodySendMode or {@code null} for none
    */
   public ExtensionChainExtension setResponseBodySendMode(java.lang.String responseBodySendMode) {
@@ -411,7 +425,9 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * called. For the `LbTrafficExtension` resource, this field is required. For the
    * `LbRouteExtension` resource, this field is optional. If unspecified, `REQUEST_HEADERS` event is
    * assumed as supported. For the `LbEdgeExtension` resource, this field is required and must only
-   * contain `REQUEST_HEADERS` event.
+   * contain `REQUEST_HEADERS` event. For the `AuthzExtension` resource, this field is optional.
+   * `REQUEST_HEADERS` is the only supported event. If unspecified, `REQUEST_HEADERS` event is
+   * assumed as supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedEvents() {
@@ -423,7 +439,9 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * called. For the `LbTrafficExtension` resource, this field is required. For the
    * `LbRouteExtension` resource, this field is optional. If unspecified, `REQUEST_HEADERS` event is
    * assumed as supported. For the `LbEdgeExtension` resource, this field is required and must only
-   * contain `REQUEST_HEADERS` event.
+   * contain `REQUEST_HEADERS` event. For the `AuthzExtension` resource, this field is optional.
+   * `REQUEST_HEADERS` is the only supported event. If unspecified, `REQUEST_HEADERS` event is
+   * assumed as supported.
    * @param supportedEvents supportedEvents or {@code null} for none
    */
   public ExtensionChainExtension setSupportedEvents(java.util.List<java.lang.String> supportedEvents) {

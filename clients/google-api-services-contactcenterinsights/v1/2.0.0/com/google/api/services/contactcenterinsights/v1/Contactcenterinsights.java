@@ -5883,138 +5883,6 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           public class Conversations {
 
             /**
-             * Analyzes multiple conversations in a single request.
-             *
-             * Create a request for the method "conversations.bulkAnalyze".
-             *
-             * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-             * optional parameters, call the {@link BulkAnalyze#execute()} method to invoke the remote
-             * operation.
-             *
-             * @param parent Required. The parent resource to create analyses in.
-             * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest}
-             * @return the request
-             */
-            public BulkAnalyze bulkAnalyze(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest content) throws java.io.IOException {
-              BulkAnalyze result = new BulkAnalyze(parent, content);
-              initialize(result);
-              return result;
-            }
-
-            public class BulkAnalyze extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
-
-              private static final String REST_PATH = "v1/{+parent}/conversations:bulkAnalyze";
-
-              private final java.util.regex.Pattern PARENT_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+$");
-
-              /**
-               * Analyzes multiple conversations in a single request.
-               *
-               * Create a request for the method "conversations.bulkAnalyze".
-               *
-               * This request holds the parameters needed by the the contactcenterinsights server.  After
-               * setting any optional parameters, call the {@link BulkAnalyze#execute()} method to invoke the
-               * remote operation. <p> {@link
-               * BulkAnalyze#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param parent Required. The parent resource to create analyses in.
-               * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest}
-               * @since 1.13
-               */
-              protected BulkAnalyze(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest content) {
-                super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
-                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+$");
-                }
-              }
-
-              @Override
-              public BulkAnalyze set$Xgafv(java.lang.String $Xgafv) {
-                return (BulkAnalyze) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public BulkAnalyze setAccessToken(java.lang.String accessToken) {
-                return (BulkAnalyze) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public BulkAnalyze setAlt(java.lang.String alt) {
-                return (BulkAnalyze) super.setAlt(alt);
-              }
-
-              @Override
-              public BulkAnalyze setCallback(java.lang.String callback) {
-                return (BulkAnalyze) super.setCallback(callback);
-              }
-
-              @Override
-              public BulkAnalyze setFields(java.lang.String fields) {
-                return (BulkAnalyze) super.setFields(fields);
-              }
-
-              @Override
-              public BulkAnalyze setKey(java.lang.String key) {
-                return (BulkAnalyze) super.setKey(key);
-              }
-
-              @Override
-              public BulkAnalyze setOauthToken(java.lang.String oauthToken) {
-                return (BulkAnalyze) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public BulkAnalyze setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (BulkAnalyze) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public BulkAnalyze setQuotaUser(java.lang.String quotaUser) {
-                return (BulkAnalyze) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public BulkAnalyze setUploadType(java.lang.String uploadType) {
-                return (BulkAnalyze) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public BulkAnalyze setUploadProtocol(java.lang.String uploadProtocol) {
-                return (BulkAnalyze) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Required. The parent resource to create analyses in. */
-              @com.google.api.client.util.Key
-              private java.lang.String parent;
-
-              /** Required. The parent resource to create analyses in.
-               */
-              public java.lang.String getParent() {
-                return parent;
-              }
-
-              /** Required. The parent resource to create analyses in. */
-              public BulkAnalyze setParent(java.lang.String parent) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+$");
-                }
-                this.parent = parent;
-                return this;
-              }
-
-              @Override
-              public BulkAnalyze set(String parameterName, Object value) {
-                return (BulkAnalyze) super.set(parameterName, value);
-              }
-            }
-            /**
              * Gets conversation statistics.
              *
              * Create a request for the method "conversations.calculateStats".
@@ -6751,642 +6619,6 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
               }
             }
 
-            /**
-             * An accessor for creating requests from the Analyses collection.
-             *
-             * <p>The typical use is:</p>
-             * <pre>
-             *   {@code Contactcenterinsights contactcenterinsights = new Contactcenterinsights(...);}
-             *   {@code Contactcenterinsights.Analyses.List request = contactcenterinsights.analyses().list(parameters ...)}
-             * </pre>
-             *
-             * @return the resource collection
-             */
-            public Analyses analyses() {
-              return new Analyses();
-            }
-
-            /**
-             * The "analyses" collection of methods.
-             */
-            public class Analyses {
-
-              /**
-               * Creates an analysis. The long running operation is done when the analysis has completed.
-               *
-               * Create a request for the method "analyses.create".
-               *
-               * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-               *
-               * @param parent Required. The parent resource of the analysis.
-               * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis}
-               * @return the request
-               */
-              public Create create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis content) throws java.io.IOException {
-                Create result = new Create(parent, content);
-                initialize(result);
-                return result;
-              }
-
-              public class Create extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
-
-                private static final String REST_PATH = "v1/{+parent}/analyses";
-
-                private final java.util.regex.Pattern PARENT_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+$");
-
-                /**
-                 * Creates an analysis. The long running operation is done when the analysis has completed.
-                 *
-                 * Create a request for the method "analyses.create".
-                 *
-                 * This request holds the parameters needed by the the contactcenterinsights server.  After
-                 * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
-                 * operation. <p> {@link
-                 * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-                 * be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param parent Required. The parent resource of the analysis.
-                 * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis}
-                 * @since 1.13
-                 */
-                protected Create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis content) {
-                  super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
-                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+$");
-                  }
-                }
-
-                @Override
-                public Create set$Xgafv(java.lang.String $Xgafv) {
-                  return (Create) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public Create setAccessToken(java.lang.String accessToken) {
-                  return (Create) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public Create setAlt(java.lang.String alt) {
-                  return (Create) super.setAlt(alt);
-                }
-
-                @Override
-                public Create setCallback(java.lang.String callback) {
-                  return (Create) super.setCallback(callback);
-                }
-
-                @Override
-                public Create setFields(java.lang.String fields) {
-                  return (Create) super.setFields(fields);
-                }
-
-                @Override
-                public Create setKey(java.lang.String key) {
-                  return (Create) super.setKey(key);
-                }
-
-                @Override
-                public Create setOauthToken(java.lang.String oauthToken) {
-                  return (Create) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (Create) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public Create setQuotaUser(java.lang.String quotaUser) {
-                  return (Create) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public Create setUploadType(java.lang.String uploadType) {
-                  return (Create) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public Create setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (Create) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /** Required. The parent resource of the analysis. */
-                @com.google.api.client.util.Key
-                private java.lang.String parent;
-
-                /** Required. The parent resource of the analysis.
-                 */
-                public java.lang.String getParent() {
-                  return parent;
-                }
-
-                /** Required. The parent resource of the analysis. */
-                public Create setParent(java.lang.String parent) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+$");
-                  }
-                  this.parent = parent;
-                  return this;
-                }
-
-                @Override
-                public Create set(String parameterName, Object value) {
-                  return (Create) super.set(parameterName, value);
-                }
-              }
-              /**
-               * Deletes an analysis.
-               *
-               * Create a request for the method "analyses.delete".
-               *
-               * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-               *
-               * @param name Required. The name of the analysis to delete.
-               * @return the request
-               */
-              public Delete delete(java.lang.String name) throws java.io.IOException {
-                Delete result = new Delete(name);
-                initialize(result);
-                return result;
-              }
-
-              public class Delete extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleProtobufEmpty> {
-
-                private static final String REST_PATH = "v1/{+name}";
-
-                private final java.util.regex.Pattern NAME_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-
-                /**
-                 * Deletes an analysis.
-                 *
-                 * Create a request for the method "analyses.delete".
-                 *
-                 * This request holds the parameters needed by the the contactcenterinsights server.  After
-                 * setting any optional parameters, call the {@link Delete#execute()} method to invoke the remote
-                 * operation. <p> {@link
-                 * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-                 * be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param name Required. The name of the analysis to delete.
-                 * @since 1.13
-                 */
-                protected Delete(java.lang.String name) {
-                  super(Contactcenterinsights.this, "DELETE", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleProtobufEmpty.class);
-                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-                  }
-                }
-
-                @Override
-                public Delete set$Xgafv(java.lang.String $Xgafv) {
-                  return (Delete) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public Delete setAccessToken(java.lang.String accessToken) {
-                  return (Delete) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public Delete setAlt(java.lang.String alt) {
-                  return (Delete) super.setAlt(alt);
-                }
-
-                @Override
-                public Delete setCallback(java.lang.String callback) {
-                  return (Delete) super.setCallback(callback);
-                }
-
-                @Override
-                public Delete setFields(java.lang.String fields) {
-                  return (Delete) super.setFields(fields);
-                }
-
-                @Override
-                public Delete setKey(java.lang.String key) {
-                  return (Delete) super.setKey(key);
-                }
-
-                @Override
-                public Delete setOauthToken(java.lang.String oauthToken) {
-                  return (Delete) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (Delete) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public Delete setQuotaUser(java.lang.String quotaUser) {
-                  return (Delete) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public Delete setUploadType(java.lang.String uploadType) {
-                  return (Delete) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (Delete) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /** Required. The name of the analysis to delete. */
-                @com.google.api.client.util.Key
-                private java.lang.String name;
-
-                /** Required. The name of the analysis to delete.
-                 */
-                public java.lang.String getName() {
-                  return name;
-                }
-
-                /** Required. The name of the analysis to delete. */
-                public Delete setName(java.lang.String name) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-                  }
-                  this.name = name;
-                  return this;
-                }
-
-                @Override
-                public Delete set(String parameterName, Object value) {
-                  return (Delete) super.set(parameterName, value);
-                }
-              }
-              /**
-               * Gets an analysis.
-               *
-               * Create a request for the method "analyses.get".
-               *
-               * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-               *
-               * @param name Required. The name of the analysis to get.
-               * @return the request
-               */
-              public Get get(java.lang.String name) throws java.io.IOException {
-                Get result = new Get(name);
-                initialize(result);
-                return result;
-              }
-
-              public class Get extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis> {
-
-                private static final String REST_PATH = "v1/{+name}";
-
-                private final java.util.regex.Pattern NAME_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-
-                /**
-                 * Gets an analysis.
-                 *
-                 * Create a request for the method "analyses.get".
-                 *
-                 * This request holds the parameters needed by the the contactcenterinsights server.  After
-                 * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
-                 * operation. <p> {@link
-                 * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-                 * called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param name Required. The name of the analysis to get.
-                 * @since 1.13
-                 */
-                protected Get(java.lang.String name) {
-                  super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis.class);
-                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-                  }
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public Get set$Xgafv(java.lang.String $Xgafv) {
-                  return (Get) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public Get setAccessToken(java.lang.String accessToken) {
-                  return (Get) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public Get setAlt(java.lang.String alt) {
-                  return (Get) super.setAlt(alt);
-                }
-
-                @Override
-                public Get setCallback(java.lang.String callback) {
-                  return (Get) super.setCallback(callback);
-                }
-
-                @Override
-                public Get setFields(java.lang.String fields) {
-                  return (Get) super.setFields(fields);
-                }
-
-                @Override
-                public Get setKey(java.lang.String key) {
-                  return (Get) super.setKey(key);
-                }
-
-                @Override
-                public Get setOauthToken(java.lang.String oauthToken) {
-                  return (Get) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (Get) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public Get setQuotaUser(java.lang.String quotaUser) {
-                  return (Get) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public Get setUploadType(java.lang.String uploadType) {
-                  return (Get) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public Get setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (Get) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /** Required. The name of the analysis to get. */
-                @com.google.api.client.util.Key
-                private java.lang.String name;
-
-                /** Required. The name of the analysis to get.
-                 */
-                public java.lang.String getName() {
-                  return name;
-                }
-
-                /** Required. The name of the analysis to get. */
-                public Get setName(java.lang.String name) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-                  }
-                  this.name = name;
-                  return this;
-                }
-
-                @Override
-                public Get set(String parameterName, Object value) {
-                  return (Get) super.set(parameterName, value);
-                }
-              }
-              /**
-               * Lists analyses.
-               *
-               * Create a request for the method "analyses.list".
-               *
-               * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-               * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
-               *
-               * @param parent Required. The parent resource of the analyses.
-               * @return the request
-               */
-              public List list(java.lang.String parent) throws java.io.IOException {
-                List result = new List(parent);
-                initialize(result);
-                return result;
-              }
-
-              public class List extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListAnalysesResponse> {
-
-                private static final String REST_PATH = "v1/{+parent}/analyses";
-
-                private final java.util.regex.Pattern PARENT_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+$");
-
-                /**
-                 * Lists analyses.
-                 *
-                 * Create a request for the method "analyses.list".
-                 *
-                 * This request holds the parameters needed by the the contactcenterinsights server.  After
-                 * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
-                 * operation. <p> {@link
-                 * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-                 * called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param parent Required. The parent resource of the analyses.
-                 * @since 1.13
-                 */
-                protected List(java.lang.String parent) {
-                  super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListAnalysesResponse.class);
-                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+$");
-                  }
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public List set$Xgafv(java.lang.String $Xgafv) {
-                  return (List) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public List setAccessToken(java.lang.String accessToken) {
-                  return (List) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public List setAlt(java.lang.String alt) {
-                  return (List) super.setAlt(alt);
-                }
-
-                @Override
-                public List setCallback(java.lang.String callback) {
-                  return (List) super.setCallback(callback);
-                }
-
-                @Override
-                public List setFields(java.lang.String fields) {
-                  return (List) super.setFields(fields);
-                }
-
-                @Override
-                public List setKey(java.lang.String key) {
-                  return (List) super.setKey(key);
-                }
-
-                @Override
-                public List setOauthToken(java.lang.String oauthToken) {
-                  return (List) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (List) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public List setQuotaUser(java.lang.String quotaUser) {
-                  return (List) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public List setUploadType(java.lang.String uploadType) {
-                  return (List) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public List setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (List) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /** Required. The parent resource of the analyses. */
-                @com.google.api.client.util.Key
-                private java.lang.String parent;
-
-                /** Required. The parent resource of the analyses.
-                 */
-                public java.lang.String getParent() {
-                  return parent;
-                }
-
-                /** Required. The parent resource of the analyses. */
-                public List setParent(java.lang.String parent) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+$");
-                  }
-                  this.parent = parent;
-                  return this;
-                }
-
-                /**
-                 * A filter to reduce results to a specific subset. Useful for querying
-                 * conversations with specific properties.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String filter;
-
-                /** A filter to reduce results to a specific subset. Useful for querying conversations with specific
-               properties.
-                 */
-                public java.lang.String getFilter() {
-                  return filter;
-                }
-
-                /**
-                 * A filter to reduce results to a specific subset. Useful for querying
-                 * conversations with specific properties.
-                 */
-                public List setFilter(java.lang.String filter) {
-                  this.filter = filter;
-                  return this;
-                }
-
-                /**
-                 * The maximum number of analyses to return in the response. If this value is zero,
-                 * the service will select a default size. A call might return fewer objects than
-                 * requested. A non-empty `next_page_token` in the response indicates that more data
-                 * is available.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.Integer pageSize;
-
-                /** The maximum number of analyses to return in the response. If this value is zero, the service will
-               select a default size. A call might return fewer objects than requested. A non-empty
-               `next_page_token` in the response indicates that more data is available.
-                 */
-                public java.lang.Integer getPageSize() {
-                  return pageSize;
-                }
-
-                /**
-                 * The maximum number of analyses to return in the response. If this value is zero,
-                 * the service will select a default size. A call might return fewer objects than
-                 * requested. A non-empty `next_page_token` in the response indicates that more data
-                 * is available.
-                 */
-                public List setPageSize(java.lang.Integer pageSize) {
-                  this.pageSize = pageSize;
-                  return this;
-                }
-
-                /**
-                 * The value returned by the last `ListAnalysesResponse`; indicates that this is a
-                 * continuation of a prior `ListAnalyses` call and the system should return the next
-                 * page of data.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String pageToken;
-
-                /** The value returned by the last `ListAnalysesResponse`; indicates that this is a continuation of a
-               prior `ListAnalyses` call and the system should return the next page of data.
-                 */
-                public java.lang.String getPageToken() {
-                  return pageToken;
-                }
-
-                /**
-                 * The value returned by the last `ListAnalysesResponse`; indicates that this is a
-                 * continuation of a prior `ListAnalyses` call and the system should return the next
-                 * page of data.
-                 */
-                public List setPageToken(java.lang.String pageToken) {
-                  this.pageToken = pageToken;
-                  return this;
-                }
-
-                @Override
-                public List set(String parameterName, Object value) {
-                  return (List) super.set(parameterName, value);
-                }
-              }
-
-            }
             /**
              * An accessor for creating requests from the Assessments collection.
              *
@@ -15389,6 +14621,160 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
 
         }
+        /**
+         * An accessor for creating requests from the Segments collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Contactcenterinsights contactcenterinsights = new Contactcenterinsights(...);}
+         *   {@code Contactcenterinsights.Segments.List request = contactcenterinsights.segments().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Segments segments() {
+          return new Segments();
+        }
+
+        /**
+         * The "segments" collection of methods.
+         */
+        public class Segments {
+
+          /**
+           * Analyzes multiple conversations in a single request.
+           *
+           * Create a request for the method "segments.bulkAnalyze".
+           *
+           * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+           * optional parameters, call the {@link BulkAnalyze#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. The parent resource to create analyses in.
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest}
+           * @return the request
+           */
+          public BulkAnalyze bulkAnalyze(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest content) throws java.io.IOException {
+            BulkAnalyze result = new BulkAnalyze(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BulkAnalyze extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+parent}/segments:bulkAnalyze";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+
+            /**
+             * Analyzes multiple conversations in a single request.
+             *
+             * Create a request for the method "segments.bulkAnalyze".
+             *
+             * This request holds the parameters needed by the the contactcenterinsights server.  After
+             * setting any optional parameters, call the {@link BulkAnalyze#execute()} method to invoke the
+             * remote operation. <p> {@link
+             * BulkAnalyze#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource to create analyses in.
+             * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest}
+             * @since 1.13
+             */
+            protected BulkAnalyze(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest content) {
+              super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+              }
+            }
+
+            @Override
+            public BulkAnalyze set$Xgafv(java.lang.String $Xgafv) {
+              return (BulkAnalyze) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BulkAnalyze setAccessToken(java.lang.String accessToken) {
+              return (BulkAnalyze) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BulkAnalyze setAlt(java.lang.String alt) {
+              return (BulkAnalyze) super.setAlt(alt);
+            }
+
+            @Override
+            public BulkAnalyze setCallback(java.lang.String callback) {
+              return (BulkAnalyze) super.setCallback(callback);
+            }
+
+            @Override
+            public BulkAnalyze setFields(java.lang.String fields) {
+              return (BulkAnalyze) super.setFields(fields);
+            }
+
+            @Override
+            public BulkAnalyze setKey(java.lang.String key) {
+              return (BulkAnalyze) super.setKey(key);
+            }
+
+            @Override
+            public BulkAnalyze setOauthToken(java.lang.String oauthToken) {
+              return (BulkAnalyze) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BulkAnalyze setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BulkAnalyze) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BulkAnalyze setQuotaUser(java.lang.String quotaUser) {
+              return (BulkAnalyze) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BulkAnalyze setUploadType(java.lang.String uploadType) {
+              return (BulkAnalyze) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BulkAnalyze setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BulkAnalyze) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent resource to create analyses in. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource to create analyses in.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent resource to create analyses in. */
+            public BulkAnalyze setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BulkAnalyze set(String parameterName, Object value) {
+              return (BulkAnalyze) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Datasets collection.
@@ -16844,138 +16230,6 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
         public class Conversations {
 
           /**
-           * Analyzes multiple conversations in a single request.
-           *
-           * Create a request for the method "conversations.bulkAnalyze".
-           *
-           * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-           * optional parameters, call the {@link BulkAnalyze#execute()} method to invoke the remote
-           * operation.
-           *
-           * @param parent Required. The parent resource to create analyses in.
-           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest}
-           * @return the request
-           */
-          public BulkAnalyze bulkAnalyze(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest content) throws java.io.IOException {
-            BulkAnalyze result = new BulkAnalyze(parent, content);
-            initialize(result);
-            return result;
-          }
-
-          public class BulkAnalyze extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
-
-            private static final String REST_PATH = "v1/{+parent}/conversations:bulkAnalyze";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
-
-            /**
-             * Analyzes multiple conversations in a single request.
-             *
-             * Create a request for the method "conversations.bulkAnalyze".
-             *
-             * This request holds the parameters needed by the the contactcenterinsights server.  After
-             * setting any optional parameters, call the {@link BulkAnalyze#execute()} method to invoke the
-             * remote operation. <p> {@link
-             * BulkAnalyze#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent Required. The parent resource to create analyses in.
-             * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest}
-             * @since 1.13
-             */
-            protected BulkAnalyze(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest content) {
-              super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
-              }
-            }
-
-            @Override
-            public BulkAnalyze set$Xgafv(java.lang.String $Xgafv) {
-              return (BulkAnalyze) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public BulkAnalyze setAccessToken(java.lang.String accessToken) {
-              return (BulkAnalyze) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public BulkAnalyze setAlt(java.lang.String alt) {
-              return (BulkAnalyze) super.setAlt(alt);
-            }
-
-            @Override
-            public BulkAnalyze setCallback(java.lang.String callback) {
-              return (BulkAnalyze) super.setCallback(callback);
-            }
-
-            @Override
-            public BulkAnalyze setFields(java.lang.String fields) {
-              return (BulkAnalyze) super.setFields(fields);
-            }
-
-            @Override
-            public BulkAnalyze setKey(java.lang.String key) {
-              return (BulkAnalyze) super.setKey(key);
-            }
-
-            @Override
-            public BulkAnalyze setOauthToken(java.lang.String oauthToken) {
-              return (BulkAnalyze) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public BulkAnalyze setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (BulkAnalyze) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public BulkAnalyze setQuotaUser(java.lang.String quotaUser) {
-              return (BulkAnalyze) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public BulkAnalyze setUploadType(java.lang.String uploadType) {
-              return (BulkAnalyze) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public BulkAnalyze setUploadProtocol(java.lang.String uploadProtocol) {
-              return (BulkAnalyze) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** Required. The parent resource to create analyses in. */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Required. The parent resource to create analyses in.
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /** Required. The parent resource to create analyses in. */
-            public BulkAnalyze setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            @Override
-            public BulkAnalyze set(String parameterName, Object value) {
-              return (BulkAnalyze) super.set(parameterName, value);
-            }
-          }
-          /**
            * Deletes multiple conversations in a single request.
            *
            * Create a request for the method "conversations.bulkDelete".
@@ -18085,642 +17339,6 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             }
           }
 
-          /**
-           * An accessor for creating requests from the Analyses collection.
-           *
-           * <p>The typical use is:</p>
-           * <pre>
-           *   {@code Contactcenterinsights contactcenterinsights = new Contactcenterinsights(...);}
-           *   {@code Contactcenterinsights.Analyses.List request = contactcenterinsights.analyses().list(parameters ...)}
-           * </pre>
-           *
-           * @return the resource collection
-           */
-          public Analyses analyses() {
-            return new Analyses();
-          }
-
-          /**
-           * The "analyses" collection of methods.
-           */
-          public class Analyses {
-
-            /**
-             * Creates an analysis. The long running operation is done when the analysis has completed.
-             *
-             * Create a request for the method "analyses.create".
-             *
-             * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-             *
-             * @param parent Required. The parent resource of the analysis.
-             * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis}
-             * @return the request
-             */
-            public Create create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis content) throws java.io.IOException {
-              Create result = new Create(parent, content);
-              initialize(result);
-              return result;
-            }
-
-            public class Create extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
-
-              private static final String REST_PATH = "v1/{+parent}/analyses";
-
-              private final java.util.regex.Pattern PARENT_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+$");
-
-              /**
-               * Creates an analysis. The long running operation is done when the analysis has completed.
-               *
-               * Create a request for the method "analyses.create".
-               *
-               * This request holds the parameters needed by the the contactcenterinsights server.  After
-               * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-               * be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param parent Required. The parent resource of the analysis.
-               * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis}
-               * @since 1.13
-               */
-              protected Create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis content) {
-                super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
-                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+$");
-                }
-              }
-
-              @Override
-              public Create set$Xgafv(java.lang.String $Xgafv) {
-                return (Create) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Create setAccessToken(java.lang.String accessToken) {
-                return (Create) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Create setAlt(java.lang.String alt) {
-                return (Create) super.setAlt(alt);
-              }
-
-              @Override
-              public Create setCallback(java.lang.String callback) {
-                return (Create) super.setCallback(callback);
-              }
-
-              @Override
-              public Create setFields(java.lang.String fields) {
-                return (Create) super.setFields(fields);
-              }
-
-              @Override
-              public Create setKey(java.lang.String key) {
-                return (Create) super.setKey(key);
-              }
-
-              @Override
-              public Create setOauthToken(java.lang.String oauthToken) {
-                return (Create) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Create) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Create setQuotaUser(java.lang.String quotaUser) {
-                return (Create) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Create setUploadType(java.lang.String uploadType) {
-                return (Create) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Create setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Create) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Required. The parent resource of the analysis. */
-              @com.google.api.client.util.Key
-              private java.lang.String parent;
-
-              /** Required. The parent resource of the analysis.
-               */
-              public java.lang.String getParent() {
-                return parent;
-              }
-
-              /** Required. The parent resource of the analysis. */
-              public Create setParent(java.lang.String parent) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+$");
-                }
-                this.parent = parent;
-                return this;
-              }
-
-              @Override
-              public Create set(String parameterName, Object value) {
-                return (Create) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Deletes an analysis.
-             *
-             * Create a request for the method "analyses.delete".
-             *
-             * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. The name of the analysis to delete.
-             * @return the request
-             */
-            public Delete delete(java.lang.String name) throws java.io.IOException {
-              Delete result = new Delete(name);
-              initialize(result);
-              return result;
-            }
-
-            public class Delete extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleProtobufEmpty> {
-
-              private static final String REST_PATH = "v1/{+name}";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-
-              /**
-               * Deletes an analysis.
-               *
-               * Create a request for the method "analyses.delete".
-               *
-               * This request holds the parameters needed by the the contactcenterinsights server.  After
-               * setting any optional parameters, call the {@link Delete#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-               * be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. The name of the analysis to delete.
-               * @since 1.13
-               */
-              protected Delete(java.lang.String name) {
-                super(Contactcenterinsights.this, "DELETE", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleProtobufEmpty.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-                }
-              }
-
-              @Override
-              public Delete set$Xgafv(java.lang.String $Xgafv) {
-                return (Delete) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Delete setAccessToken(java.lang.String accessToken) {
-                return (Delete) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Delete setAlt(java.lang.String alt) {
-                return (Delete) super.setAlt(alt);
-              }
-
-              @Override
-              public Delete setCallback(java.lang.String callback) {
-                return (Delete) super.setCallback(callback);
-              }
-
-              @Override
-              public Delete setFields(java.lang.String fields) {
-                return (Delete) super.setFields(fields);
-              }
-
-              @Override
-              public Delete setKey(java.lang.String key) {
-                return (Delete) super.setKey(key);
-              }
-
-              @Override
-              public Delete setOauthToken(java.lang.String oauthToken) {
-                return (Delete) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Delete) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Delete setQuotaUser(java.lang.String quotaUser) {
-                return (Delete) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Delete setUploadType(java.lang.String uploadType) {
-                return (Delete) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Delete) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Required. The name of the analysis to delete. */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. The name of the analysis to delete.
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /** Required. The name of the analysis to delete. */
-              public Delete setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public Delete set(String parameterName, Object value) {
-                return (Delete) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Gets an analysis.
-             *
-             * Create a request for the method "analyses.get".
-             *
-             * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. The name of the analysis to get.
-             * @return the request
-             */
-            public Get get(java.lang.String name) throws java.io.IOException {
-              Get result = new Get(name);
-              initialize(result);
-              return result;
-            }
-
-            public class Get extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis> {
-
-              private static final String REST_PATH = "v1/{+name}";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-
-              /**
-               * Gets an analysis.
-               *
-               * Create a request for the method "analyses.get".
-               *
-               * This request holds the parameters needed by the the contactcenterinsights server.  After
-               * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-               * called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. The name of the analysis to get.
-               * @since 1.13
-               */
-              protected Get(java.lang.String name) {
-                super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1Analysis.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-                }
-              }
-
-              @Override
-              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                return super.executeUsingHead();
-              }
-
-              @Override
-              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                return super.buildHttpRequestUsingHead();
-              }
-
-              @Override
-              public Get set$Xgafv(java.lang.String $Xgafv) {
-                return (Get) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Get setAccessToken(java.lang.String accessToken) {
-                return (Get) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Get setAlt(java.lang.String alt) {
-                return (Get) super.setAlt(alt);
-              }
-
-              @Override
-              public Get setCallback(java.lang.String callback) {
-                return (Get) super.setCallback(callback);
-              }
-
-              @Override
-              public Get setFields(java.lang.String fields) {
-                return (Get) super.setFields(fields);
-              }
-
-              @Override
-              public Get setKey(java.lang.String key) {
-                return (Get) super.setKey(key);
-              }
-
-              @Override
-              public Get setOauthToken(java.lang.String oauthToken) {
-                return (Get) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Get) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Get setQuotaUser(java.lang.String quotaUser) {
-                return (Get) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Get setUploadType(java.lang.String uploadType) {
-                return (Get) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Get setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Get) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Required. The name of the analysis to get. */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. The name of the analysis to get.
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /** Required. The name of the analysis to get. */
-              public Get setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+/analyses/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public Get set(String parameterName, Object value) {
-                return (Get) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Lists analyses.
-             *
-             * Create a request for the method "analyses.list".
-             *
-             * This request holds the parameters needed by the contactcenterinsights server.  After setting any
-             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
-             *
-             * @param parent Required. The parent resource of the analyses.
-             * @return the request
-             */
-            public List list(java.lang.String parent) throws java.io.IOException {
-              List result = new List(parent);
-              initialize(result);
-              return result;
-            }
-
-            public class List extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListAnalysesResponse> {
-
-              private static final String REST_PATH = "v1/{+parent}/analyses";
-
-              private final java.util.regex.Pattern PARENT_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+$");
-
-              /**
-               * Lists analyses.
-               *
-               * Create a request for the method "analyses.list".
-               *
-               * This request holds the parameters needed by the the contactcenterinsights server.  After
-               * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-               * called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param parent Required. The parent resource of the analyses.
-               * @since 1.13
-               */
-              protected List(java.lang.String parent) {
-                super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListAnalysesResponse.class);
-                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+$");
-                }
-              }
-
-              @Override
-              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                return super.executeUsingHead();
-              }
-
-              @Override
-              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                return super.buildHttpRequestUsingHead();
-              }
-
-              @Override
-              public List set$Xgafv(java.lang.String $Xgafv) {
-                return (List) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public List setAccessToken(java.lang.String accessToken) {
-                return (List) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public List setAlt(java.lang.String alt) {
-                return (List) super.setAlt(alt);
-              }
-
-              @Override
-              public List setCallback(java.lang.String callback) {
-                return (List) super.setCallback(callback);
-              }
-
-              @Override
-              public List setFields(java.lang.String fields) {
-                return (List) super.setFields(fields);
-              }
-
-              @Override
-              public List setKey(java.lang.String key) {
-                return (List) super.setKey(key);
-              }
-
-              @Override
-              public List setOauthToken(java.lang.String oauthToken) {
-                return (List) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (List) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public List setQuotaUser(java.lang.String quotaUser) {
-                return (List) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public List setUploadType(java.lang.String uploadType) {
-                return (List) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public List setUploadProtocol(java.lang.String uploadProtocol) {
-                return (List) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Required. The parent resource of the analyses. */
-              @com.google.api.client.util.Key
-              private java.lang.String parent;
-
-              /** Required. The parent resource of the analyses.
-               */
-              public java.lang.String getParent() {
-                return parent;
-              }
-
-              /** Required. The parent resource of the analyses. */
-              public List setParent(java.lang.String parent) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+$");
-                }
-                this.parent = parent;
-                return this;
-              }
-
-              /**
-               * A filter to reduce results to a specific subset. Useful for querying conversations
-               * with specific properties.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String filter;
-
-              /** A filter to reduce results to a specific subset. Useful for querying conversations with specific
-             properties.
-               */
-              public java.lang.String getFilter() {
-                return filter;
-              }
-
-              /**
-               * A filter to reduce results to a specific subset. Useful for querying conversations
-               * with specific properties.
-               */
-              public List setFilter(java.lang.String filter) {
-                this.filter = filter;
-                return this;
-              }
-
-              /**
-               * The maximum number of analyses to return in the response. If this value is zero,
-               * the service will select a default size. A call might return fewer objects than
-               * requested. A non-empty `next_page_token` in the response indicates that more data
-               * is available.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.Integer pageSize;
-
-              /** The maximum number of analyses to return in the response. If this value is zero, the service will
-             select a default size. A call might return fewer objects than requested. A non-empty
-             `next_page_token` in the response indicates that more data is available.
-               */
-              public java.lang.Integer getPageSize() {
-                return pageSize;
-              }
-
-              /**
-               * The maximum number of analyses to return in the response. If this value is zero,
-               * the service will select a default size. A call might return fewer objects than
-               * requested. A non-empty `next_page_token` in the response indicates that more data
-               * is available.
-               */
-              public List setPageSize(java.lang.Integer pageSize) {
-                this.pageSize = pageSize;
-                return this;
-              }
-
-              /**
-               * The value returned by the last `ListAnalysesResponse`; indicates that this is a
-               * continuation of a prior `ListAnalyses` call and the system should return the next
-               * page of data.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String pageToken;
-
-              /** The value returned by the last `ListAnalysesResponse`; indicates that this is a continuation of a
-             prior `ListAnalyses` call and the system should return the next page of data.
-               */
-              public java.lang.String getPageToken() {
-                return pageToken;
-              }
-
-              /**
-               * The value returned by the last `ListAnalysesResponse`; indicates that this is a
-               * continuation of a prior `ListAnalyses` call and the system should return the next
-               * page of data.
-               */
-              public List setPageToken(java.lang.String pageToken) {
-                this.pageToken = pageToken;
-                return this;
-              }
-
-              @Override
-              public List set(String parameterName, Object value) {
-                return (List) super.set(parameterName, value);
-              }
-            }
-
-          }
           /**
            * An accessor for creating requests from the FeedbackLabels collection.
            *

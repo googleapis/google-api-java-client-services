@@ -559,114 +559,6 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Retrieves the merchant account that the calling GCP is registered with.
-     *
-     * Create a request for the method "accounts.getAccountForGcpRegistration".
-     *
-     * This request holds the parameters needed by the merchantapi server.  After setting any optional
-     * parameters, call the {@link GetAccountForGcpRegistration#execute()} method to invoke the remote
-     * operation.
-     *
-     * @return the request
-     */
-    public GetAccountForGcpRegistration getAccountForGcpRegistration() throws java.io.IOException {
-      GetAccountForGcpRegistration result = new GetAccountForGcpRegistration();
-      initialize(result);
-      return result;
-    }
-
-    public class GetAccountForGcpRegistration extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1.model.GetAccountForGcpRegistrationResponse> {
-
-      private static final String REST_PATH = "accounts/v1/accounts:getAccountForGcpRegistration";
-
-      /**
-       * Retrieves the merchant account that the calling GCP is registered with.
-       *
-       * Create a request for the method "accounts.getAccountForGcpRegistration".
-       *
-       * This request holds the parameters needed by the the merchantapi server.  After setting any
-       * optional parameters, call the {@link GetAccountForGcpRegistration#execute()} method to invoke
-       * the remote operation. <p> {@link GetAccountForGcpRegistration#initialize(com.google.api.client.
-       * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-       * immediately after invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected GetAccountForGcpRegistration() {
-        super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1.model.GetAccountForGcpRegistrationResponse.class);
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public GetAccountForGcpRegistration set$Xgafv(java.lang.String $Xgafv) {
-        return (GetAccountForGcpRegistration) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setAccessToken(java.lang.String accessToken) {
-        return (GetAccountForGcpRegistration) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setAlt(java.lang.String alt) {
-        return (GetAccountForGcpRegistration) super.setAlt(alt);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setCallback(java.lang.String callback) {
-        return (GetAccountForGcpRegistration) super.setCallback(callback);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setFields(java.lang.String fields) {
-        return (GetAccountForGcpRegistration) super.setFields(fields);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setKey(java.lang.String key) {
-        return (GetAccountForGcpRegistration) super.setKey(key);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setOauthToken(java.lang.String oauthToken) {
-        return (GetAccountForGcpRegistration) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (GetAccountForGcpRegistration) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setQuotaUser(java.lang.String quotaUser) {
-        return (GetAccountForGcpRegistration) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setUploadType(java.lang.String uploadType) {
-        return (GetAccountForGcpRegistration) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration setUploadProtocol(java.lang.String uploadProtocol) {
-        return (GetAccountForGcpRegistration) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public GetAccountForGcpRegistration set(String parameterName, Object value) {
-        return (GetAccountForGcpRegistration) super.set(parameterName, value);
-      }
-    }
-    /**
      * Note: For the `accounts.list` method, quota and limits usage are charged for each user, and not
      * for the Merchant Center ID or the advanced account ID. To list several sub-accounts, you should
      * use the `accounts.listSubaccounts` method, which is more suitable for advanced accounts use case.
@@ -2570,6 +2462,114 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
      */
     public class DeveloperRegistration {
 
+      /**
+       * Retrieves the merchant account that the calling GCP is registered with.
+       *
+       * Create a request for the method "developerRegistration.getAccountForGcpRegistration".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link GetAccountForGcpRegistration#execute()} method to invoke the remote
+       * operation.
+       *
+       * @return the request
+       */
+      public GetAccountForGcpRegistration getAccountForGcpRegistration() throws java.io.IOException {
+        GetAccountForGcpRegistration result = new GetAccountForGcpRegistration();
+        initialize(result);
+        return result;
+      }
+
+      public class GetAccountForGcpRegistration extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1.model.GetAccountForGcpRegistrationResponse> {
+
+        private static final String REST_PATH = "accounts/v1/accounts:getAccountForGcpRegistration";
+
+        /**
+         * Retrieves the merchant account that the calling GCP is registered with.
+         *
+         * Create a request for the method "developerRegistration.getAccountForGcpRegistration".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link GetAccountForGcpRegistration#execute()} method to invoke
+         * the remote operation. <p> {@link GetAccountForGcpRegistration#initialize(com.google.api.client.
+         * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @since 1.13
+         */
+        protected GetAccountForGcpRegistration() {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1.model.GetAccountForGcpRegistrationResponse.class);
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAccountForGcpRegistration set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAccountForGcpRegistration) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setAccessToken(java.lang.String accessToken) {
+          return (GetAccountForGcpRegistration) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setAlt(java.lang.String alt) {
+          return (GetAccountForGcpRegistration) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setCallback(java.lang.String callback) {
+          return (GetAccountForGcpRegistration) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setFields(java.lang.String fields) {
+          return (GetAccountForGcpRegistration) super.setFields(fields);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setKey(java.lang.String key) {
+          return (GetAccountForGcpRegistration) super.setKey(key);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setOauthToken(java.lang.String oauthToken) {
+          return (GetAccountForGcpRegistration) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAccountForGcpRegistration) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setQuotaUser(java.lang.String quotaUser) {
+          return (GetAccountForGcpRegistration) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setUploadType(java.lang.String uploadType) {
+          return (GetAccountForGcpRegistration) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAccountForGcpRegistration) super.setUploadProtocol(uploadProtocol);
+        }
+
+        @Override
+        public GetAccountForGcpRegistration set(String parameterName, Object value) {
+          return (GetAccountForGcpRegistration) super.set(parameterName, value);
+        }
+      }
       /**
        * Retrieves a developer registration for a merchant.
        *

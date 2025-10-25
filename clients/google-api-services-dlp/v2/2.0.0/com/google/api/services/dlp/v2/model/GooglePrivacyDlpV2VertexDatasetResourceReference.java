@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Identifies a single Vertex AI dataset.
+ * Identifies a single Vertex AI resource. Currently only datasets are supported.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -31,16 +31,18 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2VertexDatasetResourceReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the dataset resource. If set within a project-level configuration, the
-   * specified resource must be within the project.
+   * Required. The name of the Vertex AI resource. If set within a project-level configuration, the
+   * specified resource must be within the project. Examples: *
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String datasetResourceName;
 
   /**
-   * Required. The name of the dataset resource. If set within a project-level configuration, the
-   * specified resource must be within the project.
+   * Required. The name of the Vertex AI resource. If set within a project-level configuration, the
+   * specified resource must be within the project. Examples: *
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetResourceName() {
@@ -48,8 +50,9 @@ public final class GooglePrivacyDlpV2VertexDatasetResourceReference extends com.
   }
 
   /**
-   * Required. The name of the dataset resource. If set within a project-level configuration, the
-   * specified resource must be within the project.
+   * Required. The name of the Vertex AI resource. If set within a project-level configuration, the
+   * specified resource must be within the project. Examples: *
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
    * @param datasetResourceName datasetResourceName or {@code null} for none
    */
   public GooglePrivacyDlpV2VertexDatasetResourceReference setDatasetResourceName(java.lang.String datasetResourceName) {

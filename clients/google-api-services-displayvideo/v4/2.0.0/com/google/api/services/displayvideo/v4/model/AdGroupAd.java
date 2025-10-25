@@ -45,6 +45,13 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private java.lang.Long adGroupId;
 
   /**
+   * The policy approval status of the ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdPolicy adPolicy;
+
+  /**
    * List of URLs used by the ad.
    * The value may be {@code null}.
    */
@@ -175,6 +182,23 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
    */
   public AdGroupAd setAdGroupId(java.lang.Long adGroupId) {
     this.adGroupId = adGroupId;
+    return this;
+  }
+
+  /**
+   * The policy approval status of the ad.
+   * @return value or {@code null} for none
+   */
+  public AdPolicy getAdPolicy() {
+    return adPolicy;
+  }
+
+  /**
+   * The policy approval status of the ad.
+   * @param adPolicy adPolicy or {@code null} for none
+   */
+  public AdGroupAd setAdPolicy(AdPolicy adPolicy) {
+    this.adPolicy = adPolicy;
     return this;
   }
 

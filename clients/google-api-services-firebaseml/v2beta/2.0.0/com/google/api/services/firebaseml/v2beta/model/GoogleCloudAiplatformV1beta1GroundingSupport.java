@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Grounding support.
+ * A collection of supporting references for a segment of the model's response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,34 +30,39 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1GroundingSupport extends com.google.api.client.json.GenericJson {
 
   /**
-   * Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For
-   * Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For
-   * Gemini 2.5 and after, this list will be empty and should be ignored.
+   * The confidence scores for the support references. This list is parallel to the
+   * `grounding_chunk_indices` list. A score is a value between 0.0 and 1.0, with a higher score
+   * indicating a higher confidence that the reference supports the claim. For Gemini 2.0 and
+   * before, this list has the same size as `grounding_chunk_indices`. For Gemini 2.5 and later,
+   * this list is empty and should be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Float> confidenceScores;
 
   /**
-   * A list of indices (into 'grounding_chunk') specifying the citations associated with the claim.
-   * For instance [1,3,4] means that grounding_chunk[1], grounding_chunk[3], grounding_chunk[4] are
-   * the retrieved content attributed to the claim.
+   * A list of indices into the `grounding_chunks` field of the `GroundingMetadata` message. These
+   * indices specify which grounding chunks support the claim made in the content segment. For
+   * example, if this field has the values `[1, 3]`, it means that `grounding_chunks[1]` and
+   * `grounding_chunks[3]` are the sources for the claim in the content segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> groundingChunkIndices;
 
   /**
-   * Segment of the content this support belongs to.
+   * The content segment that this support message applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1Segment segment;
 
   /**
-   * Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For
-   * Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For
-   * Gemini 2.5 and after, this list will be empty and should be ignored.
+   * The confidence scores for the support references. This list is parallel to the
+   * `grounding_chunk_indices` list. A score is a value between 0.0 and 1.0, with a higher score
+   * indicating a higher confidence that the reference supports the claim. For Gemini 2.0 and
+   * before, this list has the same size as `grounding_chunk_indices`. For Gemini 2.5 and later,
+   * this list is empty and should be ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Float> getConfidenceScores() {
@@ -65,9 +70,11 @@ public final class GoogleCloudAiplatformV1beta1GroundingSupport extends com.goog
   }
 
   /**
-   * Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For
-   * Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For
-   * Gemini 2.5 and after, this list will be empty and should be ignored.
+   * The confidence scores for the support references. This list is parallel to the
+   * `grounding_chunk_indices` list. A score is a value between 0.0 and 1.0, with a higher score
+   * indicating a higher confidence that the reference supports the claim. For Gemini 2.0 and
+   * before, this list has the same size as `grounding_chunk_indices`. For Gemini 2.5 and later,
+   * this list is empty and should be ignored.
    * @param confidenceScores confidenceScores or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingSupport setConfidenceScores(java.util.List<java.lang.Float> confidenceScores) {
@@ -76,9 +83,10 @@ public final class GoogleCloudAiplatformV1beta1GroundingSupport extends com.goog
   }
 
   /**
-   * A list of indices (into 'grounding_chunk') specifying the citations associated with the claim.
-   * For instance [1,3,4] means that grounding_chunk[1], grounding_chunk[3], grounding_chunk[4] are
-   * the retrieved content attributed to the claim.
+   * A list of indices into the `grounding_chunks` field of the `GroundingMetadata` message. These
+   * indices specify which grounding chunks support the claim made in the content segment. For
+   * example, if this field has the values `[1, 3]`, it means that `grounding_chunks[1]` and
+   * `grounding_chunks[3]` are the sources for the claim in the content segment.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getGroundingChunkIndices() {
@@ -86,9 +94,10 @@ public final class GoogleCloudAiplatformV1beta1GroundingSupport extends com.goog
   }
 
   /**
-   * A list of indices (into 'grounding_chunk') specifying the citations associated with the claim.
-   * For instance [1,3,4] means that grounding_chunk[1], grounding_chunk[3], grounding_chunk[4] are
-   * the retrieved content attributed to the claim.
+   * A list of indices into the `grounding_chunks` field of the `GroundingMetadata` message. These
+   * indices specify which grounding chunks support the claim made in the content segment. For
+   * example, if this field has the values `[1, 3]`, it means that `grounding_chunks[1]` and
+   * `grounding_chunks[3]` are the sources for the claim in the content segment.
    * @param groundingChunkIndices groundingChunkIndices or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingSupport setGroundingChunkIndices(java.util.List<java.lang.Integer> groundingChunkIndices) {
@@ -97,7 +106,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingSupport extends com.goog
   }
 
   /**
-   * Segment of the content this support belongs to.
+   * The content segment that this support message applies to.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Segment getSegment() {
@@ -105,7 +114,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingSupport extends com.goog
   }
 
   /**
-   * Segment of the content this support belongs to.
+   * The content segment that this support message applies to.
    * @param segment segment or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingSupport setSegment(GoogleCloudAiplatformV1beta1Segment segment) {

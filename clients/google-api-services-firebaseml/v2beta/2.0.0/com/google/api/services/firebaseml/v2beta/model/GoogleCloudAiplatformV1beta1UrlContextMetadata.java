@@ -17,7 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Metadata related to url context retrieval tool.
+ * Metadata returned when the model uses the `url_context` tool to get information from a user-
+ * provided URL.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,14 +31,14 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1UrlContextMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of url context.
+   * Output only. A list of URL metadata, with one entry for each URL retrieved by the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1UrlMetadata> urlMetadata;
 
   /**
-   * Output only. List of url context.
+   * Output only. A list of URL metadata, with one entry for each URL retrieved by the tool.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1UrlMetadata> getUrlMetadata() {
@@ -45,7 +46,7 @@ public final class GoogleCloudAiplatformV1beta1UrlContextMetadata extends com.go
   }
 
   /**
-   * Output only. List of url context.
+   * Output only. A list of URL metadata, with one entry for each URL retrieved by the tool.
    * @param urlMetadata urlMetadata or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1UrlContextMetadata setUrlMetadata(java.util.List<GoogleCloudAiplatformV1beta1UrlMetadata> urlMetadata) {

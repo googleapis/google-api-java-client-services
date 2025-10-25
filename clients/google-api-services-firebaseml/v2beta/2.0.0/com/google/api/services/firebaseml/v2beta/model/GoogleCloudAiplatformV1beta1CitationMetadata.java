@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * A collection of source attributions for a piece of content.
+ * A collection of citations that apply to a piece of generated content.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1CitationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of citations.
+   * Output only. A list of citations for the content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class GoogleCloudAiplatformV1beta1CitationMetadata extends com.goog
   }
 
   /**
-   * Output only. List of citations.
+   * Output only. A list of citations for the content.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1Citation> getCitations() {
@@ -51,7 +51,7 @@ public final class GoogleCloudAiplatformV1beta1CitationMetadata extends com.goog
   }
 
   /**
-   * Output only. List of citations.
+   * Output only. A list of citations for the content.
    * @param citations citations or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CitationMetadata setCitations(java.util.List<GoogleCloudAiplatformV1beta1Citation> citations) {

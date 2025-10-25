@@ -17,7 +17,9 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Chunk from the web.
+ * A `Web` chunk is a piece of evidence that comes from a web page. It contains the URI of the web
+ * page, the title of the page, and the domain of the page. This is used to provide the user with a
+ * link to the source of the information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,28 +32,30 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1GroundingChunkWeb extends com.google.api.client.json.GenericJson {
 
   /**
-   * Domain of the (original) URI.
+   * The domain of the web page that contains the evidence. This can be used to filter out low-
+   * quality sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * Title of the chunk.
+   * The title of the web page that contains the evidence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * URI reference of the chunk.
+   * The URI of the web page that contains the evidence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Domain of the (original) URI.
+   * The domain of the web page that contains the evidence. This can be used to filter out low-
+   * quality sources.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -59,7 +63,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkWeb extends com.goo
   }
 
   /**
-   * Domain of the (original) URI.
+   * The domain of the web page that contains the evidence. This can be used to filter out low-
+   * quality sources.
    * @param domain domain or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkWeb setDomain(java.lang.String domain) {
@@ -68,7 +73,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkWeb extends com.goo
   }
 
   /**
-   * Title of the chunk.
+   * The title of the web page that contains the evidence.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -76,7 +81,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkWeb extends com.goo
   }
 
   /**
-   * Title of the chunk.
+   * The title of the web page that contains the evidence.
    * @param title title or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkWeb setTitle(java.lang.String title) {
@@ -85,7 +90,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkWeb extends com.goo
   }
 
   /**
-   * URI reference of the chunk.
+   * The URI of the web page that contains the evidence.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -93,7 +98,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkWeb extends com.goo
   }
 
   /**
-   * URI reference of the chunk.
+   * The URI of the web page that contains the evidence.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkWeb setUri(java.lang.String uri) {

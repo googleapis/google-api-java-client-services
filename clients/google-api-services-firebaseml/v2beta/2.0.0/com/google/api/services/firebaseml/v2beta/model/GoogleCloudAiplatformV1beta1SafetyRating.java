@@ -17,7 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Safety rating corresponding to the generated content.
+ * A safety rating for a piece of content. The safety rating contains the harm category and the harm
+ * probability level.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,14 +31,14 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Indicates whether the content was filtered out because of this rating.
+   * Output only. Indicates whether the content was blocked because of this rating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean blocked;
 
   /**
-   * Output only. Harm category.
+   * Output only. The harm category of this rating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,35 +54,35 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   private java.lang.String overwrittenThreshold;
 
   /**
-   * Output only. Harm probability levels in the content.
+   * Output only. The probability of harm for this category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String probability;
 
   /**
-   * Output only. Harm probability score.
+   * Output only. The probability score of harm for this category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float probabilityScore;
 
   /**
-   * Output only. Harm severity levels in the content.
+   * Output only. The severity of harm for this category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * Output only. Harm severity score.
+   * Output only. The severity score of harm for this category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float severityScore;
 
   /**
-   * Output only. Indicates whether the content was filtered out because of this rating.
+   * Output only. Indicates whether the content was blocked because of this rating.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBlocked() {
@@ -89,7 +90,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Indicates whether the content was filtered out because of this rating.
+   * Output only. Indicates whether the content was blocked because of this rating.
    * @param blocked blocked or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SafetyRating setBlocked(java.lang.Boolean blocked) {
@@ -98,7 +99,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm category.
+   * Output only. The harm category of this rating.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -106,7 +107,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm category.
+   * Output only. The harm category of this rating.
    * @param category category or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SafetyRating setCategory(java.lang.String category) {
@@ -136,7 +137,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm probability levels in the content.
+   * Output only. The probability of harm for this category.
    * @return value or {@code null} for none
    */
   public java.lang.String getProbability() {
@@ -144,7 +145,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm probability levels in the content.
+   * Output only. The probability of harm for this category.
    * @param probability probability or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SafetyRating setProbability(java.lang.String probability) {
@@ -153,7 +154,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm probability score.
+   * Output only. The probability score of harm for this category.
    * @return value or {@code null} for none
    */
   public java.lang.Float getProbabilityScore() {
@@ -161,7 +162,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm probability score.
+   * Output only. The probability score of harm for this category.
    * @param probabilityScore probabilityScore or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SafetyRating setProbabilityScore(java.lang.Float probabilityScore) {
@@ -170,7 +171,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm severity levels in the content.
+   * Output only. The severity of harm for this category.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -178,7 +179,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm severity levels in the content.
+   * Output only. The severity of harm for this category.
    * @param severity severity or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SafetyRating setSeverity(java.lang.String severity) {
@@ -187,7 +188,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm severity score.
+   * Output only. The severity score of harm for this category.
    * @return value or {@code null} for none
    */
   public java.lang.Float getSeverityScore() {
@@ -195,7 +196,7 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   }
 
   /**
-   * Output only. Harm severity score.
+   * Output only. The severity score of harm for this category.
    * @param severityScore severityScore or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SafetyRating setSeverityScore(java.lang.Float severityScore) {

@@ -31,12 +31,36 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2IssueResourceApplication extends com.google.api.client.json.GenericJson {
 
   /**
+   * Consumer provided attributes for the application
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes attributes;
+
+  /**
    * The resource name of an Application. Format: `projects/{host-project-
    * id}/locations/{location}/applications/{application-id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Consumer provided attributes for the application
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes getAttributes() {
+    return attributes;
+  }
+
+  /**
+   * Consumer provided attributes for the application
+   * @param attributes attributes or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2IssueResourceApplication setAttributes(GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes attributes) {
+    this.attributes = attributes;
+    return this;
+  }
 
   /**
    * The resource name of an Application. Format: `projects/{host-project-

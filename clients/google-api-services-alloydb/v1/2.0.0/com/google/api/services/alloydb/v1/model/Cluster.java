@@ -117,6 +117,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String databaseVersion;
 
   /**
+   * Optional. Configuration for Dataplex integration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataplexConfig dataplexConfig;
+
+  /**
    * Output only. Delete time stamp
    * The value may be {@code null}.
    */
@@ -506,6 +513,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setDatabaseVersion(java.lang.String databaseVersion) {
     this.databaseVersion = databaseVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Dataplex integration.
+   * @return value or {@code null} for none
+   */
+  public DataplexConfig getDataplexConfig() {
+    return dataplexConfig;
+  }
+
+  /**
+   * Optional. Configuration for Dataplex integration.
+   * @param dataplexConfig dataplexConfig or {@code null} for none
+   */
+  public Cluster setDataplexConfig(DataplexConfig dataplexConfig) {
+    this.dataplexConfig = dataplexConfig;
     return this;
   }
 

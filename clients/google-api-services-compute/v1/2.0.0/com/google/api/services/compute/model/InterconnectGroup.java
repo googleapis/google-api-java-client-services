@@ -54,7 +54,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
    * Opaque system-generated token that uniquely identifies the configuration. If provided when
    * patching a configuration in update mode, the provided token must match the current token or the
    * update is rejected. This provides a reliable means of doing read-modify-write (optimistic
-   * locking) as described byAPI 154.
+   * locking) as described by AIP 154.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +168,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
    * Opaque system-generated token that uniquely identifies the configuration. If provided when
    * patching a configuration in update mode, the provided token must match the current token or the
    * update is rejected. This provides a reliable means of doing read-modify-write (optimistic
-   * locking) as described byAPI 154.
+   * locking) as described by AIP 154.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -179,7 +179,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
    * Opaque system-generated token that uniquely identifies the configuration. If provided when
    * patching a configuration in update mode, the provided token must match the current token or the
    * update is rejected. This provides a reliable means of doing read-modify-write (optimistic
-   * locking) as described byAPI 154.
+   * locking) as described by AIP 154.
    * @param etag etag or {@code null} for none
    */
   public InterconnectGroup setEtag(java.lang.String etag) {

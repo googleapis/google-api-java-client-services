@@ -256,6 +256,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String operationalStatus;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectParams params;
+
+  /**
    * [Output Only] IP address configured on the customer side of the Interconnect link. The customer
    * should configure this IP address during turnup when prompted by Google NOC. This can be used
    * only for ping tests.
@@ -899,6 +907,25 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setOperationalStatus(java.lang.String operationalStatus) {
     this.operationalStatus = operationalStatus;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public InterconnectParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Interconnect setParams(InterconnectParams params) {
+    this.params = params;
     return this;
   }
 

@@ -39,6 +39,34 @@ public final class GoogleCloudContactcenterinsightsV1Dimension extends com.googl
   private GoogleCloudContactcenterinsightsV1DimensionAgentDimensionMetadata agentDimensionMetadata;
 
   /**
+   * Output only. Metadata about the client sentiment category dimension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1DimensionClientSentimentCategoryDimensionMetadata clientSentimentCategoryDimensionMetadata;
+
+  /**
+   * Output only. Metadata about the conversation profile dimension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1DimensionConversationProfileDimensionMetadata conversationProfileDimensionMetadata;
+
+  /**
+   * Output only. Metadata about the Conversational Agents playbook dimension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsPlaybookDimensionMetadata conversationalAgentsPlaybookDimensionMetadata;
+
+  /**
+   * Output only. Metadata about the Conversational Agents tool dimension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsToolDimensionMetadata conversationalAgentsToolDimensionMetadata;
+
+  /**
    * The key of the dimension.
    * The value may be {@code null}.
    */
@@ -51,6 +79,13 @@ public final class GoogleCloudContactcenterinsightsV1Dimension extends com.googl
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1DimensionIssueDimensionMetadata issueDimensionMetadata;
+
+  /**
+   * Output only. Metadata about the conversation medium dimension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1DimensionMediumDimensionMetadata mediumDimensionMetadata;
 
   /**
    * Output only. Metadata about the QA question-answer dimension.
@@ -91,6 +126,74 @@ public final class GoogleCloudContactcenterinsightsV1Dimension extends com.googl
   }
 
   /**
+   * Output only. Metadata about the client sentiment category dimension.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DimensionClientSentimentCategoryDimensionMetadata getClientSentimentCategoryDimensionMetadata() {
+    return clientSentimentCategoryDimensionMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the client sentiment category dimension.
+   * @param clientSentimentCategoryDimensionMetadata clientSentimentCategoryDimensionMetadata or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Dimension setClientSentimentCategoryDimensionMetadata(GoogleCloudContactcenterinsightsV1DimensionClientSentimentCategoryDimensionMetadata clientSentimentCategoryDimensionMetadata) {
+    this.clientSentimentCategoryDimensionMetadata = clientSentimentCategoryDimensionMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about the conversation profile dimension.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DimensionConversationProfileDimensionMetadata getConversationProfileDimensionMetadata() {
+    return conversationProfileDimensionMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the conversation profile dimension.
+   * @param conversationProfileDimensionMetadata conversationProfileDimensionMetadata or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Dimension setConversationProfileDimensionMetadata(GoogleCloudContactcenterinsightsV1DimensionConversationProfileDimensionMetadata conversationProfileDimensionMetadata) {
+    this.conversationProfileDimensionMetadata = conversationProfileDimensionMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about the Conversational Agents playbook dimension.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsPlaybookDimensionMetadata getConversationalAgentsPlaybookDimensionMetadata() {
+    return conversationalAgentsPlaybookDimensionMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the Conversational Agents playbook dimension.
+   * @param conversationalAgentsPlaybookDimensionMetadata conversationalAgentsPlaybookDimensionMetadata or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Dimension setConversationalAgentsPlaybookDimensionMetadata(GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsPlaybookDimensionMetadata conversationalAgentsPlaybookDimensionMetadata) {
+    this.conversationalAgentsPlaybookDimensionMetadata = conversationalAgentsPlaybookDimensionMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about the Conversational Agents tool dimension.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsToolDimensionMetadata getConversationalAgentsToolDimensionMetadata() {
+    return conversationalAgentsToolDimensionMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the Conversational Agents tool dimension.
+   * @param conversationalAgentsToolDimensionMetadata conversationalAgentsToolDimensionMetadata or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Dimension setConversationalAgentsToolDimensionMetadata(GoogleCloudContactcenterinsightsV1DimensionConversationalAgentsToolDimensionMetadata conversationalAgentsToolDimensionMetadata) {
+    this.conversationalAgentsToolDimensionMetadata = conversationalAgentsToolDimensionMetadata;
+    return this;
+  }
+
+  /**
    * The key of the dimension.
    * @return value or {@code null} for none
    */
@@ -121,6 +224,23 @@ public final class GoogleCloudContactcenterinsightsV1Dimension extends com.googl
    */
   public GoogleCloudContactcenterinsightsV1Dimension setIssueDimensionMetadata(GoogleCloudContactcenterinsightsV1DimensionIssueDimensionMetadata issueDimensionMetadata) {
     this.issueDimensionMetadata = issueDimensionMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about the conversation medium dimension.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DimensionMediumDimensionMetadata getMediumDimensionMetadata() {
+    return mediumDimensionMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the conversation medium dimension.
+   * @param mediumDimensionMetadata mediumDimensionMetadata or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Dimension setMediumDimensionMetadata(GoogleCloudContactcenterinsightsV1DimensionMediumDimensionMetadata mediumDimensionMetadata) {
+    this.mediumDimensionMetadata = mediumDimensionMetadata;
     return this;
   }
 

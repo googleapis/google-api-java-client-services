@@ -11205,7 +11205,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
   public class Policies {
 
     /**
-     * Get a Policy
+     * Get a policy.
      *
      * Create a request for the method "policies.get".
      *
@@ -11229,7 +11229,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^policies/[^/]+$");
 
       /**
-       * Get a Policy
+       * Get a policy.
        *
        * Create a request for the method "policies.get".
        *
@@ -11343,7 +11343,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * List Policies
+     * List policies.
      *
      * Create a request for the method "policies.list".
      *
@@ -11363,7 +11363,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1beta1/policies";
 
       /**
-       * List Policies
+       * List policies.
        *
        * Create a request for the method "policies.list".
        *

@@ -1443,6 +1443,825 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     }
 
     /**
+     * An accessor for creating requests from the AdAssets collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.AdAssets.List request = displayvideo.adAssets().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AdAssets adAssets() {
+      return new AdAssets();
+    }
+
+    /**
+     * The "adAssets" collection of methods.
+     */
+    public class AdAssets {
+
+      /**
+       * BulkCreate video assets for Ad. Only supports youtube video assets for now.
+       *
+       * Create a request for the method "adAssets.bulkCreate".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link BulkCreate#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+       * @param content the {@link com.google.api.services.displayvideo.v4.model.BulkCreateAdAssetsRequest}
+       * @return the request
+       */
+      public BulkCreate bulkCreate(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.BulkCreateAdAssetsRequest content) throws java.io.IOException {
+        BulkCreate result = new BulkCreate(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BulkCreate extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.BulkCreateAdAssetsResponse> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/adAssets:bulkCreate";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * BulkCreate video assets for Ad. Only supports youtube video assets for now.
+         *
+         * Create a request for the method "adAssets.bulkCreate".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link BulkCreate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BulkCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+         * @param content the {@link com.google.api.services.displayvideo.v4.model.BulkCreateAdAssetsRequest}
+         * @since 1.13
+         */
+        protected BulkCreate(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.BulkCreateAdAssetsRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v4.model.BulkCreateAdAssetsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public BulkCreate set$Xgafv(java.lang.String $Xgafv) {
+          return (BulkCreate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BulkCreate setAccessToken(java.lang.String accessToken) {
+          return (BulkCreate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BulkCreate setAlt(java.lang.String alt) {
+          return (BulkCreate) super.setAlt(alt);
+        }
+
+        @Override
+        public BulkCreate setCallback(java.lang.String callback) {
+          return (BulkCreate) super.setCallback(callback);
+        }
+
+        @Override
+        public BulkCreate setFields(java.lang.String fields) {
+          return (BulkCreate) super.setFields(fields);
+        }
+
+        @Override
+        public BulkCreate setKey(java.lang.String key) {
+          return (BulkCreate) super.setKey(key);
+        }
+
+        @Override
+        public BulkCreate setOauthToken(java.lang.String oauthToken) {
+          return (BulkCreate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BulkCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BulkCreate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BulkCreate setQuotaUser(java.lang.String quotaUser) {
+          return (BulkCreate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BulkCreate setUploadType(java.lang.String uploadType) {
+          return (BulkCreate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BulkCreate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BulkCreate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this ad asset belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        public BulkCreate setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public BulkCreate set(String parameterName, Object value) {
+          return (BulkCreate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Create a video asset for Ad. Only supports youtube video assets for now.
+       *
+       * Create a request for the method "adAssets.create".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+       * @param content the {@link com.google.api.services.displayvideo.v4.model.CreateAdAssetRequest}
+       * @return the request
+       */
+      public Create create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.CreateAdAssetRequest content) throws java.io.IOException {
+        Create result = new Create(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.AdAsset> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/adAssets";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Create a video asset for Ad. Only supports youtube video assets for now.
+         *
+         * Create a request for the method "adAssets.create".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+         * @param content the {@link com.google.api.services.displayvideo.v4.model.CreateAdAssetRequest}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.CreateAdAssetRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v4.model.AdAsset.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this ad asset belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        public Create setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get an ad asset by ad asset ID. Only supports youtube video assets.
+       *
+       * Create a request for the method "adAssets.get".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+       * @param adAssetId Required. The ID of the ad asset to fetch.
+       * @return the request
+       */
+      public Get get(java.lang.Long advertiserId, java.lang.Long adAssetId) throws java.io.IOException {
+        Get result = new Get(advertiserId, adAssetId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.AdAsset> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/adAssets/{+adAssetId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern AD_ASSET_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Get an ad asset by ad asset ID. Only supports youtube video assets.
+         *
+         * Create a request for the method "adAssets.get".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+         * @param adAssetId Required. The ID of the ad asset to fetch.
+         * @since 1.13
+         */
+        protected Get(java.lang.Long advertiserId, java.lang.Long adAssetId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v4.model.AdAsset.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.adAssetId = com.google.api.client.util.Preconditions.checkNotNull(adAssetId, "Required parameter adAssetId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this ad asset belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        public Get setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the ad asset to fetch. */
+        @com.google.api.client.util.Key
+        private java.lang.Long adAssetId;
+
+        /** Required. The ID of the ad asset to fetch.
+         */
+        public java.lang.Long getAdAssetId() {
+          return adAssetId;
+        }
+
+        /** Required. The ID of the ad asset to fetch. */
+        public Get setAdAssetId(java.lang.Long adAssetId) {
+          this.adAssetId = adAssetId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List ad assets by advertiser ID. Only supports youtube video ad assets.
+       *
+       * Create a request for the method "adAssets.list".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser to list assets for.
+       * @return the request
+       */
+      public List list(java.lang.Long advertiserId) throws java.io.IOException {
+        List result = new List(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.ListAdAssetsResponse> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/adAssets";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * List ad assets by advertiser ID. Only supports youtube video ad assets.
+         *
+         * Create a request for the method "adAssets.list".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser to list assets for.
+         * @since 1.13
+         */
+        protected List(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v4.model.ListAdAssetsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser to list assets for. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser to list assets for.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser to list assets for. */
+        public List setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Optional. Filter expression to restrict the ad assets to return. The supported fields
+         * are: * `youtubeVideoAsset.youtubeVideoId` * `entityStatus` Examples: *
+         * `entityStatus=ENTITY_STATUS_ACTIVE`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Filter expression to restrict the ad assets to return. The supported fields are: *
+       `youtubeVideoAsset.youtubeVideoId` * `entityStatus` Examples: * `entityStatus=ENTITY_STATUS_ACTIVE`
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Filter expression to restrict the ad assets to return. The supported fields
+         * are: * `youtubeVideoAsset.youtubeVideoId` * `entityStatus` Examples: *
+         * `entityStatus=ENTITY_STATUS_ACTIVE`
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. Field by which to sort the list. Acceptable values are: * `entityStatus` *
+         * `youtubeVideoAsset.youtubeVideoId` * `adAssetId` (default) The default sorting order is
+         * ascending. To specify descending order for a field, a suffix "desc" should be added to
+         * the field name. Example: `assetId desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. Field by which to sort the list. Acceptable values are: * `entityStatus` *
+       `youtubeVideoAsset.youtubeVideoId` * `adAssetId` (default) The default sorting order is ascending.
+       To specify descending order for a field, a suffix "desc" should be added to the field name.
+       Example: `assetId desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. Field by which to sort the list. Acceptable values are: * `entityStatus` *
+         * `youtubeVideoAsset.youtubeVideoId` * `adAssetId` (default) The default sorting order is
+         * ascending. To specify descending order for a field, a suffix "desc" should be added to
+         * the field name. Example: `assetId desc`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. Requested page size. Must be between `1` and `5000`. If unspecified will
+         * default to `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is
+         * specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Requested page size. Must be between `1` and `5000`. If unspecified will default to
+       `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Requested page size. Must be between `1` and `5000`. If unspecified will
+         * default to `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is
+         * specified.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A token identifying a page of results the server should return. Typically, this
+         * is the value of next_page_token returned from the previous call to `ListAssets` method.
+         * If not specified, the first page of results will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A token identifying a page of results the server should return. Typically, this is the
+       value of next_page_token returned from the previous call to `ListAssets` method. If not specified,
+       the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A token identifying a page of results the server should return. Typically, this
+         * is the value of next_page_token returned from the previous call to `ListAssets` method.
+         * If not specified, the first page of results will be returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Uploads an ad asset. Returns the ID of the newly uploaded ad asset if successful.
+       *
+       * Create a request for the method "adAssets.upload".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+       * @param content the {@link com.google.api.services.displayvideo.v4.model.UploadAdAssetRequest}
+       * @return the request
+       */
+      public Upload upload(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.UploadAdAssetRequest content) throws java.io.IOException {
+        Upload result = new Upload(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      /**
+       * Uploads an ad asset. Returns the ID of the newly uploaded ad asset if successful.
+       *
+       * Create a request for the method "adAssets.upload".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       *
+       * <p>
+       * This method should be used for uploading media content.
+       * </p>
+       *
+       * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+       * @param content the {@link com.google.api.services.displayvideo.v4.model.UploadAdAssetRequest} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content.
+       * @return the request
+       * @throws java.io.IOException if the initialization of the request fails
+       */
+      public Upload upload(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.UploadAdAssetRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+        Upload result = new Upload(advertiserId, content, mediaContent);
+        initialize(result);
+        return result;
+      }
+
+      public class Upload extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.UploadAdAssetResponse> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/adAssets:uploadAdAsset";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Uploads an ad asset. Returns the ID of the newly uploaded ad asset if successful.
+         *
+         * Create a request for the method "adAssets.upload".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+         * @param content the {@link com.google.api.services.displayvideo.v4.model.UploadAdAssetRequest}
+         * @since 1.13
+         */
+        protected Upload(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.UploadAdAssetRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v4.model.UploadAdAssetResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        /**
+         * Uploads an ad asset. Returns the ID of the newly uploaded ad asset if successful.
+         *
+         * Create a request for the method "adAssets.upload".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * <p>
+         * This constructor should be used for uploading media content.
+         * </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+         * @param content the {@link com.google.api.services.displayvideo.v4.model.UploadAdAssetRequest} media metadata or {@code null} if none
+         * @param mediaContent The media HTTP content.
+         * @since 1.13
+         */
+        protected Upload(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.UploadAdAssetRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+          super(DisplayVideo.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.displayvideo.v4.model.UploadAdAssetResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+          initializeMediaUpload(mediaContent);
+        }
+
+        @Override
+        public Upload set$Xgafv(java.lang.String $Xgafv) {
+          return (Upload) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Upload setAccessToken(java.lang.String accessToken) {
+          return (Upload) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Upload setAlt(java.lang.String alt) {
+          return (Upload) super.setAlt(alt);
+        }
+
+        @Override
+        public Upload setCallback(java.lang.String callback) {
+          return (Upload) super.setCallback(callback);
+        }
+
+        @Override
+        public Upload setFields(java.lang.String fields) {
+          return (Upload) super.setFields(fields);
+        }
+
+        @Override
+        public Upload setKey(java.lang.String key) {
+          return (Upload) super.setKey(key);
+        }
+
+        @Override
+        public Upload setOauthToken(java.lang.String oauthToken) {
+          return (Upload) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Upload) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Upload setQuotaUser(java.lang.String quotaUser) {
+          return (Upload) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Upload setUploadType(java.lang.String uploadType) {
+          return (Upload) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Upload) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this ad asset belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        public Upload setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public Upload set(String parameterName, Object value) {
+          return (Upload) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the AdGroupAds collection.
      *
      * <p>The typical use is:</p>
@@ -3200,6 +4019,751 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * `ListAdGroupAssignedTargetingOptions` method. If not specified, the first page of
              * results will be returned.
              */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the YoutubeAssetTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.YoutubeAssetTypes.List request = displayvideo.youtubeAssetTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public YoutubeAssetTypes youtubeAssetTypes() {
+        return new YoutubeAssetTypes();
+      }
+
+      /**
+       * The "youtubeAssetTypes" collection of methods.
+       */
+      public class YoutubeAssetTypes {
+
+        /**
+         * An accessor for creating requests from the YoutubeAssetAssociations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+         *   {@code DisplayVideo.YoutubeAssetAssociations.List request = displayvideo.youtubeAssetAssociations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public YoutubeAssetAssociations youtubeAssetAssociations() {
+          return new YoutubeAssetAssociations();
+        }
+
+        /**
+         * The "youtubeAssetAssociations" collection of methods.
+         */
+        public class YoutubeAssetAssociations {
+
+          /**
+           * Creates a new association between an entity (line item or ad group) and a YouTube asset. Returns
+           * the newly created association if successful.
+           *
+           * Create a request for the method "youtubeAssetAssociations.create".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser this request is for.
+           * @param adGroupId The unique ID of the ad group linked.
+           * @param youtubeAssetType Required. The type of the linked YouTube asset in the association.
+           * @param content the {@link com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation}
+           * @return the request
+           */
+          public Create create(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String youtubeAssetType, com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation content) throws java.io.IOException {
+            Create result = new Create(advertiserId, adGroupId, youtubeAssetType, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation> {
+
+            private static final String REST_PATH = "v4/advertisers/{+advertiserId}/adGroups/{+adGroupId}/youtubeAssetTypes/{+youtubeAssetType}/youtubeAssetAssociations";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern AD_GROUP_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_ASSET_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Creates a new association between an entity (line item or ad group) and a YouTube asset.
+             * Returns the newly created association if successful.
+             *
+             * Create a request for the method "youtubeAssetAssociations.create".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser this request is for.
+             * @param adGroupId The unique ID of the ad group linked.
+             * @param youtubeAssetType Required. The type of the linked YouTube asset in the association.
+             * @param content the {@link com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation}
+             * @since 1.13
+             */
+            protected Create(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String youtubeAssetType, com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation content) {
+              super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.adGroupId = com.google.api.client.util.Preconditions.checkNotNull(adGroupId, "Required parameter adGroupId must be specified.");
+              this.youtubeAssetType = com.google.api.client.util.Preconditions.checkNotNull(youtubeAssetType, "Required parameter youtubeAssetType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser this request is for.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            public Create setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** The unique ID of the ad group linked. */
+            @com.google.api.client.util.Key
+            private java.lang.Long adGroupId;
+
+            /** The unique ID of the ad group linked.
+             */
+            public java.lang.Long getAdGroupId() {
+              return adGroupId;
+            }
+
+            /** The unique ID of the ad group linked. */
+            public Create setAdGroupId(java.lang.Long adGroupId) {
+              this.adGroupId = adGroupId;
+              return this;
+            }
+
+            /** Required. The type of the linked YouTube asset in the association. */
+            @com.google.api.client.util.Key
+            private java.lang.String youtubeAssetType;
+
+            /** Required. The type of the linked YouTube asset in the association.
+             */
+            public java.lang.String getYoutubeAssetType() {
+              return youtubeAssetType;
+            }
+
+            /** Required. The type of the linked YouTube asset in the association. */
+            public Create setYoutubeAssetType(java.lang.String youtubeAssetType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.youtubeAssetType = youtubeAssetType;
+              return this;
+            }
+
+            /** The unique ID of the line item linked. */
+            @com.google.api.client.util.Key("linkedEntity.lineItemId")
+            private java.lang.Long linkedEntityLineItemId;
+
+            /** The unique ID of the line item linked.
+             */
+            public java.lang.Long getLinkedEntityLineItemId() {
+              return linkedEntityLineItemId;
+            }
+
+            /** The unique ID of the line item linked. */
+            public Create setLinkedEntityLineItemId(java.lang.Long linkedEntityLineItemId) {
+              this.linkedEntityLineItemId = linkedEntityLineItemId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an existing association between an entity (line item or ad group) and a YouTube asset.
+           *
+           * Create a request for the method "youtubeAssetAssociations.delete".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser this request is for.
+           * @param adGroupId The unique ID of the ad group linked.
+           * @param youtubeAssetType Required. The YouTube asset type this request is for.
+           * @param youtubeAssetAssociationId Required. The ID of the YouTube asset in the association. For location associations: This should be
+           *        the ID of the asset set linked, or 0 if the association stands for location asset is
+           *        disabled. For affiliate location associations: This should be the ID of the asset set
+           *        linked, or 0 if the association stands for affiliate location asset is disabled. For
+           *        sitelink associations: This should be the ID of the sitelink asset linked.
+           * @return the request
+           */
+          public Delete delete(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String youtubeAssetType, java.lang.Long youtubeAssetAssociationId) throws java.io.IOException {
+            Delete result = new Delete(advertiserId, adGroupId, youtubeAssetType, youtubeAssetAssociationId);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.Empty> {
+
+            private static final String REST_PATH = "v4/advertisers/{+advertiserId}/adGroups/{+adGroupId}/youtubeAssetTypes/{+youtubeAssetType}/youtubeAssetAssociations/{+youtubeAssetAssociationId}";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern AD_GROUP_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_ASSET_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_ASSET_ASSOCIATION_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Deletes an existing association between an entity (line item or ad group) and a YouTube asset.
+             *
+             * Create a request for the method "youtubeAssetAssociations.delete".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser this request is for.
+             * @param adGroupId The unique ID of the ad group linked.
+             * @param youtubeAssetType Required. The YouTube asset type this request is for.
+             * @param youtubeAssetAssociationId Required. The ID of the YouTube asset in the association. For location associations: This should be
+           *        the ID of the asset set linked, or 0 if the association stands for location asset is
+           *        disabled. For affiliate location associations: This should be the ID of the asset set
+           *        linked, or 0 if the association stands for affiliate location asset is disabled. For
+           *        sitelink associations: This should be the ID of the sitelink asset linked.
+             * @since 1.13
+             */
+            protected Delete(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String youtubeAssetType, java.lang.Long youtubeAssetAssociationId) {
+              super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v4.model.Empty.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.adGroupId = com.google.api.client.util.Preconditions.checkNotNull(adGroupId, "Required parameter adGroupId must be specified.");
+              this.youtubeAssetType = com.google.api.client.util.Preconditions.checkNotNull(youtubeAssetType, "Required parameter youtubeAssetType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.youtubeAssetAssociationId = com.google.api.client.util.Preconditions.checkNotNull(youtubeAssetAssociationId, "Required parameter youtubeAssetAssociationId must be specified.");
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser this request is for.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            public Delete setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** The unique ID of the ad group linked. */
+            @com.google.api.client.util.Key
+            private java.lang.Long adGroupId;
+
+            /** The unique ID of the ad group linked.
+             */
+            public java.lang.Long getAdGroupId() {
+              return adGroupId;
+            }
+
+            /** The unique ID of the ad group linked. */
+            public Delete setAdGroupId(java.lang.Long adGroupId) {
+              this.adGroupId = adGroupId;
+              return this;
+            }
+
+            /** Required. The YouTube asset type this request is for. */
+            @com.google.api.client.util.Key
+            private java.lang.String youtubeAssetType;
+
+            /** Required. The YouTube asset type this request is for.
+             */
+            public java.lang.String getYoutubeAssetType() {
+              return youtubeAssetType;
+            }
+
+            /** Required. The YouTube asset type this request is for. */
+            public Delete setYoutubeAssetType(java.lang.String youtubeAssetType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.youtubeAssetType = youtubeAssetType;
+              return this;
+            }
+
+            /**
+             * Required. The ID of the YouTube asset in the association. For location associations:
+             * This should be the ID of the asset set linked, or 0 if the association stands for
+             * location asset is disabled. For affiliate location associations: This should be the
+             * ID of the asset set linked, or 0 if the association stands for affiliate location
+             * asset is disabled. For sitelink associations: This should be the ID of the sitelink
+             * asset linked.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Long youtubeAssetAssociationId;
+
+            /** Required. The ID of the YouTube asset in the association. For location associations: This should be
+           the ID of the asset set linked, or 0 if the association stands for location asset is disabled. For
+           affiliate location associations: This should be the ID of the asset set linked, or 0 if the
+           association stands for affiliate location asset is disabled. For sitelink associations: This should
+           be the ID of the sitelink asset linked.
+             */
+            public java.lang.Long getYoutubeAssetAssociationId() {
+              return youtubeAssetAssociationId;
+            }
+
+            /**
+             * Required. The ID of the YouTube asset in the association. For location associations:
+             * This should be the ID of the asset set linked, or 0 if the association stands for
+             * location asset is disabled. For affiliate location associations: This should be the
+             * ID of the asset set linked, or 0 if the association stands for affiliate location
+             * asset is disabled. For sitelink associations: This should be the ID of the sitelink
+             * asset linked.
+             */
+            public Delete setYoutubeAssetAssociationId(java.lang.Long youtubeAssetAssociationId) {
+              this.youtubeAssetAssociationId = youtubeAssetAssociationId;
+              return this;
+            }
+
+            /** The unique ID of the line item linked. */
+            @com.google.api.client.util.Key("linkedEntity.lineItemId")
+            private java.lang.Long linkedEntityLineItemId;
+
+            /** The unique ID of the line item linked.
+             */
+            public java.lang.Long getLinkedEntityLineItemId() {
+              return linkedEntityLineItemId;
+            }
+
+            /** The unique ID of the line item linked. */
+            public Delete setLinkedEntityLineItemId(java.lang.Long linkedEntityLineItemId) {
+              this.linkedEntityLineItemId = linkedEntityLineItemId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the YouTube asset associations for given resource.
+           *
+           * Create a request for the method "youtubeAssetAssociations.list".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser this request is for.
+           * @param adGroupId The unique ID of the ad group linked.
+           * @param youtubeAssetType Required. The type of YouTube asset in the association.
+           * @return the request
+           */
+          public List list(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String youtubeAssetType) throws java.io.IOException {
+            List result = new List(advertiserId, adGroupId, youtubeAssetType);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.ListYoutubeAssetAssociationsResponse> {
+
+            private static final String REST_PATH = "v4/advertisers/{+advertiserId}/adGroups/{+adGroupId}/youtubeAssetTypes/{+youtubeAssetType}/youtubeAssetAssociations";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern AD_GROUP_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_ASSET_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Lists the YouTube asset associations for given resource.
+             *
+             * Create a request for the method "youtubeAssetAssociations.list".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser this request is for.
+             * @param adGroupId The unique ID of the ad group linked.
+             * @param youtubeAssetType Required. The type of YouTube asset in the association.
+             * @since 1.13
+             */
+            protected List(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String youtubeAssetType) {
+              super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v4.model.ListYoutubeAssetAssociationsResponse.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.adGroupId = com.google.api.client.util.Preconditions.checkNotNull(adGroupId, "Required parameter adGroupId must be specified.");
+              this.youtubeAssetType = com.google.api.client.util.Preconditions.checkNotNull(youtubeAssetType, "Required parameter youtubeAssetType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser this request is for.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            public List setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** The unique ID of the ad group linked. */
+            @com.google.api.client.util.Key
+            private java.lang.Long adGroupId;
+
+            /** The unique ID of the ad group linked.
+             */
+            public java.lang.Long getAdGroupId() {
+              return adGroupId;
+            }
+
+            /** The unique ID of the ad group linked. */
+            public List setAdGroupId(java.lang.Long adGroupId) {
+              this.adGroupId = adGroupId;
+              return this;
+            }
+
+            /** Required. The type of YouTube asset in the association. */
+            @com.google.api.client.util.Key
+            private java.lang.String youtubeAssetType;
+
+            /** Required. The type of YouTube asset in the association.
+             */
+            public java.lang.String getYoutubeAssetType() {
+              return youtubeAssetType;
+            }
+
+            /** Required. The type of YouTube asset in the association. */
+            public List setYoutubeAssetType(java.lang.String youtubeAssetType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.youtubeAssetType = youtubeAssetType;
+              return this;
+            }
+
+            /** The unique ID of the line item linked. */
+            @com.google.api.client.util.Key("linkedEntity.lineItemId")
+            private java.lang.Long linkedEntityLineItemId;
+
+            /** The unique ID of the line item linked.
+             */
+            public java.lang.Long getLinkedEntityLineItemId() {
+              return linkedEntityLineItemId;
+            }
+
+            /** The unique ID of the line item linked. */
+            public List setLinkedEntityLineItemId(java.lang.Long linkedEntityLineItemId) {
+              this.linkedEntityLineItemId = linkedEntityLineItemId;
+              return this;
+            }
+
+            /**
+             * Optional. Field by which to sort the list. The only acceptable values are:
+             * `linkedYoutubeAsset.locationAssetFilter.assetSetId`,
+             * `linkedYoutubeAsset.affiliateLocationAssetFilter.assetSetId`,
+             * `linkedYoutubeAsset.sitelinkAsset.assetId` The default sorting order is ascending. To
+             * specify descending order for a field, a suffix " desc" should be added to the field
+             * name. Example: `linkedYoutubeAsset.sitelinkAsset.assetId desc`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Field by which to sort the list. The only acceptable values are:
+           `linkedYoutubeAsset.locationAssetFilter.assetSetId`,
+           `linkedYoutubeAsset.affiliateLocationAssetFilter.assetSetId`,
+           `linkedYoutubeAsset.sitelinkAsset.assetId` The default sorting order is ascending. To specify
+           descending order for a field, a suffix " desc" should be added to the field name. Example:
+           `linkedYoutubeAsset.sitelinkAsset.assetId desc`.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Field by which to sort the list. The only acceptable values are:
+             * `linkedYoutubeAsset.locationAssetFilter.assetSetId`,
+             * `linkedYoutubeAsset.affiliateLocationAssetFilter.assetSetId`,
+             * `linkedYoutubeAsset.sitelinkAsset.assetId` The default sorting order is ascending. To
+             * specify descending order for a field, a suffix " desc" should be added to the field
+             * name. Example: `linkedYoutubeAsset.sitelinkAsset.assetId desc`.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. Must be between `1` and `10000`. If unspecified will
+             * default to `100`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. Must be between `1` and `10000`. If unspecified will default to
+           `100`.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. Must be between `1` and `10000`. If unspecified will
+             * default to `100`.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results the server should return.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -13852,6 +15416,751 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * `ListLineItemAssignedTargetingOptions` method. If not specified, the first page of
              * results will be returned.
              */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the YoutubeAssetTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.YoutubeAssetTypes.List request = displayvideo.youtubeAssetTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public YoutubeAssetTypes youtubeAssetTypes() {
+        return new YoutubeAssetTypes();
+      }
+
+      /**
+       * The "youtubeAssetTypes" collection of methods.
+       */
+      public class YoutubeAssetTypes {
+
+        /**
+         * An accessor for creating requests from the YoutubeAssetAssociations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+         *   {@code DisplayVideo.YoutubeAssetAssociations.List request = displayvideo.youtubeAssetAssociations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public YoutubeAssetAssociations youtubeAssetAssociations() {
+          return new YoutubeAssetAssociations();
+        }
+
+        /**
+         * The "youtubeAssetAssociations" collection of methods.
+         */
+        public class YoutubeAssetAssociations {
+
+          /**
+           * Creates a new association between an entity (line item or ad group) and a YouTube asset. Returns
+           * the newly created association if successful.
+           *
+           * Create a request for the method "youtubeAssetAssociations.create".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser this request is for.
+           * @param lineItemId The unique ID of the line item linked.
+           * @param youtubeAssetType Required. The type of the linked YouTube asset in the association.
+           * @param content the {@link com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation}
+           * @return the request
+           */
+          public Create create(java.lang.Long advertiserId, java.lang.Long lineItemId, java.lang.String youtubeAssetType, com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation content) throws java.io.IOException {
+            Create result = new Create(advertiserId, lineItemId, youtubeAssetType, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation> {
+
+            private static final String REST_PATH = "v4/advertisers/{+advertiserId}/lineItems/{+lineItemId}/youtubeAssetTypes/{+youtubeAssetType}/youtubeAssetAssociations";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern LINE_ITEM_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_ASSET_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Creates a new association between an entity (line item or ad group) and a YouTube asset.
+             * Returns the newly created association if successful.
+             *
+             * Create a request for the method "youtubeAssetAssociations.create".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser this request is for.
+             * @param lineItemId The unique ID of the line item linked.
+             * @param youtubeAssetType Required. The type of the linked YouTube asset in the association.
+             * @param content the {@link com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation}
+             * @since 1.13
+             */
+            protected Create(java.lang.Long advertiserId, java.lang.Long lineItemId, java.lang.String youtubeAssetType, com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation content) {
+              super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v4.model.YoutubeAssetAssociation.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.lineItemId = com.google.api.client.util.Preconditions.checkNotNull(lineItemId, "Required parameter lineItemId must be specified.");
+              this.youtubeAssetType = com.google.api.client.util.Preconditions.checkNotNull(youtubeAssetType, "Required parameter youtubeAssetType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser this request is for.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            public Create setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** The unique ID of the line item linked. */
+            @com.google.api.client.util.Key
+            private java.lang.Long lineItemId;
+
+            /** The unique ID of the line item linked.
+             */
+            public java.lang.Long getLineItemId() {
+              return lineItemId;
+            }
+
+            /** The unique ID of the line item linked. */
+            public Create setLineItemId(java.lang.Long lineItemId) {
+              this.lineItemId = lineItemId;
+              return this;
+            }
+
+            /** Required. The type of the linked YouTube asset in the association. */
+            @com.google.api.client.util.Key
+            private java.lang.String youtubeAssetType;
+
+            /** Required. The type of the linked YouTube asset in the association.
+             */
+            public java.lang.String getYoutubeAssetType() {
+              return youtubeAssetType;
+            }
+
+            /** Required. The type of the linked YouTube asset in the association. */
+            public Create setYoutubeAssetType(java.lang.String youtubeAssetType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.youtubeAssetType = youtubeAssetType;
+              return this;
+            }
+
+            /** The unique ID of the ad group linked. */
+            @com.google.api.client.util.Key("linkedEntity.adGroupId")
+            private java.lang.Long linkedEntityAdGroupId;
+
+            /** The unique ID of the ad group linked.
+             */
+            public java.lang.Long getLinkedEntityAdGroupId() {
+              return linkedEntityAdGroupId;
+            }
+
+            /** The unique ID of the ad group linked. */
+            public Create setLinkedEntityAdGroupId(java.lang.Long linkedEntityAdGroupId) {
+              this.linkedEntityAdGroupId = linkedEntityAdGroupId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an existing association between an entity (line item or ad group) and a YouTube asset.
+           *
+           * Create a request for the method "youtubeAssetAssociations.delete".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser this request is for.
+           * @param lineItemId The unique ID of the line item linked.
+           * @param youtubeAssetType Required. The YouTube asset type this request is for.
+           * @param youtubeAssetAssociationId Required. The ID of the YouTube asset in the association. For location associations: This should be
+           *        the ID of the asset set linked, or 0 if the association stands for location asset is
+           *        disabled. For affiliate location associations: This should be the ID of the asset set
+           *        linked, or 0 if the association stands for affiliate location asset is disabled. For
+           *        sitelink associations: This should be the ID of the sitelink asset linked.
+           * @return the request
+           */
+          public Delete delete(java.lang.Long advertiserId, java.lang.Long lineItemId, java.lang.String youtubeAssetType, java.lang.Long youtubeAssetAssociationId) throws java.io.IOException {
+            Delete result = new Delete(advertiserId, lineItemId, youtubeAssetType, youtubeAssetAssociationId);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.Empty> {
+
+            private static final String REST_PATH = "v4/advertisers/{+advertiserId}/lineItems/{+lineItemId}/youtubeAssetTypes/{+youtubeAssetType}/youtubeAssetAssociations/{+youtubeAssetAssociationId}";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern LINE_ITEM_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_ASSET_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_ASSET_ASSOCIATION_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Deletes an existing association between an entity (line item or ad group) and a YouTube asset.
+             *
+             * Create a request for the method "youtubeAssetAssociations.delete".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser this request is for.
+             * @param lineItemId The unique ID of the line item linked.
+             * @param youtubeAssetType Required. The YouTube asset type this request is for.
+             * @param youtubeAssetAssociationId Required. The ID of the YouTube asset in the association. For location associations: This should be
+           *        the ID of the asset set linked, or 0 if the association stands for location asset is
+           *        disabled. For affiliate location associations: This should be the ID of the asset set
+           *        linked, or 0 if the association stands for affiliate location asset is disabled. For
+           *        sitelink associations: This should be the ID of the sitelink asset linked.
+             * @since 1.13
+             */
+            protected Delete(java.lang.Long advertiserId, java.lang.Long lineItemId, java.lang.String youtubeAssetType, java.lang.Long youtubeAssetAssociationId) {
+              super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v4.model.Empty.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.lineItemId = com.google.api.client.util.Preconditions.checkNotNull(lineItemId, "Required parameter lineItemId must be specified.");
+              this.youtubeAssetType = com.google.api.client.util.Preconditions.checkNotNull(youtubeAssetType, "Required parameter youtubeAssetType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.youtubeAssetAssociationId = com.google.api.client.util.Preconditions.checkNotNull(youtubeAssetAssociationId, "Required parameter youtubeAssetAssociationId must be specified.");
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser this request is for.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            public Delete setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** The unique ID of the line item linked. */
+            @com.google.api.client.util.Key
+            private java.lang.Long lineItemId;
+
+            /** The unique ID of the line item linked.
+             */
+            public java.lang.Long getLineItemId() {
+              return lineItemId;
+            }
+
+            /** The unique ID of the line item linked. */
+            public Delete setLineItemId(java.lang.Long lineItemId) {
+              this.lineItemId = lineItemId;
+              return this;
+            }
+
+            /** Required. The YouTube asset type this request is for. */
+            @com.google.api.client.util.Key
+            private java.lang.String youtubeAssetType;
+
+            /** Required. The YouTube asset type this request is for.
+             */
+            public java.lang.String getYoutubeAssetType() {
+              return youtubeAssetType;
+            }
+
+            /** Required. The YouTube asset type this request is for. */
+            public Delete setYoutubeAssetType(java.lang.String youtubeAssetType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.youtubeAssetType = youtubeAssetType;
+              return this;
+            }
+
+            /**
+             * Required. The ID of the YouTube asset in the association. For location associations:
+             * This should be the ID of the asset set linked, or 0 if the association stands for
+             * location asset is disabled. For affiliate location associations: This should be the
+             * ID of the asset set linked, or 0 if the association stands for affiliate location
+             * asset is disabled. For sitelink associations: This should be the ID of the sitelink
+             * asset linked.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Long youtubeAssetAssociationId;
+
+            /** Required. The ID of the YouTube asset in the association. For location associations: This should be
+           the ID of the asset set linked, or 0 if the association stands for location asset is disabled. For
+           affiliate location associations: This should be the ID of the asset set linked, or 0 if the
+           association stands for affiliate location asset is disabled. For sitelink associations: This should
+           be the ID of the sitelink asset linked.
+             */
+            public java.lang.Long getYoutubeAssetAssociationId() {
+              return youtubeAssetAssociationId;
+            }
+
+            /**
+             * Required. The ID of the YouTube asset in the association. For location associations:
+             * This should be the ID of the asset set linked, or 0 if the association stands for
+             * location asset is disabled. For affiliate location associations: This should be the
+             * ID of the asset set linked, or 0 if the association stands for affiliate location
+             * asset is disabled. For sitelink associations: This should be the ID of the sitelink
+             * asset linked.
+             */
+            public Delete setYoutubeAssetAssociationId(java.lang.Long youtubeAssetAssociationId) {
+              this.youtubeAssetAssociationId = youtubeAssetAssociationId;
+              return this;
+            }
+
+            /** The unique ID of the ad group linked. */
+            @com.google.api.client.util.Key("linkedEntity.adGroupId")
+            private java.lang.Long linkedEntityAdGroupId;
+
+            /** The unique ID of the ad group linked.
+             */
+            public java.lang.Long getLinkedEntityAdGroupId() {
+              return linkedEntityAdGroupId;
+            }
+
+            /** The unique ID of the ad group linked. */
+            public Delete setLinkedEntityAdGroupId(java.lang.Long linkedEntityAdGroupId) {
+              this.linkedEntityAdGroupId = linkedEntityAdGroupId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the YouTube asset associations for given resource.
+           *
+           * Create a request for the method "youtubeAssetAssociations.list".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser this request is for.
+           * @param lineItemId The unique ID of the line item linked.
+           * @param youtubeAssetType Required. The type of YouTube asset in the association.
+           * @return the request
+           */
+          public List list(java.lang.Long advertiserId, java.lang.Long lineItemId, java.lang.String youtubeAssetType) throws java.io.IOException {
+            List result = new List(advertiserId, lineItemId, youtubeAssetType);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.ListYoutubeAssetAssociationsResponse> {
+
+            private static final String REST_PATH = "v4/advertisers/{+advertiserId}/lineItems/{+lineItemId}/youtubeAssetTypes/{+youtubeAssetType}/youtubeAssetAssociations";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern LINE_ITEM_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern YOUTUBE_ASSET_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Lists the YouTube asset associations for given resource.
+             *
+             * Create a request for the method "youtubeAssetAssociations.list".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser this request is for.
+             * @param lineItemId The unique ID of the line item linked.
+             * @param youtubeAssetType Required. The type of YouTube asset in the association.
+             * @since 1.13
+             */
+            protected List(java.lang.Long advertiserId, java.lang.Long lineItemId, java.lang.String youtubeAssetType) {
+              super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v4.model.ListYoutubeAssetAssociationsResponse.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.lineItemId = com.google.api.client.util.Preconditions.checkNotNull(lineItemId, "Required parameter lineItemId must be specified.");
+              this.youtubeAssetType = com.google.api.client.util.Preconditions.checkNotNull(youtubeAssetType, "Required parameter youtubeAssetType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser this request is for.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser this request is for. */
+            public List setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** The unique ID of the line item linked. */
+            @com.google.api.client.util.Key
+            private java.lang.Long lineItemId;
+
+            /** The unique ID of the line item linked.
+             */
+            public java.lang.Long getLineItemId() {
+              return lineItemId;
+            }
+
+            /** The unique ID of the line item linked. */
+            public List setLineItemId(java.lang.Long lineItemId) {
+              this.lineItemId = lineItemId;
+              return this;
+            }
+
+            /** Required. The type of YouTube asset in the association. */
+            @com.google.api.client.util.Key
+            private java.lang.String youtubeAssetType;
+
+            /** Required. The type of YouTube asset in the association.
+             */
+            public java.lang.String getYoutubeAssetType() {
+              return youtubeAssetType;
+            }
+
+            /** Required. The type of YouTube asset in the association. */
+            public List setYoutubeAssetType(java.lang.String youtubeAssetType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(YOUTUBE_ASSET_TYPE_PATTERN.matcher(youtubeAssetType).matches(),
+                    "Parameter youtubeAssetType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.youtubeAssetType = youtubeAssetType;
+              return this;
+            }
+
+            /** The unique ID of the ad group linked. */
+            @com.google.api.client.util.Key("linkedEntity.adGroupId")
+            private java.lang.Long linkedEntityAdGroupId;
+
+            /** The unique ID of the ad group linked.
+             */
+            public java.lang.Long getLinkedEntityAdGroupId() {
+              return linkedEntityAdGroupId;
+            }
+
+            /** The unique ID of the ad group linked. */
+            public List setLinkedEntityAdGroupId(java.lang.Long linkedEntityAdGroupId) {
+              this.linkedEntityAdGroupId = linkedEntityAdGroupId;
+              return this;
+            }
+
+            /**
+             * Optional. Field by which to sort the list. The only acceptable values are:
+             * `linkedYoutubeAsset.locationAssetFilter.assetSetId`,
+             * `linkedYoutubeAsset.affiliateLocationAssetFilter.assetSetId`,
+             * `linkedYoutubeAsset.sitelinkAsset.assetId` The default sorting order is ascending. To
+             * specify descending order for a field, a suffix " desc" should be added to the field
+             * name. Example: `linkedYoutubeAsset.sitelinkAsset.assetId desc`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Field by which to sort the list. The only acceptable values are:
+           `linkedYoutubeAsset.locationAssetFilter.assetSetId`,
+           `linkedYoutubeAsset.affiliateLocationAssetFilter.assetSetId`,
+           `linkedYoutubeAsset.sitelinkAsset.assetId` The default sorting order is ascending. To specify
+           descending order for a field, a suffix " desc" should be added to the field name. Example:
+           `linkedYoutubeAsset.sitelinkAsset.assetId desc`.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Field by which to sort the list. The only acceptable values are:
+             * `linkedYoutubeAsset.locationAssetFilter.assetSetId`,
+             * `linkedYoutubeAsset.affiliateLocationAssetFilter.assetSetId`,
+             * `linkedYoutubeAsset.sitelinkAsset.assetId` The default sorting order is ascending. To
+             * specify descending order for a field, a suffix " desc" should be added to the field
+             * name. Example: `linkedYoutubeAsset.sitelinkAsset.assetId desc`.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. Must be between `1` and `10000`. If unspecified will
+             * default to `100`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. Must be between `1` and `10000`. If unspecified will default to
+           `100`.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. Must be between `1` and `10000`. If unspecified will
+             * default to `100`.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results the server should return.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;

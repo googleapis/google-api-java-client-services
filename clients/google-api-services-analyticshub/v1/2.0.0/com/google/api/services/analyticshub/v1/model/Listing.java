@@ -177,6 +177,14 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Optional. If set, stored procedure configuration will be propagated and enforced on the linked
+   * dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StoredProcedureConfig storedProcedureConfig;
+
+  /**
    * Optional. If true, the listing is only available to get the resource metadata. Listing is non
    * subscribable.
    * @return value or {@code null} for none
@@ -554,6 +562,25 @@ public final class Listing extends com.google.api.client.json.GenericJson {
    */
   public Listing setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. If set, stored procedure configuration will be propagated and enforced on the linked
+   * dataset.
+   * @return value or {@code null} for none
+   */
+  public StoredProcedureConfig getStoredProcedureConfig() {
+    return storedProcedureConfig;
+  }
+
+  /**
+   * Optional. If set, stored procedure configuration will be propagated and enforced on the linked
+   * dataset.
+   * @param storedProcedureConfig storedProcedureConfig or {@code null} for none
+   */
+  public Listing setStoredProcedureConfig(StoredProcedureConfig storedProcedureConfig) {
+    this.storedProcedureConfig = storedProcedureConfig;
     return this;
   }
 

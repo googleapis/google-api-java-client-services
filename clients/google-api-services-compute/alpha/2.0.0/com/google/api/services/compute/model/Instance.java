@@ -501,6 +501,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private UpcomingMaintenance upcomingMaintenance;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadIdentityConfig workloadIdentityConfig;
+
+  /**
    * [Output Only] URL of the zone where the instance resides. You must specify this field as part
    * of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
@@ -1664,6 +1670,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {
     this.upcomingMaintenance = upcomingMaintenance;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public WorkloadIdentityConfig getWorkloadIdentityConfig() {
+    return workloadIdentityConfig;
+  }
+
+  /**
+   * @param workloadIdentityConfig workloadIdentityConfig or {@code null} for none
+   */
+  public Instance setWorkloadIdentityConfig(WorkloadIdentityConfig workloadIdentityConfig) {
+    this.workloadIdentityConfig = workloadIdentityConfig;
     return this;
   }
 

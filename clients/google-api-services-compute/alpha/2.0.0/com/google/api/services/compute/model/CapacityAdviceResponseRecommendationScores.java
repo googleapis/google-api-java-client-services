@@ -38,9 +38,9 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
   private java.lang.Double obtainability;
 
   /**
-   * The uptime score indicates the availability of your Spot VMs. For more information about the
-   * preemption process, see Preemption of Spot VMs. The score range is 0.0 through 1.0. Higher is
-   * better.
+   * The uptime score indicates the likelihood that your Spot VMs will continue to run without
+   * preemption within the next few hours. For more information about the preemption process, see
+   * Preemption of Spot VMs. The score range is 0.0 through 1.0. Higher is better.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +66,9 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
   }
 
   /**
-   * The uptime score indicates the availability of your Spot VMs. For more information about the
-   * preemption process, see Preemption of Spot VMs. The score range is 0.0 through 1.0. Higher is
-   * better.
+   * The uptime score indicates the likelihood that your Spot VMs will continue to run without
+   * preemption within the next few hours. For more information about the preemption process, see
+   * Preemption of Spot VMs. The score range is 0.0 through 1.0. Higher is better.
    * @return value or {@code null} for none
    */
   public java.lang.Double getUptimeScore() {
@@ -76,9 +76,9 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
   }
 
   /**
-   * The uptime score indicates the availability of your Spot VMs. For more information about the
-   * preemption process, see Preemption of Spot VMs. The score range is 0.0 through 1.0. Higher is
-   * better.
+   * The uptime score indicates the likelihood that your Spot VMs will continue to run without
+   * preemption within the next few hours. For more information about the preemption process, see
+   * Preemption of Spot VMs. The score range is 0.0 through 1.0. Higher is better.
    * @param uptimeScore uptimeScore or {@code null} for none
    */
   public CapacityAdviceResponseRecommendationScores setUptimeScore(java.lang.Double uptimeScore) {

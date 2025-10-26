@@ -31,6 +31,14 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the connection mode for the accelerator topology. If not specified, the default is
+   * AUTO_CONNECT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String acceleratorTopologyMode;
+
+  /**
    * The number of availability domains to spread instances across. If two instances are in
    * different availability domain, they are not in the same low latency network.
    * The value may be {@code null}.
@@ -88,6 +96,25 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.Integer vmCount;
+
+  /**
+   * Specifies the connection mode for the accelerator topology. If not specified, the default is
+   * AUTO_CONNECT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAcceleratorTopologyMode() {
+    return acceleratorTopologyMode;
+  }
+
+  /**
+   * Specifies the connection mode for the accelerator topology. If not specified, the default is
+   * AUTO_CONNECT.
+   * @param acceleratorTopologyMode acceleratorTopologyMode or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy setAcceleratorTopologyMode(java.lang.String acceleratorTopologyMode) {
+    this.acceleratorTopologyMode = acceleratorTopologyMode;
+    return this;
+  }
 
   /**
    * The number of availability domains to spread instances across. If two instances are in

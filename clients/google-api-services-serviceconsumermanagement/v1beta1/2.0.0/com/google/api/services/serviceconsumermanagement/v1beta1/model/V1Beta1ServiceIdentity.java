@@ -46,6 +46,16 @@ public final class V1Beta1ServiceIdentity extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * The project-level IAM role defined in the service agent's grant configuration. This is the
+   * standard role intended for this service agent. This field is populated regardless of the
+   * `skip_role_attach` option in the request. If `skip_role_attach` is true, the caller can use
+   * this value to know which role they are responsible for granting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectRole;
+
+  /**
    * The P4 service identity configuration tag. This must be defined in activation_grants. If not
    * specified when creating the account, the tag is set to "default".
    * The value may be {@code null}.
@@ -93,6 +103,29 @@ public final class V1Beta1ServiceIdentity extends com.google.api.client.json.Gen
    */
   public V1Beta1ServiceIdentity setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The project-level IAM role defined in the service agent's grant configuration. This is the
+   * standard role intended for this service agent. This field is populated regardless of the
+   * `skip_role_attach` option in the request. If `skip_role_attach` is true, the caller can use
+   * this value to know which role they are responsible for granting.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectRole() {
+    return projectRole;
+  }
+
+  /**
+   * The project-level IAM role defined in the service agent's grant configuration. This is the
+   * standard role intended for this service agent. This field is populated regardless of the
+   * `skip_role_attach` option in the request. If `skip_role_attach` is true, the caller can use
+   * this value to know which role they are responsible for granting.
+   * @param projectRole projectRole or {@code null} for none
+   */
+  public V1Beta1ServiceIdentity setProjectRole(java.lang.String projectRole) {
+    this.projectRole = projectRole;
     return this;
   }
 

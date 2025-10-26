@@ -54,6 +54,20 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String consumerNetwork;
 
   /**
+   * Optional. Controlled egress configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ControlledEgressConfig controlledEgressConfig;
+
+  /**
+   * Optional. Whether controlled egress is enabled on the Looker instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean controlledEgressEnabled;
+
+  /**
    * Output only. The time when the Looker instance provisioning was first requested.
    * The value may be {@code null}.
    */
@@ -303,6 +317,40 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setConsumerNetwork(java.lang.String consumerNetwork) {
     this.consumerNetwork = consumerNetwork;
+    return this;
+  }
+
+  /**
+   * Optional. Controlled egress configuration.
+   * @return value or {@code null} for none
+   */
+  public ControlledEgressConfig getControlledEgressConfig() {
+    return controlledEgressConfig;
+  }
+
+  /**
+   * Optional. Controlled egress configuration.
+   * @param controlledEgressConfig controlledEgressConfig or {@code null} for none
+   */
+  public Instance setControlledEgressConfig(ControlledEgressConfig controlledEgressConfig) {
+    this.controlledEgressConfig = controlledEgressConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Whether controlled egress is enabled on the Looker instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getControlledEgressEnabled() {
+    return controlledEgressEnabled;
+  }
+
+  /**
+   * Optional. Whether controlled egress is enabled on the Looker instance.
+   * @param controlledEgressEnabled controlledEgressEnabled or {@code null} for none
+   */
+  public Instance setControlledEgressEnabled(java.lang.Boolean controlledEgressEnabled) {
+    this.controlledEgressEnabled = controlledEgressEnabled;
     return this;
   }
 

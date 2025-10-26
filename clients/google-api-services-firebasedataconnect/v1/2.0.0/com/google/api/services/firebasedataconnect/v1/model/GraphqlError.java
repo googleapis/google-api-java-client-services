@@ -20,10 +20,11 @@ package com.google.api.services.firebasedataconnect.v1.model;
  * GraphqlError conforms to the GraphQL error spec. https://spec.graphql.org/draft/#sec-Errors
  * Firebase Data Connect API surfaces `GraphqlError` in various APIs: - Upon compile error,
  * `UpdateSchema` and `UpdateConnector` return Code.Invalid_Argument with a list of `GraphqlError`
- * in error details. - Upon query compile error, `ExecuteGraphql` and `ExecuteGraphqlRead` return
- * Code.OK with a list of `GraphqlError` in response body. - Upon query execution error,
- * `ExecuteGraphql`, `ExecuteGraphqlRead`, `ExecuteMutation` and `ExecuteQuery` all return Code.OK
- * with a list of `GraphqlError` in response body.
+ * in error details. - Upon query compile error, `ExecuteGraphql`, `ExecuteGraphqlRead` and
+ * `IntrospectGraphql` return Code.OK with a list of `GraphqlError` in response body. - Upon query
+ * execution error, `ExecuteGraphql`, `ExecuteGraphqlRead`, `ExecuteMutation`, `ExecuteQuery`,
+ * `IntrospectGraphql`, `ImpersonateQuery` and `ImpersonateMutation` all return Code.OK with a list
+ * of `GraphqlError` in response body.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Data Connect API. For a detailed explanation
@@ -46,9 +47,10 @@ public final class GraphqlError extends com.google.api.client.json.GenericJson {
   /**
    * The source locations where the error occurred. Locations should help developers and toolings
    * identify the source of error quickly. Included in admin endpoints (`ExecuteGraphql`,
-   * `ExecuteGraphqlRead`, `UpdateSchema` and `UpdateConnector`) to reference the provided GraphQL
-   * GQL document. Omitted in `ExecuteMutation` and `ExecuteQuery` since the caller shouldn't have
-   * access access the underlying GQL source.
+   * `ExecuteGraphqlRead`, `IntrospectGraphql`, `ImpersonateQuery`, `ImpersonateMutation`,
+   * `UpdateSchema` and `UpdateConnector`) to reference the provided GraphQL GQL document. Omitted
+   * in `ExecuteMutation` and `ExecuteQuery` since the caller shouldn't have access access the
+   * underlying GQL source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +93,10 @@ public final class GraphqlError extends com.google.api.client.json.GenericJson {
   /**
    * The source locations where the error occurred. Locations should help developers and toolings
    * identify the source of error quickly. Included in admin endpoints (`ExecuteGraphql`,
-   * `ExecuteGraphqlRead`, `UpdateSchema` and `UpdateConnector`) to reference the provided GraphQL
-   * GQL document. Omitted in `ExecuteMutation` and `ExecuteQuery` since the caller shouldn't have
-   * access access the underlying GQL source.
+   * `ExecuteGraphqlRead`, `IntrospectGraphql`, `ImpersonateQuery`, `ImpersonateMutation`,
+   * `UpdateSchema` and `UpdateConnector`) to reference the provided GraphQL GQL document. Omitted
+   * in `ExecuteMutation` and `ExecuteQuery` since the caller shouldn't have access access the
+   * underlying GQL source.
    * @return value or {@code null} for none
    */
   public java.util.List<SourceLocation> getLocations() {
@@ -103,9 +106,10 @@ public final class GraphqlError extends com.google.api.client.json.GenericJson {
   /**
    * The source locations where the error occurred. Locations should help developers and toolings
    * identify the source of error quickly. Included in admin endpoints (`ExecuteGraphql`,
-   * `ExecuteGraphqlRead`, `UpdateSchema` and `UpdateConnector`) to reference the provided GraphQL
-   * GQL document. Omitted in `ExecuteMutation` and `ExecuteQuery` since the caller shouldn't have
-   * access access the underlying GQL source.
+   * `ExecuteGraphqlRead`, `IntrospectGraphql`, `ImpersonateQuery`, `ImpersonateMutation`,
+   * `UpdateSchema` and `UpdateConnector`) to reference the provided GraphQL GQL document. Omitted
+   * in `ExecuteMutation` and `ExecuteQuery` since the caller shouldn't have access access the
+   * underlying GQL source.
    * @param locations locations or {@code null} for none
    */
   public GraphqlError setLocations(java.util.List<SourceLocation> locations) {

@@ -482,6 +482,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * - DEDICATED: an attachment to a Dedicated Interconnect.    - PARTNER: an attachment to a
    * Partner Interconnect, created by the    customer.    - PARTNER_PROVIDER: an attachment to a
    * Partner Interconnect, created by    the partner.
+   *
+   * - L2_DEDICATED: a L2 attachment to a Dedicated Interconnect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1569,6 +1571,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * - DEDICATED: an attachment to a Dedicated Interconnect.    - PARTNER: an attachment to a
    * Partner Interconnect, created by the    customer.    - PARTNER_PROVIDER: an attachment to a
    * Partner Interconnect, created by    the partner.
+   *
+   * - L2_DEDICATED: a L2 attachment to a Dedicated Interconnect.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -1580,6 +1584,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * - DEDICATED: an attachment to a Dedicated Interconnect.    - PARTNER: an attachment to a
    * Partner Interconnect, created by the    customer.    - PARTNER_PROVIDER: an attachment to a
    * Partner Interconnect, created by    the partner.
+   *
+   * - L2_DEDICATED: a L2 attachment to a Dedicated Interconnect.
    * @param type type or {@code null} for none
    */
   public InterconnectAttachment setType(java.lang.String type) {

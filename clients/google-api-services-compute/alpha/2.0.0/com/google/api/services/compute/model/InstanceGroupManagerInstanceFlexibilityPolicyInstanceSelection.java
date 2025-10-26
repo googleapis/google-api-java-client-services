@@ -30,11 +30,31 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of disks to be attached to the instances created from this selection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AttachedDisk> disks;
+
+  static {
+    // hack to force ProGuard to consider AttachedDisk used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AttachedDisk.class);
+  }
+
+  /**
    * Full machine-type names, e.g. "n1-standard-16".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> machineTypes;
+
+  /**
+   * Name of the minimum CPU platform to be used by this instance selection. e.g. 'Intel Ice Lake'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minCpuPlatform;
 
   /**
    * Preference of this instance selection. Lower number means higher preference. MIG will first try
@@ -45,6 +65,23 @@ public final class InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelectio
    */
   @com.google.api.client.util.Key
   private java.lang.Integer rank;
+
+  /**
+   * List of disks to be attached to the instances created from this selection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AttachedDisk> getDisks() {
+    return disks;
+  }
+
+  /**
+   * List of disks to be attached to the instances created from this selection.
+   * @param disks disks or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection setDisks(java.util.List<AttachedDisk> disks) {
+    this.disks = disks;
+    return this;
+  }
 
   /**
    * Full machine-type names, e.g. "n1-standard-16".
@@ -60,6 +97,23 @@ public final class InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelectio
    */
   public InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection setMachineTypes(java.util.List<java.lang.String> machineTypes) {
     this.machineTypes = machineTypes;
+    return this;
+  }
+
+  /**
+   * Name of the minimum CPU platform to be used by this instance selection. e.g. 'Intel Ice Lake'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinCpuPlatform() {
+    return minCpuPlatform;
+  }
+
+  /**
+   * Name of the minimum CPU platform to be used by this instance selection. e.g. 'Intel Ice Lake'.
+   * @param minCpuPlatform minCpuPlatform or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection setMinCpuPlatform(java.lang.String minCpuPlatform) {
+    this.minCpuPlatform = minCpuPlatform;
     return this;
   }
 

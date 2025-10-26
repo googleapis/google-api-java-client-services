@@ -30,6 +30,19 @@ package com.google.api.services.compute.model;
 public final class ManagedInstanceInstanceFlexibilityOverride extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of disks to be attached to the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AttachedDisk> disks;
+
+  static {
+    // hack to force ProGuard to consider AttachedDisk used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AttachedDisk.class);
+  }
+
+  /**
    * The machine type to be used for this instance.
    * The value may be {@code null}.
    */
@@ -37,11 +50,35 @@ public final class ManagedInstanceInstanceFlexibilityOverride extends com.google
   private java.lang.String machineType;
 
   /**
+   * Name of the minimum CPU platform to be used by this instance. e.g. 'Intel Ice Lake'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minCpuPlatform;
+
+  /**
    * The provisioning model to be used for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String provisioningModel;
+
+  /**
+   * List of disks to be attached to the instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AttachedDisk> getDisks() {
+    return disks;
+  }
+
+  /**
+   * List of disks to be attached to the instance.
+   * @param disks disks or {@code null} for none
+   */
+  public ManagedInstanceInstanceFlexibilityOverride setDisks(java.util.List<AttachedDisk> disks) {
+    this.disks = disks;
+    return this;
+  }
 
   /**
    * The machine type to be used for this instance.
@@ -57,6 +94,23 @@ public final class ManagedInstanceInstanceFlexibilityOverride extends com.google
    */
   public ManagedInstanceInstanceFlexibilityOverride setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Name of the minimum CPU platform to be used by this instance. e.g. 'Intel Ice Lake'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinCpuPlatform() {
+    return minCpuPlatform;
+  }
+
+  /**
+   * Name of the minimum CPU platform to be used by this instance. e.g. 'Intel Ice Lake'.
+   * @param minCpuPlatform minCpuPlatform or {@code null} for none
+   */
+  public ManagedInstanceInstanceFlexibilityOverride setMinCpuPlatform(java.lang.String minCpuPlatform) {
+    this.minCpuPlatform = minCpuPlatform;
     return this;
   }
 

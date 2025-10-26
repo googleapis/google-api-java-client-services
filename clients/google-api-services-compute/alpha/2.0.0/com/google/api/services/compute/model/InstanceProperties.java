@@ -272,6 +272,12 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private Tags tags;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadIdentityConfig workloadIdentityConfig;
+
+  /**
    * Controls for advanced machine-related behavior features. Note that for MachineImage, this is
    * not supported yet.
    * @return value or {@code null} for none
@@ -815,6 +821,21 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setTags(Tags tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public WorkloadIdentityConfig getWorkloadIdentityConfig() {
+    return workloadIdentityConfig;
+  }
+
+  /**
+   * @param workloadIdentityConfig workloadIdentityConfig or {@code null} for none
+   */
+  public InstanceProperties setWorkloadIdentityConfig(WorkloadIdentityConfig workloadIdentityConfig) {
+    this.workloadIdentityConfig = workloadIdentityConfig;
     return this;
   }
 

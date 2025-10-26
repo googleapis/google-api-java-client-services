@@ -31,7 +31,7 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy extends com.goog
 
   /**
    * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308,
-   * 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status
+   * 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status
    * code more than once.
    * The value may be {@code null}.
    */
@@ -49,7 +49,7 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy extends com.goog
 
   /**
    * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308,
-   * 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status
+   * 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status
    * code more than once.
    * @return value or {@code null} for none
    */
@@ -59,7 +59,7 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy extends com.goog
 
   /**
    * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308,
-   * 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status
+   * 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status
    * code more than once.
    * @param code code or {@code null} for none
    */

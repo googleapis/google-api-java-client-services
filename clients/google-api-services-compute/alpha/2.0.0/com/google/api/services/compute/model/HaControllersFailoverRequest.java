@@ -34,10 +34,34 @@ public final class HaControllersFailoverRequest extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String failoverToZone;
+
+  /**
+   * Name of the destination zone for the failover. Deprecated: use failover_to_zone instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String primaryZone;
 
   /**
    * Name of the destination zone for the failover.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFailoverToZone() {
+    return failoverToZone;
+  }
+
+  /**
+   * Name of the destination zone for the failover.
+   * @param failoverToZone failoverToZone or {@code null} for none
+   */
+  public HaControllersFailoverRequest setFailoverToZone(java.lang.String failoverToZone) {
+    this.failoverToZone = failoverToZone;
+    return this;
+  }
+
+  /**
+   * Name of the destination zone for the failover. Deprecated: use failover_to_zone instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryZone() {
@@ -45,7 +69,7 @@ public final class HaControllersFailoverRequest extends com.google.api.client.js
   }
 
   /**
-   * Name of the destination zone for the failover.
+   * Name of the destination zone for the failover. Deprecated: use failover_to_zone instead.
    * @param primaryZone primaryZone or {@code null} for none
    */
   public HaControllersFailoverRequest setPrimaryZone(java.lang.String primaryZone) {

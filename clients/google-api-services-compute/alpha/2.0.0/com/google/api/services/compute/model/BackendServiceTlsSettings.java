@@ -39,28 +39,28 @@ public final class BackendServiceTlsSettings extends com.google.api.client.json.
   private java.lang.String authenticationConfig;
 
   /**
-   * Assigns the Managed Identity for the RegionBackendService Workload.
+   * Assigns the Managed Identity for the BackendService Workload.
    *
    * Use this property to configure the load balancer back-end to use certificates and roots of
    * trust provisioned by the Managed Workload Identity system.
    *
-   *  The `managedIdentity` property is the fully-specified SPIFFE ID to use in the SVID presented
-   * by the Load Balancer Workload.
+   *  The `identity` property is the fully-specified SPIFFE ID to use in the SVID presented by the
+   * Load Balancer Workload.
    *
-   *  The SPIFFE ID must be a resource starting with the "spiffe" scheme identifier, followed by the
-   * "trustDomain" property value, followed by the path to the Managed Workload Identity.
+   *  The SPIFFE ID must be a resource starting with the `trustDomain` property value, followed by
+   * the path to the Managed Workload Identity.
    *
-   *  Supported SPIFFE ID format:         - spiffe:ns//sa/
+   *  Supported SPIFFE ID format:         - ns//sa/
    *
    * The Trust Domain within the Managed Identity must refer to a valid Workload Identity Pool. The
    * TrustConfig and CertificateIssuanceConfig will be inherited from the Workload Identity Pool.
    *
-   *  Restrictions:         - If you set the `managedIdentity` property, you cannot manually set
-   * the following fields:         - tlsSettings.sni       - tlsSettings.subjectAltNames       -
+   *  Restrictions:         - If you set the `identity` property, you cannot manually set    the
+   * following fields:         - tlsSettings.sni       - tlsSettings.subjectAltNames       -
    * tlsSettings.authenticationConfig
    *
-   * When defining a `managedIdentity` for a RegionBackendServices, the corresponding Workload
-   * Identity Pool must have a ca_pool configured in the same region.
+   * When defining a `identity` for a RegionBackendServices, the corresponding Workload Identity
+   * Pool must have a ca_pool configured in the same region.
    *
    *  The system will set up a read-onlytlsSettings.authenticationConfig for the Managed Identity.
    * The value may be {@code null}.
@@ -115,28 +115,28 @@ public final class BackendServiceTlsSettings extends com.google.api.client.json.
   }
 
   /**
-   * Assigns the Managed Identity for the RegionBackendService Workload.
+   * Assigns the Managed Identity for the BackendService Workload.
    *
    * Use this property to configure the load balancer back-end to use certificates and roots of
    * trust provisioned by the Managed Workload Identity system.
    *
-   *  The `managedIdentity` property is the fully-specified SPIFFE ID to use in the SVID presented
-   * by the Load Balancer Workload.
+   *  The `identity` property is the fully-specified SPIFFE ID to use in the SVID presented by the
+   * Load Balancer Workload.
    *
-   *  The SPIFFE ID must be a resource starting with the "spiffe" scheme identifier, followed by the
-   * "trustDomain" property value, followed by the path to the Managed Workload Identity.
+   *  The SPIFFE ID must be a resource starting with the `trustDomain` property value, followed by
+   * the path to the Managed Workload Identity.
    *
-   *  Supported SPIFFE ID format:         - spiffe:ns//sa/
+   *  Supported SPIFFE ID format:         - ns//sa/
    *
    * The Trust Domain within the Managed Identity must refer to a valid Workload Identity Pool. The
    * TrustConfig and CertificateIssuanceConfig will be inherited from the Workload Identity Pool.
    *
-   *  Restrictions:         - If you set the `managedIdentity` property, you cannot manually set
-   * the following fields:         - tlsSettings.sni       - tlsSettings.subjectAltNames       -
+   *  Restrictions:         - If you set the `identity` property, you cannot manually set    the
+   * following fields:         - tlsSettings.sni       - tlsSettings.subjectAltNames       -
    * tlsSettings.authenticationConfig
    *
-   * When defining a `managedIdentity` for a RegionBackendServices, the corresponding Workload
-   * Identity Pool must have a ca_pool configured in the same region.
+   * When defining a `identity` for a RegionBackendServices, the corresponding Workload Identity
+   * Pool must have a ca_pool configured in the same region.
    *
    *  The system will set up a read-onlytlsSettings.authenticationConfig for the Managed Identity.
    * @return value or {@code null} for none
@@ -146,28 +146,28 @@ public final class BackendServiceTlsSettings extends com.google.api.client.json.
   }
 
   /**
-   * Assigns the Managed Identity for the RegionBackendService Workload.
+   * Assigns the Managed Identity for the BackendService Workload.
    *
    * Use this property to configure the load balancer back-end to use certificates and roots of
    * trust provisioned by the Managed Workload Identity system.
    *
-   *  The `managedIdentity` property is the fully-specified SPIFFE ID to use in the SVID presented
-   * by the Load Balancer Workload.
+   *  The `identity` property is the fully-specified SPIFFE ID to use in the SVID presented by the
+   * Load Balancer Workload.
    *
-   *  The SPIFFE ID must be a resource starting with the "spiffe" scheme identifier, followed by the
-   * "trustDomain" property value, followed by the path to the Managed Workload Identity.
+   *  The SPIFFE ID must be a resource starting with the `trustDomain` property value, followed by
+   * the path to the Managed Workload Identity.
    *
-   *  Supported SPIFFE ID format:         - spiffe:ns//sa/
+   *  Supported SPIFFE ID format:         - ns//sa/
    *
    * The Trust Domain within the Managed Identity must refer to a valid Workload Identity Pool. The
    * TrustConfig and CertificateIssuanceConfig will be inherited from the Workload Identity Pool.
    *
-   *  Restrictions:         - If you set the `managedIdentity` property, you cannot manually set
-   * the following fields:         - tlsSettings.sni       - tlsSettings.subjectAltNames       -
+   *  Restrictions:         - If you set the `identity` property, you cannot manually set    the
+   * following fields:         - tlsSettings.sni       - tlsSettings.subjectAltNames       -
    * tlsSettings.authenticationConfig
    *
-   * When defining a `managedIdentity` for a RegionBackendServices, the corresponding Workload
-   * Identity Pool must have a ca_pool configured in the same region.
+   * When defining a `identity` for a RegionBackendServices, the corresponding Workload Identity
+   * Pool must have a ca_pool configured in the same region.
    *
    *  The system will set up a read-onlytlsSettings.authenticationConfig for the Managed Identity.
    * @param identity identity or {@code null} for none

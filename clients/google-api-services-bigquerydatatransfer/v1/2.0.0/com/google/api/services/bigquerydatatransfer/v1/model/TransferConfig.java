@@ -107,6 +107,13 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   private Status error;
 
   /**
+   * The classification of the destination table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String managedTableType;
+
+  /**
    * Identifier. The resource name of the transfer config. Transfer config names have the form
    * either `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
    * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID, even
@@ -371,6 +378,23 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    */
   public TransferConfig setError(Status error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * The classification of the destination table.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagedTableType() {
+    return managedTableType;
+  }
+
+  /**
+   * The classification of the destination table.
+   * @param managedTableType managedTableType or {@code null} for none
+   */
+  public TransferConfig setManagedTableType(java.lang.String managedTableType) {
+    this.managedTableType = managedTableType;
     return this;
   }
 

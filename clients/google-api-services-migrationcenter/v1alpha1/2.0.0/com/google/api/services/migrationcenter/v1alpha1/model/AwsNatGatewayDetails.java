@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Configuration for network dependencies exports.
+ * Details of an AWS NAT Gateway.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,16 +27,16 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AssetsExportJobNetworkDependencies extends com.google.api.client.json.GenericJson {
+public final class AwsNatGatewayDetails extends com.google.api.client.json.GenericJson {
 
   @Override
-  public AssetsExportJobNetworkDependencies set(String fieldName, Object value) {
-    return (AssetsExportJobNetworkDependencies) super.set(fieldName, value);
+  public AwsNatGatewayDetails set(String fieldName, Object value) {
+    return (AwsNatGatewayDetails) super.set(fieldName, value);
   }
 
   @Override
-  public AssetsExportJobNetworkDependencies clone() {
-    return (AssetsExportJobNetworkDependencies) super.clone();
+  public AwsNatGatewayDetails clone() {
+    return (AwsNatGatewayDetails) super.clone();
   }
 
 }

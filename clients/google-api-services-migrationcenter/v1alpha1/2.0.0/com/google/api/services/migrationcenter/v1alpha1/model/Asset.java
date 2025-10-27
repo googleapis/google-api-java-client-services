@@ -52,6 +52,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private AwsCloudFrontDistributionDetails awsCloudFrontDistributionDetails;
 
   /**
+   * Output only. Asset information specific for AWS DynamoDB tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsDynamoDBTableDetails awsDynamodbTableDetails;
+
+  /**
    * Output only. Asset information specific for AWS ECS clusters.
    * The value may be {@code null}.
    */
@@ -87,11 +94,25 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private AwsLambdaFunctionDetails awsLambdaFunctionDetails;
 
   /**
+   * Output only. Asset information specific for AwsNatGatewayDetails
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsNatGatewayDetails awsNatGatewayDetails;
+
+  /**
    * Output only. Asset information specific for AWS Redshift
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsRedshiftDetails awsRedshiftDetails;
+
+  /**
+   * Output only. Asset information specific for AwsRoute53HostedZoneDetails
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsRoute53HostedZoneDetails awsRoute53HostedZoneDetails;
 
   /**
    * Output only. Asset information specific for AWS S3 buckets.
@@ -278,6 +299,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Asset information specific for AWS DynamoDB tables.
+   * @return value or {@code null} for none
+   */
+  public AwsDynamoDBTableDetails getAwsDynamodbTableDetails() {
+    return awsDynamodbTableDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS DynamoDB tables.
+   * @param awsDynamodbTableDetails awsDynamodbTableDetails or {@code null} for none
+   */
+  public Asset setAwsDynamodbTableDetails(AwsDynamoDBTableDetails awsDynamodbTableDetails) {
+    this.awsDynamodbTableDetails = awsDynamodbTableDetails;
+    return this;
+  }
+
+  /**
    * Output only. Asset information specific for AWS ECS clusters.
    * @return value or {@code null} for none
    */
@@ -363,6 +401,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Asset information specific for AwsNatGatewayDetails
+   * @return value or {@code null} for none
+   */
+  public AwsNatGatewayDetails getAwsNatGatewayDetails() {
+    return awsNatGatewayDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsNatGatewayDetails
+   * @param awsNatGatewayDetails awsNatGatewayDetails or {@code null} for none
+   */
+  public Asset setAwsNatGatewayDetails(AwsNatGatewayDetails awsNatGatewayDetails) {
+    this.awsNatGatewayDetails = awsNatGatewayDetails;
+    return this;
+  }
+
+  /**
    * Output only. Asset information specific for AWS Redshift
    * @return value or {@code null} for none
    */
@@ -376,6 +431,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setAwsRedshiftDetails(AwsRedshiftDetails awsRedshiftDetails) {
     this.awsRedshiftDetails = awsRedshiftDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsRoute53HostedZoneDetails
+   * @return value or {@code null} for none
+   */
+  public AwsRoute53HostedZoneDetails getAwsRoute53HostedZoneDetails() {
+    return awsRoute53HostedZoneDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsRoute53HostedZoneDetails
+   * @param awsRoute53HostedZoneDetails awsRoute53HostedZoneDetails or {@code null} for none
+   */
+  public Asset setAwsRoute53HostedZoneDetails(AwsRoute53HostedZoneDetails awsRoute53HostedZoneDetails) {
+    this.awsRoute53HostedZoneDetails = awsRoute53HostedZoneDetails;
     return this;
   }
 

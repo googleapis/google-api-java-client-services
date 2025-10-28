@@ -123,7 +123,8 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   private GoogleCloudApihubV1Documentation documentation;
 
   /**
-   * Optional. Fingerprint of the API resource.
+   * Optional. Fingerprint of the API resource. This must be unique for each API resource. It can
+   * neither be unset nor be updated to an existing fingerprint of another API resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -426,7 +427,8 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Fingerprint of the API resource.
+   * Optional. Fingerprint of the API resource. This must be unique for each API resource. It can
+   * neither be unset nor be updated to an existing fingerprint of another API resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getFingerprint() {
@@ -434,7 +436,8 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Fingerprint of the API resource.
+   * Optional. Fingerprint of the API resource. This must be unique for each API resource. It can
+   * neither be unset nor be updated to an existing fingerprint of another API resource.
    * @param fingerprint fingerprint or {@code null} for none
    */
   public GoogleCloudApihubV1Api setFingerprint(java.lang.String fingerprint) {

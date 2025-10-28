@@ -585,22 +585,22 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
-       primarily intended for internal usage.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -2538,9 +2538,9 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Update an API resource in the API hub. The following fields in the API can be updated: *
          * display_name * description * owner * documentation * target_user * team * business_unit *
-         * maturity_level * api_style * attributes The update_mask should be used to specify the fields
-         * being updated. Updating the owner field requires complete owner message and updates both owner
-         * and email fields.
+         * maturity_level * api_style * attributes * fingerprint The update_mask should be used to specify
+         * the fields being updated. Updating the owner field requires complete owner message and updates
+         * both owner and email fields.
          *
          * Create a request for the method "apis.patch".
          *
@@ -2568,9 +2568,9 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           /**
            * Update an API resource in the API hub. The following fields in the API can be updated: *
            * display_name * description * owner * documentation * target_user * team * business_unit *
-           * maturity_level * api_style * attributes The update_mask should be used to specify the fields
-           * being updated. Updating the owner field requires complete owner message and updates both owner
-           * and email fields.
+           * maturity_level * api_style * attributes * fingerprint The update_mask should be used to specify
+           * the fields being updated. Updating the owner field requires complete owner message and updates
+           * both owner and email fields.
            *
            * Create a request for the method "apis.patch".
            *
@@ -4787,10 +4787,14 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
             /**
              * Update an operation in an API version. The following fields in the ApiOperation resource can be
              * updated: * details.description * details.documentation * details.http_operation.path *
-             * details.http_operation.method * details.deprecated * attributes The update_mask should be used to
-             * specify the fields being updated. An operation can be updated only if the operation was created
-             * via CreateApiOperation API. If the operation was created by parsing the spec, then it can be
-             * edited by updating the spec.
+             * details.http_operation.method * details.deprecated * attributes * details.mcp_tool.title *
+             * details.mcp_tool.description * details.input_schema * details.output_schema *
+             * details.mcp_tool.annotations.title * details.mcp_tool.annotations.read_only_hint *
+             * details.mcp_tool.annotations.destructive_hint * details.mcp_tool.annotations.idempotent_hint *
+             * details.mcp_tool.annotations.open_world_hint * details.mcp_tool.annotations.additional_hints The
+             * update_mask should be used to specify the fields being updated. An operation can be updated only
+             * if the operation was created via CreateApiOperation API. If the operation was created by parsing
+             * the spec, then it can be edited by updating the spec.
              *
              * Create a request for the method "operations.patch".
              *
@@ -4819,10 +4823,14 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
               /**
                * Update an operation in an API version. The following fields in the ApiOperation resource can be
                * updated: * details.description * details.documentation * details.http_operation.path *
-               * details.http_operation.method * details.deprecated * attributes The update_mask should be used
-               * to specify the fields being updated. An operation can be updated only if the operation was
-               * created via CreateApiOperation API. If the operation was created by parsing the spec, then it
-               * can be edited by updating the spec.
+               * details.http_operation.method * details.deprecated * attributes * details.mcp_tool.title *
+               * details.mcp_tool.description * details.input_schema * details.output_schema *
+               * details.mcp_tool.annotations.title * details.mcp_tool.annotations.read_only_hint *
+               * details.mcp_tool.annotations.destructive_hint * details.mcp_tool.annotations.idempotent_hint *
+               * details.mcp_tool.annotations.open_world_hint * details.mcp_tool.annotations.additional_hints
+               * The update_mask should be used to specify the fields being updated. An operation can be updated
+               * only if the operation was created via CreateApiOperation API. If the operation was created by
+               * parsing the spec, then it can be edited by updating the spec.
                *
                * Create a request for the method "operations.patch".
                *
@@ -12896,6 +12904,40 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           /** The standard list page token. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** When set to `true`, operations that are reachable are returned as normal, and those that are
+         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
+         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
+         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
+         explicitly documented otherwise in service or product specific documentation.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+           * This can only be `true` when reading across collections e.g. when `parent` is set to
+           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 

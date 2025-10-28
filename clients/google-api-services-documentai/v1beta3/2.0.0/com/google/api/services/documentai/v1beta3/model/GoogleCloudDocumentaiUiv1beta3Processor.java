@@ -29,7 +29,7 @@ package com.google.api.services.documentai.v1beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDocumentaiUiv1beta3Processor extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. SchemaVersion used by the Processor. It is the same as Processor's
@@ -89,7 +89,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDocumentaiV1beta3ProcessorVersionAlias> processorVersionAliases;
+  private java.util.List<GoogleCloudDocumentaiUiv1beta3ProcessorVersionAlias> processorVersionAliases;
 
   /**
    * Output only. Reserved for future use.
@@ -136,7 +136,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * `projects/{project}/locations/{location}/schemas/{schema}/schemaVersions/{schema_version}
    * @param activeSchemaVersion activeSchemaVersion or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setActiveSchemaVersion(java.lang.String activeSchemaVersion) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setActiveSchemaVersion(java.lang.String activeSchemaVersion) {
     this.activeSchemaVersion = activeSchemaVersion;
     return this;
   }
@@ -153,7 +153,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * Output only. The time the processor was created.
    * @param createTime createTime or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setCreateTime(String createTime) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -170,7 +170,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * The default processor version.
    * @param defaultProcessorVersion defaultProcessorVersion or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setDefaultProcessorVersion(java.lang.String defaultProcessorVersion) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setDefaultProcessorVersion(java.lang.String defaultProcessorVersion) {
     this.defaultProcessorVersion = defaultProcessorVersion;
     return this;
   }
@@ -187,7 +187,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * The display name of the processor.
    * @param displayName displayName or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setDisplayName(java.lang.String displayName) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
     return this;
   }
@@ -206,7 +206,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * decryption in CMEK scenarios.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setKmsKeyName(java.lang.String kmsKeyName) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setKmsKeyName(java.lang.String kmsKeyName) {
     this.kmsKeyName = kmsKeyName;
     return this;
   }
@@ -225,7 +225,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * `projects/{project}/locations/{location}/processors/{processor}`
    * @param name name or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setName(java.lang.String name) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -242,7 +242,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * Output only. Immutable. The http endpoint that can be called to invoke processing.
    * @param processEndpoint processEndpoint or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setProcessEndpoint(java.lang.String processEndpoint) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setProcessEndpoint(java.lang.String processEndpoint) {
     this.processEndpoint = processEndpoint;
     return this;
   }
@@ -251,7 +251,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * Output only. The processor version aliases.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDocumentaiV1beta3ProcessorVersionAlias> getProcessorVersionAliases() {
+  public java.util.List<GoogleCloudDocumentaiUiv1beta3ProcessorVersionAlias> getProcessorVersionAliases() {
     return processorVersionAliases;
   }
 
@@ -259,7 +259,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * Output only. The processor version aliases.
    * @param processorVersionAliases processorVersionAliases or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setProcessorVersionAliases(java.util.List<GoogleCloudDocumentaiV1beta3ProcessorVersionAlias> processorVersionAliases) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setProcessorVersionAliases(java.util.List<GoogleCloudDocumentaiUiv1beta3ProcessorVersionAlias> processorVersionAliases) {
     this.processorVersionAliases = processorVersionAliases;
     return this;
   }
@@ -276,7 +276,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * Output only. Reserved for future use.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
     this.satisfiesPzi = satisfiesPzi;
     return this;
   }
@@ -293,7 +293,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * Output only. Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
     return this;
   }
@@ -310,7 +310,7 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * Output only. The state of the processor.
    * @param state state or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setState(java.lang.String state) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setState(java.lang.String state) {
     this.state = state;
     return this;
   }
@@ -329,19 +329,19 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    * types, see FetchProcessorTypes.
    * @param type type or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3Processor setType(java.lang.String type) {
+  public GoogleCloudDocumentaiUiv1beta3Processor setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta3Processor set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiV1beta3Processor) super.set(fieldName, value);
+  public GoogleCloudDocumentaiUiv1beta3Processor set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiUiv1beta3Processor) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta3Processor clone() {
-    return (GoogleCloudDocumentaiV1beta3Processor) super.clone();
+  public GoogleCloudDocumentaiUiv1beta3Processor clone() {
+    return (GoogleCloudDocumentaiUiv1beta3Processor) super.clone();
   }
 
 }

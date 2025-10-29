@@ -31,6 +31,14 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidationResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The name of the rule resource that is used for validation. Format:
+   * `projects/{project}/locations/{location}/rules/{rule}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rule;
+
+  /**
    * The description of the validation rule.
    * The value may be {@code null}.
    */
@@ -38,7 +46,7 @@ public final class GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidati
   private java.lang.String ruleDescription;
 
   /**
-   * The name of the validation rule.
+   * The display name of the validation rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,6 +68,25 @@ public final class GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidati
   private java.lang.String validationResultType;
 
   /**
+   * Optional. The name of the rule resource that is used for validation. Format:
+   * `projects/{project}/locations/{location}/rules/{rule}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRule() {
+    return rule;
+  }
+
+  /**
+   * Optional. The name of the rule resource that is used for validation. Format:
+   * `projects/{project}/locations/{location}/rules/{rule}`
+   * @param rule rule or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidationResult setRule(java.lang.String rule) {
+    this.rule = rule;
+    return this;
+  }
+
+  /**
    * The description of the validation rule.
    * @return value or {@code null} for none
    */
@@ -77,7 +104,7 @@ public final class GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidati
   }
 
   /**
-   * The name of the validation rule.
+   * The display name of the validation rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuleName() {
@@ -85,7 +112,7 @@ public final class GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidati
   }
 
   /**
-   * The name of the validation rule.
+   * The display name of the validation rule.
    * @param ruleName ruleName or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidationResult setRuleName(java.lang.String ruleName) {

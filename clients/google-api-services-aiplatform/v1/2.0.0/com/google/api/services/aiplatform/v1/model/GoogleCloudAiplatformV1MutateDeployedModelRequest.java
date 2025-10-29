@@ -34,7 +34,9 @@ public final class GoogleCloudAiplatformV1MutateDeployedModelRequest extends com
    * mutated: * `min_replica_count` in either DedicatedResources or AutomaticResources *
    * `max_replica_count` in either DedicatedResources or AutomaticResources *
    * `required_replica_count` in DedicatedResources * autoscaling_metric_specs *
-   * `disable_container_logging` (v1 only) * `enable_container_logging` (v1beta1 only)
+   * `disable_container_logging` (v1 only) * `enable_container_logging` (v1beta1 only) *
+   * `scale_to_zero_spec` in DedicatedResources (v1beta1 only) * `initial_replica_count` in
+   * DedicatedResources (v1beta1 only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +54,9 @@ public final class GoogleCloudAiplatformV1MutateDeployedModelRequest extends com
    * mutated: * `min_replica_count` in either DedicatedResources or AutomaticResources *
    * `max_replica_count` in either DedicatedResources or AutomaticResources *
    * `required_replica_count` in DedicatedResources * autoscaling_metric_specs *
-   * `disable_container_logging` (v1 only) * `enable_container_logging` (v1beta1 only)
+   * `disable_container_logging` (v1 only) * `enable_container_logging` (v1beta1 only) *
+   * `scale_to_zero_spec` in DedicatedResources (v1beta1 only) * `initial_replica_count` in
+   * DedicatedResources (v1beta1 only)
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1DeployedModel getDeployedModel() {
@@ -64,7 +68,9 @@ public final class GoogleCloudAiplatformV1MutateDeployedModelRequest extends com
    * mutated: * `min_replica_count` in either DedicatedResources or AutomaticResources *
    * `max_replica_count` in either DedicatedResources or AutomaticResources *
    * `required_replica_count` in DedicatedResources * autoscaling_metric_specs *
-   * `disable_container_logging` (v1 only) * `enable_container_logging` (v1beta1 only)
+   * `disable_container_logging` (v1 only) * `enable_container_logging` (v1beta1 only) *
+   * `scale_to_zero_spec` in DedicatedResources (v1beta1 only) * `initial_replica_count` in
+   * DedicatedResources (v1beta1 only)
    * @param deployedModel deployedModel or {@code null} for none
    */
   public GoogleCloudAiplatformV1MutateDeployedModelRequest setDeployedModel(GoogleCloudAiplatformV1DeployedModel deployedModel) {

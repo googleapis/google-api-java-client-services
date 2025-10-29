@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1OptimizePromptRequest extends com
   private GoogleCloudAiplatformV1beta1Content content;
 
   /**
+   * Optional. The target model to optimize the prompt for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String optimizationTarget;
+
+  /**
    * Required. The content to optimize.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1beta1OptimizePromptRequest extends com
    */
   public GoogleCloudAiplatformV1beta1OptimizePromptRequest setContent(GoogleCloudAiplatformV1beta1Content content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Optional. The target model to optimize the prompt for.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOptimizationTarget() {
+    return optimizationTarget;
+  }
+
+  /**
+   * Optional. The target model to optimize the prompt for.
+   * @param optimizationTarget optimizationTarget or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1OptimizePromptRequest setOptimizationTarget(java.lang.String optimizationTarget) {
+    this.optimizationTarget = optimizationTarget;
     return this;
   }
 

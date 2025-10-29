@@ -30,6 +30,15 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The standard list filter that will be applied to the retrieved memories. More detail
+   * in [AIP-160](https://google.aip.dev/160). Supported fields: * `fact` * `create_time` *
+   * `update_time`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
+
+  /**
    * Required. The scope of the memories to retrieve. A memory must have exactly the same scope
    * (`Memory.scope`) as the scope provided here to be retrieved (same keys and values). Order does
    * not matter, but it is case-sensitive.
@@ -51,6 +60,27 @@ public final class GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest extends c
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1RetrieveMemoriesRequestSimpleRetrievalParams simpleRetrievalParams;
+
+  /**
+   * Optional. The standard list filter that will be applied to the retrieved memories. More detail
+   * in [AIP-160](https://google.aip.dev/160). Supported fields: * `fact` * `create_time` *
+   * `update_time`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * Optional. The standard list filter that will be applied to the retrieved memories. More detail
+   * in [AIP-160](https://google.aip.dev/160). Supported fields: * `fact` * `create_time` *
+   * `update_time`
+   * @param filter filter or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest setFilter(java.lang.String filter) {
+    this.filter = filter;
+    return this;
+  }
 
   /**
    * Required. The scope of the memories to retrieve. A memory must have exactly the same scope

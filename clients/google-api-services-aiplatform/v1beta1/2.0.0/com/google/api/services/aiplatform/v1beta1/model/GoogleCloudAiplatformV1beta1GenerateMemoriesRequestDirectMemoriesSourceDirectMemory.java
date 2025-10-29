@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequestDirectMemo
   private java.lang.String fact;
 
   /**
+   * Optional. The topics that the consolidated memories should be associated with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> topics;
+
+  /**
    * Required. The fact to consolidate with existing memories.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequestDirectMemo
    */
   public GoogleCloudAiplatformV1beta1GenerateMemoriesRequestDirectMemoriesSourceDirectMemory setFact(java.lang.String fact) {
     this.fact = fact;
+    return this;
+  }
+
+  /**
+   * Optional. The topics that the consolidated memories should be associated with.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> getTopics() {
+    return topics;
+  }
+
+  /**
+   * Optional. The topics that the consolidated memories should be associated with.
+   * @param topics topics or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateMemoriesRequestDirectMemoriesSourceDirectMemory setTopics(java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> topics) {
+    this.topics = topics;
     return this;
   }
 

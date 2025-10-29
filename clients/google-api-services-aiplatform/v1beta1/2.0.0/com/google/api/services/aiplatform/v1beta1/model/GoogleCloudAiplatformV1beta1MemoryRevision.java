@@ -44,6 +44,21 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   private String expireTime;
 
   /**
+   * Output only. The extracted memories from the source content before consolidation when the
+   * memory was updated via GenerateMemories. This information was used to modify an existing Memory
+   * via Consolidation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1IntermediateExtractedMemory> extractedMemories;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1IntermediateExtractedMemory used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1IntermediateExtractedMemory.class);
+  }
+
+  /**
    * Output only. The fact of the Memory Revision. This corresponds to the `fact` field of the
    * parent Memory at the time of revision creation.
    * The value may be {@code null}.
@@ -98,6 +113,27 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
    */
   public GoogleCloudAiplatformV1beta1MemoryRevision setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Output only. The extracted memories from the source content before consolidation when the
+   * memory was updated via GenerateMemories. This information was used to modify an existing Memory
+   * via Consolidation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1IntermediateExtractedMemory> getExtractedMemories() {
+    return extractedMemories;
+  }
+
+  /**
+   * Output only. The extracted memories from the source content before consolidation when the
+   * memory was updated via GenerateMemories. This information was used to modify an existing Memory
+   * via Consolidation.
+   * @param extractedMemories extractedMemories or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MemoryRevision setExtractedMemories(java.util.List<GoogleCloudAiplatformV1beta1IntermediateExtractedMemory> extractedMemories) {
+    this.extractedMemories = extractedMemories;
     return this;
   }
 

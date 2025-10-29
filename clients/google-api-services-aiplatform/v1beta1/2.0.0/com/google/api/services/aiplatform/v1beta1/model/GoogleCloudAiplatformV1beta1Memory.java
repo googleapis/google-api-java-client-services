@@ -106,6 +106,13 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
   private java.util.Map<String, java.lang.String> scope;
 
   /**
+   * Optional. The Topics of the Memory.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> topics;
+
+  /**
    * Optional. Input only. The TTL for this resource. The expiration time is computed: now + TTL.
    * The value may be {@code null}.
    */
@@ -298,6 +305,23 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Memory setScope(java.util.Map<String, java.lang.String> scope) {
     this.scope = scope;
+    return this;
+  }
+
+  /**
+   * Optional. The Topics of the Memory.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> getTopics() {
+    return topics;
+  }
+
+  /**
+   * Optional. The Topics of the Memory.
+   * @param topics topics or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Memory setTopics(java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> topics) {
+    this.topics = topics;
     return this;
   }
 

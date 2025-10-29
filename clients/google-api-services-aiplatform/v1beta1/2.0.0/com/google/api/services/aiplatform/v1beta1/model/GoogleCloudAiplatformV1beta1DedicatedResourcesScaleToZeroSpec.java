@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1DedicatedResourcesScaleToZeroSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Duration of no traffic before scaling to zero. [MinValue=3600] (5 minutes)
+   * Optional. Duration of no traffic before scaling to zero. [MinValue=300] (5 minutes)
    * [MaxValue=28800] (8 hours)
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResourcesScaleToZeroSpec
   private String minScaleupPeriod;
 
   /**
-   * Optional. Duration of no traffic before scaling to zero. [MinValue=3600] (5 minutes)
+   * Optional. Duration of no traffic before scaling to zero. [MinValue=300] (5 minutes)
    * [MaxValue=28800] (8 hours)
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResourcesScaleToZeroSpec
   }
 
   /**
-   * Optional. Duration of no traffic before scaling to zero. [MinValue=3600] (5 minutes)
+   * Optional. Duration of no traffic before scaling to zero. [MinValue=300] (5 minutes)
    * [MaxValue=28800] (8 hours)
    * @param idleScaledownPeriod idleScaledownPeriod or {@code null} for none
    */

@@ -37,15 +37,14 @@ public final class GoogleCloudAiplatformV1beta1RagManagedDbConfig extends com.go
   private GoogleCloudAiplatformV1beta1RagManagedDbConfigBasic basic;
 
   /**
-   * Sets the RagManagedDb to the Enterprise tier. This is the default tier if not explicitly
-   * chosen.
+   * Sets the RagManagedDb to the Enterprise tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1RagManagedDbConfigEnterprise enterprise;
 
   /**
-   * Sets the RagManagedDb to the Scaled tier.
+   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not explicitly chosen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +75,7 @@ public final class GoogleCloudAiplatformV1beta1RagManagedDbConfig extends com.go
   }
 
   /**
-   * Sets the RagManagedDb to the Enterprise tier. This is the default tier if not explicitly
-   * chosen.
+   * Sets the RagManagedDb to the Enterprise tier.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagManagedDbConfigEnterprise getEnterprise() {
@@ -85,8 +83,7 @@ public final class GoogleCloudAiplatformV1beta1RagManagedDbConfig extends com.go
   }
 
   /**
-   * Sets the RagManagedDb to the Enterprise tier. This is the default tier if not explicitly
-   * chosen.
+   * Sets the RagManagedDb to the Enterprise tier.
    * @param enterprise enterprise or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagManagedDbConfig setEnterprise(GoogleCloudAiplatformV1beta1RagManagedDbConfigEnterprise enterprise) {
@@ -95,7 +92,7 @@ public final class GoogleCloudAiplatformV1beta1RagManagedDbConfig extends com.go
   }
 
   /**
-   * Sets the RagManagedDb to the Scaled tier.
+   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not explicitly chosen.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagManagedDbConfigScaled getScaled() {
@@ -103,7 +100,7 @@ public final class GoogleCloudAiplatformV1beta1RagManagedDbConfig extends com.go
   }
 
   /**
-   * Sets the RagManagedDb to the Scaled tier.
+   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not explicitly chosen.
    * @param scaled scaled or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagManagedDbConfig setScaled(GoogleCloudAiplatformV1beta1RagManagedDbConfigScaled scaled) {

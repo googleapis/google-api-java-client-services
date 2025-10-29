@@ -31,13 +31,6 @@ package com.google.api.services.serviceusage.v1beta1.model;
 public final class McpPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * ContentSecurity contains the content security related fields of a MCP policy.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ContentSecurity contentSecurity;
-
-  /**
    * Output only. The time the policy was created. For singleton policies (such as the `default`
    * policy), this is the first touch of the policy.
    * The value may be {@code null}.
@@ -81,23 +74,6 @@ public final class McpPolicy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
-
-  /**
-   * ContentSecurity contains the content security related fields of a MCP policy.
-   * @return value or {@code null} for none
-   */
-  public ContentSecurity getContentSecurity() {
-    return contentSecurity;
-  }
-
-  /**
-   * ContentSecurity contains the content security related fields of a MCP policy.
-   * @param contentSecurity contentSecurity or {@code null} for none
-   */
-  public McpPolicy setContentSecurity(ContentSecurity contentSecurity) {
-    this.contentSecurity = contentSecurity;
-    return this;
-  }
 
   /**
    * Output only. The time the policy was created. For singleton policies (such as the `default`

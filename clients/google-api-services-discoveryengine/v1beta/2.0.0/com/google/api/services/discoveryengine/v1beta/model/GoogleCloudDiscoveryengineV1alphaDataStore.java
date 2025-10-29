@@ -69,6 +69,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private java.lang.String configurableBillingApproach;
 
   /**
+   * Output only. The timestamp when configurable_billing_approach was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String configurableBillingApproachUpdateTime;
+
+  /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior
    * defaults to ContentConfig.NO_CONTENT.
    * The value may be {@code null}.
@@ -301,6 +308,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setConfigurableBillingApproach(java.lang.String configurableBillingApproach) {
     this.configurableBillingApproach = configurableBillingApproach;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when configurable_billing_approach was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getConfigurableBillingApproachUpdateTime() {
+    return configurableBillingApproachUpdateTime;
+  }
+
+  /**
+   * Output only. The timestamp when configurable_billing_approach was last updated.
+   * @param configurableBillingApproachUpdateTime configurableBillingApproachUpdateTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setConfigurableBillingApproachUpdateTime(String configurableBillingApproachUpdateTime) {
+    this.configurableBillingApproachUpdateTime = configurableBillingApproachUpdateTime;
     return this;
   }
 

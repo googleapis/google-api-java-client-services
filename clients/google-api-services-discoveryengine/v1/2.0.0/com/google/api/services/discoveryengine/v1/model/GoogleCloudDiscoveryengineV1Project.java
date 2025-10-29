@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1Project extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The current status of the project's configurable billing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus configurableBillingStatus;
+
+  /**
    * Output only. The timestamp when this project is created.
    * The value may be {@code null}.
    */
@@ -66,6 +73,23 @@ public final class GoogleCloudDiscoveryengineV1Project extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudDiscoveryengineV1ProjectServiceTerms> serviceTermsMap;
+
+  /**
+   * Output only. The current status of the project's configurable billing.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus getConfigurableBillingStatus() {
+    return configurableBillingStatus;
+  }
+
+  /**
+   * Output only. The current status of the project's configurable billing.
+   * @param configurableBillingStatus configurableBillingStatus or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Project setConfigurableBillingStatus(GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus configurableBillingStatus) {
+    this.configurableBillingStatus = configurableBillingStatus;
+    return this;
+  }
 
   /**
    * Output only. The timestamp when this project is created.

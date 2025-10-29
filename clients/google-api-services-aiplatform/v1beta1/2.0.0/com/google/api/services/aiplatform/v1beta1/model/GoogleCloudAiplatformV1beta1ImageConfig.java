@@ -38,6 +38,20 @@ public final class GoogleCloudAiplatformV1beta1ImageConfig extends com.google.ap
   private java.lang.String aspectRatio;
 
   /**
+   * Optional. The image output format for generated images.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ImageConfigImageOutputOptions imageOutputOptions;
+
+  /**
+   * Optional. Controls whether the model can generate people.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String personGeneration;
+
+  /**
    * Optional. The desired aspect ratio for the generated images. The following aspect ratios are
    * supported: "1:1" "2:3", "3:2" "3:4", "4:3" "4:5", "5:4" "9:16", "16:9" "21:9"
    * @return value or {@code null} for none
@@ -53,6 +67,40 @@ public final class GoogleCloudAiplatformV1beta1ImageConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1ImageConfig setAspectRatio(java.lang.String aspectRatio) {
     this.aspectRatio = aspectRatio;
+    return this;
+  }
+
+  /**
+   * Optional. The image output format for generated images.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImageConfigImageOutputOptions getImageOutputOptions() {
+    return imageOutputOptions;
+  }
+
+  /**
+   * Optional. The image output format for generated images.
+   * @param imageOutputOptions imageOutputOptions or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImageConfig setImageOutputOptions(GoogleCloudAiplatformV1beta1ImageConfigImageOutputOptions imageOutputOptions) {
+    this.imageOutputOptions = imageOutputOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether the model can generate people.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPersonGeneration() {
+    return personGeneration;
+  }
+
+  /**
+   * Optional. Controls whether the model can generate people.
+   * @param personGeneration personGeneration or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImageConfig setPersonGeneration(java.lang.String personGeneration) {
+    this.personGeneration = personGeneration;
     return this;
   }
 

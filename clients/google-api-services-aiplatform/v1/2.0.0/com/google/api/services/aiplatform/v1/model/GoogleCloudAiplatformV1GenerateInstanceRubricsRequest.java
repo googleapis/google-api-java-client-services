@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Agent configuration, required for agent-based rubric generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EvaluationInstanceAgentConfig agentConfig;
+
+  /**
    * Required. The prompt to generate rubrics from. For single-turn queries, this is a single
    * instance. For multi-turn queries, this is a repeated field that contains conversation history +
    * latest request.
@@ -60,6 +67,23 @@ public final class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1RubricGenerationSpec rubricGenerationSpec;
+
+  /**
+   * Optional. Agent configuration, required for agent-based rubric generation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationInstanceAgentConfig getAgentConfig() {
+    return agentConfig;
+  }
+
+  /**
+   * Optional. Agent configuration, required for agent-based rubric generation.
+   * @param agentConfig agentConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateInstanceRubricsRequest setAgentConfig(GoogleCloudAiplatformV1EvaluationInstanceAgentConfig agentConfig) {
+    this.agentConfig = agentConfig;
+    return this;
+  }
 
   /**
    * Required. The prompt to generate rubrics from. For single-turn queries, this is a single

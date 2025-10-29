@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1beta1CandidateResponse extends com.goo
   private java.lang.String candidate;
 
   /**
+   * Optional. Intermediate events (such as tool calls and responses) that led to the final
+   * response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1Content> events;
+
+  /**
    * Text response.
    * The value may be {@code null}.
    */
@@ -64,6 +72,25 @@ public final class GoogleCloudAiplatformV1beta1CandidateResponse extends com.goo
    */
   public GoogleCloudAiplatformV1beta1CandidateResponse setCandidate(java.lang.String candidate) {
     this.candidate = candidate;
+    return this;
+  }
+
+  /**
+   * Optional. Intermediate events (such as tool calls and responses) that led to the final
+   * response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1Content> getEvents() {
+    return events;
+  }
+
+  /**
+   * Optional. Intermediate events (such as tool calls and responses) that led to the final
+   * response.
+   * @param events events or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CandidateResponse setEvents(java.util.List<GoogleCloudAiplatformV1beta1Content> events) {
+    this.events = events;
     return this;
   }
 

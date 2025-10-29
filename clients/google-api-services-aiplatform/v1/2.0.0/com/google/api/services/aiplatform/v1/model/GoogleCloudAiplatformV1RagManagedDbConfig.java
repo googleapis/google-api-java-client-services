@@ -37,7 +37,7 @@ public final class GoogleCloudAiplatformV1RagManagedDbConfig extends com.google.
   private GoogleCloudAiplatformV1RagManagedDbConfigBasic basic;
 
   /**
-   * Sets the RagManagedDb to the Scaled tier.
+   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not explicitly chosen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleCloudAiplatformV1RagManagedDbConfig extends com.google.
   }
 
   /**
-   * Sets the RagManagedDb to the Scaled tier.
+   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not explicitly chosen.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1RagManagedDbConfigScaled getScaled() {
@@ -76,7 +76,7 @@ public final class GoogleCloudAiplatformV1RagManagedDbConfig extends com.google.
   }
 
   /**
-   * Sets the RagManagedDb to the Scaled tier.
+   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not explicitly chosen.
    * @param scaled scaled or {@code null} for none
    */
   public GoogleCloudAiplatformV1RagManagedDbConfig setScaled(GoogleCloudAiplatformV1RagManagedDbConfigScaled scaled) {

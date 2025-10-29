@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Agent config used to generate responses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentConfig agentConfig;
+
+  /**
    * Optional. Generation config.
    * The value may be {@code null}.
    */
@@ -44,6 +51,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
+
+  /**
+   * Optional. Agent config used to generate responses.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentConfig getAgentConfig() {
+    return agentConfig;
+  }
+
+  /**
+   * Optional. Agent config used to generate responses.
+   * @param agentConfig agentConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setAgentConfig(GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentConfig agentConfig) {
+    this.agentConfig = agentConfig;
+    return this;
+  }
 
   /**
    * Optional. Generation config.

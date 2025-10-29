@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1EvaluationRunMetric extends com.google
   private java.lang.String metric;
 
   /**
+   * The metric config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1Metric metricConfig;
+
+  /**
    * Spec for a pre-defined metric.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class GoogleCloudAiplatformV1EvaluationRunMetric extends com.google
    */
   public GoogleCloudAiplatformV1EvaluationRunMetric setMetric(java.lang.String metric) {
     this.metric = metric;
+    return this;
+  }
+
+  /**
+   * The metric config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Metric getMetricConfig() {
+    return metricConfig;
+  }
+
+  /**
+   * The metric config.
+   * @param metricConfig metricConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunMetric setMetricConfig(GoogleCloudAiplatformV1Metric metricConfig) {
+    this.metricConfig = metricConfig;
     return this;
   }
 

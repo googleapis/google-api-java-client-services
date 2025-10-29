@@ -72,6 +72,13 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   private java.lang.String serviceAccount;
 
   /**
+   * Deploy from source code files with a defined entrypoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec sourceCodeSpec;
+
+  /**
    * Optional. The OSS agent framework used to develop the agent. Currently supported values:
    * "google-adk", "langchain", "langgraph", "ag2", "llama-index", "custom".
    * @return value or {@code null} for none
@@ -167,6 +174,23 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpec setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Deploy from source code files with a defined entrypoint.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec getSourceCodeSpec() {
+    return sourceCodeSpec;
+  }
+
+  /**
+   * Deploy from source code files with a defined entrypoint.
+   * @param sourceCodeSpec sourceCodeSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpec setSourceCodeSpec(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec sourceCodeSpec) {
+    this.sourceCodeSpec = sourceCodeSpec;
     return this;
   }
 

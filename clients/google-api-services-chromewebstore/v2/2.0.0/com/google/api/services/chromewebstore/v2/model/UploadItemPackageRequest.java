@@ -29,54 +29,6 @@ package com.google.api.services.chromewebstore.v2.model;
 @SuppressWarnings("javadoc")
 public final class UploadItemPackageRequest extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Reference to the uploaded media.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Media blob;
-
-  /**
-   * Info about the media upload request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MediaRequestInfo mediaRequestInfo;
-
-  /**
-   * Reference to the uploaded media.
-   * @return value or {@code null} for none
-   */
-  public Media getBlob() {
-    return blob;
-  }
-
-  /**
-   * Reference to the uploaded media.
-   * @param blob blob or {@code null} for none
-   */
-  public UploadItemPackageRequest setBlob(Media blob) {
-    this.blob = blob;
-    return this;
-  }
-
-  /**
-   * Info about the media upload request.
-   * @return value or {@code null} for none
-   */
-  public MediaRequestInfo getMediaRequestInfo() {
-    return mediaRequestInfo;
-  }
-
-  /**
-   * Info about the media upload request.
-   * @param mediaRequestInfo mediaRequestInfo or {@code null} for none
-   */
-  public UploadItemPackageRequest setMediaRequestInfo(MediaRequestInfo mediaRequestInfo) {
-    this.mediaRequestInfo = mediaRequestInfo;
-    return this;
-  }
-
   @Override
   public UploadItemPackageRequest set(String fieldName, Object value) {
     return (UploadItemPackageRequest) super.set(fieldName, value);

@@ -30,14 +30,14 @@ package com.google.api.services.sqladmin.model;
 public final class InstancesCloneRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains details about the clone operation.
+   * Required. Contains details about the clone operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloneContext cloneContext;
 
   /**
-   * Contains details about the clone operation.
+   * Required. Contains details about the clone operation.
    * @return value or {@code null} for none
    */
   public CloneContext getCloneContext() {
@@ -45,7 +45,7 @@ public final class InstancesCloneRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Contains details about the clone operation.
+   * Required. Contains details about the clone operation.
    * @param cloneContext cloneContext or {@code null} for none
    */
   public InstancesCloneRequest setCloneContext(CloneContext cloneContext) {

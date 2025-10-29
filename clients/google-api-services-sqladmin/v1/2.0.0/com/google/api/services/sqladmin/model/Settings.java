@@ -123,6 +123,14 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean crashSafeReplicationEnabled;
 
   /**
+   * This parameter controls whether to allow using Data API to connect to the instance. Not allowed
+   * by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataApiAccess;
+
+  /**
    * Configuration for data cache.
    * The value may be {@code null}.
    */
@@ -588,6 +596,25 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setCrashSafeReplicationEnabled(java.lang.Boolean crashSafeReplicationEnabled) {
     this.crashSafeReplicationEnabled = crashSafeReplicationEnabled;
+    return this;
+  }
+
+  /**
+   * This parameter controls whether to allow using Data API to connect to the instance. Not allowed
+   * by default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataApiAccess() {
+    return dataApiAccess;
+  }
+
+  /**
+   * This parameter controls whether to allow using Data API to connect to the instance. Not allowed
+   * by default.
+   * @param dataApiAccess dataApiAccess or {@code null} for none
+   */
+  public Settings setDataApiAccess(java.lang.String dataApiAccess) {
+    this.dataApiAccess = dataApiAccess;
     return this;
   }
 

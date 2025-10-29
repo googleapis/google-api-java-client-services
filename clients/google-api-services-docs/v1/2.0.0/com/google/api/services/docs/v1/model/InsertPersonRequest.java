@@ -30,17 +30,17 @@ package com.google.api.services.docs.v1.model;
 public final class InsertPersonRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Inserts the person at the end of a header, footer, footnote or the document body.
+   * Inserts the person mention at the end of a header, footer, footnote or the document body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EndOfSegmentLocation endOfSegmentLocation;
 
   /**
-   * Inserts the person at a specific index in the document. The person mention must be inserted
-   * inside the bounds of an existing Paragraph. For instance, it cannot be inserted at a table's
-   * start index (i.e. between the table and its preceding paragraph). People cannot be inserted
-   * inside an equation.
+   * Inserts the person mention at a specific index in the document. The person mention must be
+   * inserted inside the bounds of an existing Paragraph. For instance, it cannot be inserted at a
+   * table's start index (i.e. between the table and its preceding paragraph). People cannot be
+   * inserted inside an equation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class InsertPersonRequest extends com.google.api.client.json.Generi
   private PersonProperties personProperties;
 
   /**
-   * Inserts the person at the end of a header, footer, footnote or the document body.
+   * Inserts the person mention at the end of a header, footer, footnote or the document body.
    * @return value or {@code null} for none
    */
   public EndOfSegmentLocation getEndOfSegmentLocation() {
@@ -62,7 +62,7 @@ public final class InsertPersonRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Inserts the person at the end of a header, footer, footnote or the document body.
+   * Inserts the person mention at the end of a header, footer, footnote or the document body.
    * @param endOfSegmentLocation endOfSegmentLocation or {@code null} for none
    */
   public InsertPersonRequest setEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
@@ -71,10 +71,10 @@ public final class InsertPersonRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Inserts the person at a specific index in the document. The person mention must be inserted
-   * inside the bounds of an existing Paragraph. For instance, it cannot be inserted at a table's
-   * start index (i.e. between the table and its preceding paragraph). People cannot be inserted
-   * inside an equation.
+   * Inserts the person mention at a specific index in the document. The person mention must be
+   * inserted inside the bounds of an existing Paragraph. For instance, it cannot be inserted at a
+   * table's start index (i.e. between the table and its preceding paragraph). People cannot be
+   * inserted inside an equation.
    * @return value or {@code null} for none
    */
   public Location getLocation() {
@@ -82,10 +82,10 @@ public final class InsertPersonRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Inserts the person at a specific index in the document. The person mention must be inserted
-   * inside the bounds of an existing Paragraph. For instance, it cannot be inserted at a table's
-   * start index (i.e. between the table and its preceding paragraph). People cannot be inserted
-   * inside an equation.
+   * Inserts the person mention at a specific index in the document. The person mention must be
+   * inserted inside the bounds of an existing Paragraph. For instance, it cannot be inserted at a
+   * table's start index (i.e. between the table and its preceding paragraph). People cannot be
+   * inserted inside an equation.
    * @param location location or {@code null} for none
    */
   public InsertPersonRequest setLocation(Location location) {

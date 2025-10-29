@@ -312,6 +312,152 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
         }
       }
       /**
+       * Gets the Scheduler config in the project/region.
+       *
+       * Create a request for the method "locations.getCmekConfig".
+       *
+       * This request holds the parameters needed by the cloudscheduler server.  After setting any
+       * optional parameters, call the {@link GetCmekConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The config name. For example: projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig
+       * @return the request
+       */
+      public GetCmekConfig getCmekConfig(java.lang.String name) throws java.io.IOException {
+        GetCmekConfig result = new GetCmekConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetCmekConfig extends CloudSchedulerRequest<com.google.api.services.cloudscheduler.v1.model.CmekConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cmekConfig$");
+
+        /**
+         * Gets the Scheduler config in the project/region.
+         *
+         * Create a request for the method "locations.getCmekConfig".
+         *
+         * This request holds the parameters needed by the the cloudscheduler server.  After setting any
+         * optional parameters, call the {@link GetCmekConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetCmekConfig#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The config name. For example: projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig
+         * @since 1.13
+         */
+        protected GetCmekConfig(java.lang.String name) {
+          super(CloudScheduler.this, "GET", REST_PATH, null, com.google.api.services.cloudscheduler.v1.model.CmekConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetCmekConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetCmekConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetCmekConfig setAccessToken(java.lang.String accessToken) {
+          return (GetCmekConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetCmekConfig setAlt(java.lang.String alt) {
+          return (GetCmekConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetCmekConfig setCallback(java.lang.String callback) {
+          return (GetCmekConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetCmekConfig setFields(java.lang.String fields) {
+          return (GetCmekConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetCmekConfig setKey(java.lang.String key) {
+          return (GetCmekConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetCmekConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetCmekConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetCmekConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetCmekConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetCmekConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetCmekConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetCmekConfig setUploadType(java.lang.String uploadType) {
+          return (GetCmekConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetCmekConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetCmekConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The config name. For example:
+         * projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The config name. For example: projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The config name. For example:
+         * projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig
+         */
+        public GetCmekConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetCmekConfig set(String parameterName, Object value) {
+          return (GetCmekConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -445,22 +591,22 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
-       primarily intended for internal usage.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -534,6 +680,163 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Initializes or Updates the a scheduler config.
+       *
+       * Create a request for the method "locations.updateCmekConfig".
+       *
+       * This request holds the parameters needed by the cloudscheduler server.  After setting any
+       * optional parameters, call the {@link UpdateCmekConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. The config resource name which includes the project and location and must end in
+       *        'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+       * @param content the {@link com.google.api.services.cloudscheduler.v1.model.CmekConfig}
+       * @return the request
+       */
+      public UpdateCmekConfig updateCmekConfig(java.lang.String name, com.google.api.services.cloudscheduler.v1.model.CmekConfig content) throws java.io.IOException {
+        UpdateCmekConfig result = new UpdateCmekConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateCmekConfig extends CloudSchedulerRequest<com.google.api.services.cloudscheduler.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cmekConfig$");
+
+        /**
+         * Initializes or Updates the a scheduler config.
+         *
+         * Create a request for the method "locations.updateCmekConfig".
+         *
+         * This request holds the parameters needed by the the cloudscheduler server.  After setting any
+         * optional parameters, call the {@link UpdateCmekConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateCmekConfig#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Identifier. The config resource name which includes the project and location and must end in
+       *        'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+         * @param content the {@link com.google.api.services.cloudscheduler.v1.model.CmekConfig}
+         * @since 1.13
+         */
+        protected UpdateCmekConfig(java.lang.String name, com.google.api.services.cloudscheduler.v1.model.CmekConfig content) {
+          super(CloudScheduler.this, "PATCH", REST_PATH, content, com.google.api.services.cloudscheduler.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+        }
+
+        @Override
+        public UpdateCmekConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateCmekConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateCmekConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateCmekConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateCmekConfig setAlt(java.lang.String alt) {
+          return (UpdateCmekConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateCmekConfig setCallback(java.lang.String callback) {
+          return (UpdateCmekConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateCmekConfig setFields(java.lang.String fields) {
+          return (UpdateCmekConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateCmekConfig setKey(java.lang.String key) {
+          return (UpdateCmekConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateCmekConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateCmekConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateCmekConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateCmekConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateCmekConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateCmekConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateCmekConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateCmekConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateCmekConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateCmekConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The config resource name which includes the project and location and must end
+         * in 'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The config resource name which includes the project and location and must end in
+       'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The config resource name which includes the project and location and must end
+         * in 'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+         */
+        public UpdateCmekConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. List of fields to be updated in this request. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. List of fields to be updated in this request.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. List of fields to be updated in this request. */
+        public UpdateCmekConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateCmekConfig set(String parameterName, Object value) {
+          return (UpdateCmekConfig) super.set(parameterName, value);
         }
       }
 
@@ -1179,12 +1482,13 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
          * @param name Optionally caller-specified in CreateJob, after which it becomes output only. The job name. For
          *        example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can
          *        contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For
-         *        more information, see [Identifying projects](https://cloud.google.com/resource-
-         *        manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
-         *        canonical ID for the job's location. The list of available locations can be obtained by
-         *        calling ListLocations. For more information, see
-         *        https://cloud.google.com/about/locations/. * `JOB_ID` can contain only letters ([A-Za-z]),
-         *        numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
+         *        more information, see [Identifying projects](/resource-manager/docs/creating-managing-
+         *        projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the job's location.
+         *        The list of available locations can be obtained by calling
+         *        [locations.list](/scheduler/docs/reference/rest/v1/projects.locations/list). For more
+         *        information, see [Cloud Scheduler locations](/scheduler/docs/locations). * `JOB_ID` can
+         *        contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The
+         *        maximum length is 500 characters.
          * @param content the {@link com.google.api.services.cloudscheduler.v1.model.Job}
          * @return the request
          */
@@ -1218,12 +1522,13 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * @param name Optionally caller-specified in CreateJob, after which it becomes output only. The job name. For
          *        example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can
          *        contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For
-         *        more information, see [Identifying projects](https://cloud.google.com/resource-
-         *        manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
-         *        canonical ID for the job's location. The list of available locations can be obtained by
-         *        calling ListLocations. For more information, see
-         *        https://cloud.google.com/about/locations/. * `JOB_ID` can contain only letters ([A-Za-z]),
-         *        numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
+         *        more information, see [Identifying projects](/resource-manager/docs/creating-managing-
+         *        projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the job's location.
+         *        The list of available locations can be obtained by calling
+         *        [locations.list](/scheduler/docs/reference/rest/v1/projects.locations/list). For more
+         *        information, see [Cloud Scheduler locations](/scheduler/docs/locations). * `JOB_ID` can
+         *        contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The
+         *        maximum length is 500 characters.
            * @param content the {@link com.google.api.services.cloudscheduler.v1.model.Job}
            * @since 1.13
            */
@@ -1296,13 +1601,13 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * Optionally caller-specified in CreateJob, after which it becomes output only. The job
            * name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. *
            * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:),
-           * or periods (.). For more information, see [Identifying
-           * projects](https://cloud.google.com/resource-manager/docs/creating-managing-
-           * projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the job's
-           * location. The list of available locations can be obtained by calling ListLocations. For
-           * more information, see https://cloud.google.com/about/locations/. * `JOB_ID` can contain
-           * only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum
-           * length is 500 characters.
+           * or periods (.). For more information, see [Identifying projects](/resource-
+           * manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
+           * canonical ID for the job's location. The list of available locations can be obtained by
+           * calling [locations.list](/scheduler/docs/reference/rest/v1/projects.locations/list).
+           * For more information, see [Cloud Scheduler locations](/scheduler/docs/locations). *
+           * `JOB_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or
+           * underscores (_). The maximum length is 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -1310,11 +1615,12 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           /** Optionally caller-specified in CreateJob, after which it becomes output only. The job name. For
          example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can contain
          letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information,
-         see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-
-         projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the job's location. The list
-         of available locations can be obtained by calling ListLocations. For more information, see
-         https://cloud.google.com/about/locations/. * `JOB_ID` can contain only letters ([A-Za-z]), numbers
-         ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
+         see [Identifying projects](/resource-manager/docs/creating-managing-projects#identifying_projects)
+         * `LOCATION_ID` is the canonical ID for the job's location. The list of available locations can be
+         obtained by calling [locations.list](/scheduler/docs/reference/rest/v1/projects.locations/list).
+         For more information, see [Cloud Scheduler locations](/scheduler/docs/locations). * `JOB_ID` can
+         contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum
+         length is 500 characters.
            */
           public java.lang.String getName() {
             return name;
@@ -1324,13 +1630,13 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * Optionally caller-specified in CreateJob, after which it becomes output only. The job
            * name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. *
            * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:),
-           * or periods (.). For more information, see [Identifying
-           * projects](https://cloud.google.com/resource-manager/docs/creating-managing-
-           * projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the job's
-           * location. The list of available locations can be obtained by calling ListLocations. For
-           * more information, see https://cloud.google.com/about/locations/. * `JOB_ID` can contain
-           * only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum
-           * length is 500 characters.
+           * or periods (.). For more information, see [Identifying projects](/resource-
+           * manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
+           * canonical ID for the job's location. The list of available locations can be obtained by
+           * calling [locations.list](/scheduler/docs/reference/rest/v1/projects.locations/list).
+           * For more information, see [Cloud Scheduler locations](/scheduler/docs/locations). *
+           * `JOB_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or
+           * underscores (_). The maximum length is 500 characters.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

@@ -78,12 +78,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Optionally caller-specified in CreateJob, after which it becomes output only. The job name. For
    * example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
-   * information, see [Identifying projects](https://cloud.google.com/resource-
-   * manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical
-   * ID for the job's location. The list of available locations can be obtained by calling
-   * ListLocations. For more information, see https://cloud.google.com/about/locations/. * `JOB_ID`
-   * can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The
-   * maximum length is 500 characters.
+   * information, see [Identifying projects](/resource-manager/docs/creating-managing-
+   * projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the job's location. The
+   * list of available locations can be obtained by calling
+   * [locations.list](/scheduler/docs/reference/rest/v1/projects.locations/list). For more
+   * information, see [Cloud Scheduler locations](/scheduler/docs/locations). * `JOB_ID` can contain
+   * only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length
+   * is 500 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,17 +115,17 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
    * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
-   * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general
-   * rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud
-   * Scheduler will never allow two simultaneously outstanding executions. For example, this implies
-   * that if the `n+1`th execution is scheduled to run at 16:00 but the `n`th execution takes until
-   * 16:15, the `n+1`th execution will not start until `16:15`. A scheduled start time will be
-   * delayed if the previous execution has not ended when its scheduled time occurs. If retry_count
-   * > 0 and a job attempt fails, the job will be tried a total of retry_count times, with
-   * exponential backoff, until the next scheduled start time. If retry_count is 0, a job attempt
-   * will not be retried if it fails. Instead the Cloud Scheduler system will wait for the next
-   * scheduled execution time. Setting retry_count to 0 does not prevent failed jobs from running
-   * according to schedule after the failure.
+   * [schedule](/scheduler/docs/configuring/cron-job-schedules) As a general rule, execution `n + 1`
+   * of a job will not begin until execution `n` has finished. Cloud Scheduler will never allow two
+   * simultaneously outstanding executions. For example, this implies that if the `n+1`th execution
+   * is scheduled to run at 16:00 but the `n`th execution takes until 16:15, the `n+1`th execution
+   * will not start until `16:15`. A scheduled start time will be delayed if the previous execution
+   * has not ended when its scheduled time occurs. If retry_count > 0 and a job attempt fails, the
+   * job will be tried a total of retry_count times, with exponential backoff, until the next
+   * scheduled start time. If retry_count is 0, a job attempt will not be retried if it fails.
+   * Instead the Cloud Scheduler system will wait for the next scheduled execution time. Setting
+   * retry_count to 0 does not prevent failed jobs from running according to schedule after the
+   * failure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,12 +280,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Optionally caller-specified in CreateJob, after which it becomes output only. The job name. For
    * example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
-   * information, see [Identifying projects](https://cloud.google.com/resource-
-   * manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical
-   * ID for the job's location. The list of available locations can be obtained by calling
-   * ListLocations. For more information, see https://cloud.google.com/about/locations/. * `JOB_ID`
-   * can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The
-   * maximum length is 500 characters.
+   * information, see [Identifying projects](/resource-manager/docs/creating-managing-
+   * projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the job's location. The
+   * list of available locations can be obtained by calling
+   * [locations.list](/scheduler/docs/reference/rest/v1/projects.locations/list). For more
+   * information, see [Cloud Scheduler locations](/scheduler/docs/locations). * `JOB_ID` can contain
+   * only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length
+   * is 500 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -295,12 +297,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Optionally caller-specified in CreateJob, after which it becomes output only. The job name. For
    * example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
-   * information, see [Identifying projects](https://cloud.google.com/resource-
-   * manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical
-   * ID for the job's location. The list of available locations can be obtained by calling
-   * ListLocations. For more information, see https://cloud.google.com/about/locations/. * `JOB_ID`
-   * can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The
-   * maximum length is 500 characters.
+   * information, see [Identifying projects](/resource-manager/docs/creating-managing-
+   * projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the job's location. The
+   * list of available locations can be obtained by calling
+   * [locations.list](/scheduler/docs/reference/rest/v1/projects.locations/list). For more
+   * information, see [Cloud Scheduler locations](/scheduler/docs/locations). * `JOB_ID` can contain
+   * only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length
+   * is 500 characters.
    * @param name name or {@code null} for none
    */
   public Job setName(java.lang.String name) {
@@ -363,17 +366,17 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
    * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
-   * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general
-   * rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud
-   * Scheduler will never allow two simultaneously outstanding executions. For example, this implies
-   * that if the `n+1`th execution is scheduled to run at 16:00 but the `n`th execution takes until
-   * 16:15, the `n+1`th execution will not start until `16:15`. A scheduled start time will be
-   * delayed if the previous execution has not ended when its scheduled time occurs. If retry_count
-   * > 0 and a job attempt fails, the job will be tried a total of retry_count times, with
-   * exponential backoff, until the next scheduled start time. If retry_count is 0, a job attempt
-   * will not be retried if it fails. Instead the Cloud Scheduler system will wait for the next
-   * scheduled execution time. Setting retry_count to 0 does not prevent failed jobs from running
-   * according to schedule after the failure.
+   * [schedule](/scheduler/docs/configuring/cron-job-schedules) As a general rule, execution `n + 1`
+   * of a job will not begin until execution `n` has finished. Cloud Scheduler will never allow two
+   * simultaneously outstanding executions. For example, this implies that if the `n+1`th execution
+   * is scheduled to run at 16:00 but the `n`th execution takes until 16:15, the `n+1`th execution
+   * will not start until `16:15`. A scheduled start time will be delayed if the previous execution
+   * has not ended when its scheduled time occurs. If retry_count > 0 and a job attempt fails, the
+   * job will be tried a total of retry_count times, with exponential backoff, until the next
+   * scheduled start time. If retry_count is 0, a job attempt will not be retried if it fails.
+   * Instead the Cloud Scheduler system will wait for the next scheduled execution time. Setting
+   * retry_count to 0 does not prevent failed jobs from running according to schedule after the
+   * failure.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedule() {
@@ -384,17 +387,17 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
    * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
-   * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general
-   * rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud
-   * Scheduler will never allow two simultaneously outstanding executions. For example, this implies
-   * that if the `n+1`th execution is scheduled to run at 16:00 but the `n`th execution takes until
-   * 16:15, the `n+1`th execution will not start until `16:15`. A scheduled start time will be
-   * delayed if the previous execution has not ended when its scheduled time occurs. If retry_count
-   * > 0 and a job attempt fails, the job will be tried a total of retry_count times, with
-   * exponential backoff, until the next scheduled start time. If retry_count is 0, a job attempt
-   * will not be retried if it fails. Instead the Cloud Scheduler system will wait for the next
-   * scheduled execution time. Setting retry_count to 0 does not prevent failed jobs from running
-   * according to schedule after the failure.
+   * [schedule](/scheduler/docs/configuring/cron-job-schedules) As a general rule, execution `n + 1`
+   * of a job will not begin until execution `n` has finished. Cloud Scheduler will never allow two
+   * simultaneously outstanding executions. For example, this implies that if the `n+1`th execution
+   * is scheduled to run at 16:00 but the `n`th execution takes until 16:15, the `n+1`th execution
+   * will not start until `16:15`. A scheduled start time will be delayed if the previous execution
+   * has not ended when its scheduled time occurs. If retry_count > 0 and a job attempt fails, the
+   * job will be tried a total of retry_count times, with exponential backoff, until the next
+   * scheduled start time. If retry_count is 0, a job attempt will not be retried if it fails.
+   * Instead the Cloud Scheduler system will wait for the next scheduled execution time. Setting
+   * retry_count to 0 does not prevent failed jobs from running according to schedule after the
+   * failure.
    * @param schedule schedule or {@code null} for none
    */
   public Job setSchedule(java.lang.String schedule) {

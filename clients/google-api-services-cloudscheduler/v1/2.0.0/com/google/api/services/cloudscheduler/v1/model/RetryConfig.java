@@ -18,9 +18,9 @@ package com.google.api.services.cloudscheduler.v1.model;
 
 /**
  * Settings that determine the retry behavior. For more information, see [Retry
- * jobs](https://cloud.google.com/scheduler/docs/configuring/retry-jobs). By default, if a job does
- * not complete successfully (meaning that an acknowledgement is not received from the handler, then
- * it will be retried with exponential backoff according to the settings in RetryConfig.
+ * jobs](/scheduler/docs/configuring/retry-jobs). By default, if a job does not complete
+ * successfully (meaning that an acknowledgement is not received from the handler, then it will be
+ * retried with exponential backoff according to the settings in RetryConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Scheduler API. For a detailed explanation see:
@@ -44,8 +44,8 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
    * The time between retries will double `max_doublings` times. A job's retry interval starts at
    * min_backoff_duration, then doubles `max_doublings` times, then increases linearly, and finally
    * retries at intervals of max_backoff_duration up to retry_count times. For examples, see [Retry
-   * jobs](https://cloud.google.com/scheduler/docs/configuring/retry-jobs#max-doublings). The
-   * default value of this field is 5.
+   * jobs](/scheduler/docs/configuring/retry-jobs#max-doublings). The default value of this field is
+   * 5.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +107,8 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
    * The time between retries will double `max_doublings` times. A job's retry interval starts at
    * min_backoff_duration, then doubles `max_doublings` times, then increases linearly, and finally
    * retries at intervals of max_backoff_duration up to retry_count times. For examples, see [Retry
-   * jobs](https://cloud.google.com/scheduler/docs/configuring/retry-jobs#max-doublings). The
-   * default value of this field is 5.
+   * jobs](/scheduler/docs/configuring/retry-jobs#max-doublings). The default value of this field is
+   * 5.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDoublings() {
@@ -119,8 +119,8 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
    * The time between retries will double `max_doublings` times. A job's retry interval starts at
    * min_backoff_duration, then doubles `max_doublings` times, then increases linearly, and finally
    * retries at intervals of max_backoff_duration up to retry_count times. For examples, see [Retry
-   * jobs](https://cloud.google.com/scheduler/docs/configuring/retry-jobs#max-doublings). The
-   * default value of this field is 5.
+   * jobs](/scheduler/docs/configuring/retry-jobs#max-doublings). The default value of this field is
+   * 5.
    * @param maxDoublings maxDoublings or {@code null} for none
    */
   public RetryConfig setMaxDoublings(java.lang.Integer maxDoublings) {

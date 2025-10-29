@@ -3812,8 +3812,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the sqladmin server.  After setting any optional
      * parameters, call the {@link Clone#execute()} method to invoke the remote operation.
      *
-     * @param project Project ID of the source as well as the clone Cloud SQL instance.
-     * @param instance The ID of the Cloud SQL instance to be cloned (source). This does not include the project ID.
+     * @param project Required. Project ID of the source as well as the clone Cloud SQL instance.
+     * @param instance Required. The ID of the Cloud SQL instance to be cloned (source). This does not include the project
+     *        ID.
      * @param content the {@link com.google.api.services.sqladmin.model.InstancesCloneRequest}
      * @return the request
      */
@@ -3839,8 +3840,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * Clone#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project Project ID of the source as well as the clone Cloud SQL instance.
-       * @param instance The ID of the Cloud SQL instance to be cloned (source). This does not include the project ID.
+       * @param project Required. Project ID of the source as well as the clone Cloud SQL instance.
+       * @param instance Required. The ID of the Cloud SQL instance to be cloned (source). This does not include the project
+     *        ID.
        * @param content the {@link com.google.api.services.sqladmin.model.InstancesCloneRequest}
        * @since 1.13
        */
@@ -3905,38 +3907,39 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return (Clone) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Project ID of the source as well as the clone Cloud SQL instance. */
+      /** Required. Project ID of the source as well as the clone Cloud SQL instance. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /** Project ID of the source as well as the clone Cloud SQL instance.
+      /** Required. Project ID of the source as well as the clone Cloud SQL instance.
        */
       public java.lang.String getProject() {
         return project;
       }
 
-      /** Project ID of the source as well as the clone Cloud SQL instance. */
+      /** Required. Project ID of the source as well as the clone Cloud SQL instance. */
       public Clone setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
       /**
-       * The ID of the Cloud SQL instance to be cloned (source). This does not include the project
-       * ID.
+       * Required. The ID of the Cloud SQL instance to be cloned (source). This does not include the
+       * project ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String instance;
 
-      /** The ID of the Cloud SQL instance to be cloned (source). This does not include the project ID.
+      /** Required. The ID of the Cloud SQL instance to be cloned (source). This does not include the project
+     ID.
        */
       public java.lang.String getInstance() {
         return instance;
       }
 
       /**
-       * The ID of the Cloud SQL instance to be cloned (source). This does not include the project
-       * ID.
+       * Required. The ID of the Cloud SQL instance to be cloned (source). This does not include the
+       * project ID.
        */
       public Clone setInstance(java.lang.String instance) {
         this.instance = instance;

@@ -58,7 +58,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> databaseNames;
 
   /**
-   * Name of the Cloud SQL instance to be created as a clone.
+   * Required. Name of the Cloud SQL instance to be created as a clone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +177,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the Cloud SQL instance to be created as a clone.
+   * Required. Name of the Cloud SQL instance to be created as a clone.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationInstanceName() {
@@ -185,7 +185,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the Cloud SQL instance to be created as a clone.
+   * Required. Name of the Cloud SQL instance to be created as a clone.
    * @param destinationInstanceName destinationInstanceName or {@code null} for none
    */
   public CloneContext setDestinationInstanceName(java.lang.String destinationInstanceName) {

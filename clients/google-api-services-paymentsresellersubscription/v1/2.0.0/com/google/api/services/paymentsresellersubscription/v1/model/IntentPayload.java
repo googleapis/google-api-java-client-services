@@ -45,6 +45,13 @@ public final class IntentPayload extends com.google.api.client.json.GenericJson 
   private EntitleSubscriptionIntent entitleIntent;
 
   /**
+   * Optional. The additional features for the intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IntentPayloadIntentOptions intentOptions;
+
+  /**
    * The request to create a subscription.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class IntentPayload extends com.google.api.client.json.GenericJson 
    */
   public IntentPayload setEntitleIntent(EntitleSubscriptionIntent entitleIntent) {
     this.entitleIntent = entitleIntent;
+    return this;
+  }
+
+  /**
+   * Optional. The additional features for the intent.
+   * @return value or {@code null} for none
+   */
+  public IntentPayloadIntentOptions getIntentOptions() {
+    return intentOptions;
+  }
+
+  /**
+   * Optional. The additional features for the intent.
+   * @param intentOptions intentOptions or {@code null} for none
+   */
+  public IntentPayload setIntentOptions(IntentPayloadIntentOptions intentOptions) {
+    this.intentOptions = intentOptions;
     return this;
   }
 

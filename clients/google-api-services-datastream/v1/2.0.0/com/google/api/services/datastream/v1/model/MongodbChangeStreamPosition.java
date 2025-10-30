@@ -30,14 +30,14 @@ package com.google.api.services.datastream.v1.model;
 public final class MongodbChangeStreamPosition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The timestamp (in epoch seconds) to start change stream from.
+   * Required. The timestamp to start change stream from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Required. The timestamp (in epoch seconds) to start change stream from.
+   * Required. The timestamp to start change stream from.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -45,7 +45,7 @@ public final class MongodbChangeStreamPosition extends com.google.api.client.jso
   }
 
   /**
-   * Required. The timestamp (in epoch seconds) to start change stream from.
+   * Required. The timestamp to start change stream from.
    * @param startTime startTime or {@code null} for none
    */
   public MongodbChangeStreamPosition setStartTime(String startTime) {

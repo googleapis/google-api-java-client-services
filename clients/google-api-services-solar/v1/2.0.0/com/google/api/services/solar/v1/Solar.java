@@ -257,6 +257,38 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
         return (FindClosest) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * Optional. Whether to require exact quality of the imagery. If set to false, the
+       * `required_quality` field is interpreted as the minimum required quality, such that HIGH
+       * quality imagery may be returned when `required_quality` is set to MEDIUM. If set to true,
+       * `required_quality` is interpreted as the exact required quality and only `MEDIUM` quality
+       * imagery is returned if `required_quality` is set to `MEDIUM`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean exactQualityRequired;
+
+      /** Optional. Whether to require exact quality of the imagery. If set to false, the `required_quality`
+     field is interpreted as the minimum required quality, such that HIGH quality imagery may be
+     returned when `required_quality` is set to MEDIUM. If set to true, `required_quality` is
+     interpreted as the exact required quality and only `MEDIUM` quality imagery is returned if
+     `required_quality` is set to `MEDIUM`.
+       */
+      public java.lang.Boolean getExactQualityRequired() {
+        return exactQualityRequired;
+      }
+
+      /**
+       * Optional. Whether to require exact quality of the imagery. If set to false, the
+       * `required_quality` field is interpreted as the minimum required quality, such that HIGH
+       * quality imagery may be returned when `required_quality` is set to MEDIUM. If set to true,
+       * `required_quality` is interpreted as the exact required quality and only `MEDIUM` quality
+       * imagery is returned if `required_quality` is set to `MEDIUM`.
+       */
+      public FindClosest setExactQualityRequired(java.lang.Boolean exactQualityRequired) {
+        this.exactQualityRequired = exactQualityRequired;
+        return this;
+      }
+
       /** Optional. Specifies the pre-GA features to enable. */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> experiments;

@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * Request for manually initiating a backfill job for a specific stream object.
+ * Represents a filter for included data on a stream object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -27,46 +27,43 @@ package com.google.api.services.datastream.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class StartBackfillJobRequest extends com.google.api.client.json.GenericJson {
+public final class EventFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Optional event filter. If not set, or empty, the backfill will be performed on the
-   * entire object. This is currently used for partial backfill and only supported for SQL Server
-   * sources.
+   * An SQL-query Where clause selecting which data should be included, not including the "WHERE"
+   * keyword. E.g., "t.key1 = 'value1' AND t.key2 = 'value2'".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private EventFilter eventFilter;
+  private java.lang.String sqlWhereClause;
 
   /**
-   * Optional. Optional event filter. If not set, or empty, the backfill will be performed on the
-   * entire object. This is currently used for partial backfill and only supported for SQL Server
-   * sources.
+   * An SQL-query Where clause selecting which data should be included, not including the "WHERE"
+   * keyword. E.g., "t.key1 = 'value1' AND t.key2 = 'value2'".
    * @return value or {@code null} for none
    */
-  public EventFilter getEventFilter() {
-    return eventFilter;
+  public java.lang.String getSqlWhereClause() {
+    return sqlWhereClause;
   }
 
   /**
-   * Optional. Optional event filter. If not set, or empty, the backfill will be performed on the
-   * entire object. This is currently used for partial backfill and only supported for SQL Server
-   * sources.
-   * @param eventFilter eventFilter or {@code null} for none
+   * An SQL-query Where clause selecting which data should be included, not including the "WHERE"
+   * keyword. E.g., "t.key1 = 'value1' AND t.key2 = 'value2'".
+   * @param sqlWhereClause sqlWhereClause or {@code null} for none
    */
-  public StartBackfillJobRequest setEventFilter(EventFilter eventFilter) {
-    this.eventFilter = eventFilter;
+  public EventFilter setSqlWhereClause(java.lang.String sqlWhereClause) {
+    this.sqlWhereClause = sqlWhereClause;
     return this;
   }
 
   @Override
-  public StartBackfillJobRequest set(String fieldName, Object value) {
-    return (StartBackfillJobRequest) super.set(fieldName, value);
+  public EventFilter set(String fieldName, Object value) {
+    return (EventFilter) super.set(fieldName, value);
   }
 
   @Override
-  public StartBackfillJobRequest clone() {
-    return (StartBackfillJobRequest) super.clone();
+  public EventFilter clone() {
+    return (EventFilter) super.clone();
   }
 
 }

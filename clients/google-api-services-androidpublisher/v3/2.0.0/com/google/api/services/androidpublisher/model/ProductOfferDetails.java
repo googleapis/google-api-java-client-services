@@ -60,6 +60,13 @@ public final class ProductOfferDetails extends com.google.api.client.json.Generi
   private java.lang.String offerToken;
 
   /**
+   * Offer details for a preorder offer. This will only be set for preorders.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PreorderOfferDetails preorderOfferDetails;
+
+  /**
    * The purchase option ID.
    * The value may be {@code null}.
    */
@@ -155,6 +162,23 @@ public final class ProductOfferDetails extends com.google.api.client.json.Generi
    */
   public ProductOfferDetails setOfferToken(java.lang.String offerToken) {
     this.offerToken = offerToken;
+    return this;
+  }
+
+  /**
+   * Offer details for a preorder offer. This will only be set for preorders.
+   * @return value or {@code null} for none
+   */
+  public PreorderOfferDetails getPreorderOfferDetails() {
+    return preorderOfferDetails;
+  }
+
+  /**
+   * Offer details for a preorder offer. This will only be set for preorders.
+   * @param preorderOfferDetails preorderOfferDetails or {@code null} for none
+   */
+  public ProductOfferDetails setPreorderOfferDetails(PreorderOfferDetails preorderOfferDetails) {
+    this.preorderOfferDetails = preorderOfferDetails;
     return this;
   }
 

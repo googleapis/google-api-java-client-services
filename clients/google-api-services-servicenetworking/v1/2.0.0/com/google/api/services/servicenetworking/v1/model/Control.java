@@ -32,9 +32,9 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class Control extends com.google.api.client.json.GenericJson {
 
   /**
-   * The service controller environment to use. If empty, no control plane feature (like quota and
+   * The service controller environment to use. If empty, no control plane features (like quota and
    * billing) will be enabled. The recommended value for most services is
-   * servicecontrol.googleapis.com
+   * servicecontrol.googleapis.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,9 +48,9 @@ public final class Control extends com.google.api.client.json.GenericJson {
   private java.util.List<MethodPolicy> methodPolicies;
 
   /**
-   * The service controller environment to use. If empty, no control plane feature (like quota and
+   * The service controller environment to use. If empty, no control plane features (like quota and
    * billing) will be enabled. The recommended value for most services is
-   * servicecontrol.googleapis.com
+   * servicecontrol.googleapis.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -58,9 +58,9 @@ public final class Control extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The service controller environment to use. If empty, no control plane feature (like quota and
+   * The service controller environment to use. If empty, no control plane features (like quota and
    * billing) will be enabled. The recommended value for most services is
-   * servicecontrol.googleapis.com
+   * servicecontrol.googleapis.com.
    * @param environment environment or {@code null} for none
    */
   public Control setEnvironment(java.lang.String environment) {

@@ -33,7 +33,9 @@ public final class PySparkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. HCFS URIs of archives to be extracted into the working directory of each executor.
-   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.Note: Spark applications must be
+   * deployed in cluster mode (https://spark.apache.org/docs/latest/cluster-overview.html) for
+   * correct environment propagation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +98,9 @@ public final class PySparkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. HCFS URIs of archives to be extracted into the working directory of each executor.
-   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.Note: Spark applications must be
+   * deployed in cluster mode (https://spark.apache.org/docs/latest/cluster-overview.html) for
+   * correct environment propagation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArchiveUris() {
@@ -105,7 +109,9 @@ public final class PySparkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. HCFS URIs of archives to be extracted into the working directory of each executor.
-   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+   * Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.Note: Spark applications must be
+   * deployed in cluster mode (https://spark.apache.org/docs/latest/cluster-overview.html) for
+   * correct environment propagation.
    * @param archiveUris archiveUris or {@code null} for none
    */
   public PySparkJob setArchiveUris(java.util.List<java.lang.String> archiveUris) {

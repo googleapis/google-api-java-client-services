@@ -38,6 +38,14 @@ public final class OneTimePurchaseDetails extends com.google.api.client.json.Gen
   private java.lang.String offerId;
 
   /**
+   * The details of a pre-order purchase. Only set if it is a pre-order purchase. Note that this
+   * field will be set even after pre-order is fulfilled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PreorderDetails preorderDetails;
+
+  /**
    * ID of the purchase option. This field is set for both purchase options and variant offers. For
    * purchase options, this ID identifies the purchase option itself. For variant offers, this ID
    * refers to the associated purchase option, and in conjunction with offer_id it identifies the
@@ -75,6 +83,25 @@ public final class OneTimePurchaseDetails extends com.google.api.client.json.Gen
    */
   public OneTimePurchaseDetails setOfferId(java.lang.String offerId) {
     this.offerId = offerId;
+    return this;
+  }
+
+  /**
+   * The details of a pre-order purchase. Only set if it is a pre-order purchase. Note that this
+   * field will be set even after pre-order is fulfilled.
+   * @return value or {@code null} for none
+   */
+  public PreorderDetails getPreorderDetails() {
+    return preorderDetails;
+  }
+
+  /**
+   * The details of a pre-order purchase. Only set if it is a pre-order purchase. Note that this
+   * field will be set even after pre-order is fulfilled.
+   * @param preorderDetails preorderDetails or {@code null} for none
+   */
+  public OneTimePurchaseDetails setPreorderDetails(PreorderDetails preorderDetails) {
+    this.preorderDetails = preorderDetails;
     return this;
   }
 

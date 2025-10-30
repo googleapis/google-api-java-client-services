@@ -17,9 +17,9 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * T&S proactive enforcement for policies meant to address regional requirements. This is considered
- * as Google owned investigation instead of regulation notice since it's a T&S proactive
- * enforcement.
+ * Trust & Safety (T&S) proactive enforcement for policies meant to address regional requirements.
+ * This is considered a Google-owned investigation instead of a regulation notice since it's
+ * proactive T&S enforcement.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

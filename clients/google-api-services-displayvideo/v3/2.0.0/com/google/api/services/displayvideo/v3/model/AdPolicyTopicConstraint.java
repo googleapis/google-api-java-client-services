@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v3.model;
 
 /**
- * Additional constraints information that explains restrictions applied to this policy.
+ * Details on ad serving constraints.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -67,7 +67,7 @@ public final class AdPolicyTopicConstraint extends com.google.api.client.json.Ge
   private AdPolicyTopicConstraintAdPolicyGlobalCertificateMissingConstraint globalCertificateMissing;
 
   /**
-   * Link to the form to request a certificate for the policy topic constraint.
+   * Link to the form to request a certificate for the constraint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +168,7 @@ public final class AdPolicyTopicConstraint extends com.google.api.client.json.Ge
   }
 
   /**
-   * Link to the form to request a certificate for the policy topic constraint.
+   * Link to the form to request a certificate for the constraint.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestCertificateFormLink() {
@@ -176,7 +176,7 @@ public final class AdPolicyTopicConstraint extends com.google.api.client.json.Ge
   }
 
   /**
-   * Link to the form to request a certificate for the policy topic constraint.
+   * Link to the form to request a certificate for the constraint.
    * @param requestCertificateFormLink requestCertificateFormLink or {@code null} for none
    */
   public AdPolicyTopicConstraint setRequestCertificateFormLink(java.lang.String requestCertificateFormLink) {

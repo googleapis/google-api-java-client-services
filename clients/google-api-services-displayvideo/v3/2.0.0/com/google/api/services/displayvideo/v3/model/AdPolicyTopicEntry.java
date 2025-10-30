@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v3.model;
 
 /**
- * Policy topic entry.
+ * An entry describing how an ad has been identified as relating to an ad policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AdPolicyTopicEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * Ad policy appeal related information for the policy topic.
+   * Information on how to appeal the policy decision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,21 +59,22 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   private java.lang.String policyEnforcementMeans;
 
   /**
-   * Localized label text for policy. (Trademarks in text, Contains Alcohol, etc.)
+   * Localized label text for policy. Examples include "Trademarks in text", "Contains Alcohol",
+   * etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyLabel;
 
   /**
-   * The policy topic of an ad policy topic entry. (TRADEMARKS, ALCOHOL, etc.)
+   * The policy topic. Examples include "TRADEMARKS", "ALCOHOL", etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyTopic;
 
   /**
-   * The policy topic constraints.
+   * The serving constraints relevant to the policy decision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,28 +87,28 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * Short summary description of the policy topic.
+   * A short summary description of the policy topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyTopicDescription;
 
   /**
-   * The policy topic evidences.
+   * The evidence used in the policy decision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AdPolicyTopicEvidence> policyTopicEvidences;
 
   /**
-   * The policy topic entry type.
+   * How ad serving will be affected due to the relation to the ad policy topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyTopicType;
 
   /**
-   * Ad policy appeal related information for the policy topic.
+   * Information on how to appeal the policy decision.
    * @return value or {@code null} for none
    */
   public AdPolicyTopicAppealInfo getAppealInfo() {
@@ -115,7 +116,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * Ad policy appeal related information for the policy topic.
+   * Information on how to appeal the policy decision.
    * @param appealInfo appealInfo or {@code null} for none
    */
   public AdPolicyTopicEntry setAppealInfo(AdPolicyTopicAppealInfo appealInfo) {
@@ -175,7 +176,8 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * Localized label text for policy. (Trademarks in text, Contains Alcohol, etc.)
+   * Localized label text for policy. Examples include "Trademarks in text", "Contains Alcohol",
+   * etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyLabel() {
@@ -183,7 +185,8 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * Localized label text for policy. (Trademarks in text, Contains Alcohol, etc.)
+   * Localized label text for policy. Examples include "Trademarks in text", "Contains Alcohol",
+   * etc.
    * @param policyLabel policyLabel or {@code null} for none
    */
   public AdPolicyTopicEntry setPolicyLabel(java.lang.String policyLabel) {
@@ -192,7 +195,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * The policy topic of an ad policy topic entry. (TRADEMARKS, ALCOHOL, etc.)
+   * The policy topic. Examples include "TRADEMARKS", "ALCOHOL", etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyTopic() {
@@ -200,7 +203,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * The policy topic of an ad policy topic entry. (TRADEMARKS, ALCOHOL, etc.)
+   * The policy topic. Examples include "TRADEMARKS", "ALCOHOL", etc.
    * @param policyTopic policyTopic or {@code null} for none
    */
   public AdPolicyTopicEntry setPolicyTopic(java.lang.String policyTopic) {
@@ -209,7 +212,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * The policy topic constraints.
+   * The serving constraints relevant to the policy decision.
    * @return value or {@code null} for none
    */
   public java.util.List<AdPolicyTopicConstraint> getPolicyTopicConstraints() {
@@ -217,7 +220,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * The policy topic constraints.
+   * The serving constraints relevant to the policy decision.
    * @param policyTopicConstraints policyTopicConstraints or {@code null} for none
    */
   public AdPolicyTopicEntry setPolicyTopicConstraints(java.util.List<AdPolicyTopicConstraint> policyTopicConstraints) {
@@ -226,7 +229,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * Short summary description of the policy topic.
+   * A short summary description of the policy topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyTopicDescription() {
@@ -234,7 +237,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * Short summary description of the policy topic.
+   * A short summary description of the policy topic.
    * @param policyTopicDescription policyTopicDescription or {@code null} for none
    */
   public AdPolicyTopicEntry setPolicyTopicDescription(java.lang.String policyTopicDescription) {
@@ -243,7 +246,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * The policy topic evidences.
+   * The evidence used in the policy decision.
    * @return value or {@code null} for none
    */
   public java.util.List<AdPolicyTopicEvidence> getPolicyTopicEvidences() {
@@ -251,7 +254,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * The policy topic evidences.
+   * The evidence used in the policy decision.
    * @param policyTopicEvidences policyTopicEvidences or {@code null} for none
    */
   public AdPolicyTopicEntry setPolicyTopicEvidences(java.util.List<AdPolicyTopicEvidence> policyTopicEvidences) {
@@ -260,7 +263,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * The policy topic entry type.
+   * How ad serving will be affected due to the relation to the ad policy topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyTopicType() {
@@ -268,7 +271,7 @@ public final class AdPolicyTopicEntry extends com.google.api.client.json.Generic
   }
 
   /**
-   * The policy topic entry type.
+   * How ad serving will be affected due to the relation to the ad policy topic.
    * @param policyTopicType policyTopicType or {@code null} for none
    */
   public AdPolicyTopicEntry setPolicyTopicType(java.lang.String policyTopicType) {

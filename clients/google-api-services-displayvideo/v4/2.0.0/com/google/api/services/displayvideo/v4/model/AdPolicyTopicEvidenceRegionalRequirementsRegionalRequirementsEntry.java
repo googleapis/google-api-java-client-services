@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v4.model;
 public final class AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirementsEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The restricted countries due to the legal policy.
+   * The countries restricted due to the legal policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirements
   }
 
   /**
-   * The legal policy that is violated.
+   * The legal policy that is being violated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String legalPolicy;
 
   /**
-   * The restricted countries due to the legal policy.
+   * The countries restricted due to the legal policy.
    * @return value or {@code null} for none
    */
   public java.util.List<AdPolicyCriterionRestriction> getCountryRestrictions() {
@@ -59,7 +59,7 @@ public final class AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirements
   }
 
   /**
-   * The restricted countries due to the legal policy.
+   * The countries restricted due to the legal policy.
    * @param countryRestrictions countryRestrictions or {@code null} for none
    */
   public AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirementsEntry setCountryRestrictions(java.util.List<AdPolicyCriterionRestriction> countryRestrictions) {
@@ -68,7 +68,7 @@ public final class AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirements
   }
 
   /**
-   * The legal policy that is violated.
+   * The legal policy that is being violated.
    * @return value or {@code null} for none
    */
   public java.lang.String getLegalPolicy() {
@@ -76,7 +76,7 @@ public final class AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirements
   }
 
   /**
-   * The legal policy that is violated.
+   * The legal policy that is being violated.
    * @param legalPolicy legalPolicy or {@code null} for none
    */
   public AdPolicyTopicEvidenceRegionalRequirementsRegionalRequirementsEntry setLegalPolicy(java.lang.String legalPolicy) {

@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * A YouTube asset association between one linked entity and one YouTube asset.
+ * An association between a resource and a YouTube asset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,36 +31,37 @@ package com.google.api.services.displayvideo.v4.model;
 public final class YoutubeAssetAssociation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The linked YouTube asset in the association.
+   * Required. The YouTube asset associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private YoutubeAssetAssociationLinkedYouTubeAsset linkedYoutubeAsset;
 
   /**
-   * Identifier. The resource name of the association. For line item level associations: The name
+   * Identifier. The resource name of the association. For line item-level associations: The name
    * pattern is `advertisers/{advertiser_id}/lineItems/{line_item_id}/youtubeAssetTypes/{youtube_ass
-   * et_type}/youtubeAssetAssociations/{youtube_asset_association_id}`. For ad group level
+   * et_type}/youtubeAssetAssociations/{youtube_asset_association_id}`. For ad group-level
    * associations: The name pattern is `advertisers/{advertiser_id}/adGroups/{ad_group_id}/youtubeAs
    * setTypes/{youtube_asset_type}/youtubeAssetAssociations/{youtube_asset_association_id}`. For
-   * location and affiliate location associations: {youtube_asset_association_id} is the linked
-   * asset set ID if the YouTube asset type (location or affiliate location) is enabled on the
-   * linked line item or ad group, 0 if disabled. For sitelink associations:
-   * {youtube_asset_association_id} is the linked asset ID.
+   * `YOUTUBE_ASSET_TYPE_LOCATION` and `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION` associations:
+   * `youtube_asset_association_id` is the ID of the asset set linked, or 0 if the
+   * location_matching_type or affiliate_location_matching_type is `DISABLED`. For
+   * `YOUTUBE_ASSET_TYPE_SITELINK` associations: `youtube_asset_association_id` is be the ID of the
+   * sitelink asset linked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The type of the linked YouTube asset in the association.
+   * Required. The type of YouTube asset associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String youtubeAssetType;
 
   /**
-   * Required. The linked YouTube asset in the association.
+   * Required. The YouTube asset associated with the resource.
    * @return value or {@code null} for none
    */
   public YoutubeAssetAssociationLinkedYouTubeAsset getLinkedYoutubeAsset() {
@@ -68,7 +69,7 @@ public final class YoutubeAssetAssociation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The linked YouTube asset in the association.
+   * Required. The YouTube asset associated with the resource.
    * @param linkedYoutubeAsset linkedYoutubeAsset or {@code null} for none
    */
   public YoutubeAssetAssociation setLinkedYoutubeAsset(YoutubeAssetAssociationLinkedYouTubeAsset linkedYoutubeAsset) {
@@ -77,15 +78,16 @@ public final class YoutubeAssetAssociation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Identifier. The resource name of the association. For line item level associations: The name
+   * Identifier. The resource name of the association. For line item-level associations: The name
    * pattern is `advertisers/{advertiser_id}/lineItems/{line_item_id}/youtubeAssetTypes/{youtube_ass
-   * et_type}/youtubeAssetAssociations/{youtube_asset_association_id}`. For ad group level
+   * et_type}/youtubeAssetAssociations/{youtube_asset_association_id}`. For ad group-level
    * associations: The name pattern is `advertisers/{advertiser_id}/adGroups/{ad_group_id}/youtubeAs
    * setTypes/{youtube_asset_type}/youtubeAssetAssociations/{youtube_asset_association_id}`. For
-   * location and affiliate location associations: {youtube_asset_association_id} is the linked
-   * asset set ID if the YouTube asset type (location or affiliate location) is enabled on the
-   * linked line item or ad group, 0 if disabled. For sitelink associations:
-   * {youtube_asset_association_id} is the linked asset ID.
+   * `YOUTUBE_ASSET_TYPE_LOCATION` and `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION` associations:
+   * `youtube_asset_association_id` is the ID of the asset set linked, or 0 if the
+   * location_matching_type or affiliate_location_matching_type is `DISABLED`. For
+   * `YOUTUBE_ASSET_TYPE_SITELINK` associations: `youtube_asset_association_id` is be the ID of the
+   * sitelink asset linked.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -93,15 +95,16 @@ public final class YoutubeAssetAssociation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Identifier. The resource name of the association. For line item level associations: The name
+   * Identifier. The resource name of the association. For line item-level associations: The name
    * pattern is `advertisers/{advertiser_id}/lineItems/{line_item_id}/youtubeAssetTypes/{youtube_ass
-   * et_type}/youtubeAssetAssociations/{youtube_asset_association_id}`. For ad group level
+   * et_type}/youtubeAssetAssociations/{youtube_asset_association_id}`. For ad group-level
    * associations: The name pattern is `advertisers/{advertiser_id}/adGroups/{ad_group_id}/youtubeAs
    * setTypes/{youtube_asset_type}/youtubeAssetAssociations/{youtube_asset_association_id}`. For
-   * location and affiliate location associations: {youtube_asset_association_id} is the linked
-   * asset set ID if the YouTube asset type (location or affiliate location) is enabled on the
-   * linked line item or ad group, 0 if disabled. For sitelink associations:
-   * {youtube_asset_association_id} is the linked asset ID.
+   * `YOUTUBE_ASSET_TYPE_LOCATION` and `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION` associations:
+   * `youtube_asset_association_id` is the ID of the asset set linked, or 0 if the
+   * location_matching_type or affiliate_location_matching_type is `DISABLED`. For
+   * `YOUTUBE_ASSET_TYPE_SITELINK` associations: `youtube_asset_association_id` is be the ID of the
+   * sitelink asset linked.
    * @param name name or {@code null} for none
    */
   public YoutubeAssetAssociation setName(java.lang.String name) {
@@ -110,7 +113,7 @@ public final class YoutubeAssetAssociation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The type of the linked YouTube asset in the association.
+   * Required. The type of YouTube asset associated with the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getYoutubeAssetType() {
@@ -118,7 +121,7 @@ public final class YoutubeAssetAssociation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The type of the linked YouTube asset in the association.
+   * Required. The type of YouTube asset associated with the resource.
    * @param youtubeAssetType youtubeAssetType or {@code null} for none
    */
   public YoutubeAssetAssociation setYoutubeAssetType(java.lang.String youtubeAssetType) {

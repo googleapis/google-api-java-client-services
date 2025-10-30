@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * The YouTube asset linked with the entity in a YouTube asset association.
+ * A YouTube asset linked to a resource in a YoutubeAssetAssociation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,28 +31,32 @@ package com.google.api.services.displayvideo.v4.model;
 public final class YoutubeAssetAssociationLinkedYouTubeAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * The linked affiliate location asset filter.
+   * An affiliate location asset filter. This can be set only when youtube_asset_type is
+   * `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private YoutubeAssetAssociationAffiliateLocationAssetFilter affiliateLocationAssetFilter;
 
   /**
-   * The linked location asset filter.
+   * A location asset filter. This can be set only when youtube_asset_type is
+   * `YOUTUBE_ASSET_TYPE_LOCATION`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private YoutubeAssetAssociationLocationAssetFilter locationAssetFilter;
 
   /**
-   * The linked sitelink asset.
+   * A sitelink asset. This can be set only when youtube_asset_type is
+   * `YOUTUBE_ASSET_TYPE_SITELINK`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private YoutubeAssetAssociationSitelinkAsset sitelinkAsset;
 
   /**
-   * The linked affiliate location asset filter.
+   * An affiliate location asset filter. This can be set only when youtube_asset_type is
+   * `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION`.
    * @return value or {@code null} for none
    */
   public YoutubeAssetAssociationAffiliateLocationAssetFilter getAffiliateLocationAssetFilter() {
@@ -60,7 +64,8 @@ public final class YoutubeAssetAssociationLinkedYouTubeAsset extends com.google.
   }
 
   /**
-   * The linked affiliate location asset filter.
+   * An affiliate location asset filter. This can be set only when youtube_asset_type is
+   * `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION`.
    * @param affiliateLocationAssetFilter affiliateLocationAssetFilter or {@code null} for none
    */
   public YoutubeAssetAssociationLinkedYouTubeAsset setAffiliateLocationAssetFilter(YoutubeAssetAssociationAffiliateLocationAssetFilter affiliateLocationAssetFilter) {
@@ -69,7 +74,8 @@ public final class YoutubeAssetAssociationLinkedYouTubeAsset extends com.google.
   }
 
   /**
-   * The linked location asset filter.
+   * A location asset filter. This can be set only when youtube_asset_type is
+   * `YOUTUBE_ASSET_TYPE_LOCATION`.
    * @return value or {@code null} for none
    */
   public YoutubeAssetAssociationLocationAssetFilter getLocationAssetFilter() {
@@ -77,7 +83,8 @@ public final class YoutubeAssetAssociationLinkedYouTubeAsset extends com.google.
   }
 
   /**
-   * The linked location asset filter.
+   * A location asset filter. This can be set only when youtube_asset_type is
+   * `YOUTUBE_ASSET_TYPE_LOCATION`.
    * @param locationAssetFilter locationAssetFilter or {@code null} for none
    */
   public YoutubeAssetAssociationLinkedYouTubeAsset setLocationAssetFilter(YoutubeAssetAssociationLocationAssetFilter locationAssetFilter) {
@@ -86,7 +93,8 @@ public final class YoutubeAssetAssociationLinkedYouTubeAsset extends com.google.
   }
 
   /**
-   * The linked sitelink asset.
+   * A sitelink asset. This can be set only when youtube_asset_type is
+   * `YOUTUBE_ASSET_TYPE_SITELINK`.
    * @return value or {@code null} for none
    */
   public YoutubeAssetAssociationSitelinkAsset getSitelinkAsset() {
@@ -94,7 +102,8 @@ public final class YoutubeAssetAssociationLinkedYouTubeAsset extends com.google.
   }
 
   /**
-   * The linked sitelink asset.
+   * A sitelink asset. This can be set only when youtube_asset_type is
+   * `YOUTUBE_ASSET_TYPE_SITELINK`.
    * @param sitelinkAsset sitelinkAsset or {@code null} for none
    */
   public YoutubeAssetAssociationLinkedYouTubeAsset setSitelinkAsset(YoutubeAssetAssociationSitelinkAsset sitelinkAsset) {

@@ -31,10 +31,9 @@ package com.google.api.services.displayvideo.v4.model;
 public final class YoutubeAssetAssociationAffiliateLocationAssetFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The matching function that contains details about how the affiliate location asset
-   * filter matches affiliate location assets. When creating associations with affiliate location
-   * asset filters: This field is required only for affiliate location asset filters of
-   * AffiliateLocationMatchingType#SELECTED_CHAINS.
+   * Optional. The matching function that determines how the affiliate location asset filter matches
+   * affiliate location assets. This field is required and can only be set for if
+   * affiliate_location_matching_type is `SELECTED_CHAINS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,10 +55,9 @@ public final class YoutubeAssetAssociationAffiliateLocationAssetFilter extends c
   private java.lang.Long assetSetId;
 
   /**
-   * Optional. The matching function that contains details about how the affiliate location asset
-   * filter matches affiliate location assets. When creating associations with affiliate location
-   * asset filters: This field is required only for affiliate location asset filters of
-   * AffiliateLocationMatchingType#SELECTED_CHAINS.
+   * Optional. The matching function that determines how the affiliate location asset filter matches
+   * affiliate location assets. This field is required and can only be set for if
+   * affiliate_location_matching_type is `SELECTED_CHAINS`.
    * @return value or {@code null} for none
    */
   public YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationMatchingFunction getAffiliateLocationMatchingFunction() {
@@ -67,10 +65,9 @@ public final class YoutubeAssetAssociationAffiliateLocationAssetFilter extends c
   }
 
   /**
-   * Optional. The matching function that contains details about how the affiliate location asset
-   * filter matches affiliate location assets. When creating associations with affiliate location
-   * asset filters: This field is required only for affiliate location asset filters of
-   * AffiliateLocationMatchingType#SELECTED_CHAINS.
+   * Optional. The matching function that determines how the affiliate location asset filter matches
+   * affiliate location assets. This field is required and can only be set for if
+   * affiliate_location_matching_type is `SELECTED_CHAINS`.
    * @param affiliateLocationMatchingFunction affiliateLocationMatchingFunction or {@code null} for none
    */
   public YoutubeAssetAssociationAffiliateLocationAssetFilter setAffiliateLocationMatchingFunction(YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationMatchingFunction affiliateLocationMatchingFunction) {

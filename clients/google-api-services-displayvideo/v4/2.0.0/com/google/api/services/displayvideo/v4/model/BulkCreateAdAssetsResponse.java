@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v4.model;
 public final class BulkCreateAdAssetsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The uploaded video ad assets, if successful.
+   * The created ad assets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class BulkCreateAdAssetsResponse extends com.google.api.client.json
   }
 
   /**
-   * The uploaded video ad assets, if successful.
+   * The created ad assets.
    * @return value or {@code null} for none
    */
   public java.util.List<AdAsset> getAdAssets() {
@@ -52,7 +52,7 @@ public final class BulkCreateAdAssetsResponse extends com.google.api.client.json
   }
 
   /**
-   * The uploaded video ad assets, if successful.
+   * The created ad assets.
    * @param adAssets adAssets or {@code null} for none
    */
   public BulkCreateAdAssetsResponse setAdAssets(java.util.List<AdAsset> adAssets) {

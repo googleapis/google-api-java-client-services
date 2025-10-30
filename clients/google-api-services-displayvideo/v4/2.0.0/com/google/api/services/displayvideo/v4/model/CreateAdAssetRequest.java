@@ -31,14 +31,16 @@ package com.google.api.services.displayvideo.v4.model;
 public final class CreateAdAssetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Ad assets to create. Only supports youtube video assets for now.
+   * Required. The ad asset to create. Only supports assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdAsset adAsset;
 
   /**
-   * Required. Ad assets to create. Only supports youtube video assets for now.
+   * Required. The ad asset to create. Only supports assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
    * @return value or {@code null} for none
    */
   public AdAsset getAdAsset() {
@@ -46,7 +48,8 @@ public final class CreateAdAssetRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Ad assets to create. Only supports youtube video assets for now.
+   * Required. The ad asset to create. Only supports assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
    * @param adAsset adAsset or {@code null} for none
    */
   public CreateAdAssetRequest setAdAsset(AdAsset adAsset) {

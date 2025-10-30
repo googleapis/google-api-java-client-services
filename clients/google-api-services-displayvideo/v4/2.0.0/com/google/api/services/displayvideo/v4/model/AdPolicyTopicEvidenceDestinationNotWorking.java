@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * Evidence details for destination not working policy violations.
+ * Details for on HTTP or DNS errors related to the ad destination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v4.model;
 public final class AdPolicyTopicEvidenceDestinationNotWorking extends com.google.api.client.json.GenericJson {
 
   /**
-   * The device platform of the not working url.
+   * The device where visiting the URL resulted in the error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,14 +59,14 @@ public final class AdPolicyTopicEvidenceDestinationNotWorking extends com.google
   private java.lang.Long httpErrorCode;
 
   /**
-   * The last checked time of the not working url.
+   * The last time the error was seen when navigating to URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastCheckedTime;
 
   /**
-   * The device platform of the not working url.
+   * The device where visiting the URL resulted in the error.
    * @return value or {@code null} for none
    */
   public java.lang.String getDevice() {
@@ -74,7 +74,7 @@ public final class AdPolicyTopicEvidenceDestinationNotWorking extends com.google
   }
 
   /**
-   * The device platform of the not working url.
+   * The device where visiting the URL resulted in the error.
    * @param device device or {@code null} for none
    */
   public AdPolicyTopicEvidenceDestinationNotWorking setDevice(java.lang.String device) {
@@ -134,7 +134,7 @@ public final class AdPolicyTopicEvidenceDestinationNotWorking extends com.google
   }
 
   /**
-   * The last checked time of the not working url.
+   * The last time the error was seen when navigating to URL.
    * @return value or {@code null} for none
    */
   public String getLastCheckedTime() {
@@ -142,7 +142,7 @@ public final class AdPolicyTopicEvidenceDestinationNotWorking extends com.google
   }
 
   /**
-   * The last checked time of the not working url.
+   * The last time the error was seen when navigating to URL.
    * @param lastCheckedTime lastCheckedTime or {@code null} for none
    */
   public AdPolicyTopicEvidenceDestinationNotWorking setLastCheckedTime(String lastCheckedTime) {

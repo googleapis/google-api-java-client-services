@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v4.model;
 public final class UploadAdAssetResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The uploaded ad asset, if successful.
+   * The created ad asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdAsset adAsset;
 
   /**
-   * The uploaded ad asset, if successful.
+   * The created ad asset.
    * @return value or {@code null} for none
    */
   public AdAsset getAdAsset() {
@@ -46,7 +46,7 @@ public final class UploadAdAssetResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The uploaded ad asset, if successful.
+   * The created ad asset.
    * @param adAsset adAsset or {@code null} for none
    */
   public UploadAdAssetResponse setAdAsset(AdAsset adAsset) {

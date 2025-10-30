@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * The youtube video asset data of the ad asset.
+ * Data for a YouTube video ad asset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,16 +31,16 @@ package com.google.api.services.displayvideo.v4.model;
 public final class YoutubeVideoAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The youtube video id of the asset. This is the 11 char string value used in the
-   * Youtube video URL.
+   * Required. The YouTube video id of the asset. This is the 11 char string value used in the
+   * YouTube video URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String youtubeVideoId;
 
   /**
-   * Required. The youtube video id of the asset. This is the 11 char string value used in the
-   * Youtube video URL.
+   * Required. The YouTube video id of the asset. This is the 11 char string value used in the
+   * YouTube video URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getYoutubeVideoId() {
@@ -48,8 +48,8 @@ public final class YoutubeVideoAsset extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The youtube video id of the asset. This is the 11 char string value used in the
-   * Youtube video URL.
+   * Required. The YouTube video id of the asset. This is the 11 char string value used in the
+   * YouTube video URL.
    * @param youtubeVideoId youtubeVideoId or {@code null} for none
    */
   public YoutubeVideoAsset setYoutubeVideoId(java.lang.String youtubeVideoId) {

@@ -31,29 +31,29 @@ package com.google.api.services.displayvideo.v4.model;
 public final class AdPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The policy approval status of an ad. Indicating the ad policy approval decision.
+   * The policy approval status of an ad, indicating the approval decision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adPolicyApprovalStatus;
 
   /**
-   * The policy review status of an ad. Indicating where the review process the ad is currently at.
+   * The policy review status of an ad, indicating where in the review process the ad is currently.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adPolicyReviewStatus;
 
   /**
-   * The policy topic entries for the ad, including the topic, restriction level, and guidance on
-   * how to fix policy issues.
+   * The entries for each policy topic identified as relating to the ad. Each entry includes the
+   * topic, restriction level, and guidance on how to fix policy issues.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AdPolicyTopicEntry> adPolicyTopicEntry;
 
   /**
-   * The policy approval status of an ad. Indicating the ad policy approval decision.
+   * The policy approval status of an ad, indicating the approval decision.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdPolicyApprovalStatus() {
@@ -61,7 +61,7 @@ public final class AdPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The policy approval status of an ad. Indicating the ad policy approval decision.
+   * The policy approval status of an ad, indicating the approval decision.
    * @param adPolicyApprovalStatus adPolicyApprovalStatus or {@code null} for none
    */
   public AdPolicy setAdPolicyApprovalStatus(java.lang.String adPolicyApprovalStatus) {
@@ -70,7 +70,7 @@ public final class AdPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The policy review status of an ad. Indicating where the review process the ad is currently at.
+   * The policy review status of an ad, indicating where in the review process the ad is currently.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdPolicyReviewStatus() {
@@ -78,7 +78,7 @@ public final class AdPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The policy review status of an ad. Indicating where the review process the ad is currently at.
+   * The policy review status of an ad, indicating where in the review process the ad is currently.
    * @param adPolicyReviewStatus adPolicyReviewStatus or {@code null} for none
    */
   public AdPolicy setAdPolicyReviewStatus(java.lang.String adPolicyReviewStatus) {
@@ -87,8 +87,8 @@ public final class AdPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The policy topic entries for the ad, including the topic, restriction level, and guidance on
-   * how to fix policy issues.
+   * The entries for each policy topic identified as relating to the ad. Each entry includes the
+   * topic, restriction level, and guidance on how to fix policy issues.
    * @return value or {@code null} for none
    */
   public java.util.List<AdPolicyTopicEntry> getAdPolicyTopicEntry() {
@@ -96,8 +96,8 @@ public final class AdPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The policy topic entries for the ad, including the topic, restriction level, and guidance on
-   * how to fix policy issues.
+   * The entries for each policy topic identified as relating to the ad. Each entry includes the
+   * topic, restriction level, and guidance on how to fix policy issues.
    * @param adPolicyTopicEntry adPolicyTopicEntry or {@code null} for none
    */
   public AdPolicy setAdPolicyTopicEntry(java.util.List<AdPolicyTopicEntry> adPolicyTopicEntry) {

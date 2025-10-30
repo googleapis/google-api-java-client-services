@@ -52,6 +52,14 @@ public final class FhirStoreMetric extends com.google.api.client.json.GenericJso
   private java.lang.Long structuredStorageSizeBytes;
 
   /**
+   * The total amount of versioned storage used by versioned FHIR resources of this resource type in
+   * the store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long versionedStorageSizeBytes;
+
+  /**
    * The total count of FHIR resources in the store of this resource type.
    * @return value or {@code null} for none
    */
@@ -101,6 +109,25 @@ public final class FhirStoreMetric extends com.google.api.client.json.GenericJso
    */
   public FhirStoreMetric setStructuredStorageSizeBytes(java.lang.Long structuredStorageSizeBytes) {
     this.structuredStorageSizeBytes = structuredStorageSizeBytes;
+    return this;
+  }
+
+  /**
+   * The total amount of versioned storage used by versioned FHIR resources of this resource type in
+   * the store.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVersionedStorageSizeBytes() {
+    return versionedStorageSizeBytes;
+  }
+
+  /**
+   * The total amount of versioned storage used by versioned FHIR resources of this resource type in
+   * the store.
+   * @param versionedStorageSizeBytes versionedStorageSizeBytes or {@code null} for none
+   */
+  public FhirStoreMetric setVersionedStorageSizeBytes(java.lang.Long versionedStorageSizeBytes) {
+    this.versionedStorageSizeBytes = versionedStorageSizeBytes;
     return this;
   }
 

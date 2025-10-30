@@ -17,8 +17,7 @@
 package com.google.api.services.displayvideo.v3.model;
 
 /**
- * Represents a criterion that is restricted. Today only used to represent a country restriction.
- * Used by both policy evidence and policy constraints.
+ * Represents a country restriction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -32,21 +31,21 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AdPolicyCriterionRestriction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Only used today to represent a country criterion id.
+   * The country criterion id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long countryCriterionId;
 
   /**
-   * Localized name for the country. Could be empty.
+   * Localized name for the country. May be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String countryLabel;
 
   /**
-   * Only used today to represent a country criterion id.
+   * The country criterion id.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCountryCriterionId() {
@@ -54,7 +53,7 @@ public final class AdPolicyCriterionRestriction extends com.google.api.client.js
   }
 
   /**
-   * Only used today to represent a country criterion id.
+   * The country criterion id.
    * @param countryCriterionId countryCriterionId or {@code null} for none
    */
   public AdPolicyCriterionRestriction setCountryCriterionId(java.lang.Long countryCriterionId) {
@@ -63,7 +62,7 @@ public final class AdPolicyCriterionRestriction extends com.google.api.client.js
   }
 
   /**
-   * Localized name for the country. Could be empty.
+   * Localized name for the country. May be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryLabel() {
@@ -71,7 +70,7 @@ public final class AdPolicyCriterionRestriction extends com.google.api.client.js
   }
 
   /**
-   * Localized name for the country. Could be empty.
+   * Localized name for the country. May be empty.
    * @param countryLabel countryLabel or {@code null} for none
    */
   public AdPolicyCriterionRestriction setCountryLabel(java.lang.String countryLabel) {

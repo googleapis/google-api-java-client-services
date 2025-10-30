@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * A single ad asset. Next ID: 6
+ * A single ad asset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v4.model;
 public final class AdAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Asset ID of the ad asset.
+   * Output only. The ID of the ad asset. Referred to as the asset ID when assigned to an ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -59,14 +59,14 @@ public final class AdAsset extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The youtube video asset of the ad asset.
+   * Youtube video asset data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private YoutubeVideoAsset youtubeVideoAsset;
 
   /**
-   * Output only. Asset ID of the ad asset.
+   * Output only. The ID of the ad asset. Referred to as the asset ID when assigned to an ad.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdAssetId() {
@@ -74,7 +74,7 @@ public final class AdAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Asset ID of the ad asset.
+   * Output only. The ID of the ad asset. Referred to as the asset ID when assigned to an ad.
    * @param adAssetId adAssetId or {@code null} for none
    */
   public AdAsset setAdAssetId(java.lang.Long adAssetId) {
@@ -134,7 +134,7 @@ public final class AdAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The youtube video asset of the ad asset.
+   * Youtube video asset data.
    * @return value or {@code null} for none
    */
   public YoutubeVideoAsset getYoutubeVideoAsset() {
@@ -142,7 +142,7 @@ public final class AdAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The youtube video asset of the ad asset.
+   * Youtube video asset data.
    * @param youtubeVideoAsset youtubeVideoAsset or {@code null} for none
    */
   public AdAsset setYoutubeVideoAsset(YoutubeVideoAsset youtubeVideoAsset) {

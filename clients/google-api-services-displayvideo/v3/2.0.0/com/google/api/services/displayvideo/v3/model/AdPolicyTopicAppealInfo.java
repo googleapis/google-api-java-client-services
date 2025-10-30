@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v3.model;
 
 /**
- * Appeal related information for a policy topic.
+ * Information on how to appeal a policy decision.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AdPolicyTopicAppealInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Only available when appeal_type is APPEAL_FORM.
+   * Only available when appeal_type is `APPEAL_FORM`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appealFormLink;
 
   /**
-   * Indicate whether the policy topic can be self-service appeal or appeal form.
+   * Whether the decision can be appealed through a self-service appeal or an appeal form.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appealType;
 
   /**
-   * Only available when appeal_type is APPEAL_FORM.
+   * Only available when appeal_type is `APPEAL_FORM`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppealFormLink() {
@@ -53,7 +53,7 @@ public final class AdPolicyTopicAppealInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Only available when appeal_type is APPEAL_FORM.
+   * Only available when appeal_type is `APPEAL_FORM`.
    * @param appealFormLink appealFormLink or {@code null} for none
    */
   public AdPolicyTopicAppealInfo setAppealFormLink(java.lang.String appealFormLink) {
@@ -62,7 +62,7 @@ public final class AdPolicyTopicAppealInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Indicate whether the policy topic can be self-service appeal or appeal form.
+   * Whether the decision can be appealed through a self-service appeal or an appeal form.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppealType() {
@@ -70,7 +70,7 @@ public final class AdPolicyTopicAppealInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Indicate whether the policy topic can be self-service appeal or appeal form.
+   * Whether the decision can be appealed through a self-service appeal or an appeal form.
    * @param appealType appealType or {@code null} for none
    */
   public AdPolicyTopicAppealInfo setAppealType(java.lang.String appealType) {

@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v4.model;
 public final class AdPolicyTopicEvidenceTrademark extends com.google.api.client.json.GenericJson {
 
   /**
-   * Criteria that are geo restrictions.
+   * Countries where the policy violation is relevant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class AdPolicyTopicEvidenceTrademark extends com.google.api.client.
   private java.lang.String term;
 
   /**
-   * Criteria that are geo restrictions.
+   * Countries where the policy violation is relevant.
    * @return value or {@code null} for none
    */
   public java.util.List<AdPolicyCriterionRestriction> getCountryRestrictions() {
@@ -66,7 +66,7 @@ public final class AdPolicyTopicEvidenceTrademark extends com.google.api.client.
   }
 
   /**
-   * Criteria that are geo restrictions.
+   * Countries where the policy violation is relevant.
    * @param countryRestrictions countryRestrictions or {@code null} for none
    */
   public AdPolicyTopicEvidenceTrademark setCountryRestrictions(java.util.List<AdPolicyCriterionRestriction> countryRestrictions) {

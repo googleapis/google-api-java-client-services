@@ -31,7 +31,8 @@ package com.google.api.services.displayvideo.v4.model;
 public final class ListAdAssetsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of ad assets. This list will be absent if empty.
+   * The list of ad assets. The list will only contain assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`. This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,8 @@ public final class ListAdAssetsResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * The list of ad assets. This list will be absent if empty.
+   * The list of ad assets. The list will only contain assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`. This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<AdAsset> getAdAssets() {
@@ -60,7 +62,8 @@ public final class ListAdAssetsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The list of ad assets. This list will be absent if empty.
+   * The list of ad assets. The list will only contain assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`. This list will be absent if empty.
    * @param adAssets adAssets or {@code null} for none
    */
   public ListAdAssetsResponse setAdAssets(java.util.List<AdAsset> adAssets) {

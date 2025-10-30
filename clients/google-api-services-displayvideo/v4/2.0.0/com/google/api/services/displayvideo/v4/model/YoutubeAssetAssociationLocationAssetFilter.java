@@ -38,11 +38,9 @@ public final class YoutubeAssetAssociationLocationAssetFilter extends com.google
   private java.lang.Long assetSetId;
 
   /**
-   * Optional. The matching function that contains details about how the location asset filter
-   * matches location assets. This field should only be set for location asset filters of
-   * LocationMatchingType#FILTER or LocationMatchingType#SELECTED_ASSETS. When creating associations
-   * with location asset filters: This field is required only for location asset filters of
-   * LocationMatchingType#FILTER or LocationMatchingType#SELECTED_ASSETS.
+   * Optional. The matching function that determines how the location asset filter matches location
+   * assets. This field is required and can only be set for if location_matching_type is `FILTER` or
+   * `SELECTED_ASSETS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,11 +71,9 @@ public final class YoutubeAssetAssociationLocationAssetFilter extends com.google
   }
 
   /**
-   * Optional. The matching function that contains details about how the location asset filter
-   * matches location assets. This field should only be set for location asset filters of
-   * LocationMatchingType#FILTER or LocationMatchingType#SELECTED_ASSETS. When creating associations
-   * with location asset filters: This field is required only for location asset filters of
-   * LocationMatchingType#FILTER or LocationMatchingType#SELECTED_ASSETS.
+   * Optional. The matching function that determines how the location asset filter matches location
+   * assets. This field is required and can only be set for if location_matching_type is `FILTER` or
+   * `SELECTED_ASSETS`.
    * @return value or {@code null} for none
    */
   public YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction getLocationMatchingFunction() {
@@ -85,11 +81,9 @@ public final class YoutubeAssetAssociationLocationAssetFilter extends com.google
   }
 
   /**
-   * Optional. The matching function that contains details about how the location asset filter
-   * matches location assets. This field should only be set for location asset filters of
-   * LocationMatchingType#FILTER or LocationMatchingType#SELECTED_ASSETS. When creating associations
-   * with location asset filters: This field is required only for location asset filters of
-   * LocationMatchingType#FILTER or LocationMatchingType#SELECTED_ASSETS.
+   * Optional. The matching function that determines how the location asset filter matches location
+   * assets. This field is required and can only be set for if location_matching_type is `FILTER` or
+   * `SELECTED_ASSETS`.
    * @param locationMatchingFunction locationMatchingFunction or {@code null} for none
    */
   public YoutubeAssetAssociationLocationAssetFilter setLocationMatchingFunction(YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction locationMatchingFunction) {

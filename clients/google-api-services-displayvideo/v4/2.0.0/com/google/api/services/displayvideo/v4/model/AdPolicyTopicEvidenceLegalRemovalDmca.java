@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * DMCA related regulation enforcement.
+ * DMCA complaint details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v4.model;
 public final class AdPolicyTopicEvidenceLegalRemovalDmca extends com.google.api.client.json.GenericJson {
 
   /**
-   * The entity who makes the legal complaint.
+   * The entity who made the legal complaint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String complainant;
 
   /**
-   * The entity who makes the legal complaint.
+   * The entity who made the legal complaint.
    * @return value or {@code null} for none
    */
   public java.lang.String getComplainant() {
@@ -46,7 +46,7 @@ public final class AdPolicyTopicEvidenceLegalRemovalDmca extends com.google.api.
   }
 
   /**
-   * The entity who makes the legal complaint.
+   * The entity who made the legal complaint.
    * @param complainant complainant or {@code null} for none
    */
   public AdPolicyTopicEvidenceLegalRemovalDmca setComplainant(java.lang.String complainant) {

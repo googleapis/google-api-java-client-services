@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * Legal related regulation enforcement, either from DMCA or local legal.
+ * Legal related regulation enforcement, either from DMCA or local legal regulation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v4.model;
 public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.client.json.GenericJson {
 
   /**
-   * The legal removal complaint type.
+   * The type of complaint causing the legal removal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String complaintType;
 
   /**
-   * The restricted countries due to the legal removal.
+   * The countries restricted due to the legal removal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,28 +51,28 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * Whether the restriction is from DMCA regulation.
+   * Details on the DMCA regulation legal removal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdPolicyTopicEvidenceLegalRemovalDmca dmca;
 
   /**
-   * Whether the restriction is from local legal regulation.
+   * Details on the local legal regulation legal removal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdPolicyTopicEvidenceLegalRemovalLocalLegal localLegal;
 
   /**
-   * The urls that are restricted due to the legal removal.
+   * The urls restricted due to the legal removal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> restrictedUris;
 
   /**
-   * The legal removal complaint type.
+   * The type of complaint causing the legal removal.
    * @return value or {@code null} for none
    */
   public java.lang.String getComplaintType() {
@@ -80,7 +80,7 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * The legal removal complaint type.
+   * The type of complaint causing the legal removal.
    * @param complaintType complaintType or {@code null} for none
    */
   public AdPolicyTopicEvidenceLegalRemoval setComplaintType(java.lang.String complaintType) {
@@ -89,7 +89,7 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * The restricted countries due to the legal removal.
+   * The countries restricted due to the legal removal.
    * @return value or {@code null} for none
    */
   public java.util.List<AdPolicyCriterionRestriction> getCountryRestrictions() {
@@ -97,7 +97,7 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * The restricted countries due to the legal removal.
+   * The countries restricted due to the legal removal.
    * @param countryRestrictions countryRestrictions or {@code null} for none
    */
   public AdPolicyTopicEvidenceLegalRemoval setCountryRestrictions(java.util.List<AdPolicyCriterionRestriction> countryRestrictions) {
@@ -106,7 +106,7 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * Whether the restriction is from DMCA regulation.
+   * Details on the DMCA regulation legal removal.
    * @return value or {@code null} for none
    */
   public AdPolicyTopicEvidenceLegalRemovalDmca getDmca() {
@@ -114,7 +114,7 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * Whether the restriction is from DMCA regulation.
+   * Details on the DMCA regulation legal removal.
    * @param dmca dmca or {@code null} for none
    */
   public AdPolicyTopicEvidenceLegalRemoval setDmca(AdPolicyTopicEvidenceLegalRemovalDmca dmca) {
@@ -123,7 +123,7 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * Whether the restriction is from local legal regulation.
+   * Details on the local legal regulation legal removal.
    * @return value or {@code null} for none
    */
   public AdPolicyTopicEvidenceLegalRemovalLocalLegal getLocalLegal() {
@@ -131,7 +131,7 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * Whether the restriction is from local legal regulation.
+   * Details on the local legal regulation legal removal.
    * @param localLegal localLegal or {@code null} for none
    */
   public AdPolicyTopicEvidenceLegalRemoval setLocalLegal(AdPolicyTopicEvidenceLegalRemovalLocalLegal localLegal) {
@@ -140,7 +140,7 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * The urls that are restricted due to the legal removal.
+   * The urls restricted due to the legal removal.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRestrictedUris() {
@@ -148,7 +148,7 @@ public final class AdPolicyTopicEvidenceLegalRemoval extends com.google.api.clie
   }
 
   /**
-   * The urls that are restricted due to the legal removal.
+   * The urls restricted due to the legal removal.
    * @param restrictedUris restrictedUris or {@code null} for none
    */
   public AdPolicyTopicEvidenceLegalRemoval setRestrictedUris(java.util.List<java.lang.String> restrictedUris) {

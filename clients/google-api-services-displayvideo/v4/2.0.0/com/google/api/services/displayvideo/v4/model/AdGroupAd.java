@@ -38,7 +38,10 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private java.lang.Long adGroupAdId;
 
   /**
-   * The unique ID of the ad group that the ad belongs to.
+   * The unique ID of the ad group that the ad belongs to. *Caution*: Parent ad groups for Demand
+   * Gen ads are not currently retrieveable using `advertisers.adGroups.list` or
+   * `advertisers.adGroups.get`. Demand Gen ads can be identified by the absence of the `ad_details`
+   * union field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -169,7 +172,10 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the ad group that the ad belongs to.
+   * The unique ID of the ad group that the ad belongs to. *Caution*: Parent ad groups for Demand
+   * Gen ads are not currently retrieveable using `advertisers.adGroups.list` or
+   * `advertisers.adGroups.get`. Demand Gen ads can be identified by the absence of the `ad_details`
+   * union field.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdGroupId() {
@@ -177,7 +183,10 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the ad group that the ad belongs to.
+   * The unique ID of the ad group that the ad belongs to. *Caution*: Parent ad groups for Demand
+   * Gen ads are not currently retrieveable using `advertisers.adGroups.list` or
+   * `advertisers.adGroups.get`. Demand Gen ads can be identified by the absence of the `ad_details`
+   * union field.
    * @param adGroupId adGroupId or {@code null} for none
    */
   public AdGroupAd setAdGroupId(java.lang.Long adGroupId) {

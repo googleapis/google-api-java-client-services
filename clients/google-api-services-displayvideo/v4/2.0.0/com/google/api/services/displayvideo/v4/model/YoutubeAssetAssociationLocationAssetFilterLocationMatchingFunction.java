@@ -31,35 +31,32 @@ package com.google.api.services.displayvideo.v4.model;
 public final class YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The business name filter. This can be set only when linking with location asset
-   * filters of LocationMatchingType#FILTER. This is optional when linking with location asset
-   * filters of LocationMatchingType#FILTER.
+   * Optional. The business name to match with. This field is optional and can only be set if
+   * location_matching_type is `FILTER`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String business;
 
   /**
-   * Optional. The label filters. Label filters are OR'ed together. This can be set only when
-   * linking with location asset filters of LocationMatchingType#FILTER. This is optional when
-   * linking with location asset filters of LocationMatchingType#FILTER.
+   * Optional. The labels to match with. Labels are logically OR'ed together. This field is optional
+   * and can only be set if location_matching_type is `FILTER`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> labels;
 
   /**
-   * Optional. The selected location asset IDs. This is required to set when linking with location
-   * asset filters of LocationMatchingType#SELECTED_ASSETS.
+   * Optional. The selected location asset IDs. This field is required if location_matching_type is
+   * `SELECTED_ASSETS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> locationAssetIds;
 
   /**
-   * Optional. The business name filter. This can be set only when linking with location asset
-   * filters of LocationMatchingType#FILTER. This is optional when linking with location asset
-   * filters of LocationMatchingType#FILTER.
+   * Optional. The business name to match with. This field is optional and can only be set if
+   * location_matching_type is `FILTER`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBusiness() {
@@ -67,9 +64,8 @@ public final class YoutubeAssetAssociationLocationAssetFilterLocationMatchingFun
   }
 
   /**
-   * Optional. The business name filter. This can be set only when linking with location asset
-   * filters of LocationMatchingType#FILTER. This is optional when linking with location asset
-   * filters of LocationMatchingType#FILTER.
+   * Optional. The business name to match with. This field is optional and can only be set if
+   * location_matching_type is `FILTER`.
    * @param business business or {@code null} for none
    */
   public YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction setBusiness(java.lang.String business) {
@@ -78,9 +74,8 @@ public final class YoutubeAssetAssociationLocationAssetFilterLocationMatchingFun
   }
 
   /**
-   * Optional. The label filters. Label filters are OR'ed together. This can be set only when
-   * linking with location asset filters of LocationMatchingType#FILTER. This is optional when
-   * linking with location asset filters of LocationMatchingType#FILTER.
+   * Optional. The labels to match with. Labels are logically OR'ed together. This field is optional
+   * and can only be set if location_matching_type is `FILTER`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLabels() {
@@ -88,9 +83,8 @@ public final class YoutubeAssetAssociationLocationAssetFilterLocationMatchingFun
   }
 
   /**
-   * Optional. The label filters. Label filters are OR'ed together. This can be set only when
-   * linking with location asset filters of LocationMatchingType#FILTER. This is optional when
-   * linking with location asset filters of LocationMatchingType#FILTER.
+   * Optional. The labels to match with. Labels are logically OR'ed together. This field is optional
+   * and can only be set if location_matching_type is `FILTER`.
    * @param labels labels or {@code null} for none
    */
   public YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction setLabels(java.util.List<java.lang.String> labels) {
@@ -99,8 +93,8 @@ public final class YoutubeAssetAssociationLocationAssetFilterLocationMatchingFun
   }
 
   /**
-   * Optional. The selected location asset IDs. This is required to set when linking with location
-   * asset filters of LocationMatchingType#SELECTED_ASSETS.
+   * Optional. The selected location asset IDs. This field is required if location_matching_type is
+   * `SELECTED_ASSETS`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getLocationAssetIds() {
@@ -108,8 +102,8 @@ public final class YoutubeAssetAssociationLocationAssetFilterLocationMatchingFun
   }
 
   /**
-   * Optional. The selected location asset IDs. This is required to set when linking with location
-   * asset filters of LocationMatchingType#SELECTED_ASSETS.
+   * Optional. The selected location asset IDs. This field is required if location_matching_type is
+   * `SELECTED_ASSETS`.
    * @param locationAssetIds locationAssetIds or {@code null} for none
    */
   public YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction setLocationAssetIds(java.util.List<java.lang.Long> locationAssetIds) {

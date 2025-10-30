@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v3.model;
 
 /**
- * Counterfeit enforcement that caused a policy violation.
+ * Details on the counterfeit enforcement that caused a policy violation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AdPolicyTopicEvidenceCounterfeit extends com.google.api.client.json.GenericJson {
 
   /**
-   * The content or product owners that make the complainants.
+   * The content or product owners that made a complaint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> owners;
 
   /**
-   * The content or product owners that make the complainants.
+   * The content or product owners that made a complaint.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOwners() {
@@ -46,7 +46,7 @@ public final class AdPolicyTopicEvidenceCounterfeit extends com.google.api.clien
   }
 
   /**
-   * The content or product owners that make the complainants.
+   * The content or product owners that made a complaint.
    * @param owners owners or {@code null} for none
    */
   public AdPolicyTopicEvidenceCounterfeit setOwners(java.util.List<java.lang.String> owners) {

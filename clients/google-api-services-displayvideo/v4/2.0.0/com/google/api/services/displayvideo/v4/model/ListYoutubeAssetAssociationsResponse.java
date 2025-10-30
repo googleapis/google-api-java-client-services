@@ -31,21 +31,23 @@ package com.google.api.services.displayvideo.v4.model;
 public final class ListYoutubeAssetAssociationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token to retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListYoutubeAssetAssociations` method to retrieve the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of associations. This list will be absent if empty.
+   * The list of asset associations. This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<YoutubeAssetAssociation> youtubeAssetAssociations;
 
   /**
-   * A token to retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListYoutubeAssetAssociations` method to retrieve the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -53,7 +55,8 @@ public final class ListYoutubeAssetAssociationsResponse extends com.google.api.c
   }
 
   /**
-   * A token to retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListYoutubeAssetAssociations` method to retrieve the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListYoutubeAssetAssociationsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -62,7 +65,7 @@ public final class ListYoutubeAssetAssociationsResponse extends com.google.api.c
   }
 
   /**
-   * The list of associations. This list will be absent if empty.
+   * The list of asset associations. This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<YoutubeAssetAssociation> getYoutubeAssetAssociations() {
@@ -70,7 +73,7 @@ public final class ListYoutubeAssetAssociationsResponse extends com.google.api.c
   }
 
   /**
-   * The list of associations. This list will be absent if empty.
+   * The list of asset associations. This list will be absent if empty.
    * @param youtubeAssetAssociations youtubeAssetAssociations or {@code null} for none
    */
   public ListYoutubeAssetAssociationsResponse setYoutubeAssetAssociations(java.util.List<YoutubeAssetAssociation> youtubeAssetAssociations) {

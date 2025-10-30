@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * A request message for UploadAdAsset. Next ID: 6
+ * A request message for UploadAdAsset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v4.model;
 public final class UploadAdAssetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The type of the ad asset. Only supports image assets for now.
+   * Required. The type of the ad asset. Only `AD_ASSET_TYPE_IMAGE` is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class UploadAdAssetRequest extends com.google.api.client.json.Gener
   private java.lang.String filename;
 
   /**
-   * Required. The type of the ad asset. Only supports image assets for now.
+   * Required. The type of the ad asset. Only `AD_ASSET_TYPE_IMAGE` is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdAssetType() {
@@ -54,7 +54,7 @@ public final class UploadAdAssetRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The type of the ad asset. Only supports image assets for now.
+   * Required. The type of the ad asset. Only `AD_ASSET_TYPE_IMAGE` is supported.
    * @param adAssetType adAssetType or {@code null} for none
    */
   public UploadAdAssetRequest setAdAssetType(java.lang.String adAssetType) {

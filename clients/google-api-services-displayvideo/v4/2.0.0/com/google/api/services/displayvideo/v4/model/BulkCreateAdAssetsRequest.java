@@ -31,7 +31,8 @@ package com.google.api.services.displayvideo.v4.model;
 public final class BulkCreateAdAssetsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Ad assets to create. Only supports youtube video assets for now.
+   * Required. Ad assets to create. Only supports assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class BulkCreateAdAssetsRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Ad assets to create. Only supports youtube video assets for now.
+   * Required. Ad assets to create. Only supports assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
    * @return value or {@code null} for none
    */
   public java.util.List<AdAsset> getAdAssets() {
@@ -52,7 +54,8 @@ public final class BulkCreateAdAssetsRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Ad assets to create. Only supports youtube video assets for now.
+   * Required. Ad assets to create. Only supports assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
    * @param adAssets adAssets or {@code null} for none
    */
   public BulkCreateAdAssetsRequest setAdAssets(java.util.List<AdAsset> adAssets) {

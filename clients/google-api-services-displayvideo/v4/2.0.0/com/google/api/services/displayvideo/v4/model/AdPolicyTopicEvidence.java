@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * Additional evidence information that explains a policy decision.
+ * Evidence information used in the policy decision.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -38,14 +38,14 @@ public final class AdPolicyTopicEvidence extends com.google.api.client.json.Gene
   private AdPolicyTopicEvidenceCounterfeit counterfeit;
 
   /**
-   * Mismatch between the ad destinations URLs.
+   * A mismatch between the ad destination URLs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdPolicyTopicEvidenceDestinationMismatch destinationMismatch;
 
   /**
-   * Destination not working because of HTTP error or DNS error.
+   * Information on HTTP or DNS errors related to the ad destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class AdPolicyTopicEvidence extends com.google.api.client.json.Gene
   private java.lang.Integer httpCode;
 
   /**
-   * The language the ad was detected to be written in. This is an IETF language tag such as "en-
-   * US".
+   * The language the ad was detected to be written in. This field uses IETF language tags, such as
+   * "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class AdPolicyTopicEvidence extends com.google.api.client.json.Gene
   }
 
   /**
-   * Mismatch between the ad destinations URLs.
+   * A mismatch between the ad destination URLs.
    * @return value or {@code null} for none
    */
   public AdPolicyTopicEvidenceDestinationMismatch getDestinationMismatch() {
@@ -134,7 +134,7 @@ public final class AdPolicyTopicEvidence extends com.google.api.client.json.Gene
   }
 
   /**
-   * Mismatch between the ad destinations URLs.
+   * A mismatch between the ad destination URLs.
    * @param destinationMismatch destinationMismatch or {@code null} for none
    */
   public AdPolicyTopicEvidence setDestinationMismatch(AdPolicyTopicEvidenceDestinationMismatch destinationMismatch) {
@@ -143,7 +143,7 @@ public final class AdPolicyTopicEvidence extends com.google.api.client.json.Gene
   }
 
   /**
-   * Destination not working because of HTTP error or DNS error.
+   * Information on HTTP or DNS errors related to the ad destination.
    * @return value or {@code null} for none
    */
   public AdPolicyTopicEvidenceDestinationNotWorking getDestinationNotWorking() {
@@ -151,7 +151,7 @@ public final class AdPolicyTopicEvidence extends com.google.api.client.json.Gene
   }
 
   /**
-   * Destination not working because of HTTP error or DNS error.
+   * Information on HTTP or DNS errors related to the ad destination.
    * @param destinationNotWorking destinationNotWorking or {@code null} for none
    */
   public AdPolicyTopicEvidence setDestinationNotWorking(AdPolicyTopicEvidenceDestinationNotWorking destinationNotWorking) {
@@ -194,8 +194,8 @@ public final class AdPolicyTopicEvidence extends com.google.api.client.json.Gene
   }
 
   /**
-   * The language the ad was detected to be written in. This is an IETF language tag such as "en-
-   * US".
+   * The language the ad was detected to be written in. This field uses IETF language tags, such as
+   * "en-US".
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -203,8 +203,8 @@ public final class AdPolicyTopicEvidence extends com.google.api.client.json.Gene
   }
 
   /**
-   * The language the ad was detected to be written in. This is an IETF language tag such as "en-
-   * US".
+   * The language the ad was detected to be written in. This field uses IETF language tags, such as
+   * "en-US".
    * @param languageCode languageCode or {@code null} for none
    */
   public AdPolicyTopicEvidence setLanguageCode(java.lang.String languageCode) {

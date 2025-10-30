@@ -725,6 +725,164 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Sets the given finalized deal as ready to serve. By default, deals are set as ready to serve as
+       * soon as they're finalized. If you want to opt out of the default behavior, and manually indicate
+       * that deals are ready to serve, ask your Technical Account Manager to add you to the allowlist. If
+       * you choose to use this method, finalized deals belonging to the bidder and its child seats don't
+       * start serving until after you call `setReadyToServe`, and after the deals become active. For
+       * example, you can use this method to delay receiving bid requests until your creative is ready. In
+       * addition, bidders can use the URL path "/v1/bidders/{accountId}/finalizedDeals/{dealId}" to set
+       * ready to serve for the finalized deals belong to itself, its child seats and all their clients.
+       * This method only applies to programmatic guaranteed deals.
+       *
+       * Create a request for the method "finalizedDeals.setReadyToServe".
+       *
+       * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link SetReadyToServe#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param deal Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+       *        `bidders/{accountId}/finalizedDeals/{dealId}`
+       * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1.model.SetReadyToServeRequest}
+       * @return the request
+       */
+      public SetReadyToServe setReadyToServe(java.lang.String deal, com.google.api.services.authorizedbuyersmarketplace.v1.model.SetReadyToServeRequest content) throws java.io.IOException {
+        SetReadyToServe result = new SetReadyToServe(deal, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SetReadyToServe extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1.model.FinalizedDeal> {
+
+        private static final String REST_PATH = "v1/{+deal}:setReadyToServe";
+
+        private final java.util.regex.Pattern DEAL_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/finalizedDeals/[^/]+$");
+
+        /**
+         * Sets the given finalized deal as ready to serve. By default, deals are set as ready to serve as
+         * soon as they're finalized. If you want to opt out of the default behavior, and manually
+         * indicate that deals are ready to serve, ask your Technical Account Manager to add you to the
+         * allowlist. If you choose to use this method, finalized deals belonging to the bidder and its
+         * child seats don't start serving until after you call `setReadyToServe`, and after the deals
+         * become active. For example, you can use this method to delay receiving bid requests until your
+         * creative is ready. In addition, bidders can use the URL path
+         * "/v1/bidders/{accountId}/finalizedDeals/{dealId}" to set ready to serve for the finalized deals
+         * belong to itself, its child seats and all their clients. This method only applies to
+         * programmatic guaranteed deals.
+         *
+         * Create a request for the method "finalizedDeals.setReadyToServe".
+         *
+         * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+         * setting any optional parameters, call the {@link SetReadyToServe#execute()} method to invoke
+         * the remote operation. <p> {@link SetReadyToServe#initialize(com.google.api.client.googleapis.se
+         * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param deal Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+       *        `bidders/{accountId}/finalizedDeals/{dealId}`
+         * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1.model.SetReadyToServeRequest}
+         * @since 1.13
+         */
+        protected SetReadyToServe(java.lang.String deal, com.google.api.services.authorizedbuyersmarketplace.v1.model.SetReadyToServeRequest content) {
+          super(AuthorizedBuyersMarketplace.this, "POST", REST_PATH, content, com.google.api.services.authorizedbuyersmarketplace.v1.model.FinalizedDeal.class);
+          this.deal = com.google.api.client.util.Preconditions.checkNotNull(deal, "Required parameter deal must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(DEAL_PATTERN.matcher(deal).matches(),
+                "Parameter deal must conform to the pattern " +
+                "^bidders/[^/]+/finalizedDeals/[^/]+$");
+          }
+        }
+
+        @Override
+        public SetReadyToServe set$Xgafv(java.lang.String $Xgafv) {
+          return (SetReadyToServe) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SetReadyToServe setAccessToken(java.lang.String accessToken) {
+          return (SetReadyToServe) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SetReadyToServe setAlt(java.lang.String alt) {
+          return (SetReadyToServe) super.setAlt(alt);
+        }
+
+        @Override
+        public SetReadyToServe setCallback(java.lang.String callback) {
+          return (SetReadyToServe) super.setCallback(callback);
+        }
+
+        @Override
+        public SetReadyToServe setFields(java.lang.String fields) {
+          return (SetReadyToServe) super.setFields(fields);
+        }
+
+        @Override
+        public SetReadyToServe setKey(java.lang.String key) {
+          return (SetReadyToServe) super.setKey(key);
+        }
+
+        @Override
+        public SetReadyToServe setOauthToken(java.lang.String oauthToken) {
+          return (SetReadyToServe) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SetReadyToServe setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SetReadyToServe) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SetReadyToServe setQuotaUser(java.lang.String quotaUser) {
+          return (SetReadyToServe) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SetReadyToServe setUploadType(java.lang.String uploadType) {
+          return (SetReadyToServe) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SetReadyToServe setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SetReadyToServe) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+         * `bidders/{accountId}/finalizedDeals/{dealId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String deal;
+
+        /** Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+       `bidders/{accountId}/finalizedDeals/{dealId}`
+         */
+        public java.lang.String getDeal() {
+          return deal;
+        }
+
+        /**
+         * Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+         * `bidders/{accountId}/finalizedDeals/{dealId}`
+         */
+        public SetReadyToServe setDeal(java.lang.String deal) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(DEAL_PATTERN.matcher(deal).matches(),
+                "Parameter deal must conform to the pattern " +
+                "^bidders/[^/]+/finalizedDeals/[^/]+$");
+          }
+          this.deal = deal;
+          return this;
+        }
+
+        @Override
+        public SetReadyToServe set(String parameterName, Object value) {
+          return (SetReadyToServe) super.set(parameterName, value);
+        }
+      }
 
     }
   }
@@ -4491,7 +4649,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * that deals are ready to serve, ask your Technical Account Manager to add you to the allowlist. If
        * you choose to use this method, finalized deals belonging to the bidder and its child seats don't
        * start serving until after you call `setReadyToServe`, and after the deals become active. For
-       * example, you can use this method to delay receiving bid requests until your creative is ready.
+       * example, you can use this method to delay receiving bid requests until your creative is ready. In
+       * addition, bidders can use the URL path "/v1/bidders/{accountId}/finalizedDeals/{dealId}" to set
+       * ready to serve for the finalized deals belong to itself, its child seats and all their clients.
        * This method only applies to programmatic guaranteed deals.
        *
        * Create a request for the method "finalizedDeals.setReadyToServe".
@@ -4500,7 +4660,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * setting any optional parameters, call the {@link SetReadyToServe#execute()} method to invoke the
        * remote operation.
        *
-       * @param deal Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}`
+       * @param deal Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+       *        `bidders/{accountId}/finalizedDeals/{dealId}`
        * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1.model.SetReadyToServeRequest}
        * @return the request
        */
@@ -4524,7 +4685,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * allowlist. If you choose to use this method, finalized deals belonging to the bidder and its
          * child seats don't start serving until after you call `setReadyToServe`, and after the deals
          * become active. For example, you can use this method to delay receiving bid requests until your
-         * creative is ready. This method only applies to programmatic guaranteed deals.
+         * creative is ready. In addition, bidders can use the URL path
+         * "/v1/bidders/{accountId}/finalizedDeals/{dealId}" to set ready to serve for the finalized deals
+         * belong to itself, its child seats and all their clients. This method only applies to
+         * programmatic guaranteed deals.
          *
          * Create a request for the method "finalizedDeals.setReadyToServe".
          *
@@ -4534,7 +4698,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param deal Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}`
+         * @param deal Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+       *        `bidders/{accountId}/finalizedDeals/{dealId}`
          * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1.model.SetReadyToServeRequest}
          * @since 1.13
          */
@@ -4603,17 +4768,24 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
           return (SetReadyToServe) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` */
+        /**
+         * Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+         * `bidders/{accountId}/finalizedDeals/{dealId}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String deal;
 
-        /** Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}`
+        /** Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+       `bidders/{accountId}/finalizedDeals/{dealId}`
          */
         public java.lang.String getDeal() {
           return deal;
         }
 
-        /** Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` */
+        /**
+         * Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}` or
+         * `bidders/{accountId}/finalizedDeals/{dealId}`
+         */
         public SetReadyToServe setDeal(java.lang.String deal) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(DEAL_PATTERN.matcher(deal).matches(),

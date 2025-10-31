@@ -154,6 +154,140 @@ public class GoogleMarketingPlatformAdminAPI extends com.google.api.client.googl
   public class Organizations {
 
     /**
+     * Returns a list of clients managed by the sales partner organization. User needs to be an
+     * OrgAdmin/BillingAdmin on the sales partner organization in order to view the end clients.
+     *
+     * Create a request for the method "organizations.findSalesPartnerManagedClients".
+     *
+     * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+     * optional parameters, call the {@link FindSalesPartnerManagedClients#execute()} method to invoke
+     * the remote operation.
+     *
+     * @param organization Required. The name of the sales partner organization. Format: organizations/{org_id}
+     * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.FindSalesPartnerManagedClientsRequest}
+     * @return the request
+     */
+    public FindSalesPartnerManagedClients findSalesPartnerManagedClients(java.lang.String organization, com.google.api.services.marketingplatformadmin.v1alpha.model.FindSalesPartnerManagedClientsRequest content) throws java.io.IOException {
+      FindSalesPartnerManagedClients result = new FindSalesPartnerManagedClients(organization, content);
+      initialize(result);
+      return result;
+    }
+
+    public class FindSalesPartnerManagedClients extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.FindSalesPartnerManagedClientsResponse> {
+
+      private static final String REST_PATH = "v1alpha/{+organization}:findSalesPartnerManagedClients";
+
+      private final java.util.regex.Pattern ORGANIZATION_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Returns a list of clients managed by the sales partner organization. User needs to be an
+       * OrgAdmin/BillingAdmin on the sales partner organization in order to view the end clients.
+       *
+       * Create a request for the method "organizations.findSalesPartnerManagedClients".
+       *
+       * This request holds the parameters needed by the the marketingplatformadmin server.  After
+       * setting any optional parameters, call the {@link FindSalesPartnerManagedClients#execute()}
+       * method to invoke the remote operation. <p> {@link FindSalesPartnerManagedClients#initialize(com
+       * .google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param organization Required. The name of the sales partner organization. Format: organizations/{org_id}
+       * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.FindSalesPartnerManagedClientsRequest}
+       * @since 1.13
+       */
+      protected FindSalesPartnerManagedClients(java.lang.String organization, com.google.api.services.marketingplatformadmin.v1alpha.model.FindSalesPartnerManagedClientsRequest content) {
+        super(GoogleMarketingPlatformAdminAPI.this, "POST", REST_PATH, content, com.google.api.services.marketingplatformadmin.v1alpha.model.FindSalesPartnerManagedClientsResponse.class);
+        this.organization = com.google.api.client.util.Preconditions.checkNotNull(organization, "Required parameter organization must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ORGANIZATION_PATTERN.matcher(organization).matches(),
+              "Parameter organization must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients set$Xgafv(java.lang.String $Xgafv) {
+        return (FindSalesPartnerManagedClients) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setAccessToken(java.lang.String accessToken) {
+        return (FindSalesPartnerManagedClients) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setAlt(java.lang.String alt) {
+        return (FindSalesPartnerManagedClients) super.setAlt(alt);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setCallback(java.lang.String callback) {
+        return (FindSalesPartnerManagedClients) super.setCallback(callback);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setFields(java.lang.String fields) {
+        return (FindSalesPartnerManagedClients) super.setFields(fields);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setKey(java.lang.String key) {
+        return (FindSalesPartnerManagedClients) super.setKey(key);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setOauthToken(java.lang.String oauthToken) {
+        return (FindSalesPartnerManagedClients) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (FindSalesPartnerManagedClients) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setQuotaUser(java.lang.String quotaUser) {
+        return (FindSalesPartnerManagedClients) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setUploadType(java.lang.String uploadType) {
+        return (FindSalesPartnerManagedClients) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients setUploadProtocol(java.lang.String uploadProtocol) {
+        return (FindSalesPartnerManagedClients) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the sales partner organization. Format: organizations/{org_id} */
+      @com.google.api.client.util.Key
+      private java.lang.String organization;
+
+      /** Required. The name of the sales partner organization. Format: organizations/{org_id}
+       */
+      public java.lang.String getOrganization() {
+        return organization;
+      }
+
+      /** Required. The name of the sales partner organization. Format: organizations/{org_id} */
+      public FindSalesPartnerManagedClients setOrganization(java.lang.String organization) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ORGANIZATION_PATTERN.matcher(organization).matches(),
+              "Parameter organization must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.organization = organization;
+        return this;
+      }
+
+      @Override
+      public FindSalesPartnerManagedClients set(String parameterName, Object value) {
+        return (FindSalesPartnerManagedClients) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lookup for a single organization.
      *
      * Create a request for the method "organizations.get".
@@ -290,6 +424,314 @@ public class GoogleMarketingPlatformAdminAPI extends com.google.api.client.googl
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns a list of organizations that the user has access to.
+     *
+     * Create a request for the method "organizations.list".
+     *
+     * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.ListOrganizationsResponse> {
+
+      private static final String REST_PATH = "v1alpha/organizations";
+
+      /**
+       * Returns a list of organizations that the user has access to.
+       *
+       * Create a request for the method "organizations.list".
+       *
+       * This request holds the parameters needed by the the marketingplatformadmin server.  After
+       * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(GoogleMarketingPlatformAdminAPI.this, "GET", REST_PATH, null, com.google.api.services.marketingplatformadmin.v1alpha.model.ListOrganizationsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The maximum number of organizations to return in one call. The service may return
+       * fewer than this value. If unspecified, at most 50 organizations will be returned. The
+       * maximum value is 1000; values above 1000 will be coerced to 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of organizations to return in one call. The service may return fewer
+     than this value. If unspecified, at most 50 organizations will be returned. The maximum value is
+     1000; values above 1000 will be coerced to 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of organizations to return in one call. The service may return
+       * fewer than this value. If unspecified, at most 50 organizations will be returned. The
+       * maximum value is 1000; values above 1000 will be coerced to 1000.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous ListOrganizations call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListOrganizations` must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous ListOrganizations call. Provide this to retrieve
+     the subsequent page. When paginating, all other parameters provided to `ListOrganizations` must
+     match the call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous ListOrganizations call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListOrganizations` must match the call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Get the usage and billing data for properties within the organization for the specified month.
+     * Per direct client org, user needs to be OrgAdmin/BillingAdmin on the organization in order to
+     * view the billing and usage data. Per sales partner client org, user needs to be
+     * OrgAdmin/BillingAdmin on the sales partner org in order to view the billing and usage data, or
+     * OrgAdmin/BillingAdmin on the sales partner client org in order to view the usage data only.
+     *
+     * Create a request for the method "organizations.reportPropertyUsage".
+     *
+     * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+     * optional parameters, call the {@link ReportPropertyUsage#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param organization Required. Specifies the organization whose property usage will be listed. Format:
+     *        organizations/{org_id}
+     * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.ReportPropertyUsageRequest}
+     * @return the request
+     */
+    public ReportPropertyUsage reportPropertyUsage(java.lang.String organization, com.google.api.services.marketingplatformadmin.v1alpha.model.ReportPropertyUsageRequest content) throws java.io.IOException {
+      ReportPropertyUsage result = new ReportPropertyUsage(organization, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ReportPropertyUsage extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.ReportPropertyUsageResponse> {
+
+      private static final String REST_PATH = "v1alpha/{+organization}:reportPropertyUsage";
+
+      private final java.util.regex.Pattern ORGANIZATION_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Get the usage and billing data for properties within the organization for the specified month.
+       * Per direct client org, user needs to be OrgAdmin/BillingAdmin on the organization in order to
+       * view the billing and usage data. Per sales partner client org, user needs to be
+       * OrgAdmin/BillingAdmin on the sales partner org in order to view the billing and usage data, or
+       * OrgAdmin/BillingAdmin on the sales partner client org in order to view the usage data only.
+       *
+       * Create a request for the method "organizations.reportPropertyUsage".
+       *
+       * This request holds the parameters needed by the the marketingplatformadmin server.  After
+       * setting any optional parameters, call the {@link ReportPropertyUsage#execute()} method to
+       * invoke the remote operation. <p> {@link ReportPropertyUsage#initialize(com.google.api.client.go
+       * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param organization Required. Specifies the organization whose property usage will be listed. Format:
+     *        organizations/{org_id}
+       * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.ReportPropertyUsageRequest}
+       * @since 1.13
+       */
+      protected ReportPropertyUsage(java.lang.String organization, com.google.api.services.marketingplatformadmin.v1alpha.model.ReportPropertyUsageRequest content) {
+        super(GoogleMarketingPlatformAdminAPI.this, "POST", REST_PATH, content, com.google.api.services.marketingplatformadmin.v1alpha.model.ReportPropertyUsageResponse.class);
+        this.organization = com.google.api.client.util.Preconditions.checkNotNull(organization, "Required parameter organization must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ORGANIZATION_PATTERN.matcher(organization).matches(),
+              "Parameter organization must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public ReportPropertyUsage set$Xgafv(java.lang.String $Xgafv) {
+        return (ReportPropertyUsage) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ReportPropertyUsage setAccessToken(java.lang.String accessToken) {
+        return (ReportPropertyUsage) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ReportPropertyUsage setAlt(java.lang.String alt) {
+        return (ReportPropertyUsage) super.setAlt(alt);
+      }
+
+      @Override
+      public ReportPropertyUsage setCallback(java.lang.String callback) {
+        return (ReportPropertyUsage) super.setCallback(callback);
+      }
+
+      @Override
+      public ReportPropertyUsage setFields(java.lang.String fields) {
+        return (ReportPropertyUsage) super.setFields(fields);
+      }
+
+      @Override
+      public ReportPropertyUsage setKey(java.lang.String key) {
+        return (ReportPropertyUsage) super.setKey(key);
+      }
+
+      @Override
+      public ReportPropertyUsage setOauthToken(java.lang.String oauthToken) {
+        return (ReportPropertyUsage) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ReportPropertyUsage setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ReportPropertyUsage) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ReportPropertyUsage setQuotaUser(java.lang.String quotaUser) {
+        return (ReportPropertyUsage) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ReportPropertyUsage setUploadType(java.lang.String uploadType) {
+        return (ReportPropertyUsage) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ReportPropertyUsage setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ReportPropertyUsage) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Specifies the organization whose property usage will be listed. Format:
+       * organizations/{org_id}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String organization;
+
+      /** Required. Specifies the organization whose property usage will be listed. Format:
+     organizations/{org_id}
+       */
+      public java.lang.String getOrganization() {
+        return organization;
+      }
+
+      /**
+       * Required. Specifies the organization whose property usage will be listed. Format:
+       * organizations/{org_id}
+       */
+      public ReportPropertyUsage setOrganization(java.lang.String organization) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ORGANIZATION_PATTERN.matcher(organization).matches(),
+              "Parameter organization must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.organization = organization;
+        return this;
+      }
+
+      @Override
+      public ReportPropertyUsage set(String parameterName, Object value) {
+        return (ReportPropertyUsage) super.set(parameterName, value);
       }
     }
 

@@ -50,9 +50,9 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
   /**
    * The type of data stored in each of this family's cell values, including its full encoding. If
    * omitted, the family only serves raw untyped bytes. For now, only the `Aggregate` type is
-   * supported. `Aggregate` can only be set at family creation and is immutable afterwards. If
-   * `value_type` is `Aggregate`, written data must be compatible with: * `value_type.input_type`
-   * for `AddInput` mutations
+   * supported. `Aggregate` can only be set at family creation and is immutable afterwards. This
+   * field is mutually exclusive with `sql_type`. If `value_type` is `Aggregate`, written data must
+   * be compatible with: * `value_type.input_type` for `AddInput` mutations
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +101,9 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
   /**
    * The type of data stored in each of this family's cell values, including its full encoding. If
    * omitted, the family only serves raw untyped bytes. For now, only the `Aggregate` type is
-   * supported. `Aggregate` can only be set at family creation and is immutable afterwards. If
-   * `value_type` is `Aggregate`, written data must be compatible with: * `value_type.input_type`
-   * for `AddInput` mutations
+   * supported. `Aggregate` can only be set at family creation and is immutable afterwards. This
+   * field is mutually exclusive with `sql_type`. If `value_type` is `Aggregate`, written data must
+   * be compatible with: * `value_type.input_type` for `AddInput` mutations
    * @return value or {@code null} for none
    */
   public Type getValueType() {
@@ -113,9 +113,9 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
   /**
    * The type of data stored in each of this family's cell values, including its full encoding. If
    * omitted, the family only serves raw untyped bytes. For now, only the `Aggregate` type is
-   * supported. `Aggregate` can only be set at family creation and is immutable afterwards. If
-   * `value_type` is `Aggregate`, written data must be compatible with: * `value_type.input_type`
-   * for `AddInput` mutations
+   * supported. `Aggregate` can only be set at family creation and is immutable afterwards. This
+   * field is mutually exclusive with `sql_type`. If `value_type` is `Aggregate`, written data must
+   * be compatible with: * `value_type.input_type` for `AddInput` mutations
    * @param valueType valueType or {@code null} for none
    */
   public ColumnFamily setValueType(Type valueType) {

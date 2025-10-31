@@ -40,9 +40,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   private java.lang.String accountId;
 
   /**
-   * Optional. The annotation that is assigned to the Event. This field can be left empty to provide
-   * reasons that apply to an event without concluding whether the event is legitimate or
-   * fraudulent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +63,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   private GoogleCloudRecaptchaenterpriseV1PhoneAuthenticationEvent phoneAuthenticationEvent;
 
   /**
-   * Optional. Reasons for the annotation that are assigned to the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,9 +98,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. The annotation that is assigned to the Event. This field can be left empty to provide
-   * reasons that apply to an event without concluding whether the event is legitimate or
-   * fraudulent.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnnotation() {
@@ -112,9 +105,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. The annotation that is assigned to the Event. This field can be left empty to provide
-   * reasons that apply to an event without concluding whether the event is legitimate or
-   * fraudulent.
    * @param annotation annotation or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest setAnnotation(java.lang.String annotation) {
@@ -195,7 +185,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. Reasons for the annotation that are assigned to the event.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReasons() {
@@ -203,7 +192,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. Reasons for the annotation that are assigned to the event.
    * @param reasons reasons or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest setReasons(java.util.List<java.lang.String> reasons) {

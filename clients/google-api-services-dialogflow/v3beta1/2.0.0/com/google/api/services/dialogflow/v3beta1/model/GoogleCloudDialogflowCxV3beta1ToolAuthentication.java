@@ -51,6 +51,13 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthentication extends com.
   private GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig oauthConfig;
 
   /**
+   * Configuration for service account authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ToolAuthenticationServiceAccountAuthConfig serviceAccountAuthConfig;
+
+  /**
    * Config for [Diglogflow service agent](https://cloud.google.com/iam/docs/service-
    * agents#dialogflow-service-agent) auth.
    * The value may be {@code null}.
@@ -106,6 +113,23 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthentication extends com.
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthentication setOauthConfig(GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig oauthConfig) {
     this.oauthConfig = oauthConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for service account authentication.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolAuthenticationServiceAccountAuthConfig getServiceAccountAuthConfig() {
+    return serviceAccountAuthConfig;
+  }
+
+  /**
+   * Configuration for service account authentication.
+   * @param serviceAccountAuthConfig serviceAccountAuthConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolAuthentication setServiceAccountAuthConfig(GoogleCloudDialogflowCxV3beta1ToolAuthenticationServiceAccountAuthConfig serviceAccountAuthConfig) {
+    this.serviceAccountAuthConfig = serviceAccountAuthConfig;
     return this;
   }
 

@@ -34,6 +34,13 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The playbook's scoped code block, which may implement handlers and actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1CodeBlock codeBlock;
+
+  /**
    * Output only. The timestamp of initial playbook creation.
    * The value may be {@code null}.
    */
@@ -67,6 +74,15 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowCxV3beta1Handler.class);
   }
+
+  /**
+   * Optional. Output only. Names of inline actions scoped to this playbook. These actions are in
+   * addition to those belonging to referenced tools, child playbooks, and flows, e.g. actions that
+   * are defined in the playbook's code block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> inlineActions;
 
   /**
    * Optional. Defined structured input parameters for this playbook.
@@ -168,6 +184,23 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
   private String updateTime;
 
   /**
+   * Optional. The playbook's scoped code block, which may implement handlers and actions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1CodeBlock getCodeBlock() {
+    return codeBlock;
+  }
+
+  /**
+   * Optional. The playbook's scoped code block, which may implement handlers and actions.
+   * @param codeBlock codeBlock or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Playbook setCodeBlock(GoogleCloudDialogflowCxV3beta1CodeBlock codeBlock) {
+    this.codeBlock = codeBlock;
+    return this;
+  }
+
+  /**
    * Output only. The timestamp of initial playbook creation.
    * @return value or {@code null} for none
    */
@@ -234,6 +267,27 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
    */
   public GoogleCloudDialogflowCxV3beta1Playbook setHandlers(java.util.List<GoogleCloudDialogflowCxV3beta1Handler> handlers) {
     this.handlers = handlers;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Names of inline actions scoped to this playbook. These actions are in
+   * addition to those belonging to referenced tools, child playbooks, and flows, e.g. actions that
+   * are defined in the playbook's code block.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getInlineActions() {
+    return inlineActions;
+  }
+
+  /**
+   * Optional. Output only. Names of inline actions scoped to this playbook. These actions are in
+   * addition to those belonging to referenced tools, child playbooks, and flows, e.g. actions that
+   * are defined in the playbook's code block.
+   * @param inlineActions inlineActions or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Playbook setInlineActions(java.util.List<java.lang.String> inlineActions) {
+    this.inlineActions = inlineActions;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The generated assets for anomaly detection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataQualityResultAnomalyDetectionGeneratedAssets anomalyDetectionGeneratedAssets;
+
+  /**
    * Output only. The status of publishing the data scan as Dataplex Universal Catalog metadata.
    * The value may be {@code null}.
    */
@@ -108,6 +115,23 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
+
+  /**
+   * Output only. The generated assets for anomaly detection.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityResultAnomalyDetectionGeneratedAssets getAnomalyDetectionGeneratedAssets() {
+    return anomalyDetectionGeneratedAssets;
+  }
+
+  /**
+   * Output only. The generated assets for anomaly detection.
+   * @param anomalyDetectionGeneratedAssets anomalyDetectionGeneratedAssets or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityResult setAnomalyDetectionGeneratedAssets(GoogleCloudDataplexV1DataQualityResultAnomalyDetectionGeneratedAssets anomalyDetectionGeneratedAssets) {
+    this.anomalyDetectionGeneratedAssets = anomalyDetectionGeneratedAssets;
+    return this;
+  }
 
   /**
    * Output only. The status of publishing the data scan as Dataplex Universal Catalog metadata.

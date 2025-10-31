@@ -55,8 +55,7 @@ public final class SetMaintenancePolicyRequest extends com.google.api.client.jso
 
   /**
    * Required. The Google Developers Console [project ID or project
-   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
-   * manager/docs/creating-managing-projects).
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +63,7 @@ public final class SetMaintenancePolicyRequest extends com.google.api.client.jso
 
   /**
    * Required. The name of the Google Compute Engine
-   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the cluster resides.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +126,7 @@ public final class SetMaintenancePolicyRequest extends com.google.api.client.jso
 
   /**
    * Required. The Google Developers Console [project ID or project
-   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
-   * manager/docs/creating-managing-projects).
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -138,8 +135,7 @@ public final class SetMaintenancePolicyRequest extends com.google.api.client.jso
 
   /**
    * Required. The Google Developers Console [project ID or project
-   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
-   * manager/docs/creating-managing-projects).
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
    * @param projectId projectId or {@code null} for none
    */
   public SetMaintenancePolicyRequest setProjectId(java.lang.String projectId) {
@@ -149,8 +145,7 @@ public final class SetMaintenancePolicyRequest extends com.google.api.client.jso
 
   /**
    * Required. The name of the Google Compute Engine
-   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the cluster resides.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -159,8 +154,7 @@ public final class SetMaintenancePolicyRequest extends com.google.api.client.jso
 
   /**
    * Required. The name of the Google Compute Engine
-   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the cluster resides.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
    * @param zone zone or {@code null} for none
    */
   public SetMaintenancePolicyRequest setZone(java.lang.String zone) {

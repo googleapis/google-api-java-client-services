@@ -122,9 +122,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The relative name of the Google Compute Engine
-   * [network](https://{$universe.dns_names.final_documentation_domain}/compute/docs/networks-and-
-   * firewalls#networks) to which the cluster is connected. Example: projects/my-
-   * project/global/networks/my-network
+   * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
+   * cluster is connected. Example: projects/my-project/global/networks/my-network
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,9 +153,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The relative name of the Google Compute Engine
-   * [subnetwork](https://{$universe.dns_names.final_documentation_domain}/compute/docs/vpc) to
-   * which the cluster is connected. Example: projects/my-project/regions/us-
-   * central1/subnetworks/my-subnet
+   * [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected.
+   * Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -380,9 +378,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The relative name of the Google Compute Engine
-   * [network](https://{$universe.dns_names.final_documentation_domain}/compute/docs/networks-and-
-   * firewalls#networks) to which the cluster is connected. Example: projects/my-
-   * project/global/networks/my-network
+   * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
+   * cluster is connected. Example: projects/my-project/global/networks/my-network
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -391,9 +388,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The relative name of the Google Compute Engine
-   * [network](https://{$universe.dns_names.final_documentation_domain}/compute/docs/networks-and-
-   * firewalls#networks) to which the cluster is connected. Example: projects/my-
-   * project/global/networks/my-network
+   * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
+   * cluster is connected. Example: projects/my-project/global/networks/my-network
    * @param network network or {@code null} for none
    */
   public NetworkConfig setNetwork(java.lang.String network) {
@@ -456,9 +452,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The relative name of the Google Compute Engine
-   * [subnetwork](https://{$universe.dns_names.final_documentation_domain}/compute/docs/vpc) to
-   * which the cluster is connected. Example: projects/my-project/regions/us-
-   * central1/subnetworks/my-subnet
+   * [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected.
+   * Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -467,9 +462,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The relative name of the Google Compute Engine
-   * [subnetwork](https://{$universe.dns_names.final_documentation_domain}/compute/docs/vpc) to
-   * which the cluster is connected. Example: projects/my-project/regions/us-
-   * central1/subnetworks/my-subnet
+   * [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected.
+   * Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
    * @param subnetwork subnetwork or {@code null} for none
    */
   public NetworkConfig setSubnetwork(java.lang.String subnetwork) {

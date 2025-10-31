@@ -106,6 +106,13 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   private java.util.Map<String, GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue> secretVersionsForRequestHeaders;
 
   /**
+   * Optional. Configuration for service account authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3WebhookGenericWebServiceServiceAccountAuthConfig serviceAccountAuthConfig;
+
+  /**
    * Optional. Indicate the auth token type generated from the [Diglogflow service
    * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
    * generated token is sent in the Authorization header.
@@ -311,6 +318,23 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setSecretVersionsForRequestHeaders(java.util.Map<String, GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue> secretVersionsForRequestHeaders) {
     this.secretVersionsForRequestHeaders = secretVersionsForRequestHeaders;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for service account authentication.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebServiceServiceAccountAuthConfig getServiceAccountAuthConfig() {
+    return serviceAccountAuthConfig;
+  }
+
+  /**
+   * Optional. Configuration for service account authentication.
+   * @param serviceAccountAuthConfig serviceAccountAuthConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebService setServiceAccountAuthConfig(GoogleCloudDialogflowCxV3WebhookGenericWebServiceServiceAccountAuthConfig serviceAccountAuthConfig) {
+    this.serviceAccountAuthConfig = serviceAccountAuthConfig;
     return this;
   }
 

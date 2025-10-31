@@ -285,10 +285,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The desired list of Google Compute Engine
-   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the cluster's nodes should be located. This list must always include the cluster's
-   * primary zone. Warning: changing cluster locations will update the locations of all node pools
-   * and will result in nodes being added and/or removed.
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. This list must always include the cluster's primary zone. Warning: changing
+   * cluster locations will update the locations of all node pools and will result in nodes being
+   * added and/or removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -537,6 +537,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private SecretManagerConfig desiredSecretManagerConfig;
+
+  /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecretSyncConfig desiredSecretSyncConfig;
 
   /**
    * Enable/Disable Security Posture API features for the cluster.
@@ -1269,10 +1276,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The desired list of Google Compute Engine
-   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the cluster's nodes should be located. This list must always include the cluster's
-   * primary zone. Warning: changing cluster locations will update the locations of all node pools
-   * and will result in nodes being added and/or removed.
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. This list must always include the cluster's primary zone. Warning: changing
+   * cluster locations will update the locations of all node pools and will result in nodes being
+   * added and/or removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDesiredLocations() {
@@ -1281,10 +1288,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The desired list of Google Compute Engine
-   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the cluster's nodes should be located. This list must always include the cluster's
-   * primary zone. Warning: changing cluster locations will update the locations of all node pools
-   * and will result in nodes being added and/or removed.
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. This list must always include the cluster's primary zone. Warning: changing
+   * cluster locations will update the locations of all node pools and will result in nodes being
+   * added and/or removed.
    * @param desiredLocations desiredLocations or {@code null} for none
    */
   public ClusterUpdate setDesiredLocations(java.util.List<java.lang.String> desiredLocations) {
@@ -1867,6 +1874,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredSecretManagerConfig(SecretManagerConfig desiredSecretManagerConfig) {
     this.desiredSecretManagerConfig = desiredSecretManagerConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   * @return value or {@code null} for none
+   */
+  public SecretSyncConfig getDesiredSecretSyncConfig() {
+    return desiredSecretSyncConfig;
+  }
+
+  /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   * @param desiredSecretSyncConfig desiredSecretSyncConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredSecretSyncConfig(SecretSyncConfig desiredSecretSyncConfig) {
+    this.desiredSecretSyncConfig = desiredSecretSyncConfig;
     return this;
   }
 

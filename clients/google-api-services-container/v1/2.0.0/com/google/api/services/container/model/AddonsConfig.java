@@ -109,8 +109,7 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in
    * 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes
    * clusters, workloads and applications. For more information, see:
-   * https://{$universe.dns_names.final_documentation_domain}/kubernetes-
-   * engine/docs/concepts/dashboards
+   * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -334,8 +333,7 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in
    * 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes
    * clusters, workloads and applications. For more information, see:
-   * https://{$universe.dns_names.final_documentation_domain}/kubernetes-
-   * engine/docs/concepts/dashboards
+   * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
    * @return value or {@code null} for none
    */
   public KubernetesDashboard getKubernetesDashboard() {
@@ -346,8 +344,7 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in
    * 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes
    * clusters, workloads and applications. For more information, see:
-   * https://{$universe.dns_names.final_documentation_domain}/kubernetes-
-   * engine/docs/concepts/dashboards
+   * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
    * @param kubernetesDashboard kubernetesDashboard or {@code null} for none
    */
   public AddonsConfig setKubernetesDashboard(KubernetesDashboard kubernetesDashboard) {

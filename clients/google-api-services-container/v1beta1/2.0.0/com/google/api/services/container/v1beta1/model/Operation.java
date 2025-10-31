@@ -62,10 +62,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
-   * zones/regions-zones#available) or
-   * [region](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
-   * zones/regions-zones#available) in which the cluster resides.
+   * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
+   * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
+   * the cluster resides.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +145,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the operation is taking place. This field is deprecated, use location instead.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation is taking
+   * place. This field is deprecated, use location instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,10 +224,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
-   * zones/regions-zones#available) or
-   * [region](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
-   * zones/regions-zones#available) in which the cluster resides.
+   * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
+   * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
+   * the cluster resides.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -237,10 +235,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
-   * zones/regions-zones#available) or
-   * [region](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
-   * zones/regions-zones#available) in which the cluster resides.
+   * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
+   * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
+   * the cluster resides.
    * @param location location or {@code null} for none
    */
   public Operation setLocation(java.lang.String location) {
@@ -423,8 +420,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the operation is taking place. This field is deprecated, use location instead.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation is taking
+   * place. This field is deprecated, use location instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -433,8 +430,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the operation is taking place. This field is deprecated, use location instead.
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation is taking
+   * place. This field is deprecated, use location instead.
    * @param zone zone or {@code null} for none
    */
   public Operation setZone(java.lang.String zone) {

@@ -81,8 +81,8 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * The initial node count for the pool. You must ensure that your Compute Engine [resource
-   * quota](https://{$universe.dns_names.final_documentation_domain}/compute/quotas) is sufficient
-   * for this number of instances. You must also have available firewall and routes quota.
+   * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
+   * must also have available firewall and routes quota.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +90,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource URLs of the [managed instance
-   * groups](https://{$universe.dns_names.final_documentation_domain}/compute/docs/instance-
-   * groups/creating-groups-of-managed-instances) associated with this node pool. During the node
-   * pool blue-green upgrade operation, the URLs contain both blue and green resources.
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
+   * instances) associated with this node pool. During the node pool blue-green upgrade operation,
+   * the URLs contain both blue and green resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,10 +100,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of Google Compute Engine
-   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the NodePool's nodes should be located. If this value is unspecified during node pool
-   * creation, the
-   * [Cluster.Locations](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
+   * should be located. If this value is unspecified during node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-
    * engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
    * be used, instead. Warning: changing node pool locations will result in nodes being added and/or
    * removed.
@@ -201,7 +200,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * The version of Kubernetes running on this NodePool's nodes. If unspecified, it defaults as
-   * described [here](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
+   * described [here](https://cloud.google.com/kubernetes-
    * engine/versioning#specifying_node_version).
    * The value may be {@code null}.
    */
@@ -318,8 +317,8 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * The initial node count for the pool. You must ensure that your Compute Engine [resource
-   * quota](https://{$universe.dns_names.final_documentation_domain}/compute/quotas) is sufficient
-   * for this number of instances. You must also have available firewall and routes quota.
+   * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
+   * must also have available firewall and routes quota.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialNodeCount() {
@@ -328,8 +327,8 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * The initial node count for the pool. You must ensure that your Compute Engine [resource
-   * quota](https://{$universe.dns_names.final_documentation_domain}/compute/quotas) is sufficient
-   * for this number of instances. You must also have available firewall and routes quota.
+   * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
+   * must also have available firewall and routes quota.
    * @param initialNodeCount initialNodeCount or {@code null} for none
    */
   public NodePool setInitialNodeCount(java.lang.Integer initialNodeCount) {
@@ -339,9 +338,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource URLs of the [managed instance
-   * groups](https://{$universe.dns_names.final_documentation_domain}/compute/docs/instance-
-   * groups/creating-groups-of-managed-instances) associated with this node pool. During the node
-   * pool blue-green upgrade operation, the URLs contain both blue and green resources.
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
+   * instances) associated with this node pool. During the node pool blue-green upgrade operation,
+   * the URLs contain both blue and green resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstanceGroupUrls() {
@@ -350,9 +349,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource URLs of the [managed instance
-   * groups](https://{$universe.dns_names.final_documentation_domain}/compute/docs/instance-
-   * groups/creating-groups-of-managed-instances) associated with this node pool. During the node
-   * pool blue-green upgrade operation, the URLs contain both blue and green resources.
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
+   * instances) associated with this node pool. During the node pool blue-green upgrade operation,
+   * the URLs contain both blue and green resources.
    * @param instanceGroupUrls instanceGroupUrls or {@code null} for none
    */
   public NodePool setInstanceGroupUrls(java.util.List<java.lang.String> instanceGroupUrls) {
@@ -362,10 +361,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of Google Compute Engine
-   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the NodePool's nodes should be located. If this value is unspecified during node pool
-   * creation, the
-   * [Cluster.Locations](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
+   * should be located. If this value is unspecified during node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-
    * engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
    * be used, instead. Warning: changing node pool locations will result in nodes being added and/or
    * removed.
@@ -377,10 +375,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of Google Compute Engine
-   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
-   * in which the NodePool's nodes should be located. If this value is unspecified during node pool
-   * creation, the
-   * [Cluster.Locations](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
+   * should be located. If this value is unspecified during node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-
    * engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
    * be used, instead. Warning: changing node pool locations will result in nodes being added and/or
    * removed.
@@ -603,7 +600,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * The version of Kubernetes running on this NodePool's nodes. If unspecified, it defaults as
-   * described [here](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
+   * described [here](https://cloud.google.com/kubernetes-
    * engine/versioning#specifying_node_version).
    * @return value or {@code null} for none
    */
@@ -613,7 +610,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * The version of Kubernetes running on this NodePool's nodes. If unspecified, it defaults as
-   * described [here](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
+   * described [here](https://cloud.google.com/kubernetes-
    * engine/versioning#specifying_node_version).
    * @param version version or {@code null} for none
    */

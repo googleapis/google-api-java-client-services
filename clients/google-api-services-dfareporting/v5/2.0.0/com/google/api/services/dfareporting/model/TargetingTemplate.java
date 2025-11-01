@@ -55,6 +55,13 @@ public final class TargetingTemplate extends com.google.api.client.json.GenericJ
   private DimensionValue advertiserIdDimensionValue;
 
   /**
+   * Optional. Contextual keyword targeting criteria.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContextualKeywordTargeting contextualKeywordTargeting;
+
+  /**
    * Time and day targeting criteria.
    * The value may be {@code null}.
    */
@@ -179,6 +186,23 @@ public final class TargetingTemplate extends com.google.api.client.json.GenericJ
    */
   public TargetingTemplate setAdvertiserIdDimensionValue(DimensionValue advertiserIdDimensionValue) {
     this.advertiserIdDimensionValue = advertiserIdDimensionValue;
+    return this;
+  }
+
+  /**
+   * Optional. Contextual keyword targeting criteria.
+   * @return value or {@code null} for none
+   */
+  public ContextualKeywordTargeting getContextualKeywordTargeting() {
+    return contextualKeywordTargeting;
+  }
+
+  /**
+   * Optional. Contextual keyword targeting criteria.
+   * @param contextualKeywordTargeting contextualKeywordTargeting or {@code null} for none
+   */
+  public TargetingTemplate setContextualKeywordTargeting(ContextualKeywordTargeting contextualKeywordTargeting) {
+    this.contextualKeywordTargeting = contextualKeywordTargeting;
     return this;
   }
 

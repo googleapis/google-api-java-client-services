@@ -98,6 +98,15 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.Long logRetentionDays;
 
   /**
+   * Optional. Optional field to configure the maximum number of days for which a backup can be
+   * retained. This field is only applicable for on-demand backups taken with custom retention
+   * value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxCustomOnDemandRetentionDays;
+
+  /**
    * Output only. Identifier. The resource name of the `BackupPlan`. Format:
    * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
    * The value may be {@code null}.
@@ -302,6 +311,27 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   public BackupPlan setLogRetentionDays(java.lang.Long logRetentionDays) {
     this.logRetentionDays = logRetentionDays;
+    return this;
+  }
+
+  /**
+   * Optional. Optional field to configure the maximum number of days for which a backup can be
+   * retained. This field is only applicable for on-demand backups taken with custom retention
+   * value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxCustomOnDemandRetentionDays() {
+    return maxCustomOnDemandRetentionDays;
+  }
+
+  /**
+   * Optional. Optional field to configure the maximum number of days for which a backup can be
+   * retained. This field is only applicable for on-demand backups taken with custom retention
+   * value.
+   * @param maxCustomOnDemandRetentionDays maxCustomOnDemandRetentionDays or {@code null} for none
+   */
+  public BackupPlan setMaxCustomOnDemandRetentionDays(java.lang.Integer maxCustomOnDemandRetentionDays) {
+    this.maxCustomOnDemandRetentionDays = maxCustomOnDemandRetentionDays;
     return this;
   }
 

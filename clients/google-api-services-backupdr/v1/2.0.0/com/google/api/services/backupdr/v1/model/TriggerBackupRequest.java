@@ -31,6 +31,15 @@ package com.google.api.services.backupdr.v1.model;
 public final class TriggerBackupRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The duration for which backup data will be kept, while taking an on-demand backup
+   * with custom retention. It is defined in "days". It is mutually exclusive with rule_id. This
+   * field is required if rule_id is not provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer customRetentionDays;
+
+  /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
    * you must retry your request, the server will know to ignore the request if it has already been
    * completed. The server will guarantee that for at least 60 minutes after the first request. For
@@ -51,6 +60,27 @@ public final class TriggerBackupRequest extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String ruleId;
+
+  /**
+   * Optional. The duration for which backup data will be kept, while taking an on-demand backup
+   * with custom retention. It is defined in "days". It is mutually exclusive with rule_id. This
+   * field is required if rule_id is not provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCustomRetentionDays() {
+    return customRetentionDays;
+  }
+
+  /**
+   * Optional. The duration for which backup data will be kept, while taking an on-demand backup
+   * with custom retention. It is defined in "days". It is mutually exclusive with rule_id. This
+   * field is required if rule_id is not provided.
+   * @param customRetentionDays customRetentionDays or {@code null} for none
+   */
+  public TriggerBackupRequest setCustomRetentionDays(java.lang.Integer customRetentionDays) {
+    this.customRetentionDays = customRetentionDays;
+    return this;
+  }
 
   /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if

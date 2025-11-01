@@ -44,7 +44,8 @@ public final class Site extends com.google.api.client.json.GenericJson {
    * Adform * `3`, Adobe * `4`, Amobee * `5`, Basis (Centro) * `6`, Beeswax * `7`, Amazon * `8`,
    * DV360 (DBM) * `9`, Innovid * `10`, MediaMath * `11`, Roku OneView DSP * `12`, TabMo Hawk *
    * `13`, The Trade Desk * `14`, Xandr Invest DSP * `15`, Yahoo DSP * `16`, Zeta Global * `17`,
-   * Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast * `22`, Cognitiv
+   * Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast * `22`, Cognitiv *
+   * `23`, AdTheorent * `24`, DeepIntent * `25`, Pulsepoint
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -163,7 +164,8 @@ public final class Site extends com.google.api.client.json.GenericJson {
    * Adform * `3`, Adobe * `4`, Amobee * `5`, Basis (Centro) * `6`, Beeswax * `7`, Amazon * `8`,
    * DV360 (DBM) * `9`, Innovid * `10`, MediaMath * `11`, Roku OneView DSP * `12`, TabMo Hawk *
    * `13`, The Trade Desk * `14`, Xandr Invest DSP * `15`, Yahoo DSP * `16`, Zeta Global * `17`,
-   * Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast * `22`, Cognitiv
+   * Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast * `22`, Cognitiv *
+   * `23`, AdTheorent * `24`, DeepIntent * `25`, Pulsepoint
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdServingPlatformId() {
@@ -177,7 +179,8 @@ public final class Site extends com.google.api.client.json.GenericJson {
    * Adform * `3`, Adobe * `4`, Amobee * `5`, Basis (Centro) * `6`, Beeswax * `7`, Amazon * `8`,
    * DV360 (DBM) * `9`, Innovid * `10`, MediaMath * `11`, Roku OneView DSP * `12`, TabMo Hawk *
    * `13`, The Trade Desk * `14`, Xandr Invest DSP * `15`, Yahoo DSP * `16`, Zeta Global * `17`,
-   * Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast * `22`, Cognitiv
+   * Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast * `22`, Cognitiv *
+   * `23`, AdTheorent * `24`, DeepIntent * `25`, Pulsepoint
    * @param adServingPlatformId adServingPlatformId or {@code null} for none
    */
   public Site setAdServingPlatformId(java.lang.Long adServingPlatformId) {

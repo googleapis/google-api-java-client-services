@@ -123,6 +123,13 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   private java.lang.String compatibility;
 
   /**
+   * Optional. Contextual keyword targeting information for this ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContextualKeywordTargeting contextualKeywordTargeting;
+
+  /**
    * Information about the creation of this ad. This is a read-only field.
    * The value may be {@code null}.
    */
@@ -544,6 +551,23 @@ public final class Ad extends com.google.api.client.json.GenericJson {
    */
   public Ad setCompatibility(java.lang.String compatibility) {
     this.compatibility = compatibility;
+    return this;
+  }
+
+  /**
+   * Optional. Contextual keyword targeting information for this ad.
+   * @return value or {@code null} for none
+   */
+  public ContextualKeywordTargeting getContextualKeywordTargeting() {
+    return contextualKeywordTargeting;
+  }
+
+  /**
+   * Optional. Contextual keyword targeting information for this ad.
+   * @param contextualKeywordTargeting contextualKeywordTargeting or {@code null} for none
+   */
+  public Ad setContextualKeywordTargeting(ContextualKeywordTargeting contextualKeywordTargeting) {
+    this.contextualKeywordTargeting = contextualKeywordTargeting;
     return this;
   }
 

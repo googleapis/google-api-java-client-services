@@ -65,6 +65,13 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
   private GoogleFirebaseAppdistroV1alphaTestDevice device;
 
   /**
+   * Output only. The type of execution for the test.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String executionType;
+
+  /**
    * Output only. The reason why the test failed.
    * The value may be {@code null}.
    */
@@ -187,6 +194,23 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
    */
   public GoogleFirebaseAppdistroV1alphaDeviceExecution setDevice(GoogleFirebaseAppdistroV1alphaTestDevice device) {
     this.device = device;
+    return this;
+  }
+
+  /**
+   * Output only. The type of execution for the test.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExecutionType() {
+    return executionType;
+  }
+
+  /**
+   * Output only. The type of execution for the test.
+   * @param executionType executionType or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceExecution setExecutionType(java.lang.String executionType) {
+    this.executionType = executionType;
     return this;
   }
 

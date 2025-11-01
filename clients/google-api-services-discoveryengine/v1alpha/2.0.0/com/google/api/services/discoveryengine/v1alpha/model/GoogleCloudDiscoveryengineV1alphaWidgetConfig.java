@@ -201,13 +201,6 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   private java.lang.Boolean enableWebApp;
 
   /**
-   * Allows to toggle unstable/experimental features in the widget (or web app)
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> experimentalFeatures;
-
-  /**
    * The configuration and appearance of facets in the end user view.
    * The value may be {@code null}.
    */
@@ -716,23 +709,6 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfig setEnableWebApp(java.lang.Boolean enableWebApp) {
     this.enableWebApp = enableWebApp;
-    return this;
-  }
-
-  /**
-   * Allows to toggle unstable/experimental features in the widget (or web app)
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getExperimentalFeatures() {
-    return experimentalFeatures;
-  }
-
-  /**
-   * Allows to toggle unstable/experimental features in the widget (or web app)
-   * @param experimentalFeatures experimentalFeatures or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setExperimentalFeatures(java.util.Map<String, java.lang.String> experimentalFeatures) {
-    this.experimentalFeatures = experimentalFeatures;
     return this;
   }
 

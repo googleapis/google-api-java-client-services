@@ -102,12 +102,12 @@ public final class GoogleCloudDiscoveryengineV1betaAdvancedCompleteQueryRequest 
   private GoogleCloudDiscoveryengineV1betaUserInfo userInfo;
 
   /**
-   * A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
-   * cookie, which should be able to uniquely identify a visitor on a single device. This unique
-   * identifier should not change if the visitor logs in or out of the website. This field should
-   * NOT have a fixed value such as `unknown_visitor`. This should be the same identifier as
-   * UserEvent.user_pseudo_id and SearchRequest.user_pseudo_id. The field must be a UTF-8 encoded
-   * string with a length limit of 128
+   * Optional. A unique identifier for tracking visitors. For example, this could be implemented
+   * with an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
+   * This unique identifier should not change if the visitor logs in or out of the website. This
+   * field should NOT have a fixed value such as `unknown_visitor`. This should be the same
+   * identifier as UserEvent.user_pseudo_id and SearchRequest.user_pseudo_id. The field must be a
+   * UTF-8 encoded string with a length limit of 128
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -282,12 +282,12 @@ public final class GoogleCloudDiscoveryengineV1betaAdvancedCompleteQueryRequest 
   }
 
   /**
-   * A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
-   * cookie, which should be able to uniquely identify a visitor on a single device. This unique
-   * identifier should not change if the visitor logs in or out of the website. This field should
-   * NOT have a fixed value such as `unknown_visitor`. This should be the same identifier as
-   * UserEvent.user_pseudo_id and SearchRequest.user_pseudo_id. The field must be a UTF-8 encoded
-   * string with a length limit of 128
+   * Optional. A unique identifier for tracking visitors. For example, this could be implemented
+   * with an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
+   * This unique identifier should not change if the visitor logs in or out of the website. This
+   * field should NOT have a fixed value such as `unknown_visitor`. This should be the same
+   * identifier as UserEvent.user_pseudo_id and SearchRequest.user_pseudo_id. The field must be a
+   * UTF-8 encoded string with a length limit of 128
    * @return value or {@code null} for none
    */
   public java.lang.String getUserPseudoId() {
@@ -295,12 +295,12 @@ public final class GoogleCloudDiscoveryengineV1betaAdvancedCompleteQueryRequest 
   }
 
   /**
-   * A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
-   * cookie, which should be able to uniquely identify a visitor on a single device. This unique
-   * identifier should not change if the visitor logs in or out of the website. This field should
-   * NOT have a fixed value such as `unknown_visitor`. This should be the same identifier as
-   * UserEvent.user_pseudo_id and SearchRequest.user_pseudo_id. The field must be a UTF-8 encoded
-   * string with a length limit of 128
+   * Optional. A unique identifier for tracking visitors. For example, this could be implemented
+   * with an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
+   * This unique identifier should not change if the visitor logs in or out of the website. This
+   * field should NOT have a fixed value such as `unknown_visitor`. This should be the same
+   * identifier as UserEvent.user_pseudo_id and SearchRequest.user_pseudo_id. The field must be a
+   * UTF-8 encoded string with a length limit of 128
    * @param userPseudoId userPseudoId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaAdvancedCompleteQueryRequest setUserPseudoId(java.lang.String userPseudoId) {

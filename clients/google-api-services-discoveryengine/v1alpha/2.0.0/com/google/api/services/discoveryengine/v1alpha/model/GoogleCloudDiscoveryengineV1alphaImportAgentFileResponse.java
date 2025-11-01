@@ -17,8 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Describes the homepage setting of the widget. It includes all homepage related settings and
- * configurations, such as shortcuts.
+ * Response for the AgentService.ImportAgentFile method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -28,40 +27,40 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaImportAgentFileResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The shortcuts to display on the homepage.
+   * The imported AgentFile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts;
+  private GoogleCloudDiscoveryengineV1alphaAgentFile agentFile;
 
   /**
-   * Optional. The shortcuts to display on the homepage.
+   * The imported AgentFile.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> getShortcuts() {
-    return shortcuts;
+  public GoogleCloudDiscoveryengineV1alphaAgentFile getAgentFile() {
+    return agentFile;
   }
 
   /**
-   * Optional. The shortcuts to display on the homepage.
-   * @param shortcuts shortcuts or {@code null} for none
+   * The imported AgentFile.
+   * @param agentFile agentFile or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting setShortcuts(java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts) {
-    this.shortcuts = shortcuts;
+  public GoogleCloudDiscoveryengineV1alphaImportAgentFileResponse setAgentFile(GoogleCloudDiscoveryengineV1alphaAgentFile agentFile) {
+    this.agentFile = agentFile;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaImportAgentFileResponse set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaImportAgentFileResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting clone() {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaImportAgentFileResponse clone() {
+    return (GoogleCloudDiscoveryengineV1alphaImportAgentFileResponse) super.clone();
   }
 
 }

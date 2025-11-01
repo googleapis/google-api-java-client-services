@@ -17,8 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Describes the homepage setting of the widget. It includes all homepage related settings and
- * configurations, such as shortcuts.
+ * Represents an image.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -28,40 +27,64 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaAgentImage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The shortcuts to display on the homepage.
+   * Base64-encoded image file contents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts;
+  private java.lang.String content;
 
   /**
-   * Optional. The shortcuts to display on the homepage.
+   * Image URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uri;
+
+  /**
+   * Base64-encoded image file contents.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> getShortcuts() {
-    return shortcuts;
+  public java.lang.String getContent() {
+    return content;
   }
 
   /**
-   * Optional. The shortcuts to display on the homepage.
-   * @param shortcuts shortcuts or {@code null} for none
+   * Base64-encoded image file contents.
+   * @param content content or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting setShortcuts(java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts) {
-    this.shortcuts = shortcuts;
+  public GoogleCloudDiscoveryengineV1alphaAgentImage setContent(java.lang.String content) {
+    this.content = content;
+    return this;
+  }
+
+  /**
+   * Image URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUri() {
+    return uri;
+  }
+
+  /**
+   * Image URI.
+   * @param uri uri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAgentImage setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaAgentImage set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaAgentImage) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting clone() {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaAgentImage clone() {
+    return (GoogleCloudDiscoveryengineV1alphaAgentImage) super.clone();
   }
 
 }

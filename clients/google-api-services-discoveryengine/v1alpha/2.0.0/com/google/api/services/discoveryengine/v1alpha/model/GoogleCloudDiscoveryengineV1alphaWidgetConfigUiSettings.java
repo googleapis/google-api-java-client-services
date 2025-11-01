@@ -144,6 +144,14 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
   private java.lang.String resultDescriptionType;
 
   /**
+   * Optional. SearchAddonSpec is used to disable add-ons for search. This field is only supported
+   * for search requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsSearchAddonSpec searchAddonSpec;
+
+  /**
    * Per data store configuration.
    * @return value or {@code null} for none
    */
@@ -396,6 +404,25 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setResultDescriptionType(java.lang.String resultDescriptionType) {
     this.resultDescriptionType = resultDescriptionType;
+    return this;
+  }
+
+  /**
+   * Optional. SearchAddonSpec is used to disable add-ons for search. This field is only supported
+   * for search requests.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsSearchAddonSpec getSearchAddonSpec() {
+    return searchAddonSpec;
+  }
+
+  /**
+   * Optional. SearchAddonSpec is used to disable add-ons for search. This field is only supported
+   * for search requests.
+   * @param searchAddonSpec searchAddonSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setSearchAddonSpec(GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsSearchAddonSpec searchAddonSpec) {
+    this.searchAddonSpec = searchAddonSpec;
     return this;
   }
 

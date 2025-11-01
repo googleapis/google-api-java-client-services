@@ -420,13 +420,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private java.util.Map<String, java.lang.String> userLabels;
 
   /**
-   * A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
-   * cookie, which should be able to uniquely identify a visitor on a single device. This unique
-   * identifier should not change if the visitor logs in or out of the website. This field should
-   * NOT have a fixed value such as `unknown_visitor`. This should be the same identifier as
-   * UserEvent.user_pseudo_id and CompleteQueryRequest.user_pseudo_id The field must be a UTF-8
-   * encoded string with a length limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is
-   * returned.
+   * Optional. A unique identifier for tracking visitors. For example, this could be implemented
+   * with an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
+   * This unique identifier should not change if the visitor logs in or out of the website. This
+   * field should NOT have a fixed value such as `unknown_visitor`. This should be the same
+   * identifier as UserEvent.user_pseudo_id and CompleteQueryRequest.user_pseudo_id The field must
+   * be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an
+   * `INVALID_ARGUMENT` error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1324,13 +1324,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
-   * cookie, which should be able to uniquely identify a visitor on a single device. This unique
-   * identifier should not change if the visitor logs in or out of the website. This field should
-   * NOT have a fixed value such as `unknown_visitor`. This should be the same identifier as
-   * UserEvent.user_pseudo_id and CompleteQueryRequest.user_pseudo_id The field must be a UTF-8
-   * encoded string with a length limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is
-   * returned.
+   * Optional. A unique identifier for tracking visitors. For example, this could be implemented
+   * with an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
+   * This unique identifier should not change if the visitor logs in or out of the website. This
+   * field should NOT have a fixed value such as `unknown_visitor`. This should be the same
+   * identifier as UserEvent.user_pseudo_id and CompleteQueryRequest.user_pseudo_id The field must
+   * be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an
+   * `INVALID_ARGUMENT` error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserPseudoId() {
@@ -1338,13 +1338,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
-   * cookie, which should be able to uniquely identify a visitor on a single device. This unique
-   * identifier should not change if the visitor logs in or out of the website. This field should
-   * NOT have a fixed value such as `unknown_visitor`. This should be the same identifier as
-   * UserEvent.user_pseudo_id and CompleteQueryRequest.user_pseudo_id The field must be a UTF-8
-   * encoded string with a length limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is
-   * returned.
+   * Optional. A unique identifier for tracking visitors. For example, this could be implemented
+   * with an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
+   * This unique identifier should not change if the visitor logs in or out of the website. This
+   * field should NOT have a fixed value such as `unknown_visitor`. This should be the same
+   * identifier as UserEvent.user_pseudo_id and CompleteQueryRequest.user_pseudo_id The field must
+   * be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an
+   * `INVALID_ARGUMENT` error is returned.
    * @param userPseudoId userPseudoId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setUserPseudoId(java.lang.String userPseudoId) {

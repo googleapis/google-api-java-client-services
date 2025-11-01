@@ -5182,8 +5182,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Lists Schemas in a given project and location. Note that only `schemas/main` is supported, so
-           * this will always return at most one Schema.
+           * Lists Schemas in a given project and location.
            *
            * Create a request for the method "schemas.list".
            *
@@ -5207,8 +5206,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
             /**
-             * Lists Schemas in a given project and location. Note that only `schemas/main` is supported, so
-             * this will always return at most one Schema.
+             * Lists Schemas in a given project and location.
              *
              * Create a request for the method "schemas.list".
              *

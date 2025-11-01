@@ -154,15 +154,14 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
   public class Folders {
 
     /**
-     * Returns the AutokeyConfig for a folder or project.
+     * Returns the AutokeyConfig for a folder.
      *
      * Create a request for the method "folders.getAutokeyConfig".
      *
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
      * @return the request
      */
     public GetAutokeyConfig getAutokeyConfig(java.lang.String name) throws java.io.IOException {
@@ -179,7 +178,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^folders/[^/]+/autokeyConfig$");
 
       /**
-       * Returns the AutokeyConfig for a folder or project.
+       * Returns the AutokeyConfig for a folder.
        *
        * Create a request for the method "folders.getAutokeyConfig".
        *
@@ -189,8 +188,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * tractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
        * @since 1.13
        */
       protected GetAutokeyConfig(java.lang.String name) {
@@ -269,22 +267,19 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     `projects/{PROJECT_NUMBER}/autokeyConfig`.
+      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
        */
       public GetAutokeyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1104,154 +1099,6 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
   public class Projects {
 
     /**
-     * Returns the AutokeyConfig for a folder or project.
-     *
-     * Create a request for the method "projects.getAutokeyConfig".
-     *
-     * This request holds the parameters needed by the cloudkms server.  After setting any optional
-     * parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
-     * @return the request
-     */
-    public GetAutokeyConfig getAutokeyConfig(java.lang.String name) throws java.io.IOException {
-      GetAutokeyConfig result = new GetAutokeyConfig(name);
-      initialize(result);
-      return result;
-    }
-
-    public class GetAutokeyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.AutokeyConfig> {
-
-      private static final String REST_PATH = "v1/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+/autokeyConfig$");
-
-      /**
-       * Returns the AutokeyConfig for a folder or project.
-       *
-       * Create a request for the method "projects.getAutokeyConfig".
-       *
-       * This request holds the parameters needed by the the cloudkms server.  After setting any
-       * optional parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote
-       * operation. <p> {@link GetAutokeyConfig#initialize(com.google.api.client.googleapis.services.Abs
-       * tractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
-       * @since 1.13
-       */
-      protected GetAutokeyConfig(java.lang.String name) {
-        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.AutokeyConfig.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/autokeyConfig$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public GetAutokeyConfig set$Xgafv(java.lang.String $Xgafv) {
-        return (GetAutokeyConfig) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public GetAutokeyConfig setAccessToken(java.lang.String accessToken) {
-        return (GetAutokeyConfig) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public GetAutokeyConfig setAlt(java.lang.String alt) {
-        return (GetAutokeyConfig) super.setAlt(alt);
-      }
-
-      @Override
-      public GetAutokeyConfig setCallback(java.lang.String callback) {
-        return (GetAutokeyConfig) super.setCallback(callback);
-      }
-
-      @Override
-      public GetAutokeyConfig setFields(java.lang.String fields) {
-        return (GetAutokeyConfig) super.setFields(fields);
-      }
-
-      @Override
-      public GetAutokeyConfig setKey(java.lang.String key) {
-        return (GetAutokeyConfig) super.setKey(key);
-      }
-
-      @Override
-      public GetAutokeyConfig setOauthToken(java.lang.String oauthToken) {
-        return (GetAutokeyConfig) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public GetAutokeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (GetAutokeyConfig) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public GetAutokeyConfig setQuotaUser(java.lang.String quotaUser) {
-        return (GetAutokeyConfig) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public GetAutokeyConfig setUploadType(java.lang.String uploadType) {
-        return (GetAutokeyConfig) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public GetAutokeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
-        return (GetAutokeyConfig) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     `projects/{PROJECT_NUMBER}/autokeyConfig`.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
-       */
-      public GetAutokeyConfig setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/autokeyConfig$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public GetAutokeyConfig set(String parameterName, Object value) {
-        return (GetAutokeyConfig) super.set(parameterName, value);
-      }
-    }
-    /**
      * Gets the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
      *
      * Create a request for the method "projects.getKajPolicyConfig".
@@ -1847,170 +1694,6 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public ShowEffectiveKeyAccessJustificationsPolicyConfig set(String parameterName, Object value) {
         return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Updates the AutokeyConfig for a folder. The caller must have both
-     * `cloudkms.autokeyConfigs.update` permission on the parent folder and
-     * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A KeyHandle creation
-     * in the folder's descendant projects will use this configuration to determine where to create the
-     * resulting CryptoKey.
-     *
-     * Create a request for the method "projects.updateAutokeyConfig".
-     *
-     * This request holds the parameters needed by the cloudkms server.  After setting any optional
-     * parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote operation.
-     *
-     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
-     * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
-     * @return the request
-     */
-    public UpdateAutokeyConfig updateAutokeyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.AutokeyConfig content) throws java.io.IOException {
-      UpdateAutokeyConfig result = new UpdateAutokeyConfig(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class UpdateAutokeyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.AutokeyConfig> {
-
-      private static final String REST_PATH = "v1/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+/autokeyConfig$");
-
-      /**
-       * Updates the AutokeyConfig for a folder. The caller must have both
-       * `cloudkms.autokeyConfigs.update` permission on the parent folder and
-       * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A KeyHandle creation
-       * in the folder's descendant projects will use this configuration to determine where to create
-       * the resulting CryptoKey.
-       *
-       * Create a request for the method "projects.updateAutokeyConfig".
-       *
-       * This request holds the parameters needed by the the cloudkms server.  After setting any
-       * optional parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote
-       * operation. <p> {@link UpdateAutokeyConfig#initialize(com.google.api.client.googleapis.services.
-       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
-       * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
-       * @since 1.13
-       */
-      protected UpdateAutokeyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.AutokeyConfig content) {
-        super(CloudKMS.this, "PATCH", REST_PATH, content, com.google.api.services.cloudkms.v1.model.AutokeyConfig.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/autokeyConfig$");
-        }
-      }
-
-      @Override
-      public UpdateAutokeyConfig set$Xgafv(java.lang.String $Xgafv) {
-        return (UpdateAutokeyConfig) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setAccessToken(java.lang.String accessToken) {
-        return (UpdateAutokeyConfig) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setAlt(java.lang.String alt) {
-        return (UpdateAutokeyConfig) super.setAlt(alt);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setCallback(java.lang.String callback) {
-        return (UpdateAutokeyConfig) super.setCallback(callback);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setFields(java.lang.String fields) {
-        return (UpdateAutokeyConfig) super.setFields(fields);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setKey(java.lang.String key) {
-        return (UpdateAutokeyConfig) super.setKey(key);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setOauthToken(java.lang.String oauthToken) {
-        return (UpdateAutokeyConfig) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (UpdateAutokeyConfig) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setQuotaUser(java.lang.String quotaUser) {
-        return (UpdateAutokeyConfig) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setUploadType(java.lang.String uploadType) {
-        return (UpdateAutokeyConfig) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public UpdateAutokeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
-        return (UpdateAutokeyConfig) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig` `projects/{PROJECT_NUMBER}/autokeyConfig`.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-     `projects/{PROJECT_NUMBER}/autokeyConfig`.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig` `projects/{PROJECT_NUMBER}/autokeyConfig`.
-       */
-      public UpdateAutokeyConfig setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/autokeyConfig$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /** Required. Masks which fields of the AutokeyConfig to update, e.g. `keyProject`. */
-      @com.google.api.client.util.Key
-      private String updateMask;
-
-      /** Required. Masks which fields of the AutokeyConfig to update, e.g. `keyProject`.
-       */
-      public String getUpdateMask() {
-        return updateMask;
-      }
-
-      /** Required. Masks which fields of the AutokeyConfig to update, e.g. `keyProject`. */
-      public UpdateAutokeyConfig setUpdateMask(String updateMask) {
-        this.updateMask = updateMask;
-        return this;
-      }
-
-      @Override
-      public UpdateAutokeyConfig set(String parameterName, Object value) {
-        return (UpdateAutokeyConfig) super.set(parameterName, value);
       }
     }
     /**
@@ -2742,22 +2425,22 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
-       primarily intended for internal usage.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;

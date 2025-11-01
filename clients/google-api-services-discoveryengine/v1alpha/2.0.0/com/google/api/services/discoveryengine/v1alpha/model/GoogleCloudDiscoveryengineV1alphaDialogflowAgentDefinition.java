@@ -17,8 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Describes the homepage setting of the widget. It includes all homepage related settings and
- * configurations, such as shortcuts.
+ * Stored definition of an agent that uses a Dialogflow agent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -28,40 +27,43 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaDialogflowAgentDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The shortcuts to display on the homepage.
+   * Required. Resource name of the underlying Dialogflow Agent. Format:
+   * `projects/{project}/locations/{location}/agents/{agent}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts;
+  private java.lang.String dialogflowAgent;
 
   /**
-   * Optional. The shortcuts to display on the homepage.
+   * Required. Resource name of the underlying Dialogflow Agent. Format:
+   * `projects/{project}/locations/{location}/agents/{agent}`
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> getShortcuts() {
-    return shortcuts;
+  public java.lang.String getDialogflowAgent() {
+    return dialogflowAgent;
   }
 
   /**
-   * Optional. The shortcuts to display on the homepage.
-   * @param shortcuts shortcuts or {@code null} for none
+   * Required. Resource name of the underlying Dialogflow Agent. Format:
+   * `projects/{project}/locations/{location}/agents/{agent}`
+   * @param dialogflowAgent dialogflowAgent or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting setShortcuts(java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts) {
-    this.shortcuts = shortcuts;
+  public GoogleCloudDiscoveryengineV1alphaDialogflowAgentDefinition setDialogflowAgent(java.lang.String dialogflowAgent) {
+    this.dialogflowAgent = dialogflowAgent;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaDialogflowAgentDefinition set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaDialogflowAgentDefinition) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting clone() {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaDialogflowAgentDefinition clone() {
+    return (GoogleCloudDiscoveryengineV1alphaDialogflowAgentDefinition) super.clone();
   }
 
 }

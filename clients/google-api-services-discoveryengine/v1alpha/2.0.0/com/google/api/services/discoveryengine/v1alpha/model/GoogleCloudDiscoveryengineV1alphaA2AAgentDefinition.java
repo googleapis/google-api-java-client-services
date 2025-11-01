@@ -17,8 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Describes the homepage setting of the widget. It includes all homepage related settings and
- * configurations, such as shortcuts.
+ * Stored definition of an agent that uses A2A.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -28,40 +27,40 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaA2AAgentDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The shortcuts to display on the homepage.
+   * Optional. The agent card is a JSON string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts;
+  private java.lang.String jsonAgentCard;
 
   /**
-   * Optional. The shortcuts to display on the homepage.
+   * Optional. The agent card is a JSON string.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> getShortcuts() {
-    return shortcuts;
+  public java.lang.String getJsonAgentCard() {
+    return jsonAgentCard;
   }
 
   /**
-   * Optional. The shortcuts to display on the homepage.
-   * @param shortcuts shortcuts or {@code null} for none
+   * Optional. The agent card is a JSON string.
+   * @param jsonAgentCard jsonAgentCard or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting setShortcuts(java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSettingShortcut> shortcuts) {
-    this.shortcuts = shortcuts;
+  public GoogleCloudDiscoveryengineV1alphaA2AAgentDefinition setJsonAgentCard(java.lang.String jsonAgentCard) {
+    this.jsonAgentCard = jsonAgentCard;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaA2AAgentDefinition set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaA2AAgentDefinition) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting clone() {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigHomepageSetting) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaA2AAgentDefinition clone() {
+    return (GoogleCloudDiscoveryengineV1alphaA2AAgentDefinition) super.clone();
   }
 
 }

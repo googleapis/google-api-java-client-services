@@ -30,6 +30,13 @@ package com.google.api.services.apphub.v1.model;
 public final class ServiceProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The type of the service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FunctionalType functionalType;
+
+  /**
    * Output only. The service project identifier that the underlying cloud resource resides in.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class ServiceProperties extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Output only. The type of the service.
+   * @return value or {@code null} for none
+   */
+  public FunctionalType getFunctionalType() {
+    return functionalType;
+  }
+
+  /**
+   * Output only. The type of the service.
+   * @param functionalType functionalType or {@code null} for none
+   */
+  public ServiceProperties setFunctionalType(FunctionalType functionalType) {
+    this.functionalType = functionalType;
+    return this;
+  }
 
   /**
    * Output only. The service project identifier that the underlying cloud resource resides in.

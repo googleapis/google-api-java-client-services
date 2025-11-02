@@ -102,6 +102,13 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
   private GPUDriverConfig gpuDriverConfig;
 
   /**
+   * Output only. The unique ID of the Compute Engine instance resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceId;
+
+  /**
    * Optional. The machine type of the VM instance. https://cloud.google.com/compute/docs/machine-
    * resource
    * The value may be {@code null}.
@@ -311,6 +318,23 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
    */
   public GceSetup setGpuDriverConfig(GPUDriverConfig gpuDriverConfig) {
     this.gpuDriverConfig = gpuDriverConfig;
+    return this;
+  }
+
+  /**
+   * Output only. The unique ID of the Compute Engine instance resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceId() {
+    return instanceId;
+  }
+
+  /**
+   * Output only. The unique ID of the Compute Engine instance resource.
+   * @param instanceId instanceId or {@code null} for none
+   */
+  public GceSetup setInstanceId(java.lang.String instanceId) {
+    this.instanceId = instanceId;
     return this;
   }
 

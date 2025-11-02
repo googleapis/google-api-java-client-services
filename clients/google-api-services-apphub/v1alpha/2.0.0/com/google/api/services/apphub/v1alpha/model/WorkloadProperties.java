@@ -30,6 +30,13 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class WorkloadProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The type of the workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FunctionalType functionalType;
+
+  /**
    * Output only. The service project identifier that the underlying cloud resource resides in.
    * Empty for non-cloud resources.
    * The value may be {@code null}.
@@ -52,6 +59,23 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Output only. The type of the workload.
+   * @return value or {@code null} for none
+   */
+  public FunctionalType getFunctionalType() {
+    return functionalType;
+  }
+
+  /**
+   * Output only. The type of the workload.
+   * @param functionalType functionalType or {@code null} for none
+   */
+  public WorkloadProperties setFunctionalType(FunctionalType functionalType) {
+    this.functionalType = functionalType;
+    return this;
+  }
 
   /**
    * Output only. The service project identifier that the underlying cloud resource resides in.

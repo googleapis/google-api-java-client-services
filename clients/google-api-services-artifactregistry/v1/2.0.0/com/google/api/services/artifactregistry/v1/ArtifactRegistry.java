@@ -1602,6 +1602,147 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
           }
         }
         /**
+         * Exports an artifact.
+         *
+         * Create a request for the method "repositories.exportArtifact".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link ExportArtifact#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param repository Required. The repository of the artifact to export. Format:
+         *        projects/{project}/locations/{location}/repositories/{repository}
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.ExportArtifactRequest}
+         * @return the request
+         */
+        public ExportArtifact exportArtifact(java.lang.String repository, com.google.api.services.artifactregistry.v1.model.ExportArtifactRequest content) throws java.io.IOException {
+          ExportArtifact result = new ExportArtifact(repository, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExportArtifact extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+repository}:exportArtifact";
+
+          private final java.util.regex.Pattern REPOSITORY_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Exports an artifact.
+           *
+           * Create a request for the method "repositories.exportArtifact".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link ExportArtifact#execute()} method to invoke the remote
+           * operation. <p> {@link ExportArtifact#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param repository Required. The repository of the artifact to export. Format:
+         *        projects/{project}/locations/{location}/repositories/{repository}
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.ExportArtifactRequest}
+           * @since 1.13
+           */
+          protected ExportArtifact(java.lang.String repository, com.google.api.services.artifactregistry.v1.model.ExportArtifactRequest content) {
+            super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Operation.class);
+            this.repository = com.google.api.client.util.Preconditions.checkNotNull(repository, "Required parameter repository must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REPOSITORY_PATTERN.matcher(repository).matches(),
+                  "Parameter repository must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public ExportArtifact set$Xgafv(java.lang.String $Xgafv) {
+            return (ExportArtifact) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExportArtifact setAccessToken(java.lang.String accessToken) {
+            return (ExportArtifact) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExportArtifact setAlt(java.lang.String alt) {
+            return (ExportArtifact) super.setAlt(alt);
+          }
+
+          @Override
+          public ExportArtifact setCallback(java.lang.String callback) {
+            return (ExportArtifact) super.setCallback(callback);
+          }
+
+          @Override
+          public ExportArtifact setFields(java.lang.String fields) {
+            return (ExportArtifact) super.setFields(fields);
+          }
+
+          @Override
+          public ExportArtifact setKey(java.lang.String key) {
+            return (ExportArtifact) super.setKey(key);
+          }
+
+          @Override
+          public ExportArtifact setOauthToken(java.lang.String oauthToken) {
+            return (ExportArtifact) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExportArtifact setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExportArtifact) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExportArtifact setQuotaUser(java.lang.String quotaUser) {
+            return (ExportArtifact) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExportArtifact setUploadType(java.lang.String uploadType) {
+            return (ExportArtifact) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExportArtifact setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExportArtifact) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The repository of the artifact to export. Format:
+           * projects/{project}/locations/{location}/repositories/{repository}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String repository;
+
+          /** Required. The repository of the artifact to export. Format:
+         projects/{project}/locations/{location}/repositories/{repository}
+           */
+          public java.lang.String getRepository() {
+            return repository;
+          }
+
+          /**
+           * Required. The repository of the artifact to export. Format:
+           * projects/{project}/locations/{location}/repositories/{repository}
+           */
+          public ExportArtifact setRepository(java.lang.String repository) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REPOSITORY_PATTERN.matcher(repository).matches(),
+                  "Parameter repository must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.repository = repository;
+            return this;
+          }
+
+          @Override
+          public ExportArtifact set(String parameterName, Object value) {
+            return (ExportArtifact) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets a repository.
          *
          * Create a request for the method "repositories.get".

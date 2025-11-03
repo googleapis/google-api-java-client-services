@@ -37,7 +37,7 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   private java.lang.String asset;
 
   /**
-   * Details of the violation.
+   * Details of the violation. TODO(b/452163887)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Details of the violation.
+   * Details of the violation. TODO(b/452163887)
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getObserved() {
@@ -76,7 +76,7 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Details of the violation.
+   * Details of the violation. TODO(b/452163887)
    * @param observed observed or {@code null} for none
    */
   public ViolationDetails setObserved(java.util.Map<String, java.lang.String> observed) {

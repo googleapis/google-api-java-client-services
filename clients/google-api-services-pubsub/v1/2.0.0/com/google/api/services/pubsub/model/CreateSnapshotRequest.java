@@ -49,6 +49,14 @@ public final class CreateSnapshotRequest extends com.google.api.client.json.Gene
   private java.lang.String subscription;
 
   /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Optional. See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
    * @return value or {@code null} for none
    */
@@ -89,6 +97,25 @@ public final class CreateSnapshotRequest extends com.google.api.client.json.Gene
    */
   public CreateSnapshotRequest setSubscription(java.lang.String subscription) {
     this.subscription = subscription;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @param tags tags or {@code null} for none
+   */
+  public CreateSnapshotRequest setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

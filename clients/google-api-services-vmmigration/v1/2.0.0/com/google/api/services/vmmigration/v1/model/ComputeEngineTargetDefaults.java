@@ -194,6 +194,16 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   private java.lang.String serviceAccount;
 
   /**
+   * Optional. If specified this will be the storage pool in which the disk is created. This is the
+   * full path of the storage pool resource, for example: "projects/my-project/zones/us-
+   * central1-a/storagePools/my-storage-pool". The storage pool must be in the same project and zone
+   * as the target disks. The storage pool's type must match the disk type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storagePool;
+
+  /**
    * The full path of the resource of type TargetProject which represents the Compute Engine project
    * in which to create this VM.
    * The value may be {@code null}.
@@ -589,6 +599,29 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   public ComputeEngineTargetDefaults setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. If specified this will be the storage pool in which the disk is created. This is the
+   * full path of the storage pool resource, for example: "projects/my-project/zones/us-
+   * central1-a/storagePools/my-storage-pool". The storage pool must be in the same project and zone
+   * as the target disks. The storage pool's type must match the disk type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoragePool() {
+    return storagePool;
+  }
+
+  /**
+   * Optional. If specified this will be the storage pool in which the disk is created. This is the
+   * full path of the storage pool resource, for example: "projects/my-project/zones/us-
+   * central1-a/storagePools/my-storage-pool". The storage pool must be in the same project and zone
+   * as the target disks. The storage pool's type must match the disk type.
+   * @param storagePool storagePool or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setStoragePool(java.lang.String storagePool) {
+    this.storagePool = storagePool;
     return this;
   }
 

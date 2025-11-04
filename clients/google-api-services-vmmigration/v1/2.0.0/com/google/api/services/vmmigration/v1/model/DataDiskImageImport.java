@@ -17,7 +17,7 @@
 package com.google.api.services.vmmigration.v1.model;
 
 /**
- * Mentions that the image import is not using OS adaptation process.
+ * Used when the image import is not using OS adaptation process.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the VM Migration API. For a detailed explanation see:

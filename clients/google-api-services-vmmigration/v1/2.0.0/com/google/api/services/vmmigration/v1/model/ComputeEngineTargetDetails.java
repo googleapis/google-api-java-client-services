@@ -199,6 +199,17 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   private java.lang.String serviceAccount;
 
   /**
+   * Optional. The storage pool used for the VM disks. If specified this will be the storage pool in
+   * which the disk is created. This is the full path of the storage pool resource, for example:
+   * "projects/my-project/zones/us-central1-a/storagePools/my-storage-pool". The storage pool must
+   * be in the same project and zone as the target disks. The storage pool's type must match the
+   * disk type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storagePool;
+
+  /**
    * The name of the VM to create.
    * The value may be {@code null}.
    */
@@ -599,6 +610,31 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
    */
   public ComputeEngineTargetDetails setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. The storage pool used for the VM disks. If specified this will be the storage pool in
+   * which the disk is created. This is the full path of the storage pool resource, for example:
+   * "projects/my-project/zones/us-central1-a/storagePools/my-storage-pool". The storage pool must
+   * be in the same project and zone as the target disks. The storage pool's type must match the
+   * disk type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoragePool() {
+    return storagePool;
+  }
+
+  /**
+   * Optional. The storage pool used for the VM disks. If specified this will be the storage pool in
+   * which the disk is created. This is the full path of the storage pool resource, for example:
+   * "projects/my-project/zones/us-central1-a/storagePools/my-storage-pool". The storage pool must
+   * be in the same project and zone as the target disks. The storage pool's type must match the
+   * disk type.
+   * @param storagePool storagePool or {@code null} for none
+   */
+  public ComputeEngineTargetDetails setStoragePool(java.lang.String storagePool) {
+    this.storagePool = storagePool;
     return this;
   }
 

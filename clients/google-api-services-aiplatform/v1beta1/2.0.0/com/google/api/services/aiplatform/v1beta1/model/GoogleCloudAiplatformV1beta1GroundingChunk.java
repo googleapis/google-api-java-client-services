@@ -17,7 +17,9 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Grounding chunk.
+ * A piece of evidence that supports a claim made by the model. This is used to show a citation for
+ * a claim made by the model. When grounding is enabled, the model returns a `GroundingChunk` that
+ * contains a reference to the source of the information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,28 +32,30 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Grounding chunk from Google Maps.
+   * A grounding chunk from Google Maps. See the `Maps` message for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GroundingChunkMaps maps;
 
   /**
-   * Grounding chunk from context retrieved by the retrieval tools.
+   * A grounding chunk from a data source retrieved by a retrieval tool, such as Vertex AI Search.
+   * See the `RetrievedContext` message for details
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext retrievedContext;
 
   /**
-   * Grounding chunk from the web.
+   * A grounding chunk from a web page, typically from Google Search. See the `Web` message for
+   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GroundingChunkWeb web;
 
   /**
-   * Grounding chunk from Google Maps.
+   * A grounding chunk from Google Maps. See the `Maps` message for details.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkMaps getMaps() {
@@ -59,7 +63,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google
   }
 
   /**
-   * Grounding chunk from Google Maps.
+   * A grounding chunk from Google Maps. See the `Maps` message for details.
    * @param maps maps or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunk setMaps(GoogleCloudAiplatformV1beta1GroundingChunkMaps maps) {
@@ -68,7 +72,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google
   }
 
   /**
-   * Grounding chunk from context retrieved by the retrieval tools.
+   * A grounding chunk from a data source retrieved by a retrieval tool, such as Vertex AI Search.
+   * See the `RetrievedContext` message for details
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext getRetrievedContext() {
@@ -76,7 +81,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google
   }
 
   /**
-   * Grounding chunk from context retrieved by the retrieval tools.
+   * A grounding chunk from a data source retrieved by a retrieval tool, such as Vertex AI Search.
+   * See the `RetrievedContext` message for details
    * @param retrievedContext retrievedContext or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunk setRetrievedContext(GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext retrievedContext) {
@@ -85,7 +91,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google
   }
 
   /**
-   * Grounding chunk from the web.
+   * A grounding chunk from a web page, typically from Google Search. See the `Web` message for
+   * details.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkWeb getWeb() {
@@ -93,7 +100,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google
   }
 
   /**
-   * Grounding chunk from the web.
+   * A grounding chunk from a web page, typically from Google Search. See the `Web` message for
+   * details.
    * @param web web or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunk setWeb(GoogleCloudAiplatformV1beta1GroundingChunkWeb web) {

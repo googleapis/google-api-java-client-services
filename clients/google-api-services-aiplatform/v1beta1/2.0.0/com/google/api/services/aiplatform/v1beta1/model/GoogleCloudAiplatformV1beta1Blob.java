@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Content blob.
+ * A content blob. A Blob contains data of a specific media type. It is used to represent images,
+ * audio, and video.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,17 +31,17 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Raw bytes.
+   * Required. The raw bytes of the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String data;
 
   /**
-   * Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs.
-   * This field is only returned in PromptMessage for prompt management. It is currently used in the
-   * Gemini GenerateContent calls only when server side tools (code_execution, google_search, and
-   * url_context) are enabled.
+   * Optional. The display name of the blob. Used to provide a label or filename to distinguish
+   * blobs. This field is only returned in `PromptMessage` for prompt management. It is used in the
+   * Gemini calls only when server-side tools (`code_execution`, `google_search`, and `url_context`)
+   * are enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +55,7 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   private java.lang.String mimeType;
 
   /**
-   * Required. Raw bytes.
+   * Required. The raw bytes of the data.
    * @see #decodeData()
    * @return value or {@code null} for none
    */
@@ -63,7 +64,7 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   }
 
   /**
-   * Required. Raw bytes.
+   * Required. The raw bytes of the data.
    * @see #getData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -74,7 +75,7 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   }
 
   /**
-   * Required. Raw bytes.
+   * Required. The raw bytes of the data.
    * @see #encodeData()
    * @param data data or {@code null} for none
    */
@@ -84,7 +85,7 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   }
 
   /**
-   * Required. Raw bytes.
+   * Required. The raw bytes of the data.
    * @see #setData()
    *
    * <p>
@@ -99,10 +100,10 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   }
 
   /**
-   * Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs.
-   * This field is only returned in PromptMessage for prompt management. It is currently used in the
-   * Gemini GenerateContent calls only when server side tools (code_execution, google_search, and
-   * url_context) are enabled.
+   * Optional. The display name of the blob. Used to provide a label or filename to distinguish
+   * blobs. This field is only returned in `PromptMessage` for prompt management. It is used in the
+   * Gemini calls only when server-side tools (`code_execution`, `google_search`, and `url_context`)
+   * are enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -110,10 +111,10 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   }
 
   /**
-   * Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs.
-   * This field is only returned in PromptMessage for prompt management. It is currently used in the
-   * Gemini GenerateContent calls only when server side tools (code_execution, google_search, and
-   * url_context) are enabled.
+   * Optional. The display name of the blob. Used to provide a label or filename to distinguish
+   * blobs. This field is only returned in `PromptMessage` for prompt management. It is used in the
+   * Gemini calls only when server-side tools (`code_execution`, `google_search`, and `url_context`)
+   * are enabled.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Blob setDisplayName(java.lang.String displayName) {

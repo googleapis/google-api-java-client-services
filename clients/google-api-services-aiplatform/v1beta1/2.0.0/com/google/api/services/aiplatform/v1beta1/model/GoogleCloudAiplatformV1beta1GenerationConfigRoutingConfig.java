@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * The configuration for routing the request to a specific model.
+ * The configuration for routing the request to a specific model. This can be used to control which
+ * model is used for the generation, either automatically or by specifying a model name.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,21 +31,21 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Automated routing.
+   * In this mode, the model is selected automatically based on the content of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfigAutoRoutingMode autoMode;
 
   /**
-   * Manual routing.
+   * In this mode, the model is specified manually.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfigManualRoutingMode manualMode;
 
   /**
-   * Automated routing.
+   * In this mode, the model is selected automatically based on the content of the request.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfigAutoRoutingMode getAutoMode() {
@@ -52,7 +53,7 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfig ext
   }
 
   /**
-   * Automated routing.
+   * In this mode, the model is selected automatically based on the content of the request.
    * @param autoMode autoMode or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfig setAutoMode(GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfigAutoRoutingMode autoMode) {
@@ -61,7 +62,7 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfig ext
   }
 
   /**
-   * Manual routing.
+   * In this mode, the model is specified manually.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfigManualRoutingMode getManualMode() {
@@ -69,7 +70,7 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfig ext
   }
 
   /**
-   * Manual routing.
+   * In this mode, the model is specified manually.
    * @param manualMode manualMode or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfig setManualMode(GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfigManualRoutingMode manualMode) {

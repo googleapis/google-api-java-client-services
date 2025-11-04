@@ -44,8 +44,8 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec extends
   private java.lang.String pickleObjectGcsUri;
 
   /**
-   * Optional. The Python version. Currently support 3.8, 3.9, 3.10, 3.11. If not specified, default
-   * value is 3.10.
+   * Optional. The Python version. Supported values are 3.9, 3.10, 3.11, 3.12, 3.13. If not
+   * specified, the default value is 3.10.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,8 +93,8 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec extends
   }
 
   /**
-   * Optional. The Python version. Currently support 3.8, 3.9, 3.10, 3.11. If not specified, default
-   * value is 3.10.
+   * Optional. The Python version. Supported values are 3.9, 3.10, 3.11, 3.12, 3.13. If not
+   * specified, the default value is 3.10.
    * @return value or {@code null} for none
    */
   public java.lang.String getPythonVersion() {
@@ -102,8 +102,8 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec extends
   }
 
   /**
-   * Optional. The Python version. Currently support 3.8, 3.9, 3.10, 3.11. If not specified, default
-   * value is 3.10.
+   * Optional. The Python version. Supported values are 3.9, 3.10, 3.11, 3.12, 3.13. If not
+   * specified, the default value is 3.10.
    * @param pythonVersion pythonVersion or {@code null} for none
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec setPythonVersion(java.lang.String pythonVersion) {

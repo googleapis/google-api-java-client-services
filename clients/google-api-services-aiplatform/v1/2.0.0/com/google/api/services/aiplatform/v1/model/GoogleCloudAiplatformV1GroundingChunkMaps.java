@@ -17,7 +17,9 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Chunk from Google Maps.
+ * A `Maps` chunk is a piece of evidence that comes from Google Maps. It contains information about
+ * a place, such as its name, address, and reviews. This is used to provide the user with rich,
+ * location-based information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,44 +32,45 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.api.client.json.GenericJson {
 
   /**
-   * Sources used to generate the place answer. This includes review snippets and photos that were
-   * used to generate the answer, as well as uris to flag content.
+   * The sources that were used to generate the place answer. This includes review snippets and
+   * photos that were used to generate the answer, as well as URIs to flag content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSources placeAnswerSources;
 
   /**
-   * This Place's resource name, in `places/{place_id}` format. Can be used to look up the Place.
+   * This Place's resource name, in `places/{place_id}` format. This can be used to look up the
+   * place in the Google Maps API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String placeId;
 
   /**
-   * Text of the place answer.
+   * The text of the place answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Title of the place.
+   * The title of the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * URI reference of the place.
+   * The URI of the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Sources used to generate the place answer. This includes review snippets and photos that were
-   * used to generate the answer, as well as uris to flag content.
+   * The sources that were used to generate the place answer. This includes review snippets and
+   * photos that were used to generate the answer, as well as URIs to flag content.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSources getPlaceAnswerSources() {
@@ -75,8 +78,8 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * Sources used to generate the place answer. This includes review snippets and photos that were
-   * used to generate the answer, as well as uris to flag content.
+   * The sources that were used to generate the place answer. This includes review snippets and
+   * photos that were used to generate the answer, as well as URIs to flag content.
    * @param placeAnswerSources placeAnswerSources or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMaps setPlaceAnswerSources(GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSources placeAnswerSources) {
@@ -85,7 +88,8 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * This Place's resource name, in `places/{place_id}` format. Can be used to look up the Place.
+   * This Place's resource name, in `places/{place_id}` format. This can be used to look up the
+   * place in the Google Maps API.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaceId() {
@@ -93,7 +97,8 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * This Place's resource name, in `places/{place_id}` format. Can be used to look up the Place.
+   * This Place's resource name, in `places/{place_id}` format. This can be used to look up the
+   * place in the Google Maps API.
    * @param placeId placeId or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMaps setPlaceId(java.lang.String placeId) {
@@ -102,7 +107,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * Text of the place answer.
+   * The text of the place answer.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -110,7 +115,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * Text of the place answer.
+   * The text of the place answer.
    * @param text text or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMaps setText(java.lang.String text) {
@@ -119,7 +124,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * Title of the place.
+   * The title of the place.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -127,7 +132,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * Title of the place.
+   * The title of the place.
    * @param title title or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMaps setTitle(java.lang.String title) {
@@ -136,7 +141,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * URI reference of the place.
+   * The URI of the place.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -144,7 +149,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   }
 
   /**
-   * URI reference of the place.
+   * The URI of the place.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMaps setUri(java.lang.String uri) {

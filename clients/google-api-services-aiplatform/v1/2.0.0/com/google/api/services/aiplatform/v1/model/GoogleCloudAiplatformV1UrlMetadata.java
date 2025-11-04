@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Context of the a single url retrieval.
+ * The metadata for a single URL retrieval.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1UrlMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Retrieved url by the tool.
+   * The URL retrieved by the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String retrievedUrl;
 
   /**
-   * Status of the url retrieval.
+   * The status of the URL retrieval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String urlRetrievalStatus;
 
   /**
-   * Retrieved url by the tool.
+   * The URL retrieved by the tool.
    * @return value or {@code null} for none
    */
   public java.lang.String getRetrievedUrl() {
@@ -52,7 +52,7 @@ public final class GoogleCloudAiplatformV1UrlMetadata extends com.google.api.cli
   }
 
   /**
-   * Retrieved url by the tool.
+   * The URL retrieved by the tool.
    * @param retrievedUrl retrievedUrl or {@code null} for none
    */
   public GoogleCloudAiplatformV1UrlMetadata setRetrievedUrl(java.lang.String retrievedUrl) {
@@ -61,7 +61,7 @@ public final class GoogleCloudAiplatformV1UrlMetadata extends com.google.api.cli
   }
 
   /**
-   * Status of the url retrieval.
+   * The status of the URL retrieval.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlRetrievalStatus() {
@@ -69,7 +69,7 @@ public final class GoogleCloudAiplatformV1UrlMetadata extends com.google.api.cli
   }
 
   /**
-   * Status of the url retrieval.
+   * The status of the URL retrieval.
    * @param urlRetrievalStatus urlRetrievalStatus or {@code null} for none
    */
   public GoogleCloudAiplatformV1UrlMetadata setUrlRetrievalStatus(java.lang.String urlRetrievalStatus) {

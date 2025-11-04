@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1AggregationResult extends com.goo
   private GoogleCloudAiplatformV1beta1BleuMetricValue bleuMetricValue;
 
   /**
+   * Result for code execution metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1CustomCodeExecutionResult customCodeExecutionResult;
+
+  /**
    * Results for exact match metric.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class GoogleCloudAiplatformV1beta1AggregationResult extends com.goo
    */
   public GoogleCloudAiplatformV1beta1AggregationResult setBleuMetricValue(GoogleCloudAiplatformV1beta1BleuMetricValue bleuMetricValue) {
     this.bleuMetricValue = bleuMetricValue;
+    return this;
+  }
+
+  /**
+   * Result for code execution metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CustomCodeExecutionResult getCustomCodeExecutionResult() {
+    return customCodeExecutionResult;
+  }
+
+  /**
+   * Result for code execution metric.
+   * @param customCodeExecutionResult customCodeExecutionResult or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AggregationResult setCustomCodeExecutionResult(GoogleCloudAiplatformV1beta1CustomCodeExecutionResult customCodeExecutionResult) {
+    this.customCodeExecutionResult = customCodeExecutionResult;
     return this;
   }
 

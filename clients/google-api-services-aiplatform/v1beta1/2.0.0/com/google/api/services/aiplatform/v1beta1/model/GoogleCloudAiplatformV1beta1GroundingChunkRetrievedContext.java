@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Chunk from context retrieved by the retrieval tools.
+ * Context retrieved from a data source to ground the model's response. This is used when a
+ * retrieval tool fetches information from a user-provided corpus or a public dataset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,43 +31,49 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The full document name for the referenced Vertex AI Search document.
+   * Output only. The full resource name of the referenced Vertex AI Search document. This is used
+   * to identify the specific document that was retrieved. The format is `projects/{project}/locatio
+   * ns/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{doc
+   * ument}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentName;
 
   /**
-   * Additional context for the RAG retrieval result. This is only populated when using the RAG
-   * retrieval tool.
+   * Additional context for a Retrieval-Augmented Generation (RAG) retrieval result. This is
+   * populated only when the RAG retrieval tool is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1RagChunk ragChunk;
 
   /**
-   * Text of the attribution.
+   * The content of the retrieved data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Title of the attribution.
+   * The title of the retrieved data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * URI reference of the attribution.
+   * The URI of the retrieved data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Output only. The full document name for the referenced Vertex AI Search document.
+   * Output only. The full resource name of the referenced Vertex AI Search document. This is used
+   * to identify the specific document that was retrieved. The format is `projects/{project}/locatio
+   * ns/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{doc
+   * ument}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentName() {
@@ -74,7 +81,10 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
   }
 
   /**
-   * Output only. The full document name for the referenced Vertex AI Search document.
+   * Output only. The full resource name of the referenced Vertex AI Search document. This is used
+   * to identify the specific document that was retrieved. The format is `projects/{project}/locatio
+   * ns/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{doc
+   * ument}`.
    * @param documentName documentName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext setDocumentName(java.lang.String documentName) {
@@ -83,8 +93,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
   }
 
   /**
-   * Additional context for the RAG retrieval result. This is only populated when using the RAG
-   * retrieval tool.
+   * Additional context for a Retrieval-Augmented Generation (RAG) retrieval result. This is
+   * populated only when the RAG retrieval tool is used.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagChunk getRagChunk() {
@@ -92,8 +102,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
   }
 
   /**
-   * Additional context for the RAG retrieval result. This is only populated when using the RAG
-   * retrieval tool.
+   * Additional context for a Retrieval-Augmented Generation (RAG) retrieval result. This is
+   * populated only when the RAG retrieval tool is used.
    * @param ragChunk ragChunk or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext setRagChunk(GoogleCloudAiplatformV1beta1RagChunk ragChunk) {
@@ -102,7 +112,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
   }
 
   /**
-   * Text of the attribution.
+   * The content of the retrieved data source.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -110,7 +120,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
   }
 
   /**
-   * Text of the attribution.
+   * The content of the retrieved data source.
    * @param text text or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext setText(java.lang.String text) {
@@ -119,7 +129,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
   }
 
   /**
-   * Title of the attribution.
+   * The title of the retrieved data source.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -127,7 +137,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
   }
 
   /**
-   * Title of the attribution.
+   * The title of the retrieved data source.
    * @param title title or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext setTitle(java.lang.String title) {
@@ -136,7 +146,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
   }
 
   /**
-   * URI reference of the attribution.
+   * The URI of the retrieved data source.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -144,7 +154,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
   }
 
   /**
-   * URI reference of the attribution.
+   * The URI of the retrieved data source.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext setUri(java.lang.String uri) {

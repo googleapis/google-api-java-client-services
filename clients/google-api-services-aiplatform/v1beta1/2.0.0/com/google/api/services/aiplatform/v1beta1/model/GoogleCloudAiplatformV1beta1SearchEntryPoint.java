@@ -17,7 +17,9 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Google search entry point.
+ * An entry point for displaying Google Search results. A `SearchEntryPoint` is populated when the
+ * grounding source for a model's response is Google Search. It provides information that you can
+ * use to display the search results in your application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,21 +32,26 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1SearchEntryPoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Web content snippet that can be embedded in a web page or an app webview.
+   * Optional. An HTML snippet that can be embedded in a web page or an application's webview. This
+   * snippet displays a search result, including the title, URL, and a brief description of the
+   * search result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String renderedContent;
 
   /**
-   * Optional. Base64 encoded JSON representing array of tuple.
+   * Optional. A base64-encoded JSON object that contains a list of search queries and their
+   * corresponding search URLs. This information can be used to build a custom search UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sdkBlob;
 
   /**
-   * Optional. Web content snippet that can be embedded in a web page or an app webview.
+   * Optional. An HTML snippet that can be embedded in a web page or an application's webview. This
+   * snippet displays a search result, including the title, URL, and a brief description of the
+   * search result.
    * @return value or {@code null} for none
    */
   public java.lang.String getRenderedContent() {
@@ -52,7 +59,9 @@ public final class GoogleCloudAiplatformV1beta1SearchEntryPoint extends com.goog
   }
 
   /**
-   * Optional. Web content snippet that can be embedded in a web page or an app webview.
+   * Optional. An HTML snippet that can be embedded in a web page or an application's webview. This
+   * snippet displays a search result, including the title, URL, and a brief description of the
+   * search result.
    * @param renderedContent renderedContent or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SearchEntryPoint setRenderedContent(java.lang.String renderedContent) {
@@ -61,7 +70,8 @@ public final class GoogleCloudAiplatformV1beta1SearchEntryPoint extends com.goog
   }
 
   /**
-   * Optional. Base64 encoded JSON representing array of tuple.
+   * Optional. A base64-encoded JSON object that contains a list of search queries and their
+   * corresponding search URLs. This information can be used to build a custom search UI.
    * @see #decodeSdkBlob()
    * @return value or {@code null} for none
    */
@@ -70,7 +80,8 @@ public final class GoogleCloudAiplatformV1beta1SearchEntryPoint extends com.goog
   }
 
   /**
-   * Optional. Base64 encoded JSON representing array of tuple.
+   * Optional. A base64-encoded JSON object that contains a list of search queries and their
+   * corresponding search URLs. This information can be used to build a custom search UI.
    * @see #getSdkBlob()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -81,7 +92,8 @@ public final class GoogleCloudAiplatformV1beta1SearchEntryPoint extends com.goog
   }
 
   /**
-   * Optional. Base64 encoded JSON representing array of tuple.
+   * Optional. A base64-encoded JSON object that contains a list of search queries and their
+   * corresponding search URLs. This information can be used to build a custom search UI.
    * @see #encodeSdkBlob()
    * @param sdkBlob sdkBlob or {@code null} for none
    */
@@ -91,7 +103,8 @@ public final class GoogleCloudAiplatformV1beta1SearchEntryPoint extends com.goog
   }
 
   /**
-   * Optional. Base64 encoded JSON representing array of tuple.
+   * Optional. A base64-encoded JSON object that contains a list of search queries and their
+   * corresponding search URLs. This information can be used to build a custom search UI.
    * @see #setSdkBlob()
    *
    * <p>

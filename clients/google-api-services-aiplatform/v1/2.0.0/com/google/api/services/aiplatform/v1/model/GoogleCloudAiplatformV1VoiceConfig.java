@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * The configuration for the voice to use.
+ * Configuration for a voice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1VoiceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration for the prebuilt voice to use.
+   * The configuration for a prebuilt voice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1PrebuiltVoiceConfig prebuiltVoiceConfig;
 
   /**
-   * The configuration for the prebuilt voice to use.
+   * The configuration for a prebuilt voice.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1PrebuiltVoiceConfig getPrebuiltVoiceConfig() {
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1VoiceConfig extends com.google.api.cli
   }
 
   /**
-   * The configuration for the prebuilt voice to use.
+   * The configuration for a prebuilt voice.
    * @param prebuiltVoiceConfig prebuiltVoiceConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1VoiceConfig setPrebuiltVoiceConfig(GoogleCloudAiplatformV1PrebuiltVoiceConfig prebuiltVoiceConfig) {

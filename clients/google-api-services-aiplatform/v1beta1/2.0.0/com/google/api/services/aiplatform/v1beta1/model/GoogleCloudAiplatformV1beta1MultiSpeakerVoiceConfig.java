@@ -17,8 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Configuration for a multi-speaker text-to-speech setup. Enables the use of up to two distinct
- * voices in a single synthesis request.
+ * Configuration for a multi-speaker text-to-speech request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

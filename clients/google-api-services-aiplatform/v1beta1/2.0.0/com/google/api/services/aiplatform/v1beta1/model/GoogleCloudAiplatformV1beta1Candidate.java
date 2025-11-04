@@ -30,29 +30,31 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Average log probability score of the candidate.
+   * Output only. The average log probability of the tokens in this candidate. This is a length-
+   * normalized score that can be used to compare the quality of candidates of different lengths. A
+   * higher average log probability suggests a more confident and coherent response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double avgLogprobs;
 
   /**
-   * Output only. Source attribution of the generated content.
+   * Output only. A collection of citations that apply to the generated content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1CitationMetadata citationMetadata;
 
   /**
-   * Output only. Content parts of the candidate.
+   * Output only. The content of the candidate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1Content content;
 
   /**
-   * Output only. Describes the reason the mode stopped generating tokens in more detail. This is
-   * only filled when `finish_reason` is set.
+   * Output only. Describes the reason the model stopped generating tokens in more detail. This
+   * field is returned only when `finish_reason` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,35 +62,39 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
 
   /**
    * Output only. The reason why the model stopped generating tokens. If empty, the model has not
-   * stopped generating the tokens.
+   * stopped generating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String finishReason;
 
   /**
-   * Output only. Metadata specifies sources used to ground generated content.
+   * Output only. Metadata returned when grounding is enabled. It contains the sources used to
+   * ground the generated content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GroundingMetadata groundingMetadata;
 
   /**
-   * Output only. Index of the candidate.
+   * Output only. The 0-based index of this candidate in the list of generated responses. This is
+   * useful for distinguishing between multiple candidates when `candidate_count` > 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer index;
 
   /**
-   * Output only. Log-likelihood scores for the response tokens and top tokens
+   * Output only. The detailed log probability information for the tokens in this candidate. This is
+   * useful for debugging, understanding model uncertainty, and identifying potential
+   * "hallucinations".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1LogprobsResult logprobsResult;
 
   /**
-   * Output only. List of ratings for the safety of a response candidate. There is at most one
+   * Output only. A list of ratings for the safety of a response candidate. There is at most one
    * rating per category.
    * The value may be {@code null}.
    */
@@ -96,14 +102,17 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   private java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> safetyRatings;
 
   /**
-   * Output only. Metadata related to url context retrieval tool.
+   * Output only. Metadata returned when the model uses the `url_context` tool to get information
+   * from a user-provided URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1UrlContextMetadata urlContextMetadata;
 
   /**
-   * Output only. Average log probability score of the candidate.
+   * Output only. The average log probability of the tokens in this candidate. This is a length-
+   * normalized score that can be used to compare the quality of candidates of different lengths. A
+   * higher average log probability suggests a more confident and coherent response.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAvgLogprobs() {
@@ -111,7 +120,9 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Average log probability score of the candidate.
+   * Output only. The average log probability of the tokens in this candidate. This is a length-
+   * normalized score that can be used to compare the quality of candidates of different lengths. A
+   * higher average log probability suggests a more confident and coherent response.
    * @param avgLogprobs avgLogprobs or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setAvgLogprobs(java.lang.Double avgLogprobs) {
@@ -120,7 +131,7 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Source attribution of the generated content.
+   * Output only. A collection of citations that apply to the generated content.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CitationMetadata getCitationMetadata() {
@@ -128,7 +139,7 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Source attribution of the generated content.
+   * Output only. A collection of citations that apply to the generated content.
    * @param citationMetadata citationMetadata or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setCitationMetadata(GoogleCloudAiplatformV1beta1CitationMetadata citationMetadata) {
@@ -137,7 +148,7 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Content parts of the candidate.
+   * Output only. The content of the candidate.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Content getContent() {
@@ -145,7 +156,7 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Content parts of the candidate.
+   * Output only. The content of the candidate.
    * @param content content or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setContent(GoogleCloudAiplatformV1beta1Content content) {
@@ -154,8 +165,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Describes the reason the mode stopped generating tokens in more detail. This is
-   * only filled when `finish_reason` is set.
+   * Output only. Describes the reason the model stopped generating tokens in more detail. This
+   * field is returned only when `finish_reason` is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getFinishMessage() {
@@ -163,8 +174,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Describes the reason the mode stopped generating tokens in more detail. This is
-   * only filled when `finish_reason` is set.
+   * Output only. Describes the reason the model stopped generating tokens in more detail. This
+   * field is returned only when `finish_reason` is set.
    * @param finishMessage finishMessage or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setFinishMessage(java.lang.String finishMessage) {
@@ -174,7 +185,7 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
 
   /**
    * Output only. The reason why the model stopped generating tokens. If empty, the model has not
-   * stopped generating the tokens.
+   * stopped generating.
    * @return value or {@code null} for none
    */
   public java.lang.String getFinishReason() {
@@ -183,7 +194,7 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
 
   /**
    * Output only. The reason why the model stopped generating tokens. If empty, the model has not
-   * stopped generating the tokens.
+   * stopped generating.
    * @param finishReason finishReason or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setFinishReason(java.lang.String finishReason) {
@@ -192,7 +203,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Metadata specifies sources used to ground generated content.
+   * Output only. Metadata returned when grounding is enabled. It contains the sources used to
+   * ground the generated content.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata getGroundingMetadata() {
@@ -200,7 +212,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Metadata specifies sources used to ground generated content.
+   * Output only. Metadata returned when grounding is enabled. It contains the sources used to
+   * ground the generated content.
    * @param groundingMetadata groundingMetadata or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setGroundingMetadata(GoogleCloudAiplatformV1beta1GroundingMetadata groundingMetadata) {
@@ -209,7 +222,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Index of the candidate.
+   * Output only. The 0-based index of this candidate in the list of generated responses. This is
+   * useful for distinguishing between multiple candidates when `candidate_count` > 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -217,7 +231,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Index of the candidate.
+   * Output only. The 0-based index of this candidate in the list of generated responses. This is
+   * useful for distinguishing between multiple candidates when `candidate_count` > 1.
    * @param index index or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setIndex(java.lang.Integer index) {
@@ -226,7 +241,9 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Log-likelihood scores for the response tokens and top tokens
+   * Output only. The detailed log probability information for the tokens in this candidate. This is
+   * useful for debugging, understanding model uncertainty, and identifying potential
+   * "hallucinations".
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1LogprobsResult getLogprobsResult() {
@@ -234,7 +251,9 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Log-likelihood scores for the response tokens and top tokens
+   * Output only. The detailed log probability information for the tokens in this candidate. This is
+   * useful for debugging, understanding model uncertainty, and identifying potential
+   * "hallucinations".
    * @param logprobsResult logprobsResult or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setLogprobsResult(GoogleCloudAiplatformV1beta1LogprobsResult logprobsResult) {
@@ -243,7 +262,7 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. List of ratings for the safety of a response candidate. There is at most one
+   * Output only. A list of ratings for the safety of a response candidate. There is at most one
    * rating per category.
    * @return value or {@code null} for none
    */
@@ -252,7 +271,7 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. List of ratings for the safety of a response candidate. There is at most one
+   * Output only. A list of ratings for the safety of a response candidate. There is at most one
    * rating per category.
    * @param safetyRatings safetyRatings or {@code null} for none
    */
@@ -262,7 +281,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Metadata related to url context retrieval tool.
+   * Output only. Metadata returned when the model uses the `url_context` tool to get information
+   * from a user-provided URL.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1UrlContextMetadata getUrlContextMetadata() {
@@ -270,7 +290,8 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   }
 
   /**
-   * Output only. Metadata related to url context retrieval tool.
+   * Output only. Metadata returned when the model uses the `url_context` tool to get information
+   * from a user-provided URL.
    * @param urlContextMetadata urlContextMetadata or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Candidate setUrlContextMetadata(GoogleCloudAiplatformV1beta1UrlContextMetadata urlContextMetadata) {

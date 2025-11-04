@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Encapsulates a review snippet.
+ * A review snippet that is used to generate the answer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -37,14 +37,14 @@ public final class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesRe
   private java.lang.String googleMapsUri;
 
   /**
-   * Id of the review referencing the place.
+   * The ID of the review that is being referenced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reviewId;
 
   /**
-   * Title of the review.
+   * The title of the review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesRe
   }
 
   /**
-   * Id of the review referencing the place.
+   * The ID of the review that is being referenced.
    * @return value or {@code null} for none
    */
   public java.lang.String getReviewId() {
@@ -76,7 +76,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesRe
   }
 
   /**
-   * Id of the review referencing the place.
+   * The ID of the review that is being referenced.
    * @param reviewId reviewId or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet setReviewId(java.lang.String reviewId) {
@@ -85,7 +85,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesRe
   }
 
   /**
-   * Title of the review.
+   * The title of the review.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -93,7 +93,7 @@ public final class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesRe
   }
 
   /**
-   * Title of the review.
+   * The title of the review.
    * @param title title or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet setTitle(java.lang.String title) {

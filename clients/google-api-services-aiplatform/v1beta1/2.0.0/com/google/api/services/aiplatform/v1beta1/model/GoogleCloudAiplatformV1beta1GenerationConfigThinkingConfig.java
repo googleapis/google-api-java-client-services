@@ -17,7 +17,9 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Config for thinking features.
+ * Configuration for the model's thinking features. "Thinking" is a process where the model breaks
+ * down a complex task into smaller, manageable steps. This allows the model to reason about the
+ * task, plan its approach, and execute the plan to generate a high-quality response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,23 +32,29 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates whether to include thoughts in the response. If true, thoughts are returned
-   * only when available.
+   * Optional. If true, the model will include its thoughts in the response. "Thoughts" are the
+   * intermediate steps the model takes to arrive at the final response. They can provide insights
+   * into the model's reasoning process and help with debugging. If this is true, thoughts are
+   * returned only when available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeThoughts;
 
   /**
-   * Optional. Indicates the thinking budget in tokens.
+   * Optional. The token budget for the model's thinking process. The model will make a best effort
+   * to stay within this budget. This can be used to control the trade-off between response quality
+   * and latency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer thinkingBudget;
 
   /**
-   * Optional. Indicates whether to include thoughts in the response. If true, thoughts are returned
-   * only when available.
+   * Optional. If true, the model will include its thoughts in the response. "Thoughts" are the
+   * intermediate steps the model takes to arrive at the final response. They can provide insights
+   * into the model's reasoning process and help with debugging. If this is true, thoughts are
+   * returned only when available.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeThoughts() {
@@ -54,8 +62,10 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig ex
   }
 
   /**
-   * Optional. Indicates whether to include thoughts in the response. If true, thoughts are returned
-   * only when available.
+   * Optional. If true, the model will include its thoughts in the response. "Thoughts" are the
+   * intermediate steps the model takes to arrive at the final response. They can provide insights
+   * into the model's reasoning process and help with debugging. If this is true, thoughts are
+   * returned only when available.
    * @param includeThoughts includeThoughts or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig setIncludeThoughts(java.lang.Boolean includeThoughts) {
@@ -64,7 +74,9 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig ex
   }
 
   /**
-   * Optional. Indicates the thinking budget in tokens.
+   * Optional. The token budget for the model's thinking process. The model will make a best effort
+   * to stay within this budget. This can be used to control the trade-off between response quality
+   * and latency.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getThinkingBudget() {
@@ -72,7 +84,9 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig ex
   }
 
   /**
-   * Optional. Indicates the thinking budget in tokens.
+   * Optional. The token budget for the model's thinking process. The model will make a best effort
+   * to stay within this budget. This can be used to control the trade-off between response quality
+   * and latency.
    * @param thinkingBudget thinkingBudget or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig setThinkingBudget(java.lang.Integer thinkingBudget) {

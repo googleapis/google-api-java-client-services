@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1Metric extends com.google.api.cli
   private GoogleCloudAiplatformV1beta1BleuSpec bleuSpec;
 
   /**
+   * Spec for Custom Code Execution metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1CustomCodeExecutionSpec customCodeExecutionSpec;
+
+  /**
    * Spec for exact match metric.
    * The value may be {@code null}.
    */
@@ -116,6 +123,23 @@ public final class GoogleCloudAiplatformV1beta1Metric extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Metric setBleuSpec(GoogleCloudAiplatformV1beta1BleuSpec bleuSpec) {
     this.bleuSpec = bleuSpec;
+    return this;
+  }
+
+  /**
+   * Spec for Custom Code Execution metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CustomCodeExecutionSpec getCustomCodeExecutionSpec() {
+    return customCodeExecutionSpec;
+  }
+
+  /**
+   * Spec for Custom Code Execution metric.
+   * @param customCodeExecutionSpec customCodeExecutionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Metric setCustomCodeExecutionSpec(GoogleCloudAiplatformV1beta1CustomCodeExecutionSpec customCodeExecutionSpec) {
+    this.customCodeExecutionSpec = customCodeExecutionSpec;
     return this;
   }
 

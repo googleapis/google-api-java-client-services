@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Candidates with top log probabilities at each decoding step.
+ * A list of the top candidate tokens and their log probabilities at each decoding step. This can be
+ * used to see what other tokens the model considered.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,7 +31,7 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1LogprobsResultTopCandidates extends com.google.api.client.json.GenericJson {
 
   /**
-   * Sorted by log probability in descending order.
+   * The list of candidate tokens, sorted by log probability in descending order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +44,7 @@ public final class GoogleCloudAiplatformV1LogprobsResultTopCandidates extends co
   }
 
   /**
-   * Sorted by log probability in descending order.
+   * The list of candidate tokens, sorted by log probability in descending order.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1LogprobsResultCandidate> getCandidates() {
@@ -51,7 +52,7 @@ public final class GoogleCloudAiplatformV1LogprobsResultTopCandidates extends co
   }
 
   /**
-   * Sorted by log probability in descending order.
+   * The list of candidate tokens, sorted by log probability in descending order.
    * @param candidates candidates or {@code null} for none
    */
   public GoogleCloudAiplatformV1LogprobsResultTopCandidates setCandidates(java.util.List<GoogleCloudAiplatformV1LogprobsResultCandidate> candidates) {

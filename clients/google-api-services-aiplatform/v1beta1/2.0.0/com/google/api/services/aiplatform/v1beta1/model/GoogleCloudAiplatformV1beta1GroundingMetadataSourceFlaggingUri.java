@@ -17,8 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Source content flagging uri for a place or review. This is currently populated only for Google
- * Maps grounding.
+ * A URI that can be used to flag a place or review for inappropriate content. This is populated
+ * only when the grounding source is Google Maps.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -31,21 +31,21 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GroundingMetadataSourceFlaggingUri extends com.google.api.client.json.GenericJson {
 
   /**
-   * A link where users can flag a problem with the source (place or review).
+   * The URI that can be used to flag the content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flagContentUri;
 
   /**
-   * Id of the place or review.
+   * The ID of the place or review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceId;
 
   /**
-   * A link where users can flag a problem with the source (place or review).
+   * The URI that can be used to flag the content.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlagContentUri() {
@@ -53,7 +53,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadataSourceFlaggingUr
   }
 
   /**
-   * A link where users can flag a problem with the source (place or review).
+   * The URI that can be used to flag the content.
    * @param flagContentUri flagContentUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadataSourceFlaggingUri setFlagContentUri(java.lang.String flagContentUri) {
@@ -62,7 +62,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadataSourceFlaggingUr
   }
 
   /**
-   * Id of the place or review.
+   * The ID of the place or review.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceId() {
@@ -70,7 +70,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadataSourceFlaggingUr
   }
 
   /**
-   * Id of the place or review.
+   * The ID of the place or review.
    * @param sourceId sourceId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadataSourceFlaggingUri setSourceId(java.lang.String sourceId) {

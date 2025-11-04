@@ -17,9 +17,9 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * The base structured datatype containing multi-part content of a message. A `Content` includes a
- * `role` field designating the producer of the `Content` and a `parts` field containing multi-part
- * data that contains the content of the message turn.
+ * The structured data content of a message. A Content message contains a `role` field, which
+ * indicates the producer of the content, and a `parts` field, which contains the multi-part data of
+ * the message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -32,24 +32,24 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Content extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Ordered `Parts` that constitute a single message. Parts may have different IANA MIME
-   * types.
+   * Required. A list of Part objects that make up a single message. Parts of a message can have
+   * different MIME types. A Content message must have at least one Part.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1Part> parts;
 
   /**
-   * Optional. The producer of the content. Must be either 'user' or 'model'. Useful to set for
-   * multi-turn conversations, otherwise can be left blank or unset.
+   * Optional. The producer of the content. Must be either 'user' or 'model'. If not set, the
+   * service will default to 'user'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
 
   /**
-   * Required. Ordered `Parts` that constitute a single message. Parts may have different IANA MIME
-   * types.
+   * Required. A list of Part objects that make up a single message. Parts of a message can have
+   * different MIME types. A Content message must have at least one Part.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1Part> getParts() {
@@ -57,8 +57,8 @@ public final class GoogleCloudAiplatformV1beta1Content extends com.google.api.cl
   }
 
   /**
-   * Required. Ordered `Parts` that constitute a single message. Parts may have different IANA MIME
-   * types.
+   * Required. A list of Part objects that make up a single message. Parts of a message can have
+   * different MIME types. A Content message must have at least one Part.
    * @param parts parts or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Content setParts(java.util.List<GoogleCloudAiplatformV1beta1Part> parts) {
@@ -67,8 +67,8 @@ public final class GoogleCloudAiplatformV1beta1Content extends com.google.api.cl
   }
 
   /**
-   * Optional. The producer of the content. Must be either 'user' or 'model'. Useful to set for
-   * multi-turn conversations, otherwise can be left blank or unset.
+   * Optional. The producer of the content. Must be either 'user' or 'model'. If not set, the
+   * service will default to 'user'.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -76,8 +76,8 @@ public final class GoogleCloudAiplatformV1beta1Content extends com.google.api.cl
   }
 
   /**
-   * Optional. The producer of the content. Must be either 'user' or 'model'. Useful to set for
-   * multi-turn conversations, otherwise can be left blank or unset.
+   * Optional. The producer of the content. Must be either 'user' or 'model'. If not set, the
+   * service will default to 'user'.
    * @param role role or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Content setRole(java.lang.String role) {

@@ -17,7 +17,9 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Metadata returned to client when grounding is enabled.
+ * Information about the sources that support the content of a response. When grounding is enabled,
+ * the model returns citations for claims in the response. This object contains the retrieved
+ * sources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,16 +32,16 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Output only. Resource name of the Google Maps widget context token to be used with
-   * the PlacesContextElement widget to render contextual data. This is populated only for Google
-   * Maps grounding.
+   * Optional. Output only. A token that can be used to render a Google Maps widget with the
+   * contextual data. This field is populated only when the grounding source is Google Maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googleMapsWidgetContextToken;
 
   /**
-   * List of supporting references retrieved from specified grounding source.
+   * A list of supporting references retrieved from the grounding source. This field is populated
+   * when the grounding source is Google Search, Vertex AI Search, or Google Maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,52 +54,55 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. List of grounding support.
+   * Optional. A list of grounding supports that connect the generated content to the grounding
+   * chunks. This field is populated when the grounding source is Google Search or Vertex AI Search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1GroundingSupport> groundingSupports;
 
   /**
-   * Optional. Output only. Retrieval metadata.
+   * Optional. Output only. Metadata related to the retrieval grounding source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1RetrievalMetadata retrievalMetadata;
 
   /**
-   * Optional. Queries executed by the retrieval tools.
+   * Optional. The queries that were executed by the retrieval tools. This field is populated only
+   * when the grounding source is a retrieval tool, such as Vertex AI Search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> retrievalQueries;
 
   /**
-   * Optional. Google search entry for the following-up web searches.
+   * Optional. A web search entry point that can be used to display search results. This field is
+   * populated only when the grounding source is Google Search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1SearchEntryPoint searchEntryPoint;
 
   /**
-   * Optional. Output only. List of source flagging uris. This is currently populated only for
-   * Google Maps grounding.
+   * Optional. Output only. A list of URIs that can be used to flag a place or review for
+   * inappropriate content. This field is populated only when the grounding source is Google Maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1GroundingMetadataSourceFlaggingUri> sourceFlaggingUris;
 
   /**
-   * Optional. Web search queries for the following-up web search.
+   * Optional. The web search queries that were used to generate the content. This field is
+   * populated only when the grounding source is Google Search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> webSearchQueries;
 
   /**
-   * Optional. Output only. Resource name of the Google Maps widget context token to be used with
-   * the PlacesContextElement widget to render contextual data. This is populated only for Google
-   * Maps grounding.
+   * Optional. Output only. A token that can be used to render a Google Maps widget with the
+   * contextual data. This field is populated only when the grounding source is Google Maps.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleMapsWidgetContextToken() {
@@ -105,9 +110,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Output only. Resource name of the Google Maps widget context token to be used with
-   * the PlacesContextElement widget to render contextual data. This is populated only for Google
-   * Maps grounding.
+   * Optional. Output only. A token that can be used to render a Google Maps widget with the
+   * contextual data. This field is populated only when the grounding source is Google Maps.
    * @param googleMapsWidgetContextToken googleMapsWidgetContextToken or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setGoogleMapsWidgetContextToken(java.lang.String googleMapsWidgetContextToken) {
@@ -116,7 +120,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * List of supporting references retrieved from specified grounding source.
+   * A list of supporting references retrieved from the grounding source. This field is populated
+   * when the grounding source is Google Search, Vertex AI Search, or Google Maps.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1GroundingChunk> getGroundingChunks() {
@@ -124,7 +129,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * List of supporting references retrieved from specified grounding source.
+   * A list of supporting references retrieved from the grounding source. This field is populated
+   * when the grounding source is Google Search, Vertex AI Search, or Google Maps.
    * @param groundingChunks groundingChunks or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setGroundingChunks(java.util.List<GoogleCloudAiplatformV1beta1GroundingChunk> groundingChunks) {
@@ -133,7 +139,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. List of grounding support.
+   * Optional. A list of grounding supports that connect the generated content to the grounding
+   * chunks. This field is populated when the grounding source is Google Search or Vertex AI Search.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1GroundingSupport> getGroundingSupports() {
@@ -141,7 +148,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. List of grounding support.
+   * Optional. A list of grounding supports that connect the generated content to the grounding
+   * chunks. This field is populated when the grounding source is Google Search or Vertex AI Search.
    * @param groundingSupports groundingSupports or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setGroundingSupports(java.util.List<GoogleCloudAiplatformV1beta1GroundingSupport> groundingSupports) {
@@ -150,7 +158,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Output only. Retrieval metadata.
+   * Optional. Output only. Metadata related to the retrieval grounding source.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RetrievalMetadata getRetrievalMetadata() {
@@ -158,7 +166,7 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Output only. Retrieval metadata.
+   * Optional. Output only. Metadata related to the retrieval grounding source.
    * @param retrievalMetadata retrievalMetadata or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setRetrievalMetadata(GoogleCloudAiplatformV1beta1RetrievalMetadata retrievalMetadata) {
@@ -167,7 +175,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Queries executed by the retrieval tools.
+   * Optional. The queries that were executed by the retrieval tools. This field is populated only
+   * when the grounding source is a retrieval tool, such as Vertex AI Search.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRetrievalQueries() {
@@ -175,7 +184,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Queries executed by the retrieval tools.
+   * Optional. The queries that were executed by the retrieval tools. This field is populated only
+   * when the grounding source is a retrieval tool, such as Vertex AI Search.
    * @param retrievalQueries retrievalQueries or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setRetrievalQueries(java.util.List<java.lang.String> retrievalQueries) {
@@ -184,7 +194,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Google search entry for the following-up web searches.
+   * Optional. A web search entry point that can be used to display search results. This field is
+   * populated only when the grounding source is Google Search.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SearchEntryPoint getSearchEntryPoint() {
@@ -192,7 +203,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Google search entry for the following-up web searches.
+   * Optional. A web search entry point that can be used to display search results. This field is
+   * populated only when the grounding source is Google Search.
    * @param searchEntryPoint searchEntryPoint or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setSearchEntryPoint(GoogleCloudAiplatformV1beta1SearchEntryPoint searchEntryPoint) {
@@ -201,8 +213,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Output only. List of source flagging uris. This is currently populated only for
-   * Google Maps grounding.
+   * Optional. Output only. A list of URIs that can be used to flag a place or review for
+   * inappropriate content. This field is populated only when the grounding source is Google Maps.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1GroundingMetadataSourceFlaggingUri> getSourceFlaggingUris() {
@@ -210,8 +222,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Output only. List of source flagging uris. This is currently populated only for
-   * Google Maps grounding.
+   * Optional. Output only. A list of URIs that can be used to flag a place or review for
+   * inappropriate content. This field is populated only when the grounding source is Google Maps.
    * @param sourceFlaggingUris sourceFlaggingUris or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setSourceFlaggingUris(java.util.List<GoogleCloudAiplatformV1beta1GroundingMetadataSourceFlaggingUri> sourceFlaggingUris) {
@@ -220,7 +232,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Web search queries for the following-up web search.
+   * Optional. The web search queries that were used to generate the content. This field is
+   * populated only when the grounding source is Google Search.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getWebSearchQueries() {
@@ -228,7 +241,8 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Web search queries for the following-up web search.
+   * Optional. The web search queries that were used to generate the content. This field is
+   * populated only when the grounding source is Google Search.
    * @param webSearchQueries webSearchQueries or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setWebSearchQueries(java.util.List<java.lang.String> webSearchQueries) {

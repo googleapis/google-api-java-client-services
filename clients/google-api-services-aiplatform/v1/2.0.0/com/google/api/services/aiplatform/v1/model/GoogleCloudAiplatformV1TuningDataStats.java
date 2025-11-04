@@ -30,11 +30,35 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1TuningDataStats extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Statistics for preference optimization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PreferenceOptimizationDataStats preferenceOptimizationDataStats;
+
+  /**
    * The SFT Tuning data stats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1SupervisedTuningDataStats supervisedTuningDataStats;
+
+  /**
+   * Output only. Statistics for preference optimization.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PreferenceOptimizationDataStats getPreferenceOptimizationDataStats() {
+    return preferenceOptimizationDataStats;
+  }
+
+  /**
+   * Output only. Statistics for preference optimization.
+   * @param preferenceOptimizationDataStats preferenceOptimizationDataStats or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1TuningDataStats setPreferenceOptimizationDataStats(GoogleCloudAiplatformV1PreferenceOptimizationDataStats preferenceOptimizationDataStats) {
+    this.preferenceOptimizationDataStats = preferenceOptimizationDataStats;
+    return this;
+  }
 
   /**
    * The SFT Tuning data stats.

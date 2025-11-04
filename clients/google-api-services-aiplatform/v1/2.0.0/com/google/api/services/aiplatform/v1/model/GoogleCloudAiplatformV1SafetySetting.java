@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Safety settings.
+ * A safety setting that affects the safety-blocking behavior. A SafetySetting consists of a harm
+ * category and a threshold for that category.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,29 +31,30 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SafetySetting extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Harm category.
+   * Required. The harm category to be blocked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String category;
 
   /**
-   * Optional. Specify if the threshold is used for probability or severity score. If not specified,
-   * the threshold is used for probability score.
+   * Optional. The method for blocking content. If not specified, the default behavior is to use the
+   * probability score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String method;
 
   /**
-   * Required. The harm block threshold.
+   * Required. The threshold for blocking content. If the harm probability exceeds this threshold,
+   * the content will be blocked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String threshold;
 
   /**
-   * Required. Harm category.
+   * Required. The harm category to be blocked.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -60,7 +62,7 @@ public final class GoogleCloudAiplatformV1SafetySetting extends com.google.api.c
   }
 
   /**
-   * Required. Harm category.
+   * Required. The harm category to be blocked.
    * @param category category or {@code null} for none
    */
   public GoogleCloudAiplatformV1SafetySetting setCategory(java.lang.String category) {
@@ -69,8 +71,8 @@ public final class GoogleCloudAiplatformV1SafetySetting extends com.google.api.c
   }
 
   /**
-   * Optional. Specify if the threshold is used for probability or severity score. If not specified,
-   * the threshold is used for probability score.
+   * Optional. The method for blocking content. If not specified, the default behavior is to use the
+   * probability score.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -78,8 +80,8 @@ public final class GoogleCloudAiplatformV1SafetySetting extends com.google.api.c
   }
 
   /**
-   * Optional. Specify if the threshold is used for probability or severity score. If not specified,
-   * the threshold is used for probability score.
+   * Optional. The method for blocking content. If not specified, the default behavior is to use the
+   * probability score.
    * @param method method or {@code null} for none
    */
   public GoogleCloudAiplatformV1SafetySetting setMethod(java.lang.String method) {
@@ -88,7 +90,8 @@ public final class GoogleCloudAiplatformV1SafetySetting extends com.google.api.c
   }
 
   /**
-   * Required. The harm block threshold.
+   * Required. The threshold for blocking content. If the harm probability exceeds this threshold,
+   * the content will be blocked.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreshold() {
@@ -96,7 +99,8 @@ public final class GoogleCloudAiplatformV1SafetySetting extends com.google.api.c
   }
 
   /**
-   * Required. The harm block threshold.
+   * Required. The threshold for blocking content. If the harm probability exceeds this threshold,
+   * the content will be blocked.
    * @param threshold threshold or {@code null} for none
    */
   public GoogleCloudAiplatformV1SafetySetting setThreshold(java.lang.String threshold) {

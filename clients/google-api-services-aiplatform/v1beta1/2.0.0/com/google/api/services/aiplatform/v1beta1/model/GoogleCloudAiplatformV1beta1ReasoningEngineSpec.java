@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The A2A Agent Card for the agent (if available). It follows the specification at
+   * https://a2a-protocol.org/latest/specification/#5-agent-discovery-the-agent-card.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> agentCard;
+
+  /**
    * Optional. The OSS agent framework used to develop the agent. Currently supported values:
    * "google-adk", "langchain", "langgraph", "ag2", "llama-index", "custom".
    * The value may be {@code null}.
@@ -77,6 +85,25 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpec extends com.g
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec sourceCodeSpec;
+
+  /**
+   * Optional. The A2A Agent Card for the agent (if available). It follows the specification at
+   * https://a2a-protocol.org/latest/specification/#5-agent-discovery-the-agent-card.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getAgentCard() {
+    return agentCard;
+  }
+
+  /**
+   * Optional. The A2A Agent Card for the agent (if available). It follows the specification at
+   * https://a2a-protocol.org/latest/specification/#5-agent-discovery-the-agent-card.
+   * @param agentCard agentCard or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpec setAgentCard(java.util.Map<String, java.lang.Object> agentCard) {
+    this.agentCard = agentCard;
+    return this;
+  }
 
   /**
    * Optional. The OSS agent framework used to develop the agent. Currently supported values:

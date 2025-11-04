@@ -90,6 +90,14 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
   private String revisionExpireTime;
 
   /**
+   * Optional. Input only. The labels to apply to the Memory Revision created as a result of this
+   * request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> revisionLabels;
+
+  /**
    * Optional. Input only. The TTL for the revision. The expiration time is computed: now + TTL.
    * The value may be {@code null}.
    */
@@ -267,6 +275,25 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Memory setRevisionExpireTime(String revisionExpireTime) {
     this.revisionExpireTime = revisionExpireTime;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The labels to apply to the Memory Revision created as a result of this
+   * request.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getRevisionLabels() {
+    return revisionLabels;
+  }
+
+  /**
+   * Optional. Input only. The labels to apply to the Memory Revision created as a result of this
+   * request.
+   * @param revisionLabels revisionLabels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Memory setRevisionLabels(java.util.Map<String, java.lang.String> revisionLabels) {
+    this.revisionLabels = revisionLabels;
     return this;
   }
 

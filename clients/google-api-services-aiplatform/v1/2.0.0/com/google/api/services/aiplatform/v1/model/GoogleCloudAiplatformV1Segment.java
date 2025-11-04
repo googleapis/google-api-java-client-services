@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Segment of the content.
+ * A segment of the content.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,38 +30,42 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1Segment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. End index in the given Part, measured in bytes. Offset from the start of the Part,
-   * exclusive, starting at zero.
+   * Output only. The end index of the segment in the `Part`, measured in bytes. This marks the end
+   * of the segment and is exclusive, meaning the segment includes content up to, but not including,
+   * the byte at this index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer endIndex;
 
   /**
-   * Output only. The index of a Part object within its parent Content object.
+   * Output only. The index of the `Part` object that this segment belongs to. This is useful for
+   * associating the segment with a specific part of the content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer partIndex;
 
   /**
-   * Output only. Start index in the given Part, measured in bytes. Offset from the start of the
-   * Part, inclusive, starting at zero.
+   * Output only. The start index of the segment in the `Part`, measured in bytes. This marks the
+   * beginning of the segment and is inclusive, meaning the byte at this index is the first byte of
+   * the segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer startIndex;
 
   /**
-   * Output only. The text corresponding to the segment from the response.
+   * Output only. The text of the segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Output only. End index in the given Part, measured in bytes. Offset from the start of the Part,
-   * exclusive, starting at zero.
+   * Output only. The end index of the segment in the `Part`, measured in bytes. This marks the end
+   * of the segment and is exclusive, meaning the segment includes content up to, but not including,
+   * the byte at this index.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndIndex() {
@@ -69,8 +73,9 @@ public final class GoogleCloudAiplatformV1Segment extends com.google.api.client.
   }
 
   /**
-   * Output only. End index in the given Part, measured in bytes. Offset from the start of the Part,
-   * exclusive, starting at zero.
+   * Output only. The end index of the segment in the `Part`, measured in bytes. This marks the end
+   * of the segment and is exclusive, meaning the segment includes content up to, but not including,
+   * the byte at this index.
    * @param endIndex endIndex or {@code null} for none
    */
   public GoogleCloudAiplatformV1Segment setEndIndex(java.lang.Integer endIndex) {
@@ -79,7 +84,8 @@ public final class GoogleCloudAiplatformV1Segment extends com.google.api.client.
   }
 
   /**
-   * Output only. The index of a Part object within its parent Content object.
+   * Output only. The index of the `Part` object that this segment belongs to. This is useful for
+   * associating the segment with a specific part of the content.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPartIndex() {
@@ -87,7 +93,8 @@ public final class GoogleCloudAiplatformV1Segment extends com.google.api.client.
   }
 
   /**
-   * Output only. The index of a Part object within its parent Content object.
+   * Output only. The index of the `Part` object that this segment belongs to. This is useful for
+   * associating the segment with a specific part of the content.
    * @param partIndex partIndex or {@code null} for none
    */
   public GoogleCloudAiplatformV1Segment setPartIndex(java.lang.Integer partIndex) {
@@ -96,8 +103,9 @@ public final class GoogleCloudAiplatformV1Segment extends com.google.api.client.
   }
 
   /**
-   * Output only. Start index in the given Part, measured in bytes. Offset from the start of the
-   * Part, inclusive, starting at zero.
+   * Output only. The start index of the segment in the `Part`, measured in bytes. This marks the
+   * beginning of the segment and is inclusive, meaning the byte at this index is the first byte of
+   * the segment.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartIndex() {
@@ -105,8 +113,9 @@ public final class GoogleCloudAiplatformV1Segment extends com.google.api.client.
   }
 
   /**
-   * Output only. Start index in the given Part, measured in bytes. Offset from the start of the
-   * Part, inclusive, starting at zero.
+   * Output only. The start index of the segment in the `Part`, measured in bytes. This marks the
+   * beginning of the segment and is inclusive, meaning the byte at this index is the first byte of
+   * the segment.
    * @param startIndex startIndex or {@code null} for none
    */
   public GoogleCloudAiplatformV1Segment setStartIndex(java.lang.Integer startIndex) {
@@ -115,7 +124,7 @@ public final class GoogleCloudAiplatformV1Segment extends com.google.api.client.
   }
 
   /**
-   * Output only. The text corresponding to the segment from the response.
+   * Output only. The text of the segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -123,7 +132,7 @@ public final class GoogleCloudAiplatformV1Segment extends com.google.api.client.
   }
 
   /**
-   * Output only. The text corresponding to the segment from the response.
+   * Output only. The text of the segment.
    * @param text text or {@code null} for none
    */
   public GoogleCloudAiplatformV1Segment setText(java.lang.String text) {

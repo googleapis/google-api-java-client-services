@@ -108,6 +108,13 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   private GoogleCloudAiplatformV1PreTunedModel preTunedModel;
 
   /**
+   * Tuning Spec for Preference Optimization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PreferenceOptimizationSpec preferenceOptimizationSpec;
+
+  /**
    * The service account that the tuningJob workload runs as. If not specified, the Vertex AI Secure
    * Fine-Tuned Service Agent in the project will be used. See
    * https://cloud.google.com/iam/docs/service-agents#vertex-ai-secure-fine-tuning-service-agent
@@ -353,6 +360,23 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1TuningJob setPreTunedModel(GoogleCloudAiplatformV1PreTunedModel preTunedModel) {
     this.preTunedModel = preTunedModel;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Preference Optimization.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PreferenceOptimizationSpec getPreferenceOptimizationSpec() {
+    return preferenceOptimizationSpec;
+  }
+
+  /**
+   * Tuning Spec for Preference Optimization.
+   * @param preferenceOptimizationSpec preferenceOptimizationSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1TuningJob setPreferenceOptimizationSpec(GoogleCloudAiplatformV1PreferenceOptimizationSpec preferenceOptimizationSpec) {
+    this.preferenceOptimizationSpec = preferenceOptimizationSpec;
     return this;
   }
 

@@ -17,7 +17,9 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Config for image generation features.
+ * Configuration for image generation. This message allows you to control various aspects of image
+ * generation, such as the output format, aspect ratio, and whether the model can generate images of
+ * people.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

@@ -17497,45 +17497,44 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. Required. The FHIR resource type used to organize exported resources. Only
-             * supports "Patient". When organized by Patient resource, output files are grouped as
-             * follows: * Patient file(s) containing the Patient resources. Each Patient is
-             * sequentially followed by all resources the Patient references, and all resources that
-             * reference the Patient (equivalent to a GetPatientEverything request). * Individual
-             * files grouped by resource type for resources in the Group's member field and the
-             * Group resource itself. Resources may be duplicated across multiple Patients. For
-             * example, if two Patient resources reference the same Organization resource, it will
-             * appear twice, once after each Patient. The Group resource from the request does not
-             * appear in the Patient files.
+             * Required. The FHIR resource type used to organize exported resources. Only supports
+             * "Patient". When organized by Patient resource, output files are grouped as follows: *
+             * Patient file(s) containing the Patient resources. Each Patient is sequentially
+             * followed by all resources the Patient references, and all resources that reference
+             * the Patient (equivalent to a GetPatientEverything request). * Individual files
+             * grouped by resource type for resources in the Group's member field and the Group
+             * resource itself. Resources may be duplicated across multiple Patients. For example,
+             * if two Patient resources reference the same Organization resource, it will appear
+             * twice, once after each Patient. The Group resource from the request does not appear
+             * in the Patient files.
              */
             @com.google.api.client.util.Key
             private java.lang.String organizeOutputBy;
 
-            /** Optional. Required. The FHIR resource type used to organize exported resources. Only supports
-           "Patient". When organized by Patient resource, output files are grouped as follows: * Patient
-           file(s) containing the Patient resources. Each Patient is sequentially followed by all resources
-           the Patient references, and all resources that reference the Patient (equivalent to a
-           GetPatientEverything request). * Individual files grouped by resource type for resources in the
-           Group's member field and the Group resource itself. Resources may be duplicated across multiple
-           Patients. For example, if two Patient resources reference the same Organization resource, it will
-           appear twice, once after each Patient. The Group resource from the request does not appear in the
-           Patient files.
+            /** Required. The FHIR resource type used to organize exported resources. Only supports "Patient". When
+           organized by Patient resource, output files are grouped as follows: * Patient file(s) containing
+           the Patient resources. Each Patient is sequentially followed by all resources the Patient
+           references, and all resources that reference the Patient (equivalent to a GetPatientEverything
+           request). * Individual files grouped by resource type for resources in the Group's member field and
+           the Group resource itself. Resources may be duplicated across multiple Patients. For example, if
+           two Patient resources reference the same Organization resource, it will appear twice, once after
+           each Patient. The Group resource from the request does not appear in the Patient files.
              */
             public java.lang.String getOrganizeOutputBy() {
               return organizeOutputBy;
             }
 
             /**
-             * Optional. Required. The FHIR resource type used to organize exported resources. Only
-             * supports "Patient". When organized by Patient resource, output files are grouped as
-             * follows: * Patient file(s) containing the Patient resources. Each Patient is
-             * sequentially followed by all resources the Patient references, and all resources that
-             * reference the Patient (equivalent to a GetPatientEverything request). * Individual
-             * files grouped by resource type for resources in the Group's member field and the
-             * Group resource itself. Resources may be duplicated across multiple Patients. For
-             * example, if two Patient resources reference the same Organization resource, it will
-             * appear twice, once after each Patient. The Group resource from the request does not
-             * appear in the Patient files.
+             * Required. The FHIR resource type used to organize exported resources. Only supports
+             * "Patient". When organized by Patient resource, output files are grouped as follows: *
+             * Patient file(s) containing the Patient resources. Each Patient is sequentially
+             * followed by all resources the Patient references, and all resources that reference
+             * the Patient (equivalent to a GetPatientEverything request). * Individual files
+             * grouped by resource type for resources in the Group's member field and the Group
+             * resource itself. Resources may be duplicated across multiple Patients. For example,
+             * if two Patient resources reference the same Organization resource, it will appear
+             * twice, once after each Patient. The Group resource from the request does not appear
+             * in the Patient files.
              */
             public BulkExportGroup setOrganizeOutputBy(java.lang.String organizeOutputBy) {
               this.organizeOutputBy = organizeOutputBy;

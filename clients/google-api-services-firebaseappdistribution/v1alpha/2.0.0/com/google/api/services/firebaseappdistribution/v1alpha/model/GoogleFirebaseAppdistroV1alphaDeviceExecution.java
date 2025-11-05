@@ -86,6 +86,14 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
   private java.lang.String inconclusiveReason;
 
   /**
+   * Identifier. The name of the device execution resource. Format: `projects/{project_number}/apps/
+   * {app_id}/releases/{release_id}/tests/{test_id}/deviceExecutions/{device_execution}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Output only. The path to a directory in Cloud Storage that will eventually contain the results
    * for this execution. For example, gs://bucket/Nexus5-18-en-portrait.
    * The value may be {@code null}.
@@ -245,6 +253,25 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
    */
   public GoogleFirebaseAppdistroV1alphaDeviceExecution setInconclusiveReason(java.lang.String inconclusiveReason) {
     this.inconclusiveReason = inconclusiveReason;
+    return this;
+  }
+
+  /**
+   * Identifier. The name of the device execution resource. Format: `projects/{project_number}/apps/
+   * {app_id}/releases/{release_id}/tests/{test_id}/deviceExecutions/{device_execution}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Identifier. The name of the device execution resource. Format: `projects/{project_number}/apps/
+   * {app_id}/releases/{release_id}/tests/{test_id}/deviceExecutions/{device_execution}`
+   * @param name name or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceExecution setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

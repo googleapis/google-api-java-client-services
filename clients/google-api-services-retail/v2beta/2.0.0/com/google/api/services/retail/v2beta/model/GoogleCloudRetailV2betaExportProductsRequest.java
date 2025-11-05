@@ -31,7 +31,7 @@ package com.google.api.services.retail.v2beta.model;
 public final class GoogleCloudRetailV2betaExportProductsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field is deprecated. Any filter provided will be ignored.
+   * Deprecated: This field is deprecated. Any filter provided will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2betaExportProductsRequest extends com.goog
   private GoogleCloudRetailV2betaOutputConfig outputConfig;
 
   /**
-   * This field is deprecated. Any filter provided will be ignored.
+   * Deprecated: This field is deprecated. Any filter provided will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -53,7 +53,7 @@ public final class GoogleCloudRetailV2betaExportProductsRequest extends com.goog
   }
 
   /**
-   * This field is deprecated. Any filter provided will be ignored.
+   * Deprecated: This field is deprecated. Any filter provided will be ignored.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudRetailV2betaExportProductsRequest setFilter(java.lang.String filter) {

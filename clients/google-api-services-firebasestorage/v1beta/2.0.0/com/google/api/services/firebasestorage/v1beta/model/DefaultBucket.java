@@ -47,7 +47,7 @@ public final class DefaultBucket extends com.google.api.client.json.GenericJson 
   private java.lang.String location;
 
   /**
-   * Resource name of the default bucket.
+   * Identifier. Resource name of the default bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class DefaultBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Resource name of the default bucket.
+   * Identifier. Resource name of the default bucket.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -104,7 +104,7 @@ public final class DefaultBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Resource name of the default bucket.
+   * Identifier. Resource name of the default bucket.
    * @param name name or {@code null} for none
    */
   public DefaultBucket setName(java.lang.String name) {

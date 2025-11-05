@@ -17,8 +17,10 @@
 package com.google.api.services.merchantapi.datasources_v1.model;
 
 /**
- * The supplemental data source for local and online products. After creation, you should make sure
- * to link the supplemental product data source into one or more primary product data sources.
+ * The [supplemental data source](https://developers.google.com/merchant/api/guides/data-
+ * sources/api-sources#link-supplemental-data-source) for local and online products. After
+ * creation,you should make sure to link the supplemental product data source into one or more
+ * primary product data sources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

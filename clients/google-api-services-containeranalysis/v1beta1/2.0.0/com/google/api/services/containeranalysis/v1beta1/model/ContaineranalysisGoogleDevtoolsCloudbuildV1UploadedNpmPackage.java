@@ -31,6 +31,13 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Path to the artifact in Artifact Registry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String artifactRegistryPackage;
+
+  /**
    * Hash types and values of the npm package.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Output only. Path to the artifact in Artifact Registry.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArtifactRegistryPackage() {
+    return artifactRegistryPackage;
+  }
+
+  /**
+   * Output only. Path to the artifact in Artifact Registry.
+   * @param artifactRegistryPackage artifactRegistryPackage or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage setArtifactRegistryPackage(java.lang.String artifactRegistryPackage) {
+    this.artifactRegistryPackage = artifactRegistryPackage;
+    return this;
+  }
 
   /**
    * Hash types and values of the npm package.

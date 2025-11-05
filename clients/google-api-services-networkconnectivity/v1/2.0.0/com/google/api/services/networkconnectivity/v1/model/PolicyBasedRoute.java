@@ -77,7 +77,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. A unique name of the resource in the form of
+   * Immutable. Identifier. A unique name of the resource in the form of
    * `projects/{project_number}/locations/global/PolicyBasedRoutes/{policy_based_route_id}`
    * The value may be {@code null}.
    */
@@ -253,7 +253,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. A unique name of the resource in the form of
+   * Immutable. Identifier. A unique name of the resource in the form of
    * `projects/{project_number}/locations/global/PolicyBasedRoutes/{policy_based_route_id}`
    * @return value or {@code null} for none
    */
@@ -262,7 +262,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. A unique name of the resource in the form of
+   * Immutable. Identifier. A unique name of the resource in the form of
    * `projects/{project_number}/locations/global/PolicyBasedRoutes/{policy_based_route_id}`
    * @param name name or {@code null} for none
    */

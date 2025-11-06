@@ -18,7 +18,7 @@ package com.google.api.services.documentai.v1.model;
 
 /**
  * Definition of the validation rules. Those are the input to the validator logic and they are used
- * to validate a document.
+ * to validate a document. Next ID: 3
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

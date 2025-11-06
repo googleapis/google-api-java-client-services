@@ -17,7 +17,7 @@
 package com.google.api.services.authorizedbuyersmarketplace.v1alpha.model;
 
 /**
- * Describes a single Media Planner account.
+ * Represents a media planner account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Authorized Buyers Marketplace API. For a detailed

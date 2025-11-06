@@ -45,21 +45,21 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   private java.lang.String emailAddress;
 
   /**
-   * Whether user is an order manager.
+   * This role is deprecated and can no longer be assigned. Any value set will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean orderManager;
 
   /**
-   * Whether user can access payment statements.
+   * This role is deprecated and can no longer be assigned. Any value set will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean paymentsAnalyst;
 
   /**
-   * Whether user can manage payment settings.
+   * This role is deprecated and can no longer be assigned. Any value set will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user is an order manager.
+   * This role is deprecated and can no longer be assigned. Any value set will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOrderManager() {
@@ -123,7 +123,7 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user is an order manager.
+   * This role is deprecated and can no longer be assigned. Any value set will be ignored.
    * @param orderManager orderManager or {@code null} for none
    */
   public AccountUser setOrderManager(java.lang.Boolean orderManager) {
@@ -132,7 +132,7 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user can access payment statements.
+   * This role is deprecated and can no longer be assigned. Any value set will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPaymentsAnalyst() {
@@ -140,7 +140,7 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user can access payment statements.
+   * This role is deprecated and can no longer be assigned. Any value set will be ignored.
    * @param paymentsAnalyst paymentsAnalyst or {@code null} for none
    */
   public AccountUser setPaymentsAnalyst(java.lang.Boolean paymentsAnalyst) {
@@ -149,7 +149,7 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user can manage payment settings.
+   * This role is deprecated and can no longer be assigned. Any value set will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPaymentsManager() {
@@ -157,7 +157,7 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user can manage payment settings.
+   * This role is deprecated and can no longer be assigned. Any value set will be ignored.
    * @param paymentsManager paymentsManager or {@code null} for none
    */
   public AccountUser setPaymentsManager(java.lang.Boolean paymentsManager) {

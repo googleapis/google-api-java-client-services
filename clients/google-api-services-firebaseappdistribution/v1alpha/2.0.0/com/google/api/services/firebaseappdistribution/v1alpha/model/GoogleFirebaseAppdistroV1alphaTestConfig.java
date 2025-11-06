@@ -40,7 +40,7 @@ public final class GoogleFirebaseAppdistroV1alphaTestConfig extends com.google.a
 
   /**
    * Identifier. The name of the test configuration resource. Format:
-   * `projects/{project_number}/apps/{app_id}/testConfig`
+   * `projects/{project_number}/apps/{app}/testConfig`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class GoogleFirebaseAppdistroV1alphaTestConfig extends com.google.a
 
   /**
    * Identifier. The name of the test configuration resource. Format:
-   * `projects/{project_number}/apps/{app_id}/testConfig`
+   * `projects/{project_number}/apps/{app}/testConfig`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -90,7 +90,7 @@ public final class GoogleFirebaseAppdistroV1alphaTestConfig extends com.google.a
 
   /**
    * Identifier. The name of the test configuration resource. Format:
-   * `projects/{project_number}/apps/{app_id}/testConfig`
+   * `projects/{project_number}/apps/{app}/testConfig`
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaTestConfig setName(java.lang.String name) {

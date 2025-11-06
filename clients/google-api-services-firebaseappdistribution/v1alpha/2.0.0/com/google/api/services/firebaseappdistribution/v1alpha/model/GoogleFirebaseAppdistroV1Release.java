@@ -77,7 +77,7 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
 
   /**
    * The name of the release resource. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+   * `projects/{project_number}/apps/{app}/releases/{release}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,7 +216,7 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
 
   /**
    * The name of the release resource. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+   * `projects/{project_number}/apps/{app}/releases/{release}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -225,7 +225,7 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
 
   /**
    * The name of the release resource. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+   * `projects/{project_number}/apps/{app}/releases/{release}`
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1Release setName(java.lang.String name) {

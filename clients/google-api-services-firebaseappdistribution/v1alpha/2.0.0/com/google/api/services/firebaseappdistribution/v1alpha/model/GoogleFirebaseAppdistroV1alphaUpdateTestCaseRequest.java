@@ -39,7 +39,7 @@ public final class GoogleFirebaseAppdistroV1alphaUpdateTestCaseRequest extends c
 
   /**
    * Required. The test case to update. The test case's `name` field is used to identify the test
-   * case to update. Format: `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+   * case to update. Format: `projects/{project_number}/apps/{app}/testCases/{test_case}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class GoogleFirebaseAppdistroV1alphaUpdateTestCaseRequest extends c
 
   /**
    * Required. The test case to update. The test case's `name` field is used to identify the test
-   * case to update. Format: `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+   * case to update. Format: `projects/{project_number}/apps/{app}/testCases/{test_case}`
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaTestCase getTestCase() {
@@ -73,7 +73,7 @@ public final class GoogleFirebaseAppdistroV1alphaUpdateTestCaseRequest extends c
 
   /**
    * Required. The test case to update. The test case's `name` field is used to identify the test
-   * case to update. Format: `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+   * case to update. Format: `projects/{project_number}/apps/{app}/testCases/{test_case}`
    * @param testCase testCase or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaUpdateTestCaseRequest setTestCase(GoogleFirebaseAppdistroV1alphaTestCase testCase) {

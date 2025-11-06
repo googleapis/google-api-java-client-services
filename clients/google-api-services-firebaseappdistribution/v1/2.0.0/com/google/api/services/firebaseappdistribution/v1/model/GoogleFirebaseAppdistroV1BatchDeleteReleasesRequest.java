@@ -32,8 +32,8 @@ public final class GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest extends c
 
   /**
    * Required. The names of the release resources to delete. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}` A maximum of 100 releases can
-   * be deleted per request.
+   * `projects/{project_number}/apps/{app}/releases/{release}` A maximum of 100 releases can be
+   * deleted per request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,8 +41,8 @@ public final class GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest extends c
 
   /**
    * Required. The names of the release resources to delete. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}` A maximum of 100 releases can
-   * be deleted per request.
+   * `projects/{project_number}/apps/{app}/releases/{release}` A maximum of 100 releases can be
+   * deleted per request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNames() {
@@ -51,8 +51,8 @@ public final class GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest extends c
 
   /**
    * Required. The names of the release resources to delete. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}` A maximum of 100 releases can
-   * be deleted per request.
+   * `projects/{project_number}/apps/{app}/releases/{release}` A maximum of 100 releases can be
+   * deleted per request.
    * @param names names or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest setNames(java.util.List<java.lang.String> names) {

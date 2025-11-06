@@ -1547,7 +1547,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * operation.
        *
        * @param name Required. The name of the `TestConfig` resource to retrieve. Format:
-       *        `projects/{project_number}/apps/{app_id}/testConfig`
+       *        `projects/{project_number}/apps/{app}/testConfig`
        * @return the request
        */
       public GetTestConfig getTestConfig(java.lang.String name) throws java.io.IOException {
@@ -1575,7 +1575,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * invoking the constructor. </p>
          *
          * @param name Required. The name of the `TestConfig` resource to retrieve. Format:
-       *        `projects/{project_number}/apps/{app_id}/testConfig`
+       *        `projects/{project_number}/apps/{app}/testConfig`
          * @since 1.13
          */
         protected GetTestConfig(java.lang.String name) {
@@ -1655,13 +1655,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
         /**
          * Required. The name of the `TestConfig` resource to retrieve. Format:
-         * `projects/{project_number}/apps/{app_id}/testConfig`
+         * `projects/{project_number}/apps/{app}/testConfig`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the `TestConfig` resource to retrieve. Format:
-       `projects/{project_number}/apps/{app_id}/testConfig`
+       `projects/{project_number}/apps/{app}/testConfig`
          */
         public java.lang.String getName() {
           return name;
@@ -1669,7 +1669,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
         /**
          * Required. The name of the `TestConfig` resource to retrieve. Format:
-         * `projects/{project_number}/apps/{app_id}/testConfig`
+         * `projects/{project_number}/apps/{app}/testConfig`
          */
         public GetTestConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1696,7 +1696,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * operation.
        *
        * @param name Identifier. The name of the test configuration resource. Format:
-       *        `projects/{project_number}/apps/{app_id}/testConfig`
+       *        `projects/{project_number}/apps/{app}/testConfig`
        * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaTestConfig}
        * @return the request
        */
@@ -1725,7 +1725,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * after invoking the constructor. </p>
          *
          * @param name Identifier. The name of the test configuration resource. Format:
-       *        `projects/{project_number}/apps/{app_id}/testConfig`
+       *        `projects/{project_number}/apps/{app}/testConfig`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaTestConfig}
          * @since 1.13
          */
@@ -1796,13 +1796,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
         /**
          * Identifier. The name of the test configuration resource. Format:
-         * `projects/{project_number}/apps/{app_id}/testConfig`
+         * `projects/{project_number}/apps/{app}/testConfig`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Identifier. The name of the test configuration resource. Format:
-       `projects/{project_number}/apps/{app_id}/testConfig`
+       `projects/{project_number}/apps/{app}/testConfig`
          */
         public java.lang.String getName() {
           return name;
@@ -1810,7 +1810,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
         /**
          * Identifier. The name of the test configuration resource. Format:
-         * `projects/{project_number}/apps/{app_id}/testConfig`
+         * `projects/{project_number}/apps/{app}/testConfig`
          */
         public UpdateTestConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1893,7 +1893,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * any optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
            *
            * @param name Required. The name of the release test resource. Format:
-           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+           *        `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
            * @return the request
            */
           public Cancel cancel(java.lang.String name) throws java.io.IOException {
@@ -1921,7 +1921,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The name of the release test resource. Format:
-           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+           *        `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
              * @since 1.13
              */
             protected Cancel(java.lang.String name) {
@@ -2001,13 +2001,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Required. The name of the release test resource. Format:
-             * `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+             * `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the release test resource. Format:
-           `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+           `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
              */
             public java.lang.String getName() {
               return name;
@@ -2015,7 +2015,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Required. The name of the release test resource. Format:
-             * `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+             * `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
              */
             public Cancel setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2041,7 +2041,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The name of the release resource, which is the parent of the test Format:
-           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           *        `projects/{project_number}/apps/{app}/releases/{release}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaReleaseTest}
            * @return the request
            */
@@ -2070,7 +2070,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The name of the release resource, which is the parent of the test Format:
-           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           *        `projects/{project_number}/apps/{app}/releases/{release}`
              * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaReleaseTest}
              * @since 1.13
              */
@@ -2141,13 +2141,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Required. The name of the release resource, which is the parent of the test Format:
-             * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+             * `projects/{project_number}/apps/{app}/releases/{release}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The name of the release resource, which is the parent of the test Format:
-           `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           `projects/{project_number}/apps/{app}/releases/{release}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -2155,7 +2155,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Required. The name of the release resource, which is the parent of the test Format:
-             * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+             * `projects/{project_number}/apps/{app}/releases/{release}`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2207,7 +2207,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The name of the release test resource. Format:
-           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+           *        `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2235,7 +2235,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The name of the release test resource. Format:
-           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+           *        `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2315,13 +2315,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Required. The name of the release test resource. Format:
-             * `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+             * `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the release test resource. Format:
-           `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+           `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
              */
             public java.lang.String getName() {
               return name;
@@ -2329,7 +2329,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Required. The name of the release test resource. Format:
-             * `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+             * `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2355,7 +2355,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The name of the release resource, which is the parent of the tests Format:
-           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           *        `projects/{project_number}/apps/{app}/releases/{release}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2383,7 +2383,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The name of the release resource, which is the parent of the tests Format:
-           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           *        `projects/{project_number}/apps/{app}/releases/{release}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2463,13 +2463,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Required. The name of the release resource, which is the parent of the tests Format:
-             * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+             * `projects/{project_number}/apps/{app}/releases/{release}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The name of the release resource, which is the parent of the tests Format:
-           `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           `projects/{project_number}/apps/{app}/releases/{release}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -2477,7 +2477,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Required. The name of the release resource, which is the parent of the tests Format:
-             * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+             * `projects/{project_number}/apps/{app}/releases/{release}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2594,7 +2594,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * operation.
          *
          * @param parent Required. The parent resource of the test cases being deleted. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest}
          * @return the request
          */
@@ -2623,7 +2623,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource of the test cases being deleted. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest}
            * @since 1.13
            */
@@ -2694,13 +2694,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The parent resource of the test cases being deleted. Format:
-           * `projects/{project_number}/apps/{app_id}`
+           * `projects/{project_number}/apps/{app}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource of the test cases being deleted. Format:
-         `projects/{project_number}/apps/{app_id}`
+         `projects/{project_number}/apps/{app}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -2708,7 +2708,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The parent resource of the test cases being deleted. Format:
-           * `projects/{project_number}/apps/{app_id}`
+           * `projects/{project_number}/apps/{app}`
            */
           public BatchDelete setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2735,7 +2735,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * operation.
          *
          * @param parent Required. The parent resource of the test cases being updated. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchUpdateTestCasesRequest}
          * @return the request
          */
@@ -2764,7 +2764,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource of the test cases being updated. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchUpdateTestCasesRequest}
            * @since 1.13
            */
@@ -2835,13 +2835,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The parent resource of the test cases being updated. Format:
-           * `projects/{project_number}/apps/{app_id}`
+           * `projects/{project_number}/apps/{app}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource of the test cases being updated. Format:
-         `projects/{project_number}/apps/{app_id}`
+         `projects/{project_number}/apps/{app}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -2849,7 +2849,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The parent resource of the test cases being updated. Format:
-           * `projects/{project_number}/apps/{app_id}`
+           * `projects/{project_number}/apps/{app}`
            */
           public BatchUpdate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2876,7 +2876,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * remote operation.
          *
          * @param testCase Required. The name of the test case resource for which to clear the cache. Format:
-         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         *        `projects/{project_number}/apps/{app}/testCases/{test_case}`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaClearTestCaseCacheRequest}
          * @return the request
          */
@@ -2905,7 +2905,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * after invoking the constructor. </p>
            *
            * @param testCase Required. The name of the test case resource for which to clear the cache. Format:
-         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         *        `projects/{project_number}/apps/{app}/testCases/{test_case}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaClearTestCaseCacheRequest}
            * @since 1.13
            */
@@ -2976,13 +2976,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the test case resource for which to clear the cache. Format:
-           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           * `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           @com.google.api.client.util.Key
           private java.lang.String testCase;
 
           /** Required. The name of the test case resource for which to clear the cache. Format:
-         `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           public java.lang.String getTestCase() {
             return testCase;
@@ -2990,7 +2990,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the test case resource for which to clear the cache. Format:
-           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           * `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           public ClearTestCaseCache setTestCase(java.lang.String testCase) {
             if (!getSuppressPatternChecks()) {
@@ -3016,7 +3016,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource where this test case will be created. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaTestCase}
          * @return the request
          */
@@ -3045,7 +3045,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource where this test case will be created. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaTestCase}
            * @since 1.13
            */
@@ -3116,13 +3116,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The parent resource where this test case will be created. Format:
-           * `projects/{project_number}/apps/{app_id}`
+           * `projects/{project_number}/apps/{app}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource where this test case will be created. Format:
-         `projects/{project_number}/apps/{app_id}`
+         `projects/{project_number}/apps/{app}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -3130,7 +3130,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The parent resource where this test case will be created. Format:
-           * `projects/{project_number}/apps/{app_id}`
+           * `projects/{project_number}/apps/{app}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3181,7 +3181,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * any optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the test case resource to delete. Format:
-         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         *        `projects/{project_number}/apps/{app}/testCases/{test_case}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3209,7 +3209,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the test case resource to delete. Format:
-         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         *        `projects/{project_number}/apps/{app}/testCases/{test_case}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -3279,13 +3279,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the test case resource to delete. Format:
-           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           * `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the test case resource to delete. Format:
-         `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           public java.lang.String getName() {
             return name;
@@ -3293,7 +3293,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the test case resource to delete. Format:
-           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           * `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3319,7 +3319,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the test case resource to retrieve. Format:
-         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         *        `projects/{project_number}/apps/{app}/testCases/{test_case}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3347,7 +3347,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the test case resource to retrieve. Format:
-         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         *        `projects/{project_number}/apps/{app}/testCases/{test_case}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3427,13 +3427,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the test case resource to retrieve. Format:
-           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           * `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the test case resource to retrieve. Format:
-         `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           public java.lang.String getName() {
             return name;
@@ -3441,7 +3441,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the test case resource to retrieve. Format:
-           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           * `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3467,7 +3467,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource from which to list test cases. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3495,7 +3495,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource from which to list test cases. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3575,13 +3575,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The parent resource from which to list test cases. Format:
-           * `projects/{project_number}/apps/{app_id}`
+           * `projects/{project_number}/apps/{app}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource from which to list test cases. Format:
-         `projects/{project_number}/apps/{app_id}`
+         `projects/{project_number}/apps/{app}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -3589,7 +3589,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The parent resource from which to list test cases. Format:
-           * `projects/{project_number}/apps/{app_id}`
+           * `projects/{project_number}/apps/{app}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3667,7 +3667,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * any optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Identifier. The name of the test case resource. Format:
-         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         *        `projects/{project_number}/apps/{app}/testCases/{test_case}`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaTestCase}
          * @return the request
          */
@@ -3696,7 +3696,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Identifier. The name of the test case resource. Format:
-         *        `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         *        `projects/{project_number}/apps/{app}/testCases/{test_case}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaTestCase}
            * @since 1.13
            */
@@ -3767,13 +3767,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Identifier. The name of the test case resource. Format:
-           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           * `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Identifier. The name of the test case resource. Format:
-         `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+         `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           public java.lang.String getName() {
             return name;
@@ -3781,7 +3781,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Identifier. The name of the test case resource. Format:
-           * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+           * `projects/{project_number}/apps/{app}/testCases/{test_case}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

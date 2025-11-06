@@ -17,7 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for DiskSettingsAccessLocation.
+ * AccessLocation is only used for regional snapshot. It contains which regions are allowed to
+ * create a regional snapshot from disks located in the given region/zone. It includes key-value
+ * pairs designed to store the following structure. The keys should match their corresponding
+ * values, which must be provided: access_location: {  locations {   us-central1 {    region: "us-
+ * central1"    },   asia-west2 {     region: "asia-west2"   }  } }
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,18 +34,21 @@ package com.google.api.services.compute.model;
 public final class DiskSettingsAccessLocation extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of regions that can create a regional snapshot from the current region
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, DiskSettingsAccessLocationAccessLocationPreference> locations;
 
   /**
+   * Policy of which location is allowed to access snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policy;
 
   /**
+   * List of regions that can create a regional snapshot from the current region
    * @return value or {@code null} for none
    */
   public java.util.Map<String, DiskSettingsAccessLocationAccessLocationPreference> getLocations() {
@@ -49,6 +56,7 @@ public final class DiskSettingsAccessLocation extends com.google.api.client.json
   }
 
   /**
+   * List of regions that can create a regional snapshot from the current region
    * @param locations locations or {@code null} for none
    */
   public DiskSettingsAccessLocation setLocations(java.util.Map<String, DiskSettingsAccessLocationAccessLocationPreference> locations) {
@@ -57,6 +65,7 @@ public final class DiskSettingsAccessLocation extends com.google.api.client.json
   }
 
   /**
+   * Policy of which location is allowed to access snapshot.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicy() {
@@ -64,6 +73,7 @@ public final class DiskSettingsAccessLocation extends com.google.api.client.json
   }
 
   /**
+   * Policy of which location is allowed to access snapshot.
    * @param policy policy or {@code null} for none
    */
   public DiskSettingsAccessLocation setPolicy(java.lang.String policy) {

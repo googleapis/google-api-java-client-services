@@ -45,20 +45,6 @@ public final class NetworkPolicyTrafficClassificationRuleAction extends com.goog
   private java.lang.Integer dscpValue;
 
   /**
-   * The field type could be one of: TRAFFIC_CLASS or DSCP.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String fieldType;
-
-  /**
-   * For field_type = TRAFFIC_CLASS: 1 to 6. For field_type = DSCP: 0 to 63.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer fieldValue;
-
-  /**
    * The traffic class that should be applied to the matching packet.
    * The value may be {@code null}.
    */
@@ -105,40 +91,6 @@ public final class NetworkPolicyTrafficClassificationRuleAction extends com.goog
    */
   public NetworkPolicyTrafficClassificationRuleAction setDscpValue(java.lang.Integer dscpValue) {
     this.dscpValue = dscpValue;
-    return this;
-  }
-
-  /**
-   * The field type could be one of: TRAFFIC_CLASS or DSCP.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFieldType() {
-    return fieldType;
-  }
-
-  /**
-   * The field type could be one of: TRAFFIC_CLASS or DSCP.
-   * @param fieldType fieldType or {@code null} for none
-   */
-  public NetworkPolicyTrafficClassificationRuleAction setFieldType(java.lang.String fieldType) {
-    this.fieldType = fieldType;
-    return this;
-  }
-
-  /**
-   * For field_type = TRAFFIC_CLASS: 1 to 6. For field_type = DSCP: 0 to 63.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getFieldValue() {
-    return fieldValue;
-  }
-
-  /**
-   * For field_type = TRAFFIC_CLASS: 1 to 6. For field_type = DSCP: 0 to 63.
-   * @param fieldValue fieldValue or {@code null} for none
-   */
-  public NetworkPolicyTrafficClassificationRuleAction setFieldValue(java.lang.Integer fieldValue) {
-    this.fieldValue = fieldValue;
     return this;
   }
 

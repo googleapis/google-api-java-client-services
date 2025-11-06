@@ -58,9 +58,11 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean deleted;
 
   /**
-   * Due date of the task (as a RFC 3339 timestamp). Optional. The due date only records date
-   * information; the time portion of the timestamp is discarded when setting the due date. It isn't
-   * possible to read or write the time that a task is due via the API.
+   * Scheduled date for the task (as an RFC 3339 timestamp). Optional. This represents the day that
+   * the task should be done, or that the task is visible on the calendar grid. It doesn't represent
+   * the deadline of the task. Only date information is recorded; the time portion of the timestamp
+   * is discarded when setting this field. It isn't possible to read or write the time that a task
+   * is scheduled for using the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,9 +239,11 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Due date of the task (as a RFC 3339 timestamp). Optional. The due date only records date
-   * information; the time portion of the timestamp is discarded when setting the due date. It isn't
-   * possible to read or write the time that a task is due via the API.
+   * Scheduled date for the task (as an RFC 3339 timestamp). Optional. This represents the day that
+   * the task should be done, or that the task is visible on the calendar grid. It doesn't represent
+   * the deadline of the task. Only date information is recorded; the time portion of the timestamp
+   * is discarded when setting this field. It isn't possible to read or write the time that a task
+   * is scheduled for using the API.
    * @return value or {@code null} for none
    */
   public java.lang.String getDue() {
@@ -247,9 +251,11 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Due date of the task (as a RFC 3339 timestamp). Optional. The due date only records date
-   * information; the time portion of the timestamp is discarded when setting the due date. It isn't
-   * possible to read or write the time that a task is due via the API.
+   * Scheduled date for the task (as an RFC 3339 timestamp). Optional. This represents the day that
+   * the task should be done, or that the task is visible on the calendar grid. It doesn't represent
+   * the deadline of the task. Only date information is recorded; the time portion of the timestamp
+   * is discarded when setting this field. It isn't possible to read or write the time that a task
+   * is scheduled for using the API.
    * @param due due or {@code null} for none
    */
   public Task setDue(java.lang.String due) {

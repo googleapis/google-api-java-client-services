@@ -45,6 +45,14 @@ public final class Counters extends com.google.api.client.json.GenericJson {
   private java.lang.Long succeededObjectCount;
 
   /**
+   * Output only. Number of bytes found from source. This field is only populated for jobs with a
+   * prefix list object configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalBytesFound;
+
+  /**
    * Output only. Number of objects listed.
    * The value may be {@code null}.
    */
@@ -82,6 +90,25 @@ public final class Counters extends com.google.api.client.json.GenericJson {
    */
   public Counters setSucceededObjectCount(java.lang.Long succeededObjectCount) {
     this.succeededObjectCount = succeededObjectCount;
+    return this;
+  }
+
+  /**
+   * Output only. Number of bytes found from source. This field is only populated for jobs with a
+   * prefix list object configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalBytesFound() {
+    return totalBytesFound;
+  }
+
+  /**
+   * Output only. Number of bytes found from source. This field is only populated for jobs with a
+   * prefix list object configuration.
+   * @param totalBytesFound totalBytesFound or {@code null} for none
+   */
+  public Counters setTotalBytesFound(java.lang.Long totalBytesFound) {
+    this.totalBytesFound = totalBytesFound;
     return this;
   }
 

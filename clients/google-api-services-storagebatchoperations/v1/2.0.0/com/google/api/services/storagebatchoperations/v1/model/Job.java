@@ -74,6 +74,15 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. If true, the job will run in dry run mode, returning the total object count and, if
+   * the object configuration is a prefix list, the bytes found from source. No transformations will
+   * be performed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dryRun;
+
+  /**
    * Output only. Summarizes errors encountered with sample error log entries.
    * The value may be {@code null}.
    */
@@ -241,6 +250,27 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the job will run in dry run mode, returning the total object count and, if
+   * the object configuration is a prefix list, the bytes found from source. No transformations will
+   * be performed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDryRun() {
+    return dryRun;
+  }
+
+  /**
+   * Optional. If true, the job will run in dry run mode, returning the total object count and, if
+   * the object configuration is a prefix list, the bytes found from source. No transformations will
+   * be performed.
+   * @param dryRun dryRun or {@code null} for none
+   */
+  public Job setDryRun(java.lang.Boolean dryRun) {
+    this.dryRun = dryRun;
     return this;
   }
 

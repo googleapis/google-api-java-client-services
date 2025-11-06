@@ -54,8 +54,8 @@ public final class RolloutRolloutEntityOrchestratedEntity extends com.google.api
    * the configuration being rolled out across locations/projects. For example, in the case of a
    * global Rollout which is applied across regions, this contains the name of the global resource
    * created by the user which contains a payload for a resource that is orchestrated across
-   * regions. This follows the following format: //.googleapis.com/organizations//locations/global//
-   * e.g. //osconfig.googleapis.com/organizations/1/locations/global/policyOrchestrators/po1
+   * regions. This follows the following format: //.googleapis.com/projects//locations/global// e.g.
+   * //osconfig.googleapis.com/projects/1/locations/global/policyOrchestrators/po1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class RolloutRolloutEntityOrchestratedEntity extends com.google.api
    * the configuration being rolled out across locations/projects. For example, in the case of a
    * global Rollout which is applied across regions, this contains the name of the global resource
    * created by the user which contains a payload for a resource that is orchestrated across
-   * regions. This follows the following format: //.googleapis.com/organizations//locations/global//
-   * e.g. //osconfig.googleapis.com/organizations/1/locations/global/policyOrchestrators/po1
+   * regions. This follows the following format: //.googleapis.com/projects//locations/global// e.g.
+   * //osconfig.googleapis.com/projects/1/locations/global/policyOrchestrators/po1
    * @return value or {@code null} for none
    */
   public java.lang.String getOrchestrationSource() {
@@ -123,8 +123,8 @@ public final class RolloutRolloutEntityOrchestratedEntity extends com.google.api
    * the configuration being rolled out across locations/projects. For example, in the case of a
    * global Rollout which is applied across regions, this contains the name of the global resource
    * created by the user which contains a payload for a resource that is orchestrated across
-   * regions. This follows the following format: //.googleapis.com/organizations//locations/global//
-   * e.g. //osconfig.googleapis.com/organizations/1/locations/global/policyOrchestrators/po1
+   * regions. This follows the following format: //.googleapis.com/projects//locations/global// e.g.
+   * //osconfig.googleapis.com/projects/1/locations/global/policyOrchestrators/po1
    * @param orchestrationSource orchestrationSource or {@code null} for none
    */
   public RolloutRolloutEntityOrchestratedEntity setOrchestrationSource(java.lang.String orchestrationSource) {

@@ -32,6 +32,14 @@ package com.google.api.services.compute.model;
 public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
+   * Capacity tier of the VPN tunnel. This is used for IPsec over Interconnect tunnels to indicate
+   * different bandwidth limits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String capacityTier;
+
+  /**
    * User specified list of ciphers to use for the phase 1 and phase 2 of the IKE protocol.
    * The value may be {@code null}.
    */
@@ -261,6 +269,25 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer vpnGatewayInterface;
+
+  /**
+   * Capacity tier of the VPN tunnel. This is used for IPsec over Interconnect tunnels to indicate
+   * different bandwidth limits.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCapacityTier() {
+    return capacityTier;
+  }
+
+  /**
+   * Capacity tier of the VPN tunnel. This is used for IPsec over Interconnect tunnels to indicate
+   * different bandwidth limits.
+   * @param capacityTier capacityTier or {@code null} for none
+   */
+  public VpnTunnel setCapacityTier(java.lang.String capacityTier) {
+    this.capacityTier = capacityTier;
+    return this;
+  }
 
   /**
    * User specified list of ciphers to use for the phase 1 and phase 2 of the IKE protocol.

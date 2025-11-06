@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for DiskSettingsAccessLocationAccessLocationPreference.
+ * A structure for specifying an allowed target region to create snapshot.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,12 +30,14 @@ package com.google.api.services.compute.model;
 public final class DiskSettingsAccessLocationAccessLocationPreference extends com.google.api.client.json.GenericJson {
 
   /**
+   * Accessible region name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
+   * Accessible region name
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -43,6 +45,7 @@ public final class DiskSettingsAccessLocationAccessLocationPreference extends co
   }
 
   /**
+   * Accessible region name
    * @param region region or {@code null} for none
    */
   public DiskSettingsAccessLocationAccessLocationPreference setRegion(java.lang.String region) {

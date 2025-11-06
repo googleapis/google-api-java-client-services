@@ -105,8 +105,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Rollout Plan used to model the Rollout. Ex.
-   * progressiverollout.googleapis.com/v1/organizations/1/rolloutPlans Ex.
-   * progressiverollout.googleapis.com/v1/folders/1/rolloutPlans
+   * compute.googleapis.com/v1/projects/1234/rolloutPlans/rp1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -320,8 +319,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Rollout Plan used to model the Rollout. Ex.
-   * progressiverollout.googleapis.com/v1/organizations/1/rolloutPlans Ex.
-   * progressiverollout.googleapis.com/v1/folders/1/rolloutPlans
+   * compute.googleapis.com/v1/projects/1234/rolloutPlans/rp1
    * @return value or {@code null} for none
    */
   public java.lang.String getRolloutPlan() {
@@ -330,8 +328,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Rollout Plan used to model the Rollout. Ex.
-   * progressiverollout.googleapis.com/v1/organizations/1/rolloutPlans Ex.
-   * progressiverollout.googleapis.com/v1/folders/1/rolloutPlans
+   * compute.googleapis.com/v1/projects/1234/rolloutPlans/rp1
    * @param rolloutPlan rolloutPlan or {@code null} for none
    */
   public Rollout setRolloutPlan(java.lang.String rolloutPlan) {

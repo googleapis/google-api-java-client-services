@@ -37,7 +37,7 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    *
    * fullPathMatch must be from 1 to 1024 characters.
    *
-   * Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    *
    * The value must be from 1 to 1024 characters.
    *
-   * Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,10 +143,10 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * expression specified inregexMatch after removing any query parameters and anchor supplied with
    * the original URL. For more information about regular expression syntax, see Syntax.
    *
-   * Only one of prefixMatch, fullPathMatch orregexMatch must be specified.
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +159,7 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    *
    * fullPathMatch must be from 1 to 1024 characters.
    *
-   * Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullPathMatch() {
@@ -172,7 +173,7 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    *
    * fullPathMatch must be from 1 to 1024 characters.
    *
-   * Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
    * @param fullPathMatch fullPathMatch or {@code null} for none
    */
   public HttpRouteRuleMatch setFullPathMatch(java.lang.String fullPathMatch) {
@@ -318,7 +319,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    *
    * The value must be from 1 to 1024 characters.
    *
-   * Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
+   * specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrefixMatch() {
@@ -331,7 +333,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    *
    * The value must be from 1 to 1024 characters.
    *
-   * Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
+   * specified.
    * @param prefixMatch prefixMatch or {@code null} for none
    */
   public HttpRouteRuleMatch setPrefixMatch(java.lang.String prefixMatch) {
@@ -367,10 +370,10 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * expression specified inregexMatch after removing any query parameters and anchor supplied with
    * the original URL. For more information about regular expression syntax, see Syntax.
    *
-   * Only one of prefixMatch, fullPathMatch orregexMatch must be specified.
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -382,10 +385,10 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * expression specified inregexMatch after removing any query parameters and anchor supplied with
    * the original URL. For more information about regular expression syntax, see Syntax.
    *
-   * Only one of prefixMatch, fullPathMatch orregexMatch must be specified.
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpRouteRuleMatch setRegexMatch(java.lang.String regexMatch) {

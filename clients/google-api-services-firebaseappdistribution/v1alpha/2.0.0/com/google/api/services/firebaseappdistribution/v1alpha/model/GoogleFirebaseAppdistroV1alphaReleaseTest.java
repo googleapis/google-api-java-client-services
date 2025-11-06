@@ -74,7 +74,7 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
 
   /**
    * The name of the release test resource. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+   * `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,7 +185,7 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
 
   /**
    * The name of the release test resource. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+   * `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -194,7 +194,7 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
 
   /**
    * The name of the release test resource. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+   * `projects/{project_number}/apps/{app}/releases/{release}/tests/{test}`
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaReleaseTest setName(java.lang.String name) {

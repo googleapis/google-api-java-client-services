@@ -32,7 +32,7 @@ public final class GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest ext
 
   /**
    * Required. The name of the test cases to delete. A maximum number of 1000 test cases can be
-   * deleted in one batch Format: `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+   * deleted in one batch Format: `projects/{project_number}/apps/{app}/testCases/{test_case}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest ext
 
   /**
    * Required. The name of the test cases to delete. A maximum number of 1000 test cases can be
-   * deleted in one batch Format: `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+   * deleted in one batch Format: `projects/{project_number}/apps/{app}/testCases/{test_case}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNames() {
@@ -49,7 +49,7 @@ public final class GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest ext
 
   /**
    * Required. The name of the test cases to delete. A maximum number of 1000 test cases can be
-   * deleted in one batch Format: `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+   * deleted in one batch Format: `projects/{project_number}/apps/{app}/testCases/{test_case}`
    * @param names names or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest setNames(java.util.List<java.lang.String> names) {

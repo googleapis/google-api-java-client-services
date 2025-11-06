@@ -162,7 +162,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
      * This request holds the parameters needed by the firebaseappdistribution server.  After setting
      * any optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
      *
-     * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+     * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app}`
      * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest}
      * @return the request
      */
@@ -186,7 +186,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
      * This method should be used for uploading media content.
      * </p>
      *
-     * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+     * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app}`
      * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest} media metadata or {@code null} if none
      * @param mediaContent The media HTTP content.
      * @return the request
@@ -217,7 +217,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+       * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app}`
        * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest}
        * @since 1.13
        */
@@ -247,7 +247,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * This constructor should be used for uploading media content.
        * </p>
        *
-       * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+       * @param app Required. The name of the app resource. Format: `projects/{project_number}/apps/{app}`
        * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1UploadReleaseRequest} media metadata or {@code null} if none
        * @param mediaContent The media HTTP content.
        * @since 1.13
@@ -314,21 +314,17 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
         return (Upload) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
-       */
+      /** Required. The name of the app resource. Format: `projects/{project_number}/apps/{app}` */
       @com.google.api.client.util.Key
       private java.lang.String app;
 
-      /** Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
+      /** Required. The name of the app resource. Format: `projects/{project_number}/apps/{app}`
        */
       public java.lang.String getApp() {
         return app;
       }
 
-      /**
-       * Required. The name of the app resource. Format: `projects/{project_number}/apps/{app_id}`
-       */
+      /** Required. The name of the app resource. Format: `projects/{project_number}/apps/{app}` */
       public Upload setApp(java.lang.String app) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
@@ -397,7 +393,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
        * operation.
        *
        * @param name Required. The name of the `AabInfo` resource to retrieve. Format:
-       *        `projects/{project_number}/apps/{app_id}/aabInfo`
+       *        `projects/{project_number}/apps/{app}/aabInfo`
        * @return the request
        */
       public GetAabInfo getAabInfo(java.lang.String name) throws java.io.IOException {
@@ -425,7 +421,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the `AabInfo` resource to retrieve. Format:
-       *        `projects/{project_number}/apps/{app_id}/aabInfo`
+       *        `projects/{project_number}/apps/{app}/aabInfo`
          * @since 1.13
          */
         protected GetAabInfo(java.lang.String name) {
@@ -505,13 +501,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
         /**
          * Required. The name of the `AabInfo` resource to retrieve. Format:
-         * `projects/{project_number}/apps/{app_id}/aabInfo`
+         * `projects/{project_number}/apps/{app}/aabInfo`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the `AabInfo` resource to retrieve. Format:
-       `projects/{project_number}/apps/{app_id}/aabInfo`
+       `projects/{project_number}/apps/{app}/aabInfo`
          */
         public java.lang.String getName() {
           return name;
@@ -519,7 +515,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
         /**
          * Required. The name of the `AabInfo` resource to retrieve. Format:
-         * `projects/{project_number}/apps/{app_id}/aabInfo`
+         * `projects/{project_number}/apps/{app}/aabInfo`
          */
         public GetAabInfo setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -567,7 +563,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * operation.
          *
          * @param parent Required. The name of the app resource, which is the parent of the release resources. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest}
          * @return the request
          */
@@ -596,7 +592,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The name of the app resource, which is the parent of the release resources. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest}
            * @since 1.13
            */
@@ -667,13 +663,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the app resource, which is the parent of the release resources.
-           * Format: `projects/{project_number}/apps/{app_id}`
+           * Format: `projects/{project_number}/apps/{app}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The name of the app resource, which is the parent of the release resources. Format:
-         `projects/{project_number}/apps/{app_id}`
+         `projects/{project_number}/apps/{app}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -681,7 +677,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the app resource, which is the parent of the release resources.
-           * Format: `projects/{project_number}/apps/{app_id}`
+           * Format: `projects/{project_number}/apps/{app}`
            */
           public BatchDelete setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -711,7 +707,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * operation.
          *
          * @param name Required. The name of the release resource to distribute. Format:
-         *        `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+         *        `projects/{project_number}/apps/{app}/releases/{release}`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1DistributeReleaseRequest}
          * @return the request
          */
@@ -743,7 +739,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the release resource to distribute. Format:
-         *        `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+         *        `projects/{project_number}/apps/{app}/releases/{release}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1DistributeReleaseRequest}
            * @since 1.13
            */
@@ -814,13 +810,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the release resource to distribute. Format:
-           * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           * `projects/{project_number}/apps/{app}/releases/{release}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the release resource to distribute. Format:
-         `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+         `projects/{project_number}/apps/{app}/releases/{release}`
            */
           public java.lang.String getName() {
             return name;
@@ -828,7 +824,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the release resource to distribute. Format:
-           * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           * `projects/{project_number}/apps/{app}/releases/{release}`
            */
           public Distribute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -854,7 +850,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the release resource to retrieve. Format:
-         *        projects/{project_number}/apps/{app_id}/releases/{release_id}
+         *        projects/{project_number}/apps/{app}/releases/{release}
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -882,7 +878,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the release resource to retrieve. Format:
-         *        projects/{project_number}/apps/{app_id}/releases/{release_id}
+         *        projects/{project_number}/apps/{app}/releases/{release}
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -962,13 +958,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the release resource to retrieve. Format:
-           * projects/{project_number}/apps/{app_id}/releases/{release_id}
+           * projects/{project_number}/apps/{app}/releases/{release}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the release resource to retrieve. Format:
-         projects/{project_number}/apps/{app_id}/releases/{release_id}
+         projects/{project_number}/apps/{app}/releases/{release}
            */
           public java.lang.String getName() {
             return name;
@@ -976,7 +972,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the release resource to retrieve. Format:
-           * projects/{project_number}/apps/{app_id}/releases/{release_id}
+           * projects/{project_number}/apps/{app}/releases/{release}
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1002,7 +998,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The name of the app resource, which is the parent of the release resources. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1030,7 +1026,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The name of the app resource, which is the parent of the release resources. Format:
-         *        `projects/{project_number}/apps/{app_id}`
+         *        `projects/{project_number}/apps/{app}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1110,13 +1106,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the app resource, which is the parent of the release resources.
-           * Format: `projects/{project_number}/apps/{app_id}`
+           * Format: `projects/{project_number}/apps/{app}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The name of the app resource, which is the parent of the release resources. Format:
-         `projects/{project_number}/apps/{app_id}`
+         `projects/{project_number}/apps/{app}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -1124,7 +1120,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * Required. The name of the app resource, which is the parent of the release resources.
-           * Format: `projects/{project_number}/apps/{app_id}`
+           * Format: `projects/{project_number}/apps/{app}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1266,8 +1262,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
          * This request holds the parameters needed by the firebaseappdistribution server.  After setting
          * any optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the release resource. Format:
-         *        `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+         * @param name The name of the release resource. Format: `projects/{project_number}/apps/{app}/releases/{release}`
          * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1Release}
          * @return the request
          */
@@ -1295,8 +1290,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the release resource. Format:
-         *        `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           * @param name The name of the release resource. Format: `projects/{project_number}/apps/{app}/releases/{release}`
            * @param content the {@link com.google.api.services.firebaseappdistribution.v1.model.GoogleFirebaseAppdistroV1Release}
            * @since 1.13
            */
@@ -1367,13 +1361,12 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * The name of the release resource. Format:
-           * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           * `projects/{project_number}/apps/{app}/releases/{release}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the release resource. Format:
-         `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+          /** The name of the release resource. Format: `projects/{project_number}/apps/{app}/releases/{release}`
            */
           public java.lang.String getName() {
             return name;
@@ -1381,7 +1374,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
           /**
            * The name of the release resource. Format:
-           * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+           * `projects/{project_number}/apps/{app}/releases/{release}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

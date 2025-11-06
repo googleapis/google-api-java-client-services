@@ -60,7 +60,7 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
 
   /**
    * Identifier. The name of the test case resource. Format:
-   * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+   * `projects/{project_number}/apps/{app}/testCases/{test_case}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
 
   /**
    * Identifier. The name of the test case resource. Format:
-   * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+   * `projects/{project_number}/apps/{app}/testCases/{test_case}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -152,7 +152,7 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
 
   /**
    * Identifier. The name of the test case resource. Format:
-   * `projects/{project_number}/apps/{app_id}/testCases/{test_case_id}`
+   * `projects/{project_number}/apps/{app}/testCases/{test_case}`
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaTestCase setName(java.lang.String name) {

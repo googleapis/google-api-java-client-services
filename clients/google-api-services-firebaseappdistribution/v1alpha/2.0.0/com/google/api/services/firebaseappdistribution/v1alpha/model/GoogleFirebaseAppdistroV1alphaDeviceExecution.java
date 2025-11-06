@@ -87,7 +87,7 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
 
   /**
    * Identifier. The name of the device execution resource. Format: `projects/{project_number}/apps/
-   * {app_id}/releases/{release_id}/tests/{test_id}/deviceExecutions/{device_execution}`
+   * {app}/releases/{release}/tests/{test}/deviceExecutions/{device_execution}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +258,7 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
 
   /**
    * Identifier. The name of the device execution resource. Format: `projects/{project_number}/apps/
-   * {app_id}/releases/{release_id}/tests/{test_id}/deviceExecutions/{device_execution}`
+   * {app}/releases/{release}/tests/{test}/deviceExecutions/{device_execution}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -267,7 +267,7 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
 
   /**
    * Identifier. The name of the device execution resource. Format: `projects/{project_number}/apps/
-   * {app_id}/releases/{release_id}/tests/{test_id}/deviceExecutions/{device_execution}`
+   * {app}/releases/{release}/tests/{test}/deviceExecutions/{device_execution}`
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaDeviceExecution setName(java.lang.String name) {

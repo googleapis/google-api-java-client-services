@@ -110,6 +110,13 @@ public final class PatchJobInstanceDetailsSummary extends com.google.api.client.
   private java.lang.Long rebootingInstanceCount;
 
   /**
+   * Number of instances that were skipped during patching.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long skippedInstanceCount;
+
+  /**
    * Number of instances that have started.
    * The value may be {@code null}.
    */
@@ -323,6 +330,23 @@ public final class PatchJobInstanceDetailsSummary extends com.google.api.client.
    */
   public PatchJobInstanceDetailsSummary setRebootingInstanceCount(java.lang.Long rebootingInstanceCount) {
     this.rebootingInstanceCount = rebootingInstanceCount;
+    return this;
+  }
+
+  /**
+   * Number of instances that were skipped during patching.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSkippedInstanceCount() {
+    return skippedInstanceCount;
+  }
+
+  /**
+   * Number of instances that were skipped during patching.
+   * @param skippedInstanceCount skippedInstanceCount or {@code null} for none
+   */
+  public PatchJobInstanceDetailsSummary setSkippedInstanceCount(java.lang.Long skippedInstanceCount) {
+    this.skippedInstanceCount = skippedInstanceCount;
     return this;
   }
 

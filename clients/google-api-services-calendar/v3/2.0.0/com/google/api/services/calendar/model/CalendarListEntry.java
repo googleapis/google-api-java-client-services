@@ -35,8 +35,10 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
    * Provides read access to the calendar. Private events will appear to users with reader access,
    * but event details will be hidden.  - "writer" - Provides read and write access to the calendar.
    * Private events will appear to users with writer access, and event details will be visible.  -
-   * "owner" - Provides ownership of the calendar. This role has all of the permissions of the
-   * writer role with the additional ability to see and manipulate ACLs.
+   * "owner" - Provides manager access to the calendar. This role has all of the permissions of the
+   * writer role with the additional ability to see and modify access levels of other users.
+   * Important: the owner role is different from the calendar's data owner. A calendar has a single
+   * data owner, but can have multiple users with owner role.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,6 +68,13 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private ConferenceProperties conferenceProperties;
+
+  /**
+   * The email of the owner of the calendar. Set only for secondary calendars. Read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataOwner;
 
   /**
    * The default reminders that the authenticated user has for this calendar.
@@ -184,8 +193,10 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
    * Provides read access to the calendar. Private events will appear to users with reader access,
    * but event details will be hidden.  - "writer" - Provides read and write access to the calendar.
    * Private events will appear to users with writer access, and event details will be visible.  -
-   * "owner" - Provides ownership of the calendar. This role has all of the permissions of the
-   * writer role with the additional ability to see and manipulate ACLs.
+   * "owner" - Provides manager access to the calendar. This role has all of the permissions of the
+   * writer role with the additional ability to see and modify access levels of other users.
+   * Important: the owner role is different from the calendar's data owner. A calendar has a single
+   * data owner, but can have multiple users with owner role.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessRole() {
@@ -198,8 +209,10 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
    * Provides read access to the calendar. Private events will appear to users with reader access,
    * but event details will be hidden.  - "writer" - Provides read and write access to the calendar.
    * Private events will appear to users with writer access, and event details will be visible.  -
-   * "owner" - Provides ownership of the calendar. This role has all of the permissions of the
-   * writer role with the additional ability to see and manipulate ACLs.
+   * "owner" - Provides manager access to the calendar. This role has all of the permissions of the
+   * writer role with the additional ability to see and modify access levels of other users.
+   * Important: the owner role is different from the calendar's data owner. A calendar has a single
+   * data owner, but can have multiple users with owner role.
    * @param accessRole accessRole or {@code null} for none
    */
   public CalendarListEntry setAccessRole(java.lang.String accessRole) {
@@ -263,6 +276,23 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
    */
   public CalendarListEntry setConferenceProperties(ConferenceProperties conferenceProperties) {
     this.conferenceProperties = conferenceProperties;
+    return this;
+  }
+
+  /**
+   * The email of the owner of the calendar. Set only for secondary calendars. Read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataOwner() {
+    return dataOwner;
+  }
+
+  /**
+   * The email of the owner of the calendar. Set only for secondary calendars. Read-only.
+   * @param dataOwner dataOwner or {@code null} for none
+   */
+  public CalendarListEntry setDataOwner(java.lang.String dataOwner) {
+    this.dataOwner = dataOwner;
     return this;
   }
 

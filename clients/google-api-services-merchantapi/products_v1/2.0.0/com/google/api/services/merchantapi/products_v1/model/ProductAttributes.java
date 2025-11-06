@@ -652,6 +652,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.util.List<Shipping> shipping;
 
   /**
+   * The business days during which orders can be handled. If not provided, Monday to Friday
+   * business days will be assumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ShippingBusinessDaysConfig> shippingHandlingBusinessDays;
+
+  /**
    * Height of the item for shipping.
    * The value may be {@code null}.
    */
@@ -671,6 +679,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private ShippingDimension shippingLength;
+
+  /**
+   * The business days during which orders are in transit. If not provided, Monday to Friday
+   * business days will be assumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ShippingBusinessDaysConfig> shippingTransitBusinessDays;
 
   /**
    * Weight of the item for shipping.
@@ -2200,6 +2216,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The business days during which orders can be handled. If not provided, Monday to Friday
+   * business days will be assumed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ShippingBusinessDaysConfig> getShippingHandlingBusinessDays() {
+    return shippingHandlingBusinessDays;
+  }
+
+  /**
+   * The business days during which orders can be handled. If not provided, Monday to Friday
+   * business days will be assumed.
+   * @param shippingHandlingBusinessDays shippingHandlingBusinessDays or {@code null} for none
+   */
+  public ProductAttributes setShippingHandlingBusinessDays(java.util.List<ShippingBusinessDaysConfig> shippingHandlingBusinessDays) {
+    this.shippingHandlingBusinessDays = shippingHandlingBusinessDays;
+    return this;
+  }
+
+  /**
    * Height of the item for shipping.
    * @return value or {@code null} for none
    */
@@ -2247,6 +2282,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setShippingLength(ShippingDimension shippingLength) {
     this.shippingLength = shippingLength;
+    return this;
+  }
+
+  /**
+   * The business days during which orders are in transit. If not provided, Monday to Friday
+   * business days will be assumed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ShippingBusinessDaysConfig> getShippingTransitBusinessDays() {
+    return shippingTransitBusinessDays;
+  }
+
+  /**
+   * The business days during which orders are in transit. If not provided, Monday to Friday
+   * business days will be assumed.
+   * @param shippingTransitBusinessDays shippingTransitBusinessDays or {@code null} for none
+   */
+  public ProductAttributes setShippingTransitBusinessDays(java.util.List<ShippingBusinessDaysConfig> shippingTransitBusinessDays) {
+    this.shippingTransitBusinessDays = shippingTransitBusinessDays;
     return this;
   }
 

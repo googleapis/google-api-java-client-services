@@ -134,6 +134,130 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Message collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code WorkspaceEvents workspaceevents = new WorkspaceEvents(...);}
+   *   {@code WorkspaceEvents.Message.List request = workspaceevents.message().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Message message() {
+    return new Message();
+  }
+
+  /**
+   * The "message" collection of methods.
+   */
+  public class Message {
+
+    /**
+     * SendStreamingMessage is a streaming call that will return a stream of task update events until
+     * the Task is in an interrupted or terminal state.
+     *
+     * Create a request for the method "message.stream".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Stream#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.workspaceevents.v1.model.SendMessageRequest}
+     * @return the request
+     */
+    public Stream stream(com.google.api.services.workspaceevents.v1.model.SendMessageRequest content) throws java.io.IOException {
+      Stream result = new Stream(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Stream extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.StreamResponse> {
+
+      private static final String REST_PATH = "v1/message:stream";
+
+      /**
+       * SendStreamingMessage is a streaming call that will return a stream of task update events until
+       * the Task is in an interrupted or terminal state.
+       *
+       * Create a request for the method "message.stream".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Stream#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Stream#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.workspaceevents.v1.model.SendMessageRequest}
+       * @since 1.13
+       */
+      protected Stream(com.google.api.services.workspaceevents.v1.model.SendMessageRequest content) {
+        super(WorkspaceEvents.this, "POST", REST_PATH, content, com.google.api.services.workspaceevents.v1.model.StreamResponse.class);
+      }
+
+      @Override
+      public Stream set$Xgafv(java.lang.String $Xgafv) {
+        return (Stream) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Stream setAccessToken(java.lang.String accessToken) {
+        return (Stream) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Stream setAlt(java.lang.String alt) {
+        return (Stream) super.setAlt(alt);
+      }
+
+      @Override
+      public Stream setCallback(java.lang.String callback) {
+        return (Stream) super.setCallback(callback);
+      }
+
+      @Override
+      public Stream setFields(java.lang.String fields) {
+        return (Stream) super.setFields(fields);
+      }
+
+      @Override
+      public Stream setKey(java.lang.String key) {
+        return (Stream) super.setKey(key);
+      }
+
+      @Override
+      public Stream setOauthToken(java.lang.String oauthToken) {
+        return (Stream) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Stream setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Stream) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Stream setQuotaUser(java.lang.String quotaUser) {
+        return (Stream) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Stream setUploadType(java.lang.String uploadType) {
+        return (Stream) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Stream setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Stream) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Stream set(String parameterName, Object value) {
+        return (Stream) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Operations collection.
    *
    * <p>The typical use is:</p>
@@ -1398,6 +1522,1228 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
       @Override
       public Reactivate set(String parameterName, Object value) {
         return (Reactivate) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Tasks collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code WorkspaceEvents workspaceevents = new WorkspaceEvents(...);}
+   *   {@code WorkspaceEvents.Tasks.List request = workspaceevents.tasks().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Tasks tasks() {
+    return new Tasks();
+  }
+
+  /**
+   * The "tasks" collection of methods.
+   */
+  public class Tasks {
+
+    /**
+     * Cancel a task from the agent. If supported one should expect no more task updates for the task.
+     *
+     * Create a request for the method "tasks.cancel".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+     *
+     * @param name The resource name of the task to cancel. Format: tasks/{task_id}
+     * @param content the {@link com.google.api.services.workspaceevents.v1.model.CancelTaskRequest}
+     * @return the request
+     */
+    public Cancel cancel(java.lang.String name, com.google.api.services.workspaceevents.v1.model.CancelTaskRequest content) throws java.io.IOException {
+      Cancel result = new Cancel(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Cancel extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.Task> {
+
+      private static final String REST_PATH = "v1/{+name}:cancel";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^tasks/[^/]+$");
+
+      /**
+       * Cancel a task from the agent. If supported one should expect no more task updates for the task.
+       *
+       * Create a request for the method "tasks.cancel".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource name of the task to cancel. Format: tasks/{task_id}
+       * @param content the {@link com.google.api.services.workspaceevents.v1.model.CancelTaskRequest}
+       * @since 1.13
+       */
+      protected Cancel(java.lang.String name, com.google.api.services.workspaceevents.v1.model.CancelTaskRequest content) {
+        super(WorkspaceEvents.this, "POST", REST_PATH, content, com.google.api.services.workspaceevents.v1.model.Task.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^tasks/[^/]+$");
+        }
+      }
+
+      @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Cancel setAlt(java.lang.String alt) {
+        return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
+      }
+
+      @Override
+      public Cancel setFields(java.lang.String fields) {
+        return (Cancel) super.setFields(fields);
+      }
+
+      @Override
+      public Cancel setKey(java.lang.String key) {
+        return (Cancel) super.setKey(key);
+      }
+
+      @Override
+      public Cancel setOauthToken(java.lang.String oauthToken) {
+        return (Cancel) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Cancel) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Cancel setQuotaUser(java.lang.String quotaUser) {
+        return (Cancel) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The resource name of the task to cancel. Format: tasks/{task_id} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource name of the task to cancel. Format: tasks/{task_id}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The resource name of the task to cancel. Format: tasks/{task_id} */
+      public Cancel setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^tasks/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Cancel set(String parameterName, Object value) {
+        return (Cancel) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Get the current state of a task from the agent.
+     *
+     * Create a request for the method "tasks.get".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the task. Format: tasks/{task_id}
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.Task> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^tasks/[^/]+$");
+
+      /**
+       * Get the current state of a task from the agent.
+       *
+       * Create a request for the method "tasks.get".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the task. Format: tasks/{task_id}
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(WorkspaceEvents.this, "GET", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.Task.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^tasks/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The resource name of the task. Format: tasks/{task_id} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the task. Format: tasks/{task_id}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The resource name of the task. Format: tasks/{task_id} */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^tasks/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** The number of most recent messages from the task's history to retrieve. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer historyLength;
+
+      /** The number of most recent messages from the task's history to retrieve.
+       */
+      public java.lang.Integer getHistoryLength() {
+        return historyLength;
+      }
+
+      /** The number of most recent messages from the task's history to retrieve. */
+      public Get setHistoryLength(java.lang.Integer historyLength) {
+        this.historyLength = historyLength;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * TaskSubscription is a streaming call that will return a stream of task update events. This
+     * attaches the stream to an existing in process task. If the task is complete the stream will
+     * return the completed task (like GetTask) and close the stream.
+     *
+     * Create a request for the method "tasks.subscribe".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Subscribe#execute()} method to invoke the remote operation.
+     *
+     * @param name The resource name of the task to subscribe to. Format: tasks/{task_id}
+     * @return the request
+     */
+    public Subscribe subscribe(java.lang.String name) throws java.io.IOException {
+      Subscribe result = new Subscribe(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Subscribe extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.StreamResponse> {
+
+      private static final String REST_PATH = "v1/{+name}:subscribe";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^tasks/[^/]+$");
+
+      /**
+       * TaskSubscription is a streaming call that will return a stream of task update events. This
+       * attaches the stream to an existing in process task. If the task is complete the stream will
+       * return the completed task (like GetTask) and close the stream.
+       *
+       * Create a request for the method "tasks.subscribe".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Subscribe#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Subscribe#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource name of the task to subscribe to. Format: tasks/{task_id}
+       * @since 1.13
+       */
+      protected Subscribe(java.lang.String name) {
+        super(WorkspaceEvents.this, "GET", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.StreamResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^tasks/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Subscribe set$Xgafv(java.lang.String $Xgafv) {
+        return (Subscribe) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Subscribe setAccessToken(java.lang.String accessToken) {
+        return (Subscribe) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Subscribe setAlt(java.lang.String alt) {
+        return (Subscribe) super.setAlt(alt);
+      }
+
+      @Override
+      public Subscribe setCallback(java.lang.String callback) {
+        return (Subscribe) super.setCallback(callback);
+      }
+
+      @Override
+      public Subscribe setFields(java.lang.String fields) {
+        return (Subscribe) super.setFields(fields);
+      }
+
+      @Override
+      public Subscribe setKey(java.lang.String key) {
+        return (Subscribe) super.setKey(key);
+      }
+
+      @Override
+      public Subscribe setOauthToken(java.lang.String oauthToken) {
+        return (Subscribe) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Subscribe setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Subscribe) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Subscribe setQuotaUser(java.lang.String quotaUser) {
+        return (Subscribe) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Subscribe setUploadType(java.lang.String uploadType) {
+        return (Subscribe) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Subscribe setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Subscribe) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The resource name of the task to subscribe to. Format: tasks/{task_id} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource name of the task to subscribe to. Format: tasks/{task_id}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The resource name of the task to subscribe to. Format: tasks/{task_id} */
+      public Subscribe setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^tasks/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Subscribe set(String parameterName, Object value) {
+        return (Subscribe) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the PushNotificationConfigs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code WorkspaceEvents workspaceevents = new WorkspaceEvents(...);}
+     *   {@code WorkspaceEvents.PushNotificationConfigs.List request = workspaceevents.pushNotificationConfigs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PushNotificationConfigs pushNotificationConfigs() {
+      return new PushNotificationConfigs();
+    }
+
+    /**
+     * The "pushNotificationConfigs" collection of methods.
+     */
+    public class PushNotificationConfigs {
+
+      /**
+       * Set a push notification config for a task.
+       *
+       * Create a request for the method "pushNotificationConfigs.create".
+       *
+       * This request holds the parameters needed by the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent task resource for this config. Format: tasks/{task_id}
+       * @param content the {@link com.google.api.services.workspaceevents.v1.model.TaskPushNotificationConfig}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.workspaceevents.v1.model.TaskPushNotificationConfig content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.TaskPushNotificationConfig> {
+
+        private static final String REST_PATH = "v1/{+parent}";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^tasks/[^/]+/pushNotificationConfigs$");
+
+        /**
+         * Set a push notification config for a task.
+         *
+         * Create a request for the method "pushNotificationConfigs.create".
+         *
+         * This request holds the parameters needed by the the workspaceevents server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent task resource for this config. Format: tasks/{task_id}
+         * @param content the {@link com.google.api.services.workspaceevents.v1.model.TaskPushNotificationConfig}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.workspaceevents.v1.model.TaskPushNotificationConfig content) {
+          super(WorkspaceEvents.this, "POST", REST_PATH, content, com.google.api.services.workspaceevents.v1.model.TaskPushNotificationConfig.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tasks/[^/]+/pushNotificationConfigs$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent task resource for this config. Format: tasks/{task_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent task resource for this config. Format: tasks/{task_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent task resource for this config. Format: tasks/{task_id} */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tasks/[^/]+/pushNotificationConfigs$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Required. The ID for the new config. */
+        @com.google.api.client.util.Key
+        private java.lang.String configId;
+
+        /** Required. The ID for the new config.
+         */
+        public java.lang.String getConfigId() {
+          return configId;
+        }
+
+        /** Required. The ID for the new config. */
+        public Create setConfigId(java.lang.String configId) {
+          this.configId = configId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Delete a push notification config for a task.
+       *
+       * Create a request for the method "pushNotificationConfigs.delete".
+       *
+       * This request holds the parameters needed by the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource name of the config to delete. Format:
+       *        tasks/{task_id}/pushNotificationConfigs/{config_id}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+
+        /**
+         * Delete a push notification config for a task.
+         *
+         * Create a request for the method "pushNotificationConfigs.delete".
+         *
+         * This request holds the parameters needed by the the workspaceevents server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource name of the config to delete. Format:
+       *        tasks/{task_id}/pushNotificationConfigs/{config_id}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(WorkspaceEvents.this, "DELETE", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the config to delete. Format:
+         * tasks/{task_id}/pushNotificationConfigs/{config_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource name of the config to delete. Format:
+       tasks/{task_id}/pushNotificationConfigs/{config_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The resource name of the config to delete. Format:
+         * tasks/{task_id}/pushNotificationConfigs/{config_id}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a push notification config for a task.
+       *
+       * Create a request for the method "pushNotificationConfigs.get".
+       *
+       * This request holds the parameters needed by the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource name of the config to retrieve. Format:
+       *        tasks/{task_id}/pushNotificationConfigs/{config_id}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.TaskPushNotificationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+
+        /**
+         * Get a push notification config for a task.
+         *
+         * Create a request for the method "pushNotificationConfigs.get".
+         *
+         * This request holds the parameters needed by the the workspaceevents server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource name of the config to retrieve. Format:
+       *        tasks/{task_id}/pushNotificationConfigs/{config_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(WorkspaceEvents.this, "GET", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.TaskPushNotificationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the config to retrieve. Format:
+         * tasks/{task_id}/pushNotificationConfigs/{config_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource name of the config to retrieve. Format:
+       tasks/{task_id}/pushNotificationConfigs/{config_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The resource name of the config to retrieve. Format:
+         * tasks/{task_id}/pushNotificationConfigs/{config_id}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a list of push notifications configured for a task.
+       *
+       * Create a request for the method "pushNotificationConfigs.list".
+       *
+       * This request holds the parameters needed by the workspaceevents server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent The parent task resource. Format: tasks/{task_id}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.ListTaskPushNotificationConfigResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/pushNotificationConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^tasks/[^/]+$");
+
+        /**
+         * Get a list of push notifications configured for a task.
+         *
+         * Create a request for the method "pushNotificationConfigs.list".
+         *
+         * This request holds the parameters needed by the the workspaceevents server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The parent task resource. Format: tasks/{task_id}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(WorkspaceEvents.this, "GET", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.ListTaskPushNotificationConfigResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tasks/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The parent task resource. Format: tasks/{task_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The parent task resource. Format: tasks/{task_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** The parent task resource. Format: tasks/{task_id} */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tasks/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * For AIP-158 these fields are present. Usually not used/needed. The maximum number of
+         * configurations to return. If unspecified, all configs will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** For AIP-158 these fields are present. Usually not used/needed. The maximum number of configurations
+       to return. If unspecified, all configs will be returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * For AIP-158 these fields are present. Usually not used/needed. The maximum number of
+         * configurations to return. If unspecified, all configs will be returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token received from a previous ListTaskPushNotificationConfigRequest call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListTaskPushNotificationConfigRequest` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token received from a previous ListTaskPushNotificationConfigRequest call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListTaskPushNotificationConfigRequest` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token received from a previous ListTaskPushNotificationConfigRequest call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListTaskPushNotificationConfigRequest` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the V1 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code WorkspaceEvents workspaceevents = new WorkspaceEvents(...);}
+   *   {@code WorkspaceEvents.V1.List request = workspaceevents.v1().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V1 v1() {
+    return new V1();
+  }
+
+  /**
+   * The "v1" collection of methods.
+   */
+  public class V1 {
+
+    /**
+     * GetAgentCard returns the agent card for the agent.
+     *
+     * Create a request for the method "v1.getCard".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link GetCard#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public GetCard getCard() throws java.io.IOException {
+      GetCard result = new GetCard();
+      initialize(result);
+      return result;
+    }
+
+    public class GetCard extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.AgentCard> {
+
+      private static final String REST_PATH = "v1/card";
+
+      /**
+       * GetAgentCard returns the agent card for the agent.
+       *
+       * Create a request for the method "v1.getCard".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link GetCard#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * GetCard#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetCard() {
+        super(WorkspaceEvents.this, "GET", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.AgentCard.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetCard set$Xgafv(java.lang.String $Xgafv) {
+        return (GetCard) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetCard setAccessToken(java.lang.String accessToken) {
+        return (GetCard) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetCard setAlt(java.lang.String alt) {
+        return (GetCard) super.setAlt(alt);
+      }
+
+      @Override
+      public GetCard setCallback(java.lang.String callback) {
+        return (GetCard) super.setCallback(callback);
+      }
+
+      @Override
+      public GetCard setFields(java.lang.String fields) {
+        return (GetCard) super.setFields(fields);
+      }
+
+      @Override
+      public GetCard setKey(java.lang.String key) {
+        return (GetCard) super.setKey(key);
+      }
+
+      @Override
+      public GetCard setOauthToken(java.lang.String oauthToken) {
+        return (GetCard) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetCard setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetCard) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetCard setQuotaUser(java.lang.String quotaUser) {
+        return (GetCard) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetCard setUploadType(java.lang.String uploadType) {
+        return (GetCard) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetCard setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetCard) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GetCard set(String parameterName, Object value) {
+        return (GetCard) super.set(parameterName, value);
       }
     }
 

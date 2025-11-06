@@ -37,6 +37,13 @@ public final class Calendar extends com.google.api.client.json.GenericJson {
   private ConferenceProperties conferenceProperties;
 
   /**
+   * The email of the owner of the calendar. Set only for secondary calendars. Read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataOwner;
+
+  /**
    * Description of the calendar. Optional.
    * The value may be {@code null}.
    */
@@ -100,6 +107,23 @@ public final class Calendar extends com.google.api.client.json.GenericJson {
    */
   public Calendar setConferenceProperties(ConferenceProperties conferenceProperties) {
     this.conferenceProperties = conferenceProperties;
+    return this;
+  }
+
+  /**
+   * The email of the owner of the calendar. Set only for secondary calendars. Read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataOwner() {
+    return dataOwner;
+  }
+
+  /**
+   * The email of the owner of the calendar. Set only for secondary calendars. Read-only.
+   * @param dataOwner dataOwner or {@code null} for none
+   */
+  public Calendar setDataOwner(java.lang.String dataOwner) {
+    this.dataOwner = dataOwner;
     return this;
   }
 

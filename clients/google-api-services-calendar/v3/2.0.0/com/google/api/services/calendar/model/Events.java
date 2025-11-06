@@ -35,8 +35,10 @@ public final class Events extends com.google.api.client.json.GenericJson {
    * "reader" - The user has read access to the calendar. Private events will appear to users with
    * reader access, but event details will be hidden.  - "writer" - The user has read and write
    * access to the calendar. Private events will appear to users with writer access, and event
-   * details will be visible.  - "owner" - The user has ownership of the calendar. This role has all
-   * of the permissions of the writer role with the additional ability to see and manipulate ACLs.
+   * details will be visible.  - "owner" - The user has manager access to the calendar. This role
+   * has all of the permissions of the writer role with the additional ability to see and modify
+   * access levels of other users. Important: the owner role is different from the calendar's data
+   * owner. A calendar has a single data owner, but can have multiple users with owner role.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,8 +137,10 @@ public final class Events extends com.google.api.client.json.GenericJson {
    * "reader" - The user has read access to the calendar. Private events will appear to users with
    * reader access, but event details will be hidden.  - "writer" - The user has read and write
    * access to the calendar. Private events will appear to users with writer access, and event
-   * details will be visible.  - "owner" - The user has ownership of the calendar. This role has all
-   * of the permissions of the writer role with the additional ability to see and manipulate ACLs.
+   * details will be visible.  - "owner" - The user has manager access to the calendar. This role
+   * has all of the permissions of the writer role with the additional ability to see and modify
+   * access levels of other users. Important: the owner role is different from the calendar's data
+   * owner. A calendar has a single data owner, but can have multiple users with owner role.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessRole() {
@@ -149,8 +153,10 @@ public final class Events extends com.google.api.client.json.GenericJson {
    * "reader" - The user has read access to the calendar. Private events will appear to users with
    * reader access, but event details will be hidden.  - "writer" - The user has read and write
    * access to the calendar. Private events will appear to users with writer access, and event
-   * details will be visible.  - "owner" - The user has ownership of the calendar. This role has all
-   * of the permissions of the writer role with the additional ability to see and manipulate ACLs.
+   * details will be visible.  - "owner" - The user has manager access to the calendar. This role
+   * has all of the permissions of the writer role with the additional ability to see and modify
+   * access levels of other users. Important: the owner role is different from the calendar's data
+   * owner. A calendar has a single data owner, but can have multiple users with owner role.
    * @param accessRole accessRole or {@code null} for none
    */
   public Events setAccessRole(java.lang.String accessRole) {

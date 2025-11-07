@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   private java.lang.Boolean enableCompletenessEvaluation;
 
   /**
-   * Output only. Version for summarization evaluation.
+   * Optional. Version for summarization evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Output only. Version for summarization evaluation.
+   * Optional. Version for summarization evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvaluatorVersion() {
@@ -147,7 +147,7 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Output only. Version for summarization evaluation.
+   * Optional. Version for summarization evaluation.
    * @param evaluatorVersion evaluatorVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarizationConfig setEvaluatorVersion(java.lang.String evaluatorVersion) {

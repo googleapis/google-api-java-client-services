@@ -595,22 +595,22 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
-       primarily intended for internal usage.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;

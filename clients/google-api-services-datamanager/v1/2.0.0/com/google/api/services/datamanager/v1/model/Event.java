@@ -38,11 +38,27 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private AdIdentifiers adIdentifiers;
 
   /**
+   * Optional. A bucket of any [event parameters](https://developers.google.com/analytics/devguides/
+   * collection/protocol/ga4/reference/events) to be included within the event that were not already
+   * specified using other structured fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EventParameter> additionalEventParameters;
+
+  /**
    * Optional. Information about the transaction and items associated with the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CartData cartData;
+
+  /**
+   * Optional. A unique identifier for the user instance of a web client for this GA4 web stream.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientId;
 
   /**
    * Optional. Information about whether the associated user has provided different types of
@@ -96,6 +112,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private DeviceInfo eventDeviceInfo;
 
   /**
+   * Optional. The name of the event. Required for GA4 events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventName;
+
+  /**
    * Optional. Signal for where the event happened (web, app, in-store, etc.).
    * The value may be {@code null}.
    */
@@ -140,6 +163,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private UserData userData;
 
   /**
+   * Optional. A unique identifier for a user, as defined by the advertiser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userId;
+
+  /**
    * Optional. Advertiser-assessed information about the user at the time that the event happened.
    * The value may be {@code null}.
    */
@@ -166,6 +196,27 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. A bucket of any [event parameters](https://developers.google.com/analytics/devguides/
+   * collection/protocol/ga4/reference/events) to be included within the event that were not already
+   * specified using other structured fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EventParameter> getAdditionalEventParameters() {
+    return additionalEventParameters;
+  }
+
+  /**
+   * Optional. A bucket of any [event parameters](https://developers.google.com/analytics/devguides/
+   * collection/protocol/ga4/reference/events) to be included within the event that were not already
+   * specified using other structured fields.
+   * @param additionalEventParameters additionalEventParameters or {@code null} for none
+   */
+  public Event setAdditionalEventParameters(java.util.List<EventParameter> additionalEventParameters) {
+    this.additionalEventParameters = additionalEventParameters;
+    return this;
+  }
+
+  /**
    * Optional. Information about the transaction and items associated with the event.
    * @return value or {@code null} for none
    */
@@ -179,6 +230,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setCartData(CartData cartData) {
     this.cartData = cartData;
+    return this;
+  }
+
+  /**
+   * Optional. A unique identifier for the user instance of a web client for this GA4 web stream.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientId() {
+    return clientId;
+  }
+
+  /**
+   * Optional. A unique identifier for the user instance of a web client for this GA4 web stream.
+   * @param clientId clientId or {@code null} for none
+   */
+  public Event setClientId(java.lang.String clientId) {
+    this.clientId = clientId;
     return this;
   }
 
@@ -291,6 +359,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The name of the event. Required for GA4 events.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventName() {
+    return eventName;
+  }
+
+  /**
+   * Optional. The name of the event. Required for GA4 events.
+   * @param eventName eventName or {@code null} for none
+   */
+  public Event setEventName(java.lang.String eventName) {
+    this.eventName = eventName;
+    return this;
+  }
+
+  /**
    * Optional. Signal for where the event happened (web, app, in-store, etc.).
    * @return value or {@code null} for none
    */
@@ -393,6 +478,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setUserData(UserData userData) {
     this.userData = userData;
+    return this;
+  }
+
+  /**
+   * Optional. A unique identifier for a user, as defined by the advertiser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserId() {
+    return userId;
+  }
+
+  /**
+   * Optional. A unique identifier for a user, as defined by the advertiser.
+   * @param userId userId or {@code null} for none
+   */
+  public Event setUserId(java.lang.String userId) {
+    this.userId = userId;
     return this;
   }
 

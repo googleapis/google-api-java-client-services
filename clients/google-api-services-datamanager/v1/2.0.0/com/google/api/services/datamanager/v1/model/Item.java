@@ -30,6 +30,22 @@ package com.google.api.services.datamanager.v1.model;
 public final class Item extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A bucket of any [event parameters related to an item](https://developers.google.com/a
+   * nalytics/devguides/collection/protocol/ga4/reference/events) to be included within the event
+   * that were not already specified using other structured fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ItemParameter> additionalItemParameters;
+
+  /**
+   * Optional. A unique identifier to reference the item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String itemId;
+
+  /**
    * Optional. The product ID within the Merchant Center account.
    * The value may be {@code null}.
    */
@@ -49,6 +65,44 @@ public final class Item extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Double unitPrice;
+
+  /**
+   * Optional. A bucket of any [event parameters related to an item](https://developers.google.com/a
+   * nalytics/devguides/collection/protocol/ga4/reference/events) to be included within the event
+   * that were not already specified using other structured fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ItemParameter> getAdditionalItemParameters() {
+    return additionalItemParameters;
+  }
+
+  /**
+   * Optional. A bucket of any [event parameters related to an item](https://developers.google.com/a
+   * nalytics/devguides/collection/protocol/ga4/reference/events) to be included within the event
+   * that were not already specified using other structured fields.
+   * @param additionalItemParameters additionalItemParameters or {@code null} for none
+   */
+  public Item setAdditionalItemParameters(java.util.List<ItemParameter> additionalItemParameters) {
+    this.additionalItemParameters = additionalItemParameters;
+    return this;
+  }
+
+  /**
+   * Optional. A unique identifier to reference the item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getItemId() {
+    return itemId;
+  }
+
+  /**
+   * Optional. A unique identifier to reference the item.
+   * @param itemId itemId or {@code null} for none
+   */
+  public Item setItemId(java.lang.String itemId) {
+    this.itemId = itemId;
+    return this;
+  }
 
   /**
    * Optional. The product ID within the Merchant Center account.

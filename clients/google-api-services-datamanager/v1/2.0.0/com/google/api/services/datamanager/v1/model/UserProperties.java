@@ -31,6 +31,15 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A bucket of any additional [user
+   * properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-
+   * properties) for the user associated with this event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UserProperty> additionalUserProperties;
+
+  /**
    * Optional. Type of the customer associated with the event.
    * The value may be {@code null}.
    */
@@ -43,6 +52,27 @@ public final class UserProperties extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String customerValueBucket;
+
+  /**
+   * Optional. A bucket of any additional [user
+   * properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-
+   * properties) for the user associated with this event.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UserProperty> getAdditionalUserProperties() {
+    return additionalUserProperties;
+  }
+
+  /**
+   * Optional. A bucket of any additional [user
+   * properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-
+   * properties) for the user associated with this event.
+   * @param additionalUserProperties additionalUserProperties or {@code null} for none
+   */
+  public UserProperties setAdditionalUserProperties(java.util.List<UserProperty> additionalUserProperties) {
+    this.additionalUserProperties = additionalUserProperties;
+    return this;
+  }
 
   /**
    * Optional. Type of the customer associated with the event.

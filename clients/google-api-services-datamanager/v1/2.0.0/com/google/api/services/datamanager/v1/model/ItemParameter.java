@@ -17,7 +17,9 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Encryption information for the data being ingested.
+ * A bucket of any [event parameters related to an
+ * item](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events)
+ * to be included within the event that were not already specified using other structured fields.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -27,64 +29,64 @@ package com.google.api.services.datamanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EncryptionInfo extends com.google.api.client.json.GenericJson {
+public final class ItemParameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Amazon Web Services wrapped key information.
+   * Required. The name of the parameter to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AwsWrappedKeyInfo awsWrappedKeyInfo;
+  private java.lang.String parameterName;
 
   /**
-   * Google Cloud Platform wrapped key information.
+   * Required. The string representation of the value of the parameter to set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GcpWrappedKeyInfo gcpWrappedKeyInfo;
+  private java.lang.String value;
 
   /**
-   * Amazon Web Services wrapped key information.
+   * Required. The name of the parameter to use.
    * @return value or {@code null} for none
    */
-  public AwsWrappedKeyInfo getAwsWrappedKeyInfo() {
-    return awsWrappedKeyInfo;
+  public java.lang.String getParameterName() {
+    return parameterName;
   }
 
   /**
-   * Amazon Web Services wrapped key information.
-   * @param awsWrappedKeyInfo awsWrappedKeyInfo or {@code null} for none
+   * Required. The name of the parameter to use.
+   * @param parameterName parameterName or {@code null} for none
    */
-  public EncryptionInfo setAwsWrappedKeyInfo(AwsWrappedKeyInfo awsWrappedKeyInfo) {
-    this.awsWrappedKeyInfo = awsWrappedKeyInfo;
+  public ItemParameter setParameterName(java.lang.String parameterName) {
+    this.parameterName = parameterName;
     return this;
   }
 
   /**
-   * Google Cloud Platform wrapped key information.
+   * Required. The string representation of the value of the parameter to set.
    * @return value or {@code null} for none
    */
-  public GcpWrappedKeyInfo getGcpWrappedKeyInfo() {
-    return gcpWrappedKeyInfo;
+  public java.lang.String getValue() {
+    return value;
   }
 
   /**
-   * Google Cloud Platform wrapped key information.
-   * @param gcpWrappedKeyInfo gcpWrappedKeyInfo or {@code null} for none
+   * Required. The string representation of the value of the parameter to set.
+   * @param value value or {@code null} for none
    */
-  public EncryptionInfo setGcpWrappedKeyInfo(GcpWrappedKeyInfo gcpWrappedKeyInfo) {
-    this.gcpWrappedKeyInfo = gcpWrappedKeyInfo;
+  public ItemParameter setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public EncryptionInfo set(String fieldName, Object value) {
-    return (EncryptionInfo) super.set(fieldName, value);
+  public ItemParameter set(String fieldName, Object value) {
+    return (ItemParameter) super.set(fieldName, value);
   }
 
   @Override
-  public EncryptionInfo clone() {
-    return (EncryptionInfo) super.clone();
+  public ItemParameter clone() {
+    return (ItemParameter) super.clone();
   }
 
 }

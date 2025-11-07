@@ -44,6 +44,13 @@ public final class MongodbSourceConfig extends com.google.api.client.json.Generi
   private MongodbCluster includeObjects;
 
   /**
+   * Optional. MongoDB JSON mode to use for the stream.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jsonMode;
+
+  /**
    * Optional. Maximum number of concurrent backfill tasks. The number should be non-negative and
    * less than or equal to 50. If not set (or set to 0), the system's default value is used
    * The value may be {@code null}.
@@ -82,6 +89,23 @@ public final class MongodbSourceConfig extends com.google.api.client.json.Generi
    */
   public MongodbSourceConfig setIncludeObjects(MongodbCluster includeObjects) {
     this.includeObjects = includeObjects;
+    return this;
+  }
+
+  /**
+   * Optional. MongoDB JSON mode to use for the stream.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJsonMode() {
+    return jsonMode;
+  }
+
+  /**
+   * Optional. MongoDB JSON mode to use for the stream.
+   * @param jsonMode jsonMode or {@code null} for none
+   */
+  public MongodbSourceConfig setJsonMode(java.lang.String jsonMode) {
+    this.jsonMode = jsonMode;
     return this;
   }
 

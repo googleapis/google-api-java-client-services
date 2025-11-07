@@ -117,7 +117,7 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
    * set.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -316,7 +316,7 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
    * set.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -334,7 +334,7 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
    * set.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpHeaderMatch setRegexMatch(java.lang.String regexMatch) {

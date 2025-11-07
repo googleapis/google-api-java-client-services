@@ -31,6 +31,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The status of publishing the data scan as Dataplex Universal Catalog metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataScanCatalogPublishingStatus catalogPublishingStatus;
+
+  /**
    * Output only. The result of post scan actions.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1ScannedData scannedData;
+
+  /**
+   * Output only. The status of publishing the data scan as Dataplex Universal Catalog metadata.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanCatalogPublishingStatus getCatalogPublishingStatus() {
+    return catalogPublishingStatus;
+  }
+
+  /**
+   * Output only. The status of publishing the data scan as Dataplex Universal Catalog metadata.
+   * @param catalogPublishingStatus catalogPublishingStatus or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileResult setCatalogPublishingStatus(GoogleCloudDataplexV1DataScanCatalogPublishingStatus catalogPublishingStatus) {
+    this.catalogPublishingStatus = catalogPublishingStatus;
+    return this;
+  }
 
   /**
    * Output only. The result of post scan actions.

@@ -30,6 +30,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If set, the latest DataScan job result will be published as Dataplex Universal
+   * Catalog metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean catalogPublishingEnabled;
+
+  /**
    * Optional. The fields to exclude from data profile.If specified, the fields will be excluded
    * from data profile, regardless of include_fields value.
    * The value may be {@code null}.
@@ -69,6 +77,25 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Float samplingPercent;
+
+  /**
+   * Optional. If set, the latest DataScan job result will be published as Dataplex Universal
+   * Catalog metadata.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCatalogPublishingEnabled() {
+    return catalogPublishingEnabled;
+  }
+
+  /**
+   * Optional. If set, the latest DataScan job result will be published as Dataplex Universal
+   * Catalog metadata.
+   * @param catalogPublishingEnabled catalogPublishingEnabled or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpec setCatalogPublishingEnabled(java.lang.Boolean catalogPublishingEnabled) {
+    this.catalogPublishingEnabled = catalogPublishingEnabled;
+    return this;
+  }
 
   /**
    * Optional. The fields to exclude from data profile.If specified, the fields will be excluded

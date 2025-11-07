@@ -37,7 +37,7 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
   private java.lang.String id;
 
   /**
-   * Full path to the DomainMapping resource in the API. Example:
+   * Output only. Full path to the DomainMapping resource in the API. Example:
    * apps/myapp/domainMapping/example.com.@OutputOnly
    * The value may be {@code null}.
    */
@@ -45,8 +45,8 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * The resource records required to configure this domain mapping. These records must be added to
-   * the domain's DNS configuration in order to serve the application via this domain
+   * Output only. The resource records required to configure this domain mapping. These records must
+   * be added to the domain's DNS configuration in order to serve the application via this domain
    * mapping.@OutputOnly
    * The value may be {@code null}.
    */
@@ -78,7 +78,7 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Full path to the DomainMapping resource in the API. Example:
+   * Output only. Full path to the DomainMapping resource in the API. Example:
    * apps/myapp/domainMapping/example.com.@OutputOnly
    * @return value or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Full path to the DomainMapping resource in the API. Example:
+   * Output only. Full path to the DomainMapping resource in the API. Example:
    * apps/myapp/domainMapping/example.com.@OutputOnly
    * @param name name or {@code null} for none
    */
@@ -97,8 +97,8 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The resource records required to configure this domain mapping. These records must be added to
-   * the domain's DNS configuration in order to serve the application via this domain
+   * Output only. The resource records required to configure this domain mapping. These records must
+   * be added to the domain's DNS configuration in order to serve the application via this domain
    * mapping.@OutputOnly
    * @return value or {@code null} for none
    */
@@ -107,8 +107,8 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The resource records required to configure this domain mapping. These records must be added to
-   * the domain's DNS configuration in order to serve the application via this domain
+   * Output only. The resource records required to configure this domain mapping. These records must
+   * be added to the domain's DNS configuration in order to serve the application via this domain
    * mapping.@OutputOnly
    * @param resourceRecords resourceRecords or {@code null} for none
    */

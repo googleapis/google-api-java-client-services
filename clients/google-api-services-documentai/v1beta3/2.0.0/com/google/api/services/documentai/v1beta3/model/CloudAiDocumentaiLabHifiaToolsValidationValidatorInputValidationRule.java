@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Model definition for CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule.
+ * Next ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -73,6 +73,13 @@ public final class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidat
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Unique identifier of the rule. Optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ruleId;
 
   /**
    * @return value or {@code null} for none
@@ -180,6 +187,23 @@ public final class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidat
    */
   public CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Unique identifier of the rule. Optional.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuleId() {
+    return ruleId;
+  }
+
+  /**
+   * Unique identifier of the rule. Optional.
+   * @param ruleId ruleId or {@code null} for none
+   */
+  public CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule setRuleId(java.lang.String ruleId) {
+    this.ruleId = ruleId;
     return this;
   }
 

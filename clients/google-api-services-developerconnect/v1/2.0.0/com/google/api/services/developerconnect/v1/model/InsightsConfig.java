@@ -62,7 +62,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   private java.lang.String state;
 
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,7 +179,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -187,7 +187,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    * @param createTime createTime or {@code null} for none
    */
   public InsightsConfig setCreateTime(String createTime) {
@@ -310,7 +310,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -318,7 +318,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public InsightsConfig setUpdateTime(String updateTime) {

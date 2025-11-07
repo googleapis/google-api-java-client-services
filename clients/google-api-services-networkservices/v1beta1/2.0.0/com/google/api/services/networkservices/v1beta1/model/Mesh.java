@@ -72,7 +72,7 @@ public final class Mesh extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
+   * Identifier. Name of the Mesh resource. It matches pattern `projects/locations/meshes/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,7 +188,7 @@ public final class Mesh extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
+   * Identifier. Name of the Mesh resource. It matches pattern `projects/locations/meshes/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -196,7 +196,7 @@ public final class Mesh extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
+   * Identifier. Name of the Mesh resource. It matches pattern `projects/locations/meshes/`.
    * @param name name or {@code null} for none
    */
   public Mesh setName(java.lang.String name) {

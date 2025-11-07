@@ -46,7 +46,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Gateways defines a list of gateways this TlsRoute is attached to, as one of the
    * routing rules to route the requests served by the gateway. Each gateway reference should match
-   * the pattern: `projects/locations/global/gateways/`
+   * the pattern: `projects/locations/gateways/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Meshes defines a list of meshes this TlsRoute is attached to, as one of the routing
    * rules to route the requests served by the mesh. Each mesh reference should match the pattern:
-   * `projects/locations/global/meshes/` The attached Mesh should be of a type SIDECAR
+   * `projects/locations/meshes/` The attached Mesh should be of a type SIDECAR
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. Name of the TlsRoute resource. It matches pattern
-   * `projects/locations/global/tlsRoutes/tls_route_name>`.
+   * `projects/locations/tlsRoutes/tls_route_name>`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Gateways defines a list of gateways this TlsRoute is attached to, as one of the
    * routing rules to route the requests served by the gateway. Each gateway reference should match
-   * the pattern: `projects/locations/global/gateways/`
+   * the pattern: `projects/locations/gateways/`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGateways() {
@@ -145,7 +145,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Gateways defines a list of gateways this TlsRoute is attached to, as one of the
    * routing rules to route the requests served by the gateway. Each gateway reference should match
-   * the pattern: `projects/locations/global/gateways/`
+   * the pattern: `projects/locations/gateways/`
    * @param gateways gateways or {@code null} for none
    */
   public TlsRoute setGateways(java.util.List<java.lang.String> gateways) {
@@ -173,7 +173,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Meshes defines a list of meshes this TlsRoute is attached to, as one of the routing
    * rules to route the requests served by the mesh. Each mesh reference should match the pattern:
-   * `projects/locations/global/meshes/` The attached Mesh should be of a type SIDECAR
+   * `projects/locations/meshes/` The attached Mesh should be of a type SIDECAR
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMeshes() {
@@ -183,7 +183,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Meshes defines a list of meshes this TlsRoute is attached to, as one of the routing
    * rules to route the requests served by the mesh. Each mesh reference should match the pattern:
-   * `projects/locations/global/meshes/` The attached Mesh should be of a type SIDECAR
+   * `projects/locations/meshes/` The attached Mesh should be of a type SIDECAR
    * @param meshes meshes or {@code null} for none
    */
   public TlsRoute setMeshes(java.util.List<java.lang.String> meshes) {
@@ -193,7 +193,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. Name of the TlsRoute resource. It matches pattern
-   * `projects/locations/global/tlsRoutes/tls_route_name>`.
+   * `projects/locations/tlsRoutes/tls_route_name>`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -202,7 +202,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. Name of the TlsRoute resource. It matches pattern
-   * `projects/locations/global/tlsRoutes/tls_route_name>`.
+   * `projects/locations/tlsRoutes/tls_route_name>`.
    * @param name name or {@code null} for none
    */
   public TlsRoute setName(java.lang.String name) {

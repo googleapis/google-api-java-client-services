@@ -115,6 +115,13 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private GoogleCloudRunV2ResourceRequirements resources;
 
   /**
+   * Optional. Location of the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2SourceCode sourceCode;
+
+  /**
    * Startup probe of application within the container. All other probes are disabled if a startup
    * probe is provided, until it succeeds. Container will not be added to service endpoints if the
    * probe fails.
@@ -334,6 +341,23 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Container setResources(GoogleCloudRunV2ResourceRequirements resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * Optional. Location of the source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2SourceCode getSourceCode() {
+    return sourceCode;
+  }
+
+  /**
+   * Optional. Location of the source.
+   * @param sourceCode sourceCode or {@code null} for none
+   */
+  public GoogleCloudRunV2Container setSourceCode(GoogleCloudRunV2SourceCode sourceCode) {
+    this.sourceCode = sourceCode;
     return this;
   }
 

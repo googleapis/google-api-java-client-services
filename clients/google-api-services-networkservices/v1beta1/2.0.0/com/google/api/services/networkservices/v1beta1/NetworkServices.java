@@ -445,22 +445,22 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
-       primarily intended for internal usage.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -1537,8 +1537,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the EndpointPolicy. Must be in the format
-         *        `projects/locations/global`.
+         * @param parent Required. The parent resource of the EndpointPolicy. Must be in the format `projects/locations`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.EndpointPolicy}
          * @return the request
          */
@@ -1566,8 +1565,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the EndpointPolicy. Must be in the format
-         *        `projects/locations/global`.
+           * @param parent Required. The parent resource of the EndpointPolicy. Must be in the format `projects/locations`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.EndpointPolicy}
            * @since 1.13
            */
@@ -1638,13 +1636,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the EndpointPolicy. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the EndpointPolicy. Must be in the format
-         `projects/locations/global`.
+          /** Required. The parent resource of the EndpointPolicy. Must be in the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1652,7 +1649,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the EndpointPolicy. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1698,7 +1695,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. A name of the EndpointPolicy to delete. Must be in the format
-         *        `projects/locations/global/endpointPolicies`.
+         *        `projects/locations/endpointPolicies`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1726,7 +1723,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. A name of the EndpointPolicy to delete. Must be in the format
-         *        `projects/locations/global/endpointPolicies`.
+         *        `projects/locations/endpointPolicies`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1796,13 +1793,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the EndpointPolicy to delete. Must be in the format
-           * `projects/locations/global/endpointPolicies`.
+           * `projects/locations/endpointPolicies`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. A name of the EndpointPolicy to delete. Must be in the format
-         `projects/locations/global/endpointPolicies`.
+         `projects/locations/endpointPolicies`.
            */
           public java.lang.String getName() {
             return name;
@@ -1810,7 +1807,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the EndpointPolicy to delete. Must be in the format
-           * `projects/locations/global/endpointPolicies`.
+           * `projects/locations/endpointPolicies`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1836,7 +1833,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. A name of the EndpointPolicy to get. Must be in the format
-         *        `projects/locations/global/endpointPolicies`.
+         *        `projects/locations/endpointPolicies`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1863,7 +1860,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. A name of the EndpointPolicy to get. Must be in the format
-         *        `projects/locations/global/endpointPolicies`.
+         *        `projects/locations/endpointPolicies`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1943,13 +1940,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the EndpointPolicy to get. Must be in the format
-           * `projects/locations/global/endpointPolicies`.
+           * `projects/locations/endpointPolicies`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. A name of the EndpointPolicy to get. Must be in the format
-         `projects/locations/global/endpointPolicies`.
+         `projects/locations/endpointPolicies`.
            */
           public java.lang.String getName() {
             return name;
@@ -1957,7 +1954,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the EndpointPolicy to get. Must be in the format
-           * `projects/locations/global/endpointPolicies`.
+           * `projects/locations/endpointPolicies`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1983,7 +1980,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location from which the EndpointPolicies should be listed, specified in
-         *        the format `projects/locations/global`.
+         *        the format `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2010,7 +2007,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location from which the EndpointPolicies should be listed, specified in
-         *        the format `projects/locations/global`.
+         *        the format `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2090,13 +2087,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the EndpointPolicies should be listed,
-           * specified in the format `projects/locations/global`.
+           * specified in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location from which the EndpointPolicies should be listed, specified in
-         the format `projects/locations/global`.
+         the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2104,7 +2101,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the EndpointPolicies should be listed,
-           * specified in the format `projects/locations/global`.
+           * specified in the format `projects/locations`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2196,7 +2193,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Identifier. Name of the EndpointPolicy resource. It matches pattern
-         *        `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
+         *        `projects/{project}/locations/endpointPolicies/{endpoint_policy}`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.EndpointPolicy}
          * @return the request
          */
@@ -2225,7 +2222,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Identifier. Name of the EndpointPolicy resource. It matches pattern
-         *        `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
+         *        `projects/{project}/locations/endpointPolicies/{endpoint_policy}`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.EndpointPolicy}
            * @since 1.13
            */
@@ -2296,13 +2293,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the EndpointPolicy resource. It matches pattern
-           * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
+           * `projects/{project}/locations/endpointPolicies/{endpoint_policy}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Identifier. Name of the EndpointPolicy resource. It matches pattern
-         `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
+         `projects/{project}/locations/endpointPolicies/{endpoint_policy}`.
            */
           public java.lang.String getName() {
             return name;
@@ -2310,7 +2307,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the EndpointPolicy resource. It matches pattern
-           * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
+           * `projects/{project}/locations/endpointPolicies/{endpoint_policy}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3552,7 +3549,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the GrpcRoute. Must be in the format `projects/locations/global`.
+         * @param parent Required. The parent resource of the GrpcRoute. Must be in the format `projects/locations`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.GrpcRoute}
          * @return the request
          */
@@ -3580,7 +3577,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the GrpcRoute. Must be in the format `projects/locations/global`.
+           * @param parent Required. The parent resource of the GrpcRoute. Must be in the format `projects/locations`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.GrpcRoute}
            * @since 1.13
            */
@@ -3651,12 +3648,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the GrpcRoute. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the GrpcRoute. Must be in the format `projects/locations/global`.
+          /** Required. The parent resource of the GrpcRoute. Must be in the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3664,7 +3661,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the GrpcRoute. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3705,8 +3702,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the GrpcRoute to delete. Must be in the format
-         *        `projects/locations/global/grpcRoutes`.
+         * @param name Required. A name of the GrpcRoute to delete. Must be in the format `projects/locations/grpcRoutes`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3733,8 +3729,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the GrpcRoute to delete. Must be in the format
-         *        `projects/locations/global/grpcRoutes`.
+           * @param name Required. A name of the GrpcRoute to delete. Must be in the format `projects/locations/grpcRoutes`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -3804,13 +3799,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the GrpcRoute to delete. Must be in the format
-           * `projects/locations/global/grpcRoutes`.
+           * `projects/locations/grpcRoutes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the GrpcRoute to delete. Must be in the format
-         `projects/locations/global/grpcRoutes`.
+          /** Required. A name of the GrpcRoute to delete. Must be in the format `projects/locations/grpcRoutes`.
            */
           public java.lang.String getName() {
             return name;
@@ -3818,7 +3812,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the GrpcRoute to delete. Must be in the format
-           * `projects/locations/global/grpcRoutes`.
+           * `projects/locations/grpcRoutes`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3843,8 +3837,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the GrpcRoute to get. Must be in the format
-         *        `projects/locations/global/grpcRoutes`.
+         * @param name Required. A name of the GrpcRoute to get. Must be in the format `projects/locations/grpcRoutes`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3870,8 +3863,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the GrpcRoute to get. Must be in the format
-         *        `projects/locations/global/grpcRoutes`.
+           * @param name Required. A name of the GrpcRoute to get. Must be in the format `projects/locations/grpcRoutes`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3951,13 +3943,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the GrpcRoute to get. Must be in the format
-           * `projects/locations/global/grpcRoutes`.
+           * `projects/locations/grpcRoutes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the GrpcRoute to get. Must be in the format
-         `projects/locations/global/grpcRoutes`.
+          /** Required. A name of the GrpcRoute to get. Must be in the format `projects/locations/grpcRoutes`.
            */
           public java.lang.String getName() {
             return name;
@@ -3965,7 +3956,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the GrpcRoute to get. Must be in the format
-           * `projects/locations/global/grpcRoutes`.
+           * `projects/locations/grpcRoutes`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3991,7 +3982,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location from which the GrpcRoutes should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4018,7 +4009,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location from which the GrpcRoutes should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4098,13 +4089,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the GrpcRoutes should be listed,
-           * specified in the format `projects/locations/global`.
+           * specified in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location from which the GrpcRoutes should be listed, specified in the
-         format `projects/locations/global`.
+         format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4112,7 +4103,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the GrpcRoutes should be listed,
-           * specified in the format `projects/locations/global`.
+           * specified in the format `projects/locations`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4203,8 +4194,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. Name of the GrpcRoute resource. It matches pattern
-         *        `projects/locations/global/grpcRoutes/`
+         * @param name Identifier. Name of the GrpcRoute resource. It matches pattern `projects/locations/grpcRoutes/`
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.GrpcRoute}
          * @return the request
          */
@@ -4232,8 +4222,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. Name of the GrpcRoute resource. It matches pattern
-         *        `projects/locations/global/grpcRoutes/`
+           * @param name Identifier. Name of the GrpcRoute resource. It matches pattern `projects/locations/grpcRoutes/`
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.GrpcRoute}
            * @since 1.13
            */
@@ -4304,13 +4293,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the GrpcRoute resource. It matches pattern
-           * `projects/locations/global/grpcRoutes/`
+           * `projects/locations/grpcRoutes/`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. Name of the GrpcRoute resource. It matches pattern
-         `projects/locations/global/grpcRoutes/`
+          /** Identifier. Name of the GrpcRoute resource. It matches pattern `projects/locations/grpcRoutes/`
            */
           public java.lang.String getName() {
             return name;
@@ -4318,7 +4306,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the GrpcRoute resource. It matches pattern
-           * `projects/locations/global/grpcRoutes/`
+           * `projects/locations/grpcRoutes/`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4394,7 +4382,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the HttpRoute. Must be in the format `projects/locations/global`.
+         * @param parent Required. The parent resource of the HttpRoute. Must be in the format `projects/locations`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.HttpRoute}
          * @return the request
          */
@@ -4422,7 +4410,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the HttpRoute. Must be in the format `projects/locations/global`.
+           * @param parent Required. The parent resource of the HttpRoute. Must be in the format `projects/locations`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.HttpRoute}
            * @since 1.13
            */
@@ -4493,12 +4481,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the HttpRoute. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the HttpRoute. Must be in the format `projects/locations/global`.
+          /** Required. The parent resource of the HttpRoute. Must be in the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4506,7 +4494,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the HttpRoute. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4547,8 +4535,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the HttpRoute to delete. Must be in the format
-         *        `projects/locations/global/httpRoutes`.
+         * @param name Required. A name of the HttpRoute to delete. Must be in the format `projects/locations/httpRoutes`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4575,8 +4562,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the HttpRoute to delete. Must be in the format
-         *        `projects/locations/global/httpRoutes`.
+           * @param name Required. A name of the HttpRoute to delete. Must be in the format `projects/locations/httpRoutes`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -4646,13 +4632,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the HttpRoute to delete. Must be in the format
-           * `projects/locations/global/httpRoutes`.
+           * `projects/locations/httpRoutes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the HttpRoute to delete. Must be in the format
-         `projects/locations/global/httpRoutes`.
+          /** Required. A name of the HttpRoute to delete. Must be in the format `projects/locations/httpRoutes`.
            */
           public java.lang.String getName() {
             return name;
@@ -4660,7 +4645,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the HttpRoute to delete. Must be in the format
-           * `projects/locations/global/httpRoutes`.
+           * `projects/locations/httpRoutes`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4685,8 +4670,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the HttpRoute to get. Must be in the format
-         *        `projects/locations/global/httpRoutes`.
+         * @param name Required. A name of the HttpRoute to get. Must be in the format `projects/locations/httpRoutes`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -4712,8 +4696,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the HttpRoute to get. Must be in the format
-         *        `projects/locations/global/httpRoutes`.
+           * @param name Required. A name of the HttpRoute to get. Must be in the format `projects/locations/httpRoutes`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4793,13 +4776,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the HttpRoute to get. Must be in the format
-           * `projects/locations/global/httpRoutes`.
+           * `projects/locations/httpRoutes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the HttpRoute to get. Must be in the format
-         `projects/locations/global/httpRoutes`.
+          /** Required. A name of the HttpRoute to get. Must be in the format `projects/locations/httpRoutes`.
            */
           public java.lang.String getName() {
             return name;
@@ -4807,7 +4789,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the HttpRoute to get. Must be in the format
-           * `projects/locations/global/httpRoutes`.
+           * `projects/locations/httpRoutes`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4833,7 +4815,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location from which the HttpRoutes should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4860,7 +4842,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location from which the HttpRoutes should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4940,13 +4922,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the HttpRoutes should be listed,
-           * specified in the format `projects/locations/global`.
+           * specified in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location from which the HttpRoutes should be listed, specified in the
-         format `projects/locations/global`.
+         format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4954,7 +4936,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the HttpRoutes should be listed,
-           * specified in the format `projects/locations/global`.
+           * specified in the format `projects/locations`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5046,7 +5028,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Identifier. Name of the HttpRoute resource. It matches pattern
-         *        `projects/locations/global/httpRoutes/http_route_name>`.
+         *        `projects/locations/httpRoutes/http_route_name>`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.HttpRoute}
          * @return the request
          */
@@ -5075,7 +5057,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Identifier. Name of the HttpRoute resource. It matches pattern
-         *        `projects/locations/global/httpRoutes/http_route_name>`.
+         *        `projects/locations/httpRoutes/http_route_name>`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.HttpRoute}
            * @since 1.13
            */
@@ -5146,13 +5128,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the HttpRoute resource. It matches pattern
-           * `projects/locations/global/httpRoutes/http_route_name>`.
+           * `projects/locations/httpRoutes/http_route_name>`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Identifier. Name of the HttpRoute resource. It matches pattern
-         `projects/locations/global/httpRoutes/http_route_name>`.
+         `projects/locations/httpRoutes/http_route_name>`.
            */
           public java.lang.String getName() {
             return name;
@@ -5160,7 +5142,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the HttpRoute resource. It matches pattern
-           * `projects/locations/global/httpRoutes/http_route_name>`.
+           * `projects/locations/httpRoutes/http_route_name>`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9135,7 +9117,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the Mesh. Must be in the format `projects/locations/global`.
+         * @param parent Required. The parent resource of the Mesh. Must be in the format `projects/locations`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.Mesh}
          * @return the request
          */
@@ -9163,7 +9145,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the Mesh. Must be in the format `projects/locations/global`.
+           * @param parent Required. The parent resource of the Mesh. Must be in the format `projects/locations`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.Mesh}
            * @since 1.13
            */
@@ -9233,21 +9215,19 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent resource of the Mesh. Must be in the format
-           * `projects/locations/global`.
+           * Required. The parent resource of the Mesh. Must be in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the Mesh. Must be in the format `projects/locations/global`.
+          /** Required. The parent resource of the Mesh. Must be in the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource of the Mesh. Must be in the format
-           * `projects/locations/global`.
+           * Required. The parent resource of the Mesh. Must be in the format `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9288,7 +9268,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the Mesh to delete. Must be in the format `projects/locations/global/meshes`.
+         * @param name Required. A name of the Mesh to delete. Must be in the format `projects/locations/meshes`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -9315,7 +9295,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the Mesh to delete. Must be in the format `projects/locations/global/meshes`.
+           * @param name Required. A name of the Mesh to delete. Must be in the format `projects/locations/meshes`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -9385,12 +9365,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the Mesh to delete. Must be in the format
-           * `projects/locations/global/meshes`.
+           * `projects/locations/meshes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the Mesh to delete. Must be in the format `projects/locations/global/meshes`.
+          /** Required. A name of the Mesh to delete. Must be in the format `projects/locations/meshes`.
            */
           public java.lang.String getName() {
             return name;
@@ -9398,7 +9378,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the Mesh to delete. Must be in the format
-           * `projects/locations/global/meshes`.
+           * `projects/locations/meshes`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9423,7 +9403,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the Mesh to get. Must be in the format `projects/locations/global/meshes`.
+         * @param name Required. A name of the Mesh to get. Must be in the format `projects/locations/meshes`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -9449,7 +9429,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the Mesh to get. Must be in the format `projects/locations/global/meshes`.
+           * @param name Required. A name of the Mesh to get. Must be in the format `projects/locations/meshes`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -9528,21 +9508,19 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the Mesh to get. Must be in the format
-           * `projects/locations/global/meshes`.
+           * Required. A name of the Mesh to get. Must be in the format `projects/locations/meshes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the Mesh to get. Must be in the format `projects/locations/global/meshes`.
+          /** Required. A name of the Mesh to get. Must be in the format `projects/locations/meshes`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. A name of the Mesh to get. Must be in the format
-           * `projects/locations/global/meshes`.
+           * Required. A name of the Mesh to get. Must be in the format `projects/locations/meshes`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9568,7 +9546,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location from which the Meshes should be listed, specified in the format
-         *        `projects/locations/global`.
+         *        `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -9595,7 +9573,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location from which the Meshes should be listed, specified in the format
-         *        `projects/locations/global`.
+         *        `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -9675,13 +9653,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the Meshes should be listed, specified in
-           * the format `projects/locations/global`.
+           * the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location from which the Meshes should be listed, specified in the format
-         `projects/locations/global`.
+         `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -9689,7 +9667,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the Meshes should be listed, specified in
-           * the format `projects/locations/global`.
+           * the format `projects/locations`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9780,7 +9758,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
+         * @param name Identifier. Name of the Mesh resource. It matches pattern `projects/locations/meshes/`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.Mesh}
          * @return the request
          */
@@ -9808,7 +9786,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
+           * @param name Identifier. Name of the Mesh resource. It matches pattern `projects/locations/meshes/`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.Mesh}
            * @since 1.13
            */
@@ -9878,21 +9856,19 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Identifier. Name of the Mesh resource. It matches pattern
-           * `projects/locations/global/meshes/`.
+           * Identifier. Name of the Mesh resource. It matches pattern `projects/locations/meshes/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
+          /** Identifier. Name of the Mesh resource. It matches pattern `projects/locations/meshes/`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Identifier. Name of the Mesh resource. It matches pattern
-           * `projects/locations/global/meshes/`.
+           * Identifier. Name of the Mesh resource. It matches pattern `projects/locations/meshes/`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12635,7 +12611,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the TcpRoute. Must be in the format `projects/locations/global`.
+         * @param parent Required. The parent resource of the TcpRoute. Must be in the format `projects/locations`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TcpRoute}
          * @return the request
          */
@@ -12663,7 +12639,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the TcpRoute. Must be in the format `projects/locations/global`.
+           * @param parent Required. The parent resource of the TcpRoute. Must be in the format `projects/locations`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TcpRoute}
            * @since 1.13
            */
@@ -12734,12 +12710,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the TcpRoute. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the TcpRoute. Must be in the format `projects/locations/global`.
+          /** Required. The parent resource of the TcpRoute. Must be in the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -12747,7 +12723,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the TcpRoute. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -12788,8 +12764,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the TcpRoute to delete. Must be in the format
-         *        `projects/locations/global/tcpRoutes`.
+         * @param name Required. A name of the TcpRoute to delete. Must be in the format `projects/locations/tcpRoutes`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -12816,8 +12791,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the TcpRoute to delete. Must be in the format
-         *        `projects/locations/global/tcpRoutes`.
+           * @param name Required. A name of the TcpRoute to delete. Must be in the format `projects/locations/tcpRoutes`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -12887,13 +12861,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the TcpRoute to delete. Must be in the format
-           * `projects/locations/global/tcpRoutes`.
+           * `projects/locations/tcpRoutes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the TcpRoute to delete. Must be in the format
-         `projects/locations/global/tcpRoutes`.
+          /** Required. A name of the TcpRoute to delete. Must be in the format `projects/locations/tcpRoutes`.
            */
           public java.lang.String getName() {
             return name;
@@ -12901,7 +12874,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the TcpRoute to delete. Must be in the format
-           * `projects/locations/global/tcpRoutes`.
+           * `projects/locations/tcpRoutes`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12926,8 +12899,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the TcpRoute to get. Must be in the format
-         *        `projects/locations/global/tcpRoutes`.
+         * @param name Required. A name of the TcpRoute to get. Must be in the format `projects/locations/tcpRoutes`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -12953,8 +12925,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the TcpRoute to get. Must be in the format
-         *        `projects/locations/global/tcpRoutes`.
+           * @param name Required. A name of the TcpRoute to get. Must be in the format `projects/locations/tcpRoutes`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -13034,13 +13005,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the TcpRoute to get. Must be in the format
-           * `projects/locations/global/tcpRoutes`.
+           * `projects/locations/tcpRoutes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the TcpRoute to get. Must be in the format
-         `projects/locations/global/tcpRoutes`.
+          /** Required. A name of the TcpRoute to get. Must be in the format `projects/locations/tcpRoutes`.
            */
           public java.lang.String getName() {
             return name;
@@ -13048,7 +13018,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the TcpRoute to get. Must be in the format
-           * `projects/locations/global/tcpRoutes`.
+           * `projects/locations/tcpRoutes`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -13074,7 +13044,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location from which the TcpRoutes should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -13101,7 +13071,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location from which the TcpRoutes should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -13181,13 +13151,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the TcpRoutes should be listed, specified
-           * in the format `projects/locations/global`.
+           * in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location from which the TcpRoutes should be listed, specified in the
-         format `projects/locations/global`.
+         format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -13195,7 +13165,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the TcpRoutes should be listed, specified
-           * in the format `projects/locations/global`.
+           * in the format `projects/locations`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -13287,7 +13257,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Identifier. Name of the TcpRoute resource. It matches pattern
-         *        `projects/locations/global/tcpRoutes/tcp_route_name>`.
+         *        `projects/locations/tcpRoutes/tcp_route_name>`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TcpRoute}
          * @return the request
          */
@@ -13316,7 +13286,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Identifier. Name of the TcpRoute resource. It matches pattern
-         *        `projects/locations/global/tcpRoutes/tcp_route_name>`.
+         *        `projects/locations/tcpRoutes/tcp_route_name>`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TcpRoute}
            * @since 1.13
            */
@@ -13387,13 +13357,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the TcpRoute resource. It matches pattern
-           * `projects/locations/global/tcpRoutes/tcp_route_name>`.
+           * `projects/locations/tcpRoutes/tcp_route_name>`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Identifier. Name of the TcpRoute resource. It matches pattern
-         `projects/locations/global/tcpRoutes/tcp_route_name>`.
+         `projects/locations/tcpRoutes/tcp_route_name>`.
            */
           public java.lang.String getName() {
             return name;
@@ -13401,7 +13371,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the TcpRoute resource. It matches pattern
-           * `projects/locations/global/tcpRoutes/tcp_route_name>`.
+           * `projects/locations/tcpRoutes/tcp_route_name>`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -13477,7 +13447,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the TlsRoute. Must be in the format `projects/locations/global`.
+         * @param parent Required. The parent resource of the TlsRoute. Must be in the format `projects/locations`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TlsRoute}
          * @return the request
          */
@@ -13505,7 +13475,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the TlsRoute. Must be in the format `projects/locations/global`.
+           * @param parent Required. The parent resource of the TlsRoute. Must be in the format `projects/locations`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TlsRoute}
            * @since 1.13
            */
@@ -13576,12 +13546,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the TlsRoute. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the TlsRoute. Must be in the format `projects/locations/global`.
+          /** Required. The parent resource of the TlsRoute. Must be in the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -13589,7 +13559,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the TlsRoute. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -13630,8 +13600,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the TlsRoute to delete. Must be in the format
-         *        `projects/locations/global/tlsRoutes`.
+         * @param name Required. A name of the TlsRoute to delete. Must be in the format `projects/locations/tlsRoutes`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -13658,8 +13627,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the TlsRoute to delete. Must be in the format
-         *        `projects/locations/global/tlsRoutes`.
+           * @param name Required. A name of the TlsRoute to delete. Must be in the format `projects/locations/tlsRoutes`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -13729,13 +13697,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the TlsRoute to delete. Must be in the format
-           * `projects/locations/global/tlsRoutes`.
+           * `projects/locations/tlsRoutes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the TlsRoute to delete. Must be in the format
-         `projects/locations/global/tlsRoutes`.
+          /** Required. A name of the TlsRoute to delete. Must be in the format `projects/locations/tlsRoutes`.
            */
           public java.lang.String getName() {
             return name;
@@ -13743,7 +13710,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the TlsRoute to delete. Must be in the format
-           * `projects/locations/global/tlsRoutes`.
+           * `projects/locations/tlsRoutes`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -13768,8 +13735,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the TlsRoute to get. Must be in the format
-         *        `projects/locations/global/tlsRoutes`.
+         * @param name Required. A name of the TlsRoute to get. Must be in the format `projects/locations/tlsRoutes`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -13795,8 +13761,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the TlsRoute to get. Must be in the format
-         *        `projects/locations/global/tlsRoutes`.
+           * @param name Required. A name of the TlsRoute to get. Must be in the format `projects/locations/tlsRoutes`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -13876,13 +13841,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the TlsRoute to get. Must be in the format
-           * `projects/locations/global/tlsRoutes`.
+           * `projects/locations/tlsRoutes`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the TlsRoute to get. Must be in the format
-         `projects/locations/global/tlsRoutes`.
+          /** Required. A name of the TlsRoute to get. Must be in the format `projects/locations/tlsRoutes`.
            */
           public java.lang.String getName() {
             return name;
@@ -13890,7 +13854,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the TlsRoute to get. Must be in the format
-           * `projects/locations/global/tlsRoutes`.
+           * `projects/locations/tlsRoutes`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -13916,7 +13880,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location from which the TlsRoutes should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -13943,7 +13907,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location from which the TlsRoutes should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -14023,13 +13987,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the TlsRoutes should be listed, specified
-           * in the format `projects/locations/global`.
+           * in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location from which the TlsRoutes should be listed, specified in the
-         format `projects/locations/global`.
+         format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -14037,7 +14001,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the TlsRoutes should be listed, specified
-           * in the format `projects/locations/global`.
+           * in the format `projects/locations`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -14129,7 +14093,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Identifier. Name of the TlsRoute resource. It matches pattern
-         *        `projects/locations/global/tlsRoutes/tls_route_name>`.
+         *        `projects/locations/tlsRoutes/tls_route_name>`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TlsRoute}
          * @return the request
          */
@@ -14158,7 +14122,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Identifier. Name of the TlsRoute resource. It matches pattern
-         *        `projects/locations/global/tlsRoutes/tls_route_name>`.
+         *        `projects/locations/tlsRoutes/tls_route_name>`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TlsRoute}
            * @since 1.13
            */
@@ -14229,13 +14193,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the TlsRoute resource. It matches pattern
-           * `projects/locations/global/tlsRoutes/tls_route_name>`.
+           * `projects/locations/tlsRoutes/tls_route_name>`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Identifier. Name of the TlsRoute resource. It matches pattern
-         `projects/locations/global/tlsRoutes/tls_route_name>`.
+         `projects/locations/tlsRoutes/tls_route_name>`.
            */
           public java.lang.String getName() {
             return name;
@@ -14243,7 +14207,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Identifier. Name of the TlsRoute resource. It matches pattern
-           * `projects/locations/global/tlsRoutes/tls_route_name>`.
+           * `projects/locations/tlsRoutes/tls_route_name>`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

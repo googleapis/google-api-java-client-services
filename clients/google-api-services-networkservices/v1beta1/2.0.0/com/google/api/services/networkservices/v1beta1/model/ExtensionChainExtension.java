@@ -100,6 +100,19 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
+   * Optional. When set to `TRUE`, enables `observability_mode` on the `ext_proc` filter. This makes
+   * `ext_proc` calls asynchronous. Envoy doesn't check for the response from `ext_proc` calls. For
+   * more information about the filter, see: https://www.envoyproxy.io/docs/envoy/v1.32.3/api-v3/ext
+   * ensions/filters/http/ext_proc/v3/ext_proc.proto#extensions-filters-http-ext-
+   * proc-v3-externalprocessor This field is helpful when you want to try out the extension in async
+   * log-only mode. Supported by regional `LbTrafficExtension` and `LbRouteExtension` resources.
+   * Only `STREAMED` (default) body processing mode is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean observabilityMode;
+
+  /**
    * Optional. Configures the send mode for request body processing. The field can only be set if
    * `supported_events` includes `REQUEST_BODY`. If `supported_events` includes `REQUEST_BODY`, but
    * `request_body_send_mode` is unset, the default value `STREAMED` is used. When this field is set
@@ -320,6 +333,35 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    */
   public ExtensionChainExtension setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. When set to `TRUE`, enables `observability_mode` on the `ext_proc` filter. This makes
+   * `ext_proc` calls asynchronous. Envoy doesn't check for the response from `ext_proc` calls. For
+   * more information about the filter, see: https://www.envoyproxy.io/docs/envoy/v1.32.3/api-v3/ext
+   * ensions/filters/http/ext_proc/v3/ext_proc.proto#extensions-filters-http-ext-
+   * proc-v3-externalprocessor This field is helpful when you want to try out the extension in async
+   * log-only mode. Supported by regional `LbTrafficExtension` and `LbRouteExtension` resources.
+   * Only `STREAMED` (default) body processing mode is supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getObservabilityMode() {
+    return observabilityMode;
+  }
+
+  /**
+   * Optional. When set to `TRUE`, enables `observability_mode` on the `ext_proc` filter. This makes
+   * `ext_proc` calls asynchronous. Envoy doesn't check for the response from `ext_proc` calls. For
+   * more information about the filter, see: https://www.envoyproxy.io/docs/envoy/v1.32.3/api-v3/ext
+   * ensions/filters/http/ext_proc/v3/ext_proc.proto#extensions-filters-http-ext-
+   * proc-v3-externalprocessor This field is helpful when you want to try out the extension in async
+   * log-only mode. Supported by regional `LbTrafficExtension` and `LbRouteExtension` resources.
+   * Only `STREAMED` (default) body processing mode is supported.
+   * @param observabilityMode observabilityMode or {@code null} for none
+   */
+  public ExtensionChainExtension setObservabilityMode(java.lang.Boolean observabilityMode) {
+    this.observabilityMode = observabilityMode;
     return this;
   }
 

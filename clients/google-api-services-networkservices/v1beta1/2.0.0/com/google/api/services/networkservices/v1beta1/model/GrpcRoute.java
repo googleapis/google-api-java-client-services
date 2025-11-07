@@ -47,7 +47,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Gateways defines a list of gateways this GrpcRoute is attached to, as one of the
    * routing rules to route the requests served by the gateway. Each gateway reference should match
-   * the pattern: `projects/locations/global/gateways/`
+   * the pattern: `projects/locations/gateways/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,15 +84,14 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Meshes defines a list of meshes this GrpcRoute is attached to, as one of the routing
    * rules to route the requests served by the mesh. Each mesh reference should match the pattern:
-   * `projects/locations/global/meshes/`
+   * `projects/locations/meshes/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> meshes;
 
   /**
-   * Identifier. Name of the GrpcRoute resource. It matches pattern
-   * `projects/locations/global/grpcRoutes/`
+   * Identifier. Name of the GrpcRoute resource. It matches pattern `projects/locations/grpcRoutes/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +157,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Gateways defines a list of gateways this GrpcRoute is attached to, as one of the
    * routing rules to route the requests served by the gateway. Each gateway reference should match
-   * the pattern: `projects/locations/global/gateways/`
+   * the pattern: `projects/locations/gateways/`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGateways() {
@@ -168,7 +167,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Gateways defines a list of gateways this GrpcRoute is attached to, as one of the
    * routing rules to route the requests served by the gateway. Each gateway reference should match
-   * the pattern: `projects/locations/global/gateways/`
+   * the pattern: `projects/locations/gateways/`
    * @param gateways gateways or {@code null} for none
    */
   public GrpcRoute setGateways(java.util.List<java.lang.String> gateways) {
@@ -241,7 +240,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Meshes defines a list of meshes this GrpcRoute is attached to, as one of the routing
    * rules to route the requests served by the mesh. Each mesh reference should match the pattern:
-   * `projects/locations/global/meshes/`
+   * `projects/locations/meshes/`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMeshes() {
@@ -251,7 +250,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Meshes defines a list of meshes this GrpcRoute is attached to, as one of the routing
    * rules to route the requests served by the mesh. Each mesh reference should match the pattern:
-   * `projects/locations/global/meshes/`
+   * `projects/locations/meshes/`
    * @param meshes meshes or {@code null} for none
    */
   public GrpcRoute setMeshes(java.util.List<java.lang.String> meshes) {
@@ -260,8 +259,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the GrpcRoute resource. It matches pattern
-   * `projects/locations/global/grpcRoutes/`
+   * Identifier. Name of the GrpcRoute resource. It matches pattern `projects/locations/grpcRoutes/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -269,8 +267,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the GrpcRoute resource. It matches pattern
-   * `projects/locations/global/grpcRoutes/`
+   * Identifier. Name of the GrpcRoute resource. It matches pattern `projects/locations/grpcRoutes/`
    * @param name name or {@code null} for none
    */
   public GrpcRoute setName(java.lang.String name) {

@@ -17,7 +17,9 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Encryption information for the data being ingested.
+ * A bucket of any additional [user
+ * properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-
+ * properties) for the user associated with this event.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -27,64 +29,64 @@ package com.google.api.services.datamanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EncryptionInfo extends com.google.api.client.json.GenericJson {
+public final class UserProperty extends com.google.api.client.json.GenericJson {
 
   /**
-   * Amazon Web Services wrapped key information.
+   * Required. The name of the user property to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AwsWrappedKeyInfo awsWrappedKeyInfo;
+  private java.lang.String propertyName;
 
   /**
-   * Google Cloud Platform wrapped key information.
+   * Required. The string representation of the value of the user property to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GcpWrappedKeyInfo gcpWrappedKeyInfo;
+  private java.lang.String value;
 
   /**
-   * Amazon Web Services wrapped key information.
+   * Required. The name of the user property to use.
    * @return value or {@code null} for none
    */
-  public AwsWrappedKeyInfo getAwsWrappedKeyInfo() {
-    return awsWrappedKeyInfo;
+  public java.lang.String getPropertyName() {
+    return propertyName;
   }
 
   /**
-   * Amazon Web Services wrapped key information.
-   * @param awsWrappedKeyInfo awsWrappedKeyInfo or {@code null} for none
+   * Required. The name of the user property to use.
+   * @param propertyName propertyName or {@code null} for none
    */
-  public EncryptionInfo setAwsWrappedKeyInfo(AwsWrappedKeyInfo awsWrappedKeyInfo) {
-    this.awsWrappedKeyInfo = awsWrappedKeyInfo;
+  public UserProperty setPropertyName(java.lang.String propertyName) {
+    this.propertyName = propertyName;
     return this;
   }
 
   /**
-   * Google Cloud Platform wrapped key information.
+   * Required. The string representation of the value of the user property to use.
    * @return value or {@code null} for none
    */
-  public GcpWrappedKeyInfo getGcpWrappedKeyInfo() {
-    return gcpWrappedKeyInfo;
+  public java.lang.String getValue() {
+    return value;
   }
 
   /**
-   * Google Cloud Platform wrapped key information.
-   * @param gcpWrappedKeyInfo gcpWrappedKeyInfo or {@code null} for none
+   * Required. The string representation of the value of the user property to use.
+   * @param value value or {@code null} for none
    */
-  public EncryptionInfo setGcpWrappedKeyInfo(GcpWrappedKeyInfo gcpWrappedKeyInfo) {
-    this.gcpWrappedKeyInfo = gcpWrappedKeyInfo;
+  public UserProperty setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public EncryptionInfo set(String fieldName, Object value) {
-    return (EncryptionInfo) super.set(fieldName, value);
+  public UserProperty set(String fieldName, Object value) {
+    return (UserProperty) super.set(fieldName, value);
   }
 
   @Override
-  public EncryptionInfo clone() {
-    return (EncryptionInfo) super.clone();
+  public UserProperty clone() {
+    return (UserProperty) super.clone();
   }
 
 }

@@ -2286,22 +2286,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
-       primarily intended for internal usage.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -3063,22 +3063,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
-       primarily intended for internal usage.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -5011,6 +5011,207 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the domain mappings on an application.
+           *
+           * Create a request for the method "domainMappings.list".
+           *
+           * This request holds the parameters needed by the appengine server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+           * @param locationsId Part of `parent`. See documentation of `projectsId`.
+           * @param applicationsId Part of `parent`. See documentation of `projectsId`.
+           * @return the request
+           */
+          public List list(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId) throws java.io.IOException {
+            List result = new List(projectsId, locationsId, applicationsId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AppengineRequest<com.google.api.services.appengine.model.ListDomainMappingsResponse> {
+
+            private static final String REST_PATH = "v1alpha/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/domainMappings";
+
+            /**
+             * Lists the domain mappings on an application.
+             *
+             * Create a request for the method "domainMappings.list".
+             *
+             * This request holds the parameters needed by the the appengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param projectsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+             * @param locationsId Part of `parent`. See documentation of `projectsId`.
+             * @param applicationsId Part of `parent`. See documentation of `projectsId`.
+             * @since 1.13
+             */
+            protected List(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId) {
+              super(Appengine.this, "GET", REST_PATH, null, com.google.api.services.appengine.model.ListDomainMappingsResponse.class);
+              this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+              this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+              this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String projectsId;
+
+            /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+             */
+            public java.lang.String getProjectsId() {
+              return projectsId;
+            }
+
+            /**
+             * Part of `parent`. Required. Name of the parent Application resource. Example:
+             * apps/myapp.
+             */
+            public List setProjectsId(java.lang.String projectsId) {
+              this.projectsId = projectsId;
+              return this;
+            }
+
+            /** Part of `parent`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String locationsId;
+
+            /** Part of `parent`. See documentation of `projectsId`.
+             */
+            public java.lang.String getLocationsId() {
+              return locationsId;
+            }
+
+            /** Part of `parent`. See documentation of `projectsId`. */
+            public List setLocationsId(java.lang.String locationsId) {
+              this.locationsId = locationsId;
+              return this;
+            }
+
+            /** Part of `parent`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String applicationsId;
+
+            /** Part of `parent`. See documentation of `projectsId`.
+             */
+            public java.lang.String getApplicationsId() {
+              return applicationsId;
+            }
+
+            /** Part of `parent`. See documentation of `projectsId`. */
+            public List setApplicationsId(java.lang.String applicationsId) {
+              this.applicationsId = applicationsId;
+              return this;
+            }
+
+            /** Maximum results to return per page. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Maximum results to return per page.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Maximum results to return per page. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Continuation token for fetching the next page of results. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Continuation token for fetching the next page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Continuation token for fetching the next page of results. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
             }
           }
           /**

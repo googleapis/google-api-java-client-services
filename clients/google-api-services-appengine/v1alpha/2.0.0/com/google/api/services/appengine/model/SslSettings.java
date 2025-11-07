@@ -41,9 +41,9 @@ public final class SslSettings extends com.google.api.client.json.GenericJson {
   private java.lang.String certificateId;
 
   /**
-   * Whether the mapped certificate is an App Engine managed certificate. Managed certificates are
-   * created by default with a domain mapping. To opt out, specify no_managed_certificate on a
-   * CREATE or UPDATE request.@OutputOnly
+   * Output only. Whether the mapped certificate is an App Engine managed certificate. Managed
+   * certificates are created by default with a domain mapping. To opt out, specify
+   * no_managed_certificate on a CREATE or UPDATE request.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +75,9 @@ public final class SslSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the mapped certificate is an App Engine managed certificate. Managed certificates are
-   * created by default with a domain mapping. To opt out, specify no_managed_certificate on a
-   * CREATE or UPDATE request.@OutputOnly
+   * Output only. Whether the mapped certificate is an App Engine managed certificate. Managed
+   * certificates are created by default with a domain mapping. To opt out, specify
+   * no_managed_certificate on a CREATE or UPDATE request.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsManagedCertificate() {
@@ -85,9 +85,9 @@ public final class SslSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the mapped certificate is an App Engine managed certificate. Managed certificates are
-   * created by default with a domain mapping. To opt out, specify no_managed_certificate on a
-   * CREATE or UPDATE request.@OutputOnly
+   * Output only. Whether the mapped certificate is an App Engine managed certificate. Managed
+   * certificates are created by default with a domain mapping. To opt out, specify
+   * no_managed_certificate on a CREATE or UPDATE request.@OutputOnly
    * @param isManagedCertificate isManagedCertificate or {@code null} for none
    */
   public SslSettings setIsManagedCertificate(java.lang.Boolean isManagedCertificate) {

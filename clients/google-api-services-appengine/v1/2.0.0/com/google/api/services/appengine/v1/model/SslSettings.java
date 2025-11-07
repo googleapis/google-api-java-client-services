@@ -42,12 +42,12 @@ public final class SslSettings extends com.google.api.client.json.GenericJson {
   private java.lang.String certificateId;
 
   /**
-   * ID of the managed AuthorizedCertificate resource currently being provisioned, if applicable.
-   * Until the new managed certificate has been successfully provisioned, the previous SSL state
-   * will be preserved. Once the provisioning process completes, the certificate_id field will
-   * reflect the new managed certificate and this field will be left empty. To remove SSL support
-   * while there is still a pending managed certificate, clear the certificate_id field with an
-   * UpdateDomainMappingRequest.@OutputOnly
+   * Output only. ID of the managed AuthorizedCertificate resource currently being provisioned, if
+   * applicable. Until the new managed certificate has been successfully provisioned, the previous
+   * SSL state will be preserved. Once the provisioning process completes, the certificate_id field
+   * will reflect the new managed certificate and this field will be left empty. To remove SSL
+   * support while there is still a pending managed certificate, clear the certificate_id field with
+   * an UpdateDomainMappingRequest.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,12 +90,12 @@ public final class SslSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the managed AuthorizedCertificate resource currently being provisioned, if applicable.
-   * Until the new managed certificate has been successfully provisioned, the previous SSL state
-   * will be preserved. Once the provisioning process completes, the certificate_id field will
-   * reflect the new managed certificate and this field will be left empty. To remove SSL support
-   * while there is still a pending managed certificate, clear the certificate_id field with an
-   * UpdateDomainMappingRequest.@OutputOnly
+   * Output only. ID of the managed AuthorizedCertificate resource currently being provisioned, if
+   * applicable. Until the new managed certificate has been successfully provisioned, the previous
+   * SSL state will be preserved. Once the provisioning process completes, the certificate_id field
+   * will reflect the new managed certificate and this field will be left empty. To remove SSL
+   * support while there is still a pending managed certificate, clear the certificate_id field with
+   * an UpdateDomainMappingRequest.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getPendingManagedCertificateId() {
@@ -103,12 +103,12 @@ public final class SslSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the managed AuthorizedCertificate resource currently being provisioned, if applicable.
-   * Until the new managed certificate has been successfully provisioned, the previous SSL state
-   * will be preserved. Once the provisioning process completes, the certificate_id field will
-   * reflect the new managed certificate and this field will be left empty. To remove SSL support
-   * while there is still a pending managed certificate, clear the certificate_id field with an
-   * UpdateDomainMappingRequest.@OutputOnly
+   * Output only. ID of the managed AuthorizedCertificate resource currently being provisioned, if
+   * applicable. Until the new managed certificate has been successfully provisioned, the previous
+   * SSL state will be preserved. Once the provisioning process completes, the certificate_id field
+   * will reflect the new managed certificate and this field will be left empty. To remove SSL
+   * support while there is still a pending managed certificate, clear the certificate_id field with
+   * an UpdateDomainMappingRequest.@OutputOnly
    * @param pendingManagedCertificateId pendingManagedCertificateId or {@code null} for none
    */
   public SslSettings setPendingManagedCertificateId(java.lang.String pendingManagedCertificateId) {

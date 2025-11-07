@@ -130,6 +130,13 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * [Output Only] The parent of the security policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parent;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -517,6 +524,23 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] The parent of the security policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParent() {
+    return parent;
+  }
+
+  /**
+   * [Output Only] The parent of the security policy.
+   * @param parent parent or {@code null} for none
+   */
+  public SecurityPolicy setParent(java.lang.String parent) {
+    this.parent = parent;
     return this;
   }
 

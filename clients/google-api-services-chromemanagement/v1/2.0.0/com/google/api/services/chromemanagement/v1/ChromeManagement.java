@@ -3410,6 +3410,209 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
     public class Reports {
 
       /**
+       * Get a count of active devices per set time frames.
+       *
+       * Create a request for the method "reports.countActiveDevices".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountActiveDevices#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+       * @return the request
+       */
+      public CountActiveDevices countActiveDevices(java.lang.String customer) throws java.io.IOException {
+        CountActiveDevices result = new CountActiveDevices(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountActiveDevices extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountActiveDevicesResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:countActiveDevices";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Get a count of active devices per set time frames.
+         *
+         * Create a request for the method "reports.countActiveDevices".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountActiveDevices#execute()} method to invoke the remote
+         * operation. <p> {@link CountActiveDevices#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         * @since 1.13
+         */
+        protected CountActiveDevices(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountActiveDevicesResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountActiveDevices set$Xgafv(java.lang.String $Xgafv) {
+          return (CountActiveDevices) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountActiveDevices setAccessToken(java.lang.String accessToken) {
+          return (CountActiveDevices) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountActiveDevices setAlt(java.lang.String alt) {
+          return (CountActiveDevices) super.setAlt(alt);
+        }
+
+        @Override
+        public CountActiveDevices setCallback(java.lang.String callback) {
+          return (CountActiveDevices) super.setCallback(callback);
+        }
+
+        @Override
+        public CountActiveDevices setFields(java.lang.String fields) {
+          return (CountActiveDevices) super.setFields(fields);
+        }
+
+        @Override
+        public CountActiveDevices setKey(java.lang.String key) {
+          return (CountActiveDevices) super.setKey(key);
+        }
+
+        @Override
+        public CountActiveDevices setOauthToken(java.lang.String oauthToken) {
+          return (CountActiveDevices) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountActiveDevices setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountActiveDevices) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountActiveDevices setQuotaUser(java.lang.String quotaUser) {
+          return (CountActiveDevices) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountActiveDevices setUploadType(java.lang.String uploadType) {
+          return (CountActiveDevices) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountActiveDevices setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountActiveDevices) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public CountActiveDevices setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        @com.google.api.client.util.Key("date.day")
+        private java.lang.Integer dateDay;
+
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
+         */
+        public java.lang.Integer getDateDay() {
+          return dateDay;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        public CountActiveDevices setDateDay(java.lang.Integer dateDay) {
+          this.dateDay = dateDay;
+          return this;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        @com.google.api.client.util.Key("date.month")
+        private java.lang.Integer dateMonth;
+
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public java.lang.Integer getDateMonth() {
+          return dateMonth;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public CountActiveDevices setDateMonth(java.lang.Integer dateMonth) {
+          this.dateMonth = dateMonth;
+          return this;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        @com.google.api.client.util.Key("date.year")
+        private java.lang.Integer dateYear;
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         */
+        public java.lang.Integer getDateYear() {
+          return dateYear;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        public CountActiveDevices setDateYear(java.lang.Integer dateYear) {
+          this.dateYear = dateYear;
+          return this;
+        }
+
+        @Override
+        public CountActiveDevices set(String parameterName, Object value) {
+          return (CountActiveDevices) super.set(parameterName, value);
+        }
+      }
+      /**
        * Count of Chrome Browsers that have been recently enrolled, have new policy to be synced, or have
        * no recent activity.
        *
@@ -4565,6 +4768,412 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         @Override
         public CountChromeVersions set(String parameterName, Object value) {
           return (CountChromeVersions) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a count of devices per boot type.
+       *
+       * Create a request for the method "reports.countDevicesPerBootType".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountDevicesPerBootType#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+       * @return the request
+       */
+      public CountDevicesPerBootType countDevicesPerBootType(java.lang.String customer) throws java.io.IOException {
+        CountDevicesPerBootType result = new CountDevicesPerBootType(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountDevicesPerBootType extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountDevicesPerBootTypeResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:countDevicesPerBootType";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Get a count of devices per boot type.
+         *
+         * Create a request for the method "reports.countDevicesPerBootType".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountDevicesPerBootType#execute()} method to invoke the
+         * remote operation. <p> {@link CountDevicesPerBootType#initialize(com.google.api.client.googleapi
+         * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         * @since 1.13
+         */
+        protected CountDevicesPerBootType(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountDevicesPerBootTypeResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountDevicesPerBootType set$Xgafv(java.lang.String $Xgafv) {
+          return (CountDevicesPerBootType) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountDevicesPerBootType setAccessToken(java.lang.String accessToken) {
+          return (CountDevicesPerBootType) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountDevicesPerBootType setAlt(java.lang.String alt) {
+          return (CountDevicesPerBootType) super.setAlt(alt);
+        }
+
+        @Override
+        public CountDevicesPerBootType setCallback(java.lang.String callback) {
+          return (CountDevicesPerBootType) super.setCallback(callback);
+        }
+
+        @Override
+        public CountDevicesPerBootType setFields(java.lang.String fields) {
+          return (CountDevicesPerBootType) super.setFields(fields);
+        }
+
+        @Override
+        public CountDevicesPerBootType setKey(java.lang.String key) {
+          return (CountDevicesPerBootType) super.setKey(key);
+        }
+
+        @Override
+        public CountDevicesPerBootType setOauthToken(java.lang.String oauthToken) {
+          return (CountDevicesPerBootType) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountDevicesPerBootType setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountDevicesPerBootType) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountDevicesPerBootType setQuotaUser(java.lang.String quotaUser) {
+          return (CountDevicesPerBootType) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountDevicesPerBootType setUploadType(java.lang.String uploadType) {
+          return (CountDevicesPerBootType) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountDevicesPerBootType setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountDevicesPerBootType) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public CountDevicesPerBootType setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        @com.google.api.client.util.Key("date.day")
+        private java.lang.Integer dateDay;
+
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
+         */
+        public java.lang.Integer getDateDay() {
+          return dateDay;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        public CountDevicesPerBootType setDateDay(java.lang.Integer dateDay) {
+          this.dateDay = dateDay;
+          return this;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        @com.google.api.client.util.Key("date.month")
+        private java.lang.Integer dateMonth;
+
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public java.lang.Integer getDateMonth() {
+          return dateMonth;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public CountDevicesPerBootType setDateMonth(java.lang.Integer dateMonth) {
+          this.dateMonth = dateMonth;
+          return this;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        @com.google.api.client.util.Key("date.year")
+        private java.lang.Integer dateYear;
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         */
+        public java.lang.Integer getDateYear() {
+          return dateYear;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        public CountDevicesPerBootType setDateYear(java.lang.Integer dateYear) {
+          this.dateYear = dateYear;
+          return this;
+        }
+
+        @Override
+        public CountDevicesPerBootType set(String parameterName, Object value) {
+          return (CountDevicesPerBootType) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a count of devices per channel.
+       *
+       * Create a request for the method "reports.countDevicesPerReleaseChannel".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountDevicesPerReleaseChannel#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+       * @return the request
+       */
+      public CountDevicesPerReleaseChannel countDevicesPerReleaseChannel(java.lang.String customer) throws java.io.IOException {
+        CountDevicesPerReleaseChannel result = new CountDevicesPerReleaseChannel(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountDevicesPerReleaseChannel extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:countDevicesPerReleaseChannel";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Get a count of devices per channel.
+         *
+         * Create a request for the method "reports.countDevicesPerReleaseChannel".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountDevicesPerReleaseChannel#execute()} method to invoke
+         * the remote operation. <p> {@link CountDevicesPerReleaseChannel#initialize(com.google.api.client
+         * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         * @since 1.13
+         */
+        protected CountDevicesPerReleaseChannel(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel set$Xgafv(java.lang.String $Xgafv) {
+          return (CountDevicesPerReleaseChannel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setAccessToken(java.lang.String accessToken) {
+          return (CountDevicesPerReleaseChannel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setAlt(java.lang.String alt) {
+          return (CountDevicesPerReleaseChannel) super.setAlt(alt);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setCallback(java.lang.String callback) {
+          return (CountDevicesPerReleaseChannel) super.setCallback(callback);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setFields(java.lang.String fields) {
+          return (CountDevicesPerReleaseChannel) super.setFields(fields);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setKey(java.lang.String key) {
+          return (CountDevicesPerReleaseChannel) super.setKey(key);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setOauthToken(java.lang.String oauthToken) {
+          return (CountDevicesPerReleaseChannel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountDevicesPerReleaseChannel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setQuotaUser(java.lang.String quotaUser) {
+          return (CountDevicesPerReleaseChannel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setUploadType(java.lang.String uploadType) {
+          return (CountDevicesPerReleaseChannel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountDevicesPerReleaseChannel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public CountDevicesPerReleaseChannel setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        @com.google.api.client.util.Key("date.day")
+        private java.lang.Integer dateDay;
+
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
+         */
+        public java.lang.Integer getDateDay() {
+          return dateDay;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        public CountDevicesPerReleaseChannel setDateDay(java.lang.Integer dateDay) {
+          this.dateDay = dateDay;
+          return this;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        @com.google.api.client.util.Key("date.month")
+        private java.lang.Integer dateMonth;
+
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public java.lang.Integer getDateMonth() {
+          return dateMonth;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public CountDevicesPerReleaseChannel setDateMonth(java.lang.Integer dateMonth) {
+          this.dateMonth = dateMonth;
+          return this;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        @com.google.api.client.util.Key("date.year")
+        private java.lang.Integer dateYear;
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         */
+        public java.lang.Integer getDateYear() {
+          return dateYear;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        public CountDevicesPerReleaseChannel setDateYear(java.lang.Integer dateYear) {
+          this.dateYear = dateYear;
+          return this;
+        }
+
+        @Override
+        public CountDevicesPerReleaseChannel set(String parameterName, Object value) {
+          return (CountDevicesPerReleaseChannel) super.set(parameterName, value);
         }
       }
       /**

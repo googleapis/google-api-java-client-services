@@ -32,6 +32,13 @@ package com.google.api.services.workstations.v1beta.model;
 public final class PersistentDirectory extends com.google.api.client.json.GenericJson {
 
   /**
+   * A PersistentDirectory backed by a Compute Engine hyperdisk high availability disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GceHyperdiskBalancedHighAvailability gceHd;
+
+  /**
    * A PersistentDirectory backed by a Compute Engine persistent disk.
    * The value may be {@code null}.
    */
@@ -44,6 +51,23 @@ public final class PersistentDirectory extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String mountPath;
+
+  /**
+   * A PersistentDirectory backed by a Compute Engine hyperdisk high availability disk.
+   * @return value or {@code null} for none
+   */
+  public GceHyperdiskBalancedHighAvailability getGceHd() {
+    return gceHd;
+  }
+
+  /**
+   * A PersistentDirectory backed by a Compute Engine hyperdisk high availability disk.
+   * @param gceHd gceHd or {@code null} for none
+   */
+  public PersistentDirectory setGceHd(GceHyperdiskBalancedHighAvailability gceHd) {
+    this.gceHd = gceHd;
+    return this;
+  }
 
   /**
    * A PersistentDirectory backed by a Compute Engine persistent disk.

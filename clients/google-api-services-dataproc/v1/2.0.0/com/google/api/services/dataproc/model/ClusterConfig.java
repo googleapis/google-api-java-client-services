@@ -85,6 +85,17 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private DataprocMetricConfig dataprocMetricConfig;
 
   /**
+   * Optional. A Cloud Storage bucket used to collect checkpoint diagnostic data
+   * (https://cloud.google.com/dataproc/docs/support/diagnose-clusters#checkpoint_diagnostic_data).
+   * If you do not specify a diagnostic bucket, Cloud Dataproc will use the Dataproc temp bucket to
+   * collect the checkpoint diagnostic data. This field requires a Cloud Storage bucket name, not a
+   * gs://... URI to a Cloud Storage bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String diagnosticBucket;
+
+  /**
    * Optional. Encryption settings for the cluster.
    * The value may be {@code null}.
    */
@@ -303,6 +314,31 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setDataprocMetricConfig(DataprocMetricConfig dataprocMetricConfig) {
     this.dataprocMetricConfig = dataprocMetricConfig;
+    return this;
+  }
+
+  /**
+   * Optional. A Cloud Storage bucket used to collect checkpoint diagnostic data
+   * (https://cloud.google.com/dataproc/docs/support/diagnose-clusters#checkpoint_diagnostic_data).
+   * If you do not specify a diagnostic bucket, Cloud Dataproc will use the Dataproc temp bucket to
+   * collect the checkpoint diagnostic data. This field requires a Cloud Storage bucket name, not a
+   * gs://... URI to a Cloud Storage bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiagnosticBucket() {
+    return diagnosticBucket;
+  }
+
+  /**
+   * Optional. A Cloud Storage bucket used to collect checkpoint diagnostic data
+   * (https://cloud.google.com/dataproc/docs/support/diagnose-clusters#checkpoint_diagnostic_data).
+   * If you do not specify a diagnostic bucket, Cloud Dataproc will use the Dataproc temp bucket to
+   * collect the checkpoint diagnostic data. This field requires a Cloud Storage bucket name, not a
+   * gs://... URI to a Cloud Storage bucket.
+   * @param diagnosticBucket diagnosticBucket or {@code null} for none
+   */
+  public ClusterConfig setDiagnosticBucket(java.lang.String diagnosticBucket) {
+    this.diagnosticBucket = diagnosticBucket;
     return this;
   }
 

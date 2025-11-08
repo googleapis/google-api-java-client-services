@@ -1114,6 +1114,194 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * Generates an access token for the user's environment.
+       *
+       * Create a request for the method "environments.generateAccessToken".
+       *
+       * This request holds the parameters needed by the cloudshell server.  After setting any optional
+       * parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote operation.
+       *
+       * @param environment Required. The environment to generate the access token for.
+       * @return the request
+       */
+      public GenerateAccessToken generateAccessToken(java.lang.String environment) throws java.io.IOException {
+        GenerateAccessToken result = new GenerateAccessToken(environment);
+        initialize(result);
+        return result;
+      }
+
+      public class GenerateAccessToken extends CloudShellRequest<com.google.api.services.cloudshell.v1.model.GenerateAccessTokenResponse> {
+
+        private static final String REST_PATH = "v1/{+environment}:generateAccessToken";
+
+        private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/environments/[^/]+$");
+
+        /**
+         * Generates an access token for the user's environment.
+         *
+         * Create a request for the method "environments.generateAccessToken".
+         *
+         * This request holds the parameters needed by the the cloudshell server.  After setting any
+         * optional parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote
+         * operation. <p> {@link GenerateAccessToken#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param environment Required. The environment to generate the access token for.
+         * @since 1.13
+         */
+        protected GenerateAccessToken(java.lang.String environment) {
+          super(CloudShell.this, "GET", REST_PATH, null, com.google.api.services.cloudshell.v1.model.GenerateAccessTokenResponse.class);
+          this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                "Parameter environment must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GenerateAccessToken set$Xgafv(java.lang.String $Xgafv) {
+          return (GenerateAccessToken) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GenerateAccessToken setAccessToken(java.lang.String accessToken) {
+          return (GenerateAccessToken) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GenerateAccessToken setAlt(java.lang.String alt) {
+          return (GenerateAccessToken) super.setAlt(alt);
+        }
+
+        @Override
+        public GenerateAccessToken setCallback(java.lang.String callback) {
+          return (GenerateAccessToken) super.setCallback(callback);
+        }
+
+        @Override
+        public GenerateAccessToken setFields(java.lang.String fields) {
+          return (GenerateAccessToken) super.setFields(fields);
+        }
+
+        @Override
+        public GenerateAccessToken setKey(java.lang.String key) {
+          return (GenerateAccessToken) super.setKey(key);
+        }
+
+        @Override
+        public GenerateAccessToken setOauthToken(java.lang.String oauthToken) {
+          return (GenerateAccessToken) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GenerateAccessToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GenerateAccessToken) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GenerateAccessToken setQuotaUser(java.lang.String quotaUser) {
+          return (GenerateAccessToken) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GenerateAccessToken setUploadType(java.lang.String uploadType) {
+          return (GenerateAccessToken) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GenerateAccessToken setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GenerateAccessToken) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The environment to generate the access token for. */
+        @com.google.api.client.util.Key
+        private java.lang.String environment;
+
+        /** Required. The environment to generate the access token for.
+         */
+        public java.lang.String getEnvironment() {
+          return environment;
+        }
+
+        /** Required. The environment to generate the access token for. */
+        public GenerateAccessToken setEnvironment(java.lang.String environment) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                "Parameter environment must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+          this.environment = environment;
+          return this;
+        }
+
+        /**
+         * Desired expiration time of the access token. This value must be at most 24 hours in the
+         * future. If a value is not specified, the token's expiration time will be set to a default
+         * value of 1 hour in the future.
+         */
+        @com.google.api.client.util.Key
+        private String expireTime;
+
+        /** Desired expiration time of the access token. This value must be at most 24 hours in the future. If
+       a value is not specified, the token's expiration time will be set to a default value of 1 hour in
+       the future.
+         */
+        public String getExpireTime() {
+          return expireTime;
+        }
+
+        /**
+         * Desired expiration time of the access token. This value must be at most 24 hours in the
+         * future. If a value is not specified, the token's expiration time will be set to a default
+         * value of 1 hour in the future.
+         */
+        public GenerateAccessToken setExpireTime(String expireTime) {
+          this.expireTime = expireTime;
+          return this;
+        }
+
+        /**
+         * Desired lifetime duration of the access token. This value must be at most 24 hours. If a
+         * value is not specified, the token's lifetime will be set to a default value of 1 hour.
+         */
+        @com.google.api.client.util.Key
+        private String ttl;
+
+        /** Desired lifetime duration of the access token. This value must be at most 24 hours. If a value is
+       not specified, the token's lifetime will be set to a default value of 1 hour.
+         */
+        public String getTtl() {
+          return ttl;
+        }
+
+        /**
+         * Desired lifetime duration of the access token. This value must be at most 24 hours. If a
+         * value is not specified, the token's lifetime will be set to a default value of 1 hour.
+         */
+        public GenerateAccessToken setTtl(String ttl) {
+          this.ttl = ttl;
+          return this;
+        }
+
+        @Override
+        public GenerateAccessToken set(String parameterName, Object value) {
+          return (GenerateAccessToken) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets an environment. Returns NOT_FOUND if the environment does not exist.
        *
        * Create a request for the method "environments.get".

@@ -37,14 +37,14 @@ public final class NotebookLmNotebook extends com.google.api.client.json.Generic
   private java.lang.String id;
 
   /**
-   * Title of the Notebook. Read-only.
+   * Title of the Notebook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * URL that can be used to access the Notebook. Read-only.
+   * URL that can be used to access the Notebook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class NotebookLmNotebook extends com.google.api.client.json.Generic
   }
 
   /**
-   * Title of the Notebook. Read-only.
+   * Title of the Notebook.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -76,7 +76,7 @@ public final class NotebookLmNotebook extends com.google.api.client.json.Generic
   }
 
   /**
-   * Title of the Notebook. Read-only.
+   * Title of the Notebook.
    * @param title title or {@code null} for none
    */
   public NotebookLmNotebook setTitle(java.lang.String title) {
@@ -85,7 +85,7 @@ public final class NotebookLmNotebook extends com.google.api.client.json.Generic
   }
 
   /**
-   * URL that can be used to access the Notebook. Read-only.
+   * URL that can be used to access the Notebook.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -93,7 +93,7 @@ public final class NotebookLmNotebook extends com.google.api.client.json.Generic
   }
 
   /**
-   * URL that can be used to access the Notebook. Read-only.
+   * URL that can be used to access the Notebook.
    * @param url url or {@code null} for none
    */
   public NotebookLmNotebook setUrl(java.lang.String url) {

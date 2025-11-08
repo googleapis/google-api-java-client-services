@@ -37,14 +37,14 @@ public final class GeminiGem extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Title of the Gem. Read-only.
+   * Title of the Gem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * URL that can be used to access the Gem. Read-only.
+   * URL that can be used to access the Gem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GeminiGem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the Gem. Read-only.
+   * Title of the Gem.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -76,7 +76,7 @@ public final class GeminiGem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the Gem. Read-only.
+   * Title of the Gem.
    * @param title title or {@code null} for none
    */
   public GeminiGem setTitle(java.lang.String title) {
@@ -85,7 +85,7 @@ public final class GeminiGem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL that can be used to access the Gem. Read-only.
+   * URL that can be used to access the Gem.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -93,7 +93,7 @@ public final class GeminiGem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL that can be used to access the Gem. Read-only.
+   * URL that can be used to access the Gem.
    * @param url url or {@code null} for none
    */
   public GeminiGem setUrl(java.lang.String url) {

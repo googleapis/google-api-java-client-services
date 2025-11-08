@@ -187,6 +187,18 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private GceShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
+   * Optional. Link to the startup script stored in Cloud Storage. This script will be run on the
+   * host workstation VM when the VM is created. The uri must be of the form gs://{bucket-
+   * name}/{object-name}. If specifying a startup script, the service account must have [Permission
+   * to access the bucket and script file in Cloud
+   * Storage](https://cloud.google.com/storage/docs/access-control/iam-permissions). Otherwise, the
+   * script must be publicly accessible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startupScriptUri;
+
+  /**
    * Optional. Network tags to add to the Compute Engine VMs backing the workstations. This option
    * applies [network tags](https://cloud.google.com/vpc/docs/add-remove-network-tags) to VMs
    * created with this configuration. These network tags enable the creation of [firewall
@@ -533,6 +545,33 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    */
   public GceInstance setShieldedInstanceConfig(GceShieldedInstanceConfig shieldedInstanceConfig) {
     this.shieldedInstanceConfig = shieldedInstanceConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Link to the startup script stored in Cloud Storage. This script will be run on the
+   * host workstation VM when the VM is created. The uri must be of the form gs://{bucket-
+   * name}/{object-name}. If specifying a startup script, the service account must have [Permission
+   * to access the bucket and script file in Cloud
+   * Storage](https://cloud.google.com/storage/docs/access-control/iam-permissions). Otherwise, the
+   * script must be publicly accessible.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartupScriptUri() {
+    return startupScriptUri;
+  }
+
+  /**
+   * Optional. Link to the startup script stored in Cloud Storage. This script will be run on the
+   * host workstation VM when the VM is created. The uri must be of the form gs://{bucket-
+   * name}/{object-name}. If specifying a startup script, the service account must have [Permission
+   * to access the bucket and script file in Cloud
+   * Storage](https://cloud.google.com/storage/docs/access-control/iam-permissions). Otherwise, the
+   * script must be publicly accessible.
+   * @param startupScriptUri startupScriptUri or {@code null} for none
+   */
+  public GceInstance setStartupScriptUri(java.lang.String startupScriptUri) {
+    this.startupScriptUri = startupScriptUri;
     return this;
   }
 

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
- * Master is the configuration for components on master.
+ * RegistryHeader configures headers for the registry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,43 +28,64 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Master extends com.google.api.client.json.GenericJson {
+public final class RegistryHeader extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * Key configures the header key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CompatibilityStatus compatibilityStatus;
+  private java.lang.String key;
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * Value configures the header value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> value;
+
+  /**
+   * Key configures the header key.
    * @return value or {@code null} for none
    */
-  public CompatibilityStatus getCompatibilityStatus() {
-    return compatibilityStatus;
+  public java.lang.String getKey() {
+    return key;
   }
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
-   * @param compatibilityStatus compatibilityStatus or {@code null} for none
+   * Key configures the header key.
+   * @param key key or {@code null} for none
    */
-  public Master setCompatibilityStatus(CompatibilityStatus compatibilityStatus) {
-    this.compatibilityStatus = compatibilityStatus;
+  public RegistryHeader setKey(java.lang.String key) {
+    this.key = key;
+    return this;
+  }
+
+  /**
+   * Value configures the header value.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getValue() {
+    return value;
+  }
+
+  /**
+   * Value configures the header value.
+   * @param value value or {@code null} for none
+   */
+  public RegistryHeader setValue(java.util.List<java.lang.String> value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public Master set(String fieldName, Object value) {
-    return (Master) super.set(fieldName, value);
+  public RegistryHeader set(String fieldName, Object value) {
+    return (RegistryHeader) super.set(fieldName, value);
   }
 
   @Override
-  public Master clone() {
-    return (Master) super.clone();
+  public RegistryHeader clone() {
+    return (RegistryHeader) super.clone();
   }
 
 }

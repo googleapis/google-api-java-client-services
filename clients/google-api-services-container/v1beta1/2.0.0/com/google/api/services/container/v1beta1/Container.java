@@ -953,6 +953,149 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
+         * CompleteControlPlaneUpgrade completes the rollback-safe upgrade by performing the step two
+         * upgrade for a specific cluster.
+         *
+         * Create a request for the method "clusters.completeControlPlaneUpgrade".
+         *
+         * This request holds the parameters needed by the container server.  After setting any optional
+         * parameters, call the {@link CompleteControlPlaneUpgrade#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name The name (project, location, cluster) of the cluster to complete upgrade. Specified in the format
+         *        `projects/locations/clusters`.
+         * @param content the {@link com.google.api.services.container.v1beta1.model.CompleteControlPlaneUpgradeRequest}
+         * @return the request
+         */
+        public CompleteControlPlaneUpgrade completeControlPlaneUpgrade(java.lang.String name, com.google.api.services.container.v1beta1.model.CompleteControlPlaneUpgradeRequest content) throws java.io.IOException {
+          CompleteControlPlaneUpgrade result = new CompleteControlPlaneUpgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CompleteControlPlaneUpgrade extends ContainerRequest<com.google.api.services.container.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:completeControlPlaneUpgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * CompleteControlPlaneUpgrade completes the rollback-safe upgrade by performing the step two
+           * upgrade for a specific cluster.
+           *
+           * Create a request for the method "clusters.completeControlPlaneUpgrade".
+           *
+           * This request holds the parameters needed by the the container server.  After setting any
+           * optional parameters, call the {@link CompleteControlPlaneUpgrade#execute()} method to invoke
+           * the remote operation. <p> {@link CompleteControlPlaneUpgrade#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name The name (project, location, cluster) of the cluster to complete upgrade. Specified in the format
+         *        `projects/locations/clusters`.
+           * @param content the {@link com.google.api.services.container.v1beta1.model.CompleteControlPlaneUpgradeRequest}
+           * @since 1.13
+           */
+          protected CompleteControlPlaneUpgrade(java.lang.String name, com.google.api.services.container.v1beta1.model.CompleteControlPlaneUpgradeRequest content) {
+            super(Container.this, "POST", REST_PATH, content, com.google.api.services.container.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (CompleteControlPlaneUpgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setAccessToken(java.lang.String accessToken) {
+            return (CompleteControlPlaneUpgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setAlt(java.lang.String alt) {
+            return (CompleteControlPlaneUpgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setCallback(java.lang.String callback) {
+            return (CompleteControlPlaneUpgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setFields(java.lang.String fields) {
+            return (CompleteControlPlaneUpgrade) super.setFields(fields);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setKey(java.lang.String key) {
+            return (CompleteControlPlaneUpgrade) super.setKey(key);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setOauthToken(java.lang.String oauthToken) {
+            return (CompleteControlPlaneUpgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CompleteControlPlaneUpgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setQuotaUser(java.lang.String quotaUser) {
+            return (CompleteControlPlaneUpgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setUploadType(java.lang.String uploadType) {
+            return (CompleteControlPlaneUpgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CompleteControlPlaneUpgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name (project, location, cluster) of the cluster to complete upgrade. Specified in
+           * the format `projects/locations/clusters`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name (project, location, cluster) of the cluster to complete upgrade. Specified in the format
+         `projects/locations/clusters`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name (project, location, cluster) of the cluster to complete upgrade. Specified in
+           * the format `projects/locations/clusters`.
+           */
+          public CompleteControlPlaneUpgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade set(String parameterName, Object value) {
+            return (CompleteControlPlaneUpgrade) super.set(parameterName, value);
+          }
+        }
+        /**
          * Completes master IP rotation.
          *
          * Create a request for the method "clusters.completeIpRotation".
@@ -6948,6 +7091,149 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           @Override
           public Addons set(String parameterName, Object value) {
             return (Addons) super.set(parameterName, value);
+          }
+        }
+        /**
+         * CompleteControlPlaneUpgrade completes the rollback-safe upgrade by performing the step two
+         * upgrade for a specific cluster.
+         *
+         * Create a request for the method "clusters.completeControlPlaneUpgrade".
+         *
+         * This request holds the parameters needed by the container server.  After setting any optional
+         * parameters, call the {@link CompleteControlPlaneUpgrade#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name The name (project, location, cluster) of the cluster to complete upgrade. Specified in the format
+         *        `projects/locations/clusters`.
+         * @param content the {@link com.google.api.services.container.v1beta1.model.CompleteControlPlaneUpgradeRequest}
+         * @return the request
+         */
+        public CompleteControlPlaneUpgrade completeControlPlaneUpgrade(java.lang.String name, com.google.api.services.container.v1beta1.model.CompleteControlPlaneUpgradeRequest content) throws java.io.IOException {
+          CompleteControlPlaneUpgrade result = new CompleteControlPlaneUpgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CompleteControlPlaneUpgrade extends ContainerRequest<com.google.api.services.container.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:completeControlPlaneUpgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/zones/[^/]+/clusters/[^/]+$");
+
+          /**
+           * CompleteControlPlaneUpgrade completes the rollback-safe upgrade by performing the step two
+           * upgrade for a specific cluster.
+           *
+           * Create a request for the method "clusters.completeControlPlaneUpgrade".
+           *
+           * This request holds the parameters needed by the the container server.  After setting any
+           * optional parameters, call the {@link CompleteControlPlaneUpgrade#execute()} method to invoke
+           * the remote operation. <p> {@link CompleteControlPlaneUpgrade#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name The name (project, location, cluster) of the cluster to complete upgrade. Specified in the format
+         *        `projects/locations/clusters`.
+           * @param content the {@link com.google.api.services.container.v1beta1.model.CompleteControlPlaneUpgradeRequest}
+           * @since 1.13
+           */
+          protected CompleteControlPlaneUpgrade(java.lang.String name, com.google.api.services.container.v1beta1.model.CompleteControlPlaneUpgradeRequest content) {
+            super(Container.this, "POST", REST_PATH, content, com.google.api.services.container.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/zones/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (CompleteControlPlaneUpgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setAccessToken(java.lang.String accessToken) {
+            return (CompleteControlPlaneUpgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setAlt(java.lang.String alt) {
+            return (CompleteControlPlaneUpgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setCallback(java.lang.String callback) {
+            return (CompleteControlPlaneUpgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setFields(java.lang.String fields) {
+            return (CompleteControlPlaneUpgrade) super.setFields(fields);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setKey(java.lang.String key) {
+            return (CompleteControlPlaneUpgrade) super.setKey(key);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setOauthToken(java.lang.String oauthToken) {
+            return (CompleteControlPlaneUpgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CompleteControlPlaneUpgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setQuotaUser(java.lang.String quotaUser) {
+            return (CompleteControlPlaneUpgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setUploadType(java.lang.String uploadType) {
+            return (CompleteControlPlaneUpgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CompleteControlPlaneUpgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name (project, location, cluster) of the cluster to complete upgrade. Specified in
+           * the format `projects/locations/clusters`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name (project, location, cluster) of the cluster to complete upgrade. Specified in the format
+         `projects/locations/clusters`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name (project, location, cluster) of the cluster to complete upgrade. Specified in
+           * the format `projects/locations/clusters`.
+           */
+          public CompleteControlPlaneUpgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/zones/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CompleteControlPlaneUpgrade set(String parameterName, Object value) {
+            return (CompleteControlPlaneUpgrade) super.set(parameterName, value);
           }
         }
         /**

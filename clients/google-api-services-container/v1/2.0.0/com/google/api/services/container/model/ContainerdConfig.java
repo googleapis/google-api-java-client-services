@@ -39,6 +39,14 @@ public final class ContainerdConfig extends com.google.api.client.json.GenericJs
   private PrivateRegistryAccessConfig privateRegistryAccessConfig;
 
   /**
+   * RegistryHostConfig configures containerd registry host configuration. Each registry_hosts
+   * represents a hosts.toml file. At most 25 registry_hosts are allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RegistryHostConfig> registryHosts;
+
+  /**
    * Optional. WritableCgroups defines writable cgroups configuration for the node pool.
    * The value may be {@code null}.
    */
@@ -61,6 +69,25 @@ public final class ContainerdConfig extends com.google.api.client.json.GenericJs
    */
   public ContainerdConfig setPrivateRegistryAccessConfig(PrivateRegistryAccessConfig privateRegistryAccessConfig) {
     this.privateRegistryAccessConfig = privateRegistryAccessConfig;
+    return this;
+  }
+
+  /**
+   * RegistryHostConfig configures containerd registry host configuration. Each registry_hosts
+   * represents a hosts.toml file. At most 25 registry_hosts are allowed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RegistryHostConfig> getRegistryHosts() {
+    return registryHosts;
+  }
+
+  /**
+   * RegistryHostConfig configures containerd registry host configuration. Each registry_hosts
+   * represents a hosts.toml file. At most 25 registry_hosts are allowed.
+   * @param registryHosts registryHosts or {@code null} for none
+   */
+  public ContainerdConfig setRegistryHosts(java.util.List<RegistryHostConfig> registryHosts) {
+    this.registryHosts = registryHosts;
     return this;
   }
 

@@ -142,6 +142,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String createTime;
 
   /**
+   * Output only. The current emulated version of the master endpoint. The version is in minor
+   * version format, e.g. 1.30. No value or empty string means the cluster has no emulated version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String currentEmulatedVersion;
+
+  /**
    * Output only. The current software version of the master endpoint.
    * The value may be {@code null}.
    */
@@ -608,6 +616,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ResourceUsageExportConfig resourceUsageExportConfig;
 
   /**
+   * The rollback safe upgrade information of the cluster. This field is used when user manually
+   * triggers a rollback safe upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RollbackSafeUpgrade rollbackSafeUpgrade;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -1016,6 +1032,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setCreateTime(java.lang.String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The current emulated version of the master endpoint. The version is in minor
+   * version format, e.g. 1.30. No value or empty string means the cluster has no emulated version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurrentEmulatedVersion() {
+    return currentEmulatedVersion;
+  }
+
+  /**
+   * Output only. The current emulated version of the master endpoint. The version is in minor
+   * version format, e.g. 1.30. No value or empty string means the cluster has no emulated version.
+   * @param currentEmulatedVersion currentEmulatedVersion or {@code null} for none
+   */
+  public Cluster setCurrentEmulatedVersion(java.lang.String currentEmulatedVersion) {
+    this.currentEmulatedVersion = currentEmulatedVersion;
     return this;
   }
 
@@ -2113,6 +2148,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setResourceUsageExportConfig(ResourceUsageExportConfig resourceUsageExportConfig) {
     this.resourceUsageExportConfig = resourceUsageExportConfig;
+    return this;
+  }
+
+  /**
+   * The rollback safe upgrade information of the cluster. This field is used when user manually
+   * triggers a rollback safe upgrade.
+   * @return value or {@code null} for none
+   */
+  public RollbackSafeUpgrade getRollbackSafeUpgrade() {
+    return rollbackSafeUpgrade;
+  }
+
+  /**
+   * The rollback safe upgrade information of the cluster. This field is used when user manually
+   * triggers a rollback safe upgrade.
+   * @param rollbackSafeUpgrade rollbackSafeUpgrade or {@code null} for none
+   */
+  public Cluster setRollbackSafeUpgrade(RollbackSafeUpgrade rollbackSafeUpgrade) {
+    this.rollbackSafeUpgrade = rollbackSafeUpgrade;
     return this;
   }
 

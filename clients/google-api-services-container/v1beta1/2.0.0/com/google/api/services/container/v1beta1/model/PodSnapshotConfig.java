@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Master is the configuration for components on master.
+ * PodSnapshotConfig is the configuration for GKE Pod Snapshots feature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,43 +28,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Master extends com.google.api.client.json.GenericJson {
+public final class PodSnapshotConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * Whether or not the Pod Snapshots feature is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CompatibilityStatus compatibilityStatus;
+  private java.lang.Boolean enabled;
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * Whether or not the Pod Snapshots feature is enabled.
    * @return value or {@code null} for none
    */
-  public CompatibilityStatus getCompatibilityStatus() {
-    return compatibilityStatus;
+  public java.lang.Boolean getEnabled() {
+    return enabled;
   }
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
-   * @param compatibilityStatus compatibilityStatus or {@code null} for none
+   * Whether or not the Pod Snapshots feature is enabled.
+   * @param enabled enabled or {@code null} for none
    */
-  public Master setCompatibilityStatus(CompatibilityStatus compatibilityStatus) {
-    this.compatibilityStatus = compatibilityStatus;
+  public PodSnapshotConfig setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
     return this;
   }
 
   @Override
-  public Master set(String fieldName, Object value) {
-    return (Master) super.set(fieldName, value);
+  public PodSnapshotConfig set(String fieldName, Object value) {
+    return (PodSnapshotConfig) super.set(fieldName, value);
   }
 
   @Override
-  public Master clone() {
-    return (Master) super.clone();
+  public PodSnapshotConfig clone() {
+    return (PodSnapshotConfig) super.clone();
   }
 
 }

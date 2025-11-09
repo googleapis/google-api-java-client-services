@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Master is the configuration for components on master.
+ * RollbackSafeUpgrade is the configuration for the rollback safe upgrade.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,43 +28,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Master extends com.google.api.client.json.GenericJson {
+public final class RollbackSafeUpgrade extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * A user-defined period for the cluster remains in the rollbackable state. ex: {seconds: 21600}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CompatibilityStatus compatibilityStatus;
+  private String controlPlaneSoakDuration;
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * A user-defined period for the cluster remains in the rollbackable state. ex: {seconds: 21600}.
    * @return value or {@code null} for none
    */
-  public CompatibilityStatus getCompatibilityStatus() {
-    return compatibilityStatus;
+  public String getControlPlaneSoakDuration() {
+    return controlPlaneSoakDuration;
   }
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
-   * @param compatibilityStatus compatibilityStatus or {@code null} for none
+   * A user-defined period for the cluster remains in the rollbackable state. ex: {seconds: 21600}.
+   * @param controlPlaneSoakDuration controlPlaneSoakDuration or {@code null} for none
    */
-  public Master setCompatibilityStatus(CompatibilityStatus compatibilityStatus) {
-    this.compatibilityStatus = compatibilityStatus;
+  public RollbackSafeUpgrade setControlPlaneSoakDuration(String controlPlaneSoakDuration) {
+    this.controlPlaneSoakDuration = controlPlaneSoakDuration;
     return this;
   }
 
   @Override
-  public Master set(String fieldName, Object value) {
-    return (Master) super.set(fieldName, value);
+  public RollbackSafeUpgrade set(String fieldName, Object value) {
+    return (RollbackSafeUpgrade) super.set(fieldName, value);
   }
 
   @Override
-  public Master clone() {
-    return (Master) super.clone();
+  public RollbackSafeUpgrade clone() {
+    return (RollbackSafeUpgrade) super.clone();
   }
 
 }

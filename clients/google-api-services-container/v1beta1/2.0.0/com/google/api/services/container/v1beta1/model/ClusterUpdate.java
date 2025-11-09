@@ -532,6 +532,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ResourceUsageExportConfig desiredResourceUsageExportConfig;
 
   /**
+   * The desired rollback safe upgrade configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RollbackSafeUpgrade desiredRollbackSafeUpgrade;
+
+  /**
    * Enable/Disable Secret Manager Config.
    * The value may be {@code null}.
    */
@@ -1857,6 +1864,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredResourceUsageExportConfig(ResourceUsageExportConfig desiredResourceUsageExportConfig) {
     this.desiredResourceUsageExportConfig = desiredResourceUsageExportConfig;
+    return this;
+  }
+
+  /**
+   * The desired rollback safe upgrade configuration.
+   * @return value or {@code null} for none
+   */
+  public RollbackSafeUpgrade getDesiredRollbackSafeUpgrade() {
+    return desiredRollbackSafeUpgrade;
+  }
+
+  /**
+   * The desired rollback safe upgrade configuration.
+   * @param desiredRollbackSafeUpgrade desiredRollbackSafeUpgrade or {@code null} for none
+   */
+  public ClusterUpdate setDesiredRollbackSafeUpgrade(RollbackSafeUpgrade desiredRollbackSafeUpgrade) {
+    this.desiredRollbackSafeUpgrade = desiredRollbackSafeUpgrade;
     return this;
   }
 

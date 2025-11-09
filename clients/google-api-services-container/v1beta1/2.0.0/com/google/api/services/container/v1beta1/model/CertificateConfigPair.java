@@ -17,7 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Master is the configuration for components on master.
+ * CertificateConfigPair configures pairs of certificates, which is used for client certificate and
+ * key pairs under a registry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,43 +29,64 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Master extends com.google.api.client.json.GenericJson {
+public final class CertificateConfigPair extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * Cert configures the client certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CompatibilityStatus compatibilityStatus;
+  private CertificateConfig cert;
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * Key configures the client private key. Optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CertificateConfig key;
+
+  /**
+   * Cert configures the client certificate.
    * @return value or {@code null} for none
    */
-  public CompatibilityStatus getCompatibilityStatus() {
-    return compatibilityStatus;
+  public CertificateConfig getCert() {
+    return cert;
   }
 
   /**
-   * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
-   * @param compatibilityStatus compatibilityStatus or {@code null} for none
+   * Cert configures the client certificate.
+   * @param cert cert or {@code null} for none
    */
-  public Master setCompatibilityStatus(CompatibilityStatus compatibilityStatus) {
-    this.compatibilityStatus = compatibilityStatus;
+  public CertificateConfigPair setCert(CertificateConfig cert) {
+    this.cert = cert;
+    return this;
+  }
+
+  /**
+   * Key configures the client private key. Optional.
+   * @return value or {@code null} for none
+   */
+  public CertificateConfig getKey() {
+    return key;
+  }
+
+  /**
+   * Key configures the client private key. Optional.
+   * @param key key or {@code null} for none
+   */
+  public CertificateConfigPair setKey(CertificateConfig key) {
+    this.key = key;
     return this;
   }
 
   @Override
-  public Master set(String fieldName, Object value) {
-    return (Master) super.set(fieldName, value);
+  public CertificateConfigPair set(String fieldName, Object value) {
+    return (CertificateConfigPair) super.set(fieldName, value);
   }
 
   @Override
-  public Master clone() {
-    return (Master) super.clone();
+  public CertificateConfigPair clone() {
+    return (CertificateConfigPair) super.clone();
   }
 
 }

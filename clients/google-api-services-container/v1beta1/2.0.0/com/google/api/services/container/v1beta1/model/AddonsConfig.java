@@ -153,6 +153,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private ParallelstoreCsiDriverConfig parallelstoreCsiDriverConfig;
 
   /**
+   * Configuration for the Pod Snapshot feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PodSnapshotConfig podSnapshotConfig;
+
+  /**
    * Optional. Configuration for Ray Operator addon.
    * The value may be {@code null}.
    */
@@ -453,6 +460,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setParallelstoreCsiDriverConfig(ParallelstoreCsiDriverConfig parallelstoreCsiDriverConfig) {
     this.parallelstoreCsiDriverConfig = parallelstoreCsiDriverConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the Pod Snapshot feature.
+   * @return value or {@code null} for none
+   */
+  public PodSnapshotConfig getPodSnapshotConfig() {
+    return podSnapshotConfig;
+  }
+
+  /**
+   * Configuration for the Pod Snapshot feature.
+   * @param podSnapshotConfig podSnapshotConfig or {@code null} for none
+   */
+  public AddonsConfig setPodSnapshotConfig(PodSnapshotConfig podSnapshotConfig) {
+    this.podSnapshotConfig = podSnapshotConfig;
     return this;
   }
 

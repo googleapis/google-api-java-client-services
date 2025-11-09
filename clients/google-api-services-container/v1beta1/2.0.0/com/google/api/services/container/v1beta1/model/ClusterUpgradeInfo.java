@@ -73,6 +73,13 @@ public final class ClusterUpgradeInfo extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> pausedReason;
 
   /**
+   * The cluster's rollback-safe upgrade status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RollbackSafeUpgradeStatus rollbackSafeUpgradeStatus;
+
+  /**
    * The list of past auto upgrades.
    * The value may be {@code null}.
    */
@@ -178,6 +185,23 @@ public final class ClusterUpgradeInfo extends com.google.api.client.json.Generic
    */
   public ClusterUpgradeInfo setPausedReason(java.util.List<java.lang.String> pausedReason) {
     this.pausedReason = pausedReason;
+    return this;
+  }
+
+  /**
+   * The cluster's rollback-safe upgrade status.
+   * @return value or {@code null} for none
+   */
+  public RollbackSafeUpgradeStatus getRollbackSafeUpgradeStatus() {
+    return rollbackSafeUpgradeStatus;
+  }
+
+  /**
+   * The cluster's rollback-safe upgrade status.
+   * @param rollbackSafeUpgradeStatus rollbackSafeUpgradeStatus or {@code null} for none
+   */
+  public ClusterUpgradeInfo setRollbackSafeUpgradeStatus(RollbackSafeUpgradeStatus rollbackSafeUpgradeStatus) {
+    this.rollbackSafeUpgradeStatus = rollbackSafeUpgradeStatus;
     return this;
   }
 

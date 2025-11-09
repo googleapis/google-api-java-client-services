@@ -52,6 +52,16 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
   private String expireTime;
 
   /**
+   * The labels with user-defined metadata to organize your Sessions. Label keys and values can be
+   * no longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Identifier. The resource name of the session. Format: 'projects/{project}/locations/{location}/
    * reasoningEngines/{reasoning_engine}/sessions/{session}'.
    * The value may be {@code null}.
@@ -137,6 +147,29 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1Session setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * The labels with user-defined metadata to organize your Sessions. Label keys and values can be
+   * no longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * The labels with user-defined metadata to organize your Sessions. Label keys and values can be
+   * no longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Session setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

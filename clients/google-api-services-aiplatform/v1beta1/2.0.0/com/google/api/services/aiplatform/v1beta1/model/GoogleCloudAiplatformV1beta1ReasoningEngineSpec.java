@@ -60,6 +60,26 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpec extends com.g
   private GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec deploymentSpec;
 
   /**
+   * Output only. The identity to use for the Reasoning Engine. It can contain one of the following
+   * values: * service-{project}@gcp-sa-aiplatform-re.googleapis.com (for SERVICE_AGENT identity
+   * type) * {name}@{project}.gserviceaccount.com (for SERVICE_ACCOUNT identity type) * agents.globa
+   * l.{org}.system.id.goog/resources/aiplatform/projects/{project}/locations/{location}/reasoningEn
+   * gines/{reasoning_engine} (for AGENT_IDENTITY identity type)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveIdentity;
+
+  /**
+   * Optional. The identity type to use for the Reasoning Engine. If not specified, the
+   * `service_account` field will be used if set, otherwise the default Vertex AI Reasoning Engine
+   * Service Agent in the project will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String identityType;
+
+  /**
    * Optional. User provided package spec of the ReasoningEngine. Ignored when users directly
    * specify a deployment image through `deployment_spec.first_party_image_override`, but keeping
    * the field_behavior to avoid introducing breaking changes. The `deployment_source` field should
@@ -155,6 +175,52 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpec extends com.g
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpec setDeploymentSpec(GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec deploymentSpec) {
     this.deploymentSpec = deploymentSpec;
+    return this;
+  }
+
+  /**
+   * Output only. The identity to use for the Reasoning Engine. It can contain one of the following
+   * values: * service-{project}@gcp-sa-aiplatform-re.googleapis.com (for SERVICE_AGENT identity
+   * type) * {name}@{project}.gserviceaccount.com (for SERVICE_ACCOUNT identity type) * agents.globa
+   * l.{org}.system.id.goog/resources/aiplatform/projects/{project}/locations/{location}/reasoningEn
+   * gines/{reasoning_engine} (for AGENT_IDENTITY identity type)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveIdentity() {
+    return effectiveIdentity;
+  }
+
+  /**
+   * Output only. The identity to use for the Reasoning Engine. It can contain one of the following
+   * values: * service-{project}@gcp-sa-aiplatform-re.googleapis.com (for SERVICE_AGENT identity
+   * type) * {name}@{project}.gserviceaccount.com (for SERVICE_ACCOUNT identity type) * agents.globa
+   * l.{org}.system.id.goog/resources/aiplatform/projects/{project}/locations/{location}/reasoningEn
+   * gines/{reasoning_engine} (for AGENT_IDENTITY identity type)
+   * @param effectiveIdentity effectiveIdentity or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpec setEffectiveIdentity(java.lang.String effectiveIdentity) {
+    this.effectiveIdentity = effectiveIdentity;
+    return this;
+  }
+
+  /**
+   * Optional. The identity type to use for the Reasoning Engine. If not specified, the
+   * `service_account` field will be used if set, otherwise the default Vertex AI Reasoning Engine
+   * Service Agent in the project will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdentityType() {
+    return identityType;
+  }
+
+  /**
+   * Optional. The identity type to use for the Reasoning Engine. If not specified, the
+   * `service_account` field will be used if set, otherwise the default Vertex AI Reasoning Engine
+   * Service Agent in the project will be used.
+   * @param identityType identityType or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpec setIdentityType(java.lang.String identityType) {
+    this.identityType = identityType;
     return this;
   }
 

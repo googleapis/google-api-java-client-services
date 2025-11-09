@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 29
+ * Common model for database resource instance metadata. Next ID: 30
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -123,6 +123,13 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceType;
+
+  /**
+   * Optional. Whether deletion protection is enabled for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDeletionProtectionEnabled;
 
   /**
    * The resource location. REQUIRED
@@ -448,6 +455,23 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   public DatabaseResourceMetadata setInstanceType(java.lang.String instanceType) {
     this.instanceType = instanceType;
+    return this;
+  }
+
+  /**
+   * Optional. Whether deletion protection is enabled for this resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDeletionProtectionEnabled() {
+    return isDeletionProtectionEnabled;
+  }
+
+  /**
+   * Optional. Whether deletion protection is enabled for this resource.
+   * @param isDeletionProtectionEnabled isDeletionProtectionEnabled or {@code null} for none
+   */
+  public DatabaseResourceMetadata setIsDeletionProtectionEnabled(java.lang.Boolean isDeletionProtectionEnabled) {
+    this.isDeletionProtectionEnabled = isDeletionProtectionEnabled;
     return this;
   }
 

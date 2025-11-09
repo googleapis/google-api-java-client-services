@@ -38,7 +38,9 @@ public final class GoogleCloudAiplatformV1beta1CustomCodeExecutionSpec extends c
    * reference=EvaluationInstance.InstanceData(text="4") ) ``` Example converted input: ``` {
    * 'response': {'text': 'The answer is 4.'}, 'reference': {'text': '4'} } ``` Example python
    * function: ``` def evaluate(instance: dict[str, Any]) -> float: if instance'response' ==
-   * instance'reference': return 1.0 return 0.0 ```
+   * instance'reference': return 1.0 return 0.0 ``` CustomCodeExecutionSpec is also supported in
+   * Batch Evaluation (EvalDataset RPC) and Tuning Evaluation. Each line in the input jsonl file
+   * will be converted to dict[str, Any] and passed to the evaluation function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +55,9 @@ public final class GoogleCloudAiplatformV1beta1CustomCodeExecutionSpec extends c
    * reference=EvaluationInstance.InstanceData(text="4") ) ``` Example converted input: ``` {
    * 'response': {'text': 'The answer is 4.'}, 'reference': {'text': '4'} } ``` Example python
    * function: ``` def evaluate(instance: dict[str, Any]) -> float: if instance'response' ==
-   * instance'reference': return 1.0 return 0.0 ```
+   * instance'reference': return 1.0 return 0.0 ``` CustomCodeExecutionSpec is also supported in
+   * Batch Evaluation (EvalDataset RPC) and Tuning Evaluation. Each line in the input jsonl file
+   * will be converted to dict[str, Any] and passed to the evaluation function.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvaluationFunction() {
@@ -69,7 +73,9 @@ public final class GoogleCloudAiplatformV1beta1CustomCodeExecutionSpec extends c
    * reference=EvaluationInstance.InstanceData(text="4") ) ``` Example converted input: ``` {
    * 'response': {'text': 'The answer is 4.'}, 'reference': {'text': '4'} } ``` Example python
    * function: ``` def evaluate(instance: dict[str, Any]) -> float: if instance'response' ==
-   * instance'reference': return 1.0 return 0.0 ```
+   * instance'reference': return 1.0 return 0.0 ``` CustomCodeExecutionSpec is also supported in
+   * Batch Evaluation (EvalDataset RPC) and Tuning Evaluation. Each line in the input jsonl file
+   * will be converted to dict[str, Any] and passed to the evaluation function.
    * @param evaluationFunction evaluationFunction or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CustomCodeExecutionSpec setEvaluationFunction(java.lang.String evaluationFunction) {

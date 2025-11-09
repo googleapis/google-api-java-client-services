@@ -51,13 +51,6 @@ public final class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends co
   private GoogleCloudAiplatformV1EvaluationInstanceAgentDataEvents events;
 
   /**
-   * A JSON string containing a sequence of events.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String eventsText;
-
-  /**
    * List of tools.
    * The value may be {@code null}.
    */
@@ -124,23 +117,6 @@ public final class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends co
    */
   public GoogleCloudAiplatformV1EvaluationInstanceAgentData setEvents(GoogleCloudAiplatformV1EvaluationInstanceAgentDataEvents events) {
     this.events = events;
-    return this;
-  }
-
-  /**
-   * A JSON string containing a sequence of events.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEventsText() {
-    return eventsText;
-  }
-
-  /**
-   * A JSON string containing a sequence of events.
-   * @param eventsText eventsText or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1EvaluationInstanceAgentData setEventsText(java.lang.String eventsText) {
-    this.eventsText = eventsText;
     return this;
   }
 

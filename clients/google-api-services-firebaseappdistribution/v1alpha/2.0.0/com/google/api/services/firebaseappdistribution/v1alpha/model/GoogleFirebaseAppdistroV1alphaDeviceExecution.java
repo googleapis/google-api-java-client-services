@@ -94,6 +94,16 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
   private java.lang.String name;
 
   /**
+   * Output only. The device execution from which cached steps were used during this execution.
+   * Note: This field is only populated for ACTION_BASED_REPLAY executions. If the original device
+   * execution no longer exists, this field will be empty. Format: `projects/{project_number}/apps/{
+   * app}/releases/{release}/tests/{test}/deviceExecutions/{device_execution}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originDeviceExecution;
+
+  /**
    * Output only. The path to a directory in Cloud Storage that will eventually contain the results
    * for this execution. For example, gs://bucket/Nexus5-18-en-portrait.
    * The value may be {@code null}.
@@ -272,6 +282,29 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
    */
   public GoogleFirebaseAppdistroV1alphaDeviceExecution setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The device execution from which cached steps were used during this execution.
+   * Note: This field is only populated for ACTION_BASED_REPLAY executions. If the original device
+   * execution no longer exists, this field will be empty. Format: `projects/{project_number}/apps/{
+   * app}/releases/{release}/tests/{test}/deviceExecutions/{device_execution}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginDeviceExecution() {
+    return originDeviceExecution;
+  }
+
+  /**
+   * Output only. The device execution from which cached steps were used during this execution.
+   * Note: This field is only populated for ACTION_BASED_REPLAY executions. If the original device
+   * execution no longer exists, this field will be empty. Format: `projects/{project_number}/apps/{
+   * app}/releases/{release}/tests/{test}/deviceExecutions/{device_execution}`
+   * @param originDeviceExecution originDeviceExecution or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceExecution setOriginDeviceExecution(java.lang.String originDeviceExecution) {
+    this.originDeviceExecution = originDeviceExecution;
     return this;
   }
 

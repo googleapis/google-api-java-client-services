@@ -57,6 +57,17 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Output only. Output only snapshot of the effective unit filter at Rollout start time.
+   * Contains a CEL(https://github.com/google/cel-spec) expression consisting of a conjunction of
+   * Rollout.unit_filter and RolloutKind.unit_filter. This field captures the filter applied by the
+   * Rollout to determine the Unit population. If the associated RolloutKind's unit_filter is
+   * modified after the rollout is started, it will not be updated here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveUnitFilter;
+
+  /**
    * Optional. Output only. The time when the rollout finished execution (regardless of success,
    * failure, or cancellation). Will be empty if the rollout hasn't finished yet. Once set, the
    * rollout is in terminal state and all the results are final.
@@ -260,6 +271,31 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Output only snapshot of the effective unit filter at Rollout start time.
+   * Contains a CEL(https://github.com/google/cel-spec) expression consisting of a conjunction of
+   * Rollout.unit_filter and RolloutKind.unit_filter. This field captures the filter applied by the
+   * Rollout to determine the Unit population. If the associated RolloutKind's unit_filter is
+   * modified after the rollout is started, it will not be updated here.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveUnitFilter() {
+    return effectiveUnitFilter;
+  }
+
+  /**
+   * Optional. Output only. Output only snapshot of the effective unit filter at Rollout start time.
+   * Contains a CEL(https://github.com/google/cel-spec) expression consisting of a conjunction of
+   * Rollout.unit_filter and RolloutKind.unit_filter. This field captures the filter applied by the
+   * Rollout to determine the Unit population. If the associated RolloutKind's unit_filter is
+   * modified after the rollout is started, it will not be updated here.
+   * @param effectiveUnitFilter effectiveUnitFilter or {@code null} for none
+   */
+  public Rollout setEffectiveUnitFilter(java.lang.String effectiveUnitFilter) {
+    this.effectiveUnitFilter = effectiveUnitFilter;
     return this;
   }
 

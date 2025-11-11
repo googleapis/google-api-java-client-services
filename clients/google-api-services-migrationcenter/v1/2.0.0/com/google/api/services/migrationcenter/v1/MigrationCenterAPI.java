@@ -9273,6 +9273,138 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
         public class Reports {
 
           /**
+           * Gets the link to the generated artifact of a given type for a Report.
+           *
+           * Create a request for the method "reports.artifactLink".
+           *
+           * This request holds the parameters needed by the migrationcenter server.  After setting any
+           * optional parameters, call the {@link ArtifactLink#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. Name of the resource.
+           * @param content the {@link com.google.api.services.migrationcenter.v1.model.GenerateReportArtifactLinkRequest}
+           * @return the request
+           */
+          public ArtifactLink artifactLink(java.lang.String name, com.google.api.services.migrationcenter.v1.model.GenerateReportArtifactLinkRequest content) throws java.io.IOException {
+            ArtifactLink result = new ArtifactLink(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ArtifactLink extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1.model.ReportArtifactLink> {
+
+            private static final String REST_PATH = "v1/{+name}:artifactLink";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+
+            /**
+             * Gets the link to the generated artifact of a given type for a Report.
+             *
+             * Create a request for the method "reports.artifactLink".
+             *
+             * This request holds the parameters needed by the the migrationcenter server.  After setting any
+             * optional parameters, call the {@link ArtifactLink#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * ArtifactLink#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource.
+             * @param content the {@link com.google.api.services.migrationcenter.v1.model.GenerateReportArtifactLinkRequest}
+             * @since 1.13
+             */
+            protected ArtifactLink(java.lang.String name, com.google.api.services.migrationcenter.v1.model.GenerateReportArtifactLinkRequest content) {
+              super(MigrationCenterAPI.this, "POST", REST_PATH, content, com.google.api.services.migrationcenter.v1.model.ReportArtifactLink.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+              }
+            }
+
+            @Override
+            public ArtifactLink set$Xgafv(java.lang.String $Xgafv) {
+              return (ArtifactLink) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ArtifactLink setAccessToken(java.lang.String accessToken) {
+              return (ArtifactLink) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ArtifactLink setAlt(java.lang.String alt) {
+              return (ArtifactLink) super.setAlt(alt);
+            }
+
+            @Override
+            public ArtifactLink setCallback(java.lang.String callback) {
+              return (ArtifactLink) super.setCallback(callback);
+            }
+
+            @Override
+            public ArtifactLink setFields(java.lang.String fields) {
+              return (ArtifactLink) super.setFields(fields);
+            }
+
+            @Override
+            public ArtifactLink setKey(java.lang.String key) {
+              return (ArtifactLink) super.setKey(key);
+            }
+
+            @Override
+            public ArtifactLink setOauthToken(java.lang.String oauthToken) {
+              return (ArtifactLink) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ArtifactLink setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ArtifactLink) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ArtifactLink setQuotaUser(java.lang.String quotaUser) {
+              return (ArtifactLink) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ArtifactLink setUploadType(java.lang.String uploadType) {
+              return (ArtifactLink) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ArtifactLink setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ArtifactLink) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the resource. */
+            public ArtifactLink setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ArtifactLink set(String parameterName, Object value) {
+              return (ArtifactLink) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a report.
            *
            * Create a request for the method "reports.create".

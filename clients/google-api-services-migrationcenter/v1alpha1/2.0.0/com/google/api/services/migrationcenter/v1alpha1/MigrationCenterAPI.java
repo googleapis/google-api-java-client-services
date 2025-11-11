@@ -10041,6 +10041,138 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
         public class Reports {
 
           /**
+           * Gets the link to the generated artifact of a given type for a Report.
+           *
+           * Create a request for the method "reports.artifactLink".
+           *
+           * This request holds the parameters needed by the migrationcenter server.  After setting any
+           * optional parameters, call the {@link ArtifactLink#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. Name of the resource.
+           * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.GenerateReportArtifactLinkRequest}
+           * @return the request
+           */
+          public ArtifactLink artifactLink(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.GenerateReportArtifactLinkRequest content) throws java.io.IOException {
+            ArtifactLink result = new ArtifactLink(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ArtifactLink extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.ReportArtifactLink> {
+
+            private static final String REST_PATH = "v1alpha1/{+name}:artifactLink";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+
+            /**
+             * Gets the link to the generated artifact of a given type for a Report.
+             *
+             * Create a request for the method "reports.artifactLink".
+             *
+             * This request holds the parameters needed by the the migrationcenter server.  After setting any
+             * optional parameters, call the {@link ArtifactLink#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * ArtifactLink#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource.
+             * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.GenerateReportArtifactLinkRequest}
+             * @since 1.13
+             */
+            protected ArtifactLink(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.GenerateReportArtifactLinkRequest content) {
+              super(MigrationCenterAPI.this, "POST", REST_PATH, content, com.google.api.services.migrationcenter.v1alpha1.model.ReportArtifactLink.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+              }
+            }
+
+            @Override
+            public ArtifactLink set$Xgafv(java.lang.String $Xgafv) {
+              return (ArtifactLink) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ArtifactLink setAccessToken(java.lang.String accessToken) {
+              return (ArtifactLink) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ArtifactLink setAlt(java.lang.String alt) {
+              return (ArtifactLink) super.setAlt(alt);
+            }
+
+            @Override
+            public ArtifactLink setCallback(java.lang.String callback) {
+              return (ArtifactLink) super.setCallback(callback);
+            }
+
+            @Override
+            public ArtifactLink setFields(java.lang.String fields) {
+              return (ArtifactLink) super.setFields(fields);
+            }
+
+            @Override
+            public ArtifactLink setKey(java.lang.String key) {
+              return (ArtifactLink) super.setKey(key);
+            }
+
+            @Override
+            public ArtifactLink setOauthToken(java.lang.String oauthToken) {
+              return (ArtifactLink) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ArtifactLink setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ArtifactLink) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ArtifactLink setQuotaUser(java.lang.String quotaUser) {
+              return (ArtifactLink) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ArtifactLink setUploadType(java.lang.String uploadType) {
+              return (ArtifactLink) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ArtifactLink setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ArtifactLink) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the resource. */
+            public ArtifactLink setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ArtifactLink set(String parameterName, Object value) {
+              return (ArtifactLink) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a report.
            *
            * Create a request for the method "reports.create".
@@ -10413,6 +10545,137 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Export a Report into a supported format.
+           *
+           * Create a request for the method "reports.export".
+           *
+           * This request holds the parameters needed by the migrationcenter server.  After setting any
+           * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource.
+           * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.ExportReportRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.ExportReportRequest content) throws java.io.IOException {
+            Export result = new Export(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.Operation> {
+
+            private static final String REST_PATH = "v1alpha1/{+name}:export";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+
+            /**
+             * Export a Report into a supported format.
+             *
+             * Create a request for the method "reports.export".
+             *
+             * This request holds the parameters needed by the the migrationcenter server.  After setting any
+             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource.
+             * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.ExportReportRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.ExportReportRequest content) {
+              super(MigrationCenterAPI.this, "POST", REST_PATH, content, com.google.api.services.migrationcenter.v1alpha1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the resource. */
+            public Export setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
             }
           }
           /**
@@ -10795,6 +11058,839 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
             }
           }
 
+          /**
+           * An accessor for creating requests from the ReportExportJobs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code MigrationCenterAPI migrationcenter = new MigrationCenterAPI(...);}
+           *   {@code MigrationCenterAPI.ReportExportJobs.List request = migrationcenter.reportExportJobs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public ReportExportJobs reportExportJobs() {
+            return new ReportExportJobs();
+          }
+
+          /**
+           * The "reportExportJobs" collection of methods.
+           */
+          public class ReportExportJobs {
+
+            /**
+             * Export a Report into a supported destination.
+             *
+             * Create a request for the method "reportExportJobs.create".
+             *
+             * This request holds the parameters needed by the migrationcenter server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource where this export job will be created.
+             * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.ReportExportJob}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.migrationcenter.v1alpha1.model.ReportExportJob content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.Operation> {
+
+              private static final String REST_PATH = "v1alpha1/{+parent}/reportExportJobs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+
+              /**
+               * Export a Report into a supported destination.
+               *
+               * Create a request for the method "reportExportJobs.create".
+               *
+               * This request holds the parameters needed by the the migrationcenter server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource where this export job will be created.
+               * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.ReportExportJob}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.migrationcenter.v1alpha1.model.ReportExportJob content) {
+                super(MigrationCenterAPI.this, "POST", REST_PATH, content, com.google.api.services.migrationcenter.v1alpha1.model.Operation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The parent resource where this export job will be created. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource where this export job will be created.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The parent resource where this export job will be created. */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Required. The ID to use for the report export job. */
+              @com.google.api.client.util.Key
+              private java.lang.String reportExportJobId;
+
+              /** Required. The ID to use for the report export job.
+               */
+              public java.lang.String getReportExportJobId() {
+                return reportExportJobId;
+              }
+
+              /** Required. The ID to use for the report export job. */
+              public Create setReportExportJobId(java.lang.String reportExportJobId) {
+                this.reportExportJobId = reportExportJobId;
+                return this;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes after the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String requestId;
+
+              /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+             must retry your request, the server will know to ignore the request if it has already been
+             completed. The server will guarantee that for at least 60 minutes after the first request. For
+             example, consider a situation where you make an initial request and the request times out. If you
+             make the request again with the same request ID, the server can check if original operation with
+             the same request ID was received, and if so, will ignore the second request. This prevents clients
+             from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+             exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+               */
+              public java.lang.String getRequestId() {
+                return requestId;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes after the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              public Create setRequestId(java.lang.String requestId) {
+                this.requestId = requestId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes an report export job.
+             *
+             * Create a request for the method "reportExportJobs.delete".
+             *
+             * This request holds the parameters needed by the migrationcenter server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Name of the resource.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.Operation> {
+
+              private static final String REST_PATH = "v1alpha1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+/reportExportJobs/[^/]+$");
+
+              /**
+               * Deletes an report export job.
+               *
+               * Create a request for the method "reportExportJobs.delete".
+               *
+               * This request holds the parameters needed by the the migrationcenter server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Name of the resource.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(MigrationCenterAPI.this, "DELETE", REST_PATH, null, com.google.api.services.migrationcenter.v1alpha1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+/reportExportJobs/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the resource. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Name of the resource.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. Name of the resource. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+/reportExportJobs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes after the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String requestId;
+
+              /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+             must retry your request, the server will know to ignore the request if it has already been
+             completed. The server will guarantee that for at least 60 minutes after the first request. For
+             example, consider a situation where you make an initial request and the request times out. If you
+             make the request again with the same request ID, the server can check if original operation with
+             the same request ID was received, and if so, will ignore the second request. This prevents clients
+             from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+             exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+               */
+              public java.lang.String getRequestId() {
+                return requestId;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes after the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              public Delete setRequestId(java.lang.String requestId) {
+                this.requestId = requestId;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the details of a report export job.
+             *
+             * Create a request for the method "reportExportJobs.get".
+             *
+             * This request holds the parameters needed by the migrationcenter server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Name of the resource.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.ReportExportJob> {
+
+              private static final String REST_PATH = "v1alpha1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+/reportExportJobs/[^/]+$");
+
+              /**
+               * Gets the details of a report export job.
+               *
+               * Create a request for the method "reportExportJobs.get".
+               *
+               * This request holds the parameters needed by the the migrationcenter server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Name of the resource.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(MigrationCenterAPI.this, "GET", REST_PATH, null, com.google.api.services.migrationcenter.v1alpha1.model.ReportExportJob.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+/reportExportJobs/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the resource. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Name of the resource.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. Name of the resource. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+/reportExportJobs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists all the report export jobs for a given report.
+             *
+             * Create a request for the method "reportExportJobs.list".
+             *
+             * This request holds the parameters needed by the migrationcenter server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Parent report owning the export jobs.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.ListReportExportJobsResponse> {
+
+              private static final String REST_PATH = "v1alpha1/{+parent}/reportExportJobs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+
+              /**
+               * Lists all the report export jobs for a given report.
+               *
+               * Create a request for the method "reportExportJobs.list".
+               *
+               * This request holds the parameters needed by the the migrationcenter server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Parent report owning the export jobs.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(MigrationCenterAPI.this, "GET", REST_PATH, null, com.google.api.services.migrationcenter.v1alpha1.model.ListReportExportJobsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Parent report owning the export jobs. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Parent report owning the export jobs.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Parent report owning the export jobs. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Requested page size. The server may return fewer items than requested. If
+               * unspecified, the server will pick an appropriate default value.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. Requested page size. The server may return fewer items than requested. If unspecified,
+             the server will pick an appropriate default value.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. Requested page size. The server may return fewer items than requested. If
+               * unspecified, the server will pick an appropriate default value.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Optional. A token identifying a page of results that the server should return. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. A token identifying a page of results that the server should return.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Optional. A token identifying a page of results that the server should return. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Runs a report export job.
+             *
+             * Create a request for the method "reportExportJobs.run".
+             *
+             * This request holds the parameters needed by the migrationcenter server.  After setting any
+             * optional parameters, call the {@link Run#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Name of the resource.
+             * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.RunReportExportJobRequest}
+             * @return the request
+             */
+            public Run run(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.RunReportExportJobRequest content) throws java.io.IOException {
+              Run result = new Run(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Run extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.Operation> {
+
+              private static final String REST_PATH = "v1alpha1/{+name}:run";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+/reportExportJobs/[^/]+$");
+
+              /**
+               * Runs a report export job.
+               *
+               * Create a request for the method "reportExportJobs.run".
+               *
+               * This request holds the parameters needed by the the migrationcenter server.  After setting any
+               * optional parameters, call the {@link Run#execute()} method to invoke the remote operation. <p>
+               * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Name of the resource.
+               * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.RunReportExportJobRequest}
+               * @since 1.13
+               */
+              protected Run(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.RunReportExportJobRequest content) {
+                super(MigrationCenterAPI.this, "POST", REST_PATH, content, com.google.api.services.migrationcenter.v1alpha1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+/reportExportJobs/[^/]+$");
+                }
+              }
+
+              @Override
+              public Run set$Xgafv(java.lang.String $Xgafv) {
+                return (Run) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Run setAccessToken(java.lang.String accessToken) {
+                return (Run) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Run setAlt(java.lang.String alt) {
+                return (Run) super.setAlt(alt);
+              }
+
+              @Override
+              public Run setCallback(java.lang.String callback) {
+                return (Run) super.setCallback(callback);
+              }
+
+              @Override
+              public Run setFields(java.lang.String fields) {
+                return (Run) super.setFields(fields);
+              }
+
+              @Override
+              public Run setKey(java.lang.String key) {
+                return (Run) super.setKey(key);
+              }
+
+              @Override
+              public Run setOauthToken(java.lang.String oauthToken) {
+                return (Run) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Run setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Run) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Run setQuotaUser(java.lang.String quotaUser) {
+                return (Run) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Run setUploadType(java.lang.String uploadType) {
+                return (Run) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Run setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Run) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the resource. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Name of the resource.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. Name of the resource. */
+              public Run setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+/reportExportJobs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Run set(String parameterName, Object value) {
+                return (Run) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**

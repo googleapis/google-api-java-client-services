@@ -30,7 +30,15 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1SecurityAssessmentResultResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of this resource.
+   * Output only. Additional details for the API Hub deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails apiHubDeploymentDetails;
+
+  /**
+   * Required. Name of this resource. For an Apigee API Proxy, this should be the id of the API
+   * proxy. For an API Hub Deployment, this should be the id of the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +59,25 @@ public final class GoogleCloudApigeeV1SecurityAssessmentResultResource extends c
   private java.lang.String type;
 
   /**
-   * Required. Name of this resource.
+   * Output only. Additional details for the API Hub deployment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails getApiHubDeploymentDetails() {
+    return apiHubDeploymentDetails;
+  }
+
+  /**
+   * Output only. Additional details for the API Hub deployment.
+   * @param apiHubDeploymentDetails apiHubDeploymentDetails or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityAssessmentResultResource setApiHubDeploymentDetails(GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails apiHubDeploymentDetails) {
+    this.apiHubDeploymentDetails = apiHubDeploymentDetails;
+    return this;
+  }
+
+  /**
+   * Required. Name of this resource. For an Apigee API Proxy, this should be the id of the API
+   * proxy. For an API Hub Deployment, this should be the id of the deployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -59,7 +85,8 @@ public final class GoogleCloudApigeeV1SecurityAssessmentResultResource extends c
   }
 
   /**
-   * Required. Name of this resource.
+   * Required. Name of this resource. For an Apigee API Proxy, this should be the id of the API
+   * proxy. For an API Hub Deployment, this should be the id of the deployment.
    * @param name name or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityAssessmentResultResource setName(java.lang.String name) {

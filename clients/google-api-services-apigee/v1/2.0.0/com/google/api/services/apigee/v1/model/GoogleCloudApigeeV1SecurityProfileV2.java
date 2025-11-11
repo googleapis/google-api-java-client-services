@@ -67,6 +67,13 @@ public final class GoogleCloudApigeeV1SecurityProfileV2 extends com.google.api.c
   private java.util.Map<String, GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfig> profileAssessmentConfigs;
 
   /**
+   * Optional. The risk assessment type of the security profile. Defaults to ADVANCED_API_SECURITY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String riskAssessmentType;
+
+  /**
    * Output only. The time of the security profile update.
    * The value may be {@code null}.
    */
@@ -159,6 +166,23 @@ public final class GoogleCloudApigeeV1SecurityProfileV2 extends com.google.api.c
    */
   public GoogleCloudApigeeV1SecurityProfileV2 setProfileAssessmentConfigs(java.util.Map<String, GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfig> profileAssessmentConfigs) {
     this.profileAssessmentConfigs = profileAssessmentConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. The risk assessment type of the security profile. Defaults to ADVANCED_API_SECURITY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRiskAssessmentType() {
+    return riskAssessmentType;
+  }
+
+  /**
+   * Optional. The risk assessment type of the security profile. Defaults to ADVANCED_API_SECURITY.
+   * @param riskAssessmentType riskAssessmentType or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityProfileV2 setRiskAssessmentType(java.lang.String riskAssessmentType) {
+    this.riskAssessmentType = riskAssessmentType;
     return this;
   }
 

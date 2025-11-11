@@ -56125,6 +56125,28 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
+        /**
+         * Optional. The risk assessment type of the security profile. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String riskAssessmentType;
+
+        /** Optional. The risk assessment type of the security profile. Defaults to ADVANCED_API_SECURITY.
+         */
+        public java.lang.String getRiskAssessmentType() {
+          return riskAssessmentType;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security profile. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        public Delete setRiskAssessmentType(java.lang.String riskAssessmentType) {
+          this.riskAssessmentType = riskAssessmentType;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -56269,6 +56291,28 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 "^organizations/[^/]+/securityProfilesV2/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security profile. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String riskAssessmentType;
+
+        /** Optional. The risk assessment type of the security profile. Defaults to ADVANCED_API_SECURITY.
+         */
+        public java.lang.String getRiskAssessmentType() {
+          return riskAssessmentType;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security profile. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        public Get setRiskAssessmentType(java.lang.String riskAssessmentType) {
+          this.riskAssessmentType = riskAssessmentType;
           return this;
         }
 
@@ -56455,6 +56499,28 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security profiles. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String riskAssessmentType;
+
+        /** Optional. The risk assessment type of the security profiles. Defaults to ADVANCED_API_SECURITY.
+         */
+        public java.lang.String getRiskAssessmentType() {
+          return riskAssessmentType;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security profiles. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        public List setRiskAssessmentType(java.lang.String riskAssessmentType) {
+          this.riskAssessmentType = riskAssessmentType;
           return this;
         }
 

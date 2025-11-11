@@ -30,6 +30,20 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * An array of API Hub APIs to assess. A maximum of 1 API can be assessed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray apiHubApis;
+
+  /**
+   * An array of API Hub Gateways to assess. A maximum of 3 gateways can be assessed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray apiHubGateways;
+
+  /**
    * Include only these resources.
    * The value may be {@code null}.
    */
@@ -67,12 +81,47 @@ public final class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsReque
   private java.lang.String profile;
 
   /**
-   * Optional. Scope of the resources for the computation. For Apigee, the environment is the scope
-   * of the resources.
+   * Optional. Scope of the resources for the computation. When computing scores for Apigee proxies,
+   * the scope should be set to the environment of the resources. When computing scores for API Hub
+   * deployments, api_hub_scope should be set instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scope;
+
+  /**
+   * An array of API Hub APIs to assess. A maximum of 1 API can be assessed.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray getApiHubApis() {
+    return apiHubApis;
+  }
+
+  /**
+   * An array of API Hub APIs to assess. A maximum of 1 API can be assessed.
+   * @param apiHubApis apiHubApis or {@code null} for none
+   */
+  public GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest setApiHubApis(GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray apiHubApis) {
+    this.apiHubApis = apiHubApis;
+    return this;
+  }
+
+  /**
+   * An array of API Hub Gateways to assess. A maximum of 3 gateways can be assessed.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray getApiHubGateways() {
+    return apiHubGateways;
+  }
+
+  /**
+   * An array of API Hub Gateways to assess. A maximum of 3 gateways can be assessed.
+   * @param apiHubGateways apiHubGateways or {@code null} for none
+   */
+  public GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest setApiHubGateways(GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray apiHubGateways) {
+    this.apiHubGateways = apiHubGateways;
+    return this;
+  }
 
   /**
    * Include only these resources.
@@ -164,8 +213,9 @@ public final class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsReque
   }
 
   /**
-   * Optional. Scope of the resources for the computation. For Apigee, the environment is the scope
-   * of the resources.
+   * Optional. Scope of the resources for the computation. When computing scores for Apigee proxies,
+   * the scope should be set to the environment of the resources. When computing scores for API Hub
+   * deployments, api_hub_scope should be set instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -173,8 +223,9 @@ public final class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsReque
   }
 
   /**
-   * Optional. Scope of the resources for the computation. For Apigee, the environment is the scope
-   * of the resources.
+   * Optional. Scope of the resources for the computation. When computing scores for Apigee proxies,
+   * the scope should be set to the environment of the resources. When computing scores for API Hub
+   * deployments, api_hub_scope should be set instead.
    * @param scope scope or {@code null} for none
    */
   public GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest setScope(java.lang.String scope) {

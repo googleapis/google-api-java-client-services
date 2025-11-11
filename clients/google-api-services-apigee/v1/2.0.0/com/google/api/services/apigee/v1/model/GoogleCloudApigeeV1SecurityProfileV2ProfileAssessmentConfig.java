@@ -30,11 +30,35 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Include only these Gateway Types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray include;
+
+  /**
    * The weight of the assessment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String weight;
+
+  /**
+   * Include only these Gateway Types.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray getInclude() {
+    return include;
+  }
+
+  /**
+   * Include only these Gateway Types.
+   * @param include include or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfig setInclude(GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray include) {
+    this.include = include;
+    return this;
+  }
 
   /**
    * The weight of the assessment.

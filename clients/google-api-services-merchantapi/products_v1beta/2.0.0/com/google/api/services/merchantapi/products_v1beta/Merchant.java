@@ -345,6 +345,46 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * Optional. If true, the `{productInput}` in the `name` field of the request will be
+         * interpreted as unpadded base64url-encoded and decoded during request processing to match
+         * the decoded value. Default value is `false`. Use this if your `{productInput}` contains
+         * special characters, such as forward slash `/` or other characters that are unpadded
+         * base64url-encoded (as per RFC 7515:
+         * https://datatracker.ietf.org/doc/html/rfc7515#section-2). Note that future versions of
+         * the API will only accept unpadded base64url-encoded product ids, so we strongly recommend
+         * proactively setting this to `true` and encoding the product ids.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean productIdBase64UrlEncoded;
+
+        /** Optional. If true, the `{productInput}` in the `name` field of the request will be interpreted as
+       unpadded base64url-encoded and decoded during request processing to match the decoded value.
+       Default value is `false`. Use this if your `{productInput}` contains special characters, such as
+       forward slash `/` or other characters that are unpadded base64url-encoded (as per RFC 7515:
+       https://datatracker.ietf.org/doc/html/rfc7515#section-2). Note that future versions of the API will
+       only accept unpadded base64url-encoded product ids, so we strongly recommend proactively setting
+       this to `true` and encoding the product ids.
+         */
+        public java.lang.Boolean getProductIdBase64UrlEncoded() {
+          return productIdBase64UrlEncoded;
+        }
+
+        /**
+         * Optional. If true, the `{productInput}` in the `name` field of the request will be
+         * interpreted as unpadded base64url-encoded and decoded during request processing to match
+         * the decoded value. Default value is `false`. Use this if your `{productInput}` contains
+         * special characters, such as forward slash `/` or other characters that are unpadded
+         * base64url-encoded (as per RFC 7515:
+         * https://datatracker.ietf.org/doc/html/rfc7515#section-2). Note that future versions of
+         * the API will only accept unpadded base64url-encoded product ids, so we strongly recommend
+         * proactively setting this to `true` and encoding the product ids.
+         */
+        public Delete setProductIdBase64UrlEncoded(java.lang.Boolean productIdBase64UrlEncoded) {
+          this.productIdBase64UrlEncoded = productIdBase64UrlEncoded;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -724,6 +764,46 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
+         * Optional. If true, the `{productInput}` in the `name` field of the request will be
+         * interpreted as unpadded base64url-encoded and decoded during request processing to match
+         * the decoded value. Default value is `false`. Use this if your `{productInput}` contains
+         * special characters, such as forward slash `/` or other characters that are unpadded
+         * base64url-encoded (as per RFC 7515:
+         * https://datatracker.ietf.org/doc/html/rfc7515#section-2). Note that future versions of
+         * the API will only accept unpadded base64url-encoded product ids, so we strongly recommend
+         * proactively setting this to `true` and encoding the product ids.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean productIdBase64UrlEncoded;
+
+        /** Optional. If true, the `{productInput}` in the `name` field of the request will be interpreted as
+       unpadded base64url-encoded and decoded during request processing to match the decoded value.
+       Default value is `false`. Use this if your `{productInput}` contains special characters, such as
+       forward slash `/` or other characters that are unpadded base64url-encoded (as per RFC 7515:
+       https://datatracker.ietf.org/doc/html/rfc7515#section-2). Note that future versions of the API will
+       only accept unpadded base64url-encoded product ids, so we strongly recommend proactively setting
+       this to `true` and encoding the product ids.
+         */
+        public java.lang.Boolean getProductIdBase64UrlEncoded() {
+          return productIdBase64UrlEncoded;
+        }
+
+        /**
+         * Optional. If true, the `{productInput}` in the `name` field of the request will be
+         * interpreted as unpadded base64url-encoded and decoded during request processing to match
+         * the decoded value. Default value is `false`. Use this if your `{productInput}` contains
+         * special characters, such as forward slash `/` or other characters that are unpadded
+         * base64url-encoded (as per RFC 7515:
+         * https://datatracker.ietf.org/doc/html/rfc7515#section-2). Note that future versions of
+         * the API will only accept unpadded base64url-encoded product ids, so we strongly recommend
+         * proactively setting this to `true` and encoding the product ids.
+         */
+        public Patch setProductIdBase64UrlEncoded(java.lang.Boolean productIdBase64UrlEncoded) {
+          this.productIdBase64UrlEncoded = productIdBase64UrlEncoded;
+          return this;
+        }
+
+        /**
          * Optional. The list of product attributes to be updated. If the update mask is omitted,
          * then it is treated as implied field mask equivalent to all fields that are populated
          * (have a non-empty value). Attributes specified in the update mask without a value
@@ -953,6 +1033,44 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
                 "^accounts/[^/]+/products/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. If true, the `{product}` in the `name` field of the request will be interpreted
+         * as unpadded base64url-encoded and decoded during request processing to match the decoded
+         * value. Default value is `false`. Use this if your `{product}` contains special
+         * characters, such as forward slash `/` or other characters that are unpadded base64url-
+         * encoded (as per RFC 7515: https://datatracker.ietf.org/doc/html/rfc7515#section-2). Note
+         * that future versions of the API will only accept unpadded base64url-encoded product ids,
+         * so we strongly recommend proactively setting this to `true` and encoding the product ids.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean productIdBase64UrlEncoded;
+
+        /** Optional. If true, the `{product}` in the `name` field of the request will be interpreted as
+       unpadded base64url-encoded and decoded during request processing to match the decoded value.
+       Default value is `false`. Use this if your `{product}` contains special characters, such as forward
+       slash `/` or other characters that are unpadded base64url-encoded (as per RFC 7515:
+       https://datatracker.ietf.org/doc/html/rfc7515#section-2). Note that future versions of the API will
+       only accept unpadded base64url-encoded product ids, so we strongly recommend proactively setting
+       this to `true` and encoding the product ids.
+         */
+        public java.lang.Boolean getProductIdBase64UrlEncoded() {
+          return productIdBase64UrlEncoded;
+        }
+
+        /**
+         * Optional. If true, the `{product}` in the `name` field of the request will be interpreted
+         * as unpadded base64url-encoded and decoded during request processing to match the decoded
+         * value. Default value is `false`. Use this if your `{product}` contains special
+         * characters, such as forward slash `/` or other characters that are unpadded base64url-
+         * encoded (as per RFC 7515: https://datatracker.ietf.org/doc/html/rfc7515#section-2). Note
+         * that future versions of the API will only accept unpadded base64url-encoded product ids,
+         * so we strongly recommend proactively setting this to `true` and encoding the product ids.
+         */
+        public Get setProductIdBase64UrlEncoded(java.lang.Boolean productIdBase64UrlEncoded) {
+          this.productIdBase64UrlEncoded = productIdBase64UrlEncoded;
           return this;
         }
 

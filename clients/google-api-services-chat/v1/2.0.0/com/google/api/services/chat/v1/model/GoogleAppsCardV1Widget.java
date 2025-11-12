@@ -104,8 +104,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   private GoogleAppsCardV1Divider divider;
 
   /**
-   * Specifies the event actions that can be performed on the widget. Only supported by Google
-   * Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * Specifies the event actions that can be performed on the widget. Available for Google Workspace
+   * add-ons that extend Google Workspace flows, which is available as part of the [Gemini Alpha
+   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,8 +143,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * A unique ID assigned to the widget that's used to identify the widget to be mutated. The ID has
-   * a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+` and. Only
-   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+` and.
+   * Available for Google Workspace add-ons that extend Google Workspace flows, which is available
+   * as part of the [Gemini Alpha program](https://support.google.com/a/answer/14170809).
+   * Unavailable for Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,8 +198,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   private GoogleAppsCardV1TextParagraph textParagraph;
 
   /**
-   * Specifies whether the widget is visible or hidden. The default value is `VISIBLE`. Only
-   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * Specifies whether the widget is visible or hidden. The default value is `VISIBLE`. Available
+   * for Google Workspace add-ons that extend Google Workspace flows, which is available as part of
+   * the [Gemini Alpha program](https://support.google.com/a/answer/14170809). Unavailable for
+   * Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -370,8 +375,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies the event actions that can be performed on the widget. Only supported by Google
-   * Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * Specifies the event actions that can be performed on the widget. Available for Google Workspace
+   * add-ons that extend Google Workspace flows, which is available as part of the [Gemini Alpha
+   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1EventAction> getEventActions() {
@@ -379,8 +385,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies the event actions that can be performed on the widget. Only supported by Google
-   * Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * Specifies the event actions that can be performed on the widget. Available for Google Workspace
+   * add-ons that extend Google Workspace flows, which is available as part of the [Gemini Alpha
+   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
    * @param eventActions eventActions or {@code null} for none
    */
   public GoogleAppsCardV1Widget setEventActions(java.util.List<GoogleAppsCardV1EventAction> eventActions) {
@@ -442,8 +449,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * A unique ID assigned to the widget that's used to identify the widget to be mutated. The ID has
-   * a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+` and. Only
-   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+` and.
+   * Available for Google Workspace add-ons that extend Google Workspace flows, which is available
+   * as part of the [Gemini Alpha program](https://support.google.com/a/answer/14170809).
+   * Unavailable for Google Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -452,8 +461,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
 
   /**
    * A unique ID assigned to the widget that's used to identify the widget to be mutated. The ID has
-   * a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+` and. Only
-   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+` and.
+   * Available for Google Workspace add-ons that extend Google Workspace flows, which is available
+   * as part of the [Gemini Alpha program](https://support.google.com/a/answer/14170809).
+   * Unavailable for Google Chat apps.
    * @param id id or {@code null} for none
    */
   public GoogleAppsCardV1Widget setId(java.lang.String id) {
@@ -564,8 +575,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies whether the widget is visible or hidden. The default value is `VISIBLE`. Only
-   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * Specifies whether the widget is visible or hidden. The default value is `VISIBLE`. Available
+   * for Google Workspace add-ons that extend Google Workspace flows, which is available as part of
+   * the [Gemini Alpha program](https://support.google.com/a/answer/14170809). Unavailable for
+   * Google Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisibility() {
@@ -573,8 +586,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies whether the widget is visible or hidden. The default value is `VISIBLE`. Only
-   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * Specifies whether the widget is visible or hidden. The default value is `VISIBLE`. Available
+   * for Google Workspace add-ons that extend Google Workspace flows, which is available as part of
+   * the [Gemini Alpha program](https://support.google.com/a/answer/14170809). Unavailable for
+   * Google Chat apps.
    * @param visibility visibility or {@code null} for none
    */
   public GoogleAppsCardV1Widget setVisibility(java.lang.String visibility) {

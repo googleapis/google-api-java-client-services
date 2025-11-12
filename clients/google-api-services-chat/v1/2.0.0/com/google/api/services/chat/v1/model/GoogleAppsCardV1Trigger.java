@@ -17,8 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents a trigger. Only supported by Google Workspace Workflow, but not Google Chat apps or
- * Google Workspace add-ons.
+ * Represents a trigger. Available for Google Workspace add-ons that extend Google Workspace flows,
+ * which is available as part of the [Gemini Alpha
+ * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

@@ -62,8 +62,10 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * A unique ID assigned to the section that's used to identify the section to be mutated. The ID
-   * has a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+`. Only
-   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * has a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+`.
+   * Available for Google Workspace add-ons that extend Google Workspace flows, which is available
+   * as part of the [Gemini Alpha program](https://support.google.com/a/answer/14170809).
+   * Unavailable for Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +157,10 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * A unique ID assigned to the section that's used to identify the section to be mutated. The ID
-   * has a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+`. Only
-   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * has a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+`.
+   * Available for Google Workspace add-ons that extend Google Workspace flows, which is available
+   * as part of the [Gemini Alpha program](https://support.google.com/a/answer/14170809).
+   * Unavailable for Google Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -165,8 +169,10 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * A unique ID assigned to the section that's used to identify the section to be mutated. The ID
-   * has a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+`. Only
-   * supported by Google Workspace Workflow, but not Google Chat apps or Google Workspace add-ons.
+   * has a character limit of 64 characters and should be in the format of `[a-zA-Z0-9-]+`.
+   * Available for Google Workspace add-ons that extend Google Workspace flows, which is available
+   * as part of the [Gemini Alpha program](https://support.google.com/a/answer/14170809).
+   * Unavailable for Google Chat apps.
    * @param id id or {@code null} for none
    */
   public GoogleAppsCardV1Section setId(java.lang.String id) {

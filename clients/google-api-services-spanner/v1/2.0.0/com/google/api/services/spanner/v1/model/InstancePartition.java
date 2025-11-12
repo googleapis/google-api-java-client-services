@@ -30,6 +30,15 @@ package com.google.api.services.spanner.v1.model;
 public final class InstancePartition extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The autoscaling configuration. Autoscaling is enabled if this field is set. When
+   * autoscaling is enabled, fields in compute_capacity are treated as OUTPUT_ONLY fields and
+   * reflect the current compute capacity allocated to the instance partition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoscalingConfig autoscalingConfig;
+
+  /**
    * Required. The name of the instance partition's configuration. Values are of the form
    * `projects//instanceConfigs/`. See also InstanceConfig and ListInstanceConfigs.
    * The value may be {@code null}.
@@ -126,6 +135,27 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. The autoscaling configuration. Autoscaling is enabled if this field is set. When
+   * autoscaling is enabled, fields in compute_capacity are treated as OUTPUT_ONLY fields and
+   * reflect the current compute capacity allocated to the instance partition.
+   * @return value or {@code null} for none
+   */
+  public AutoscalingConfig getAutoscalingConfig() {
+    return autoscalingConfig;
+  }
+
+  /**
+   * Optional. The autoscaling configuration. Autoscaling is enabled if this field is set. When
+   * autoscaling is enabled, fields in compute_capacity are treated as OUTPUT_ONLY fields and
+   * reflect the current compute capacity allocated to the instance partition.
+   * @param autoscalingConfig autoscalingConfig or {@code null} for none
+   */
+  public InstancePartition setAutoscalingConfig(AutoscalingConfig autoscalingConfig) {
+    this.autoscalingConfig = autoscalingConfig;
+    return this;
+  }
 
   /**
    * Required. The name of the instance partition's configuration. Values are of the form

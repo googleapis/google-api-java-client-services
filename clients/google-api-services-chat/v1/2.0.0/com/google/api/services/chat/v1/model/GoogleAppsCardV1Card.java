@@ -73,8 +73,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private java.lang.String displayStyle;
 
   /**
-   * The expression data for the card. Only supported by Google Workspace Workflow, but not Google
-   * Chat apps or Google Workspace add-ons.
+   * The expression data for the card. Available for Google Workspace add-ons that extend Google
+   * Workspace flows, which is available as part of the [Gemini Alpha
+   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,8 +183,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The expression data for the card. Only supported by Google Workspace Workflow, but not Google
-   * Chat apps or Google Workspace add-ons.
+   * The expression data for the card. Available for Google Workspace add-ons that extend Google
+   * Workspace flows, which is available as part of the [Gemini Alpha
+   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1ExpressionData> getExpressionData() {
@@ -191,8 +193,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The expression data for the card. Only supported by Google Workspace Workflow, but not Google
-   * Chat apps or Google Workspace add-ons.
+   * The expression data for the card. Available for Google Workspace add-ons that extend Google
+   * Workspace flows, which is available as part of the [Gemini Alpha
+   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
    * @param expressionData expressionData or {@code null} for none
    */
   public GoogleAppsCardV1Card setExpressionData(java.util.List<GoogleAppsCardV1ExpressionData> expressionData) {

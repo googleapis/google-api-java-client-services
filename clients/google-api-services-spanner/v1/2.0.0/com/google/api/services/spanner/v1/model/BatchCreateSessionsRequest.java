@@ -30,9 +30,10 @@ package com.google.api.services.spanner.v1.model;
 public final class BatchCreateSessionsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The number of sessions to be created in this batch call. The API can return fewer
-   * than the requested number of sessions. If a specific number of sessions are desired, the client
-   * can make additional calls to `BatchCreateSessions` (adjusting session_count as necessary).
+   * Required. The number of sessions to be created in this batch call. At least one session is
+   * created. The API can return fewer than the requested number of sessions. If a specific number
+   * of sessions are desired, the client can make additional calls to `BatchCreateSessions`
+   * (adjusting session_count as necessary).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +47,10 @@ public final class BatchCreateSessionsRequest extends com.google.api.client.json
   private Session sessionTemplate;
 
   /**
-   * Required. The number of sessions to be created in this batch call. The API can return fewer
-   * than the requested number of sessions. If a specific number of sessions are desired, the client
-   * can make additional calls to `BatchCreateSessions` (adjusting session_count as necessary).
+   * Required. The number of sessions to be created in this batch call. At least one session is
+   * created. The API can return fewer than the requested number of sessions. If a specific number
+   * of sessions are desired, the client can make additional calls to `BatchCreateSessions`
+   * (adjusting session_count as necessary).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSessionCount() {
@@ -56,9 +58,10 @@ public final class BatchCreateSessionsRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The number of sessions to be created in this batch call. The API can return fewer
-   * than the requested number of sessions. If a specific number of sessions are desired, the client
-   * can make additional calls to `BatchCreateSessions` (adjusting session_count as necessary).
+   * Required. The number of sessions to be created in this batch call. At least one session is
+   * created. The API can return fewer than the requested number of sessions. If a specific number
+   * of sessions are desired, the client can make additional calls to `BatchCreateSessions`
+   * (adjusting session_count as necessary).
    * @param sessionCount sessionCount or {@code null} for none
    */
   public BatchCreateSessionsRequest setSessionCount(java.lang.Integer sessionCount) {

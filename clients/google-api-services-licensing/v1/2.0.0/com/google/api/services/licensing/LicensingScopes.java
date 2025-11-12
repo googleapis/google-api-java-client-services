@@ -23,7 +23,7 @@ package com.google.api.services.licensing;
  */
 public class LicensingScopes {
 
-  /** View and manage G Suite licenses for your domain. */
+  /** View and manage Google Workspace licenses for your domain. */
   public static final String APPS_LICENSING = "https://www.googleapis.com/auth/apps.licensing";
 
   /**

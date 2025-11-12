@@ -25702,6 +25702,316 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
             /**
+             * Lists the data for displaying the Agents under an Assistant which are available to the caller.
+             *
+             * Create a request for the method "assistants.listAvailableAgentViews".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link ListAvailableAgentViews#execute()} method to invoke the
+             * remote operation.
+             *
+             * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/collections/{co
+             *        llection}/engines/{engine}/assistants/{assistant}`
+             * @return the request
+             */
+            public ListAvailableAgentViews listAvailableAgentViews(java.lang.String parent) throws java.io.IOException {
+              ListAvailableAgentViews result = new ListAvailableAgentViews(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class ListAvailableAgentViews extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListAvailableAgentViewsResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}:listAvailableAgentViews";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Lists the data for displaying the Agents under an Assistant which are available to the caller.
+               *
+               * Create a request for the method "assistants.listAvailableAgentViews".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link ListAvailableAgentViews#execute()} method to invoke the
+               * remote operation. <p> {@link ListAvailableAgentViews#initialize(com.google.api.client.googleapi
+               * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/collections/{co
+             *        llection}/engines/{engine}/assistants/{assistant}`
+               * @since 1.13
+               */
+              protected ListAvailableAgentViews(java.lang.String parent) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListAvailableAgentViewsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public ListAvailableAgentViews set$Xgafv(java.lang.String $Xgafv) {
+                return (ListAvailableAgentViews) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ListAvailableAgentViews setAccessToken(java.lang.String accessToken) {
+                return (ListAvailableAgentViews) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ListAvailableAgentViews setAlt(java.lang.String alt) {
+                return (ListAvailableAgentViews) super.setAlt(alt);
+              }
+
+              @Override
+              public ListAvailableAgentViews setCallback(java.lang.String callback) {
+                return (ListAvailableAgentViews) super.setCallback(callback);
+              }
+
+              @Override
+              public ListAvailableAgentViews setFields(java.lang.String fields) {
+                return (ListAvailableAgentViews) super.setFields(fields);
+              }
+
+              @Override
+              public ListAvailableAgentViews setKey(java.lang.String key) {
+                return (ListAvailableAgentViews) super.setKey(key);
+              }
+
+              @Override
+              public ListAvailableAgentViews setOauthToken(java.lang.String oauthToken) {
+                return (ListAvailableAgentViews) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ListAvailableAgentViews setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ListAvailableAgentViews) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ListAvailableAgentViews setQuotaUser(java.lang.String quotaUser) {
+                return (ListAvailableAgentViews) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ListAvailableAgentViews setUploadType(java.lang.String uploadType) {
+                return (ListAvailableAgentViews) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ListAvailableAgentViews setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ListAvailableAgentViews) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent resource name. Format: `projects/{project}/locations/{location
+               * }/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource name. Format: `projects/{project}/locations/{location}/collections/{c
+             ollection}/engines/{engine}/assistants/{assistant}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent resource name. Format: `projects/{project}/locations/{location
+               * }/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public ListAvailableAgentViews setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Optional. The origin of the Agent. */
+              @com.google.api.client.util.Key
+              private java.lang.String agentOrigin;
+
+              /** Optional. The origin of the Agent.
+               */
+              public java.lang.String getAgentOrigin() {
+                return agentOrigin;
+              }
+
+              /** Optional. The origin of the Agent. */
+              public ListAvailableAgentViews setAgentOrigin(java.lang.String agentOrigin) {
+                this.agentOrigin = agentOrigin;
+                return this;
+              }
+
+              /**
+               * Optional. The filter syntax consists of an expression language for constructing a
+               * predicate from one or more fields of the files being filtered. Filter expression is
+               * case-sensitive. Allowed fields are: * `display_name` * `state` Some examples of
+               * filters would be: * `display_name = 'agent_1'` * `display_name = 'agent_1' AND
+               * state = ENABLED` For a full description of the filter format, please see
+               * https://google.aip.dev/160.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. The filter syntax consists of an expression language for constructing a predicate from
+             one or more fields of the files being filtered. Filter expression is case-sensitive. Allowed fields
+             are: * `display_name` * `state` Some examples of filters would be: * `display_name = 'agent_1'` *
+             `display_name = 'agent_1' AND state = ENABLED` For a full description of the filter format, please
+             see https://google.aip.dev/160.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. The filter syntax consists of an expression language for constructing a
+               * predicate from one or more fields of the files being filtered. Filter expression is
+               * case-sensitive. Allowed fields are: * `display_name` * `state` Some examples of
+               * filters would be: * `display_name = 'agent_1'` * `display_name = 'agent_1' AND
+               * state = ENABLED` For a full description of the filter format, please see
+               * https://google.aip.dev/160.
+               */
+              public ListAvailableAgentViews setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. The UI language currently shown to the user. Specifying this field
+               * request that the texts in the AgentViews in the response should be translated to
+               * this language.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String languageCode;
+
+              /** Optional. The UI language currently shown to the user. Specifying this field request that the texts
+             in the AgentViews in the response should be translated to this language.
+               */
+              public java.lang.String getLanguageCode() {
+                return languageCode;
+              }
+
+              /**
+               * Optional. The UI language currently shown to the user. Specifying this field
+               * request that the texts in the AgentViews in the response should be translated to
+               * this language.
+               */
+              public ListAvailableAgentViews setLanguageCode(java.lang.String languageCode) {
+                this.languageCode = languageCode;
+                return this;
+              }
+
+              /** Optional. The maximum number of suggested prompts to return per agent. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer maxSuggestedPrompts;
+
+              /** Optional. The maximum number of suggested prompts to return per agent.
+               */
+              public java.lang.Integer getMaxSuggestedPrompts() {
+                return maxSuggestedPrompts;
+              }
+
+              /** Optional. The maximum number of suggested prompts to return per agent. */
+              public ListAvailableAgentViews setMaxSuggestedPrompts(java.lang.Integer maxSuggestedPrompts) {
+                this.maxSuggestedPrompts = maxSuggestedPrompts;
+                return this;
+              }
+
+              /**
+               * Optional. Maximum number of AgentViewss to return. If unspecified, defaults to 100.
+               * The maximum allowed value is 1000; anything above that will be coerced down to
+               * 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. Maximum number of AgentViewss to return. If unspecified, defaults to 100. The maximum
+             allowed value is 1000; anything above that will be coerced down to 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. Maximum number of AgentViewss to return. If unspecified, defaults to 100.
+               * The maximum allowed value is 1000; anything above that will be coerced down to
+               * 1000.
+               */
+              public ListAvailableAgentViews setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. A page token ListAvailableAgentViewsResponse.next_page_token, received
+               * from a previous AgentService.ListAvailableAgentViews call. Provide this to retrieve
+               * the subsequent page. When paginating, all other parameters provided to
+               * ListAvailableAgentViews must match the call that provided the page token.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. A page token ListAvailableAgentViewsResponse.next_page_token, received from a previous
+             AgentService.ListAvailableAgentViews call. Provide this to retrieve the subsequent page. When
+             paginating, all other parameters provided to ListAvailableAgentViews must match the call that
+             provided the page token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. A page token ListAvailableAgentViewsResponse.next_page_token, received
+               * from a previous AgentService.ListAvailableAgentViews call. Provide this to retrieve
+               * the subsequent page. When paginating, all other parameters provided to
+               * ListAvailableAgentViews must match the call that provided the page token.
+               */
+              public ListAvailableAgentViews setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Optional. The field to sort by. Can have the following values: - display-name: The
+               * display name of the agent. - description: The description of the agent. - create-
+               * time: The creation time of the agent. - state: The state of the agent.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String sortBy;
+
+              /** Optional. The field to sort by. Can have the following values: - display-name: The display name of
+             the agent. - description: The description of the agent. - create-time: The creation time of the
+             agent. - state: The state of the agent.
+               */
+              public java.lang.String getSortBy() {
+                return sortBy;
+              }
+
+              /**
+               * Optional. The field to sort by. Can have the following values: - display-name: The
+               * display name of the agent. - description: The description of the agent. - create-
+               * time: The creation time of the agent. - state: The state of the agent.
+               */
+              public ListAvailableAgentViews setSortBy(java.lang.String sortBy) {
+                this.sortBy = sortBy;
+                return this;
+              }
+
+              @Override
+              public ListAvailableAgentViews set(String parameterName, Object value) {
+                return (ListAvailableAgentViews) super.set(parameterName, value);
+              }
+            }
+            /**
              * Updates an Assistant
              *
              * Create a request for the method "assistants.patch".
@@ -26317,6 +26627,292 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
               }
               /**
+               * Disables an Agent. The `state` of the Agent becomes `DISABLED`. Can be called on an Agent in the
+               * state `ENABLED` or`SUSPENDED`, otherwise it returns an error.
+               *
+               * Create a request for the method "agents.disableAgent".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link DisableAgent#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param name Required. The name of the Agent to disable. Format: `projects/{project}/locations/{location}/collect
+               *        ions/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+               * @return the request
+               */
+              public DisableAgent disableAgent(java.lang.String name) throws java.io.IOException {
+                DisableAgent result = new DisableAgent(name);
+                initialize(result);
+                return result;
+              }
+
+              public class DisableAgent extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAgent> {
+
+                private static final String REST_PATH = "v1alpha/{+name}:disableAgent";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                /**
+                 * Disables an Agent. The `state` of the Agent becomes `DISABLED`. Can be called on an Agent in
+                 * the state `ENABLED` or`SUSPENDED`, otherwise it returns an error.
+                 *
+                 * Create a request for the method "agents.disableAgent".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link DisableAgent#execute()} method to invoke the remote
+                 * operation. <p> {@link
+                 * DisableAgent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The name of the Agent to disable. Format: `projects/{project}/locations/{location}/collect
+               *        ions/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+                 * @since 1.13
+                 */
+                protected DisableAgent(java.lang.String name) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAgent.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public DisableAgent set$Xgafv(java.lang.String $Xgafv) {
+                  return (DisableAgent) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public DisableAgent setAccessToken(java.lang.String accessToken) {
+                  return (DisableAgent) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public DisableAgent setAlt(java.lang.String alt) {
+                  return (DisableAgent) super.setAlt(alt);
+                }
+
+                @Override
+                public DisableAgent setCallback(java.lang.String callback) {
+                  return (DisableAgent) super.setCallback(callback);
+                }
+
+                @Override
+                public DisableAgent setFields(java.lang.String fields) {
+                  return (DisableAgent) super.setFields(fields);
+                }
+
+                @Override
+                public DisableAgent setKey(java.lang.String key) {
+                  return (DisableAgent) super.setKey(key);
+                }
+
+                @Override
+                public DisableAgent setOauthToken(java.lang.String oauthToken) {
+                  return (DisableAgent) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public DisableAgent setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (DisableAgent) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public DisableAgent setQuotaUser(java.lang.String quotaUser) {
+                  return (DisableAgent) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public DisableAgent setUploadType(java.lang.String uploadType) {
+                  return (DisableAgent) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public DisableAgent setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (DisableAgent) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The name of the Agent to disable. Format: `projects/{project}/locations
+                 * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}/agen
+                 * ts/{agent}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The name of the Agent to disable. Format: `projects/{project}/locations/{location}/collec
+               tions/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. The name of the Agent to disable. Format: `projects/{project}/locations
+                 * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}/agen
+                 * ts/{agent}`
+                 */
+                public DisableAgent setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public DisableAgent set(String parameterName, Object value) {
+                  return (DisableAgent) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Enables an Agent. The `state` of the Agent becomes `ENABLED`. Can be called on an Agent in the
+               * state `DISABLED` or 'SUSPENDED', otherwise it returns an error.
+               *
+               * Create a request for the method "agents.enableAgent".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link EnableAgent#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param name Required. The name of the Agent to enable. Format: `projects/{project}/locations/{location}/collecti
+               *        ons/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+               * @return the request
+               */
+              public EnableAgent enableAgent(java.lang.String name) throws java.io.IOException {
+                EnableAgent result = new EnableAgent(name);
+                initialize(result);
+                return result;
+              }
+
+              public class EnableAgent extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAgent> {
+
+                private static final String REST_PATH = "v1alpha/{+name}:enableAgent";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                /**
+                 * Enables an Agent. The `state` of the Agent becomes `ENABLED`. Can be called on an Agent in the
+                 * state `DISABLED` or 'SUSPENDED', otherwise it returns an error.
+                 *
+                 * Create a request for the method "agents.enableAgent".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link EnableAgent#execute()} method to invoke the remote
+                 * operation. <p> {@link
+                 * EnableAgent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The name of the Agent to enable. Format: `projects/{project}/locations/{location}/collecti
+               *        ons/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+                 * @since 1.13
+                 */
+                protected EnableAgent(java.lang.String name) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAgent.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public EnableAgent set$Xgafv(java.lang.String $Xgafv) {
+                  return (EnableAgent) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public EnableAgent setAccessToken(java.lang.String accessToken) {
+                  return (EnableAgent) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public EnableAgent setAlt(java.lang.String alt) {
+                  return (EnableAgent) super.setAlt(alt);
+                }
+
+                @Override
+                public EnableAgent setCallback(java.lang.String callback) {
+                  return (EnableAgent) super.setCallback(callback);
+                }
+
+                @Override
+                public EnableAgent setFields(java.lang.String fields) {
+                  return (EnableAgent) super.setFields(fields);
+                }
+
+                @Override
+                public EnableAgent setKey(java.lang.String key) {
+                  return (EnableAgent) super.setKey(key);
+                }
+
+                @Override
+                public EnableAgent setOauthToken(java.lang.String oauthToken) {
+                  return (EnableAgent) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public EnableAgent setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (EnableAgent) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public EnableAgent setQuotaUser(java.lang.String quotaUser) {
+                  return (EnableAgent) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public EnableAgent setUploadType(java.lang.String uploadType) {
+                  return (EnableAgent) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public EnableAgent setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (EnableAgent) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The name of the Agent to enable. Format: `projects/{project}/locations/
+                 * {location}/collections/{collection}/engines/{engine}/assistants/{assistant}/agent
+                 * s/{agent}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The name of the Agent to enable. Format: `projects/{project}/locations/{location}/collect
+               ions/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. The name of the Agent to enable. Format: `projects/{project}/locations/
+                 * {location}/collections/{collection}/engines/{engine}/assistants/{assistant}/agent
+                 * s/{agent}`
+                 */
+                public EnableAgent setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public EnableAgent set(String parameterName, Object value) {
+                  return (EnableAgent) super.set(parameterName, value);
+                }
+              }
+              /**
                * Gets an Agent.
                *
                * Create a request for the method "agents.get".
@@ -26463,6 +27059,401 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 @Override
                 public Get set(String parameterName, Object value) {
                   return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Returns a AgentView for a given Agent, which contains additional information about the Agent.
+               *
+               * Create a request for the method "agents.getAgentView".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link GetAgentView#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param name Required. The name of the Agent to get. Format: `projects/{project}/locations/{location}/collections
+               *        /{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+               * @return the request
+               */
+              public GetAgentView getAgentView(java.lang.String name) throws java.io.IOException {
+                GetAgentView result = new GetAgentView(name);
+                initialize(result);
+                return result;
+              }
+
+              public class GetAgentView extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+name}:getAgentView";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                /**
+                 * Returns a AgentView for a given Agent, which contains additional information about the Agent.
+                 *
+                 * Create a request for the method "agents.getAgentView".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link GetAgentView#execute()} method to invoke the remote
+                 * operation. <p> {@link
+                 * GetAgentView#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The name of the Agent to get. Format: `projects/{project}/locations/{location}/collections
+               *        /{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+                 * @since 1.13
+                 */
+                protected GetAgentView(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public GetAgentView set$Xgafv(java.lang.String $Xgafv) {
+                  return (GetAgentView) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public GetAgentView setAccessToken(java.lang.String accessToken) {
+                  return (GetAgentView) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public GetAgentView setAlt(java.lang.String alt) {
+                  return (GetAgentView) super.setAlt(alt);
+                }
+
+                @Override
+                public GetAgentView setCallback(java.lang.String callback) {
+                  return (GetAgentView) super.setCallback(callback);
+                }
+
+                @Override
+                public GetAgentView setFields(java.lang.String fields) {
+                  return (GetAgentView) super.setFields(fields);
+                }
+
+                @Override
+                public GetAgentView setKey(java.lang.String key) {
+                  return (GetAgentView) super.setKey(key);
+                }
+
+                @Override
+                public GetAgentView setOauthToken(java.lang.String oauthToken) {
+                  return (GetAgentView) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public GetAgentView setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (GetAgentView) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public GetAgentView setQuotaUser(java.lang.String quotaUser) {
+                  return (GetAgentView) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public GetAgentView setUploadType(java.lang.String uploadType) {
+                  return (GetAgentView) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public GetAgentView setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (GetAgentView) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The name of the Agent to get. Format: `projects/{project}/locations/{lo
+                 * cation}/collections/{collection}/engines/{engine}/assistants/{assistant}/agents/{
+                 * agent}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The name of the Agent to get. Format: `projects/{project}/locations/{location}/collection
+               s/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. The name of the Agent to get. Format: `projects/{project}/locations/{lo
+                 * cation}/collections/{collection}/engines/{engine}/assistants/{assistant}/agents/{
+                 * agent}`
+                 */
+                public GetAgentView setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /**
+                 * Optional. The UI language currently shown to the user. Specifying this field
+                 * request that the texts in the AgentView in the response should be translated to
+                 * this language.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String languageCode;
+
+                /** Optional. The UI language currently shown to the user. Specifying this field request that the texts
+               in the AgentView in the response should be translated to this language.
+                 */
+                public java.lang.String getLanguageCode() {
+                  return languageCode;
+                }
+
+                /**
+                 * Optional. The UI language currently shown to the user. Specifying this field
+                 * request that the texts in the AgentView in the response should be translated to
+                 * this language.
+                 */
+                public GetAgentView setLanguageCode(java.lang.String languageCode) {
+                  this.languageCode = languageCode;
+                  return this;
+                }
+
+                /** Optional. The maximum number of suggested prompts to return per agent. */
+                @com.google.api.client.util.Key
+                private java.lang.Integer maxSuggestedPrompts;
+
+                /** Optional. The maximum number of suggested prompts to return per agent.
+                 */
+                public java.lang.Integer getMaxSuggestedPrompts() {
+                  return maxSuggestedPrompts;
+                }
+
+                /** Optional. The maximum number of suggested prompts to return per agent. */
+                public GetAgentView setMaxSuggestedPrompts(java.lang.Integer maxSuggestedPrompts) {
+                  this.maxSuggestedPrompts = maxSuggestedPrompts;
+                  return this;
+                }
+
+                @Override
+                public GetAgentView set(String parameterName, Object value) {
+                  return (GetAgentView) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Gets the access control policy for an agent resource. A `NOT_FOUND` error is returned if the
+               * resource does not exist. An empty policy is returned if the resource exists but does not have a
+               * policy set on it.
+               *
+               * Create a request for the method "agents.getIamPolicy".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+               *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+               *        this field.
+               * @return the request
+               */
+              public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+                GetIamPolicy result = new GetIamPolicy(resource);
+                initialize(result);
+                return result;
+              }
+
+              public class GetIamPolicy extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleIamV1Policy> {
+
+                private static final String REST_PATH = "v1alpha/{+resource}:getIamPolicy";
+
+                private final java.util.regex.Pattern RESOURCE_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                /**
+                 * Gets the access control policy for an agent resource. A `NOT_FOUND` error is returned if the
+                 * resource does not exist. An empty policy is returned if the resource exists but does not have a
+                 * policy set on it.
+                 *
+                 * Create a request for the method "agents.getIamPolicy".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+                 * operation. <p> {@link
+                 * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+               *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+               *        this field.
+                 * @since 1.13
+                 */
+                protected GetIamPolicy(java.lang.String resource) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleIamV1Policy.class);
+                  this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                        "Parameter resource must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+                  return (GetIamPolicy) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+                  return (GetIamPolicy) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public GetIamPolicy setAlt(java.lang.String alt) {
+                  return (GetIamPolicy) super.setAlt(alt);
+                }
+
+                @Override
+                public GetIamPolicy setCallback(java.lang.String callback) {
+                  return (GetIamPolicy) super.setCallback(callback);
+                }
+
+                @Override
+                public GetIamPolicy setFields(java.lang.String fields) {
+                  return (GetIamPolicy) super.setFields(fields);
+                }
+
+                @Override
+                public GetIamPolicy setKey(java.lang.String key) {
+                  return (GetIamPolicy) super.setKey(key);
+                }
+
+                @Override
+                public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+                  return (GetIamPolicy) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+                  return (GetIamPolicy) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public GetIamPolicy setUploadType(java.lang.String uploadType) {
+                  return (GetIamPolicy) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * REQUIRED: The resource for which the policy is being requested. See [Resource
+                 * names](https://cloud.google.com/apis/design/resource_names) for the appropriate
+                 * value for this field.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String resource;
+
+                /** REQUIRED: The resource for which the policy is being requested. See [Resource
+               names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+               field.
+                 */
+                public java.lang.String getResource() {
+                  return resource;
+                }
+
+                /**
+                 * REQUIRED: The resource for which the policy is being requested. See [Resource
+                 * names](https://cloud.google.com/apis/design/resource_names) for the appropriate
+                 * value for this field.
+                 */
+                public GetIamPolicy setResource(java.lang.String resource) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                        "Parameter resource must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                  this.resource = resource;
+                  return this;
+                }
+
+                /**
+                 * Optional. The maximum policy version that will be used to format the policy.
+                 * Valid values are 0, 1, and 3. Requests specifying an invalid value will be
+                 * rejected. Requests for policies with any conditional role bindings must specify
+                 * version 3. Policies with no conditional role bindings may specify any valid value
+                 * or leave the field unset. The policy in the response might use the policy version
+                 * that you specified, or it might use a lower policy version. For example, if you
+                 * specify version 3, but the policy has no conditional role bindings, the response
+                 * uses version 1. To learn which resources support conditions in their IAM
+                 * policies, see the [IAM
+                 * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+                 */
+                @com.google.api.client.util.Key("options.requestedPolicyVersion")
+                private java.lang.Integer optionsRequestedPolicyVersion;
+
+                /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+               and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+               conditional role bindings must specify version 3. Policies with no conditional role bindings may
+               specify any valid value or leave the field unset. The policy in the response might use the policy
+               version that you specified, or it might use a lower policy version. For example, if you specify
+               version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+               which resources support conditions in their IAM policies, see the [IAM
+               documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+                 */
+                public java.lang.Integer getOptionsRequestedPolicyVersion() {
+                  return optionsRequestedPolicyVersion;
+                }
+
+                /**
+                 * Optional. The maximum policy version that will be used to format the policy.
+                 * Valid values are 0, 1, and 3. Requests specifying an invalid value will be
+                 * rejected. Requests for policies with any conditional role bindings must specify
+                 * version 3. Policies with no conditional role bindings may specify any valid value
+                 * or leave the field unset. The policy in the response might use the policy version
+                 * that you specified, or it might use a lower policy version. For example, if you
+                 * specify version 3, but the policy has no conditional role bindings, the response
+                 * uses version 1. To learn which resources support conditions in their IAM
+                 * policies, see the [IAM
+                 * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+                 */
+                public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+                  this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+                  return this;
+                }
+
+                @Override
+                public GetIamPolicy set(String parameterName, Object value) {
+                  return (GetIamPolicy) super.set(parameterName, value);
                 }
               }
               /**
@@ -26850,6 +27841,323 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 @Override
                 public Patch set(String parameterName, Object value) {
                   return (Patch) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Sets the access control policy for an agent resource. A `NOT_FOUND` error is returned if the
+               * resource does not exist. Policy can only contain `roles/discoveryengine.agentUser`,
+               * `roles/discoveryengine.agentViewer` and `roles/discoveryengine.agentEditor` roles.
+               *
+               * Create a request for the method "agents.setIamPolicy".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+               *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+               *        this field.
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleIamV1SetIamPolicyRequest}
+               * @return the request
+               */
+              public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.discoveryengine.v1alpha.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
+                SetIamPolicy result = new SetIamPolicy(resource, content);
+                initialize(result);
+                return result;
+              }
+
+              public class SetIamPolicy extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleIamV1Policy> {
+
+                private static final String REST_PATH = "v1alpha/{+resource}:setIamPolicy";
+
+                private final java.util.regex.Pattern RESOURCE_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                /**
+                 * Sets the access control policy for an agent resource. A `NOT_FOUND` error is returned if the
+                 * resource does not exist. Policy can only contain `roles/discoveryengine.agentUser`,
+                 * `roles/discoveryengine.agentViewer` and `roles/discoveryengine.agentEditor` roles.
+                 *
+                 * Create a request for the method "agents.setIamPolicy".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+                 * operation. <p> {@link
+                 * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+               *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+               *        this field.
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleIamV1SetIamPolicyRequest}
+                 * @since 1.13
+                 */
+                protected SetIamPolicy(java.lang.String resource, com.google.api.services.discoveryengine.v1alpha.model.GoogleIamV1SetIamPolicyRequest content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleIamV1Policy.class);
+                  this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                        "Parameter resource must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+                  return (SetIamPolicy) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+                  return (SetIamPolicy) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public SetIamPolicy setAlt(java.lang.String alt) {
+                  return (SetIamPolicy) super.setAlt(alt);
+                }
+
+                @Override
+                public SetIamPolicy setCallback(java.lang.String callback) {
+                  return (SetIamPolicy) super.setCallback(callback);
+                }
+
+                @Override
+                public SetIamPolicy setFields(java.lang.String fields) {
+                  return (SetIamPolicy) super.setFields(fields);
+                }
+
+                @Override
+                public SetIamPolicy setKey(java.lang.String key) {
+                  return (SetIamPolicy) super.setKey(key);
+                }
+
+                @Override
+                public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+                  return (SetIamPolicy) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+                  return (SetIamPolicy) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public SetIamPolicy setUploadType(java.lang.String uploadType) {
+                  return (SetIamPolicy) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * REQUIRED: The resource for which the policy is being specified. See [Resource
+                 * names](https://cloud.google.com/apis/design/resource_names) for the appropriate
+                 * value for this field.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String resource;
+
+                /** REQUIRED: The resource for which the policy is being specified. See [Resource
+               names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+               field.
+                 */
+                public java.lang.String getResource() {
+                  return resource;
+                }
+
+                /**
+                 * REQUIRED: The resource for which the policy is being specified. See [Resource
+                 * names](https://cloud.google.com/apis/design/resource_names) for the appropriate
+                 * value for this field.
+                 */
+                public SetIamPolicy setResource(java.lang.String resource) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                        "Parameter resource must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                  this.resource = resource;
+                  return this;
+                }
+
+                @Override
+                public SetIamPolicy set(String parameterName, Object value) {
+                  return (SetIamPolicy) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Suspends an Agent. It is still available for viewing but not for use. The `state` of the Agent
+               * becomes `SUSPENDED`. Can be called on an Agent in the state `ENABLED`, otherwise it returns an
+               * error.
+               *
+               * Create a request for the method "agents.suspendAgent".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link SuspendAgent#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param name Required. The name of the Agent to suspend. Format: `projects/{project}/locations/{location}/collect
+               *        ions/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+               * @return the request
+               */
+              public SuspendAgent suspendAgent(java.lang.String name) throws java.io.IOException {
+                SuspendAgent result = new SuspendAgent(name);
+                initialize(result);
+                return result;
+              }
+
+              public class SuspendAgent extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAgent> {
+
+                private static final String REST_PATH = "v1alpha/{+name}:suspendAgent";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                /**
+                 * Suspends an Agent. It is still available for viewing but not for use. The `state` of the Agent
+                 * becomes `SUSPENDED`. Can be called on an Agent in the state `ENABLED`, otherwise it returns an
+                 * error.
+                 *
+                 * Create a request for the method "agents.suspendAgent".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link SuspendAgent#execute()} method to invoke the remote
+                 * operation. <p> {@link
+                 * SuspendAgent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The name of the Agent to suspend. Format: `projects/{project}/locations/{location}/collect
+               *        ions/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+                 * @since 1.13
+                 */
+                protected SuspendAgent(java.lang.String name) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAgent.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public SuspendAgent set$Xgafv(java.lang.String $Xgafv) {
+                  return (SuspendAgent) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public SuspendAgent setAccessToken(java.lang.String accessToken) {
+                  return (SuspendAgent) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public SuspendAgent setAlt(java.lang.String alt) {
+                  return (SuspendAgent) super.setAlt(alt);
+                }
+
+                @Override
+                public SuspendAgent setCallback(java.lang.String callback) {
+                  return (SuspendAgent) super.setCallback(callback);
+                }
+
+                @Override
+                public SuspendAgent setFields(java.lang.String fields) {
+                  return (SuspendAgent) super.setFields(fields);
+                }
+
+                @Override
+                public SuspendAgent setKey(java.lang.String key) {
+                  return (SuspendAgent) super.setKey(key);
+                }
+
+                @Override
+                public SuspendAgent setOauthToken(java.lang.String oauthToken) {
+                  return (SuspendAgent) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public SuspendAgent setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (SuspendAgent) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public SuspendAgent setQuotaUser(java.lang.String quotaUser) {
+                  return (SuspendAgent) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public SuspendAgent setUploadType(java.lang.String uploadType) {
+                  return (SuspendAgent) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public SuspendAgent setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (SuspendAgent) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The name of the Agent to suspend. Format: `projects/{project}/locations
+                 * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}/agen
+                 * ts/{agent}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The name of the Agent to suspend. Format: `projects/{project}/locations/{location}/collec
+               tions/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. The name of the Agent to suspend. Format: `projects/{project}/locations
+                 * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}/agen
+                 * ts/{agent}`
+                 */
+                public SuspendAgent setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /**
+                 * Required. The reason for suspending the Agent. This will be shown to the users of
+                 * the Agent.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String suspensionReason;
+
+                /** Required. The reason for suspending the Agent. This will be shown to the users of the Agent.
+                 */
+                public java.lang.String getSuspensionReason() {
+                  return suspensionReason;
+                }
+
+                /**
+                 * Required. The reason for suspending the Agent. This will be shown to the users of
+                 * the Agent.
+                 */
+                public SuspendAgent setSuspensionReason(java.lang.String suspensionReason) {
+                  this.suspensionReason = suspensionReason;
+                  return this;
+                }
+
+                @Override
+                public SuspendAgent set(String parameterName, Object value) {
+                  return (SuspendAgent) super.set(parameterName, value);
                 }
               }
 
@@ -57626,6 +58934,175 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * An accessor for creating requests from the LicenseConfigsUsageStats collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.LicenseConfigsUsageStats.List request = discoveryengine.licenseConfigsUsageStats().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public LicenseConfigsUsageStats licenseConfigsUsageStats() {
+          return new LicenseConfigsUsageStats();
+        }
+
+        /**
+         * The "licenseConfigsUsageStats" collection of methods.
+         */
+        public class LicenseConfigsUsageStats {
+
+          /**
+           * Lists all the LicenseConfigUsageStatss associated with the project.
+           *
+           * Create a request for the method "licenseConfigsUsageStats.list".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent branch resource name, such as
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListLicenseConfigsUsageStatsResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/licenseConfigsUsageStats";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+
+            /**
+             * Lists all the LicenseConfigUsageStatss associated with the project.
+             *
+             * Create a request for the method "licenseConfigsUsageStats.list".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent branch resource name, such as
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListLicenseConfigsUsageStatsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent branch resource name, such as
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent branch resource name, such as
+           `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent branch resource name, such as
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>
@@ -58172,33 +59649,36 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
-             * Examples: * `license_assignment_state = ASSIGNED` to list assigned user licenses. *
-             * `license_assignment_state = NO_LICENSE` to list not licensed users. *
-             * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted
-             * login but no license assigned. * `license_assignment_state !=
+             * Optional. Filter for the list request. Supported fields: *
+             * `license`_`assignment`_`state` * `user_principal` * `user_profile` Examples: *
+             * `license`_`assignment`_`state = ASSIGNED` to list assigned user licenses. *
+             * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
+             * `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
+             * attempted login but no license assigned. * `license`_`assignment`_`state !=
              * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
              * assigned.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter for the list request. Supported fields: * `license_assignment_state` Examples: *
-           `license_assignment_state = ASSIGNED` to list assigned user licenses. * `license_assignment_state =
-           NO_LICENSE` to list not licensed users. * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN`
-           to list users who attempted login but no license assigned. * `license_assignment_state !=
-           NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license assigned.
+            /** Optional. Filter for the list request. Supported fields: * `license`_`assignment`_`state` *
+           `user_principal` * `user_profile` Examples: * `license`_`assignment`_`state = ASSIGNED` to list
+           assigned user licenses. * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
+           `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted login but
+           no license assigned. * `license`_`assignment`_`state != NO_LICENSE_ATTEMPTED_LOGIN` to filter out
+           users who attempted login but no license assigned.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
-             * Examples: * `license_assignment_state = ASSIGNED` to list assigned user licenses. *
-             * `license_assignment_state = NO_LICENSE` to list not licensed users. *
-             * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted
-             * login but no license assigned. * `license_assignment_state !=
+             * Optional. Filter for the list request. Supported fields: *
+             * `license`_`assignment`_`state` * `user_principal` * `user_profile` Examples: *
+             * `license`_`assignment`_`state = ASSIGNED` to list assigned user licenses. *
+             * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
+             * `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
+             * attempted login but no license assigned. * `license`_`assignment`_`state !=
              * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
              * assigned.
              */

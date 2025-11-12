@@ -44524,6 +44524,175 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * An accessor for creating requests from the LicenseConfigsUsageStats collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.LicenseConfigsUsageStats.List request = discoveryengine.licenseConfigsUsageStats().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public LicenseConfigsUsageStats licenseConfigsUsageStats() {
+          return new LicenseConfigsUsageStats();
+        }
+
+        /**
+         * The "licenseConfigsUsageStats" collection of methods.
+         */
+        public class LicenseConfigsUsageStats {
+
+          /**
+           * Lists all the LicenseConfigUsageStatss associated with the project.
+           *
+           * Create a request for the method "licenseConfigsUsageStats.list".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent branch resource name, such as
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListLicenseConfigsUsageStatsResponse> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/licenseConfigsUsageStats";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+
+            /**
+             * Lists all the LicenseConfigUsageStatss associated with the project.
+             *
+             * Create a request for the method "licenseConfigsUsageStats.list".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent branch resource name, such as
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListLicenseConfigsUsageStatsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent branch resource name, such as
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent branch resource name, such as
+           `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent branch resource name, such as
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the UserLicenses collection.
          *
          * <p>The typical use is:</p>
@@ -44686,33 +44855,36 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
-             * Examples: * `license_assignment_state = ASSIGNED` to list assigned user licenses. *
-             * `license_assignment_state = NO_LICENSE` to list not licensed users. *
-             * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted
-             * login but no license assigned. * `license_assignment_state !=
+             * Optional. Filter for the list request. Supported fields: *
+             * `license`_`assignment`_`state` * `user_principal` * `user_profile` Examples: *
+             * `license`_`assignment`_`state = ASSIGNED` to list assigned user licenses. *
+             * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
+             * `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
+             * attempted login but no license assigned. * `license`_`assignment`_`state !=
              * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
              * assigned.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter for the list request. Supported fields: * `license_assignment_state` Examples: *
-           `license_assignment_state = ASSIGNED` to list assigned user licenses. * `license_assignment_state =
-           NO_LICENSE` to list not licensed users. * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN`
-           to list users who attempted login but no license assigned. * `license_assignment_state !=
-           NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license assigned.
+            /** Optional. Filter for the list request. Supported fields: * `license`_`assignment`_`state` *
+           `user_principal` * `user_profile` Examples: * `license`_`assignment`_`state = ASSIGNED` to list
+           assigned user licenses. * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
+           `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted login but
+           no license assigned. * `license`_`assignment`_`state != NO_LICENSE_ATTEMPTED_LOGIN` to filter out
+           users who attempted login but no license assigned.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
-             * Examples: * `license_assignment_state = ASSIGNED` to list assigned user licenses. *
-             * `license_assignment_state = NO_LICENSE` to list not licensed users. *
-             * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted
-             * login but no license assigned. * `license_assignment_state !=
+             * Optional. Filter for the list request. Supported fields: *
+             * `license`_`assignment`_`state` * `user_principal` * `user_profile` Examples: *
+             * `license`_`assignment`_`state = ASSIGNED` to list assigned user licenses. *
+             * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
+             * `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
+             * attempted login but no license assigned. * `license`_`assignment`_`state !=
              * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
              * assigned.
              */

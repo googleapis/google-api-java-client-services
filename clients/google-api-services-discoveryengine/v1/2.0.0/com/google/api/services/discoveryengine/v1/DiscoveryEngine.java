@@ -17655,6 +17655,403 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
           }
+          /**
+           * An accessor for creating requests from the WidgetConfigs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.WidgetConfigs.List request = discoveryengine.widgetConfigs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public WidgetConfigs widgetConfigs() {
+            return new WidgetConfigs();
+          }
+
+          /**
+           * The "widgetConfigs" collection of methods.
+           */
+          public class WidgetConfigs {
+
+            /**
+             * Gets a WidgetConfig.
+             *
+             * Create a request for the method "widgetConfigs.get".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+
+              /**
+               * Gets a WidgetConfig.
+               *
+               * Create a request for the method "widgetConfigs.get".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widg
+               * et_config_id}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{location}/collect
+             ions/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widg
+               * et_config_id}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. Whether it's acceptable to load the widget config from cache. If set to
+               * true, recent changes on widget configs may take a few minutes to reflect on the end
+               * user's view. It's recommended to set to true for maturely developed widgets, as it
+               * improves widget performance. Set to false to see changes reflected in prod right
+               * away, if your widget is under development.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean acceptCache;
+
+              /** Optional. Whether it's acceptable to load the widget config from cache. If set to true, recent
+             changes on widget configs may take a few minutes to reflect on the end user's view. It's
+             recommended to set to true for maturely developed widgets, as it improves widget performance. Set
+             to false to see changes reflected in prod right away, if your widget is under development.
+               */
+              public java.lang.Boolean getAcceptCache() {
+                return acceptCache;
+              }
+
+              /**
+               * Optional. Whether it's acceptable to load the widget config from cache. If set to
+               * true, recent changes on widget configs may take a few minutes to reflect on the end
+               * user's view. It's recommended to set to true for maturely developed widgets, as it
+               * improves widget performance. Set to false to see changes reflected in prod right
+               * away, if your widget is under development.
+               */
+              public Get setAcceptCache(java.lang.Boolean acceptCache) {
+                this.acceptCache = acceptCache;
+                return this;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              @com.google.api.client.util.Key("getWidgetConfigRequestOption.turnOffCollectionComponents")
+              private java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents;
+
+              /** Optional. Whether to turn off collection_components in WidgetConfig to reduce latency and data
+             transmission.
+               */
+              public java.lang.Boolean getGetWidgetConfigRequestOptionTurnOffCollectionComponents() {
+                return getWidgetConfigRequestOptionTurnOffCollectionComponents;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
+                this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Update a WidgetConfig.
+             *
+             * Create a request for the method "widgetConfigs.patch".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_i
+             *        d}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+             * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+
+              /**
+               * Update a WidgetConfig.
+               *
+               * Create a request for the method "widgetConfigs.patch".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_i
+             *        d}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+               * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig content) {
+                super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Immutable. The full resource name of the widget config. Format: `projects/{project}
+               * /locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/widget
+               * Configs/{widget_config_id}`. This field must be a UTF-8 encoded string with a
+               * length limit of 1024 characters.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{loca
+             tion}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`.
+             This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Immutable. The full resource name of the widget config. Format: `projects/{project}
+               * /locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/widget
+               * Configs/{widget_config_id}`. This field must be a UTF-8 encoded string with a
+               * length limit of 1024 characters.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Indicates which fields in the provided WidgetConfig to update. The following are
+               * the only supported fields: * WidgetConfig.enable_autocomplete If not set, all
+               * supported fields are updated.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Indicates which fields in the provided WidgetConfig to update. The following are the only supported
+             fields: * WidgetConfig.enable_autocomplete If not set, all supported fields are updated.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Indicates which fields in the provided WidgetConfig to update. The following are
+               * the only supported fields: * WidgetConfig.enable_autocomplete If not set, all
+               * supported fields are updated.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
         /**
          * An accessor for creating requests from the Engines collection.
@@ -23991,6 +24388,403 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
             }
+          }
+          /**
+           * An accessor for creating requests from the WidgetConfigs collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.WidgetConfigs.List request = discoveryengine.widgetConfigs().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public WidgetConfigs widgetConfigs() {
+            return new WidgetConfigs();
+          }
+
+          /**
+           * The "widgetConfigs" collection of methods.
+           */
+          public class WidgetConfigs {
+
+            /**
+             * Gets a WidgetConfig.
+             *
+             * Create a request for the method "widgetConfigs.get".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/widgetConfigs/[^/]+$");
+
+              /**
+               * Gets a WidgetConfig.
+               *
+               * Create a request for the method "widgetConfigs.get".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{location}/collecti
+             *        ons/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/widgetConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widg
+               * et_config_id}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{location}/collect
+             ions/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{l
+               * ocation}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widg
+               * et_config_id}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/widgetConfigs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. Whether it's acceptable to load the widget config from cache. If set to
+               * true, recent changes on widget configs may take a few minutes to reflect on the end
+               * user's view. It's recommended to set to true for maturely developed widgets, as it
+               * improves widget performance. Set to false to see changes reflected in prod right
+               * away, if your widget is under development.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean acceptCache;
+
+              /** Optional. Whether it's acceptable to load the widget config from cache. If set to true, recent
+             changes on widget configs may take a few minutes to reflect on the end user's view. It's
+             recommended to set to true for maturely developed widgets, as it improves widget performance. Set
+             to false to see changes reflected in prod right away, if your widget is under development.
+               */
+              public java.lang.Boolean getAcceptCache() {
+                return acceptCache;
+              }
+
+              /**
+               * Optional. Whether it's acceptable to load the widget config from cache. If set to
+               * true, recent changes on widget configs may take a few minutes to reflect on the end
+               * user's view. It's recommended to set to true for maturely developed widgets, as it
+               * improves widget performance. Set to false to see changes reflected in prod right
+               * away, if your widget is under development.
+               */
+              public Get setAcceptCache(java.lang.Boolean acceptCache) {
+                this.acceptCache = acceptCache;
+                return this;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              @com.google.api.client.util.Key("getWidgetConfigRequestOption.turnOffCollectionComponents")
+              private java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents;
+
+              /** Optional. Whether to turn off collection_components in WidgetConfig to reduce latency and data
+             transmission.
+               */
+              public java.lang.Boolean getGetWidgetConfigRequestOptionTurnOffCollectionComponents() {
+                return getWidgetConfigRequestOptionTurnOffCollectionComponents;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
+                this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Update a WidgetConfig.
+             *
+             * Create a request for the method "widgetConfigs.patch".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_i
+             *        d}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+             * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/widgetConfigs/[^/]+$");
+
+              /**
+               * Update a WidgetConfig.
+               *
+               * Create a request for the method "widgetConfigs.patch".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_i
+             *        d}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+               * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig content) {
+                super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/widgetConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Immutable. The full resource name of the widget config. Format: `projects/{project}
+               * /locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/widget
+               * Configs/{widget_config_id}`. This field must be a UTF-8 encoded string with a
+               * length limit of 1024 characters.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{loca
+             tion}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`.
+             This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Immutable. The full resource name of the widget config. Format: `projects/{project}
+               * /locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/widget
+               * Configs/{widget_config_id}`. This field must be a UTF-8 encoded string with a
+               * length limit of 1024 characters.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/widgetConfigs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Indicates which fields in the provided WidgetConfig to update. The following are
+               * the only supported fields: * WidgetConfig.enable_autocomplete If not set, all
+               * supported fields are updated.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Indicates which fields in the provided WidgetConfig to update. The following are the only supported
+             fields: * WidgetConfig.enable_autocomplete If not set, all supported fields are updated.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Indicates which fields in the provided WidgetConfig to update. The following are
+               * the only supported fields: * WidgetConfig.enable_autocomplete If not set, all
+               * supported fields are updated.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
           }
         }
         /**
@@ -37128,6 +37922,403 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
         }
+        /**
+         * An accessor for creating requests from the WidgetConfigs collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.WidgetConfigs.List request = discoveryengine.widgetConfigs().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public WidgetConfigs widgetConfigs() {
+          return new WidgetConfigs();
+        }
+
+        /**
+         * The "widgetConfigs" collection of methods.
+         */
+        public class WidgetConfigs {
+
+          /**
+           * Gets a WidgetConfig.
+           *
+           * Create a request for the method "widgetConfigs.get".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{location}/collecti
+           *        ons/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+
+            /**
+             * Gets a WidgetConfig.
+             *
+             * Create a request for the method "widgetConfigs.get".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{location}/collecti
+           *        ons/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_c
+             * onfig_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{location}/collect
+           ions/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Full WidgetConfig resource name. Format: `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_c
+             * onfig_id}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Whether it's acceptable to load the widget config from cache. If set to
+             * true, recent changes on widget configs may take a few minutes to reflect on the end
+             * user's view. It's recommended to set to true for maturely developed widgets, as it
+             * improves widget performance. Set to false to see changes reflected in prod right
+             * away, if your widget is under development.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean acceptCache;
+
+            /** Optional. Whether it's acceptable to load the widget config from cache. If set to true, recent
+           changes on widget configs may take a few minutes to reflect on the end user's view. It's
+           recommended to set to true for maturely developed widgets, as it improves widget performance. Set
+           to false to see changes reflected in prod right away, if your widget is under development.
+             */
+            public java.lang.Boolean getAcceptCache() {
+              return acceptCache;
+            }
+
+            /**
+             * Optional. Whether it's acceptable to load the widget config from cache. If set to
+             * true, recent changes on widget configs may take a few minutes to reflect on the end
+             * user's view. It's recommended to set to true for maturely developed widgets, as it
+             * improves widget performance. Set to false to see changes reflected in prod right
+             * away, if your widget is under development.
+             */
+            public Get setAcceptCache(java.lang.Boolean acceptCache) {
+              this.acceptCache = acceptCache;
+              return this;
+            }
+
+            /**
+             * Optional. Whether to turn off collection_components in WidgetConfig to reduce latency
+             * and data transmission.
+             */
+            @com.google.api.client.util.Key("getWidgetConfigRequestOption.turnOffCollectionComponents")
+            private java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents;
+
+            /** Optional. Whether to turn off collection_components in WidgetConfig to reduce latency and data
+           transmission.
+             */
+            public java.lang.Boolean getGetWidgetConfigRequestOptionTurnOffCollectionComponents() {
+              return getWidgetConfigRequestOptionTurnOffCollectionComponents;
+            }
+
+            /**
+             * Optional. Whether to turn off collection_components in WidgetConfig to reduce latency
+             * and data transmission.
+             */
+            public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
+              this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update a WidgetConfig.
+           *
+           * Create a request for the method "widgetConfigs.patch".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{locat
+           *        ion}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_i
+           *        d}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+           * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+
+            /**
+             * Update a WidgetConfig.
+             *
+             * Create a request for the method "widgetConfigs.patch".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{locat
+           *        ion}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_i
+           *        d}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+             * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig content) {
+              super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1WidgetConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Immutable. The full resource name of the widget config. Format: `projects/{project}/l
+             * ocations/{location}/collections/{collection_id}/dataStores/{data_store_id}/widgetConf
+             * igs/{widget_config_id}`. This field must be a UTF-8 encoded string with a length
+             * limit of 1024 characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Immutable. The full resource name of the widget config. Format: `projects/{project}/locations/{loca
+           tion}/collections/{collection_id}/dataStores/{data_store_id}/widgetConfigs/{widget_config_id}`.
+           This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Immutable. The full resource name of the widget config. Format: `projects/{project}/l
+             * ocations/{location}/collections/{collection_id}/dataStores/{data_store_id}/widgetConf
+             * igs/{widget_config_id}`. This field must be a UTF-8 encoded string with a length
+             * limit of 1024 characters.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/widgetConfigs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Indicates which fields in the provided WidgetConfig to update. The following are the
+             * only supported fields: * WidgetConfig.enable_autocomplete If not set, all supported
+             * fields are updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Indicates which fields in the provided WidgetConfig to update. The following are the only supported
+           fields: * WidgetConfig.enable_autocomplete If not set, all supported fields are updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Indicates which fields in the provided WidgetConfig to update. The following are the
+             * only supported fields: * WidgetConfig.enable_autocomplete If not set, all supported
+             * fields are updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the GroundingConfigs collection.
@@ -41450,6 +42641,175 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * An accessor for creating requests from the LicenseConfigsUsageStats collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.LicenseConfigsUsageStats.List request = discoveryengine.licenseConfigsUsageStats().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public LicenseConfigsUsageStats licenseConfigsUsageStats() {
+          return new LicenseConfigsUsageStats();
+        }
+
+        /**
+         * The "licenseConfigsUsageStats" collection of methods.
+         */
+        public class LicenseConfigsUsageStats {
+
+          /**
+           * Lists all the LicenseConfigUsageStatss associated with the project.
+           *
+           * Create a request for the method "licenseConfigsUsageStats.list".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent branch resource name, such as
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1ListLicenseConfigsUsageStatsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/licenseConfigsUsageStats";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+
+            /**
+             * Lists all the LicenseConfigUsageStatss associated with the project.
+             *
+             * Create a request for the method "licenseConfigsUsageStats.list".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent branch resource name, such as
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1ListLicenseConfigsUsageStatsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent branch resource name, such as
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent branch resource name, such as
+           `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent branch resource name, such as
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the UserLicenses collection.
          *
          * <p>The typical use is:</p>
@@ -41612,33 +42972,36 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
-             * Examples: * `license_assignment_state = ASSIGNED` to list assigned user licenses. *
-             * `license_assignment_state = NO_LICENSE` to list not licensed users. *
-             * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted
-             * login but no license assigned. * `license_assignment_state !=
+             * Optional. Filter for the list request. Supported fields: *
+             * `license`_`assignment`_`state` * `user_principal` * `user_profile` Examples: *
+             * `license`_`assignment`_`state = ASSIGNED` to list assigned user licenses. *
+             * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
+             * `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
+             * attempted login but no license assigned. * `license`_`assignment`_`state !=
              * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
              * assigned.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter for the list request. Supported fields: * `license_assignment_state` Examples: *
-           `license_assignment_state = ASSIGNED` to list assigned user licenses. * `license_assignment_state =
-           NO_LICENSE` to list not licensed users. * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN`
-           to list users who attempted login but no license assigned. * `license_assignment_state !=
-           NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license assigned.
+            /** Optional. Filter for the list request. Supported fields: * `license`_`assignment`_`state` *
+           `user_principal` * `user_profile` Examples: * `license`_`assignment`_`state = ASSIGNED` to list
+           assigned user licenses. * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
+           `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted login but
+           no license assigned. * `license`_`assignment`_`state != NO_LICENSE_ATTEMPTED_LOGIN` to filter out
+           users who attempted login but no license assigned.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
-             * Examples: * `license_assignment_state = ASSIGNED` to list assigned user licenses. *
-             * `license_assignment_state = NO_LICENSE` to list not licensed users. *
-             * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted
-             * login but no license assigned. * `license_assignment_state !=
+             * Optional. Filter for the list request. Supported fields: *
+             * `license`_`assignment`_`state` * `user_principal` * `user_profile` Examples: *
+             * `license`_`assignment`_`state = ASSIGNED` to list assigned user licenses. *
+             * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
+             * `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
+             * attempted login but no license assigned. * `license`_`assignment`_`state !=
              * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
              * assigned.
              */

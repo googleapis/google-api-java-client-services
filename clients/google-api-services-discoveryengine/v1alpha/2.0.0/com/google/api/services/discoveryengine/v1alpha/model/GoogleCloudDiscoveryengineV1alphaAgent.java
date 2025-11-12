@@ -128,6 +128,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
   private java.lang.String rejectionReason;
 
   /**
+   * Optional. The sharing config of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaAgentSharingConfig sharingConfig;
+
+  /**
    * Optional. The starter prompt suggestions to show the user on the landing page of the agent.
    * The value may be {@code null}.
    */
@@ -387,6 +394,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1alphaAgent setRejectionReason(java.lang.String rejectionReason) {
     this.rejectionReason = rejectionReason;
+    return this;
+  }
+
+  /**
+   * Optional. The sharing config of the agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAgentSharingConfig getSharingConfig() {
+    return sharingConfig;
+  }
+
+  /**
+   * Optional. The sharing config of the agent.
+   * @param sharingConfig sharingConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAgent setSharingConfig(GoogleCloudDiscoveryengineV1alphaAgentSharingConfig sharingConfig) {
+    this.sharingConfig = sharingConfig;
     return this;
   }
 

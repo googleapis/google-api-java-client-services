@@ -45,12 +45,13 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends co
   private java.lang.String displayName;
 
   /**
-   * Required. Endpoint matchers associated with an application. A combination of hostname and ports
-   * as endpoint matchers is used to match the application. Match conditions for OR logic. An array
-   * of match conditions to allow for multiple matching criteria. The rule is considered a match if
-   * one of the conditions is met. The conditions should be the following combination: (Hostname &
-   * Ports) EXAMPLES: Hostname and Ports - ("*.example.com", "443"), ("example.com" and "22"),
-   * ("example.com" and "22,33") etc
+   * Optional. An array of conditions to match the application's network endpoint. Each element in
+   * the array is an EndpointMatcher object, which defines a specific combination of a hostname
+   * pattern and one or more ports. The application is considered matched if at least one of the
+   * EndpointMatcher conditions in this array is met (the conditions are combined using OR logic).
+   * Each EndpointMatcher must contain a hostname pattern, such as "example.com", and one or more
+   * port numbers specified as a string, such as "443". Hostname and port number examples:
+   * "*.example.com", "443" "example.com" and "22" "example.com" and "22,33"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,12 +122,13 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends co
   }
 
   /**
-   * Required. Endpoint matchers associated with an application. A combination of hostname and ports
-   * as endpoint matchers is used to match the application. Match conditions for OR logic. An array
-   * of match conditions to allow for multiple matching criteria. The rule is considered a match if
-   * one of the conditions is met. The conditions should be the following combination: (Hostname &
-   * Ports) EXAMPLES: Hostname and Ports - ("*.example.com", "443"), ("example.com" and "22"),
-   * ("example.com" and "22,33") etc
+   * Optional. An array of conditions to match the application's network endpoint. Each element in
+   * the array is an EndpointMatcher object, which defines a specific combination of a hostname
+   * pattern and one or more ports. The application is considered matched if at least one of the
+   * EndpointMatcher conditions in this array is met (the conditions are combined using OR logic).
+   * Each EndpointMatcher must contain a hostname pattern, such as "example.com", and one or more
+   * port numbers specified as a string, such as "443". Hostname and port number examples:
+   * "*.example.com", "443" "example.com" and "22" "example.com" and "22,33"
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1EndpointMatcher> getEndpointMatchers() {
@@ -134,12 +136,13 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends co
   }
 
   /**
-   * Required. Endpoint matchers associated with an application. A combination of hostname and ports
-   * as endpoint matchers is used to match the application. Match conditions for OR logic. An array
-   * of match conditions to allow for multiple matching criteria. The rule is considered a match if
-   * one of the conditions is met. The conditions should be the following combination: (Hostname &
-   * Ports) EXAMPLES: Hostname and Ports - ("*.example.com", "443"), ("example.com" and "22"),
-   * ("example.com" and "22,33") etc
+   * Optional. An array of conditions to match the application's network endpoint. Each element in
+   * the array is an EndpointMatcher object, which defines a specific combination of a hostname
+   * pattern and one or more ports. The application is considered matched if at least one of the
+   * EndpointMatcher conditions in this array is met (the conditions are combined using OR logic).
+   * Each EndpointMatcher must contain a hostname pattern, such as "example.com", and one or more
+   * port numbers specified as a string, such as "443". Hostname and port number examples:
+   * "*.example.com", "443" "example.com" and "22" "example.com" and "22,33"
    * @param endpointMatchers endpointMatchers or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1Application setEndpointMatchers(java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1EndpointMatcher> endpointMatchers) {

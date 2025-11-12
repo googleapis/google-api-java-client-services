@@ -53,6 +53,13 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   private GoogleCloudDiscoveryengineV1alphaEngineChatEngineMetadata chatEngineMetadata;
 
   /**
+   * Output only. CMEK-related information for the Engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaCmekConfig cmekConfig;
+
+  /**
    * Common config spec that specifies the metadata of the engine.
    * The value may be {@code null}.
    */
@@ -128,6 +135,18 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig mediaRecommendationEngineConfig;
+
+  /**
+   * Optional. Maps a model name to its specific configuration for this engine. This allows admin
+   * users to turn on/off individual models. This only stores models whose states are overridden by
+   * the admin. When the state is unspecified, or model_configs is empty for this model, the system
+   * will decide if this model should be available or not based on the default configuration. For
+   * example, a preview model should be disabled by default if the admin has not chosen to enable
+   * it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> modelConfigs;
 
   /**
    * Immutable. Identifier. The fully qualified resource name of the engine. This field must be a
@@ -228,6 +247,23 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setChatEngineMetadata(GoogleCloudDiscoveryengineV1alphaEngineChatEngineMetadata chatEngineMetadata) {
     this.chatEngineMetadata = chatEngineMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. CMEK-related information for the Engine.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCmekConfig getCmekConfig() {
+    return cmekConfig;
+  }
+
+  /**
+   * Output only. CMEK-related information for the Engine.
+   * @param cmekConfig cmekConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setCmekConfig(GoogleCloudDiscoveryengineV1alphaCmekConfig cmekConfig) {
+    this.cmekConfig = cmekConfig;
     return this;
   }
 
@@ -409,6 +445,33 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setMediaRecommendationEngineConfig(GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig mediaRecommendationEngineConfig) {
     this.mediaRecommendationEngineConfig = mediaRecommendationEngineConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Maps a model name to its specific configuration for this engine. This allows admin
+   * users to turn on/off individual models. This only stores models whose states are overridden by
+   * the admin. When the state is unspecified, or model_configs is empty for this model, the system
+   * will decide if this model should be available or not based on the default configuration. For
+   * example, a preview model should be disabled by default if the admin has not chosen to enable
+   * it.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getModelConfigs() {
+    return modelConfigs;
+  }
+
+  /**
+   * Optional. Maps a model name to its specific configuration for this engine. This allows admin
+   * users to turn on/off individual models. This only stores models whose states are overridden by
+   * the admin. When the state is unspecified, or model_configs is empty for this model, the system
+   * will decide if this model should be available or not based on the default configuration. For
+   * example, a preview model should be disabled by default if the admin has not chosen to enable
+   * it.
+   * @param modelConfigs modelConfigs or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setModelConfigs(java.util.Map<String, java.lang.String> modelConfigs) {
+    this.modelConfigs = modelConfigs;
     return this;
   }
 

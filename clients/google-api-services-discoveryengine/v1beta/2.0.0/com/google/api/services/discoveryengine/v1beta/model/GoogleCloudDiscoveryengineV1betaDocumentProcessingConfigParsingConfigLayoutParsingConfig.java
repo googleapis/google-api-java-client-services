@@ -45,6 +45,13 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentProcessingConfigParsi
   private java.lang.Boolean enableImageAnnotation;
 
   /**
+   * Optional. If true, the pdf layout will be refined using an LLM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableLlmLayoutParsing;
+
+  /**
    * Optional. If true, the LLM based annotation is added to the table during parsing.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentProcessingConfigParsi
    */
   public GoogleCloudDiscoveryengineV1betaDocumentProcessingConfigParsingConfigLayoutParsingConfig setEnableImageAnnotation(java.lang.Boolean enableImageAnnotation) {
     this.enableImageAnnotation = enableImageAnnotation;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the pdf layout will be refined using an LLM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableLlmLayoutParsing() {
+    return enableLlmLayoutParsing;
+  }
+
+  /**
+   * Optional. If true, the pdf layout will be refined using an LLM.
+   * @param enableLlmLayoutParsing enableLlmLayoutParsing or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDocumentProcessingConfigParsingConfigLayoutParsingConfig setEnableLlmLayoutParsing(java.lang.Boolean enableLlmLayoutParsing) {
+    this.enableLlmLayoutParsing = enableLlmLayoutParsing;
     return this;
   }
 

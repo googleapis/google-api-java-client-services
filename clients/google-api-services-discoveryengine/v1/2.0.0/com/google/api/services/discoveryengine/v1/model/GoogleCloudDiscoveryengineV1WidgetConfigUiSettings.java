@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.discoveryengine.v1alpha.model;
+package com.google.api.services.discoveryengine.v1.model;
 
 /**
  * Describes general widget (or web app) UI settings as seen in the cloud console UI configuration
@@ -28,19 +28,19 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * Per data store configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreUiConfig> dataStoreUiConfigs;
+  private java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig> dataStoreUiConfigs;
 
   static {
-    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreUiConfig used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreUiConfig.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig.class);
   }
 
   /**
@@ -126,7 +126,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsGenerativeAnswerConfig generativeAnswerConfig;
+  private GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig generativeAnswerConfig;
 
   /**
    * Describes widget (or web app) interaction type
@@ -156,18 +156,10 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
   private java.lang.String resultDescriptionType;
 
   /**
-   * Optional. SearchAddonSpec is used to disable add-ons for search. This field is only supported
-   * for search requests.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsSearchAddonSpec searchAddonSpec;
-
-  /**
    * Per data store configuration.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreUiConfig> getDataStoreUiConfigs() {
+  public java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig> getDataStoreUiConfigs() {
     return dataStoreUiConfigs;
   }
 
@@ -175,7 +167,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Per data store configuration.
    * @param dataStoreUiConfigs dataStoreUiConfigs or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setDataStoreUiConfigs(java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreUiConfig> dataStoreUiConfigs) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setDataStoreUiConfigs(java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig> dataStoreUiConfigs) {
     this.dataStoreUiConfigs = dataStoreUiConfigs;
     return this;
   }
@@ -196,7 +188,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * lpha/projects.locations.dataStores.servingConfigs/search#request-body
    * @param defaultSearchRequestOrderBy defaultSearchRequestOrderBy or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setDefaultSearchRequestOrderBy(java.lang.String defaultSearchRequestOrderBy) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setDefaultSearchRequestOrderBy(java.lang.String defaultSearchRequestOrderBy) {
     this.defaultSearchRequestOrderBy = defaultSearchRequestOrderBy;
     return this;
   }
@@ -213,7 +205,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * If set to true, the widget will not collect user events.
    * @param disableUserEventsCollection disableUserEventsCollection or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setDisableUserEventsCollection(java.lang.Boolean disableUserEventsCollection) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setDisableUserEventsCollection(java.lang.Boolean disableUserEventsCollection) {
     this.disableUserEventsCollection = disableUserEventsCollection;
     return this;
   }
@@ -230,7 +222,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Whether or not to enable autocomplete.
    * @param enableAutocomplete enableAutocomplete or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setEnableAutocomplete(java.lang.Boolean enableAutocomplete) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setEnableAutocomplete(java.lang.Boolean enableAutocomplete) {
     this.enableAutocomplete = enableAutocomplete;
     return this;
   }
@@ -247,7 +239,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Optional. If set to true, the widget will enable the create agent button.
    * @param enableCreateAgentButton enableCreateAgentButton or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setEnableCreateAgentButton(java.lang.Boolean enableCreateAgentButton) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setEnableCreateAgentButton(java.lang.Boolean enableCreateAgentButton) {
     this.enableCreateAgentButton = enableCreateAgentButton;
     return this;
   }
@@ -264,7 +256,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Optional. If set to true, the widget will enable people search.
    * @param enablePeopleSearch enablePeopleSearch or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setEnablePeopleSearch(java.lang.Boolean enablePeopleSearch) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setEnablePeopleSearch(java.lang.Boolean enablePeopleSearch) {
     this.enablePeopleSearch = enablePeopleSearch;
     return this;
   }
@@ -281,7 +273,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Turn on or off collecting the search result quality feedback from end users.
    * @param enableQualityFeedback enableQualityFeedback or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setEnableQualityFeedback(java.lang.Boolean enableQualityFeedback) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setEnableQualityFeedback(java.lang.Boolean enableQualityFeedback) {
     this.enableQualityFeedback = enableQualityFeedback;
     return this;
   }
@@ -298,7 +290,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Whether to enable safe search.
    * @param enableSafeSearch enableSafeSearch or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setEnableSafeSearch(java.lang.Boolean enableSafeSearch) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setEnableSafeSearch(java.lang.Boolean enableSafeSearch) {
     this.enableSafeSearch = enableSafeSearch;
     return this;
   }
@@ -315,7 +307,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Whether to enable search-as-you-type behavior for the search widget.
    * @param enableSearchAsYouType enableSearchAsYouType or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setEnableSearchAsYouType(java.lang.Boolean enableSearchAsYouType) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setEnableSearchAsYouType(java.lang.Boolean enableSearchAsYouType) {
     this.enableSearchAsYouType = enableSearchAsYouType;
     return this;
   }
@@ -334,7 +326,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Only used by healthcare search.
    * @param enableVisualContentSummary enableVisualContentSummary or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setEnableVisualContentSummary(java.lang.Boolean enableVisualContentSummary) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setEnableVisualContentSummary(java.lang.Boolean enableVisualContentSummary) {
     this.enableVisualContentSummary = enableVisualContentSummary;
     return this;
   }
@@ -361,7 +353,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * google-drive-upload`
    * @param features features or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {
     this.features = features;
     return this;
   }
@@ -370,7 +362,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Describes generative answer configuration.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsGenerativeAnswerConfig getGenerativeAnswerConfig() {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig getGenerativeAnswerConfig() {
     return generativeAnswerConfig;
   }
 
@@ -378,7 +370,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Describes generative answer configuration.
    * @param generativeAnswerConfig generativeAnswerConfig or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setGenerativeAnswerConfig(GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsGenerativeAnswerConfig generativeAnswerConfig) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setGenerativeAnswerConfig(GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig generativeAnswerConfig) {
     this.generativeAnswerConfig = generativeAnswerConfig;
     return this;
   }
@@ -395,7 +387,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * Describes widget (or web app) interaction type
    * @param interactionType interactionType or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setInteractionType(java.lang.String interactionType) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setInteractionType(java.lang.String interactionType) {
     this.interactionType = interactionType;
     return this;
   }
@@ -422,7 +414,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * it.
    * @param modelConfigs modelConfigs or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setModelConfigs(java.util.Map<String, java.lang.String> modelConfigs) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setModelConfigs(java.util.Map<String, java.lang.String> modelConfigs) {
     this.modelConfigs = modelConfigs;
     return this;
   }
@@ -441,38 +433,19 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * no result if unspecified.
    * @param resultDescriptionType resultDescriptionType or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setResultDescriptionType(java.lang.String resultDescriptionType) {
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setResultDescriptionType(java.lang.String resultDescriptionType) {
     this.resultDescriptionType = resultDescriptionType;
     return this;
   }
 
-  /**
-   * Optional. SearchAddonSpec is used to disable add-ons for search. This field is only supported
-   * for search requests.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsSearchAddonSpec getSearchAddonSpec() {
-    return searchAddonSpec;
-  }
-
-  /**
-   * Optional. SearchAddonSpec is used to disable add-ons for search. This field is only supported
-   * for search requests.
-   * @param searchAddonSpec searchAddonSpec or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setSearchAddonSpec(GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsSearchAddonSpec searchAddonSpec) {
-    this.searchAddonSpec = searchAddonSpec;
-    return this;
+  @Override
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1WidgetConfigUiSettings) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings clone() {
-    return (GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings) super.clone();
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings clone() {
+    return (GoogleCloudDiscoveryengineV1WidgetConfigUiSettings) super.clone();
   }
 
 }

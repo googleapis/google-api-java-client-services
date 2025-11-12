@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1.model;
 
 /**
- * Delegated device info configuration.
+ * The delegated device information configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.beyondcorp.v1.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedDeviceInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The output type of the delegated device info.
+   * Optional. The output type details for the delegated device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputType;
 
   /**
-   * Optional. The output type of the delegated device info.
+   * Optional. The output type details for the delegated device.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputType() {
@@ -45,7 +45,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDeleg
   }
 
   /**
-   * Optional. The output type of the delegated device info.
+   * Optional. The output type details for the delegated device.
    * @param outputType outputType or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1ContextualHeadersDelegatedDeviceInfo setOutputType(java.lang.String outputType) {

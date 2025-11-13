@@ -972,6 +972,545 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
       }
 
       /**
+       * An accessor for creating requests from the Addons collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code APIhub apihub = new APIhub(...);}
+       *   {@code APIhub.Addons.List request = apihub.addons().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Addons addons() {
+        return new Addons();
+      }
+
+      /**
+       * The "addons" collection of methods.
+       */
+      public class Addons {
+
+        /**
+         * Get an addon.
+         *
+         * Create a request for the method "addons.get".
+         *
+         * This request holds the parameters needed by the apihub server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the addon to get. Format:
+         *        `projects/{project}/locations/{location}/addons/{addon}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleCloudApihubV1Addon> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addons/[^/]+$");
+
+          /**
+           * Get an addon.
+           *
+           * Create a request for the method "addons.get".
+           *
+           * This request holds the parameters needed by the the apihub server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the addon to get. Format:
+         *        `projects/{project}/locations/{location}/addons/{addon}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(APIhub.this, "GET", REST_PATH, null, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1Addon.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addons/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the addon to get. Format:
+           * `projects/{project}/locations/{location}/addons/{addon}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the addon to get. Format:
+         `projects/{project}/locations/{location}/addons/{addon}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the addon to get. Format:
+           * `projects/{project}/locations/{location}/addons/{addon}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addons/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List addons.
+         *
+         * Create a request for the method "addons.list".
+         *
+         * This request holds the parameters needed by the apihub server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this addon will be created. Format:
+         *        `projects/{project}/locations/{location}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ListAddonsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/addons";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List addons.
+           *
+           * Create a request for the method "addons.list".
+           *
+           * This request holds the parameters needed by the the apihub server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this addon will be created. Format:
+         *        `projects/{project}/locations/{location}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(APIhub.this, "GET", REST_PATH, null, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ListAddonsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this addon will be created. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this addon will be created. Format:
+         `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this addon will be created. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An expression that filters the list of addons. The only supported filter is
+           * `plugin_instance_name`. It can be used to filter addons that are enabled for a given
+           * plugin instance. The format of the filter is `plugin_instance_name =
+           * "projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}"`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression that filters the list of addons. The only supported filter is
+         `plugin_instance_name`. It can be used to filter addons that are enabled for a given plugin
+         instance. The format of the filter is `plugin_instance_name =
+         "projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}"`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An expression that filters the list of addons. The only supported filter is
+           * `plugin_instance_name`. It can be used to filter addons that are enabled for a given
+           * plugin instance. The format of the filter is `plugin_instance_name =
+           * "projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}"`.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of hub addons to return. The service may return fewer than
+           * this value. If unspecified, at most 50 hub addons will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of hub addons to return. The service may return fewer than this value.
+         If unspecified, at most 50 hub addons will be returned. The maximum value is 1000; values above
+         1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of hub addons to return. The service may return fewer than
+           * this value. If unspecified, at most 50 hub addons will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAddons` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters (except page_size)
+           * provided to `ListAddons` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListAddons` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters (except page_size) provided to `ListAddons`
+         must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAddons` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters (except page_size)
+           * provided to `ListAddons` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Manage addon config. This RPC is used for managing the config of the addon. Calling this RPC
+         * moves the addon into an updating state until the long-running operation succeeds.
+         *
+         * Create a request for the method "addons.manageConfig".
+         *
+         * This request holds the parameters needed by the apihub server.  After setting any optional
+         * parameters, call the {@link ManageConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the addon for which the config is to be managed. Format:
+         *        `projects/{project}/locations/{location}/addons/{addon}`.
+         * @param content the {@link com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManageAddonConfigRequest}
+         * @return the request
+         */
+        public ManageConfig manageConfig(java.lang.String name, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManageAddonConfigRequest content) throws java.io.IOException {
+          ManageConfig result = new ManageConfig(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ManageConfig extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}:manageConfig";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addons/[^/]+$");
+
+          /**
+           * Manage addon config. This RPC is used for managing the config of the addon. Calling this RPC
+           * moves the addon into an updating state until the long-running operation succeeds.
+           *
+           * Create a request for the method "addons.manageConfig".
+           *
+           * This request holds the parameters needed by the the apihub server.  After setting any optional
+           * parameters, call the {@link ManageConfig#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * ManageConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the addon for which the config is to be managed. Format:
+         *        `projects/{project}/locations/{location}/addons/{addon}`.
+           * @param content the {@link com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManageAddonConfigRequest}
+           * @since 1.13
+           */
+          protected ManageConfig(java.lang.String name, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ManageAddonConfigRequest content) {
+            super(APIhub.this, "POST", REST_PATH, content, com.google.api.services.apihub.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addons/[^/]+$");
+            }
+          }
+
+          @Override
+          public ManageConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (ManageConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ManageConfig setAccessToken(java.lang.String accessToken) {
+            return (ManageConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ManageConfig setAlt(java.lang.String alt) {
+            return (ManageConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public ManageConfig setCallback(java.lang.String callback) {
+            return (ManageConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public ManageConfig setFields(java.lang.String fields) {
+            return (ManageConfig) super.setFields(fields);
+          }
+
+          @Override
+          public ManageConfig setKey(java.lang.String key) {
+            return (ManageConfig) super.setKey(key);
+          }
+
+          @Override
+          public ManageConfig setOauthToken(java.lang.String oauthToken) {
+            return (ManageConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ManageConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ManageConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ManageConfig setQuotaUser(java.lang.String quotaUser) {
+            return (ManageConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ManageConfig setUploadType(java.lang.String uploadType) {
+            return (ManageConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ManageConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ManageConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the addon for which the config is to be managed. Format:
+           * `projects/{project}/locations/{location}/addons/{addon}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the addon for which the config is to be managed. Format:
+         `projects/{project}/locations/{location}/addons/{addon}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the addon for which the config is to be managed. Format:
+           * `projects/{project}/locations/{location}/addons/{addon}`.
+           */
+          public ManageConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addons/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ManageConfig set(String parameterName, Object value) {
+            return (ManageConfig) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the ApiHubInstances collection.
        *
        * <p>The typical use is:</p>

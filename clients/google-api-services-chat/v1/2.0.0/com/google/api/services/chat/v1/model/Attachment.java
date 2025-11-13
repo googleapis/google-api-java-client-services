@@ -68,7 +68,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private DriveDataRef driveDataRef;
 
   /**
-   * Optional. Resource name of the attachment, in the form
+   * Identifier. Resource name of the attachment. Format:
    * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * The value may be {@code null}.
    */
@@ -182,7 +182,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Resource name of the attachment, in the form
+   * Identifier. Resource name of the attachment. Format:
    * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * @return value or {@code null} for none
    */
@@ -191,7 +191,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Resource name of the attachment, in the form
+   * Identifier. Resource name of the attachment. Format:
    * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * @param name name or {@code null} for none
    */

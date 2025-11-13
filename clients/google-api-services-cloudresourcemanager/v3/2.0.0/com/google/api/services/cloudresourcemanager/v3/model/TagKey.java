@@ -31,6 +31,14 @@ package com.google.api.services.cloudresourcemanager.v3.model;
 public final class TagKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Regular expression constraint for freeform tag values. If present, it implicitly
+   * allows freeform values (constrained by the regex).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allowedValuesRegex;
+
+  /**
    * Output only. Creation time.
    * The value may be {@code null}.
    */
@@ -112,6 +120,25 @@ public final class TagKey extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Regular expression constraint for freeform tag values. If present, it implicitly
+   * allows freeform values (constrained by the regex).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllowedValuesRegex() {
+    return allowedValuesRegex;
+  }
+
+  /**
+   * Optional. Regular expression constraint for freeform tag values. If present, it implicitly
+   * allows freeform values (constrained by the regex).
+   * @param allowedValuesRegex allowedValuesRegex or {@code null} for none
+   */
+  public TagKey setAllowedValuesRegex(java.lang.String allowedValuesRegex) {
+    this.allowedValuesRegex = allowedValuesRegex;
+    return this;
+  }
 
   /**
    * Output only. Creation time.

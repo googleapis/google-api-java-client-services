@@ -30,14 +30,14 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Device info configuration.
+   * Optional. The device information configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedDeviceInfo deviceInfo;
 
   /**
-   * Optional. Group info configuration.
+   * Optional. Group details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +51,14 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders
   private java.lang.String outputType;
 
   /**
-   * Optional. User info configuration.
+   * Optional. User details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedUserInfo userInfo;
 
   /**
-   * Optional. Device info configuration.
+   * Optional. The device information configuration.
    * @return value or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedDeviceInfo getDeviceInfo() {
@@ -66,7 +66,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders
   }
 
   /**
-   * Optional. Device info configuration.
+   * Optional. The device information configuration.
    * @param deviceInfo deviceInfo or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders setDeviceInfo(GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedDeviceInfo deviceInfo) {
@@ -75,7 +75,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders
   }
 
   /**
-   * Optional. Group info configuration.
+   * Optional. Group details.
    * @return value or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedGroupInfo getGroupInfo() {
@@ -83,7 +83,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders
   }
 
   /**
-   * Optional. Group info configuration.
+   * Optional. Group details.
    * @param groupInfo groupInfo or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders setGroupInfo(GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedGroupInfo groupInfo) {
@@ -109,7 +109,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders
   }
 
   /**
-   * Optional. User info configuration.
+   * Optional. User details.
    * @return value or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedUserInfo getUserInfo() {
@@ -117,7 +117,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders
   }
 
   /**
-   * Optional. User info configuration.
+   * Optional. User details.
    * @param userInfo userInfo or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders setUserInfo(GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedUserInfo userInfo) {

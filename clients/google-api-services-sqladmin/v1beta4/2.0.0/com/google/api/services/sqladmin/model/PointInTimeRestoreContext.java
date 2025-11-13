@@ -17,8 +17,8 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Context to perform a point-in-time restore of an instance managed by Google Cloud Backup and
- * Disaster Recovery.
+ * Context to perform a point-in-time restore of an instance managed by Backup and Disaster Recovery
+ * (DR) Service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -43,7 +43,7 @@ public final class PointInTimeRestoreContext extends com.google.api.client.json.
   private java.lang.String allocatedIpRange;
 
   /**
-   * The Google Cloud Backup and Disaster Recovery Datasource URI. Format:
+   * The Backup and Disaster Recovery (DR) Service Datasource URI. Format:
    * projects/{project}/locations/{region}/backupVaults/{backupvault}/dataSources/{datasource}.
    * The value may be {@code null}.
    */
@@ -117,7 +117,7 @@ public final class PointInTimeRestoreContext extends com.google.api.client.json.
   }
 
   /**
-   * The Google Cloud Backup and Disaster Recovery Datasource URI. Format:
+   * The Backup and Disaster Recovery (DR) Service Datasource URI. Format:
    * projects/{project}/locations/{region}/backupVaults/{backupvault}/dataSources/{datasource}.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class PointInTimeRestoreContext extends com.google.api.client.json.
   }
 
   /**
-   * The Google Cloud Backup and Disaster Recovery Datasource URI. Format:
+   * The Backup and Disaster Recovery (DR) Service Datasource URI. Format:
    * projects/{project}/locations/{region}/backupVaults/{backupvault}/dataSources/{datasource}.
    * @param datasource datasource or {@code null} for none
    */

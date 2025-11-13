@@ -30,6 +30,13 @@ package com.google.api.services.sqladmin.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Role memberships of the user
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> databaseRoles;
+
+  /**
    * Dual password status for the user.
    * The value may be {@code null}.
    */
@@ -126,6 +133,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Role memberships of the user
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDatabaseRoles() {
+    return databaseRoles;
+  }
+
+  /**
+   * Optional. Role memberships of the user
+   * @param databaseRoles databaseRoles or {@code null} for none
+   */
+  public User setDatabaseRoles(java.util.List<java.lang.String> databaseRoles) {
+    this.databaseRoles = databaseRoles;
+    return this;
+  }
 
   /**
    * Dual password status for the user.

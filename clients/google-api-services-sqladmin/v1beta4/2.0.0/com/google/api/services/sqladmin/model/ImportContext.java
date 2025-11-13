@@ -298,7 +298,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     private EncryptionOptions encryptionOptions;
 
     /**
-     * Whether or not the backup importing will restore database with NORECOVERY option Applies only
+     * Whether or not the backup importing will restore database with NORECOVERY option. Applies only
      * to Cloud SQL for SQL Server.
      * The value may be {@code null}.
      */
@@ -372,7 +372,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Whether or not the backup importing will restore database with NORECOVERY option Applies only
+     * Whether or not the backup importing will restore database with NORECOVERY option. Applies only
      * to Cloud SQL for SQL Server.
      * @return value or {@code null} for none
      */
@@ -381,7 +381,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Whether or not the backup importing will restore database with NORECOVERY option Applies only
+     * Whether or not the backup importing will restore database with NORECOVERY option. Applies only
      * to Cloud SQL for SQL Server.
      * @param noRecovery noRecovery or {@code null} for none
      */

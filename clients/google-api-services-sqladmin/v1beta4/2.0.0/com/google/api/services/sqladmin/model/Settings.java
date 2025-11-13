@@ -123,8 +123,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean crashSafeReplicationEnabled;
 
   /**
-   * This parameter controls whether to allow using Data API to connect to the instance. Not allowed
-   * by default.
+   * This parameter controls whether to allow using ExecuteSql API to connect to the instance. Not
+   * allowed by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,6 +232,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableGoogleMlIntegration;
+
+  /**
+   * Optional. The Microsoft Entra ID configuration for the SQL Server instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerEntraIdConfig entraidConfig;
 
   /**
    * Optional. The final backup configuration for the instance.
@@ -600,8 +607,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This parameter controls whether to allow using Data API to connect to the instance. Not allowed
-   * by default.
+   * This parameter controls whether to allow using ExecuteSql API to connect to the instance. Not
+   * allowed by default.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataApiAccess() {
@@ -609,8 +616,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This parameter controls whether to allow using Data API to connect to the instance. Not allowed
-   * by default.
+   * This parameter controls whether to allow using ExecuteSql API to connect to the instance. Not
+   * allowed by default.
    * @param dataApiAccess dataApiAccess or {@code null} for none
    */
   public Settings setDataApiAccess(java.lang.String dataApiAccess) {
@@ -833,6 +840,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setEnableGoogleMlIntegration(java.lang.Boolean enableGoogleMlIntegration) {
     this.enableGoogleMlIntegration = enableGoogleMlIntegration;
+    return this;
+  }
+
+  /**
+   * Optional. The Microsoft Entra ID configuration for the SQL Server instance.
+   * @return value or {@code null} for none
+   */
+  public SqlServerEntraIdConfig getEntraidConfig() {
+    return entraidConfig;
+  }
+
+  /**
+   * Optional. The Microsoft Entra ID configuration for the SQL Server instance.
+   * @param entraidConfig entraidConfig or {@code null} for none
+   */
+  public Settings setEntraidConfig(SqlServerEntraIdConfig entraidConfig) {
+    this.entraidConfig = entraidConfig;
     return this;
   }
 

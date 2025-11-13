@@ -120,6 +120,17 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   private java.lang.String serverCaPool;
 
   /**
+   * Optional. Controls the automatic server certificate rotation feature. This feature is disabled
+   * by default. When enabled, the server certificate will be automatically rotated during Cloud SQL
+   * scheduled maintenance or self-service maintenance updates up to six months before it expires.
+   * This setting can only be set if server_ca_mode is either GOOGLE_MANAGED_CAS_CA or
+   * CUSTOMER_MANAGED_CAS_CA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverCertificateRotationMode;
+
+  /**
    * Specify how SSL/TLS is enforced in database connections. If you must use the `require_ssl` flag
    * for backward compatibility, then only the following value pairs are valid: For PostgreSQL and
    * MySQL: * `ssl_mode=ALLOW_UNENCRYPTED_AND_ENCRYPTED` and `require_ssl=false` *
@@ -331,6 +342,31 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    */
   public IpConfiguration setServerCaPool(java.lang.String serverCaPool) {
     this.serverCaPool = serverCaPool;
+    return this;
+  }
+
+  /**
+   * Optional. Controls the automatic server certificate rotation feature. This feature is disabled
+   * by default. When enabled, the server certificate will be automatically rotated during Cloud SQL
+   * scheduled maintenance or self-service maintenance updates up to six months before it expires.
+   * This setting can only be set if server_ca_mode is either GOOGLE_MANAGED_CAS_CA or
+   * CUSTOMER_MANAGED_CAS_CA.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerCertificateRotationMode() {
+    return serverCertificateRotationMode;
+  }
+
+  /**
+   * Optional. Controls the automatic server certificate rotation feature. This feature is disabled
+   * by default. When enabled, the server certificate will be automatically rotated during Cloud SQL
+   * scheduled maintenance or self-service maintenance updates up to six months before it expires.
+   * This setting can only be set if server_ca_mode is either GOOGLE_MANAGED_CAS_CA or
+   * CUSTOMER_MANAGED_CAS_CA.
+   * @param serverCertificateRotationMode serverCertificateRotationMode or {@code null} for none
+   */
+  public IpConfiguration setServerCertificateRotationMode(java.lang.String serverCertificateRotationMode) {
+    this.serverCertificateRotationMode = serverCertificateRotationMode;
     return this;
   }
 

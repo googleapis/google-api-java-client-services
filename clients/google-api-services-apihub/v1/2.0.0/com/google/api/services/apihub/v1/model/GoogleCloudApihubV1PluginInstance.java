@@ -92,6 +92,14 @@ public final class GoogleCloudApihubV1PluginInstance extends com.google.api.clie
   private java.lang.String name;
 
   /**
+   * Optional. The source environment's config present in the gateway instance linked to the plugin
+   * instance. The key is the `source_environment` name from the SourceEnvironment message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudApihubV1SourceEnvironment> sourceEnvironmentsConfig;
+
+  /**
    * Optional. The source project id of the plugin instance. This will be the id of runtime project
    * in case of gcp based plugins and org id in case of non gcp based plugins. This field will be a
    * required field for Google provided on-ramp plugins.
@@ -242,6 +250,25 @@ public final class GoogleCloudApihubV1PluginInstance extends com.google.api.clie
    */
   public GoogleCloudApihubV1PluginInstance setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The source environment's config present in the gateway instance linked to the plugin
+   * instance. The key is the `source_environment` name from the SourceEnvironment message.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudApihubV1SourceEnvironment> getSourceEnvironmentsConfig() {
+    return sourceEnvironmentsConfig;
+  }
+
+  /**
+   * Optional. The source environment's config present in the gateway instance linked to the plugin
+   * instance. The key is the `source_environment` name from the SourceEnvironment message.
+   * @param sourceEnvironmentsConfig sourceEnvironmentsConfig or {@code null} for none
+   */
+  public GoogleCloudApihubV1PluginInstance setSourceEnvironmentsConfig(java.util.Map<String, GoogleCloudApihubV1SourceEnvironment> sourceEnvironmentsConfig) {
+    this.sourceEnvironmentsConfig = sourceEnvironmentsConfig;
     return this;
   }
 

@@ -1,6 +1,6 @@
 # BeyondCorp API Client Library for Java
 
-Beyondcorp Enterprise provides identity and context aware access controls for enterprise resources and enables zero-trust access. Using the Beyondcorp Enterprise APIs, enterprises can set up multi-cloud and on-prem connectivity solutions.
+Chrome Enterprise Premium is a secure enterprise browsing solution that provides secure access to applications and resources, and offers integrated threat and data protection. It adds an extra layer of security to safeguard your Chrome browser environment, including Data Loss Prevention (DLP), real-time URL and file scanning, and Context-Aware Access for SaaS and web apps.
 
 This page contains information about getting started with the BeyondCorp API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-beyondcorp</artifactId>
-      <version>v1alpha-rev20250930-2.0.0</version>
+      <version>v1alpha-rev20251029-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-beyondcorp:v1alpha-rev20250930-2.0.0'
+  implementation 'com.google.apis:google-api-services-beyondcorp:v1alpha-rev20251029-2.0.0'
 }
 ```
 

@@ -30,14 +30,14 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaServiceDiscoveryApiGatewayOperationDescriptor extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Contains uri path fragment where HTTP request is sent.
+   * Required. Contains the URI path fragment where HTTP request is sent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Required. Contains uri path fragment where HTTP request is sent.
+   * Required. Contains the URI path fragment where HTTP request is sent.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -45,7 +45,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaServiceDiscoveryA
   }
 
   /**
-   * Required. Contains uri path fragment where HTTP request is sent.
+   * Required. Contains the URI path fragment where HTTP request is sent.
    * @param path path or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaServiceDiscoveryApiGatewayOperationDescriptor setPath(java.lang.String path) {

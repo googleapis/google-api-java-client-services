@@ -51,7 +51,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConf
   private GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders contextualHeaders;
 
   /**
-   * Optional. Gateway identity configuration.
+   * Optional. The security gateway identity configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +59,8 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConf
 
   /**
    * Optional. Custom resource specific headers along with the values. The names should conform to
-   * RFC 9110: > Field names SHOULD constrain themselves to alphanumeric characters, "-", and ".",
-   * and SHOULD begin with a letter. Field values SHOULD contain only ASCII printable characters and
-   * tab.
+   * RFC 9110: >Field names can contain alphanumeric characters, hyphens, and periods, can contain
+   * only ASCII-printable characters and tabs, and must start with a letter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +118,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConf
   }
 
   /**
-   * Optional. Gateway identity configuration.
+   * Optional. The security gateway identity configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getGatewayIdentity() {
@@ -127,7 +126,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConf
   }
 
   /**
-   * Optional. Gateway identity configuration.
+   * Optional. The security gateway identity configuration.
    * @param gatewayIdentity gatewayIdentity or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConfig setGatewayIdentity(java.lang.String gatewayIdentity) {
@@ -137,9 +136,8 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConf
 
   /**
    * Optional. Custom resource specific headers along with the values. The names should conform to
-   * RFC 9110: > Field names SHOULD constrain themselves to alphanumeric characters, "-", and ".",
-   * and SHOULD begin with a letter. Field values SHOULD contain only ASCII printable characters and
-   * tab.
+   * RFC 9110: >Field names can contain alphanumeric characters, hyphens, and periods, can contain
+   * only ASCII-printable characters and tabs, and must start with a letter.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadataHeaders() {
@@ -148,9 +146,8 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConf
 
   /**
    * Optional. Custom resource specific headers along with the values. The names should conform to
-   * RFC 9110: > Field names SHOULD constrain themselves to alphanumeric characters, "-", and ".",
-   * and SHOULD begin with a letter. Field values SHOULD contain only ASCII printable characters and
-   * tab.
+   * RFC 9110: >Field names can contain alphanumeric characters, hyphens, and periods, can contain
+   * only ASCII-printable characters and tabs, and must start with a letter.
    * @param metadataHeaders metadataHeaders or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaProxyProtocolConfig setMetadataHeaders(java.util.Map<String, java.lang.String> metadataHeaders) {

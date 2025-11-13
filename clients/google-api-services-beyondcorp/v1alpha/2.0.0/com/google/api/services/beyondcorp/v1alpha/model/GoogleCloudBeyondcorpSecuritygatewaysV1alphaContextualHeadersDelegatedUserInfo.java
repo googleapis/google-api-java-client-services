@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1alpha.model;
 
 /**
- * Delegated user info configuration.
+ * The configuration information for the delegated user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedUserInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The output type of the delegated user info.
+   * Optional. The delegated user's information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputType;
 
   /**
-   * Optional. The output type of the delegated user info.
+   * Optional. The delegated user's information.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputType() {
@@ -45,7 +45,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders
   }
 
   /**
-   * Optional. The output type of the delegated user info.
+   * Optional. The delegated user's information.
    * @param outputType outputType or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedUserInfo setOutputType(java.lang.String outputType) {

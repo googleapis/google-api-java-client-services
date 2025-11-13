@@ -52,6 +52,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.util.List<BackupLock> backupApplianceLocks;
 
   /**
+   * Output only. Setting for how the enforced retention end time is inherited. This value is copied
+   * from this backup's BackupVault.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupRetentionInheritance;
+
+  /**
    * Output only. Type of the backup, unspecified, scheduled or ondemand.
    * The value may be {@code null}.
    */
@@ -134,6 +142,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private BackupGcpResource gcpResource;
+
+  /**
+   * Optional. Output only. The list of KMS key versions used to encrypt the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> kmsKeyVersions;
 
   /**
    * Optional. Resource labels to represent user provided metadata. No labels currently defined.
@@ -243,6 +258,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setBackupApplianceLocks(java.util.List<BackupLock> backupApplianceLocks) {
     this.backupApplianceLocks = backupApplianceLocks;
+    return this;
+  }
+
+  /**
+   * Output only. Setting for how the enforced retention end time is inherited. This value is copied
+   * from this backup's BackupVault.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupRetentionInheritance() {
+    return backupRetentionInheritance;
+  }
+
+  /**
+   * Output only. Setting for how the enforced retention end time is inherited. This value is copied
+   * from this backup's BackupVault.
+   * @param backupRetentionInheritance backupRetentionInheritance or {@code null} for none
+   */
+  public Backup setBackupRetentionInheritance(java.lang.String backupRetentionInheritance) {
+    this.backupRetentionInheritance = backupRetentionInheritance;
     return this;
   }
 
@@ -447,6 +481,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setGcpResource(BackupGcpResource gcpResource) {
     this.gcpResource = gcpResource;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The list of KMS key versions used to encrypt the backup.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getKmsKeyVersions() {
+    return kmsKeyVersions;
+  }
+
+  /**
+   * Optional. Output only. The list of KMS key versions used to encrypt the backup.
+   * @param kmsKeyVersions kmsKeyVersions or {@code null} for none
+   */
+  public Backup setKmsKeyVersions(java.util.List<java.lang.String> kmsKeyVersions) {
+    this.kmsKeyVersions = kmsKeyVersions;
     return this;
   }
 

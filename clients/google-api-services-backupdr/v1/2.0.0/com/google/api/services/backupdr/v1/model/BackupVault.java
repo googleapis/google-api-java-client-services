@@ -65,6 +65,13 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private String backupMinimumEnforcedRetentionDuration;
 
   /**
+   * Optional. Setting for how a backup's enforced retention end time is inherited.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupRetentionInheritance;
+
+  /**
    * Output only. The time when the instance was created.
    * The value may be {@code null}.
    */
@@ -91,6 +98,13 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String effectiveTime;
+
+  /**
+   * Optional. The encryption config of the backup vault.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfig encryptionConfig;
 
   /**
    * Optional. Server specified ETag for the backup vault resource to prevent simultaneous updates
@@ -235,6 +249,23 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Setting for how a backup's enforced retention end time is inherited.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupRetentionInheritance() {
+    return backupRetentionInheritance;
+  }
+
+  /**
+   * Optional. Setting for how a backup's enforced retention end time is inherited.
+   * @param backupRetentionInheritance backupRetentionInheritance or {@code null} for none
+   */
+  public BackupVault setBackupRetentionInheritance(java.lang.String backupRetentionInheritance) {
+    this.backupRetentionInheritance = backupRetentionInheritance;
+    return this;
+  }
+
+  /**
    * Output only. The time when the instance was created.
    * @return value or {@code null} for none
    */
@@ -299,6 +330,23 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
    */
   public BackupVault setEffectiveTime(String effectiveTime) {
     this.effectiveTime = effectiveTime;
+    return this;
+  }
+
+  /**
+   * Optional. The encryption config of the backup vault.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Optional. The encryption config of the backup vault.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public BackupVault setEncryptionConfig(EncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
     return this;
   }
 

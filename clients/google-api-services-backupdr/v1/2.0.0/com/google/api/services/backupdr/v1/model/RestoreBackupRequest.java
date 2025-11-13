@@ -31,6 +31,18 @@ package com.google.api.services.backupdr.v1.model;
 public final class RestoreBackupRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A field mask used to clear server-side default values for fields within the
+   * `instance_properties` oneof. When a field in this mask is cleared, the server will not apply
+   * its default logic (like inheriting a value from the source) for that field. The most common
+   * current use case is clearing default encryption keys. Examples of field mask paths: - Compute
+   * Instance Disks: `compute_instance_restore_properties.disks.*.disk_encryption_key` - Single
+   * Disk: `disk_restore_properties.disk_encryption_key`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String clearOverridesFieldMask;
+
+  /**
    * Compute Engine instance properties to be overridden during restore.
    * The value may be {@code null}.
    */
@@ -78,6 +90,33 @@ public final class RestoreBackupRequest extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * Optional. A field mask used to clear server-side default values for fields within the
+   * `instance_properties` oneof. When a field in this mask is cleared, the server will not apply
+   * its default logic (like inheriting a value from the source) for that field. The most common
+   * current use case is clearing default encryption keys. Examples of field mask paths: - Compute
+   * Instance Disks: `compute_instance_restore_properties.disks.*.disk_encryption_key` - Single
+   * Disk: `disk_restore_properties.disk_encryption_key`
+   * @return value or {@code null} for none
+   */
+  public String getClearOverridesFieldMask() {
+    return clearOverridesFieldMask;
+  }
+
+  /**
+   * Optional. A field mask used to clear server-side default values for fields within the
+   * `instance_properties` oneof. When a field in this mask is cleared, the server will not apply
+   * its default logic (like inheriting a value from the source) for that field. The most common
+   * current use case is clearing default encryption keys. Examples of field mask paths: - Compute
+   * Instance Disks: `compute_instance_restore_properties.disks.*.disk_encryption_key` - Single
+   * Disk: `disk_restore_properties.disk_encryption_key`
+   * @param clearOverridesFieldMask clearOverridesFieldMask or {@code null} for none
+   */
+  public RestoreBackupRequest setClearOverridesFieldMask(String clearOverridesFieldMask) {
+    this.clearOverridesFieldMask = clearOverridesFieldMask;
+    return this;
+  }
 
   /**
    * Compute Engine instance properties to be overridden during restore.

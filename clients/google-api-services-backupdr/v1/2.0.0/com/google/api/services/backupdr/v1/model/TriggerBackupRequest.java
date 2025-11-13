@@ -40,6 +40,13 @@ public final class TriggerBackupRequest extends com.google.api.client.json.Gener
   private java.lang.Integer customRetentionDays;
 
   /**
+   * Optional. Labels to be applied on the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
    * you must retry your request, the server will know to ignore the request if it has already been
    * completed. The server will guarantee that for at least 60 minutes after the first request. For
@@ -79,6 +86,23 @@ public final class TriggerBackupRequest extends com.google.api.client.json.Gener
    */
   public TriggerBackupRequest setCustomRetentionDays(java.lang.Integer customRetentionDays) {
     this.customRetentionDays = customRetentionDays;
+    return this;
+  }
+
+  /**
+   * Optional. Labels to be applied on the backup.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Labels to be applied on the backup.
+   * @param labels labels or {@code null} for none
+   */
+  public TriggerBackupRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

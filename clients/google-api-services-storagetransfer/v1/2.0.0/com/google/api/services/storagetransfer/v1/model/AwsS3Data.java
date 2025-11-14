@@ -89,6 +89,14 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
+   * Service Directory Service to be used as the endpoint for transfers from a custom VPC. Format:
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace}/services/{service}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateNetworkService;
+
+  /**
    * The Amazon Resource Name (ARN) of the role to support temporary credentials via
    * `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM
    * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-
@@ -231,6 +239,25 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    */
   public AwsS3Data setPath(java.lang.String path) {
     this.path = path;
+    return this;
+  }
+
+  /**
+   * Service Directory Service to be used as the endpoint for transfers from a custom VPC. Format:
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace}/services/{service}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateNetworkService() {
+    return privateNetworkService;
+  }
+
+  /**
+   * Service Directory Service to be used as the endpoint for transfers from a custom VPC. Format:
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace}/services/{service}`
+   * @param privateNetworkService privateNetworkService or {@code null} for none
+   */
+  public AwsS3Data setPrivateNetworkService(java.lang.String privateNetworkService) {
+    this.privateNetworkService = privateNetworkService;
     return this;
   }
 

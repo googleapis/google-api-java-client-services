@@ -80,6 +80,14 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
   private java.lang.String path;
 
   /**
+   * Service Directory Service to be used as the endpoint for transfers from a custom VPC. Format:
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace}/services/{service}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateNetworkService;
+
+  /**
    * Required. The name of the Azure Storage account.
    * The value may be {@code null}.
    */
@@ -188,6 +196,25 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
    */
   public AzureBlobStorageData setPath(java.lang.String path) {
     this.path = path;
+    return this;
+  }
+
+  /**
+   * Service Directory Service to be used as the endpoint for transfers from a custom VPC. Format:
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace}/services/{service}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateNetworkService() {
+    return privateNetworkService;
+  }
+
+  /**
+   * Service Directory Service to be used as the endpoint for transfers from a custom VPC. Format:
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace}/services/{service}`
+   * @param privateNetworkService privateNetworkService or {@code null} for none
+   */
+  public AzureBlobStorageData setPrivateNetworkService(java.lang.String privateNetworkService) {
+    this.privateNetworkService = privateNetworkService;
     return this;
   }
 

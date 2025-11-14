@@ -689,8 +689,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean screenCaptureDisabled;
 
   /**
-   * Whether changing the user icon is disabled. The setting has effect only on fully managed
-   * devices.
+   * Whether changing the user icon is disabled. This applies only on devices running Android 7 and
+   * above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -711,8 +711,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.util.List<SetupAction> setupActions;
 
   /**
-   * Whether location sharing is disabled. share_location_disabled is supported for both fully
-   * managed devices and personally owned work profiles.
+   * Whether location sharing is disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2326,8 +2325,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether changing the user icon is disabled. The setting has effect only on fully managed
-   * devices.
+   * Whether changing the user icon is disabled. This applies only on devices running Android 7 and
+   * above.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSetUserIconDisabled() {
@@ -2335,8 +2334,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether changing the user icon is disabled. The setting has effect only on fully managed
-   * devices.
+   * Whether changing the user icon is disabled. This applies only on devices running Android 7 and
+   * above.
    * @param setUserIconDisabled setUserIconDisabled or {@code null} for none
    */
   public Policy setSetUserIconDisabled(java.lang.Boolean setUserIconDisabled) {
@@ -2379,8 +2378,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether location sharing is disabled. share_location_disabled is supported for both fully
-   * managed devices and personally owned work profiles.
+   * Whether location sharing is disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShareLocationDisabled() {
@@ -2388,8 +2386,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether location sharing is disabled. share_location_disabled is supported for both fully
-   * managed devices and personally owned work profiles.
+   * Whether location sharing is disabled.
    * @param shareLocationDisabled shareLocationDisabled or {@code null} for none
    */
   public Policy setShareLocationDisabled(java.lang.Boolean shareLocationDisabled) {

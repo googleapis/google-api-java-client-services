@@ -46,6 +46,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean appEngineApis;
 
   /**
+   * List of specific App Engine Bundled Services that are enabled for this Version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> appEngineBundledServices;
+
+  /**
    * Automatic scaling is based on request rate, response latencies, and other application metrics.
    * Instances are dynamically created and destroyed as needed in order to handle traffic.
    * The value may be {@code null}.
@@ -419,6 +426,23 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setAppEngineApis(java.lang.Boolean appEngineApis) {
     this.appEngineApis = appEngineApis;
+    return this;
+  }
+
+  /**
+   * List of specific App Engine Bundled Services that are enabled for this Version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAppEngineBundledServices() {
+    return appEngineBundledServices;
+  }
+
+  /**
+   * List of specific App Engine Bundled Services that are enabled for this Version.
+   * @param appEngineBundledServices appEngineBundledServices or {@code null} for none
+   */
+  public Version setAppEngineBundledServices(java.util.List<java.lang.String> appEngineBundledServices) {
+    this.appEngineBundledServices = appEngineBundledServices;
     return this;
   }
 

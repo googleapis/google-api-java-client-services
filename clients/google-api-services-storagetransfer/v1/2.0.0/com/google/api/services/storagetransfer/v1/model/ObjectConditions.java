@@ -99,6 +99,13 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
   private String lastModifiedSince;
 
   /**
+   * Optional. If specified, only objects matching this glob are transferred.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String matchGlob;
+
+  /**
    * Ensures that objects are not transferred if a specific maximum time has elapsed since the "last
    * modification time". When a TransferOperation begins, objects with a "last modification time"
    * are transferred only if the elapsed time between the start_time of the `TransferOperation`and
@@ -251,6 +258,23 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    */
   public ObjectConditions setLastModifiedSince(String lastModifiedSince) {
     this.lastModifiedSince = lastModifiedSince;
+    return this;
+  }
+
+  /**
+   * Optional. If specified, only objects matching this glob are transferred.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMatchGlob() {
+    return matchGlob;
+  }
+
+  /**
+   * Optional. If specified, only objects matching this glob are transferred.
+   * @param matchGlob matchGlob or {@code null} for none
+   */
+  public ObjectConditions setMatchGlob(java.lang.String matchGlob) {
+    this.matchGlob = matchGlob;
     return this;
   }
 

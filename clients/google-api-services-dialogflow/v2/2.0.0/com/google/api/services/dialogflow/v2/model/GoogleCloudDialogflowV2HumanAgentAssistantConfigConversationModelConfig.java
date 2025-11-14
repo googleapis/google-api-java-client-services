@@ -18,7 +18,7 @@ package com.google.api.services.dialogflow.v2.model;
 
 /**
  * Custom conversation models used in agent assist feature. Supported feature: ARTICLE_SUGGESTION,
- * SMART_COMPOSE, SMART_REPLY, CONVERSATION_SUMMARIZATION.
+ * SMART_COMPOSE, SMART_REPLY, CONVERSATION_SUMMARIZATION
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

@@ -81,6 +81,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1Dimension extends com
   private GoogleCloudContactcenterinsightsV1alpha1DimensionIssueDimensionMetadata issueDimensionMetadata;
 
   /**
+   * Output only. Metadata about conversation labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1alpha1DimensionLabelDimensionMetadata labelDimensionMetadata;
+
+  /**
    * Output only. Metadata about the conversation medium dimension.
    * The value may be {@code null}.
    */
@@ -224,6 +231,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1Dimension extends com
    */
   public GoogleCloudContactcenterinsightsV1alpha1Dimension setIssueDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionIssueDimensionMetadata issueDimensionMetadata) {
     this.issueDimensionMetadata = issueDimensionMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about conversation labels.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1DimensionLabelDimensionMetadata getLabelDimensionMetadata() {
+    return labelDimensionMetadata;
+  }
+
+  /**
+   * Output only. Metadata about conversation labels.
+   * @param labelDimensionMetadata labelDimensionMetadata or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1Dimension setLabelDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionLabelDimensionMetadata labelDimensionMetadata) {
+    this.labelDimensionMetadata = labelDimensionMetadata;
     return this;
   }
 

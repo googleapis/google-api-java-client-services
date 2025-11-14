@@ -23,10 +23,10 @@ package com.google.api.services.reports;
  */
 public class ReportsScopes {
 
-  /** View audit reports for your G Suite domain. */
+  /** View audit reports for your Google Workspace domain. */
   public static final String ADMIN_REPORTS_AUDIT_READONLY = "https://www.googleapis.com/auth/admin.reports.audit.readonly";
 
-  /** View usage reports for your G Suite domain. */
+  /** View usage reports for your Google Workspace domain. */
   public static final String ADMIN_REPORTS_USAGE_READONLY = "https://www.googleapis.com/auth/admin.reports.usage.readonly";
 
   /**

@@ -30,6 +30,22 @@ package com.google.api.services.gmail.model;
 public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
+   * Classification Label values on the message. Available Classification Label schemas can be
+   * queried using the Google Drive Labels API. Each classification label ID must be unique. If
+   * duplicate IDs are provided, only one will be retained, and the selection is arbitrary. Only
+   * used for Google Workspace accounts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ClassificationLabelValue> classificationLabelValues;
+
+  static {
+    // hack to force ProGuard to consider ClassificationLabelValue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ClassificationLabelValue.class);
+  }
+
+  /**
    * The ID of the last history record that modified this message.
    * The value may be {@code null}.
    */
@@ -99,6 +115,29 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String threadId;
+
+  /**
+   * Classification Label values on the message. Available Classification Label schemas can be
+   * queried using the Google Drive Labels API. Each classification label ID must be unique. If
+   * duplicate IDs are provided, only one will be retained, and the selection is arbitrary. Only
+   * used for Google Workspace accounts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ClassificationLabelValue> getClassificationLabelValues() {
+    return classificationLabelValues;
+  }
+
+  /**
+   * Classification Label values on the message. Available Classification Label schemas can be
+   * queried using the Google Drive Labels API. Each classification label ID must be unique. If
+   * duplicate IDs are provided, only one will be retained, and the selection is arbitrary. Only
+   * used for Google Workspace accounts.
+   * @param classificationLabelValues classificationLabelValues or {@code null} for none
+   */
+  public Message setClassificationLabelValues(java.util.List<ClassificationLabelValue> classificationLabelValues) {
+    this.classificationLabelValues = classificationLabelValues;
+    return this;
+  }
 
   /**
    * The ID of the last history record that modified this message.

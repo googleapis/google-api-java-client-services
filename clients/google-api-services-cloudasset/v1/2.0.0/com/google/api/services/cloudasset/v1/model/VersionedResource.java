@@ -31,6 +31,19 @@ package com.google.api.services.cloudasset.v1.model;
 public final class VersionedResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * The exceptions of a resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AssetException> assetExceptions;
+
+  static {
+    // hack to force ProGuard to consider AssetException used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AssetException.class);
+  }
+
+  /**
    * JSON representation of the resource as defined by the corresponding service providing this
    * resource. Example: If the resource is an instance provided by Compute Engine, this field will
    * contain the JSON representation of the instance as defined by Compute Engine:
@@ -50,6 +63,23 @@ public final class VersionedResource extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The exceptions of a resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AssetException> getAssetExceptions() {
+    return assetExceptions;
+  }
+
+  /**
+   * The exceptions of a resource.
+   * @param assetExceptions assetExceptions or {@code null} for none
+   */
+  public VersionedResource setAssetExceptions(java.util.List<AssetException> assetExceptions) {
+    this.assetExceptions = assetExceptions;
+    return this;
+  }
 
   /**
    * JSON representation of the resource as defined by the corresponding service providing this

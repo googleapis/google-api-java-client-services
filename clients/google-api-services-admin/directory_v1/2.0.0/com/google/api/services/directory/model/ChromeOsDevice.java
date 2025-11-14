@@ -97,7 +97,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Information about bluetooth adapters of the device.
+   * Output only. Information about Bluetooth adapters of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -643,7 +643,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Information about bluetooth adapters of the device.
+   * Output only. Information about Bluetooth adapters of the device.
    * @return value or {@code null} for none
    */
   public java.util.List<BluetoothAdapterInfo> getBluetoothAdapterInfo() {
@@ -651,7 +651,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Information about bluetooth adapters of the device.
+   * Output only. Information about Bluetooth adapters of the device.
    * @param bluetoothAdapterInfo bluetoothAdapterInfo or {@code null} for none
    */
   public ChromeOsDevice setBluetoothAdapterInfo(java.util.List<BluetoothAdapterInfo> bluetoothAdapterInfo) {

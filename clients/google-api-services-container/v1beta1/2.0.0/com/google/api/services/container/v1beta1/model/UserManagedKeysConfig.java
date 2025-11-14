@@ -53,6 +53,14 @@ public final class UserManagedKeysConfig extends com.google.api.client.json.Gene
   private java.lang.String controlPlaneDiskEncryptionKey;
 
   /**
+   * Output only. All of the versions of the Cloud KMS cryptoKey that are used by Confidential
+   * Hyperdisks on the control plane nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> controlPlaneDiskEncryptionKeyVersions;
+
+  /**
    * Resource path of the Certificate Authority Service caPool to use for the etcd API CA in this
    * cluster.
    * The value may be {@code null}.
@@ -141,6 +149,25 @@ public final class UserManagedKeysConfig extends com.google.api.client.json.Gene
    */
   public UserManagedKeysConfig setControlPlaneDiskEncryptionKey(java.lang.String controlPlaneDiskEncryptionKey) {
     this.controlPlaneDiskEncryptionKey = controlPlaneDiskEncryptionKey;
+    return this;
+  }
+
+  /**
+   * Output only. All of the versions of the Cloud KMS cryptoKey that are used by Confidential
+   * Hyperdisks on the control plane nodes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getControlPlaneDiskEncryptionKeyVersions() {
+    return controlPlaneDiskEncryptionKeyVersions;
+  }
+
+  /**
+   * Output only. All of the versions of the Cloud KMS cryptoKey that are used by Confidential
+   * Hyperdisks on the control plane nodes.
+   * @param controlPlaneDiskEncryptionKeyVersions controlPlaneDiskEncryptionKeyVersions or {@code null} for none
+   */
+  public UserManagedKeysConfig setControlPlaneDiskEncryptionKeyVersions(java.util.List<java.lang.String> controlPlaneDiskEncryptionKeyVersions) {
+    this.controlPlaneDiskEncryptionKeyVersions = controlPlaneDiskEncryptionKeyVersions;
     return this;
   }
 

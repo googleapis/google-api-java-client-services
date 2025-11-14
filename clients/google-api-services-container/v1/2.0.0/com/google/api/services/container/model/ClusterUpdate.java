@@ -472,6 +472,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredPrivateIpv6GoogleAccess;
 
   /**
+   * The desired privileged admission config for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivilegedAdmissionConfig desiredPrivilegedAdmissionConfig;
+
+  /**
    * RBACBindingConfig allows user to restrict ClusterRoleBindings an RoleBindings that can be
    * created.
    * The value may be {@code null}.
@@ -1637,6 +1644,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredPrivateIpv6GoogleAccess(java.lang.String desiredPrivateIpv6GoogleAccess) {
     this.desiredPrivateIpv6GoogleAccess = desiredPrivateIpv6GoogleAccess;
+    return this;
+  }
+
+  /**
+   * The desired privileged admission config for the cluster.
+   * @return value or {@code null} for none
+   */
+  public PrivilegedAdmissionConfig getDesiredPrivilegedAdmissionConfig() {
+    return desiredPrivilegedAdmissionConfig;
+  }
+
+  /**
+   * The desired privileged admission config for the cluster.
+   * @param desiredPrivilegedAdmissionConfig desiredPrivilegedAdmissionConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredPrivilegedAdmissionConfig(PrivilegedAdmissionConfig desiredPrivilegedAdmissionConfig) {
+    this.desiredPrivilegedAdmissionConfig = desiredPrivilegedAdmissionConfig;
     return this;
   }
 

@@ -30,32 +30,31 @@ package com.google.api.services.docs.v1.model;
 public final class RichLinkProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The [MIME type](https://developers.google.com/drive/api/v3/mime-types) of the
-   * RichLink, if there's one (for example, when it's a file in Drive).
+   * The [MIME type](https://developers.google.com/drive/api/v3/mime-types) of the RichLink, if
+   * there's one (for example, when it's a file in Drive).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * Output only. The title of the RichLink as displayed in the link. This title matches the title
-   * of the linked resource at the time of the insertion or last update of the link. This field is
-   * always present.
+   * The title of the RichLink as displayed in the link. This title matches the title of the linked
+   * resource at the time of the insertion or last update of the link. This field is always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Output only. The URI to the RichLink. This is always present.
+   * The URI to the RichLink. This is always present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Output only. The [MIME type](https://developers.google.com/drive/api/v3/mime-types) of the
-   * RichLink, if there's one (for example, when it's a file in Drive).
+   * The [MIME type](https://developers.google.com/drive/api/v3/mime-types) of the RichLink, if
+   * there's one (for example, when it's a file in Drive).
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -63,8 +62,8 @@ public final class RichLinkProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The [MIME type](https://developers.google.com/drive/api/v3/mime-types) of the
-   * RichLink, if there's one (for example, when it's a file in Drive).
+   * The [MIME type](https://developers.google.com/drive/api/v3/mime-types) of the RichLink, if
+   * there's one (for example, when it's a file in Drive).
    * @param mimeType mimeType or {@code null} for none
    */
   public RichLinkProperties setMimeType(java.lang.String mimeType) {
@@ -73,9 +72,8 @@ public final class RichLinkProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The title of the RichLink as displayed in the link. This title matches the title
-   * of the linked resource at the time of the insertion or last update of the link. This field is
-   * always present.
+   * The title of the RichLink as displayed in the link. This title matches the title of the linked
+   * resource at the time of the insertion or last update of the link. This field is always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -83,9 +81,8 @@ public final class RichLinkProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The title of the RichLink as displayed in the link. This title matches the title
-   * of the linked resource at the time of the insertion or last update of the link. This field is
-   * always present.
+   * The title of the RichLink as displayed in the link. This title matches the title of the linked
+   * resource at the time of the insertion or last update of the link. This field is always present.
    * @param title title or {@code null} for none
    */
   public RichLinkProperties setTitle(java.lang.String title) {
@@ -94,7 +91,7 @@ public final class RichLinkProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The URI to the RichLink. This is always present.
+   * The URI to the RichLink. This is always present.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -102,7 +99,7 @@ public final class RichLinkProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The URI to the RichLink. This is always present.
+   * The URI to the RichLink. This is always present.
    * @param uri uri or {@code null} for none
    */
   public RichLinkProperties setUri(java.lang.String uri) {

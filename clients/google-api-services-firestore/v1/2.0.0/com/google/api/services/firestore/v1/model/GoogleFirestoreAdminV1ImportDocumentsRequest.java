@@ -30,8 +30,8 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1ImportDocumentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Which collection IDs to import. Unspecified means all collections included in the import. Each
-   * collection ID in this list must be unique.
+   * IDs of the collection groups to import. Unspecified means all collection groups that were
+   * included in the export. Each collection group in this list must be unique.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,8 @@ public final class GoogleFirestoreAdminV1ImportDocumentsRequest extends com.goog
   private java.util.List<java.lang.String> namespaceIds;
 
   /**
-   * Which collection IDs to import. Unspecified means all collections included in the import. Each
-   * collection ID in this list must be unique.
+   * IDs of the collection groups to import. Unspecified means all collection groups that were
+   * included in the export. Each collection group in this list must be unique.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCollectionIds() {
@@ -66,8 +66,8 @@ public final class GoogleFirestoreAdminV1ImportDocumentsRequest extends com.goog
   }
 
   /**
-   * Which collection IDs to import. Unspecified means all collections included in the import. Each
-   * collection ID in this list must be unique.
+   * IDs of the collection groups to import. Unspecified means all collection groups that were
+   * included in the export. Each collection group in this list must be unique.
    * @param collectionIds collectionIds or {@code null} for none
    */
   public GoogleFirestoreAdminV1ImportDocumentsRequest setCollectionIds(java.util.List<java.lang.String> collectionIds) {

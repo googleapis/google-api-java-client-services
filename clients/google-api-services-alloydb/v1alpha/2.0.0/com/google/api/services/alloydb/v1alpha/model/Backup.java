@@ -38,6 +38,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Output only. Set to true if the cluster corresponding to this backup is deleted. This field is
+   * only populated for when using the BACKUP_VIEW_CLUSTER_DELETED view.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean clusterDeleted;
+
+  /**
    * Required. The full resource name of the backup source cluster (e.g.,
    * projects/{project}/locations/{region}/clusters/{cluster_id}).
    * The value may be {@code null}.
@@ -237,6 +245,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Output only. Set to true if the cluster corresponding to this backup is deleted. This field is
+   * only populated for when using the BACKUP_VIEW_CLUSTER_DELETED view.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getClusterDeleted() {
+    return clusterDeleted;
+  }
+
+  /**
+   * Output only. Set to true if the cluster corresponding to this backup is deleted. This field is
+   * only populated for when using the BACKUP_VIEW_CLUSTER_DELETED view.
+   * @param clusterDeleted clusterDeleted or {@code null} for none
+   */
+  public Backup setClusterDeleted(java.lang.Boolean clusterDeleted) {
+    this.clusterDeleted = clusterDeleted;
     return this;
   }
 

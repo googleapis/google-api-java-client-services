@@ -1121,6 +1121,22 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
             return this;
           }
 
+          /** Optional. The view of the backup to return. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. The view of the backup to return.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Optional. The view of the backup to return. */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
@@ -1327,6 +1343,22 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
           /** A token identifying a page of results the server should return. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Optional. The view of the backup to return. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. The view of the backup to return.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Optional. The view of the backup to return. */
+          public List setView(java.lang.String view) {
+            this.view = view;
             return this;
           }
 

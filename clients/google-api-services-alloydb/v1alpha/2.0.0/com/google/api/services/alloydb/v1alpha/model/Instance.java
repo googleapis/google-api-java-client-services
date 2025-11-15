@@ -171,6 +171,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private MachineConfig machineConfig;
 
   /**
+   * Output only. Maintenance version of the instance, for example: POSTGRES_15.2025_07_15.04_00.
+   * Output only. Update this field via the parent cluster's maintenance_version field(s).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceVersionName;
+
+  /**
    * Output only. The name of the instance resource with the format: *
    * projects/{project}/locations/{region}/clusters/{cluster_id}/instances/{instance_id} where the
    * cluster and instance ID segments should satisfy the regex expression
@@ -631,6 +639,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setMachineConfig(MachineConfig machineConfig) {
     this.machineConfig = machineConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Maintenance version of the instance, for example: POSTGRES_15.2025_07_15.04_00.
+   * Output only. Update this field via the parent cluster's maintenance_version field(s).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceVersionName() {
+    return maintenanceVersionName;
+  }
+
+  /**
+   * Output only. Maintenance version of the instance, for example: POSTGRES_15.2025_07_15.04_00.
+   * Output only. Update this field via the parent cluster's maintenance_version field(s).
+   * @param maintenanceVersionName maintenanceVersionName or {@code null} for none
+   */
+  public Instance setMaintenanceVersionName(java.lang.String maintenanceVersionName) {
+    this.maintenanceVersionName = maintenanceVersionName;
     return this;
   }
 

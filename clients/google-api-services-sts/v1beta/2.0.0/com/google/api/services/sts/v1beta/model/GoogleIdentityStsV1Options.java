@@ -42,6 +42,14 @@ public final class GoogleIdentityStsV1Options extends com.google.api.client.json
   private GoogleIdentityStsV1AccessBoundary accessBoundary;
 
   /**
+   * The unpadded, base64url-encoded SHA-256 hash of the certificate's DER encoding and it must be
+   * 43 characters long. The resulting token will be bound to this value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bindCertFingerprint;
+
+  /**
    * A Google project used for quota and billing purposes when the credential is used to access
    * Google APIs. The provided project overrides the project bound to the credential. The value must
    * be a project number or a project ID. Example: `my-sample-project-191923`. The maximum length is
@@ -69,6 +77,25 @@ public final class GoogleIdentityStsV1Options extends com.google.api.client.json
    */
   public GoogleIdentityStsV1Options setAccessBoundary(GoogleIdentityStsV1AccessBoundary accessBoundary) {
     this.accessBoundary = accessBoundary;
+    return this;
+  }
+
+  /**
+   * The unpadded, base64url-encoded SHA-256 hash of the certificate's DER encoding and it must be
+   * 43 characters long. The resulting token will be bound to this value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBindCertFingerprint() {
+    return bindCertFingerprint;
+  }
+
+  /**
+   * The unpadded, base64url-encoded SHA-256 hash of the certificate's DER encoding and it must be
+   * 43 characters long. The resulting token will be bound to this value.
+   * @param bindCertFingerprint bindCertFingerprint or {@code null} for none
+   */
+  public GoogleIdentityStsV1Options setBindCertFingerprint(java.lang.String bindCertFingerprint) {
+    this.bindCertFingerprint = bindCertFingerprint;
     return this;
   }
 

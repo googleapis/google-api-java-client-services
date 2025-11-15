@@ -30,6 +30,21 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class WorkloadProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Additional metadata specific to the resource type. The key is a string that
+   * identifies the type of metadata and the value is the metadata contents specific to that type.
+   * Key format: `apphub.googleapis.com/{metadataType}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ExtendedMetadata> extendedMetadata;
+
+  static {
+    // hack to force ProGuard to consider ExtendedMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExtendedMetadata.class);
+  }
+
+  /**
    * Output only. The type of the workload.
    * The value may be {@code null}.
    */
@@ -59,6 +74,27 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Output only. Additional metadata specific to the resource type. The key is a string that
+   * identifies the type of metadata and the value is the metadata contents specific to that type.
+   * Key format: `apphub.googleapis.com/{metadataType}`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ExtendedMetadata> getExtendedMetadata() {
+    return extendedMetadata;
+  }
+
+  /**
+   * Output only. Additional metadata specific to the resource type. The key is a string that
+   * identifies the type of metadata and the value is the metadata contents specific to that type.
+   * Key format: `apphub.googleapis.com/{metadataType}`
+   * @param extendedMetadata extendedMetadata or {@code null} for none
+   */
+  public WorkloadProperties setExtendedMetadata(java.util.Map<String, ExtendedMetadata> extendedMetadata) {
+    this.extendedMetadata = extendedMetadata;
+    return this;
+  }
 
   /**
    * Output only. The type of the workload.

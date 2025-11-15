@@ -214,8 +214,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.Long priority;
 
   /**
-   * [Output only] The status of the route. This status only applies to dynamic routes learned by
-   * Cloud Routers. This status is not applicable to static routes.
+   * [Output only] The status of the route. This status applies to dynamic routes learned by Cloud
+   * Routers. It is also applicable to routes undergoing migration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -683,8 +683,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The status of the route. This status only applies to dynamic routes learned by
-   * Cloud Routers. This status is not applicable to static routes.
+   * [Output only] The status of the route. This status applies to dynamic routes learned by Cloud
+   * Routers. It is also applicable to routes undergoing migration.
    * @return value or {@code null} for none
    */
   public java.lang.String getRouteStatus() {
@@ -692,8 +692,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The status of the route. This status only applies to dynamic routes learned by
-   * Cloud Routers. This status is not applicable to static routes.
+   * [Output only] The status of the route. This status applies to dynamic routes learned by Cloud
+   * Routers. It is also applicable to routes undergoing migration.
    * @param routeStatus routeStatus or {@code null} for none
    */
   public Route setRouteStatus(java.lang.String routeStatus) {

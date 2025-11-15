@@ -30,6 +30,41 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class ReleaseCondition extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Details around the support state of the release's Docker version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolVersionSupportedCondition dockerVersionSupportedCondition;
+
+  /**
+   * Output only. Details around the support state of the release's Helm version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolVersionSupportedCondition helmVersionSupportedCondition;
+
+  /**
+   * Output only. Details around the support state of the release's Kpt version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolVersionSupportedCondition kptVersionSupportedCondition;
+
+  /**
+   * Output only. Details around the support state of the release's Kubectl version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolVersionSupportedCondition kubectlVersionSupportedCondition;
+
+  /**
+   * Output only. Details around the support state of the release's Kustomize version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolVersionSupportedCondition kustomizeVersionSupportedCondition;
+
+  /**
    * Details around the Releases's overall status.
    * The value may be {@code null}.
    */
@@ -42,6 +77,98 @@ public final class ReleaseCondition extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private SkaffoldSupportedCondition skaffoldSupportedCondition;
+
+  /**
+   * Output only. Details around the support state of the release's Skaffold version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolVersionSupportedCondition skaffoldVersionSupportedCondition;
+
+  /**
+   * Output only. Details around the support state of the release's Docker version.
+   * @return value or {@code null} for none
+   */
+  public ToolVersionSupportedCondition getDockerVersionSupportedCondition() {
+    return dockerVersionSupportedCondition;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Docker version.
+   * @param dockerVersionSupportedCondition dockerVersionSupportedCondition or {@code null} for none
+   */
+  public ReleaseCondition setDockerVersionSupportedCondition(ToolVersionSupportedCondition dockerVersionSupportedCondition) {
+    this.dockerVersionSupportedCondition = dockerVersionSupportedCondition;
+    return this;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Helm version.
+   * @return value or {@code null} for none
+   */
+  public ToolVersionSupportedCondition getHelmVersionSupportedCondition() {
+    return helmVersionSupportedCondition;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Helm version.
+   * @param helmVersionSupportedCondition helmVersionSupportedCondition or {@code null} for none
+   */
+  public ReleaseCondition setHelmVersionSupportedCondition(ToolVersionSupportedCondition helmVersionSupportedCondition) {
+    this.helmVersionSupportedCondition = helmVersionSupportedCondition;
+    return this;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Kpt version.
+   * @return value or {@code null} for none
+   */
+  public ToolVersionSupportedCondition getKptVersionSupportedCondition() {
+    return kptVersionSupportedCondition;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Kpt version.
+   * @param kptVersionSupportedCondition kptVersionSupportedCondition or {@code null} for none
+   */
+  public ReleaseCondition setKptVersionSupportedCondition(ToolVersionSupportedCondition kptVersionSupportedCondition) {
+    this.kptVersionSupportedCondition = kptVersionSupportedCondition;
+    return this;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Kubectl version.
+   * @return value or {@code null} for none
+   */
+  public ToolVersionSupportedCondition getKubectlVersionSupportedCondition() {
+    return kubectlVersionSupportedCondition;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Kubectl version.
+   * @param kubectlVersionSupportedCondition kubectlVersionSupportedCondition or {@code null} for none
+   */
+  public ReleaseCondition setKubectlVersionSupportedCondition(ToolVersionSupportedCondition kubectlVersionSupportedCondition) {
+    this.kubectlVersionSupportedCondition = kubectlVersionSupportedCondition;
+    return this;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Kustomize version.
+   * @return value or {@code null} for none
+   */
+  public ToolVersionSupportedCondition getKustomizeVersionSupportedCondition() {
+    return kustomizeVersionSupportedCondition;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Kustomize version.
+   * @param kustomizeVersionSupportedCondition kustomizeVersionSupportedCondition or {@code null} for none
+   */
+  public ReleaseCondition setKustomizeVersionSupportedCondition(ToolVersionSupportedCondition kustomizeVersionSupportedCondition) {
+    this.kustomizeVersionSupportedCondition = kustomizeVersionSupportedCondition;
+    return this;
+  }
 
   /**
    * Details around the Releases's overall status.
@@ -74,6 +201,23 @@ public final class ReleaseCondition extends com.google.api.client.json.GenericJs
    */
   public ReleaseCondition setSkaffoldSupportedCondition(SkaffoldSupportedCondition skaffoldSupportedCondition) {
     this.skaffoldSupportedCondition = skaffoldSupportedCondition;
+    return this;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Skaffold version.
+   * @return value or {@code null} for none
+   */
+  public ToolVersionSupportedCondition getSkaffoldVersionSupportedCondition() {
+    return skaffoldVersionSupportedCondition;
+  }
+
+  /**
+   * Output only. Details around the support state of the release's Skaffold version.
+   * @param skaffoldVersionSupportedCondition skaffoldVersionSupportedCondition or {@code null} for none
+   */
+  public ReleaseCondition setSkaffoldVersionSupportedCondition(ToolVersionSupportedCondition skaffoldVersionSupportedCondition) {
+    this.skaffoldVersionSupportedCondition = skaffoldVersionSupportedCondition;
     return this;
   }
 

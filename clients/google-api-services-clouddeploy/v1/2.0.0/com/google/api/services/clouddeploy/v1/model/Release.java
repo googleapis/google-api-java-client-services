@@ -203,6 +203,14 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.util.List<Target> targetSnapshots;
 
   /**
+   * Optional. The tool versions to use for this release and all subsequent operations involving
+   * this release. If unset, then it will freeze the tool versions at the time of release creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolVersions toolVersions;
+
+  /**
    * Output only. Unique identifier of the `Release`.
    * The value may be {@code null}.
    */
@@ -589,6 +597,25 @@ public final class Release extends com.google.api.client.json.GenericJson {
    */
   public Release setTargetSnapshots(java.util.List<Target> targetSnapshots) {
     this.targetSnapshots = targetSnapshots;
+    return this;
+  }
+
+  /**
+   * Optional. The tool versions to use for this release and all subsequent operations involving
+   * this release. If unset, then it will freeze the tool versions at the time of release creation.
+   * @return value or {@code null} for none
+   */
+  public ToolVersions getToolVersions() {
+    return toolVersions;
+  }
+
+  /**
+   * Optional. The tool versions to use for this release and all subsequent operations involving
+   * this release. If unset, then it will freeze the tool versions at the time of release creation.
+   * @param toolVersions toolVersions or {@code null} for none
+   */
+  public Release setToolVersions(ToolVersions toolVersions) {
+    this.toolVersions = toolVersions;
     return this;
   }
 

@@ -30,11 +30,48 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class BareMetalAdminNetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Enables the use of advanced Anthos networking features, such as Bundled Load Balancing with BGP
+   * or the egress NAT gateway. Setting configuration for advanced networking features will
+   * automatically set this flag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean advancedNetworking;
+
+  /**
    * Configuration for Island mode CIDR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BareMetalAdminIslandModeCidrConfig islandModeCidr;
+
+  /**
+   * Configuration for multiple network interfaces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BareMetalAdminMultipleNetworkInterfacesConfig multipleNetworkInterfacesConfig;
+
+  /**
+   * Enables the use of advanced Anthos networking features, such as Bundled Load Balancing with BGP
+   * or the egress NAT gateway. Setting configuration for advanced networking features will
+   * automatically set this flag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAdvancedNetworking() {
+    return advancedNetworking;
+  }
+
+  /**
+   * Enables the use of advanced Anthos networking features, such as Bundled Load Balancing with BGP
+   * or the egress NAT gateway. Setting configuration for advanced networking features will
+   * automatically set this flag.
+   * @param advancedNetworking advancedNetworking or {@code null} for none
+   */
+  public BareMetalAdminNetworkConfig setAdvancedNetworking(java.lang.Boolean advancedNetworking) {
+    this.advancedNetworking = advancedNetworking;
+    return this;
+  }
 
   /**
    * Configuration for Island mode CIDR.
@@ -50,6 +87,23 @@ public final class BareMetalAdminNetworkConfig extends com.google.api.client.jso
    */
   public BareMetalAdminNetworkConfig setIslandModeCidr(BareMetalAdminIslandModeCidrConfig islandModeCidr) {
     this.islandModeCidr = islandModeCidr;
+    return this;
+  }
+
+  /**
+   * Configuration for multiple network interfaces.
+   * @return value or {@code null} for none
+   */
+  public BareMetalAdminMultipleNetworkInterfacesConfig getMultipleNetworkInterfacesConfig() {
+    return multipleNetworkInterfacesConfig;
+  }
+
+  /**
+   * Configuration for multiple network interfaces.
+   * @param multipleNetworkInterfacesConfig multipleNetworkInterfacesConfig or {@code null} for none
+   */
+  public BareMetalAdminNetworkConfig setMultipleNetworkInterfacesConfig(BareMetalAdminMultipleNetworkInterfacesConfig multipleNetworkInterfacesConfig) {
+    this.multipleNetworkInterfacesConfig = multipleNetworkInterfacesConfig;
     return this;
   }
 

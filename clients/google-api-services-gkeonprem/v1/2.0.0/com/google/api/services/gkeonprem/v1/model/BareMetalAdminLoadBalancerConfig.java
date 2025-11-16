@@ -30,6 +30,13 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class BareMetalAdminLoadBalancerConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration for BGP typed load balancers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BareMetalAdminBgpLbConfig bgpLbConfig;
+
+  /**
    * Manually configured load balancers.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class BareMetalAdminLoadBalancerConfig extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private BareMetalAdminVipConfig vipConfig;
+
+  /**
+   * Configuration for BGP typed load balancers.
+   * @return value or {@code null} for none
+   */
+  public BareMetalAdminBgpLbConfig getBgpLbConfig() {
+    return bgpLbConfig;
+  }
+
+  /**
+   * Configuration for BGP typed load balancers.
+   * @param bgpLbConfig bgpLbConfig or {@code null} for none
+   */
+  public BareMetalAdminLoadBalancerConfig setBgpLbConfig(BareMetalAdminBgpLbConfig bgpLbConfig) {
+    this.bgpLbConfig = bgpLbConfig;
+    return this;
+  }
 
   /**
    * Manually configured load balancers.

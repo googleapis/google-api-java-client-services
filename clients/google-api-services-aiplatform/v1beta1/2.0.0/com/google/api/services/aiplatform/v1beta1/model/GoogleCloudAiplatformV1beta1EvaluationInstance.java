@@ -59,7 +59,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
   private GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData reference;
 
   /**
-   * Required. Data used to populate placeholder `response` in a metric prompt template.
+   * Optional. Data used to populate placeholder `response` in a metric prompt template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
   }
 
   /**
-   * Required. Data used to populate placeholder `response` in a metric prompt template.
+   * Optional. Data used to populate placeholder `response` in a metric prompt template.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData getResponse() {
@@ -151,7 +151,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
   }
 
   /**
-   * Required. Data used to populate placeholder `response` in a metric prompt template.
+   * Optional. Data used to populate placeholder `response` in a metric prompt template.
    * @param response response or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationInstance setResponse(GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData response) {

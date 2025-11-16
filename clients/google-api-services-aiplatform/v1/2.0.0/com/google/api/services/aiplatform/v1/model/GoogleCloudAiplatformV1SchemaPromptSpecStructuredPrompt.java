@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt extends com.google.api.client.json.GenericJson {
 
   /**
+   * Data for app builder use case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData appBuilderData;
+
+  /**
    * Preamble: The context of the prompt.
    * The value may be {@code null}.
    */
@@ -97,6 +104,23 @@ public final class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt exten
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage promptMessage;
+
+  /**
+   * Data for app builder use case.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData getAppBuilderData() {
+    return appBuilderData;
+  }
+
+  /**
+   * Data for app builder use case.
+   * @param appBuilderData appBuilderData or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt setAppBuilderData(GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData appBuilderData) {
+    this.appBuilderData = appBuilderData;
+    return this;
+  }
 
   /**
    * Preamble: The context of the prompt.

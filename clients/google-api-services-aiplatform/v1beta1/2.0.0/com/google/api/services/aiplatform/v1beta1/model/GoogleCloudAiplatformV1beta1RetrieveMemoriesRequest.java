@@ -32,7 +32,8 @@ public final class GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest extends c
   /**
    * Optional. The standard list filter that will be applied to the retrieved memories. More detail
    * in [AIP-160](https://google.aip.dev/160). Supported fields: * `fact` * `create_time` *
-   * `update_time`
+   * `update_time` * `topics` (i.e. `topics.custom_memory_topic_label: "example topic" OR
+   * topics.managed_memory_topic: USER_PREFERENCES`)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest extends c
   /**
    * Optional. The standard list filter that will be applied to the retrieved memories. More detail
    * in [AIP-160](https://google.aip.dev/160). Supported fields: * `fact` * `create_time` *
-   * `update_time`
+   * `update_time` * `topics` (i.e. `topics.custom_memory_topic_label: "example topic" OR
+   * topics.managed_memory_topic: USER_PREFERENCES`)
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -74,7 +76,8 @@ public final class GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest extends c
   /**
    * Optional. The standard list filter that will be applied to the retrieved memories. More detail
    * in [AIP-160](https://google.aip.dev/160). Supported fields: * `fact` * `create_time` *
-   * `update_time`
+   * `update_time` * `topics` (i.e. `topics.custom_memory_topic_label: "example topic" OR
+   * topics.managed_memory_topic: USER_PREFERENCES`)
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest setFilter(java.lang.String filter) {

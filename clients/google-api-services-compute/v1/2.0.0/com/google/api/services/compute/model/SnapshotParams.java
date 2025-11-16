@@ -31,10 +31,8 @@ public final class SnapshotParams extends com.google.api.client.json.GenericJson
 
   /**
    * Resource manager tags to be bound to the snapshot. Tag keys and values have the same definition
-   * as resource manager tags. Keys and values can be either in numeric format, such as
-   * `tagKeys/{tag_key_id}` and `tagValues/456` or in namespaced format such as
-   * `{org_id|project_id}/{tag_key_short_name}` and `{tag_value_short_name}`. The field is ignored
-   * (both PUT & PATCH) when empty.
+   * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
+   * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,10 +40,8 @@ public final class SnapshotParams extends com.google.api.client.json.GenericJson
 
   /**
    * Resource manager tags to be bound to the snapshot. Tag keys and values have the same definition
-   * as resource manager tags. Keys and values can be either in numeric format, such as
-   * `tagKeys/{tag_key_id}` and `tagValues/456` or in namespaced format such as
-   * `{org_id|project_id}/{tag_key_short_name}` and `{tag_value_short_name}`. The field is ignored
-   * (both PUT & PATCH) when empty.
+   * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
+   * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getResourceManagerTags() {
@@ -54,10 +50,8 @@ public final class SnapshotParams extends com.google.api.client.json.GenericJson
 
   /**
    * Resource manager tags to be bound to the snapshot. Tag keys and values have the same definition
-   * as resource manager tags. Keys and values can be either in numeric format, such as
-   * `tagKeys/{tag_key_id}` and `tagValues/456` or in namespaced format such as
-   * `{org_id|project_id}/{tag_key_short_name}` and `{tag_value_short_name}`. The field is ignored
-   * (both PUT & PATCH) when empty.
+   * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
+   * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
    * @param resourceManagerTags resourceManagerTags or {@code null} for none
    */
   public SnapshotParams setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {

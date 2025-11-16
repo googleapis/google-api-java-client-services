@@ -38,7 +38,7 @@ public final class ResumeSubscriptionRequest extends com.google.api.client.json.
   private CycleOptions cycleOptions;
 
   /**
-   * Optional. The mode to resume the subscription.
+   * Required. The mode to resume the subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class ResumeSubscriptionRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The mode to resume the subscription.
+   * Required. The mode to resume the subscription.
    * @return value or {@code null} for none
    */
   public java.lang.String getResumeMode() {
@@ -70,7 +70,7 @@ public final class ResumeSubscriptionRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The mode to resume the subscription.
+   * Required. The mode to resume the subscription.
    * @param resumeMode resumeMode or {@code null} for none
    */
   public ResumeSubscriptionRequest setResumeMode(java.lang.String resumeMode) {

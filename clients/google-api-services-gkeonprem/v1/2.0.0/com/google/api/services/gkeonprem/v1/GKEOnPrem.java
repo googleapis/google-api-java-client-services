@@ -8563,6 +8563,22 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /** Optional. If set, skip the specified validations. */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> skipValidations;
+
+          /** Optional. If set, skip the specified validations.
+           */
+          public java.util.List<java.lang.String> getSkipValidations() {
+            return skipValidations;
+          }
+
+          /** Optional. If set, skip the specified validations. */
+          public Create setSkipValidations(java.util.List<java.lang.String> skipValidations) {
+            this.skipValidations = skipValidations;
+            return this;
+          }
+
           /** Validate the request without actually doing any updates. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
@@ -9510,6 +9526,22 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                   "^projects/[^/]+/locations/[^/]+/vmwareAdminClusters/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /** Optional. If set, the server-side preflight checks will be skipped. */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> skipValidations;
+
+          /** Optional. If set, the server-side preflight checks will be skipped.
+           */
+          public java.util.List<java.lang.String> getSkipValidations() {
+            return skipValidations;
+          }
+
+          /** Optional. If set, the server-side preflight checks will be skipped. */
+          public Patch setSkipValidations(java.util.List<java.lang.String> skipValidations) {
+            this.skipValidations = skipValidations;
             return this;
           }
 
@@ -10674,6 +10706,22 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
            */
           public Create setAllowPreflightFailure(java.lang.Boolean allowPreflightFailure) {
             this.allowPreflightFailure = allowPreflightFailure;
+            return this;
+          }
+
+          /** Optional. List of validations to skip during cluster creation. */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> skipValidations;
+
+          /** Optional. List of validations to skip during cluster creation.
+           */
+          public java.util.List<java.lang.String> getSkipValidations() {
+            return skipValidations;
+          }
+
+          /** Optional. List of validations to skip during cluster creation. */
+          public Create setSkipValidations(java.util.List<java.lang.String> skipValidations) {
+            this.skipValidations = skipValidations;
             return this;
           }
 
@@ -11896,6 +11944,21 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                   "^projects/[^/]+/locations/[^/]+/vmwareClusters/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> skipValidations;
+
+          /**
+
+           */
+          public java.util.List<java.lang.String> getSkipValidations() {
+            return skipValidations;
+          }
+
+          public Patch setSkipValidations(java.util.List<java.lang.String> skipValidations) {
+            this.skipValidations = skipValidations;
             return this;
           }
 

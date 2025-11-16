@@ -29,6 +29,45 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 @SuppressWarnings("javadoc")
 public final class DataDiskImageImport extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. A list of guest OS features to apply to the imported image. These features are flags
+   * that are used by Compute Engine to enable certain capabilities for virtual machine instances
+   * that are created from the image. This field does not change the OS of the image; it only marks
+   * the image with the specified features. The user must ensure that the OS is compatible with the
+   * features. For a list of available features, see
+   * https://cloud.google.com/compute/docs/images/create-custom#guest-os-features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> guestOsFeatures;
+
+  /**
+   * Optional. A list of guest OS features to apply to the imported image. These features are flags
+   * that are used by Compute Engine to enable certain capabilities for virtual machine instances
+   * that are created from the image. This field does not change the OS of the image; it only marks
+   * the image with the specified features. The user must ensure that the OS is compatible with the
+   * features. For a list of available features, see
+   * https://cloud.google.com/compute/docs/images/create-custom#guest-os-features.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGuestOsFeatures() {
+    return guestOsFeatures;
+  }
+
+  /**
+   * Optional. A list of guest OS features to apply to the imported image. These features are flags
+   * that are used by Compute Engine to enable certain capabilities for virtual machine instances
+   * that are created from the image. This field does not change the OS of the image; it only marks
+   * the image with the specified features. The user must ensure that the OS is compatible with the
+   * features. For a list of available features, see
+   * https://cloud.google.com/compute/docs/images/create-custom#guest-os-features.
+   * @param guestOsFeatures guestOsFeatures or {@code null} for none
+   */
+  public DataDiskImageImport setGuestOsFeatures(java.util.List<java.lang.String> guestOsFeatures) {
+    this.guestOsFeatures = guestOsFeatures;
+    return this;
+  }
+
   @Override
   public DataDiskImageImport set(String fieldName, Object value) {
     return (DataDiskImageImport) super.set(fieldName, value);

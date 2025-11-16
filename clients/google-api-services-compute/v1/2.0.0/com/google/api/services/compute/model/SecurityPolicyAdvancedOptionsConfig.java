@@ -50,14 +50,6 @@ public final class SecurityPolicyAdvancedOptionsConfig extends com.google.api.cl
   private java.lang.String logLevel;
 
   /**
-   * The maximum request size chosen by the customer with Waf enabled. Values supported are "8KB",
-   * "16KB, "32KB", "48KB" and "64KB". Values are case insensitive.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String requestBodyInspectionSize;
-
-  /**
    * An optional list of case-insensitive request header names to use for resolving the callers
    * client IP address.
    * The value may be {@code null}.
@@ -111,25 +103,6 @@ public final class SecurityPolicyAdvancedOptionsConfig extends com.google.api.cl
    */
   public SecurityPolicyAdvancedOptionsConfig setLogLevel(java.lang.String logLevel) {
     this.logLevel = logLevel;
-    return this;
-  }
-
-  /**
-   * The maximum request size chosen by the customer with Waf enabled. Values supported are "8KB",
-   * "16KB, "32KB", "48KB" and "64KB". Values are case insensitive.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRequestBodyInspectionSize() {
-    return requestBodyInspectionSize;
-  }
-
-  /**
-   * The maximum request size chosen by the customer with Waf enabled. Values supported are "8KB",
-   * "16KB, "32KB", "48KB" and "64KB". Values are case insensitive.
-   * @param requestBodyInspectionSize requestBodyInspectionSize or {@code null} for none
-   */
-  public SecurityPolicyAdvancedOptionsConfig setRequestBodyInspectionSize(java.lang.String requestBodyInspectionSize) {
-    this.requestBodyInspectionSize = requestBodyInspectionSize;
     return this;
   }
 

@@ -59,6 +59,13 @@ public final class ServiceProperties extends com.google.api.client.json.GenericJ
   private java.lang.String gcpProject;
 
   /**
+   * Output only. The identity associated with the service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Identity identity;
+
+  /**
    * Output only. The location that the underlying resource resides in, for example, us-west1.
    * The value may be {@code null}.
    */
@@ -132,6 +139,23 @@ public final class ServiceProperties extends com.google.api.client.json.GenericJ
    */
   public ServiceProperties setGcpProject(java.lang.String gcpProject) {
     this.gcpProject = gcpProject;
+    return this;
+  }
+
+  /**
+   * Output only. The identity associated with the service.
+   * @return value or {@code null} for none
+   */
+  public Identity getIdentity() {
+    return identity;
+  }
+
+  /**
+   * Output only. The identity associated with the service.
+   * @param identity identity or {@code null} for none
+   */
+  public ServiceProperties setIdentity(Identity identity) {
+    this.identity = identity;
     return this;
   }
 

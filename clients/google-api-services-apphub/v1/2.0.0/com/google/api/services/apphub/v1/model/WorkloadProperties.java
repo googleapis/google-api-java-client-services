@@ -60,6 +60,13 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
   private java.lang.String gcpProject;
 
   /**
+   * Output only. The identity associated with the workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Identity identity;
+
+  /**
    * Output only. The location that the underlying compute resource resides in (for example, us-
    * west1).
    * The value may be {@code null}.
@@ -129,6 +136,23 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
    */
   public WorkloadProperties setGcpProject(java.lang.String gcpProject) {
     this.gcpProject = gcpProject;
+    return this;
+  }
+
+  /**
+   * Output only. The identity associated with the workload.
+   * @return value or {@code null} for none
+   */
+  public Identity getIdentity() {
+    return identity;
+  }
+
+  /**
+   * Output only. The identity associated with the workload.
+   * @param identity identity or {@code null} for none
+   */
+  public WorkloadProperties setIdentity(Identity identity) {
+    this.identity = identity;
     return this;
   }
 

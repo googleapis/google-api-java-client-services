@@ -37,6 +37,13 @@ public final class GoogleCloudDataplexV1Trigger extends com.google.api.client.js
   private GoogleCloudDataplexV1TriggerOnDemand onDemand;
 
   /**
+   * The scan runs once, and does not create an associated ScanJob child resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1TriggerOneTime oneTime;
+
+  /**
    * The scan is scheduled to run periodically.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudDataplexV1Trigger extends com.google.api.client.js
    */
   public GoogleCloudDataplexV1Trigger setOnDemand(GoogleCloudDataplexV1TriggerOnDemand onDemand) {
     this.onDemand = onDemand;
+    return this;
+  }
+
+  /**
+   * The scan runs once, and does not create an associated ScanJob child resource.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1TriggerOneTime getOneTime() {
+    return oneTime;
+  }
+
+  /**
+   * The scan runs once, and does not create an associated ScanJob child resource.
+   * @param oneTime oneTime or {@code null} for none
+   */
+  public GoogleCloudDataplexV1Trigger setOneTime(GoogleCloudDataplexV1TriggerOneTime oneTime) {
+    this.oneTime = oneTime;
     return this;
   }
 

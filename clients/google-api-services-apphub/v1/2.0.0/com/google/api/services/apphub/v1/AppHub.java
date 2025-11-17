@@ -455,6 +455,154 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * Gets a Boundary.
+       *
+       * Create a request for the method "locations.getBoundary".
+       *
+       * This request holds the parameters needed by the apphub server.  After setting any optional
+       * parameters, call the {@link GetBoundary#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the boundary to retrieve. Format:
+       *        projects/{project}/locations/{location}/boundary
+       * @return the request
+       */
+      public GetBoundary getBoundary(java.lang.String name) throws java.io.IOException {
+        GetBoundary result = new GetBoundary(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetBoundary extends AppHubRequest<com.google.api.services.apphub.v1.model.Boundary> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/boundary$");
+
+        /**
+         * Gets a Boundary.
+         *
+         * Create a request for the method "locations.getBoundary".
+         *
+         * This request holds the parameters needed by the the apphub server.  After setting any optional
+         * parameters, call the {@link GetBoundary#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * GetBoundary#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the boundary to retrieve. Format:
+       *        projects/{project}/locations/{location}/boundary
+         * @since 1.13
+         */
+        protected GetBoundary(java.lang.String name) {
+          super(AppHub.this, "GET", REST_PATH, null, com.google.api.services.apphub.v1.model.Boundary.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/boundary$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetBoundary set$Xgafv(java.lang.String $Xgafv) {
+          return (GetBoundary) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetBoundary setAccessToken(java.lang.String accessToken) {
+          return (GetBoundary) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetBoundary setAlt(java.lang.String alt) {
+          return (GetBoundary) super.setAlt(alt);
+        }
+
+        @Override
+        public GetBoundary setCallback(java.lang.String callback) {
+          return (GetBoundary) super.setCallback(callback);
+        }
+
+        @Override
+        public GetBoundary setFields(java.lang.String fields) {
+          return (GetBoundary) super.setFields(fields);
+        }
+
+        @Override
+        public GetBoundary setKey(java.lang.String key) {
+          return (GetBoundary) super.setKey(key);
+        }
+
+        @Override
+        public GetBoundary setOauthToken(java.lang.String oauthToken) {
+          return (GetBoundary) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetBoundary setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetBoundary) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetBoundary setQuotaUser(java.lang.String quotaUser) {
+          return (GetBoundary) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetBoundary setUploadType(java.lang.String uploadType) {
+          return (GetBoundary) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetBoundary setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetBoundary) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the boundary to retrieve. Format:
+         * projects/{project}/locations/{location}/boundary
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the boundary to retrieve. Format:
+       projects/{project}/locations/{location}/boundary
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the boundary to retrieve. Format:
+         * projects/{project}/locations/{location}/boundary
+         */
+        public GetBoundary setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/boundary$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetBoundary set(String parameterName, Object value) {
+          return (GetBoundary) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -828,6 +976,218 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
         @Override
         public LookupServiceProjectAttachment set(String parameterName, Object value) {
           return (LookupServiceProjectAttachment) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a Boundary.
+       *
+       * Create a request for the method "locations.updateBoundary".
+       *
+       * This request holds the parameters needed by the apphub server.  After setting any optional
+       * parameters, call the {@link UpdateBoundary#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The resource name of the boundary. Format:
+       *        "projects/{project}/locations/{location}/boundary"
+       * @param content the {@link com.google.api.services.apphub.v1.model.Boundary}
+       * @return the request
+       */
+      public UpdateBoundary updateBoundary(java.lang.String name, com.google.api.services.apphub.v1.model.Boundary content) throws java.io.IOException {
+        UpdateBoundary result = new UpdateBoundary(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateBoundary extends AppHubRequest<com.google.api.services.apphub.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/boundary$");
+
+        /**
+         * Updates a Boundary.
+         *
+         * Create a request for the method "locations.updateBoundary".
+         *
+         * This request holds the parameters needed by the the apphub server.  After setting any optional
+         * parameters, call the {@link UpdateBoundary#execute()} method to invoke the remote operation.
+         * <p> {@link UpdateBoundary#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+         * ientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Identifier. The resource name of the boundary. Format:
+       *        "projects/{project}/locations/{location}/boundary"
+         * @param content the {@link com.google.api.services.apphub.v1.model.Boundary}
+         * @since 1.13
+         */
+        protected UpdateBoundary(java.lang.String name, com.google.api.services.apphub.v1.model.Boundary content) {
+          super(AppHub.this, "PATCH", REST_PATH, content, com.google.api.services.apphub.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/boundary$");
+          }
+        }
+
+        @Override
+        public UpdateBoundary set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateBoundary) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateBoundary setAccessToken(java.lang.String accessToken) {
+          return (UpdateBoundary) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateBoundary setAlt(java.lang.String alt) {
+          return (UpdateBoundary) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateBoundary setCallback(java.lang.String callback) {
+          return (UpdateBoundary) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateBoundary setFields(java.lang.String fields) {
+          return (UpdateBoundary) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateBoundary setKey(java.lang.String key) {
+          return (UpdateBoundary) super.setKey(key);
+        }
+
+        @Override
+        public UpdateBoundary setOauthToken(java.lang.String oauthToken) {
+          return (UpdateBoundary) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateBoundary setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateBoundary) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateBoundary setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateBoundary) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateBoundary setUploadType(java.lang.String uploadType) {
+          return (UpdateBoundary) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateBoundary setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateBoundary) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the boundary. Format:
+         * "projects/{project}/locations/{location}/boundary"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the boundary. Format:
+       "projects/{project}/locations/{location}/boundary"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the boundary. Format:
+         * "projects/{project}/locations/{location}/boundary"
+         */
+        public UpdateBoundary setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/boundary$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. An optional request ID to identify requests. Specify a unique request ID so
+         * that if you must retry your request, the server will know to ignore the request if it has
+         * already been completed. The server will guarantee that for at least 60 minutes since the
+         * first request. For example, consider a situation where you make an initial request and
+         * the request times out. If you make the request again with the same request ID, the server
+         * can check if original operation with the same request ID was received, and if so, will
+         * ignore the second request. This prevents clients from accidentally creating duplicate
+         * commitments. The request ID must be a valid UUID with the exception that zero UUID is not
+         * supported (00000000-0000-0000-0000-000000000000).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String requestId;
+
+        /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+       must retry your request, the server will know to ignore the request if it has already been
+       completed. The server will guarantee that for at least 60 minutes since the first request. For
+       example, consider a situation where you make an initial request and the request times out. If you
+       make the request again with the same request ID, the server can check if original operation with
+       the same request ID was received, and if so, will ignore the second request. This prevents clients
+       from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+       exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         */
+        public java.lang.String getRequestId() {
+          return requestId;
+        }
+
+        /**
+         * Optional. An optional request ID to identify requests. Specify a unique request ID so
+         * that if you must retry your request, the server will know to ignore the request if it has
+         * already been completed. The server will guarantee that for at least 60 minutes since the
+         * first request. For example, consider a situation where you make an initial request and
+         * the request times out. If you make the request again with the same request ID, the server
+         * can check if original operation with the same request ID was received, and if so, will
+         * ignore the second request. This prevents clients from accidentally creating duplicate
+         * commitments. The request ID must be a valid UUID with the exception that zero UUID is not
+         * supported (00000000-0000-0000-0000-000000000000).
+         */
+        public UpdateBoundary setRequestId(java.lang.String requestId) {
+          this.requestId = requestId;
+          return this;
+        }
+
+        /**
+         * Required. Field mask is used to specify the fields to be overwritten in the Boundary
+         * resource by the update. The fields specified in the update_mask are relative to the
+         * resource, not the full request. A field will be overwritten if it is in the mask. If the
+         * user does not provide a mask then all fields will be overwritten.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. Field mask is used to specify the fields to be overwritten in the Boundary resource by
+       the update. The fields specified in the update_mask are relative to the resource, not the full
+       request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+       all fields will be overwritten.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. Field mask is used to specify the fields to be overwritten in the Boundary
+         * resource by the update. The fields specified in the update_mask are relative to the
+         * resource, not the full request. A field will be overwritten if it is in the mask. If the
+         * user does not provide a mask then all fields will be overwritten.
+         */
+        public UpdateBoundary setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateBoundary set(String parameterName, Object value) {
+          return (UpdateBoundary) super.set(parameterName, value);
         }
       }
 
@@ -6047,9 +6407,9 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -6057,10 +6417,11 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -6068,9 +6429,9 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */

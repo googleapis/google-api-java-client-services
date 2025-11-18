@@ -37,6 +37,13 @@ public final class MachineNetworkDetails extends com.google.api.client.json.Gene
   private NetworkAdapterList adapters;
 
   /**
+   * Optional. Default gateway address.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultGateway;
+
+  /**
    * The primary IP address of the machine.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class MachineNetworkDetails extends com.google.api.client.json.Gene
    */
   public MachineNetworkDetails setAdapters(NetworkAdapterList adapters) {
     this.adapters = adapters;
+    return this;
+  }
+
+  /**
+   * Optional. Default gateway address.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultGateway() {
+    return defaultGateway;
+  }
+
+  /**
+   * Optional. Default gateway address.
+   * @param defaultGateway defaultGateway or {@code null} for none
+   */
+  public MachineNetworkDetails setDefaultGateway(java.lang.String defaultGateway) {
+    this.defaultGateway = defaultGateway;
     return this;
   }
 

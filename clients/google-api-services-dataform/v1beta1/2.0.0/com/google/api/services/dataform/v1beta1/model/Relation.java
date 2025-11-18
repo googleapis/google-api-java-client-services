@@ -46,6 +46,16 @@ public final class Relation extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> clusterExpressions;
 
   /**
+   * Optional. The connection specifying the credentials to be used to read and write to external
+   * storage, such as Cloud Storage. The connection can have the form
+   * `{project}.{location}.{connection_id}` or
+   * `projects/{project}/locations/{location}/connections/{connection_id}", or be set to DEFAULT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connection;
+
+  /**
    * A list of actions that this action depends on.
    * The value may be {@code null}.
    */
@@ -58,6 +68,13 @@ public final class Relation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
+
+  /**
+   * Optional. The file format for the BigQuery table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileFormat;
 
   /**
    * Configures `INCREMENTAL_TABLE` settings for this relation. Only set if `relation_type` is
@@ -125,6 +142,21 @@ public final class Relation extends com.google.api.client.json.GenericJson {
   private java.lang.String selectQuery;
 
   /**
+   * Optional. The fully qualified location prefix of the external folder where table data is
+   * stored. The URI should be in the format `gs://bucket/path_to_table/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageUri;
+
+  /**
+   * Optional. The table format for the BigQuery table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tableFormat;
+
+  /**
    * Arbitrary, user-defined tags on this action.
    * The value may be {@code null}.
    */
@@ -170,6 +202,29 @@ public final class Relation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The connection specifying the credentials to be used to read and write to external
+   * storage, such as Cloud Storage. The connection can have the form
+   * `{project}.{location}.{connection_id}` or
+   * `projects/{project}/locations/{location}/connections/{connection_id}", or be set to DEFAULT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnection() {
+    return connection;
+  }
+
+  /**
+   * Optional. The connection specifying the credentials to be used to read and write to external
+   * storage, such as Cloud Storage. The connection can have the form
+   * `{project}.{location}.{connection_id}` or
+   * `projects/{project}/locations/{location}/connections/{connection_id}", or be set to DEFAULT.
+   * @param connection connection or {@code null} for none
+   */
+  public Relation setConnection(java.lang.String connection) {
+    this.connection = connection;
+    return this;
+  }
+
+  /**
    * A list of actions that this action depends on.
    * @return value or {@code null} for none
    */
@@ -200,6 +255,23 @@ public final class Relation extends com.google.api.client.json.GenericJson {
    */
   public Relation setDisabled(java.lang.Boolean disabled) {
     this.disabled = disabled;
+    return this;
+  }
+
+  /**
+   * Optional. The file format for the BigQuery table.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileFormat() {
+    return fileFormat;
+  }
+
+  /**
+   * Optional. The file format for the BigQuery table.
+   * @param fileFormat fileFormat or {@code null} for none
+   */
+  public Relation setFileFormat(java.lang.String fileFormat) {
+    this.fileFormat = fileFormat;
     return this;
   }
 
@@ -357,6 +429,42 @@ public final class Relation extends com.google.api.client.json.GenericJson {
    */
   public Relation setSelectQuery(java.lang.String selectQuery) {
     this.selectQuery = selectQuery;
+    return this;
+  }
+
+  /**
+   * Optional. The fully qualified location prefix of the external folder where table data is
+   * stored. The URI should be in the format `gs://bucket/path_to_table/`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageUri() {
+    return storageUri;
+  }
+
+  /**
+   * Optional. The fully qualified location prefix of the external folder where table data is
+   * stored. The URI should be in the format `gs://bucket/path_to_table/`.
+   * @param storageUri storageUri or {@code null} for none
+   */
+  public Relation setStorageUri(java.lang.String storageUri) {
+    this.storageUri = storageUri;
+    return this;
+  }
+
+  /**
+   * Optional. The table format for the BigQuery table.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTableFormat() {
+    return tableFormat;
+  }
+
+  /**
+   * Optional. The table format for the BigQuery table.
+   * @param tableFormat tableFormat or {@code null} for none
+   */
+  public Relation setTableFormat(java.lang.String tableFormat) {
+    this.tableFormat = tableFormat;
     return this;
   }
 

@@ -23,7 +23,7 @@ package com.google.api.services.alertcenter.v1beta1;
  */
 public class AlertCenterScopes {
 
-  /** See and delete your domain's G Suite alerts, and send alert feedback. */
+  /** See and delete your domain's Google Workspace alerts, and send alert feedback. */
   public static final String APPS_ALERTS = "https://www.googleapis.com/auth/apps.alerts";
 
   /**

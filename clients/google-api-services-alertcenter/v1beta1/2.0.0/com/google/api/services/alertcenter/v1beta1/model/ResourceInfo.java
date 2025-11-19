@@ -60,6 +60,13 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String documentId;
 
   /**
+   * RFC2822 message ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String messageId;
+
+  /**
    * Title of the resource, for example email subject, or document title.
    * The value may be {@code null}.
    */
@@ -133,6 +140,23 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
    */
   public ResourceInfo setDocumentId(java.lang.String documentId) {
     this.documentId = documentId;
+    return this;
+  }
+
+  /**
+   * RFC2822 message ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMessageId() {
+    return messageId;
+  }
+
+  /**
+   * RFC2822 message ID.
+   * @param messageId messageId or {@code null} for none
+   */
+  public ResourceInfo setMessageId(java.lang.String messageId) {
+    this.messageId = messageId;
     return this;
   }
 

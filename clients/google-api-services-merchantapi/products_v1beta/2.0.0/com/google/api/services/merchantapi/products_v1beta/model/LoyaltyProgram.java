@@ -17,7 +17,7 @@
 package com.google.api.services.merchantapi.products_v1beta.model;
 
 /**
- * A message that represents loyalty program.
+ * LINT.IfChange(LoyaltyProgram) A message that represents loyalty program.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

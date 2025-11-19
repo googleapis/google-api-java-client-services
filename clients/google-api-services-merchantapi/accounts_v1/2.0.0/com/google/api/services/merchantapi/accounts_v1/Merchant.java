@@ -12051,6 +12051,165 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
       }
 
+      /**
+       * An accessor for creating requests from the Me collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Merchant merchantapi = new Merchant(...);}
+       *   {@code Merchant.Me.List request = merchantapi.me().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Me me() {
+        return new Me();
+      }
+
+      /**
+       * The "me" collection of methods.
+       */
+      public class Me {
+
+        /**
+         * Updates the user that is represented by the caller from pending to verified.
+         *
+         * Create a request for the method "me.verifySelf".
+         *
+         * This request holds the parameters needed by the merchantapi server.  After setting any optional
+         * parameters, call the {@link VerifySelf#execute()} method to invoke the remote operation.
+         *
+         * @param account Required. The name of the account under which the caller is a user. Format: `accounts/{account}`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.VerifySelfRequest}
+         * @return the request
+         */
+        public VerifySelf verifySelf(java.lang.String account, com.google.api.services.merchantapi.accounts_v1.model.VerifySelfRequest content) throws java.io.IOException {
+          VerifySelf result = new VerifySelf(account, content);
+          initialize(result);
+          return result;
+        }
+
+        public class VerifySelf extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1.model.User> {
+
+          private static final String REST_PATH = "accounts/v1/{+account}/users/me:verifySelf";
+
+          private final java.util.regex.Pattern ACCOUNT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+          /**
+           * Updates the user that is represented by the caller from pending to verified.
+           *
+           * Create a request for the method "me.verifySelf".
+           *
+           * This request holds the parameters needed by the the merchantapi server.  After setting any
+           * optional parameters, call the {@link VerifySelf#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * VerifySelf#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param account Required. The name of the account under which the caller is a user. Format: `accounts/{account}`
+           * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.VerifySelfRequest}
+           * @since 1.13
+           */
+          protected VerifySelf(java.lang.String account, com.google.api.services.merchantapi.accounts_v1.model.VerifySelfRequest content) {
+            super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1.model.User.class);
+            this.account = com.google.api.client.util.Preconditions.checkNotNull(account, "Required parameter account must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_PATTERN.matcher(account).matches(),
+                  "Parameter account must conform to the pattern " +
+                  "^accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public VerifySelf set$Xgafv(java.lang.String $Xgafv) {
+            return (VerifySelf) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public VerifySelf setAccessToken(java.lang.String accessToken) {
+            return (VerifySelf) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public VerifySelf setAlt(java.lang.String alt) {
+            return (VerifySelf) super.setAlt(alt);
+          }
+
+          @Override
+          public VerifySelf setCallback(java.lang.String callback) {
+            return (VerifySelf) super.setCallback(callback);
+          }
+
+          @Override
+          public VerifySelf setFields(java.lang.String fields) {
+            return (VerifySelf) super.setFields(fields);
+          }
+
+          @Override
+          public VerifySelf setKey(java.lang.String key) {
+            return (VerifySelf) super.setKey(key);
+          }
+
+          @Override
+          public VerifySelf setOauthToken(java.lang.String oauthToken) {
+            return (VerifySelf) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public VerifySelf setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (VerifySelf) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public VerifySelf setQuotaUser(java.lang.String quotaUser) {
+            return (VerifySelf) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public VerifySelf setUploadType(java.lang.String uploadType) {
+            return (VerifySelf) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public VerifySelf setUploadProtocol(java.lang.String uploadProtocol) {
+            return (VerifySelf) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the account under which the caller is a user. Format:
+           * `accounts/{account}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String account;
+
+          /** Required. The name of the account under which the caller is a user. Format: `accounts/{account}`
+           */
+          public java.lang.String getAccount() {
+            return account;
+          }
+
+          /**
+           * Required. The name of the account under which the caller is a user. Format:
+           * `accounts/{account}`
+           */
+          public VerifySelf setAccount(java.lang.String account) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_PATTERN.matcher(account).matches(),
+                  "Parameter account must conform to the pattern " +
+                  "^accounts/[^/]+$");
+            }
+            this.account = account;
+            return this;
+          }
+
+          @Override
+          public VerifySelf set(String parameterName, Object value) {
+            return (VerifySelf) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

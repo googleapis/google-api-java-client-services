@@ -45,6 +45,14 @@ public final class AddUser extends com.google.api.client.json.GenericJson {
   private java.lang.String userId;
 
   /**
+   * Optional. Settings related to configuring the verification email that is sent after adding a
+   * user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VerificationMailSettings verificationMailSettings;
+
+  /**
    * Optional. Details about the user to be added. At the moment, only access rights may be
    * specified.
    * @return value or {@code null} for none
@@ -77,6 +85,25 @@ public final class AddUser extends com.google.api.client.json.GenericJson {
    */
   public AddUser setUserId(java.lang.String userId) {
     this.userId = userId;
+    return this;
+  }
+
+  /**
+   * Optional. Settings related to configuring the verification email that is sent after adding a
+   * user.
+   * @return value or {@code null} for none
+   */
+  public VerificationMailSettings getVerificationMailSettings() {
+    return verificationMailSettings;
+  }
+
+  /**
+   * Optional. Settings related to configuring the verification email that is sent after adding a
+   * user.
+   * @param verificationMailSettings verificationMailSettings or {@code null} for none
+   */
+  public AddUser setVerificationMailSettings(VerificationMailSettings verificationMailSettings) {
+    this.verificationMailSettings = verificationMailSettings;
     return this;
   }
 

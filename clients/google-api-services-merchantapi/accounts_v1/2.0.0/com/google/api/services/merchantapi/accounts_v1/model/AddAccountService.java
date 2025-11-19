@@ -38,6 +38,49 @@ public final class AddAccountService extends com.google.api.client.json.GenericJ
   private AccountAggregation accountAggregation;
 
   /**
+   * The provider manages this account. Payload for service type Account Management.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccountManagement accountManagement;
+
+  /**
+   * The provider manages campaigns for this account. Payload for service type campaigns management.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CampaignsManagement campaignsManagement;
+
+  /**
+   * The provider is a CSS (Comparison Shopping Service) of this account. Payload for service type
+   * Comparison Shopping.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComparisonShopping comparisonShopping;
+
+  /**
+   * Immutable. An optional, immutable identifier that Google uses to refer to this account when
+   * communicating with the provider. This should be the unique account ID within the provider's
+   * system (for example, your shop ID in Shopify). If you have multiple accounts with the same
+   * provider - for instance, different accounts for various regions — the `external_account_id`
+   * differentiates between them, ensuring accurate linking and integration between Google and the
+   * provider. The external account ID must be specified for the campaigns management service type.
+   * The external account ID must not be specified for the account aggregation service type. The
+   * external account ID is optional / may be specified for all other service types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalAccountId;
+
+  /**
+   * The provider manages products for this account. Payload for service type products management.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductsManagement productsManagement;
+
+  /**
    * Required. The provider of the service. Either the reference to an account such as
    * `providers/123` or a well-known service provider (one of `providers/GOOGLE_ADS` or
    * `providers/GOOGLE_BUSINESS_PROFILE`).
@@ -62,6 +105,107 @@ public final class AddAccountService extends com.google.api.client.json.GenericJ
    */
   public AddAccountService setAccountAggregation(AccountAggregation accountAggregation) {
     this.accountAggregation = accountAggregation;
+    return this;
+  }
+
+  /**
+   * The provider manages this account. Payload for service type Account Management.
+   * @return value or {@code null} for none
+   */
+  public AccountManagement getAccountManagement() {
+    return accountManagement;
+  }
+
+  /**
+   * The provider manages this account. Payload for service type Account Management.
+   * @param accountManagement accountManagement or {@code null} for none
+   */
+  public AddAccountService setAccountManagement(AccountManagement accountManagement) {
+    this.accountManagement = accountManagement;
+    return this;
+  }
+
+  /**
+   * The provider manages campaigns for this account. Payload for service type campaigns management.
+   * @return value or {@code null} for none
+   */
+  public CampaignsManagement getCampaignsManagement() {
+    return campaignsManagement;
+  }
+
+  /**
+   * The provider manages campaigns for this account. Payload for service type campaigns management.
+   * @param campaignsManagement campaignsManagement or {@code null} for none
+   */
+  public AddAccountService setCampaignsManagement(CampaignsManagement campaignsManagement) {
+    this.campaignsManagement = campaignsManagement;
+    return this;
+  }
+
+  /**
+   * The provider is a CSS (Comparison Shopping Service) of this account. Payload for service type
+   * Comparison Shopping.
+   * @return value or {@code null} for none
+   */
+  public ComparisonShopping getComparisonShopping() {
+    return comparisonShopping;
+  }
+
+  /**
+   * The provider is a CSS (Comparison Shopping Service) of this account. Payload for service type
+   * Comparison Shopping.
+   * @param comparisonShopping comparisonShopping or {@code null} for none
+   */
+  public AddAccountService setComparisonShopping(ComparisonShopping comparisonShopping) {
+    this.comparisonShopping = comparisonShopping;
+    return this;
+  }
+
+  /**
+   * Immutable. An optional, immutable identifier that Google uses to refer to this account when
+   * communicating with the provider. This should be the unique account ID within the provider's
+   * system (for example, your shop ID in Shopify). If you have multiple accounts with the same
+   * provider - for instance, different accounts for various regions — the `external_account_id`
+   * differentiates between them, ensuring accurate linking and integration between Google and the
+   * provider. The external account ID must be specified for the campaigns management service type.
+   * The external account ID must not be specified for the account aggregation service type. The
+   * external account ID is optional / may be specified for all other service types.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalAccountId() {
+    return externalAccountId;
+  }
+
+  /**
+   * Immutable. An optional, immutable identifier that Google uses to refer to this account when
+   * communicating with the provider. This should be the unique account ID within the provider's
+   * system (for example, your shop ID in Shopify). If you have multiple accounts with the same
+   * provider - for instance, different accounts for various regions — the `external_account_id`
+   * differentiates between them, ensuring accurate linking and integration between Google and the
+   * provider. The external account ID must be specified for the campaigns management service type.
+   * The external account ID must not be specified for the account aggregation service type. The
+   * external account ID is optional / may be specified for all other service types.
+   * @param externalAccountId externalAccountId or {@code null} for none
+   */
+  public AddAccountService setExternalAccountId(java.lang.String externalAccountId) {
+    this.externalAccountId = externalAccountId;
+    return this;
+  }
+
+  /**
+   * The provider manages products for this account. Payload for service type products management.
+   * @return value or {@code null} for none
+   */
+  public ProductsManagement getProductsManagement() {
+    return productsManagement;
+  }
+
+  /**
+   * The provider manages products for this account. Payload for service type products management.
+   * @param productsManagement productsManagement or {@code null} for none
+   */
+  public AddAccountService setProductsManagement(ProductsManagement productsManagement) {
+    this.productsManagement = productsManagement;
     return this;
   }
 

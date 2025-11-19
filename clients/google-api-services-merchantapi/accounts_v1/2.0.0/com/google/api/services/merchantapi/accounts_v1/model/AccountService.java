@@ -69,6 +69,14 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   private CampaignsManagement campaignsManagement;
 
   /**
+   * Service type for comparison shopping. The provider is a CSS (Comparison Shopping Service)
+   * managing the account. See https://support.google.com/merchants/answer/12653197
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComparisonShopping comparisonShopping;
+
+  /**
    * Immutable. An optional, immutable identifier that Google uses to refer to this account when
    * communicating with the provider. This should be the unique account ID within the provider's
    * system (for example, your shop ID in Shopify). If you have multiple accounts with the same
@@ -202,6 +210,25 @@ public final class AccountService extends com.google.api.client.json.GenericJson
    */
   public AccountService setCampaignsManagement(CampaignsManagement campaignsManagement) {
     this.campaignsManagement = campaignsManagement;
+    return this;
+  }
+
+  /**
+   * Service type for comparison shopping. The provider is a CSS (Comparison Shopping Service)
+   * managing the account. See https://support.google.com/merchants/answer/12653197
+   * @return value or {@code null} for none
+   */
+  public ComparisonShopping getComparisonShopping() {
+    return comparisonShopping;
+  }
+
+  /**
+   * Service type for comparison shopping. The provider is a CSS (Comparison Shopping Service)
+   * managing the account. See https://support.google.com/merchants/answer/12653197
+   * @param comparisonShopping comparisonShopping or {@code null} for none
+   */
+  public AccountService setComparisonShopping(ComparisonShopping comparisonShopping) {
+    this.comparisonShopping = comparisonShopping;
     return this;
   }
 

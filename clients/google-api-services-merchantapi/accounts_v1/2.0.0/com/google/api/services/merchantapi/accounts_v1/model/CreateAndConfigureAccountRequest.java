@@ -54,6 +54,14 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
   }
 
   /**
+   * Optional. If a relationship is created with a provider, you can set an alias for it with this
+   * field. The calling user must be an admin on the provider to be able to set an alias.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SetAliasForRelationship> setAlias;
+
+  /**
    * Optional. Users to be added to the account.
    * The value may be {@code null}.
    */
@@ -105,6 +113,25 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
    */
   public CreateAndConfigureAccountRequest setService(java.util.List<AddAccountService> service) {
     this.service = service;
+    return this;
+  }
+
+  /**
+   * Optional. If a relationship is created with a provider, you can set an alias for it with this
+   * field. The calling user must be an admin on the provider to be able to set an alias.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SetAliasForRelationship> getSetAlias() {
+    return setAlias;
+  }
+
+  /**
+   * Optional. If a relationship is created with a provider, you can set an alias for it with this
+   * field. The calling user must be an admin on the provider to be able to set an alias.
+   * @param setAlias setAlias or {@code null} for none
+   */
+  public CreateAndConfigureAccountRequest setSetAlias(java.util.List<SetAliasForRelationship> setAlias) {
+    this.setAlias = setAlias;
     return this;
   }
 

@@ -32,7 +32,7 @@ public class PeopleServiceScopes {
   /** See and download your contacts. */
   public static final String CONTACTS_READONLY = "https://www.googleapis.com/auth/contacts.readonly";
 
-  /** See and download your organization's GSuite directory. */
+  /** See and download your organization's Google Workspace directory. */
   public static final String DIRECTORY_READONLY = "https://www.googleapis.com/auth/directory.readonly";
 
   /** View your street addresses. */

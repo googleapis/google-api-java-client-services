@@ -16732,7 +16732,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists a file's revisions.
+     * Lists a file's revisions. **Important:** The list of revisions returned by this method might be
+     * incomplete for files with a large revision history, including frequently edited Google Docs,
+     * Sheets, and Slides. Older revisions might be omitted from the response, meaning the first
+     * revision returned may not be the oldest existing revision. The revision history visible in the
+     * Workspace editor user interface might be more complete than the list returned by the API.
      *
      * Create a request for the method "revisions.list".
      *
@@ -16753,7 +16757,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/revisions";
 
       /**
-       * Lists a file's revisions.
+       * Lists a file's revisions. **Important:** The list of revisions returned by this method might be
+       * incomplete for files with a large revision history, including frequently edited Google Docs,
+       * Sheets, and Slides. Older revisions might be omitted from the response, meaning the first
+       * revision returned may not be the oldest existing revision. The revision history visible in the
+       * Workspace editor user interface might be more complete than the list returned by the API.
        *
        * Create a request for the method "revisions.list".
        *

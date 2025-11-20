@@ -40,8 +40,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private java.lang.String anchor;
 
   /**
-   * Output only. The email of the user who is assigned to this comment, if none is assigned this
-   * will be unset.
+   * Output only. The email address of the user assigned to this comment. If no user is assigned,
+   * the field is unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +100,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Output only. The emails of the users who were mentioned in this comment, if none were mentioned
-   * this will be an empty list.
+   * Output only. A list of email addresses for users mentioned in this comment. If no users are
+   * mentioned, the list is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +158,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The email of the user who is assigned to this comment, if none is assigned this
-   * will be unset.
+   * Output only. The email address of the user assigned to this comment. If no user is assigned,
+   * the field is unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssigneeEmailAddress() {
@@ -167,8 +167,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The email of the user who is assigned to this comment, if none is assigned this
-   * will be unset.
+   * Output only. The email address of the user assigned to this comment. If no user is assigned,
+   * the field is unset.
    * @param assigneeEmailAddress assigneeEmailAddress or {@code null} for none
    */
   public Comment setAssigneeEmailAddress(java.lang.String assigneeEmailAddress) {
@@ -302,8 +302,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The emails of the users who were mentioned in this comment, if none were mentioned
-   * this will be an empty list.
+   * Output only. A list of email addresses for users mentioned in this comment. If no users are
+   * mentioned, the list is empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMentionedEmailAddresses() {
@@ -311,8 +311,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The emails of the users who were mentioned in this comment, if none were mentioned
-   * this will be an empty list.
+   * Output only. A list of email addresses for users mentioned in this comment. If no users are
+   * mentioned, the list is empty.
    * @param mentionedEmailAddresses mentionedEmailAddresses or {@code null} for none
    */
   public Comment setMentionedEmailAddresses(java.util.List<java.lang.String> mentionedEmailAddresses) {

@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1beta1VoiceConfig extends com.google.ap
   private GoogleCloudAiplatformV1beta1PrebuiltVoiceConfig prebuiltVoiceConfig;
 
   /**
+   * Optional. The configuration for a replicated voice. This enables users to replicate a voice
+   * from an audio sample.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReplicatedVoiceConfig replicatedVoiceConfig;
+
+  /**
    * The configuration for a prebuilt voice.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class GoogleCloudAiplatformV1beta1VoiceConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1VoiceConfig setPrebuiltVoiceConfig(GoogleCloudAiplatformV1beta1PrebuiltVoiceConfig prebuiltVoiceConfig) {
     this.prebuiltVoiceConfig = prebuiltVoiceConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for a replicated voice. This enables users to replicate a voice
+   * from an audio sample.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReplicatedVoiceConfig getReplicatedVoiceConfig() {
+    return replicatedVoiceConfig;
+  }
+
+  /**
+   * Optional. The configuration for a replicated voice. This enables users to replicate a voice
+   * from an audio sample.
+   * @param replicatedVoiceConfig replicatedVoiceConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VoiceConfig setReplicatedVoiceConfig(GoogleCloudAiplatformV1beta1ReplicatedVoiceConfig replicatedVoiceConfig) {
+    this.replicatedVoiceConfig = replicatedVoiceConfig;
     return this;
   }
 

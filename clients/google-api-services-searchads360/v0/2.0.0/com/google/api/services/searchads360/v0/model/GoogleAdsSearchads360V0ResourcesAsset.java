@@ -69,6 +69,20 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
   private java.lang.String engineStatus;
 
   /**
+   * A list of possible final mobile URLs after all cross domain redirects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> finalMobileUrls;
+
+  /**
+   * URL template for appending params to landing page URLs served with parallel tracking.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String finalUrlSuffix;
+
+  /**
    * A list of possible final URLs after all cross domain redirects.
    * The value may be {@code null}.
    */
@@ -169,6 +183,20 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
   private java.lang.String type;
 
   /**
+   * A list of mappings to be used for substituting URL custom parameter tags in the
+   * tracking_url_template, final_urls, and/or final_mobile_urls.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0CommonCustomParameter> urlCustomParameters;
+
+  static {
+    // hack to force ProGuard to consider GoogleAdsSearchads360V0CommonCustomParameter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V0CommonCustomParameter.class);
+  }
+
+  /**
    * Immutable. A YouTube video asset.
    * The value may be {@code null}.
    */
@@ -259,6 +287,40 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   public GoogleAdsSearchads360V0ResourcesAsset setEngineStatus(java.lang.String engineStatus) {
     this.engineStatus = engineStatus;
+    return this;
+  }
+
+  /**
+   * A list of possible final mobile URLs after all cross domain redirects.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFinalMobileUrls() {
+    return finalMobileUrls;
+  }
+
+  /**
+   * A list of possible final mobile URLs after all cross domain redirects.
+   * @param finalMobileUrls finalMobileUrls or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setFinalMobileUrls(java.util.List<java.lang.String> finalMobileUrls) {
+    this.finalMobileUrls = finalMobileUrls;
+    return this;
+  }
+
+  /**
+   * URL template for appending params to landing page URLs served with parallel tracking.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFinalUrlSuffix() {
+    return finalUrlSuffix;
+  }
+
+  /**
+   * URL template for appending params to landing page URLs served with parallel tracking.
+   * @param finalUrlSuffix finalUrlSuffix or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setFinalUrlSuffix(java.lang.String finalUrlSuffix) {
+    this.finalUrlSuffix = finalUrlSuffix;
     return this;
   }
 
@@ -501,6 +563,25 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   public GoogleAdsSearchads360V0ResourcesAsset setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * A list of mappings to be used for substituting URL custom parameter tags in the
+   * tracking_url_template, final_urls, and/or final_mobile_urls.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0CommonCustomParameter> getUrlCustomParameters() {
+    return urlCustomParameters;
+  }
+
+  /**
+   * A list of mappings to be used for substituting URL custom parameter tags in the
+   * tracking_url_template, final_urls, and/or final_mobile_urls.
+   * @param urlCustomParameters urlCustomParameters or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setUrlCustomParameters(java.util.List<GoogleAdsSearchads360V0CommonCustomParameter> urlCustomParameters) {
+    this.urlCustomParameters = urlCustomParameters;
     return this;
   }
 

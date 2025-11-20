@@ -87,6 +87,13 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
   private java.lang.String engineStatus;
 
   /**
+   * URL template for appending params to Final URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String finalUrlSuffix;
+
+  /**
    * Output only. The ID of the ad group.
    * The value may be {@code null}.
    */
@@ -159,6 +166,13 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0CommonTargetingSetting targetingSetting;
+
+  /**
+   * The URL template for constructing a tracking URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trackingUrlTemplate;
 
   /**
    * Immutable. The type of the ad group.
@@ -297,6 +311,23 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
    */
   public GoogleAdsSearchads360V0ResourcesAdGroup setEngineStatus(java.lang.String engineStatus) {
     this.engineStatus = engineStatus;
+    return this;
+  }
+
+  /**
+   * URL template for appending params to Final URL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFinalUrlSuffix() {
+    return finalUrlSuffix;
+  }
+
+  /**
+   * URL template for appending params to Final URL.
+   * @param finalUrlSuffix finalUrlSuffix or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setFinalUrlSuffix(java.lang.String finalUrlSuffix) {
+    this.finalUrlSuffix = finalUrlSuffix;
     return this;
   }
 
@@ -472,6 +503,23 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
    */
   public GoogleAdsSearchads360V0ResourcesAdGroup setTargetingSetting(GoogleAdsSearchads360V0CommonTargetingSetting targetingSetting) {
     this.targetingSetting = targetingSetting;
+    return this;
+  }
+
+  /**
+   * The URL template for constructing a tracking URL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrackingUrlTemplate() {
+    return trackingUrlTemplate;
+  }
+
+  /**
+   * The URL template for constructing a tracking URL.
+   * @param trackingUrlTemplate trackingUrlTemplate or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setTrackingUrlTemplate(java.lang.String trackingUrlTemplate) {
+    this.trackingUrlTemplate = trackingUrlTemplate;
     return this;
   }
 

@@ -153,6 +153,18 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double allConversionsValuePerCost;
 
   /**
+   * Average cart size is the average number of products in each order attributed to your ads. How
+   * it works: You report conversions with cart data for completed purchases on your website.
+   * Average cart size is the total number of products sold divided by the total number of orders
+   * you received. Example: You received 2 orders, the first included 3 products and the second
+   * included 2. The average cart size is 2.5 products = (3+2)/2. This metric is only available if
+   * you report conversions with cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double averageCartSize;
+
+  /**
    * The average amount you pay per interaction. This amount is the total cost of your ads divided
    * by the total number of interactions.
    * The value may be {@code null}.
@@ -178,6 +190,27 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Double averageCpm;
+
+  /**
+   * The average number of times a unique user saw your ad during the requested time period. This
+   * metric cannot be aggregated, and can only be requested for date ranges of 92 days or less. This
+   * metric is available for following campaign types - Display, Video, Discovery and App.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double averageImpressionFrequencyPerUser;
+
+  /**
+   * Average order value is the average revenue you made per order attributed to your ads. How it
+   * works: You report conversions with cart data for completed purchases on your website. Average
+   * order value is the total revenue from your orders divided by the total number of orders.
+   * Example: You received 3 orders which made $10, $15 and $20 worth of revenue. The average order
+   * value is $15 = ($10 + $15 + $20)/3. This metric is only available if you report conversions
+   * with cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long averageOrderValueMicros;
 
   /**
    * The average quality score.
@@ -465,6 +498,20 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Long costMicros;
 
   /**
+   * Cost of goods sold (COGS) is the total cost of the products you sold in orders attributed to
+   * your ads. How it works: You can add a cost of goods sold value to every product in Merchant
+   * Center. If you report conversions with cart data, the products you sold are matched with their
+   * cost of goods sold value and this can be used to calculate the gross profit you made on each
+   * order. Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a
+   * shirt. The hat has a cost of goods sold value of $3, the shirt has a cost of goods sold value
+   * of $5. The cost of goods sold for this order is $8 = $3 + $5. This metric is only available if
+   * you report conversions with cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long costOfGoodsSoldMicros;
+
+  /**
    * The cost of ad interactions divided by all conversions.
    * The value may be {@code null}.
    */
@@ -621,6 +668,36 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Long generalInvalidClicks;
 
   /**
+   * Gross profit margin is the percentage gross profit you made from orders attributed to your ads,
+   * after taking out the cost of goods sold (COGS). How it works: You report conversions with cart
+   * data for completed purchases on your website. Gross profit margin is the gross profit you made
+   * divided by your total revenue and multiplied by 100%. Gross profit margin calculations only
+   * include products that have a cost of goods sold value in Merchant Center. Example: Someone
+   * bought a hat and a shirt in an order on your website. The hat is priced $10 and has a cost of
+   * goods sold value of $3. The shirt is priced $20 but has no cost of goods sold value. Gross
+   * profit margin for this order will only take into account the hat because it has a cost of goods
+   * sold value, so it's 70% = ($10 - $3)/$10 x 100%. This metric is only available if you report
+   * conversions with cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double grossProfitMargin;
+
+  /**
+   * Gross profit is the profit you made from orders attributed to your ads minus the cost of goods
+   * sold (COGS). How it works: Gross profit is the revenue you made from sales attributed to your
+   * ads minus cost of goods sold. Gross profit calculations only include products that have a cost
+   * of goods sold value in Merchant Center. Example: Someone clicked on a Shopping ad for a hat
+   * then bought the same hat and a shirt in an order from your website. The hat is priced $10 and
+   * the shirt is priced $20. The hat has a cost of goods sold value of $3, but the shirt has no
+   * cost of goods sold value. Gross profit for this order will only take into account the hat, so
+   * it's $7 = $10 - $3. This metric is only available if you report conversions with cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long grossProfitMicros;
+
+  /**
    * The creative historical quality score.
    * The value may be {@code null}.
    */
@@ -770,11 +847,37 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double mobileFriendlyClicksPercentage;
 
   /**
+   * Orders is the total number of purchase conversions you received attributed to your ads. How it
+   * works: You report conversions with cart data for completed purchases on your website. If a
+   * conversion is attributed to previous interactions with your ads (clicks for text or Shopping
+   * ads, views for video ads etc.) it's counted as an order. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt in an order on your website. Even though they
+   * bought 2 products, this would count as 1 order. This metric is only available if you report
+   * conversions with cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double orders;
+
+  /**
    * The raw event conversion metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleAdsSearchads360V0CommonValue> rawEventConversionMetrics;
+
+  /**
+   * Revenue is the total amount you made from orders attributed to your ads. How it works: You
+   * report conversions with cart data for completed purchases on your website. Revenue is the total
+   * value of all the orders you received attributed to your ads, minus any discount. Example:
+   * Someone clicked on a Shopping ad for a hat then bought the same hat and a shirt in an order
+   * from your website. The hat is priced $10 and the shirt is priced $20. The entire order has a $5
+   * discount. The revenue from this order is $25 = ($10 + $20) - $5. This metric is only available
+   * if you report conversions with cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long revenueMicros;
 
   /**
    * The percentage of the customer's Shopping or Search ad impressions that are shown in the most
@@ -885,6 +988,27 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Double topImpressionPercentage;
+
+  /**
+   * The number of unique users who saw your ad during the requested time period. This metric cannot
+   * be aggregated, and can only be requested for date ranges of 92 days or less. This metric is
+   * available for following campaign types - Display, Video, Discovery and App.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long uniqueUsers;
+
+  /**
+   * Units sold is the total number of products sold from orders attributed to your ads. How it
+   * works: You report conversions with cart data for completed purchases on your website. Units
+   * sold is the total number of products sold from all orders attributed to your ads. Example:
+   * Someone clicked on a Shopping ad for a hat then bought the same hat, a shirt and a jacket. The
+   * units sold in this order is 3. This metric is only available if you report conversions with
+   * cart data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double unitsSold;
 
   /**
    * The value of all conversions divided by the number of all conversions.
@@ -1218,6 +1342,33 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
+   * Average cart size is the average number of products in each order attributed to your ads. How
+   * it works: You report conversions with cart data for completed purchases on your website.
+   * Average cart size is the total number of products sold divided by the total number of orders
+   * you received. Example: You received 2 orders, the first included 3 products and the second
+   * included 2. The average cart size is 2.5 products = (3+2)/2. This metric is only available if
+   * you report conversions with cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAverageCartSize() {
+    return averageCartSize;
+  }
+
+  /**
+   * Average cart size is the average number of products in each order attributed to your ads. How
+   * it works: You report conversions with cart data for completed purchases on your website.
+   * Average cart size is the total number of products sold divided by the total number of orders
+   * you received. Example: You received 2 orders, the first included 3 products and the second
+   * included 2. The average cart size is 2.5 products = (3+2)/2. This metric is only available if
+   * you report conversions with cart data.
+   * @param averageCartSize averageCartSize or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setAverageCartSize(java.lang.Double averageCartSize) {
+    this.averageCartSize = averageCartSize;
+    return this;
+  }
+
+  /**
    * The average amount you pay per interaction. This amount is the total cost of your ads divided
    * by the total number of interactions.
    * @return value or {@code null} for none
@@ -1277,6 +1428,54 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   public GoogleAdsSearchads360V0CommonMetrics setAverageCpm(java.lang.Double averageCpm) {
     this.averageCpm = averageCpm;
+    return this;
+  }
+
+  /**
+   * The average number of times a unique user saw your ad during the requested time period. This
+   * metric cannot be aggregated, and can only be requested for date ranges of 92 days or less. This
+   * metric is available for following campaign types - Display, Video, Discovery and App.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAverageImpressionFrequencyPerUser() {
+    return averageImpressionFrequencyPerUser;
+  }
+
+  /**
+   * The average number of times a unique user saw your ad during the requested time period. This
+   * metric cannot be aggregated, and can only be requested for date ranges of 92 days or less. This
+   * metric is available for following campaign types - Display, Video, Discovery and App.
+   * @param averageImpressionFrequencyPerUser averageImpressionFrequencyPerUser or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setAverageImpressionFrequencyPerUser(java.lang.Double averageImpressionFrequencyPerUser) {
+    this.averageImpressionFrequencyPerUser = averageImpressionFrequencyPerUser;
+    return this;
+  }
+
+  /**
+   * Average order value is the average revenue you made per order attributed to your ads. How it
+   * works: You report conversions with cart data for completed purchases on your website. Average
+   * order value is the total revenue from your orders divided by the total number of orders.
+   * Example: You received 3 orders which made $10, $15 and $20 worth of revenue. The average order
+   * value is $15 = ($10 + $15 + $20)/3. This metric is only available if you report conversions
+   * with cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAverageOrderValueMicros() {
+    return averageOrderValueMicros;
+  }
+
+  /**
+   * Average order value is the average revenue you made per order attributed to your ads. How it
+   * works: You report conversions with cart data for completed purchases on your website. Average
+   * order value is the total revenue from your orders divided by the total number of orders.
+   * Example: You received 3 orders which made $10, $15 and $20 worth of revenue. The average order
+   * value is $15 = ($10 + $15 + $20)/3. This metric is only available if you report conversions
+   * with cart data.
+   * @param averageOrderValueMicros averageOrderValueMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setAverageOrderValueMicros(java.lang.Long averageOrderValueMicros) {
+    this.averageOrderValueMicros = averageOrderValueMicros;
     return this;
   }
 
@@ -1926,6 +2125,37 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
+   * Cost of goods sold (COGS) is the total cost of the products you sold in orders attributed to
+   * your ads. How it works: You can add a cost of goods sold value to every product in Merchant
+   * Center. If you report conversions with cart data, the products you sold are matched with their
+   * cost of goods sold value and this can be used to calculate the gross profit you made on each
+   * order. Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a
+   * shirt. The hat has a cost of goods sold value of $3, the shirt has a cost of goods sold value
+   * of $5. The cost of goods sold for this order is $8 = $3 + $5. This metric is only available if
+   * you report conversions with cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCostOfGoodsSoldMicros() {
+    return costOfGoodsSoldMicros;
+  }
+
+  /**
+   * Cost of goods sold (COGS) is the total cost of the products you sold in orders attributed to
+   * your ads. How it works: You can add a cost of goods sold value to every product in Merchant
+   * Center. If you report conversions with cart data, the products you sold are matched with their
+   * cost of goods sold value and this can be used to calculate the gross profit you made on each
+   * order. Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a
+   * shirt. The hat has a cost of goods sold value of $3, the shirt has a cost of goods sold value
+   * of $5. The cost of goods sold for this order is $8 = $3 + $5. This metric is only available if
+   * you report conversions with cart data.
+   * @param costOfGoodsSoldMicros costOfGoodsSoldMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setCostOfGoodsSoldMicros(java.lang.Long costOfGoodsSoldMicros) {
+    this.costOfGoodsSoldMicros = costOfGoodsSoldMicros;
+    return this;
+  }
+
+  /**
    * The cost of ad interactions divided by all conversions.
    * @return value or {@code null} for none
    */
@@ -2280,6 +2510,72 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
+   * Gross profit margin is the percentage gross profit you made from orders attributed to your ads,
+   * after taking out the cost of goods sold (COGS). How it works: You report conversions with cart
+   * data for completed purchases on your website. Gross profit margin is the gross profit you made
+   * divided by your total revenue and multiplied by 100%. Gross profit margin calculations only
+   * include products that have a cost of goods sold value in Merchant Center. Example: Someone
+   * bought a hat and a shirt in an order on your website. The hat is priced $10 and has a cost of
+   * goods sold value of $3. The shirt is priced $20 but has no cost of goods sold value. Gross
+   * profit margin for this order will only take into account the hat because it has a cost of goods
+   * sold value, so it's 70% = ($10 - $3)/$10 x 100%. This metric is only available if you report
+   * conversions with cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getGrossProfitMargin() {
+    return grossProfitMargin;
+  }
+
+  /**
+   * Gross profit margin is the percentage gross profit you made from orders attributed to your ads,
+   * after taking out the cost of goods sold (COGS). How it works: You report conversions with cart
+   * data for completed purchases on your website. Gross profit margin is the gross profit you made
+   * divided by your total revenue and multiplied by 100%. Gross profit margin calculations only
+   * include products that have a cost of goods sold value in Merchant Center. Example: Someone
+   * bought a hat and a shirt in an order on your website. The hat is priced $10 and has a cost of
+   * goods sold value of $3. The shirt is priced $20 but has no cost of goods sold value. Gross
+   * profit margin for this order will only take into account the hat because it has a cost of goods
+   * sold value, so it's 70% = ($10 - $3)/$10 x 100%. This metric is only available if you report
+   * conversions with cart data.
+   * @param grossProfitMargin grossProfitMargin or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setGrossProfitMargin(java.lang.Double grossProfitMargin) {
+    this.grossProfitMargin = grossProfitMargin;
+    return this;
+  }
+
+  /**
+   * Gross profit is the profit you made from orders attributed to your ads minus the cost of goods
+   * sold (COGS). How it works: Gross profit is the revenue you made from sales attributed to your
+   * ads minus cost of goods sold. Gross profit calculations only include products that have a cost
+   * of goods sold value in Merchant Center. Example: Someone clicked on a Shopping ad for a hat
+   * then bought the same hat and a shirt in an order from your website. The hat is priced $10 and
+   * the shirt is priced $20. The hat has a cost of goods sold value of $3, but the shirt has no
+   * cost of goods sold value. Gross profit for this order will only take into account the hat, so
+   * it's $7 = $10 - $3. This metric is only available if you report conversions with cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getGrossProfitMicros() {
+    return grossProfitMicros;
+  }
+
+  /**
+   * Gross profit is the profit you made from orders attributed to your ads minus the cost of goods
+   * sold (COGS). How it works: Gross profit is the revenue you made from sales attributed to your
+   * ads minus cost of goods sold. Gross profit calculations only include products that have a cost
+   * of goods sold value in Merchant Center. Example: Someone clicked on a Shopping ad for a hat
+   * then bought the same hat and a shirt in an order from your website. The hat is priced $10 and
+   * the shirt is priced $20. The hat has a cost of goods sold value of $3, but the shirt has no
+   * cost of goods sold value. Gross profit for this order will only take into account the hat, so
+   * it's $7 = $10 - $3. This metric is only available if you report conversions with cart data.
+   * @param grossProfitMicros grossProfitMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setGrossProfitMicros(java.lang.Long grossProfitMicros) {
+    this.grossProfitMicros = grossProfitMicros;
+    return this;
+  }
+
+  /**
    * The creative historical quality score.
    * @return value or {@code null} for none
    */
@@ -2623,6 +2919,35 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
+   * Orders is the total number of purchase conversions you received attributed to your ads. How it
+   * works: You report conversions with cart data for completed purchases on your website. If a
+   * conversion is attributed to previous interactions with your ads (clicks for text or Shopping
+   * ads, views for video ads etc.) it's counted as an order. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt in an order on your website. Even though they
+   * bought 2 products, this would count as 1 order. This metric is only available if you report
+   * conversions with cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getOrders() {
+    return orders;
+  }
+
+  /**
+   * Orders is the total number of purchase conversions you received attributed to your ads. How it
+   * works: You report conversions with cart data for completed purchases on your website. If a
+   * conversion is attributed to previous interactions with your ads (clicks for text or Shopping
+   * ads, views for video ads etc.) it's counted as an order. Example: Someone clicked on a Shopping
+   * ad for a hat then bought the same hat and a shirt in an order on your website. Even though they
+   * bought 2 products, this would count as 1 order. This metric is only available if you report
+   * conversions with cart data.
+   * @param orders orders or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setOrders(java.lang.Double orders) {
+    this.orders = orders;
+    return this;
+  }
+
+  /**
    * The raw event conversion metrics.
    * @return value or {@code null} for none
    */
@@ -2636,6 +2961,35 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   public GoogleAdsSearchads360V0CommonMetrics setRawEventConversionMetrics(java.util.List<GoogleAdsSearchads360V0CommonValue> rawEventConversionMetrics) {
     this.rawEventConversionMetrics = rawEventConversionMetrics;
+    return this;
+  }
+
+  /**
+   * Revenue is the total amount you made from orders attributed to your ads. How it works: You
+   * report conversions with cart data for completed purchases on your website. Revenue is the total
+   * value of all the orders you received attributed to your ads, minus any discount. Example:
+   * Someone clicked on a Shopping ad for a hat then bought the same hat and a shirt in an order
+   * from your website. The hat is priced $10 and the shirt is priced $20. The entire order has a $5
+   * discount. The revenue from this order is $25 = ($10 + $20) - $5. This metric is only available
+   * if you report conversions with cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRevenueMicros() {
+    return revenueMicros;
+  }
+
+  /**
+   * Revenue is the total amount you made from orders attributed to your ads. How it works: You
+   * report conversions with cart data for completed purchases on your website. Revenue is the total
+   * value of all the orders you received attributed to your ads, minus any discount. Example:
+   * Someone clicked on a Shopping ad for a hat then bought the same hat and a shirt in an order
+   * from your website. The hat is priced $10 and the shirt is priced $20. The entire order has a $5
+   * discount. The revenue from this order is $25 = ($10 + $20) - $5. This metric is only available
+   * if you report conversions with cart data.
+   * @param revenueMicros revenueMicros or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setRevenueMicros(java.lang.Long revenueMicros) {
+    this.revenueMicros = revenueMicros;
     return this;
   }
 
@@ -2892,6 +3246,54 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   public GoogleAdsSearchads360V0CommonMetrics setTopImpressionPercentage(java.lang.Double topImpressionPercentage) {
     this.topImpressionPercentage = topImpressionPercentage;
+    return this;
+  }
+
+  /**
+   * The number of unique users who saw your ad during the requested time period. This metric cannot
+   * be aggregated, and can only be requested for date ranges of 92 days or less. This metric is
+   * available for following campaign types - Display, Video, Discovery and App.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getUniqueUsers() {
+    return uniqueUsers;
+  }
+
+  /**
+   * The number of unique users who saw your ad during the requested time period. This metric cannot
+   * be aggregated, and can only be requested for date ranges of 92 days or less. This metric is
+   * available for following campaign types - Display, Video, Discovery and App.
+   * @param uniqueUsers uniqueUsers or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setUniqueUsers(java.lang.Long uniqueUsers) {
+    this.uniqueUsers = uniqueUsers;
+    return this;
+  }
+
+  /**
+   * Units sold is the total number of products sold from orders attributed to your ads. How it
+   * works: You report conversions with cart data for completed purchases on your website. Units
+   * sold is the total number of products sold from all orders attributed to your ads. Example:
+   * Someone clicked on a Shopping ad for a hat then bought the same hat, a shirt and a jacket. The
+   * units sold in this order is 3. This metric is only available if you report conversions with
+   * cart data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUnitsSold() {
+    return unitsSold;
+  }
+
+  /**
+   * Units sold is the total number of products sold from orders attributed to your ads. How it
+   * works: You report conversions with cart data for completed purchases on your website. Units
+   * sold is the total number of products sold from all orders attributed to your ads. Example:
+   * Someone clicked on a Shopping ad for a hat then bought the same hat, a shirt and a jacket. The
+   * units sold in this order is 3. This metric is only available if you report conversions with
+   * cart data.
+   * @param unitsSold unitsSold or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setUnitsSold(java.lang.Double unitsSold) {
+    this.unitsSold = unitsSold;
     return this;
   }
 

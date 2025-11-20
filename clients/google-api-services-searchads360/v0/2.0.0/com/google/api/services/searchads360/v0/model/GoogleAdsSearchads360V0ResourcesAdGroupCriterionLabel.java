@@ -54,7 +54,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel extends
   /**
    * Immutable. The resource name of the ad group criterion label. Ad group criterion label resource
    * names have the form:
-   * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
+   * `customers/{owner_customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel extends
   /**
    * Immutable. The resource name of the ad group criterion label. Ad group criterion label resource
    * names have the form:
-   * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
+   * `customers/{owner_customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -124,7 +124,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel extends
   /**
    * Immutable. The resource name of the ad group criterion label. Ad group criterion label resource
    * names have the form:
-   * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
+   * `customers/{owner_customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    * @param resourceName resourceName or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel setResourceName(java.lang.String resourceName) {

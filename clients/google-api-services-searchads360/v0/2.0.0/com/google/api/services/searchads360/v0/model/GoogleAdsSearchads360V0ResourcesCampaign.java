@@ -158,6 +158,13 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   private java.util.List<java.lang.String> excludedParentAssetFieldTypes;
 
   /**
+   * Output only. Types of feeds that are attached directly to this campaign.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> feedTypes;
+
+  /**
    * Suffix used to append query parameters to landing pages that are served with parallel tracking.
    * The value may be {@code null}.
    */
@@ -703,6 +710,23 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
    */
   public GoogleAdsSearchads360V0ResourcesCampaign setExcludedParentAssetFieldTypes(java.util.List<java.lang.String> excludedParentAssetFieldTypes) {
     this.excludedParentAssetFieldTypes = excludedParentAssetFieldTypes;
+    return this;
+  }
+
+  /**
+   * Output only. Types of feeds that are attached directly to this campaign.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFeedTypes() {
+    return feedTypes;
+  }
+
+  /**
+   * Output only. Types of feeds that are attached directly to this campaign.
+   * @param feedTypes feedTypes or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaign setFeedTypes(java.util.List<java.lang.String> feedTypes) {
+    this.feedTypes = feedTypes;
     return this;
   }
 

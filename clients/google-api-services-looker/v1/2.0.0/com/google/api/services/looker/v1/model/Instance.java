@@ -187,6 +187,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private OAuthConfig oauthConfig;
 
   /**
+   * Optional. Configuration for periodic export.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PeriodicExportConfig periodicExportConfig;
+
+  /**
    * Platform edition.
    * The value may be {@code null}.
    */
@@ -640,6 +647,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setOauthConfig(OAuthConfig oauthConfig) {
     this.oauthConfig = oauthConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for periodic export.
+   * @return value or {@code null} for none
+   */
+  public PeriodicExportConfig getPeriodicExportConfig() {
+    return periodicExportConfig;
+  }
+
+  /**
+   * Optional. Configuration for periodic export.
+   * @param periodicExportConfig periodicExportConfig or {@code null} for none
+   */
+  public Instance setPeriodicExportConfig(PeriodicExportConfig periodicExportConfig) {
+    this.periodicExportConfig = periodicExportConfig;
     return this;
   }
 

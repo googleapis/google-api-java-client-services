@@ -38,6 +38,13 @@ public final class SubscriptionPurchasesAcknowledgeRequest extends com.google.ap
   private java.lang.String developerPayload;
 
   /**
+   * Optional. User account identifier in your app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExternalAccountIds externalAccountIds;
+
+  /**
    * Payload to attach to the purchase.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class SubscriptionPurchasesAcknowledgeRequest extends com.google.ap
    */
   public SubscriptionPurchasesAcknowledgeRequest setDeveloperPayload(java.lang.String developerPayload) {
     this.developerPayload = developerPayload;
+    return this;
+  }
+
+  /**
+   * Optional. User account identifier in your app.
+   * @return value or {@code null} for none
+   */
+  public ExternalAccountIds getExternalAccountIds() {
+    return externalAccountIds;
+  }
+
+  /**
+   * Optional. User account identifier in your app.
+   * @param externalAccountIds externalAccountIds or {@code null} for none
+   */
+  public SubscriptionPurchasesAcknowledgeRequest setExternalAccountIds(ExternalAccountIds externalAccountIds) {
+    this.externalAccountIds = externalAccountIds;
     return this;
   }
 

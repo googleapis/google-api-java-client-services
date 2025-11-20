@@ -95,6 +95,16 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
   private java.lang.String linkedPurchaseToken;
 
   /**
+   * Additional context for out of app purchases. This information is only present for re-
+   * subscription purchases (subscription purchases made after the previous subscription of the same
+   * product has expired) made through the Google Play subscriptions center. This field will be
+   * removed after you acknowledge the subscription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OutOfAppPurchaseContext outOfAppPurchaseContext;
+
+  /**
    * Additional context around paused subscriptions. Only present if the subscription currently has
    * subscription_state SUBSCRIPTION_STATE_PAUSED.
    * The value may be {@code null}.
@@ -273,6 +283,29 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
    */
   public SubscriptionPurchaseV2 setLinkedPurchaseToken(java.lang.String linkedPurchaseToken) {
     this.linkedPurchaseToken = linkedPurchaseToken;
+    return this;
+  }
+
+  /**
+   * Additional context for out of app purchases. This information is only present for re-
+   * subscription purchases (subscription purchases made after the previous subscription of the same
+   * product has expired) made through the Google Play subscriptions center. This field will be
+   * removed after you acknowledge the subscription.
+   * @return value or {@code null} for none
+   */
+  public OutOfAppPurchaseContext getOutOfAppPurchaseContext() {
+    return outOfAppPurchaseContext;
+  }
+
+  /**
+   * Additional context for out of app purchases. This information is only present for re-
+   * subscription purchases (subscription purchases made after the previous subscription of the same
+   * product has expired) made through the Google Play subscriptions center. This field will be
+   * removed after you acknowledge the subscription.
+   * @param outOfAppPurchaseContext outOfAppPurchaseContext or {@code null} for none
+   */
+  public SubscriptionPurchaseV2 setOutOfAppPurchaseContext(OutOfAppPurchaseContext outOfAppPurchaseContext) {
+    this.outOfAppPurchaseContext = outOfAppPurchaseContext;
     return this;
   }
 

@@ -38,7 +38,8 @@ public final class AwsWrappedKeyInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The URI of the AWS KMS key used to decrypt the DEK. Should be in the format of
-   * "arn:{partition}:kms:{region}:{account_id}:key/{key_id}"
+   * `arn:{partition}:kms:{region}:{account_id}:key/{key_id}` or `aws-
+   * kms://arn:{partition}:kms:{region}:{account_id}:key/{key_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,7 @@ public final class AwsWrappedKeyInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The Amazon Resource Name of the IAM Role to assume for KMS decryption access. Should
-   * be in the format of "arn:{partition}:iam::{account_id}:role/{role_name}"
+   * be in the format of `arn:{partition}:iam::{account_id}:role/{role_name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +79,8 @@ public final class AwsWrappedKeyInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The URI of the AWS KMS key used to decrypt the DEK. Should be in the format of
-   * "arn:{partition}:kms:{region}:{account_id}:key/{key_id}"
+   * `arn:{partition}:kms:{region}:{account_id}:key/{key_id}` or `aws-
+   * kms://arn:{partition}:kms:{region}:{account_id}:key/{key_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getKekUri() {
@@ -87,7 +89,8 @@ public final class AwsWrappedKeyInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The URI of the AWS KMS key used to decrypt the DEK. Should be in the format of
-   * "arn:{partition}:kms:{region}:{account_id}:key/{key_id}"
+   * `arn:{partition}:kms:{region}:{account_id}:key/{key_id}` or `aws-
+   * kms://arn:{partition}:kms:{region}:{account_id}:key/{key_id}`
    * @param kekUri kekUri or {@code null} for none
    */
   public AwsWrappedKeyInfo setKekUri(java.lang.String kekUri) {
@@ -114,7 +117,7 @@ public final class AwsWrappedKeyInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The Amazon Resource Name of the IAM Role to assume for KMS decryption access. Should
-   * be in the format of "arn:{partition}:iam::{account_id}:role/{role_name}"
+   * be in the format of `arn:{partition}:iam::{account_id}:role/{role_name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getRoleArn() {
@@ -123,7 +126,7 @@ public final class AwsWrappedKeyInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The Amazon Resource Name of the IAM Role to assume for KMS decryption access. Should
-   * be in the format of "arn:{partition}:iam::{account_id}:role/{role_name}"
+   * be in the format of `arn:{partition}:iam::{account_id}:role/{role_name}`
    * @param roleArn roleArn or {@code null} for none
    */
   public AwsWrappedKeyInfo setRoleArn(java.lang.String roleArn) {

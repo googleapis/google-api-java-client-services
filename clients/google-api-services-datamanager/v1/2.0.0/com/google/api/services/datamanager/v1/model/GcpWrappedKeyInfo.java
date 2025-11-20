@@ -39,7 +39,8 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   /**
    * Required. Google Cloud Platform [Cloud Key Management Service resource
    * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the format of
-   * "projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}".
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}` or `gcp-
+   * kms://projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +81,8 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   /**
    * Required. Google Cloud Platform [Cloud Key Management Service resource
    * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the format of
-   * "projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}".
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}` or `gcp-
+   * kms://projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}`
    * @return value or {@code null} for none
    */
   public java.lang.String getKekUri() {
@@ -90,7 +92,8 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   /**
    * Required. Google Cloud Platform [Cloud Key Management Service resource
    * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the format of
-   * "projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}".
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}` or `gcp-
+   * kms://projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}`
    * @param kekUri kekUri or {@code null} for none
    */
   public GcpWrappedKeyInfo setKekUri(java.lang.String kekUri) {

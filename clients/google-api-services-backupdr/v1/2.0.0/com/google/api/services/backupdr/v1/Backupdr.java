@@ -6902,14 +6902,21 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               /**
                * Optional. A filter expression that filters the results fetched in the response. The
                * expression must specify the field name, a comparison operator, and the value that
-               * you want to use for filtering. Supported fields:
+               * you want to use for filtering. Supported fields: * name * state * backup_type *
+               * create_time * expire_time * enforced_retention_end_time *
+               * gcp_backup_plan_info.backup_plan *
+               * cloud_sql_instance_backup_properties.instance_tier *
+               * cloud_sql_instance_backup_properties.database_installed_version
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** Optional. A filter expression that filters the results fetched in the response. The expression must
              specify the field name, a comparison operator, and the value that you want to use for filtering.
-             Supported fields:
+             Supported fields: * name * state * backup_type * create_time * expire_time *
+             enforced_retention_end_time * gcp_backup_plan_info.backup_plan *
+             cloud_sql_instance_backup_properties.instance_tier *
+             cloud_sql_instance_backup_properties.database_installed_version
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -6918,7 +6925,11 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               /**
                * Optional. A filter expression that filters the results fetched in the response. The
                * expression must specify the field name, a comparison operator, and the value that
-               * you want to use for filtering. Supported fields:
+               * you want to use for filtering. Supported fields: * name * state * backup_type *
+               * create_time * expire_time * enforced_retention_end_time *
+               * gcp_backup_plan_info.backup_plan *
+               * cloud_sql_instance_backup_properties.instance_tier *
+               * cloud_sql_instance_backup_properties.database_installed_version
                */
               public FetchForResourceType setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -6927,13 +6938,13 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
               /**
                * Optional. A comma-separated list of fields to order by, sorted in ascending order.
-               * Use "desc" after a field name for descending.
+               * Use "desc" after a field name for descending. Supported fields: * name
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
               /** Optional. A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after
-             a field name for descending.
+             a field name for descending. Supported fields: * name
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
@@ -6941,7 +6952,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
               /**
                * Optional. A comma-separated list of fields to order by, sorted in ascending order.
-               * Use "desc" after a field name for descending.
+               * Use "desc" after a field name for descending. Supported fields: * name
                */
               public FetchForResourceType setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
@@ -11049,6 +11060,136 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
        */
       public class Trial {
 
+        /**
+         * Ends the trial for a project
+         *
+         * Create a request for the method "trial.end".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link End#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this trial will be ended.
+         * @param content the {@link com.google.api.services.backupdr.v1.model.EndTrialRequest}
+         * @return the request
+         */
+        public End end(java.lang.String parent, com.google.api.services.backupdr.v1.model.EndTrialRequest content) throws java.io.IOException {
+          End result = new End(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class End extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Trial> {
+
+          private static final String REST_PATH = "v1/{+parent}/trial:end";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Ends the trial for a project
+           *
+           * Create a request for the method "trial.end".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link End#execute()} method to invoke the remote operation. <p>
+           * {@link End#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this trial will be ended.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.EndTrialRequest}
+           * @since 1.13
+           */
+          protected End(java.lang.String parent, com.google.api.services.backupdr.v1.model.EndTrialRequest content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Trial.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public End set$Xgafv(java.lang.String $Xgafv) {
+            return (End) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public End setAccessToken(java.lang.String accessToken) {
+            return (End) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public End setAlt(java.lang.String alt) {
+            return (End) super.setAlt(alt);
+          }
+
+          @Override
+          public End setCallback(java.lang.String callback) {
+            return (End) super.setCallback(callback);
+          }
+
+          @Override
+          public End setFields(java.lang.String fields) {
+            return (End) super.setFields(fields);
+          }
+
+          @Override
+          public End setKey(java.lang.String key) {
+            return (End) super.setKey(key);
+          }
+
+          @Override
+          public End setOauthToken(java.lang.String oauthToken) {
+            return (End) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public End setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (End) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public End setQuotaUser(java.lang.String quotaUser) {
+            return (End) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public End setUploadType(java.lang.String uploadType) {
+            return (End) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public End setUploadProtocol(java.lang.String uploadProtocol) {
+            return (End) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource where this trial will be ended. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this trial will be ended.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource where this trial will be ended. */
+          public End setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public End set(String parameterName, Object value) {
+            return (End) super.set(parameterName, value);
+          }
+        }
         /**
          * Subscribes to a trial for a project
          *

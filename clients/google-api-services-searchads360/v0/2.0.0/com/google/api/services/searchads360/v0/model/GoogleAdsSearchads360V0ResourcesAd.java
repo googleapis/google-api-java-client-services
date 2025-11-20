@@ -52,6 +52,34 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
   private GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo expandedTextAd;
 
   /**
+   * A list of final app URLs that will be used on mobile if the user has the specific app
+   * installed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0CommonFinalAppUrl> finalAppUrls;
+
+  static {
+    // hack to force ProGuard to consider GoogleAdsSearchads360V0CommonFinalAppUrl used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V0CommonFinalAppUrl.class);
+  }
+
+  /**
+   * The list of possible final mobile URLs after all cross-domain redirects for the ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> finalMobileUrls;
+
+  /**
+   * The suffix to use when constructing a final URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String finalUrlSuffix;
+
+  /**
    * The list of possible final URLs after all cross-domain redirects for the ad.
    * The value may be {@code null}.
    */
@@ -101,6 +129,13 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo textAd;
+
+  /**
+   * The URL template for constructing a tracking URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trackingUrlTemplate;
 
   /**
    * Output only. The type of ad.
@@ -157,6 +192,59 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
    */
   public GoogleAdsSearchads360V0ResourcesAd setExpandedTextAd(GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo expandedTextAd) {
     this.expandedTextAd = expandedTextAd;
+    return this;
+  }
+
+  /**
+   * A list of final app URLs that will be used on mobile if the user has the specific app
+   * installed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0CommonFinalAppUrl> getFinalAppUrls() {
+    return finalAppUrls;
+  }
+
+  /**
+   * A list of final app URLs that will be used on mobile if the user has the specific app
+   * installed.
+   * @param finalAppUrls finalAppUrls or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAd setFinalAppUrls(java.util.List<GoogleAdsSearchads360V0CommonFinalAppUrl> finalAppUrls) {
+    this.finalAppUrls = finalAppUrls;
+    return this;
+  }
+
+  /**
+   * The list of possible final mobile URLs after all cross-domain redirects for the ad.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFinalMobileUrls() {
+    return finalMobileUrls;
+  }
+
+  /**
+   * The list of possible final mobile URLs after all cross-domain redirects for the ad.
+   * @param finalMobileUrls finalMobileUrls or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAd setFinalMobileUrls(java.util.List<java.lang.String> finalMobileUrls) {
+    this.finalMobileUrls = finalMobileUrls;
+    return this;
+  }
+
+  /**
+   * The suffix to use when constructing a final URL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFinalUrlSuffix() {
+    return finalUrlSuffix;
+  }
+
+  /**
+   * The suffix to use when constructing a final URL.
+   * @param finalUrlSuffix finalUrlSuffix or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAd setFinalUrlSuffix(java.lang.String finalUrlSuffix) {
+    this.finalUrlSuffix = finalUrlSuffix;
     return this;
   }
 
@@ -280,6 +368,23 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
    */
   public GoogleAdsSearchads360V0ResourcesAd setTextAd(GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo textAd) {
     this.textAd = textAd;
+    return this;
+  }
+
+  /**
+   * The URL template for constructing a tracking URL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrackingUrlTemplate() {
+    return trackingUrlTemplate;
+  }
+
+  /**
+   * The URL template for constructing a tracking URL.
+   * @param trackingUrlTemplate trackingUrlTemplate or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAd setTrackingUrlTemplate(java.lang.String trackingUrlTemplate) {
+    this.trackingUrlTemplate = trackingUrlTemplate;
     return this;
   }
 

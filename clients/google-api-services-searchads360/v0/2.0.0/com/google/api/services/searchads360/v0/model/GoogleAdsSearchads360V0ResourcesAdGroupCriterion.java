@@ -107,6 +107,13 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   private java.lang.String engineStatus;
 
   /**
+   * The list of possible final mobile URLs after all cross-domain redirects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> finalMobileUrls;
+
+  /**
    * URL template for appending params to final URL.
    * The value may be {@code null}.
    */
@@ -219,6 +226,20 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The list of mappings used to substitute custom parameter tags in a `tracking_url_template`,
+   * `final_urls`, or `mobile_final_urls`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0CommonCustomParameter> urlCustomParameters;
+
+  static {
+    // hack to force ProGuard to consider GoogleAdsSearchads360V0CommonCustomParameter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V0CommonCustomParameter.class);
+  }
 
   /**
    * Immutable. User List.
@@ -411,6 +432,23 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setEngineStatus(java.lang.String engineStatus) {
     this.engineStatus = engineStatus;
+    return this;
+  }
+
+  /**
+   * The list of possible final mobile URLs after all cross-domain redirects.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFinalMobileUrls() {
+    return finalMobileUrls;
+  }
+
+  /**
+   * The list of possible final mobile URLs after all cross-domain redirects.
+   * @param finalMobileUrls finalMobileUrls or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setFinalMobileUrls(java.util.List<java.lang.String> finalMobileUrls) {
+    this.finalMobileUrls = finalMobileUrls;
     return this;
   }
 
@@ -684,6 +722,25 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * The list of mappings used to substitute custom parameter tags in a `tracking_url_template`,
+   * `final_urls`, or `mobile_final_urls`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0CommonCustomParameter> getUrlCustomParameters() {
+    return urlCustomParameters;
+  }
+
+  /**
+   * The list of mappings used to substitute custom parameter tags in a `tracking_url_template`,
+   * `final_urls`, or `mobile_final_urls`.
+   * @param urlCustomParameters urlCustomParameters or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setUrlCustomParameters(java.util.List<GoogleAdsSearchads360V0CommonCustomParameter> urlCustomParameters) {
+    this.urlCustomParameters = urlCustomParameters;
     return this;
   }
 

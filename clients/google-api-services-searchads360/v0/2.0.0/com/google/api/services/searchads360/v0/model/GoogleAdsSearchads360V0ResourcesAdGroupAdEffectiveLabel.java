@@ -55,7 +55,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel exten
   /**
    * Immutable. The resource name of the ad group ad effective label. Ad group ad effective label
    * resource names have the form:
-   * `customers/{customer_id}/adGroupAdEffectiveLabels/{ad_group_id}~{ad_id}~{label_id}`
+   * `customers/{owner_customer_id}/adGroupAdEffectiveLabels/{ad_group_id}~{ad_id}~{label_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel exten
   /**
    * Immutable. The resource name of the ad group ad effective label. Ad group ad effective label
    * resource names have the form:
-   * `customers/{customer_id}/adGroupAdEffectiveLabels/{ad_group_id}~{ad_id}~{label_id}`
+   * `customers/{owner_customer_id}/adGroupAdEffectiveLabels/{ad_group_id}~{ad_id}~{label_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -125,7 +125,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel exten
   /**
    * Immutable. The resource name of the ad group ad effective label. Ad group ad effective label
    * resource names have the form:
-   * `customers/{customer_id}/adGroupAdEffectiveLabels/{ad_group_id}~{ad_id}~{label_id}`
+   * `customers/{owner_customer_id}/adGroupAdEffectiveLabels/{ad_group_id}~{ad_id}~{label_id}`
    * @param resourceName resourceName or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel setResourceName(java.lang.String resourceName) {

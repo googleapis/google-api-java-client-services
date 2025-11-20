@@ -47,7 +47,7 @@ public final class GoogleAdsSearchads360V0ResourcesLabel extends com.google.api.
 
   /**
    * Immutable. Name of the resource. Label resource names have the form:
-   * `customers/{customer_id}/labels/{label_id}`
+   * `customers/{owner_customer_id}/labels/{label_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class GoogleAdsSearchads360V0ResourcesLabel extends com.google.api.
 
   /**
    * Immutable. Name of the resource. Label resource names have the form:
-   * `customers/{customer_id}/labels/{label_id}`
+   * `customers/{owner_customer_id}/labels/{label_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -114,7 +114,7 @@ public final class GoogleAdsSearchads360V0ResourcesLabel extends com.google.api.
 
   /**
    * Immutable. Name of the resource. Label resource names have the form:
-   * `customers/{customer_id}/labels/{label_id}`
+   * `customers/{owner_customer_id}/labels/{label_id}`
    * @param resourceName resourceName or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesLabel setResourceName(java.lang.String resourceName) {

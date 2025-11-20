@@ -45,11 +45,19 @@ public final class SubscriptionDetails extends com.google.api.client.json.Generi
   private java.lang.String offerId;
 
   /**
-   * The pricing phase for the billing period funded by this order.
+   * The pricing phase for the billing period funded by this order. Deprecated. Use
+   * offer_phase_details instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String offerPhase;
+
+  /**
+   * The pricing phase details for the entitlement period funded by this order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OfferPhaseDetails offerPhaseDetails;
 
   /**
    * The end of the billing period funded by this order. This is a snapshot of the billing/service
@@ -105,7 +113,8 @@ public final class SubscriptionDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The pricing phase for the billing period funded by this order.
+   * The pricing phase for the billing period funded by this order. Deprecated. Use
+   * offer_phase_details instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferPhase() {
@@ -113,11 +122,29 @@ public final class SubscriptionDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The pricing phase for the billing period funded by this order.
+   * The pricing phase for the billing period funded by this order. Deprecated. Use
+   * offer_phase_details instead.
    * @param offerPhase offerPhase or {@code null} for none
    */
   public SubscriptionDetails setOfferPhase(java.lang.String offerPhase) {
     this.offerPhase = offerPhase;
+    return this;
+  }
+
+  /**
+   * The pricing phase details for the entitlement period funded by this order.
+   * @return value or {@code null} for none
+   */
+  public OfferPhaseDetails getOfferPhaseDetails() {
+    return offerPhaseDetails;
+  }
+
+  /**
+   * The pricing phase details for the entitlement period funded by this order.
+   * @param offerPhaseDetails offerPhaseDetails or {@code null} for none
+   */
+  public SubscriptionDetails setOfferPhaseDetails(OfferPhaseDetails offerPhaseDetails) {
+    this.offerPhaseDetails = offerPhaseDetails;
     return this;
   }
 

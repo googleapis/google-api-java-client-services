@@ -60,6 +60,14 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
   private String expiryTime;
 
   /**
+   * Details of the item being replaced. This field is only populated if this item replaced another
+   * item in a previous subscription and is only available for 60 days after the purchase time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ItemReplacement itemReplacement;
+
+  /**
    * The order id of the latest successful order associated with this item. Not present if the item
    * is not owned by the user yet (e.g. the item being deferred replaced to).
    * The value may be {@code null}.
@@ -162,6 +170,25 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
    */
   public SubscriptionPurchaseLineItem setExpiryTime(String expiryTime) {
     this.expiryTime = expiryTime;
+    return this;
+  }
+
+  /**
+   * Details of the item being replaced. This field is only populated if this item replaced another
+   * item in a previous subscription and is only available for 60 days after the purchase time.
+   * @return value or {@code null} for none
+   */
+  public ItemReplacement getItemReplacement() {
+    return itemReplacement;
+  }
+
+  /**
+   * Details of the item being replaced. This field is only populated if this item replaced another
+   * item in a previous subscription and is only available for 60 days after the purchase time.
+   * @param itemReplacement itemReplacement or {@code null} for none
+   */
+  public SubscriptionPurchaseLineItem setItemReplacement(ItemReplacement itemReplacement) {
+    this.itemReplacement = itemReplacement;
     return this;
   }
 

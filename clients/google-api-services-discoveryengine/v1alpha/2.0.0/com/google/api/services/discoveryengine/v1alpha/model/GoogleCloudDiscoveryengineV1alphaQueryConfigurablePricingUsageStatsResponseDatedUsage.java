@@ -17,8 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Backend response for a Diff get version response. For details on the Scotty Diff protocol, visit
- * http://go/scotty-diff-protocol.
+ * A list of usages for a specific day.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -28,64 +27,64 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GdataDiffVersionResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total size of the server object.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long objectSizeBytes;
-
-  /**
-   * The version of the object stored at the server.
+   * The date of the usage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String objectVersion;
+  private GoogleTypeDate date;
 
   /**
-   * The total size of the server object.
+   * The usage value on the date.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double usage;
+
+  /**
+   * The date of the usage.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getObjectSizeBytes() {
-    return objectSizeBytes;
+  public GoogleTypeDate getDate() {
+    return date;
   }
 
   /**
-   * The total size of the server object.
-   * @param objectSizeBytes objectSizeBytes or {@code null} for none
+   * The date of the usage.
+   * @param date date or {@code null} for none
    */
-  public GdataDiffVersionResponse setObjectSizeBytes(java.lang.Long objectSizeBytes) {
-    this.objectSizeBytes = objectSizeBytes;
+  public GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage setDate(GoogleTypeDate date) {
+    this.date = date;
     return this;
   }
 
   /**
-   * The version of the object stored at the server.
+   * The usage value on the date.
    * @return value or {@code null} for none
    */
-  public java.lang.String getObjectVersion() {
-    return objectVersion;
+  public java.lang.Double getUsage() {
+    return usage;
   }
 
   /**
-   * The version of the object stored at the server.
-   * @param objectVersion objectVersion or {@code null} for none
+   * The usage value on the date.
+   * @param usage usage or {@code null} for none
    */
-  public GdataDiffVersionResponse setObjectVersion(java.lang.String objectVersion) {
-    this.objectVersion = objectVersion;
+  public GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage setUsage(java.lang.Double usage) {
+    this.usage = usage;
     return this;
   }
 
   @Override
-  public GdataDiffVersionResponse set(String fieldName, Object value) {
-    return (GdataDiffVersionResponse) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage) super.set(fieldName, value);
   }
 
   @Override
-  public GdataDiffVersionResponse clone() {
-    return (GdataDiffVersionResponse) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage clone() {
+    return (GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage) super.clone();
   }
 
 }

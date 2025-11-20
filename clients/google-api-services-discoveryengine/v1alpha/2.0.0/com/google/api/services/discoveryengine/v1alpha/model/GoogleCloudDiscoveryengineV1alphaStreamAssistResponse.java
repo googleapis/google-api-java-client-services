@@ -51,6 +51,13 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistResponse extends
   private java.lang.String assistToken;
 
   /**
+   * The tool names of the tools that were invoked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> invocationTools;
+
+  /**
    * Session information. Only included in the final StreamAssistResponse of the response stream.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistResponse extends
    */
   public GoogleCloudDiscoveryengineV1alphaStreamAssistResponse setAssistToken(java.lang.String assistToken) {
     this.assistToken = assistToken;
+    return this;
+  }
+
+  /**
+   * The tool names of the tools that were invoked.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getInvocationTools() {
+    return invocationTools;
+  }
+
+  /**
+   * The tool names of the tools that were invoked.
+   * @param invocationTools invocationTools or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaStreamAssistResponse setInvocationTools(java.util.List<java.lang.String> invocationTools) {
+    this.invocationTools = invocationTools;
     return this;
   }
 

@@ -27,7 +27,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsMetricUsage extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseMetricUsage extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of usages for this resource type, chronologically sorted by date. This is populated
@@ -35,12 +35,12 @@ public final class GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStat
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsDatedUsage> datedUsages;
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage> datedUsages;
 
   static {
-    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsDatedUsage used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsDatedUsage.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage.class);
   }
 
   /**
@@ -51,18 +51,18 @@ public final class GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStat
   private java.lang.String metricType;
 
   /**
-   * The list of total usages for this resource type
+   * The total usage for this resource type. This is populated for metrics like TOTAL_STORAGE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.Double> totalUsages;
+  private java.lang.Double totalUsage;
 
   /**
    * The list of usages for this resource type, chronologically sorted by date. This is populated
    * for metrics with daily aggregation like DAILY_MDN_QPM.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsDatedUsage> getDatedUsages() {
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage> getDatedUsages() {
     return datedUsages;
   }
 
@@ -71,7 +71,7 @@ public final class GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStat
    * for metrics with daily aggregation like DAILY_MDN_QPM.
    * @param datedUsages datedUsages or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsMetricUsage setDatedUsages(java.util.List<GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsDatedUsage> datedUsages) {
+  public GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseMetricUsage setDatedUsages(java.util.List<GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseDatedUsage> datedUsages) {
     this.datedUsages = datedUsages;
     return this;
   }
@@ -88,36 +88,36 @@ public final class GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStat
    * The metric type.
    * @param metricType metricType or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsMetricUsage setMetricType(java.lang.String metricType) {
+  public GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseMetricUsage setMetricType(java.lang.String metricType) {
     this.metricType = metricType;
     return this;
   }
 
   /**
-   * The list of total usages for this resource type
+   * The total usage for this resource type. This is populated for metrics like TOTAL_STORAGE.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.Double> getTotalUsages() {
-    return totalUsages;
+  public java.lang.Double getTotalUsage() {
+    return totalUsage;
   }
 
   /**
-   * The list of total usages for this resource type
-   * @param totalUsages totalUsages or {@code null} for none
+   * The total usage for this resource type. This is populated for metrics like TOTAL_STORAGE.
+   * @param totalUsage totalUsage or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsMetricUsage setTotalUsages(java.util.List<java.lang.Double> totalUsages) {
-    this.totalUsages = totalUsages;
+  public GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseMetricUsage setTotalUsage(java.lang.Double totalUsage) {
+    this.totalUsage = totalUsage;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsMetricUsage set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsMetricUsage) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseMetricUsage set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseMetricUsage) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsMetricUsage clone() {
-    return (GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStatsMetricUsage) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseMetricUsage clone() {
+    return (GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponseMetricUsage) super.clone();
   }
 
 }

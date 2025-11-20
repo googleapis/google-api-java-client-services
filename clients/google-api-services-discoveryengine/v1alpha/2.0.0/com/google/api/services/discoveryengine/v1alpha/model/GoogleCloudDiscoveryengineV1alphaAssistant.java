@@ -37,6 +37,22 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
   private GoogleCloudDiscoveryengineV1alphaAssistantCustomerPolicy customerPolicy;
 
   /**
+   * Optional. Description for additional information. Expected to be shown on the configuration UI,
+   * not to the users of the assistant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Required. The assistant display name. It must be a UTF-8 encoded string with a length limit of
+   * 128 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Optional. Note: not implemented yet. Use enabled_actions instead. The enabled tools on this
    * assistant. The keys are connector name, for example
    * "projects/{projectId}/locations/{locationId}/collections/{collectionId}/dataconnector The
@@ -86,6 +102,44 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaAssistant setCustomerPolicy(GoogleCloudDiscoveryengineV1alphaAssistantCustomerPolicy customerPolicy) {
     this.customerPolicy = customerPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Description for additional information. Expected to be shown on the configuration UI,
+   * not to the users of the assistant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. Description for additional information. Expected to be shown on the configuration UI,
+   * not to the users of the assistant.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAssistant setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Required. The assistant display name. It must be a UTF-8 encoded string with a length limit of
+   * 128 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Required. The assistant display name. It must be a UTF-8 encoded string with a length limit of
+   * 128 characters.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAssistant setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

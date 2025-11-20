@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1AssistantGenerationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The list of models that are allowed to be used for assistant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedModelIds;
+
+  /**
    * The default language to use for the generation of the assistant response. Use an ISO 639-1
    * language code such as `en`. If not specified, the language will be automatically detected.
    * The value may be {@code null}.
@@ -38,12 +45,36 @@ public final class GoogleCloudDiscoveryengineV1AssistantGenerationConfig extends
   private java.lang.String defaultLanguage;
 
   /**
+   * Optional. The default model to use for assistant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultModelId;
+
+  /**
    * System instruction, also known as the prompt preamble for LLM calls. See also
    * https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/system-instructions
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1AssistantGenerationConfigSystemInstruction systemInstruction;
+
+  /**
+   * Optional. The list of models that are allowed to be used for assistant.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedModelIds() {
+    return allowedModelIds;
+  }
+
+  /**
+   * Optional. The list of models that are allowed to be used for assistant.
+   * @param allowedModelIds allowedModelIds or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistantGenerationConfig setAllowedModelIds(java.util.List<java.lang.String> allowedModelIds) {
+    this.allowedModelIds = allowedModelIds;
+    return this;
+  }
 
   /**
    * The default language to use for the generation of the assistant response. Use an ISO 639-1
@@ -61,6 +92,23 @@ public final class GoogleCloudDiscoveryengineV1AssistantGenerationConfig extends
    */
   public GoogleCloudDiscoveryengineV1AssistantGenerationConfig setDefaultLanguage(java.lang.String defaultLanguage) {
     this.defaultLanguage = defaultLanguage;
+    return this;
+  }
+
+  /**
+   * Optional. The default model to use for assistant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultModelId() {
+    return defaultModelId;
+  }
+
+  /**
+   * Optional. The default model to use for assistant.
+   * @param defaultModelId defaultModelId or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistantGenerationConfig setDefaultModelId(java.lang.String defaultModelId) {
+    this.defaultModelId = defaultModelId;
     return this;
   }
 

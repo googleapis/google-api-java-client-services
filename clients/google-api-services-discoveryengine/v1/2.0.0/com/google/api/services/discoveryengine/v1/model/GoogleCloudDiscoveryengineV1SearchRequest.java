@@ -67,6 +67,18 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   private GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec contentSearchSpec;
 
   /**
+   * Optional. Crowding specifications for improving result diversity. If multiple CrowdingSpecs are
+   * specified, crowding will be evaluated on each unique combination of the `field` values, and
+   * max_count will be the maximum value of `max_count` across all CrowdingSpecs. For example, if
+   * the first CrowdingSpec has `field` = "color" and `max_count` = 3, and the second CrowdingSpec
+   * has `field` = "size" and `max_count` = 2, then after 3 documents that share the same color AND
+   * size have been returned, subsequent ones should be removed or demoted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1SearchRequestCrowdingSpec> crowdingSpecs;
+
+  /**
    * Specifications that define the specific DataStores to be searched, along with configurations
    * for those data stores. This is only considered for Engines with multiple data stores. For
    * engines with a single data store, the specs directly under SearchRequest should be used.
@@ -163,6 +175,21 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String orderBy;
+
+  /**
+   * Optional. The categories associated with a category page. Must be set for category navigation
+   * queries to achieve good search quality. The format should be the same as
+   * UserEvent.PageInfo.page_category. This field is the equivalent of the query for browse
+   * (navigation) queries. It's used by the browse model when the query is empty. If the field is
+   * empty, it will not be used by the browse model. To represent full path of a category, use '>'
+   * character to separate different hierarchies. If '>' is part of the category name, replace it
+   * with other character(s). For example, `Graphics Cards > RTX>4090 > Founders Edition` where "RTX
+   * > 4090" represents one level, can be rewritten as `Graphics Cards > RTX_4090 > Founders
+   * Edition`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> pageCategories;
 
   /**
    * Maximum number of Documents to return. The maximum allowed value depends on the data type.
@@ -454,6 +481,33 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   }
 
   /**
+   * Optional. Crowding specifications for improving result diversity. If multiple CrowdingSpecs are
+   * specified, crowding will be evaluated on each unique combination of the `field` values, and
+   * max_count will be the maximum value of `max_count` across all CrowdingSpecs. For example, if
+   * the first CrowdingSpec has `field` = "color" and `max_count` = 3, and the second CrowdingSpec
+   * has `field` = "size" and `max_count` = 2, then after 3 documents that share the same color AND
+   * size have been returned, subsequent ones should be removed or demoted.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1SearchRequestCrowdingSpec> getCrowdingSpecs() {
+    return crowdingSpecs;
+  }
+
+  /**
+   * Optional. Crowding specifications for improving result diversity. If multiple CrowdingSpecs are
+   * specified, crowding will be evaluated on each unique combination of the `field` values, and
+   * max_count will be the maximum value of `max_count` across all CrowdingSpecs. For example, if
+   * the first CrowdingSpec has `field` = "color" and `max_count` = 3, and the second CrowdingSpec
+   * has `field` = "size" and `max_count` = 2, then after 3 documents that share the same color AND
+   * size have been returned, subsequent ones should be removed or demoted.
+   * @param crowdingSpecs crowdingSpecs or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setCrowdingSpecs(java.util.List<GoogleCloudDiscoveryengineV1SearchRequestCrowdingSpec> crowdingSpecs) {
+    this.crowdingSpecs = crowdingSpecs;
+    return this;
+  }
+
+  /**
    * Specifications that define the specific DataStores to be searched, along with configurations
    * for those data stores. This is only considered for Engines with multiple data stores. For
    * engines with a single data store, the specs directly under SearchRequest should be used.
@@ -676,6 +730,39 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setOrderBy(java.lang.String orderBy) {
     this.orderBy = orderBy;
+    return this;
+  }
+
+  /**
+   * Optional. The categories associated with a category page. Must be set for category navigation
+   * queries to achieve good search quality. The format should be the same as
+   * UserEvent.PageInfo.page_category. This field is the equivalent of the query for browse
+   * (navigation) queries. It's used by the browse model when the query is empty. If the field is
+   * empty, it will not be used by the browse model. To represent full path of a category, use '>'
+   * character to separate different hierarchies. If '>' is part of the category name, replace it
+   * with other character(s). For example, `Graphics Cards > RTX>4090 > Founders Edition` where "RTX
+   * > 4090" represents one level, can be rewritten as `Graphics Cards > RTX_4090 > Founders
+   * Edition`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPageCategories() {
+    return pageCategories;
+  }
+
+  /**
+   * Optional. The categories associated with a category page. Must be set for category navigation
+   * queries to achieve good search quality. The format should be the same as
+   * UserEvent.PageInfo.page_category. This field is the equivalent of the query for browse
+   * (navigation) queries. It's used by the browse model when the query is empty. If the field is
+   * empty, it will not be used by the browse model. To represent full path of a category, use '>'
+   * character to separate different hierarchies. If '>' is part of the category name, replace it
+   * with other character(s). For example, `Graphics Cards > RTX>4090 > Founders Edition` where "RTX
+   * > 4090" represents one level, can be rewritten as `Graphics Cards > RTX_4090 > Founders
+   * Edition`
+   * @param pageCategories pageCategories or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setPageCategories(java.util.List<java.lang.String> pageCategories) {
+    this.pageCategories = pageCategories;
     return this;
   }
 

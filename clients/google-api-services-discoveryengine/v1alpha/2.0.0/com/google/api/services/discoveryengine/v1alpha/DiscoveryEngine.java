@@ -779,426 +779,6 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
   }
 
   /**
-   * An accessor for creating requests from the Media collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
-   *   {@code DiscoveryEngine.Media.List request = discoveryengine.media().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Media media() {
-    return new Media();
-  }
-
-  /**
-   * The "media" collection of methods.
-   */
-  public class Media {
-
-    /**
-     * Downloads a file from the session.
-     *
-     * Create a request for the method "media.download".
-     *
-     * This request holds the parameters needed by the discoveryengine server.  After setting any
-     * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
-     *        ions/{collection}/engines/{engine}/sessions/{session}`
-     * @return the request
-     */
-    public Download download(java.lang.String name) throws java.io.IOException {
-      Download result = new Download(name);
-      initialize(result);
-      return result;
-    }
-
-    public class Download extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GdataMedia> {
-
-      private static final String REST_PATH = "v1alpha/{+name}:downloadFile";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
-
-      /**
-       * Downloads a file from the session.
-       *
-       * Create a request for the method "media.download".
-       *
-       * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
-     *        ions/{collection}/engines/{engine}/sessions/{session}`
-       * @since 1.13
-       */
-      protected Download(java.lang.String name) {
-        super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GdataMedia.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
-        }
-        initializeMediaDownload();
-      }
-
-      @Override
-      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
-        super.executeMediaAndDownloadTo(outputStream);
-      }
-
-      @Override
-      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
-        return super.executeMediaAsInputStream();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
-        return super.executeMedia();
-      }
-
-      @Override
-      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
-        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
-            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
-        return new com.google.api.client.http.GenericUrl(
-            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public Download set$Xgafv(java.lang.String $Xgafv) {
-        return (Download) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Download setAccessToken(java.lang.String accessToken) {
-        return (Download) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Download setAlt(java.lang.String alt) {
-        return (Download) super.setAlt(alt);
-      }
-
-      @Override
-      public Download setCallback(java.lang.String callback) {
-        return (Download) super.setCallback(callback);
-      }
-
-      @Override
-      public Download setFields(java.lang.String fields) {
-        return (Download) super.setFields(fields);
-      }
-
-      @Override
-      public Download setKey(java.lang.String key) {
-        return (Download) super.setKey(key);
-      }
-
-      @Override
-      public Download setOauthToken(java.lang.String oauthToken) {
-        return (Download) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Download) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Download setQuotaUser(java.lang.String quotaUser) {
-        return (Download) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Download setUploadType(java.lang.String uploadType) {
-        return (Download) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Download setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Download) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
-       * }/collections/{collection}/engines/{engine}/sessions/{session}`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collec
-     tions/{collection}/engines/{engine}/sessions/{session}`
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
-       * }/collections/{collection}/engines/{engine}/sessions/{session}`
-       */
-      public Download setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /** Required. The ID of the file to be downloaded. */
-      @com.google.api.client.util.Key
-      private java.lang.String fileId;
-
-      /** Required. The ID of the file to be downloaded.
-       */
-      public java.lang.String getFileId() {
-        return fileId;
-      }
-
-      /** Required. The ID of the file to be downloaded. */
-      public Download setFileId(java.lang.String fileId) {
-        this.fileId = fileId;
-        return this;
-      }
-
-      /** Optional. The ID of the view to be downloaded. */
-      @com.google.api.client.util.Key
-      private java.lang.String viewId;
-
-      /** Optional. The ID of the view to be downloaded.
-       */
-      public java.lang.String getViewId() {
-        return viewId;
-      }
-
-      /** Optional. The ID of the view to be downloaded. */
-      public Download setViewId(java.lang.String viewId) {
-        this.viewId = viewId;
-        return this;
-      }
-
-      @Override
-      public Download set(String parameterName, Object value) {
-        return (Download) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Uploads a file for the assistant to use as a source of information within the session.
-     *
-     * Create a request for the method "media.upload".
-     *
-     * This request holds the parameters needed by the discoveryengine server.  After setting any
-     * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
-     *        ions/{collection}/engines/{engine}/sessions/{session}`
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileRequest}
-     * @return the request
-     */
-    public Upload upload(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileRequest content) throws java.io.IOException {
-      Upload result = new Upload(name, content);
-      initialize(result);
-      return result;
-    }
-
-    /**
-     * Uploads a file for the assistant to use as a source of information within the session.
-     *
-     * Create a request for the method "media.upload".
-     *
-     * This request holds the parameters needed by the the discoveryengine server.  After setting any
-     * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
-     *
-     * <p>
-     * This method should be used for uploading media content.
-     * </p>
-     *
-     * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
-     *        ions/{collection}/engines/{engine}/sessions/{session}`
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileRequest} media metadata or {@code null} if none
-     * @param mediaContent The media HTTP content.
-     * @return the request
-     * @throws java.io.IOException if the initialization of the request fails
-     */
-    public Upload upload(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
-      Upload result = new Upload(name, content, mediaContent);
-      initialize(result);
-      return result;
-    }
-
-    public class Upload extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileResponse> {
-
-      private static final String REST_PATH = "v1alpha/{+name}:uploadFile";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
-
-      /**
-       * Uploads a file for the assistant to use as a source of information within the session.
-       *
-       * Create a request for the method "media.upload".
-       *
-       * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
-     *        ions/{collection}/engines/{engine}/sessions/{session}`
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileRequest}
-       * @since 1.13
-       */
-      protected Upload(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileRequest content) {
-        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileResponse.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
-        }
-      }
-
-      /**
-       * Uploads a file for the assistant to use as a source of information within the session.
-       *
-       * Create a request for the method "media.upload".
-       *
-       * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * <p>
-       * This constructor should be used for uploading media content.
-       * </p>
-       *
-       * @param name Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
-     *        ions/{collection}/engines/{engine}/sessions/{session}`
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileRequest} media metadata or {@code null} if none
-       * @param mediaContent The media HTTP content.
-       * @since 1.13
-       */
-      protected Upload(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
-        super(DiscoveryEngine.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUploadSessionFileResponse.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
-        initializeMediaUpload(mediaContent);
-      }
-
-      @Override
-      public Upload set$Xgafv(java.lang.String $Xgafv) {
-        return (Upload) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Upload setAccessToken(java.lang.String accessToken) {
-        return (Upload) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Upload setAlt(java.lang.String alt) {
-        return (Upload) super.setAlt(alt);
-      }
-
-      @Override
-      public Upload setCallback(java.lang.String callback) {
-        return (Upload) super.setCallback(callback);
-      }
-
-      @Override
-      public Upload setFields(java.lang.String fields) {
-        return (Upload) super.setFields(fields);
-      }
-
-      @Override
-      public Upload setKey(java.lang.String key) {
-        return (Upload) super.setKey(key);
-      }
-
-      @Override
-      public Upload setOauthToken(java.lang.String oauthToken) {
-        return (Upload) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Upload) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Upload setQuotaUser(java.lang.String quotaUser) {
-        return (Upload) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Upload setUploadType(java.lang.String uploadType) {
-        return (Upload) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Upload) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
-       * }/collections/{collection}/engines/{engine}/sessions/{session}`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collec
-     tions/{collection}/engines/{engine}/sessions/{session}`
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. The resource name of the Session. Format: `projects/{project}/locations/{location
-       * }/collections/{collection}/engines/{engine}/sessions/{session}`
-       */
-      public Upload setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Upload set(String parameterName, Object value) {
-        return (Upload) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -2258,289 +1838,6 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Gets configurable pricing usage stats.
-       *
-       * Create a request for the method "locations.getConfigurablePricingUsageStats".
-       *
-       * This request holds the parameters needed by the discoveryengine server.  After setting any
-       * optional parameters, call the {@link GetConfigurablePricingUsageStats#execute()} method to invoke
-       * the remote operation.
-       *
-       * @param name Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
-       *        projects/{project}/locations/{location}/configurablePricingUsageStats
-       * @return the request
-       */
-      public GetConfigurablePricingUsageStats getConfigurablePricingUsageStats(java.lang.String name) throws java.io.IOException {
-        GetConfigurablePricingUsageStats result = new GetConfigurablePricingUsageStats(name);
-        initialize(result);
-        return result;
-      }
-
-      public class GetConfigurablePricingUsageStats extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStats> {
-
-        private static final String REST_PATH = "v1alpha/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/configurablePricingUsageStats$");
-
-        /**
-         * Gets configurable pricing usage stats.
-         *
-         * Create a request for the method "locations.getConfigurablePricingUsageStats".
-         *
-         * This request holds the parameters needed by the the discoveryengine server.  After setting any
-         * optional parameters, call the {@link GetConfigurablePricingUsageStats#execute()} method to
-         * invoke the remote operation. <p> {@link GetConfigurablePricingUsageStats#initialize(com.google.
-         * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
-         * instance immediately after invoking the constructor. </p>
-         *
-         * @param name Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
-       *        projects/{project}/locations/{location}/configurablePricingUsageStats
-         * @since 1.13
-         */
-        protected GetConfigurablePricingUsageStats(java.lang.String name) {
-          super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConfigurablePricingUsageStats.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/locations/[^/]+/configurablePricingUsageStats$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats set$Xgafv(java.lang.String $Xgafv) {
-          return (GetConfigurablePricingUsageStats) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setAccessToken(java.lang.String accessToken) {
-          return (GetConfigurablePricingUsageStats) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setAlt(java.lang.String alt) {
-          return (GetConfigurablePricingUsageStats) super.setAlt(alt);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setCallback(java.lang.String callback) {
-          return (GetConfigurablePricingUsageStats) super.setCallback(callback);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setFields(java.lang.String fields) {
-          return (GetConfigurablePricingUsageStats) super.setFields(fields);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setKey(java.lang.String key) {
-          return (GetConfigurablePricingUsageStats) super.setKey(key);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setOauthToken(java.lang.String oauthToken) {
-          return (GetConfigurablePricingUsageStats) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (GetConfigurablePricingUsageStats) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setQuotaUser(java.lang.String quotaUser) {
-          return (GetConfigurablePricingUsageStats) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setUploadType(java.lang.String uploadType) {
-          return (GetConfigurablePricingUsageStats) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats setUploadProtocol(java.lang.String uploadProtocol) {
-          return (GetConfigurablePricingUsageStats) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
-         * projects/{project}/locations/{location}/configurablePricingUsageStats
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
-       projects/{project}/locations/{location}/configurablePricingUsageStats
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * Required. The name of the ConfigurablePricingUsageStats to retrieve. Format:
-         * projects/{project}/locations/{location}/configurablePricingUsageStats
-         */
-        public GetConfigurablePricingUsageStats setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/locations/[^/]+/configurablePricingUsageStats$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        /** Optional. The metric types to return usage for. */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> metricTypes;
-
-        /** Optional. The metric types to return usage for.
-         */
-        public java.util.List<java.lang.String> getMetricTypes() {
-          return metricTypes;
-        }
-
-        /** Optional. The metric types to return usage for. */
-        public GetConfigurablePricingUsageStats setMetricTypes(java.util.List<java.lang.String> metricTypes) {
-          this.metricTypes = metricTypes;
-          return this;
-        }
-
-        /**
-         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
-         * year by itself or a year and month where the day isn't significant.
-         */
-        @com.google.api.client.util.Key("timeRange.endDate.day")
-        private java.lang.Integer timeRangeEndDateDay;
-
-        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
-       itself or a year and month where the day isn't significant.
-         */
-        public java.lang.Integer getTimeRangeEndDateDay() {
-          return timeRangeEndDateDay;
-        }
-
-        /**
-         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
-         * year by itself or a year and month where the day isn't significant.
-         */
-        public GetConfigurablePricingUsageStats setTimeRangeEndDateDay(java.lang.Integer timeRangeEndDateDay) {
-          this.timeRangeEndDateDay = timeRangeEndDateDay;
-          return this;
-        }
-
-        /**
-         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        @com.google.api.client.util.Key("timeRange.endDate.month")
-        private java.lang.Integer timeRangeEndDateMonth;
-
-        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        public java.lang.Integer getTimeRangeEndDateMonth() {
-          return timeRangeEndDateMonth;
-        }
-
-        /**
-         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        public GetConfigurablePricingUsageStats setTimeRangeEndDateMonth(java.lang.Integer timeRangeEndDateMonth) {
-          this.timeRangeEndDateMonth = timeRangeEndDateMonth;
-          return this;
-        }
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
-        @com.google.api.client.util.Key("timeRange.endDate.year")
-        private java.lang.Integer timeRangeEndDateYear;
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
-         */
-        public java.lang.Integer getTimeRangeEndDateYear() {
-          return timeRangeEndDateYear;
-        }
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
-        public GetConfigurablePricingUsageStats setTimeRangeEndDateYear(java.lang.Integer timeRangeEndDateYear) {
-          this.timeRangeEndDateYear = timeRangeEndDateYear;
-          return this;
-        }
-
-        /**
-         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
-         * year by itself or a year and month where the day isn't significant.
-         */
-        @com.google.api.client.util.Key("timeRange.startDate.day")
-        private java.lang.Integer timeRangeStartDateDay;
-
-        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
-       itself or a year and month where the day isn't significant.
-         */
-        public java.lang.Integer getTimeRangeStartDateDay() {
-          return timeRangeStartDateDay;
-        }
-
-        /**
-         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
-         * year by itself or a year and month where the day isn't significant.
-         */
-        public GetConfigurablePricingUsageStats setTimeRangeStartDateDay(java.lang.Integer timeRangeStartDateDay) {
-          this.timeRangeStartDateDay = timeRangeStartDateDay;
-          return this;
-        }
-
-        /**
-         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        @com.google.api.client.util.Key("timeRange.startDate.month")
-        private java.lang.Integer timeRangeStartDateMonth;
-
-        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        public java.lang.Integer getTimeRangeStartDateMonth() {
-          return timeRangeStartDateMonth;
-        }
-
-        /**
-         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        public GetConfigurablePricingUsageStats setTimeRangeStartDateMonth(java.lang.Integer timeRangeStartDateMonth) {
-          this.timeRangeStartDateMonth = timeRangeStartDateMonth;
-          return this;
-        }
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
-        @com.google.api.client.util.Key("timeRange.startDate.year")
-        private java.lang.Integer timeRangeStartDateYear;
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
-         */
-        public java.lang.Integer getTimeRangeStartDateYear() {
-          return timeRangeStartDateYear;
-        }
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
-        public GetConfigurablePricingUsageStats setTimeRangeStartDateYear(java.lang.Integer timeRangeStartDateYear) {
-          this.timeRangeStartDateYear = timeRangeStartDateYear;
-          return this;
-        }
-
-        @Override
-        public GetConfigurablePricingUsageStats set(String parameterName, Object value) {
-          return (GetConfigurablePricingUsageStats) super.set(parameterName, value);
-        }
-      }
-      /**
        * Obtains the time series data of organic or dedicated crawl rate for monitoring. When dedicated
        * crawl rate is not set, it will return vertex AI's organic crawl rate time series. Organic crawl
        * means Google automatically crawl the internet at its own convenience. When dedicated crawl rate
@@ -2685,6 +1982,299 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         @Override
         public ObtainCrawlRate set(String parameterName, Object value) {
           return (ObtainCrawlRate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Queries configurable pricing usage stats for a project.
+       *
+       * Create a request for the method "locations.queryConfigurablePricingUsageStats".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link QueryConfigurablePricingUsageStats#execute()} method to
+       * invoke the remote operation.
+       *
+       * @param project Required. The project to query usage stats for. Format: projects/{project}
+       * @param location Required. The location to query usage stats for.
+       * @return the request
+       */
+      public QueryConfigurablePricingUsageStats queryConfigurablePricingUsageStats(java.lang.String project, java.lang.String location) throws java.io.IOException {
+        QueryConfigurablePricingUsageStats result = new QueryConfigurablePricingUsageStats(project, location);
+        initialize(result);
+        return result;
+      }
+
+      public class QueryConfigurablePricingUsageStats extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+project}/locations/{location}:queryConfigurablePricingUsageStats";
+
+        private final java.util.regex.Pattern PROJECT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Queries configurable pricing usage stats for a project.
+         *
+         * Create a request for the method "locations.queryConfigurablePricingUsageStats".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link QueryConfigurablePricingUsageStats#execute()} method to
+         * invoke the remote operation. <p> {@link QueryConfigurablePricingUsageStats#initialize(com.googl
+         * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+         * this instance immediately after invoking the constructor. </p>
+         *
+         * @param project Required. The project to query usage stats for. Format: projects/{project}
+         * @param location Required. The location to query usage stats for.
+         * @since 1.13
+         */
+        protected QueryConfigurablePricingUsageStats(java.lang.String project, java.lang.String location) {
+          super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaQueryConfigurablePricingUsageStatsResponse.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                "Parameter project must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats set$Xgafv(java.lang.String $Xgafv) {
+          return (QueryConfigurablePricingUsageStats) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setAccessToken(java.lang.String accessToken) {
+          return (QueryConfigurablePricingUsageStats) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setAlt(java.lang.String alt) {
+          return (QueryConfigurablePricingUsageStats) super.setAlt(alt);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setCallback(java.lang.String callback) {
+          return (QueryConfigurablePricingUsageStats) super.setCallback(callback);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setFields(java.lang.String fields) {
+          return (QueryConfigurablePricingUsageStats) super.setFields(fields);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setKey(java.lang.String key) {
+          return (QueryConfigurablePricingUsageStats) super.setKey(key);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setOauthToken(java.lang.String oauthToken) {
+          return (QueryConfigurablePricingUsageStats) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (QueryConfigurablePricingUsageStats) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setQuotaUser(java.lang.String quotaUser) {
+          return (QueryConfigurablePricingUsageStats) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setUploadType(java.lang.String uploadType) {
+          return (QueryConfigurablePricingUsageStats) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats setUploadProtocol(java.lang.String uploadProtocol) {
+          return (QueryConfigurablePricingUsageStats) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The project to query usage stats for. Format: projects/{project} */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** Required. The project to query usage stats for. Format: projects/{project}
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** Required. The project to query usage stats for. Format: projects/{project} */
+        public QueryConfigurablePricingUsageStats setProject(java.lang.String project) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                "Parameter project must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.project = project;
+          return this;
+        }
+
+        /** Required. The location to query usage stats for. */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Required. The location to query usage stats for.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /** Required. The location to query usage stats for. */
+        public QueryConfigurablePricingUsageStats setLocation(java.lang.String location) {
+          this.location = location;
+          return this;
+        }
+
+        /** Optional. The metric types to return usage for. */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> metricTypes;
+
+        /** Optional. The metric types to return usage for.
+         */
+        public java.util.List<java.lang.String> getMetricTypes() {
+          return metricTypes;
+        }
+
+        /** Optional. The metric types to return usage for. */
+        public QueryConfigurablePricingUsageStats setMetricTypes(java.util.List<java.lang.String> metricTypes) {
+          this.metricTypes = metricTypes;
+          return this;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        @com.google.api.client.util.Key("timeRange.endDate.day")
+        private java.lang.Integer timeRangeEndDateDay;
+
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
+         */
+        public java.lang.Integer getTimeRangeEndDateDay() {
+          return timeRangeEndDateDay;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        public QueryConfigurablePricingUsageStats setTimeRangeEndDateDay(java.lang.Integer timeRangeEndDateDay) {
+          this.timeRangeEndDateDay = timeRangeEndDateDay;
+          return this;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        @com.google.api.client.util.Key("timeRange.endDate.month")
+        private java.lang.Integer timeRangeEndDateMonth;
+
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public java.lang.Integer getTimeRangeEndDateMonth() {
+          return timeRangeEndDateMonth;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public QueryConfigurablePricingUsageStats setTimeRangeEndDateMonth(java.lang.Integer timeRangeEndDateMonth) {
+          this.timeRangeEndDateMonth = timeRangeEndDateMonth;
+          return this;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        @com.google.api.client.util.Key("timeRange.endDate.year")
+        private java.lang.Integer timeRangeEndDateYear;
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         */
+        public java.lang.Integer getTimeRangeEndDateYear() {
+          return timeRangeEndDateYear;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        public QueryConfigurablePricingUsageStats setTimeRangeEndDateYear(java.lang.Integer timeRangeEndDateYear) {
+          this.timeRangeEndDateYear = timeRangeEndDateYear;
+          return this;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        @com.google.api.client.util.Key("timeRange.startDate.day")
+        private java.lang.Integer timeRangeStartDateDay;
+
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
+         */
+        public java.lang.Integer getTimeRangeStartDateDay() {
+          return timeRangeStartDateDay;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        public QueryConfigurablePricingUsageStats setTimeRangeStartDateDay(java.lang.Integer timeRangeStartDateDay) {
+          this.timeRangeStartDateDay = timeRangeStartDateDay;
+          return this;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        @com.google.api.client.util.Key("timeRange.startDate.month")
+        private java.lang.Integer timeRangeStartDateMonth;
+
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public java.lang.Integer getTimeRangeStartDateMonth() {
+          return timeRangeStartDateMonth;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public QueryConfigurablePricingUsageStats setTimeRangeStartDateMonth(java.lang.Integer timeRangeStartDateMonth) {
+          this.timeRangeStartDateMonth = timeRangeStartDateMonth;
+          return this;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        @com.google.api.client.util.Key("timeRange.startDate.year")
+        private java.lang.Integer timeRangeStartDateYear;
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         */
+        public java.lang.Integer getTimeRangeStartDateYear() {
+          return timeRangeStartDateYear;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        public QueryConfigurablePricingUsageStats setTimeRangeStartDateYear(java.lang.Integer timeRangeStartDateYear) {
+          this.timeRangeStartDateYear = timeRangeStartDateYear;
+          return this;
+        }
+
+        @Override
+        public QueryConfigurablePricingUsageStats set(String parameterName, Object value) {
+          return (QueryConfigurablePricingUsageStats) super.set(parameterName, value);
         }
       }
       /**
@@ -7321,9 +6911,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -7331,10 +6921,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               private java.lang.Boolean returnPartialSuccess;
 
               /** When set to `true`, operations that are reachable are returned as normal, and those that are
-             unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-             when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-             field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-             explicitly documented otherwise in service or product specific documentation.
+             unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+             when reading across collections. For example, when `parent` is set to
+             `"projects/example/locations/-"`. This field is not supported by default and will result in an
+             `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+             documentation.
                */
               public java.lang.Boolean getReturnPartialSuccess() {
                 return returnPartialSuccess;
@@ -7342,9 +6933,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -12147,21 +11738,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * When set to `true`, operations that are reachable are returned as normal, and
-                 * those that are unreachable are returned in the
-                 * [ListOperationsResponse.unreachable] field. This can only be `true` when reading
-                 * across collections e.g. when `parent` is set to `"projects/example/locations/-"`.
-                 * This field is not by default supported and will result in an `UNIMPLEMENTED`
-                 * error if set unless explicitly documented otherwise in service or product
-                 * specific documentation.
+                 * those that are unreachable are returned in the ListOperationsResponse.unreachable
+                 * field. This can only be `true` when reading across collections. For example, when
+                 * `parent` is set to `"projects/example/locations/-"`. This field is not supported
+                 * by default and will result in an `UNIMPLEMENTED` error if set unless explicitly
+                 * documented otherwise in service or product specific documentation.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.Boolean returnPartialSuccess;
 
                 /** When set to `true`, operations that are reachable are returned as normal, and those that are
-               unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-               when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-               field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-               explicitly documented otherwise in service or product specific documentation.
+               unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+               when reading across collections. For example, when `parent` is set to
+               `"projects/example/locations/-"`. This field is not supported by default and will result in an
+               `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+               documentation.
                  */
                 public java.lang.Boolean getReturnPartialSuccess() {
                   return returnPartialSuccess;
@@ -12169,12 +11760,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * When set to `true`, operations that are reachable are returned as normal, and
-                 * those that are unreachable are returned in the
-                 * [ListOperationsResponse.unreachable] field. This can only be `true` when reading
-                 * across collections e.g. when `parent` is set to `"projects/example/locations/-"`.
-                 * This field is not by default supported and will result in an `UNIMPLEMENTED`
-                 * error if set unless explicitly documented otherwise in service or product
-                 * specific documentation.
+                 * those that are unreachable are returned in the ListOperationsResponse.unreachable
+                 * field. This can only be `true` when reading across collections. For example, when
+                 * `parent` is set to `"projects/example/locations/-"`. This field is not supported
+                 * by default and will result in an `UNIMPLEMENTED` error if set unless explicitly
+                 * documented otherwise in service or product specific documentation.
                  */
                 public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
                   this.returnPartialSuccess = returnPartialSuccess;
@@ -15108,21 +14698,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * When set to `true`, operations that are reachable are returned as normal, and
-                 * those that are unreachable are returned in the
-                 * [ListOperationsResponse.unreachable] field. This can only be `true` when reading
-                 * across collections e.g. when `parent` is set to `"projects/example/locations/-"`.
-                 * This field is not by default supported and will result in an `UNIMPLEMENTED`
-                 * error if set unless explicitly documented otherwise in service or product
-                 * specific documentation.
+                 * those that are unreachable are returned in the ListOperationsResponse.unreachable
+                 * field. This can only be `true` when reading across collections. For example, when
+                 * `parent` is set to `"projects/example/locations/-"`. This field is not supported
+                 * by default and will result in an `UNIMPLEMENTED` error if set unless explicitly
+                 * documented otherwise in service or product specific documentation.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.Boolean returnPartialSuccess;
 
                 /** When set to `true`, operations that are reachable are returned as normal, and those that are
-               unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-               when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-               field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-               explicitly documented otherwise in service or product specific documentation.
+               unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+               when reading across collections. For example, when `parent` is set to
+               `"projects/example/locations/-"`. This field is not supported by default and will result in an
+               `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+               documentation.
                  */
                 public java.lang.Boolean getReturnPartialSuccess() {
                   return returnPartialSuccess;
@@ -15130,12 +14720,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * When set to `true`, operations that are reachable are returned as normal, and
-                 * those that are unreachable are returned in the
-                 * [ListOperationsResponse.unreachable] field. This can only be `true` when reading
-                 * across collections e.g. when `parent` is set to `"projects/example/locations/-"`.
-                 * This field is not by default supported and will result in an `UNIMPLEMENTED`
-                 * error if set unless explicitly documented otherwise in service or product
-                 * specific documentation.
+                 * those that are unreachable are returned in the ListOperationsResponse.unreachable
+                 * field. This can only be `true` when reading across collections. For example, when
+                 * `parent` is set to `"projects/example/locations/-"`. This field is not supported
+                 * by default and will result in an `UNIMPLEMENTED` error if set unless explicitly
+                 * documented otherwise in service or product specific documentation.
                  */
                 public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
                   this.returnPartialSuccess = returnPartialSuccess;
@@ -15495,9 +15084,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -15505,10 +15094,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               private java.lang.Boolean returnPartialSuccess;
 
               /** When set to `true`, operations that are reachable are returned as normal, and those that are
-             unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-             when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-             field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-             explicitly documented otherwise in service or product specific documentation.
+             unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+             when reading across collections. For example, when `parent` is set to
+             `"projects/example/locations/-"`. This field is not supported by default and will result in an
+             `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+             documentation.
                */
               public java.lang.Boolean getReturnPartialSuccess() {
                 return returnPartialSuccess;
@@ -15516,9 +15106,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -16730,21 +16320,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * When set to `true`, operations that are reachable are returned as normal, and
-                 * those that are unreachable are returned in the
-                 * [ListOperationsResponse.unreachable] field. This can only be `true` when reading
-                 * across collections e.g. when `parent` is set to `"projects/example/locations/-"`.
-                 * This field is not by default supported and will result in an `UNIMPLEMENTED`
-                 * error if set unless explicitly documented otherwise in service or product
-                 * specific documentation.
+                 * those that are unreachable are returned in the ListOperationsResponse.unreachable
+                 * field. This can only be `true` when reading across collections. For example, when
+                 * `parent` is set to `"projects/example/locations/-"`. This field is not supported
+                 * by default and will result in an `UNIMPLEMENTED` error if set unless explicitly
+                 * documented otherwise in service or product specific documentation.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.Boolean returnPartialSuccess;
 
                 /** When set to `true`, operations that are reachable are returned as normal, and those that are
-               unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-               when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-               field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-               explicitly documented otherwise in service or product specific documentation.
+               unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+               when reading across collections. For example, when `parent` is set to
+               `"projects/example/locations/-"`. This field is not supported by default and will result in an
+               `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+               documentation.
                  */
                 public java.lang.Boolean getReturnPartialSuccess() {
                   return returnPartialSuccess;
@@ -16752,12 +16342,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * When set to `true`, operations that are reachable are returned as normal, and
-                 * those that are unreachable are returned in the
-                 * [ListOperationsResponse.unreachable] field. This can only be `true` when reading
-                 * across collections e.g. when `parent` is set to `"projects/example/locations/-"`.
-                 * This field is not by default supported and will result in an `UNIMPLEMENTED`
-                 * error if set unless explicitly documented otherwise in service or product
-                 * specific documentation.
+                 * those that are unreachable are returned in the ListOperationsResponse.unreachable
+                 * field. This can only be `true` when reading across collections. For example, when
+                 * `parent` is set to `"projects/example/locations/-"`. This field is not supported
+                 * by default and will result in an `UNIMPLEMENTED` error if set unless explicitly
+                 * documented otherwise in service or product specific documentation.
                  */
                 public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
                   this.returnPartialSuccess = returnPartialSuccess;
@@ -20605,21 +20194,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * When set to `true`, operations that are reachable are returned as normal, and
-                 * those that are unreachable are returned in the
-                 * [ListOperationsResponse.unreachable] field. This can only be `true` when reading
-                 * across collections e.g. when `parent` is set to `"projects/example/locations/-"`.
-                 * This field is not by default supported and will result in an `UNIMPLEMENTED`
-                 * error if set unless explicitly documented otherwise in service or product
-                 * specific documentation.
+                 * those that are unreachable are returned in the ListOperationsResponse.unreachable
+                 * field. This can only be `true` when reading across collections. For example, when
+                 * `parent` is set to `"projects/example/locations/-"`. This field is not supported
+                 * by default and will result in an `UNIMPLEMENTED` error if set unless explicitly
+                 * documented otherwise in service or product specific documentation.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.Boolean returnPartialSuccess;
 
                 /** When set to `true`, operations that are reachable are returned as normal, and those that are
-               unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-               when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-               field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-               explicitly documented otherwise in service or product specific documentation.
+               unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+               when reading across collections. For example, when `parent` is set to
+               `"projects/example/locations/-"`. This field is not supported by default and will result in an
+               `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+               documentation.
                  */
                 public java.lang.Boolean getReturnPartialSuccess() {
                   return returnPartialSuccess;
@@ -20627,12 +20216,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * When set to `true`, operations that are reachable are returned as normal, and
-                 * those that are unreachable are returned in the
-                 * [ListOperationsResponse.unreachable] field. This can only be `true` when reading
-                 * across collections e.g. when `parent` is set to `"projects/example/locations/-"`.
-                 * This field is not by default supported and will result in an `UNIMPLEMENTED`
-                 * error if set unless explicitly documented otherwise in service or product
-                 * specific documentation.
+                 * those that are unreachable are returned in the ListOperationsResponse.unreachable
+                 * field. This can only be `true` when reading across collections. For example, when
+                 * `parent` is set to `"projects/example/locations/-"`. This field is not supported
+                 * by default and will result in an `UNIMPLEMENTED` error if set unless explicitly
+                 * documented otherwise in service or product specific documentation.
                  */
                 public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
                   this.returnPartialSuccess = returnPartialSuccess;
@@ -22457,9 +22045,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   /**
                    * When set to `true`, operations that are reachable are returned as normal, and
                    * those that are unreachable are returned in the
-                   * [ListOperationsResponse.unreachable] field. This can only be `true` when
-                   * reading across collections e.g. when `parent` is set to
-                   * `"projects/example/locations/-"`. This field is not by default supported and
+                   * ListOperationsResponse.unreachable field. This can only be `true` when reading
+                   * across collections. For example, when `parent` is set to
+                   * `"projects/example/locations/-"`. This field is not supported by default and
                    * will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                    * otherwise in service or product specific documentation.
                    */
@@ -22467,10 +22055,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   private java.lang.Boolean returnPartialSuccess;
 
                   /** When set to `true`, operations that are reachable are returned as normal, and those that are
-                 unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-                 when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-                 field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-                 explicitly documented otherwise in service or product specific documentation.
+                 unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+                 when reading across collections. For example, when `parent` is set to
+                 `"projects/example/locations/-"`. This field is not supported by default and will result in an
+                 `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+                 documentation.
                    */
                   public java.lang.Boolean getReturnPartialSuccess() {
                     return returnPartialSuccess;
@@ -22479,9 +22068,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   /**
                    * When set to `true`, operations that are reachable are returned as normal, and
                    * those that are unreachable are returned in the
-                   * [ListOperationsResponse.unreachable] field. This can only be `true` when
-                   * reading across collections e.g. when `parent` is set to
-                   * `"projects/example/locations/-"`. This field is not by default supported and
+                   * ListOperationsResponse.unreachable field. This can only be `true` when reading
+                   * across collections. For example, when `parent` is set to
+                   * `"projects/example/locations/-"`. This field is not supported by default and
                    * will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                    * otherwise in service or product specific documentation.
                    */
@@ -25555,6 +25144,326 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           public class Assistants {
 
             /**
+             * Creates an Assistant.
+             *
+             * Create a request for the method "assistants.create".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/assistants";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+              /**
+               * Creates an Assistant.
+               *
+               * Create a request for the method "assistants.create".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAssistant.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent resource name. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource name. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent resource name. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The ID to use for the Assistant, which will become the final component of
+               * the Assistant's resource name. This field must conform to
+               * [RFC-1034](https://tools.ietf.org/html/rfc1034) with a length limit of 63
+               * characters.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String assistantId;
+
+              /** Required. The ID to use for the Assistant, which will become the final component of the Assistant's
+             resource name. This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) with a
+             length limit of 63 characters.
+               */
+              public java.lang.String getAssistantId() {
+                return assistantId;
+              }
+
+              /**
+               * Required. The ID to use for the Assistant, which will become the final component of
+               * the Assistant's resource name. This field must conform to
+               * [RFC-1034](https://tools.ietf.org/html/rfc1034) with a length limit of 63
+               * characters.
+               */
+              public Create setAssistantId(java.lang.String assistantId) {
+                this.assistantId = assistantId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes an Assistant.
+             *
+             * Create a request for the method "assistants.delete".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/{
+             *        collection}/engines/{engine}/assistants/{assistant}` If the caller does not have
+             *        permission to delete the Assistant, regardless of whether or not it exists, a
+             *        PERMISSION_DENIED error is returned. If the Assistant to delete does not exist, a
+             *        NOT_FOUND error is returned.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Deletes an Assistant.
+               *
+               * Create a request for the method "assistants.delete".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/{
+             *        collection}/engines/{engine}/assistants/{assistant}` If the caller does not have
+             *        permission to delete the Assistant, regardless of whether or not it exists, a
+             *        PERMISSION_DENIED error is returned. If the Assistant to delete does not exist, a
+             *        NOT_FOUND error is returned.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Resource name of Assistant. Format: `projects/{project}/locations/{locati
+               * on}/collections/{collection}/engines/{engine}/assistants/{assistant}` If the caller
+               * does not have permission to delete the Assistant, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned. If the Assistant to delete does not
+               * exist, a NOT_FOUND error is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Resource name of Assistant. Format: `projects/{project}/locations/{location}/collections/
+             {collection}/engines/{engine}/assistants/{assistant}` If the caller does not have permission to
+             delete the Assistant, regardless of whether or not it exists, a PERMISSION_DENIED error is
+             returned. If the Assistant to delete does not exist, a NOT_FOUND error is returned.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Resource name of Assistant. Format: `projects/{project}/locations/{locati
+               * on}/collections/{collection}/engines/{engine}/assistants/{assistant}` If the caller
+               * does not have permission to delete the Assistant, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned. If the Assistant to delete does not
+               * exist, a NOT_FOUND error is returned.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
              * Gets an Assistant.
              *
              * Create a request for the method "assistants.get".
@@ -25699,6 +25608,205 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               @Override
               public Get set(String parameterName, Object value) {
                 return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists all Assistants under an Engine.
+             *
+             * Create a request for the method "assistants.list".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListAssistantsResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/assistants";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+              /**
+               * Lists all Assistants under an Engine.
+               *
+               * Create a request for the method "assistants.list".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListAssistantsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent resource name. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource name. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent resource name. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Maximum number of Assistants to return. If unspecified, defaults to 100. The
+               * maximum allowed value is 1000; anything above that will be coerced down to 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Maximum number of Assistants to return. If unspecified, defaults to 100. The maximum allowed value
+             is 1000; anything above that will be coerced down to 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Maximum number of Assistants to return. If unspecified, defaults to 100. The
+               * maximum allowed value is 1000; anything above that will be coerced down to 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A page token ListAssistantsResponse.next_page_token, received from a previous
+               * AssistantService.ListAssistants call. Provide this to retrieve the subsequent page.
+               * When paginating, all other parameters provided to ListAssistants must match the
+               * call that provided the page token.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A page token ListAssistantsResponse.next_page_token, received from a previous
+             AssistantService.ListAssistants call. Provide this to retrieve the subsequent page. When
+             paginating, all other parameters provided to ListAssistants must match the call that provided the
+             page token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A page token ListAssistantsResponse.next_page_token, received from a previous
+               * AssistantService.ListAssistants call. Provide this to retrieve the subsequent page.
+               * When paginating, all other parameters provided to ListAssistants must match the
+               * call that provided the page token.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
               }
             }
             /**
@@ -28322,6 +28430,168 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   @Override
                   public DiscoveryEngineImport set(String parameterName, Object value) {
                     return (DiscoveryEngineImport) super.set(parameterName, value);
+                  }
+                }
+
+              }
+              /**
+               * An accessor for creating requests from the Operations collection.
+               *
+               * <p>The typical use is:</p>
+               * <pre>
+               *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+               *   {@code DiscoveryEngine.Operations.List request = discoveryengine.operations().list(parameters ...)}
+               * </pre>
+               *
+               * @return the resource collection
+               */
+              public Operations operations() {
+                return new Operations();
+              }
+
+              /**
+               * The "operations" collection of methods.
+               */
+              public class Operations {
+
+                /**
+                 * Gets the latest state of a long-running operation. Clients can use this method to poll the
+                 * operation result at intervals as recommended by the API service.
+                 *
+                 * Create a request for the method "operations.get".
+                 *
+                 * This request holds the parameters needed by the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+                 *
+                 * @param name The name of the operation resource.
+                 * @return the request
+                 */
+                public Get get(java.lang.String name) throws java.io.IOException {
+                  Get result = new Get(name);
+                  initialize(result);
+                  return result;
+                }
+
+                public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+                  private static final String REST_PATH = "v1alpha/{+name}";
+
+                  private final java.util.regex.Pattern NAME_PATTERN =
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+/operations/[^/]+$");
+
+                  /**
+                   * Gets the latest state of a long-running operation. Clients can use this method to poll the
+                   * operation result at intervals as recommended by the API service.
+                   *
+                   * Create a request for the method "operations.get".
+                   *
+                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                   * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                   * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                   * must be called to initialize this instance immediately after invoking the constructor. </p>
+                   *
+                   * @param name The name of the operation resource.
+                   * @since 1.13
+                   */
+                  protected Get(java.lang.String name) {
+                    super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                    this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                          "Parameter name must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+/operations/[^/]+$");
+                    }
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                    return super.executeUsingHead();
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                    return super.buildHttpRequestUsingHead();
+                  }
+
+                  @Override
+                  public Get set$Xgafv(java.lang.String $Xgafv) {
+                    return (Get) super.set$Xgafv($Xgafv);
+                  }
+
+                  @Override
+                  public Get setAccessToken(java.lang.String accessToken) {
+                    return (Get) super.setAccessToken(accessToken);
+                  }
+
+                  @Override
+                  public Get setAlt(java.lang.String alt) {
+                    return (Get) super.setAlt(alt);
+                  }
+
+                  @Override
+                  public Get setCallback(java.lang.String callback) {
+                    return (Get) super.setCallback(callback);
+                  }
+
+                  @Override
+                  public Get setFields(java.lang.String fields) {
+                    return (Get) super.setFields(fields);
+                  }
+
+                  @Override
+                  public Get setKey(java.lang.String key) {
+                    return (Get) super.setKey(key);
+                  }
+
+                  @Override
+                  public Get setOauthToken(java.lang.String oauthToken) {
+                    return (Get) super.setOauthToken(oauthToken);
+                  }
+
+                  @Override
+                  public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                    return (Get) super.setPrettyPrint(prettyPrint);
+                  }
+
+                  @Override
+                  public Get setQuotaUser(java.lang.String quotaUser) {
+                    return (Get) super.setQuotaUser(quotaUser);
+                  }
+
+                  @Override
+                  public Get setUploadType(java.lang.String uploadType) {
+                    return (Get) super.setUploadType(uploadType);
+                  }
+
+                  @Override
+                  public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                    return (Get) super.setUploadProtocol(uploadProtocol);
+                  }
+
+                  /** The name of the operation resource. */
+                  @com.google.api.client.util.Key
+                  private java.lang.String name;
+
+                  /** The name of the operation resource.
+                   */
+                  public java.lang.String getName() {
+                    return name;
+                  }
+
+                  /** The name of the operation resource. */
+                  public Get setName(java.lang.String name) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                          "Parameter name must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+/operations/[^/]+$");
+                    }
+                    this.name = name;
+                    return this;
+                  }
+
+                  @Override
+                  public Get set(String parameterName, Object value) {
+                    return (Get) super.set(parameterName, value);
                   }
                 }
 
@@ -31780,9 +32050,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -31790,10 +32060,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               private java.lang.Boolean returnPartialSuccess;
 
               /** When set to `true`, operations that are reachable are returned as normal, and those that are
-             unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-             when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-             field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-             explicitly documented otherwise in service or product specific documentation.
+             unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+             when reading across collections. For example, when `parent` is set to
+             `"projects/example/locations/-"`. This field is not supported by default and will result in an
+             `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+             documentation.
                */
               public java.lang.Boolean getReturnPartialSuccess() {
                 return returnPartialSuccess;
@@ -31801,9 +32072,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -35281,20 +35552,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean returnPartialSuccess;
 
             /** When set to `true`, operations that are reachable are returned as normal, and those that are
-           unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-           when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-           field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-           explicitly documented otherwise in service or product specific documentation.
+           unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+           when reading across collections. For example, when `parent` is set to
+           `"projects/example/locations/-"`. This field is not supported by default and will result in an
+           `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+           documentation.
              */
             public java.lang.Boolean getReturnPartialSuccess() {
               return returnPartialSuccess;
@@ -35302,11 +35574,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
               this.returnPartialSuccess = returnPartialSuccess;
@@ -39949,9 +40221,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -39959,10 +40231,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               private java.lang.Boolean returnPartialSuccess;
 
               /** When set to `true`, operations that are reachable are returned as normal, and those that are
-             unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-             when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-             field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-             explicitly documented otherwise in service or product specific documentation.
+             unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+             when reading across collections. For example, when `parent` is set to
+             `"projects/example/locations/-"`. This field is not supported by default and will result in an
+             `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+             documentation.
                */
               public java.lang.Boolean getReturnPartialSuccess() {
                 return returnPartialSuccess;
@@ -39970,9 +40243,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -42728,9 +43001,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -42738,10 +43011,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               private java.lang.Boolean returnPartialSuccess;
 
               /** When set to `true`, operations that are reachable are returned as normal, and those that are
-             unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-             when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-             field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-             explicitly documented otherwise in service or product specific documentation.
+             unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+             when reading across collections. For example, when `parent` is set to
+             `"projects/example/locations/-"`. This field is not supported by default and will result in an
+             `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+             documentation.
                */
               public java.lang.Boolean getReturnPartialSuccess() {
                 return returnPartialSuccess;
@@ -42749,9 +43023,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * When set to `true`, operations that are reachable are returned as normal, and those
-               * that are unreachable are returned in the [ListOperationsResponse.unreachable]
-               * field. This can only be `true` when reading across collections e.g. when `parent`
-               * is set to `"projects/example/locations/-"`. This field is not by default supported
+               * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+               * This can only be `true` when reading across collections. For example, when `parent`
+               * is set to `"projects/example/locations/-"`. This field is not supported by default
                * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
                * otherwise in service or product specific documentation.
                */
@@ -43113,20 +43387,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean returnPartialSuccess;
 
             /** When set to `true`, operations that are reachable are returned as normal, and those that are
-           unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-           when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-           field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-           explicitly documented otherwise in service or product specific documentation.
+           unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+           when reading across collections. For example, when `parent` is set to
+           `"projects/example/locations/-"`. This field is not supported by default and will result in an
+           `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+           documentation.
              */
             public java.lang.Boolean getReturnPartialSuccess() {
               return returnPartialSuccess;
@@ -43134,11 +43409,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
               this.returnPartialSuccess = returnPartialSuccess;
@@ -52353,20 +52628,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean returnPartialSuccess;
 
             /** When set to `true`, operations that are reachable are returned as normal, and those that are
-           unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-           when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-           field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-           explicitly documented otherwise in service or product specific documentation.
+           unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+           when reading across collections. For example, when `parent` is set to
+           `"projects/example/locations/-"`. This field is not supported by default and will result in an
+           `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+           documentation.
              */
             public java.lang.Boolean getReturnPartialSuccess() {
               return returnPartialSuccess;
@@ -52374,11 +52650,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
               this.returnPartialSuccess = returnPartialSuccess;
@@ -54417,174 +54693,6 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               return (Get) super.set(parameterName, value);
             }
           }
-          /**
-           * Uploads a file for Notebook LM to use. Creates a Source.
-           *
-           * Create a request for the method "sources.uploadFile".
-           *
-           * This request holds the parameters needed by the discoveryengine server.  After setting any
-           * optional parameters, call the {@link UploadFile#execute()} method to invoke the remote operation.
-           *
-           * @param parent Required. The parent resource where the sources will be created. Format:
-           *        projects/{project}/locations/{location}/notebooks/{notebook}
-           * @param sourceId The source id of the associated file. If not set, a source id will be generated and a new tentative
-           *        source will be created.
-           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest}
-           * @return the request
-           */
-          public UploadFile uploadFile(java.lang.String parent, java.lang.String sourceId, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content) throws java.io.IOException {
-            UploadFile result = new UploadFile(parent, sourceId, content);
-            initialize(result);
-            return result;
-          }
-
-          public class UploadFile extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse> {
-
-            private static final String REST_PATH = "v1alpha/{+parent}/sources/{sourceId}:uploadFile";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
-
-            /**
-             * Uploads a file for Notebook LM to use. Creates a Source.
-             *
-             * Create a request for the method "sources.uploadFile".
-             *
-             * This request holds the parameters needed by the the discoveryengine server.  After setting any
-             * optional parameters, call the {@link UploadFile#execute()} method to invoke the remote
-             * operation. <p> {@link
-             * UploadFile#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent Required. The parent resource where the sources will be created. Format:
-           *        projects/{project}/locations/{location}/notebooks/{notebook}
-             * @param sourceId The source id of the associated file. If not set, a source id will be generated and a new tentative
-           *        source will be created.
-             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest}
-             * @since 1.13
-             */
-            protected UploadFile(java.lang.String parent, java.lang.String sourceId, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content) {
-              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
-              }
-              this.sourceId = com.google.api.client.util.Preconditions.checkNotNull(sourceId, "Required parameter sourceId must be specified.");
-            }
-
-            @Override
-            public UploadFile set$Xgafv(java.lang.String $Xgafv) {
-              return (UploadFile) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public UploadFile setAccessToken(java.lang.String accessToken) {
-              return (UploadFile) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public UploadFile setAlt(java.lang.String alt) {
-              return (UploadFile) super.setAlt(alt);
-            }
-
-            @Override
-            public UploadFile setCallback(java.lang.String callback) {
-              return (UploadFile) super.setCallback(callback);
-            }
-
-            @Override
-            public UploadFile setFields(java.lang.String fields) {
-              return (UploadFile) super.setFields(fields);
-            }
-
-            @Override
-            public UploadFile setKey(java.lang.String key) {
-              return (UploadFile) super.setKey(key);
-            }
-
-            @Override
-            public UploadFile setOauthToken(java.lang.String oauthToken) {
-              return (UploadFile) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public UploadFile setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (UploadFile) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public UploadFile setQuotaUser(java.lang.String quotaUser) {
-              return (UploadFile) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public UploadFile setUploadType(java.lang.String uploadType) {
-              return (UploadFile) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public UploadFile setUploadProtocol(java.lang.String uploadProtocol) {
-              return (UploadFile) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The parent resource where the sources will be created. Format:
-             * projects/{project}/locations/{location}/notebooks/{notebook}
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Required. The parent resource where the sources will be created. Format:
-           projects/{project}/locations/{location}/notebooks/{notebook}
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /**
-             * Required. The parent resource where the sources will be created. Format:
-             * projects/{project}/locations/{location}/notebooks/{notebook}
-             */
-            public UploadFile setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            /**
-             * The source id of the associated file. If not set, a source id will be generated and a
-             * new tentative source will be created.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String sourceId;
-
-            /** The source id of the associated file. If not set, a source id will be generated and a new tentative
-           source will be created.
-             */
-            public java.lang.String getSourceId() {
-              return sourceId;
-            }
-
-            /**
-             * The source id of the associated file. If not set, a source id will be generated and a
-             * new tentative source will be created.
-             */
-            public UploadFile setSourceId(java.lang.String sourceId) {
-              this.sourceId = sourceId;
-              return this;
-            }
-
-            @Override
-            public UploadFile set(String parameterName, Object value) {
-              return (UploadFile) super.set(parameterName, value);
-            }
-          }
 
         }
       }
@@ -54933,9 +55041,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -54943,10 +55051,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -54954,9 +55063,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -59447,20 +59556,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean returnPartialSuccess;
 
             /** When set to `true`, operations that are reachable are returned as normal, and those that are
-           unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-           when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-           field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-           explicitly documented otherwise in service or product specific documentation.
+           unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+           when reading across collections. For example, when `parent` is set to
+           `"projects/example/locations/-"`. This field is not supported by default and will result in an
+           `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+           documentation.
              */
             public java.lang.Boolean getReturnPartialSuccess() {
               return returnPartialSuccess;
@@ -59468,11 +59578,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
               this.returnPartialSuccess = returnPartialSuccess;
@@ -59649,41 +59759,53 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. Filter for the list request. Supported fields: *
-             * `license`_`assignment`_`state` * `user_principal` * `user_profile` Examples: *
-             * `license`_`assignment`_`state = ASSIGNED` to list assigned user licenses. *
-             * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
-             * `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
-             * attempted login but no license assigned. * `license`_`assignment`_`state !=
-             * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
-             * assigned.
+             * Optional. The order in which the UserLicenses are listed. The value must be a comma-
+             * separated list of fields. Default sorting order is ascending. To specify descending
+             * order for a field, append a " desc" suffix. Redundant space characters in the syntax
+             * are insignificant. Supported fields: * `license_assignment_state` * `user_principal`
+             * * `user_profile` * `last_login_date` * `update_time` If not set, the default ordering
+             * is by `user_principal`. Examples: * `user_principal desc` to order by
+             * `user_principal` in descending order. * `license_assignment_state` to order by
+             * `license_assignment_state` in ascending order. * `last_login_date desc` to order by
+             * `last_login_date` in descending order. * `update_time desc` to order by `update_time`
+             * in descending order. * `last_login_date desc, user_principal` to order by
+             * `last_login_date` in descending order and then by `user_principal` in ascending
+             * order.
              */
             @com.google.api.client.util.Key
-            private java.lang.String filter;
+            private java.lang.String orderBy;
 
-            /** Optional. Filter for the list request. Supported fields: * `license`_`assignment`_`state` *
-           `user_principal` * `user_profile` Examples: * `license`_`assignment`_`state = ASSIGNED` to list
-           assigned user licenses. * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
-           `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted login but
-           no license assigned. * `license`_`assignment`_`state != NO_LICENSE_ATTEMPTED_LOGIN` to filter out
-           users who attempted login but no license assigned.
+            /** Optional. The order in which the UserLicenses are listed. The value must be a comma-separated list
+           of fields. Default sorting order is ascending. To specify descending order for a field, append a "
+           desc" suffix. Redundant space characters in the syntax are insignificant. Supported fields: *
+           `license_assignment_state` * `user_principal` * `user_profile` * `last_login_date` * `update_time`
+           If not set, the default ordering is by `user_principal`. Examples: * `user_principal desc` to order
+           by `user_principal` in descending order. * `license_assignment_state` to order by
+           `license_assignment_state` in ascending order. * `last_login_date desc` to order by
+           `last_login_date` in descending order. * `update_time desc` to order by `update_time` in descending
+           order. * `last_login_date desc, user_principal` to order by `last_login_date` in descending order
+           and then by `user_principal` in ascending order.
              */
-            public java.lang.String getFilter() {
-              return filter;
+            public java.lang.String getOrderBy() {
+              return orderBy;
             }
 
             /**
-             * Optional. Filter for the list request. Supported fields: *
-             * `license`_`assignment`_`state` * `user_principal` * `user_profile` Examples: *
-             * `license`_`assignment`_`state = ASSIGNED` to list assigned user licenses. *
-             * `license`_`assignment`_`state = NO_LICENSE` to list not licensed users. *
-             * `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who
-             * attempted login but no license assigned. * `license`_`assignment`_`state !=
-             * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
-             * assigned.
+             * Optional. The order in which the UserLicenses are listed. The value must be a comma-
+             * separated list of fields. Default sorting order is ascending. To specify descending
+             * order for a field, append a " desc" suffix. Redundant space characters in the syntax
+             * are insignificant. Supported fields: * `license_assignment_state` * `user_principal`
+             * * `user_profile` * `last_login_date` * `update_time` If not set, the default ordering
+             * is by `user_principal`. Examples: * `user_principal desc` to order by
+             * `user_principal` in descending order. * `license_assignment_state` to order by
+             * `license_assignment_state` in ascending order. * `last_login_date desc` to order by
+             * `last_login_date` in descending order. * `update_time desc` to order by `update_time`
+             * in descending order. * `last_login_date desc, user_principal` to order by
+             * `last_login_date` in descending order and then by `user_principal` in ascending
+             * order.
              */
-            public List setFilter(java.lang.String filter) {
-              this.filter = filter;
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
               return this;
             }
 
@@ -60093,9 +60215,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
         /**
          * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the [ListOperationsResponse.unreachable] field. This can
-         * only be `true` when reading across collections e.g. when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not by default supported and will result
+         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
+         * only be `true` when reading across collections. For example, when `parent` is set to
+         * `"projects/example/locations/-"`. This field is not supported by default and will result
          * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
          * product specific documentation.
          */
@@ -60103,10 +60225,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         private java.lang.Boolean returnPartialSuccess;
 
         /** When set to `true`, operations that are reachable are returned as normal, and those that are
-       unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-       when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-       field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-       explicitly documented otherwise in service or product specific documentation.
+       unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+       when reading across collections. For example, when `parent` is set to
+       `"projects/example/locations/-"`. This field is not supported by default and will result in an
+       `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+       documentation.
          */
         public java.lang.Boolean getReturnPartialSuccess() {
           return returnPartialSuccess;
@@ -60114,9 +60237,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
         /**
          * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the [ListOperationsResponse.unreachable] field. This can
-         * only be `true` when reading across collections e.g. when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not by default supported and will result
+         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
+         * only be `true` when reading across collections. For example, when `parent` is set to
+         * `"projects/example/locations/-"`. This field is not supported by default and will result
          * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
          * product specific documentation.
          */

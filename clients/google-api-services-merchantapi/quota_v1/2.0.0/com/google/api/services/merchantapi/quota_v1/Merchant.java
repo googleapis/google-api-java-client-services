@@ -154,6 +154,385 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
   public class Accounts {
 
     /**
+     * An accessor for creating requests from the Limits collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Merchant merchantapi = new Merchant(...);}
+     *   {@code Merchant.Limits.List request = merchantapi.limits().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Limits limits() {
+      return new Limits();
+    }
+
+    /**
+     * The "limits" collection of methods.
+     */
+    public class Limits {
+
+      /**
+       * Retrieves an account limit.
+       *
+       * Create a request for the method "limits.get".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the limit to retrieve. Format: `accounts/{account}/limits/{limit}` For
+       *        example: `accounts/123/limits/products~ADS_NON_EEA`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends MerchantRequest<com.google.api.services.merchantapi.quota_v1.model.AccountLimit> {
+
+        private static final String REST_PATH = "quota/v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/limits/[^/]+$");
+
+        /**
+         * Retrieves an account limit.
+         *
+         * Create a request for the method "limits.get".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the limit to retrieve. Format: `accounts/{account}/limits/{limit}` For
+       *        example: `accounts/123/limits/products~ADS_NON_EEA`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.quota_v1.model.AccountLimit.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/limits/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the limit to retrieve. Format: `accounts/{account}/limits/{limit}`
+         * For example: `accounts/123/limits/products~ADS_NON_EEA`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the limit to retrieve. Format: `accounts/{account}/limits/{limit}` For
+       example: `accounts/123/limits/products~ADS_NON_EEA`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the limit to retrieve. Format: `accounts/{account}/limits/{limit}`
+         * For example: `accounts/123/limits/products~ADS_NON_EEA`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/limits/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the limits of an account.
+       *
+       * Create a request for the method "limits.list".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent account. Format: `accounts/{account}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends MerchantRequest<com.google.api.services.merchantapi.quota_v1.model.ListAccountLimitsResponse> {
+
+        private static final String REST_PATH = "quota/v1/{+parent}/limits";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Lists the limits of an account.
+         *
+         * Create a request for the method "limits.list".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent account. Format: `accounts/{account}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.quota_v1.model.ListAccountLimitsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent account. Format: `accounts/{account}` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent account. Format: `accounts/{account}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent account. Format: `accounts/{account}` */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. A filter on the limit `type` is required, for example, `type = "products"`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Required. A filter on the limit `type` is required, for example, `type = "products"`.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Required. A filter on the limit `type` is required, for example, `type = "products"`.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of limits to return. The service may return fewer than this
+         * value. If unspecified, at most 100 limits will be returned. The maximum value is 100;
+         * values above 100 will be coerced to 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of limits to return. The service may return fewer than this value. If
+       unspecified, at most 100 limits will be returned. The maximum value is 100; values above 100 will
+       be coerced to 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of limits to return. The service may return fewer than this
+         * value. If unspecified, at most 100 limits will be returned. The maximum value is 100;
+         * values above 100 will be coerced to 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListAccountLimits` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAccountLimits` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListAccountLimits` call. Provide this to retrieve
+       the subsequent page. When paginating, all other parameters provided to `ListAccountLimits` must
+       match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListAccountLimits` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAccountLimits` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Quotas collection.
      *
      * <p>The typical use is:</p>

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.merchantapi.accounts_v1.model;
+package com.google.api.services.merchantapi.quota_v1.model;
 
 /**
  * A limit of a certain type that is applied to an account.

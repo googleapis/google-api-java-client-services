@@ -22581,13 +22581,13 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Requested page size. Must be between `1` and `100`. If unspecified will default
+         * Optional. Requested page size. Must be between `1` and `200`. If unspecified will default
          * to `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+        /** Optional. Requested page size. Must be between `1` and `200`. If unspecified will default to `100`.
        Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
          */
         public java.lang.Integer getPageSize() {
@@ -22595,7 +22595,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Requested page size. Must be between `1` and `100`. If unspecified will default
+         * Optional. Requested page size. Must be between `1` and `200`. If unspecified will default
          * to `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
          */
         public List setPageSize(java.lang.Integer pageSize) {

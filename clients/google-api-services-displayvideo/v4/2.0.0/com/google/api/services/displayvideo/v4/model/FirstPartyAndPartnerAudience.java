@@ -58,7 +58,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   private java.lang.String audienceSource;
 
   /**
-   * Output only. The type of the audience.
+   * Immutable. The type of the audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   private ContactInfoList contactInfoList;
 
   /**
-   * Output only. The user-provided description of the audience. Only applicable to first party
+   * Optional. The user-provided description of the audience. Only applicable to first party
    * audiences.
    * The value may be {@code null}.
    */
@@ -120,7 +120,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   private java.lang.Long displayMobileWebAudienceSize;
 
   /**
-   * Output only. The display name of the first party and partner audience.
+   * Optional. The display name of the first party and partner audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   private java.lang.Long gmailAudienceSize;
 
   /**
-   * Output only. The duration in days that an entry remains in the audience after the qualifying
+   * Optional. The duration in days that an entry remains in the audience after the qualifying
    * event. The set value must be greater than 0 and less than or equal to 540. Only applicable to
    * first party audiences. This field is required if one of the following audience_type is used: *
    * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
@@ -245,7 +245,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   }
 
   /**
-   * Output only. The type of the audience.
+   * Immutable. The type of the audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudienceType() {
@@ -253,7 +253,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   }
 
   /**
-   * Output only. The type of the audience.
+   * Immutable. The type of the audience.
    * @param audienceType audienceType or {@code null} for none
    */
   public FirstPartyAndPartnerAudience setAudienceType(java.lang.String audienceType) {
@@ -281,7 +281,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   }
 
   /**
-   * Output only. The user-provided description of the audience. Only applicable to first party
+   * Optional. The user-provided description of the audience. Only applicable to first party
    * audiences.
    * @return value or {@code null} for none
    */
@@ -290,7 +290,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   }
 
   /**
-   * Output only. The user-provided description of the audience. Only applicable to first party
+   * Optional. The user-provided description of the audience. Only applicable to first party
    * audiences.
    * @param description description or {@code null} for none
    */
@@ -390,7 +390,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   }
 
   /**
-   * Output only. The display name of the first party and partner audience.
+   * Optional. The display name of the first party and partner audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -398,7 +398,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   }
 
   /**
-   * Output only. The display name of the first party and partner audience.
+   * Optional. The display name of the first party and partner audience.
    * @param displayName displayName or {@code null} for none
    */
   public FirstPartyAndPartnerAudience setDisplayName(java.lang.String displayName) {
@@ -464,7 +464,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   }
 
   /**
-   * Output only. The duration in days that an entry remains in the audience after the qualifying
+   * Optional. The duration in days that an entry remains in the audience after the qualifying
    * event. The set value must be greater than 0 and less than or equal to 540. Only applicable to
    * first party audiences. This field is required if one of the following audience_type is used: *
    * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
@@ -475,7 +475,7 @@ public final class FirstPartyAndPartnerAudience extends com.google.api.client.js
   }
 
   /**
-   * Output only. The duration in days that an entry remains in the audience after the qualifying
+   * Optional. The duration in days that an entry remains in the audience after the qualifying
    * event. The set value must be greater than 0 and less than or equal to 540. Only applicable to
    * first party audiences. This field is required if one of the following audience_type is used: *
    * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`

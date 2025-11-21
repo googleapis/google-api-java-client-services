@@ -78,6 +78,14 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> eligibleSeatIds;
 
   /**
+   * Output only. The minimum price a buyer has to bid to compete in this auction package. If this
+   * is field is not populated, there is no floor price.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Money floorPriceCpm;
+
+  /**
    * Immutable. The unique identifier for the auction package. Format:
    * `buyers/{accountId}/auctionPackages/{auctionPackageId}` The auction_package_id part of name is
    * sent in the BidRequest to all RTB bidders and is returned as deal_id by the bidder in the
@@ -228,6 +236,25 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
    */
   public AuctionPackage setEligibleSeatIds(java.util.List<java.lang.String> eligibleSeatIds) {
     this.eligibleSeatIds = eligibleSeatIds;
+    return this;
+  }
+
+  /**
+   * Output only. The minimum price a buyer has to bid to compete in this auction package. If this
+   * is field is not populated, there is no floor price.
+   * @return value or {@code null} for none
+   */
+  public Money getFloorPriceCpm() {
+    return floorPriceCpm;
+  }
+
+  /**
+   * Output only. The minimum price a buyer has to bid to compete in this auction package. If this
+   * is field is not populated, there is no floor price.
+   * @param floorPriceCpm floorPriceCpm or {@code null} for none
+   */
+  public AuctionPackage setFloorPriceCpm(Money floorPriceCpm) {
+    this.floorPriceCpm = floorPriceCpm;
     return this;
   }
 

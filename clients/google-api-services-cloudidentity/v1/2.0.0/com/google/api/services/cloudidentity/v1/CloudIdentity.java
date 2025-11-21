@@ -11009,7 +11009,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The name of the policy to retrieve. Format: "policies/{policy}".
+     * @param name Required. The name of the policy to retrieve. Format: `policies/{policy}`.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -11035,7 +11035,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the policy to retrieve. Format: "policies/{policy}".
+       * @param name Required. The name of the policy to retrieve. Format: `policies/{policy}`.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -11113,17 +11113,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The name of the policy to retrieve. Format: "policies/{policy}". */
+      /** Required. The name of the policy to retrieve. Format: `policies/{policy}`. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the policy to retrieve. Format: "policies/{policy}".
+      /** Required. The name of the policy to retrieve. Format: `policies/{policy}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The name of the policy to retrieve. Format: "policies/{policy}". */
+      /** Required. The name of the policy to retrieve. Format: `policies/{policy}`. */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

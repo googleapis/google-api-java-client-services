@@ -814,7 +814,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
              * This can only be `true` when reading across collections. For example, when `parent`
              * is set to `"projects/example/locations/-"`. This field is not supported by default
              * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
@@ -824,7 +824,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
             private java.lang.Boolean returnPartialSuccess;
 
             /** When set to `true`, operations that are reachable are returned as normal, and those that are
-           unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
+           unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
            when reading across collections. For example, when `parent` is set to
            `"projects/example/locations/-"`. This field is not supported by default and will result in an
            `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
@@ -836,7 +836,7 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
              * This can only be `true` when reading across collections. For example, when `parent`
              * is set to `"projects/example/locations/-"`. This field is not supported by default
              * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented

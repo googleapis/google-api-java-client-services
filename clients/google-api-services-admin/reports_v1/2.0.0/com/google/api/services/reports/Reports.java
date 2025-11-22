@@ -182,7 +182,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "admin/reports/v1/activity/users/{userKey}/applications/{applicationName}";
 
       private final java.util.regex.Pattern APPLICATION_NAME_PATTERN =
-          java.util.regex.Pattern.compile("(access_transparency)|(admin)|(calendar)|(chat)|(chrome)|(classroom)|(context_aware_access)|(data_studio)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)");
+          java.util.regex.Pattern.compile("(access_transparency)|(admin)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(context_aware_access)|(data_studio)|(data_migration)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(meet_hardware)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)");
 
       private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
           java.util.regex.Pattern.compile("C.+|my_customer");
@@ -229,7 +229,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(access_transparency)|(admin)|(calendar)|(chat)|(chrome)|(classroom)|(context_aware_access)|(data_studio)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)");
+              "(access_transparency)|(admin)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(context_aware_access)|(data_studio)|(data_migration)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(meet_hardware)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)");
         }
       }
 
@@ -344,7 +344,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(access_transparency)|(admin)|(calendar)|(chat)|(chrome)|(classroom)|(context_aware_access)|(data_studio)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)");
+              "(access_transparency)|(admin)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(context_aware_access)|(data_studio)|(data_migration)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(meet_hardware)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)");
         }
         this.applicationName = applicationName;
         return this;
@@ -715,6 +715,120 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional. The `resourceDetailsFilter` query string is an AND separated list composed of
+       * [Resource Details](#resourcedetails) fields manipulated by relational operators. Resource
+       * Details Filters are in the form `{resourceDetails.field1}{relational operator}{field1
+       * value} AND {resourceDetails.field2}{relational operator}{field2 value}...` All the inner
+       * fields are traversed using the `.` operator, as shown in the following example: ```
+       * resourceDetails.id = "resourceId" AND resourceDetails.appliedLabels.id = "appliedLabelId"
+       * AND resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" ```
+       * `resourceDetailsFilter` query supports these relational operators: * `=`—'equal to'. *
+       * `!=`—'not equal to'. * `:`—'exists'. This is used for filtering on repeated fields.
+       * [`FieldValue`](#fieldvalue) types that are repeated in nature uses `exists` operator for
+       * filtering. The following [`FieldValue`](#fieldvalue) types are repeated: *
+       * [`TextListValue`](#textlistvalue) * [`SelectionListValue`](#selectionlistvalue) *
+       * [`UserListValue`](#userlistvalue) For example, in the following filter,
+       * [`SelectionListValue`](#selectionlistvalue), is a repeated field. The filter checks whether
+       * [`SelectionListValue`](#selectionlistvalue) contains `selection_id`: ``` resourceDetails.id
+       * = "resourceId" AND resourceDetails.appliedLabels.id = "appliedLabelId" AND
+       * resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" AND
+       * resourceDetails.appliedLabels.fieldValue.type = "SELECTION_LIST_VALUE" AND
+       * resourceDetails.appliedLabels.fieldValue.selectionListValue.id: "id" ``` **Usage** ```
+       * GET...&resourceDetailsFilter=resourceDetails.id = "resourceId" AND
+       * resourceDetails.appliedLabels.id = "appliedLabelId" GET...&resourceDetailsFilter=resourceDe
+       * tails.id=%22resourceId%22%20AND%20resourceDetails.appliedLabels.id=%22appliedLabelId%22 ```
+       * **Note the following**: * You must URL encode the query string before sending the request.
+       * * The API supports a maximum of 5 fields separated by the AND operator. - When filtering on
+       * deeper levels (e.g., [`AppliedLabel`](#appliedlabel), [`FieldValue`](#fieldvalue)), the IDs
+       * of all preceding levels in the hierarchy must be included in the filter. For example:
+       * Filtering on [`FieldValue`](#fieldvalue) requires [`AppliedLabel`](#appliedlabel) ID and
+       * resourceDetails ID to be present. *Sample Query*: ``` resourceDetails.id = "resourceId" AND
+       * resourceDetails.appliedLabels.id = "appliedLabelId" AND
+       * resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" ``` * Filtering on inner
+       * [`FieldValue`](#fieldvalue) types like `longTextValue` and `textValue` requires
+       * `resourceDetails.appliedLabels.fieldValue.type` to be present. * Only Filtering on a single
+       * [`AppliedLabel`](#appliedlabel) id and [`FieldValue`](#fieldvalue) id is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceDetailsFilter;
+
+      /** Optional. The `resourceDetailsFilter` query string is an AND separated list composed of [Resource
+     Details](#resourcedetails) fields manipulated by relational operators. Resource Details Filters are
+     in the form `{resourceDetails.field1}{relational operator}{field1 value} AND
+     {resourceDetails.field2}{relational operator}{field2 value}...` All the inner fields are traversed
+     using the `.` operator, as shown in the following example: ``` resourceDetails.id = "resourceId"
+     AND resourceDetails.appliedLabels.id = "appliedLabelId" AND
+     resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" ``` `resourceDetailsFilter` query
+     supports these relational operators: * `=`—'equal to'. * `!=`—'not equal to'. * `:`—'exists'. This
+     is used for filtering on repeated fields. [`FieldValue`](#fieldvalue) types that are repeated in
+     nature uses `exists` operator for filtering. The following [`FieldValue`](#fieldvalue) types are
+     repeated: * [`TextListValue`](#textlistvalue) * [`SelectionListValue`](#selectionlistvalue) *
+     [`UserListValue`](#userlistvalue) For example, in the following filter,
+     [`SelectionListValue`](#selectionlistvalue), is a repeated field. The filter checks whether
+     [`SelectionListValue`](#selectionlistvalue) contains `selection_id`: ``` resourceDetails.id =
+     "resourceId" AND resourceDetails.appliedLabels.id = "appliedLabelId" AND
+     resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" AND
+     resourceDetails.appliedLabels.fieldValue.type = "SELECTION_LIST_VALUE" AND
+     resourceDetails.appliedLabels.fieldValue.selectionListValue.id: "id" ``` **Usage** ```
+     GET...&resourceDetailsFilter=resourceDetails.id = "resourceId" AND resourceDetails.appliedLabels.id
+     = "appliedLabelId" GET...&resourceDetailsFilter=resourceDetails.id=%22resourceId%22%20AND%20resourc
+     eDetails.appliedLabels.id=%22appliedLabelId%22 ``` **Note the following**: * You must URL encode
+     the query string before sending the request. * The API supports a maximum of 5 fields separated by
+     the AND operator. - When filtering on deeper levels (e.g., [`AppliedLabel`](#appliedlabel),
+     [`FieldValue`](#fieldvalue)), the IDs of all preceding levels in the hierarchy must be included in
+     the filter. For example: Filtering on [`FieldValue`](#fieldvalue) requires
+     [`AppliedLabel`](#appliedlabel) ID and resourceDetails ID to be present. *Sample Query*: ```
+     resourceDetails.id = "resourceId" AND resourceDetails.appliedLabels.id = "appliedLabelId" AND
+     resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" ``` * Filtering on inner
+     [`FieldValue`](#fieldvalue) types like `longTextValue` and `textValue` requires
+     `resourceDetails.appliedLabels.fieldValue.type` to be present. * Only Filtering on a single
+     [`AppliedLabel`](#appliedlabel) id and [`FieldValue`](#fieldvalue) id is supported.
+       */
+      public java.lang.String getResourceDetailsFilter() {
+        return resourceDetailsFilter;
+      }
+
+      /**
+       * Optional. The `resourceDetailsFilter` query string is an AND separated list composed of
+       * [Resource Details](#resourcedetails) fields manipulated by relational operators. Resource
+       * Details Filters are in the form `{resourceDetails.field1}{relational operator}{field1
+       * value} AND {resourceDetails.field2}{relational operator}{field2 value}...` All the inner
+       * fields are traversed using the `.` operator, as shown in the following example: ```
+       * resourceDetails.id = "resourceId" AND resourceDetails.appliedLabels.id = "appliedLabelId"
+       * AND resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" ```
+       * `resourceDetailsFilter` query supports these relational operators: * `=`—'equal to'. *
+       * `!=`—'not equal to'. * `:`—'exists'. This is used for filtering on repeated fields.
+       * [`FieldValue`](#fieldvalue) types that are repeated in nature uses `exists` operator for
+       * filtering. The following [`FieldValue`](#fieldvalue) types are repeated: *
+       * [`TextListValue`](#textlistvalue) * [`SelectionListValue`](#selectionlistvalue) *
+       * [`UserListValue`](#userlistvalue) For example, in the following filter,
+       * [`SelectionListValue`](#selectionlistvalue), is a repeated field. The filter checks whether
+       * [`SelectionListValue`](#selectionlistvalue) contains `selection_id`: ``` resourceDetails.id
+       * = "resourceId" AND resourceDetails.appliedLabels.id = "appliedLabelId" AND
+       * resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" AND
+       * resourceDetails.appliedLabels.fieldValue.type = "SELECTION_LIST_VALUE" AND
+       * resourceDetails.appliedLabels.fieldValue.selectionListValue.id: "id" ``` **Usage** ```
+       * GET...&resourceDetailsFilter=resourceDetails.id = "resourceId" AND
+       * resourceDetails.appliedLabels.id = "appliedLabelId" GET...&resourceDetailsFilter=resourceDe
+       * tails.id=%22resourceId%22%20AND%20resourceDetails.appliedLabels.id=%22appliedLabelId%22 ```
+       * **Note the following**: * You must URL encode the query string before sending the request.
+       * * The API supports a maximum of 5 fields separated by the AND operator. - When filtering on
+       * deeper levels (e.g., [`AppliedLabel`](#appliedlabel), [`FieldValue`](#fieldvalue)), the IDs
+       * of all preceding levels in the hierarchy must be included in the filter. For example:
+       * Filtering on [`FieldValue`](#fieldvalue) requires [`AppliedLabel`](#appliedlabel) ID and
+       * resourceDetails ID to be present. *Sample Query*: ``` resourceDetails.id = "resourceId" AND
+       * resourceDetails.appliedLabels.id = "appliedLabelId" AND
+       * resourceDetails.appliedLabels.fieldValue.id = "fieldValueId" ``` * Filtering on inner
+       * [`FieldValue`](#fieldvalue) types like `longTextValue` and `textValue` requires
+       * `resourceDetails.appliedLabels.fieldValue.type` to be present. * Only Filtering on a single
+       * [`AppliedLabel`](#appliedlabel) id and [`FieldValue`](#fieldvalue) id is supported.
+       */
+      public List setResourceDetailsFilter(java.lang.String resourceDetailsFilter) {
+        this.resourceDetailsFilter = resourceDetailsFilter;
         return this;
       }
 

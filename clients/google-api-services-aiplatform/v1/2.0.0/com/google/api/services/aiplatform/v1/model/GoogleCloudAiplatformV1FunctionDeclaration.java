@@ -43,7 +43,7 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
 
   /**
    * Required. The name of the function to call. Must start with a letter or an underscore. Must be
-   * a-z, A-Z, 0-9, or contain underscores, dots and dashes, with a maximum length of 64.
+   * a-z, A-Z, 0-9, or contain underscores, dots, colons and dashes, with a maximum length of 64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
 
   /**
    * Required. The name of the function to call. Must start with a letter or an underscore. Must be
-   * a-z, A-Z, 0-9, or contain underscores, dots and dashes, with a maximum length of 64.
+   * a-z, A-Z, 0-9, or contain underscores, dots, colons and dashes, with a maximum length of 64.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -120,7 +120,7 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
 
   /**
    * Required. The name of the function to call. Must start with a letter or an underscore. Must be
-   * a-z, A-Z, 0-9, or contain underscores, dots and dashes, with a maximum length of 64.
+   * a-z, A-Z, 0-9, or contain underscores, dots, colons and dashes, with a maximum length of 64.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1FunctionDeclaration setName(java.lang.String name) {

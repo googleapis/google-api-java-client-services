@@ -70,6 +70,15 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
   private java.lang.String machineType;
 
   /**
+   * Optional. Immutable. The minimum GPU driver version that this machine requires. For example,
+   * "535.104.06". If not specified, the default GPU driver version will be used by the underlying
+   * infrastructure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minGpuDriverVersion;
+
+  /**
    * Optional. Immutable. The number of nodes per replica for multihost GPU deployments.
    * The value may be {@code null}.
    */
@@ -180,6 +189,27 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1MachineSpec setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The minimum GPU driver version that this machine requires. For example,
+   * "535.104.06". If not specified, the default GPU driver version will be used by the underlying
+   * infrastructure.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinGpuDriverVersion() {
+    return minGpuDriverVersion;
+  }
+
+  /**
+   * Optional. Immutable. The minimum GPU driver version that this machine requires. For example,
+   * "535.104.06". If not specified, the default GPU driver version will be used by the underlying
+   * infrastructure.
+   * @param minGpuDriverVersion minGpuDriverVersion or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MachineSpec setMinGpuDriverVersion(java.lang.String minGpuDriverVersion) {
+    this.minGpuDriverVersion = minGpuDriverVersion;
     return this;
   }
 

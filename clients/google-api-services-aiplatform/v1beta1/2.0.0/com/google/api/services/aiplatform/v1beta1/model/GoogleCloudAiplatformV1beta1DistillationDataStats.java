@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Statistics computed for datasets used for distillation.
+ * Statistics for distillation prompt dataset. These statistics do not include the responses sampled
+ * from the teacher model.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

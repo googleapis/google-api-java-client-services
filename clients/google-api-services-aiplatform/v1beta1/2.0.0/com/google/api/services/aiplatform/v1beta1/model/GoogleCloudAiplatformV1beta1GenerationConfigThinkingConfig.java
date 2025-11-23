@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig ex
   private java.lang.Integer thinkingBudget;
 
   /**
+   * Optional. The number of thoughts tokens that the model should generate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thinkingLevel;
+
+  /**
    * Optional. If true, the model will include its thoughts in the response. "Thoughts" are the
    * intermediate steps the model takes to arrive at the final response. They can provide insights
    * into the model's reasoning process and help with debugging. If this is true, thoughts are
@@ -91,6 +98,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig ex
    */
   public GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig setThinkingBudget(java.lang.Integer thinkingBudget) {
     this.thinkingBudget = thinkingBudget;
+    return this;
+  }
+
+  /**
+   * Optional. The number of thoughts tokens that the model should generate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThinkingLevel() {
+    return thinkingLevel;
+  }
+
+  /**
+   * Optional. The number of thoughts tokens that the model should generate.
+   * @param thinkingLevel thinkingLevel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig setThinkingLevel(java.lang.String thinkingLevel) {
+    this.thinkingLevel = thinkingLevel;
     return this;
   }
 

@@ -47,6 +47,22 @@ public final class GoogleCloudAiplatformV1FunctionCall extends com.google.api.cl
   private java.lang.String name;
 
   /**
+   * Optional. The partial argument value of the function call. If provided, represents the
+   * arguments/fields that are streamed incrementally.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1PartialArg> partialArgs;
+
+  /**
+   * Optional. Whether this is the last part of the FunctionCall. If true, another partial message
+   * for the current FunctionCall is expected to follow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean willContinue;
+
+  /**
    * Optional. The function parameters and values in JSON object format. See
    * [FunctionDeclaration.parameters] for parameter details.
    * @return value or {@code null} for none
@@ -79,6 +95,44 @@ public final class GoogleCloudAiplatformV1FunctionCall extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1FunctionCall setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The partial argument value of the function call. If provided, represents the
+   * arguments/fields that are streamed incrementally.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1PartialArg> getPartialArgs() {
+    return partialArgs;
+  }
+
+  /**
+   * Optional. The partial argument value of the function call. If provided, represents the
+   * arguments/fields that are streamed incrementally.
+   * @param partialArgs partialArgs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FunctionCall setPartialArgs(java.util.List<GoogleCloudAiplatformV1PartialArg> partialArgs) {
+    this.partialArgs = partialArgs;
+    return this;
+  }
+
+  /**
+   * Optional. Whether this is the last part of the FunctionCall. If true, another partial message
+   * for the current FunctionCall is expected to follow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWillContinue() {
+    return willContinue;
+  }
+
+  /**
+   * Optional. Whether this is the last part of the FunctionCall. If true, another partial message
+   * for the current FunctionCall is expected to follow.
+   * @param willContinue willContinue or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FunctionCall setWillContinue(java.lang.Boolean willContinue) {
+    this.willContinue = willContinue;
     return this;
   }
 

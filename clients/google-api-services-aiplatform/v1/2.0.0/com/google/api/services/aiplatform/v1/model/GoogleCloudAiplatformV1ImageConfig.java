@@ -47,6 +47,14 @@ public final class GoogleCloudAiplatformV1ImageConfig extends com.google.api.cli
   private GoogleCloudAiplatformV1ImageConfigImageOutputOptions imageOutputOptions;
 
   /**
+   * Optional. Specifies the size of generated images. Supported values are `1K`, `2K`, `4K`. If not
+   * specified, the model will use default value `1K`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageSize;
+
+  /**
    * Optional. Controls whether the model can generate people.
    * The value may be {@code null}.
    */
@@ -86,6 +94,25 @@ public final class GoogleCloudAiplatformV1ImageConfig extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1ImageConfig setImageOutputOptions(GoogleCloudAiplatformV1ImageConfigImageOutputOptions imageOutputOptions) {
     this.imageOutputOptions = imageOutputOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the size of generated images. Supported values are `1K`, `2K`, `4K`. If not
+   * specified, the model will use default value `1K`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageSize() {
+    return imageSize;
+  }
+
+  /**
+   * Optional. Specifies the size of generated images. Supported values are `1K`, `2K`, `4K`. If not
+   * specified, the model will use default value `1K`.
+   * @param imageSize imageSize or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImageConfig setImageSize(java.lang.String imageSize) {
+    this.imageSize = imageSize;
     return this;
   }
 

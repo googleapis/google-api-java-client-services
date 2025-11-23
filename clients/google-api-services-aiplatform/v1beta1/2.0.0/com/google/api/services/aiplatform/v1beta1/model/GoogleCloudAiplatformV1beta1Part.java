@@ -80,6 +80,13 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1Blob inlineData;
 
   /**
+   * per part media resolution. Media resolution for the input media.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PartMediaResolution mediaResolution;
+
+  /**
    * Optional. The text content of the part.
    * The value may be {@code null}.
    */
@@ -215,6 +222,23 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Part setInlineData(GoogleCloudAiplatformV1beta1Blob inlineData) {
     this.inlineData = inlineData;
+    return this;
+  }
+
+  /**
+   * per part media resolution. Media resolution for the input media.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PartMediaResolution getMediaResolution() {
+    return mediaResolution;
+  }
+
+  /**
+   * per part media resolution. Media resolution for the input media.
+   * @param mediaResolution mediaResolution or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Part setMediaResolution(GoogleCloudAiplatformV1beta1PartMediaResolution mediaResolution) {
+    this.mediaResolution = mediaResolution;
     return this;
   }
 

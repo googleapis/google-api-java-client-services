@@ -30,7 +30,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1TuningDataStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Statistics for distillation.
+   * Output only. Statistics for distillation prompt dataset. These statistics do not include the
+   * responses sampled from the teacher model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +52,8 @@ public final class GoogleCloudAiplatformV1beta1TuningDataStats extends com.googl
   private GoogleCloudAiplatformV1beta1SupervisedTuningDataStats supervisedTuningDataStats;
 
   /**
-   * Output only. Statistics for distillation.
+   * Output only. Statistics for distillation prompt dataset. These statistics do not include the
+   * responses sampled from the teacher model.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DistillationDataStats getDistillationDataStats() {
@@ -59,7 +61,8 @@ public final class GoogleCloudAiplatformV1beta1TuningDataStats extends com.googl
   }
 
   /**
-   * Output only. Statistics for distillation.
+   * Output only. Statistics for distillation prompt dataset. These statistics do not include the
+   * responses sampled from the teacher model.
    * @param distillationDataStats distillationDataStats or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1TuningDataStats setDistillationDataStats(GoogleCloudAiplatformV1beta1DistillationDataStats distillationDataStats) {

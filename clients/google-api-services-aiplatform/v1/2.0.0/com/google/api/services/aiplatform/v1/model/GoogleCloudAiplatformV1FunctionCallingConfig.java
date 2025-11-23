@@ -46,6 +46,15 @@ public final class GoogleCloudAiplatformV1FunctionCallingConfig extends com.goog
   private java.lang.String mode;
 
   /**
+   * Optional. When set to true, arguments of a single function call will be streamed out in
+   * multiple parts/contents/responses. Partial parameter results will be returned in the
+   * [FunctionCall.partial_args] field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean streamFunctionCallArguments;
+
+  /**
    * Optional. Function names to call. Only set when the Mode is ANY. Function names should match
    * [FunctionDeclaration.name]. With mode set to ANY, model will predict a function call from the
    * set of function names provided.
@@ -80,6 +89,27 @@ public final class GoogleCloudAiplatformV1FunctionCallingConfig extends com.goog
    */
   public GoogleCloudAiplatformV1FunctionCallingConfig setMode(java.lang.String mode) {
     this.mode = mode;
+    return this;
+  }
+
+  /**
+   * Optional. When set to true, arguments of a single function call will be streamed out in
+   * multiple parts/contents/responses. Partial parameter results will be returned in the
+   * [FunctionCall.partial_args] field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStreamFunctionCallArguments() {
+    return streamFunctionCallArguments;
+  }
+
+  /**
+   * Optional. When set to true, arguments of a single function call will be streamed out in
+   * multiple parts/contents/responses. Partial parameter results will be returned in the
+   * [FunctionCall.partial_args] field.
+   * @param streamFunctionCallArguments streamFunctionCallArguments or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FunctionCallingConfig setStreamFunctionCallArguments(java.lang.Boolean streamFunctionCallArguments) {
+    this.streamFunctionCallArguments = streamFunctionCallArguments;
     return this;
   }
 

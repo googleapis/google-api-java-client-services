@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DataSourceType extends com.google.api.client.json.GenericJson {
 
   /**
-   * An identifying string to the type of resource being profiled. Current values: *
+   * A string that identifies the type of resource being profiled. Current values: *
    * google/bigquery/table * google/project * google/sql/table * google/gcs/bucket
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2DataSourceType extends com.google.api.clien
   private java.lang.String dataSource;
 
   /**
-   * An identifying string to the type of resource being profiled. Current values: *
+   * A string that identifies the type of resource being profiled. Current values: *
    * google/bigquery/table * google/project * google/sql/table * google/gcs/bucket
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2DataSourceType extends com.google.api.clien
   }
 
   /**
-   * An identifying string to the type of resource being profiled. Current values: *
+   * A string that identifies the type of resource being profiled. Current values: *
    * google/bigquery/table * google/project * google/sql/table * google/gcs/bucket
    * @param dataSource dataSource or {@code null} for none
    */

@@ -49,6 +49,13 @@ public final class GdataBlobstore2Info extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String downloadExternalReadToken;
+
+  /**
+   * gdata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String downloadReadHandle;
 
   /**
@@ -96,6 +103,51 @@ public final class GdataBlobstore2Info extends com.google.api.client.json.Generi
    */
   public GdataBlobstore2Info setBlobId(java.lang.String blobId) {
     this.blobId = blobId;
+    return this;
+  }
+
+  /**
+   * gdata
+   * @see #decodeDownloadExternalReadToken()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDownloadExternalReadToken() {
+    return downloadExternalReadToken;
+  }
+
+  /**
+   * gdata
+   * @see #getDownloadExternalReadToken()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeDownloadExternalReadToken() {
+    return com.google.api.client.util.Base64.decodeBase64(downloadExternalReadToken);
+  }
+
+  /**
+   * gdata
+   * @see #encodeDownloadExternalReadToken()
+   * @param downloadExternalReadToken downloadExternalReadToken or {@code null} for none
+   */
+  public GdataBlobstore2Info setDownloadExternalReadToken(java.lang.String downloadExternalReadToken) {
+    this.downloadExternalReadToken = downloadExternalReadToken;
+    return this;
+  }
+
+  /**
+   * gdata
+   * @see #setDownloadExternalReadToken()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GdataBlobstore2Info encodeDownloadExternalReadToken(byte[] downloadExternalReadToken) {
+    this.downloadExternalReadToken = com.google.api.client.util.Base64.encodeBase64URLSafeString(downloadExternalReadToken);
     return this;
   }
 

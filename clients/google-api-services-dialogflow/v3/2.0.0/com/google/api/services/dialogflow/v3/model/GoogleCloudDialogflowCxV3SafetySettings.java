@@ -44,11 +44,27 @@ public final class GoogleCloudDialogflowCxV3SafetySettings extends com.google.ap
   private java.lang.String defaultBannedPhraseMatchStrategy;
 
   /**
+   * Optional. Immutable. Default RAI settings to be annotated on the agent, so that users will be
+   * able to restore their RAI configurations to the default settings. Read-only field for the API
+   * proto only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3SafetySettingsRaiSettings defaultRaiSettings;
+
+  /**
    * Optional. Settings for prompt security checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3SafetySettingsPromptSecuritySettings promptSecuritySettings;
+
+  /**
+   * Optional. Settings for Responsible AI checks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3SafetySettingsRaiSettings raiSettings;
 
   /**
    * Banned phrases for generated text.
@@ -85,6 +101,27 @@ public final class GoogleCloudDialogflowCxV3SafetySettings extends com.google.ap
   }
 
   /**
+   * Optional. Immutable. Default RAI settings to be annotated on the agent, so that users will be
+   * able to restore their RAI configurations to the default settings. Read-only field for the API
+   * proto only.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3SafetySettingsRaiSettings getDefaultRaiSettings() {
+    return defaultRaiSettings;
+  }
+
+  /**
+   * Optional. Immutable. Default RAI settings to be annotated on the agent, so that users will be
+   * able to restore their RAI configurations to the default settings. Read-only field for the API
+   * proto only.
+   * @param defaultRaiSettings defaultRaiSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3SafetySettings setDefaultRaiSettings(GoogleCloudDialogflowCxV3SafetySettingsRaiSettings defaultRaiSettings) {
+    this.defaultRaiSettings = defaultRaiSettings;
+    return this;
+  }
+
+  /**
    * Optional. Settings for prompt security checks.
    * @return value or {@code null} for none
    */
@@ -98,6 +135,23 @@ public final class GoogleCloudDialogflowCxV3SafetySettings extends com.google.ap
    */
   public GoogleCloudDialogflowCxV3SafetySettings setPromptSecuritySettings(GoogleCloudDialogflowCxV3SafetySettingsPromptSecuritySettings promptSecuritySettings) {
     this.promptSecuritySettings = promptSecuritySettings;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for Responsible AI checks.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3SafetySettingsRaiSettings getRaiSettings() {
+    return raiSettings;
+  }
+
+  /**
+   * Optional. Settings for Responsible AI checks.
+   * @param raiSettings raiSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3SafetySettings setRaiSettings(GoogleCloudDialogflowCxV3SafetySettingsRaiSettings raiSettings) {
+    this.raiSettings = raiSettings;
     return this;
   }
 

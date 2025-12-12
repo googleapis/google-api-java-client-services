@@ -183,6 +183,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private MaintenancePolicy maintenancePolicy;
 
   /**
+   * Optional. The monitoring configuration for this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MonitoringConfig monitoringConfig;
+
+  /**
    * Output only. The name of this instance is in the form of
    * projects/{project}/locations/{location}/instances/{instance}.
    * The value may be {@code null}.
@@ -671,6 +678,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setMaintenancePolicy(MaintenancePolicy maintenancePolicy) {
     this.maintenancePolicy = maintenancePolicy;
+    return this;
+  }
+
+  /**
+   * Optional. The monitoring configuration for this instance.
+   * @return value or {@code null} for none
+   */
+  public MonitoringConfig getMonitoringConfig() {
+    return monitoringConfig;
+  }
+
+  /**
+   * Optional. The monitoring configuration for this instance.
+   * @param monitoringConfig monitoringConfig or {@code null} for none
+   */
+  public Instance setMonitoringConfig(MonitoringConfig monitoringConfig) {
+    this.monitoringConfig = monitoringConfig;
     return this;
   }
 

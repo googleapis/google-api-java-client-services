@@ -131,10 +131,9 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The user-managed service account to which to delegate service agent permissions. You
    * can grant Cloud Storage bucket permissions to this service account instead of to the Transfer
-   * Service service agent. Format is `projects/-/serviceAccounts/ACCOUNT_EMAIL_OR_UNIQUEID` Either
-   * the service account email (`SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com`) or the
-   * unique ID (`123456789012345678901`) are accepted in the string. The `-` wildcard character is
-   * required; replacing it with a project ID is invalid. See https://cloud.google.com//storage-
+   * Service service agent. Either the service account email
+   * (`SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com`) or the unique ID
+   * (`123456789012345678901`) are accepted. See https://docs.cloud.google.com/storage-
    * transfer/docs/delegate-service-agent-permissions for required permissions.
    * The value may be {@code null}.
    */
@@ -395,10 +394,9 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The user-managed service account to which to delegate service agent permissions. You
    * can grant Cloud Storage bucket permissions to this service account instead of to the Transfer
-   * Service service agent. Format is `projects/-/serviceAccounts/ACCOUNT_EMAIL_OR_UNIQUEID` Either
-   * the service account email (`SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com`) or the
-   * unique ID (`123456789012345678901`) are accepted in the string. The `-` wildcard character is
-   * required; replacing it with a project ID is invalid. See https://cloud.google.com//storage-
+   * Service service agent. Either the service account email
+   * (`SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com`) or the unique ID
+   * (`123456789012345678901`) are accepted. See https://docs.cloud.google.com/storage-
    * transfer/docs/delegate-service-agent-permissions for required permissions.
    * @return value or {@code null} for none
    */
@@ -409,10 +407,9 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The user-managed service account to which to delegate service agent permissions. You
    * can grant Cloud Storage bucket permissions to this service account instead of to the Transfer
-   * Service service agent. Format is `projects/-/serviceAccounts/ACCOUNT_EMAIL_OR_UNIQUEID` Either
-   * the service account email (`SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com`) or the
-   * unique ID (`123456789012345678901`) are accepted in the string. The `-` wildcard character is
-   * required; replacing it with a project ID is invalid. See https://cloud.google.com//storage-
+   * Service service agent. Either the service account email
+   * (`SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com`) or the unique ID
+   * (`123456789012345678901`) are accepted. See https://docs.cloud.google.com/storage-
    * transfer/docs/delegate-service-agent-permissions for required permissions.
    * @param serviceAccount serviceAccount or {@code null} for none
    */

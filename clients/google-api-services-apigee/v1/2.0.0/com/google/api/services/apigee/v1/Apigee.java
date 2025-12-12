@@ -38935,7 +38935,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the security monitoring condition to delete. Format:
+         * @param name Required. The name of the security action to delete. Format:
          *        `organizations/{org}/environment/{env}/securityActions/{security_action}`
          * @return the request
          */
@@ -38962,7 +38962,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the security monitoring condition to delete. Format:
+           * @param name Required. The name of the security action to delete. Format:
          *        `organizations/{org}/environment/{env}/securityActions/{security_action}`
            * @since 1.13
            */
@@ -39032,13 +39032,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The name of the security monitoring condition to delete. Format:
+           * Required. The name of the security action to delete. Format:
            * `organizations/{org}/environment/{env}/securityActions/{security_action}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the security monitoring condition to delete. Format:
+          /** Required. The name of the security action to delete. Format:
          `organizations/{org}/environment/{env}/securityActions/{security_action}`
            */
           public java.lang.String getName() {
@@ -39046,7 +39046,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The name of the security monitoring condition to delete. Format:
+           * Required. The name of the security action to delete. Format:
            * `organizations/{org}/environment/{env}/securityActions/{security_action}`
            */
           public Delete setName(java.lang.String name) {
@@ -51310,9 +51310,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the [ListOperationsResponse.unreachable] field. This can
-         * only be `true` when reading across collections e.g. when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not by default supported and will result
+         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
+         * only be `true` when reading across collections. For example, when `parent` is set to
+         * `"projects/example/locations/-"`. This field is not supported by default and will result
          * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
          * product specific documentation.
          */
@@ -51320,10 +51320,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         private java.lang.Boolean returnPartialSuccess;
 
         /** When set to `true`, operations that are reachable are returned as normal, and those that are
-       unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-       when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-       field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-       explicitly documented otherwise in service or product specific documentation.
+       unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+       when reading across collections. For example, when `parent` is set to
+       `"projects/example/locations/-"`. This field is not supported by default and will result in an
+       `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+       documentation.
          */
         public java.lang.Boolean getReturnPartialSuccess() {
           return returnPartialSuccess;
@@ -51331,9 +51332,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the [ListOperationsResponse.unreachable] field. This can
-         * only be `true` when reading across collections e.g. when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not by default supported and will result
+         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
+         * only be `true` when reading across collections. For example, when `parent` is set to
+         * `"projects/example/locations/-"`. This field is not supported by default and will result
          * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
          * product specific documentation.
          */

@@ -121,6 +121,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private DeleteTableRowRequest deleteTableRow;
 
   /**
+   * Inserts a date.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertDateRequest insertDate;
+
+  /**
    * Inserts an inline image at the specified location.
    * The value may be {@code null}.
    */
@@ -485,6 +492,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setDeleteTableRow(DeleteTableRowRequest deleteTableRow) {
     this.deleteTableRow = deleteTableRow;
+    return this;
+  }
+
+  /**
+   * Inserts a date.
+   * @return value or {@code null} for none
+   */
+  public InsertDateRequest getInsertDate() {
+    return insertDate;
+  }
+
+  /**
+   * Inserts a date.
+   * @param insertDate insertDate or {@code null} for none
+   */
+  public Request setInsertDate(InsertDateRequest insertDate) {
+    this.insertDate = insertDate;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * DataDocumentation scan related spec.
+ * Represents the principal entity associated with an access group, as per
+ * https://cloud.google.com/iam/docs/principals-overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -27,40 +28,43 @@ package com.google.api.services.dataplex.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDataplexV1DataDocumentationSpec extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDataplexV1DataProductPrincipal extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether to publish result to Dataplex Catalog.
+   * Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-overview#google-
+   * group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean catalogPublishingEnabled;
+  private java.lang.String googleGroup;
 
   /**
-   * Optional. Whether to publish result to Dataplex Catalog.
+   * Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-overview#google-
+   * group.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getCatalogPublishingEnabled() {
-    return catalogPublishingEnabled;
+  public java.lang.String getGoogleGroup() {
+    return googleGroup;
   }
 
   /**
-   * Optional. Whether to publish result to Dataplex Catalog.
-   * @param catalogPublishingEnabled catalogPublishingEnabled or {@code null} for none
+   * Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-overview#google-
+   * group.
+   * @param googleGroup googleGroup or {@code null} for none
    */
-  public GoogleCloudDataplexV1DataDocumentationSpec setCatalogPublishingEnabled(java.lang.Boolean catalogPublishingEnabled) {
-    this.catalogPublishingEnabled = catalogPublishingEnabled;
+  public GoogleCloudDataplexV1DataProductPrincipal setGoogleGroup(java.lang.String googleGroup) {
+    this.googleGroup = googleGroup;
     return this;
   }
 
   @Override
-  public GoogleCloudDataplexV1DataDocumentationSpec set(String fieldName, Object value) {
-    return (GoogleCloudDataplexV1DataDocumentationSpec) super.set(fieldName, value);
+  public GoogleCloudDataplexV1DataProductPrincipal set(String fieldName, Object value) {
+    return (GoogleCloudDataplexV1DataProductPrincipal) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDataplexV1DataDocumentationSpec clone() {
-    return (GoogleCloudDataplexV1DataDocumentationSpec) super.clone();
+  public GoogleCloudDataplexV1DataProductPrincipal clone() {
+    return (GoogleCloudDataplexV1DataProductPrincipal) super.clone();
   }
 
 }

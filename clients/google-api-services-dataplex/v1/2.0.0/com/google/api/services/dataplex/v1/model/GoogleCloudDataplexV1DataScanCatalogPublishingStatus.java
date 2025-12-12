@@ -17,7 +17,9 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * The status of publishing the data scan result as Dataplex Universal Catalog metadata.
+ * The status of publishing the data scan result as Dataplex Universal Catalog metadata. Multiple
+ * DataScan log events may exist, each with different publishing information depending on the type
+ * of publishing triggered.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,14 +32,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataScanCatalogPublishingStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Execution state for catalog publishing.
+   * Output only. Execution state for publishing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. Execution state for catalog publishing.
+   * Output only. Execution state for publishing.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -45,7 +47,7 @@ public final class GoogleCloudDataplexV1DataScanCatalogPublishingStatus extends 
   }
 
   /**
-   * Output only. Execution state for catalog publishing.
+   * Output only. Execution state for publishing.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScanCatalogPublishingStatus setState(java.lang.String state) {

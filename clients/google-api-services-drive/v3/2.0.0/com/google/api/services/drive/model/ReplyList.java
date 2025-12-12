@@ -48,7 +48,7 @@ public final class ReplyList extends com.google.api.client.json.GenericJson {
   private java.lang.String nextPageToken;
 
   /**
-   * The list of replies. If nextPageToken is populated, then this list may be incomplete and an
+   * The list of replies. If `nextPageToken` is populated, then this list may be incomplete and an
    * additional page of results should be fetched.
    * The value may be {@code null}.
    */
@@ -104,7 +104,7 @@ public final class ReplyList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of replies. If nextPageToken is populated, then this list may be incomplete and an
+   * The list of replies. If `nextPageToken` is populated, then this list may be incomplete and an
    * additional page of results should be fetched.
    * @return value or {@code null} for none
    */
@@ -113,7 +113,7 @@ public final class ReplyList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of replies. If nextPageToken is populated, then this list may be incomplete and an
+   * The list of replies. If `nextPageToken` is populated, then this list may be incomplete and an
    * additional page of results should be fetched.
    * @param replies replies or {@code null} for none
    */

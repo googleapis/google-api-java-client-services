@@ -124,6 +124,13 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.String purchaseToken;
 
   /**
+   * The originating sales channel of the order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String salesChannel;
+
+  /**
    * The state of the order.
    * The value may be {@code null}.
    */
@@ -317,6 +324,23 @@ public final class Order extends com.google.api.client.json.GenericJson {
    */
   public Order setPurchaseToken(java.lang.String purchaseToken) {
     this.purchaseToken = purchaseToken;
+    return this;
+  }
+
+  /**
+   * The originating sales channel of the order.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSalesChannel() {
+    return salesChannel;
+  }
+
+  /**
+   * The originating sales channel of the order.
+   * @param salesChannel salesChannel or {@code null} for none
+   */
+  public Order setSalesChannel(java.lang.String salesChannel) {
+    this.salesChannel = salesChannel;
     return this;
   }
 

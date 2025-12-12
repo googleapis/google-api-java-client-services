@@ -1634,6 +1634,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return this;
       }
 
+      /**
+       * Optional. The behavior of committing a new edit while a submission is already in review.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String inProgressReviewBehaviour;
+
+      /** Optional. The behavior of committing a new edit while a submission is already in review.
+       */
+      public java.lang.String getInProgressReviewBehaviour() {
+        return inProgressReviewBehaviour;
+      }
+
+      /**
+       * Optional. The behavior of committing a new edit while a submission is already in review.
+       */
+      public Commit setInProgressReviewBehaviour(java.lang.String inProgressReviewBehaviour) {
+        this.inProgressReviewBehaviour = inProgressReviewBehaviour;
+        return this;
+      }
+
       @Override
       public Commit set(String parameterName, Object value) {
         return (Commit) super.set(parameterName, value);

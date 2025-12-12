@@ -174,6 +174,147 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
     public class Locations {
 
       /**
+       * Generates shifts constrained by various parameters.
+       *
+       * Create a request for the method "locations.generateShifts".
+       *
+       * This request holds the parameters needed by the contactcenteraiplatform server.  After setting
+       * any optional parameters, call the {@link GenerateShifts#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. Name of the parent resource associated with the request. Format:
+       *        projects/{project}/locations/{location}
+       * @param content the {@link com.google.api.services.contactcenteraiplatform.v1alpha1.model.GenerateShiftsRequest}
+       * @return the request
+       */
+      public GenerateShifts generateShifts(java.lang.String parent, com.google.api.services.contactcenteraiplatform.v1alpha1.model.GenerateShiftsRequest content) throws java.io.IOException {
+        GenerateShifts result = new GenerateShifts(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GenerateShifts extends CCAIPlatformRequest<com.google.api.services.contactcenteraiplatform.v1alpha1.model.Operation> {
+
+        private static final String REST_PATH = "v1alpha1/{+parent}:generateShifts";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Generates shifts constrained by various parameters.
+         *
+         * Create a request for the method "locations.generateShifts".
+         *
+         * This request holds the parameters needed by the the contactcenteraiplatform server.  After
+         * setting any optional parameters, call the {@link GenerateShifts#execute()} method to invoke the
+         * remote operation. <p> {@link GenerateShifts#initialize(com.google.api.client.googleapis.service
+         * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the parent resource associated with the request. Format:
+       *        projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.contactcenteraiplatform.v1alpha1.model.GenerateShiftsRequest}
+         * @since 1.13
+         */
+        protected GenerateShifts(java.lang.String parent, com.google.api.services.contactcenteraiplatform.v1alpha1.model.GenerateShiftsRequest content) {
+          super(CCAIPlatform.this, "POST", REST_PATH, content, com.google.api.services.contactcenteraiplatform.v1alpha1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public GenerateShifts set$Xgafv(java.lang.String $Xgafv) {
+          return (GenerateShifts) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GenerateShifts setAccessToken(java.lang.String accessToken) {
+          return (GenerateShifts) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GenerateShifts setAlt(java.lang.String alt) {
+          return (GenerateShifts) super.setAlt(alt);
+        }
+
+        @Override
+        public GenerateShifts setCallback(java.lang.String callback) {
+          return (GenerateShifts) super.setCallback(callback);
+        }
+
+        @Override
+        public GenerateShifts setFields(java.lang.String fields) {
+          return (GenerateShifts) super.setFields(fields);
+        }
+
+        @Override
+        public GenerateShifts setKey(java.lang.String key) {
+          return (GenerateShifts) super.setKey(key);
+        }
+
+        @Override
+        public GenerateShifts setOauthToken(java.lang.String oauthToken) {
+          return (GenerateShifts) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GenerateShifts setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GenerateShifts) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GenerateShifts setQuotaUser(java.lang.String quotaUser) {
+          return (GenerateShifts) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GenerateShifts setUploadType(java.lang.String uploadType) {
+          return (GenerateShifts) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GenerateShifts setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GenerateShifts) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the parent resource associated with the request. Format:
+         * projects/{project}/locations/{location}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the parent resource associated with the request. Format:
+       projects/{project}/locations/{location}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the parent resource associated with the request. Format:
+         * projects/{project}/locations/{location}
+         */
+        public GenerateShifts setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public GenerateShifts set(String parameterName, Object value) {
+          return (GenerateShifts) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets information about a location.
        *
        * Create a request for the method "locations.get".

@@ -312,6 +312,155 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * Get the AutoMigrationConfig for a given project and location.
+       *
+       * Create a request for the method "locations.getAutoMigrationConfig".
+       *
+       * This request holds the parameters needed by the config server.  After setting any optional
+       * parameters, call the {@link GetAutoMigrationConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the AutoMigrationConfig. Format:
+       *        'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+       * @return the request
+       */
+      public GetAutoMigrationConfig getAutoMigrationConfig(java.lang.String name) throws java.io.IOException {
+        GetAutoMigrationConfig result = new GetAutoMigrationConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAutoMigrationConfig extends ConfigRequest<com.google.api.services.config.v1.model.AutoMigrationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoMigrationConfig$");
+
+        /**
+         * Get the AutoMigrationConfig for a given project and location.
+         *
+         * Create a request for the method "locations.getAutoMigrationConfig".
+         *
+         * This request holds the parameters needed by the the config server.  After setting any optional
+         * parameters, call the {@link GetAutoMigrationConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetAutoMigrationConfig#initialize(com.google.api.client.googleapis.servic
+         * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the AutoMigrationConfig. Format:
+       *        'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+         * @since 1.13
+         */
+        protected GetAutoMigrationConfig(java.lang.String name) {
+          super(Config.this, "GET", REST_PATH, null, com.google.api.services.config.v1.model.AutoMigrationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/autoMigrationConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAutoMigrationConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAutoMigrationConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setAccessToken(java.lang.String accessToken) {
+          return (GetAutoMigrationConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setAlt(java.lang.String alt) {
+          return (GetAutoMigrationConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setCallback(java.lang.String callback) {
+          return (GetAutoMigrationConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setFields(java.lang.String fields) {
+          return (GetAutoMigrationConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setKey(java.lang.String key) {
+          return (GetAutoMigrationConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetAutoMigrationConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAutoMigrationConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetAutoMigrationConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setUploadType(java.lang.String uploadType) {
+          return (GetAutoMigrationConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAutoMigrationConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAutoMigrationConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the AutoMigrationConfig. Format:
+         * 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the AutoMigrationConfig. Format:
+       'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the AutoMigrationConfig. Format:
+         * 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+         */
+        public GetAutoMigrationConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/autoMigrationConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetAutoMigrationConfig set(String parameterName, Object value) {
+          return (GetAutoMigrationConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -534,6 +683,163 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the AutoMigrationConfig for a given project and location.
+       *
+       * Create a request for the method "locations.updateAutoMigrationConfig".
+       *
+       * This request holds the parameters needed by the config server.  After setting any optional
+       * parameters, call the {@link UpdateAutoMigrationConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. The name of the AutoMigrationConfig. Format:
+       *        'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+       * @param content the {@link com.google.api.services.config.v1.model.AutoMigrationConfig}
+       * @return the request
+       */
+      public UpdateAutoMigrationConfig updateAutoMigrationConfig(java.lang.String name, com.google.api.services.config.v1.model.AutoMigrationConfig content) throws java.io.IOException {
+        UpdateAutoMigrationConfig result = new UpdateAutoMigrationConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateAutoMigrationConfig extends ConfigRequest<com.google.api.services.config.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoMigrationConfig$");
+
+        /**
+         * Updates the AutoMigrationConfig for a given project and location.
+         *
+         * Create a request for the method "locations.updateAutoMigrationConfig".
+         *
+         * This request holds the parameters needed by the the config server.  After setting any optional
+         * parameters, call the {@link UpdateAutoMigrationConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateAutoMigrationConfig#initialize(com.google.api.client.googleapis.ser
+         * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Identifier. The name of the AutoMigrationConfig. Format:
+       *        'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+         * @param content the {@link com.google.api.services.config.v1.model.AutoMigrationConfig}
+         * @since 1.13
+         */
+        protected UpdateAutoMigrationConfig(java.lang.String name, com.google.api.services.config.v1.model.AutoMigrationConfig content) {
+          super(Config.this, "PATCH", REST_PATH, content, com.google.api.services.config.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/autoMigrationConfig$");
+          }
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateAutoMigrationConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateAutoMigrationConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setAlt(java.lang.String alt) {
+          return (UpdateAutoMigrationConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setCallback(java.lang.String callback) {
+          return (UpdateAutoMigrationConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setFields(java.lang.String fields) {
+          return (UpdateAutoMigrationConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setKey(java.lang.String key) {
+          return (UpdateAutoMigrationConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateAutoMigrationConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateAutoMigrationConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateAutoMigrationConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateAutoMigrationConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateAutoMigrationConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The name of the AutoMigrationConfig. Format:
+         * 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The name of the AutoMigrationConfig. Format:
+       'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The name of the AutoMigrationConfig. Format:
+         * 'projects/{project_id}/locations/{location}/AutoMigrationConfig'.
+         */
+        public UpdateAutoMigrationConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/autoMigrationConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The update mask applies to the resource. See google.protobuf.FieldMask. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The update mask applies to the resource. See google.protobuf.FieldMask.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The update mask applies to the resource. See google.protobuf.FieldMask. */
+        public UpdateAutoMigrationConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateAutoMigrationConfig set(String parameterName, Object value) {
+          return (UpdateAutoMigrationConfig) super.set(parameterName, value);
         }
       }
 
@@ -4544,9 +4850,9 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -4554,10 +4860,11 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -4565,9 +4872,9 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */

@@ -18,7 +18,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
  * A DNS threat detector sends DNS query logs to a _provider_ that then analyzes the logs to
- * identify malicious activity in the DNS queries. By default, all VPC networks in your projects are
+ * identify threat events in the DNS queries. By default, all VPC networks in your projects are
  * included. You can exclude specific networks by supplying `excluded_networks`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

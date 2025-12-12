@@ -31,18 +31,18 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class CustomMirroringProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The target MirroringEndpointGroup. When a mirroring rule with this security profile
-   * attached matches a packet, a replica will be mirrored to the location-local target in this
-   * group.
+   * Required. Immutable. The target MirroringEndpointGroup. When a mirroring rule with this
+   * security profile attached matches a packet, a replica will be mirrored to the location-local
+   * target in this group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mirroringEndpointGroup;
 
   /**
-   * Required. The target MirroringEndpointGroup. When a mirroring rule with this security profile
-   * attached matches a packet, a replica will be mirrored to the location-local target in this
-   * group.
+   * Required. Immutable. The target MirroringEndpointGroup. When a mirroring rule with this
+   * security profile attached matches a packet, a replica will be mirrored to the location-local
+   * target in this group.
    * @return value or {@code null} for none
    */
   public java.lang.String getMirroringEndpointGroup() {
@@ -50,9 +50,9 @@ public final class CustomMirroringProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The target MirroringEndpointGroup. When a mirroring rule with this security profile
-   * attached matches a packet, a replica will be mirrored to the location-local target in this
-   * group.
+   * Required. Immutable. The target MirroringEndpointGroup. When a mirroring rule with this
+   * security profile attached matches a packet, a replica will be mirrored to the location-local
+   * target in this group.
    * @param mirroringEndpointGroup mirroringEndpointGroup or {@code null} for none
    */
   public CustomMirroringProfile setMirroringEndpointGroup(java.lang.String mirroringEndpointGroup) {

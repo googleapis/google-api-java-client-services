@@ -10592,9 +10592,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -10602,10 +10602,11 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -10613,9 +10614,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -11068,7 +11069,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the backupdr server.  After setting any optional
          * parameters, call the {@link End#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource where this trial will be ended.
+         * @param parent Required. The parent resource where the trial has been created. Format:
+         *        projects/{project}/locations/{location}
          * @param content the {@link com.google.api.services.backupdr.v1.model.EndTrialRequest}
          * @return the request
          */
@@ -11095,7 +11097,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * {@link End#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource where this trial will be ended.
+           * @param parent Required. The parent resource where the trial has been created. Format:
+         *        projects/{project}/locations/{location}
            * @param content the {@link com.google.api.services.backupdr.v1.model.EndTrialRequest}
            * @since 1.13
            */
@@ -11164,17 +11167,24 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             return (End) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource where this trial will be ended. */
+          /**
+           * Required. The parent resource where the trial has been created. Format:
+           * projects/{project}/locations/{location}
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource where this trial will be ended.
+          /** Required. The parent resource where the trial has been created. Format:
+         projects/{project}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource where this trial will be ended. */
+          /**
+           * Required. The parent resource where the trial has been created. Format:
+           * projects/{project}/locations/{location}
+           */
           public End setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

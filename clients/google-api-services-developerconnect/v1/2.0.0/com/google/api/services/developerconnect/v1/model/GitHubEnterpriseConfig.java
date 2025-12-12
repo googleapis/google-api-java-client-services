@@ -68,7 +68,8 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
 
   /**
    * Optional. SecretManager resource containing the private key of the GitHub App, formatted as
-   * `projects/secrets/versions`.
+   * `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional secrets are
+   * supported in that location).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +101,8 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
 
   /**
    * Optional. SecretManager resource containing the webhook secret of the GitHub App, formatted as
-   * `projects/secrets/versions`.
+   * `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional secrets are
+   * supported in that location).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +197,8 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
 
   /**
    * Optional. SecretManager resource containing the private key of the GitHub App, formatted as
-   * `projects/secrets/versions`.
+   * `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional secrets are
+   * supported in that location).
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateKeySecretVersion() {
@@ -204,7 +207,8 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
 
   /**
    * Optional. SecretManager resource containing the private key of the GitHub App, formatted as
-   * `projects/secrets/versions`.
+   * `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional secrets are
+   * supported in that location).
    * @param privateKeySecretVersion privateKeySecretVersion or {@code null} for none
    */
   public GitHubEnterpriseConfig setPrivateKeySecretVersion(java.lang.String privateKeySecretVersion) {
@@ -271,7 +275,8 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
 
   /**
    * Optional. SecretManager resource containing the webhook secret of the GitHub App, formatted as
-   * `projects/secrets/versions`.
+   * `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional secrets are
+   * supported in that location).
    * @return value or {@code null} for none
    */
   public java.lang.String getWebhookSecretSecretVersion() {
@@ -280,7 +285,8 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
 
   /**
    * Optional. SecretManager resource containing the webhook secret of the GitHub App, formatted as
-   * `projects/secrets/versions`.
+   * `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional secrets are
+   * supported in that location).
    * @param webhookSecretSecretVersion webhookSecretSecretVersion or {@code null} for none
    */
   public GitHubEnterpriseConfig setWebhookSecretSecretVersion(java.lang.String webhookSecretSecretVersion) {

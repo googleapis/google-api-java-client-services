@@ -79,7 +79,9 @@ public final class BitbucketDataCenterConfig extends com.google.api.client.json.
 
   /**
    * Required. Immutable. SecretManager resource containing the webhook secret used to verify
-   * webhook events, formatted as `projects/secrets/versions`. This is used to validate webhooks.
+   * webhook events, formatted as `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in that location).
+   * This is used to validate webhooks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +201,9 @@ public final class BitbucketDataCenterConfig extends com.google.api.client.json.
 
   /**
    * Required. Immutable. SecretManager resource containing the webhook secret used to verify
-   * webhook events, formatted as `projects/secrets/versions`. This is used to validate webhooks.
+   * webhook events, formatted as `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in that location).
+   * This is used to validate webhooks.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebhookSecretSecretVersion() {
@@ -208,7 +212,9 @@ public final class BitbucketDataCenterConfig extends com.google.api.client.json.
 
   /**
    * Required. Immutable. SecretManager resource containing the webhook secret used to verify
-   * webhook events, formatted as `projects/secrets/versions`. This is used to validate webhooks.
+   * webhook events, formatted as `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in that location).
+   * This is used to validate webhooks.
    * @param webhookSecretSecretVersion webhookSecretSecretVersion or {@code null} for none
    */
   public BitbucketDataCenterConfig setWebhookSecretSecretVersion(java.lang.String webhookSecretSecretVersion) {

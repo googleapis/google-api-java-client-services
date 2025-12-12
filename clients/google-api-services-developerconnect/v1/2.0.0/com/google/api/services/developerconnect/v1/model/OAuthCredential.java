@@ -32,7 +32,8 @@ public final class OAuthCredential extends com.google.api.client.json.GenericJso
 
   /**
    * Required. A SecretManager resource containing the OAuth token that authorizes the connection.
-   * Format: `projects/secrets/versions`.
+   * Format: `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional
+   * secrets are supported in that location).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class OAuthCredential extends com.google.api.client.json.GenericJso
 
   /**
    * Required. A SecretManager resource containing the OAuth token that authorizes the connection.
-   * Format: `projects/secrets/versions`.
+   * Format: `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional
+   * secrets are supported in that location).
    * @return value or {@code null} for none
    */
   public java.lang.String getOauthTokenSecretVersion() {
@@ -56,7 +58,8 @@ public final class OAuthCredential extends com.google.api.client.json.GenericJso
 
   /**
    * Required. A SecretManager resource containing the OAuth token that authorizes the connection.
-   * Format: `projects/secrets/versions`.
+   * Format: `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional
+   * secrets are supported in that location).
    * @param oauthTokenSecretVersion oauthTokenSecretVersion or {@code null} for none
    */
   public OAuthCredential setOauthTokenSecretVersion(java.lang.String oauthTokenSecretVersion) {

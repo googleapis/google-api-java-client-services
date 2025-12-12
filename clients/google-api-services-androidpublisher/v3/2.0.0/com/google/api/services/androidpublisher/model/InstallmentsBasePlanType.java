@@ -31,10 +31,10 @@ package com.google.api.services.androidpublisher.model;
 public final class InstallmentsBasePlanType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Account hold period of the subscription, specified in ISO 8601 format. Acceptable
-   * values must be in days and between P0D and P60D. If not specified, the default value is P30D.
-   * The sum of gracePeriodDuration and accountHoldDuration must be between P30D and P60D days,
-   * inclusive.
+   * Optional. Custom account hold period of the subscription, specified in ISO 8601 format.
+   * Acceptable values must be in days and between P0D and P60D. An empty field represents a
+   * recommended account hold, calculated as 60 days minus grace period. The sum of
+   * gracePeriodDuration and accountHoldDuration must be between P30D and P60D days, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,10 +92,10 @@ public final class InstallmentsBasePlanType extends com.google.api.client.json.G
   private java.lang.String resubscribeState;
 
   /**
-   * Optional. Account hold period of the subscription, specified in ISO 8601 format. Acceptable
-   * values must be in days and between P0D and P60D. If not specified, the default value is P30D.
-   * The sum of gracePeriodDuration and accountHoldDuration must be between P30D and P60D days,
-   * inclusive.
+   * Optional. Custom account hold period of the subscription, specified in ISO 8601 format.
+   * Acceptable values must be in days and between P0D and P60D. An empty field represents a
+   * recommended account hold, calculated as 60 days minus grace period. The sum of
+   * gracePeriodDuration and accountHoldDuration must be between P30D and P60D days, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountHoldDuration() {
@@ -103,10 +103,10 @@ public final class InstallmentsBasePlanType extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Account hold period of the subscription, specified in ISO 8601 format. Acceptable
-   * values must be in days and between P0D and P60D. If not specified, the default value is P30D.
-   * The sum of gracePeriodDuration and accountHoldDuration must be between P30D and P60D days,
-   * inclusive.
+   * Optional. Custom account hold period of the subscription, specified in ISO 8601 format.
+   * Acceptable values must be in days and between P0D and P60D. An empty field represents a
+   * recommended account hold, calculated as 60 days minus grace period. The sum of
+   * gracePeriodDuration and accountHoldDuration must be between P30D and P60D days, inclusive.
    * @param accountHoldDuration accountHoldDuration or {@code null} for none
    */
   public InstallmentsBasePlanType setAccountHoldDuration(java.lang.String accountHoldDuration) {

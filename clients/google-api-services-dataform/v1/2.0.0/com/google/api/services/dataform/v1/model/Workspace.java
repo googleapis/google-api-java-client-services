@@ -60,6 +60,14 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Metadata indicating whether this resource is user-scoped. For `Workspace`
+   * resources, the `user_scoped` field is always `true`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateResourceMetadata privateResourceMetadata;
+
+  /**
    * Output only. The timestamp of when the workspace was created.
    * @return value or {@code null} for none
    */
@@ -128,6 +136,25 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
    */
   public Workspace setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata indicating whether this resource is user-scoped. For `Workspace`
+   * resources, the `user_scoped` field is always `true`.
+   * @return value or {@code null} for none
+   */
+  public PrivateResourceMetadata getPrivateResourceMetadata() {
+    return privateResourceMetadata;
+  }
+
+  /**
+   * Output only. Metadata indicating whether this resource is user-scoped. For `Workspace`
+   * resources, the `user_scoped` field is always `true`.
+   * @param privateResourceMetadata privateResourceMetadata or {@code null} for none
+   */
+  public Workspace setPrivateResourceMetadata(PrivateResourceMetadata privateResourceMetadata) {
+    this.privateResourceMetadata = privateResourceMetadata;
     return this;
   }
 

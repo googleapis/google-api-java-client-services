@@ -45,6 +45,14 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
   private java.lang.String description;
 
   /**
+   * Optional. Indicates whether to disable user location context. By default, user location context
+   * is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableLocationContext;
+
+  /**
    * Required. The assistant display name. It must be a UTF-8 encoded string with a length limit of
    * 128 characters.
    * The value may be {@code null}.
@@ -121,6 +129,25 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaAssistant setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether to disable user location context. By default, user location context
+   * is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableLocationContext() {
+    return disableLocationContext;
+  }
+
+  /**
+   * Optional. Indicates whether to disable user location context. By default, user location context
+   * is enabled.
+   * @param disableLocationContext disableLocationContext or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAssistant setDisableLocationContext(java.lang.Boolean disableLocationContext) {
+    this.disableLocationContext = disableLocationContext;
     return this;
   }
 

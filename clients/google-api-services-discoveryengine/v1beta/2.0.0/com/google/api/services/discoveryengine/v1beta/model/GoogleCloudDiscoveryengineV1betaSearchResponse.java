@@ -132,6 +132,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
   }
 
   /**
+   * Output only. Indicates the semantic state of the search response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String semanticState;
+
+  /**
    * Session information. Only set if SearchRequest.session is provided. See its description for
    * more details.
    * The value may be {@code null}.
@@ -393,6 +400,23 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponse setSearchLinkPromotions(java.util.List<GoogleCloudDiscoveryengineV1betaSearchLinkPromotion> searchLinkPromotions) {
     this.searchLinkPromotions = searchLinkPromotions;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates the semantic state of the search response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSemanticState() {
+    return semanticState;
+  }
+
+  /**
+   * Output only. Indicates the semantic state of the search response.
+   * @param semanticState semanticState or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponse setSemanticState(java.lang.String semanticState) {
+    this.semanticState = semanticState;
     return this;
   }
 

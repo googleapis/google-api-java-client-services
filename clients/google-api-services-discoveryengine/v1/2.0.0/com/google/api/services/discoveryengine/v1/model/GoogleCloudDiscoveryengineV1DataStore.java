@@ -162,6 +162,13 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
   private java.lang.String name;
 
   /**
+   * Optional. Configuration for Natural Language Query Understanding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1NaturalLanguageQueryUnderstandingConfig naturalLanguageQueryUnderstandingConfig;
+
+  /**
    * Optional. Stores serving config at DataStore level.
    * The value may be {@code null}.
    */
@@ -509,6 +516,23 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
    */
   public GoogleCloudDiscoveryengineV1DataStore setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Natural Language Query Understanding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1NaturalLanguageQueryUnderstandingConfig getNaturalLanguageQueryUnderstandingConfig() {
+    return naturalLanguageQueryUnderstandingConfig;
+  }
+
+  /**
+   * Optional. Configuration for Natural Language Query Understanding.
+   * @param naturalLanguageQueryUnderstandingConfig naturalLanguageQueryUnderstandingConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataStore setNaturalLanguageQueryUnderstandingConfig(GoogleCloudDiscoveryengineV1NaturalLanguageQueryUnderstandingConfig naturalLanguageQueryUnderstandingConfig) {
+    this.naturalLanguageQueryUnderstandingConfig = naturalLanguageQueryUnderstandingConfig;
     return this;
   }
 

@@ -135,6 +135,43 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
   private java.lang.Long lastModifiedAt;
 
   /**
+   * Optional. Configuration used to group Apigee proxies with resources, method types, LLM model
+   * and quotas. The resource refers to the resource URI (excluding the base path). With this
+   * grouping, the API product creator is able to fine-tune and give precise control over which REST
+   * methods have access to specific resources, specific LLM model and how many calls can be made
+   * (using the `quota` setting). **Note:** The `api_resources` setting cannot be specified for both
+   * the API product and llm operation group; otherwise the call will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1LlmOperationGroup llmOperationGroup;
+
+  /**
+   * Optional. Number of LLM tokens permitted per app by this API product for the specified
+   * `llm_quota_interval` and `llm_quota_time_unit`. For example, an `llm_quota` of 50,000, for an
+   * `llm_quota_interval` of 12 and an `llm_quota_time_unit` of hours means 50,000 llm tokens are
+   * allowed to be used every 12 hours.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String llmQuota;
+
+  /**
+   * Optional. Time interval over which the number of tokens from LLM responses is calculated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String llmQuotaInterval;
+
+  /**
+   * Optional. Time unit defined for the `llm_quota_interval`. Valid values include `minute`,
+   * `hour`, `day`, or `month`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String llmQuotaTimeUnit;
+
+  /**
    * Internal name of the API product. Characters you can use in the name are restricted to:
    * `A-Z0-9._\-$ %`. **Note:** The internal name cannot be edited when updating the API product.
    * The value may be {@code null}.
@@ -458,6 +495,92 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
    */
   public GoogleCloudApigeeV1ApiProduct setLastModifiedAt(java.lang.Long lastModifiedAt) {
     this.lastModifiedAt = lastModifiedAt;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration used to group Apigee proxies with resources, method types, LLM model
+   * and quotas. The resource refers to the resource URI (excluding the base path). With this
+   * grouping, the API product creator is able to fine-tune and give precise control over which REST
+   * methods have access to specific resources, specific LLM model and how many calls can be made
+   * (using the `quota` setting). **Note:** The `api_resources` setting cannot be specified for both
+   * the API product and llm operation group; otherwise the call will fail.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1LlmOperationGroup getLlmOperationGroup() {
+    return llmOperationGroup;
+  }
+
+  /**
+   * Optional. Configuration used to group Apigee proxies with resources, method types, LLM model
+   * and quotas. The resource refers to the resource URI (excluding the base path). With this
+   * grouping, the API product creator is able to fine-tune and give precise control over which REST
+   * methods have access to specific resources, specific LLM model and how many calls can be made
+   * (using the `quota` setting). **Note:** The `api_resources` setting cannot be specified for both
+   * the API product and llm operation group; otherwise the call will fail.
+   * @param llmOperationGroup llmOperationGroup or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProduct setLlmOperationGroup(GoogleCloudApigeeV1LlmOperationGroup llmOperationGroup) {
+    this.llmOperationGroup = llmOperationGroup;
+    return this;
+  }
+
+  /**
+   * Optional. Number of LLM tokens permitted per app by this API product for the specified
+   * `llm_quota_interval` and `llm_quota_time_unit`. For example, an `llm_quota` of 50,000, for an
+   * `llm_quota_interval` of 12 and an `llm_quota_time_unit` of hours means 50,000 llm tokens are
+   * allowed to be used every 12 hours.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLlmQuota() {
+    return llmQuota;
+  }
+
+  /**
+   * Optional. Number of LLM tokens permitted per app by this API product for the specified
+   * `llm_quota_interval` and `llm_quota_time_unit`. For example, an `llm_quota` of 50,000, for an
+   * `llm_quota_interval` of 12 and an `llm_quota_time_unit` of hours means 50,000 llm tokens are
+   * allowed to be used every 12 hours.
+   * @param llmQuota llmQuota or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProduct setLlmQuota(java.lang.String llmQuota) {
+    this.llmQuota = llmQuota;
+    return this;
+  }
+
+  /**
+   * Optional. Time interval over which the number of tokens from LLM responses is calculated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLlmQuotaInterval() {
+    return llmQuotaInterval;
+  }
+
+  /**
+   * Optional. Time interval over which the number of tokens from LLM responses is calculated.
+   * @param llmQuotaInterval llmQuotaInterval or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProduct setLlmQuotaInterval(java.lang.String llmQuotaInterval) {
+    this.llmQuotaInterval = llmQuotaInterval;
+    return this;
+  }
+
+  /**
+   * Optional. Time unit defined for the `llm_quota_interval`. Valid values include `minute`,
+   * `hour`, `day`, or `month`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLlmQuotaTimeUnit() {
+    return llmQuotaTimeUnit;
+  }
+
+  /**
+   * Optional. Time unit defined for the `llm_quota_interval`. Valid values include `minute`,
+   * `hour`, `day`, or `month`.
+   * @param llmQuotaTimeUnit llmQuotaTimeUnit or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProduct setLlmQuotaTimeUnit(java.lang.String llmQuotaTimeUnit) {
+    this.llmQuotaTimeUnit = llmQuotaTimeUnit;
     return this;
   }
 

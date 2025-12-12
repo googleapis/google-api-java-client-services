@@ -17,7 +17,7 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * Cloud KMS Autokey configuration for a folder or project.
+ * Cloud KMS Autokey configuration for a folder.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a
@@ -54,7 +54,6 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +118,6 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -128,7 +126,6 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    * @param name name or {@code null} for none
    */
   public AutokeyConfig setName(java.lang.String name) {

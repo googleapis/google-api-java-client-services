@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.workstations.v1beta.model;
+package com.google.api.services.workstations.v1.model;
 
 /**
  * A Persistent Directory backed by a Compute Engine [Hyperdisk Balanced High Availability

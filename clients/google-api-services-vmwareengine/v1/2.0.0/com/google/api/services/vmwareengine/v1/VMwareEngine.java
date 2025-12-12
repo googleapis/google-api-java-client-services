@@ -613,22 +613,22 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Unless explicitly documented otherwise, don't use this unsupported field which is
-       primarily intended for internal usage.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Unless explicitly documented otherwise, don't use this unsupported field which
-         * is primarily intended for internal usage.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -1161,6 +1161,1097 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Datastores collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code VMwareEngine vmwareengine = new VMwareEngine(...);}
+       *   {@code VMwareEngine.Datastores.List request = vmwareengine.datastores().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Datastores datastores() {
+        return new Datastores();
+      }
+
+      /**
+       * The "datastores" collection of methods.
+       */
+      public class Datastores {
+
+        /**
+         * Creates a new `Datastore` resource in a given project and location. Datastores are regional
+         * resources
+         *
+         * Create a request for the method "datastores.create".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location to create the new datastore in. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/us-central1`
+         * @param content the {@link com.google.api.services.vmwareengine.v1.model.Datastore}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.vmwareengine.v1.model.Datastore content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/datastores";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new `Datastore` resource in a given project and location. Datastores are regional
+           * resources
+           *
+           * Create a request for the method "datastores.create".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location to create the new datastore in. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/us-central1`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.Datastore}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.vmwareengine.v1.model.Datastore content) {
+            super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location to create the new datastore in. Resource
+           * names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location to create the new datastore in. Resource names are
+         schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+         For example: `projects/my-project/locations/us-central1`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location to create the new datastore in. Resource
+           * names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The user-provided identifier of the datastore to be created. This identifier
+           * must be unique among each `Datastore` within the parent and becomes the final token in
+           * the name URI. The identifier must meet the following requirements: * Only contains 1-63
+           * alphanumeric characters and hyphens * Begins with an alphabetical character * Ends with
+           * a non-hyphen character * Not formatted as a UUID * Complies with [RFC
+           * 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String datastoreId;
+
+          /** Required. The user-provided identifier of the datastore to be created. This identifier must be
+         unique among each `Datastore` within the parent and becomes the final token in the name URI. The
+         identifier must meet the following requirements: * Only contains 1-63 alphanumeric characters and
+         hyphens * Begins with an alphabetical character * Ends with a non-hyphen character * Not formatted
+         as a UUID * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
+           */
+          public java.lang.String getDatastoreId() {
+            return datastoreId;
+          }
+
+          /**
+           * Required. The user-provided identifier of the datastore to be created. This identifier
+           * must be unique among each `Datastore` within the parent and becomes the final token in
+           * the name URI. The identifier must meet the following requirements: * Only contains 1-63
+           * alphanumeric characters and hyphens * Begins with an alphabetical character * Ends with
+           * a non-hyphen character * Not formatted as a UUID * Complies with [RFC
+           * 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
+           */
+          public Create setDatastoreId(java.lang.String datastoreId) {
+            this.datastoreId = datastoreId;
+            return this;
+          }
+
+          /**
+           * Optional. The request ID must be a valid UUID with the exception that zero UUID is not
+           * supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. The request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. The request ID must be a valid UUID with the exception that zero UUID is not
+           * supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a `Datastore` resource. You can only delete a Datastore after all resources that refer to
+         * it are deleted. For example, multiple clusters of the same private cloud or different private
+         * clouds can refer to the same datastore.
+         *
+         * Create a request for the method "datastores.delete".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the Datastore to be deleted. Resource names are schemeless URIs that
+         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1/datastore/my-datastore`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
+
+          /**
+           * Deletes a `Datastore` resource. You can only delete a Datastore after all resources that refer
+           * to it are deleted. For example, multiple clusters of the same private cloud or different
+           * private clouds can refer to the same datastore.
+           *
+           * Create a request for the method "datastores.delete".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the Datastore to be deleted. Resource names are schemeless URIs that
+         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1/datastore/my-datastore`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(VMwareEngine.this, "DELETE", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Datastore to be deleted. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1/datastore/my-datastore`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the Datastore to be deleted. Resource names are schemeless URIs that
+         follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         `projects/my-project/locations/us-central1/datastore/my-datastore`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the Datastore to be deleted. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1/datastore/my-datastore`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Checksum used to ensure that the user-provided value is up to date before the
+           * server processes the request. The server compares provided checksum with the current
+           * checksum of the resource. If the user-provided value is out of date, this request
+           * returns an `ABORTED` error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. Checksum used to ensure that the user-provided value is up to date before the server
+         processes the request. The server compares provided checksum with the current checksum of the
+         resource. If the user-provided value is out of date, this request returns an `ABORTED` error.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. Checksum used to ensure that the user-provided value is up to date before the
+           * server processes the request. The server compares provided checksum with the current
+           * checksum of the resource. If the user-provided value is out of date, this request
+           * returns an `ABORTED` error.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Optional. The request ID must be a valid UUID with the exception that zero UUID is not
+           * supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. The request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. The request ID must be a valid UUID with the exception that zero UUID is not
+           * supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a `Datastore` resource by its resource name. The resource contains details of the
+         * Datastore, such as its description, subnets, type, and more.
+         *
+         * Create a request for the method "datastores.get".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the Datastore to retrieve. Resource names are schemeless URIs that
+         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1/datastores/my-datastore`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Datastore> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
+
+          /**
+           * Retrieves a `Datastore` resource by its resource name. The resource contains details of the
+           * Datastore, such as its description, subnets, type, and more.
+           *
+           * Create a request for the method "datastores.get".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the Datastore to retrieve. Resource names are schemeless URIs that
+         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1/datastores/my-datastore`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.Datastore.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Datastore to retrieve. Resource names are schemeless
+           * URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1/datastores/my-datastore`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the Datastore to retrieve. Resource names are schemeless URIs that
+         follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         `projects/my-project/locations/us-central1/datastores/my-datastore`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the Datastore to retrieve. Resource names are schemeless
+           * URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1/datastores/my-datastore`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists `Datastore` resources in a given project and location.
+         *
+         * Create a request for the method "datastores.list".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location to query for Datastores. Resource names are schemeless
+         *        URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+         *        For example: `projects/my-project/locations/us-central1`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.ListDatastoresResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/datastores";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists `Datastore` resources in a given project and location.
+           *
+           * Create a request for the method "datastores.list".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location to query for Datastores. Resource names are schemeless
+         *        URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+         *        For example: `projects/my-project/locations/us-central1`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.ListDatastoresResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location to query for Datastores. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location to query for Datastores. Resource names are schemeless
+         URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         example: `projects/my-project/locations/us-central1`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location to query for Datastores. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter expression that matches resources returned in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * comparison operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a
+           * list of datastores, you can exclude the ones named `example-datastore` by specifying
+           * `name != "example-datastore"`. To filter on multiple expressions, provide each separate
+           * expression within parentheses. For example: ``` (name = "example-datastore")
+           * (createTime > "2021-04-12T08:15:10.40Z") ``` By default, each expression is an `AND`
+           * expression. However, you can include `AND` and `OR` expressions explicitly. For
+           * example: ``` (name = "example-datastore-1") AND (createTime >
+           * "2021-04-12T08:15:10.40Z") OR (name = "example-datastore-2") ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter expression that matches resources returned in the response. The expression must
+         specify the field name, a comparison operator, and the value that you want to use for filtering.
+         The value must be a string, a number, or a boolean. The comparison operator must be `=`, `!=`, `>`,
+         or `<`. For example, if you are filtering a list of datastores, you can exclude the ones named
+         `example-datastore` by specifying `name != "example-datastore"`. To filter on multiple expressions,
+         provide each separate expression within parentheses. For example: ``` (name = "example-datastore")
+         (createTime > "2021-04-12T08:15:10.40Z") ``` By default, each expression is an `AND` expression.
+         However, you can include `AND` and `OR` expressions explicitly. For example: ``` (name = "example-
+         datastore-1") AND (createTime > "2021-04-12T08:15:10.40Z") OR (name = "example-datastore-2") ```
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter expression that matches resources returned in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * comparison operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a
+           * list of datastores, you can exclude the ones named `example-datastore` by specifying
+           * `name != "example-datastore"`. To filter on multiple expressions, provide each separate
+           * expression within parentheses. For example: ``` (name = "example-datastore")
+           * (createTime > "2021-04-12T08:15:10.40Z") ``` By default, each expression is an `AND`
+           * expression. However, you can include `AND` and `OR` expressions explicitly. For
+           * example: ``` (name = "example-datastore-1") AND (createTime >
+           * "2021-04-12T08:15:10.40Z") OR (name = "example-datastore-2") ```
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Sorts list results by a certain order. By default, returned results are
+           * ordered by `name` in ascending order. You can also sort results in descending order
+           * based on the `name` value using `orderBy="name desc"`. Currently, only ordering by
+           * `name` is supported.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Sorts list results by a certain order. By default, returned results are ordered by `name`
+         in ascending order. You can also sort results in descending order based on the `name` value using
+         `orderBy="name desc"`. Currently, only ordering by `name` is supported.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Sorts list results by a certain order. By default, returned results are
+           * ordered by `name` in ascending order. You can also sort results in descending order
+           * based on the `name` value using `orderBy="name desc"`. Currently, only ordering by
+           * `name` is supported.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return in one page. The maximum value is
+           * coerced to 1000. The default value of this field is 500.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return in one page. The maximum value is coerced to
+         1000. The default value of this field is 500.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return in one page. The maximum value is
+           * coerced to 1000. The default value of this field is 500.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListDatastores` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListDatastores` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListDatastores` call. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters provided to `ListDatastores` must match
+         the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListDatastores` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListDatastores` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The request ID must be a valid UUID with the exception that zero UUID is not
+           * supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. The request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. The request ID must be a valid UUID with the exception that zero UUID is not
+           * supported (00000000-0000-0000-0000-000000000000).
+           */
+          public List setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Modifies a Datastore resource. Only the following fields can be updated: `description`. Only
+         * fields specified in `updateMask` are applied.
+         *
+         * Create a request for the method "datastores.patch".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Identifier. The resource name of this datastore. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1/datastores/datastore`
+         * @param content the {@link com.google.api.services.vmwareengine.v1.model.Datastore}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.vmwareengine.v1.model.Datastore content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
+
+          /**
+           * Modifies a Datastore resource. Only the following fields can be updated: `description`. Only
+           * fields specified in `updateMask` are applied.
+           *
+           * Create a request for the method "datastores.patch".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Identifier. The resource name of this datastore. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1/datastores/datastore`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.Datastore}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.vmwareengine.v1.model.Datastore content) {
+            super(VMwareEngine.this, "PATCH", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Identifier. The resource name of this datastore. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1/datastores/datastore`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Identifier. The resource name of this datastore. Resource names are schemeless URIs
+         that follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         `projects/my-project/locations/us-central1/datastores/datastore`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Identifier. The resource name of this datastore. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1/datastores/datastore`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The request ID must be a valid UUID with the exception that zero UUID is not
+           * supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. The request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. The request ID must be a valid UUID with the exception that zero UUID is not
+           * supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the Datastore
+           * resource by the update. The fields specified in the `update_mask` are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then all fields will be overwritten. Only the
+           * following fields can be updated: `description`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the Datastore resource by
+         the update. The fields specified in the `update_mask` are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         all fields will be overwritten. Only the following fields can be updated: `description`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the Datastore
+           * resource by the update. The fields specified in the `update_mask` are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then all fields will be overwritten. Only the
+           * following fields can be updated: `description`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -6253,9 +7344,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -6263,10 +7354,11 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -6274,9 +7366,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -10321,6 +11413,155 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
           }
           /**
+           * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+           *
+           * Create a request for the method "clusters.mountDatastore".
+           *
+           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+           * parameters, call the {@link MountDatastore#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the cluster to mount the datastore. Resource names are schemeless
+           *        URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+           *        For example: `projects/my-project/locations/us-central1-a/privateClouds/my-
+           *        cloud/clusters/my-cluster`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.MountDatastoreRequest}
+           * @return the request
+           */
+          public MountDatastore mountDatastore(java.lang.String name, com.google.api.services.vmwareengine.v1.model.MountDatastoreRequest content) throws java.io.IOException {
+            MountDatastore result = new MountDatastore(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class MountDatastore extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:mountDatastore";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/clusters/[^/]+$");
+
+            /**
+             * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+             *
+             * Create a request for the method "clusters.mountDatastore".
+             *
+             * This request holds the parameters needed by the the vmwareengine server.  After setting any
+             * optional parameters, call the {@link MountDatastore#execute()} method to invoke the remote
+             * operation. <p> {@link MountDatastore#initialize(com.google.api.client.googleapis.services.Abstr
+             * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The resource name of the cluster to mount the datastore. Resource names are schemeless
+           *        URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+           *        For example: `projects/my-project/locations/us-central1-a/privateClouds/my-
+           *        cloud/clusters/my-cluster`
+             * @param content the {@link com.google.api.services.vmwareengine.v1.model.MountDatastoreRequest}
+             * @since 1.13
+             */
+            protected MountDatastore(java.lang.String name, com.google.api.services.vmwareengine.v1.model.MountDatastoreRequest content) {
+              super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/clusters/[^/]+$");
+              }
+            }
+
+            @Override
+            public MountDatastore set$Xgafv(java.lang.String $Xgafv) {
+              return (MountDatastore) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public MountDatastore setAccessToken(java.lang.String accessToken) {
+              return (MountDatastore) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public MountDatastore setAlt(java.lang.String alt) {
+              return (MountDatastore) super.setAlt(alt);
+            }
+
+            @Override
+            public MountDatastore setCallback(java.lang.String callback) {
+              return (MountDatastore) super.setCallback(callback);
+            }
+
+            @Override
+            public MountDatastore setFields(java.lang.String fields) {
+              return (MountDatastore) super.setFields(fields);
+            }
+
+            @Override
+            public MountDatastore setKey(java.lang.String key) {
+              return (MountDatastore) super.setKey(key);
+            }
+
+            @Override
+            public MountDatastore setOauthToken(java.lang.String oauthToken) {
+              return (MountDatastore) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public MountDatastore setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (MountDatastore) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public MountDatastore setQuotaUser(java.lang.String quotaUser) {
+              return (MountDatastore) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public MountDatastore setUploadType(java.lang.String uploadType) {
+              return (MountDatastore) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public MountDatastore setUploadProtocol(java.lang.String uploadProtocol) {
+              return (MountDatastore) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the cluster to mount the datastore. Resource names are
+             * schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the cluster to mount the datastore. Resource names are schemeless
+           URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the cluster to mount the datastore. Resource names are
+             * schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+             */
+            public MountDatastore setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/clusters/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public MountDatastore set(String parameterName, Object value) {
+              return (MountDatastore) super.set(parameterName, value);
+            }
+          }
+          /**
            * Modifies a `Cluster` resource. Only fields specified in `updateMask` are applied. During
            * operation processing, the resource is temporarily in the `ACTIVE` state before the operation
            * fully completes. For that period of time, you can't update the resource. Use the operation status
@@ -10845,6 +12086,155 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             @Override
             public TestIamPermissions set(String parameterName, Object value) {
               return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+           *
+           * Create a request for the method "clusters.unmountDatastore".
+           *
+           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+           * parameters, call the {@link UnmountDatastore#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the cluster to unmount the datastore. Resource names are schemeless
+           *        URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+           *        For example: `projects/my-project/locations/us-central1-a/privateClouds/my-
+           *        cloud/clusters/my-cluster`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.UnmountDatastoreRequest}
+           * @return the request
+           */
+          public UnmountDatastore unmountDatastore(java.lang.String name, com.google.api.services.vmwareengine.v1.model.UnmountDatastoreRequest content) throws java.io.IOException {
+            UnmountDatastore result = new UnmountDatastore(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UnmountDatastore extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:unmountDatastore";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/clusters/[^/]+$");
+
+            /**
+             * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+             *
+             * Create a request for the method "clusters.unmountDatastore".
+             *
+             * This request holds the parameters needed by the the vmwareengine server.  After setting any
+             * optional parameters, call the {@link UnmountDatastore#execute()} method to invoke the remote
+             * operation. <p> {@link UnmountDatastore#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the cluster to unmount the datastore. Resource names are schemeless
+           *        URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+           *        For example: `projects/my-project/locations/us-central1-a/privateClouds/my-
+           *        cloud/clusters/my-cluster`
+             * @param content the {@link com.google.api.services.vmwareengine.v1.model.UnmountDatastoreRequest}
+             * @since 1.13
+             */
+            protected UnmountDatastore(java.lang.String name, com.google.api.services.vmwareengine.v1.model.UnmountDatastoreRequest content) {
+              super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/clusters/[^/]+$");
+              }
+            }
+
+            @Override
+            public UnmountDatastore set$Xgafv(java.lang.String $Xgafv) {
+              return (UnmountDatastore) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UnmountDatastore setAccessToken(java.lang.String accessToken) {
+              return (UnmountDatastore) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UnmountDatastore setAlt(java.lang.String alt) {
+              return (UnmountDatastore) super.setAlt(alt);
+            }
+
+            @Override
+            public UnmountDatastore setCallback(java.lang.String callback) {
+              return (UnmountDatastore) super.setCallback(callback);
+            }
+
+            @Override
+            public UnmountDatastore setFields(java.lang.String fields) {
+              return (UnmountDatastore) super.setFields(fields);
+            }
+
+            @Override
+            public UnmountDatastore setKey(java.lang.String key) {
+              return (UnmountDatastore) super.setKey(key);
+            }
+
+            @Override
+            public UnmountDatastore setOauthToken(java.lang.String oauthToken) {
+              return (UnmountDatastore) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UnmountDatastore setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UnmountDatastore) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UnmountDatastore setQuotaUser(java.lang.String quotaUser) {
+              return (UnmountDatastore) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UnmountDatastore setUploadType(java.lang.String uploadType) {
+              return (UnmountDatastore) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UnmountDatastore setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UnmountDatastore) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the cluster to unmount the datastore. Resource names
+             * are schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the cluster to unmount the datastore. Resource names are schemeless
+           URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the cluster to unmount the datastore. Resource names
+             * are schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+             */
+            public UnmountDatastore setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/clusters/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public UnmountDatastore set(String parameterName, Object value) {
+              return (UnmountDatastore) super.set(parameterName, value);
             }
           }
 

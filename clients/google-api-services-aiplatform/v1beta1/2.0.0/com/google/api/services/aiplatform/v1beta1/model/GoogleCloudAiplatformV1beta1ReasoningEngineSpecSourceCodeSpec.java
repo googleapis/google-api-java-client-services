@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Source code is in a Git repository managed by Developer Connect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource developerConnectSource;
+
+  /**
    * Source code is provided directly in the request.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecPythonSpec pythonSpec;
+
+  /**
+   * Source code is in a Git repository managed by Developer Connect.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource getDeveloperConnectSource() {
+    return developerConnectSource;
+  }
+
+  /**
+   * Source code is in a Git repository managed by Developer Connect.
+   * @param developerConnectSource developerConnectSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec setDeveloperConnectSource(GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource developerConnectSource) {
+    this.developerConnectSource = developerConnectSource;
+    return this;
+  }
 
   /**
    * Source code is provided directly in the request.

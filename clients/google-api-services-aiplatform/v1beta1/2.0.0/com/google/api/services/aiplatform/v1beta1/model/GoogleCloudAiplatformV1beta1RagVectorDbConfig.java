@@ -58,6 +58,13 @@ public final class GoogleCloudAiplatformV1beta1RagVectorDbConfig extends com.goo
   private GoogleCloudAiplatformV1beta1RagVectorDbConfigRagManagedDb ragManagedDb;
 
   /**
+   * The config for the RAG-managed Vertex Vector Search 2.0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagVectorDbConfigRagManagedVertexVectorSearch ragManagedVertexVectorSearch;
+
+  /**
    * The config for the Vertex Feature Store.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class GoogleCloudAiplatformV1beta1RagVectorDbConfig extends com.goo
    */
   public GoogleCloudAiplatformV1beta1RagVectorDbConfig setRagManagedDb(GoogleCloudAiplatformV1beta1RagVectorDbConfigRagManagedDb ragManagedDb) {
     this.ragManagedDb = ragManagedDb;
+    return this;
+  }
+
+  /**
+   * The config for the RAG-managed Vertex Vector Search 2.0.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagVectorDbConfigRagManagedVertexVectorSearch getRagManagedVertexVectorSearch() {
+    return ragManagedVertexVectorSearch;
+  }
+
+  /**
+   * The config for the RAG-managed Vertex Vector Search 2.0.
+   * @param ragManagedVertexVectorSearch ragManagedVertexVectorSearch or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagVectorDbConfig setRagManagedVertexVectorSearch(GoogleCloudAiplatformV1beta1RagVectorDbConfigRagManagedVertexVectorSearch ragManagedVertexVectorSearch) {
+    this.ragManagedVertexVectorSearch = ragManagedVertexVectorSearch;
     return this;
   }
 

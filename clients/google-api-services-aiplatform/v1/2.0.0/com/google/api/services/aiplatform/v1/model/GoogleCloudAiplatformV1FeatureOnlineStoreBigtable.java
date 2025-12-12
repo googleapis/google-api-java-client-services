@@ -51,6 +51,15 @@ public final class GoogleCloudAiplatformV1FeatureOnlineStoreBigtable extends com
   private java.lang.Boolean enableDirectBigtableAccess;
 
   /**
+   * Optional. The zone where the underlying Bigtable cluster for the primary Bigtable instance will
+   * be provisioned. Only the zone must be provided. For example, only "us-central1-a" should be
+   * provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String zone;
+
+  /**
    * Required. Autoscaling config applied to Bigtable Instance.
    * @return value or {@code null} for none
    */
@@ -98,6 +107,27 @@ public final class GoogleCloudAiplatformV1FeatureOnlineStoreBigtable extends com
    */
   public GoogleCloudAiplatformV1FeatureOnlineStoreBigtable setEnableDirectBigtableAccess(java.lang.Boolean enableDirectBigtableAccess) {
     this.enableDirectBigtableAccess = enableDirectBigtableAccess;
+    return this;
+  }
+
+  /**
+   * Optional. The zone where the underlying Bigtable cluster for the primary Bigtable instance will
+   * be provisioned. Only the zone must be provided. For example, only "us-central1-a" should be
+   * provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getZone() {
+    return zone;
+  }
+
+  /**
+   * Optional. The zone where the underlying Bigtable cluster for the primary Bigtable instance will
+   * be provisioned. Only the zone must be provided. For example, only "us-central1-a" should be
+   * provided.
+   * @param zone zone or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureOnlineStoreBigtable setZone(java.lang.String zone) {
+    this.zone = zone;
     return this;
   }
 

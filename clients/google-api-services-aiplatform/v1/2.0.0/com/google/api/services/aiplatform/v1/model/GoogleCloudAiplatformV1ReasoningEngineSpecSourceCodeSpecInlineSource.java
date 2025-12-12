@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input only. The application source code archive, provided as a compressed tarball
+   * Required. Input only. The application source code archive. It must be a compressed tarball
    * (.tar.gz) file.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlin
   private java.lang.String sourceArchive;
 
   /**
-   * Required. Input only. The application source code archive, provided as a compressed tarball
+   * Required. Input only. The application source code archive. It must be a compressed tarball
    * (.tar.gz) file.
    * @see #decodeSourceArchive()
    * @return value or {@code null} for none
@@ -48,7 +48,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlin
   }
 
   /**
-   * Required. Input only. The application source code archive, provided as a compressed tarball
+   * Required. Input only. The application source code archive. It must be a compressed tarball
    * (.tar.gz) file.
    * @see #getSourceArchive()
    * @return Base64 decoded value or {@code null} for none
@@ -60,7 +60,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlin
   }
 
   /**
-   * Required. Input only. The application source code archive, provided as a compressed tarball
+   * Required. Input only. The application source code archive. It must be a compressed tarball
    * (.tar.gz) file.
    * @see #encodeSourceArchive()
    * @param sourceArchive sourceArchive or {@code null} for none
@@ -71,7 +71,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlin
   }
 
   /**
-   * Required. Input only. The application source code archive, provided as a compressed tarball
+   * Required. Input only. The application source code archive. It must be a compressed tarball
    * (.tar.gz) file.
    * @see #setSourceArchive()
    *

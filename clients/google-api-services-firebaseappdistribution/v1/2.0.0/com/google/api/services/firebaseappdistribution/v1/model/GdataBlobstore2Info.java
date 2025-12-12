@@ -45,6 +45,14 @@ public final class GdataBlobstore2Info extends com.google.api.client.json.Generi
   private java.lang.String blobId;
 
   /**
+   * A serialized External Read Token passed from Bigstore -> Scotty for a GCS download. This field
+   * must never be consumed outside of Bigstore, and is not applicable to non-GCS media uploads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String downloadExternalReadToken;
+
+  /**
    * Read handle passed from Bigstore -> Scotty for a GCS download. This is a signed, serialized
    * blobstore2.ReadHandle proto which must never be set outside of Bigstore, and is not applicable
    * to non-GCS media downloads.
@@ -101,6 +109,55 @@ public final class GdataBlobstore2Info extends com.google.api.client.json.Generi
    */
   public GdataBlobstore2Info setBlobId(java.lang.String blobId) {
     this.blobId = blobId;
+    return this;
+  }
+
+  /**
+   * A serialized External Read Token passed from Bigstore -> Scotty for a GCS download. This field
+   * must never be consumed outside of Bigstore, and is not applicable to non-GCS media uploads.
+   * @see #decodeDownloadExternalReadToken()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDownloadExternalReadToken() {
+    return downloadExternalReadToken;
+  }
+
+  /**
+   * A serialized External Read Token passed from Bigstore -> Scotty for a GCS download. This field
+   * must never be consumed outside of Bigstore, and is not applicable to non-GCS media uploads.
+   * @see #getDownloadExternalReadToken()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeDownloadExternalReadToken() {
+    return com.google.api.client.util.Base64.decodeBase64(downloadExternalReadToken);
+  }
+
+  /**
+   * A serialized External Read Token passed from Bigstore -> Scotty for a GCS download. This field
+   * must never be consumed outside of Bigstore, and is not applicable to non-GCS media uploads.
+   * @see #encodeDownloadExternalReadToken()
+   * @param downloadExternalReadToken downloadExternalReadToken or {@code null} for none
+   */
+  public GdataBlobstore2Info setDownloadExternalReadToken(java.lang.String downloadExternalReadToken) {
+    this.downloadExternalReadToken = downloadExternalReadToken;
+    return this;
+  }
+
+  /**
+   * A serialized External Read Token passed from Bigstore -> Scotty for a GCS download. This field
+   * must never be consumed outside of Bigstore, and is not applicable to non-GCS media uploads.
+   * @see #setDownloadExternalReadToken()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GdataBlobstore2Info encodeDownloadExternalReadToken(byte[] downloadExternalReadToken) {
+    this.downloadExternalReadToken = com.google.api.client.util.Base64.encodeBase64URLSafeString(downloadExternalReadToken);
     return this;
   }
 

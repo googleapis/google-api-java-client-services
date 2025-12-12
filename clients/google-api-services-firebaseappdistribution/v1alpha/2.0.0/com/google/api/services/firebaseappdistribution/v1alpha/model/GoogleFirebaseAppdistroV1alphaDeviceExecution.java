@@ -79,6 +79,14 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
   private java.lang.String failedReason;
 
   /**
+   * Output only. Indicates that the test replayed saved actions and concluded without a final AI
+   * assertion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean finalAiAssertionMissing;
+
+  /**
    * Output only. The reason why the test was inconclusive.
    * The value may be {@code null}.
    */
@@ -246,6 +254,25 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
    */
   public GoogleFirebaseAppdistroV1alphaDeviceExecution setFailedReason(java.lang.String failedReason) {
     this.failedReason = failedReason;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates that the test replayed saved actions and concluded without a final AI
+   * assertion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFinalAiAssertionMissing() {
+    return finalAiAssertionMissing;
+  }
+
+  /**
+   * Output only. Indicates that the test replayed saved actions and concluded without a final AI
+   * assertion.
+   * @param finalAiAssertionMissing finalAiAssertionMissing or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceExecution setFinalAiAssertionMissing(java.lang.Boolean finalAiAssertionMissing) {
+    this.finalAiAssertionMissing = finalAiAssertionMissing;
     return this;
   }
 

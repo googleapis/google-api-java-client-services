@@ -185,6 +185,9 @@ public class DataPortabilityScopes {
   /** Move a copy of your YouTube comments. */
   public static final String DATAPORTABILITY_YOUTUBE_COMMENTS = "https://www.googleapis.com/auth/dataportability.youtube.comments";
 
+  /** Move a copy of all your YouTube messages. */
+  public static final String DATAPORTABILITY_YOUTUBE_CONVERSATIONS = "https://www.googleapis.com/auth/dataportability.youtube.conversations";
+
   /** Move a copy of your YouTube messages in live chat. */
   public static final String DATAPORTABILITY_YOUTUBE_LIVE_CHAT = "https://www.googleapis.com/auth/dataportability.youtube.live_chat";
 
@@ -282,6 +285,7 @@ public class DataPortabilityScopes {
     set.add(DATAPORTABILITY_YOUTUBE_CHANNEL);
     set.add(DATAPORTABILITY_YOUTUBE_CLIPS);
     set.add(DATAPORTABILITY_YOUTUBE_COMMENTS);
+    set.add(DATAPORTABILITY_YOUTUBE_CONVERSATIONS);
     set.add(DATAPORTABILITY_YOUTUBE_LIVE_CHAT);
     set.add(DATAPORTABILITY_YOUTUBE_MUSIC);
     set.add(DATAPORTABILITY_YOUTUBE_PLAYABLE);

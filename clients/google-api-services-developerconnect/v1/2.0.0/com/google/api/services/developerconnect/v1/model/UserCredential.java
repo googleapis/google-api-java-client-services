@@ -32,7 +32,8 @@ public final class UserCredential extends com.google.api.client.json.GenericJson
 
   /**
    * Required. A SecretManager resource containing the user token that authorizes the Developer
-   * Connect connection. Format: `projects/secrets/versions`.
+   * Connect connection. Format: `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in that location).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class UserCredential extends com.google.api.client.json.GenericJson
 
   /**
    * Required. A SecretManager resource containing the user token that authorizes the Developer
-   * Connect connection. Format: `projects/secrets/versions`.
+   * Connect connection. Format: `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in that location).
    * @return value or {@code null} for none
    */
   public java.lang.String getUserTokenSecretVersion() {
@@ -56,7 +58,8 @@ public final class UserCredential extends com.google.api.client.json.GenericJson
 
   /**
    * Required. A SecretManager resource containing the user token that authorizes the Developer
-   * Connect connection. Format: `projects/secrets/versions`.
+   * Connect connection. Format: `projects/secrets/versions` or
+   * `projects/locations/secrets/versions` (if regional secrets are supported in that location).
    * @param userTokenSecretVersion userTokenSecretVersion or {@code null} for none
    */
   public UserCredential setUserTokenSecretVersion(java.lang.String userTokenSecretVersion) {

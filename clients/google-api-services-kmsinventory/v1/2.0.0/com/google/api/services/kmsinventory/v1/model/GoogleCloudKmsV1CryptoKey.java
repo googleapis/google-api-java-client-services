@@ -42,8 +42,10 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
    * Immutable. The resource name of the backend environment where the key material for all
    * CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic
    * operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of
-   * EXTERNAL_VPC, with the resource name in the format `projects/locations/ekmConnections`. Note,
-   * this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+   * EXTERNAL_VPC, with the resource name in the format `projects/locations/ekmConnections`. Only
+   * applicable if CryptoKeyVersions have a ProtectionLevel of HSM_SINGLE_TENANT, with the resource
+   * name in the format `projects/locations/singleTenantHsmInstances`. Note, this list is non-
+   * exhaustive and may apply to additional ProtectionLevels in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +163,10 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
    * Immutable. The resource name of the backend environment where the key material for all
    * CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic
    * operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of
-   * EXTERNAL_VPC, with the resource name in the format `projects/locations/ekmConnections`. Note,
-   * this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+   * EXTERNAL_VPC, with the resource name in the format `projects/locations/ekmConnections`. Only
+   * applicable if CryptoKeyVersions have a ProtectionLevel of HSM_SINGLE_TENANT, with the resource
+   * name in the format `projects/locations/singleTenantHsmInstances`. Note, this list is non-
+   * exhaustive and may apply to additional ProtectionLevels in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKeyBackend() {
@@ -173,8 +177,10 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
    * Immutable. The resource name of the backend environment where the key material for all
    * CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic
    * operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of
-   * EXTERNAL_VPC, with the resource name in the format `projects/locations/ekmConnections`. Note,
-   * this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
+   * EXTERNAL_VPC, with the resource name in the format `projects/locations/ekmConnections`. Only
+   * applicable if CryptoKeyVersions have a ProtectionLevel of HSM_SINGLE_TENANT, with the resource
+   * name in the format `projects/locations/singleTenantHsmInstances`. Note, this list is non-
+   * exhaustive and may apply to additional ProtectionLevels in the future.
    * @param cryptoKeyBackend cryptoKeyBackend or {@code null} for none
    */
   public GoogleCloudKmsV1CryptoKey setCryptoKeyBackend(java.lang.String cryptoKeyBackend) {

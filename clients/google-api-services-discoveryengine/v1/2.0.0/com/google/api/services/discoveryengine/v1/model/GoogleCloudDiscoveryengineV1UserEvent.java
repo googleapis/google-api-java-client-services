@@ -163,13 +163,14 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
   private java.lang.String eventType;
 
   /**
-   * The filter syntax consists of an expression language for constructing a predicate from one or
-   * more fields of the documents being filtered. One example is for `search` events, the associated
-   * SearchRequest may contain a filter expression in SearchRequest.filter conforming to
-   * https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are generated
-   * from a RecommendRequest, this field may be populated directly from RecommendRequest.filter
-   * conforming to https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string
-   * with a length limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * Optional. The filter syntax consists of an expression language for constructing a predicate
+   * from one or more fields of the documents being filtered. One example is for `search` events,
+   * the associated SearchRequest may contain a filter expression in SearchRequest.filter conforming
+   * to https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are
+   * generated from a RecommendRequest, this field may be populated directly from
+   * RecommendRequest.filter conforming to https://google.aip.dev/160#filtering. The value must be a
+   * UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT`
+   * error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -544,13 +545,14 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
   }
 
   /**
-   * The filter syntax consists of an expression language for constructing a predicate from one or
-   * more fields of the documents being filtered. One example is for `search` events, the associated
-   * SearchRequest may contain a filter expression in SearchRequest.filter conforming to
-   * https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are generated
-   * from a RecommendRequest, this field may be populated directly from RecommendRequest.filter
-   * conforming to https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string
-   * with a length limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * Optional. The filter syntax consists of an expression language for constructing a predicate
+   * from one or more fields of the documents being filtered. One example is for `search` events,
+   * the associated SearchRequest may contain a filter expression in SearchRequest.filter conforming
+   * to https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are
+   * generated from a RecommendRequest, this field may be populated directly from
+   * RecommendRequest.filter conforming to https://google.aip.dev/160#filtering. The value must be a
+   * UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT`
+   * error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -558,13 +560,14 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
   }
 
   /**
-   * The filter syntax consists of an expression language for constructing a predicate from one or
-   * more fields of the documents being filtered. One example is for `search` events, the associated
-   * SearchRequest may contain a filter expression in SearchRequest.filter conforming to
-   * https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are generated
-   * from a RecommendRequest, this field may be populated directly from RecommendRequest.filter
-   * conforming to https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string
-   * with a length limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * Optional. The filter syntax consists of an expression language for constructing a predicate
+   * from one or more fields of the documents being filtered. One example is for `search` events,
+   * the associated SearchRequest may contain a filter expression in SearchRequest.filter conforming
+   * to https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are
+   * generated from a RecommendRequest, this field may be populated directly from
+   * RecommendRequest.filter conforming to https://google.aip.dev/160#filtering. The value must be a
+   * UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT`
+   * error is returned.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1UserEvent setFilter(java.lang.String filter) {

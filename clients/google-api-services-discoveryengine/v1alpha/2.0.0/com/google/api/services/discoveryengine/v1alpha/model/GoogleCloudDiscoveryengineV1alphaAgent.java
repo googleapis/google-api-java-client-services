@@ -112,6 +112,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
   private java.lang.String languageCode;
 
   /**
+   * Optional. The behavior of the Google managed agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaManagedAgentDefinition managedAgentDefinition;
+
+  /**
    * Identifier. Resource name of the agent. Format: `projects/{project}/locations/{location}/collec
    * tions/{collection}/engines/{engine}/assistants/{assistant}/agents/{agent}`
    * The value may be {@code null}.
@@ -356,6 +363,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1alphaAgent setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Optional. The behavior of the Google managed agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaManagedAgentDefinition getManagedAgentDefinition() {
+    return managedAgentDefinition;
+  }
+
+  /**
+   * Optional. The behavior of the Google managed agent.
+   * @param managedAgentDefinition managedAgentDefinition or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAgent setManagedAgentDefinition(GoogleCloudDiscoveryengineV1alphaManagedAgentDefinition managedAgentDefinition) {
+    this.managedAgentDefinition = managedAgentDefinition;
     return this;
   }
 

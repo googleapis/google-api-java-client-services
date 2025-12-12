@@ -38,6 +38,13 @@ public final class GoogleCloudDiscoveryengineV1betaIdentityMappingEntry extends 
   private java.lang.String externalIdentity;
 
   /**
+   * Optional. The name of the external identity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalIdentityName;
+
+  /**
    * Group identifier. For Google Workspace user account, group_id should be the google workspace
    * group email. For non-google identity provider, group_id is the mapped group identifier
    * configured during the workforcepool config.
@@ -71,6 +78,23 @@ public final class GoogleCloudDiscoveryengineV1betaIdentityMappingEntry extends 
    */
   public GoogleCloudDiscoveryengineV1betaIdentityMappingEntry setExternalIdentity(java.lang.String externalIdentity) {
     this.externalIdentity = externalIdentity;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the external identity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalIdentityName() {
+    return externalIdentityName;
+  }
+
+  /**
+   * Optional. The name of the external identity.
+   * @param externalIdentityName externalIdentityName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaIdentityMappingEntry setExternalIdentityName(java.lang.String externalIdentityName) {
+    this.externalIdentityName = externalIdentityName;
     return this;
   }
 

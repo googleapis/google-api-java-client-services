@@ -30,6 +30,15 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The required subscription tier of this engine. They cannot be modified after engine
+   * creation. If the required subscription tier is search, user with higher license tier like
+   * assist can still access the standalone app associated with this engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requiredSubscriptionTier;
+
+  /**
    * The add-on that this search engine enables.
    * The value may be {@code null}.
    */
@@ -44,6 +53,27 @@ public final class GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig exte
    */
   @com.google.api.client.util.Key
   private java.lang.String searchTier;
+
+  /**
+   * Optional. The required subscription tier of this engine. They cannot be modified after engine
+   * creation. If the required subscription tier is search, user with higher license tier like
+   * assist can still access the standalone app associated with this engine.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequiredSubscriptionTier() {
+    return requiredSubscriptionTier;
+  }
+
+  /**
+   * Optional. The required subscription tier of this engine. They cannot be modified after engine
+   * creation. If the required subscription tier is search, user with higher license tier like
+   * assist can still access the standalone app associated with this engine.
+   * @param requiredSubscriptionTier requiredSubscriptionTier or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig setRequiredSubscriptionTier(java.lang.String requiredSubscriptionTier) {
+    this.requiredSubscriptionTier = requiredSubscriptionTier;
+    return this;
+  }
 
   /**
    * The add-on that this search engine enables.

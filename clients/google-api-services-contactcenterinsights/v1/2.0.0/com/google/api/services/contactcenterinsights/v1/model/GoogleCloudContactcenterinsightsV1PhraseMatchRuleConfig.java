@@ -38,6 +38,13 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig exten
   private GoogleCloudContactcenterinsightsV1ExactMatchConfig exactMatchConfig;
 
   /**
+   * The configuration for the regex match rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1RegexMatchConfig regexMatchConfig;
+
+  /**
    * The configuration for the exact match rule.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig exten
    */
   public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig setExactMatchConfig(GoogleCloudContactcenterinsightsV1ExactMatchConfig exactMatchConfig) {
     this.exactMatchConfig = exactMatchConfig;
+    return this;
+  }
+
+  /**
+   * The configuration for the regex match rule.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1RegexMatchConfig getRegexMatchConfig() {
+    return regexMatchConfig;
+  }
+
+  /**
+   * The configuration for the regex match rule.
+   * @param regexMatchConfig regexMatchConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig setRegexMatchConfig(GoogleCloudContactcenterinsightsV1RegexMatchConfig regexMatchConfig) {
+    this.regexMatchConfig = regexMatchConfig;
     return this;
   }
 

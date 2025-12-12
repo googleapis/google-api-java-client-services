@@ -39,7 +39,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition ex
 
   /**
    * Org policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
+   * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")` or,
    * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * The value may be {@code null}.
    */
@@ -88,7 +88,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition ex
 
   /**
    * Org policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
+   * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")` or,
    * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * @return value or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition ex
 
   /**
    * Org policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
+   * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")` or,
    * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * @param condition condition or {@code null} for none
    */

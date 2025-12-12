@@ -182,7 +182,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "admin/reports/v1/activity/users/{userKey}/applications/{applicationName}";
 
       private final java.util.regex.Pattern APPLICATION_NAME_PATTERN =
-          java.util.regex.Pattern.compile("(access_transparency)|(admin)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(context_aware_access)|(data_studio)|(data_migration)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(meet_hardware)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)");
+          java.util.regex.Pattern.compile("(access_evaluation)|(access_transparency)|(admin)|(admin_data_action)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(contacts)|(context_aware_access)|(data_studio)|(data_migration)|(directory_sync)|(drive)|(gcp)|(gmail)|(gplus)|(graduation)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(ldap)|(login)|(meet)|(meet_hardware)|(mobile)|(profile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)|(takeout)");
 
       private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
           java.util.regex.Pattern.compile("C.+|my_customer");
@@ -229,7 +229,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(access_transparency)|(admin)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(context_aware_access)|(data_studio)|(data_migration)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(meet_hardware)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)");
+              "(access_evaluation)|(access_transparency)|(admin)|(admin_data_action)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(contacts)|(context_aware_access)|(data_studio)|(data_migration)|(directory_sync)|(drive)|(gcp)|(gmail)|(gplus)|(graduation)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(ldap)|(login)|(meet)|(meet_hardware)|(mobile)|(profile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)|(takeout)");
         }
       }
 
@@ -344,7 +344,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(access_transparency)|(admin)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(context_aware_access)|(data_studio)|(data_migration)|(drive)|(gcp)|(gmail)|(gplus)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(login)|(meet)|(meet_hardware)|(mobile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)");
+              "(access_evaluation)|(access_transparency)|(admin)|(admin_data_action)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(contacts)|(context_aware_access)|(data_studio)|(data_migration)|(directory_sync)|(drive)|(gcp)|(gmail)|(gplus)|(graduation)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(ldap)|(login)|(meet)|(meet_hardware)|(mobile)|(profile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)|(takeout)");
         }
         this.applicationName = applicationName;
         return this;

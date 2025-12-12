@@ -138,6 +138,13 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Object gender;
 
   /**
+   * Immutable. Additional guest-related metadata fields
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GuestAccountInfo guestAccountInfo;
+
+  /**
    * Stores the hash format of the `password` property. The following `hashFunction` values are
    * allowed: * `MD5` - Accepts simple hex-encoded values. * `SHA-1` - Accepts simple hex-encoded
    * values. * `crypt` - Compliant with the [C crypt
@@ -219,6 +226,13 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isEnrolledIn2Sv;
+
+  /**
+   * Immutable. Indicates if the inserted user is a guest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isGuestUser;
 
   /**
    * Output only. Indicates if the user's Google mailbox is created. This property is only
@@ -650,6 +664,23 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Immutable. Additional guest-related metadata fields
+   * @return value or {@code null} for none
+   */
+  public GuestAccountInfo getGuestAccountInfo() {
+    return guestAccountInfo;
+  }
+
+  /**
+   * Immutable. Additional guest-related metadata fields
+   * @param guestAccountInfo guestAccountInfo or {@code null} for none
+   */
+  public User setGuestAccountInfo(GuestAccountInfo guestAccountInfo) {
+    this.guestAccountInfo = guestAccountInfo;
+    return this;
+  }
+
+  /**
    * Stores the hash format of the `password` property. The following `hashFunction` values are
    * allowed: * `MD5` - Accepts simple hex-encoded values. * `SHA-1` - Accepts simple hex-encoded
    * values. * `crypt` - Compliant with the [C crypt
@@ -839,6 +870,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setIsEnrolledIn2Sv(java.lang.Boolean isEnrolledIn2Sv) {
     this.isEnrolledIn2Sv = isEnrolledIn2Sv;
+    return this;
+  }
+
+  /**
+   * Immutable. Indicates if the inserted user is a guest.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsGuestUser() {
+    return isGuestUser;
+  }
+
+  /**
+   * Immutable. Indicates if the inserted user is a guest.
+   * @param isGuestUser isGuestUser or {@code null} for none
+   */
+  public User setIsGuestUser(java.lang.Boolean isGuestUser) {
+    this.isGuestUser = isGuestUser;
     return this;
   }
 

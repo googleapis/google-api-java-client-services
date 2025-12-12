@@ -17195,6 +17195,109 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
   public class Users {
 
     /**
+     * Create a guest user with access to a [subset of Workspace
+     * capabilities](https://support.google.com/a/answer/16558545?hl=en). This feature is currently in
+     * Alpha. Please reach out to support if you are interested in trying this feature.
+     *
+     * Create a request for the method "users.createGuest".
+     *
+     * This request holds the parameters needed by the admin server.  After setting any optional
+     * parameters, call the {@link CreateGuest#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.directory.model.DirectoryUsersCreateGuestRequest}
+     * @return the request
+     */
+    public CreateGuest createGuest(com.google.api.services.directory.model.DirectoryUsersCreateGuestRequest content) throws java.io.IOException {
+      CreateGuest result = new CreateGuest(content);
+      initialize(result);
+      return result;
+    }
+
+    public class CreateGuest extends DirectoryRequest<com.google.api.services.directory.model.User> {
+
+      private static final String REST_PATH = "admin/directory/v1/users:createGuest";
+
+      /**
+       * Create a guest user with access to a [subset of Workspace
+       * capabilities](https://support.google.com/a/answer/16558545?hl=en). This feature is currently in
+       * Alpha. Please reach out to support if you are interested in trying this feature.
+       *
+       * Create a request for the method "users.createGuest".
+       *
+       * This request holds the parameters needed by the the admin server.  After setting any optional
+       * parameters, call the {@link CreateGuest#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * CreateGuest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.directory.model.DirectoryUsersCreateGuestRequest}
+       * @since 1.13
+       */
+      protected CreateGuest(com.google.api.services.directory.model.DirectoryUsersCreateGuestRequest content) {
+        super(Directory.this, "POST", REST_PATH, content, com.google.api.services.directory.model.User.class);
+      }
+
+      @Override
+      public CreateGuest set$Xgafv(java.lang.String $Xgafv) {
+        return (CreateGuest) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CreateGuest setAccessToken(java.lang.String accessToken) {
+        return (CreateGuest) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CreateGuest setAlt(java.lang.String alt) {
+        return (CreateGuest) super.setAlt(alt);
+      }
+
+      @Override
+      public CreateGuest setCallback(java.lang.String callback) {
+        return (CreateGuest) super.setCallback(callback);
+      }
+
+      @Override
+      public CreateGuest setFields(java.lang.String fields) {
+        return (CreateGuest) super.setFields(fields);
+      }
+
+      @Override
+      public CreateGuest setKey(java.lang.String key) {
+        return (CreateGuest) super.setKey(key);
+      }
+
+      @Override
+      public CreateGuest setOauthToken(java.lang.String oauthToken) {
+        return (CreateGuest) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CreateGuest setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CreateGuest) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CreateGuest setQuotaUser(java.lang.String quotaUser) {
+        return (CreateGuest) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CreateGuest setUploadType(java.lang.String uploadType) {
+        return (CreateGuest) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CreateGuest setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CreateGuest) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public CreateGuest set(String parameterName, Object value) {
+        return (CreateGuest) super.set(parameterName, value);
+      }
+    }
+    /**
      * Deletes a user.
      *
      * Create a request for the method "users.delete".

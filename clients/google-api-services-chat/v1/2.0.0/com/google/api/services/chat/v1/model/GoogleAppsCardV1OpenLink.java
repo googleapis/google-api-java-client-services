@@ -47,7 +47,7 @@ public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.G
   private java.lang.String openAs;
 
   /**
-   * The URL to open.
+   * The URL to open. HTTP URLs are converted to HTTPS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.G
   }
 
   /**
-   * The URL to open.
+   * The URL to open. HTTP URLs are converted to HTTPS.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -100,7 +100,7 @@ public final class GoogleAppsCardV1OpenLink extends com.google.api.client.json.G
   }
 
   /**
-   * The URL to open.
+   * The URL to open. HTTP URLs are converted to HTTPS.
    * @param url url or {@code null} for none
    */
   public GoogleAppsCardV1OpenLink setUrl(java.lang.String url) {

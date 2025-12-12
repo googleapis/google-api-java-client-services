@@ -61,8 +61,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * A data source that's unique to a Google Workspace host application, such as Gmail emails,
    * Google Calendar events, or Google Chat messages. Available for Google Workspace add-ons that
-   * extend Google Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
+   * extend Google Workspace Studio. Unavailable for Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,8 +191,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * A data source that's unique to a Google Workspace host application, such as Gmail emails,
    * Google Calendar events, or Google Chat messages. Available for Google Workspace add-ons that
-   * extend Google Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
+   * extend Google Workspace Studio. Unavailable for Google Chat apps.
    * @return value or {@code null} for none
    */
   public HostAppDataSourceMarkup getHostAppDataSource() {
@@ -203,8 +201,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * A data source that's unique to a Google Workspace host application, such as Gmail emails,
    * Google Calendar events, or Google Chat messages. Available for Google Workspace add-ons that
-   * extend Google Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
+   * extend Google Workspace Studio. Unavailable for Google Chat apps.
    * @param hostAppDataSource hostAppDataSource or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setHostAppDataSource(HostAppDataSourceMarkup hostAppDataSource) {

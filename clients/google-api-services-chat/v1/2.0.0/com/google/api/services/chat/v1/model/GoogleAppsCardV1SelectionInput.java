@@ -44,8 +44,10 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
    * grained control over the data source. If specified, the `multi_select_max_selected_items`
    * field, `multi_select_min_query_length` field, `external_data_source` field and
    * `platform_data_source` field are ignored. Available for Google Workspace add-ons that extend
-   * Google Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
+   * Google Workspace Studio. Available for the `Dropdown widget` widget in Google Chat apps as part
+   * of the [Developer Preview Program](https://developers.google.com/workspace/preview). For the
+   * `Dropdown` widget in Google Chat apps, only one `DataSourceConfig` is supported. If multiple
+   * `DataSourceConfig`s are set, only the first one is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +69,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   /**
    * Optional. Text that appears below the selection input field meant to assist users by prompting
    * them to enter a certain value. This text is always visible. Available for Google Workspace add-
-   * ons that extend Google Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
+   * ons that extend Google Workspace Studio. Unavailable for Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,8 +152,10 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
    * grained control over the data source. If specified, the `multi_select_max_selected_items`
    * field, `multi_select_min_query_length` field, `external_data_source` field and
    * `platform_data_source` field are ignored. Available for Google Workspace add-ons that extend
-   * Google Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
+   * Google Workspace Studio. Available for the `Dropdown widget` widget in Google Chat apps as part
+   * of the [Developer Preview Program](https://developers.google.com/workspace/preview). For the
+   * `Dropdown` widget in Google Chat apps, only one `DataSourceConfig` is supported. If multiple
+   * `DataSourceConfig`s are set, only the first one is used.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1DataSourceConfig> getDataSourceConfigs() {
@@ -164,8 +167,10 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
    * grained control over the data source. If specified, the `multi_select_max_selected_items`
    * field, `multi_select_min_query_length` field, `external_data_source` field and
    * `platform_data_source` field are ignored. Available for Google Workspace add-ons that extend
-   * Google Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
+   * Google Workspace Studio. Available for the `Dropdown widget` widget in Google Chat apps as part
+   * of the [Developer Preview Program](https://developers.google.com/workspace/preview). For the
+   * `Dropdown` widget in Google Chat apps, only one `DataSourceConfig` is supported. If multiple
+   * `DataSourceConfig`s are set, only the first one is used.
    * @param dataSourceConfigs dataSourceConfigs or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setDataSourceConfigs(java.util.List<GoogleAppsCardV1DataSourceConfig> dataSourceConfigs) {
@@ -193,8 +198,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   /**
    * Optional. Text that appears below the selection input field meant to assist users by prompting
    * them to enter a certain value. This text is always visible. Available for Google Workspace add-
-   * ons that extend Google Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
+   * ons that extend Google Workspace Studio. Unavailable for Google Chat apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getHintText() {
@@ -204,8 +208,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   /**
    * Optional. Text that appears below the selection input field meant to assist users by prompting
    * them to enter a certain value. This text is always visible. Available for Google Workspace add-
-   * ons that extend Google Workspace flows, which is available as part of the [Gemini Alpha
-   * program](https://support.google.com/a/answer/14170809). Unavailable for Google Chat apps.
+   * ons that extend Google Workspace Studio. Unavailable for Google Chat apps.
    * @param hintText hintText or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setHintText(java.lang.String hintText) {

@@ -95,10 +95,7 @@ public final class GoogleCloudRunV2WorkerPool extends com.google.api.client.json
   private java.lang.String creator;
 
   /**
-   * One or more custom audiences that you want this worker pool to support. Specify each custom
-   * audience as the full URL in a string. The custom audiences are encoded in the token and used to
-   * authenticate requests. For more information, see
-   * https://cloud.google.com/run/docs/configuring/custom-audiences.
+   * Not supported, and ignored by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -290,6 +287,14 @@ public final class GoogleCloudRunV2WorkerPool extends com.google.api.client.json
   private GoogleCloudRunV2Condition terminalCondition;
 
   /**
+   * Output only. Indicates whether Cloud Run Threat Detection monitoring is enabled for the parent
+   * project of this worker pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean threatDetectionEnabled;
+
+  /**
    * Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and
    * guaranteed to remain unchanged until the resource is deleted.
    * The value may be {@code null}.
@@ -438,10 +443,7 @@ public final class GoogleCloudRunV2WorkerPool extends com.google.api.client.json
   }
 
   /**
-   * One or more custom audiences that you want this worker pool to support. Specify each custom
-   * audience as the full URL in a string. The custom audiences are encoded in the token and used to
-   * authenticate requests. For more information, see
-   * https://cloud.google.com/run/docs/configuring/custom-audiences.
+   * Not supported, and ignored by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCustomAudiences() {
@@ -449,10 +451,7 @@ public final class GoogleCloudRunV2WorkerPool extends com.google.api.client.json
   }
 
   /**
-   * One or more custom audiences that you want this worker pool to support. Specify each custom
-   * audience as the full URL in a string. The custom audiences are encoded in the token and used to
-   * authenticate requests. For more information, see
-   * https://cloud.google.com/run/docs/configuring/custom-audiences.
+   * Not supported, and ignored by Cloud Run.
    * @param customAudiences customAudiences or {@code null} for none
    */
   public GoogleCloudRunV2WorkerPool setCustomAudiences(java.util.List<java.lang.String> customAudiences) {
@@ -860,6 +859,25 @@ public final class GoogleCloudRunV2WorkerPool extends com.google.api.client.json
    */
   public GoogleCloudRunV2WorkerPool setTerminalCondition(GoogleCloudRunV2Condition terminalCondition) {
     this.terminalCondition = terminalCondition;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether Cloud Run Threat Detection monitoring is enabled for the parent
+   * project of this worker pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getThreatDetectionEnabled() {
+    return threatDetectionEnabled;
+  }
+
+  /**
+   * Output only. Indicates whether Cloud Run Threat Detection monitoring is enabled for the parent
+   * project of this worker pool.
+   * @param threatDetectionEnabled threatDetectionEnabled or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkerPool setThreatDetectionEnabled(java.lang.Boolean threatDetectionEnabled) {
+    this.threatDetectionEnabled = threatDetectionEnabled;
     return this;
   }
 

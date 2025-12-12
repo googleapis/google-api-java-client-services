@@ -45,6 +45,14 @@ public final class GoogleCloudRunV2ListServicesResponse extends com.google.api.c
   private java.util.List<GoogleCloudRunV2Service> services;
 
   /**
+   * Output only. For global requests, returns the list of regions that could not be reached within
+   * the deadline.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * A token indicating there are more items than page_size. Use it in the next ListServices request
    * to continue.
    * @return value or {@code null} for none
@@ -77,6 +85,25 @@ public final class GoogleCloudRunV2ListServicesResponse extends com.google.api.c
    */
   public GoogleCloudRunV2ListServicesResponse setServices(java.util.List<GoogleCloudRunV2Service> services) {
     this.services = services;
+    return this;
+  }
+
+  /**
+   * Output only. For global requests, returns the list of regions that could not be reached within
+   * the deadline.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Output only. For global requests, returns the list of regions that could not be reached within
+   * the deadline.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public GoogleCloudRunV2ListServicesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

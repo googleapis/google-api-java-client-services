@@ -147,7 +147,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private java.lang.String podRange;
 
   /**
-   * Output only. The subnetwork path for the node pool. Format:
+   * The subnetwork path for the node pool. Format:
    * projects/{project}/regions/{region}/subnetworks/{subnetwork} If the cluster is associated with
    * multiple subnetworks, the subnetwork for the node pool is picked based on the IP utilization
    * during node pool creation and is immutable.
@@ -398,7 +398,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The subnetwork path for the node pool. Format:
+   * The subnetwork path for the node pool. Format:
    * projects/{project}/regions/{region}/subnetworks/{subnetwork} If the cluster is associated with
    * multiple subnetworks, the subnetwork for the node pool is picked based on the IP utilization
    * during node pool creation and is immutable.
@@ -409,7 +409,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The subnetwork path for the node pool. Format:
+   * The subnetwork path for the node pool. Format:
    * projects/{project}/regions/{region}/subnetworks/{subnetwork} If the cluster is associated with
    * multiple subnetworks, the subnetwork for the node pool is picked based on the IP utilization
    * during node pool creation and is immutable.

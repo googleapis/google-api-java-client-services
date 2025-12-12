@@ -374,6 +374,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private MaintenancePolicy maintenancePolicy;
 
   /**
+   * Configuration for Managed OpenTelemetry pipeline.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedOpenTelemetryConfig managedOpentelemetryConfig;
+
+  /**
    * The authentication information for accessing the master endpoint. If unspecified, the defaults
    * are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to
    * "admin", a random password will be generated, and a client certificate will be issued.
@@ -1483,6 +1490,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setMaintenancePolicy(MaintenancePolicy maintenancePolicy) {
     this.maintenancePolicy = maintenancePolicy;
+    return this;
+  }
+
+  /**
+   * Configuration for Managed OpenTelemetry pipeline.
+   * @return value or {@code null} for none
+   */
+  public ManagedOpenTelemetryConfig getManagedOpentelemetryConfig() {
+    return managedOpentelemetryConfig;
+  }
+
+  /**
+   * Configuration for Managed OpenTelemetry pipeline.
+   * @param managedOpentelemetryConfig managedOpentelemetryConfig or {@code null} for none
+   */
+  public Cluster setManagedOpentelemetryConfig(ManagedOpenTelemetryConfig managedOpentelemetryConfig) {
+    this.managedOpentelemetryConfig = managedOpentelemetryConfig;
     return this;
   }
 

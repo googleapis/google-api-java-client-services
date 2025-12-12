@@ -45,6 +45,14 @@ public final class UpgradeInfoEvent extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
+   * The information about the disruption event. This field is only populated when event_type is
+   * DISRUPTION_EVENT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DisruptionEvent disruptionEvent;
+
+  /**
    * The time when the operation ended.
    * The value may be {@code null}.
    */
@@ -146,6 +154,25 @@ public final class UpgradeInfoEvent extends com.google.api.client.json.GenericJs
    */
   public UpgradeInfoEvent setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * The information about the disruption event. This field is only populated when event_type is
+   * DISRUPTION_EVENT.
+   * @return value or {@code null} for none
+   */
+  public DisruptionEvent getDisruptionEvent() {
+    return disruptionEvent;
+  }
+
+  /**
+   * The information about the disruption event. This field is only populated when event_type is
+   * DISRUPTION_EVENT.
+   * @param disruptionEvent disruptionEvent or {@code null} for none
+   */
+  public UpgradeInfoEvent setDisruptionEvent(DisruptionEvent disruptionEvent) {
+    this.disruptionEvent = disruptionEvent;
     return this;
   }
 

@@ -295,6 +295,14 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private PasswordValidationPolicy passwordValidationPolicy;
 
   /**
+   * Optional. Configuration for Performance Capture, provides diagnostic metrics during high load
+   * situations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PerformanceCaptureConfig performanceCaptureConfig;
+
+  /**
    * The pricing plan for this instance. This can be either `PER_USE` or `PACKAGE`. Only `PER_USE`
    * is supported for Second Generation instances.
    * The value may be {@code null}.
@@ -986,6 +994,25 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setPasswordValidationPolicy(PasswordValidationPolicy passwordValidationPolicy) {
     this.passwordValidationPolicy = passwordValidationPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Performance Capture, provides diagnostic metrics during high load
+   * situations.
+   * @return value or {@code null} for none
+   */
+  public PerformanceCaptureConfig getPerformanceCaptureConfig() {
+    return performanceCaptureConfig;
+  }
+
+  /**
+   * Optional. Configuration for Performance Capture, provides diagnostic metrics during high load
+   * situations.
+   * @param performanceCaptureConfig performanceCaptureConfig or {@code null} for none
+   */
+  public Settings setPerformanceCaptureConfig(PerformanceCaptureConfig performanceCaptureConfig) {
+    this.performanceCaptureConfig = performanceCaptureConfig;
     return this;
   }
 

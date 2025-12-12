@@ -3822,11 +3822,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Required. Project ID of the project that contains the instance.
      * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
-     * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesAddEntraIdCertificateRequest}
      * @return the request
      */
-    public AddEntraIdCertificate addEntraIdCertificate(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesAddEntraIdCertificateRequest content) throws java.io.IOException {
-      AddEntraIdCertificate result = new AddEntraIdCertificate(project, instance, content);
+    public AddEntraIdCertificate addEntraIdCertificate(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+      AddEntraIdCertificate result = new AddEntraIdCertificate(project, instance);
       initialize(result);
       return result;
     }
@@ -3850,11 +3849,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Required. Project ID of the project that contains the instance.
        * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
-       * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesAddEntraIdCertificateRequest}
        * @since 1.13
        */
-      protected AddEntraIdCertificate(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesAddEntraIdCertificateRequest content) {
-        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+      protected AddEntraIdCertificate(java.lang.String project, java.lang.String instance) {
+        super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.Operation.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
       }

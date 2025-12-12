@@ -78,6 +78,21 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * Output only. The list of settings for requested automatically-setup Private Service Connect
+   * (PSC) consumer endpoints that can be used to connect to this read pool node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PscAutoConnectionConfig> pscAutoConnections;
+
+  /**
+   * Output only. The Private Service Connect (PSC) service attachment of the read pool node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscServiceAttachmentLink;
+
+  /**
    * Output only. The current state of the read pool node.
    * The value may be {@code null}.
    */
@@ -168,6 +183,42 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
    */
   public PoolNodeConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The list of settings for requested automatically-setup Private Service Connect
+   * (PSC) consumer endpoints that can be used to connect to this read pool node.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PscAutoConnectionConfig> getPscAutoConnections() {
+    return pscAutoConnections;
+  }
+
+  /**
+   * Output only. The list of settings for requested automatically-setup Private Service Connect
+   * (PSC) consumer endpoints that can be used to connect to this read pool node.
+   * @param pscAutoConnections pscAutoConnections or {@code null} for none
+   */
+  public PoolNodeConfig setPscAutoConnections(java.util.List<PscAutoConnectionConfig> pscAutoConnections) {
+    this.pscAutoConnections = pscAutoConnections;
+    return this;
+  }
+
+  /**
+   * Output only. The Private Service Connect (PSC) service attachment of the read pool node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscServiceAttachmentLink() {
+    return pscServiceAttachmentLink;
+  }
+
+  /**
+   * Output only. The Private Service Connect (PSC) service attachment of the read pool node.
+   * @param pscServiceAttachmentLink pscServiceAttachmentLink or {@code null} for none
+   */
+  public PoolNodeConfig setPscServiceAttachmentLink(java.lang.String pscServiceAttachmentLink) {
+    this.pscServiceAttachmentLink = pscServiceAttachmentLink;
     return this;
   }
 

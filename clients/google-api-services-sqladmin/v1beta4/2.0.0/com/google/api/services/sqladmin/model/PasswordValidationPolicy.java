@@ -17,7 +17,9 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Database instance local user password validation policy
+ * Database instance local user password validation policy. This message defines the password policy
+ * for local database users. When enabled, it enforces constraints on password complexity, length,
+ * and reuse. Keep this policy enabled to help prevent unauthorized access.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -51,7 +53,9 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
   private java.lang.Boolean disallowUsernameSubstring;
 
   /**
-   * Whether the password policy is enabled or not.
+   * Whether to enable the password policy or not. When enabled, passwords must meet complexity
+   * requirements. Keep this policy enabled to help prevent unauthorized access. Disabling this
+   * policy allows weak passwords.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +135,9 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
   }
 
   /**
-   * Whether the password policy is enabled or not.
+   * Whether to enable the password policy or not. When enabled, passwords must meet complexity
+   * requirements. Keep this policy enabled to help prevent unauthorized access. Disabling this
+   * policy allows weak passwords.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePasswordPolicy() {
@@ -139,7 +145,9 @@ public final class PasswordValidationPolicy extends com.google.api.client.json.G
   }
 
   /**
-   * Whether the password policy is enabled or not.
+   * Whether to enable the password policy or not. When enabled, passwords must meet complexity
+   * requirements. Keep this policy enabled to help prevent unauthorized access. Disabling this
+   * policy allows weak passwords.
    * @param enablePasswordPolicy enablePasswordPolicy or {@code null} for none
    */
   public PasswordValidationPolicy setEnablePasswordPolicy(java.lang.Boolean enablePasswordPolicy) {

@@ -3807,6 +3807,145 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Adds a new Entra ID certificate for the specified instance. If an Entra ID certificate was
+     * previously added but never used in a certificate rotation, this operation replaces that version.
+     *
+     * Create a request for the method "instances.addEntraIdCertificate".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link AddEntraIdCertificate#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+     * @return the request
+     */
+    public AddEntraIdCertificate addEntraIdCertificate(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+      AddEntraIdCertificate result = new AddEntraIdCertificate(project, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class AddEntraIdCertificate extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/addEntraIdCertificate";
+
+      /**
+       * Adds a new Entra ID certificate for the specified instance. If an Entra ID certificate was
+       * previously added but never used in a certificate rotation, this operation replaces that
+       * version.
+       *
+       * Create a request for the method "instances.addEntraIdCertificate".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link AddEntraIdCertificate#execute()} method to invoke the
+       * remote operation. <p> {@link AddEntraIdCertificate#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+       * @since 1.13
+       */
+      protected AddEntraIdCertificate(java.lang.String project, java.lang.String instance) {
+        super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public AddEntraIdCertificate set$Xgafv(java.lang.String $Xgafv) {
+        return (AddEntraIdCertificate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AddEntraIdCertificate setAccessToken(java.lang.String accessToken) {
+        return (AddEntraIdCertificate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AddEntraIdCertificate setAlt(java.lang.String alt) {
+        return (AddEntraIdCertificate) super.setAlt(alt);
+      }
+
+      @Override
+      public AddEntraIdCertificate setCallback(java.lang.String callback) {
+        return (AddEntraIdCertificate) super.setCallback(callback);
+      }
+
+      @Override
+      public AddEntraIdCertificate setFields(java.lang.String fields) {
+        return (AddEntraIdCertificate) super.setFields(fields);
+      }
+
+      @Override
+      public AddEntraIdCertificate setKey(java.lang.String key) {
+        return (AddEntraIdCertificate) super.setKey(key);
+      }
+
+      @Override
+      public AddEntraIdCertificate setOauthToken(java.lang.String oauthToken) {
+        return (AddEntraIdCertificate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AddEntraIdCertificate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AddEntraIdCertificate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AddEntraIdCertificate setQuotaUser(java.lang.String quotaUser) {
+        return (AddEntraIdCertificate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AddEntraIdCertificate setUploadType(java.lang.String uploadType) {
+        return (AddEntraIdCertificate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AddEntraIdCertificate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AddEntraIdCertificate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public AddEntraIdCertificate setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public AddEntraIdCertificate setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public AddEntraIdCertificate set(String parameterName, Object value) {
+        return (AddEntraIdCertificate) super.set(parameterName, value);
+      }
+    }
+    /**
      * Adds a new trusted Certificate Authority (CA) version for the specified instance. Required to
      * prepare for a certificate rotation. If a CA version was previously added but never used in a
      * certificate rotation, this operation replaces that version. There cannot be more than one CA

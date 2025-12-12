@@ -38,6 +38,15 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArti
   private java.lang.String artifactId;
 
   /**
+   * Optional. Path to a folder containing the files to upload to Artifact Registry. This can be
+   * either an absolute path, e.g. `/workspace/my-app/target/`, or a relative path from /workspace,
+   * e.g. `my-app/target/`. This field is mutually exclusive with the `path` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deployFolder;
+
+  /**
    * Maven `groupId` value used when uploading the artifact to Artifact Registry.
    * The value may be {@code null}.
    */
@@ -83,6 +92,27 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArti
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact setArtifactId(java.lang.String artifactId) {
     this.artifactId = artifactId;
+    return this;
+  }
+
+  /**
+   * Optional. Path to a folder containing the files to upload to Artifact Registry. This can be
+   * either an absolute path, e.g. `/workspace/my-app/target/`, or a relative path from /workspace,
+   * e.g. `my-app/target/`. This field is mutually exclusive with the `path` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeployFolder() {
+    return deployFolder;
+  }
+
+  /**
+   * Optional. Path to a folder containing the files to upload to Artifact Registry. This can be
+   * either an absolute path, e.g. `/workspace/my-app/target/`, or a relative path from /workspace,
+   * e.g. `my-app/target/`. This field is mutually exclusive with the `path` field.
+   * @param deployFolder deployFolder or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact setDeployFolder(java.lang.String deployFolder) {
+    this.deployFolder = deployFolder;
     return this;
   }
 

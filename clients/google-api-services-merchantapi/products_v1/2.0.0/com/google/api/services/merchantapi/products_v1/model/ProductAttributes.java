@@ -752,7 +752,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private StructuredTitle structuredTitle;
 
   /**
-   * Number of periods (months or years) and amount of payment per period for an item with an
+   * Number of periods (weeks, months or years) and amount of payment per period for an item with an
    * associated subscription contract.
    * The value may be {@code null}.
    */
@@ -2455,7 +2455,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of periods (months or years) and amount of payment per period for an item with an
+   * Number of periods (weeks, months or years) and amount of payment per period for an item with an
    * associated subscription contract.
    * @return value or {@code null} for none
    */
@@ -2464,7 +2464,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of periods (months or years) and amount of payment per period for an item with an
+   * Number of periods (weeks, months or years) and amount of payment per period for an item with an
    * associated subscription contract.
    * @param subscriptionCost subscriptionCost or {@code null} for none
    */

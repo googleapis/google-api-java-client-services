@@ -37,7 +37,7 @@ public final class SubscriptionCost extends com.google.api.client.json.GenericJs
   private Price amount;
 
   /**
-   * The type of subscription period. Supported values are: * "`month`" * "`year`"
+   * The type of subscription period. Supported values are: * "`month`" * "`year`" * "`week`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class SubscriptionCost extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The type of subscription period. Supported values are: * "`month`" * "`year`"
+   * The type of subscription period. Supported values are: * "`month`" * "`year`" * "`week`"
    * @return value or {@code null} for none
    */
   public java.lang.String getPeriod() {
@@ -76,7 +76,7 @@ public final class SubscriptionCost extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The type of subscription period. Supported values are: * "`month`" * "`year`"
+   * The type of subscription period. Supported values are: * "`month`" * "`year`" * "`week`"
    * @param period period or {@code null} for none
    */
   public SubscriptionCost setPeriod(java.lang.String period) {

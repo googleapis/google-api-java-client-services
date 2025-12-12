@@ -32,9 +32,10 @@ package com.google.api.services.managedkafka.v1.model;
 public final class ConnectNetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Additional subnets may be specified. They may be in another region, but must be in
-   * the same VPC network. The Connect workers can communicate with network endpoints in either the
-   * primary or additional subnets.
+   * Optional. Deprecated: Managed Kafka Connect clusters can now reach any endpoint accessible from
+   * the primary subnet without the need to define additional subnets. Please see
+   * https://cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-connect-
+   * cluster#worker-subnet for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +64,10 @@ public final class ConnectNetworkConfig extends com.google.api.client.json.Gener
   private java.lang.String primarySubnet;
 
   /**
-   * Optional. Additional subnets may be specified. They may be in another region, but must be in
-   * the same VPC network. The Connect workers can communicate with network endpoints in either the
-   * primary or additional subnets.
+   * Optional. Deprecated: Managed Kafka Connect clusters can now reach any endpoint accessible from
+   * the primary subnet without the need to define additional subnets. Please see
+   * https://cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-connect-
+   * cluster#worker-subnet for more information.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdditionalSubnets() {
@@ -73,9 +75,10 @@ public final class ConnectNetworkConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional subnets may be specified. They may be in another region, but must be in
-   * the same VPC network. The Connect workers can communicate with network endpoints in either the
-   * primary or additional subnets.
+   * Optional. Deprecated: Managed Kafka Connect clusters can now reach any endpoint accessible from
+   * the primary subnet without the need to define additional subnets. Please see
+   * https://cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-connect-
+   * cluster#worker-subnet for more information.
    * @param additionalSubnets additionalSubnets or {@code null} for none
    */
   public ConnectNetworkConfig setAdditionalSubnets(java.util.List<java.lang.String> additionalSubnets) {

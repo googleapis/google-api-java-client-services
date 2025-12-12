@@ -3243,6 +3243,29 @@ public class ManagedKafka extends com.google.api.client.googleapis.services.json
               return this;
             }
 
+            /**
+             * Optional. Specifies the view (BASIC or FULL) of the ConsumerGroup resource to be
+             * returned in the response. Defaults to FULL view.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. Specifies the view (BASIC or FULL) of the ConsumerGroup resource to be returned in the
+           response. Defaults to FULL view.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. Specifies the view (BASIC or FULL) of the ConsumerGroup resource to be
+             * returned in the response. Defaults to FULL view.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);

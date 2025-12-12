@@ -74,6 +74,15 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
+   * Output only. Metadata indicating whether this resource is user-scoped. `WorkflowInvocation`
+   * resource is `user_scoped` only if it is sourced from a compilation result and the compilation
+   * result is user-scoped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateResourceMetadata privateResourceMetadata;
+
+  /**
    * Output only. The resolved compilation result that was used to create this invocation. Will be
    * in the format `projects/locations/repositories/compilationResults`.
    * The value may be {@code null}.
@@ -199,6 +208,27 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
    */
   public WorkflowInvocation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata indicating whether this resource is user-scoped. `WorkflowInvocation`
+   * resource is `user_scoped` only if it is sourced from a compilation result and the compilation
+   * result is user-scoped.
+   * @return value or {@code null} for none
+   */
+  public PrivateResourceMetadata getPrivateResourceMetadata() {
+    return privateResourceMetadata;
+  }
+
+  /**
+   * Output only. Metadata indicating whether this resource is user-scoped. `WorkflowInvocation`
+   * resource is `user_scoped` only if it is sourced from a compilation result and the compilation
+   * result is user-scoped.
+   * @param privateResourceMetadata privateResourceMetadata or {@code null} for none
+   */
+  public WorkflowInvocation setPrivateResourceMetadata(PrivateResourceMetadata privateResourceMetadata) {
+    this.privateResourceMetadata = privateResourceMetadata;
     return this;
   }
 

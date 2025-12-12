@@ -96,6 +96,14 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * Output only. Metadata indicating whether this resource is user-scoped. `CompilationResult`
+   * resource is `user_scoped` only if it is sourced from a workspace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateResourceMetadata privateResourceMetadata;
+
+  /**
    * Immutable. The name of the release config to compile. Must be in the format
    * `projects/locations/repositories/releaseConfigs`.
    * The value may be {@code null}.
@@ -260,6 +268,25 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
    */
   public CompilationResult setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata indicating whether this resource is user-scoped. `CompilationResult`
+   * resource is `user_scoped` only if it is sourced from a workspace.
+   * @return value or {@code null} for none
+   */
+  public PrivateResourceMetadata getPrivateResourceMetadata() {
+    return privateResourceMetadata;
+  }
+
+  /**
+   * Output only. Metadata indicating whether this resource is user-scoped. `CompilationResult`
+   * resource is `user_scoped` only if it is sourced from a workspace.
+   * @param privateResourceMetadata privateResourceMetadata or {@code null} for none
+   */
+  public CompilationResult setPrivateResourceMetadata(PrivateResourceMetadata privateResourceMetadata) {
+    this.privateResourceMetadata = privateResourceMetadata;
     return this;
   }
 

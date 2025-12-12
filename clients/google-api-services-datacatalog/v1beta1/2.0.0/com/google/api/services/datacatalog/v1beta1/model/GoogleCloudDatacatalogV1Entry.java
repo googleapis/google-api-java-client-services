@@ -148,6 +148,13 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1GcsFilesetSpec gcsFilesetSpec;
 
   /**
+   * Spec for graph.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1GraphSpec graphSpec;
+
+  /**
    * Output only. Indicates the entry's source system that Data Catalog integrates with, such as
    * BigQuery, Pub/Sub, or Dataproc Metastore.
    * The value may be {@code null}.
@@ -550,6 +557,23 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setGcsFilesetSpec(GoogleCloudDatacatalogV1GcsFilesetSpec gcsFilesetSpec) {
     this.gcsFilesetSpec = gcsFilesetSpec;
+    return this;
+  }
+
+  /**
+   * Spec for graph.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1GraphSpec getGraphSpec() {
+    return graphSpec;
+  }
+
+  /**
+   * Spec for graph.
+   * @param graphSpec graphSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setGraphSpec(GoogleCloudDatacatalogV1GraphSpec graphSpec) {
+    this.graphSpec = graphSpec;
     return this;
   }
 

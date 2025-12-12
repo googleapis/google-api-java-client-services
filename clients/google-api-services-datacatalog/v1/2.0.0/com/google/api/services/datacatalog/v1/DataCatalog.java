@@ -6649,9 +6649,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -6659,10 +6659,11 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -6670,9 +6671,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */

@@ -30,6 +30,17 @@ package com.google.api.services.datastream.v1.model;
 public final class MongodbProfile extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies additional options for the MongoDB connection. The options should be sent
+   * as key-value pairs, for example: `additional_options = {"serverSelectionTimeoutMS": "10000",
+   * "directConnection": "true"}`. Keys are case-sensitive and should match the official MongoDB
+   * connection string options: https://www.mongodb.com/docs/manual/reference/connection-string-
+   * options/ The server will not modify the values provided by the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> additionalOptions;
+
+  /**
    * Required. List of host addresses for a MongoDB cluster. For SRV connection format, this list
    * must contain exactly one DNS host without a port. For Standard connection format, this list
    * must contain all the required hosts in the cluster with their respective ports.
@@ -96,6 +107,31 @@ public final class MongodbProfile extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
+
+  /**
+   * Optional. Specifies additional options for the MongoDB connection. The options should be sent
+   * as key-value pairs, for example: `additional_options = {"serverSelectionTimeoutMS": "10000",
+   * "directConnection": "true"}`. Keys are case-sensitive and should match the official MongoDB
+   * connection string options: https://www.mongodb.com/docs/manual/reference/connection-string-
+   * options/ The server will not modify the values provided by the user.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAdditionalOptions() {
+    return additionalOptions;
+  }
+
+  /**
+   * Optional. Specifies additional options for the MongoDB connection. The options should be sent
+   * as key-value pairs, for example: `additional_options = {"serverSelectionTimeoutMS": "10000",
+   * "directConnection": "true"}`. Keys are case-sensitive and should match the official MongoDB
+   * connection string options: https://www.mongodb.com/docs/manual/reference/connection-string-
+   * options/ The server will not modify the values provided by the user.
+   * @param additionalOptions additionalOptions or {@code null} for none
+   */
+  public MongodbProfile setAdditionalOptions(java.util.Map<String, java.lang.String> additionalOptions) {
+    this.additionalOptions = additionalOptions;
+    return this;
+  }
 
   /**
    * Required. List of host addresses for a MongoDB cluster. For SRV connection format, this list

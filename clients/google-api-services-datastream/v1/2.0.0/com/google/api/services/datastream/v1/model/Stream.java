@@ -110,6 +110,19 @@ public final class Stream extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Rule sets to apply to the stream.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RuleSet> ruleSets;
+
+  static {
+    // hack to force ProGuard to consider RuleSet used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RuleSet.class);
+  }
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -319,6 +332,23 @@ public final class Stream extends com.google.api.client.json.GenericJson {
    */
   public Stream setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Rule sets to apply to the stream.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RuleSet> getRuleSets() {
+    return ruleSets;
+  }
+
+  /**
+   * Optional. Rule sets to apply to the stream.
+   * @param ruleSets ruleSets or {@code null} for none
+   */
+  public Stream setRuleSets(java.util.List<RuleSet> ruleSets) {
+    this.ruleSets = ruleSets;
     return this;
   }
 

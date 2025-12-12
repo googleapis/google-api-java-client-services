@@ -61,6 +61,16 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Immutable. The resource name of the backend environment where the key material for the wrapping
+   * key resides and where all related cryptographic operations are performed. Currently, this field
+   * is only populated for keys stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and
+   * may apply to additional ProtectionLevels in the future.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoKeyBackend;
+
+  /**
    * Output only. The time this ImportJob expired. Only present if state is EXPIRED.
    * The value may be {@code null}.
    */
@@ -157,6 +167,29 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
    */
   public ImportJob setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Immutable. The resource name of the backend environment where the key material for the wrapping
+   * key resides and where all related cryptographic operations are performed. Currently, this field
+   * is only populated for keys stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and
+   * may apply to additional ProtectionLevels in the future.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoKeyBackend() {
+    return cryptoKeyBackend;
+  }
+
+  /**
+   * Immutable. The resource name of the backend environment where the key material for the wrapping
+   * key resides and where all related cryptographic operations are performed. Currently, this field
+   * is only populated for keys stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and
+   * may apply to additional ProtectionLevels in the future.
+   * @param cryptoKeyBackend cryptoKeyBackend or {@code null} for none
+   */
+  public ImportJob setCryptoKeyBackend(java.lang.String cryptoKeyBackend) {
+    this.cryptoKeyBackend = cryptoKeyBackend;
     return this;
   }
 

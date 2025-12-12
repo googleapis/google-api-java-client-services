@@ -45,6 +45,14 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
   private java.lang.Boolean hsmAvailable;
 
   /**
+   * Indicates whether CryptoKeys with protection_level HSM_SINGLE_TENANT can be created in this
+   * location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hsmSingleTenantAvailable;
+
+  /**
    * Indicates whether CryptoKeys with protection_level EXTERNAL can be created in this location.
    * @return value or {@code null} for none
    */
@@ -75,6 +83,25 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
    */
   public LocationMetadata setHsmAvailable(java.lang.Boolean hsmAvailable) {
     this.hsmAvailable = hsmAvailable;
+    return this;
+  }
+
+  /**
+   * Indicates whether CryptoKeys with protection_level HSM_SINGLE_TENANT can be created in this
+   * location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHsmSingleTenantAvailable() {
+    return hsmSingleTenantAvailable;
+  }
+
+  /**
+   * Indicates whether CryptoKeys with protection_level HSM_SINGLE_TENANT can be created in this
+   * location.
+   * @param hsmSingleTenantAvailable hsmSingleTenantAvailable or {@code null} for none
+   */
+  public LocationMetadata setHsmSingleTenantAvailable(java.lang.Boolean hsmSingleTenantAvailable) {
+    this.hsmSingleTenantAvailable = hsmSingleTenantAvailable;
     return this;
   }
 

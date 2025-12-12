@@ -80,6 +80,13 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   private java.lang.String publisher;
 
   /**
+   * The purpose of the model, for example, "Inteference" or "Training".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String usageCategory;
+
+  /**
    * The platform on which the model is deployed.
    * @return value or {@code null} for none
    */
@@ -195,6 +202,23 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2AiModel setPublisher(java.lang.String publisher) {
     this.publisher = publisher;
+    return this;
+  }
+
+  /**
+   * The purpose of the model, for example, "Inteference" or "Training".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUsageCategory() {
+    return usageCategory;
+  }
+
+  /**
+   * The purpose of the model, for example, "Inteference" or "Training".
+   * @param usageCategory usageCategory or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AiModel setUsageCategory(java.lang.String usageCategory) {
+    this.usageCategory = usageCategory;
     return this;
   }
 

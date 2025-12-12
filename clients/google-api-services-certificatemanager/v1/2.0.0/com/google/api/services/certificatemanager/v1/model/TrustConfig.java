@@ -83,6 +83,14 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Defines a mapping from a trust domain to a TrustStore. This is used for SPIFFE
+   * certificate validation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, TrustStore> spiffeTrustStores;
+
+  /**
    * Optional. Set of trust stores to perform validation against. This field is supported when
    * TrustConfig is configured with Load Balancers, currently not supported for SPIFFE certificate
    * validation. Only one TrustStore specified is currently allowed.
@@ -205,6 +213,25 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
    */
   public TrustConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Defines a mapping from a trust domain to a TrustStore. This is used for SPIFFE
+   * certificate validation.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, TrustStore> getSpiffeTrustStores() {
+    return spiffeTrustStores;
+  }
+
+  /**
+   * Optional. Defines a mapping from a trust domain to a TrustStore. This is used for SPIFFE
+   * certificate validation.
+   * @param spiffeTrustStores spiffeTrustStores or {@code null} for none
+   */
+  public TrustConfig setSpiffeTrustStores(java.util.Map<String, TrustStore> spiffeTrustStores) {
+    this.spiffeTrustStores = spiffeTrustStores;
     return this;
   }
 

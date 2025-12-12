@@ -66,6 +66,13 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   private ManagedCertificate managed;
 
   /**
+   * If set, contains configuration and state of a managed identity certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedIdentityCertificate managedIdentity;
+
+  /**
    * Identifier. A user-defined name of the certificate. Certificate names must be unique globally
    * and match pattern `projects/locations/certificates`.
    * The value may be {@code null}.
@@ -199,6 +206,23 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
    */
   public Certificate setManaged(ManagedCertificate managed) {
     this.managed = managed;
+    return this;
+  }
+
+  /**
+   * If set, contains configuration and state of a managed identity certificate.
+   * @return value or {@code null} for none
+   */
+  public ManagedIdentityCertificate getManagedIdentity() {
+    return managedIdentity;
+  }
+
+  /**
+   * If set, contains configuration and state of a managed identity certificate.
+   * @param managedIdentity managedIdentity or {@code null} for none
+   */
+  public Certificate setManagedIdentity(ManagedIdentityCertificate managedIdentity) {
+    this.managedIdentity = managedIdentity;
     return this;
   }
 

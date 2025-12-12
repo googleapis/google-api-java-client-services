@@ -58,6 +58,13 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   private ReportSummaryChartData operatingSystem;
 
   /**
+   * Output only. Count of assets grouped by software name. Only present for virtual machines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReportSummaryChartData softwareInstances;
+
+  /**
    * Histogram showing a distribution of storage sizes.
    * The value may be {@code null}.
    */
@@ -164,6 +171,23 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
    */
   public ReportSummaryAssetAggregateStats setOperatingSystem(ReportSummaryChartData operatingSystem) {
     this.operatingSystem = operatingSystem;
+    return this;
+  }
+
+  /**
+   * Output only. Count of assets grouped by software name. Only present for virtual machines.
+   * @return value or {@code null} for none
+   */
+  public ReportSummaryChartData getSoftwareInstances() {
+    return softwareInstances;
+  }
+
+  /**
+   * Output only. Count of assets grouped by software name. Only present for virtual machines.
+   * @param softwareInstances softwareInstances or {@code null} for none
+   */
+  public ReportSummaryAssetAggregateStats setSoftwareInstances(ReportSummaryChartData softwareInstances) {
+    this.softwareInstances = softwareInstances;
     return this;
   }
 

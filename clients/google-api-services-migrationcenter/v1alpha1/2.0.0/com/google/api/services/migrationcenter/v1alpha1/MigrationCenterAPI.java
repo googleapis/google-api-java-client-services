@@ -7926,9 +7926,9 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -7936,10 +7936,11 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -7947,9 +7948,9 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -10041,138 +10042,6 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
         public class Reports {
 
           /**
-           * Gets the link to the generated artifact of a given type for a Report.
-           *
-           * Create a request for the method "reports.artifactLink".
-           *
-           * This request holds the parameters needed by the migrationcenter server.  After setting any
-           * optional parameters, call the {@link ArtifactLink#execute()} method to invoke the remote
-           * operation.
-           *
-           * @param name Required. Name of the resource.
-           * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.GenerateReportArtifactLinkRequest}
-           * @return the request
-           */
-          public ArtifactLink artifactLink(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.GenerateReportArtifactLinkRequest content) throws java.io.IOException {
-            ArtifactLink result = new ArtifactLink(name, content);
-            initialize(result);
-            return result;
-          }
-
-          public class ArtifactLink extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.ReportArtifactLink> {
-
-            private static final String REST_PATH = "v1alpha1/{+name}:artifactLink";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
-
-            /**
-             * Gets the link to the generated artifact of a given type for a Report.
-             *
-             * Create a request for the method "reports.artifactLink".
-             *
-             * This request holds the parameters needed by the the migrationcenter server.  After setting any
-             * optional parameters, call the {@link ArtifactLink#execute()} method to invoke the remote
-             * operation. <p> {@link
-             * ArtifactLink#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. Name of the resource.
-             * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.GenerateReportArtifactLinkRequest}
-             * @since 1.13
-             */
-            protected ArtifactLink(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.GenerateReportArtifactLinkRequest content) {
-              super(MigrationCenterAPI.this, "POST", REST_PATH, content, com.google.api.services.migrationcenter.v1alpha1.model.ReportArtifactLink.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
-              }
-            }
-
-            @Override
-            public ArtifactLink set$Xgafv(java.lang.String $Xgafv) {
-              return (ArtifactLink) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public ArtifactLink setAccessToken(java.lang.String accessToken) {
-              return (ArtifactLink) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public ArtifactLink setAlt(java.lang.String alt) {
-              return (ArtifactLink) super.setAlt(alt);
-            }
-
-            @Override
-            public ArtifactLink setCallback(java.lang.String callback) {
-              return (ArtifactLink) super.setCallback(callback);
-            }
-
-            @Override
-            public ArtifactLink setFields(java.lang.String fields) {
-              return (ArtifactLink) super.setFields(fields);
-            }
-
-            @Override
-            public ArtifactLink setKey(java.lang.String key) {
-              return (ArtifactLink) super.setKey(key);
-            }
-
-            @Override
-            public ArtifactLink setOauthToken(java.lang.String oauthToken) {
-              return (ArtifactLink) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public ArtifactLink setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (ArtifactLink) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public ArtifactLink setQuotaUser(java.lang.String quotaUser) {
-              return (ArtifactLink) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public ArtifactLink setUploadType(java.lang.String uploadType) {
-              return (ArtifactLink) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public ArtifactLink setUploadProtocol(java.lang.String uploadProtocol) {
-              return (ArtifactLink) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** Required. Name of the resource. */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. Name of the resource.
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /** Required. Name of the resource. */
-            public ArtifactLink setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public ArtifactLink set(String parameterName, Object value) {
-              return (ArtifactLink) super.set(parameterName, value);
-            }
-          }
-          /**
            * Creates a report.
            *
            * Create a request for the method "reports.create".
@@ -10545,137 +10414,6 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Export a Report into a supported format.
-           *
-           * Create a request for the method "reports.export".
-           *
-           * This request holds the parameters needed by the migrationcenter server.  After setting any
-           * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. Name of the resource.
-           * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.ExportReportRequest}
-           * @return the request
-           */
-          public Export export(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.ExportReportRequest content) throws java.io.IOException {
-            Export result = new Export(name, content);
-            initialize(result);
-            return result;
-          }
-
-          public class Export extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.Operation> {
-
-            private static final String REST_PATH = "v1alpha1/{+name}:export";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
-
-            /**
-             * Export a Report into a supported format.
-             *
-             * Create a request for the method "reports.export".
-             *
-             * This request holds the parameters needed by the the migrationcenter server.  After setting any
-             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. Name of the resource.
-             * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.ExportReportRequest}
-             * @since 1.13
-             */
-            protected Export(java.lang.String name, com.google.api.services.migrationcenter.v1alpha1.model.ExportReportRequest content) {
-              super(MigrationCenterAPI.this, "POST", REST_PATH, content, com.google.api.services.migrationcenter.v1alpha1.model.Operation.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
-              }
-            }
-
-            @Override
-            public Export set$Xgafv(java.lang.String $Xgafv) {
-              return (Export) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Export setAccessToken(java.lang.String accessToken) {
-              return (Export) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Export setAlt(java.lang.String alt) {
-              return (Export) super.setAlt(alt);
-            }
-
-            @Override
-            public Export setCallback(java.lang.String callback) {
-              return (Export) super.setCallback(callback);
-            }
-
-            @Override
-            public Export setFields(java.lang.String fields) {
-              return (Export) super.setFields(fields);
-            }
-
-            @Override
-            public Export setKey(java.lang.String key) {
-              return (Export) super.setKey(key);
-            }
-
-            @Override
-            public Export setOauthToken(java.lang.String oauthToken) {
-              return (Export) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Export) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Export setQuotaUser(java.lang.String quotaUser) {
-              return (Export) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Export setUploadType(java.lang.String uploadType) {
-              return (Export) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Export setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Export) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** Required. Name of the resource. */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. Name of the resource.
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /** Required. Name of the resource. */
-            public Export setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/reportConfigs/[^/]+/reports/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Export set(String parameterName, Object value) {
-              return (Export) super.set(parameterName, value);
             }
           }
           /**

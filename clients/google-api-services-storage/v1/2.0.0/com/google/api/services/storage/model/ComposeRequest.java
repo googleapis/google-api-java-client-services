@@ -31,6 +31,13 @@ package com.google.api.services.storage.model;
 public final class ComposeRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true, the source objects will be deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deleteSourceObjects;
+
+  /**
    * Properties of the resulting object.
    * The value may be {@code null}.
    */
@@ -55,6 +62,23 @@ public final class ComposeRequest extends com.google.api.client.json.GenericJson
     // hack to force ProGuard to consider SourceObjects used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(SourceObjects.class);
+  }
+
+  /**
+   * If true, the source objects will be deleted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeleteSourceObjects() {
+    return deleteSourceObjects;
+  }
+
+  /**
+   * If true, the source objects will be deleted.
+   * @param deleteSourceObjects deleteSourceObjects or {@code null} for none
+   */
+  public ComposeRequest setDeleteSourceObjects(java.lang.Boolean deleteSourceObjects) {
+    this.deleteSourceObjects = deleteSourceObjects;
+    return this;
   }
 
   /**

@@ -30,6 +30,13 @@ package com.google.api.services.calendar.model;
 public final class Calendar extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether this calendar automatically accepts invitations. Only valid for resource calendars.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoAcceptInvitations;
+
+  /**
    * Conferencing properties for this calendar, for example what types of conferences are allowed.
    * The value may be {@code null}.
    */
@@ -92,6 +99,23 @@ public final class Calendar extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
+
+  /**
+   * Whether this calendar automatically accepts invitations. Only valid for resource calendars.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoAcceptInvitations() {
+    return autoAcceptInvitations;
+  }
+
+  /**
+   * Whether this calendar automatically accepts invitations. Only valid for resource calendars.
+   * @param autoAcceptInvitations autoAcceptInvitations or {@code null} for none
+   */
+  public Calendar setAutoAcceptInvitations(java.lang.Boolean autoAcceptInvitations) {
+    this.autoAcceptInvitations = autoAcceptInvitations;
+    return this;
+  }
 
   /**
    * Conferencing properties for this calendar, for example what types of conferences are allowed.

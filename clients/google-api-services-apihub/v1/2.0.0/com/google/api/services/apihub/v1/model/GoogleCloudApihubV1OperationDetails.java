@@ -62,6 +62,13 @@ public final class GoogleCloudApihubV1OperationDetails extends com.google.api.cl
   private GoogleCloudApihubV1HttpOperation httpOperation;
 
   /**
+   * The MCP Tool Operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApihubV1McpTool mcpTool;
+
+  /**
    * Optional. For OpenAPI spec, this will be set if `operation.deprecated`is marked as `true` in
    * the spec.
    * @return value or {@code null} for none
@@ -134,6 +141,23 @@ public final class GoogleCloudApihubV1OperationDetails extends com.google.api.cl
    */
   public GoogleCloudApihubV1OperationDetails setHttpOperation(GoogleCloudApihubV1HttpOperation httpOperation) {
     this.httpOperation = httpOperation;
+    return this;
+  }
+
+  /**
+   * The MCP Tool Operation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApihubV1McpTool getMcpTool() {
+    return mcpTool;
+  }
+
+  /**
+   * The MCP Tool Operation.
+   * @param mcpTool mcpTool or {@code null} for none
+   */
+  public GoogleCloudApihubV1OperationDetails setMcpTool(GoogleCloudApihubV1McpTool mcpTool) {
+    this.mcpTool = mcpTool;
     return this;
   }
 

@@ -121,6 +121,13 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
   private java.lang.String geoTargetMetro;
 
   /**
+   * Resource name of the geo target constant that represents a postal code.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String geoTargetPostalCode;
+
+  /**
    * Resource name of the geo target constant that represents a region.
    * The value may be {@code null}.
    */
@@ -693,6 +700,23 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   public GoogleAdsSearchads360V0CommonSegments setGeoTargetMetro(java.lang.String geoTargetMetro) {
     this.geoTargetMetro = geoTargetMetro;
+    return this;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a postal code.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGeoTargetPostalCode() {
+    return geoTargetPostalCode;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a postal code.
+   * @param geoTargetPostalCode geoTargetPostalCode or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setGeoTargetPostalCode(java.lang.String geoTargetPostalCode) {
+    this.geoTargetPostalCode = geoTargetPostalCode;
     return this;
   }
 

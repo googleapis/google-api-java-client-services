@@ -26,7 +26,7 @@ public class CloudchannelScopes {
   /** Manage users on your domain. */
   public static final String APPS_ORDER = "https://www.googleapis.com/auth/apps.order";
 
-  /** View usage reports for your G Suite domain. */
+  /** View usage reports for your Google Workspace domain. */
   public static final String APPS_REPORTS_USAGE_READONLY = "https://www.googleapis.com/auth/apps.reports.usage.readonly";
 
   /**

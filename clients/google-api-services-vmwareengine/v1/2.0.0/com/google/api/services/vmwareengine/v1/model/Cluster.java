@@ -44,6 +44,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. Configuration of a mounted datastore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DatastoreMountConfig> datastoreMountConfig;
+
+  /**
    * Output only. True if the cluster is a management cluster; false otherwise. There can only be
    * one management cluster in a private cloud and it has to be the first one.
    * The value may be {@code null}.
@@ -129,6 +136,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Configuration of a mounted datastore.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DatastoreMountConfig> getDatastoreMountConfig() {
+    return datastoreMountConfig;
+  }
+
+  /**
+   * Output only. Configuration of a mounted datastore.
+   * @param datastoreMountConfig datastoreMountConfig or {@code null} for none
+   */
+  public Cluster setDatastoreMountConfig(java.util.List<DatastoreMountConfig> datastoreMountConfig) {
+    this.datastoreMountConfig = datastoreMountConfig;
     return this;
   }
 

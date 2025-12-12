@@ -112,6 +112,14 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. The retry policy to use in the Trigger. If unset, event delivery will be retried for
+   * up to 24 hours by default: https://cloud.google.com/eventarc/docs/retry-events
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RetryPolicy retryPolicy;
+
+  /**
    * Output only. Whether or not this Trigger satisfies the requirements of physical zone separation
    * The value may be {@code null}.
    */
@@ -317,6 +325,25 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    */
   public Trigger setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The retry policy to use in the Trigger. If unset, event delivery will be retried for
+   * up to 24 hours by default: https://cloud.google.com/eventarc/docs/retry-events
+   * @return value or {@code null} for none
+   */
+  public RetryPolicy getRetryPolicy() {
+    return retryPolicy;
+  }
+
+  /**
+   * Optional. The retry policy to use in the Trigger. If unset, event delivery will be retried for
+   * up to 24 hours by default: https://cloud.google.com/eventarc/docs/retry-events
+   * @param retryPolicy retryPolicy or {@code null} for none
+   */
+  public Trigger setRetryPolicy(RetryPolicy retryPolicy) {
+    this.retryPolicy = retryPolicy;
     return this;
   }
 

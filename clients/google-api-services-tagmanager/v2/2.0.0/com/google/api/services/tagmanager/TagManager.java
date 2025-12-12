@@ -4705,6 +4705,147 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       public class Workspaces {
 
         /**
+         * Applies multiple entity changes to a workspace in one call. When creating new entities, their
+         * entity IDs must be unique and in correct format. That is, they must start with "new_" and
+         * followed by number, e.g. "new_1", "new_2". Example body snippet to create myNewTag under
+         * myNewFolder is: ``` "changes": [ { "folder": { "folderId": "new_1", "name": "myNewFolder", ... },
+         * "changeStatus": "added" }, { "tag": { "tagId": "new_2", "name": "myNewTag", "parentFolderId":
+         * "new_1", ... }, "changeStatus": "added" } ] ```
+         *
+         * Create a request for the method "workspaces.bulk_update".
+         *
+         * This request holds the parameters needed by the tagmanager server.  After setting any optional
+         * parameters, call the {@link BulkUpdate#execute()} method to invoke the remote operation.
+         *
+         * @param path GTM Workspace's API relative path.
+         * @param content the {@link com.google.api.services.tagmanager.model.ProposedChange}
+         * @return the request
+         */
+        public BulkUpdate bulkUpdate(java.lang.String path, com.google.api.services.tagmanager.model.ProposedChange content) throws java.io.IOException {
+          BulkUpdate result = new BulkUpdate(path, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BulkUpdate extends TagManagerRequest<com.google.api.services.tagmanager.model.BulkUpdateWorkspaceResponse> {
+
+          private static final String REST_PATH = "tagmanager/v2/{+path}/bulk_update";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+
+          /**
+           * Applies multiple entity changes to a workspace in one call. When creating new entities, their
+           * entity IDs must be unique and in correct format. That is, they must start with "new_" and
+           * followed by number, e.g. "new_1", "new_2". Example body snippet to create myNewTag under
+           * myNewFolder is: ``` "changes": [ { "folder": { "folderId": "new_1", "name": "myNewFolder", ...
+           * }, "changeStatus": "added" }, { "tag": { "tagId": "new_2", "name": "myNewTag",
+           * "parentFolderId": "new_1", ... }, "changeStatus": "added" } ] ```
+           *
+           * Create a request for the method "workspaces.bulk_update".
+           *
+           * This request holds the parameters needed by the the tagmanager server.  After setting any
+           * optional parameters, call the {@link BulkUpdate#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BulkUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param path GTM Workspace's API relative path.
+           * @param content the {@link com.google.api.services.tagmanager.model.ProposedChange}
+           * @since 1.13
+           */
+          protected BulkUpdate(java.lang.String path, com.google.api.services.tagmanager.model.ProposedChange content) {
+            super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.BulkUpdateWorkspaceResponse.class);
+            this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public BulkUpdate set$Xgafv(java.lang.String $Xgafv) {
+            return (BulkUpdate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BulkUpdate setAccessToken(java.lang.String accessToken) {
+            return (BulkUpdate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BulkUpdate setAlt(java.lang.String alt) {
+            return (BulkUpdate) super.setAlt(alt);
+          }
+
+          @Override
+          public BulkUpdate setCallback(java.lang.String callback) {
+            return (BulkUpdate) super.setCallback(callback);
+          }
+
+          @Override
+          public BulkUpdate setFields(java.lang.String fields) {
+            return (BulkUpdate) super.setFields(fields);
+          }
+
+          @Override
+          public BulkUpdate setKey(java.lang.String key) {
+            return (BulkUpdate) super.setKey(key);
+          }
+
+          @Override
+          public BulkUpdate setOauthToken(java.lang.String oauthToken) {
+            return (BulkUpdate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BulkUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BulkUpdate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BulkUpdate setQuotaUser(java.lang.String quotaUser) {
+            return (BulkUpdate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BulkUpdate setUploadType(java.lang.String uploadType) {
+            return (BulkUpdate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BulkUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BulkUpdate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** GTM Workspace's API relative path. */
+          @com.google.api.client.util.Key
+          private java.lang.String path;
+
+          /** GTM Workspace's API relative path.
+           */
+          public java.lang.String getPath() {
+            return path;
+          }
+
+          /** GTM Workspace's API relative path. */
+          public BulkUpdate setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
+            this.path = path;
+            return this;
+          }
+
+          @Override
+          public BulkUpdate set(String parameterName, Object value) {
+            return (BulkUpdate) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a Workspace.
          *
          * Create a request for the method "workspaces.create".

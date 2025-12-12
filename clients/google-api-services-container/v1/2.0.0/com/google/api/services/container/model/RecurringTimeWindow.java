@@ -31,8 +31,8 @@ package com.google.api.services.container.model;
 public final class RecurringTimeWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this window reccurs.
-   * They go on for the span of time between the start and end time. For example, to have something
+   * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this window recurs. They
+   * go on for the span of time between the start and end time. For example, to have something
    * repeat every weekday, you'd use: `FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR` To repeat some window daily
    * (equivalent to the DailyMaintenanceWindow): `FREQ=DAILY` For the first weekend of every month:
    * `FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA,SU` This specifies how frequently the window starts. Eg, if
@@ -57,8 +57,8 @@ public final class RecurringTimeWindow extends com.google.api.client.json.Generi
   private TimeWindow window;
 
   /**
-   * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this window reccurs.
-   * They go on for the span of time between the start and end time. For example, to have something
+   * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this window recurs. They
+   * go on for the span of time between the start and end time. For example, to have something
    * repeat every weekday, you'd use: `FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR` To repeat some window daily
    * (equivalent to the DailyMaintenanceWindow): `FREQ=DAILY` For the first weekend of every month:
    * `FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA,SU` This specifies how frequently the window starts. Eg, if
@@ -77,8 +77,8 @@ public final class RecurringTimeWindow extends com.google.api.client.json.Generi
   }
 
   /**
-   * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this window reccurs.
-   * They go on for the span of time between the start and end time. For example, to have something
+   * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this window recurs. They
+   * go on for the span of time between the start and end time. For example, to have something
    * repeat every weekday, you'd use: `FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR` To repeat some window daily
    * (equivalent to the DailyMaintenanceWindow): `FREQ=DAILY` For the first weekend of every month:
    * `FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA,SU` This specifies how frequently the window starts. Eg, if

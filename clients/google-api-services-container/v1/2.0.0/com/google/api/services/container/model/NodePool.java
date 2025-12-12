@@ -142,6 +142,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private NodeNetworkConfig networkConfig;
 
   /**
+   * Specifies the node drain configuration for this node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeDrainConfig nodeDrainConfig;
+
+  /**
    * Specifies the node placement policy.
    * The value may be {@code null}.
    */
@@ -457,6 +464,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setNetworkConfig(NodeNetworkConfig networkConfig) {
     this.networkConfig = networkConfig;
+    return this;
+  }
+
+  /**
+   * Specifies the node drain configuration for this node pool.
+   * @return value or {@code null} for none
+   */
+  public NodeDrainConfig getNodeDrainConfig() {
+    return nodeDrainConfig;
+  }
+
+  /**
+   * Specifies the node drain configuration for this node pool.
+   * @param nodeDrainConfig nodeDrainConfig or {@code null} for none
+   */
+  public NodePool setNodeDrainConfig(NodeDrainConfig nodeDrainConfig) {
+    this.nodeDrainConfig = nodeDrainConfig;
     return this;
   }
 

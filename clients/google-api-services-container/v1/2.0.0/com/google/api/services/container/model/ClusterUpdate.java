@@ -299,6 +299,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredLoggingService;
 
   /**
+   * The desired managed open telemetry configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedOpenTelemetryConfig desiredManagedOpentelemetryConfig;
+
+  /**
    * The desired configuration options for master authorized networks feature. Deprecated: Use
    * desired_control_plane_endpoints_config.ip_endpoints_config.authorized_networks_config instead.
    * The value may be {@code null}.
@@ -1235,6 +1242,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredLoggingService(java.lang.String desiredLoggingService) {
     this.desiredLoggingService = desiredLoggingService;
+    return this;
+  }
+
+  /**
+   * The desired managed open telemetry configuration.
+   * @return value or {@code null} for none
+   */
+  public ManagedOpenTelemetryConfig getDesiredManagedOpentelemetryConfig() {
+    return desiredManagedOpentelemetryConfig;
+  }
+
+  /**
+   * The desired managed open telemetry configuration.
+   * @param desiredManagedOpentelemetryConfig desiredManagedOpentelemetryConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredManagedOpentelemetryConfig(ManagedOpenTelemetryConfig desiredManagedOpentelemetryConfig) {
+    this.desiredManagedOpentelemetryConfig = desiredManagedOpentelemetryConfig;
     return this;
   }
 

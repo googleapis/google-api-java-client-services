@@ -205,6 +205,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
+   * The desired node drain configuration for nodes in the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeDrainConfig nodeDrainConfig;
+
+  /**
    * Node network config.
    * The value may be {@code null}.
    */
@@ -716,6 +723,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The desired node drain configuration for nodes in the node pool.
+   * @return value or {@code null} for none
+   */
+  public NodeDrainConfig getNodeDrainConfig() {
+    return nodeDrainConfig;
+  }
+
+  /**
+   * The desired node drain configuration for nodes in the node pool.
+   * @param nodeDrainConfig nodeDrainConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setNodeDrainConfig(NodeDrainConfig nodeDrainConfig) {
+    this.nodeDrainConfig = nodeDrainConfig;
     return this;
   }
 

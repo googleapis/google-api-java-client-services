@@ -30,8 +30,9 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReplicatedVoiceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The mimetype of the voice sample. Currently only mime_type=audio/pcm is supported,
-   * which is raw mono 16-bit signed little-endian pcm data, with 24k sampling rate.
+   * Optional. The mimetype of the voice sample. The only currently supported value is `audio/wav`.
+   * This represents 16-bit signed little-endian wav data, with a 24kHz sampling rate. `mime_type`
+   * will default to `audio/wav` if not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +46,9 @@ public final class GoogleCloudAiplatformV1beta1ReplicatedVoiceConfig extends com
   private java.lang.String voiceSampleAudio;
 
   /**
-   * Optional. The mimetype of the voice sample. Currently only mime_type=audio/pcm is supported,
-   * which is raw mono 16-bit signed little-endian pcm data, with 24k sampling rate.
+   * Optional. The mimetype of the voice sample. The only currently supported value is `audio/wav`.
+   * This represents 16-bit signed little-endian wav data, with a 24kHz sampling rate. `mime_type`
+   * will default to `audio/wav` if not set.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -54,8 +56,9 @@ public final class GoogleCloudAiplatformV1beta1ReplicatedVoiceConfig extends com
   }
 
   /**
-   * Optional. The mimetype of the voice sample. Currently only mime_type=audio/pcm is supported,
-   * which is raw mono 16-bit signed little-endian pcm data, with 24k sampling rate.
+   * Optional. The mimetype of the voice sample. The only currently supported value is `audio/wav`.
+   * This represents 16-bit signed little-endian wav data, with a 24kHz sampling rate. `mime_type`
+   * will default to `audio/wav` if not set.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReplicatedVoiceConfig setMimeType(java.lang.String mimeType) {

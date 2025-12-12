@@ -45,7 +45,8 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
 
   /**
    * Optional. Timestamp of when this session is considered expired. This is *always* provided on
-   * output, regardless of what was sent on input.
+   * output, regardless of what was sent on input. The minimum value is 24 hours from the time of
+   * creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +78,7 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
   private java.util.Map<String, java.lang.Object> sessionState;
 
   /**
-   * Optional. Input only. The TTL for this session.
+   * Optional. Input only. The TTL for this session. The minimum value is 24 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +134,8 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
 
   /**
    * Optional. Timestamp of when this session is considered expired. This is *always* provided on
-   * output, regardless of what was sent on input.
+   * output, regardless of what was sent on input. The minimum value is 24 hours from the time of
+   * creation.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -142,7 +144,8 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
 
   /**
    * Optional. Timestamp of when this session is considered expired. This is *always* provided on
-   * output, regardless of what was sent on input.
+   * output, regardless of what was sent on input. The minimum value is 24 hours from the time of
+   * creation.
    * @param expireTime expireTime or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Session setExpireTime(String expireTime) {
@@ -210,7 +213,7 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
   }
 
   /**
-   * Optional. Input only. The TTL for this session.
+   * Optional. Input only. The TTL for this session. The minimum value is 24 hours.
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -218,7 +221,7 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
   }
 
   /**
-   * Optional. Input only. The TTL for this session.
+   * Optional. Input only. The TTL for this session. The minimum value is 24 hours.
    * @param ttl ttl or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Session setTtl(String ttl) {

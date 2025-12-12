@@ -30,7 +30,17 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of accelerators to attach to the machine.
+   * The number of accelerators to attach to the machine. For accelerator optimized machine types
+   * (https://cloud.google.com/compute/docs/accelerator-optimized-machines), One may set the
+   * accelerator_count from 1 to N for machine with N GPUs. If accelerator_count is less than or
+   * equal to N / 2, Vertex will co-schedule the replicas of the model into the same VM to save
+   * cost. For example, if the machine type is a3-highgpu-8g, which has 8 H100 GPUs, one can set
+   * accelerator_count to 1 to 8. If accelerator_count is 1, 2, 3, or 4, Vertex will co-schedule 8,
+   * 4, 2, or 2 replicas of the model into the same VM to save cost. When co-scheduling, CPU, memory
+   * and storage on the VM will be distributed to replicas on the VM. For example, one can expect a
+   * co-scheduled replica requesting 2 GPUs out of a 8-GPU VM will receive 25% of the CPU, memory
+   * and storage of the VM. Note that the feature is not compatible with multihost_gpu_node_count.
+   * When multihost_gpu_node_count is set, the co-scheduling will not be enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +111,17 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
   private java.lang.String tpuTopology;
 
   /**
-   * The number of accelerators to attach to the machine.
+   * The number of accelerators to attach to the machine. For accelerator optimized machine types
+   * (https://cloud.google.com/compute/docs/accelerator-optimized-machines), One may set the
+   * accelerator_count from 1 to N for machine with N GPUs. If accelerator_count is less than or
+   * equal to N / 2, Vertex will co-schedule the replicas of the model into the same VM to save
+   * cost. For example, if the machine type is a3-highgpu-8g, which has 8 H100 GPUs, one can set
+   * accelerator_count to 1 to 8. If accelerator_count is 1, 2, 3, or 4, Vertex will co-schedule 8,
+   * 4, 2, or 2 replicas of the model into the same VM to save cost. When co-scheduling, CPU, memory
+   * and storage on the VM will be distributed to replicas on the VM. For example, one can expect a
+   * co-scheduled replica requesting 2 GPUs out of a 8-GPU VM will receive 25% of the CPU, memory
+   * and storage of the VM. Note that the feature is not compatible with multihost_gpu_node_count.
+   * When multihost_gpu_node_count is set, the co-scheduling will not be enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAcceleratorCount() {
@@ -109,7 +129,17 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
   }
 
   /**
-   * The number of accelerators to attach to the machine.
+   * The number of accelerators to attach to the machine. For accelerator optimized machine types
+   * (https://cloud.google.com/compute/docs/accelerator-optimized-machines), One may set the
+   * accelerator_count from 1 to N for machine with N GPUs. If accelerator_count is less than or
+   * equal to N / 2, Vertex will co-schedule the replicas of the model into the same VM to save
+   * cost. For example, if the machine type is a3-highgpu-8g, which has 8 H100 GPUs, one can set
+   * accelerator_count to 1 to 8. If accelerator_count is 1, 2, 3, or 4, Vertex will co-schedule 8,
+   * 4, 2, or 2 replicas of the model into the same VM to save cost. When co-scheduling, CPU, memory
+   * and storage on the VM will be distributed to replicas on the VM. For example, one can expect a
+   * co-scheduled replica requesting 2 GPUs out of a 8-GPU VM will receive 25% of the CPU, memory
+   * and storage of the VM. Note that the feature is not compatible with multihost_gpu_node_count.
+   * When multihost_gpu_node_count is set, the co-scheduling will not be enabled.
    * @param acceleratorCount acceleratorCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MachineSpec setAcceleratorCount(java.lang.Integer acceleratorCount) {

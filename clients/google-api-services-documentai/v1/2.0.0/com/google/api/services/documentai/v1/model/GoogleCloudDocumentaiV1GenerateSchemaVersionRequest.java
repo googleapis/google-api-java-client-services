@@ -60,7 +60,8 @@ public final class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends c
   private GoogleCloudDocumentaiV1GenerateSchemaVersionRequestGenerateSchemaVersionParams generateSchemaVersionParams;
 
   /**
-   * The set of documents specified inline.
+   * The set of documents specified inline. For each document, its `uri` or `content` field must be
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +145,8 @@ public final class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends c
   }
 
   /**
-   * The set of documents specified inline.
+   * The set of documents specified inline. For each document, its `uri` or `content` field must be
+   * set.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1Documents getInlineDocuments() {
@@ -152,7 +154,8 @@ public final class GoogleCloudDocumentaiV1GenerateSchemaVersionRequest extends c
   }
 
   /**
-   * The set of documents specified inline.
+   * The set of documents specified inline. For each document, its `uri` or `content` field must be
+   * set.
    * @param inlineDocuments inlineDocuments or {@code null} for none
    */
   public GoogleCloudDocumentaiV1GenerateSchemaVersionRequest setInlineDocuments(GoogleCloudDocumentaiV1Documents inlineDocuments) {

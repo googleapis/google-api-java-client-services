@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1beta3NextSchema extends com.google.api
   private String createTime;
 
   /**
-   * Optional. The user-defined name of the Schema.
+   * Required. The user-defined name of the Schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GoogleCloudDocumentaiV1beta3NextSchema extends com.google.api
   }
 
   /**
-   * Optional. The user-defined name of the Schema.
+   * Required. The user-defined name of the Schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -92,7 +92,7 @@ public final class GoogleCloudDocumentaiV1beta3NextSchema extends com.google.api
   }
 
   /**
-   * Optional. The user-defined name of the Schema.
+   * Required. The user-defined name of the Schema.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3NextSchema setDisplayName(java.lang.String displayName) {

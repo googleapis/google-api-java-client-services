@@ -53,6 +53,16 @@ public final class GoogleCloudDocumentaiV1beta3ImportDocumentsRequestBatchDocume
   private java.lang.String datasetSplit;
 
   /**
+   * Optional. If set, determines the type of the documents to be imported in this batch. It can be
+   * used to auto-label the documents with a single entity of the provided type. This field can only
+   * be used with a classifier or splitter processor. Providing this field is mutually exclusive
+   * with `entities` and `auto_labeling_config`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String documentType;
+
+  /**
    * If set, documents will be automatically split into training and test split category with the
    * specified ratio.
    * @return value or {@code null} for none
@@ -102,6 +112,29 @@ public final class GoogleCloudDocumentaiV1beta3ImportDocumentsRequestBatchDocume
    */
   public GoogleCloudDocumentaiV1beta3ImportDocumentsRequestBatchDocumentsImportConfig setDatasetSplit(java.lang.String datasetSplit) {
     this.datasetSplit = datasetSplit;
+    return this;
+  }
+
+  /**
+   * Optional. If set, determines the type of the documents to be imported in this batch. It can be
+   * used to auto-label the documents with a single entity of the provided type. This field can only
+   * be used with a classifier or splitter processor. Providing this field is mutually exclusive
+   * with `entities` and `auto_labeling_config`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDocumentType() {
+    return documentType;
+  }
+
+  /**
+   * Optional. If set, determines the type of the documents to be imported in this batch. It can be
+   * used to auto-label the documents with a single entity of the provided type. This field can only
+   * be used with a classifier or splitter processor. Providing this field is mutually exclusive
+   * with `entities` and `auto_labeling_config`.
+   * @param documentType documentType or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ImportDocumentsRequestBatchDocumentsImportConfig setDocumentType(java.lang.String documentType) {
+    this.documentType = documentType;
     return this;
   }
 

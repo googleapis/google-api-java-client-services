@@ -51,6 +51,14 @@ public final class GoogleCloudApihubV1LastExecution extends com.google.api.clien
   private java.lang.String result;
 
   /**
+   * Output only. The result metadata of the last execution of the plugin instance. This will be a
+   * string representation of a JSON object and will be available on successful execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resultMetadata;
+
+  /**
    * Output only. The last execution start time of the plugin instance.
    * The value may be {@code null}.
    */
@@ -105,6 +113,25 @@ public final class GoogleCloudApihubV1LastExecution extends com.google.api.clien
    */
   public GoogleCloudApihubV1LastExecution setResult(java.lang.String result) {
     this.result = result;
+    return this;
+  }
+
+  /**
+   * Output only. The result metadata of the last execution of the plugin instance. This will be a
+   * string representation of a JSON object and will be available on successful execution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResultMetadata() {
+    return resultMetadata;
+  }
+
+  /**
+   * Output only. The result metadata of the last execution of the plugin instance. This will be a
+   * string representation of a JSON object and will be available on successful execution.
+   * @param resultMetadata resultMetadata or {@code null} for none
+   */
+  public GoogleCloudApihubV1LastExecution setResultMetadata(java.lang.String resultMetadata) {
+    this.resultMetadata = resultMetadata;
     return this;
   }
 

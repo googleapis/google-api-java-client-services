@@ -31,6 +31,19 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1Spec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The additional spec contents for the spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudApihubV1AdditionalSpecContent> additionalSpecContents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudApihubV1AdditionalSpecContent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudApihubV1AdditionalSpecContent.class);
+  }
+
+  /**
    * Optional. The list of user defined attributes associated with the spec. The key is the
    * attribute name. It will be of the format:
    * `projects/{project}/locations/{location}/attributes/{attribute}`. The value is the attribute
@@ -141,6 +154,23 @@ public final class GoogleCloudApihubV1Spec extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. The additional spec contents for the spec.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudApihubV1AdditionalSpecContent> getAdditionalSpecContents() {
+    return additionalSpecContents;
+  }
+
+  /**
+   * Output only. The additional spec contents for the spec.
+   * @param additionalSpecContents additionalSpecContents or {@code null} for none
+   */
+  public GoogleCloudApihubV1Spec setAdditionalSpecContents(java.util.List<GoogleCloudApihubV1AdditionalSpecContent> additionalSpecContents) {
+    this.additionalSpecContents = additionalSpecContents;
+    return this;
+  }
 
   /**
    * Optional. The list of user defined attributes associated with the spec. The key is the

@@ -826,6 +826,220 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * Retrieve API views.
+       *
+       * Create a request for the method "locations.retrieveApiViews".
+       *
+       * This request holds the parameters needed by the apihub server.  After setting any optional
+       * parameters, call the {@link RetrieveApiViews#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}`.
+       * @return the request
+       */
+      public RetrieveApiViews retrieveApiViews(java.lang.String parent) throws java.io.IOException {
+        RetrieveApiViews result = new RetrieveApiViews(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class RetrieveApiViews extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleCloudApihubV1RetrieveApiViewsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:retrieveApiViews";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Retrieve API views.
+         *
+         * Create a request for the method "locations.retrieveApiViews".
+         *
+         * This request holds the parameters needed by the the apihub server.  After setting any optional
+         * parameters, call the {@link RetrieveApiViews#execute()} method to invoke the remote operation.
+         * <p> {@link RetrieveApiViews#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+         * ClientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}`.
+         * @since 1.13
+         */
+        protected RetrieveApiViews(java.lang.String parent) {
+          super(APIhub.this, "GET", REST_PATH, null, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1RetrieveApiViewsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public RetrieveApiViews set$Xgafv(java.lang.String $Xgafv) {
+          return (RetrieveApiViews) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RetrieveApiViews setAccessToken(java.lang.String accessToken) {
+          return (RetrieveApiViews) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RetrieveApiViews setAlt(java.lang.String alt) {
+          return (RetrieveApiViews) super.setAlt(alt);
+        }
+
+        @Override
+        public RetrieveApiViews setCallback(java.lang.String callback) {
+          return (RetrieveApiViews) super.setCallback(callback);
+        }
+
+        @Override
+        public RetrieveApiViews setFields(java.lang.String fields) {
+          return (RetrieveApiViews) super.setFields(fields);
+        }
+
+        @Override
+        public RetrieveApiViews setKey(java.lang.String key) {
+          return (RetrieveApiViews) super.setKey(key);
+        }
+
+        @Override
+        public RetrieveApiViews setOauthToken(java.lang.String oauthToken) {
+          return (RetrieveApiViews) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RetrieveApiViews setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RetrieveApiViews) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RetrieveApiViews setQuotaUser(java.lang.String quotaUser) {
+          return (RetrieveApiViews) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RetrieveApiViews setUploadType(java.lang.String uploadType) {
+          return (RetrieveApiViews) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RetrieveApiViews setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RetrieveApiViews) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource name. Format: `projects/{project}/locations/{location}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource name. Format: `projects/{project}/locations/{location}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource name. Format: `projects/{project}/locations/{location}`.
+         */
+        public RetrieveApiViews setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional. The filter expression. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. The filter expression.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** Optional. The filter expression. */
+        public RetrieveApiViews setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** Optional. The maximum number of results to return. Default to 100. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of results to return. Default to 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. The maximum number of results to return. Default to 100. */
+        public RetrieveApiViews setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `RetrieveApiViews` call. Provide this to
+         * retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `RetrieveApiViews` call. Provide this to retrieve
+       the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `RetrieveApiViews` call. Provide this to
+         * retrieve the subsequent page.
+         */
+        public RetrieveApiViews setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Required. The view type to return. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Required. The view type to return.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Required. The view type to return. */
+        public RetrieveApiViews setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public RetrieveApiViews set(String parameterName, Object value) {
+          return (RetrieveApiViews) super.set(parameterName, value);
+        }
+      }
+      /**
        * Search across API-Hub resources.
        *
        * Create a request for the method "locations.searchResources".
@@ -2833,13 +3047,17 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            * function returns the id of the resource name. For example, `id(name) = \"api-1\"` is
            * equivalent to `name = \"projects/test-project-id/locations/test-location-
            * id/apis/api-1\"` provided the parent is `projects/test-project-id/locations/test-
-           * location-id`. Expressions are combined with either `AND` logic operator or `OR` logical
-           * operator but not both of them together i.e. only one of the `AND` or `OR` operator can
-           * be used throughout the filter string and both the operators cannot be used together. No
-           * other logical operators are supported. At most three filter fields are allowed in the
-           * filter string and if provided more than that then `INVALID_ARGUMENT` error is returned
-           * by the API. Here are a few examples: * `owner.email = \"apihub@google.com\"` - - The
-           * owner team email is _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND
+           * location-id`. Another supported filter function is `plugins(source_metadata)`. This
+           * function filters for resources that are associated with a specific plugin. For example,
+           * `plugins(source_metadata) : "projects/test-project-id/locations/test-location-
+           * id/plugins/test-plugin-id"` will return resources sourced from the given plugin.
+           * Expressions are combined with either `AND` logic operator or `OR` logical operator but
+           * not both of them together i.e. only one of the `AND` or `OR` operator can be used
+           * throughout the filter string and both the operators cannot be used together. No other
+           * logical operators are supported. At most three filter fields are allowed in the filter
+           * string and if provided more than that then `INVALID_ARGUMENT` error is returned by the
+           * API. Here are a few examples: * `owner.email = \"apihub@google.com\"` - - The owner
+           * team email is _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND
            * create_time < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` -
            * The owner team email is _apihub@google.com_ and the api was created before _2021-08-15
            * 14:50:00 UTC_ and after _2021-08-10 12:00:00 UTC_. * `owner.email =
@@ -2907,14 +3125,17 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
          is also supported in the filter string. The filter function is `id(name)`. The `id(name)` function
          returns the id of the resource name. For example, `id(name) = \"api-1\"` is equivalent to `name =
          \"projects/test-project-id/locations/test-location-id/apis/api-1\"` provided the parent is
-         `projects/test-project-id/locations/test-location-id`. Expressions are combined with either `AND`
-         logic operator or `OR` logical operator but not both of them together i.e. only one of the `AND` or
-         `OR` operator can be used throughout the filter string and both the operators cannot be used
-         together. No other logical operators are supported. At most three filter fields are allowed in the
-         filter string and if provided more than that then `INVALID_ARGUMENT` error is returned by the API.
-         Here are a few examples: * `owner.email = \"apihub@google.com\"` - - The owner team email is
-         _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND create_time <
-         \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` - The owner team email is
+         `projects/test-project-id/locations/test-location-id`. Another supported filter function is
+         `plugins(source_metadata)`. This function filters for resources that are associated with a specific
+         plugin. For example, `plugins(source_metadata) : "projects/test-project-id/locations/test-location-
+         id/plugins/test-plugin-id"` will return resources sourced from the given plugin. Expressions are
+         combined with either `AND` logic operator or `OR` logical operator but not both of them together
+         i.e. only one of the `AND` or `OR` operator can be used throughout the filter string and both the
+         operators cannot be used together. No other logical operators are supported. At most three filter
+         fields are allowed in the filter string and if provided more than that then `INVALID_ARGUMENT`
+         error is returned by the API. Here are a few examples: * `owner.email = \"apihub@google.com\"` - -
+         The owner team email is _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND create_time
+         < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` - The owner team email is
          _apihub@google.com_ and the api was created before _2021-08-15 14:50:00 UTC_ and after _2021-08-10
          12:00:00 UTC_. * `owner.email = \"apihub@google.com\" OR team.enum_values.values.id: apihub-team-
          id` - The filter string specifies the APIs where the owner team email is _apihub@google.com_ or the
@@ -2986,13 +3207,17 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            * function returns the id of the resource name. For example, `id(name) = \"api-1\"` is
            * equivalent to `name = \"projects/test-project-id/locations/test-location-
            * id/apis/api-1\"` provided the parent is `projects/test-project-id/locations/test-
-           * location-id`. Expressions are combined with either `AND` logic operator or `OR` logical
-           * operator but not both of them together i.e. only one of the `AND` or `OR` operator can
-           * be used throughout the filter string and both the operators cannot be used together. No
-           * other logical operators are supported. At most three filter fields are allowed in the
-           * filter string and if provided more than that then `INVALID_ARGUMENT` error is returned
-           * by the API. Here are a few examples: * `owner.email = \"apihub@google.com\"` - - The
-           * owner team email is _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND
+           * location-id`. Another supported filter function is `plugins(source_metadata)`. This
+           * function filters for resources that are associated with a specific plugin. For example,
+           * `plugins(source_metadata) : "projects/test-project-id/locations/test-location-
+           * id/plugins/test-plugin-id"` will return resources sourced from the given plugin.
+           * Expressions are combined with either `AND` logic operator or `OR` logical operator but
+           * not both of them together i.e. only one of the `AND` or `OR` operator can be used
+           * throughout the filter string and both the operators cannot be used together. No other
+           * logical operators are supported. At most three filter fields are allowed in the filter
+           * string and if provided more than that then `INVALID_ARGUMENT` error is returned by the
+           * API. Here are a few examples: * `owner.email = \"apihub@google.com\"` - - The owner
+           * team email is _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND
            * create_time < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` -
            * The owner team email is _apihub@google.com_ and the api was created before _2021-08-15
            * 14:50:00 UTC_ and after _2021-08-10 12:00:00 UTC_. * `owner.email =
@@ -5327,13 +5552,14 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
              * Update an operation in an API version. The following fields in the ApiOperation resource can be
              * updated: * details.description * details.documentation * details.http_operation.path *
              * details.http_operation.method * details.deprecated * attributes * details.mcp_tool.title *
-             * details.mcp_tool.description * details.input_schema * details.output_schema *
-             * details.mcp_tool.annotations.title * details.mcp_tool.annotations.read_only_hint *
-             * details.mcp_tool.annotations.destructive_hint * details.mcp_tool.annotations.idempotent_hint *
-             * details.mcp_tool.annotations.open_world_hint * details.mcp_tool.annotations.additional_hints The
-             * update_mask should be used to specify the fields being updated. An operation can be updated only
-             * if the operation was created via CreateApiOperation API. If the operation was created by parsing
-             * the spec, then it can be edited by updating the spec.
+             * details.mcp_tool.description * details.mcp_tool.input_schema * details.mcp_tool.output_schema *
+             * details.input_schema * details.output_schema * details.mcp_tool.annotations.title *
+             * details.mcp_tool.annotations.read_only_hint * details.mcp_tool.annotations.destructive_hint *
+             * details.mcp_tool.annotations.idempotent_hint * details.mcp_tool.annotations.open_world_hint *
+             * details.mcp_tool.annotations.additional_hints The update_mask should be used to specify the
+             * fields being updated. An operation can be updated only if the operation was created via
+             * CreateApiOperation API. If the operation was created by parsing the spec, then it can be edited
+             * by updating the spec.
              *
              * Create a request for the method "operations.patch".
              *
@@ -5363,13 +5589,14 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
                * Update an operation in an API version. The following fields in the ApiOperation resource can be
                * updated: * details.description * details.documentation * details.http_operation.path *
                * details.http_operation.method * details.deprecated * attributes * details.mcp_tool.title *
-               * details.mcp_tool.description * details.input_schema * details.output_schema *
-               * details.mcp_tool.annotations.title * details.mcp_tool.annotations.read_only_hint *
-               * details.mcp_tool.annotations.destructive_hint * details.mcp_tool.annotations.idempotent_hint *
-               * details.mcp_tool.annotations.open_world_hint * details.mcp_tool.annotations.additional_hints
-               * The update_mask should be used to specify the fields being updated. An operation can be updated
-               * only if the operation was created via CreateApiOperation API. If the operation was created by
-               * parsing the spec, then it can be edited by updating the spec.
+               * details.mcp_tool.description * details.mcp_tool.input_schema * details.mcp_tool.output_schema *
+               * details.input_schema * details.output_schema * details.mcp_tool.annotations.title *
+               * details.mcp_tool.annotations.read_only_hint * details.mcp_tool.annotations.destructive_hint *
+               * details.mcp_tool.annotations.idempotent_hint * details.mcp_tool.annotations.open_world_hint *
+               * details.mcp_tool.annotations.additional_hints The update_mask should be used to specify the
+               * fields being updated. An operation can be updated only if the operation was created via
+               * CreateApiOperation API. If the operation was created by parsing the spec, then it can be edited
+               * by updating the spec.
                *
                * Create a request for the method "operations.patch".
                *
@@ -5852,6 +6079,171 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
               @Override
               public Delete set(String parameterName, Object value) {
                 return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Fetch additional spec content.
+             *
+             * Create a request for the method "specs.fetchAdditionalSpecContent".
+             *
+             * This request holds the parameters needed by the apihub server.  After setting any optional
+             * parameters, call the {@link FetchAdditionalSpecContent#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param name Required. The name of the spec whose contents need to be retrieved. Format:
+             *        `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+             * @return the request
+             */
+            public FetchAdditionalSpecContent fetchAdditionalSpecContent(java.lang.String name) throws java.io.IOException {
+              FetchAdditionalSpecContent result = new FetchAdditionalSpecContent(name);
+              initialize(result);
+              return result;
+            }
+
+            public class FetchAdditionalSpecContent extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleCloudApihubV1FetchAdditionalSpecContentResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:fetchAdditionalSpecContent";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
+
+              /**
+               * Fetch additional spec content.
+               *
+               * Create a request for the method "specs.fetchAdditionalSpecContent".
+               *
+               * This request holds the parameters needed by the the apihub server.  After setting any optional
+               * parameters, call the {@link FetchAdditionalSpecContent#execute()} method to invoke the remote
+               * operation. <p> {@link FetchAdditionalSpecContent#initialize(com.google.api.client.googleapis.se
+               * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the spec whose contents need to be retrieved. Format:
+             *        `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+               * @since 1.13
+               */
+              protected FetchAdditionalSpecContent(java.lang.String name) {
+                super(APIhub.this, "GET", REST_PATH, null, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1FetchAdditionalSpecContentResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public FetchAdditionalSpecContent set$Xgafv(java.lang.String $Xgafv) {
+                return (FetchAdditionalSpecContent) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setAccessToken(java.lang.String accessToken) {
+                return (FetchAdditionalSpecContent) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setAlt(java.lang.String alt) {
+                return (FetchAdditionalSpecContent) super.setAlt(alt);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setCallback(java.lang.String callback) {
+                return (FetchAdditionalSpecContent) super.setCallback(callback);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setFields(java.lang.String fields) {
+                return (FetchAdditionalSpecContent) super.setFields(fields);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setKey(java.lang.String key) {
+                return (FetchAdditionalSpecContent) super.setKey(key);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setOauthToken(java.lang.String oauthToken) {
+                return (FetchAdditionalSpecContent) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (FetchAdditionalSpecContent) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setQuotaUser(java.lang.String quotaUser) {
+                return (FetchAdditionalSpecContent) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setUploadType(java.lang.String uploadType) {
+                return (FetchAdditionalSpecContent) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public FetchAdditionalSpecContent setUploadProtocol(java.lang.String uploadProtocol) {
+                return (FetchAdditionalSpecContent) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the spec whose contents need to be retrieved. Format: `projec
+               * ts/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the spec whose contents need to be retrieved. Format:
+             `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the spec whose contents need to be retrieved. Format: `projec
+               * ts/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+               */
+              public FetchAdditionalSpecContent setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** Optional. The type of the spec contents to be retrieved. */
+              @com.google.api.client.util.Key
+              private java.lang.String specContentType;
+
+              /** Optional. The type of the spec contents to be retrieved.
+               */
+              public java.lang.String getSpecContentType() {
+                return specContentType;
+              }
+
+              /** Optional. The type of the spec contents to be retrieved. */
+              public FetchAdditionalSpecContent setSpecContentType(java.lang.String specContentType) {
+                this.specContentType = specContentType;
+                return this;
+              }
+
+              @Override
+              public FetchAdditionalSpecContent set(String parameterName, Object value) {
+                return (FetchAdditionalSpecContent) super.set(parameterName, value);
               }
             }
             /**
@@ -13448,9 +13840,9 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -13458,10 +13850,11 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -13469,9 +13862,9 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -15856,19 +16249,20 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
              * filtering. The value must be a string. The comparison operator must be one of: `<`,
              * `>` or `=`. Filters are not case sensitive. The following fields in the
              * `PluginInstances` are eligible for filtering: * `state` - The state of the Plugin
-             * Instance. Allowed comparison operators: `=`. A filter function is also supported in
-             * the filter string. The filter function is `id(name)`. The `id(name)` function returns
-             * the id of the resource name. For example, `id(name) = \"plugin-instance-1\"` is
-             * equivalent to `name = \"projects/test-project-id/locations/test-location-
-             * id/plugins/plugin-1/instances/plugin-instance-1\"` provided the parent is
-             * `projects/test-project-id/locations/test-location-id/plugins/plugin-1`. Expressions
-             * are combined with either `AND` logic operator or `OR` logical operator but not both
-             * of them together i.e. only one of the `AND` or `OR` operator can be used throughout
-             * the filter string and both the operators cannot be used together. No other logical
-             * operators are supported. At most three filter fields are allowed in the filter string
-             * and if provided more than that then `INVALID_ARGUMENT` error is returned by the API.
-             * Here are a few examples: * `state = ENABLED` - The plugin instance is in enabled
-             * state.
+             * Instance. Allowed comparison operators: `=`. * `source_project_id` - The source
+             * project id of the Plugin Instance. Allowed comparison operators: `=`. A filter
+             * function is also supported in the filter string. The filter function is `id(name)`.
+             * The `id(name)` function returns the id of the resource name. For example, `id(name) =
+             * \"plugin-instance-1\"` is equivalent to `name = \"projects/test-project-
+             * id/locations/test-location-id/plugins/plugin-1/instances/plugin-instance-1\"`
+             * provided the parent is `projects/test-project-id/locations/test-location-
+             * id/plugins/plugin-1`. Expressions are combined with either `AND` logic operator or
+             * `OR` logical operator but not both of them together i.e. only one of the `AND` or
+             * `OR` operator can be used throughout the filter string and both the operators cannot
+             * be used together. No other logical operators are supported. At most three filter
+             * fields are allowed in the filter string and if provided more than that then
+             * `INVALID_ARGUMENT` error is returned by the API. Here are a few examples: * `state =
+             * ENABLED` - The plugin instance is in enabled state.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -15877,17 +16271,18 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            a field name, a comparison operator, and a value for filtering. The value must be a string. The
            comparison operator must be one of: `<`, `>` or `=`. Filters are not case sensitive. The following
            fields in the `PluginInstances` are eligible for filtering: * `state` - The state of the Plugin
-           Instance. Allowed comparison operators: `=`. A filter function is also supported in the filter
-           string. The filter function is `id(name)`. The `id(name)` function returns the id of the resource
-           name. For example, `id(name) = \"plugin-instance-1\"` is equivalent to `name = \"projects/test-
-           project-id/locations/test-location-id/plugins/plugin-1/instances/plugin-instance-1\"` provided the
-           parent is `projects/test-project-id/locations/test-location-id/plugins/plugin-1`. Expressions are
-           combined with either `AND` logic operator or `OR` logical operator but not both of them together
-           i.e. only one of the `AND` or `OR` operator can be used throughout the filter string and both the
-           operators cannot be used together. No other logical operators are supported. At most three filter
-           fields are allowed in the filter string and if provided more than that then `INVALID_ARGUMENT`
-           error is returned by the API. Here are a few examples: * `state = ENABLED` - The plugin instance is
-           in enabled state.
+           Instance. Allowed comparison operators: `=`. * `source_project_id` - The source project id of the
+           Plugin Instance. Allowed comparison operators: `=`. A filter function is also supported in the
+           filter string. The filter function is `id(name)`. The `id(name)` function returns the id of the
+           resource name. For example, `id(name) = \"plugin-instance-1\"` is equivalent to `name =
+           \"projects/test-project-id/locations/test-location-id/plugins/plugin-1/instances/plugin-
+           instance-1\"` provided the parent is `projects/test-project-id/locations/test-location-
+           id/plugins/plugin-1`. Expressions are combined with either `AND` logic operator or `OR` logical
+           operator but not both of them together i.e. only one of the `AND` or `OR` operator can be used
+           throughout the filter string and both the operators cannot be used together. No other logical
+           operators are supported. At most three filter fields are allowed in the filter string and if
+           provided more than that then `INVALID_ARGUMENT` error is returned by the API. Here are a few
+           examples: * `state = ENABLED` - The plugin instance is in enabled state.
              */
             public java.lang.String getFilter() {
               return filter;
@@ -15899,19 +16294,20 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
              * filtering. The value must be a string. The comparison operator must be one of: `<`,
              * `>` or `=`. Filters are not case sensitive. The following fields in the
              * `PluginInstances` are eligible for filtering: * `state` - The state of the Plugin
-             * Instance. Allowed comparison operators: `=`. A filter function is also supported in
-             * the filter string. The filter function is `id(name)`. The `id(name)` function returns
-             * the id of the resource name. For example, `id(name) = \"plugin-instance-1\"` is
-             * equivalent to `name = \"projects/test-project-id/locations/test-location-
-             * id/plugins/plugin-1/instances/plugin-instance-1\"` provided the parent is
-             * `projects/test-project-id/locations/test-location-id/plugins/plugin-1`. Expressions
-             * are combined with either `AND` logic operator or `OR` logical operator but not both
-             * of them together i.e. only one of the `AND` or `OR` operator can be used throughout
-             * the filter string and both the operators cannot be used together. No other logical
-             * operators are supported. At most three filter fields are allowed in the filter string
-             * and if provided more than that then `INVALID_ARGUMENT` error is returned by the API.
-             * Here are a few examples: * `state = ENABLED` - The plugin instance is in enabled
-             * state.
+             * Instance. Allowed comparison operators: `=`. * `source_project_id` - The source
+             * project id of the Plugin Instance. Allowed comparison operators: `=`. A filter
+             * function is also supported in the filter string. The filter function is `id(name)`.
+             * The `id(name)` function returns the id of the resource name. For example, `id(name) =
+             * \"plugin-instance-1\"` is equivalent to `name = \"projects/test-project-
+             * id/locations/test-location-id/plugins/plugin-1/instances/plugin-instance-1\"`
+             * provided the parent is `projects/test-project-id/locations/test-location-
+             * id/plugins/plugin-1`. Expressions are combined with either `AND` logic operator or
+             * `OR` logical operator but not both of them together i.e. only one of the `AND` or
+             * `OR` operator can be used throughout the filter string and both the operators cannot
+             * be used together. No other logical operators are supported. At most three filter
+             * fields are allowed in the filter string and if provided more than that then
+             * `INVALID_ARGUMENT` error is returned by the API. Here are a few examples: * `state =
+             * ENABLED` - The plugin instance is in enabled state.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

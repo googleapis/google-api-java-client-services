@@ -63,7 +63,7 @@ public final class GoogleAppsCloudidentityDevicesV1BrowserInfo extends com.googl
   private java.lang.Boolean isBulkDataEntryAnalysisEnabled;
 
   /**
-   * Current state of [Chrome
+   * Deprecated: This field is not used for Chrome version 118 and later. Current state of [Chrome
    * Cleanup](https://chromeenterprise.google/policies/#ChromeCleanupEnabled).
    * The value may be {@code null}.
    */
@@ -221,7 +221,7 @@ public final class GoogleAppsCloudidentityDevicesV1BrowserInfo extends com.googl
   }
 
   /**
-   * Current state of [Chrome
+   * Deprecated: This field is not used for Chrome version 118 and later. Current state of [Chrome
    * Cleanup](https://chromeenterprise.google/policies/#ChromeCleanupEnabled).
    * @return value or {@code null} for none
    */
@@ -230,7 +230,7 @@ public final class GoogleAppsCloudidentityDevicesV1BrowserInfo extends com.googl
   }
 
   /**
-   * Current state of [Chrome
+   * Deprecated: This field is not used for Chrome version 118 and later. Current state of [Chrome
    * Cleanup](https://chromeenterprise.google/policies/#ChromeCleanupEnabled).
    * @param isChromeCleanupEnabled isChromeCleanupEnabled or {@code null} for none
    */

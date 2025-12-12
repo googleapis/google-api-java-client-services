@@ -31,6 +31,13 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
+   * The App Hub application this resource belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV1ResourceApplication application;
+
+  /**
    * The AWS metadata associated with the finding.
    * The value may be {@code null}.
    */
@@ -155,6 +162,23 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The App Hub application this resource belongs to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ResourceApplication getApplication() {
+    return application;
+  }
+
+  /**
+   * The App Hub application this resource belongs to.
+   * @param application application or {@code null} for none
+   */
+  public Resource setApplication(GoogleCloudSecuritycenterV1ResourceApplication application) {
+    this.application = application;
+    return this;
+  }
 
   /**
    * The AWS metadata associated with the finding.

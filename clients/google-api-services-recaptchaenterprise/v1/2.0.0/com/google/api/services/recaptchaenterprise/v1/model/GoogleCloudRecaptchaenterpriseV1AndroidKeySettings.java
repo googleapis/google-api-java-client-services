@@ -39,7 +39,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends co
 
   /**
    * Optional. Android package names of apps allowed to use the key. Example:
-   * 'com.companyname.appname'
+   * 'com.companyname.appname' Each key supports a maximum of 250 package names. To use a key on
+   * more apps, set `allow_all_package_names` to true. When this is set, you are responsible for
+   * validating the package name by checking the `token_properties.android_package_name` field in
+   * each assessment response against your list of allowed package names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +75,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends co
 
   /**
    * Optional. Android package names of apps allowed to use the key. Example:
-   * 'com.companyname.appname'
+   * 'com.companyname.appname' Each key supports a maximum of 250 package names. To use a key on
+   * more apps, set `allow_all_package_names` to true. When this is set, you are responsible for
+   * validating the package name by checking the `token_properties.android_package_name` field in
+   * each assessment response against your list of allowed package names.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedPackageNames() {
@@ -81,7 +87,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends co
 
   /**
    * Optional. Android package names of apps allowed to use the key. Example:
-   * 'com.companyname.appname'
+   * 'com.companyname.appname' Each key supports a maximum of 250 package names. To use a key on
+   * more apps, set `allow_all_package_names` to true. When this is set, you are responsible for
+   * validating the package name by checking the `token_properties.android_package_name` field in
+   * each assessment response against your list of allowed package names.
    * @param allowedPackageNames allowedPackageNames or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AndroidKeySettings setAllowedPackageNames(java.util.List<java.lang.String> allowedPackageNames) {

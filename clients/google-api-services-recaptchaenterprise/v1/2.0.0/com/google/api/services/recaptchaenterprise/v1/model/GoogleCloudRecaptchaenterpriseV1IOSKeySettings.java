@@ -38,8 +38,11 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   private java.lang.Boolean allowAllBundleIds;
 
   /**
-   * Optional. iOS bundle ids of apps allowed to use the key. Example:
-   * 'com.companyname.productname.appname'
+   * Optional. iOS bundle IDs of apps allowed to use the key. Example:
+   * 'com.companyname.productname.appname' Each key supports a maximum of 250 bundle IDs. To use a
+   * key on more apps, set `allow_all_bundle_ids` to true. When this is set, you are responsible for
+   * validating the bundle id by checking the `token_properties.ios_bundle_id` field in each
+   * assessment response against your list of allowed bundle IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +76,11 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * Optional. iOS bundle ids of apps allowed to use the key. Example:
-   * 'com.companyname.productname.appname'
+   * Optional. iOS bundle IDs of apps allowed to use the key. Example:
+   * 'com.companyname.productname.appname' Each key supports a maximum of 250 bundle IDs. To use a
+   * key on more apps, set `allow_all_bundle_ids` to true. When this is set, you are responsible for
+   * validating the bundle id by checking the `token_properties.ios_bundle_id` field in each
+   * assessment response against your list of allowed bundle IDs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedBundleIds() {
@@ -82,8 +88,11 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * Optional. iOS bundle ids of apps allowed to use the key. Example:
-   * 'com.companyname.productname.appname'
+   * Optional. iOS bundle IDs of apps allowed to use the key. Example:
+   * 'com.companyname.productname.appname' Each key supports a maximum of 250 bundle IDs. To use a
+   * key on more apps, set `allow_all_bundle_ids` to true. When this is set, you are responsible for
+   * validating the bundle id by checking the `token_properties.ios_bundle_id` field in each
+   * assessment response against your list of allowed bundle IDs.
    * @param allowedBundleIds allowedBundleIds or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1IOSKeySettings setAllowedBundleIds(java.util.List<java.lang.String> allowedBundleIds) {

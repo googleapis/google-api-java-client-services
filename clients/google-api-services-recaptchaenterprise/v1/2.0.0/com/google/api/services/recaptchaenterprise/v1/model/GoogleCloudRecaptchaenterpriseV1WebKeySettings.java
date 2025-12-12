@@ -48,7 +48,11 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   /**
    * Optional. Domains or subdomains of websites allowed to use the key. All subdomains of an
    * allowed domain are automatically allowed. A valid domain requires a host and must not include
-   * any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+   * any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com' Each key
+   * supports a maximum of 250 domains. To use a key on more domains, set `allow_all_domains` to
+   * true. When this is set, you are responsible for validating the hostname by checking the
+   * `token_properties.hostname` field in each assessment response against your list of allowed
+   * domains.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +120,11 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   /**
    * Optional. Domains or subdomains of websites allowed to use the key. All subdomains of an
    * allowed domain are automatically allowed. A valid domain requires a host and must not include
-   * any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+   * any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com' Each key
+   * supports a maximum of 250 domains. To use a key on more domains, set `allow_all_domains` to
+   * true. When this is set, you are responsible for validating the hostname by checking the
+   * `token_properties.hostname` field in each assessment response against your list of allowed
+   * domains.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedDomains() {
@@ -126,7 +134,11 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   /**
    * Optional. Domains or subdomains of websites allowed to use the key. All subdomains of an
    * allowed domain are automatically allowed. A valid domain requires a host and must not include
-   * any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
+   * any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com' Each key
+   * supports a maximum of 250 domains. To use a key on more domains, set `allow_all_domains` to
+   * true. When this is set, you are responsible for validating the hostname by checking the
+   * `token_properties.hostname` field in each assessment response against your list of allowed
+   * domains.
    * @param allowedDomains allowedDomains or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WebKeySettings setAllowedDomains(java.util.List<java.lang.String> allowedDomains) {

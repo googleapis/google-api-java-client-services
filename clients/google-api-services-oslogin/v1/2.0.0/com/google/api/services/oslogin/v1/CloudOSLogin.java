@@ -843,6 +843,140 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
           return (Delete) super.set(parameterName, value);
         }
       }
+      /**
+       * Adds a POSIX account and returns the profile information. Default POSIX account information is
+       * set when no username and UID exist as part of the login profile.
+       *
+       * Create a request for the method "projects.provisionPosixAccount".
+       *
+       * This request holds the parameters needed by the oslogin server.  After setting any optional
+       * parameters, call the {@link ProvisionPosixAccount#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The unique ID for the user in format `users/{user}/projects/{project}`.
+       * @param content the {@link com.google.api.services.oslogin.v1.model.ProvisionPosixAccountRequest}
+       * @return the request
+       */
+      public ProvisionPosixAccount provisionPosixAccount(java.lang.String name, com.google.api.services.oslogin.v1.model.ProvisionPosixAccountRequest content) throws java.io.IOException {
+        ProvisionPosixAccount result = new ProvisionPosixAccount(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ProvisionPosixAccount extends CloudOSLoginRequest<com.google.api.services.oslogin.v1.model.PosixAccount> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/projects/[^/]+$");
+
+        /**
+         * Adds a POSIX account and returns the profile information. Default POSIX account information is
+         * set when no username and UID exist as part of the login profile.
+         *
+         * Create a request for the method "projects.provisionPosixAccount".
+         *
+         * This request holds the parameters needed by the the oslogin server.  After setting any optional
+         * parameters, call the {@link ProvisionPosixAccount#execute()} method to invoke the remote
+         * operation. <p> {@link ProvisionPosixAccount#initialize(com.google.api.client.googleapis.service
+         * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The unique ID for the user in format `users/{user}/projects/{project}`.
+         * @param content the {@link com.google.api.services.oslogin.v1.model.ProvisionPosixAccountRequest}
+         * @since 1.13
+         */
+        protected ProvisionPosixAccount(java.lang.String name, com.google.api.services.oslogin.v1.model.ProvisionPosixAccountRequest content) {
+          super(CloudOSLogin.this, "POST", REST_PATH, content, com.google.api.services.oslogin.v1.model.PosixAccount.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public ProvisionPosixAccount set$Xgafv(java.lang.String $Xgafv) {
+          return (ProvisionPosixAccount) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ProvisionPosixAccount setAccessToken(java.lang.String accessToken) {
+          return (ProvisionPosixAccount) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ProvisionPosixAccount setAlt(java.lang.String alt) {
+          return (ProvisionPosixAccount) super.setAlt(alt);
+        }
+
+        @Override
+        public ProvisionPosixAccount setCallback(java.lang.String callback) {
+          return (ProvisionPosixAccount) super.setCallback(callback);
+        }
+
+        @Override
+        public ProvisionPosixAccount setFields(java.lang.String fields) {
+          return (ProvisionPosixAccount) super.setFields(fields);
+        }
+
+        @Override
+        public ProvisionPosixAccount setKey(java.lang.String key) {
+          return (ProvisionPosixAccount) super.setKey(key);
+        }
+
+        @Override
+        public ProvisionPosixAccount setOauthToken(java.lang.String oauthToken) {
+          return (ProvisionPosixAccount) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ProvisionPosixAccount setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ProvisionPosixAccount) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ProvisionPosixAccount setQuotaUser(java.lang.String quotaUser) {
+          return (ProvisionPosixAccount) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ProvisionPosixAccount setUploadType(java.lang.String uploadType) {
+          return (ProvisionPosixAccount) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ProvisionPosixAccount setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ProvisionPosixAccount) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The unique ID for the user in format `users/{user}/projects/{project}`. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The unique ID for the user in format `users/{user}/projects/{project}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The unique ID for the user in format `users/{user}/projects/{project}`. */
+        public ProvisionPosixAccount setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/projects/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ProvisionPosixAccount set(String parameterName, Object value) {
+          return (ProvisionPosixAccount) super.set(parameterName, value);
+        }
+      }
 
     }
     /**

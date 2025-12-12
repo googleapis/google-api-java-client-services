@@ -23431,7 +23431,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Bulk exports all resources from the FHIR store to the specified destination. Implements the FHIR
              * implementation guide [system level $export](https://build.fhir.org/ig/HL7/bulk-
-             * data/export.html#endpoint---system-level-export. The following headers must be set in the
+             * data/export.html#endpoint---system-level-export). The following headers must be set in the
              * request: * `Accept`: specifies the format of the `OperationOutcome` response. Only
              * `application/fhir+json` is supported. * `Prefer`: specifies whether the response is immediate or
              * asynchronous. Must be to `respond-async` because only asynchronous responses are supported.
@@ -23477,7 +23477,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Bulk exports all resources from the FHIR store to the specified destination. Implements the
                * FHIR implementation guide [system level $export](https://build.fhir.org/ig/HL7/bulk-
-               * data/export.html#endpoint---system-level-export. The following headers must be set in the
+               * data/export.html#endpoint---system-level-export). The following headers must be set in the
                * request: * `Accept`: specifies the format of the `OperationOutcome` response. Only
                * `application/fhir+json` is supported. * `Prefer`: specifies whether the response is immediate
                * or asynchronous. Must be to `respond-async` because only asynchronous responses are supported.
@@ -25760,10 +25760,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link Search#execute()} method to invoke the remote operation.
              *
              * @param parent Required. Name of the FHIR store to retrieve resources from.
-             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest}
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
-            public Search search(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest content) throws java.io.IOException {
+            public Search search(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
               Search result = new Search(parent, content);
               initialize(result);
               return result;
@@ -25839,10 +25839,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. Name of the FHIR store to retrieve resources from.
-               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest}
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
-              protected Search(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest content) {
+              protected Search(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
                 super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -25928,6 +25928,39 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
+              /**
+               * Optional. The FHIR resource type to search, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
+               * ([DSTU2](https://hl7.org/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/fhir/R4/resourcelist.html),
+               * [R5](https://hl7.org/fhir/R5/resourcelist.html)).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String resourceType;
+
+              /** Optional. The FHIR resource type to search, such as Patient or Observation. For a complete list,
+             see the FHIR Resource Index ([DSTU2](https://hl7.org/fhir/DSTU2/resourcelist.html),
+             [STU3](https://hl7.org/fhir/STU3/resourcelist.html),
+             [R4](https://hl7.org/fhir/R4/resourcelist.html), [R5](https://hl7.org/fhir/R5/resourcelist.html)).
+               */
+              public java.lang.String getResourceType() {
+                return resourceType;
+              }
+
+              /**
+               * Optional. The FHIR resource type to search, such as Patient or Observation. For a
+               * complete list, see the FHIR Resource Index
+               * ([DSTU2](https://hl7.org/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/fhir/R4/resourcelist.html),
+               * [R5](https://hl7.org/fhir/R5/resourcelist.html)).
+               */
+              public Search setResourceType(java.lang.String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+              }
+
               @Override
               public Search set(String parameterName, Object value) {
                 return (Search) super.set(parameterName, value);
@@ -25997,10 +26030,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *        [STU3](https://hl7.org/fhir/STU3/resourcelist.html),
              *        [R4](https://hl7.org/fhir/R4/resourcelist.html),
              *        [R5](https://hl7.org/fhir/R5/resourcelist.html)).
-             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest}
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
-            public SearchType searchType(java.lang.String parent, java.lang.String resourceType, com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest content) throws java.io.IOException {
+            public SearchType searchType(java.lang.String parent, java.lang.String resourceType, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
               SearchType result = new SearchType(parent, resourceType, content);
               initialize(result);
               return result;
@@ -26081,10 +26114,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *        [STU3](https://hl7.org/fhir/STU3/resourcelist.html),
              *        [R4](https://hl7.org/fhir/R4/resourcelist.html),
              *        [R5](https://hl7.org/fhir/R5/resourcelist.html)).
-               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest}
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
-              protected SearchType(java.lang.String parent, java.lang.String resourceType, com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest content) {
+              protected SearchType(java.lang.String parent, java.lang.String resourceType, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
                 super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -30682,20 +30715,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean returnPartialSuccess;
 
             /** When set to `true`, operations that are reachable are returned as normal, and those that are
-           unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-           when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-           field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-           explicitly documented otherwise in service or product specific documentation.
+           unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+           when reading across collections. For example, when `parent` is set to
+           `"projects/example/locations/-"`. This field is not supported by default and will result in an
+           `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+           documentation.
              */
             public java.lang.Boolean getReturnPartialSuccess() {
               return returnPartialSuccess;
@@ -30703,11 +30737,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-             * This can only be `true` when reading across collections e.g. when `parent` is set to
-             * `"projects/example/locations/-"`. This field is not by default supported and will
-             * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-             * service or product specific documentation.
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
              */
             public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
               this.returnPartialSuccess = returnPartialSuccess;

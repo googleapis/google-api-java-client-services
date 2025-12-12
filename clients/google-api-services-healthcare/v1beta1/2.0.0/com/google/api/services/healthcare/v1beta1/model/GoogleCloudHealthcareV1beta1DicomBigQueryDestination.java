@@ -30,6 +30,18 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Setting this field will enable BigQuery's Change Data Capture (CDC) on the
+   * destination tables with JSON schema. Set this field if you want to only keep the latest version
+   * of each instance. Updates and deletes to an existing' instance will overwrite the corresponding
+   * row. See https://cloud.google.com/bigquery/docs/change-data-capture for details. Note that this
+   * field is only supported with the SchemaJSON option. The SchemaFlattened option is not
+   * compatible with CDC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudHealthcareV1beta1DicomChangeDataCaptureConfig changeDataCaptureConfig;
+
+  /**
    * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
    * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
    * equivalent to write_disposition=WRITE_TRUNCATE.
@@ -37,6 +49,28 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean force;
+
+  /**
+   * Optional. If true, the source store name will be included as a column in the BigQuery schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeSourceStore;
+
+  /**
+   * Optional. Setting this field will use flattened DICOM instances schema for the BigQuery table.
+   * The flattened schema will have one column for each DICOM tag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchemaFlattened schemaFlattened;
+
+  /**
+   * Optional. Setting this field will store all the DICOM tags as a JSON type in a single column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchemaJSON schemaJson;
 
   /**
    * BigQuery URI to a table, up to 2000 characters long, in the format
@@ -53,6 +87,33 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
    */
   @com.google.api.client.util.Key
   private java.lang.String writeDisposition;
+
+  /**
+   * Optional. Setting this field will enable BigQuery's Change Data Capture (CDC) on the
+   * destination tables with JSON schema. Set this field if you want to only keep the latest version
+   * of each instance. Updates and deletes to an existing' instance will overwrite the corresponding
+   * row. See https://cloud.google.com/bigquery/docs/change-data-capture for details. Note that this
+   * field is only supported with the SchemaJSON option. The SchemaFlattened option is not
+   * compatible with CDC.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1beta1DicomChangeDataCaptureConfig getChangeDataCaptureConfig() {
+    return changeDataCaptureConfig;
+  }
+
+  /**
+   * Optional. Setting this field will enable BigQuery's Change Data Capture (CDC) on the
+   * destination tables with JSON schema. Set this field if you want to only keep the latest version
+   * of each instance. Updates and deletes to an existing' instance will overwrite the corresponding
+   * row. See https://cloud.google.com/bigquery/docs/change-data-capture for details. Note that this
+   * field is only supported with the SchemaJSON option. The SchemaFlattened option is not
+   * compatible with CDC.
+   * @param changeDataCaptureConfig changeDataCaptureConfig or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1beta1DicomBigQueryDestination setChangeDataCaptureConfig(GoogleCloudHealthcareV1beta1DicomChangeDataCaptureConfig changeDataCaptureConfig) {
+    this.changeDataCaptureConfig = changeDataCaptureConfig;
+    return this;
+  }
 
   /**
    * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
@@ -72,6 +133,59 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
    */
   public GoogleCloudHealthcareV1beta1DicomBigQueryDestination setForce(java.lang.Boolean force) {
     this.force = force;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the source store name will be included as a column in the BigQuery schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeSourceStore() {
+    return includeSourceStore;
+  }
+
+  /**
+   * Optional. If true, the source store name will be included as a column in the BigQuery schema.
+   * @param includeSourceStore includeSourceStore or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1beta1DicomBigQueryDestination setIncludeSourceStore(java.lang.Boolean includeSourceStore) {
+    this.includeSourceStore = includeSourceStore;
+    return this;
+  }
+
+  /**
+   * Optional. Setting this field will use flattened DICOM instances schema for the BigQuery table.
+   * The flattened schema will have one column for each DICOM tag.
+   * @return value or {@code null} for none
+   */
+  public SchemaFlattened getSchemaFlattened() {
+    return schemaFlattened;
+  }
+
+  /**
+   * Optional. Setting this field will use flattened DICOM instances schema for the BigQuery table.
+   * The flattened schema will have one column for each DICOM tag.
+   * @param schemaFlattened schemaFlattened or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1beta1DicomBigQueryDestination setSchemaFlattened(SchemaFlattened schemaFlattened) {
+    this.schemaFlattened = schemaFlattened;
+    return this;
+  }
+
+  /**
+   * Optional. Setting this field will store all the DICOM tags as a JSON type in a single column.
+   * @return value or {@code null} for none
+   */
+  public SchemaJSON getSchemaJson() {
+    return schemaJson;
+  }
+
+  /**
+   * Optional. Setting this field will store all the DICOM tags as a JSON type in a single column.
+   * @param schemaJson schemaJson or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1beta1DicomBigQueryDestination setSchemaJson(SchemaJSON schemaJson) {
+    this.schemaJson = schemaJson;
     return this;
   }
 

@@ -39,6 +39,28 @@ public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.g
   private java.lang.Boolean force;
 
   /**
+   * Optional. If true, the source store name will be included as a column in the BigQuery schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeSourceStore;
+
+  /**
+   * Optional. Setting this field will use flattened DICOM instances schema for the BigQuery table.
+   * The flattened schema will have one column for each DICOM tag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchemaFlattened schemaFlattened;
+
+  /**
+   * Optional. Setting this field will store all the DICOM tags as a JSON type in a single column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchemaJSON schemaJson;
+
+  /**
    * Optional. BigQuery URI to a table, up to 2000 characters long, in the format
    * `bq://projectId.bqDatasetId.tableId`
    * The value may be {@code null}.
@@ -72,6 +94,59 @@ public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.g
    */
   public GoogleCloudHealthcareV1DicomBigQueryDestination setForce(java.lang.Boolean force) {
     this.force = force;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the source store name will be included as a column in the BigQuery schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeSourceStore() {
+    return includeSourceStore;
+  }
+
+  /**
+   * Optional. If true, the source store name will be included as a column in the BigQuery schema.
+   * @param includeSourceStore includeSourceStore or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1DicomBigQueryDestination setIncludeSourceStore(java.lang.Boolean includeSourceStore) {
+    this.includeSourceStore = includeSourceStore;
+    return this;
+  }
+
+  /**
+   * Optional. Setting this field will use flattened DICOM instances schema for the BigQuery table.
+   * The flattened schema will have one column for each DICOM tag.
+   * @return value or {@code null} for none
+   */
+  public SchemaFlattened getSchemaFlattened() {
+    return schemaFlattened;
+  }
+
+  /**
+   * Optional. Setting this field will use flattened DICOM instances schema for the BigQuery table.
+   * The flattened schema will have one column for each DICOM tag.
+   * @param schemaFlattened schemaFlattened or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1DicomBigQueryDestination setSchemaFlattened(SchemaFlattened schemaFlattened) {
+    this.schemaFlattened = schemaFlattened;
+    return this;
+  }
+
+  /**
+   * Optional. Setting this field will store all the DICOM tags as a JSON type in a single column.
+   * @return value or {@code null} for none
+   */
+  public SchemaJSON getSchemaJson() {
+    return schemaJson;
+  }
+
+  /**
+   * Optional. Setting this field will store all the DICOM tags as a JSON type in a single column.
+   * @param schemaJson schemaJson or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1DicomBigQueryDestination setSchemaJson(SchemaJSON schemaJson) {
+    this.schemaJson = schemaJson;
     return this;
   }
 

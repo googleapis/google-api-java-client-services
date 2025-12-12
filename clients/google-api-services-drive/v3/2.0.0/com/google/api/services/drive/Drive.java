@@ -741,6 +741,343 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   }
 
   /**
+   * An accessor for creating requests from the Approvals collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Drive drive = new Drive(...);}
+   *   {@code Drive.Approvals.List request = drive.approvals().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Approvals approvals() {
+    return new Approvals();
+  }
+
+  /**
+   * The "approvals" collection of methods.
+   */
+  public class Approvals {
+
+    /**
+     * Gets an Approval by ID.
+     *
+     * Create a request for the method "approvals.get".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param fileId Required. The ID of the file the Approval is on.
+     * @param approvalId Required. The ID of the Approval.
+     * @return the request
+     */
+    public Get get(java.lang.String fileId, java.lang.String approvalId) throws java.io.IOException {
+      Get result = new Get(fileId, approvalId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DriveRequest<com.google.api.services.drive.model.Approval> {
+
+      private static final String REST_PATH = "files/{fileId}/approvals/{approvalId}";
+
+      /**
+       * Gets an Approval by ID.
+       *
+       * Create a request for the method "approvals.get".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId Required. The ID of the file the Approval is on.
+       * @param approvalId Required. The ID of the Approval.
+       * @since 1.13
+       */
+      protected Get(java.lang.String fileId, java.lang.String approvalId) {
+        super(Drive.this, "GET", REST_PATH, null, com.google.api.services.drive.model.Approval.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+        this.approvalId = com.google.api.client.util.Preconditions.checkNotNull(approvalId, "Required parameter approvalId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the file the Approval is on. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file the Approval is on.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file the Approval is on. */
+      public Get setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Required. The ID of the Approval. */
+      @com.google.api.client.util.Key
+      private java.lang.String approvalId;
+
+      /** Required. The ID of the Approval.
+       */
+      public java.lang.String getApprovalId() {
+        return approvalId;
+      }
+
+      /** Required. The ID of the Approval. */
+      public Get setApprovalId(java.lang.String approvalId) {
+        this.approvalId = approvalId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the Approvals on a file.
+     *
+     * Create a request for the method "approvals.list".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param fileId Required. The ID of the file the Approval is on.
+     * @return the request
+     */
+    public List list(java.lang.String fileId) throws java.io.IOException {
+      List result = new List(fileId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DriveRequest<com.google.api.services.drive.model.ApprovalList> {
+
+      private static final String REST_PATH = "files/{fileId}/approvals";
+
+      /**
+       * Lists the Approvals on a file.
+       *
+       * Create a request for the method "approvals.list".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId Required. The ID of the file the Approval is on.
+       * @since 1.13
+       */
+      protected List(java.lang.String fileId) {
+        super(Drive.this, "GET", REST_PATH, null, com.google.api.services.drive.model.ApprovalList.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the file the Approval is on. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file the Approval is on.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file the Approval is on. */
+      public List setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /**
+       * The maximum number of Approvals to return. When not set, at most 100 Approvals will be
+       * returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of Approvals to return. When not set, at most 100 Approvals will be returned.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of Approvals to return. When not set, at most 100 Approvals will be
+       * returned.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * The token for continuing a previous list request on the next page. This should be set to
+       * the value of nextPageToken from a previous response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The token for continuing a previous list request on the next page. This should be set to the value
+     of nextPageToken from a previous response.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * The token for continuing a previous list request on the next page. This should be set to
+       * the value of nextPageToken from a previous response.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Apps collection.
    *
    * <p>The typical use is:</p>
@@ -10835,7 +11172,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Replies {
 
     /**
-     * Creates a reply to a comment.
+     * Creates a reply to a comment. For more information, see [Manage comments and
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
      *
      * Create a request for the method "replies.create".
      *
@@ -10858,7 +11196,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/comments/{commentId}/replies";
 
       /**
-       * Creates a reply to a comment.
+       * Creates a reply to a comment. For more information, see [Manage comments and
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
        *
        * Create a request for the method "replies.create".
        *
@@ -10971,7 +11310,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Deletes a reply.
+     * Deletes a reply. For more information, see [Manage comments and
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
      *
      * Create a request for the method "replies.delete".
      *
@@ -10994,7 +11334,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/comments/{commentId}/replies/{replyId}";
 
       /**
-       * Deletes a reply.
+       * Deletes a reply. For more information, see [Manage comments and
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
        *
        * Create a request for the method "replies.delete".
        *
@@ -11124,7 +11465,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Gets a reply by ID.
+     * Gets a reply by ID. For more information, see [Manage comments and
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
      *
      * Create a request for the method "replies.get".
      *
@@ -11147,7 +11489,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/comments/{commentId}/replies/{replyId}";
 
       /**
-       * Gets a reply by ID.
+       * Gets a reply by ID. For more information, see [Manage comments and
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
        *
        * Create a request for the method "replies.get".
        *
@@ -11282,20 +11625,20 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Whether to return deleted replies. Deleted replies will not include their original content.
+       * Whether to return deleted replies. Deleted replies don't include their original content.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeDeleted;
 
-      /** Whether to return deleted replies. Deleted replies will not include their original content.
-     [default: false]
+      /** Whether to return deleted replies. Deleted replies don't include their original content. [default:
+     false]
        */
       public java.lang.Boolean getIncludeDeleted() {
         return includeDeleted;
       }
 
       /**
-       * Whether to return deleted replies. Deleted replies will not include their original content.
+       * Whether to return deleted replies. Deleted replies don't include their original content.
        */
       public Get setIncludeDeleted(java.lang.Boolean includeDeleted) {
         this.includeDeleted = includeDeleted;
@@ -11319,7 +11662,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether to return deleted replies. Deleted replies will not include their original content.
+       * Whether to return deleted replies. Deleted replies don't include their original content.
        * </p>
        */
       public boolean isIncludeDeleted() {
@@ -11335,7 +11678,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists a comment's replies.
+     * Lists a comment's replies. For more information, see [Manage comments and
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
      *
      * Create a request for the method "replies.list".
      *
@@ -11357,7 +11701,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/comments/{commentId}/replies";
 
       /**
-       * Lists a comment's replies.
+       * Lists a comment's replies. For more information, see [Manage comments and
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
        *
        * Create a request for the method "replies.list".
        *
@@ -11474,22 +11819,20 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Whether to include deleted replies. Deleted replies will not include their original
-       * content.
+       * Whether to include deleted replies. Deleted replies don't include their original content.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeDeleted;
 
-      /** Whether to include deleted replies. Deleted replies will not include their original content.
-     [default: false]
+      /** Whether to include deleted replies. Deleted replies don't include their original content. [default:
+     false]
        */
       public java.lang.Boolean getIncludeDeleted() {
         return includeDeleted;
       }
 
       /**
-       * Whether to include deleted replies. Deleted replies will not include their original
-       * content.
+       * Whether to include deleted replies. Deleted replies don't include their original content.
        */
       public List setIncludeDeleted(java.lang.Boolean includeDeleted) {
         this.includeDeleted = includeDeleted;
@@ -11513,7 +11856,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether to include deleted replies. Deleted replies will not include their original content.
+       * Whether to include deleted replies. Deleted replies don't include their original content.
        * </p>
        */
       public boolean isIncludeDeleted() {
@@ -11541,13 +11884,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response.
+       * the value of `nextPageToken` from the previous response.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** The token for continuing a previous list request on the next page. This should be set to the value
-     of 'nextPageToken' from the previous response.
+     of `nextPageToken` from the previous response.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -11555,7 +11898,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response.
+       * the value of `nextPageToken` from the previous response.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -11568,7 +11911,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a reply with patch semantics.
+     * Updates a reply with patch semantics. For more information, see [Manage comments and
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
      *
      * Create a request for the method "replies.update".
      *
@@ -11592,7 +11936,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/comments/{commentId}/replies/{replyId}";
 
       /**
-       * Updates a reply with patch semantics.
+       * Updates a reply with patch semantics. For more information, see [Manage comments and
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
        *
        * Create a request for the method "replies.update".
        *

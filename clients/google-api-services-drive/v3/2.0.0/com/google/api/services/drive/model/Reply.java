@@ -31,7 +31,8 @@ package com.google.api.services.drive.model;
 public final class Reply extends com.google.api.client.json.GenericJson {
 
   /**
-   * The action the reply performed to the parent comment. Valid values are: * `resolve` * `reopen`
+   * The action the reply performed to the parent comment. The supported values are: * `resolve` *
+   * `reopen`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   private java.lang.String assigneeEmailAddress;
 
   /**
-   * Output only. The author of the reply. The author's email address and permission ID will not be
+   * Output only. The author of the reply. The author's email address and permission ID won't be
    * populated.
    * The value may be {@code null}.
    */
@@ -55,7 +56,8 @@ public final class Reply extends com.google.api.client.json.GenericJson {
 
   /**
    * The plain text content of the reply. This field is used for setting the content, while
-   * `htmlContent` should be displayed. This is required on creates if no `action` is specified.
+   * `htmlContent` should be displayed. This field is required by the `create` method if no `action`
+   * value is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +114,8 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime modifiedTime;
 
   /**
-   * The action the reply performed to the parent comment. Valid values are: * `resolve` * `reopen`
+   * The action the reply performed to the parent comment. The supported values are: * `resolve` *
+   * `reopen`
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -120,7 +123,8 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The action the reply performed to the parent comment. Valid values are: * `resolve` * `reopen`
+   * The action the reply performed to the parent comment. The supported values are: * `resolve` *
+   * `reopen`
    * @param action action or {@code null} for none
    */
   public Reply setAction(java.lang.String action) {
@@ -148,7 +152,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The author of the reply. The author's email address and permission ID will not be
+   * Output only. The author of the reply. The author's email address and permission ID won't be
    * populated.
    * @return value or {@code null} for none
    */
@@ -157,7 +161,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The author of the reply. The author's email address and permission ID will not be
+   * Output only. The author of the reply. The author's email address and permission ID won't be
    * populated.
    * @param author author or {@code null} for none
    */
@@ -168,7 +172,8 @@ public final class Reply extends com.google.api.client.json.GenericJson {
 
   /**
    * The plain text content of the reply. This field is used for setting the content, while
-   * `htmlContent` should be displayed. This is required on creates if no `action` is specified.
+   * `htmlContent` should be displayed. This field is required by the `create` method if no `action`
+   * value is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -177,7 +182,8 @@ public final class Reply extends com.google.api.client.json.GenericJson {
 
   /**
    * The plain text content of the reply. This field is used for setting the content, while
-   * `htmlContent` should be displayed. This is required on creates if no `action` is specified.
+   * `htmlContent` should be displayed. This field is required by the `create` method if no `action`
+   * value is specified.
    * @param content content or {@code null} for none
    */
   public Reply setContent(java.lang.String content) {

@@ -45,6 +45,14 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentSchema extends com.goog
   private java.lang.String displayName;
 
   /**
+   * Optional. Document level prompt provided by the user. This custom text is injected into the AI
+   * model's prompt to provide extra, document-wide guidance for processing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String documentPrompt;
+
+  /**
    * Entity types of the schema.
    * The value may be {@code null}.
    */
@@ -89,6 +97,25 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentSchema extends com.goog
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentSchema setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Document level prompt provided by the user. This custom text is injected into the AI
+   * model's prompt to provide extra, document-wide guidance for processing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDocumentPrompt() {
+    return documentPrompt;
+  }
+
+  /**
+   * Optional. Document level prompt provided by the user. This custom text is injected into the AI
+   * model's prompt to provide extra, document-wide guidance for processing.
+   * @param documentPrompt documentPrompt or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3DocumentSchema setDocumentPrompt(java.lang.String documentPrompt) {
+    this.documentPrompt = documentPrompt;
     return this;
   }
 

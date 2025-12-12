@@ -66,6 +66,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig extend
   private java.lang.Boolean enableTableAnnotation;
 
   /**
+   * Optional. Whether to split table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableTableSplit;
+
+  /**
    * Optional. Whether to include bounding boxes in layout parser processor response.
    * The value may be {@code null}.
    */
@@ -161,6 +168,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig extend
    */
   public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig setEnableTableAnnotation(java.lang.Boolean enableTableAnnotation) {
     this.enableTableAnnotation = enableTableAnnotation;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to split table.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableTableSplit() {
+    return enableTableSplit;
+  }
+
+  /**
+   * Optional. Whether to split table.
+   * @param enableTableSplit enableTableSplit or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig setEnableTableSplit(java.lang.Boolean enableTableSplit) {
+    this.enableTableSplit = enableTableSplit;
     return this;
   }
 

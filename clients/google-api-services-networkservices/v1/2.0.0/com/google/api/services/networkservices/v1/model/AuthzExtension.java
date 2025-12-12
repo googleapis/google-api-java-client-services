@@ -138,8 +138,9 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   private String updateTime;
 
   /**
-   * Optional. The format of communication supported by the callout extension. If not specified, the
-   * default value `EXT_PROC_GRPC` is used.
+   * Optional. The format of communication supported by the callout extension. This field is
+   * supported only for regional `AuthzExtension` resources. If not specified, the default value
+   * `EXT_PROC_GRPC` is used. Global `AuthzExtension` resources use the `EXT_PROC_GRPC` wire format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -396,8 +397,9 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The format of communication supported by the callout extension. If not specified, the
-   * default value `EXT_PROC_GRPC` is used.
+   * Optional. The format of communication supported by the callout extension. This field is
+   * supported only for regional `AuthzExtension` resources. If not specified, the default value
+   * `EXT_PROC_GRPC` is used. Global `AuthzExtension` resources use the `EXT_PROC_GRPC` wire format.
    * @return value or {@code null} for none
    */
   public java.lang.String getWireFormat() {
@@ -405,8 +407,9 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The format of communication supported by the callout extension. If not specified, the
-   * default value `EXT_PROC_GRPC` is used.
+   * Optional. The format of communication supported by the callout extension. This field is
+   * supported only for regional `AuthzExtension` resources. If not specified, the default value
+   * `EXT_PROC_GRPC` is used. Global `AuthzExtension` resources use the `EXT_PROC_GRPC` wire format.
    * @param wireFormat wireFormat or {@code null} for none
    */
   public AuthzExtension setWireFormat(java.lang.String wireFormat) {

@@ -44,6 +44,20 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private BackupConfig backupConfig;
 
   /**
+   * Optional. Block devices for the volume. Currently, only one block device is permitted per
+   * Volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BlockDevice> blockDevices;
+
+  static {
+    // hack to force ProGuard to consider BlockDevice used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BlockDevice.class);
+  }
+
+  /**
    * Optional. Cache parameters for the volume.
    * The value may be {@code null}.
    */
@@ -361,6 +375,25 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setBackupConfig(BackupConfig backupConfig) {
     this.backupConfig = backupConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Block devices for the volume. Currently, only one block device is permitted per
+   * Volume.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BlockDevice> getBlockDevices() {
+    return blockDevices;
+  }
+
+  /**
+   * Optional. Block devices for the volume. Currently, only one block device is permitted per
+   * Volume.
+   * @param blockDevices blockDevices or {@code null} for none
+   */
+  public Volume setBlockDevices(java.util.List<BlockDevice> blockDevices) {
+    this.blockDevices = blockDevices;
     return this;
   }
 

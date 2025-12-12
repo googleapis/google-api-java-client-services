@@ -692,6 +692,140 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
         }
         /**
+         * Commits a function upgrade from GCF Gen1 to GCF Gen2. This action deletes the Gen1 function,
+         * leaving the Gen2 function active and manageable by the GCFv2 API.
+         *
+         * Create a request for the method "functions.commitFunctionUpgradeAsGen2".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link CommitFunctionUpgradeAsGen2#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The name of the function for which upgrade should be committed to Gen2.
+         * @param content the {@link com.google.api.services.cloudfunctions.v2beta.model.CommitFunctionUpgradeAsGen2Request}
+         * @return the request
+         */
+        public CommitFunctionUpgradeAsGen2 commitFunctionUpgradeAsGen2(java.lang.String name, com.google.api.services.cloudfunctions.v2beta.model.CommitFunctionUpgradeAsGen2Request content) throws java.io.IOException {
+          CommitFunctionUpgradeAsGen2 result = new CommitFunctionUpgradeAsGen2(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CommitFunctionUpgradeAsGen2 extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2beta.model.Operation> {
+
+          private static final String REST_PATH = "v2beta/{+name}:commitFunctionUpgradeAsGen2";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Commits a function upgrade from GCF Gen1 to GCF Gen2. This action deletes the Gen1 function,
+           * leaving the Gen2 function active and manageable by the GCFv2 API.
+           *
+           * Create a request for the method "functions.commitFunctionUpgradeAsGen2".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link CommitFunctionUpgradeAsGen2#execute()} method to invoke
+           * the remote operation. <p> {@link CommitFunctionUpgradeAsGen2#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the function for which upgrade should be committed to Gen2.
+           * @param content the {@link com.google.api.services.cloudfunctions.v2beta.model.CommitFunctionUpgradeAsGen2Request}
+           * @since 1.13
+           */
+          protected CommitFunctionUpgradeAsGen2(java.lang.String name, com.google.api.services.cloudfunctions.v2beta.model.CommitFunctionUpgradeAsGen2Request content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 set$Xgafv(java.lang.String $Xgafv) {
+            return (CommitFunctionUpgradeAsGen2) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setAccessToken(java.lang.String accessToken) {
+            return (CommitFunctionUpgradeAsGen2) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setAlt(java.lang.String alt) {
+            return (CommitFunctionUpgradeAsGen2) super.setAlt(alt);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setCallback(java.lang.String callback) {
+            return (CommitFunctionUpgradeAsGen2) super.setCallback(callback);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setFields(java.lang.String fields) {
+            return (CommitFunctionUpgradeAsGen2) super.setFields(fields);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setKey(java.lang.String key) {
+            return (CommitFunctionUpgradeAsGen2) super.setKey(key);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setOauthToken(java.lang.String oauthToken) {
+            return (CommitFunctionUpgradeAsGen2) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CommitFunctionUpgradeAsGen2) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setQuotaUser(java.lang.String quotaUser) {
+            return (CommitFunctionUpgradeAsGen2) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setUploadType(java.lang.String uploadType) {
+            return (CommitFunctionUpgradeAsGen2) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CommitFunctionUpgradeAsGen2) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the function for which upgrade should be committed to Gen2. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the function for which upgrade should be committed to Gen2.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the function for which upgrade should be committed to Gen2. */
+          public CommitFunctionUpgradeAsGen2 setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CommitFunctionUpgradeAsGen2 set(String parameterName, Object value) {
+            return (CommitFunctionUpgradeAsGen2) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a new function. If a function with the given name already exists in the specified
          * project, the long running operation will return `ALREADY_EXISTS` error.
          *
@@ -3293,9 +3427,9 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -3303,10 +3437,11 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -3314,9 +3449,9 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */

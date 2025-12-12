@@ -38,7 +38,7 @@ public final class GoogleCloudAssetV1CustomConstraint extends com.google.api.cli
 
   /**
    * Organization Policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")'` or,
+   * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")'` or,
    * `resource.management.auto_upgrade == true`
    * The value may be {@code null}.
    */
@@ -102,7 +102,7 @@ public final class GoogleCloudAssetV1CustomConstraint extends com.google.api.cli
 
   /**
    * Organization Policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")'` or,
+   * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")'` or,
    * `resource.management.auto_upgrade == true`
    * @return value or {@code null} for none
    */
@@ -112,7 +112,7 @@ public final class GoogleCloudAssetV1CustomConstraint extends com.google.api.cli
 
   /**
    * Organization Policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")'` or,
+   * `resource.instanceName.matches("(production|test)_(.+_)?[\d]+")'` or,
    * `resource.management.auto_upgrade == true`
    * @param condition condition or {@code null} for none
    */

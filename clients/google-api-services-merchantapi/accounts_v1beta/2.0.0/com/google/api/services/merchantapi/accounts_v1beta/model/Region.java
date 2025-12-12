@@ -62,6 +62,13 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private PostalCodeArea postalCodeArea;
 
   /**
+   * Optional. A radius area that defines the region area.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RadiusArea radiusArea;
+
+  /**
    * Output only. Indicates if the region is eligible for use in the Regional Inventory
    * configuration.
    * The value may be {@code null}.
@@ -142,6 +149,23 @@ public final class Region extends com.google.api.client.json.GenericJson {
    */
   public Region setPostalCodeArea(PostalCodeArea postalCodeArea) {
     this.postalCodeArea = postalCodeArea;
+    return this;
+  }
+
+  /**
+   * Optional. A radius area that defines the region area.
+   * @return value or {@code null} for none
+   */
+  public RadiusArea getRadiusArea() {
+    return radiusArea;
+  }
+
+  /**
+   * Optional. A radius area that defines the region area.
+   * @param radiusArea radiusArea or {@code null} for none
+   */
+  public Region setRadiusArea(RadiusArea radiusArea) {
+    this.radiusArea = radiusArea;
     return this;
   }
 

@@ -32,7 +32,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends co
 
   /**
    * The modifier for the bid when the criterion matches. The modifier must be in the range: 0.1 -
-   * 10.0. The range is 1.0 - 6.0 for PreferredContent. Use 0 to opt out of a Device type.
+   * 10.0. Use 0 to opt out of a Device type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends co
 
   /**
    * The modifier for the bid when the criterion matches. The modifier must be in the range: 0.1 -
-   * 10.0. The range is 1.0 - 6.0 for PreferredContent. Use 0 to opt out of a Device type.
+   * 10.0. Use 0 to opt out of a Device type.
    * @return value or {@code null} for none
    */
   public java.lang.Double getBidModifier() {
@@ -64,7 +64,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends co
 
   /**
    * The modifier for the bid when the criterion matches. The modifier must be in the range: 0.1 -
-   * 10.0. The range is 1.0 - 6.0 for PreferredContent. Use 0 to opt out of a Device type.
+   * 10.0. Use 0 to opt out of a Device type.
    * @param bidModifier bidModifier or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupBidModifier setBidModifier(java.lang.Double bidModifier) {

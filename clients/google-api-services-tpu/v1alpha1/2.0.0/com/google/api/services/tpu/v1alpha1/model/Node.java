@@ -17,7 +17,7 @@
 package com.google.api.services.tpu.v1alpha1.model;
 
 /**
- * A TPU instance.
+ * DEPRECATED: Please use TPU API v2alpha1 instead. A TPU instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud TPU API. For a detailed explanation see:

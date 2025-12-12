@@ -44,7 +44,7 @@ public final class AggregateAssetsValuesRequest extends com.google.api.client.js
   private java.lang.String filter;
 
   /**
-   * Optional. When this value is set to 'true,' the response will include all assets, including
+   * Optional. When this value is set to 'true' the response will include all assets, including
    * those that are hidden.
    * The value may be {@code null}.
    */
@@ -86,7 +86,7 @@ public final class AggregateAssetsValuesRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. When this value is set to 'true,' the response will include all assets, including
+   * Optional. When this value is set to 'true' the response will include all assets, including
    * those that are hidden.
    * @return value or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class AggregateAssetsValuesRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. When this value is set to 'true,' the response will include all assets, including
+   * Optional. When this value is set to 'true' the response will include all assets, including
    * those that are hidden.
    * @param showHidden showHidden or {@code null} for none
    */

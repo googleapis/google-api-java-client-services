@@ -72,13 +72,6 @@ public final class Report extends com.google.api.client.json.GenericJson {
   private ReportSummary summary;
 
   /**
-   * Output only. Detailed data related to TCO reports.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ReportTotalCostOfOwnershipDetails tcoDetails;
-
-  /**
    * Report type.
    * The value may be {@code null}.
    */
@@ -191,23 +184,6 @@ public final class Report extends com.google.api.client.json.GenericJson {
    */
   public Report setSummary(ReportSummary summary) {
     this.summary = summary;
-    return this;
-  }
-
-  /**
-   * Output only. Detailed data related to TCO reports.
-   * @return value or {@code null} for none
-   */
-  public ReportTotalCostOfOwnershipDetails getTcoDetails() {
-    return tcoDetails;
-  }
-
-  /**
-   * Output only. Detailed data related to TCO reports.
-   * @param tcoDetails tcoDetails or {@code null} for none
-   */
-  public Report setTcoDetails(ReportTotalCostOfOwnershipDetails tcoDetails) {
-    this.tcoDetails = tcoDetails;
     return this;
   }
 

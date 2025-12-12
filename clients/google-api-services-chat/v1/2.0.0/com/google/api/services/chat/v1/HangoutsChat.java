@@ -2566,8 +2566,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Supports changing the [permission
        * settings](https://support.google.com/chat/answer/13340792) of a space. When updating
        * permission settings, you can only specify `permissionSettings` field masks; you cannot
-       * update other field masks at the same time. `permissionSettings` is not supported with
-       * `useAdminAccess`. The supported field masks include: -
+       * update other field masks at the same time. The supported field masks include: -
        * `permission_settings.manageMembersAndGroups` - `permission_settings.modifySpaceDetails` -
        * `permission_settings.toggleHistory` - `permission_settings.useAtMentionAll` -
        * `permission_settings.manageApps` - `permission_settings.manageWebhooks` -
@@ -2604,11 +2603,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      `access_settings.audience` is not supported with `useAdminAccess`. `permission_settings`: Supports
      changing the [permission settings](https://support.google.com/chat/answer/13340792) of a space.
      When updating permission settings, you can only specify `permissionSettings` field masks; you
-     cannot update other field masks at the same time. `permissionSettings` is not supported with
-     `useAdminAccess`. The supported field masks include: - `permission_settings.manageMembersAndGroups`
-     - `permission_settings.modifySpaceDetails` - `permission_settings.toggleHistory` -
-     `permission_settings.useAtMentionAll` - `permission_settings.manageApps` -
-     `permission_settings.manageWebhooks` - `permission_settings.replyMessages`
+     cannot update other field masks at the same time. The supported field masks include: -
+     `permission_settings.manageMembersAndGroups` - `permission_settings.modifySpaceDetails` -
+     `permission_settings.toggleHistory` - `permission_settings.useAtMentionAll` -
+     `permission_settings.manageApps` - `permission_settings.manageWebhooks` -
+     `permission_settings.replyMessages`
        */
       public String getUpdateMask() {
         return updateMask;
@@ -2647,8 +2646,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Supports changing the [permission
        * settings](https://support.google.com/chat/answer/13340792) of a space. When updating
        * permission settings, you can only specify `permissionSettings` field masks; you cannot
-       * update other field masks at the same time. `permissionSettings` is not supported with
-       * `useAdminAccess`. The supported field masks include: -
+       * update other field masks at the same time. The supported field masks include: -
        * `permission_settings.manageMembersAndGroups` - `permission_settings.modifySpaceDetails` -
        * `permission_settings.toggleHistory` - `permission_settings.useAtMentionAll` -
        * `permission_settings.manageApps` - `permission_settings.manageWebhooks` -

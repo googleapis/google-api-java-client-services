@@ -43,7 +43,7 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   private CustomPronunciations customPronunciations;
 
   /**
-   * Markup for HD voices specifically. This field may not be used with any other voices.
+   * Markup for Chirp 3: HD voices specifically. This field may not be used with any other voices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Markup for HD voices specifically. This field may not be used with any other voices.
+   * Markup for Chirp 3: HD voices specifically. This field may not be used with any other voices.
    * @return value or {@code null} for none
    */
   public java.lang.String getMarkup() {
@@ -115,7 +115,7 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Markup for HD voices specifically. This field may not be used with any other voices.
+   * Markup for Chirp 3: HD voices specifically. This field may not be used with any other voices.
    * @param markup markup or {@code null} for none
    */
   public SynthesisInput setMarkup(java.lang.String markup) {

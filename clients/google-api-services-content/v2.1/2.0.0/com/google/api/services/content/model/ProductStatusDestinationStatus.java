@@ -38,6 +38,13 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
   private java.util.List<java.lang.String> approvedCountries;
 
   /**
+   * The channel of the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String channel;
+
+  /**
    * The name of the destination
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
    */
   public ProductStatusDestinationStatus setApprovedCountries(java.util.List<java.lang.String> approvedCountries) {
     this.approvedCountries = approvedCountries;
+    return this;
+  }
+
+  /**
+   * The channel of the destination.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChannel() {
+    return channel;
+  }
+
+  /**
+   * The channel of the destination.
+   * @param channel channel or {@code null} for none
+   */
+  public ProductStatusDestinationStatus setChannel(java.lang.String channel) {
+    this.channel = channel;
     return this;
   }
 

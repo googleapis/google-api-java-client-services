@@ -45,8 +45,8 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
 
   /**
    * Unordered list. Unreachable resources. Populated when the request sets
-   * ListOperationsRequest.return_partial_success and reads across collections e.g. when attempting
-   * to list all resources across all supported locations.
+   * ListOperationsRequest.return_partial_success and reads across collections. For example, when
+   * attempting to list all resources across all supported locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +88,8 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
 
   /**
    * Unordered list. Unreachable resources. Populated when the request sets
-   * ListOperationsRequest.return_partial_success and reads across collections e.g. when attempting
-   * to list all resources across all supported locations.
+   * ListOperationsRequest.return_partial_success and reads across collections. For example, when
+   * attempting to list all resources across all supported locations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -98,8 +98,8 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
 
   /**
    * Unordered list. Unreachable resources. Populated when the request sets
-   * ListOperationsRequest.return_partial_success and reads across collections e.g. when attempting
-   * to list all resources across all supported locations.
+   * ListOperationsRequest.return_partial_success and reads across collections. For example, when
+   * attempting to list all resources across all supported locations.
    * @param unreachable unreachable or {@code null} for none
    */
   public GoogleLongrunningListOperationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

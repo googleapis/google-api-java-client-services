@@ -352,9 +352,10 @@ public final class ResourceUpdate extends com.google.api.client.json.GenericJson
     public static final class Errors extends com.google.api.client.json.GenericJson {
 
       /**
-       * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is for internal use-only
-       * (like componentization) (thus the visibility "none") and in case of public exposure it is
-       * strongly recommended to follow pattern of: https://aip.dev/193 and expose as details field.
+       * Output only. [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is for
+       * internal use-only (like componentization) (thus the visibility "none") and in case of public
+       * exposure it is strongly recommended to follow pattern of: https://aip.dev/193 and expose as
+       * details field.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -404,9 +405,10 @@ public final class ResourceUpdate extends com.google.api.client.json.GenericJson
       private java.lang.String message;
 
       /**
-       * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is for internal use-only
-       * (like componentization) (thus the visibility "none") and in case of public exposure it is
-       * strongly recommended to follow pattern of: https://aip.dev/193 and expose as details field.
+       * Output only. [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is for
+       * internal use-only (like componentization) (thus the visibility "none") and in case of public
+       * exposure it is strongly recommended to follow pattern of: https://aip.dev/193 and expose as
+       * details field.
        * @return value or {@code null} for none
        */
       public java.util.List<java.lang.String> getArguments() {
@@ -414,9 +416,10 @@ public final class ResourceUpdate extends com.google.api.client.json.GenericJson
       }
 
       /**
-       * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is for internal use-only
-       * (like componentization) (thus the visibility "none") and in case of public exposure it is
-       * strongly recommended to follow pattern of: https://aip.dev/193 and expose as details field.
+       * Output only. [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is for
+       * internal use-only (like componentization) (thus the visibility "none") and in case of public
+       * exposure it is strongly recommended to follow pattern of: https://aip.dev/193 and expose as
+       * details field.
        * @param arguments arguments or {@code null} for none
        */
       public Errors setArguments(java.util.List<java.lang.String> arguments) {

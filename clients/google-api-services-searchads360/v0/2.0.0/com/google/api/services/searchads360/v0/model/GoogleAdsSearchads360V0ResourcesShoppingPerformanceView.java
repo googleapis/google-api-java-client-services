@@ -17,17 +17,17 @@
 package com.google.api.services.searchads360.v0.model;
 
 /**
- * Shopping performance view. Provides Shopping campaign statistics aggregated at several product
- * dimension levels. Product dimension values from Merchant Center such as brand, category, custom
- * attributes, product condition and product type will reflect the state of each dimension as of the
- * date and time when the corresponding event was recorded. The number of impressions and clicks
- * that shopping_performance_view returns stats for may be different from campaign reports.
- * shopping_performance_view shows impressions and clicks on products appearing in ads, while
- * campaign reports show impressions and clicks on the ads themselves. Depending on the format, an
- * ad can show from zero to several products, so the numbers may not match. In Google Ads UI, you
- * can query impressions and clicks of products appearing in ads by selecting a column from "Product
- * attributes" in the report editor. For example, selecting the "Brand" column is equivalent to
- * selecting `segments.product_brand`.
+ * Shopping performance view. Provides Shopping campaign and Performance Max campaign statistics
+ * aggregated at several product dimension levels. Product dimension values from Merchant Center
+ * such as brand, category, custom attributes, product condition, and product type will reflect the
+ * state of each dimension as of the date and time when the corresponding event was recorded. The
+ * number of impressions and clicks that `shopping_performance_view` returns stats for may be
+ * different from campaign reports. `shopping_performance_view` shows impressions and clicks on
+ * products appearing in ads, while campaign reports show impressions and clicks on the ads
+ * themselves. Depending on the format, an ad can show from zero to several products, so the numbers
+ * may not match. In Search Ads 360 UI, you can query impressions and clicks of products appearing
+ * in ads by selecting a column from "Product attributes" in the report editor. For example,
+ * selecting the "Brand" column is equivalent to selecting `segments.product_brand`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

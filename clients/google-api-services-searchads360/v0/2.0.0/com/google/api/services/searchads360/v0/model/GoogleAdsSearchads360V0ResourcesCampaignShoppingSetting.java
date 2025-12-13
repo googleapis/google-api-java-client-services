@@ -49,10 +49,11 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting exten
   private java.lang.Boolean enableLocal;
 
   /**
-   * Feed label of products to include in the campaign. Only one of feed_label or sales_country can
-   * be set. If used instead of sales_country, the feed_label field accepts country codes in the
-   * same format for example: 'XX'. Otherwise can be any string used for feed label in Google
-   * Merchant Center.
+   * Feed label of products to include in the campaign. Valid feed labels may contain a maximum of
+   * 20 characters including uppercase letters, numbers, hyphens, and underscores. If you previously
+   * used the deprecated `sales_country` in the two-letter country code (`XX`) format, the
+   * `feed_label` field should be used instead. For more information see the [feed
+   * label](//support.google.com/merchants/answer/12453549) support article.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,10 +122,11 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting exten
   }
 
   /**
-   * Feed label of products to include in the campaign. Only one of feed_label or sales_country can
-   * be set. If used instead of sales_country, the feed_label field accepts country codes in the
-   * same format for example: 'XX'. Otherwise can be any string used for feed label in Google
-   * Merchant Center.
+   * Feed label of products to include in the campaign. Valid feed labels may contain a maximum of
+   * 20 characters including uppercase letters, numbers, hyphens, and underscores. If you previously
+   * used the deprecated `sales_country` in the two-letter country code (`XX`) format, the
+   * `feed_label` field should be used instead. For more information see the [feed
+   * label](//support.google.com/merchants/answer/12453549) support article.
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedLabel() {
@@ -132,10 +134,11 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting exten
   }
 
   /**
-   * Feed label of products to include in the campaign. Only one of feed_label or sales_country can
-   * be set. If used instead of sales_country, the feed_label field accepts country codes in the
-   * same format for example: 'XX'. Otherwise can be any string used for feed label in Google
-   * Merchant Center.
+   * Feed label of products to include in the campaign. Valid feed labels may contain a maximum of
+   * 20 characters including uppercase letters, numbers, hyphens, and underscores. If you previously
+   * used the deprecated `sales_country` in the two-letter country code (`XX`) format, the
+   * `feed_label` field should be used instead. For more information see the [feed
+   * label](//support.google.com/merchants/answer/12453549) support article.
    * @param feedLabel feedLabel or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting setFeedLabel(java.lang.String feedLabel) {

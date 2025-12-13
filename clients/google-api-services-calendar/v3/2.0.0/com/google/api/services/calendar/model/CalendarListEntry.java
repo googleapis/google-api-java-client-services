@@ -45,6 +45,14 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
   private java.lang.String accessRole;
 
   /**
+   * Whether this calendar automatically accepts invitations. Only valid for resource calendars.
+   * Read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoAcceptInvitations;
+
+  /**
    * The main color of the calendar in the hexadecimal format "#0088aa". This property supersedes
    * the index-based colorId property. To set or change this property, you need to specify
    * colorRgbFormat=true in the parameters of the insert, update and patch methods. Optional.
@@ -217,6 +225,25 @@ public final class CalendarListEntry extends com.google.api.client.json.GenericJ
    */
   public CalendarListEntry setAccessRole(java.lang.String accessRole) {
     this.accessRole = accessRole;
+    return this;
+  }
+
+  /**
+   * Whether this calendar automatically accepts invitations. Only valid for resource calendars.
+   * Read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoAcceptInvitations() {
+    return autoAcceptInvitations;
+  }
+
+  /**
+   * Whether this calendar automatically accepts invitations. Only valid for resource calendars.
+   * Read-only.
+   * @param autoAcceptInvitations autoAcceptInvitations or {@code null} for none
+   */
+  public CalendarListEntry setAutoAcceptInvitations(java.lang.Boolean autoAcceptInvitations) {
+    this.autoAcceptInvitations = autoAcceptInvitations;
     return this;
   }
 

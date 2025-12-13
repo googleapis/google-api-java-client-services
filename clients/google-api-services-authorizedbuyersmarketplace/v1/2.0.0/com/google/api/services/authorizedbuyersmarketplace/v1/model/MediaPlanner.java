@@ -38,6 +38,32 @@ public final class MediaPlanner extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
+   * Output only. The ancestor names of the media planner. Format:
+   * `mediaPlanners/{mediaPlannerAccountId}` Can be used to filter the response of the
+   * mediaPlanners.list method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ancestorNames;
+
+  /**
+   * Output only. The display name of the media planner. Can be used to filter the response of the
+   * mediaPlanners.list method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * Identifier. The unique resource name of the media planner. Format:
+   * `mediaPlanners/{mediaPlannerAccountId}` Can be used to filter the response of the
+   * mediaPlanners.list method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Output only. Account ID of the media planner.
    * @return value or {@code null} for none
    */
@@ -51,6 +77,67 @@ public final class MediaPlanner extends com.google.api.client.json.GenericJson {
    */
   public MediaPlanner setAccountId(java.lang.String accountId) {
     this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * Output only. The ancestor names of the media planner. Format:
+   * `mediaPlanners/{mediaPlannerAccountId}` Can be used to filter the response of the
+   * mediaPlanners.list method.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAncestorNames() {
+    return ancestorNames;
+  }
+
+  /**
+   * Output only. The ancestor names of the media planner. Format:
+   * `mediaPlanners/{mediaPlannerAccountId}` Can be used to filter the response of the
+   * mediaPlanners.list method.
+   * @param ancestorNames ancestorNames or {@code null} for none
+   */
+  public MediaPlanner setAncestorNames(java.util.List<java.lang.String> ancestorNames) {
+    this.ancestorNames = ancestorNames;
+    return this;
+  }
+
+  /**
+   * Output only. The display name of the media planner. Can be used to filter the response of the
+   * mediaPlanners.list method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. The display name of the media planner. Can be used to filter the response of the
+   * mediaPlanners.list method.
+   * @param displayName displayName or {@code null} for none
+   */
+  public MediaPlanner setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Identifier. The unique resource name of the media planner. Format:
+   * `mediaPlanners/{mediaPlannerAccountId}` Can be used to filter the response of the
+   * mediaPlanners.list method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Identifier. The unique resource name of the media planner. Format:
+   * `mediaPlanners/{mediaPlannerAccountId}` Can be used to filter the response of the
+   * mediaPlanners.list method.
+   * @param name name or {@code null} for none
+   */
+  public MediaPlanner setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

@@ -390,6 +390,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private MaintenancePolicy maintenancePolicy;
 
   /**
+   * Configuration for Managed OpenTelemetry pipeline.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedOpenTelemetryConfig managedOpentelemetryConfig;
+
+  /**
    * Configuration for master components.
    * The value may be {@code null}.
    */
@@ -1615,6 +1622,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setMaintenancePolicy(MaintenancePolicy maintenancePolicy) {
     this.maintenancePolicy = maintenancePolicy;
+    return this;
+  }
+
+  /**
+   * Configuration for Managed OpenTelemetry pipeline.
+   * @return value or {@code null} for none
+   */
+  public ManagedOpenTelemetryConfig getManagedOpentelemetryConfig() {
+    return managedOpentelemetryConfig;
+  }
+
+  /**
+   * Configuration for Managed OpenTelemetry pipeline.
+   * @param managedOpentelemetryConfig managedOpentelemetryConfig or {@code null} for none
+   */
+  public Cluster setManagedOpentelemetryConfig(ManagedOpenTelemetryConfig managedOpentelemetryConfig) {
+    this.managedOpentelemetryConfig = managedOpentelemetryConfig;
     return this;
   }
 

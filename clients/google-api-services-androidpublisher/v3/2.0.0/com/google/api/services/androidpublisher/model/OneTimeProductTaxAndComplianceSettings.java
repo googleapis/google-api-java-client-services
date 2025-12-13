@@ -38,6 +38,16 @@ public final class OneTimeProductTaxAndComplianceSettings extends com.google.api
   private java.lang.Boolean isTokenizedDigitalAsset;
 
   /**
+   * Product tax category code to assign to the one-time product. Product tax category determines
+   * the transaction tax rates applied to the product. Refer to the [Help Center
+   * article](https://support.google.com/googleplay/android-developer/answer/16408159) for more
+   * information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTaxCategoryCode;
+
+  /**
    * Regional tax configuration.
    * The value may be {@code null}.
    */
@@ -58,6 +68,29 @@ public final class OneTimeProductTaxAndComplianceSettings extends com.google.api
    */
   public OneTimeProductTaxAndComplianceSettings setIsTokenizedDigitalAsset(java.lang.Boolean isTokenizedDigitalAsset) {
     this.isTokenizedDigitalAsset = isTokenizedDigitalAsset;
+    return this;
+  }
+
+  /**
+   * Product tax category code to assign to the one-time product. Product tax category determines
+   * the transaction tax rates applied to the product. Refer to the [Help Center
+   * article](https://support.google.com/googleplay/android-developer/answer/16408159) for more
+   * information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTaxCategoryCode() {
+    return productTaxCategoryCode;
+  }
+
+  /**
+   * Product tax category code to assign to the one-time product. Product tax category determines
+   * the transaction tax rates applied to the product. Refer to the [Help Center
+   * article](https://support.google.com/googleplay/android-developer/answer/16408159) for more
+   * information.
+   * @param productTaxCategoryCode productTaxCategoryCode or {@code null} for none
+   */
+  public OneTimeProductTaxAndComplianceSettings setProductTaxCategoryCode(java.lang.String productTaxCategoryCode) {
+    this.productTaxCategoryCode = productTaxCategoryCode;
     return this;
   }
 

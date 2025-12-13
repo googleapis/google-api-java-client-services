@@ -93,6 +93,13 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * Optional. The GCP projects to track with the InsightsConfig.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Projects projects;
+
+  /**
    * Output only. Reconciling (https://google.aip.dev/128#reconciliation). Set to true if the
    * current state of InsightsConfig does not match the user's intended state, and the service is
    * actively updating the resource to reconcile them. This can happen due to user-triggered updates
@@ -249,6 +256,23 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
    */
   public InsightsConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The GCP projects to track with the InsightsConfig.
+   * @return value or {@code null} for none
+   */
+  public Projects getProjects() {
+    return projects;
+  }
+
+  /**
+   * Optional. The GCP projects to track with the InsightsConfig.
+   * @param projects projects or {@code null} for none
+   */
+  public InsightsConfig setProjects(Projects projects) {
+    this.projects = projects;
     return this;
   }
 

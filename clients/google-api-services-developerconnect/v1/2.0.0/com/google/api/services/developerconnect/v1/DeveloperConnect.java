@@ -2244,6 +2244,245 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             }
           }
           /**
+           * Finishes OAuth flow for an account connector.
+           *
+           * Create a request for the method "users.finishOAuthFlow".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link FinishOAuthFlow#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param accountConnector Required. The resource name of the AccountConnector in the format
+           *        `projects/locations/accountConnectors`.
+           * @return the request
+           */
+          public FinishOAuthFlow finishOAuthFlow(java.lang.String accountConnector) throws java.io.IOException {
+            FinishOAuthFlow result = new FinishOAuthFlow(accountConnector);
+            initialize(result);
+            return result;
+          }
+
+          public class FinishOAuthFlow extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.FinishOAuthResponse> {
+
+            private static final String REST_PATH = "v1/{+accountConnector}/users:finishOAuthFlow";
+
+            private final java.util.regex.Pattern ACCOUNT_CONNECTOR_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+            /**
+             * Finishes OAuth flow for an account connector.
+             *
+             * Create a request for the method "users.finishOAuthFlow".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link FinishOAuthFlow#execute()} method to invoke the remote
+             * operation. <p> {@link FinishOAuthFlow#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param accountConnector Required. The resource name of the AccountConnector in the format
+           *        `projects/locations/accountConnectors`.
+             * @since 1.13
+             */
+            protected FinishOAuthFlow(java.lang.String accountConnector) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.FinishOAuthResponse.class);
+              this.accountConnector = com.google.api.client.util.Preconditions.checkNotNull(accountConnector, "Required parameter accountConnector must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_CONNECTOR_PATTERN.matcher(accountConnector).matches(),
+                    "Parameter accountConnector must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FinishOAuthFlow set$Xgafv(java.lang.String $Xgafv) {
+              return (FinishOAuthFlow) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FinishOAuthFlow setAccessToken(java.lang.String accessToken) {
+              return (FinishOAuthFlow) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FinishOAuthFlow setAlt(java.lang.String alt) {
+              return (FinishOAuthFlow) super.setAlt(alt);
+            }
+
+            @Override
+            public FinishOAuthFlow setCallback(java.lang.String callback) {
+              return (FinishOAuthFlow) super.setCallback(callback);
+            }
+
+            @Override
+            public FinishOAuthFlow setFields(java.lang.String fields) {
+              return (FinishOAuthFlow) super.setFields(fields);
+            }
+
+            @Override
+            public FinishOAuthFlow setKey(java.lang.String key) {
+              return (FinishOAuthFlow) super.setKey(key);
+            }
+
+            @Override
+            public FinishOAuthFlow setOauthToken(java.lang.String oauthToken) {
+              return (FinishOAuthFlow) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FinishOAuthFlow setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FinishOAuthFlow) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FinishOAuthFlow setQuotaUser(java.lang.String quotaUser) {
+              return (FinishOAuthFlow) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FinishOAuthFlow setUploadType(java.lang.String uploadType) {
+              return (FinishOAuthFlow) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FinishOAuthFlow setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FinishOAuthFlow) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the AccountConnector in the format
+             * `projects/locations/accountConnectors`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String accountConnector;
+
+            /** Required. The resource name of the AccountConnector in the format
+           `projects/locations/accountConnectors`.
+             */
+            public java.lang.String getAccountConnector() {
+              return accountConnector;
+            }
+
+            /**
+             * Required. The resource name of the AccountConnector in the format
+             * `projects/locations/accountConnectors`.
+             */
+            public FinishOAuthFlow setAccountConnector(java.lang.String accountConnector) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_CONNECTOR_PATTERN.matcher(accountConnector).matches(),
+                    "Parameter accountConnector must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+              this.accountConnector = accountConnector;
+              return this;
+            }
+
+            /** Required. The scopes returned by Google OAuth flow. */
+            @com.google.api.client.util.Key("googleOauthParams.scopes")
+            private java.util.List<java.lang.String> googleOauthParamsScopes;
+
+            /** Required. The scopes returned by Google OAuth flow.
+             */
+            public java.util.List<java.lang.String> getGoogleOauthParamsScopes() {
+              return googleOauthParamsScopes;
+            }
+
+            /** Required. The scopes returned by Google OAuth flow. */
+            public FinishOAuthFlow setGoogleOauthParamsScopes(java.util.List<java.lang.String> googleOauthParamsScopes) {
+              this.googleOauthParamsScopes = googleOauthParamsScopes;
+              return this;
+            }
+
+            /**
+             * Required. The ticket to be used for post processing the callback from Google OAuth
+             * flow.
+             */
+            @com.google.api.client.util.Key("googleOauthParams.ticket")
+            private java.lang.String googleOauthParamsTicket;
+
+            /** Required. The ticket to be used for post processing the callback from Google OAuth flow.
+             */
+            public java.lang.String getGoogleOauthParamsTicket() {
+              return googleOauthParamsTicket;
+            }
+
+            /**
+             * Required. The ticket to be used for post processing the callback from Google OAuth
+             * flow.
+             */
+            public FinishOAuthFlow setGoogleOauthParamsTicket(java.lang.String googleOauthParamsTicket) {
+              this.googleOauthParamsTicket = googleOauthParamsTicket;
+              return this;
+            }
+
+            /** Optional. The version info returned by Google OAuth flow. */
+            @com.google.api.client.util.Key("googleOauthParams.versionInfo")
+            private java.lang.String googleOauthParamsVersionInfo;
+
+            /** Optional. The version info returned by Google OAuth flow.
+             */
+            public java.lang.String getGoogleOauthParamsVersionInfo() {
+              return googleOauthParamsVersionInfo;
+            }
+
+            /** Optional. The version info returned by Google OAuth flow. */
+            public FinishOAuthFlow setGoogleOauthParamsVersionInfo(java.lang.String googleOauthParamsVersionInfo) {
+              this.googleOauthParamsVersionInfo = googleOauthParamsVersionInfo;
+              return this;
+            }
+
+            /** Required. The code to be used for getting the token from SCM provider. */
+            @com.google.api.client.util.Key("oauthParams.code")
+            private java.lang.String oauthParamsCode;
+
+            /** Required. The code to be used for getting the token from SCM provider.
+             */
+            public java.lang.String getOauthParamsCode() {
+              return oauthParamsCode;
+            }
+
+            /** Required. The code to be used for getting the token from SCM provider. */
+            public FinishOAuthFlow setOauthParamsCode(java.lang.String oauthParamsCode) {
+              this.oauthParamsCode = oauthParamsCode;
+              return this;
+            }
+
+            /**
+             * Required. The ticket to be used for post processing the callback from SCM provider.
+             */
+            @com.google.api.client.util.Key("oauthParams.ticket")
+            private java.lang.String oauthParamsTicket;
+
+            /** Required. The ticket to be used for post processing the callback from SCM provider.
+             */
+            public java.lang.String getOauthParamsTicket() {
+              return oauthParamsTicket;
+            }
+
+            /**
+             * Required. The ticket to be used for post processing the callback from SCM provider.
+             */
+            public FinishOAuthFlow setOauthParamsTicket(java.lang.String oauthParamsTicket) {
+              this.oauthParamsTicket = oauthParamsTicket;
+              return this;
+            }
+
+            @Override
+            public FinishOAuthFlow set(String parameterName, Object value) {
+              return (FinishOAuthFlow) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists Users in a given project, location, and account_connector.
            *
            * Create a request for the method "users.list".
@@ -2450,6 +2689,155 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Starts OAuth flow for an account connector.
+           *
+           * Create a request for the method "users.startOAuthFlow".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link StartOAuthFlow#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param accountConnector Required. The resource name of the AccountConnector in the format
+           *        `projects/locations/accountConnectors`.
+           * @return the request
+           */
+          public StartOAuthFlow startOAuthFlow(java.lang.String accountConnector) throws java.io.IOException {
+            StartOAuthFlow result = new StartOAuthFlow(accountConnector);
+            initialize(result);
+            return result;
+          }
+
+          public class StartOAuthFlow extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.StartOAuthResponse> {
+
+            private static final String REST_PATH = "v1/{+accountConnector}/users:startOAuthFlow";
+
+            private final java.util.regex.Pattern ACCOUNT_CONNECTOR_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+            /**
+             * Starts OAuth flow for an account connector.
+             *
+             * Create a request for the method "users.startOAuthFlow".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link StartOAuthFlow#execute()} method to invoke the remote
+             * operation. <p> {@link StartOAuthFlow#initialize(com.google.api.client.googleapis.services.Abstr
+             * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param accountConnector Required. The resource name of the AccountConnector in the format
+           *        `projects/locations/accountConnectors`.
+             * @since 1.13
+             */
+            protected StartOAuthFlow(java.lang.String accountConnector) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.StartOAuthResponse.class);
+              this.accountConnector = com.google.api.client.util.Preconditions.checkNotNull(accountConnector, "Required parameter accountConnector must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_CONNECTOR_PATTERN.matcher(accountConnector).matches(),
+                    "Parameter accountConnector must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public StartOAuthFlow set$Xgafv(java.lang.String $Xgafv) {
+              return (StartOAuthFlow) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public StartOAuthFlow setAccessToken(java.lang.String accessToken) {
+              return (StartOAuthFlow) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public StartOAuthFlow setAlt(java.lang.String alt) {
+              return (StartOAuthFlow) super.setAlt(alt);
+            }
+
+            @Override
+            public StartOAuthFlow setCallback(java.lang.String callback) {
+              return (StartOAuthFlow) super.setCallback(callback);
+            }
+
+            @Override
+            public StartOAuthFlow setFields(java.lang.String fields) {
+              return (StartOAuthFlow) super.setFields(fields);
+            }
+
+            @Override
+            public StartOAuthFlow setKey(java.lang.String key) {
+              return (StartOAuthFlow) super.setKey(key);
+            }
+
+            @Override
+            public StartOAuthFlow setOauthToken(java.lang.String oauthToken) {
+              return (StartOAuthFlow) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public StartOAuthFlow setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (StartOAuthFlow) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public StartOAuthFlow setQuotaUser(java.lang.String quotaUser) {
+              return (StartOAuthFlow) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public StartOAuthFlow setUploadType(java.lang.String uploadType) {
+              return (StartOAuthFlow) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public StartOAuthFlow setUploadProtocol(java.lang.String uploadProtocol) {
+              return (StartOAuthFlow) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the AccountConnector in the format
+             * `projects/locations/accountConnectors`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String accountConnector;
+
+            /** Required. The resource name of the AccountConnector in the format
+           `projects/locations/accountConnectors`.
+             */
+            public java.lang.String getAccountConnector() {
+              return accountConnector;
+            }
+
+            /**
+             * Required. The resource name of the AccountConnector in the format
+             * `projects/locations/accountConnectors`.
+             */
+            public StartOAuthFlow setAccountConnector(java.lang.String accountConnector) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_CONNECTOR_PATTERN.matcher(accountConnector).matches(),
+                    "Parameter accountConnector must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+              this.accountConnector = accountConnector;
+              return this;
+            }
+
+            @Override
+            public StartOAuthFlow set(String parameterName, Object value) {
+              return (StartOAuthFlow) super.set(parameterName, value);
             }
           }
 
@@ -6808,6 +7196,399 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
           }
         }
 
+        /**
+         * An accessor for creating requests from the DeploymentEvents collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DeveloperConnect developerconnect = new DeveloperConnect(...);}
+         *   {@code DeveloperConnect.DeploymentEvents.List request = developerconnect.deploymentEvents().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public DeploymentEvents deploymentEvents() {
+          return new DeploymentEvents();
+        }
+
+        /**
+         * The "deploymentEvents" collection of methods.
+         */
+        public class DeploymentEvents {
+
+          /**
+           * Gets a single Deployment Event.
+           *
+           * Create a request for the method "deploymentEvents.get".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the deployment event to retrieve. Format:
+           *        projects/{project}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents
+           *        /{uuid}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.DeploymentEvent> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+/deploymentEvents/[^/]+$");
+
+            /**
+             * Gets a single Deployment Event.
+             *
+             * Create a request for the method "deploymentEvents.get".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the deployment event to retrieve. Format:
+           *        projects/{project}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents
+           *        /{uuid}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.DeploymentEvent.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+/deploymentEvents/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the deployment event to retrieve. Format: projects/{project}/lo
+             * cations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the deployment event to retrieve. Format:
+           projects/{project}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the deployment event to retrieve. Format: projects/{project}/lo
+             * cations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+/deploymentEvents/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists Deployment Events in a given insights config.
+           *
+           * Create a request for the method "deploymentEvents.list".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent insights config that owns this collection of deployment events. Format:
+           *        projects/{project}/locations/{location}/insightsConfigs/{insights_config}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.ListDeploymentEventsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/deploymentEvents";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+
+            /**
+             * Lists Deployment Events in a given insights config.
+             *
+             * Create a request for the method "deploymentEvents.list".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent insights config that owns this collection of deployment events. Format:
+           *        projects/{project}/locations/{location}/insightsConfigs/{insights_config}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.ListDeploymentEventsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent insights config that owns this collection of deployment events.
+             * Format: projects/{project}/locations/{location}/insightsConfigs/{insights_config}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent insights config that owns this collection of deployment events. Format:
+           projects/{project}/locations/{location}/insightsConfigs/{insights_config}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent insights config that owns this collection of deployment events.
+             * Format: projects/{project}/locations/{location}/insightsConfigs/{insights_config}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter expression that matches a subset of the DeploymentEvents.
+             * https://google.aip.dev/160.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter expression that matches a subset of the DeploymentEvents.
+           https://google.aip.dev/160.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter expression that matches a subset of the DeploymentEvents.
+             * https://google.aip.dev/160.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of deployment events to return. The service may return
+             * fewer than this value. If unspecified, at most 50 deployment events will be returned.
+             * The maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of deployment events to return. The service may return fewer than this
+           value. If unspecified, at most 50 deployment events will be returned. The maximum value is 1000;
+           values above 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of deployment events to return. The service may return
+             * fewer than this value. If unspecified, at most 50 deployment events will be returned.
+             * The maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListDeploymentEvents` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListDeploymentEvents` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListDeploymentEvents` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListDeploymentEvents` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListDeploymentEvents` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListDeploymentEvents` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Operations collection.

@@ -4427,7 +4427,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Returns a list of host groups in a location. Use '-' as location to list host groups across all
+         * Returns a list of host groups in a `location`. Use `-` as location to list host groups across all
          * locations.
          *
          * Create a request for the method "hostGroups.list".
@@ -4452,8 +4452,8 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Returns a list of host groups in a location. Use '-' as location to list host groups across all
-           * locations.
+           * Returns a list of host groups in a `location`. Use `-` as location to list host groups across
+           * all locations.
            *
            * Create a request for the method "hostGroups.list".
            *

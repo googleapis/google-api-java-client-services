@@ -30,12 +30,67 @@ package com.google.api.services.netapp.v1beta1.model;
 public final class CacheConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Pre-populate cache volume with data from the origin volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CachePrePopulate cachePrePopulate;
+
+  /**
+   * Output only. State of the prepopulation job indicating how the prepopulation is progressing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cachePrePopulateState;
+
+  /**
    * Optional. Flag indicating whether a CIFS change notification is enabled for the FlexCache
    * volume.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean cifsChangeNotifyEnabled;
+
+  /**
+   * Optional. Flag indicating whether writeback is enabled for the FlexCache volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean writebackEnabled;
+
+  /**
+   * Optional. Pre-populate cache volume with data from the origin volume.
+   * @return value or {@code null} for none
+   */
+  public CachePrePopulate getCachePrePopulate() {
+    return cachePrePopulate;
+  }
+
+  /**
+   * Optional. Pre-populate cache volume with data from the origin volume.
+   * @param cachePrePopulate cachePrePopulate or {@code null} for none
+   */
+  public CacheConfig setCachePrePopulate(CachePrePopulate cachePrePopulate) {
+    this.cachePrePopulate = cachePrePopulate;
+    return this;
+  }
+
+  /**
+   * Output only. State of the prepopulation job indicating how the prepopulation is progressing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCachePrePopulateState() {
+    return cachePrePopulateState;
+  }
+
+  /**
+   * Output only. State of the prepopulation job indicating how the prepopulation is progressing.
+   * @param cachePrePopulateState cachePrePopulateState or {@code null} for none
+   */
+  public CacheConfig setCachePrePopulateState(java.lang.String cachePrePopulateState) {
+    this.cachePrePopulateState = cachePrePopulateState;
+    return this;
+  }
 
   /**
    * Optional. Flag indicating whether a CIFS change notification is enabled for the FlexCache
@@ -53,6 +108,23 @@ public final class CacheConfig extends com.google.api.client.json.GenericJson {
    */
   public CacheConfig setCifsChangeNotifyEnabled(java.lang.Boolean cifsChangeNotifyEnabled) {
     this.cifsChangeNotifyEnabled = cifsChangeNotifyEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Flag indicating whether writeback is enabled for the FlexCache volume.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWritebackEnabled() {
+    return writebackEnabled;
+  }
+
+  /**
+   * Optional. Flag indicating whether writeback is enabled for the FlexCache volume.
+   * @param writebackEnabled writebackEnabled or {@code null} for none
+   */
+  public CacheConfig setWritebackEnabled(java.lang.Boolean writebackEnabled) {
+    this.writebackEnabled = writebackEnabled;
     return this;
   }
 

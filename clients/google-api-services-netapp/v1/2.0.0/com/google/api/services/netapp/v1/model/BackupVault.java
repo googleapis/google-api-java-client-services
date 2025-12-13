@@ -52,6 +52,15 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private java.lang.String backupVaultType;
 
   /**
+   * Output only. The crypto key version used to encrypt the backup vault. Format: projects/{project
+   * }/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_ke
+   * y_version}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupsCryptoKeyVersion;
+
+  /**
    * Output only. Create time of the backup vault.
    * The value may be {@code null}.
    */
@@ -72,6 +81,21 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationBackupVault;
+
+  /**
+   * Output only. Field indicating encryption state of CMEK backups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encryptionState;
+
+  /**
+   * Optional. Specifies the KMS config to be used for backup encryption. Format:
+   * projects/{project}/locations/{location}/kmsConfigs/{kms_config}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsConfig;
 
   /**
    * Resource labels to represent user provided metadata.
@@ -165,6 +189,27 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The crypto key version used to encrypt the backup vault. Format: projects/{project
+   * }/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_ke
+   * y_version}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupsCryptoKeyVersion() {
+    return backupsCryptoKeyVersion;
+  }
+
+  /**
+   * Output only. The crypto key version used to encrypt the backup vault. Format: projects/{project
+   * }/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_ke
+   * y_version}
+   * @param backupsCryptoKeyVersion backupsCryptoKeyVersion or {@code null} for none
+   */
+  public BackupVault setBackupsCryptoKeyVersion(java.lang.String backupsCryptoKeyVersion) {
+    this.backupsCryptoKeyVersion = backupsCryptoKeyVersion;
+    return this;
+  }
+
+  /**
    * Output only. Create time of the backup vault.
    * @return value or {@code null} for none
    */
@@ -214,6 +259,42 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
    */
   public BackupVault setDestinationBackupVault(java.lang.String destinationBackupVault) {
     this.destinationBackupVault = destinationBackupVault;
+    return this;
+  }
+
+  /**
+   * Output only. Field indicating encryption state of CMEK backups.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncryptionState() {
+    return encryptionState;
+  }
+
+  /**
+   * Output only. Field indicating encryption state of CMEK backups.
+   * @param encryptionState encryptionState or {@code null} for none
+   */
+  public BackupVault setEncryptionState(java.lang.String encryptionState) {
+    this.encryptionState = encryptionState;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the KMS config to be used for backup encryption. Format:
+   * projects/{project}/locations/{location}/kmsConfigs/{kms_config}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsConfig() {
+    return kmsConfig;
+  }
+
+  /**
+   * Optional. Specifies the KMS config to be used for backup encryption. Format:
+   * projects/{project}/locations/{location}/kmsConfigs/{kms_config}
+   * @param kmsConfig kmsConfig or {@code null} for none
+   */
+  public BackupVault setKmsConfig(java.lang.String kmsConfig) {
+    this.kmsConfig = kmsConfig;
     return this;
   }
 

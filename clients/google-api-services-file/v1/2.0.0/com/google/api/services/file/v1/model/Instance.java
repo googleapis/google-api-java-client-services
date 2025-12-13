@@ -30,7 +30,7 @@ package com.google.api.services.file.v1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The increase/decrease capacity step size in GB.
+   * Output only. The incremental increase or decrease in capacity, designated in some number of GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -116,14 +116,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The max capacity of the instance in GB.
+   * Output only. The maximum capacity of the instance in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxCapacityGb;
 
   /**
-   * Output only. The min capacity of the instance in GB.
+   * Output only. The minimum capacity of the instance in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -230,7 +230,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String tier;
 
   /**
-   * Output only. The increase/decrease capacity step size in GB.
+   * Output only. The incremental increase or decrease in capacity, designated in some number of GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCapacityStepSizeGb() {
@@ -238,7 +238,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The increase/decrease capacity step size in GB.
+   * Output only. The incremental increase or decrease in capacity, designated in some number of GB.
    * @param capacityStepSizeGb capacityStepSizeGb or {@code null} for none
    */
   public Instance setCapacityStepSizeGb(java.lang.Long capacityStepSizeGb) {
@@ -423,7 +423,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The max capacity of the instance in GB.
+   * Output only. The maximum capacity of the instance in GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxCapacityGb() {
@@ -431,7 +431,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The max capacity of the instance in GB.
+   * Output only. The maximum capacity of the instance in GB.
    * @param maxCapacityGb maxCapacityGb or {@code null} for none
    */
   public Instance setMaxCapacityGb(java.lang.Long maxCapacityGb) {
@@ -440,7 +440,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The min capacity of the instance in GB.
+   * Output only. The minimum capacity of the instance in GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinCapacityGb() {
@@ -448,7 +448,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The min capacity of the instance in GB.
+   * Output only. The minimum capacity of the instance in GB.
    * @param minCapacityGb minCapacityGb or {@code null} for none
    */
   public Instance setMinCapacityGb(java.lang.Long minCapacityGb) {

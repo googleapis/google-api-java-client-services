@@ -30,42 +30,42 @@ package com.google.api.services.file.v1.model;
 public final class PerformanceLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The max IOPS.
+   * Output only. The maximum IOPS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxIops;
 
   /**
-   * Output only. The max read IOPS.
+   * Output only. The maximum read IOPS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxReadIops;
 
   /**
-   * Output only. The max read throughput in bytes per second.
+   * Output only. The maximum read throughput in bytes per second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxReadThroughputBps;
 
   /**
-   * Output only. The max write IOPS.
+   * Output only. The maximum write IOPS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxWriteIops;
 
   /**
-   * Output only. The max write throughput in bytes per second.
+   * Output only. The maximum write throughput in bytes per second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxWriteThroughputBps;
 
   /**
-   * Output only. The max IOPS.
+   * Output only. The maximum IOPS.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxIops() {
@@ -73,7 +73,7 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The max IOPS.
+   * Output only. The maximum IOPS.
    * @param maxIops maxIops or {@code null} for none
    */
   public PerformanceLimits setMaxIops(java.lang.Long maxIops) {
@@ -82,7 +82,7 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The max read IOPS.
+   * Output only. The maximum read IOPS.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxReadIops() {
@@ -90,7 +90,7 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The max read IOPS.
+   * Output only. The maximum read IOPS.
    * @param maxReadIops maxReadIops or {@code null} for none
    */
   public PerformanceLimits setMaxReadIops(java.lang.Long maxReadIops) {
@@ -99,7 +99,7 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The max read throughput in bytes per second.
+   * Output only. The maximum read throughput in bytes per second.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxReadThroughputBps() {
@@ -107,7 +107,7 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The max read throughput in bytes per second.
+   * Output only. The maximum read throughput in bytes per second.
    * @param maxReadThroughputBps maxReadThroughputBps or {@code null} for none
    */
   public PerformanceLimits setMaxReadThroughputBps(java.lang.Long maxReadThroughputBps) {
@@ -116,7 +116,7 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The max write IOPS.
+   * Output only. The maximum write IOPS.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxWriteIops() {
@@ -124,7 +124,7 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The max write IOPS.
+   * Output only. The maximum write IOPS.
    * @param maxWriteIops maxWriteIops or {@code null} for none
    */
   public PerformanceLimits setMaxWriteIops(java.lang.Long maxWriteIops) {
@@ -133,7 +133,7 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The max write throughput in bytes per second.
+   * Output only. The maximum write throughput in bytes per second.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxWriteThroughputBps() {
@@ -141,7 +141,7 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The max write throughput in bytes per second.
+   * Output only. The maximum write throughput in bytes per second.
    * @param maxWriteThroughputBps maxWriteThroughputBps or {@code null} for none
    */
   public PerformanceLimits setMaxWriteThroughputBps(java.lang.Long maxWriteThroughputBps) {

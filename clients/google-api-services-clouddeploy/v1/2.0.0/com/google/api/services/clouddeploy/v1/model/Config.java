@@ -38,6 +38,14 @@ public final class Config extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultSkaffoldVersion;
 
   /**
+   * Output only. Default tool versions. These tool versions are assigned when a Release is created
+   * without specifying tool versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolVersions defaultToolVersions;
+
+  /**
    * Name of the configuration.
    * The value may be {@code null}.
    */
@@ -67,6 +75,25 @@ public final class Config extends com.google.api.client.json.GenericJson {
    */
   public Config setDefaultSkaffoldVersion(java.lang.String defaultSkaffoldVersion) {
     this.defaultSkaffoldVersion = defaultSkaffoldVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Default tool versions. These tool versions are assigned when a Release is created
+   * without specifying tool versions.
+   * @return value or {@code null} for none
+   */
+  public ToolVersions getDefaultToolVersions() {
+    return defaultToolVersions;
+  }
+
+  /**
+   * Output only. Default tool versions. These tool versions are assigned when a Release is created
+   * without specifying tool versions.
+   * @param defaultToolVersions defaultToolVersions or {@code null} for none
+   */
+  public Config setDefaultToolVersions(ToolVersions defaultToolVersions) {
+    this.defaultToolVersions = defaultToolVersions;
     return this;
   }
 

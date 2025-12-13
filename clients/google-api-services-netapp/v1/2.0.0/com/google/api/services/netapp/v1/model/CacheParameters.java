@@ -51,7 +51,7 @@ public final class CacheParameters extends com.google.api.client.json.GenericJso
   private java.lang.String command;
 
   /**
-   * Optional. Field indicating whether cache volume as global file lock enabled.
+   * Optional. Indicates whether the cache volume has global file lock enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +158,7 @@ public final class CacheParameters extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Field indicating whether cache volume as global file lock enabled.
+   * Optional. Indicates whether the cache volume has global file lock enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableGlobalFileLock() {
@@ -166,7 +166,7 @@ public final class CacheParameters extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Field indicating whether cache volume as global file lock enabled.
+   * Optional. Indicates whether the cache volume has global file lock enabled.
    * @param enableGlobalFileLock enableGlobalFileLock or {@code null} for none
    */
   public CacheParameters setEnableGlobalFileLock(java.lang.Boolean enableGlobalFileLock) {

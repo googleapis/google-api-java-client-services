@@ -38,14 +38,15 @@ public final class RestoreBackupFilesRequest extends com.google.api.client.json.
   private java.lang.String backup;
 
   /**
-   * Required. List of files to be restored in the form of their absolute path as in source volume.
+   * Required. List of files to be restored, specified by their absolute path in the source volume.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> fileList;
 
   /**
-   * Optional. Absolute directory path in the destination volume.
+   * Optional. Absolute directory path in the destination volume. This is required if the
+   * `file_list` is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +72,7 @@ public final class RestoreBackupFilesRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. List of files to be restored in the form of their absolute path as in source volume.
+   * Required. List of files to be restored, specified by their absolute path in the source volume.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileList() {
@@ -79,7 +80,7 @@ public final class RestoreBackupFilesRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. List of files to be restored in the form of their absolute path as in source volume.
+   * Required. List of files to be restored, specified by their absolute path in the source volume.
    * @param fileList fileList or {@code null} for none
    */
   public RestoreBackupFilesRequest setFileList(java.util.List<java.lang.String> fileList) {
@@ -88,7 +89,8 @@ public final class RestoreBackupFilesRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Absolute directory path in the destination volume.
+   * Optional. Absolute directory path in the destination volume. This is required if the
+   * `file_list` is provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getRestoreDestinationPath() {
@@ -96,7 +98,8 @@ public final class RestoreBackupFilesRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Absolute directory path in the destination volume.
+   * Optional. Absolute directory path in the destination volume. This is required if the
+   * `file_list` is provided.
    * @param restoreDestinationPath restoreDestinationPath or {@code null} for none
    */
   public RestoreBackupFilesRequest setRestoreDestinationPath(java.lang.String restoreDestinationPath) {

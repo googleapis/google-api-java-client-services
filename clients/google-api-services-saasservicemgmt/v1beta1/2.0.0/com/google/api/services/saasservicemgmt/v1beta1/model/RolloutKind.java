@@ -74,6 +74,15 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Value among strict (enforcing maintenance policy and only looking at Units with
+   * maintenance policy), ignore (ignoring maintenance policy) and skip (skipping Units with
+   * maintenance policy)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenancePolicyEnforcement;
+
+  /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
    * "projects/{project}/locations/{location}/rolloutKinds/{rollout_kind_id}"
    * The value may be {@code null}.
@@ -234,6 +243,27 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    */
   public RolloutKind setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Value among strict (enforcing maintenance policy and only looking at Units with
+   * maintenance policy), ignore (ignoring maintenance policy) and skip (skipping Units with
+   * maintenance policy)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenancePolicyEnforcement() {
+    return maintenancePolicyEnforcement;
+  }
+
+  /**
+   * Optional. Value among strict (enforcing maintenance policy and only looking at Units with
+   * maintenance policy), ignore (ignoring maintenance policy) and skip (skipping Units with
+   * maintenance policy)
+   * @param maintenancePolicyEnforcement maintenancePolicyEnforcement or {@code null} for none
+   */
+  public RolloutKind setMaintenancePolicyEnforcement(java.lang.String maintenancePolicyEnforcement) {
+    this.maintenancePolicyEnforcement = maintenancePolicyEnforcement;
     return this;
   }
 

@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1SchemaVersion extends com.google.api.c
   private String createTime;
 
   /**
-   * Optional. The user-defined name of the SchemaVersion.
+   * Required. The user-defined name of the SchemaVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GoogleCloudDocumentaiV1SchemaVersion extends com.google.api.c
   }
 
   /**
-   * Optional. The user-defined name of the SchemaVersion.
+   * Required. The user-defined name of the SchemaVersion.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -92,7 +92,7 @@ public final class GoogleCloudDocumentaiV1SchemaVersion extends com.google.api.c
   }
 
   /**
-   * Optional. The user-defined name of the SchemaVersion.
+   * Required. The user-defined name of the SchemaVersion.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDocumentaiV1SchemaVersion setDisplayName(java.lang.String displayName) {

@@ -31,6 +31,20 @@ package com.google.api.services.dataproc.model;
 public final class GceClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. An optional list of Compute Engine zones where the Dataproc cluster will not be
+   * located when Auto Zone is enabled. Only one of zone_uri or auto_zone_exclude_zone_uris can be
+   * set. If both are omitted, the service will pick a zone in the cluster Compute Engine region. If
+   * auto_zone_exclude_zone_uris is set and there is more than one non-excluded zone, the service
+   * will pick one of the non-excluded zones. Otherwise, cluster creation will fail with
+   * INVALID_ARGUMENT error.A full URL, partial URI, or short name are valid. Examples:
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
+   * projects/[project_id]/zones/[zone] [zone]
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> autoZoneExcludeZoneUris;
+
+  /**
    * Optional. Confidential Instance Config for clusters using Confidential VMs
    * (https://cloud.google.com/compute/confidential-vm/docs).
    * The value may be {@code null}.
@@ -168,6 +182,37 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String zoneUri;
+
+  /**
+   * Optional. An optional list of Compute Engine zones where the Dataproc cluster will not be
+   * located when Auto Zone is enabled. Only one of zone_uri or auto_zone_exclude_zone_uris can be
+   * set. If both are omitted, the service will pick a zone in the cluster Compute Engine region. If
+   * auto_zone_exclude_zone_uris is set and there is more than one non-excluded zone, the service
+   * will pick one of the non-excluded zones. Otherwise, cluster creation will fail with
+   * INVALID_ARGUMENT error.A full URL, partial URI, or short name are valid. Examples:
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
+   * projects/[project_id]/zones/[zone] [zone]
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAutoZoneExcludeZoneUris() {
+    return autoZoneExcludeZoneUris;
+  }
+
+  /**
+   * Optional. An optional list of Compute Engine zones where the Dataproc cluster will not be
+   * located when Auto Zone is enabled. Only one of zone_uri or auto_zone_exclude_zone_uris can be
+   * set. If both are omitted, the service will pick a zone in the cluster Compute Engine region. If
+   * auto_zone_exclude_zone_uris is set and there is more than one non-excluded zone, the service
+   * will pick one of the non-excluded zones. Otherwise, cluster creation will fail with
+   * INVALID_ARGUMENT error.A full URL, partial URI, or short name are valid. Examples:
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
+   * projects/[project_id]/zones/[zone] [zone]
+   * @param autoZoneExcludeZoneUris autoZoneExcludeZoneUris or {@code null} for none
+   */
+  public GceClusterConfig setAutoZoneExcludeZoneUris(java.util.List<java.lang.String> autoZoneExcludeZoneUris) {
+    this.autoZoneExcludeZoneUris = autoZoneExcludeZoneUris;
+    return this;
+  }
 
   /**
    * Optional. Confidential Instance Config for clusters using Confidential VMs

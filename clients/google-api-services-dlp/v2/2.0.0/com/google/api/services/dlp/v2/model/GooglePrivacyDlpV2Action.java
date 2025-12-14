@@ -55,7 +55,8 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   private GooglePrivacyDlpV2PublishToPubSub pubSub;
 
   /**
-   * Publish findings to Cloud Datahub.
+   * Deprecated because Data Catalog is being turned down. Use publish_findings_to_dataplex_catalog
+   * to publish findings to Dataplex Universal Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +146,8 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   }
 
   /**
-   * Publish findings to Cloud Datahub.
+   * Deprecated because Data Catalog is being turned down. Use publish_findings_to_dataplex_catalog
+   * to publish findings to Dataplex Universal Catalog.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog getPublishFindingsToCloudDataCatalog() {
@@ -153,7 +155,8 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   }
 
   /**
-   * Publish findings to Cloud Datahub.
+   * Deprecated because Data Catalog is being turned down. Use publish_findings_to_dataplex_catalog
+   * to publish findings to Dataplex Universal Catalog.
    * @param publishFindingsToCloudDataCatalog publishFindingsToCloudDataCatalog or {@code null} for none
    */
   public GooglePrivacyDlpV2Action setPublishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog publishFindingsToCloudDataCatalog) {

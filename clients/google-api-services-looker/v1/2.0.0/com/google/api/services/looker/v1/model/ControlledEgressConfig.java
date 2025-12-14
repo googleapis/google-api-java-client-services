@@ -46,6 +46,13 @@ public final class ControlledEgressConfig extends com.google.api.client.json.Gen
   private java.lang.Boolean marketplaceEnabled;
 
   /**
+   * Output only. The list of IP addresses used by Secure Web Proxy for outbound traffic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> webProxyIps;
+
+  /**
    * Optional. List of fully qualified domain names to be added to the allowlist for outbound
    * traffic.
    * @return value or {@code null} for none
@@ -78,6 +85,23 @@ public final class ControlledEgressConfig extends com.google.api.client.json.Gen
    */
   public ControlledEgressConfig setMarketplaceEnabled(java.lang.Boolean marketplaceEnabled) {
     this.marketplaceEnabled = marketplaceEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. The list of IP addresses used by Secure Web Proxy for outbound traffic.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getWebProxyIps() {
+    return webProxyIps;
+  }
+
+  /**
+   * Output only. The list of IP addresses used by Secure Web Proxy for outbound traffic.
+   * @param webProxyIps webProxyIps or {@code null} for none
+   */
+  public ControlledEgressConfig setWebProxyIps(java.util.List<java.lang.String> webProxyIps) {
+    this.webProxyIps = webProxyIps;
     return this;
   }
 

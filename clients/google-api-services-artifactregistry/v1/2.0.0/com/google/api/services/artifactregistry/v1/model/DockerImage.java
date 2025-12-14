@@ -33,6 +33,15 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class DockerImage extends com.google.api.client.json.GenericJson {
 
   /**
+   * ArtifactType of this image, e.g. "application/vnd.example+type". If the `subject_digest` is set
+   * and no `artifact_type` is given, the `media_type` will be considered as the `artifact_type`.
+   * This field is returned as the `metadata.artifactType` field in the Version resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String artifactType;
+
+  /**
    * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
    * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
    * easily used with the JavaScript Date constructor.
@@ -40,6 +49,14 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String buildTime;
+
+  /**
+   * Optional. For multi-arch images (manifest lists), this field contains the list of image
+   * manifests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ImageManifest> imageManifests;
 
   /**
    * Calculated size of the image. This field is returned as the 'metadata.imageSizeBytes' field in
@@ -101,6 +118,27 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
   private java.lang.String uri;
 
   /**
+   * ArtifactType of this image, e.g. "application/vnd.example+type". If the `subject_digest` is set
+   * and no `artifact_type` is given, the `media_type` will be considered as the `artifact_type`.
+   * This field is returned as the `metadata.artifactType` field in the Version resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArtifactType() {
+    return artifactType;
+  }
+
+  /**
+   * ArtifactType of this image, e.g. "application/vnd.example+type". If the `subject_digest` is set
+   * and no `artifact_type` is given, the `media_type` will be considered as the `artifact_type`.
+   * This field is returned as the `metadata.artifactType` field in the Version resource.
+   * @param artifactType artifactType or {@code null} for none
+   */
+  public DockerImage setArtifactType(java.lang.String artifactType) {
+    this.artifactType = artifactType;
+    return this;
+  }
+
+  /**
    * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
    * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
    * easily used with the JavaScript Date constructor.
@@ -118,6 +156,25 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
    */
   public DockerImage setBuildTime(String buildTime) {
     this.buildTime = buildTime;
+    return this;
+  }
+
+  /**
+   * Optional. For multi-arch images (manifest lists), this field contains the list of image
+   * manifests.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ImageManifest> getImageManifests() {
+    return imageManifests;
+  }
+
+  /**
+   * Optional. For multi-arch images (manifest lists), this field contains the list of image
+   * manifests.
+   * @param imageManifests imageManifests or {@code null} for none
+   */
+  public DockerImage setImageManifests(java.util.List<ImageManifest> imageManifests) {
+    this.imageManifests = imageManifests;
     return this;
   }
 

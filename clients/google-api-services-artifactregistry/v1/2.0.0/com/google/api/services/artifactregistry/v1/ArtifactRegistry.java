@@ -1602,7 +1602,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
           }
         }
         /**
-         * Exports an artifact.
+         * Exports an artifact to a Cloud Storage bucket.
          *
          * Create a request for the method "repositories.exportArtifact".
          *
@@ -1629,7 +1629,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
 
           /**
-           * Exports an artifact.
+           * Exports an artifact to a Cloud Storage bucket.
            *
            * Create a request for the method "repositories.exportArtifact".
            *

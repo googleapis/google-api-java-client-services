@@ -45,6 +45,15 @@ public final class ViolationInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String constraint;
 
   /**
+   * Optional. Provides extra information for the specific violated constraint. See the constraint's
+   * documentation to determine if this field is populated and what the structure of the message
+   * should be.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> constraintViolationInfo;
+
+  /**
    * Optional. Error message that policy is indicating.
    * The value may be {@code null}.
    */
@@ -91,6 +100,27 @@ public final class ViolationInfo extends com.google.api.client.json.GenericJson 
    */
   public ViolationInfo setConstraint(java.lang.String constraint) {
     this.constraint = constraint;
+    return this;
+  }
+
+  /**
+   * Optional. Provides extra information for the specific violated constraint. See the constraint's
+   * documentation to determine if this field is populated and what the structure of the message
+   * should be.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getConstraintViolationInfo() {
+    return constraintViolationInfo;
+  }
+
+  /**
+   * Optional. Provides extra information for the specific violated constraint. See the constraint's
+   * documentation to determine if this field is populated and what the structure of the message
+   * should be.
+   * @param constraintViolationInfo constraintViolationInfo or {@code null} for none
+   */
+  public ViolationInfo setConstraintViolationInfo(java.util.Map<String, java.lang.Object> constraintViolationInfo) {
+    this.constraintViolationInfo = constraintViolationInfo;
     return this;
   }
 

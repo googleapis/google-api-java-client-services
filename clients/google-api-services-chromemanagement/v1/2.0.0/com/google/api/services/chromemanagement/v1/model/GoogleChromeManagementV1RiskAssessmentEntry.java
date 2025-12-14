@@ -31,28 +31,28 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementV1RiskAssessmentEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The risk assessment provider from which this entry comes from.
+   * Output only. The risk assessment provider from which this entry comes from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String provider;
 
   /**
-   * The details of the provider's risk assessment.
+   * Output only. The details of the provider's risk assessment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleChromeManagementV1RiskAssessment riskAssessment;
 
   /**
-   * The bucketed risk level for the risk assessment.
+   * Output only. The bucketed risk level for the risk assessment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String riskLevel;
 
   /**
-   * The risk assessment provider from which this entry comes from.
+   * Output only. The risk assessment provider from which this entry comes from.
    * @return value or {@code null} for none
    */
   public java.lang.String getProvider() {
@@ -60,7 +60,7 @@ public final class GoogleChromeManagementV1RiskAssessmentEntry extends com.googl
   }
 
   /**
-   * The risk assessment provider from which this entry comes from.
+   * Output only. The risk assessment provider from which this entry comes from.
    * @param provider provider or {@code null} for none
    */
   public GoogleChromeManagementV1RiskAssessmentEntry setProvider(java.lang.String provider) {
@@ -69,7 +69,7 @@ public final class GoogleChromeManagementV1RiskAssessmentEntry extends com.googl
   }
 
   /**
-   * The details of the provider's risk assessment.
+   * Output only. The details of the provider's risk assessment.
    * @return value or {@code null} for none
    */
   public GoogleChromeManagementV1RiskAssessment getRiskAssessment() {
@@ -77,7 +77,7 @@ public final class GoogleChromeManagementV1RiskAssessmentEntry extends com.googl
   }
 
   /**
-   * The details of the provider's risk assessment.
+   * Output only. The details of the provider's risk assessment.
    * @param riskAssessment riskAssessment or {@code null} for none
    */
   public GoogleChromeManagementV1RiskAssessmentEntry setRiskAssessment(GoogleChromeManagementV1RiskAssessment riskAssessment) {
@@ -86,7 +86,7 @@ public final class GoogleChromeManagementV1RiskAssessmentEntry extends com.googl
   }
 
   /**
-   * The bucketed risk level for the risk assessment.
+   * Output only. The bucketed risk level for the risk assessment.
    * @return value or {@code null} for none
    */
   public java.lang.String getRiskLevel() {
@@ -94,7 +94,7 @@ public final class GoogleChromeManagementV1RiskAssessmentEntry extends com.googl
   }
 
   /**
-   * The bucketed risk level for the risk assessment.
+   * Output only. The bucketed risk level for the risk assessment.
    * @param riskLevel riskLevel or {@code null} for none
    */
   public GoogleChromeManagementV1RiskAssessmentEntry setRiskLevel(java.lang.String riskLevel) {

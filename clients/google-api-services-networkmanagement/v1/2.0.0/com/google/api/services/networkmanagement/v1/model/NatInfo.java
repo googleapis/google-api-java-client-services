@@ -31,6 +31,13 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class NatInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Type of Cloud NAT gateway. Only valid when `type` is CLOUD_NAT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudNatGatewayType;
+
+  /**
    * The name of Cloud NAT Gateway. Only valid when type is CLOUD_NAT.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Type of Cloud NAT gateway. Only valid when `type` is CLOUD_NAT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudNatGatewayType() {
+    return cloudNatGatewayType;
+  }
+
+  /**
+   * Type of Cloud NAT gateway. Only valid when `type` is CLOUD_NAT.
+   * @param cloudNatGatewayType cloudNatGatewayType or {@code null} for none
+   */
+  public NatInfo setCloudNatGatewayType(java.lang.String cloudNatGatewayType) {
+    this.cloudNatGatewayType = cloudNatGatewayType;
+    return this;
+  }
 
   /**
    * The name of Cloud NAT Gateway. Only valid when type is CLOUD_NAT.

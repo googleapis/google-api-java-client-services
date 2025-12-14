@@ -4085,15 +4085,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         public class ScimTenants {
 
           /**
-           * Agentspace only. Creates a new WorkforcePoolProviderScimTenant in a WorkforcePoolProvider. You
-           * cannot reuse the name of a deleted SCIM tenant until 30 days after deletion.
+           * Gemini Enterprise only. Creates a new WorkforcePoolProviderScimTenant in a WorkforcePoolProvider.
+           * You cannot reuse the name of a deleted SCIM tenant until 30 days after deletion.
            *
            * Create a request for the method "scimTenants.create".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Agentspace only. The parent to create SCIM tenant. Format:
+           * @param parent Required. Gemini Enterprise only. The parent to create SCIM tenant. Format:
            *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
            * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
            * @return the request
@@ -4112,8 +4112,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
 
             /**
-             * Agentspace only. Creates a new WorkforcePoolProviderScimTenant in a WorkforcePoolProvider. You
-             * cannot reuse the name of a deleted SCIM tenant until 30 days after deletion.
+             * Gemini Enterprise only. Creates a new WorkforcePoolProviderScimTenant in a
+             * WorkforcePoolProvider. You cannot reuse the name of a deleted SCIM tenant until 30 days after
+             * deletion.
              *
              * Create a request for the method "scimTenants.create".
              *
@@ -4122,7 +4123,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Agentspace only. The parent to create SCIM tenant. Format:
+             * @param parent Required. Gemini Enterprise only. The parent to create SCIM tenant. Format:
            *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
              * @since 1.13
@@ -4193,13 +4194,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. Agentspace only. The parent to create SCIM tenant. Format:
+             * Required. Gemini Enterprise only. The parent to create SCIM tenant. Format:
              * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Agentspace only. The parent to create SCIM tenant. Format:
+            /** Required. Gemini Enterprise only. The parent to create SCIM tenant. Format:
            'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             public java.lang.String getParent() {
@@ -4207,7 +4208,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. Agentspace only. The parent to create SCIM tenant. Format:
+             * Required. Gemini Enterprise only. The parent to create SCIM tenant. Format:
              * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             public Create setParent(java.lang.String parent) {
@@ -4221,24 +4222,25 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. Agentspace only. The ID to use for the SCIM tenant, which becomes the final
-             * component of the resource name. This value should be 4-32 characters, containing the
-             * characters [a-z0-9-].
+             * Required. Gemini Enterprise only. The ID to use for the SCIM tenant, which becomes
+             * the final component of the resource name. This value should be 4-32 characters,
+             * containing the characters [a-z0-9-].
              */
             @com.google.api.client.util.Key
             private java.lang.String workforcePoolProviderScimTenantId;
 
-            /** Required. Agentspace only. The ID to use for the SCIM tenant, which becomes the final component of
-           the resource name. This value should be 4-32 characters, containing the characters [a-z0-9-].
+            /** Required. Gemini Enterprise only. The ID to use for the SCIM tenant, which becomes the final
+           component of the resource name. This value should be 4-32 characters, containing the characters
+           [a-z0-9-].
              */
             public java.lang.String getWorkforcePoolProviderScimTenantId() {
               return workforcePoolProviderScimTenantId;
             }
 
             /**
-             * Required. Agentspace only. The ID to use for the SCIM tenant, which becomes the final
-             * component of the resource name. This value should be 4-32 characters, containing the
-             * characters [a-z0-9-].
+             * Required. Gemini Enterprise only. The ID to use for the SCIM tenant, which becomes
+             * the final component of the resource name. This value should be 4-32 characters,
+             * containing the characters [a-z0-9-].
              */
             public Create setWorkforcePoolProviderScimTenantId(java.lang.String workforcePoolProviderScimTenantId) {
               this.workforcePoolProviderScimTenantId = workforcePoolProviderScimTenantId;
@@ -4251,17 +4253,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Agentspace only. Deletes a WorkforcePoolProviderScimTenant. You can undelete a SCIM tenant for 30
-           * days. After 30 days, deletion is permanent. You cannot update deleted SCIM tenants. However, you
-           * can view and list them.
+           * Gemini Enterprise only. Deletes a WorkforcePoolProviderScimTenant. You can undelete a SCIM tenant
+           * for 30 days. After 30 days, deletion is permanent. You cannot update deleted SCIM tenants.
+           * However, you can view and list them.
            *
            * Create a request for the method "scimTenants.delete".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/{location}/work
-           *        forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+           * @param name Required. Gemini Enterprise only. The name of the SCIM tenant to delete. Format: `locations/{locatio
+           *        n}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4278,9 +4280,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
             /**
-             * Agentspace only. Deletes a WorkforcePoolProviderScimTenant. You can undelete a SCIM tenant for
-             * 30 days. After 30 days, deletion is permanent. You cannot update deleted SCIM tenants. However,
-             * you can view and list them.
+             * Gemini Enterprise only. Deletes a WorkforcePoolProviderScimTenant. You can undelete a SCIM
+             * tenant for 30 days. After 30 days, deletion is permanent. You cannot update deleted SCIM
+             * tenants. However, you can view and list them.
              *
              * Create a request for the method "scimTenants.delete".
              *
@@ -4289,8 +4291,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/{location}/work
-           *        forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * @param name Required. Gemini Enterprise only. The name of the SCIM tenant to delete. Format: `locations/{locatio
+           *        n}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -4359,24 +4361,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/
-             * {location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_ten
-             * ant}`
+             * Required. Gemini Enterprise only. The name of the SCIM tenant to delete. Format: `loc
+             * ations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{s
+             * cim_tenant}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/{location}/wor
-           kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+            /** Required. Gemini Enterprise only. The name of the SCIM tenant to delete. Format: `locations/{locati
+           on}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Agentspace only. The name of the scim tenant to delete. Format: `locations/
-             * {location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_ten
-             * ant}`
+             * Required. Gemini Enterprise only. The name of the SCIM tenant to delete. Format: `loc
+             * ations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{s
+             * cim_tenant}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4410,15 +4412,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Agentspace only. Gets an individual WorkforcePoolProviderScimTenant.
+           * Gemini Enterprise only. Gets an individual WorkforcePoolProviderScimTenant.
            *
            * Create a request for the method "scimTenants.get".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `locations/{location}/wo
-           *        rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+           * @param name Required. Gemini Enterprise only. The name of the SCIM tenant to retrieve. Format: `locations/{locat
+           *        ion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -4435,7 +4437,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
             /**
-             * Agentspace only. Gets an individual WorkforcePoolProviderScimTenant.
+             * Gemini Enterprise only. Gets an individual WorkforcePoolProviderScimTenant.
              *
              * Create a request for the method "scimTenants.get".
              *
@@ -4444,8 +4446,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `locations/{location}/wo
-           *        rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * @param name Required. Gemini Enterprise only. The name of the SCIM tenant to retrieve. Format: `locations/{locat
+           *        ion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -4524,24 +4526,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `location
-             * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_t
-             * enant}`
+             * Required. Gemini Enterprise only. The name of the SCIM tenant to retrieve. Format: `l
+             * ocations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/
+             * {scim_tenant}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `locations/{location}/w
-           orkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+            /** Required. Gemini Enterprise only. The name of the SCIM tenant to retrieve. Format: `locations/{loca
+           tion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Agentspace only. The name of the SCIM tenant to retrieve. Format: `location
-             * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_t
-             * enant}`
+             * Required. Gemini Enterprise only. The name of the SCIM tenant to retrieve. Format: `l
+             * ocations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/
+             * {scim_tenant}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4559,7 +4561,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Agentspace only. Lists all non-deleted WorkforcePoolProviderScimTenants in a
+           * Gemini Enterprise only. Lists all non-deleted WorkforcePoolProviderScimTenants in a
            * WorkforcePoolProvider. If `show_deleted` is set to `true`, then deleted SCIM tenants are also
            * listed.
            *
@@ -4568,7 +4570,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Agentspace only. The parent to list SCIM tenants. Format:
+           * @param parent Required. Gemini Enterprise only. The parent to list SCIM tenants. Format:
            *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
            * @return the request
            */
@@ -4586,7 +4588,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
 
             /**
-             * Agentspace only. Lists all non-deleted WorkforcePoolProviderScimTenants in a
+             * Gemini Enterprise only. Lists all non-deleted WorkforcePoolProviderScimTenants in a
              * WorkforcePoolProvider. If `show_deleted` is set to `true`, then deleted SCIM tenants are also
              * listed.
              *
@@ -4597,7 +4599,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Agentspace only. The parent to list SCIM tenants. Format:
+             * @param parent Required. Gemini Enterprise only. The parent to list SCIM tenants. Format:
            *        'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              * @since 1.13
              */
@@ -4677,13 +4679,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. Agentspace only. The parent to list SCIM tenants. Format:
+             * Required. Gemini Enterprise only. The parent to list SCIM tenants. Format:
              * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Agentspace only. The parent to list SCIM tenants. Format:
+            /** Required. Gemini Enterprise only. The parent to list SCIM tenants. Format:
            'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             public java.lang.String getParent() {
@@ -4691,7 +4693,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. Agentspace only. The parent to list SCIM tenants. Format:
+             * Required. Gemini Enterprise only. The parent to list SCIM tenants. Format:
              * 'locations/{location}/workforcePools/{workforce_pool}/providers/{provider}'
              */
             public List setParent(java.lang.String parent) {
@@ -4705,22 +4707,25 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Optional. Agentspace only. The maximum number of SCIM tenants to return. If
-             * unspecified, at most 1 scim tenant will be returned.
+             * Optional. Gemini Enterprise only. The maximum number of SCIM tenants to return. If
+             * unspecified, at most 50 SCIM tenants will be returned. The maximum value is 100;
+             * values above 100 are truncated to 100.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. Agentspace only. The maximum number of SCIM tenants to return. If unspecified, at most 1
-           scim tenant will be returned.
+            /** Optional. Gemini Enterprise only. The maximum number of SCIM tenants to return. If unspecified, at
+           most 50 SCIM tenants will be returned. The maximum value is 100; values above 100 are truncated to
+           100.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Optional. Agentspace only. The maximum number of SCIM tenants to return. If
-             * unspecified, at most 1 scim tenant will be returned.
+             * Optional. Gemini Enterprise only. The maximum number of SCIM tenants to return. If
+             * unspecified, at most 50 SCIM tenants will be returned. The maximum value is 100;
+             * values above 100 are truncated to 100.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -4728,39 +4733,39 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Optional. Agentspace only. A page token, received from a previous `ListScimTenants`
-             * call. Provide this to retrieve the subsequent page.
+             * Optional. Gemini Enterprise only. A page token, received from a previous
+             * `ListScimTenants` call. Provide this to retrieve the subsequent page.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. Agentspace only. A page token, received from a previous `ListScimTenants` call. Provide
-           this to retrieve the subsequent page.
+            /** Optional. Gemini Enterprise only. A page token, received from a previous `ListScimTenants` call.
+           Provide this to retrieve the subsequent page.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional. Agentspace only. A page token, received from a previous `ListScimTenants`
-             * call. Provide this to retrieve the subsequent page.
+             * Optional. Gemini Enterprise only. A page token, received from a previous
+             * `ListScimTenants` call. Provide this to retrieve the subsequent page.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
             }
 
-            /** Optional. Agentspace only. Whether to return soft-deleted SCIM tenants. */
+            /** Optional. Gemini Enterprise only. Whether to return soft-deleted SCIM tenants. */
             @com.google.api.client.util.Key
             private java.lang.Boolean showDeleted;
 
-            /** Optional. Agentspace only. Whether to return soft-deleted SCIM tenants.
+            /** Optional. Gemini Enterprise only. Whether to return soft-deleted SCIM tenants.
              */
             public java.lang.Boolean getShowDeleted() {
               return showDeleted;
             }
 
-            /** Optional. Agentspace only. Whether to return soft-deleted SCIM tenants. */
+            /** Optional. Gemini Enterprise only. Whether to return soft-deleted SCIM tenants. */
             public List setShowDeleted(java.lang.Boolean showDeleted) {
               this.showDeleted = showDeleted;
               return this;
@@ -4772,14 +4777,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Agentspace only. Updates an existing WorkforcePoolProviderScimTenant.
+           * Gemini Enterprise only. Updates an existing WorkforcePoolProviderScimTenant.
            *
            * Create a request for the method "scimTenants.patch".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
+           * @param name Identifier. Gemini Enterprise only. The resource name of the SCIM Tenant. Format:
            *        `locations/{location}/workforcePools/{workforce_pool}/providers/
            *        {workforce_pool_provider}/scimTenants/{scim_tenant}`
            * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
@@ -4799,7 +4804,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
             /**
-             * Agentspace only. Updates an existing WorkforcePoolProviderScimTenant.
+             * Gemini Enterprise only. Updates an existing WorkforcePoolProviderScimTenant.
              *
              * Create a request for the method "scimTenants.patch".
              *
@@ -4808,7 +4813,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
+             * @param name Identifier. Gemini Enterprise only. The resource name of the SCIM Tenant. Format:
            *        `locations/{location}/workforcePools/{workforce_pool}/providers/
            *        {workforce_pool_provider}/scimTenants/{scim_tenant}`
              * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimTenant}
@@ -4880,14 +4885,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
+             * Identifier. Gemini Enterprise only. The resource name of the SCIM Tenant. Format:
              * `locations/{location}/workforcePools/{workforce_pool}/providers/
              * {workforce_pool_provider}/scimTenants/{scim_tenant}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
+            /** Identifier. Gemini Enterprise only. The resource name of the SCIM Tenant. Format:
            `locations/{location}/workforcePools/{workforce_pool}/providers/
            {workforce_pool_provider}/scimTenants/{scim_tenant}`
              */
@@ -4896,7 +4901,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
+             * Identifier. Gemini Enterprise only. The resource name of the SCIM Tenant. Format:
              * `locations/{location}/workforcePools/{workforce_pool}/providers/
              * {workforce_pool_provider}/scimTenants/{scim_tenant}`
              */
@@ -4910,17 +4915,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               return this;
             }
 
-            /** Optional. Agentspace only. The list of fields to update. */
+            /** Optional. Gemini Enterprise only. The list of fields to update. */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Optional. Agentspace only. The list of fields to update.
+            /** Optional. Gemini Enterprise only. The list of fields to update.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** Optional. Agentspace only. The list of fields to update. */
+            /** Optional. Gemini Enterprise only. The list of fields to update. */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -4932,16 +4937,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Agentspace only. Undeletes a WorkforcePoolProviderScimTenant, that was deleted fewer than 30 days
-           * ago.
+           * Gemini Enterprise only. Undeletes a WorkforcePoolProviderScimTenant, that was deleted fewer than
+           * 30 days ago.
            *
            * Create a request for the method "scimTenants.undelete".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `locations/{location}/wo
-           *        rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+           * @param name Required. Gemini Enterprise only. The name of the SCIM tenant to undelete. Format: `locations/{locat
+           *        ion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
            * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTenantRequest}
            * @return the request
            */
@@ -4959,8 +4964,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
             /**
-             * Agentspace only. Undeletes a WorkforcePoolProviderScimTenant, that was deleted fewer than 30
-             * days ago.
+             * Gemini Enterprise only. Undeletes a WorkforcePoolProviderScimTenant, that was deleted fewer
+             * than 30 days ago.
              *
              * Create a request for the method "scimTenants.undelete".
              *
@@ -4970,8 +4975,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `locations/{location}/wo
-           *        rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+             * @param name Required. Gemini Enterprise only. The name of the SCIM tenant to undelete. Format: `locations/{locat
+           *        ion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTenantRequest}
              * @since 1.13
              */
@@ -5041,24 +5046,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `location
-             * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_t
-             * enant}`
+             * Required. Gemini Enterprise only. The name of the SCIM tenant to undelete. Format: `l
+             * ocations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/
+             * {scim_tenant}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `locations/{location}/w
-           orkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
+            /** Required. Gemini Enterprise only. The name of the SCIM tenant to undelete. Format: `locations/{loca
+           tion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Agentspace only. The name of the SCIM tenant to undelete. Format: `location
-             * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_t
-             * enant}`
+             * Required. Gemini Enterprise only. The name of the SCIM tenant to undelete. Format: `l
+             * ocations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/
+             * {scim_tenant}`
              */
             public Undelete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5097,7 +5102,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           public class Tokens {
 
             /**
-             * Agentspace only. Creates a new WorkforcePoolProviderScimToken in a
+             * Gemini Enterprise only. Creates a new WorkforcePoolProviderScimToken in a
              * WorkforcePoolProviderScimTenant. You cannot reuse the name of a deleted SCIM token until 30 days
              * after deletion.
              *
@@ -5106,8 +5111,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locations/{location}/wor
-             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+             * @param parent Required. Gemini Enterprise only. The parent tenant to create SCIM token. Format: 'locations/{locati
+             *        on}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
              * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
              * @return the request
              */
@@ -5125,7 +5130,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
               /**
-               * Agentspace only. Creates a new WorkforcePoolProviderScimToken in a
+               * Gemini Enterprise only. Creates a new WorkforcePoolProviderScimToken in a
                * WorkforcePoolProviderScimTenant. You cannot reuse the name of a deleted SCIM token until 30
                * days after deletion.
                *
@@ -5136,8 +5141,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locations/{location}/wor
-             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               * @param parent Required. Gemini Enterprise only. The parent tenant to create SCIM token. Format: 'locations/{locati
+             *        on}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
                * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
                * @since 1.13
                */
@@ -5207,24 +5212,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locatio
-               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
-               * m_tenant}'
+               * Required. Gemini Enterprise only. The parent tenant to create SCIM token. Format: '
+               * locations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenan
+               * ts/{scim_tenant}'
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locations/{location}/wo
-             rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+              /** Required. Gemini Enterprise only. The parent tenant to create SCIM token. Format: 'locations/{locat
+             ion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Agentspace only. The parent tenant to create SCIM token. Format: 'locatio
-               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
-               * m_tenant}'
+               * Required. Gemini Enterprise only. The parent tenant to create SCIM token. Format: '
+               * locations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenan
+               * ts/{scim_tenant}'
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5237,15 +5242,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. Agentspace only. The ID to use for the SCIM token, which becomes the
-               * final component of the resource name. This value should be 4-32 characters and
+               * Required. Gemini Enterprise only. The ID to use for the SCIM token, which becomes
+               * the final component of the resource name. This value should be 4-32 characters and
                * follow the pattern: "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
                */
               @com.google.api.client.util.Key
               private java.lang.String workforcePoolProviderScimTokenId;
 
-              /** Required. Agentspace only. The ID to use for the SCIM token, which becomes the final component of
-             the resource name. This value should be 4-32 characters and follow the pattern:
+              /** Required. Gemini Enterprise only. The ID to use for the SCIM token, which becomes the final
+             component of the resource name. This value should be 4-32 characters and follow the pattern:
              "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
                */
               public java.lang.String getWorkforcePoolProviderScimTokenId() {
@@ -5253,8 +5258,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. Agentspace only. The ID to use for the SCIM token, which becomes the
-               * final component of the resource name. This value should be 4-32 characters and
+               * Required. Gemini Enterprise only. The ID to use for the SCIM token, which becomes
+               * the final component of the resource name. This value should be 4-32 characters and
                * follow the pattern: "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
                */
               public Create setWorkforcePoolProviderScimTokenId(java.lang.String workforcePoolProviderScimTokenId) {
@@ -5268,8 +5273,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Agentspace only. Deletes a WorkforcePoolProviderScimToken. You can undelete a SCIM token for 30
-             * days. After 30 days, the SCIM token is permanently deleted. You cannot update deleted SCIM
+             * Gemini Enterprise only. Deletes a WorkforcePoolProviderScimToken. You can undelete a SCIM token
+             * for 30 days. After 30 days, the SCIM token is permanently deleted. You cannot update deleted SCIM
              * tokens, however, you can view and list them.
              *
              * Create a request for the method "tokens.delete".
@@ -5277,8 +5282,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Agentspace only. The name of the SCIM token to delete. Format: `locations/{location}/workf
-             *        orcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+             * @param name Required. Gemini Enterprise only. The name of the SCIM token to delete. Format: `locations/{location
+             *        }/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{t
+             *        oken}`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5295,9 +5301,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
 
               /**
-               * Agentspace only. Deletes a WorkforcePoolProviderScimToken. You can undelete a SCIM token for 30
-               * days. After 30 days, the SCIM token is permanently deleted. You cannot update deleted SCIM
-               * tokens, however, you can view and list them.
+               * Gemini Enterprise only. Deletes a WorkforcePoolProviderScimToken. You can undelete a SCIM token
+               * for 30 days. After 30 days, the SCIM token is permanently deleted. You cannot update deleted
+               * SCIM tokens, however, you can view and list them.
                *
                * Create a request for the method "tokens.delete".
                *
@@ -5306,8 +5312,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Agentspace only. The name of the SCIM token to delete. Format: `locations/{location}/workf
-             *        orcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+               * @param name Required. Gemini Enterprise only. The name of the SCIM token to delete. Format: `locations/{location
+             *        }/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{t
+             *        oken}`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -5376,24 +5383,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. Agentspace only. The name of the SCIM token to delete. Format: `locations
-               * /{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_
-               * tenant}/tokens/{token}`
+               * Required. Gemini Enterprise only. The name of the SCIM token to delete. Format: `lo
+               * cations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants
+               * /{scim_tenant}/tokens/{token}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Agentspace only. The name of the SCIM token to delete. Format: `locations/{location}/work
-             forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+              /** Required. Gemini Enterprise only. The name of the SCIM token to delete. Format: `locations/{locatio
+             n}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. Agentspace only. The name of the SCIM token to delete. Format: `locations
-               * /{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_
-               * tenant}/tokens/{token}`
+               * Required. Gemini Enterprise only. The name of the SCIM token to delete. Format: `lo
+               * cations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants
+               * /{scim_tenant}/tokens/{token}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -5411,16 +5418,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Agentspace only. Gets an individual WorkforcePoolProviderScimToken.
+             * Gemini Enterprise only. Gets an individual WorkforcePoolProviderScimToken.
              *
              * Create a request for the method "tokens.get".
              *
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locations/{location}/wor
-             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}
-             *        `
+             * @param name Required. Gemini Enterprise only. The name of the SCIM token to retrieve. Format: `locations/{locati
+             *        on}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
+             *        {token}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -5437,7 +5444,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
 
               /**
-               * Agentspace only. Gets an individual WorkforcePoolProviderScimToken.
+               * Gemini Enterprise only. Gets an individual WorkforcePoolProviderScimToken.
                *
                * Create a request for the method "tokens.get".
                *
@@ -5446,9 +5453,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locations/{location}/wor
-             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}
-             *        `
+               * @param name Required. Gemini Enterprise only. The name of the SCIM token to retrieve. Format: `locations/{locati
+             *        on}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
+             *        {token}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -5527,24 +5534,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locatio
-               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
-               * m_tenant}/tokens/{token}`
+               * Required. Gemini Enterprise only. The name of the SCIM token to retrieve. Format: `
+               * locations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenan
+               * ts/{scim_tenant}/tokens/{token}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locations/{location}/wo
-             rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+              /** Required. Gemini Enterprise only. The name of the SCIM token to retrieve. Format: `locations/{locat
+             ion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. Agentspace only. The name of the SCIM token to retrieve. Format: `locatio
-               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
-               * m_tenant}/tokens/{token}`
+               * Required. Gemini Enterprise only. The name of the SCIM token to retrieve. Format: `
+               * locations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenan
+               * ts/{scim_tenant}/tokens/{token}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -5562,7 +5569,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Agentspace only. Lists all non-deleted WorkforcePoolProviderScimTokenss in a
+             * Gemini Enterprise only. Lists all non-deleted WorkforcePoolProviderScimTokenss in a
              * WorkforcePoolProviderScimTenant. If `show_deleted` is set to `true`, then deleted SCIM tokens are
              * also listed.
              *
@@ -5571,8 +5578,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{location}/workforcePo
-             *        ols/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+             * @param parent Required. Gemini Enterprise only. The parent to list SCIM tokens. Format: 'locations/{location}/work
+             *        forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -5589,7 +5596,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+$");
 
               /**
-               * Agentspace only. Lists all non-deleted WorkforcePoolProviderScimTokenss in a
+               * Gemini Enterprise only. Lists all non-deleted WorkforcePoolProviderScimTokenss in a
                * WorkforcePoolProviderScimTenant. If `show_deleted` is set to `true`, then deleted SCIM tokens
                * are also listed.
                *
@@ -5600,8 +5607,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{location}/workforcePo
-             *        ols/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+               * @param parent Required. Gemini Enterprise only. The parent to list SCIM tokens. Format: 'locations/{location}/work
+             *        forcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -5680,24 +5687,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{loca
-               * tion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant
-               * }'
+               * Required. Gemini Enterprise only. The parent to list SCIM tokens. Format: 'location
+               * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim
+               * _tenant}'
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{location}/workforceP
-             ools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
+              /** Required. Gemini Enterprise only. The parent to list SCIM tokens. Format: 'locations/{location}/wor
+             kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}'
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Agentspace only. The parent to list SCIM tokens. Format: 'locations/{loca
-               * tion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant
-               * }'
+               * Required. Gemini Enterprise only. The parent to list SCIM tokens. Format: 'location
+               * s/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim
+               * _tenant}'
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -5710,21 +5717,21 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Optional. Agentspace only. The maximum number of scim tokens to return. If
+               * Optional. Gemini Enterprise only. The maximum number of SCIM tokens to return. If
                * unspecified, at most 2 SCIM tokens will be returned.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Optional. Agentspace only. The maximum number of scim tokens to return. If unspecified, at most 2
-             SCIM tokens will be returned.
+              /** Optional. Gemini Enterprise only. The maximum number of SCIM tokens to return. If unspecified, at
+             most 2 SCIM tokens will be returned.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Optional. Agentspace only. The maximum number of scim tokens to return. If
+               * Optional. Gemini Enterprise only. The maximum number of SCIM tokens to return. If
                * unspecified, at most 2 SCIM tokens will be returned.
                */
               public List setPageSize(java.lang.Integer pageSize) {
@@ -5733,14 +5740,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Optional. Agentspace only. A page token, received from a previous
+               * Optional. Gemini Enterprise only. A page token, received from a previous
                * `ListWorkforcePoolProviderScimTokens` call. Provide this to retrieve the subsequent
                * page.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Optional. Agentspace only. A page token, received from a previous
+              /** Optional. Gemini Enterprise only. A page token, received from a previous
              `ListWorkforcePoolProviderScimTokens` call. Provide this to retrieve the subsequent page.
                */
               public java.lang.String getPageToken() {
@@ -5748,7 +5755,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Optional. Agentspace only. A page token, received from a previous
+               * Optional. Gemini Enterprise only. A page token, received from a previous
                * `ListWorkforcePoolProviderScimTokens` call. Provide this to retrieve the subsequent
                * page.
                */
@@ -5757,17 +5764,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 return this;
               }
 
-              /** Optional. Agentspace only. Whether to return soft-deleted scim tokens. */
+              /** Optional. Gemini Enterprise only. Whether to return soft-deleted SCIM tokens. */
               @com.google.api.client.util.Key
               private java.lang.Boolean showDeleted;
 
-              /** Optional. Agentspace only. Whether to return soft-deleted scim tokens.
+              /** Optional. Gemini Enterprise only. Whether to return soft-deleted SCIM tokens.
                */
               public java.lang.Boolean getShowDeleted() {
                 return showDeleted;
               }
 
-              /** Optional. Agentspace only. Whether to return soft-deleted scim tokens. */
+              /** Optional. Gemini Enterprise only. Whether to return soft-deleted SCIM tokens. */
               public List setShowDeleted(java.lang.Boolean showDeleted) {
                 this.showDeleted = showDeleted;
                 return this;
@@ -5779,14 +5786,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Agentspace only. Updates an existing WorkforcePoolProviderScimToken.
+             * Gemini Enterprise only. Updates an existing WorkforcePoolProviderScimToken.
              *
              * Create a request for the method "tokens.patch".
              *
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Identifier. Agentspace only. The resource name of the SCIM Token. Format:
+             * @param name Identifier. Gemini Enterprise only. The resource name of the SCIM Token. Format:
              *        `locations/{location}/workforcePools/{workforce_pool}/providers/
              *        {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
              * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
@@ -5806,7 +5813,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
 
               /**
-               * Agentspace only. Updates an existing WorkforcePoolProviderScimToken.
+               * Gemini Enterprise only. Updates an existing WorkforcePoolProviderScimToken.
                *
                * Create a request for the method "tokens.patch".
                *
@@ -5815,7 +5822,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Identifier. Agentspace only. The resource name of the SCIM Token. Format:
+               * @param name Identifier. Gemini Enterprise only. The resource name of the SCIM Token. Format:
              *        `locations/{location}/workforcePools/{workforce_pool}/providers/
              *        {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
                * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderScimToken}
@@ -5887,14 +5894,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Identifier. Agentspace only. The resource name of the SCIM Token. Format:
+               * Identifier. Gemini Enterprise only. The resource name of the SCIM Token. Format:
                * `locations/{location}/workforcePools/{workforce_pool}/providers/
                * {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Identifier. Agentspace only. The resource name of the SCIM Token. Format:
+              /** Identifier. Gemini Enterprise only. The resource name of the SCIM Token. Format:
              `locations/{location}/workforcePools/{workforce_pool}/providers/
              {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
@@ -5903,7 +5910,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Identifier. Agentspace only. The resource name of the SCIM Token. Format:
+               * Identifier. Gemini Enterprise only. The resource name of the SCIM Token. Format:
                * `locations/{location}/workforcePools/{workforce_pool}/providers/
                * {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
@@ -5917,17 +5924,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 return this;
               }
 
-              /** Optional. Agentspace only. The list of fields to update. */
+              /** Optional. Gemini Enterprise only. The list of fields to update. */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Optional. Agentspace only. The list of fields to update.
+              /** Optional. Gemini Enterprise only. The list of fields to update.
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /** Optional. Agentspace only. The list of fields to update. */
+              /** Optional. Gemini Enterprise only. The list of fields to update. */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -5939,17 +5946,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
             }
             /**
-             * Agentspace only. Undeletes a WorkforcePoolProviderScimToken,that was deleted fewer than 30 days
-             * ago.
+             * Gemini Enterprise only. Undeletes a WorkforcePoolProviderScimToken,that was deleted fewer than 30
+             * days ago.
              *
              * Create a request for the method "tokens.undelete".
              *
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Agentspace only. The name of the SCIM token to undelete. Format: `locations/{location}/wor
-             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}
-             *        `
+             * @param name Required. Gemini Enterprise only. The name of the SCIM token to undelete. Format: `locations/{locati
+             *        on}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
+             *        {token}`
              * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTokenRequest}
              * @return the request
              */
@@ -5967,8 +5974,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                   java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/scimTenants/[^/]+/tokens/[^/]+$");
 
               /**
-               * Agentspace only. Undeletes a WorkforcePoolProviderScimToken,that was deleted fewer than 30 days
-               * ago.
+               * Gemini Enterprise only. Undeletes a WorkforcePoolProviderScimToken,that was deleted fewer than
+               * 30 days ago.
                *
                * Create a request for the method "tokens.undelete".
                *
@@ -5978,9 +5985,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Agentspace only. The name of the SCIM token to undelete. Format: `locations/{location}/wor
-             *        kforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}
-             *        `
+               * @param name Required. Gemini Enterprise only. The name of the SCIM token to undelete. Format: `locations/{locati
+             *        on}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/
+             *        {token}`
                * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderScimTokenRequest}
                * @since 1.13
                */
@@ -6050,24 +6057,24 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               }
 
               /**
-               * Required. Agentspace only. The name of the SCIM token to undelete. Format: `locatio
-               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
-               * m_tenant}/tokens/{token}`
+               * Required. Gemini Enterprise only. The name of the SCIM token to undelete. Format: `
+               * locations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenan
+               * ts/{scim_tenant}/tokens/{token}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Agentspace only. The name of the SCIM token to undelete. Format: `locations/{location}/wo
-             rkforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
+              /** Required. Gemini Enterprise only. The name of the SCIM token to undelete. Format: `locations/{locat
+             ion}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{scim_tenant}/tokens/{token}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. Agentspace only. The name of the SCIM token to undelete. Format: `locatio
-               * ns/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenants/{sci
-               * m_tenant}/tokens/{token}`
+               * Required. Gemini Enterprise only. The name of the SCIM token to undelete. Format: `
+               * locations/{location}/workforcePools/{workforce_pool}/providers/{provider}/scimTenan
+               * ts/{scim_tenant}/tokens/{token}`
                */
               public Undelete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

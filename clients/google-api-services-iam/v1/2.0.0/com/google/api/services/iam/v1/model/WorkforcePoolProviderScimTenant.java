@@ -17,8 +17,8 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Agentspace only. Represents a SCIM tenant. Used for provisioning and managing identity data (such
- * as Users and Groups) in cross-domain environments.
+ * Gemini Enterprise only. Represents a SCIM tenant. Used for provisioning and managing identity
+ * data (such as Users and Groups) in cross-domain environments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -32,7 +32,7 @@ package com.google.api.services.iam.v1.model;
 public final class WorkforcePoolProviderScimTenant extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Agentspace only. Represents the base URI as defined in [RFC 7644, Section
+   * Output only. Gemini Enterprise only. Represents the base URI as defined in [RFC 7644, Section
    * 1.3](https://datatracker.ietf.org/doc/html/rfc7644#section-1.3). Clients must use this as the
    * root address for managing resources under the tenant. Format:
    * https://iamscim.googleapis.com/{version}/{tenant_id}/
@@ -42,28 +42,43 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   private java.lang.String baseUri;
 
   /**
-   * Optional. Agentspace only. Maps BYOID claims to SCIM claims.
+   * Required. Immutable. Gemini Enterprise only. Maps SCIM attributes to Google attributes. This
+   * mapping is used to associate the attributes synced via SCIM with the Google Cloud attributes
+   * used in IAM policies for Workforce Identity Federation. SCIM-managed user and group attributes
+   * are mapped to `google.subject` and `google.group` respectively. Each key must be a string
+   * specifying the Google Cloud IAM attribute to map to. The supported keys are as follows: *
+   * `google.subject`: The principal IAM is authenticating. You can reference this value in IAM
+   * bindings. This is also the subject that appears in Cloud Logging logs. This is a required field
+   * and the mapped subject cannot exceed 127 bytes. * `google.group`: Group the authenticating user
+   * belongs to. You can grant group access to resources using an IAM `principalSet` binding; access
+   * applies to all members of the group. Each value must be a [Common Expression Language]
+   * (https://opensource.google/projects/cel) expression that maps SCIM user or group attribute to
+   * the normalized attribute specified by the corresponding map key. Example: To map the SCIM
+   * user's `externalId` to `google.subject` and the SCIM group's `externalId` to `google.group`:
+   * ``` { "google.subject": "user.externalId", "google.group": "group.externalId" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> claimMapping;
 
   /**
-   * Optional. Agentspace only. The description of the SCIM tenant. Cannot exceed 256 characters.
+   * Optional. Gemini Enterprise only. The description of the SCIM tenant. Cannot exceed 256
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. Agentspace only. The display name of the SCIM tenant. Cannot exceed 32 characters.
+   * Optional. Gemini Enterprise only. The display name of the SCIM tenant. Cannot exceed 32
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
+   * Identifier. Gemini Enterprise only. The resource name of the SCIM Tenant. Format:
    * `locations/{location}/workforcePools/{workforce_pool}/providers/
    * {workforce_pool_provider}/scimTenants/{scim_tenant}`
    * The value may be {@code null}.
@@ -72,8 +87,8 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   private java.lang.String name;
 
   /**
-   * Output only. Agentspace only. The timestamp that represents the time when the SCIM tenant is
-   * purged.
+   * Output only. Gemini Enterprise only. The timestamp that represents the time when the SCIM
+   * tenant is purged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,14 +103,14 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   private java.lang.String serviceAgent;
 
   /**
-   * Output only. Agentspace only. The state of the tenant.
+   * Output only. Gemini Enterprise only. The state of the tenant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. Agentspace only. Represents the base URI as defined in [RFC 7644, Section
+   * Output only. Gemini Enterprise only. Represents the base URI as defined in [RFC 7644, Section
    * 1.3](https://datatracker.ietf.org/doc/html/rfc7644#section-1.3). Clients must use this as the
    * root address for managing resources under the tenant. Format:
    * https://iamscim.googleapis.com/{version}/{tenant_id}/
@@ -106,7 +121,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. Agentspace only. Represents the base URI as defined in [RFC 7644, Section
+   * Output only. Gemini Enterprise only. Represents the base URI as defined in [RFC 7644, Section
    * 1.3](https://datatracker.ietf.org/doc/html/rfc7644#section-1.3). Clients must use this as the
    * root address for managing resources under the tenant. Format:
    * https://iamscim.googleapis.com/{version}/{tenant_id}/
@@ -118,7 +133,20 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. Agentspace only. Maps BYOID claims to SCIM claims.
+   * Required. Immutable. Gemini Enterprise only. Maps SCIM attributes to Google attributes. This
+   * mapping is used to associate the attributes synced via SCIM with the Google Cloud attributes
+   * used in IAM policies for Workforce Identity Federation. SCIM-managed user and group attributes
+   * are mapped to `google.subject` and `google.group` respectively. Each key must be a string
+   * specifying the Google Cloud IAM attribute to map to. The supported keys are as follows: *
+   * `google.subject`: The principal IAM is authenticating. You can reference this value in IAM
+   * bindings. This is also the subject that appears in Cloud Logging logs. This is a required field
+   * and the mapped subject cannot exceed 127 bytes. * `google.group`: Group the authenticating user
+   * belongs to. You can grant group access to resources using an IAM `principalSet` binding; access
+   * applies to all members of the group. Each value must be a [Common Expression Language]
+   * (https://opensource.google/projects/cel) expression that maps SCIM user or group attribute to
+   * the normalized attribute specified by the corresponding map key. Example: To map the SCIM
+   * user's `externalId` to `google.subject` and the SCIM group's `externalId` to `google.group`:
+   * ``` { "google.subject": "user.externalId", "google.group": "group.externalId" } ```
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getClaimMapping() {
@@ -126,7 +154,20 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. Agentspace only. Maps BYOID claims to SCIM claims.
+   * Required. Immutable. Gemini Enterprise only. Maps SCIM attributes to Google attributes. This
+   * mapping is used to associate the attributes synced via SCIM with the Google Cloud attributes
+   * used in IAM policies for Workforce Identity Federation. SCIM-managed user and group attributes
+   * are mapped to `google.subject` and `google.group` respectively. Each key must be a string
+   * specifying the Google Cloud IAM attribute to map to. The supported keys are as follows: *
+   * `google.subject`: The principal IAM is authenticating. You can reference this value in IAM
+   * bindings. This is also the subject that appears in Cloud Logging logs. This is a required field
+   * and the mapped subject cannot exceed 127 bytes. * `google.group`: Group the authenticating user
+   * belongs to. You can grant group access to resources using an IAM `principalSet` binding; access
+   * applies to all members of the group. Each value must be a [Common Expression Language]
+   * (https://opensource.google/projects/cel) expression that maps SCIM user or group attribute to
+   * the normalized attribute specified by the corresponding map key. Example: To map the SCIM
+   * user's `externalId` to `google.subject` and the SCIM group's `externalId` to `google.group`:
+   * ``` { "google.subject": "user.externalId", "google.group": "group.externalId" } ```
    * @param claimMapping claimMapping or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setClaimMapping(java.util.Map<String, java.lang.String> claimMapping) {
@@ -135,7 +176,8 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. Agentspace only. The description of the SCIM tenant. Cannot exceed 256 characters.
+   * Optional. Gemini Enterprise only. The description of the SCIM tenant. Cannot exceed 256
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -143,7 +185,8 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. Agentspace only. The description of the SCIM tenant. Cannot exceed 256 characters.
+   * Optional. Gemini Enterprise only. The description of the SCIM tenant. Cannot exceed 256
+   * characters.
    * @param description description or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setDescription(java.lang.String description) {
@@ -152,7 +195,8 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. Agentspace only. The display name of the SCIM tenant. Cannot exceed 32 characters.
+   * Optional. Gemini Enterprise only. The display name of the SCIM tenant. Cannot exceed 32
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -160,7 +204,8 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Optional. Agentspace only. The display name of the SCIM tenant. Cannot exceed 32 characters.
+   * Optional. Gemini Enterprise only. The display name of the SCIM tenant. Cannot exceed 32
+   * characters.
    * @param displayName displayName or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setDisplayName(java.lang.String displayName) {
@@ -169,7 +214,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
+   * Identifier. Gemini Enterprise only. The resource name of the SCIM Tenant. Format:
    * `locations/{location}/workforcePools/{workforce_pool}/providers/
    * {workforce_pool_provider}/scimTenants/{scim_tenant}`
    * @return value or {@code null} for none
@@ -179,7 +224,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Identifier. Agentspace only. The resource name of the SCIM Tenant. Format:
+   * Identifier. Gemini Enterprise only. The resource name of the SCIM Tenant. Format:
    * `locations/{location}/workforcePools/{workforce_pool}/providers/
    * {workforce_pool_provider}/scimTenants/{scim_tenant}`
    * @param name name or {@code null} for none
@@ -190,8 +235,8 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. Agentspace only. The timestamp that represents the time when the SCIM tenant is
-   * purged.
+   * Output only. Gemini Enterprise only. The timestamp that represents the time when the SCIM
+   * tenant is purged.
    * @return value or {@code null} for none
    */
   public String getPurgeTime() {
@@ -199,8 +244,8 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. Agentspace only. The timestamp that represents the time when the SCIM tenant is
-   * purged.
+   * Output only. Gemini Enterprise only. The timestamp that represents the time when the SCIM
+   * tenant is purged.
    * @param purgeTime purgeTime or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setPurgeTime(String purgeTime) {
@@ -228,7 +273,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. Agentspace only. The state of the tenant.
+   * Output only. Gemini Enterprise only. The state of the tenant.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -236,7 +281,7 @@ public final class WorkforcePoolProviderScimTenant extends com.google.api.client
   }
 
   /**
-   * Output only. Agentspace only. The state of the tenant.
+   * Output only. Gemini Enterprise only. The state of the tenant.
    * @param state state or {@code null} for none
    */
   public WorkforcePoolProviderScimTenant setState(java.lang.String state) {

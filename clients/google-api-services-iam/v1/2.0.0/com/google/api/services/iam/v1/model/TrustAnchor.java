@@ -31,7 +31,7 @@ package com.google.api.services.iam.v1.model;
 public final class TrustAnchor extends com.google.api.client.json.GenericJson {
 
   /**
-   * PEM certificate of the PKI used for validation. Must only contain one ca certificate(either
+   * PEM certificate of the PKI used for validation. Must only contain one ca certificate (either
    * root or intermediate cert).
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class TrustAnchor extends com.google.api.client.json.GenericJson {
   private java.lang.String pemCertificate;
 
   /**
-   * PEM certificate of the PKI used for validation. Must only contain one ca certificate(either
+   * PEM certificate of the PKI used for validation. Must only contain one ca certificate (either
    * root or intermediate cert).
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class TrustAnchor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PEM certificate of the PKI used for validation. Must only contain one ca certificate(either
+   * PEM certificate of the PKI used for validation. Must only contain one ca certificate (either
    * root or intermediate cert).
    * @param pemCertificate pemCertificate or {@code null} for none
    */

@@ -63,7 +63,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    * user's profile picture. If not set, a generic user icon will be displayed instead. This
    * attribute cannot be referenced in IAM bindings. * `google.posix_username`: The Linux username
    * used by OS Login. This is an optional field and the mapped POSIX username cannot exceed 32
-   * characters, The key must match the regex "^a-zA-Z0-9._{0,31}$". This attribute cannot be
+   * characters. The key must match the regex "^a-zA-Z0-9._{0,31}$". This attribute cannot be
    * referenced in IAM bindings. You can also provide custom attributes by specifying
    * `attribute.{custom_attribute}`, where {custom_attribute} is the name of the custom attribute to
    * be mapped. You can define a maximum of 50 custom attributes. The maximum length of a mapped
@@ -144,7 +144,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   /**
    * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
    * This should be used when users can't get the desired claims in authentication credentials.
-   * Currently this configuration is only supported with OIDC protocol.
+   * Currently, this configuration is only supported with OIDC protocol.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +159,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
-   * An OpenId Connect 1.0 identity provider configuration.
+   * An OpenID Connect 1.0 identity provider configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,10 +173,11 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private GoogleIamAdminV1WorkforcePoolProviderSaml saml;
 
   /**
-   * Optional. Agentspace only. Specifies whether the workforce identity pool provider uses SCIM-
-   * managed groups instead of the `google.groups` attribute mapping for authorization checks. The
-   * `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A request
-   * that enables both fields on the same workforce identity pool provider will produce an error.
+   * Optional. Gemini Enterprise only. Specifies whether the workforce identity pool provider uses
+   * SCIM-managed groups instead of the `google.groups` attribute mapping for authorization checks.
+   * The `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A
+   * request that enables both fields on the same workforce identity pool provider will produce an
+   * error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,7 +243,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    * user's profile picture. If not set, a generic user icon will be displayed instead. This
    * attribute cannot be referenced in IAM bindings. * `google.posix_username`: The Linux username
    * used by OS Login. This is an optional field and the mapped POSIX username cannot exceed 32
-   * characters, The key must match the regex "^a-zA-Z0-9._{0,31}$". This attribute cannot be
+   * characters. The key must match the regex "^a-zA-Z0-9._{0,31}$". This attribute cannot be
    * referenced in IAM bindings. You can also provide custom attributes by specifying
    * `attribute.{custom_attribute}`, where {custom_attribute} is the name of the custom attribute to
    * be mapped. You can define a maximum of 50 custom attributes. The maximum length of a mapped
@@ -284,7 +285,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    * user's profile picture. If not set, a generic user icon will be displayed instead. This
    * attribute cannot be referenced in IAM bindings. * `google.posix_username`: The Linux username
    * used by OS Login. This is an optional field and the mapped POSIX username cannot exceed 32
-   * characters, The key must match the regex "^a-zA-Z0-9._{0,31}$". This attribute cannot be
+   * characters. The key must match the regex "^a-zA-Z0-9._{0,31}$". This attribute cannot be
    * referenced in IAM bindings. You can also provide custom attributes by specifying
    * `attribute.{custom_attribute}`, where {custom_attribute} is the name of the custom attribute to
    * be mapped. You can define a maximum of 50 custom attributes. The maximum length of a mapped
@@ -438,7 +439,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   /**
    * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
    * This should be used when users can't get the desired claims in authentication credentials.
-   * Currently this configuration is only supported with OIDC protocol.
+   * Currently, this configuration is only supported with OIDC protocol.
    * @return value or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client getExtraAttributesOauth2Client() {
@@ -448,7 +449,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   /**
    * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
    * This should be used when users can't get the desired claims in authentication credentials.
-   * Currently this configuration is only supported with OIDC protocol.
+   * Currently, this configuration is only supported with OIDC protocol.
    * @param extraAttributesOauth2Client extraAttributesOauth2Client or {@code null} for none
    */
   public WorkforcePoolProvider setExtraAttributesOauth2Client(GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client extraAttributesOauth2Client) {
@@ -476,7 +477,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * An OpenId Connect 1.0 identity provider configuration.
+   * An OpenID Connect 1.0 identity provider configuration.
    * @return value or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderOidc getOidc() {
@@ -484,7 +485,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * An OpenId Connect 1.0 identity provider configuration.
+   * An OpenID Connect 1.0 identity provider configuration.
    * @param oidc oidc or {@code null} for none
    */
   public WorkforcePoolProvider setOidc(GoogleIamAdminV1WorkforcePoolProviderOidc oidc) {
@@ -510,10 +511,11 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Agentspace only. Specifies whether the workforce identity pool provider uses SCIM-
-   * managed groups instead of the `google.groups` attribute mapping for authorization checks. The
-   * `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A request
-   * that enables both fields on the same workforce identity pool provider will produce an error.
+   * Optional. Gemini Enterprise only. Specifies whether the workforce identity pool provider uses
+   * SCIM-managed groups instead of the `google.groups` attribute mapping for authorization checks.
+   * The `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A
+   * request that enables both fields on the same workforce identity pool provider will produce an
+   * error.
    * @return value or {@code null} for none
    */
   public java.lang.String getScimUsage() {
@@ -521,10 +523,11 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Agentspace only. Specifies whether the workforce identity pool provider uses SCIM-
-   * managed groups instead of the `google.groups` attribute mapping for authorization checks. The
-   * `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A request
-   * that enables both fields on the same workforce identity pool provider will produce an error.
+   * Optional. Gemini Enterprise only. Specifies whether the workforce identity pool provider uses
+   * SCIM-managed groups instead of the `google.groups` attribute mapping for authorization checks.
+   * The `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A
+   * request that enables both fields on the same workforce identity pool provider will produce an
+   * error.
    * @param scimUsage scimUsage or {@code null} for none
    */
   public WorkforcePoolProvider setScimUsage(java.lang.String scimUsage) {

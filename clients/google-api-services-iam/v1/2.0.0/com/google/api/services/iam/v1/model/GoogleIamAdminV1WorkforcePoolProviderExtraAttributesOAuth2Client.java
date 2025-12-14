@@ -19,8 +19,8 @@ package com.google.api.services.iam.v1.model;
 /**
  * Represents the OAuth 2.0 client credential configuration for retrieving additional user
  * attributes that are not present in the initial authentication credentials from the identity
- * provider, e.g. groups. See https://datatracker.ietf.org/doc/html/rfc6749#section-4.4 for more
- * details on client credentials grant flow.
+ * provider, for example, groups. See https://datatracker.ietf.org/doc/html/rfc6749#section-4.4 for
+ * more details on client credentials grant flow.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a

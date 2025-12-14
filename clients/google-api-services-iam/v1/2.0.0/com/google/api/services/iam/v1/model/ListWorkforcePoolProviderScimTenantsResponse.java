@@ -17,7 +17,7 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Agentspace only. Response message for ListWorkforcePoolProviderScimTenants.
+ * Gemini Enterprise only. Response message for ListWorkforcePoolProviderScimTenants.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -31,23 +31,23 @@ package com.google.api.services.iam.v1.model;
 public final class ListWorkforcePoolProviderScimTenantsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Agentspace only. A token, which can be sent as `page_token` to retrieve the next
-   * page. If this field is omitted, there are no subsequent pages.
+   * Optional. Gemini Enterprise only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. Agentspace only. A list of SCIM tenants.
+   * Output only. Gemini Enterprise only. A list of SCIM tenants.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WorkforcePoolProviderScimTenant> workforcePoolProviderScimTenants;
 
   /**
-   * Optional. Agentspace only. A token, which can be sent as `page_token` to retrieve the next
-   * page. If this field is omitted, there are no subsequent pages.
+   * Optional. Gemini Enterprise only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -55,8 +55,8 @@ public final class ListWorkforcePoolProviderScimTenantsResponse extends com.goog
   }
 
   /**
-   * Optional. Agentspace only. A token, which can be sent as `page_token` to retrieve the next
-   * page. If this field is omitted, there are no subsequent pages.
+   * Optional. Gemini Enterprise only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListWorkforcePoolProviderScimTenantsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -65,7 +65,7 @@ public final class ListWorkforcePoolProviderScimTenantsResponse extends com.goog
   }
 
   /**
-   * Output only. Agentspace only. A list of SCIM tenants.
+   * Output only. Gemini Enterprise only. A list of SCIM tenants.
    * @return value or {@code null} for none
    */
   public java.util.List<WorkforcePoolProviderScimTenant> getWorkforcePoolProviderScimTenants() {
@@ -73,7 +73,7 @@ public final class ListWorkforcePoolProviderScimTenantsResponse extends com.goog
   }
 
   /**
-   * Output only. Agentspace only. A list of SCIM tenants.
+   * Output only. Gemini Enterprise only. A list of SCIM tenants.
    * @param workforcePoolProviderScimTenants workforcePoolProviderScimTenants or {@code null} for none
    */
   public ListWorkforcePoolProviderScimTenantsResponse setWorkforcePoolProviderScimTenants(java.util.List<WorkforcePoolProviderScimTenant> workforcePoolProviderScimTenants) {

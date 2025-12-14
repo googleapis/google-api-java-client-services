@@ -45,6 +45,14 @@ public final class GoogleCloudAiplatformV1EvaluateDatasetRequest extends com.goo
   private GoogleCloudAiplatformV1EvaluationDataset dataset;
 
   /**
+   * Required. The resource name of the Location to evaluate the dataset. Format:
+   * `projects/{project}/locations/{location}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Required. The metrics used for evaluation.
    * The value may be {@code null}.
    */
@@ -91,6 +99,25 @@ public final class GoogleCloudAiplatformV1EvaluateDatasetRequest extends com.goo
    */
   public GoogleCloudAiplatformV1EvaluateDatasetRequest setDataset(GoogleCloudAiplatformV1EvaluationDataset dataset) {
     this.dataset = dataset;
+    return this;
+  }
+
+  /**
+   * Required. The resource name of the Location to evaluate the dataset. Format:
+   * `projects/{project}/locations/{location}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Required. The resource name of the Location to evaluate the dataset. Format:
+   * `projects/{project}/locations/{location}`
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateDatasetRequest setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

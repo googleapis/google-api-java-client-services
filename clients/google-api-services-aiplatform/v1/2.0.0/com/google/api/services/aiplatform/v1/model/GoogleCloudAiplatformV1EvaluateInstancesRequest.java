@@ -94,6 +94,14 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
   private GoogleCloudAiplatformV1EvaluationInstance instance;
 
   /**
+   * Required. The resource name of the Location to evaluate the instances. Format:
+   * `projects/{project}/locations/{location}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * The metrics used for evaluation. Currently, we only support evaluating a single metric. If
    * multiple metrics are provided, only the first one will be evaluated.
    * The value may be {@code null}.
@@ -428,6 +436,25 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
    */
   public GoogleCloudAiplatformV1EvaluateInstancesRequest setInstance(GoogleCloudAiplatformV1EvaluationInstance instance) {
     this.instance = instance;
+    return this;
+  }
+
+  /**
+   * Required. The resource name of the Location to evaluate the instances. Format:
+   * `projects/{project}/locations/{location}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Required. The resource name of the Location to evaluate the instances. Format:
+   * `projects/{project}/locations/{location}`
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesRequest setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

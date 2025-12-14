@@ -125,6 +125,13 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
   private GoogleCloudAiplatformV1beta1FasterDeploymentConfig fasterDeploymentConfig;
 
   /**
+   * Optional. Resources for a full fine tuned model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FullFineTunedResources fullFineTunedResources;
+
+  /**
    * GDC pretrained / Gemini model name. The model name is a plain model name, e.g.
    * gemini-1.5-flash-002.
    * The value may be {@code null}.
@@ -436,6 +443,23 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
    */
   public GoogleCloudAiplatformV1beta1DeployedModel setFasterDeploymentConfig(GoogleCloudAiplatformV1beta1FasterDeploymentConfig fasterDeploymentConfig) {
     this.fasterDeploymentConfig = fasterDeploymentConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Resources for a full fine tuned model.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FullFineTunedResources getFullFineTunedResources() {
+    return fullFineTunedResources;
+  }
+
+  /**
+   * Optional. Resources for a full fine tuned model.
+   * @param fullFineTunedResources fullFineTunedResources or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedModel setFullFineTunedResources(GoogleCloudAiplatformV1beta1FullFineTunedResources fullFineTunedResources) {
+    this.fullFineTunedResources = fullFineTunedResources;
     return this;
   }
 

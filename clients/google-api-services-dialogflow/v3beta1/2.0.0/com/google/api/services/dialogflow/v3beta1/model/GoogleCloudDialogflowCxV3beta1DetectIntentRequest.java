@@ -51,6 +51,14 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentRequest extends com
   private GoogleCloudDialogflowCxV3beta1QueryParameters queryParams;
 
   /**
+   * Optional. Specifies which fields in the QueryResult to return. If not set, the default is
+   * DETECT_INTENT_RESPONSE_VIEW_FULL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String responseView;
+
+  /**
    * Required. The name of the session this query is sent to. Format:
    * `projects//locations//agents//sessions/` or
    * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not specified,
@@ -113,6 +121,25 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentRequest extends com
    */
   public GoogleCloudDialogflowCxV3beta1DetectIntentRequest setQueryParams(GoogleCloudDialogflowCxV3beta1QueryParameters queryParams) {
     this.queryParams = queryParams;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies which fields in the QueryResult to return. If not set, the default is
+   * DETECT_INTENT_RESPONSE_VIEW_FULL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResponseView() {
+    return responseView;
+  }
+
+  /**
+   * Optional. Specifies which fields in the QueryResult to return. If not set, the default is
+   * DETECT_INTENT_RESPONSE_VIEW_FULL.
+   * @param responseView responseView or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1DetectIntentRequest setResponseView(java.lang.String responseView) {
+    this.responseView = responseView;
     return this;
   }
 

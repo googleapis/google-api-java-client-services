@@ -17,7 +17,7 @@
 package com.google.api.services.file.v1beta1.model;
 
 /**
- * Replication specifications.
+ * Optional. The configuration used to replicate an instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -44,7 +44,8 @@ public final class Replication extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The replication role.
+   * Output only. The replication role. When creating a new replica, this field must be set to
+   * `STANDBY`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class Replication extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The replication role.
+   * Output only. The replication role. When creating a new replica, this field must be set to
+   * `STANDBY`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -78,7 +80,8 @@ public final class Replication extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The replication role.
+   * Output only. The replication role. When creating a new replica, this field must be set to
+   * `STANDBY`.
    * @param role role or {@code null} for none
    */
   public Replication setRole(java.lang.String role) {

@@ -30,6 +30,15 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, then the memories will be generated in the third person (i.e. "The user
+   * generates memories with Memory Bank."). By default, the memories will be generated in the first
+   * person (i.e. "I generate memories with Memory Bank.")
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableThirdPersonMemories;
+
+  /**
    * Optional. Examples of how to generate memories for a particular scope.
    * The value may be {@code null}.
    */
@@ -53,6 +62,27 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> scopeKeys;
+
+  /**
+   * Optional. If true, then the memories will be generated in the third person (i.e. "The user
+   * generates memories with Memory Bank."). By default, the memories will be generated in the first
+   * person (i.e. "I generate memories with Memory Bank.")
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableThirdPersonMemories() {
+    return enableThirdPersonMemories;
+  }
+
+  /**
+   * Optional. If true, then the memories will be generated in the third person (i.e. "The user
+   * generates memories with Memory Bank."). By default, the memories will be generated in the first
+   * person (i.e. "I generate memories with Memory Bank.")
+   * @param enableThirdPersonMemories enableThirdPersonMemories or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MemoryBankCustomizationConfig setEnableThirdPersonMemories(java.lang.Boolean enableThirdPersonMemories) {
+    this.enableThirdPersonMemories = enableThirdPersonMemories;
+    return this;
+  }
 
   /**
    * Optional. Examples of how to generate memories for a particular scope.

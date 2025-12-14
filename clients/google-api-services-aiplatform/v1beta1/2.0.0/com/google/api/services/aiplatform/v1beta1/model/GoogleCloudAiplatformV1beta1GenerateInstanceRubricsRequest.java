@@ -52,6 +52,14 @@ public final class GoogleCloudAiplatformV1beta1GenerateInstanceRubricsRequest ex
   }
 
   /**
+   * Required. The resource name of the Location to generate rubrics from. Format:
+   * `projects/{project}/locations/{location}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Optional. Specification for using the rubric generation configs of a pre-defined metric, e.g.
    * "generic_quality_v1" and "instruction_following_v1". Some of the configs may be only used in
    * rubric generation and not supporting evaluation, e.g. "fully_customized_generic_quality_v1". If
@@ -103,6 +111,25 @@ public final class GoogleCloudAiplatformV1beta1GenerateInstanceRubricsRequest ex
    */
   public GoogleCloudAiplatformV1beta1GenerateInstanceRubricsRequest setContents(java.util.List<GoogleCloudAiplatformV1beta1Content> contents) {
     this.contents = contents;
+    return this;
+  }
+
+  /**
+   * Required. The resource name of the Location to generate rubrics from. Format:
+   * `projects/{project}/locations/{location}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Required. The resource name of the Location to generate rubrics from. Format:
+   * `projects/{project}/locations/{location}`
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateInstanceRubricsRequest setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

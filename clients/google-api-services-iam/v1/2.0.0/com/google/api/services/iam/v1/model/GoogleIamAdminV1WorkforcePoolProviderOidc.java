@@ -17,7 +17,7 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Represents an OpenId Connect 1.0 identity provider.
+ * Represents an OpenID Connect 1.0 identity provider.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -55,9 +55,9 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
 
   /**
    * Optional. OIDC JWKs in JSON String format. For details on the definition of a JWK, see
-   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
-   * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
-   * and EC asymmetric keys are supported. The JWK must use following format and include only the
+   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery document
+   * that is fetched from the well-known path of the `issuer_uri`, will be used. RSA and EC
+   * asymmetric keys are supported. The JWK must use the following format and include only the
    * following fields: { "keys": [ { "kty": "RSA/EC", "alg": "", "use": "sig", "kid": "", "n": "",
    * "e": "", "x": "", "y": "", "crv": "" } ] }
    * The value may be {@code null}.
@@ -130,9 +130,9 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
 
   /**
    * Optional. OIDC JWKs in JSON String format. For details on the definition of a JWK, see
-   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
-   * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
-   * and EC asymmetric keys are supported. The JWK must use following format and include only the
+   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery document
+   * that is fetched from the well-known path of the `issuer_uri`, will be used. RSA and EC
+   * asymmetric keys are supported. The JWK must use the following format and include only the
    * following fields: { "keys": [ { "kty": "RSA/EC", "alg": "", "use": "sig", "kid": "", "n": "",
    * "e": "", "x": "", "y": "", "crv": "" } ] }
    * @return value or {@code null} for none
@@ -143,9 +143,9 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
 
   /**
    * Optional. OIDC JWKs in JSON String format. For details on the definition of a JWK, see
-   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
-   * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
-   * and EC asymmetric keys are supported. The JWK must use following format and include only the
+   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery document
+   * that is fetched from the well-known path of the `issuer_uri`, will be used. RSA and EC
+   * asymmetric keys are supported. The JWK must use the following format and include only the
    * following fields: { "keys": [ { "kty": "RSA/EC", "alg": "", "use": "sig", "kid": "", "n": "",
    * "e": "", "x": "", "y": "", "crv": "" } ] }
    * @param jwksJson jwksJson or {@code null} for none

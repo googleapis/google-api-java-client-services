@@ -17,7 +17,7 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Agentspace only. Request message for UndeleteWorkforcePoolProviderScimToken.
+ * Gemini Enterprise only. Request message for UndeleteWorkforcePoolProviderScimToken.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a

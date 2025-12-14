@@ -38,7 +38,9 @@ public final class ReplicaConfig extends com.google.api.client.json.GenericJson 
   private String lastActiveSyncTime;
 
   /**
-   * The peer instance.
+   * The name of the source instance for the replica, in the format
+   * `projects/{project}/locations/{location}/instances/{instance}`. This field is required when
+   * creating a replica.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +87,9 @@ public final class ReplicaConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The peer instance.
+   * The name of the source instance for the replica, in the format
+   * `projects/{project}/locations/{location}/instances/{instance}`. This field is required when
+   * creating a replica.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerInstance() {
@@ -93,7 +97,9 @@ public final class ReplicaConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The peer instance.
+   * The name of the source instance for the replica, in the format
+   * `projects/{project}/locations/{location}/instances/{instance}`. This field is required when
+   * creating a replica.
    * @param peerInstance peerInstance or {@code null} for none
    */
   public ReplicaConfig setPeerInstance(java.lang.String peerInstance) {

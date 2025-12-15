@@ -38,7 +38,7 @@ public final class Boundary extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The resource name of the CRM node being attached to the boundary. Format:
-   * `projects/{project-number}` or `projects/{project-id}`
+   * `projects/{project-number}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class Boundary extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The resource name of the CRM node being attached to the boundary. Format:
-   * `projects/{project-number}` or `projects/{project-id}`
+   * `projects/{project-number}`
    * @return value or {@code null} for none
    */
   public java.lang.String getCrmNode() {
@@ -94,7 +94,7 @@ public final class Boundary extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The resource name of the CRM node being attached to the boundary. Format:
-   * `projects/{project-number}` or `projects/{project-id}`
+   * `projects/{project-number}`
    * @param crmNode crmNode or {@code null} for none
    */
   public Boundary setCrmNode(java.lang.String crmNode) {

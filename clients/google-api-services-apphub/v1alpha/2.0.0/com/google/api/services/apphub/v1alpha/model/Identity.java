@@ -30,18 +30,20 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class Identity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Principal of the identity. Supported formats: * `sa://my-
-   * sa@xxxx.iam.gserviceaccount.com` for GCP Service Account * `principal://POOL_ID.global.PROJECT_
-   * NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGED_IDENTITY_ID` for Managed Workload Identity
+   * Output only. The principal of the identity. Supported formats: * `sa://my-
+   * sa@PROJECT_ID.iam.gserviceaccount.com` for GCP Service Account * `principal://POOL_ID.global.PR
+   * OJECT_NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGED_IDENTITY_ID` for Managed Workload
+   * Identity
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principal;
 
   /**
-   * Output only. Principal of the identity. Supported formats: * `sa://my-
-   * sa@xxxx.iam.gserviceaccount.com` for GCP Service Account * `principal://POOL_ID.global.PROJECT_
-   * NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGED_IDENTITY_ID` for Managed Workload Identity
+   * Output only. The principal of the identity. Supported formats: * `sa://my-
+   * sa@PROJECT_ID.iam.gserviceaccount.com` for GCP Service Account * `principal://POOL_ID.global.PR
+   * OJECT_NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGED_IDENTITY_ID` for Managed Workload
+   * Identity
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -49,9 +51,10 @@ public final class Identity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Principal of the identity. Supported formats: * `sa://my-
-   * sa@xxxx.iam.gserviceaccount.com` for GCP Service Account * `principal://POOL_ID.global.PROJECT_
-   * NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGED_IDENTITY_ID` for Managed Workload Identity
+   * Output only. The principal of the identity. Supported formats: * `sa://my-
+   * sa@PROJECT_ID.iam.gserviceaccount.com` for GCP Service Account * `principal://POOL_ID.global.PR
+   * OJECT_NUMBER.workload.id.goog/ns/NAMESPACE_ID/sa/MANAGED_IDENTITY_ID` for Managed Workload
+   * Identity
    * @param principal principal or {@code null} for none
    */
   public Identity setPrincipal(java.lang.String principal) {

@@ -1,6 +1,6 @@
 # App Hub API Client Library for Java
 
-
+App Hub lets you build, operate, and manage applications on Google Cloud.
 
 This page contains information about getting started with the App Hub API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-apphub</artifactId>
-      <version>v1alpha-rev20251114-2.0.0</version>
+      <version>v1alpha-rev20251210-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-apphub:v1alpha-rev20251114-2.0.0'
+  implementation 'com.google.apis:google-api-services-apphub:v1alpha-rev20251210-2.0.0'
 }
 ```
 

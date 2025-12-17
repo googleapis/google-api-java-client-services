@@ -37,15 +37,6 @@ package com.google.api.services.androidpublisher.model;
 public final class ProrationPeriodDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The last order id of the original subscription purchase prior to the plan change. This is only
-   * populated if this proration period is from an ugrade/downgrade from a previous subscription and
-   * carries the remaining offer phase from the linked order of the previous subscription.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String linkedOrderId;
-
-  /**
    * Represent the original offer phase from the purchased the line item if the proration period
    * contains any of them. For example, a proration period from CHARGE_FULL_PRICE plan change may
    * merge the 1st offer phase of the subscription offer of the new product user purchased. In this
@@ -54,27 +45,6 @@ public final class ProrationPeriodDetails extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String originalOfferPhase;
-
-  /**
-   * The last order id of the original subscription purchase prior to the plan change. This is only
-   * populated if this proration period is from an ugrade/downgrade from a previous subscription and
-   * carries the remaining offer phase from the linked order of the previous subscription.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLinkedOrderId() {
-    return linkedOrderId;
-  }
-
-  /**
-   * The last order id of the original subscription purchase prior to the plan change. This is only
-   * populated if this proration period is from an ugrade/downgrade from a previous subscription and
-   * carries the remaining offer phase from the linked order of the previous subscription.
-   * @param linkedOrderId linkedOrderId or {@code null} for none
-   */
-  public ProrationPeriodDetails setLinkedOrderId(java.lang.String linkedOrderId) {
-    this.linkedOrderId = linkedOrderId;
-    return this;
-  }
 
   /**
    * Represent the original offer phase from the purchased the line item if the proration period

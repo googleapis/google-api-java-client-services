@@ -16536,6 +16536,176 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
             /**
+             * Creates a ServingConfig. Note: The Google Cloud console works only with the default serving
+             * config. Additional ServingConfigs can be created and managed only via the API. A maximum of 100
+             * ServingConfigs are allowed in an Engine, otherwise a RESOURCE_EXHAUSTED error is returned.
+             *
+             * Create a request for the method "servingConfigs.create".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Full resource name of parent. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/servingConfigs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Creates a ServingConfig. Note: The Google Cloud console works only with the default serving
+               * config. Additional ServingConfigs can be created and managed only via the API. A maximum of 100
+               * ServingConfigs are allowed in an Engine, otherwise a RESOURCE_EXHAUSTED error is returned.
+               *
+               * Create a request for the method "servingConfigs.create".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Full resource name of parent. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of parent. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Full resource name of parent. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Full resource name of parent. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The ID to use for the ServingConfig, which will become the final
+               * component of the ServingConfig's resource name. This value should be 4-63
+               * characters, and valid characters are /a-zA-Z0-9+/.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String servingConfigId;
+
+              /** Required. The ID to use for the ServingConfig, which will become the final component of the
+             ServingConfig's resource name. This value should be 4-63 characters, and valid characters are
+             /a-zA-Z0-9+/.
+               */
+              public java.lang.String getServingConfigId() {
+                return servingConfigId;
+              }
+
+              /**
+               * Required. The ID to use for the ServingConfig, which will become the final
+               * component of the ServingConfig's resource name. This value should be 4-63
+               * characters, and valid characters are /a-zA-Z0-9+/.
+               */
+              public Create setServingConfigId(java.lang.String servingConfigId) {
+                this.servingConfigId = servingConfigId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
              * Deletes a ServingConfig. Returns a NOT_FOUND error if the ServingConfig does not exist.
              *
              * Create a request for the method "servingConfigs.delete".
@@ -32459,6 +32629,176 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
             /**
+             * Creates a ServingConfig. Note: The Google Cloud console works only with the default serving
+             * config. Additional ServingConfigs can be created and managed only via the API. A maximum of 100
+             * ServingConfigs are allowed in an Engine, otherwise a RESOURCE_EXHAUSTED error is returned.
+             *
+             * Create a request for the method "servingConfigs.create".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Full resource name of parent. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/servingConfigs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+              /**
+               * Creates a ServingConfig. Note: The Google Cloud console works only with the default serving
+               * config. Additional ServingConfigs can be created and managed only via the API. A maximum of 100
+               * ServingConfigs are allowed in an Engine, otherwise a RESOURCE_EXHAUSTED error is returned.
+               *
+               * Create a request for the method "servingConfigs.create".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Full resource name of parent. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of parent. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Full resource name of parent. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Full resource name of parent. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The ID to use for the ServingConfig, which will become the final
+               * component of the ServingConfig's resource name. This value should be 4-63
+               * characters, and valid characters are /a-zA-Z0-9+/.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String servingConfigId;
+
+              /** Required. The ID to use for the ServingConfig, which will become the final component of the
+             ServingConfig's resource name. This value should be 4-63 characters, and valid characters are
+             /a-zA-Z0-9+/.
+               */
+              public java.lang.String getServingConfigId() {
+                return servingConfigId;
+              }
+
+              /**
+               * Required. The ID to use for the ServingConfig, which will become the final
+               * component of the ServingConfig's resource name. This value should be 4-63
+               * characters, and valid characters are /a-zA-Z0-9+/.
+               */
+              public Create setServingConfigId(java.lang.String servingConfigId) {
+                this.servingConfigId = servingConfigId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
              * Deletes a ServingConfig. Returns a NOT_FOUND error if the ServingConfig does not exist.
              *
              * Create a request for the method "servingConfigs.delete".
@@ -45130,6 +45470,176 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public Answer set(String parameterName, Object value) {
               return (Answer) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a ServingConfig. Note: The Google Cloud console works only with the default serving
+           * config. Additional ServingConfigs can be created and managed only via the API. A maximum of 100
+           * ServingConfigs are allowed in an Engine, otherwise a RESOURCE_EXHAUSTED error is returned.
+           *
+           * Create a request for the method "servingConfigs.create".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Full resource name of parent. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/servingConfigs";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Creates a ServingConfig. Note: The Google Cloud console works only with the default serving
+             * config. Additional ServingConfigs can be created and managed only via the API. A maximum of 100
+             * ServingConfigs are allowed in an Engine, otherwise a RESOURCE_EXHAUSTED error is returned.
+             *
+             * Create a request for the method "servingConfigs.create".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Full resource name of parent. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of parent. Format:
+             * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Full resource name of parent. Format:
+           `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Full resource name of parent. Format:
+             * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the ServingConfig, which will become the final component
+             * of the ServingConfig's resource name. This value should be 4-63 characters, and valid
+             * characters are /a-zA-Z0-9+/.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String servingConfigId;
+
+            /** Required. The ID to use for the ServingConfig, which will become the final component of the
+           ServingConfig's resource name. This value should be 4-63 characters, and valid characters are
+           /a-zA-Z0-9+/.
+             */
+            public java.lang.String getServingConfigId() {
+              return servingConfigId;
+            }
+
+            /**
+             * Required. The ID to use for the ServingConfig, which will become the final component
+             * of the ServingConfig's resource name. This value should be 4-63 characters, and valid
+             * characters are /a-zA-Z0-9+/.
+             */
+            public Create setServingConfigId(java.lang.String servingConfigId) {
+              this.servingConfigId = servingConfigId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
             }
           }
           /**

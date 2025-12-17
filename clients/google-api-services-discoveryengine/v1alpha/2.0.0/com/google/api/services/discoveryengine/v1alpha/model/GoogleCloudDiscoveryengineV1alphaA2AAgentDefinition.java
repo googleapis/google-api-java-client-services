@@ -30,11 +30,35 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaA2AAgentDefinition extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration specific to agents that are deployed from Cloud Marketplace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaA2AAgentDefinitionCloudMarketplaceConfig cloudMarketplaceConfig;
+
+  /**
    * Optional. The agent card is a JSON string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String jsonAgentCard;
+
+  /**
+   * Optional. Configuration specific to agents that are deployed from Cloud Marketplace.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaA2AAgentDefinitionCloudMarketplaceConfig getCloudMarketplaceConfig() {
+    return cloudMarketplaceConfig;
+  }
+
+  /**
+   * Optional. Configuration specific to agents that are deployed from Cloud Marketplace.
+   * @param cloudMarketplaceConfig cloudMarketplaceConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaA2AAgentDefinition setCloudMarketplaceConfig(GoogleCloudDiscoveryengineV1alphaA2AAgentDefinitionCloudMarketplaceConfig cloudMarketplaceConfig) {
+    this.cloudMarketplaceConfig = cloudMarketplaceConfig;
+    return this;
+  }
 
   /**
    * Optional. The agent card is a JSON string.

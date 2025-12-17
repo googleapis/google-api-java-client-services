@@ -44,6 +44,13 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   private ColumnBreak columnBreak;
 
   /**
+   * A paragraph element that represents a date.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DateElement dateElement;
+
+  /**
    * The zero-base end index of this paragraph element, exclusive, in UTF-16 code units.
    * The value may be {@code null}.
    */
@@ -145,6 +152,23 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
    */
   public ParagraphElement setColumnBreak(ColumnBreak columnBreak) {
     this.columnBreak = columnBreak;
+    return this;
+  }
+
+  /**
+   * A paragraph element that represents a date.
+   * @return value or {@code null} for none
+   */
+  public DateElement getDateElement() {
+    return dateElement;
+  }
+
+  /**
+   * A paragraph element that represents a date.
+   * @param dateElement dateElement or {@code null} for none
+   */
+  public ParagraphElement setDateElement(DateElement dateElement) {
+    this.dateElement = dateElement;
     return this;
   }
 

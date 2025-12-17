@@ -94,6 +94,15 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1GoogleSearchRetrieval googleSearchRetrieval;
 
   /**
+   * Optional. If specified, Vertex AI will use Parallel.ai to search for information to answer user
+   * queries. The search results will be grounded on Parallel.ai and presented to the model for
+   * response generation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ToolParallelAiSearch parallelAiSearch;
+
+  /**
    * Optional. Retrieval tool type. System will always execute the provided retrieval tool(s) to get
    * external knowledge to answer the prompt. Retrieval results are presented to the model for
    * generation.
@@ -237,6 +246,27 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Tool setGoogleSearchRetrieval(GoogleCloudAiplatformV1beta1GoogleSearchRetrieval googleSearchRetrieval) {
     this.googleSearchRetrieval = googleSearchRetrieval;
+    return this;
+  }
+
+  /**
+   * Optional. If specified, Vertex AI will use Parallel.ai to search for information to answer user
+   * queries. The search results will be grounded on Parallel.ai and presented to the model for
+   * response generation
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ToolParallelAiSearch getParallelAiSearch() {
+    return parallelAiSearch;
+  }
+
+  /**
+   * Optional. If specified, Vertex AI will use Parallel.ai to search for information to answer user
+   * queries. The search results will be grounded on Parallel.ai and presented to the model for
+   * response generation
+   * @param parallelAiSearch parallelAiSearch or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Tool setParallelAiSearch(GoogleCloudAiplatformV1beta1ToolParallelAiSearch parallelAiSearch) {
+    this.parallelAiSearch = parallelAiSearch;
     return this;
   }
 

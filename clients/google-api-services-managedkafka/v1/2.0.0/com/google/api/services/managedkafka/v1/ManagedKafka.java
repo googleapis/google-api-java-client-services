@@ -1074,6 +1074,29 @@ public class ManagedKafka extends com.google.api.client.googleapis.services.json
             return this;
           }
 
+          /**
+           * Optional. Specifies the view of the Cluster resource to be returned. Defaults to
+           * CLUSTER_VIEW_BASIC. See the ClusterView enum for possible values.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. Specifies the view of the Cluster resource to be returned. Defaults to
+         CLUSTER_VIEW_BASIC. See the ClusterView enum for possible values.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Optional. Specifies the view of the Cluster resource to be returned. Defaults to
+           * CLUSTER_VIEW_BASIC. See the ClusterView enum for possible values.
+           */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);

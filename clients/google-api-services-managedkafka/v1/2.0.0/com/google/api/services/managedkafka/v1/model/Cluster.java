@@ -31,6 +31,19 @@ package com.google.api.services.managedkafka.v1.model;
 public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Only populated when FULL view is requested. Details of each broker in the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BrokerDetails> brokerDetails;
+
+  static {
+    // hack to force ProGuard to consider BrokerDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BrokerDetails.class);
+  }
+
+  /**
    * Required. Capacity configuration for the Kafka cluster.
    * The value may be {@code null}.
    */
@@ -50,6 +63,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private GcpConfig gcpConfig;
+
+  /**
+   * Output only. Only populated when FULL view is requested. The Kafka version of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kafkaVersion;
 
   /**
    * Optional. Labels as key value pairs.
@@ -116,6 +136,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. Only populated when FULL view is requested. Details of each broker in the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BrokerDetails> getBrokerDetails() {
+    return brokerDetails;
+  }
+
+  /**
+   * Output only. Only populated when FULL view is requested. Details of each broker in the cluster.
+   * @param brokerDetails brokerDetails or {@code null} for none
+   */
+  public Cluster setBrokerDetails(java.util.List<BrokerDetails> brokerDetails) {
+    this.brokerDetails = brokerDetails;
+    return this;
+  }
+
+  /**
    * Required. Capacity configuration for the Kafka cluster.
    * @return value or {@code null} for none
    */
@@ -163,6 +200,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setGcpConfig(GcpConfig gcpConfig) {
     this.gcpConfig = gcpConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Only populated when FULL view is requested. The Kafka version of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKafkaVersion() {
+    return kafkaVersion;
+  }
+
+  /**
+   * Output only. Only populated when FULL view is requested. The Kafka version of the cluster.
+   * @param kafkaVersion kafkaVersion or {@code null} for none
+   */
+  public Cluster setKafkaVersion(java.lang.String kafkaVersion) {
+    this.kafkaVersion = kafkaVersion;
     return this;
   }
 

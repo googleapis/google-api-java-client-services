@@ -154,6 +154,1005 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
   public class Curators {
 
     /**
+     * An accessor for creating requests from the CuratedPackages collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AuthorizedBuyersMarketplace authorizedbuyersmarketplace = new AuthorizedBuyersMarketplace(...);}
+     *   {@code AuthorizedBuyersMarketplace.CuratedPackages.List request = authorizedbuyersmarketplace.curatedPackages().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public CuratedPackages curatedPackages() {
+      return new CuratedPackages();
+    }
+
+    /**
+     * The "curatedPackages" collection of methods.
+     */
+    public class CuratedPackages {
+
+      /**
+       * Activates an existing curated package.
+       *
+       * Create a request for the method "curatedPackages.activate".
+       *
+       * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link Activate#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the curated package to activate. Format:
+       *        `curators/{accountId}/curatedPackages/{curatedPackageId}`
+       * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1beta.model.ActivateCuratedPackageRequest}
+       * @return the request
+       */
+      public Activate activate(java.lang.String name, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.ActivateCuratedPackageRequest content) throws java.io.IOException {
+        Activate result = new Activate(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Activate extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage> {
+
+        private static final String REST_PATH = "v1beta/{+name}:activate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^curators/[^/]+/curatedPackages/[^/]+$");
+
+        /**
+         * Activates an existing curated package.
+         *
+         * Create a request for the method "curatedPackages.activate".
+         *
+         * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+         * setting any optional parameters, call the {@link Activate#execute()} method to invoke the
+         * remote operation. <p> {@link
+         * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the curated package to activate. Format:
+       *        `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1beta.model.ActivateCuratedPackageRequest}
+         * @since 1.13
+         */
+        protected Activate(java.lang.String name, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.ActivateCuratedPackageRequest content) {
+          super(AuthorizedBuyersMarketplace.this, "POST", REST_PATH, content, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^curators/[^/]+/curatedPackages/[^/]+$");
+          }
+        }
+
+        @Override
+        public Activate set$Xgafv(java.lang.String $Xgafv) {
+          return (Activate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Activate setAccessToken(java.lang.String accessToken) {
+          return (Activate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Activate setAlt(java.lang.String alt) {
+          return (Activate) super.setAlt(alt);
+        }
+
+        @Override
+        public Activate setCallback(java.lang.String callback) {
+          return (Activate) super.setCallback(callback);
+        }
+
+        @Override
+        public Activate setFields(java.lang.String fields) {
+          return (Activate) super.setFields(fields);
+        }
+
+        @Override
+        public Activate setKey(java.lang.String key) {
+          return (Activate) super.setKey(key);
+        }
+
+        @Override
+        public Activate setOauthToken(java.lang.String oauthToken) {
+          return (Activate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Activate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Activate setQuotaUser(java.lang.String quotaUser) {
+          return (Activate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Activate setUploadType(java.lang.String uploadType) {
+          return (Activate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Activate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the curated package to activate. Format:
+         * `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the curated package to activate. Format:
+       `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the curated package to activate. Format:
+         * `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        public Activate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^curators/[^/]+/curatedPackages/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Activate set(String parameterName, Object value) {
+          return (Activate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a new curated package.
+       *
+       * Create a request for the method "curatedPackages.create".
+       *
+       * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The parent curator account where this curated package will be created. Format:
+       *        `curators/{accountId}`
+       * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/curatedPackages";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^curators/[^/]+$");
+
+        /**
+         * Creates a new curated package.
+         *
+         * Create a request for the method "curatedPackages.create".
+         *
+         * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+         * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent curator account where this curated package will be created. Format:
+       *        `curators/{accountId}`
+         * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage content) {
+          super(AuthorizedBuyersMarketplace.this, "POST", REST_PATH, content, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^curators/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent curator account where this curated package will be created. Format:
+         * `curators/{accountId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent curator account where this curated package will be created. Format:
+       `curators/{accountId}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent curator account where this curated package will be created. Format:
+         * `curators/{accountId}`
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^curators/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deactivates an existing curated package.
+       *
+       * Create a request for the method "curatedPackages.deactivate".
+       *
+       * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link Deactivate#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Required. The name of the curated package to deactivate. Format:
+       *        `curators/{accountId}/curatedPackages/{curatedPackageId}`
+       * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1beta.model.DeactivateCuratedPackageRequest}
+       * @return the request
+       */
+      public Deactivate deactivate(java.lang.String name, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.DeactivateCuratedPackageRequest content) throws java.io.IOException {
+        Deactivate result = new Deactivate(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Deactivate extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage> {
+
+        private static final String REST_PATH = "v1beta/{+name}:deactivate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^curators/[^/]+/curatedPackages/[^/]+$");
+
+        /**
+         * Deactivates an existing curated package.
+         *
+         * Create a request for the method "curatedPackages.deactivate".
+         *
+         * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+         * setting any optional parameters, call the {@link Deactivate#execute()} method to invoke the
+         * remote operation. <p> {@link
+         * Deactivate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the curated package to deactivate. Format:
+       *        `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1beta.model.DeactivateCuratedPackageRequest}
+         * @since 1.13
+         */
+        protected Deactivate(java.lang.String name, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.DeactivateCuratedPackageRequest content) {
+          super(AuthorizedBuyersMarketplace.this, "POST", REST_PATH, content, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^curators/[^/]+/curatedPackages/[^/]+$");
+          }
+        }
+
+        @Override
+        public Deactivate set$Xgafv(java.lang.String $Xgafv) {
+          return (Deactivate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Deactivate setAccessToken(java.lang.String accessToken) {
+          return (Deactivate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Deactivate setAlt(java.lang.String alt) {
+          return (Deactivate) super.setAlt(alt);
+        }
+
+        @Override
+        public Deactivate setCallback(java.lang.String callback) {
+          return (Deactivate) super.setCallback(callback);
+        }
+
+        @Override
+        public Deactivate setFields(java.lang.String fields) {
+          return (Deactivate) super.setFields(fields);
+        }
+
+        @Override
+        public Deactivate setKey(java.lang.String key) {
+          return (Deactivate) super.setKey(key);
+        }
+
+        @Override
+        public Deactivate setOauthToken(java.lang.String oauthToken) {
+          return (Deactivate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Deactivate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Deactivate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Deactivate setQuotaUser(java.lang.String quotaUser) {
+          return (Deactivate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Deactivate setUploadType(java.lang.String uploadType) {
+          return (Deactivate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Deactivate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Deactivate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the curated package to deactivate. Format:
+         * `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the curated package to deactivate. Format:
+       `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the curated package to deactivate. Format:
+         * `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        public Deactivate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^curators/[^/]+/curatedPackages/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Deactivate set(String parameterName, Object value) {
+          return (Deactivate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a curated package given its resource name.
+       *
+       * Create a request for the method "curatedPackages.get".
+       *
+       * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the curated package to retrieve. Format:
+       *        `curators/{accountId}/curatedPackages/{curatedPackageId}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^curators/[^/]+/curatedPackages/[^/]+$");
+
+        /**
+         * Gets a curated package given its resource name.
+         *
+         * Create a request for the method "curatedPackages.get".
+         *
+         * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the curated package to retrieve. Format:
+       *        `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(AuthorizedBuyersMarketplace.this, "GET", REST_PATH, null, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^curators/[^/]+/curatedPackages/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the curated package to retrieve. Format:
+         * `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the curated package to retrieve. Format:
+       `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the curated package to retrieve. Format:
+         * `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^curators/[^/]+/curatedPackages/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists curated packages owned by the specified curator.
+       *
+       * Create a request for the method "curatedPackages.list".
+       *
+       * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The parent curator account which owns this collection of curated packages. Format:
+       *        `curators/{accountId}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1beta.model.ListCuratedPackagesResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/curatedPackages";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^curators/[^/]+$");
+
+        /**
+         * Lists curated packages owned by the specified curator.
+         *
+         * Create a request for the method "curatedPackages.list".
+         *
+         * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+         * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent curator account which owns this collection of curated packages. Format:
+       *        `curators/{accountId}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(AuthorizedBuyersMarketplace.this, "GET", REST_PATH, null, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.ListCuratedPackagesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^curators/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent curator account which owns this collection of curated packages.
+         * Format: `curators/{accountId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent curator account which owns this collection of curated packages. Format:
+       `curators/{accountId}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent curator account which owns this collection of curated packages.
+         * Format: `curators/{accountId}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^curators/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Optional query string using the [Cloud API list filtering syntax](/authorized-
+         * buyers/apis/guides/list-filters). Supported columns for filtering are: * displayName *
+         * createTime * updateTime * state * feeCpm.currencyCode * feeCpm.units * feeCpm.nanos *
+         * floorPriceCpm.currencyCode * floorPriceCpm.units * floorPriceCpm.nanos
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Optional query string using the [Cloud API list filtering syntax](/authorized-
+       buyers/apis/guides/list-filters). Supported columns for filtering are: * displayName * createTime *
+       updateTime * state * feeCpm.currencyCode * feeCpm.units * feeCpm.nanos * floorPriceCpm.currencyCode
+       * floorPriceCpm.units * floorPriceCpm.nanos
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Optional query string using the [Cloud API list filtering syntax](/authorized-
+         * buyers/apis/guides/list-filters). Supported columns for filtering are: * displayName *
+         * createTime * updateTime * state * feeCpm.currencyCode * feeCpm.units * feeCpm.nanos *
+         * floorPriceCpm.currencyCode * floorPriceCpm.units * floorPriceCpm.nanos
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. Requested page size. The server may return fewer results than requested. Max
+         * allowed page size is 500. If unspecified, the server will default to 500.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Requested page size. The server may return fewer results than requested. Max allowed page
+       size is 500. If unspecified, the server will default to 500.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Requested page size. The server may return fewer results than requested. Max
+         * allowed page size is 500. If unspecified, the server will default to 500.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListCuratedPackages` call. Provide this
+         * to retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListCuratedPackages` call. Provide this to
+       retrieve the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListCuratedPackages` call. Provide this
+         * to retrieve the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an existing curated package.
+       *
+       * Create a request for the method "curatedPackages.patch".
+       *
+       * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. The unique resource name for the curated package. Format:
+       *        `curators/{accountId}/curatedPackages/{curatedPackageId}`
+       * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^curators/[^/]+/curatedPackages/[^/]+$");
+
+        /**
+         * Updates an existing curated package.
+         *
+         * Create a request for the method "curatedPackages.patch".
+         *
+         * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+         * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The unique resource name for the curated package. Format:
+       *        `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage content) {
+          super(AuthorizedBuyersMarketplace.this, "PATCH", REST_PATH, content, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.CuratedPackage.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^curators/[^/]+/curatedPackages/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The unique resource name for the curated package. Format:
+         * `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The unique resource name for the curated package. Format:
+       `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The unique resource name for the curated package. Format:
+         * `curators/{accountId}/curatedPackages/{curatedPackageId}`
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^curators/[^/]+/curatedPackages/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. List of fields to be updated. If empty or unspecified, the service will update
+         * all fields populated in the update request excluding the output only fields and primitive
+         * fields with default value. Note that explicit field mask is required in order to reset a
+         * primitive field back to its default value, for example, false for boolean fields, 0 for
+         * integer fields. A special field mask consisting of a single path "*" can be used to
+         * indicate full replacement (the equivalent of PUT method), updatable fields unset or
+         * unspecified in the input will be cleared or set to default value. Output only fields will
+         * be ignored regardless of the value of updateMask.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. List of fields to be updated. If empty or unspecified, the service will update all fields
+       populated in the update request excluding the output only fields and primitive fields with default
+       value. Note that explicit field mask is required in order to reset a primitive field back to its
+       default value, for example, false for boolean fields, 0 for integer fields. A special field mask
+       consisting of a single path "*" can be used to indicate full replacement (the equivalent of PUT
+       method), updatable fields unset or unspecified in the input will be cleared or set to default
+       value. Output only fields will be ignored regardless of the value of updateMask.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. List of fields to be updated. If empty or unspecified, the service will update
+         * all fields populated in the update request excluding the output only fields and primitive
+         * fields with default value. Note that explicit field mask is required in order to reset a
+         * primitive field back to its default value, for example, false for boolean fields, 0 for
+         * integer fields. A special field mask consisting of a single path "*" can be used to
+         * indicate full replacement (the equivalent of PUT method), updatable fields unset or
+         * unspecified in the input will be cleared or set to default value. Output only fields will
+         * be ignored regardless of the value of updateMask.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the DataSegments collection.
      *
      * <p>The typical use is:</p>
@@ -1145,6 +2144,213 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
       }
 
     }
+  }
+
+  /**
+   * An accessor for creating requests from the MediaPlanners collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AuthorizedBuyersMarketplace authorizedbuyersmarketplace = new AuthorizedBuyersMarketplace(...);}
+   *   {@code AuthorizedBuyersMarketplace.MediaPlanners.List request = authorizedbuyersmarketplace.mediaPlanners().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public MediaPlanners mediaPlanners() {
+    return new MediaPlanners();
+  }
+
+  /**
+   * The "mediaPlanners" collection of methods.
+   */
+  public class MediaPlanners {
+
+    /**
+     * Lists all media planner accounts that the caller has access to. For curators, this will return
+     * all media planners that have accepted curator terms. For other accounts, attempting to list media
+     * planners will return an error.
+     *
+     * Create a request for the method "mediaPlanners.list".
+     *
+     * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+     * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1beta.model.ListMediaPlannersResponse> {
+
+      private static final String REST_PATH = "v1beta/mediaPlanners";
+
+      /**
+       * Lists all media planner accounts that the caller has access to. For curators, this will return
+       * all media planners that have accepted curator terms. For other accounts, attempting to list
+       * media planners will return an error.
+       *
+       * Create a request for the method "mediaPlanners.list".
+       *
+       * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(AuthorizedBuyersMarketplace.this, "GET", REST_PATH, null, com.google.api.services.authorizedbuyersmarketplace.v1beta.model.ListMediaPlannersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional query string using the [Cloud API list filtering syntax](/authorized-
+       * buyers/apis/guides/list-filters). Supported columns for filtering are: * `name` *
+       * `displayName` * `ancestorNames`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional query string using the [Cloud API list filtering syntax](/authorized-
+     buyers/apis/guides/list-filters). Supported columns for filtering are: * `name` * `displayName` *
+     `ancestorNames`
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional query string using the [Cloud API list filtering syntax](/authorized-
+       * buyers/apis/guides/list-filters). Supported columns for filtering are: * `name` *
+       * `displayName` * `ancestorNames`
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of media planners to return. If unspecified, at most 100 media planners
+       * will be returned. The maximum value is 500; values above 500 will be coerced to 500.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of media planners to return. If unspecified, at most 100 media planners will be
+     returned. The maximum value is 500; values above 500 will be coerced to 500.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of media planners to return. If unspecified, at most 100 media planners
+       * will be returned. The maximum value is 500; values above 500 will be coerced to 500.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. This value is received from
+       * a previous `ListMediaPlanners` call in ListMediaPlannersResponse.nextPageToken.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token identifying a page of results the server should return. This value is received from a
+     previous `ListMediaPlanners` call in ListMediaPlannersResponse.nextPageToken.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. This value is received from
+       * a previous `ListMediaPlanners` call in ListMediaPlannersResponse.nextPageToken.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

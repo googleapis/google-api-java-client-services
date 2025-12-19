@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.authorizedbuyersmarketplace.v1alpha.model;
+package com.google.api.services.authorizedbuyersmarketplace.v1beta.model;
 
 /**
  * Represents a media planner account.

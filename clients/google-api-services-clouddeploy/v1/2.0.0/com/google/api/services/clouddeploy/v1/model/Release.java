@@ -204,7 +204,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The tool versions to use for this release and all subsequent operations involving
-   * this release. If unset, then it will freeze the tool versions at the time of release creation.
+   * this release. If unset, tool versions are frozen when the release is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -602,7 +602,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The tool versions to use for this release and all subsequent operations involving
-   * this release. If unset, then it will freeze the tool versions at the time of release creation.
+   * this release. If unset, tool versions are frozen when the release is created.
    * @return value or {@code null} for none
    */
   public ToolVersions getToolVersions() {
@@ -611,7 +611,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The tool versions to use for this release and all subsequent operations involving
-   * this release. If unset, then it will freeze the tool versions at the time of release creation.
+   * this release. If unset, tool versions are frozen when the release is created.
    * @param toolVersions toolVersions or {@code null} for none
    */
   public Release setToolVersions(ToolVersions toolVersions) {

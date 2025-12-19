@@ -18,7 +18,7 @@ package com.google.api.services.clouddeploy.v1.model;
 
 /**
  * ToolVersionSupportedCondition contains information about when support for the release's version
- * of a Tool ends.
+ * of a tool ends.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class ToolVersionSupportedCondition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time at which this release's version of the Tool will enter maintenance mode.
+   * Output only. The time at which this release's version of the tool will enter maintenance mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,21 +45,21 @@ public final class ToolVersionSupportedCondition extends com.google.api.client.j
   private java.lang.Boolean status;
 
   /**
-   * Output only. The time at which this release's version of the Tool will no longer be supported.
+   * Output only. The time at which this release's version of the tool will no longer be supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String supportExpirationTime;
 
   /**
-   * Output only. The Tool support state for this release's version of the Tool.
+   * Output only. The tool support state for this release's version of the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String toolVersionSupportState;
 
   /**
-   * Output only. The time at which this release's version of the Tool will enter maintenance mode.
+   * Output only. The time at which this release's version of the tool will enter maintenance mode.
    * @return value or {@code null} for none
    */
   public String getMaintenanceModeTime() {
@@ -67,7 +67,7 @@ public final class ToolVersionSupportedCondition extends com.google.api.client.j
   }
 
   /**
-   * Output only. The time at which this release's version of the Tool will enter maintenance mode.
+   * Output only. The time at which this release's version of the tool will enter maintenance mode.
    * @param maintenanceModeTime maintenanceModeTime or {@code null} for none
    */
   public ToolVersionSupportedCondition setMaintenanceModeTime(String maintenanceModeTime) {
@@ -93,7 +93,7 @@ public final class ToolVersionSupportedCondition extends com.google.api.client.j
   }
 
   /**
-   * Output only. The time at which this release's version of the Tool will no longer be supported.
+   * Output only. The time at which this release's version of the tool will no longer be supported.
    * @return value or {@code null} for none
    */
   public String getSupportExpirationTime() {
@@ -101,7 +101,7 @@ public final class ToolVersionSupportedCondition extends com.google.api.client.j
   }
 
   /**
-   * Output only. The time at which this release's version of the Tool will no longer be supported.
+   * Output only. The time at which this release's version of the tool will no longer be supported.
    * @param supportExpirationTime supportExpirationTime or {@code null} for none
    */
   public ToolVersionSupportedCondition setSupportExpirationTime(String supportExpirationTime) {
@@ -110,7 +110,7 @@ public final class ToolVersionSupportedCondition extends com.google.api.client.j
   }
 
   /**
-   * Output only. The Tool support state for this release's version of the Tool.
+   * Output only. The tool support state for this release's version of the tool.
    * @return value or {@code null} for none
    */
   public java.lang.String getToolVersionSupportState() {
@@ -118,7 +118,7 @@ public final class ToolVersionSupportedCondition extends com.google.api.client.j
   }
 
   /**
-   * Output only. The Tool support state for this release's version of the Tool.
+   * Output only. The tool support state for this release's version of the tool.
    * @param toolVersionSupportState toolVersionSupportState or {@code null} for none
    */
   public ToolVersionSupportedCondition setToolVersionSupportState(java.lang.String toolVersionSupportState) {

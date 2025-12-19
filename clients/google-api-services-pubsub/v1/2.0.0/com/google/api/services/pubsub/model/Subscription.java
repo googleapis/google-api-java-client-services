@@ -170,7 +170,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the subscription. It must have the format
+   * Required. Identifier. The name of the subscription. It must have the format
    * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter,
    * and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`),
    * periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255
@@ -225,9 +225,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> tags;
 
   /**
-   * Required. The name of the topic from which this subscription is receiving messages. Format is
-   * `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the
-   * topic has been deleted.
+   * Required. Identifier. The name of the topic from which this subscription is receiving messages.
+   * Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-
+   * topic_` if the topic has been deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -548,7 +548,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the subscription. It must have the format
+   * Required. Identifier. The name of the subscription. It must have the format
    * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter,
    * and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`),
    * periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255
@@ -560,7 +560,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the subscription. It must have the format
+   * Required. Identifier. The name of the subscription. It must have the format
    * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter,
    * and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`),
    * periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255
@@ -676,9 +676,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the topic from which this subscription is receiving messages. Format is
-   * `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the
-   * topic has been deleted.
+   * Required. Identifier. The name of the topic from which this subscription is receiving messages.
+   * Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-
+   * topic_` if the topic has been deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopic() {
@@ -686,9 +686,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the topic from which this subscription is receiving messages. Format is
-   * `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the
-   * topic has been deleted.
+   * Required. Identifier. The name of the topic from which this subscription is receiving messages.
+   * Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-
+   * topic_` if the topic has been deleted.
    * @param topic topic or {@code null} for none
    */
   public Subscription setTopic(java.lang.String topic) {

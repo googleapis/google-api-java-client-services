@@ -325,6 +325,16 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   private java.lang.String regionCode;
 
   /**
+   * Optional. The granular relevance filtering specification. If not specified, the global
+   * `relevance_threshold` will be used for all sub-searches. If specified, this overrides the
+   * global `relevance_threshold` to use thresholds on a per sub-search basis. This feature is
+   * currently supported only for custom and site search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceFilterSpec relevanceFilterSpec;
+
+  /**
    * Optional. The specification for returning the relevance score.
    * The value may be {@code null}.
    */
@@ -332,9 +342,11 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   private GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceScoreSpec relevanceScoreSpec;
 
   /**
-   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
-   * a balance of precision and recall to deliver both highly accurate results and comprehensive
-   * coverage of relevant information. This feature is not supported for healthcare search.
+   * The global relevance threshold of the search results. Defaults to Google defined threshold,
+   * leveraging a balance of precision and recall to deliver both highly accurate results and
+   * comprehensive coverage of relevant information. If more granular relevance filtering is
+   * required, use the `relevance_filter_spec` instead. This feature is not supported for healthcare
+   * search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1111,6 +1123,29 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   }
 
   /**
+   * Optional. The granular relevance filtering specification. If not specified, the global
+   * `relevance_threshold` will be used for all sub-searches. If specified, this overrides the
+   * global `relevance_threshold` to use thresholds on a per sub-search basis. This feature is
+   * currently supported only for custom and site search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceFilterSpec getRelevanceFilterSpec() {
+    return relevanceFilterSpec;
+  }
+
+  /**
+   * Optional. The granular relevance filtering specification. If not specified, the global
+   * `relevance_threshold` will be used for all sub-searches. If specified, this overrides the
+   * global `relevance_threshold` to use thresholds on a per sub-search basis. This feature is
+   * currently supported only for custom and site search.
+   * @param relevanceFilterSpec relevanceFilterSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequest setRelevanceFilterSpec(GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceFilterSpec relevanceFilterSpec) {
+    this.relevanceFilterSpec = relevanceFilterSpec;
+    return this;
+  }
+
+  /**
    * Optional. The specification for returning the relevance score.
    * @return value or {@code null} for none
    */
@@ -1128,9 +1163,11 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   }
 
   /**
-   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
-   * a balance of precision and recall to deliver both highly accurate results and comprehensive
-   * coverage of relevant information. This feature is not supported for healthcare search.
+   * The global relevance threshold of the search results. Defaults to Google defined threshold,
+   * leveraging a balance of precision and recall to deliver both highly accurate results and
+   * comprehensive coverage of relevant information. If more granular relevance filtering is
+   * required, use the `relevance_filter_spec` instead. This feature is not supported for healthcare
+   * search.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelevanceThreshold() {
@@ -1138,9 +1175,11 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   }
 
   /**
-   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
-   * a balance of precision and recall to deliver both highly accurate results and comprehensive
-   * coverage of relevant information. This feature is not supported for healthcare search.
+   * The global relevance threshold of the search results. Defaults to Google defined threshold,
+   * leveraging a balance of precision and recall to deliver both highly accurate results and
+   * comprehensive coverage of relevant information. If more granular relevance filtering is
+   * required, use the `relevance_filter_spec` instead. This feature is not supported for healthcare
+   * search.
    * @param relevanceThreshold relevanceThreshold or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setRelevanceThreshold(java.lang.String relevanceThreshold) {

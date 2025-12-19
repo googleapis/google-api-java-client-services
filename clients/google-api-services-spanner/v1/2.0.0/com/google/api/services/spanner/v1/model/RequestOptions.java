@@ -30,13 +30,6 @@ package com.google.api.services.spanner.v1.model;
 public final class RequestOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Optional context that may be needed for some requests.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ClientContext clientContext;
-
-  /**
    * Priority for the request.
    * The value may be {@code null}.
    */
@@ -67,23 +60,6 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String transactionTag;
-
-  /**
-   * Optional. Optional context that may be needed for some requests.
-   * @return value or {@code null} for none
-   */
-  public ClientContext getClientContext() {
-    return clientContext;
-  }
-
-  /**
-   * Optional. Optional context that may be needed for some requests.
-   * @param clientContext clientContext or {@code null} for none
-   */
-  public RequestOptions setClientContext(ClientContext clientContext) {
-    this.clientContext = clientContext;
-    return this;
-  }
 
   /**
    * Priority for the request.

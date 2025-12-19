@@ -31,6 +31,13 @@ package com.google.api.services.spanner.v1.model;
 public final class Mutation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Ack a message from a queue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Ack ack;
+
+  /**
    * Delete rows from a table. Succeeds whether or not the named rows were present.
    * The value may be {@code null}.
    */
@@ -68,12 +75,36 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   private Write replace;
 
   /**
+   * Send a message to a queue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Send send;
+
+  /**
    * Update existing rows in a table. If any of the rows does not already exist, the transaction
    * fails with error `NOT_FOUND`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Write update;
+
+  /**
+   * Ack a message from a queue.
+   * @return value or {@code null} for none
+   */
+  public Ack getAck() {
+    return ack;
+  }
+
+  /**
+   * Ack a message from a queue.
+   * @param ack ack or {@code null} for none
+   */
+  public Mutation setAck(Ack ack) {
+    this.ack = ack;
+    return this;
+  }
 
   /**
    * Delete rows from a table. Succeeds whether or not the named rows were present.
@@ -158,6 +189,23 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
    */
   public Mutation setReplace(Write replace) {
     this.replace = replace;
+    return this;
+  }
+
+  /**
+   * Send a message to a queue.
+   * @return value or {@code null} for none
+   */
+  public Send getSend() {
+    return send;
+  }
+
+  /**
+   * Send a message to a queue.
+   * @param send send or {@code null} for none
+   */
+  public Mutation setSend(Send send) {
+    this.send = send;
     return this;
   }
 

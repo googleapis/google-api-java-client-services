@@ -45,7 +45,7 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
 
   /**
    * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections e.g. when
+   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
    * attempting to list all resources across all supported locations.
    * The value may be {@code null}.
    */
@@ -88,7 +88,7 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
 
   /**
    * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections e.g. when
+   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
    * attempting to list all resources across all supported locations.
    * @return value or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
 
   /**
    * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections e.g. when
+   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
    * attempting to list all resources across all supported locations.
    * @param unreachable unreachable or {@code null} for none
    */

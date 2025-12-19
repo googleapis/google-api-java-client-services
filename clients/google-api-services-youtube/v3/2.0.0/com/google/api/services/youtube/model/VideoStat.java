@@ -45,20 +45,19 @@ public final class VideoStat extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Output only. The ID that YouTube uses to uniquely identify the video.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * Output only. Identifies what kind of resource this is. Value: the fixed string
    * "youtube#videoStats".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
-
-  /**
-   * Output only. Identifier. The resource name for the `VideoStats` resource, in the format
-   * `videoStats/{video_stat}`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
 
   /**
    * Output only. The VideoStatsSnippet object contains basic details about the video, such publish
@@ -74,13 +73,6 @@ public final class VideoStat extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VideoStatsStatistics statistics;
-
-  /**
-   * Output only. The ID that YouTube uses to uniquely identify the video.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String videoId;
 
   /**
    * Output only. The VideoStatsContentDetails object contains information about the video content,
@@ -119,6 +111,23 @@ public final class VideoStat extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The ID that YouTube uses to uniquely identify the video.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Output only. The ID that YouTube uses to uniquely identify the video.
+   * @param id id or {@code null} for none
+   */
+  public VideoStat setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
    * Output only. Identifies what kind of resource this is. Value: the fixed string
    * "youtube#videoStats".
    * @return value or {@code null} for none
@@ -134,25 +143,6 @@ public final class VideoStat extends com.google.api.client.json.GenericJson {
    */
   public VideoStat setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * Output only. Identifier. The resource name for the `VideoStats` resource, in the format
-   * `videoStats/{video_stat}`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * Output only. Identifier. The resource name for the `VideoStats` resource, in the format
-   * `videoStats/{video_stat}`.
-   * @param name name or {@code null} for none
-   */
-  public VideoStat setName(java.lang.String name) {
-    this.name = name;
     return this;
   }
 
@@ -189,23 +179,6 @@ public final class VideoStat extends com.google.api.client.json.GenericJson {
    */
   public VideoStat setStatistics(VideoStatsStatistics statistics) {
     this.statistics = statistics;
-    return this;
-  }
-
-  /**
-   * Output only. The ID that YouTube uses to uniquely identify the video.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVideoId() {
-    return videoId;
-  }
-
-  /**
-   * Output only. The ID that YouTube uses to uniquely identify the video.
-   * @param videoId videoId or {@code null} for none
-   */
-  public VideoStat setVideoId(java.lang.String videoId) {
-    this.videoId = videoId;
     return this;
   }
 

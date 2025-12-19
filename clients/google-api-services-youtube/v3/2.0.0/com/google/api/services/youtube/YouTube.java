@@ -18550,6 +18550,22 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
             return (BatchGetStats) super.setUploadProtocol(uploadProtocol);
           }
 
+          /** Required. Return videos with the given ids. */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> id;
+
+          /** Required. Return videos with the given ids.
+           */
+          public java.util.List<java.lang.String> getId() {
+            return id;
+          }
+
+          /** Required. Return videos with the given ids. */
+          public BatchGetStats setId(java.util.List<java.lang.String> id) {
+            this.id = id;
+            return this;
+          }
+
           /**
            * Optional. **Note:** This parameter is intended exclusively for YouTube content
            * partners. The `onBehalfOfContentOwner` parameter indicates that the request's
@@ -18623,22 +18639,6 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
            */
           public BatchGetStats setPart(java.util.List<java.lang.String> part) {
             this.part = part;
-            return this;
-          }
-
-          /** Required. Return videos with the given ids. */
-          @com.google.api.client.util.Key
-          private java.util.List<java.lang.String> videoIds;
-
-          /** Required. Return videos with the given ids.
-           */
-          public java.util.List<java.lang.String> getVideoIds() {
-            return videoIds;
-          }
-
-          /** Required. Return videos with the given ids. */
-          public BatchGetStats setVideoIds(java.util.List<java.lang.String> videoIds) {
-            this.videoIds = videoIds;
             return this;
           }
 

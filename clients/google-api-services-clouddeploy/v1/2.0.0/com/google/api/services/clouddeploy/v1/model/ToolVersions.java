@@ -30,14 +30,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class ToolVersions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The docker version to use for Cloud Deploy operations.
+   * Optional. The Docker version to use for Cloud Deploy operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String docker;
 
   /**
-   * Optional. The helm version to use for Cloud Deploy operations.
+   * Optional. The Helm version to use for Cloud Deploy operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,28 +51,28 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   private java.lang.String kpt;
 
   /**
-   * Optional. The kubectl version to use for Cloud Deploy operations.
+   * Optional. The Kubectl version to use for Cloud Deploy operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kubectl;
 
   /**
-   * Optional. The kustomize version to use for Cloud Deploy operations.
+   * Optional. The Kustomize version to use for Cloud Deploy operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kustomize;
 
   /**
-   * Optional. The skaffold version to use for Cloud Deploy operations.
+   * Optional. The Skaffold version to use for Cloud Deploy operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String skaffold;
 
   /**
-   * Optional. The docker version to use for Cloud Deploy operations.
+   * Optional. The Docker version to use for Cloud Deploy operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocker() {
@@ -80,7 +80,7 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The docker version to use for Cloud Deploy operations.
+   * Optional. The Docker version to use for Cloud Deploy operations.
    * @param docker docker or {@code null} for none
    */
   public ToolVersions setDocker(java.lang.String docker) {
@@ -89,7 +89,7 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The helm version to use for Cloud Deploy operations.
+   * Optional. The Helm version to use for Cloud Deploy operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getHelm() {
@@ -97,7 +97,7 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The helm version to use for Cloud Deploy operations.
+   * Optional. The Helm version to use for Cloud Deploy operations.
    * @param helm helm or {@code null} for none
    */
   public ToolVersions setHelm(java.lang.String helm) {
@@ -123,7 +123,7 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The kubectl version to use for Cloud Deploy operations.
+   * Optional. The Kubectl version to use for Cloud Deploy operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKubectl() {
@@ -131,7 +131,7 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The kubectl version to use for Cloud Deploy operations.
+   * Optional. The Kubectl version to use for Cloud Deploy operations.
    * @param kubectl kubectl or {@code null} for none
    */
   public ToolVersions setKubectl(java.lang.String kubectl) {
@@ -140,7 +140,7 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The kustomize version to use for Cloud Deploy operations.
+   * Optional. The Kustomize version to use for Cloud Deploy operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKustomize() {
@@ -148,7 +148,7 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The kustomize version to use for Cloud Deploy operations.
+   * Optional. The Kustomize version to use for Cloud Deploy operations.
    * @param kustomize kustomize or {@code null} for none
    */
   public ToolVersions setKustomize(java.lang.String kustomize) {
@@ -157,7 +157,7 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The skaffold version to use for Cloud Deploy operations.
+   * Optional. The Skaffold version to use for Cloud Deploy operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getSkaffold() {
@@ -165,7 +165,7 @@ public final class ToolVersions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The skaffold version to use for Cloud Deploy operations.
+   * Optional. The Skaffold version to use for Cloud Deploy operations.
    * @param skaffold skaffold or {@code null} for none
    */
   public ToolVersions setSkaffold(java.lang.String skaffold) {

@@ -44,7 +44,7 @@ public final class ReleaseCondition extends com.google.api.client.json.GenericJs
   private ToolVersionSupportedCondition helmVersionSupportedCondition;
 
   /**
-   * Output only. Details around the support state of the release's Kpt version.
+   * Output only. Details around the support state of the release's kpt version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +120,7 @@ public final class ReleaseCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Details around the support state of the release's Kpt version.
+   * Output only. Details around the support state of the release's kpt version.
    * @return value or {@code null} for none
    */
   public ToolVersionSupportedCondition getKptVersionSupportedCondition() {
@@ -128,7 +128,7 @@ public final class ReleaseCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Details around the support state of the release's Kpt version.
+   * Output only. Details around the support state of the release's kpt version.
    * @param kptVersionSupportedCondition kptVersionSupportedCondition or {@code null} for none
    */
   public ReleaseCondition setKptVersionSupportedCondition(ToolVersionSupportedCondition kptVersionSupportedCondition) {

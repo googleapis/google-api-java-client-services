@@ -156,7 +156,8 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   private java.util.List<MessageTransform> messageTransforms;
 
   /**
-   * Required. Name of the subscription. Format is `projects/{project}/subscriptions/{sub}`.
+   * Required. Identifier. Name of the subscription. Format is
+   * `projects/{project}/subscriptions/{sub}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -483,7 +484,8 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   }
 
   /**
-   * Required. Name of the subscription. Format is `projects/{project}/subscriptions/{sub}`.
+   * Required. Identifier. Name of the subscription. Format is
+   * `projects/{project}/subscriptions/{sub}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -491,7 +493,8 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   }
 
   /**
-   * Required. Name of the subscription. Format is `projects/{project}/subscriptions/{sub}`.
+   * Required. Identifier. Name of the subscription. Format is
+   * `projects/{project}/subscriptions/{sub}`.
    * @param name name or {@code null} for none
    */
   public GooglePubsubV1Subscription setName(java.lang.String name) {

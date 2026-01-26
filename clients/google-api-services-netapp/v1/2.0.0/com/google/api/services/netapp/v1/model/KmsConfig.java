@@ -17,7 +17,7 @@
 package com.google.api.services.netapp.v1.model;
 
 /**
- * KmsConfig is the customer managed encryption key(CMEK) configuration.
+ * KmsConfig is the customer-managed encryption key(CMEK) configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the NetApp API. For a detailed explanation see:
@@ -37,8 +37,8 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Required. Customer managed crypto key resource full name. Format:
-   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * Required. Customer-managed crypto key resource full name. Format:
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,8 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. Name of the KmsConfig.
+   * Identifier. Name of the KmsConfig. Format:
+   * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +113,8 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Customer managed crypto key resource full name. Format:
-   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * Required. Customer-managed crypto key resource full name. Format:
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKeyName() {
@@ -121,8 +122,8 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Customer managed crypto key resource full name. Format:
-   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * Required. Customer-managed crypto key resource full name. Format:
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`
    * @param cryptoKeyName cryptoKeyName or {@code null} for none
    */
   public KmsConfig setCryptoKeyName(java.lang.String cryptoKeyName) {
@@ -182,7 +183,8 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the KmsConfig.
+   * Identifier. Name of the KmsConfig. Format:
+   * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -190,7 +192,8 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the KmsConfig.
+   * Identifier. Name of the KmsConfig. Format:
+   * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    * @param name name or {@code null} for none
    */
   public KmsConfig setName(java.lang.String name) {

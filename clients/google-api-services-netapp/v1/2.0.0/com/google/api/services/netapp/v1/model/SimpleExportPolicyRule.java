@@ -44,7 +44,7 @@ public final class SimpleExportPolicyRule extends com.google.api.client.json.Gen
   private java.lang.String allowedClients;
 
   /**
-   * Optional. An integer representing the anonymous user ID. Range is 0 to 4294967295. Required
+   * Optional. An integer representing the anonymous user ID. Range is 0 to `4294967295`. Required
    * when `squash_mode` is `ROOT_SQUASH` or `ALL_SQUASH`.
    * The value may be {@code null}.
    */
@@ -167,7 +167,7 @@ public final class SimpleExportPolicyRule extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. An integer representing the anonymous user ID. Range is 0 to 4294967295. Required
+   * Optional. An integer representing the anonymous user ID. Range is 0 to `4294967295`. Required
    * when `squash_mode` is `ROOT_SQUASH` or `ALL_SQUASH`.
    * @return value or {@code null} for none
    */
@@ -176,7 +176,7 @@ public final class SimpleExportPolicyRule extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. An integer representing the anonymous user ID. Range is 0 to 4294967295. Required
+   * Optional. An integer representing the anonymous user ID. Range is 0 to `4294967295`. Required
    * when `squash_mode` is `ROOT_SQUASH` or `ALL_SQUASH`.
    * @param anonUid anonUid or {@code null} for none
    */

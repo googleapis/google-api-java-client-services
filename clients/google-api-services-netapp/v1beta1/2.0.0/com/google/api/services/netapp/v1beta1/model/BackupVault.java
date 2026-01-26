@@ -38,7 +38,7 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private java.lang.String backupRegion;
 
   /**
-   * Optional. Backup retention policy defining the retenton of backups.
+   * Optional. Backup retention policy defining the retention of backups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,9 +52,9 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private java.lang.String backupVaultType;
 
   /**
-   * Output only. The crypto key version used to encrypt the backup vault. Format: projects/{project
-   * }/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_ke
-   * y_version}
+   * Output only. The crypto key version used to encrypt the backup vault. Format: `projects/{projec
+   * t}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_k
+   * ey_version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +90,8 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private java.lang.String encryptionState;
 
   /**
-   * Optional. Specifies the KMS config to be used for backup encryption. Format:
-   * projects/{project}/locations/{location}/kmsConfigs/{kms_config}
+   * Optional. Specifies the Key Management System (KMS) configuration to be used for backup
+   * encryption. Format: `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +155,7 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Backup retention policy defining the retenton of backups.
+   * Optional. Backup retention policy defining the retention of backups.
    * @return value or {@code null} for none
    */
   public BackupRetentionPolicy getBackupRetentionPolicy() {
@@ -163,7 +163,7 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Backup retention policy defining the retenton of backups.
+   * Optional. Backup retention policy defining the retention of backups.
    * @param backupRetentionPolicy backupRetentionPolicy or {@code null} for none
    */
   public BackupVault setBackupRetentionPolicy(BackupRetentionPolicy backupRetentionPolicy) {
@@ -189,9 +189,9 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The crypto key version used to encrypt the backup vault. Format: projects/{project
-   * }/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_ke
-   * y_version}
+   * Output only. The crypto key version used to encrypt the backup vault. Format: `projects/{projec
+   * t}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_k
+   * ey_version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupsCryptoKeyVersion() {
@@ -199,9 +199,9 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The crypto key version used to encrypt the backup vault. Format: projects/{project
-   * }/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_ke
-   * y_version}
+   * Output only. The crypto key version used to encrypt the backup vault. Format: `projects/{projec
+   * t}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_k
+   * ey_version}`
    * @param backupsCryptoKeyVersion backupsCryptoKeyVersion or {@code null} for none
    */
   public BackupVault setBackupsCryptoKeyVersion(java.lang.String backupsCryptoKeyVersion) {
@@ -280,8 +280,8 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies the KMS config to be used for backup encryption. Format:
-   * projects/{project}/locations/{location}/kmsConfigs/{kms_config}
+   * Optional. Specifies the Key Management System (KMS) configuration to be used for backup
+   * encryption. Format: `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsConfig() {
@@ -289,8 +289,8 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies the KMS config to be used for backup encryption. Format:
-   * projects/{project}/locations/{location}/kmsConfigs/{kms_config}
+   * Optional. Specifies the Key Management System (KMS) configuration to be used for backup
+   * encryption. Format: `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    * @param kmsConfig kmsConfig or {@code null} for none
    */
   public BackupVault setKmsConfig(java.lang.String kmsConfig) {

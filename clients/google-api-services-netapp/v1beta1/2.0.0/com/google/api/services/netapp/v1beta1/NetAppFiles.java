@@ -5585,7 +5585,8 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the netapp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. Name of the KmsConfig.
+         * @param name Identifier. Name of the KmsConfig. Format:
+         *        `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
          * @param content the {@link com.google.api.services.netapp.v1beta1.model.KmsConfig}
          * @return the request
          */
@@ -5612,7 +5613,8 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. Name of the KmsConfig.
+           * @param name Identifier. Name of the KmsConfig. Format:
+         *        `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            * @param content the {@link com.google.api.services.netapp.v1beta1.model.KmsConfig}
            * @since 1.13
            */
@@ -5681,17 +5683,24 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Identifier. Name of the KmsConfig. */
+          /**
+           * Identifier. Name of the KmsConfig. Format:
+           * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. Name of the KmsConfig.
+          /** Identifier. Name of the KmsConfig. Format:
+         `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Identifier. Name of the KmsConfig. */
+          /**
+           * Identifier. Name of the KmsConfig. Format:
+           * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

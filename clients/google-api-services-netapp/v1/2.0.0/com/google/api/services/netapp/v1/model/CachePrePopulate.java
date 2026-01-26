@@ -44,7 +44,7 @@ public final class CachePrePopulate extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> pathList;
 
   /**
-   * Optional. Flag indicating whether the directories listed with the pathList need to be
+   * Optional. Flag indicating whether the directories listed with the `path_list` need to be
    * recursively pre-populated.
    * The value may be {@code null}.
    */
@@ -86,7 +86,7 @@ public final class CachePrePopulate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Flag indicating whether the directories listed with the pathList need to be
+   * Optional. Flag indicating whether the directories listed with the `path_list` need to be
    * recursively pre-populated.
    * @return value or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class CachePrePopulate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Flag indicating whether the directories listed with the pathList need to be
+   * Optional. Flag indicating whether the directories listed with the `path_list` need to be
    * recursively pre-populated.
    * @param recursion recursion or {@code null} for none
    */

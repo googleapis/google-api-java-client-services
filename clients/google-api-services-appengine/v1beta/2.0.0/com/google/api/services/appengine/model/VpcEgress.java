@@ -17,7 +17,7 @@
 package com.google.api.services.appengine.model;
 
 /**
- * Vpc Egress configuration.
+ * Deprecated: Use VpcAccess instead. Vpc Egress configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Engine Admin API. For a detailed explanation see:

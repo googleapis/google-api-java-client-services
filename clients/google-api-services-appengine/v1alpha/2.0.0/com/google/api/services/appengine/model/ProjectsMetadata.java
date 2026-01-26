@@ -68,6 +68,15 @@ public final class ProjectsMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * DEPRECATED: Indicates whether the GCE project is in the DEPROVISIONING state. This field is a
+   * temporary workaround (see b/475310865) to allow GCE extensions to bypass certain checks during
+   * deprovisioning. It will be replaced by a permanent solution in the future.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isGceProjectDeprovisioning;
+
+  /**
    * The service account authorized to operate on the consumer project. Note: CCFE only propagates
    * P4SA with default tag to CLH.
    * The value may be {@code null}.
@@ -174,6 +183,27 @@ public final class ProjectsMetadata extends com.google.api.client.json.GenericJs
    */
   public ProjectsMetadata setGceTag(java.util.List<GceTag> gceTag) {
     this.gceTag = gceTag;
+    return this;
+  }
+
+  /**
+   * DEPRECATED: Indicates whether the GCE project is in the DEPROVISIONING state. This field is a
+   * temporary workaround (see b/475310865) to allow GCE extensions to bypass certain checks during
+   * deprovisioning. It will be replaced by a permanent solution in the future.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsGceProjectDeprovisioning() {
+    return isGceProjectDeprovisioning;
+  }
+
+  /**
+   * DEPRECATED: Indicates whether the GCE project is in the DEPROVISIONING state. This field is a
+   * temporary workaround (see b/475310865) to allow GCE extensions to bypass certain checks during
+   * deprovisioning. It will be replaced by a permanent solution in the future.
+   * @param isGceProjectDeprovisioning isGceProjectDeprovisioning or {@code null} for none
+   */
+  public ProjectsMetadata setIsGceProjectDeprovisioning(java.lang.Boolean isGceProjectDeprovisioning) {
+    this.isGceProjectDeprovisioning = isGceProjectDeprovisioning;
     return this;
   }
 

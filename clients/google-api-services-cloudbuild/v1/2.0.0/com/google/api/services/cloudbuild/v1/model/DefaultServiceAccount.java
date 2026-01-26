@@ -30,7 +30,7 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class DefaultServiceAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifier. Format: `projects/{project}/locations/{location}/defaultServiceAccount
+   * Identifier. Format: `projects/{project}/locations/{location}/defaultServiceAccount`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class DefaultServiceAccount extends com.google.api.client.json.Gene
   private java.lang.String serviceAccountEmail;
 
   /**
-   * Identifier. Format: `projects/{project}/locations/{location}/defaultServiceAccount
+   * Identifier. Format: `projects/{project}/locations/{location}/defaultServiceAccount`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -57,7 +57,7 @@ public final class DefaultServiceAccount extends com.google.api.client.json.Gene
   }
 
   /**
-   * Identifier. Format: `projects/{project}/locations/{location}/defaultServiceAccount
+   * Identifier. Format: `projects/{project}/locations/{location}/defaultServiceAccount`.
    * @param name name or {@code null} for none
    */
   public DefaultServiceAccount setName(java.lang.String name) {

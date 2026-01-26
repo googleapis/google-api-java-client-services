@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * SQLServer data source configuration
+ * Configuration for syncing data from a SQLServer source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -37,14 +37,14 @@ public final class SqlServerSourceConfig extends com.google.api.client.json.Gene
   private SqlServerChangeTables changeTables;
 
   /**
-   * SQLServer objects to exclude from the stream.
+   * The SQLServer objects to exclude from the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SqlServerRdbms excludeObjects;
 
   /**
-   * SQLServer objects to include in the stream.
+   * The SQLServer objects to include in the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class SqlServerSourceConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * SQLServer objects to exclude from the stream.
+   * The SQLServer objects to exclude from the stream.
    * @return value or {@code null} for none
    */
   public SqlServerRdbms getExcludeObjects() {
@@ -97,7 +97,7 @@ public final class SqlServerSourceConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * SQLServer objects to exclude from the stream.
+   * The SQLServer objects to exclude from the stream.
    * @param excludeObjects excludeObjects or {@code null} for none
    */
   public SqlServerSourceConfig setExcludeObjects(SqlServerRdbms excludeObjects) {
@@ -106,7 +106,7 @@ public final class SqlServerSourceConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * SQLServer objects to include in the stream.
+   * The SQLServer objects to include in the stream.
    * @return value or {@code null} for none
    */
   public SqlServerRdbms getIncludeObjects() {
@@ -114,7 +114,7 @@ public final class SqlServerSourceConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * SQLServer objects to include in the stream.
+   * The SQLServer objects to include in the stream.
    * @param includeObjects includeObjects or {@code null} for none
    */
   public SqlServerSourceConfig setIncludeObjects(SqlServerRdbms includeObjects) {

@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * MongoDB source configuration.
+ * Configuration for syncing data from a MongoDB source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.datastream.v1.model;
 public final class MongodbSourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * MongoDB collections to exclude from the stream.
+   * The MongoDB collections to exclude from the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MongodbCluster excludeObjects;
 
   /**
-   * MongoDB collections to include in the stream.
+   * The MongoDB collections to include in the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class MongodbSourceConfig extends com.google.api.client.json.Generi
   private java.lang.Integer maxConcurrentBackfillTasks;
 
   /**
-   * MongoDB collections to exclude from the stream.
+   * The MongoDB collections to exclude from the stream.
    * @return value or {@code null} for none
    */
   public MongodbCluster getExcludeObjects() {
@@ -67,7 +67,7 @@ public final class MongodbSourceConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * MongoDB collections to exclude from the stream.
+   * The MongoDB collections to exclude from the stream.
    * @param excludeObjects excludeObjects or {@code null} for none
    */
   public MongodbSourceConfig setExcludeObjects(MongodbCluster excludeObjects) {
@@ -76,7 +76,7 @@ public final class MongodbSourceConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * MongoDB collections to include in the stream.
+   * The MongoDB collections to include in the stream.
    * @return value or {@code null} for none
    */
   public MongodbCluster getIncludeObjects() {
@@ -84,7 +84,7 @@ public final class MongodbSourceConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * MongoDB collections to include in the stream.
+   * The MongoDB collections to include in the stream.
    * @param includeObjects includeObjects or {@code null} for none
    */
   public MongodbSourceConfig setIncludeObjects(MongodbCluster includeObjects) {

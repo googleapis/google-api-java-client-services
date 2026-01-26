@@ -37,7 +37,7 @@ public final class SalesforceField extends com.google.api.client.json.GenericJso
   private java.lang.String dataType;
 
   /**
-   * Field name.
+   * The field name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class SalesforceField extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Field name.
+   * The field name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -76,7 +76,7 @@ public final class SalesforceField extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Field name.
+   * The field name.
    * @param name name or {@code null} for none
    */
   public SalesforceField setName(java.lang.String name) {

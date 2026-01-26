@@ -30,78 +30,85 @@ package com.google.api.services.datastream.v1.model;
 public final class DiscoverConnectionProfileRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * An ad-hoc connection profile configuration.
+   * Optional. An ad-hoc connection profile configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConnectionProfile connectionProfile;
 
   /**
-   * A reference to an existing connection profile.
+   * Optional. A reference to an existing connection profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectionProfileName;
 
   /**
-   * Whether to retrieve the full hierarchy of data objects (TRUE) or only the current level
-   * (FALSE).
+   * Optional. Whether to retrieve the full hierarchy of data objects (TRUE) or only the current
+   * level (FALSE).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean fullHierarchy;
 
   /**
-   * The number of hierarchy levels below the current level to be retrieved.
+   * Optional. The number of hierarchy levels below the current level to be retrieved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer hierarchyDepth;
 
   /**
-   * MongoDB cluster to enrich with child data objects and metadata.
+   * Optional. MongoDB cluster to enrich with child data objects and metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MongodbCluster mongodbCluster;
 
   /**
-   * MySQL RDBMS to enrich with child data objects and metadata.
+   * Optional. MySQL RDBMS to enrich with child data objects and metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MysqlRdbms mysqlRdbms;
 
   /**
-   * Oracle RDBMS to enrich with child data objects and metadata.
+   * Optional. Oracle RDBMS to enrich with child data objects and metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OracleRdbms oracleRdbms;
 
   /**
-   * PostgreSQL RDBMS to enrich with child data objects and metadata.
+   * Optional. PostgreSQL RDBMS to enrich with child data objects and metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PostgresqlRdbms postgresqlRdbms;
 
   /**
-   * Salesforce organization to enrich with child data objects and metadata.
+   * Optional. Salesforce organization to enrich with child data objects and metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SalesforceOrg salesforceOrg;
 
   /**
-   * SQLServer RDBMS to enrich with child data objects and metadata.
+   * Optional. Spanner database to enrich with child data objects and metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpannerDatabase spannerDatabase;
+
+  /**
+   * Optional. SQLServer RDBMS to enrich with child data objects and metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SqlServerRdbms sqlServerRdbms;
 
   /**
-   * An ad-hoc connection profile configuration.
+   * Optional. An ad-hoc connection profile configuration.
    * @return value or {@code null} for none
    */
   public ConnectionProfile getConnectionProfile() {
@@ -109,7 +116,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * An ad-hoc connection profile configuration.
+   * Optional. An ad-hoc connection profile configuration.
    * @param connectionProfile connectionProfile or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setConnectionProfile(ConnectionProfile connectionProfile) {
@@ -118,7 +125,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * A reference to an existing connection profile.
+   * Optional. A reference to an existing connection profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionProfileName() {
@@ -126,7 +133,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * A reference to an existing connection profile.
+   * Optional. A reference to an existing connection profile.
    * @param connectionProfileName connectionProfileName or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setConnectionProfileName(java.lang.String connectionProfileName) {
@@ -135,8 +142,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * Whether to retrieve the full hierarchy of data objects (TRUE) or only the current level
-   * (FALSE).
+   * Optional. Whether to retrieve the full hierarchy of data objects (TRUE) or only the current
+   * level (FALSE).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFullHierarchy() {
@@ -144,8 +151,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * Whether to retrieve the full hierarchy of data objects (TRUE) or only the current level
-   * (FALSE).
+   * Optional. Whether to retrieve the full hierarchy of data objects (TRUE) or only the current
+   * level (FALSE).
    * @param fullHierarchy fullHierarchy or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setFullHierarchy(java.lang.Boolean fullHierarchy) {
@@ -154,7 +161,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * The number of hierarchy levels below the current level to be retrieved.
+   * Optional. The number of hierarchy levels below the current level to be retrieved.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHierarchyDepth() {
@@ -162,7 +169,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * The number of hierarchy levels below the current level to be retrieved.
+   * Optional. The number of hierarchy levels below the current level to be retrieved.
    * @param hierarchyDepth hierarchyDepth or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setHierarchyDepth(java.lang.Integer hierarchyDepth) {
@@ -171,7 +178,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * MongoDB cluster to enrich with child data objects and metadata.
+   * Optional. MongoDB cluster to enrich with child data objects and metadata.
    * @return value or {@code null} for none
    */
   public MongodbCluster getMongodbCluster() {
@@ -179,7 +186,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * MongoDB cluster to enrich with child data objects and metadata.
+   * Optional. MongoDB cluster to enrich with child data objects and metadata.
    * @param mongodbCluster mongodbCluster or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setMongodbCluster(MongodbCluster mongodbCluster) {
@@ -188,7 +195,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * MySQL RDBMS to enrich with child data objects and metadata.
+   * Optional. MySQL RDBMS to enrich with child data objects and metadata.
    * @return value or {@code null} for none
    */
   public MysqlRdbms getMysqlRdbms() {
@@ -196,7 +203,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * MySQL RDBMS to enrich with child data objects and metadata.
+   * Optional. MySQL RDBMS to enrich with child data objects and metadata.
    * @param mysqlRdbms mysqlRdbms or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setMysqlRdbms(MysqlRdbms mysqlRdbms) {
@@ -205,7 +212,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * Oracle RDBMS to enrich with child data objects and metadata.
+   * Optional. Oracle RDBMS to enrich with child data objects and metadata.
    * @return value or {@code null} for none
    */
   public OracleRdbms getOracleRdbms() {
@@ -213,7 +220,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * Oracle RDBMS to enrich with child data objects and metadata.
+   * Optional. Oracle RDBMS to enrich with child data objects and metadata.
    * @param oracleRdbms oracleRdbms or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setOracleRdbms(OracleRdbms oracleRdbms) {
@@ -222,7 +229,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * PostgreSQL RDBMS to enrich with child data objects and metadata.
+   * Optional. PostgreSQL RDBMS to enrich with child data objects and metadata.
    * @return value or {@code null} for none
    */
   public PostgresqlRdbms getPostgresqlRdbms() {
@@ -230,7 +237,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * PostgreSQL RDBMS to enrich with child data objects and metadata.
+   * Optional. PostgreSQL RDBMS to enrich with child data objects and metadata.
    * @param postgresqlRdbms postgresqlRdbms or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setPostgresqlRdbms(PostgresqlRdbms postgresqlRdbms) {
@@ -239,7 +246,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * Salesforce organization to enrich with child data objects and metadata.
+   * Optional. Salesforce organization to enrich with child data objects and metadata.
    * @return value or {@code null} for none
    */
   public SalesforceOrg getSalesforceOrg() {
@@ -247,7 +254,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * Salesforce organization to enrich with child data objects and metadata.
+   * Optional. Salesforce organization to enrich with child data objects and metadata.
    * @param salesforceOrg salesforceOrg or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setSalesforceOrg(SalesforceOrg salesforceOrg) {
@@ -256,7 +263,24 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * SQLServer RDBMS to enrich with child data objects and metadata.
+   * Optional. Spanner database to enrich with child data objects and metadata.
+   * @return value or {@code null} for none
+   */
+  public SpannerDatabase getSpannerDatabase() {
+    return spannerDatabase;
+  }
+
+  /**
+   * Optional. Spanner database to enrich with child data objects and metadata.
+   * @param spannerDatabase spannerDatabase or {@code null} for none
+   */
+  public DiscoverConnectionProfileRequest setSpannerDatabase(SpannerDatabase spannerDatabase) {
+    this.spannerDatabase = spannerDatabase;
+    return this;
+  }
+
+  /**
+   * Optional. SQLServer RDBMS to enrich with child data objects and metadata.
    * @return value or {@code null} for none
    */
   public SqlServerRdbms getSqlServerRdbms() {
@@ -264,7 +288,7 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
-   * SQLServer RDBMS to enrich with child data objects and metadata.
+   * Optional. SQLServer RDBMS to enrich with child data objects and metadata.
    * @param sqlServerRdbms sqlServerRdbms or {@code null} for none
    */
   public DiscoverConnectionProfileRequest setSqlServerRdbms(SqlServerRdbms sqlServerRdbms) {

@@ -30,7 +30,7 @@ package com.google.api.services.datastream.v1.model;
 public final class SqlServerSchema extends com.google.api.client.json.GenericJson {
 
   /**
-   * Schema name.
+   * The schema name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class SqlServerSchema extends com.google.api.client.json.GenericJso
   private java.util.List<SqlServerTable> tables;
 
   /**
-   * Schema name.
+   * The schema name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchema() {
@@ -52,7 +52,7 @@ public final class SqlServerSchema extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Schema name.
+   * The schema name.
    * @param schema schema or {@code null} for none
    */
   public SqlServerSchema setSchema(java.lang.String schema) {

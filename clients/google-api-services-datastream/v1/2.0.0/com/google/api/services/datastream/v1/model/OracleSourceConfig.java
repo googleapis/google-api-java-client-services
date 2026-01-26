@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * Oracle data source configuration
+ * Configuration for syncing data from an Oracle source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -44,14 +44,14 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   private DropLargeObjects dropLargeObjects;
 
   /**
-   * Oracle objects to exclude from the stream.
+   * The Oracle objects to exclude from the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OracleRdbms excludeObjects;
 
   /**
-   * Oracle objects to include in the stream.
+   * The Oracle objects to include in the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Oracle objects to exclude from the stream.
+   * The Oracle objects to exclude from the stream.
    * @return value or {@code null} for none
    */
   public OracleRdbms getExcludeObjects() {
@@ -130,7 +130,7 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Oracle objects to exclude from the stream.
+   * The Oracle objects to exclude from the stream.
    * @param excludeObjects excludeObjects or {@code null} for none
    */
   public OracleSourceConfig setExcludeObjects(OracleRdbms excludeObjects) {
@@ -139,7 +139,7 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Oracle objects to include in the stream.
+   * The Oracle objects to include in the stream.
    * @return value or {@code null} for none
    */
   public OracleRdbms getIncludeObjects() {
@@ -147,7 +147,7 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Oracle objects to include in the stream.
+   * The Oracle objects to include in the stream.
    * @param includeObjects includeObjects or {@code null} for none
    */
   public OracleSourceConfig setIncludeObjects(OracleRdbms includeObjects) {

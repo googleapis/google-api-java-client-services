@@ -43,7 +43,7 @@ public final class MongodbDatabase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Database name.
+   * The database name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class MongodbDatabase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Database name.
+   * The database name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -75,7 +75,7 @@ public final class MongodbDatabase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Database name.
+   * The database name.
    * @param database database or {@code null} for none
    */
   public MongodbDatabase setDatabase(java.lang.String database) {

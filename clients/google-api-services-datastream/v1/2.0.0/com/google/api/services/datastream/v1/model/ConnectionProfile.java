@@ -30,7 +30,7 @@ package com.google.api.services.datastream.v1.model;
 public final class ConnectionProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * BigQuery Connection Profile configuration.
+   * Profile for connecting to a BigQuery destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private ForwardSshTunnelConnectivity forwardSshConnectivity;
 
   /**
-   * Cloud Storage ConnectionProfile configuration.
+   * Profile for connecting to a Cloud Storage destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,14 +72,14 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * MongoDB Connection Profile configuration.
+   * Profile for connecting to a MongoDB source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MongodbProfile mongodbProfile;
 
   /**
-   * MySQL ConnectionProfile configuration.
+   * Profile for connecting to a MySQL source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,14 +93,14 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * Oracle ConnectionProfile configuration.
+   * Profile for connecting to an Oracle source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OracleProfile oracleProfile;
 
   /**
-   * PostgreSQL Connection Profile configuration.
+   * Profile for connecting to a PostgreSQL source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private PrivateConnectivity privateConnectivity;
 
   /**
-   * Salesforce Connection Profile configuration.
+   * Profile for connecting to a Salesforce source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,14 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * SQLServer Connection Profile configuration.
+   * Profile for connecting to a Spanner source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpannerProfile spannerProfile;
+
+  /**
+   * Profile for connecting to a SQLServer source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,7 +163,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private String updateTime;
 
   /**
-   * BigQuery Connection Profile configuration.
+   * Profile for connecting to a BigQuery destination.
    * @return value or {@code null} for none
    */
   public BigQueryProfile getBigqueryProfile() {
@@ -164,7 +171,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * BigQuery Connection Profile configuration.
+   * Profile for connecting to a BigQuery destination.
    * @param bigqueryProfile bigqueryProfile or {@code null} for none
    */
   public ConnectionProfile setBigqueryProfile(BigQueryProfile bigqueryProfile) {
@@ -224,7 +231,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Cloud Storage ConnectionProfile configuration.
+   * Profile for connecting to a Cloud Storage destination.
    * @return value or {@code null} for none
    */
   public GcsProfile getGcsProfile() {
@@ -232,7 +239,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Cloud Storage ConnectionProfile configuration.
+   * Profile for connecting to a Cloud Storage destination.
    * @param gcsProfile gcsProfile or {@code null} for none
    */
   public ConnectionProfile setGcsProfile(GcsProfile gcsProfile) {
@@ -258,7 +265,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * MongoDB Connection Profile configuration.
+   * Profile for connecting to a MongoDB source.
    * @return value or {@code null} for none
    */
   public MongodbProfile getMongodbProfile() {
@@ -266,7 +273,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * MongoDB Connection Profile configuration.
+   * Profile for connecting to a MongoDB source.
    * @param mongodbProfile mongodbProfile or {@code null} for none
    */
   public ConnectionProfile setMongodbProfile(MongodbProfile mongodbProfile) {
@@ -275,7 +282,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * MySQL ConnectionProfile configuration.
+   * Profile for connecting to a MySQL source.
    * @return value or {@code null} for none
    */
   public MysqlProfile getMysqlProfile() {
@@ -283,7 +290,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * MySQL ConnectionProfile configuration.
+   * Profile for connecting to a MySQL source.
    * @param mysqlProfile mysqlProfile or {@code null} for none
    */
   public ConnectionProfile setMysqlProfile(MysqlProfile mysqlProfile) {
@@ -309,7 +316,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Oracle ConnectionProfile configuration.
+   * Profile for connecting to an Oracle source.
    * @return value or {@code null} for none
    */
   public OracleProfile getOracleProfile() {
@@ -317,7 +324,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Oracle ConnectionProfile configuration.
+   * Profile for connecting to an Oracle source.
    * @param oracleProfile oracleProfile or {@code null} for none
    */
   public ConnectionProfile setOracleProfile(OracleProfile oracleProfile) {
@@ -326,7 +333,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * PostgreSQL Connection Profile configuration.
+   * Profile for connecting to a PostgreSQL source.
    * @return value or {@code null} for none
    */
   public PostgresqlProfile getPostgresqlProfile() {
@@ -334,7 +341,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * PostgreSQL Connection Profile configuration.
+   * Profile for connecting to a PostgreSQL source.
    * @param postgresqlProfile postgresqlProfile or {@code null} for none
    */
   public ConnectionProfile setPostgresqlProfile(PostgresqlProfile postgresqlProfile) {
@@ -360,7 +367,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Salesforce Connection Profile configuration.
+   * Profile for connecting to a Salesforce source.
    * @return value or {@code null} for none
    */
   public SalesforceProfile getSalesforceProfile() {
@@ -368,7 +375,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Salesforce Connection Profile configuration.
+   * Profile for connecting to a Salesforce source.
    * @param salesforceProfile salesforceProfile or {@code null} for none
    */
   public ConnectionProfile setSalesforceProfile(SalesforceProfile salesforceProfile) {
@@ -411,7 +418,24 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * SQLServer Connection Profile configuration.
+   * Profile for connecting to a Spanner source.
+   * @return value or {@code null} for none
+   */
+  public SpannerProfile getSpannerProfile() {
+    return spannerProfile;
+  }
+
+  /**
+   * Profile for connecting to a Spanner source.
+   * @param spannerProfile spannerProfile or {@code null} for none
+   */
+  public ConnectionProfile setSpannerProfile(SpannerProfile spannerProfile) {
+    this.spannerProfile = spannerProfile;
+    return this;
+  }
+
+  /**
+   * Profile for connecting to a SQLServer source.
    * @return value or {@code null} for none
    */
   public SqlServerProfile getSqlServerProfile() {
@@ -419,7 +443,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * SQLServer Connection Profile configuration.
+   * Profile for connecting to a SQLServer source.
    * @param sqlServerProfile sqlServerProfile or {@code null} for none
    */
   public ConnectionProfile setSqlServerProfile(SqlServerProfile sqlServerProfile) {

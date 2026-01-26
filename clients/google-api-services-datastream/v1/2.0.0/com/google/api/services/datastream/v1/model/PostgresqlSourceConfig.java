@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * PostgreSQL data source configuration
+ * Configuration for syncing data from a PostgreSQL source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.datastream.v1.model;
 public final class PostgresqlSourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * PostgreSQL objects to exclude from the stream.
+   * The PostgreSQL objects to exclude from the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PostgresqlRdbms excludeObjects;
 
   /**
-   * PostgreSQL objects to include in the stream.
+   * The PostgreSQL objects to include in the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class PostgresqlSourceConfig extends com.google.api.client.json.Gen
   private java.lang.String replicationSlot;
 
   /**
-   * PostgreSQL objects to exclude from the stream.
+   * The PostgreSQL objects to exclude from the stream.
    * @return value or {@code null} for none
    */
   public PostgresqlRdbms getExcludeObjects() {
@@ -76,7 +76,7 @@ public final class PostgresqlSourceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * PostgreSQL objects to exclude from the stream.
+   * The PostgreSQL objects to exclude from the stream.
    * @param excludeObjects excludeObjects or {@code null} for none
    */
   public PostgresqlSourceConfig setExcludeObjects(PostgresqlRdbms excludeObjects) {
@@ -85,7 +85,7 @@ public final class PostgresqlSourceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * PostgreSQL objects to include in the stream.
+   * The PostgreSQL objects to include in the stream.
    * @return value or {@code null} for none
    */
   public PostgresqlRdbms getIncludeObjects() {
@@ -93,7 +93,7 @@ public final class PostgresqlSourceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * PostgreSQL objects to include in the stream.
+   * The PostgreSQL objects to include in the stream.
    * @param includeObjects includeObjects or {@code null} for none
    */
   public PostgresqlSourceConfig setIncludeObjects(PostgresqlRdbms includeObjects) {

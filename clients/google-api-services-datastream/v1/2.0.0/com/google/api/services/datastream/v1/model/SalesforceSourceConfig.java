@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * Salesforce source configuration
+ * Configuration for syncing data from a Salesforce source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.datastream.v1.model;
 public final class SalesforceSourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Salesforce objects to exclude from the stream.
+   * The Salesforce objects to exclude from the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SalesforceOrg excludeObjects;
 
   /**
-   * Salesforce objects to retrieve from the source.
+   * The Salesforce objects to retrieve from the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +45,14 @@ public final class SalesforceSourceConfig extends com.google.api.client.json.Gen
 
   /**
    * Required. Salesforce objects polling interval. The interval at which new changes will be polled
-   * for each object. The duration must be between 5 minutes and 24 hours.
+   * for each object. The duration must be from `5 minutes` to `24 hours`, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String pollingInterval;
 
   /**
-   * Salesforce objects to exclude from the stream.
+   * The Salesforce objects to exclude from the stream.
    * @return value or {@code null} for none
    */
   public SalesforceOrg getExcludeObjects() {
@@ -60,7 +60,7 @@ public final class SalesforceSourceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Salesforce objects to exclude from the stream.
+   * The Salesforce objects to exclude from the stream.
    * @param excludeObjects excludeObjects or {@code null} for none
    */
   public SalesforceSourceConfig setExcludeObjects(SalesforceOrg excludeObjects) {
@@ -69,7 +69,7 @@ public final class SalesforceSourceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Salesforce objects to retrieve from the source.
+   * The Salesforce objects to retrieve from the source.
    * @return value or {@code null} for none
    */
   public SalesforceOrg getIncludeObjects() {
@@ -77,7 +77,7 @@ public final class SalesforceSourceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Salesforce objects to retrieve from the source.
+   * The Salesforce objects to retrieve from the source.
    * @param includeObjects includeObjects or {@code null} for none
    */
   public SalesforceSourceConfig setIncludeObjects(SalesforceOrg includeObjects) {
@@ -87,7 +87,7 @@ public final class SalesforceSourceConfig extends com.google.api.client.json.Gen
 
   /**
    * Required. Salesforce objects polling interval. The interval at which new changes will be polled
-   * for each object. The duration must be between 5 minutes and 24 hours.
+   * for each object. The duration must be from `5 minutes` to `24 hours`, inclusive.
    * @return value or {@code null} for none
    */
   public String getPollingInterval() {
@@ -96,7 +96,7 @@ public final class SalesforceSourceConfig extends com.google.api.client.json.Gen
 
   /**
    * Required. Salesforce objects polling interval. The interval at which new changes will be polled
-   * for each object. The duration must be between 5 minutes and 24 hours.
+   * for each object. The duration must be from `5 minutes` to `24 hours`, inclusive.
    * @param pollingInterval pollingInterval or {@code null} for none
    */
   public SalesforceSourceConfig setPollingInterval(String pollingInterval) {

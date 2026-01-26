@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * MongoDB Field.
+ * Spanner schema.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -27,40 +27,64 @@ package com.google.api.services.datastream.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MongodbField extends com.google.api.client.json.GenericJson {
+public final class SpannerSchema extends com.google.api.client.json.GenericJson {
 
   /**
-   * The field name.
+   * Required. The schema name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String field;
+  private java.lang.String schema;
 
   /**
-   * The field name.
+   * Optional. Spanner tables in the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SpannerTable> tables;
+
+  /**
+   * Required. The schema name.
    * @return value or {@code null} for none
    */
-  public java.lang.String getField() {
-    return field;
+  public java.lang.String getSchema() {
+    return schema;
   }
 
   /**
-   * The field name.
-   * @param field field or {@code null} for none
+   * Required. The schema name.
+   * @param schema schema or {@code null} for none
    */
-  public MongodbField setField(java.lang.String field) {
-    this.field = field;
+  public SpannerSchema setSchema(java.lang.String schema) {
+    this.schema = schema;
+    return this;
+  }
+
+  /**
+   * Optional. Spanner tables in the schema.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SpannerTable> getTables() {
+    return tables;
+  }
+
+  /**
+   * Optional. Spanner tables in the schema.
+   * @param tables tables or {@code null} for none
+   */
+  public SpannerSchema setTables(java.util.List<SpannerTable> tables) {
+    this.tables = tables;
     return this;
   }
 
   @Override
-  public MongodbField set(String fieldName, Object value) {
-    return (MongodbField) super.set(fieldName, value);
+  public SpannerSchema set(String fieldName, Object value) {
+    return (SpannerSchema) super.set(fieldName, value);
   }
 
   @Override
-  public MongodbField clone() {
-    return (MongodbField) super.clone();
+  public SpannerSchema clone() {
+    return (SpannerSchema) super.clone();
   }
 
 }

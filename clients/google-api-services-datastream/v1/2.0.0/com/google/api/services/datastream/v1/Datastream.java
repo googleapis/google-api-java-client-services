@@ -316,37 +316,38 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** Maximum number of Ips to return, will likely not be specified. */
+        /** Optional. Maximum number of Ips to return, will likely not be specified. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of Ips to return, will likely not be specified.
+        /** Optional. Maximum number of Ips to return, will likely not be specified.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Maximum number of Ips to return, will likely not be specified. */
+        /** Optional. Maximum number of Ips to return, will likely not be specified. */
         public FetchStaticIps setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
         /**
-         * A page token, received from a previous `ListStaticIps` call. will likely not be
+         * Optional. A page token, received from a previous `ListStaticIps` call. will likely not be
          * specified.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListStaticIps` call. will likely not be specified.
+        /** Optional. A page token, received from a previous `ListStaticIps` call. will likely not be
+       specified.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * A page token, received from a previous `ListStaticIps` call. will likely not be
+         * Optional. A page token, received from a previous `ListStaticIps` call. will likely not be
          * specified.
          */
         public FetchStaticIps setPageToken(java.lang.String pageToken) {
@@ -1559,57 +1560,57 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Filter request. */
+          /** Optional. Filter request. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter request.
+          /** Optional. Filter request.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter request. */
+          /** Optional. Filter request. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Order by fields for the result. */
+          /** Optional. Order by fields for the result. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Order by fields for the result.
+          /** Optional. Order by fields for the result.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Order by fields for the result. */
+          /** Optional. Order by fields for the result. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
           /**
-           * Maximum number of connection profiles to return. If unspecified, at most 50 connection
-           * profiles will be returned. The maximum value is 1000; values above 1000 will be coerced
-           * to 1000.
+           * Optional. Maximum number of connection profiles to return. If unspecified, at most 50
+           * connection profiles will be returned. The maximum value is 1000; values above 1000 will
+           * be coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of connection profiles to return. If unspecified, at most 50 connection profiles
-         will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+          /** Optional. Maximum number of connection profiles to return. If unspecified, at most 50 connection
+         profiles will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Maximum number of connection profiles to return. If unspecified, at most 50 connection
-           * profiles will be returned. The maximum value is 1000; values above 1000 will be coerced
-           * to 1000.
+           * Optional. Maximum number of connection profiles to return. If unspecified, at most 50
+           * connection profiles will be returned. The maximum value is 1000; values above 1000 will
+           * be coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1617,24 +1618,24 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Page token received from a previous `ListConnectionProfiles` call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * Optional. Page token received from a previous `ListConnectionProfiles` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
            * `ListConnectionProfiles` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Page token received from a previous `ListConnectionProfiles` call. Provide this to retrieve the
-         subsequent page. When paginating, all other parameters provided to `ListConnectionProfiles` must
-         match the call that provided the page token.
+          /** Optional. Page token received from a previous `ListConnectionProfiles` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListConnectionProfiles` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Page token received from a previous `ListConnectionProfiles` call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * Optional. Page token received from a previous `ListConnectionProfiles` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
            * `ListConnectionProfiles` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -3273,33 +3274,33 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Filter request. */
+          /** Optional. Filter request. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter request.
+          /** Optional. Filter request.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter request. */
+          /** Optional. Filter request. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Order by fields for the result. */
+          /** Optional. Order by fields for the result. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Order by fields for the result.
+          /** Optional. Order by fields for the result.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Order by fields for the result. */
+          /** Optional. Order by fields for the result. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -3332,24 +3333,24 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Page token received from a previous `ListPrivateConnections` call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * Optional. Page token received from a previous `ListPrivateConnections` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
            * `ListPrivateConnections` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Page token received from a previous `ListPrivateConnections` call. Provide this to retrieve the
-         subsequent page. When paginating, all other parameters provided to `ListPrivateConnections` must
-         match the call that provided the page token.
+          /** Optional. Page token received from a previous `ListPrivateConnections` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListPrivateConnections` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Page token received from a previous `ListPrivateConnections` call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * Optional. Page token received from a previous `ListPrivateConnections` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
            * `ListPrivateConnections` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -4020,58 +4021,58 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** Filter request. */
+            /** Optional. Filter request. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filter request.
+            /** Optional. Filter request.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Filter request. */
+            /** Optional. Filter request. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /** Order by fields for the result. */
+            /** Optional. Order by fields for the result. */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Order by fields for the result.
+            /** Optional. Order by fields for the result.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Order by fields for the result. */
+            /** Optional. Order by fields for the result. */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
             }
 
             /**
-             * Maximum number of Routes to return. The service may return fewer than this value. If
-             * unspecified, at most 50 Routes will be returned. The maximum value is 1000; values
-             * above 1000 will be coerced to 1000.
+             * Optional. Maximum number of Routes to return. The service may return fewer than this
+             * value. If unspecified, at most 50 Routes will be returned. The maximum value is 1000;
+             * values above 1000 will be coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Maximum number of Routes to return. The service may return fewer than this value. If unspecified,
-           at most 50 Routes will be returned. The maximum value is 1000; values above 1000 will be coerced to
-           1000.
+            /** Optional. Maximum number of Routes to return. The service may return fewer than this value. If
+           unspecified, at most 50 Routes will be returned. The maximum value is 1000; values above 1000 will
+           be coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Maximum number of Routes to return. The service may return fewer than this value. If
-             * unspecified, at most 50 Routes will be returned. The maximum value is 1000; values
-             * above 1000 will be coerced to 1000.
+             * Optional. Maximum number of Routes to return. The service may return fewer than this
+             * value. If unspecified, at most 50 Routes will be returned. The maximum value is 1000;
+             * values above 1000 will be coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -4079,25 +4080,25 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Page token received from a previous `ListRoutes` call. Provide this to retrieve the
-             * subsequent page. When paginating, all other parameters provided to `ListRoutes` must
-             * match the call that provided the page token.
+             * Optional. Page token received from a previous `ListRoutes` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListRoutes` must match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Page token received from a previous `ListRoutes` call. Provide this to retrieve the subsequent
-           page. When paginating, all other parameters provided to `ListRoutes` must match the call that
-           provided the page token.
+            /** Optional. Page token received from a previous `ListRoutes` call. Provide this to retrieve the
+           subsequent page. When paginating, all other parameters provided to `ListRoutes` must match the call
+           that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Page token received from a previous `ListRoutes` call. Provide this to retrieve the
-             * subsequent page. When paginating, all other parameters provided to `ListRoutes` must
-             * match the call that provided the page token.
+             * Optional. Page token received from a previous `ListRoutes` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListRoutes` must match the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -4803,55 +4804,55 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Filter request. */
+          /** Optional. Filter request. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter request.
+          /** Optional. Filter request.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter request. */
+          /** Optional. Filter request. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Order by fields for the result. */
+          /** Optional. Order by fields for the result. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Order by fields for the result.
+          /** Optional. Order by fields for the result.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Order by fields for the result. */
+          /** Optional. Order by fields for the result. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
           /**
-           * Maximum number of streams to return. If unspecified, at most 50 streams will be
-           * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           * Optional. Maximum number of streams to return. If unspecified, at most 50 streams will
+           * be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of streams to return. If unspecified, at most 50 streams will be returned. The
-         maximum value is 1000; values above 1000 will be coerced to 1000.
+          /** Optional. Maximum number of streams to return. If unspecified, at most 50 streams will be returned.
+         The maximum value is 1000; values above 1000 will be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Maximum number of streams to return. If unspecified, at most 50 streams will be
-           * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           * Optional. Maximum number of streams to return. If unspecified, at most 50 streams will
+           * be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -4859,25 +4860,25 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Page token received from a previous `ListStreams` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to `ListStreams` must
-           * match the call that provided the page token.
+           * Optional. Page token received from a previous `ListStreams` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListStreams` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Page token received from a previous `ListStreams` call. Provide this to retrieve the subsequent
-         page. When paginating, all other parameters provided to `ListStreams` must match the call that
-         provided the page token.
+          /** Optional. Page token received from a previous `ListStreams` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListStreams` must match the
+         call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Page token received from a previous `ListStreams` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to `ListStreams` must
-           * match the call that provided the page token.
+           * Optional. Page token received from a previous `ListStreams` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListStreams` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -5563,22 +5564,22 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Maximum number of objects to return. Default is 50. The maximum value is 1000; values
-             * above 1000 will be coerced to 1000.
+             * Optional. Maximum number of objects to return. Default is 50. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Maximum number of objects to return. Default is 50. The maximum value is 1000; values above 1000
-           will be coerced to 1000.
+            /** Optional. Maximum number of objects to return. Default is 50. The maximum value is 1000; values
+           above 1000 will be coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Maximum number of objects to return. Default is 50. The maximum value is 1000; values
-             * above 1000 will be coerced to 1000.
+             * Optional. Maximum number of objects to return. Default is 50. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -5586,25 +5587,27 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Page token received from a previous `ListStreamObjectsRequest` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListStreamObjectsRequest` must match the call that provided the page token.
+             * Optional. Page token received from a previous `ListStreamObjectsRequest` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListStreamObjectsRequest` must match the call that provided the page
+             * token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Page token received from a previous `ListStreamObjectsRequest` call. Provide this to retrieve the
-           subsequent page. When paginating, all other parameters provided to `ListStreamObjectsRequest` must
-           match the call that provided the page token.
+            /** Optional. Page token received from a previous `ListStreamObjectsRequest` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListStreamObjectsRequest` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Page token received from a previous `ListStreamObjectsRequest` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListStreamObjectsRequest` must match the call that provided the page token.
+             * Optional. Page token received from a previous `ListStreamObjectsRequest` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListStreamObjectsRequest` must match the call that provided the page
+             * token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;

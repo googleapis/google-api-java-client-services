@@ -66,6 +66,13 @@ public final class BackfillAllStrategy extends com.google.api.client.json.Generi
   private SalesforceOrg salesforceExcludedObjects;
 
   /**
+   * Spanner data source objects to avoid backfilling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpannerDatabase spannerExcludedObjects;
+
+  /**
    * SQLServer data source objects to avoid backfilling
    * The value may be {@code null}.
    */
@@ -154,6 +161,23 @@ public final class BackfillAllStrategy extends com.google.api.client.json.Generi
    */
   public BackfillAllStrategy setSalesforceExcludedObjects(SalesforceOrg salesforceExcludedObjects) {
     this.salesforceExcludedObjects = salesforceExcludedObjects;
+    return this;
+  }
+
+  /**
+   * Spanner data source objects to avoid backfilling.
+   * @return value or {@code null} for none
+   */
+  public SpannerDatabase getSpannerExcludedObjects() {
+    return spannerExcludedObjects;
+  }
+
+  /**
+   * Spanner data source objects to avoid backfilling.
+   * @param spannerExcludedObjects spannerExcludedObjects or {@code null} for none
+   */
+  public BackfillAllStrategy setSpannerExcludedObjects(SpannerDatabase spannerExcludedObjects) {
+    this.spannerExcludedObjects = spannerExcludedObjects;
     return this;
   }
 

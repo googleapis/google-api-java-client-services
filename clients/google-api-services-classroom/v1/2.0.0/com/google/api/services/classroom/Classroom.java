@@ -8523,12 +8523,12 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
         /**
          * Returns a list of student submissions that the requester is permitted to view, factoring in the
-         * OAuth scopes of the request. `-` may be specified as the `course_work_id` to include student
-         * submissions for multiple course work items. Course students may only view their own work. Course
-         * teachers and domain administrators may view all student submissions. This method returns the
-         * following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to access
-         * the requested course or course work, or for access errors. * `INVALID_ARGUMENT` if the request is
-         * malformed. * `NOT_FOUND` if the requested course does not exist.
+         * OAuth scopes of the request. A hyphen (`-`) may be specified as the `course_work_id` to include
+         * student submissions for multiple course work items. Course students may only view their own work.
+         * Course teachers and domain administrators may view all student submissions. This method returns
+         * the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to
+         * access the requested course or course work, or for access errors. * `INVALID_ARGUMENT` if the
+         * request is malformed. * `NOT_FOUND` if the requested course does not exist.
          *
          * Create a request for the method "studentSubmissions.list".
          *
@@ -8553,12 +8553,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Returns a list of student submissions that the requester is permitted to view, factoring in the
-           * OAuth scopes of the request. `-` may be specified as the `course_work_id` to include student
-           * submissions for multiple course work items. Course students may only view their own work.
-           * Course teachers and domain administrators may view all student submissions. This method returns
-           * the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to
-           * access the requested course or course work, or for access errors. * `INVALID_ARGUMENT` if the
-           * request is malformed. * `NOT_FOUND` if the requested course does not exist.
+           * OAuth scopes of the request. A hyphen (`-`) may be specified as the `course_work_id` to include
+           * student submissions for multiple course work items. Course students may only view their own
+           * work. Course teachers and domain administrators may view all student submissions. This method
+           * returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not
+           * permitted to access the requested course or course work, or for access errors. *
+           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course does not
+           * exist.
            *
            * Create a request for the method "studentSubmissions.list".
            *
@@ -13834,6 +13835,1175 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
         }
+      }
+    }
+    /**
+     * An accessor for creating requests from the StudentGroups collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Classroom classroom = new Classroom(...);}
+     *   {@code Classroom.StudentGroups.List request = classroom.studentGroups().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public StudentGroups studentGroups() {
+      return new StudentGroups();
+    }
+
+    /**
+     * The "studentGroups" collection of methods.
+     */
+    public class StudentGroups {
+
+      /**
+       * Creates a student group for a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to create the student group or for
+       * access errors. * `NOT_FOUND` if the course does not exist or the requesting user doesn't have
+       * access to the course. * `FAILED_PRECONDITION` if creating the student group would exceed the
+       * maximum number of student groups per course.
+       *
+       * Create a request for the method "studentGroups.create".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Required. The identifier of the course.
+       * @param content the {@link com.google.api.services.classroom.model.StudentGroup}
+       * @return the request
+       */
+      public Create create(java.lang.String courseId, com.google.api.services.classroom.model.StudentGroup content) throws java.io.IOException {
+        Create result = new Create(courseId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ClassroomRequest<com.google.api.services.classroom.model.StudentGroup> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/studentGroups";
+
+        /**
+         * Creates a student group for a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to create the student group or for
+         * access errors. * `NOT_FOUND` if the course does not exist or the requesting user doesn't have
+         * access to the course. * `FAILED_PRECONDITION` if creating the student group would exceed the
+         * maximum number of student groups per course.
+         *
+         * Create a request for the method "studentGroups.create".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Required. The identifier of the course.
+         * @param content the {@link com.google.api.services.classroom.model.StudentGroup}
+         * @since 1.13
+         */
+        protected Create(java.lang.String courseId, com.google.api.services.classroom.model.StudentGroup content) {
+          super(Classroom.this, "POST", REST_PATH, content, com.google.api.services.classroom.model.StudentGroup.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The identifier of the course. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Required. The identifier of the course.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /** Required. The identifier of the course. */
+        public Create setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a student group. This method returns the following error codes: * `PERMISSION_DENIED` if
+       * the requesting user is not permitted to delete the requested student group or for access errors.
+       * * `NOT_FOUND` if the student group does not exist or the user does not have access to the student
+       * group.
+       *
+       * Create a request for the method "studentGroups.delete".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Required. The identifier of the course containing the student group to delete.
+       * @param id Required. The identifier of the student group to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.String courseId, java.lang.String id) throws java.io.IOException {
+        Delete result = new Delete(courseId, id);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ClassroomRequest<com.google.api.services.classroom.model.Empty> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/studentGroups/{id}";
+
+        /**
+         * Deletes a student group. This method returns the following error codes: * `PERMISSION_DENIED`
+         * if the requesting user is not permitted to delete the requested student group or for access
+         * errors. * `NOT_FOUND` if the student group does not exist or the user does not have access to
+         * the student group.
+         *
+         * Create a request for the method "studentGroups.delete".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Required. The identifier of the course containing the student group to delete.
+         * @param id Required. The identifier of the student group to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String courseId, java.lang.String id) {
+          super(Classroom.this, "DELETE", REST_PATH, null, com.google.api.services.classroom.model.Empty.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The identifier of the course containing the student group to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Required. The identifier of the course containing the student group to delete.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /** Required. The identifier of the course containing the student group to delete. */
+        public Delete setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /** Required. The identifier of the student group to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** Required. The identifier of the student group to delete.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /** Required. The identifier of the student group to delete. */
+        public Delete setId(java.lang.String id) {
+          this.id = id;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a list of groups in a course. This method returns the following error codes: *
+       * `NOT_FOUND` if the course does not exist.
+       *
+       * Create a request for the method "studentGroups.list".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Required. The identifier of the course.
+       * @return the request
+       */
+      public List list(java.lang.String courseId) throws java.io.IOException {
+        List result = new List(courseId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListStudentGroupsResponse> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/studentGroups";
+
+        /**
+         * Returns a list of groups in a course. This method returns the following error codes: *
+         * `NOT_FOUND` if the course does not exist.
+         *
+         * Create a request for the method "studentGroups.list".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Required. The identifier of the course.
+         * @since 1.13
+         */
+        protected List(java.lang.String courseId) {
+          super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListStudentGroupsResponse.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The identifier of the course. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Required. The identifier of the course.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /** Required. The identifier of the course. */
+        public List setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum, which is currently set to 75 items. The server may return fewer than
+         * the specified number of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
+       maximum, which is currently set to 75 items. The server may return fewer than the specified number
+       of results.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum, which is currently set to 75 items. The server may return fewer than
+         * the specified number of results.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates one or more fields in a student group. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested student group
+       * or for access errors. * `NOT_FOUND` if the student group does not exist or the user does not have
+       * access to the student group. * `INVALID_ARGUMENT` if invalid fields are specified in the update
+       * mask or if no update mask is supplied.
+       *
+       * Create a request for the method "studentGroups.patch".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Required. Identifier of the course.
+       * @param id Required. Identifier of the student group.
+       * @param content the {@link com.google.api.services.classroom.model.StudentGroup}
+       * @return the request
+       */
+      public Patch patch(java.lang.String courseId, java.lang.String id, com.google.api.services.classroom.model.StudentGroup content) throws java.io.IOException {
+        Patch result = new Patch(courseId, id, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.StudentGroup> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/studentGroups/{id}";
+
+        /**
+         * Updates one or more fields in a student group. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested student
+         * group or for access errors. * `NOT_FOUND` if the student group does not exist or the user does
+         * not have access to the student group. * `INVALID_ARGUMENT` if invalid fields are specified in
+         * the update mask or if no update mask is supplied.
+         *
+         * Create a request for the method "studentGroups.patch".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param id Required. Identifier of the student group.
+         * @param content the {@link com.google.api.services.classroom.model.StudentGroup}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String courseId, java.lang.String id, com.google.api.services.classroom.model.StudentGroup content) {
+          super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.StudentGroup.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Identifier of the course. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Required. Identifier of the course.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /** Required. Identifier of the course. */
+        public Patch setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /** Required. Identifier of the student group. */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** Required. Identifier of the student group.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /** Required. Identifier of the student group. */
+        public Patch setId(java.lang.String id) {
+          this.id = id;
+          return this;
+        }
+
+        /**
+         * Required. Mask that identifies which fields on the student group to update. This field is
+         * required to do an update. The update fails if invalid fields are specified. The following
+         * fields can be specified by teachers: * `title`
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. Mask that identifies which fields on the student group to update. This field is required
+       to do an update. The update fails if invalid fields are specified. The following fields can be
+       specified by teachers: * `title`
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. Mask that identifies which fields on the student group to update. This field is
+         * required to do an update. The update fails if invalid fields are specified. The following
+         * fields can be specified by teachers: * `title`
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the StudentGroupMembers collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Classroom classroom = new Classroom(...);}
+       *   {@code Classroom.StudentGroupMembers.List request = classroom.studentGroupMembers().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public StudentGroupMembers studentGroupMembers() {
+        return new StudentGroupMembers();
+      }
+
+      /**
+       * The "studentGroupMembers" collection of methods.
+       */
+      public class StudentGroupMembers {
+
+        /**
+         * Creates a student group member for a student group. This method returns the following error
+         * codes: * `PERMISSION_DENIED` if the requesting user is not permitted to create the student group
+         * or member for access errors. * `NOT_FOUND` if the student group does not exist or the user does
+         * not have access to the student group. * `ALREADY_EXISTS` if the student group member already
+         * exists. * `FAILED_PRECONDITION` if attempting to add a member to a student group that has reached
+         * its member limit.
+         *
+         * Create a request for the method "studentGroupMembers.create".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. The identifier of the course.
+         * @param studentGroupId Required. The identifier of the student group.
+         * @param content the {@link com.google.api.services.classroom.model.StudentGroupMember}
+         * @return the request
+         */
+        public Create create(java.lang.String courseId, java.lang.String studentGroupId, com.google.api.services.classroom.model.StudentGroupMember content) throws java.io.IOException {
+          Create result = new Create(courseId, studentGroupId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ClassroomRequest<com.google.api.services.classroom.model.StudentGroupMember> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/studentGroups/{studentGroupId}/studentGroupMembers";
+
+          /**
+           * Creates a student group member for a student group. This method returns the following error
+           * codes: * `PERMISSION_DENIED` if the requesting user is not permitted to create the student
+           * group or member for access errors. * `NOT_FOUND` if the student group does not exist or the
+           * user does not have access to the student group. * `ALREADY_EXISTS` if the student group member
+           * already exists. * `FAILED_PRECONDITION` if attempting to add a member to a student group that
+           * has reached its member limit.
+           *
+           * Create a request for the method "studentGroupMembers.create".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. The identifier of the course.
+           * @param studentGroupId Required. The identifier of the student group.
+           * @param content the {@link com.google.api.services.classroom.model.StudentGroupMember}
+           * @since 1.13
+           */
+          protected Create(java.lang.String courseId, java.lang.String studentGroupId, com.google.api.services.classroom.model.StudentGroupMember content) {
+            super(Classroom.this, "POST", REST_PATH, content, com.google.api.services.classroom.model.StudentGroupMember.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.studentGroupId = com.google.api.client.util.Preconditions.checkNotNull(studentGroupId, "Required parameter studentGroupId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. The identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. The identifier of the course. */
+          public Create setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Required. The identifier of the student group. */
+          @com.google.api.client.util.Key
+          private java.lang.String studentGroupId;
+
+          /** Required. The identifier of the student group.
+           */
+          public java.lang.String getStudentGroupId() {
+            return studentGroupId;
+          }
+
+          /** Required. The identifier of the student group. */
+          public Create setStudentGroupId(java.lang.String studentGroupId) {
+            this.studentGroupId = studentGroupId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a student group member. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested student group
+         * member or for access errors. * `NOT_FOUND` if the student group member does not exist or the user
+         * does not have access to the student group.
+         *
+         * Create a request for the method "studentGroupMembers.delete".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. The identifier of the course containing the relevant student group.
+         * @param studentGroupId Required. The identifier of the student group containing the student group member to delete.
+         * @param userId Required. The identifier of the student group member to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String courseId, java.lang.String studentGroupId, java.lang.String userId) throws java.io.IOException {
+          Delete result = new Delete(courseId, studentGroupId, userId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ClassroomRequest<com.google.api.services.classroom.model.Empty> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/studentGroups/{studentGroupId}/studentGroupMembers/{userId}";
+
+          /**
+           * Deletes a student group member. This method returns the following error codes: *
+           * `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested student
+           * group member or for access errors. * `NOT_FOUND` if the student group member does not exist or
+           * the user does not have access to the student group.
+           *
+           * Create a request for the method "studentGroupMembers.delete".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. The identifier of the course containing the relevant student group.
+           * @param studentGroupId Required. The identifier of the student group containing the student group member to delete.
+           * @param userId Required. The identifier of the student group member to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String courseId, java.lang.String studentGroupId, java.lang.String userId) {
+            super(Classroom.this, "DELETE", REST_PATH, null, com.google.api.services.classroom.model.Empty.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.studentGroupId = com.google.api.client.util.Preconditions.checkNotNull(studentGroupId, "Required parameter studentGroupId must be specified.");
+            this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The identifier of the course containing the relevant student group. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. The identifier of the course containing the relevant student group.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. The identifier of the course containing the relevant student group. */
+          public Delete setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Required. The identifier of the student group containing the student group member to
+           * delete.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String studentGroupId;
+
+          /** Required. The identifier of the student group containing the student group member to delete.
+           */
+          public java.lang.String getStudentGroupId() {
+            return studentGroupId;
+          }
+
+          /**
+           * Required. The identifier of the student group containing the student group member to
+           * delete.
+           */
+          public Delete setStudentGroupId(java.lang.String studentGroupId) {
+            this.studentGroupId = studentGroupId;
+            return this;
+          }
+
+          /** Required. The identifier of the student group member to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String userId;
+
+          /** Required. The identifier of the student group member to delete.
+           */
+          public java.lang.String getUserId() {
+            return userId;
+          }
+
+          /** Required. The identifier of the student group member to delete. */
+          public Delete setUserId(java.lang.String userId) {
+            this.userId = userId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a list of students in a group. This method returns the following error codes: *
+         * `NOT_FOUND` if the course or student group does not exist.
+         *
+         * Create a request for the method "studentGroupMembers.list".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. The identifier of the course.
+         * @param studentGroupId Required. The identifier of the student group.
+         * @return the request
+         */
+        public List list(java.lang.String courseId, java.lang.String studentGroupId) throws java.io.IOException {
+          List result = new List(courseId, studentGroupId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListStudentGroupMembersResponse> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/studentGroups/{studentGroupId}/studentGroupMembers";
+
+          /**
+           * Returns a list of students in a group. This method returns the following error codes: *
+           * `NOT_FOUND` if the course or student group does not exist.
+           *
+           * Create a request for the method "studentGroupMembers.list".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. The identifier of the course.
+           * @param studentGroupId Required. The identifier of the student group.
+           * @since 1.13
+           */
+          protected List(java.lang.String courseId, java.lang.String studentGroupId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListStudentGroupMembersResponse.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.studentGroupId = com.google.api.client.util.Preconditions.checkNotNull(studentGroupId, "Required parameter studentGroupId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. The identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. The identifier of the course. */
+          public List setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Required. The identifier of the student group. */
+          @com.google.api.client.util.Key
+          private java.lang.String studentGroupId;
+
+          /** Required. The identifier of the student group.
+           */
+          public java.lang.String getStudentGroupId() {
+            return studentGroupId;
+          }
+
+          /** Required. The identifier of the student group. */
+          public List setStudentGroupId(java.lang.String studentGroupId) {
+            this.studentGroupId = studentGroupId;
+            return this;
+          }
+
+          /**
+           * Maximum number of items to return. Zero or unspecified indicates that the server may
+           * assign a maximum. The server may return fewer than the specified number of results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
+         maximum. The server may return fewer than the specified number of results.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Maximum number of items to return. Zero or unspecified indicates that the server may
+           * assign a maximum. The server may return fewer than the specified number of results.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * nextPageToken value returned from a previous list call, indicating that the subsequent
+           * page of results should be returned. The list request must be otherwise identical to the
+           * one that resulted in this token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+         results should be returned. The list request must be otherwise identical to the one that resulted
+         in this token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * nextPageToken value returned from a previous list call, indicating that the subsequent
+           * page of results should be returned. The list request must be otherwise identical to the
+           * one that resulted in this token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
       }
     }
     /**

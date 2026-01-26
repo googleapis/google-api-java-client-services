@@ -163,6 +163,13 @@ public final class Course extends com.google.api.client.json.GenericJson {
   private java.lang.String section;
 
   /**
+   * Optional. The subject of the course.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subject;
+
+  /**
    * Information about a Drive Folder that is shared with all teachers of the course. This field
    * will only be set for teachers of the course and domain administrators. Read-only.
    * The value may be {@code null}.
@@ -497,6 +504,23 @@ public final class Course extends com.google.api.client.json.GenericJson {
    */
   public Course setSection(java.lang.String section) {
     this.section = section;
+    return this;
+  }
+
+  /**
+   * Optional. The subject of the course.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubject() {
+    return subject;
+  }
+
+  /**
+   * Optional. The subject of the course.
+   * @param subject subject or {@code null} for none
+   */
+  public Course setSubject(java.lang.String subject) {
+    this.subject = subject;
     return this;
   }
 

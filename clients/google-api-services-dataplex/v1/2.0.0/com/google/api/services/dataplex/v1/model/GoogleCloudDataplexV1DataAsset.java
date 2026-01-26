@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Represents a Data Asset resource that can be packaged and shared via a Data Product.
+ * Represents a data asset resource that can be packaged and shared via a data product.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,40 +30,42 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Access groups configurations for this Data Asset. The key is
-   * DataProduct.AccessGroup.id and the value is AccessGroupConfig. Example: key: "analyst" value: {
-   * AccessGroupConfig : { iam_roles : "roles/bigquery.dataViewer" } } Currently, at most one IAM
-   * role is allowed per access group. For providing multiple predefined IAM roles, wrap them in a
-   * custom IAM role as per https://cloud.google.com/iam/docs/creating-custom-roles.
+   * Optional. Access groups configurations for this data asset.The key is
+   * DataProduct.AccessGroup.id and the value is AccessGroupConfig.Example: { "analyst": {
+   * "iamRoles": ["roles/bigquery.dataViewer"] } } Currently, at most one IAM role is allowed per
+   * access group. For providing multiple predefined IAM roles, wrap them in a custom IAM role as
+   * per https://cloud.google.com/iam/docs/creating-custom-roles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudDataplexV1DataAssetAccessGroupConfig> accessGroupConfigs;
 
   /**
-   * Output only. The time at which the Data Asset was created.
+   * Output only. The time at which the data asset was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Optional. User-defined labels for the Data Asset.
+   * Optional. User-defined labels for the data asset.Example: { "environment": "production",
+   * "billing": "marketing-department" }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. Resource name of the Data Asset. Format: projects/{project_id_or_number}/locations/
+   * Identifier. Resource name of the data asset. Format: projects/{project_id_or_number}/locations/
    * {location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
    * The value may be {@code null}.
    */
@@ -71,11 +73,11 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   private java.lang.String name;
 
   /**
-   * Required. Immutable. Full resource name of the cloud resource represented by the Data Asset.
+   * Required. Immutable. Full resource name of the cloud resource represented by the data asset.
    * This must follow https://cloud.google.com/iam/docs/full-resource-names. Example:
    * //bigquery.googleapis.com/projects/my_project_123/datasets/dataset_456/tables/table_789 Only
-   * BigQuery tables and datasets are currently supported. Data Asset creator must have getIamPolicy
-   * and setIamPolicy permissions on the resource. Data Asset creator must also have resource
+   * BigQuery tables and datasets are currently supported. Data asset creator must have getIamPolicy
+   * and setIamPolicy permissions on the resource. Data asset creator must also have resource
    * specific get permission, for instance, bigquery.tables.get for BigQuery tables.
    * The value may be {@code null}.
    */
@@ -83,26 +85,26 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   private java.lang.String resource;
 
   /**
-   * Output only. System generated globally unique ID for the Data Asset. This ID will be different
-   * if the Data Asset is deleted and re-created with the same name.
+   * Output only. System generated globally unique ID for the data asset. This ID will be different
+   * if the data asset is deleted and re-created with the same name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * Output only. The time at which the Data Asset was last updated.
+   * Output only. The time at which the data asset was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. Access groups configurations for this Data Asset. The key is
-   * DataProduct.AccessGroup.id and the value is AccessGroupConfig. Example: key: "analyst" value: {
-   * AccessGroupConfig : { iam_roles : "roles/bigquery.dataViewer" } } Currently, at most one IAM
-   * role is allowed per access group. For providing multiple predefined IAM roles, wrap them in a
-   * custom IAM role as per https://cloud.google.com/iam/docs/creating-custom-roles.
+   * Optional. Access groups configurations for this data asset.The key is
+   * DataProduct.AccessGroup.id and the value is AccessGroupConfig.Example: { "analyst": {
+   * "iamRoles": ["roles/bigquery.dataViewer"] } } Currently, at most one IAM role is allowed per
+   * access group. For providing multiple predefined IAM roles, wrap them in a custom IAM role as
+   * per https://cloud.google.com/iam/docs/creating-custom-roles.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDataplexV1DataAssetAccessGroupConfig> getAccessGroupConfigs() {
@@ -110,11 +112,11 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Optional. Access groups configurations for this Data Asset. The key is
-   * DataProduct.AccessGroup.id and the value is AccessGroupConfig. Example: key: "analyst" value: {
-   * AccessGroupConfig : { iam_roles : "roles/bigquery.dataViewer" } } Currently, at most one IAM
-   * role is allowed per access group. For providing multiple predefined IAM roles, wrap them in a
-   * custom IAM role as per https://cloud.google.com/iam/docs/creating-custom-roles.
+   * Optional. Access groups configurations for this data asset.The key is
+   * DataProduct.AccessGroup.id and the value is AccessGroupConfig.Example: { "analyst": {
+   * "iamRoles": ["roles/bigquery.dataViewer"] } } Currently, at most one IAM role is allowed per
+   * access group. For providing multiple predefined IAM roles, wrap them in a custom IAM role as
+   * per https://cloud.google.com/iam/docs/creating-custom-roles.
    * @param accessGroupConfigs accessGroupConfigs or {@code null} for none
    */
   public GoogleCloudDataplexV1DataAsset setAccessGroupConfigs(java.util.Map<String, GoogleCloudDataplexV1DataAssetAccessGroupConfig> accessGroupConfigs) {
@@ -123,7 +125,7 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Output only. The time at which the Data Asset was created.
+   * Output only. The time at which the data asset was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -131,7 +133,7 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Output only. The time at which the Data Asset was created.
+   * Output only. The time at which the data asset was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDataplexV1DataAsset setCreateTime(String createTime) {
@@ -140,8 +142,9 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -149,8 +152,9 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudDataplexV1DataAsset setEtag(java.lang.String etag) {
@@ -159,7 +163,8 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Optional. User-defined labels for the Data Asset.
+   * Optional. User-defined labels for the data asset.Example: { "environment": "production",
+   * "billing": "marketing-department" }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -167,7 +172,8 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Optional. User-defined labels for the Data Asset.
+   * Optional. User-defined labels for the data asset.Example: { "environment": "production",
+   * "billing": "marketing-department" }
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudDataplexV1DataAsset setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -176,7 +182,7 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Identifier. Resource name of the Data Asset. Format: projects/{project_id_or_number}/locations/
+   * Identifier. Resource name of the data asset. Format: projects/{project_id_or_number}/locations/
    * {location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
    * @return value or {@code null} for none
    */
@@ -185,7 +191,7 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Identifier. Resource name of the Data Asset. Format: projects/{project_id_or_number}/locations/
+   * Identifier. Resource name of the data asset. Format: projects/{project_id_or_number}/locations/
    * {location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
    * @param name name or {@code null} for none
    */
@@ -195,11 +201,11 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Required. Immutable. Full resource name of the cloud resource represented by the Data Asset.
+   * Required. Immutable. Full resource name of the cloud resource represented by the data asset.
    * This must follow https://cloud.google.com/iam/docs/full-resource-names. Example:
    * //bigquery.googleapis.com/projects/my_project_123/datasets/dataset_456/tables/table_789 Only
-   * BigQuery tables and datasets are currently supported. Data Asset creator must have getIamPolicy
-   * and setIamPolicy permissions on the resource. Data Asset creator must also have resource
+   * BigQuery tables and datasets are currently supported. Data asset creator must have getIamPolicy
+   * and setIamPolicy permissions on the resource. Data asset creator must also have resource
    * specific get permission, for instance, bigquery.tables.get for BigQuery tables.
    * @return value or {@code null} for none
    */
@@ -208,11 +214,11 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Required. Immutable. Full resource name of the cloud resource represented by the Data Asset.
+   * Required. Immutable. Full resource name of the cloud resource represented by the data asset.
    * This must follow https://cloud.google.com/iam/docs/full-resource-names. Example:
    * //bigquery.googleapis.com/projects/my_project_123/datasets/dataset_456/tables/table_789 Only
-   * BigQuery tables and datasets are currently supported. Data Asset creator must have getIamPolicy
-   * and setIamPolicy permissions on the resource. Data Asset creator must also have resource
+   * BigQuery tables and datasets are currently supported. Data asset creator must have getIamPolicy
+   * and setIamPolicy permissions on the resource. Data asset creator must also have resource
    * specific get permission, for instance, bigquery.tables.get for BigQuery tables.
    * @param resource resource or {@code null} for none
    */
@@ -222,8 +228,8 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Output only. System generated globally unique ID for the Data Asset. This ID will be different
-   * if the Data Asset is deleted and re-created with the same name.
+   * Output only. System generated globally unique ID for the data asset. This ID will be different
+   * if the data asset is deleted and re-created with the same name.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -231,8 +237,8 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Output only. System generated globally unique ID for the Data Asset. This ID will be different
-   * if the Data Asset is deleted and re-created with the same name.
+   * Output only. System generated globally unique ID for the data asset. This ID will be different
+   * if the data asset is deleted and re-created with the same name.
    * @param uid uid or {@code null} for none
    */
   public GoogleCloudDataplexV1DataAsset setUid(java.lang.String uid) {
@@ -241,7 +247,7 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Output only. The time at which the Data Asset was last updated.
+   * Output only. The time at which the data asset was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -249,7 +255,7 @@ public final class GoogleCloudDataplexV1DataAsset extends com.google.api.client.
   }
 
   /**
-   * Output only. The time at which the Data Asset was last updated.
+   * Output only. The time at which the data asset was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDataplexV1DataAsset setUpdateTime(String updateTime) {

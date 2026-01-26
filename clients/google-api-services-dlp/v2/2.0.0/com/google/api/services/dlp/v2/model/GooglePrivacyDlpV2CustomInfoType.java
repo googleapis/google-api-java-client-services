@@ -91,8 +91,7 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   private GooglePrivacyDlpV2SensitivityScore sensitivityScore;
 
   /**
-   * Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently
-   * supported in `InspectContent`.
+   * Loads an existing `StoredInfoType` resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,8 +244,7 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   }
 
   /**
-   * Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently
-   * supported in `InspectContent`.
+   * Loads an existing `StoredInfoType` resource.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredType getStoredType() {
@@ -254,8 +252,7 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   }
 
   /**
-   * Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently
-   * supported in `InspectContent`.
+   * Loads an existing `StoredInfoType` resource.
    * @param storedType storedType or {@code null} for none
    */
   public GooglePrivacyDlpV2CustomInfoType setStoredType(GooglePrivacyDlpV2StoredType storedType) {

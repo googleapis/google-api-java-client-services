@@ -31,6 +31,13 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InspectionRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * Adjustment rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2AdjustmentRule adjustmentRule;
+
+  /**
    * Exclusion rule.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GooglePrivacyDlpV2InspectionRule extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2HotwordRule hotwordRule;
+
+  /**
+   * Adjustment rule.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2AdjustmentRule getAdjustmentRule() {
+    return adjustmentRule;
+  }
+
+  /**
+   * Adjustment rule.
+   * @param adjustmentRule adjustmentRule or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InspectionRule setAdjustmentRule(GooglePrivacyDlpV2AdjustmentRule adjustmentRule) {
+    this.adjustmentRule = adjustmentRule;
+    return this;
+  }
 
   /**
    * Exclusion rule.

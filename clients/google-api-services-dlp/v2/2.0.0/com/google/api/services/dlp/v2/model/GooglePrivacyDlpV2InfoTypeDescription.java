@@ -65,6 +65,13 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
   private java.lang.String example;
 
   /**
+   * The launch status of the infoType.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String launchStatus;
+
+  /**
    * Locations at which this feature can be used. May change over time.
    * The value may be {@code null}.
    */
@@ -174,6 +181,23 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
    */
   public GooglePrivacyDlpV2InfoTypeDescription setExample(java.lang.String example) {
     this.example = example;
+    return this;
+  }
+
+  /**
+   * The launch status of the infoType.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLaunchStatus() {
+    return launchStatus;
+  }
+
+  /**
+   * The launch status of the infoType.
+   * @param launchStatus launchStatus or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoTypeDescription setLaunchStatus(java.lang.String launchStatus) {
+    this.launchStatus = launchStatus;
     return this;
   }
 

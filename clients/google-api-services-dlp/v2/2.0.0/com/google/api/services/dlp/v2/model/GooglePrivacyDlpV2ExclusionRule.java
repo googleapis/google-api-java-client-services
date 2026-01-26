@@ -47,6 +47,14 @@ public final class GooglePrivacyDlpV2ExclusionRule extends com.google.api.client
   private GooglePrivacyDlpV2ExcludeByHotword excludeByHotword;
 
   /**
+   * Exclude findings based on image containment rules. For example, exclude an image finding if it
+   * overlaps with another image finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2ExcludeByImageFindings excludeByImageFindings;
+
+  /**
    * Set of infoTypes for which findings would affect this rule.
    * The value may be {@code null}.
    */
@@ -100,6 +108,25 @@ public final class GooglePrivacyDlpV2ExclusionRule extends com.google.api.client
    */
   public GooglePrivacyDlpV2ExclusionRule setExcludeByHotword(GooglePrivacyDlpV2ExcludeByHotword excludeByHotword) {
     this.excludeByHotword = excludeByHotword;
+    return this;
+  }
+
+  /**
+   * Exclude findings based on image containment rules. For example, exclude an image finding if it
+   * overlaps with another image finding.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ExcludeByImageFindings getExcludeByImageFindings() {
+    return excludeByImageFindings;
+  }
+
+  /**
+   * Exclude findings based on image containment rules. For example, exclude an image finding if it
+   * overlaps with another image finding.
+   * @param excludeByImageFindings excludeByImageFindings or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ExclusionRule setExcludeByImageFindings(GooglePrivacyDlpV2ExcludeByImageFindings excludeByImageFindings) {
+    this.excludeByImageFindings = excludeByImageFindings;
     return this;
   }
 

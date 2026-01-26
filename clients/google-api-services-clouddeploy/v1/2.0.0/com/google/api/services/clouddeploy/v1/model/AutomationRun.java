@@ -152,6 +152,13 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   private TimedPromoteReleaseOperation timedPromoteReleaseOperation;
 
   /**
+   * Output only. Unique identifier of the `AutomationRun`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Output only. Time at which the automationRun was updated.
    * The value may be {@code null}.
    */
@@ -453,6 +460,23 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
    */
   public AutomationRun setTimedPromoteReleaseOperation(TimedPromoteReleaseOperation timedPromoteReleaseOperation) {
     this.timedPromoteReleaseOperation = timedPromoteReleaseOperation;
+    return this;
+  }
+
+  /**
+   * Output only. Unique identifier of the `AutomationRun`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. Unique identifier of the `AutomationRun`.
+   * @param uid uid or {@code null} for none
+   */
+  public AutomationRun setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

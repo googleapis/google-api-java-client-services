@@ -62,7 +62,7 @@ public final class TabProperties extends com.google.api.client.json.GenericJson 
   private java.lang.String parentTabId;
 
   /**
-   * Output only. The ID of the tab. This field can't be changed.
+   * The immutable ID of the tab.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +152,7 @@ public final class TabProperties extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The ID of the tab. This field can't be changed.
+   * The immutable ID of the tab.
    * @return value or {@code null} for none
    */
   public java.lang.String getTabId() {
@@ -160,7 +160,7 @@ public final class TabProperties extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The ID of the tab. This field can't be changed.
+   * The immutable ID of the tab.
    * @param tabId tabId or {@code null} for none
    */
   public TabProperties setTabId(java.lang.String tabId) {

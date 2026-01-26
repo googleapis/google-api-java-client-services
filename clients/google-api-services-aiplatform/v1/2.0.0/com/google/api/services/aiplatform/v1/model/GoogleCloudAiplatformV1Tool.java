@@ -94,6 +94,15 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
   private GoogleCloudAiplatformV1GoogleSearchRetrieval googleSearchRetrieval;
 
   /**
+   * Optional. If specified, Vertex AI will use Parallel.ai to search for information to answer user
+   * queries. The search results will be grounded on Parallel.ai and presented to the model for
+   * response generation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ToolParallelAiSearch parallelAiSearch;
+
+  /**
    * Optional. Retrieval tool type. System will always execute the provided retrieval tool(s) to get
    * external knowledge to answer the prompt. Retrieval results are presented to the model for
    * generation.
@@ -237,6 +246,27 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
    */
   public GoogleCloudAiplatformV1Tool setGoogleSearchRetrieval(GoogleCloudAiplatformV1GoogleSearchRetrieval googleSearchRetrieval) {
     this.googleSearchRetrieval = googleSearchRetrieval;
+    return this;
+  }
+
+  /**
+   * Optional. If specified, Vertex AI will use Parallel.ai to search for information to answer user
+   * queries. The search results will be grounded on Parallel.ai and presented to the model for
+   * response generation
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ToolParallelAiSearch getParallelAiSearch() {
+    return parallelAiSearch;
+  }
+
+  /**
+   * Optional. If specified, Vertex AI will use Parallel.ai to search for information to answer user
+   * queries. The search results will be grounded on Parallel.ai and presented to the model for
+   * response generation
+   * @param parallelAiSearch parallelAiSearch or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Tool setParallelAiSearch(GoogleCloudAiplatformV1ToolParallelAiSearch parallelAiSearch) {
+    this.parallelAiSearch = parallelAiSearch;
     return this;
   }
 

@@ -55,6 +55,14 @@ public final class GoogleCloudAiplatformV1BatchPredictionJobOutputInfo extends c
   private java.lang.String gcsOutputDirectory;
 
   /**
+   * Output only. The resource name of the Vertex Managed Dataset created, into which the prediction
+   * output is written. Format: `projects/{project}/locations/{location}/datasets/{dataset}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vertexMultimodalDatasetName;
+
+  /**
    * Output only. The path of the BigQuery dataset created, in `bq://projectId.bqDatasetId` format,
    * into which the prediction output is written.
    * @return value or {@code null} for none
@@ -110,6 +118,25 @@ public final class GoogleCloudAiplatformV1BatchPredictionJobOutputInfo extends c
    */
   public GoogleCloudAiplatformV1BatchPredictionJobOutputInfo setGcsOutputDirectory(java.lang.String gcsOutputDirectory) {
     this.gcsOutputDirectory = gcsOutputDirectory;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the Vertex Managed Dataset created, into which the prediction
+   * output is written. Format: `projects/{project}/locations/{location}/datasets/{dataset}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVertexMultimodalDatasetName() {
+    return vertexMultimodalDatasetName;
+  }
+
+  /**
+   * Output only. The resource name of the Vertex Managed Dataset created, into which the prediction
+   * output is written. Format: `projects/{project}/locations/{location}/datasets/{dataset}`
+   * @param vertexMultimodalDatasetName vertexMultimodalDatasetName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1BatchPredictionJobOutputInfo setVertexMultimodalDatasetName(java.lang.String vertexMultimodalDatasetName) {
+    this.vertexMultimodalDatasetName = vertexMultimodalDatasetName;
     return this;
   }
 

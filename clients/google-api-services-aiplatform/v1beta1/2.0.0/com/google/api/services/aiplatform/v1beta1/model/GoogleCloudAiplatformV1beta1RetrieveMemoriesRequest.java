@@ -40,6 +40,25 @@ public final class GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest extends c
   private java.lang.String filter;
 
   /**
+   * Optional. Metadata filters that will be applied to the retrieved memories' `metadata` using OR
+   * logic. Filters are defined using disjunctive normal form (OR of ANDs). For example:
+   * `filter_groups: [{filters: [{key: "author", value: {string_value: "agent 123"}, op: EQUAL}]},
+   * {filters: [{key: "label", value: {string_value: "travel"}, op: EQUAL}, {key: "author", value:
+   * {string_value: "agent 321"}, op: EQUAL}]}]` would be equivalent to the logical expression:
+   * `(metadata.author = "agent 123" OR (metadata.label = "travel" AND metadata.author = "agent
+   * 321"))`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1MemoryConjunctionFilter> filterGroups;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1MemoryConjunctionFilter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1MemoryConjunctionFilter.class);
+  }
+
+  /**
    * Required. The scope of the memories to retrieve. A memory must have exactly the same scope
    * (`Memory.scope`) as the scope provided here to be retrieved (same keys and values). Order does
    * not matter, but it is case-sensitive.
@@ -82,6 +101,35 @@ public final class GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest extends c
    */
   public GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest setFilter(java.lang.String filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Optional. Metadata filters that will be applied to the retrieved memories' `metadata` using OR
+   * logic. Filters are defined using disjunctive normal form (OR of ANDs). For example:
+   * `filter_groups: [{filters: [{key: "author", value: {string_value: "agent 123"}, op: EQUAL}]},
+   * {filters: [{key: "label", value: {string_value: "travel"}, op: EQUAL}, {key: "author", value:
+   * {string_value: "agent 321"}, op: EQUAL}]}]` would be equivalent to the logical expression:
+   * `(metadata.author = "agent 123" OR (metadata.label = "travel" AND metadata.author = "agent
+   * 321"))`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1MemoryConjunctionFilter> getFilterGroups() {
+    return filterGroups;
+  }
+
+  /**
+   * Optional. Metadata filters that will be applied to the retrieved memories' `metadata` using OR
+   * logic. Filters are defined using disjunctive normal form (OR of ANDs). For example:
+   * `filter_groups: [{filters: [{key: "author", value: {string_value: "agent 123"}, op: EQUAL}]},
+   * {filters: [{key: "label", value: {string_value: "travel"}, op: EQUAL}, {key: "author", value:
+   * {string_value: "agent 321"}, op: EQUAL}]}]` would be equivalent to the logical expression:
+   * `(metadata.author = "agent 123" OR (metadata.label = "travel" AND metadata.author = "agent
+   * 321"))`.
+   * @param filterGroups filterGroups or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RetrieveMemoriesRequest setFilterGroups(java.util.List<GoogleCloudAiplatformV1beta1MemoryConjunctionFilter> filterGroups) {
+    this.filterGroups = filterGroups;
     return this;
   }
 

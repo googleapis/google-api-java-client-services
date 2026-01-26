@@ -155,7 +155,7 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
   private java.lang.String modelDeploymentMonitoringJob;
 
   /**
-   * Output only. The resource name of the Endpoint.
+   * Identifier. The resource name of the Endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -500,7 +500,7 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
   }
 
   /**
-   * Output only. The resource name of the Endpoint.
+   * Identifier. The resource name of the Endpoint.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -508,7 +508,7 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
   }
 
   /**
-   * Output only. The resource name of the Endpoint.
+   * Identifier. The resource name of the Endpoint.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1Endpoint setName(java.lang.String name) {

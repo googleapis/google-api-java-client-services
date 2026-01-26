@@ -73,6 +73,13 @@ public final class GoogleCloudAiplatformV1beta1BatchPredictionJobOutputConfig ex
   private java.lang.String predictionsFormat;
 
   /**
+   * The details for a Vertex Multimodal Dataset that will be created for the output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1VertexMultimodalDatasetDestination vertexMultimodalDatasetDestination;
+
+  /**
    * The BigQuery project or dataset location where the output is to be written to. If project is
    * provided, a new dataset is created with name `prediction__` where is made BigQuery-dataset-name
    * compatible (for example, most special characters become underscores), and timestamp is in
@@ -162,6 +169,23 @@ public final class GoogleCloudAiplatformV1beta1BatchPredictionJobOutputConfig ex
    */
   public GoogleCloudAiplatformV1beta1BatchPredictionJobOutputConfig setPredictionsFormat(java.lang.String predictionsFormat) {
     this.predictionsFormat = predictionsFormat;
+    return this;
+  }
+
+  /**
+   * The details for a Vertex Multimodal Dataset that will be created for the output.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexMultimodalDatasetDestination getVertexMultimodalDatasetDestination() {
+    return vertexMultimodalDatasetDestination;
+  }
+
+  /**
+   * The details for a Vertex Multimodal Dataset that will be created for the output.
+   * @param vertexMultimodalDatasetDestination vertexMultimodalDatasetDestination or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1BatchPredictionJobOutputConfig setVertexMultimodalDatasetDestination(GoogleCloudAiplatformV1beta1VertexMultimodalDatasetDestination vertexMultimodalDatasetDestination) {
+    this.vertexMultimodalDatasetDestination = vertexMultimodalDatasetDestination;
     return this;
   }
 

@@ -39,6 +39,13 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecAppBuilderData ex
   private java.lang.String codeRepositoryState;
 
   /**
+   * Optional. Framework used to build the application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String framework;
+
+  /**
    * Linked resources attached to the application by the user.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecAppBuilderData ex
    */
   public GoogleCloudAiplatformV1beta1SchemaPromptSpecAppBuilderData setCodeRepositoryState(java.lang.String codeRepositoryState) {
     this.codeRepositoryState = codeRepositoryState;
+    return this;
+  }
+
+  /**
+   * Optional. Framework used to build the application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFramework() {
+    return framework;
+  }
+
+  /**
+   * Optional. Framework used to build the application.
+   * @param framework framework or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SchemaPromptSpecAppBuilderData setFramework(java.lang.String framework) {
+    this.framework = framework;
     return this;
   }
 

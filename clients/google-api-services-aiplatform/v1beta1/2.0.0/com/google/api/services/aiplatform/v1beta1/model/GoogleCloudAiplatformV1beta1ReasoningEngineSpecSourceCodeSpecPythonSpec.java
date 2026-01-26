@@ -32,7 +32,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   /**
    * Optional. The Python module to load as the entrypoint, specified as a fully qualified module
    * name. For example: path.to.agent. If not specified, defaults to "agent". The project root will
-   * be added to Python sys.path, allowing imports to be specified relative to the root.
+   * be added to Python sys.path, allowing imports to be specified relative to the root. This field
+   * should not be set if the source is `agent_config_source`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +41,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
 
   /**
    * Optional. The name of the callable object within the `entrypoint_module` to use as the
-   * application If not specified, defaults to "root_agent".
+   * application If not specified, defaults to "root_agent". This field should not be set if the
+   * source is `agent_config_source`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +57,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   private java.lang.String requirementsFile;
 
   /**
-   * Optional. The version of Python to use. Support version includes 3.9, 3.10, 3.11, 3.12, 3.13.
-   * If not specified, default value is 3.10.
+   * Optional. The version of Python to use. Support version includes 3.9, 3.10, 3.11, 3.12, 3.13,
+   * 3.14. If not specified, default value is 3.10.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +67,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   /**
    * Optional. The Python module to load as the entrypoint, specified as a fully qualified module
    * name. For example: path.to.agent. If not specified, defaults to "agent". The project root will
-   * be added to Python sys.path, allowing imports to be specified relative to the root.
+   * be added to Python sys.path, allowing imports to be specified relative to the root. This field
+   * should not be set if the source is `agent_config_source`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntrypointModule() {
@@ -75,7 +78,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   /**
    * Optional. The Python module to load as the entrypoint, specified as a fully qualified module
    * name. For example: path.to.agent. If not specified, defaults to "agent". The project root will
-   * be added to Python sys.path, allowing imports to be specified relative to the root.
+   * be added to Python sys.path, allowing imports to be specified relative to the root. This field
+   * should not be set if the source is `agent_config_source`.
    * @param entrypointModule entrypointModule or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecPythonSpec setEntrypointModule(java.lang.String entrypointModule) {
@@ -85,7 +89,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
 
   /**
    * Optional. The name of the callable object within the `entrypoint_module` to use as the
-   * application If not specified, defaults to "root_agent".
+   * application If not specified, defaults to "root_agent". This field should not be set if the
+   * source is `agent_config_source`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntrypointObject() {
@@ -94,7 +99,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
 
   /**
    * Optional. The name of the callable object within the `entrypoint_module` to use as the
-   * application If not specified, defaults to "root_agent".
+   * application If not specified, defaults to "root_agent". This field should not be set if the
+   * source is `agent_config_source`.
    * @param entrypointObject entrypointObject or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecPythonSpec setEntrypointObject(java.lang.String entrypointObject) {
@@ -122,8 +128,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   }
 
   /**
-   * Optional. The version of Python to use. Support version includes 3.9, 3.10, 3.11, 3.12, 3.13.
-   * If not specified, default value is 3.10.
+   * Optional. The version of Python to use. Support version includes 3.9, 3.10, 3.11, 3.12, 3.13,
+   * 3.14. If not specified, default value is 3.10.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -131,8 +137,8 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   }
 
   /**
-   * Optional. The version of Python to use. Support version includes 3.9, 3.10, 3.11, 3.12, 3.13.
-   * If not specified, default value is 3.10.
+   * Optional. The version of Python to use. Support version includes 3.9, 3.10, 3.11, 3.12, 3.13,
+   * 3.14. If not specified, default value is 3.10.
    * @param version version or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecPythonSpec setVersion(java.lang.String version) {

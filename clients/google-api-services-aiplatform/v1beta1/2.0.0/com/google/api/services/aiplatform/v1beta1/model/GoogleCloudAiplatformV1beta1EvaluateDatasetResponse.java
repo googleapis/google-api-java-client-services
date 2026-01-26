@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Response in LRO for EvaluationService.EvaluateDataset.
+ * The results from an evaluation run performed by the EvaluationService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1EvaluateDatasetResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Aggregation statistics derived from results of EvaluationService.EvaluateDataset.
+   * Output only. Aggregation statistics derived from results of EvaluationService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1AggregationOutput aggregationOutput;
 
   /**
-   * Output only. Output info for EvaluationService.EvaluateDataset.
+   * Output only. Output info for EvaluationService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1OutputInfo outputInfo;
 
   /**
-   * Output only. Aggregation statistics derived from results of EvaluationService.EvaluateDataset.
+   * Output only. Aggregation statistics derived from results of EvaluationService.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AggregationOutput getAggregationOutput() {
@@ -52,7 +52,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetResponse extends c
   }
 
   /**
-   * Output only. Aggregation statistics derived from results of EvaluationService.EvaluateDataset.
+   * Output only. Aggregation statistics derived from results of EvaluationService.
    * @param aggregationOutput aggregationOutput or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluateDatasetResponse setAggregationOutput(GoogleCloudAiplatformV1beta1AggregationOutput aggregationOutput) {
@@ -61,7 +61,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetResponse extends c
   }
 
   /**
-   * Output only. Output info for EvaluationService.EvaluateDataset.
+   * Output only. Output info for EvaluationService.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OutputInfo getOutputInfo() {
@@ -69,7 +69,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetResponse extends c
   }
 
   /**
-   * Output only. Output info for EvaluationService.EvaluateDataset.
+   * Output only. Output info for EvaluationService.
    * @param outputInfo outputInfo or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluateDatasetResponse setOutputInfo(GoogleCloudAiplatformV1beta1OutputInfo outputInfo) {

@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
   private GoogleRpcStatus error;
 
   /**
-   * Output only. Results for EvaluationService.EvaluateDataset.
+   * Output only. Results for EvaluationService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
   }
 
   /**
-   * Output only. Results for EvaluationService.EvaluateDataset.
+   * Output only. Results for EvaluationService.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluateDatasetResponse getEvaluateDatasetResponse() {
@@ -104,7 +104,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
   }
 
   /**
-   * Output only. Results for EvaluationService.EvaluateDataset.
+   * Output only. Results for EvaluationService.
    * @param evaluateDatasetResponse evaluateDatasetResponse or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluateDatasetRun setEvaluateDatasetResponse(GoogleCloudAiplatformV1beta1EvaluateDatasetResponse evaluateDatasetResponse) {

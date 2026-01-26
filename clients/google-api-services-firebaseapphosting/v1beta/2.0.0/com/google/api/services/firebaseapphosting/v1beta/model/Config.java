@@ -31,6 +31,16 @@ package com.google.api.services.firebaseapphosting.v1beta.model;
 public final class Config extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. [OUTPUT_ONLY] This field represents all environment variables employed during both
+   * the build and runtime. This list reflects the result of merging variables from all sources
+   * (Backend.override_env, Build.Config.env, YAML, defaults, system). Each variable includes its
+   * `origin`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EnvironmentVariable> effectiveEnv;
+
+  /**
    * Optional. Supplied environment variables for a specific build. Provided at Build creation time
    * and immutable afterwards. This field is only applicable for Builds using a build image - (e.g.,
    * ContainerSource or ArchiveSource with locally_build_source) Attempts to set this for other
@@ -47,6 +57,29 @@ public final class Config extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private RunConfig runConfig;
+
+  /**
+   * Output only. [OUTPUT_ONLY] This field represents all environment variables employed during both
+   * the build and runtime. This list reflects the result of merging variables from all sources
+   * (Backend.override_env, Build.Config.env, YAML, defaults, system). Each variable includes its
+   * `origin`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EnvironmentVariable> getEffectiveEnv() {
+    return effectiveEnv;
+  }
+
+  /**
+   * Output only. [OUTPUT_ONLY] This field represents all environment variables employed during both
+   * the build and runtime. This list reflects the result of merging variables from all sources
+   * (Backend.override_env, Build.Config.env, YAML, defaults, system). Each variable includes its
+   * `origin`
+   * @param effectiveEnv effectiveEnv or {@code null} for none
+   */
+  public Config setEffectiveEnv(java.util.List<EnvironmentVariable> effectiveEnv) {
+    this.effectiveEnv = effectiveEnv;
+    return this;
+  }
 
   /**
    * Optional. Supplied environment variables for a specific build. Provided at Build creation time

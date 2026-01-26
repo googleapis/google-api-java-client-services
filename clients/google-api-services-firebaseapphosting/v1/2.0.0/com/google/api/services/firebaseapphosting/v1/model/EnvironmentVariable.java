@@ -39,6 +39,21 @@ public final class EnvironmentVariable extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> availability;
 
   /**
+   * Output only. The high-level origin category of the environment variable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String origin;
+
+  /**
+   * Output only. Specific detail about the source. For APPHOSTING_YAML origins, this will contain
+   * the exact filename, such as "apphosting.yaml" or "apphosting.staging.yaml".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originFileName;
+
+  /**
    * A fully qualified secret version. The value of the secret will be accessed once while building
    * the application and once per cold start of the container at runtime. The service account used
    * by Cloud Build and by Cloud Run must each have the `secretmanager.versions.access` permission
@@ -81,6 +96,42 @@ public final class EnvironmentVariable extends com.google.api.client.json.Generi
    */
   public EnvironmentVariable setAvailability(java.util.List<java.lang.String> availability) {
     this.availability = availability;
+    return this;
+  }
+
+  /**
+   * Output only. The high-level origin category of the environment variable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrigin() {
+    return origin;
+  }
+
+  /**
+   * Output only. The high-level origin category of the environment variable.
+   * @param origin origin or {@code null} for none
+   */
+  public EnvironmentVariable setOrigin(java.lang.String origin) {
+    this.origin = origin;
+    return this;
+  }
+
+  /**
+   * Output only. Specific detail about the source. For APPHOSTING_YAML origins, this will contain
+   * the exact filename, such as "apphosting.yaml" or "apphosting.staging.yaml".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginFileName() {
+    return originFileName;
+  }
+
+  /**
+   * Output only. Specific detail about the source. For APPHOSTING_YAML origins, this will contain
+   * the exact filename, such as "apphosting.yaml" or "apphosting.staging.yaml".
+   * @param originFileName originFileName or {@code null} for none
+   */
+  public EnvironmentVariable setOriginFileName(java.lang.String originFileName) {
+    this.originFileName = originFileName;
     return this;
   }
 

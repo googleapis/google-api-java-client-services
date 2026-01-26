@@ -249,10 +249,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * the Chat app. To include this field in your request, you must call the Chat API using [app
    * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
    * and omit the following: * [Attachments](https://developers.google.com/workspace/chat/api/refere
-   * nce/rest/v1/spaces.messages.attachments) * [Accessory widgets](https://developers.google.com/wo
-   * rkspace/chat/api/reference/rest/v1/spaces.messages#Message.AccessoryWidget) For details, see
-   * [Send a message privately](https://developers.google.com/workspace/chat/create-
-   * messages#private).
+   * nce/rest/v1/spaces.messages.attachments) For details, see [Send a message
+   * privately](https://developers.google.com/workspace/chat/create-messages#private).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -731,10 +729,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * the Chat app. To include this field in your request, you must call the Chat API using [app
    * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
    * and omit the following: * [Attachments](https://developers.google.com/workspace/chat/api/refere
-   * nce/rest/v1/spaces.messages.attachments) * [Accessory widgets](https://developers.google.com/wo
-   * rkspace/chat/api/reference/rest/v1/spaces.messages#Message.AccessoryWidget) For details, see
-   * [Send a message privately](https://developers.google.com/workspace/chat/create-
-   * messages#private).
+   * nce/rest/v1/spaces.messages.attachments) For details, see [Send a message
+   * privately](https://developers.google.com/workspace/chat/create-messages#private).
    * @return value or {@code null} for none
    */
   public User getPrivateMessageViewer() {
@@ -747,10 +743,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * the Chat app. To include this field in your request, you must call the Chat API using [app
    * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
    * and omit the following: * [Attachments](https://developers.google.com/workspace/chat/api/refere
-   * nce/rest/v1/spaces.messages.attachments) * [Accessory widgets](https://developers.google.com/wo
-   * rkspace/chat/api/reference/rest/v1/spaces.messages#Message.AccessoryWidget) For details, see
-   * [Send a message privately](https://developers.google.com/workspace/chat/create-
-   * messages#private).
+   * nce/rest/v1/spaces.messages.attachments) For details, see [Send a message
+   * privately](https://developers.google.com/workspace/chat/create-messages#private).
    * @param privateMessageViewer privateMessageViewer or {@code null} for none
    */
   public Message setPrivateMessageViewer(User privateMessageViewer) {

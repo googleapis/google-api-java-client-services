@@ -6544,14 +6544,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class DataProducts {
 
         /**
-         * Creates a Data Product.
+         * Creates a data product.
          *
          * Create a request for the method "dataProducts.create".
          *
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource where this Data Product will be created. Format:
+         * @param parent Required. The parent resource where this data product will be created. Format:
          *        projects/{project_id_or_number}/locations/{location_id}
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataProduct}
          * @return the request
@@ -6570,7 +6570,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a Data Product.
+           * Creates a data product.
            *
            * Create a request for the method "dataProducts.create".
            *
@@ -6580,7 +6580,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource where this Data Product will be created. Format:
+           * @param parent Required. The parent resource where this data product will be created. Format:
          *        projects/{project_id_or_number}/locations/{location_id}
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataProduct}
            * @since 1.13
@@ -6651,13 +6651,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The parent resource where this Data Product will be created. Format:
+           * Required. The parent resource where this data product will be created. Format:
            * projects/{project_id_or_number}/locations/{location_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource where this Data Product will be created. Format:
+          /** Required. The parent resource where this data product will be created. Format:
          projects/{project_id_or_number}/locations/{location_id}
            */
           public java.lang.String getParent() {
@@ -6665,7 +6665,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The parent resource where this Data Product will be created. Format:
+           * Required. The parent resource where this data product will be created. Format:
            * projects/{project_id_or_number}/locations/{location_id}
            */
           public Create setParent(java.lang.String parent) {
@@ -6679,30 +6679,31 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. The ID of the Data Product to create.The ID must conform to RFC-1034 and
+           * Optional. The ID of the data product to create.The ID must conform to RFC-1034 and
            * contain only lower-case letters (a-z), numbers (0-9), or hyphens, with the first
            * character a letter, the last a letter or a number, and a 63 character maximum.
-           * Characters outside of ASCII are not permitted. Valid format regex: (^a-z?$) If not
-           * provided, a system generated ID will be used.
+           * Characters outside of ASCII are not permitted. Valid format regex:
+           * ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$ If not provided, a system generated ID will be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String dataProductId;
 
-          /** Optional. The ID of the Data Product to create.The ID must conform to RFC-1034 and contain only
+          /** Optional. The ID of the data product to create.The ID must conform to RFC-1034 and contain only
          lower-case letters (a-z), numbers (0-9), or hyphens, with the first character a letter, the last a
          letter or a number, and a 63 character maximum. Characters outside of ASCII are not permitted.
-         Valid format regex: (^a-z?$) If not provided, a system generated ID will be used.
+         Valid format regex: ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$ If not provided, a system generated ID will
+         be used.
            */
           public java.lang.String getDataProductId() {
             return dataProductId;
           }
 
           /**
-           * Optional. The ID of the Data Product to create.The ID must conform to RFC-1034 and
+           * Optional. The ID of the data product to create.The ID must conform to RFC-1034 and
            * contain only lower-case letters (a-z), numbers (0-9), or hyphens, with the first
            * character a letter, the last a letter or a number, and a 63 character maximum.
-           * Characters outside of ASCII are not permitted. Valid format regex: (^a-z?$) If not
-           * provided, a system generated ID will be used.
+           * Characters outside of ASCII are not permitted. Valid format regex:
+           * ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$ If not provided, a system generated ID will be used.
            */
           public Create setDataProductId(java.lang.String dataProductId) {
             this.dataProductId = dataProductId;
@@ -6710,20 +6711,20 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Validates the request without actually creating the Data Product. Default:
+           * Optional. Validates the request without actually creating the data product. Default:
            * false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Validates the request without actually creating the Data Product. Default: false.
+          /** Optional. Validates the request without actually creating the data product. Default: false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Validates the request without actually creating the Data Product. Default:
+           * Optional. Validates the request without actually creating the data product. Default:
            * false.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
@@ -6737,15 +6738,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Deletes a Data Product. The deletion will fail if the Data Product is not empty (i.e. contains at
-         * least one Data Asset).
+         * Deletes a data product. The deletion will fail if the data product is not empty (i.e. contains at
+         * least one data asset).
          *
          * Create a request for the method "dataProducts.delete".
          *
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the Data Product to delete. Format:
+         * @param name Required. The name of the data product to delete. Format:
          *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
          * @return the request
          */
@@ -6763,8 +6764,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
 
           /**
-           * Deletes a Data Product. The deletion will fail if the Data Product is not empty (i.e. contains
-           * at least one Data Asset).
+           * Deletes a data product. The deletion will fail if the data product is not empty (i.e. contains
+           * at least one data asset).
            *
            * Create a request for the method "dataProducts.delete".
            *
@@ -6774,7 +6775,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the Data Product to delete. Format:
+           * @param name Required. The name of the data product to delete. Format:
          *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            * @since 1.13
            */
@@ -6844,13 +6845,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The name of the Data Product to delete. Format:
+           * Required. The name of the data product to delete. Format:
            * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the Data Product to delete. Format:
+          /** Required. The name of the data product to delete. Format:
          projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            */
           public java.lang.String getName() {
@@ -6858,7 +6859,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The name of the Data Product to delete. Format:
+           * Required. The name of the data product to delete. Format:
            * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            */
           public Delete setName(java.lang.String name) {
@@ -6872,23 +6873,23 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. The etag of the Data Product.If an etag is provided and does not match the
-           * current etag of the Data Product, then the deletion will be blocked and an ABORTED
+           * Optional. The etag of the data product.If an etag is provided and does not match the
+           * current etag of the data product, then the deletion will be blocked and an ABORTED
            * error will be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** Optional. The etag of the Data Product.If an etag is provided and does not match the current etag
-         of the Data Product, then the deletion will be blocked and an ABORTED error will be returned.
+          /** Optional. The etag of the data product.If an etag is provided and does not match the current etag
+         of the data product, then the deletion will be blocked and an ABORTED error will be returned.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * Optional. The etag of the Data Product.If an etag is provided and does not match the
-           * current etag of the Data Product, then the deletion will be blocked and an ABORTED
+           * Optional. The etag of the data product.If an etag is provided and does not match the
+           * current etag of the data product, then the deletion will be blocked and an ABORTED
            * error will be returned.
            */
           public Delete setEtag(java.lang.String etag) {
@@ -6897,20 +6898,20 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Validates the request without actually deleting the Data Product. Default:
+           * Optional. Validates the request without actually deleting the data product. Default:
            * false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Validates the request without actually deleting the Data Product. Default: false.
+          /** Optional. Validates the request without actually deleting the data product. Default: false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Validates the request without actually deleting the Data Product. Default:
+           * Optional. Validates the request without actually deleting the data product. Default:
            * false.
            */
           public Delete setValidateOnly(java.lang.Boolean validateOnly) {
@@ -6924,14 +6925,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Gets a Data Product.
+         * Gets a data product.
          *
          * Create a request for the method "dataProducts.get".
          *
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the Data Product to retrieve. Format:
+         * @param name Required. The name of the data product to retrieve. Format:
          *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
          * @return the request
          */
@@ -6949,7 +6950,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
 
           /**
-           * Gets a Data Product.
+           * Gets a data product.
            *
            * Create a request for the method "dataProducts.get".
            *
@@ -6958,7 +6959,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the Data Product to retrieve. Format:
+           * @param name Required. The name of the data product to retrieve. Format:
          *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            * @since 1.13
            */
@@ -7038,13 +7039,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The name of the Data Product to retrieve. Format:
+           * Required. The name of the data product to retrieve. Format:
            * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the Data Product to retrieve. Format:
+          /** Required. The name of the data product to retrieve. Format:
          projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            */
           public java.lang.String getName() {
@@ -7052,7 +7053,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The name of the Data Product to retrieve. Format:
+           * Required. The name of the data product to retrieve. Format:
            * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            */
           public Get setName(java.lang.String name) {
@@ -7268,14 +7269,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Lists Data Products for a given project.
+         * Lists data products for a given project.
          *
          * Create a request for the method "dataProducts.list".
          *
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which has this collection of Data Products.Format:
+         * @param parent Required. The parent, which has this collection of data products.Format:
          *        projects/{project_id_or_number}/locations/{location_id}.Supports listing across all
          *        locations with the wildcard - (hyphen) character. Example:
          *        projects/{project_id_or_number}/locations/-
@@ -7295,7 +7296,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists Data Products for a given project.
+           * Lists data products for a given project.
            *
            * Create a request for the method "dataProducts.list".
            *
@@ -7304,7 +7305,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which has this collection of Data Products.Format:
+           * @param parent Required. The parent, which has this collection of data products.Format:
          *        projects/{project_id_or_number}/locations/{location_id}.Supports listing across all
          *        locations with the wildcard - (hyphen) character. Example:
          *        projects/{project_id_or_number}/locations/-
@@ -7386,7 +7387,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The parent, which has this collection of Data Products.Format:
+           * Required. The parent, which has this collection of data products.Format:
            * projects/{project_id_or_number}/locations/{location_id}.Supports listing across all
            * locations with the wildcard - (hyphen) character. Example:
            * projects/{project_id_or_number}/locations/-
@@ -7394,7 +7395,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which has this collection of Data Products.Format:
+          /** Required. The parent, which has this collection of data products.Format:
          projects/{project_id_or_number}/locations/{location_id}.Supports listing across all locations with
          the wildcard - (hyphen) character. Example: projects/{project_id_or_number}/locations/-
            */
@@ -7403,7 +7404,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The parent, which has this collection of Data Products.Format:
+           * Required. The parent, which has this collection of data products.Format:
            * projects/{project_id_or_number}/locations/{location_id}.Supports listing across all
            * locations with the wildcard - (hyphen) character. Example:
            * projects/{project_id_or_number}/locations/-
@@ -7419,13 +7420,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Filter expression that filters Data Products listed in the response.Example
+           * Optional. Filter expression that filters data products listed in the response.Example
            * of using this filter is: display_name="my-data-product"
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filter expression that filters Data Products listed in the response.Example of using this
+          /** Optional. Filter expression that filters data products listed in the response.Example of using this
          filter is: display_name="my-data-product"
            */
           public java.lang.String getFilter() {
@@ -7433,7 +7434,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Filter expression that filters Data Products listed in the response.Example
+           * Optional. Filter expression that filters data products listed in the response.Example
            * of using this filter is: display_name="my-data-product"
            */
           public List setFilter(java.lang.String filter) {
@@ -7442,7 +7443,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Order by expression that orders Data Products listed in the
+           * Optional. Order by expression that orders data products listed in the
            * response.Supported Order by fields are: name or create_time.If not specified, the
            * ordering is undefined.Ordering by create_time is not supported when listing resources
            * across locations (i.e. when request contains /locations/-).
@@ -7450,7 +7451,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Order by expression that orders Data Products listed in the response.Supported Order by
+          /** Optional. Order by expression that orders data products listed in the response.Supported Order by
          fields are: name or create_time.If not specified, the ordering is undefined.Ordering by create_time
          is not supported when listing resources across locations (i.e. when request contains /locations/-).
            */
@@ -7459,7 +7460,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Order by expression that orders Data Products listed in the
+           * Optional. Order by expression that orders data products listed in the
            * response.Supported Order by fields are: name or create_time.If not specified, the
            * ordering is undefined.Ordering by create_time is not supported when listing resources
            * across locations (i.e. when request contains /locations/-).
@@ -7470,15 +7471,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. The maximum number of Data Products to return. The service may return fewer
-           * than this value. If unspecified, at most 50 Data Products will be returned. The maximum
+           * Optional. The maximum number of data products to return. The service may return fewer
+           * than this value. If unspecified, at most 50 data products will be returned. The maximum
            * value is 1000; values above 1000 will be coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of Data Products to return. The service may return fewer than this
-         value. If unspecified, at most 50 Data Products will be returned. The maximum value is 1000; values
+          /** Optional. The maximum number of data products to return. The service may return fewer than this
+         value. If unspecified, at most 50 data products will be returned. The maximum value is 1000; values
          above 1000 will be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
@@ -7486,8 +7487,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. The maximum number of Data Products to return. The service may return fewer
-           * than this value. If unspecified, at most 50 Data Products will be returned. The maximum
+           * Optional. The maximum number of data products to return. The service may return fewer
+           * than this value. If unspecified, at most 50 data products will be returned. The maximum
            * value is 1000; values above 1000 will be coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
@@ -7527,14 +7528,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Updates a Data Product.
+         * Updates a data product.
          *
          * Create a request for the method "dataProducts.patch".
          *
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. Resource name of the Data Product. Format:
+         * @param name Identifier. Resource name of the data product. Format:
          *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataProduct}
          * @return the request
@@ -7553,7 +7554,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
 
           /**
-           * Updates a Data Product.
+           * Updates a data product.
            *
            * Create a request for the method "dataProducts.patch".
            *
@@ -7563,7 +7564,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. Resource name of the Data Product. Format:
+           * @param name Identifier. Resource name of the data product. Format:
          *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataProduct}
            * @since 1.13
@@ -7634,13 +7635,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Identifier. Resource name of the Data Product. Format:
+           * Identifier. Resource name of the data product. Format:
            * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. Resource name of the Data Product. Format:
+          /** Identifier. Resource name of the data product. Format:
          projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}.
            */
           public java.lang.String getName() {
@@ -7648,7 +7649,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Identifier. Resource name of the Data Product. Format:
+           * Identifier. Resource name of the data product. Format:
            * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}.
            */
           public Patch setName(java.lang.String name) {
@@ -7685,20 +7686,20 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Validates the request without actually updating the Data Product. Default:
+           * Optional. Validates the request without actually updating the data product. Default:
            * false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Validates the request without actually updating the Data Product. Default: false.
+          /** Optional. Validates the request without actually updating the data product. Default: false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Validates the request without actually updating the Data Product. Default:
+           * Optional. Validates the request without actually updating the data product. Default:
            * false.
            */
           public Patch setValidateOnly(java.lang.Boolean validateOnly) {
@@ -8029,14 +8030,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         public class DataAssets {
 
           /**
-           * Creates a Data Asset.
+           * Creates a data asset.
            *
            * Create a request for the method "dataAssets.create".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource where this Data Asset will be created. Format:
+           * @param parent Required. The parent resource where this data asset will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataAsset}
            * @return the request
@@ -8055,7 +8056,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
 
             /**
-             * Creates a Data Asset.
+             * Creates a data asset.
              *
              * Create a request for the method "dataAssets.create".
              *
@@ -8065,7 +8066,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource where this Data Asset will be created. Format:
+             * @param parent Required. The parent resource where this data asset will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataAsset}
              * @since 1.13
@@ -8136,13 +8137,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The parent resource where this Data Asset will be created. Format: projects
+             * Required. The parent resource where this data asset will be created. Format: projects
              * /{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource where this Data Asset will be created. Format:
+            /** Required. The parent resource where this data asset will be created. Format:
            projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
              */
             public java.lang.String getParent() {
@@ -8150,7 +8151,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The parent resource where this Data Asset will be created. Format: projects
+             * Required. The parent resource where this data asset will be created. Format: projects
              * /{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
              */
             public Create setParent(java.lang.String parent) {
@@ -8164,30 +8165,33 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. The ID of the Data Asset to create.The ID must conform to RFC-1034 and
+             * Optional. The ID of the data asset to create.The ID must conform to RFC-1034 and
              * contain only lower-case letters (a-z), numbers (0-9), or hyphens, with the first
              * character a letter, the last a letter or a number, and a 63 character maximum.
-             * Characters outside of ASCII are not permitted. Valid format regex: (^a-z?$) If not
-             * provided, a system generated ID will be used.
+             * Characters outside of ASCII are not permitted. Valid format regex:
+             * ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$ If not provided, a system generated ID will be
+             * used.
              */
             @com.google.api.client.util.Key
             private java.lang.String dataAssetId;
 
-            /** Optional. The ID of the Data Asset to create.The ID must conform to RFC-1034 and contain only
+            /** Optional. The ID of the data asset to create.The ID must conform to RFC-1034 and contain only
            lower-case letters (a-z), numbers (0-9), or hyphens, with the first character a letter, the last a
            letter or a number, and a 63 character maximum. Characters outside of ASCII are not permitted.
-           Valid format regex: (^a-z?$) If not provided, a system generated ID will be used.
+           Valid format regex: ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$ If not provided, a system generated ID will
+           be used.
              */
             public java.lang.String getDataAssetId() {
               return dataAssetId;
             }
 
             /**
-             * Optional. The ID of the Data Asset to create.The ID must conform to RFC-1034 and
+             * Optional. The ID of the data asset to create.The ID must conform to RFC-1034 and
              * contain only lower-case letters (a-z), numbers (0-9), or hyphens, with the first
              * character a letter, the last a letter or a number, and a 63 character maximum.
-             * Characters outside of ASCII are not permitted. Valid format regex: (^a-z?$) If not
-             * provided, a system generated ID will be used.
+             * Characters outside of ASCII are not permitted. Valid format regex:
+             * ^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$ If not provided, a system generated ID will be
+             * used.
              */
             public Create setDataAssetId(java.lang.String dataAssetId) {
               this.dataAssetId = dataAssetId;
@@ -8195,20 +8199,20 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. Validates the request without actually creating the Data Asset. Defaults to
+             * Optional. Validates the request without actually creating the data asset. Defaults to
              * false.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** Optional. Validates the request without actually creating the Data Asset. Defaults to false.
+            /** Optional. Validates the request without actually creating the data asset. Defaults to false.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * Optional. Validates the request without actually creating the Data Asset. Defaults to
+             * Optional. Validates the request without actually creating the data asset. Defaults to
              * false.
              */
             public Create setValidateOnly(java.lang.Boolean validateOnly) {
@@ -8222,14 +8226,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Deletes a Data Asset.
+           * Deletes a data asset.
            *
            * Create a request for the method "dataAssets.delete".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the Data Asset to delete. Format: projects/{project_id_or_number}/locations/{l
+           * @param name Required. The name of the data asset to delete. Format: projects/{project_id_or_number}/locations/{l
            *        ocation_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
            * @return the request
            */
@@ -8247,7 +8251,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
 
             /**
-             * Deletes a Data Asset.
+             * Deletes a data asset.
              *
              * Create a request for the method "dataAssets.delete".
              *
@@ -8257,7 +8261,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the Data Asset to delete. Format: projects/{project_id_or_number}/locations/{l
+             * @param name Required. The name of the data asset to delete. Format: projects/{project_id_or_number}/locations/{l
            *        ocation_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              * @since 1.13
              */
@@ -8327,13 +8331,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name of the Data Asset to delete. Format: projects/{project_id_or_numbe
+             * Required. The name of the data asset to delete. Format: projects/{project_id_or_numbe
              * r}/locations/{location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the Data Asset to delete. Format: projects/{project_id_or_number}/locations/{
+            /** Required. The name of the data asset to delete. Format: projects/{project_id_or_number}/locations/{
            location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              */
             public java.lang.String getName() {
@@ -8341,7 +8345,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name of the Data Asset to delete. Format: projects/{project_id_or_numbe
+             * Required. The name of the data asset to delete. Format: projects/{project_id_or_numbe
              * r}/locations/{location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              */
             public Delete setName(java.lang.String name) {
@@ -8355,14 +8359,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. The etag of the Data Asset. If this is provided, it must match the server's
+             * Optional. The etag of the data asset. If this is provided, it must match the server's
              * etag. If the etag is provided and does not match the server-computed etag, the
              * request must fail with a ABORTED error code.
              */
             @com.google.api.client.util.Key
             private java.lang.String etag;
 
-            /** Optional. The etag of the Data Asset. If this is provided, it must match the server's etag. If the
+            /** Optional. The etag of the data asset. If this is provided, it must match the server's etag. If the
            etag is provided and does not match the server-computed etag, the request must fail with a ABORTED
            error code.
              */
@@ -8371,7 +8375,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. The etag of the Data Asset. If this is provided, it must match the server's
+             * Optional. The etag of the data asset. If this is provided, it must match the server's
              * etag. If the etag is provided and does not match the server-computed etag, the
              * request must fail with a ABORTED error code.
              */
@@ -8381,20 +8385,20 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. Validates the request without actually deleting the Data Asset. Defaults to
+             * Optional. Validates the request without actually deleting the data asset. Defaults to
              * false.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** Optional. Validates the request without actually deleting the Data Asset. Defaults to false.
+            /** Optional. Validates the request without actually deleting the data asset. Defaults to false.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * Optional. Validates the request without actually deleting the Data Asset. Defaults to
+             * Optional. Validates the request without actually deleting the data asset. Defaults to
              * false.
              */
             public Delete setValidateOnly(java.lang.Boolean validateOnly) {
@@ -8408,14 +8412,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Gets a Data Asset.
+           * Gets a data asset.
            *
            * Create a request for the method "dataAssets.get".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the Data Asset to retrieve. Format: projects/{project_id_or_number}/locations/
+           * @param name Required. The name of the data asset to retrieve. Format: projects/{project_id_or_number}/locations/
            *        {location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
            * @return the request
            */
@@ -8433,7 +8437,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
 
             /**
-             * Gets a Data Asset.
+             * Gets a data asset.
              *
              * Create a request for the method "dataAssets.get".
              *
@@ -8442,7 +8446,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the Data Asset to retrieve. Format: projects/{project_id_or_number}/locations/
+             * @param name Required. The name of the data asset to retrieve. Format: projects/{project_id_or_number}/locations/
            *        {location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              * @since 1.13
              */
@@ -8522,14 +8526,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name of the Data Asset to retrieve. Format: projects/{project_id_or_num
+             * Required. The name of the data asset to retrieve. Format: projects/{project_id_or_num
              * ber}/locations/{location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id
              * }
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the Data Asset to retrieve. Format: projects/{project_id_or_number}/locations
+            /** Required. The name of the data asset to retrieve. Format: projects/{project_id_or_number}/locations
            /{location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              */
             public java.lang.String getName() {
@@ -8537,7 +8541,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name of the Data Asset to retrieve. Format: projects/{project_id_or_num
+             * Required. The name of the data asset to retrieve. Format: projects/{project_id_or_num
              * ber}/locations/{location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id
              * }
              */
@@ -8557,14 +8561,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Lists Data Assets for a given Data Product.
+           * Lists data assets for a given data product.
            *
            * Create a request for the method "dataAssets.list".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which has this collection of Data Assets. Format:
+           * @param parent Required. The parent, which has this collection of data assets. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
            * @return the request
            */
@@ -8582,7 +8586,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
 
             /**
-             * Lists Data Assets for a given Data Product.
+             * Lists data assets for a given data product.
              *
              * Create a request for the method "dataAssets.list".
              *
@@ -8591,7 +8595,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which has this collection of Data Assets. Format:
+             * @param parent Required. The parent, which has this collection of data assets. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
              * @since 1.13
              */
@@ -8671,13 +8675,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The parent, which has this collection of Data Assets. Format: projects/{pro
+             * Required. The parent, which has this collection of data assets. Format: projects/{pro
              * ject_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which has this collection of Data Assets. Format:
+            /** Required. The parent, which has this collection of data assets. Format:
            projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
              */
             public java.lang.String getParent() {
@@ -8685,7 +8689,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The parent, which has this collection of Data Assets. Format: projects/{pro
+             * Required. The parent, which has this collection of data assets. Format: projects/{pro
              * ject_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}
              */
             public List setParent(java.lang.String parent) {
@@ -8698,30 +8702,31 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               return this;
             }
 
-            /** Optional. Filter expression that filters DataAssets listed in the response. */
+            /** Optional. Filter expression that filters data assets listed in the response. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter expression that filters DataAssets listed in the response.
+            /** Optional. Filter expression that filters data assets listed in the response.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. Filter expression that filters DataAssets listed in the response. */
+            /** Optional. Filter expression that filters data assets listed in the response. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
             /**
-             * Optional. Order by expression that orders DataAssets listed in the response.Supported
-             * Order by fields are: name or create_time.If not specified, the ordering is undefined.
+             * Optional. Order by expression that orders data assets listed in the
+             * response.Supported order_by fields are: name or create_time.If not specified, the
+             * ordering is undefined.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Order by expression that orders DataAssets listed in the response.Supported Order by
+            /** Optional. Order by expression that orders data assets listed in the response.Supported order_by
            fields are: name or create_time.If not specified, the ordering is undefined.
              */
             public java.lang.String getOrderBy() {
@@ -8729,8 +8734,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. Order by expression that orders DataAssets listed in the response.Supported
-             * Order by fields are: name or create_time.If not specified, the ordering is undefined.
+             * Optional. Order by expression that orders data assets listed in the
+             * response.Supported order_by fields are: name or create_time.If not specified, the
+             * ordering is undefined.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -8738,15 +8744,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. The maximum number of Data Assets to return. The service may return fewer
-             * than this value. If unspecified, at most 50 Data Assets will be returned. The maximum
+             * Optional. The maximum number of data assets to return. The service may return fewer
+             * than this value. If unspecified, at most 50 data assets will be returned. The maximum
              * value is 1000; values above 1000 will be coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of Data Assets to return. The service may return fewer than this
-           value. If unspecified, at most 50 Data Assets will be returned. The maximum value is 1000; values
+            /** Optional. The maximum number of data assets to return. The service may return fewer than this
+           value. If unspecified, at most 50 data assets will be returned. The maximum value is 1000; values
            above 1000 will be coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
@@ -8754,8 +8760,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. The maximum number of Data Assets to return. The service may return fewer
-             * than this value. If unspecified, at most 50 Data Assets will be returned. The maximum
+             * Optional. The maximum number of data assets to return. The service may return fewer
+             * than this value. If unspecified, at most 50 data assets will be returned. The maximum
              * value is 1000; values above 1000 will be coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
@@ -8795,14 +8801,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Updates a Data Asset.
+           * Updates a data asset.
            *
            * Create a request for the method "dataAssets.patch".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Identifier. Resource name of the Data Asset. Format: projects/{project_id_or_number}/locations/{loca
+           * @param name Identifier. Resource name of the data asset. Format: projects/{project_id_or_number}/locations/{loca
            *        tion_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataAsset}
            * @return the request
@@ -8821,7 +8827,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+/dataAssets/[^/]+$");
 
             /**
-             * Updates a Data Asset.
+             * Updates a data asset.
              *
              * Create a request for the method "dataAssets.patch".
              *
@@ -8831,7 +8837,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Identifier. Resource name of the Data Asset. Format: projects/{project_id_or_number}/locations/{loca
+             * @param name Identifier. Resource name of the data asset. Format: projects/{project_id_or_number}/locations/{loca
            *        tion_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataAsset}
              * @since 1.13
@@ -8902,13 +8908,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Identifier. Resource name of the Data Asset. Format: projects/{project_id_or_number}/
+             * Identifier. Resource name of the data asset. Format: projects/{project_id_or_number}/
              * locations/{location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Identifier. Resource name of the Data Asset. Format: projects/{project_id_or_number}/locations/{loc
+            /** Identifier. Resource name of the data asset. Format: projects/{project_id_or_number}/locations/{loc
            ation_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              */
             public java.lang.String getName() {
@@ -8916,7 +8922,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Identifier. Resource name of the Data Asset. Format: projects/{project_id_or_number}/
+             * Identifier. Resource name of the data asset. Format: projects/{project_id_or_number}/
              * locations/{location_id}/dataProducts/{data_product_id}/dataAssets/{data_asset_id}
              */
             public Patch setName(java.lang.String name) {
@@ -8930,22 +8936,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. The list of fields to update. If this is empty or not set, then all fields
-             * that are populated (have a non-empty value) in data_asset above will be updated.
+             * Optional. The list of fields to update. If this is empty or not set, then all the
+             * fields will be updated.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Optional. The list of fields to update. If this is empty or not set, then all fields that are
-           populated (have a non-empty value) in data_asset above will be updated.
+            /** Optional. The list of fields to update. If this is empty or not set, then all the fields will be
+           updated.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
             /**
-             * Optional. The list of fields to update. If this is empty or not set, then all fields
-             * that are populated (have a non-empty value) in data_asset above will be updated.
+             * Optional. The list of fields to update. If this is empty or not set, then all the
+             * fields will be updated.
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -8953,20 +8959,20 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. Validates the request without actually updating the Data Asset. Defaults to
+             * Optional. Validates the request without actually updating the data asset. Defaults to
              * false.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** Optional. Validates the request without actually updating the Data Asset. Defaults to false.
+            /** Optional. Validates the request without actually updating the data asset. Defaults to false.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * Optional. Validates the request without actually updating the Data Asset. Defaults to
+             * Optional. Validates the request without actually updating the data asset. Defaults to
              * false.
              */
             public Patch setValidateOnly(java.lang.Boolean validateOnly) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * A Data Product is a curated collection of Data Assets, packaged to address specific use cases.
+ * A data product is a curated collection of data assets, packaged to address specific use cases.
  * It's a way to manage and share data in a more organized, product-like manner.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,52 +31,55 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProduct extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Data Product access groups by access group id as key. If Data Product is used only
-   * for packaging Data Assets, then access groups may be empty. However, if a Data Product is used
-   * for sharing Data Assets, then at least one access group must be specified.
+   * Optional. Data product access groups by access group id as key. If data product is used only
+   * for packaging data assets, then access groups may be empty. However, if a data product is used
+   * for sharing data assets, then at least one access group must be specified.Example: { "analyst":
+   * { "id": "analyst", "displayName": "Analyst", "description": "Access group for analysts",
+   * "principal": { "googleGroup": "analysts@example.com" } } }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudDataplexV1DataProductAccessGroup> accessGroups;
 
   /**
-   * Output only. Number of Data Assets associated with this Data Product.
+   * Output only. Number of data assets associated with this data product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer assetCount;
 
   /**
-   * Output only. The time at which the Data Product was created.
+   * Output only. The time at which the data product was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. Description of the Data Product.
+   * Optional. Description of the data product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. User-friendly display name of the Data Product.
+   * Required. User-friendly display name of the data product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Optional. Base64 encoded image representing the Data Product. Max Size: 3.0MiB Expected image
+   * Optional. Base64 encoded image representing the data product. Max Size: 3.0MiB Expected image
    * dimensions are 512x512 pixels, however the API only performs validation on size of the encoded
    * data. Note: For byte fields, the content of the fields are base64-encoded (which increases the
    * size of the data by 33-36%) when using JSON on the wire.
@@ -86,14 +89,15 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   private java.lang.String icon;
 
   /**
-   * Optional. User-defined labels for the Data Product.
+   * Optional. User-defined labels for the data product.Example: { "environment": "production",
+   * "billing": "marketing-department" }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. Resource name of the Data Product. Format:
+   * Identifier. Resource name of the data product. Format:
    * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}.
    * The value may be {@code null}.
    */
@@ -101,31 +105,33 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   private java.lang.String name;
 
   /**
-   * Required. Emails of the Data Product owners.
+   * Required. Emails of the data product owners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ownerEmails;
 
   /**
-   * Output only. System generated unique ID for the Data Product. This ID will be different if the
-   * Data Product is deleted and re-created with the same name.
+   * Output only. System generated unique ID for the data product. This ID will be different if the
+   * data product is deleted and re-created with the same name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * Output only. The time at which the Data Product was last updated.
+   * Output only. The time at which the data product was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. Data Product access groups by access group id as key. If Data Product is used only
-   * for packaging Data Assets, then access groups may be empty. However, if a Data Product is used
-   * for sharing Data Assets, then at least one access group must be specified.
+   * Optional. Data product access groups by access group id as key. If data product is used only
+   * for packaging data assets, then access groups may be empty. However, if a data product is used
+   * for sharing data assets, then at least one access group must be specified.Example: { "analyst":
+   * { "id": "analyst", "displayName": "Analyst", "description": "Access group for analysts",
+   * "principal": { "googleGroup": "analysts@example.com" } } }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDataplexV1DataProductAccessGroup> getAccessGroups() {
@@ -133,9 +139,11 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Optional. Data Product access groups by access group id as key. If Data Product is used only
-   * for packaging Data Assets, then access groups may be empty. However, if a Data Product is used
-   * for sharing Data Assets, then at least one access group must be specified.
+   * Optional. Data product access groups by access group id as key. If data product is used only
+   * for packaging data assets, then access groups may be empty. However, if a data product is used
+   * for sharing data assets, then at least one access group must be specified.Example: { "analyst":
+   * { "id": "analyst", "displayName": "Analyst", "description": "Access group for analysts",
+   * "principal": { "googleGroup": "analysts@example.com" } } }
    * @param accessGroups accessGroups or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setAccessGroups(java.util.Map<String, GoogleCloudDataplexV1DataProductAccessGroup> accessGroups) {
@@ -144,7 +152,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Output only. Number of Data Assets associated with this Data Product.
+   * Output only. Number of data assets associated with this data product.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAssetCount() {
@@ -152,7 +160,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Output only. Number of Data Assets associated with this Data Product.
+   * Output only. Number of data assets associated with this data product.
    * @param assetCount assetCount or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setAssetCount(java.lang.Integer assetCount) {
@@ -161,7 +169,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Output only. The time at which the Data Product was created.
+   * Output only. The time at which the data product was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -169,7 +177,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Output only. The time at which the Data Product was created.
+   * Output only. The time at which the data product was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setCreateTime(String createTime) {
@@ -178,7 +186,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Optional. Description of the Data Product.
+   * Optional. Description of the data product.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -186,7 +194,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Optional. Description of the Data Product.
+   * Optional. Description of the data product.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setDescription(java.lang.String description) {
@@ -195,7 +203,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Required. User-friendly display name of the Data Product.
+   * Required. User-friendly display name of the data product.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -203,7 +211,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Required. User-friendly display name of the Data Product.
+   * Required. User-friendly display name of the data product.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setDisplayName(java.lang.String displayName) {
@@ -212,8 +220,9 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -221,8 +230,9 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setEtag(java.lang.String etag) {
@@ -231,7 +241,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Optional. Base64 encoded image representing the Data Product. Max Size: 3.0MiB Expected image
+   * Optional. Base64 encoded image representing the data product. Max Size: 3.0MiB Expected image
    * dimensions are 512x512 pixels, however the API only performs validation on size of the encoded
    * data. Note: For byte fields, the content of the fields are base64-encoded (which increases the
    * size of the data by 33-36%) when using JSON on the wire.
@@ -243,7 +253,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Optional. Base64 encoded image representing the Data Product. Max Size: 3.0MiB Expected image
+   * Optional. Base64 encoded image representing the data product. Max Size: 3.0MiB Expected image
    * dimensions are 512x512 pixels, however the API only performs validation on size of the encoded
    * data. Note: For byte fields, the content of the fields are base64-encoded (which increases the
    * size of the data by 33-36%) when using JSON on the wire.
@@ -257,7 +267,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Optional. Base64 encoded image representing the Data Product. Max Size: 3.0MiB Expected image
+   * Optional. Base64 encoded image representing the data product. Max Size: 3.0MiB Expected image
    * dimensions are 512x512 pixels, however the API only performs validation on size of the encoded
    * data. Note: For byte fields, the content of the fields are base64-encoded (which increases the
    * size of the data by 33-36%) when using JSON on the wire.
@@ -270,7 +280,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Optional. Base64 encoded image representing the Data Product. Max Size: 3.0MiB Expected image
+   * Optional. Base64 encoded image representing the data product. Max Size: 3.0MiB Expected image
    * dimensions are 512x512 pixels, however the API only performs validation on size of the encoded
    * data. Note: For byte fields, the content of the fields are base64-encoded (which increases the
    * size of the data by 33-36%) when using JSON on the wire.
@@ -288,7 +298,8 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Optional. User-defined labels for the Data Product.
+   * Optional. User-defined labels for the data product.Example: { "environment": "production",
+   * "billing": "marketing-department" }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -296,7 +307,8 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Optional. User-defined labels for the Data Product.
+   * Optional. User-defined labels for the data product.Example: { "environment": "production",
+   * "billing": "marketing-department" }
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -305,7 +317,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Identifier. Resource name of the Data Product. Format:
+   * Identifier. Resource name of the data product. Format:
    * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}.
    * @return value or {@code null} for none
    */
@@ -314,7 +326,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Identifier. Resource name of the Data Product. Format:
+   * Identifier. Resource name of the data product. Format:
    * projects/{project_id_or_number}/locations/{location_id}/dataProducts/{data_product_id}.
    * @param name name or {@code null} for none
    */
@@ -324,7 +336,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Required. Emails of the Data Product owners.
+   * Required. Emails of the data product owners.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOwnerEmails() {
@@ -332,7 +344,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Required. Emails of the Data Product owners.
+   * Required. Emails of the data product owners.
    * @param ownerEmails ownerEmails or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setOwnerEmails(java.util.List<java.lang.String> ownerEmails) {
@@ -341,8 +353,8 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Output only. System generated unique ID for the Data Product. This ID will be different if the
-   * Data Product is deleted and re-created with the same name.
+   * Output only. System generated unique ID for the data product. This ID will be different if the
+   * data product is deleted and re-created with the same name.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -350,8 +362,8 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Output only. System generated unique ID for the Data Product. This ID will be different if the
-   * Data Product is deleted and re-created with the same name.
+   * Output only. System generated unique ID for the data product. This ID will be different if the
+   * data product is deleted and re-created with the same name.
    * @param uid uid or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setUid(java.lang.String uid) {
@@ -360,7 +372,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Output only. The time at which the Data Product was last updated.
+   * Output only. The time at which the data product was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -368,7 +380,7 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
   }
 
   /**
-   * Output only. The time at which the Data Product was last updated.
+   * Output only. The time at which the data product was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProduct setUpdateTime(String updateTime) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Response message for listing Data Products.
+ * Response message for listing data products.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ListDataProductsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Data Products for the requested filter criteria.
+   * The data products for the requested filter criteria.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleCloudDataplexV1ListDataProductsResponse extends com.goo
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The Data Products for the requested filter criteria.
+   * The data products for the requested filter criteria.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataProduct> getDataProducts() {
@@ -66,7 +66,7 @@ public final class GoogleCloudDataplexV1ListDataProductsResponse extends com.goo
   }
 
   /**
-   * The Data Products for the requested filter criteria.
+   * The data products for the requested filter criteria.
    * @param dataProducts dataProducts or {@code null} for none
    */
   public GoogleCloudDataplexV1ListDataProductsResponse setDataProducts(java.util.List<GoogleCloudDataplexV1DataProduct> dataProducts) {

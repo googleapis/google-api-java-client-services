@@ -17,8 +17,8 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Custom user defined access groups at the Data Product level. These are used for granting
- * different levels of access (IAM roles) on the individual Data Product's Data Assets.
+ * Custom user defined access groups at the data product level. These are used for granting
+ * different levels of access (IAM roles) on the individual data product's data assets.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -45,7 +45,7 @@ public final class GoogleCloudDataplexV1DataProductAccessGroup extends com.googl
   private java.lang.String displayName;
 
   /**
-   * Required. Unique identifier of the access group within the Data Product. User defined. Eg.
+   * Required. Unique identifier of the access group within the data product. User defined. Eg.
    * "analyst", "developer", etc.
    * The value may be {@code null}.
    */
@@ -94,7 +94,7 @@ public final class GoogleCloudDataplexV1DataProductAccessGroup extends com.googl
   }
 
   /**
-   * Required. Unique identifier of the access group within the Data Product. User defined. Eg.
+   * Required. Unique identifier of the access group within the data product. User defined. Eg.
    * "analyst", "developer", etc.
    * @return value or {@code null} for none
    */
@@ -103,7 +103,7 @@ public final class GoogleCloudDataplexV1DataProductAccessGroup extends com.googl
   }
 
   /**
-   * Required. Unique identifier of the access group within the Data Product. User defined. Eg.
+   * Required. Unique identifier of the access group within the data product. User defined. Eg.
    * "analyst", "developer", etc.
    * @param id id or {@code null} for none
    */

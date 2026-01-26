@@ -31,16 +31,16 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProductPrincipal extends com.google.api.client.json.GenericJson {
 
   /**
-   * Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-overview#google-
-   * group.
+   * Optional. Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-
+   * overview#google-group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googleGroup;
 
   /**
-   * Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-overview#google-
-   * group.
+   * Optional. Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-
+   * overview#google-group.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleGroup() {
@@ -48,8 +48,8 @@ public final class GoogleCloudDataplexV1DataProductPrincipal extends com.google.
   }
 
   /**
-   * Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-overview#google-
-   * group.
+   * Optional. Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-
+   * overview#google-group.
    * @param googleGroup googleGroup or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProductPrincipal setGoogleGroup(java.lang.String googleGroup) {

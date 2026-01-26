@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Configuration for access group inherited from the parent Data Product.
+ * Configuration for access group inherited from the parent data product.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -31,7 +31,8 @@ public final class GoogleCloudDataplexV1DataAssetAccessGroupConfig extends com.g
 
   /**
    * Optional. IAM roles granted on the resource to this access group. Role name follows
-   * https://cloud.google.com/iam/docs/reference/rest/v1/roles. Example: "roles/bigquery.dataViewer"
+   * https://cloud.google.com/iam/docs/reference/rest/v1/roles.Example: [
+   * "roles/bigquery.dataViewer" ]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +40,8 @@ public final class GoogleCloudDataplexV1DataAssetAccessGroupConfig extends com.g
 
   /**
    * Optional. IAM roles granted on the resource to this access group. Role name follows
-   * https://cloud.google.com/iam/docs/reference/rest/v1/roles. Example: "roles/bigquery.dataViewer"
+   * https://cloud.google.com/iam/docs/reference/rest/v1/roles.Example: [
+   * "roles/bigquery.dataViewer" ]
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIamRoles() {
@@ -48,7 +50,8 @@ public final class GoogleCloudDataplexV1DataAssetAccessGroupConfig extends com.g
 
   /**
    * Optional. IAM roles granted on the resource to this access group. Role name follows
-   * https://cloud.google.com/iam/docs/reference/rest/v1/roles. Example: "roles/bigquery.dataViewer"
+   * https://cloud.google.com/iam/docs/reference/rest/v1/roles.Example: [
+   * "roles/bigquery.dataViewer" ]
    * @param iamRoles iamRoles or {@code null} for none
    */
   public GoogleCloudDataplexV1DataAssetAccessGroupConfig setIamRoles(java.util.List<java.lang.String> iamRoles) {

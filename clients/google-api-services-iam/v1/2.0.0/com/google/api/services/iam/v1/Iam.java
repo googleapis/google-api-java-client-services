@@ -2127,14 +2127,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. The ID for the provider, which becomes the final component of the resource
-           * name. This value must be 4-32 characters, and may contain the characters [a-z0-9-]. The
-           * prefix `gcp-` is reserved for use by Google, and may not be specified.
+           * name. This value must be 4-32 characters, and may contain the characters `[a-z0-9-]`.
+           * The prefix `gcp-` is reserved for use by Google, and may not be specified.
            */
           @com.google.api.client.util.Key
           private java.lang.String workforcePoolProviderId;
 
           /** Required. The ID for the provider, which becomes the final component of the resource name. This
-         value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix `gcp-` is
+         value must be 4-32 characters, and may contain the characters `[a-z0-9-]`. The prefix `gcp-` is
          reserved for use by Google, and may not be specified.
            */
           public java.lang.String getWorkforcePoolProviderId() {
@@ -2143,8 +2143,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. The ID for the provider, which becomes the final component of the resource
-           * name. This value must be 4-32 characters, and may contain the characters [a-z0-9-]. The
-           * prefix `gcp-` is reserved for use by Google, and may not be specified.
+           * name. This value must be 4-32 characters, and may contain the characters `[a-z0-9-]`.
+           * The prefix `gcp-` is reserved for use by Google, and may not be specified.
            */
           public Create setWorkforcePoolProviderId(java.lang.String workforcePoolProviderId) {
             this.workforcePoolProviderId = workforcePoolProviderId;
@@ -3101,13 +3101,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             /**
              * Required. The ID to use for the key, which becomes the final component of the
              * resource name. This value must be 4-32 characters, and may contain the characters
-             * [a-z0-9-].
+             * `[a-z0-9-]`.
              */
             @com.google.api.client.util.Key
             private java.lang.String workforcePoolProviderKeyId;
 
             /** Required. The ID to use for the key, which becomes the final component of the resource name. This
-           value must be 4-32 characters, and may contain the characters [a-z0-9-].
+           value must be 4-32 characters, and may contain the characters `[a-z0-9-]`.
              */
             public java.lang.String getWorkforcePoolProviderKeyId() {
               return workforcePoolProviderKeyId;
@@ -3116,7 +3116,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             /**
              * Required. The ID to use for the key, which becomes the final component of the
              * resource name. This value must be 4-32 characters, and may contain the characters
-             * [a-z0-9-].
+             * `[a-z0-9-]`.
              */
             public Create setWorkforcePoolProviderKeyId(java.lang.String workforcePoolProviderKeyId) {
               this.workforcePoolProviderKeyId = workforcePoolProviderKeyId;
@@ -4224,14 +4224,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             /**
              * Required. Gemini Enterprise only. The ID to use for the SCIM tenant, which becomes
              * the final component of the resource name. This value should be 4-32 characters,
-             * containing the characters [a-z0-9-].
+             * containing the characters `[a-z0-9-]`.
              */
             @com.google.api.client.util.Key
             private java.lang.String workforcePoolProviderScimTenantId;
 
             /** Required. Gemini Enterprise only. The ID to use for the SCIM tenant, which becomes the final
            component of the resource name. This value should be 4-32 characters, containing the characters
-           [a-z0-9-].
+           `[a-z0-9-]`.
              */
             public java.lang.String getWorkforcePoolProviderScimTenantId() {
               return workforcePoolProviderScimTenantId;
@@ -4240,7 +4240,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             /**
              * Required. Gemini Enterprise only. The ID to use for the SCIM tenant, which becomes
              * the final component of the resource name. This value should be 4-32 characters,
-             * containing the characters [a-z0-9-].
+             * containing the characters `[a-z0-9-]`.
              */
             public Create setWorkforcePoolProviderScimTenantId(java.lang.String workforcePoolProviderScimTenantId) {
               this.workforcePoolProviderScimTenantId = workforcePoolProviderScimTenantId;
@@ -5244,14 +5244,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               /**
                * Required. Gemini Enterprise only. The ID to use for the SCIM token, which becomes
                * the final component of the resource name. This value should be 4-32 characters and
-               * follow the pattern: "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
+               * follow the pattern: `([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))`
                */
               @com.google.api.client.util.Key
               private java.lang.String workforcePoolProviderScimTokenId;
 
               /** Required. Gemini Enterprise only. The ID to use for the SCIM token, which becomes the final
              component of the resource name. This value should be 4-32 characters and follow the pattern:
-             "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
+             `([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))`
                */
               public java.lang.String getWorkforcePoolProviderScimTokenId() {
                 return workforcePoolProviderScimTokenId;
@@ -5260,7 +5260,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               /**
                * Required. Gemini Enterprise only. The ID to use for the SCIM token, which becomes
                * the final component of the resource name. This value should be 4-32 characters and
-               * follow the pattern: "([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))"
+               * follow the pattern: `([a-z]([a-z0-9\\-]{2,30}[a-z0-9]))`
                */
               public Create setWorkforcePoolProviderScimTokenId(java.lang.String workforcePoolProviderScimTokenId) {
                 this.workforcePoolProviderScimTokenId = workforcePoolProviderScimTokenId;

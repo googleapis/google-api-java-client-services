@@ -75,7 +75,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
   private GoogleCloudDiscoveryengineV1alphaSearchResponseGuidedSearchResult guidedSearchResult;
 
   /**
-   * Natural language query understanding information for the returned results.
+   * Output only. Natural language query understanding information for the returned results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -281,7 +281,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
   }
 
   /**
-   * Natural language query understanding information for the returned results.
+   * Output only. Natural language query understanding information for the returned results.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchResponseNaturalLanguageQueryUnderstandingInfo getNaturalLanguageQueryUnderstandingInfo() {
@@ -289,7 +289,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
   }
 
   /**
-   * Natural language query understanding information for the returned results.
+   * Output only. Natural language query understanding information for the returned results.
    * @param naturalLanguageQueryUnderstandingInfo naturalLanguageQueryUnderstandingInfo or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchResponse setNaturalLanguageQueryUnderstandingInfo(GoogleCloudDiscoveryengineV1alphaSearchResponseNaturalLanguageQueryUnderstandingInfo naturalLanguageQueryUnderstandingInfo) {

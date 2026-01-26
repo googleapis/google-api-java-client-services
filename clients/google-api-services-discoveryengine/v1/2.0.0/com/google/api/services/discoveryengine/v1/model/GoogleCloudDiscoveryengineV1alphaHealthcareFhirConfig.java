@@ -47,6 +47,17 @@ public final class GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig extends
   private java.lang.Boolean enableStaticIndexingForBatchIngestion;
 
   /**
+   * Optional. Names of the Group resources to use as a basis for the initial patient filter, in
+   * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_st
+   * ore_id}/fhir/Group/{group_id}`. The filter group must be a FHIR resource name of type Group,
+   * and the filter will be constructed from the direct members of the group which are Patient
+   * resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> initialFilterGroups;
+
+  /**
    * Whether to enable configurable schema for `HEALTHCARE_FHIR` vertical. If set to `true`, the
    * predefined healthcare fhir schema can be extended for more customized searching and filtering.
    * @return value or {@code null} for none
@@ -83,6 +94,31 @@ public final class GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig extends
    */
   public GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig setEnableStaticIndexingForBatchIngestion(java.lang.Boolean enableStaticIndexingForBatchIngestion) {
     this.enableStaticIndexingForBatchIngestion = enableStaticIndexingForBatchIngestion;
+    return this;
+  }
+
+  /**
+   * Optional. Names of the Group resources to use as a basis for the initial patient filter, in
+   * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_st
+   * ore_id}/fhir/Group/{group_id}`. The filter group must be a FHIR resource name of type Group,
+   * and the filter will be constructed from the direct members of the group which are Patient
+   * resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getInitialFilterGroups() {
+    return initialFilterGroups;
+  }
+
+  /**
+   * Optional. Names of the Group resources to use as a basis for the initial patient filter, in
+   * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_st
+   * ore_id}/fhir/Group/{group_id}`. The filter group must be a FHIR resource name of type Group,
+   * and the filter will be constructed from the direct members of the group which are Patient
+   * resources.
+   * @param initialFilterGroups initialFilterGroups or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig setInitialFilterGroups(java.util.List<java.lang.String> initialFilterGroups) {
+    this.initialFilterGroups = initialFilterGroups;
     return this;
   }
 

@@ -57,7 +57,7 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig ext
   /**
    * The name of the data store. It should be data store resource name Format: `projects/{project}/l
    * ocations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. For APIs under
-   * WidgetService, such as WidgetService.LookUpWidgetConfig, the project number and location part
+   * WidgetService, such as WidgetService.LookupWidgetConfig, the project number and location part
    * is erased in this field.
    * The value may be {@code null}.
    */
@@ -126,7 +126,7 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig ext
   /**
    * The name of the data store. It should be data store resource name Format: `projects/{project}/l
    * ocations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. For APIs under
-   * WidgetService, such as WidgetService.LookUpWidgetConfig, the project number and location part
+   * WidgetService, such as WidgetService.LookupWidgetConfig, the project number and location part
    * is erased in this field.
    * @return value or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig ext
   /**
    * The name of the data store. It should be data store resource name Format: `projects/{project}/l
    * ocations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. For APIs under
-   * WidgetService, such as WidgetService.LookUpWidgetConfig, the project number and location part
+   * WidgetService, such as WidgetService.LookupWidgetConfig, the project number and location part
    * is erased in this field.
    * @param name name or {@code null} for none
    */

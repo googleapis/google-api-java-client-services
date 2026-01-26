@@ -47,7 +47,7 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQuery
    * `HARD_FILTER`. For multi-datastore search, the default behavior is `SOFT_BOOST`. Location-based
    * filters are always applied as hard filters, and the `SOFT_BOOST` setting will not affect them.
    * This field is only used if
-   * SearchRequest.natural_language_query_understanding_spec.filter_extraction_condition is set to
+   * SearchRequest.NaturalLanguageQueryUnderstandingSpec.FilterExtractionCondition is set to
    * FilterExtractionCondition.ENABLED.
    * The value may be {@code null}.
    */
@@ -105,7 +105,7 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQuery
    * `HARD_FILTER`. For multi-datastore search, the default behavior is `SOFT_BOOST`. Location-based
    * filters are always applied as hard filters, and the `SOFT_BOOST` setting will not affect them.
    * This field is only used if
-   * SearchRequest.natural_language_query_understanding_spec.filter_extraction_condition is set to
+   * SearchRequest.NaturalLanguageQueryUnderstandingSpec.FilterExtractionCondition is set to
    * FilterExtractionCondition.ENABLED.
    * @return value or {@code null} for none
    */
@@ -119,7 +119,7 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQuery
    * `HARD_FILTER`. For multi-datastore search, the default behavior is `SOFT_BOOST`. Location-based
    * filters are always applied as hard filters, and the `SOFT_BOOST` setting will not affect them.
    * This field is only used if
-   * SearchRequest.natural_language_query_understanding_spec.filter_extraction_condition is set to
+   * SearchRequest.NaturalLanguageQueryUnderstandingSpec.FilterExtractionCondition is set to
    * FilterExtractionCondition.ENABLED.
    * @param extractedFilterBehavior extractedFilterBehavior or {@code null} for none
    */

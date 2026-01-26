@@ -76,7 +76,7 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent e
   /**
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For APIs under
-   * WidgetService, such as WidgetService.LookUpWidgetConfig, the project number and location part
+   * WidgetService, such as WidgetService.LookupWidgetConfig, the project number and location part
    * is erased in this field.
    * The value may be {@code null}.
    */
@@ -190,7 +190,7 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent e
   /**
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For APIs under
-   * WidgetService, such as WidgetService.LookUpWidgetConfig, the project number and location part
+   * WidgetService, such as WidgetService.LookupWidgetConfig, the project number and location part
    * is erased in this field.
    * @return value or {@code null} for none
    */
@@ -201,7 +201,7 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent e
   /**
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For APIs under
-   * WidgetService, such as WidgetService.LookUpWidgetConfig, the project number and location part
+   * WidgetService, such as WidgetService.LookupWidgetConfig, the project number and location part
    * is erased in this field.
    * @param name name or {@code null} for none
    */
